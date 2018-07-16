@@ -1,5 +1,6 @@
-IPFParser/input
-IPFParser/output
+IPFParser/input/
+IPFParser/input_translations/
+IPFParser/output/
 
 ########################################################################################################################
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
