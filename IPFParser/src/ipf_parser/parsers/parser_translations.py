@@ -3,17 +3,19 @@ import csv
 import os
 import xml.etree.ElementTree as ET
 
-from ipf_parser import constants
+from ipf_parser import constants, globals
 
 
-def parse(global_translations):
+def parse():
+    globals_translations = globals.translations
+
     dictionary_path = os.path.join(constants.PATH_IPF_PARSER_OUTPUT, 'language.ipf', 'wholeDicID.xml')
     dictionary = ET.parse(dictionary_path).getroot()
 
     # <file name="xml\item_Equip.xml">
     for file in dictionary:
         if file.get('name') in ['xml\item.xml', 'xml\item_Equip.xml']:
-            output = global_translations.setdefault(constants.PARSER_TRANSLATIONS.ITEMS, {})
+            output = globals_translations.setdefault(constants.PARSER_TRANSLATIONS.ITEMS, {})
 
             # Parse english translations
             translation = {}

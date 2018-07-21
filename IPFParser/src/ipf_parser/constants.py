@@ -2,14 +2,19 @@ import os
 
 from ipf_parser.utils.enum import enum
 
-PATH_IPF_PARSER = os.path.join("..", "IPFParser")
-PATH_IPF_PARSER_EXTRACT = os.path.join(PATH_IPF_PARSER, "extract")
-PATH_IPF_PARSER_INPUT = os.path.join(PATH_IPF_PARSER, "input")
-PATH_IPF_PARSER_INPUT_TRANSLATIONS = os.path.join(PATH_IPF_PARSER, "input_translations")
-PATH_IPF_PARSER_OUTPUT = os.path.join(PATH_IPF_PARSER, "output")
+PATH_IPF_PARSER = os.path.join('..', 'IPFParser')
+PATH_IPF_PARSER_EXTRACT = os.path.join(PATH_IPF_PARSER, 'extract')
+PATH_IPF_PARSER_INPUT = os.path.join(PATH_IPF_PARSER, 'input')
+PATH_IPF_PARSER_INPUT_TRANSLATIONS = os.path.join(PATH_IPF_PARSER, 'input_translations')
+PATH_IPF_PARSER_OUTPUT = os.path.join(PATH_IPF_PARSER, 'output')
 
-PATH_IPF_UNPACKER = os.path.join("..", "IPFUnpacker")
-PATH_IPF_UNPACKER_EXE = os.path.join(PATH_IPF_UNPACKER, "ipf_unpack")
+PATH_IPF_UNPACKER = os.path.join('..', 'IPFUnpacker')
+PATH_IPF_UNPACKER_EXE = os.path.join(PATH_IPF_UNPACKER, 'ipf_unpack')
+
+PATH_WEB = os.path.join('..', 'web')
+PATH_WEB_ASSETS = os.path.join(PATH_WEB, 'src', 'assets')
+PATH_WEB_ASSETS_DATA = os.path.join(PATH_WEB_ASSETS, 'data')
+PATH_WEB_ASSETS_ICONS = os.path.join(PATH_WEB_ASSETS, 'icons')
 
 PARSER_ITEM_GROUP = enum(
     'ARMBAND',

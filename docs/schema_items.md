@@ -1,8 +1,8 @@
 # Items
 | Property | Type | Description | Mapping |
 |---|---|---|---|
-| ID | Int | ClassID of the item
-| ID_Name | String | ClassName of the item
+| $ID | Int | ClassID of the item
+| $ID_Name | String | ClassName of the item
 | Description | String |
 | Icon | String |
 | Icon_Tooltip | String

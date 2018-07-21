@@ -2,14 +2,17 @@
 import csv
 import os
 
-from ipf_parser import constants
+from ipf_parser import constants, globals
 
 
-def parse(global_items, global_translations):
-    parse_items(global_items, global_translations[constants.PARSER_TRANSLATIONS.ITEMS])
+def parse():
+    parse_items()
 
 
-def parse_items(global_items, global_translations):
+def parse_items():
+    globals_items = globals.items
+    globals_translations = globals.translations[constants.PARSER_TRANSLATIONS.ITEMS]
+
     ies_item_path = os.path.join(constants.PATH_IPF_PARSER_OUTPUT, "ies.ipf", "item.ies")
     ies_item_file = open(ies_item_path, 'rb')
     ies_item_reader = csv.DictReader(ies_item_file, delimiter=',', quotechar='"')
@@ -18,12 +21,12 @@ def parse_items(global_items, global_translations):
         obj = {}
         obj['$ID'] = int(row['ClassID'])
         obj['$ID_Name'] = row['ClassName']
-        obj['Description'] = global_translations[unicode(row['Desc'], 'utf-8')] if row['Desc'] != '' else ''
+        obj['Description'] = globals_translations[unicode(row['Desc'], 'utf-8')] if row['Desc'] != '' else ''
         obj['Icon'] = row['Icon']
         obj['Icon_Tooltip'] = row['TooltipImage']
         obj['Link_Collection'] = []
         obj['Link_Monster'] = []
-        obj['Name'] = global_translations[unicode(row['Name'], 'utf-8')]
+        obj['Name'] = globals_translations[unicode(row['Name'], 'utf-8')]
         obj['Type'] = constants.PARSER_ITEM_GROUP.value_of[row['GroupName'].upper()]
         obj['Weight'] = int(row['Weight'])
 
@@ -34,7 +37,7 @@ def parse_items(global_items, global_translations):
             0,  # Team Storage
         )
 
-        global_items[obj['$ID']] = obj
+        globals_items[obj['$ID']] = obj
 
         # print 'Type: %s' % (constants.PARSER_ITEM_GROUP.to_string[obj['Type']])
         # if row['TooltipImage'] != row['Icon']:
