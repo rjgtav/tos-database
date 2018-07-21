@@ -1,0 +1,26 @@
+<nav class="navbar navbar-dark bg-primary mb-5">
+  <a class="navbar-brand" href="/">TOS Database</a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <div ngbDropdown class="nav-item">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Database</a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown" routerLinkActive="active">
+          <a class="dropdown-item" routerLink="database/collections">Collections</a>
+          <a class="dropdown-item" routerLink="database/items">Items</a>
+          <a class="dropdown-item" routerLink="database/monsters">Monsters</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-expand ml-auto">
+    <div class="navbar-nav" style="align-items: center;">
+      <a (click)="toggleTheme()" class="nav-item nav-link" ngbTooltip="Toggle Theme" placement="bottom">
+        <fa-icon [icon]="['far', theme == $Theme.LIGHT ? 'sun' : 'moon']"></fa-icon>
+      </a>
+      <a class="nav-item nav-link" href="https://github.com/rjgtav/tos-database" target="_blank" ngbTooltip="GitHub" placement="bottom">
+        <fa-icon [icon]="['fab', 'github']" [size]="'2x'"></fa-icon>
+      </a>
+    </div>
+  </div>
+</nav>

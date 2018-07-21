@@ -1,0 +1,31 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" width="48"></th>
+      <th scope="col" width="8.3%">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td class="p-1"><img height="40" width="40" src="{{ 'assets/icons/' + row.Icon + '.png' }}" /></td>
+      <th scope="row">{{ row.$ID }}</th>
+      <td>{{ row.Name }}</td>
+      <td>{{ TOSItemTypeToString.apply(this, [row.Type]) }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ngb-pagination
+  class="d-flex justify-content-center"
+  [collectionSize]="dataSize"
+  [page]="page"
+  [pageSize]="pageSize"
+  [maxSize]="7"
+  [boundaryLinks]="true"
+  [ellipses]="false"
+  [rotate]="true"
+  (pageChange)="loadPage($event)"
+>
+</ngb-pagination>
