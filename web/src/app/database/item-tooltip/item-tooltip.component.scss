@@ -1,0 +1,26 @@
+:host {
+  max-width: 480px;
+  min-width: 480px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.tos-icon {
+  max-height: 64px;
+  max-width: calc(64px + 15px * 2);
+}
+.tos-icon div {
+  height: 64px;
+  width: 64px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tos-price img {
+  vertical-align: sub;
+}
+
+.table td {
+  border-top: none;
+}

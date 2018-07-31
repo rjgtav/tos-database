@@ -1,0 +1,68 @@
+<div class="card bg-primary text-white" *ngIf="item">
+  <div class="card-body">
+      <div class="row">
+
+        <!-- Icon -->
+        <div class="col tos-icon">
+          <div [ngStyle]="{ 'background-image': 'url(\'/assets/icons/' + item.Icon_Tooltip + '.png\')'}"></div>
+        </div>
+
+        <div class="col">
+          <!-- Name and Type -->
+          <div class="row">
+            <div class="col-8"><h5 class="card-title">{{ item.Name }}</h5></div>
+            <div class="col text-right"><h6>{{ item.Type }}</h6></div>
+          </div>
+
+          <!-- Weight and Price -->
+          <div class="row text-nowrap">
+            <div class="col"><h6>
+              <fa-icon class="mr-1" [icon]="['fas', 'weight-hanging']"></fa-icon>
+              {{ item.Weight }}</h6>
+            </div>
+            <div class="col text-right">
+              <h6 class="tos-price">{{ item.Price }}</h6>
+            </div>
+          </div>
+
+          <!-- CoolDown and LifeTime -->
+          <div class="row text-nowrap">
+            <div class="col"><h6>
+              <fa-icon class="mr-1" [icon]="['far', 'clock']"></fa-icon>
+              {{ (item.TimeCoolDown | tosTime) || 'No cooldown' }}</h6>
+            </div>
+            <div class="col text-right">
+              <h6>
+                {{ item.TimeLifeTime ? ('Expires in ' + (item.TimeLifeTime | tosTime)) : 'No expiration' }}
+              </h6>
+            </div>
+          </div>
+
+          <!-- Tradability -->
+          <div class="row">
+            <div class="col">
+              <table class="table table-sm text-center mb-0">
+                <tbody>
+                  <tr>
+                    <td [class]="item.isTradable(TOSItemTradable.MARKET) ? 'table-success' : 'table-danger'" >Market</td>
+                    <td [class]="item.isTradable(TOSItemTradable.PLAYER) ? 'table-success' : 'table-danger'" >Players</td>
+                    <td [class]="item.isTradable(TOSItemTradable.SHOP) ? 'table-success' : 'table-danger'" >NPC Shops</td>
+                    <td [class]="item.isTradable(TOSItemTradable.TEAM) ? 'table-success' : 'table-danger'" >Team Storage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="w-100"><hr></div>
+
+      <div class="row">
+        <div class="col">
+          <p class="card-text text-multiline">{{ item.Description }}</p>
+        </div>
+      </div>
+    </div>
+</div>
