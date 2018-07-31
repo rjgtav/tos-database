@@ -25,6 +25,7 @@ export class ItemListComponent implements OnDestroy, OnInit {
   pageFilter: Filter;
   pageSort: Sort;
 
+  toggleFilter: boolean = false;
   tooltipItem: TOSItem;
 
   search: boolean;
@@ -34,7 +35,6 @@ export class ItemListComponent implements OnDestroy, OnInit {
   searchInput: ElementRef;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
-
   private reload() {
     let params = {};
       params[CRUDResolver.PARAM_FILTER] = this.search ? null : this.pageFilter.value != this.TOSItemType.$ANY$.toString() ? this.pageFilter.toString() : null;
@@ -42,6 +42,7 @@ export class ItemListComponent implements OnDestroy, OnInit {
       params[CRUDResolver.PARAM_SEARCH] = this.searchText;
       params[CRUDResolver.PARAM_SORT] = this.search ? null : this.pageSort;
 
+    this.toggleFilter = false;
     this.tooltipItem = null;
     this.router.navigate(['.'], { queryParams: params, relativeTo: this.route })
   }

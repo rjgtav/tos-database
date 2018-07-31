@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { CommonModule } from '@angular/common';
 
 import { DatabaseRoutingModule } from './database-routing.module';

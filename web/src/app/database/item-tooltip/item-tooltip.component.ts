@@ -1,5 +1,6 @@
 import {Component, ElementRef, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {TOSItem, TOSItemTradable} from "../../shared/domain/tos/item/tos-item.model";
+import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-item-tooltip',
@@ -12,11 +13,16 @@ export class ItemTooltipComponent implements OnChanges, OnDestroy {
   @Input('TOSItem')
   item: TOSItem;
 
-  constructor(private element: ElementRef) {
+  private disabled: boolean;
+
+  constructor(private element: ElementRef, private ngbTooltipConfig: NgbTooltipConfig) {
+    this.disabled = ngbTooltipConfig.disableTooltip;
     this.onMouseLeave();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    if (this.disabled) return;
+
     if (changes.item) {
       if (this.item)  this.onMouseEnter();
       else            this.onMouseLeave();

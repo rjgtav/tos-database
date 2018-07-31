@@ -75,32 +75,32 @@ enum TOSItemTypeEnum {
 
 export class TOSItemType {
 
-  public static readonly ARMBAND = new TOSItemType(TOSItemTypeEnum.ARMBAND);
-  public static readonly ARMOR = new TOSItemType(TOSItemTypeEnum.ARMOR);
-  public static readonly BOOK = new TOSItemType(TOSItemTypeEnum.BOOK);
-  public static readonly CARD = new TOSItemType(TOSItemTypeEnum.CARD);
-  public static readonly COLLECTION = new TOSItemType(TOSItemTypeEnum.COLLECTION);
-  public static readonly CUBE = new TOSItemType(TOSItemTypeEnum.CUBE);
-  public static readonly DRUG = new TOSItemType(TOSItemTypeEnum.DRUG);
-  public static readonly EQUIPMENT = new TOSItemType(TOSItemTypeEnum.EQUIPMENT);
-  public static readonly EVENT = new TOSItemType(TOSItemTypeEnum.EVENT);
-  public static readonly FISHINGROD = new TOSItemType(TOSItemTypeEnum.FISHINGROD);
-  public static readonly GEM = new TOSItemType(TOSItemTypeEnum.GEM);
-  public static readonly HELMET = new TOSItemType(TOSItemTypeEnum.HELMET);
-  public static readonly MAGICAMULET = new TOSItemType(TOSItemTypeEnum.MAGICAMULET);
-  public static readonly MATERIAL = new TOSItemType(TOSItemTypeEnum.MATERIAL);
-  public static readonly PASTEBAIT = new TOSItemType(TOSItemTypeEnum.PASTEBAIT);
-  public static readonly PETARMOR = new TOSItemType(TOSItemTypeEnum.PETARMOR);
-  public static readonly PETWEAPON = new TOSItemType(TOSItemTypeEnum.PETWEAPON);
-  public static readonly PREMIUM = new TOSItemType(TOSItemTypeEnum.PREMIUM);
-  public static readonly QUEST = new TOSItemType(TOSItemTypeEnum.QUEST);
-  public static readonly RECIPE = new TOSItemType(TOSItemTypeEnum.RECIPE);
-  public static readonly SUBWEAPON = new TOSItemType(TOSItemTypeEnum.SUBWEAPON);
-  public static readonly UNUSED = new TOSItemType(TOSItemTypeEnum.UNUSED);
-  public static readonly WEAPON = new TOSItemType(TOSItemTypeEnum.WEAPON);
-  public static readonly $ANY$ = new TOSItemType(TOSItemTypeEnum.$ANY$);
+  public static readonly ARMBAND = new TOSItemType(TOSItemTypeEnum.ARMBAND, 'Arm Bands');
+  public static readonly ARMOR = new TOSItemType(TOSItemTypeEnum.ARMOR, 'Armor');
+  public static readonly BOOK = new TOSItemType(TOSItemTypeEnum.BOOK, 'Books');
+  public static readonly CARD = new TOSItemType(TOSItemTypeEnum.CARD, 'Cards');
+  public static readonly COLLECTION = new TOSItemType(TOSItemTypeEnum.COLLECTION, 'Collections');
+  public static readonly CUBE = new TOSItemType(TOSItemTypeEnum.CUBE, 'Cubes');
+  public static readonly DRUG = new TOSItemType(TOSItemTypeEnum.DRUG, 'Consumables');
+  public static readonly EQUIPMENT = new TOSItemType(TOSItemTypeEnum.EQUIPMENT, 'Equipment');
+  public static readonly EVENT = new TOSItemType(TOSItemTypeEnum.EVENT, 'Event');
+  public static readonly FISHINGROD = new TOSItemType(TOSItemTypeEnum.FISHINGROD, 'Fishing Rod');
+  public static readonly GEM = new TOSItemType(TOSItemTypeEnum.GEM, 'Gems');
+  public static readonly HELMET = new TOSItemType(TOSItemTypeEnum.HELMET, 'Helmet');
+  public static readonly MAGICAMULET = new TOSItemType(TOSItemTypeEnum.MAGICAMULET, 'Magic Amulet');
+  public static readonly MATERIAL = new TOSItemType(TOSItemTypeEnum.MATERIAL, 'Materials');
+  public static readonly PASTEBAIT = new TOSItemType(TOSItemTypeEnum.PASTEBAIT, 'Paste Bait');
+  public static readonly PETARMOR = new TOSItemType(TOSItemTypeEnum.PETARMOR, 'Companion Armor');
+  public static readonly PETWEAPON = new TOSItemType(TOSItemTypeEnum.PETWEAPON, 'Companion Weapon');
+  public static readonly PREMIUM = new TOSItemType(TOSItemTypeEnum.PREMIUM, 'Premium');
+  public static readonly QUEST = new TOSItemType(TOSItemTypeEnum.QUEST, 'Quest');
+  public static readonly RECIPE = new TOSItemType(TOSItemTypeEnum.RECIPE, 'Recipe');
+  public static readonly SUBWEAPON = new TOSItemType(TOSItemTypeEnum.SUBWEAPON, 'Sub-weapon');
+  public static readonly UNUSED = new TOSItemType(TOSItemTypeEnum.UNUSED, 'Unused');
+  public static readonly WEAPON = new TOSItemType(TOSItemTypeEnum.WEAPON, 'Weapon');
+  public static readonly $ANY$ = new TOSItemType(TOSItemTypeEnum.$ANY$, 'All');
 
-  constructor(private _enum: TOSItemTypeEnum) {}
+  constructor(private _enum: TOSItemTypeEnum, public label?: string) {}
 
   public toString(): string {
     switch (this._enum) {

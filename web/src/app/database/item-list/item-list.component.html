@@ -1,16 +1,32 @@
-<!-- Tabs -->
+<!-- Filter -->
 <div class="text-center mb-4">
-  <div tosFilterGroup class="btn-group mr-2" [column]="'Type'" [ngModel]="pageFilter" (ngModelChange)="onFilterChange($event)" [hidden]="search">
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.$ANY$">All</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.BOOK">Books</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.CUBE">Cubes</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.DRUG">Consumables</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.EVENT">Event</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.MATERIAL">Materials</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.QUEST">Quest</button>
+  <!-- Tabs (Desktop & Tablet) -->
+  <div tosFilterGroup class="btn-group d-none d-md-inline-block" [column]="'Type'" [ngModel]="pageFilter" (ngModelChange)="onFilterChange($event)" *ngIf="!search">
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.$ANY$">{{ TOSItemType.$ANY$.label }}</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.BOOK">{{ TOSItemType.BOOK.label }}</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.CUBE">{{ TOSItemType.CUBE.label }}</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.DRUG">{{ TOSItemType.DRUG.label }}</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.EVENT">{{ TOSItemType.EVENT.label }}</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.MATERIAL">{{ TOSItemType.MATERIAL.label }}</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.QUEST">{{ TOSItemType.QUEST.label }}</button>
   </div>
 
-  <button class="btn btn-primary" type="button" (click)="onSearchToggle()" [hidden]="search"><fa-icon [icon]="['fas', 'search']"></fa-icon></button>
+  <!-- Dropdown (Mobile) -->
+  <div class="btn-group d-md-none" [ngClass]="{ 'show': toggleFilter }" *ngIf="!search" >
+    <button type="button" class="btn btn-primary dropdown-toggle" (click)="toggleFilter = !toggleFilter">{{ TOSItemType.valueOf(pageFilter.value).label }}</button>
+    <div tosFilterGroup class="dropdown-menu" [ngClass]="{ 'show': toggleFilter }" [column]="'Type'" [ngModel]="pageFilter" (ngModelChange)="onFilterChange($event)">
+      <button tosFilter class="dropdown-item" [value]="TOSItemType.$ANY$">{{ TOSItemType.$ANY$.label }}</button>
+      <button tosFilter class="dropdown-item" [value]="TOSItemType.BOOK">{{ TOSItemType.BOOK.label }}</button>
+      <button tosFilter class="dropdown-item" [value]="TOSItemType.CUBE">{{ TOSItemType.CUBE.label }}</button>
+      <button tosFilter class="dropdown-item" [value]="TOSItemType.DRUG">{{ TOSItemType.DRUG.label }}</button>
+      <button tosFilter class="dropdown-item" [value]="TOSItemType.EVENT">{{ TOSItemType.EVENT.label }}</button>
+      <button tosFilter class="dropdown-item" [value]="TOSItemType.MATERIAL">{{ TOSItemType.MATERIAL.label }}</button>
+      <button tosFilter class="dropdown-item" [value]="TOSItemType.QUEST">{{ TOSItemType.QUEST.label }}</button>
+    </div>
+  </div>
+
+  <!-- Search -->
+  <button class="btn btn-primary ml-2" type="button" (click)="onSearchToggle()" [hidden]="search"><fa-icon [icon]="['fas', 'search']"></fa-icon></button>
 
   <div class="input-group m-auto w-50" [hidden]="!search">
     <input class="form-control" placeholder="Search" type="text" [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)" (keyup.esc)="onSearchToggle()" #searchInput>
@@ -46,7 +62,7 @@
   [collectionSize]="dataSize"
   [page]="page"
   [pageSize]="pageSize"
-  [maxSize]="7"
+  [maxSize]="5"
   [boundaryLinks]="true"
   [ellipses]="false"
   [rotate]="true"

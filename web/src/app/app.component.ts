@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor() {}
+  constructor(private ngbTooltipConfig: NgbTooltipConfig) {
+    this.ngbTooltipConfig.disableTooltip = !!('ontouchstart' in window || navigator.msMaxTouchPoints);
+  }
+
 }

@@ -2,7 +2,6 @@
   <a class="navbar-brand" routerLink="/">TOS Database</a>
   <div class="navbar-expand mr-auto">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/">Home</a>
       <div ngbDropdown class="nav-item">
         <a ngbDropdownToggle class="nav-link dropdown-toggle" id="gameDropdown" role="button" aria-haspopup="true" aria-expanded="false">Game</a>
         <div ngbDropdownMenu aria-labelledby="gameDropdown" routerLinkActive="active">
@@ -30,7 +29,7 @@
   </div>
   <div class="navbar-expand ml-auto">
     <div class="navbar-nav" style="align-items: center;">
-      <a (click)="toggleTheme()" class="nav-item nav-link" ngbTooltip="Toggle Theme" placement="bottom">
+      <a (click)="toggleTheme()" class="nav-item nav-link" ngbTooltip="Toggle Theme" placement="bottom" triggers="click">
         <fa-icon [icon]="['far', theme == $Theme.LIGHT ? 'sun' : 'moon']"></fa-icon>
       </a>
       <a class="nav-item nav-link" href="https://github.com/rjgtav/tos-database" target="_blank" ngbTooltip="GitHub" placement="bottom">
