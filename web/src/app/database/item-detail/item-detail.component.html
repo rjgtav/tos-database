@@ -1,0 +1,76 @@
+<div class="container" *ngIf="item">
+  <div class="row">
+    <!-- Icon (Desktop & Tablet) -->
+    <div class="d-none d-sm-block" style="margin-left: -128px; width: 128px">
+      <img height="128" width="128" src="/assets/icons/{{ item.Icon_Tooltip }}.png" />
+    </div>
+
+    <div class="col">
+      <h1>{{ item.Name }}</h1>
+      <p></p>
+
+      <div class="row">
+        <!-- Description -->
+        <div class="col-md-6">
+          <h5>Description</h5>
+          <p class="text-multiline">{{ item.Description }}</p>
+        </div>
+
+        <!-- Icon (Mobile) -->
+        <div class="col-md-6 d-block d-sm-none">
+          <h5>Icon</h5>
+          <p>
+            <img height="128" width="128" src="/assets/icons/{{ item.Icon_Tooltip }}.png" />
+          </p>
+        </div>
+
+        <!-- Information -->
+        <div class="col-md-6">
+          <h5>Information</h5>
+
+          <!-- Weight and Price -->
+          <div class="row">
+            <div class="col"><h6>
+              <fa-icon class="mr-1" ngbTooltip="Weight" placement="left" [icon]="['fas', 'weight-hanging']"></fa-icon>
+              {{ item.Weight }}</h6>
+            </div>
+            <div class="col text-right">
+              <h6 class="tos-price" ngbTooltip="Sell price to NPCs" placement="right" container="body">
+                {{ item.Price }}
+              </h6>
+            </div>
+          </div>
+
+          <!-- CoolDown and LifeTime -->
+          <div class="row">
+            <div class="col"><h6>
+              <fa-icon class="mr-1" ngbTooltip="CoolDown" placement="left" [icon]="['far', 'clock']"></fa-icon>
+              {{ (item.TimeCoolDown | tosTime) || 'No cooldown' }}</h6>
+            </div>
+            <div class="col text-right">
+              <h6>
+                {{ item.TimeLifeTime ? ('Expires in ' + (item.TimeLifeTime | tosTime)) : 'No expiration' }}
+              </h6>
+            </div>
+          </div>
+          <p></p>
+        </div>
+
+        <!-- Tradability -->
+        <div class="col-md-6">
+          <h5>Tradability</h5>
+          <table class="table table-sm text-center">
+            <tbody>
+              <tr>
+                <td [class]="item.isTradable(TOSItemTradable.MARKET) ? 'table-success' : 'table-danger'" >Market</td>
+                <td [class]="item.isTradable(TOSItemTradable.PLAYER) ? 'table-success' : 'table-danger'" >Players</td>
+                <td [class]="item.isTradable(TOSItemTradable.SHOP) ? 'table-success' : 'table-danger'" >NPC Shops</td>
+                <td [class]="item.isTradable(TOSItemTradable.TEAM) ? 'table-success' : 'table-danger'" >Team Storage</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
