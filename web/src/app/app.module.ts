@@ -12,10 +12,11 @@ import { ShellModule }        from './shell/shell.module';
 
 // Load FontAwesome's icons
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import {faClock, faMoon, faSun} from "@fortawesome/free-regular-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {faSearch, faTimes, faWeightHanging} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faGithub, faMoon, faSun);
+library.add(faClock, faGithub, faMoon, faSun, faSearch, faTimes, faWeightHanging);
 
 @NgModule({
   declarations: [

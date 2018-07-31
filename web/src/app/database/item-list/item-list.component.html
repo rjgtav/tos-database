@@ -1,22 +1,46 @@
+<!-- Tabs -->
+<div class="text-center mb-4">
+  <div tosFilterGroup class="btn-group mr-2" [column]="'Type'" [ngModel]="pageFilter" (ngModelChange)="onFilterChange($event)" [hidden]="search">
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.$ANY$">All</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.BOOK">Books</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.CUBE">Cubes</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.DRUG">Consumables</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.EVENT">Event</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.MATERIAL">Materials</button>
+    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.QUEST">Quest</button>
+  </div>
+
+  <button class="btn btn-primary" type="button" (click)="onSearchToggle()" [hidden]="search"><fa-icon [icon]="['fas', 'search']"></fa-icon></button>
+
+  <div class="input-group m-auto w-50" [hidden]="!search">
+    <input class="form-control" placeholder="Search" type="text" [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)" (keyup.esc)="onSearchToggle()" #searchInput>
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" (click)="onSearchToggle()"><fa-icon [icon]="['fas', 'times']"></fa-icon></button>
+    </div>
+  </div>
+</div>
+
+<!-- List -->
 <table class="table table-hover">
   <thead>
-    <tr>
-      <th scope="col" width="48"></th>
-      <th scope="col" width="8.3%">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Type</th>
+    <tr tosSortGroup [ngModel]="pageSort" (ngModelChange)="onSortChange($event)" [disabled]="search">
+      <th scope="col" width="1"></th>
+      <th tosSort [column]="'$ID'" scope="col" width="1"></th>
+      <th tosSort [column]="'Name'" scope="col"></th>
+      <th tosSort [column]="'Type'" scope="col" width="1"></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of data">
+    <tr *ngFor="let row of data" [routerLink]="row.$ID" (mouseenter)="tooltipItem = row" (mouseleave)="tooltipItem = null" >
       <td class="p-1"><img height="40" width="40" src="{{ 'assets/icons/' + row.Icon + '.png' }}" /></td>
       <th scope="row">{{ row.$ID }}</th>
       <td>{{ row.Name }}</td>
-      <td>{{ TOSItemTypeToString.apply(this, [row.Type]) }}</td>
+      <td style="white-space: nowrap">{{ row.Type.toString() }}</td>
     </tr>
   </tbody>
 </table>
 
+<!-- Pagination -->
 <ngb-pagination
   class="d-flex justify-content-center"
   [collectionSize]="dataSize"
@@ -26,6 +50,9 @@
   [boundaryLinks]="true"
   [ellipses]="false"
   [rotate]="true"
-  (pageChange)="loadPage($event)"
+  (pageChange)="onPageChange($event)"
 >
 </ngb-pagination>
+
+<!-- Tooltip -->
+<app-item-tooltip [TOSItem]="tooltipItem"></app-item-tooltip>

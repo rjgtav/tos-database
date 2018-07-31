@@ -25,8 +25,8 @@ export class HeaderComponent {
   private setTheme(theme: Theme) {
     let href: string = null;
 
-    if (theme == Theme.LIGHT) href = 'https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css';
-    if (theme == Theme.DARK)  href = 'https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/darkly/bootstrap.min.css';
+    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.min.css';
+    if (theme == Theme.DARK)  href = 'assets/themes/darkly.min.css';
 
     localStorage.setItem(KEY_THEME, theme + '');
     this.theme = theme;

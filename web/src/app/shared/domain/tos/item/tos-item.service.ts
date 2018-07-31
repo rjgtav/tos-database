@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {TOSItem} from "./tos-item.model";
 import {HttpClient} from "@angular/common/http";
 import {PapaParseService} from "ngx-papaparse";
-import {CRUDService} from "../../../service/CRUDService";
+import {CRUDService} from "../../../service/CRUD.service";
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,12 @@ import {CRUDService} from "../../../service/CRUDService";
 export class TOSItemService extends CRUDService<TOSItem> {
 
   constructor(http: HttpClient, papa: PapaParseService) {
-    super(http, papa, 'assets/data/items.csv');
+    super(http, papa, {
+      id: '$ID',
+      path: 'assets/data/items.csv',
+      searchKeys: ['Name'],
+      step: (row: TOSItem) => new TOSItem(row)
+    });
   }
+
 }

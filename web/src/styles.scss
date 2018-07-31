@@ -1,0 +1,19 @@
+.page-link:not([aria-label]) {
+  min-width: 50px;
+  text-align: center;
+}
+
+.text-multiline {
+  white-space: pre-wrap !important;
+}
+
+.tos-price::after {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin-left: 4px;
+  background-image: url('/assets/icons/icon_item_silver2.png');
+  background-size: 18px 18px;
+  vertical-align: bottom;
+  content: '';
+}
