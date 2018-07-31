@@ -1,5 +1,6 @@
 IPFParser/**/*.pyc
-IPFParser/input/
+IPFParser/input_ipf/
+IPFParser/input_patch/
 IPFParser/input_translations/
 IPFParser/output/
 
