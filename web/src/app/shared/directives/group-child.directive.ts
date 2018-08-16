@@ -16,23 +16,23 @@ export abstract class TOSGroupDirective<C extends TOSGroupChildDirective<C, V>, 
 
   private _children: Set<C> = new Set<C>();
   private _disabled: boolean;
-  private _value: V;
+  protected $value: V;
 
   @Input('disabled')
   get disabled(): boolean { return this._disabled; }
-  set disabled(disabled: boolean) { this._disabled = disabled; this._childrenUpdate(); }
+  set disabled(disabled: boolean) { this._disabled = disabled; this._childrenUpdate(true); }
 
   public childRegister(child: C) { this._children.add(child); }
   public childUnregister(child: C) { this._children.delete(child); }
-  private _childrenUpdate() {
+  private _childrenUpdate(updateDisabled: boolean = false) {
     this._children.forEach((child) => {
-      child.disabled = this.disabled;
-      child.updateValue(this._value)
+      if (updateDisabled) child.disabled = this.disabled;
+      child.updateValue(this.$value)
     });
   }
 
   public onChildChange(child: C) {
-    let value = child.getNewValue();
+    let value = child ? child.getNewValue() : null;
     this.writeValue(value);
     this.onChange(value);
   }
@@ -45,7 +45,7 @@ export abstract class TOSGroupDirective<C extends TOSGroupChildDirective<C, V>, 
   setDisabledState(isDisabled: boolean): void {}
 
   writeValue(value: V): void {
-    this._value = value;
+    this.$value = value;
     this._childrenUpdate();
   }
 
@@ -53,12 +53,16 @@ export abstract class TOSGroupDirective<C extends TOSGroupChildDirective<C, V>, 
 
 export abstract class TOSGroupChildDirective<C, V> implements OnDestroy {
 
+  private _disabled: boolean;
+
   @Input('disabled')
-  disabled: boolean;
+  get disabled(): boolean { return this._disabled; }
+  set disabled(disabled: boolean) { this._disabled = disabled; }
 
   protected $value: V;
 
   protected constructor(protected $group: TOSGroupDirective<TOSGroupChildDirective<C, V>, V>, protected $element: ElementRef) {
+    this.disabled = this.$group.disabled;
     this.$group.childRegister(this);
   }
 

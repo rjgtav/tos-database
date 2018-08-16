@@ -1,57 +1,66 @@
-<!-- Filter -->
-<div class="text-center mb-4">
-  <!-- Tabs (Desktop & Tablet) -->
-  <div tosFilterGroup class="btn-group d-none d-md-inline-block" [column]="'Type'" [ngModel]="pageFilter" (ngModelChange)="onFilterChange($event)" *ngIf="!search">
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.$ANY$">{{ TOSItemType.$ANY$.label }}</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.BOOK">{{ TOSItemType.BOOK.label }}</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.CUBE">{{ TOSItemType.CUBE.label }}</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.DRUG">{{ TOSItemType.DRUG.label }}</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.EVENT">{{ TOSItemType.EVENT.label }}</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.MATERIAL">{{ TOSItemType.MATERIAL.label }}</button>
-    <button tosFilter class="btn btn-primary" type="button" [value]="TOSItemType.QUEST">{{ TOSItemType.QUEST.label }}</button>
-  </div>
+<div class="mb-4 text-center">
+  <!-- Desktop & Tablet -->
+  <div class="row d-none d-md-flex">
+    <!-- Filter -->
+    <div *ngFor="let filterGroup of $config.filterGroups" class="form-group col-6" tosFilterGroup [column]="$config.filterColumn" [disabled]="search" [ngModel]="pageFilter" (ngModelChange)="onFilterChange($event)">
+      <label>{{ filterGroup.label }}</label>
+      <div class="btn-group d-block">
+        <button *ngFor="let value of filterGroup.values" class="btn btn-primary mb-2 mb-xl-0" type="button" tosFilter [value]="value">{{ value }}</button>
+      </div>
+    </div>
 
-  <!-- Dropdown (Mobile) -->
-  <div class="btn-group d-md-none" [ngClass]="{ 'show': toggleFilter }" *ngIf="!search" >
-    <button type="button" class="btn btn-primary dropdown-toggle" (click)="toggleFilter = !toggleFilter">{{ TOSItemType.valueOf(pageFilter.value).label }}</button>
-    <div tosFilterGroup class="dropdown-menu" [ngClass]="{ 'show': toggleFilter }" [column]="'Type'" [ngModel]="pageFilter" (ngModelChange)="onFilterChange($event)">
-      <button tosFilter class="dropdown-item" [value]="TOSItemType.$ANY$">{{ TOSItemType.$ANY$.label }}</button>
-      <button tosFilter class="dropdown-item" [value]="TOSItemType.BOOK">{{ TOSItemType.BOOK.label }}</button>
-      <button tosFilter class="dropdown-item" [value]="TOSItemType.CUBE">{{ TOSItemType.CUBE.label }}</button>
-      <button tosFilter class="dropdown-item" [value]="TOSItemType.DRUG">{{ TOSItemType.DRUG.label }}</button>
-      <button tosFilter class="dropdown-item" [value]="TOSItemType.EVENT">{{ TOSItemType.EVENT.label }}</button>
-      <button tosFilter class="dropdown-item" [value]="TOSItemType.MATERIAL">{{ TOSItemType.MATERIAL.label }}</button>
-      <button tosFilter class="dropdown-item" [value]="TOSItemType.QUEST">{{ TOSItemType.QUEST.label }}</button>
+    <!-- Search -->
+    <div class="form-group col-6" [ngClass]="{ 'm-auto': !$config.filterColumn }">
+      <label>Search</label>
+      <div class="input-group m-auto" style="max-width: 25rem">
+        <input type="text" class="form-control" placeholder="Name, ClassID, ClassName" [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)" (keyup.esc)="onSearchToggle()">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" [disabled]="!search" (click)="onSearchToggle()">Clear</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Search -->
-  <button class="btn btn-primary ml-2" type="button" (click)="onSearchToggle()" [hidden]="search"><fa-icon [icon]="['fas', 'search']"></fa-icon></button>
+  <!-- Mobile -->
+  <div class="btn-group d-md-none" [ngClass]="{ 'show': toggleFilter }" >
+    <!-- Filter -->
+    <button type="button" class="btn btn-primary dropdown-toggle" (click)="toggleFilter = !toggleFilter" *ngIf="!search && $config.filterColumn">{{ pageFilter ? pageFilter.value : 'All' }}</button>
+    <div tosFilterGroup [column]="$config.filterColumn" [ngModel]="pageFilter" (ngModelChange)="onFilterChange($event)" class="dropdown-menu" [ngClass]="{ 'show': toggleFilter }">
+      <div *ngFor="let filterGroup of $config.filterGroups; let i = index">
+        <div class="dropdown-header" *ngIf="$config.filterGroups.length > 1">{{ filterGroup.label }}</div>
+        <button *ngFor="let value of filterGroup.values" tosFilter class="dropdown-item" [value]="value">{{ value }}</button>
+        <div class="dropdown-divider" *ngIf="i < $config.filterGroups.length - 1"></div>
+      </div>
+    </div>
 
-  <div class="input-group m-auto w-50" [hidden]="!search">
-    <input class="form-control" placeholder="Search" type="text" [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)" (keyup.esc)="onSearchToggle()" #searchInput>
-    <div class="input-group-append">
-      <button class="btn btn-primary" type="button" (click)="onSearchToggle()"><fa-icon [icon]="['fas', 'times']"></fa-icon></button>
+    <!-- Search -->
+    <button class="btn btn-primary ml-2" type="button" (click)="onSearchToggle()" [hidden]="search"><fa-icon [icon]="['fas', 'search']"></fa-icon></button>
+    <div class="input-group m-auto" [hidden]="!search">
+      <input class="form-control" placeholder="Search" type="text" [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)" (keyup.esc)="onSearchToggle()" #searchInputMobile >
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button" (click)="onSearchToggle()">Clear</button>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- List -->
+<!-- Table -->
 <table class="table table-hover">
   <thead>
     <tr tosSortGroup [ngModel]="pageSort" (ngModelChange)="onSortChange($event)" [disabled]="search">
-      <th scope="col" width="1"></th>
-      <th tosSort [column]="'$ID'" scope="col" width="1"></th>
-      <th tosSort [column]="'Name'" scope="col"></th>
-      <th tosSort [column]="'Type'" scope="col" width="1"></th>
+      <th *ngFor="let column of $config.tableColumns" tosSort [column]="column.value" [label]="column.label" [width]="column.width ? column.width : ''" scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of data" [routerLink]="row.$ID" (mouseenter)="tooltipItem = row" (mouseleave)="tooltipItem = null" >
-      <td class="p-1"><img height="40" width="40" src="{{ 'assets/icons/' + row.Icon + '.png' }}" /></td>
-      <th scope="row">{{ row.$ID }}</th>
-      <td>{{ row.Name }}</td>
-      <td style="white-space: nowrap">{{ row.Type.toString() }}</td>
+    <tr class="cursor-pointer" *ngFor="let row of data" [routerLink]="row.$ID" (mouseenter)="tooltip = row" (mouseleave)="tooltip = null" >
+      <td *ngFor="let column of $config.tableColumns" [class]="column.class ? column.class : ''" [style]="column.style ? column.style : ''" [style.whiteSpace]="column.width == 1 ? 'nowrap' : ''">
+        <span *ngIf="column.type == TOSListTableType.BADGE">
+          <span class="tos-equipment-grade mr-1" [style.background]="column.transform(row[column.value])"></span>
+          {{ row[column.value] }}
+        </span>
+        <img *ngIf="column.type == TOSListTableType.ICON" height="40" width="40" src="{{ 'assets/icons/' + row[column.value] + '.png' }}" />
+        <span *ngIf="column.type == TOSListTableType.TEXT">{{ row[column.value] }}</span>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -71,4 +80,4 @@
 </ngb-pagination>
 
 <!-- Tooltip -->
-<app-item-tooltip [TOSItem]="tooltipItem"></app-item-tooltip>
+<app-item-tooltip [debug]="false" [entity]="tooltip"></app-item-tooltip>

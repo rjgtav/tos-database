@@ -13,7 +13,7 @@ export class TOSItemService extends CRUDService<TOSItem> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/items.csv',
-      searchKeys: ['Name'],
+      searchKeys: ['$ID', '$ID_NAME', 'Name'],
       step: (row: TOSItem) => new TOSItem(row)
     });
   }

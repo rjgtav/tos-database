@@ -1,6 +1,8 @@
 import {Component, ElementRef, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
-import {TOSItem, TOSItemTradable} from "../../shared/domain/tos/item/tos-item.model";
 import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
+import {TOSClassTree, TOSEntity, TOSStat} from "../../shared/domain/tos/entity/tos-entity.model";
+import {TOSEquipment, TOSEquipmentType} from "../../shared/domain/tos/item/equipment/tos-equipment.model";
+import {TOSItem, TOSItemTradability} from "../../shared/domain/tos/item/tos-item.model";
 
 @Component({
   selector: 'app-item-tooltip',
@@ -8,12 +10,22 @@ import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
   styleUrls: ['./item-tooltip.component.scss']
 })
 export class ItemTooltipComponent implements OnChanges, OnDestroy {
-  TOSItemTradable = TOSItemTradable;
+  readonly Math = Math;
+  readonly TOSClassTree = TOSClassTree;
+  readonly TOSEquipmentType = TOSEquipmentType;
+  readonly TOSItemTradable = TOSItemTradability;
+  readonly TOSStat = TOSStat;
 
-  @Input('TOSItem')
+  @Input('debug')
+  debug: boolean;
+
+  @Input('entity')
+  entity: TOSEntity;
+
+  equipment: TOSEquipment;
   item: TOSItem;
 
-  private disabled: boolean;
+  private readonly disabled: boolean;
 
   constructor(private element: ElementRef, private ngbTooltipConfig: NgbTooltipConfig) {
     this.disabled = ngbTooltipConfig.disableTooltip;
@@ -22,10 +34,14 @@ export class ItemTooltipComponent implements OnChanges, OnDestroy {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.disabled) return;
+    if (this.debug && changes.entity && this.entity == null) return;
 
-    if (changes.item) {
-      if (this.item)  this.onMouseEnter();
-      else            this.onMouseLeave();
+    if (changes.entity) {
+      this.equipment = this.entity instanceof TOSEquipment ? this.entity as TOSEquipment : null;
+      this.item = this.entity instanceof TOSItem ? this.entity as TOSItem : null;
+
+      if (this.entity)  this.onMouseEnter();
+      else              this.onMouseLeave();
     }
   }
 
@@ -40,7 +56,7 @@ export class ItemTooltipComponent implements OnChanges, OnDestroy {
 
   private onMouseLeave() {
     document.body.removeEventListener('mousemove', this.onMouseMove);
-    this.element.nativeElement.style.visibility = 'hidden';
+    if (!this.debug) this.element.nativeElement.style.visibility = 'hidden';
   }
 
   private onMouseMove = (e: MouseEvent) => {

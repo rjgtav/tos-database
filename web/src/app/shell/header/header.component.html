@@ -15,11 +15,13 @@
       <div ngbDropdown class="nav-item">
         <a ngbDropdownToggle class="nav-link dropdown-toggle" id="databaseDropdown" role="button" aria-haspopup="true" aria-expanded="false">Database</a>
         <div ngbDropdownMenu aria-labelledby="databaseDropdown" routerLinkActive="active">
+          <a class="dropdown-item" routerLink="database/books">Books</a>
           <a class="dropdown-item" style="color: grey" routerLink="database/cards">Cards</a>
           <a class="dropdown-item" style="color: grey" routerLink="database/collections">Collections</a>
-          <a class="dropdown-item" style="color: grey" routerLink="database/equipment">Equipment</a>
+          <a class="dropdown-item" routerLink="database/equipment/armor" [queryParams]="{ 'filter': 'TypeEquipment,Bracelets' }">Equipment | Armor</a>
+          <a class="dropdown-item" routerLink="database/equipment/weapons" [queryParams]="{ 'filter': 'TypeEquipment,Crossbows' }">Equipment | Weapons</a>
           <a class="dropdown-item" style="color: grey" routerLink="database/gems">Gems</a>
-          <a class="dropdown-item" routerLink="database/items">Items</a>
+          <a class="dropdown-item" routerLink="database/items" [queryParams]="{ 'filter': 'Type,Material' }">Items</a>
           <a class="dropdown-item" style="color: grey" routerLink="database/monsters">Monsters</a>
           <a class="dropdown-item" style="color: grey" routerLink="database/premium">Premium</a>
           <a class="dropdown-item" style="color: grey" routerLink="database/recipes">Recipes</a>
@@ -29,7 +31,7 @@
   </div>
   <div class="navbar-expand ml-auto">
     <div class="navbar-nav" style="align-items: center;">
-      <a (click)="toggleTheme()" class="nav-item nav-link" ngbTooltip="Toggle Theme" placement="bottom" triggers="click">
+      <a (click)="toggleTheme()" class="nav-item nav-link" ngbTooltip="Toggle Theme" placement="bottom">
         <fa-icon [icon]="['far', theme == $Theme.LIGHT ? 'sun' : 'moon']"></fa-icon>
       </a>
       <a class="nav-item nav-link" href="https://github.com/rjgtav/tos-database" target="_blank" ngbTooltip="GitHub" placement="bottom">

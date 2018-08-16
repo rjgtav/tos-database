@@ -1,3 +1,13 @@
+.carousel-indicators li {
+  background: rgba(255, 255, 255, 0.25);
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .page-link:not([aria-label]) {
   min-width: 50px;
   text-align: center;
@@ -7,13 +17,45 @@
   white-space: pre-wrap !important;
 }
 
-.tos-price::after {
+.tos-equipment-grade {
   display: inline-block;
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  vertical-align: text-bottom;
+}
+
+.tos-icon::after,
+.tos-icon::before {
+  display: inline-block;
+  background-size: contain;
+  vertical-align: top;
+  content: '';
+}
+
+.tos-icon-attack::before {
+  height: 23px;
+  width: 23px;
+  margin-right: 4px;
+  background-image: url('/assets/images/equipment_stat_attack.png');
+}
+
+.tos-icon-defense::before {
+  height: 23px;
+  width: 23px;
+  margin-right: 4px;
+  background-image: url('/assets/images/equipment_stat_defense.png');
+}
+
+.tos-icon-price::after {
   height: 18px;
   width: 18px;
   margin-left: 4px;
   background-image: url('/assets/icons/icon_item_silver2.png');
-  background-size: 18px 18px;
-  vertical-align: bottom;
-  content: '';
+}
+
+.tos-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

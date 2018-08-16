@@ -29,8 +29,16 @@ export class TOSSortGroupDirective extends TOSGroupDirective<TOSSortDirective, S
 })
 export class TOSSortDirective extends TOSGroupChildDirective<TOSSortDirective, Sort> {
 
+  private _column: string;
+  private _label: string;
+
   @Input('column')
-  column: string;
+  get column(): string { return this._column; }
+  set column(column: string) { this._column = column; this.updateDisabled(); }
+
+  @Input('label')
+  get label(): string { return this._label; }
+  set label(label: string) { this._label = label; this.updateDisabled(); }
 
   constructor(private _group: TOSSortGroupDirective, private _element: ElementRef) {
     super(_group, _element);
@@ -44,6 +52,10 @@ export class TOSSortDirective extends TOSGroupChildDirective<TOSSortDirective, S
     return new Sort(this.column, order);
   }
 
+  updateDisabled() {
+    this.disabled = this.label != null && this.label.length == 0 && this.column != null && this.column.length > 0;
+  }
+
   updateValue(value: Sort) {
     super.updateValue(value);
 
@@ -53,12 +65,13 @@ export class TOSSortDirective extends TOSGroupChildDirective<TOSSortDirective, S
         ? '▲'
         : '▼';
 
-    this._element.nativeElement.innerText = this.column + ' ' + direction;
+    this._element.nativeElement.innerText = (this.label != null ? this.label : this.column) + ' ' + direction;
   }
 
   @HostListener('click')
   onClick(e: MouseEvent) {
-    this._group.onChildChange(this);
+    if (!this.disabled)
+      this._group.onChildChange(this);
   }
 
 }

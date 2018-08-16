@@ -1,76 +1,91 @@
 <div class="container" *ngIf="item">
+
   <div class="row">
-    <!-- Icon (Desktop & Tablet) -->
-    <div class="d-none d-sm-block" style="margin-left: -128px; width: 128px">
-      <img height="128" width="128" src="assets/icons/{{ item.Icon_Tooltip }}.png" />
-    </div>
+    <!-- Name and Material/Type -->
+    <app-item-detail-MaterialNameType class="col h2" [entity]="entity"></app-item-detail-MaterialNameType>
+  </div>
 
-    <div class="col">
-      <h1>{{ item.Name }}</h1>
-      <p></p>
+  <div class="row mb-4">
 
-      <div class="row">
-        <!-- Description -->
-        <div class="col-md-6">
-          <h5>Description</h5>
-          <p class="text-multiline">{{ item.Description }}</p>
-        </div>
+    <div class="col-lg-6 mb-4 mt-4">
+      <div class="card bg-primary m-auto text-white"
+           [style.minWidth]="sanitizer.bypassSecurityTrustStyle('calc(' + ICON_WIDTH + 'px + 2.5rem)')"
+           [style.maxWidth]="sanitizer.bypassSecurityTrustStyle('calc(' + ICON_WIDTH + 'px + 2.5rem)')">
+        <div class="card-body">
+          <!-- Icon, Grade and Class -->
+          <app-item-detail-ClassIconGrade [entity]="entity" [labels]="true" [size]="'large'"></app-item-detail-ClassIconGrade>
 
-        <!-- Icon (Mobile) -->
-        <div class="col-md-6 d-block d-sm-none">
-          <h5>Icon</h5>
-          <p>
-            <img height="128" width="128" src="assets/icons/{{ item.Icon_Tooltip }}.png" />
-          </p>
-        </div>
+          <!-- Physical and Magical Attack / Defense -->
+          <app-item-detail-AttackDefense [entity]="entity"></app-item-detail-AttackDefense>
 
-        <!-- Information -->
-        <div class="col-md-6">
-          <h5>Information</h5>
+          <!-- Potential, Durability and Sockets -->
+          <app-item-detail-DurabilityPotentialSockets [entity]="entity"></app-item-detail-DurabilityPotentialSockets>
 
-          <!-- Weight and Price -->
-          <div class="row">
-            <div class="col"><h6>
-              <fa-icon class="mr-1" ngbTooltip="Weight" placement="left" [icon]="['fas', 'weight-hanging']"></fa-icon>
-              {{ item.Weight }}</h6>
-            </div>
-            <div class="col text-right">
-              <h6 class="tos-price" ngbTooltip="Sell price to NPCs" placement="right" container="body">
-                {{ item.Price }}
-              </h6>
-            </div>
-          </div>
+          <!-- Book Content -->
+          <ngb-carousel class="row" style="min-height: 25rem;" [wrap]="false" [interval]="false" *ngIf="book">
+            <ng-template ngbSlide *ngFor="let page of book.getPages()">
+              <p class="pl-5 pr-5 pb-5 text-multiline">{{ page }}</p>
+            </ng-template>
+          </ngb-carousel>
 
-          <!-- CoolDown and LifeTime -->
-          <div class="row">
-            <div class="col"><h6>
-              <fa-icon class="mr-1" ngbTooltip="CoolDown" placement="left" [icon]="['far', 'clock']"></fa-icon>
-              {{ (item.TimeCoolDown | tosTime) || 'No cooldown' }}</h6>
-            </div>
-            <div class="col text-right">
-              <h6>
-                {{ item.TimeLifeTime ? ('Expires in ' + (item.TimeLifeTime | tosTime)) : 'No expiration' }}
-              </h6>
-            </div>
-          </div>
-          <p></p>
-        </div>
-
-        <!-- Tradability -->
-        <div class="col-md-6">
-          <h5>Tradability</h5>
-          <table class="table table-sm text-center">
-            <tbody>
-              <tr>
-                <td [class]="item.isTradable(TOSItemTradable.MARKET) ? 'table-success' : 'table-danger'" >Market</td>
-                <td [class]="item.isTradable(TOSItemTradable.PLAYER) ? 'table-success' : 'table-danger'" >Players</td>
-                <td [class]="item.isTradable(TOSItemTradable.SHOP) ? 'table-success' : 'table-danger'" >NPC Shops</td>
-                <td [class]="item.isTradable(TOSItemTradable.TEAM) ? 'table-success' : 'table-danger'" >Team Storage</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
+
+    <div class="col-lg-6">
+      <!-- Description -->
+      <h5>Description</h5>
+      <p class="mb-0 text-multiline">{{ item.Description }}</p>
+
+      <!-- CoolDown/Level, LifeTime, Weight, Price, Tradability -->
+      <app-item-detail-Information [entity]="entity" [header]="true"></app-item-detail-Information>
+
+      <!-- Stats & Unidentified -->
+      <app-item-detail-StatsUnidentified [entity]="entity" [header]="true"></app-item-detail-StatsUnidentified>
+    </div>
+
   </div>
+
+  <div class="row">
+    <!-- Dropped by -->
+    <div class="col-md-6 mb-4" *ngIf="item.Link_Drops">
+      <h5>Dropped by</h5>
+      <table class="table table-hover">
+        <tbody>
+        <tr class="cursor-pointer" *ngFor="let row of item.Link_Drops" [routerLink]="'database/monsters/' + row.Monster.$ID">
+          <td class="p-1" width="1"><img height="40" width="40" src="{{ 'assets/icons/' + row.Monster.Icon + '.png' }}" /></td>
+          <th scope="row">{{ row.Monster.Name }}</th>
+          <td width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Required for -->
+    <div class="col-md-6 mb-4" *ngIf="item.Link_Recipes">
+      <h5>Required for</h5>
+      <table class="table table-hover">
+        <tbody>
+        <tr class="cursor-pointer" *ngFor="let row of item.Link_Recipes" [routerLink]="'database/recipes/' + row.$ID">
+          <td class="p-1" width="1"><img height="40" width="40" src="{{ 'assets/icons/' + row.Icon + '.png' }}" /></td>
+          <th scope="row">{{ row.Name }}</th>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Collections -->
+    <div class="col-md-6 mb-4" *ngIf="item.Link_Collections">
+      <h5>Collections</h5>
+      <table class="table table-hover">
+        <tbody>
+        <tr class="cursor-pointer" *ngFor="let row of item.Link_Collections" [routerLink]="'database/collections/' + row.$ID">
+          <td class="p-1" width="1"><img height="40" width="40" src="{{ 'assets/icons/' + row.Icon + '.png' }}" /></td>
+          <th scope="row">{{ row.Name }}</th>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 </div>

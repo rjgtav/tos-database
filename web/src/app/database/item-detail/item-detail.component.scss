@@ -1,0 +1,10 @@
+.card {
+  transform: translateX(-1.25rem);
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .card {
+    transform: initial !important;
+  }
+}

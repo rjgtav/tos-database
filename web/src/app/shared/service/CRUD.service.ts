@@ -6,7 +6,11 @@ import {Sort, SortOrder} from "../directives/sort.directive";
 import {Filter} from "../directives/filter.directive";
 import * as fuzzysort from 'fuzzysort';
 
-export abstract class CRUDService<T> {
+export abstract class Comparable {
+  $comparators: { [key: string]: (a, b) => -1 | 0 | 1; } = {}
+}
+
+export abstract class CRUDService<T extends Comparable> {
   private data: T[] = null;
   private dataById: { [id: number] : T; } = null;
 
@@ -45,14 +49,14 @@ export abstract class CRUDService<T> {
   }
 
   public findAll(filter?: Filter, sort: Sort = new Sort(this.options.id, SortOrder.ASC)): Observable<T[]> {
-    return this.load().pipe(map((data) => data
-        .filter((item) => filter == null || filter.filter(item))
-        .sort((a, b) => {
-          if (a[sort.column] < b[sort.column])  return -1 * (sort.order == SortOrder.ASC ? 1 : -1);
-          if (a[sort.column] > b[sort.column])  return 1 * (sort.order == SortOrder.ASC ? 1 : -1);
-          return 0;
-        })
-    ));
+    return this.load().pipe(map((data) => {
+      let sorter = data != null && data[0] != null ? data[0].$comparators[sort.column] : null;
+          sorter = sorter != null ? sorter : (i, j) => (i < j) ? -1 : (i > j) ? 1 : 0;
+
+      return data
+          .filter((item) => filter == null || filter.filter(item))
+          .sort((a, b) => sorter(a[sort.column], b[sort.column]) * (sort.order == SortOrder.ASC ? 1 : -1))
+    }));
   }
 
   public findById(id: number): Observable<T> {
@@ -65,8 +69,8 @@ export abstract class CRUDService<T> {
         fuzzysort.goAsync(pattern, data, {
           allowTypo: true,
           keys: this.options.searchKeys,
-          limit: 1024,
-          threshold: -1000
+          limit: 512,
+          threshold: -512
         }).then((result) => {
           observable.next(result.map((entry) => entry.obj));
           observable.complete();

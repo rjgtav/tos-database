@@ -1,0 +1,46 @@
+<div *ngIf="header">
+  <div class="w-100"><hr></div>
+  <h5>Information</h5>
+</div>
+
+<!-- CoolDown/Level and LifeTime -->
+<div class="row pt-2 text-nowrap">
+  <div class="col" *ngIf="!equipment"><h6>
+    <fa-icon class="mr-1" [icon]="['far', 'clock']"></fa-icon>
+    {{ (item.TimeCoolDown | tosTime) || 'No cooldown' }}</h6>
+  </div>
+  <div class="col" *ngIf="equipment"><h6>
+    Level {{ equipment.RequiredLevel }}</h6>
+  </div>
+
+  <div class="col text-right"><h6>
+    {{ item.TimeLifeTime ? ('Expires in ' + (item.TimeLifeTime | tosTime)) : 'No expiration' }}</h6>
+  </div>
+</div>
+
+<!-- Weight and Price -->
+<div class="row text-nowrap">
+  <div class="col"><h6>
+    <fa-icon class="mr-1" [icon]="['fas', 'weight-hanging']"></fa-icon>
+    {{ item.Weight | number }}</h6>
+  </div>
+  <div class="col text-right">
+    <h6 class="tos-icon tos-icon-price">{{ item.Price }}</h6>
+  </div>
+</div>
+
+<!-- Tradability -->
+<div class="row mt-1">
+  <div class="col">
+    <table class="table table-sm text-center mb-0">
+      <tbody>
+      <tr>
+        <td [class]="item.isTradable(TOSItemTradability.MARKET) ? 'table-success' : 'table-danger'" >{{ TOSItemTradability.MARKET }}</td>
+        <td [class]="item.isTradable(TOSItemTradability.PLAYER) ? 'table-success' : 'table-danger'" >{{ TOSItemTradability.PLAYER }}</td>
+        <td [class]="item.isTradable(TOSItemTradability.SHOP) ? 'table-success' : 'table-danger'" >{{ TOSItemTradability.SHOP }}</td>
+        <td [class]="item.isTradable(TOSItemTradability.TEAM) ? 'table-success' : 'table-danger'" >{{ TOSItemTradability.TEAM }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

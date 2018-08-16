@@ -23,13 +23,27 @@ export class TOSFilterGroupDirective extends TOSGroupDirective<TOSFilterDirectiv
   @Input('column')
   column: string;
 
+  @Input('toggle')
+  toggle: boolean;
+
+  public onChildChange(child: TOSFilterDirective) {
+    let value = child.getNewValue();
+        child = value == null ? null : child;
+
+    if (this.toggle && this.$value && this.$value.value == value.value)
+      child = null;
+
+    super.onChildChange(child);
+  }
+
 }
 
 @Directive({
   selector: '[tosFilter]',
   host: {
+    '[disabled]': 'disabled',
     '[class.active]': '$value && value == $value.value',
-    '[style.cursor]': '"pointer"',
+    '[style.cursor]': 'disabled ? "default" : "pointer"',
     '[style.white-space]': '"nowrap"',
   }
 })
@@ -43,12 +57,15 @@ export class TOSFilterDirective extends TOSGroupChildDirective<TOSFilterDirectiv
   }
 
   getNewValue(): Filter {
-    return new Filter((this.$group as TOSFilterGroupDirective).column, this.value);
+    return this.value
+      ? new Filter((this.$group as TOSFilterGroupDirective).column, this.value)
+      : null;
   }
 
   @HostListener('click')
   onClick(e: MouseEvent) {
-    this._group.onChildChange(this);
+    if (!this.disabled)
+      this._group.onChildChange(this);
   }
 
 }

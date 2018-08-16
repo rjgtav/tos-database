@@ -1,0 +1,23 @@
+<div *ngIf="equipment && (equipment.Bonuses != null && equipment.Bonuses.length > 0 || equipment.Unidentified || equipment.UnidentifiedRandom)">
+  <div class="w-100"><hr></div>
+  <h5 *ngIf="header">Stats</h5>
+
+  <div class="row">
+    <div class="col">
+      <div class="row" *ngFor="let bonus of equipment.Bonuses">
+        <div class="col" *ngIf="bonus.Value">
+          {{ bonus.Stat }}
+          <span class="text-success" *ngIf="bonus.Value > 0">▲</span>
+          <span class="text-danger" *ngIf="bonus.Value < 0">▼</span>
+          {{ Math.abs(bonus.Value) }}
+        </div>
+        <div class="col" *ngIf="bonus.ValueHTML" [innerHTML]="'- ' + bonus.ValueHTML"></div>
+      </div>
+
+      <div class="row">
+        <div class="col text-muted" *ngIf="equipment.Unidentified">*Unidentified</div>
+        <div class="col text-muted" *ngIf="equipment.UnidentifiedRandom">*Unidentified with random stats</div>
+      </div>
+    </div>
+  </div>
+</div>

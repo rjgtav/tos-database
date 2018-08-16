@@ -1,11 +1,11 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs";
-import {CRUDService} from "./CRUD.service";
+import {Comparable, CRUDService} from "./CRUD.service";
 import {Sort} from "../directives/sort.directive";
 import {Filter} from "../directives/filter.directive";
 import {map} from "rxjs/operators";
 
-export abstract class CRUDResolver<T> implements Resolve<T> {
+export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
 
   public static readonly PAGE_SIZE: number = 15;
 

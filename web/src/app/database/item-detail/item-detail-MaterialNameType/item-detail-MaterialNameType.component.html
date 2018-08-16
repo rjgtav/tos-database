@@ -1,0 +1,10 @@
+<div>
+  {{ item.Name }}<br/>
+
+  <small class="text-muted" *ngIf="!equipment">{{ item.Type }}</small>
+  <small class="text-muted" *ngIf="equipment">{{
+    TOSEquipmentType.toStringFull(equipment.TypeEquipment) +
+        (equipment.Material ? ' [' + equipment.Material + ']' : '') +
+        (equipment.TypeAttack ? ' [' + equipment.TypeAttack + ']' : '')
+  }}</small>
+</div>
