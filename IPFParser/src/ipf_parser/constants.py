@@ -20,31 +20,3 @@ PATH_WEB = os.path.join('..', 'web')
 PATH_WEB_ASSETS = os.path.join(PATH_WEB, 'src', 'assets')
 PATH_WEB_ASSETS_DATA = os.path.join(PATH_WEB_ASSETS, 'data')
 PATH_WEB_ASSETS_ICONS = os.path.join(PATH_WEB_ASSETS, 'icons')
-
-PARSER_ITEM_GROUP = enum(
-    'ARMBAND',
-    'ARMOR',
-    'BOOK',
-    'CARD',
-    'COLLECTION',
-    'CUBE',
-    'DRUG',
-    'EQUIPMENT',
-    'EVENT',
-    'EXPORB',
-    'FISHINGROD',
-    'GEM',
-    'HELMET',
-    'ICOR',
-    'MAGICAMULET',
-    'MATERIAL',
-    'PASTEBAIT',
-    'PETARMOR',
-    'PETWEAPON',
-    'PREMIUM',
-    'QUEST',
-    'RECIPE',
-    'SUBWEAPON',
-    'UNUSED',
-    'WEAPON'
-)

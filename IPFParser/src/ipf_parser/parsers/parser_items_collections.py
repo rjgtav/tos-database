@@ -1,0 +1,83 @@
+import csv
+import logging
+import os
+
+from ipf_parser import constants, globals
+
+
+def parse_links():
+    parse_links_items()
+
+
+def parse_links_items():
+    logging.debug('Parsing items for collections...')
+
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'collection.ies')
+    ies_file = open(ies_path, 'rb')
+    ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
+
+    for row in ies_reader:
+        if row['ClassName'] not in globals.collections_by_name:
+            continue
+
+        collection = globals.collections_by_name[row['ClassName']]
+        collection['Link_Bonuses'] = collection_bonuses = []
+        collection['Link_Items'] = collection_items = []
+
+        # Parse items
+        for i in range(1, 10):
+            item_name = row['ItemName_' + str(i)]
+
+            if item_name == '':
+                continue
+
+            collection_items.append(globals.get_item_link(item_name))
+
+        # Parse bonuses
+        bonuses = (row['PropList'].split('/') + row['AccPropList'].split('/'))
+        bonuses = filter(lambda x: len(x) > 0, bonuses)
+
+        for i in range(0, len(bonuses) / 2, 2):
+            obj = {}
+            obj['Property'] = parse_links_items_bonus_stat(bonuses[i])
+            obj['Value'] = int(bonuses[i + 1])
+
+            collection_bonuses.append(obj)
+
+    ies_file.close()
+
+
+def parse_links_items_bonus_stat(stat):
+    return {
+        'CON_BM': 'CON',
+        'DEX_BM': 'DEX',
+        'INT_BM': 'INT',
+        'MNA_BM': 'SPR',
+        'STR_BM': 'STR',
+
+        'CRTATK_BM': 'Critical Attack',
+        'CRTHR_BM': 'Critical Rate',
+        'CRTDR_BM': 'Critical Defense',
+
+        'MHP_BM': 'Maximum HP',
+        'MSP_BM': 'Maximum SP',
+        'RHP_BM': 'HP Recovery',
+        'RSP_BM': 'SP Recovery',
+
+        'DEF_BM': 'Defense',
+        'MDEF_BM': 'Magic Defense',
+        'MATK_BM': 'Magic Attack',
+        'PATK_BM': 'Physical Attack',
+
+        'DR_BM': 'Evasion',
+        'HR_BM': 'Accuracy',
+        'MHR_BM': 'Magic Amplification',  # ???
+
+        'ResDark_BM': 'Dark Property Resistance',
+        'ResEarth_BM': 'Earth Property Resistance',
+        'ResHoly_BM': 'Holy Property Resistance',
+
+        'MaxSta_BM': 'Stamina',
+        'MaxAccountWarehouseCount': 'Team Storage Slots',
+        'MaxWeight_Bonus': 'Weight Limit',
+    }[stat]

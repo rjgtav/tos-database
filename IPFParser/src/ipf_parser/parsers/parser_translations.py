@@ -12,28 +12,18 @@ TRANSLATION_SUFFIX = '$*^'
 
 
 def parse():
-    logging.debug('Parsing translations...')
+    translations = parse_translations('English')
+    parse_dictionary(translations)
+
+
+def parse_dictionary(translations):
+    logging.debug('Parsing translations dictionary...')
     dictionary_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'language.ipf', 'wholeDicID.xml')
     dictionary = ET.parse(dictionary_path).getroot()
 
-    # <file name="xml\item_Equip.xml">
+    # example: <file name="xml\item_Equip.xml">
     for file in dictionary:
-        if any(s in file.get('name') for s in ['xml\\item', 'xml\\item_colorspray', 'xml\\item_Equip', 'xml\\item_Quest']):
-            # Parse english translations
-            translations = {}
-            parse_translation(translations, 'BADWORDS.tsv')
-            parse_translation(translations, 'ETC.tsv')
-            parse_translation(translations, 'INTL.tsv')
-            parse_translation(translations, 'ITEM.tsv')
-            parse_translation(translations, 'QUEST.tsv')
-            parse_translation(translations, 'QUEST_JOBSTEP.tsv')
-            parse_translation(translations, 'QUEST_LV_0100.tsv')
-            parse_translation(translations, 'QUEST_LV_0200.tsv')
-            parse_translation(translations, 'QUEST_LV_0300.tsv')
-            parse_translation(translations, 'QUEST_LV_0400.tsv')
-            parse_translation(translations, 'QUEST_UNUSED.tsv')
-            parse_translation(translations, 'SKILL.tsv')
-            parse_translation(translations, 'UI.tsv')
+        if any(s in file.get('name').lower() for s in ['xml\\item', 'xml\\item_colorspray', 'xml\\item_equip', 'xml\\item_quest', 'xml\\monster', 'xml_client\\dialogtext.xml']):
 
             # Map translations
             # <data original="없음_helmet" dicid="@dicID_^*$ITEM_20150317_000001$*^"/>
@@ -43,7 +33,7 @@ def parse():
                 value_translated = '%s' % data.get('dicid')
 
                 for dicid in value.split(TRANSLATION_SUFFIX):  # Sometimes there are multiple ids in a single entry (as translations are re-used)
-                    if len(dicid) > 1:                         # > 1 to ignore apostrophes
+                    if TRANSLATION_PREFIX in dicid:
                         dicid = dicid[dicid.index(TRANSLATION_PREFIX) + len(TRANSLATION_PREFIX):]
                         translation = translations[dicid] if dicid in translations else dicid
 
@@ -55,13 +45,40 @@ def parse():
                 globals.translations[key] = value_translated
 
 
-def parse_translation(translation, translation_path):
-    translation_path = os.path.join(constants.PATH_PARSER_INPUT_TRANSLATIONS, 'English', translation_path)
-    translation_file = open(translation_path, 'rb')
+def parse_translations(language):
+    logging.debug('Parsing translations for %s...', language)
+    result = {}
 
-    for row in csv.reader(translation_file, delimiter='\t', quotechar='"'):
-        translation[row[0]] = row[1]
+    for translation in [
+        'BADWORDS.tsv',
+        'ETC.tsv',
+        'INTL.tsv',
+        'ITEM.tsv',
+        'QUEST.tsv',
+        'QUEST_JOBSTEP.tsv',
+        'QUEST_LV_0100.tsv',
+        'QUEST_LV_0200.tsv',
+        'QUEST_LV_0300.tsv',
+        'QUEST_LV_0400.tsv',
+        'QUEST_UNUSED.tsv',
+        'SKILL.tsv',
+        'UI.tsv'
+    ]:
+        translation_path = os.path.join(constants.PATH_PARSER_INPUT_TRANSLATIONS, language, translation)
+        translation_file = open(translation_path, 'rb')
 
-    translation_file.close()
+        for row in csv.reader(translation_file, delimiter='\t', quotechar='"'):
+            result[row[0]] = row[1]
+
+        translation_file.close()
+
+    return result
 
 
+def parse_translation_key(key):
+    key = unicode(key.replace('"', ''), 'utf-8')
+
+    if key != '' and key not in globals.translations:
+        logging.warn('Missing translation for key: %s', key)
+
+    return globals.translations[key] if key in globals.translations else key

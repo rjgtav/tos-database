@@ -7,14 +7,14 @@ from ipf_parser import constants
 from utils import fileutil
 
 IPF_WHITELIST = [
-    'global.ipf',
-    'ies.ipf',
-    'ies_ability.ipf',
-    'ies_client.ipf',
-    'ies_mongen.ipf',
-    'language.ipf',
-    'ui.ipf',
-    'xml_lang.ipf'
+    'addon',
+    'global',
+    'ies',
+    'script',
+    'language',
+    'shared',
+    'ui',
+    'xml'
 ]
 
 
@@ -61,7 +61,7 @@ def unpack_file(file_name, source, destination):
 
     # Clean result
     for file_name in os.listdir(destination_extract):
-        if file_name not in IPF_WHITELIST:
+        if not any(file_name.find(s) == 0 for s in IPF_WHITELIST):
             shutil.rmtree(os.path.join(destination, '..', 'extract', file_name))
 
     # Move result to destination directory
@@ -91,7 +91,7 @@ def unpack_release():
     logging.debug('Unpacking initial release...')
     if len(os.listdir(constants.PATH_PARSER_INPUT_IPF)) == 0:
         for file_name in os.listdir(constants.PATH_TOS_DATA):
-            if file_name not in IPF_WHITELIST:
+            if not any(file_name.find(s) == 0 for s in IPF_WHITELIST):
                 continue
 
             unpack_file(file_name, constants.PATH_TOS_DATA, constants.PATH_PARSER_INPUT_IPF)
