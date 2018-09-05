@@ -14,8 +14,10 @@
 
 #### Links
 - Link_Collections `TOSEntityLink[]`
-- Link_Drops `TOSItemDropLink[]`
-- Link_Recipe `TOSEntityLink[]`
+- Link_Cubes `TOSEntityLink[]`
+- Link_MonsterDrops `TOSMonsterDropLink[]`
+- Link_RecipeTarget `TOSEntityLink[]`
+- Link_RecipeMaterial `TOSEntityLink[]`
 
 ### TOSItemType
 
@@ -46,7 +48,7 @@
 - WEAPON
 - $ANY$
 
-## TOSItemDropLink :: TOSEntityLink
+## TOSMonsterDropLink :: TOSEntityLink
 
 #### Properties
 - Chance `float`

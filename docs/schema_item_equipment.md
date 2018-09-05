@@ -1,7 +1,7 @@
 ## TOSEquipment :: TOSItem
 
 #### Properties
-- Bonuses `[TOSEntityStat, int][]`
+- Bonus `{Stat: TOSEntityStat, Value: number}[]`
 - Durability `int`
 - Grade `TOSEquipmentGrade`
 - Material `TOSEquipmentMaterial`
@@ -13,6 +13,7 @@
     - [3] Wizard
 - RequiredGender ?? - maybe put this one just on costumes/premium
 - RequiredLevel `int`
+- Set `TOSEquipmentSet`
 - Sockets `int`
 - SocketsLimit `int`
 - Stars `int`
@@ -25,6 +26,7 @@
 - TypeEquipment `TOSEquipmentType`
 - Unidentified `bool`
 - UnidentifiedRandom `bool`
+
 
 ## TOSEquipmentAttackType
 - PIERCING - or Aries

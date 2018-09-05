@@ -2,9 +2,10 @@
 
 #### Properties
 - Armor `TOSEquipmentMaterial`
-- Element `TOSMonsterElement`
+- Element `TOSElement`
 - Level `int`
 - Race `TOSMonsterRace`
+- Rank `TOSMonsterRank`
 - Size `TOSMonsterSize`
 - EXP `int`
 - EXPClass `int`
@@ -15,12 +16,12 @@
 - Stat_STR `int`
 - Stat_HP `int`
 - Stat_SP `int`
-- Stat_MATK_MIN `int`
-- Stat_MATK_MAX `int`
-- Stat_MDEF `int`
-- Stat_PATK_MIN `int`
-- Stat_PATK_MAX `int`
-- Stat_PDEF `int`
+- Stat_ATTACK_MAGICAL_MAX `int`
+- Stat_ATTACK_MAGICAL_MIN `int`
+- Stat_ATTACK_PHYSICAL_MAX `int`
+- Stat_ATTACK_PHYSICAL_MIN `int`
+- Stat_DEFENSE_MAGICAL `int`
+- Stat_DEFENSE_PHYSICAL `int`
 - Stat_Accuracy `int`
 - Stat_Evasion `int`
 - Stat_CriticalDamage `int`
@@ -28,26 +29,14 @@
 - Stat_CriticalRate `int`
 - Stat_BlockPenetration `int`
 - Stat_BlockRate `int`
-- Type `TOSMonsterType`
 
 #### Links
-- Link_Drops `TOSMonsterDropLink[]`
-- Link_Map
-
-### TOSMonsterElement
-- DARK
-- EARTH
-- FIRE
-- HOLY
-- ICE
-- LIGHTNING
-- MELEE
-- POISON
-- SOUL
+- Link_Drops `TOSItemDropLink[]`
+- Link_Spawns `TOSMapSpawnLink[]`
 
 ### TOSMonsterRace
 - BEAST
-- DEVIL
+- DEMON
 - INSECT
 - MUTANT
 - PLANT
@@ -56,6 +45,7 @@
 - BOSS
 - ELITE
 - NORMAL
+- SPECIAL
 
 ### TOSMonsterSize
 - S
@@ -63,11 +53,17 @@
 - L
 - XL
 
-## TOSMonsterDropLink :: TOSEntityLink
+## TOSItemDropLink
 
 #### Properties
 - Chance `float`
 - Item `TOSEntityLink`
-- Map `TOSEntityLink`
 - Quantity_MAX `int`
 - Quantity_MIN `int`
+
+## TOSMapSpawnLink
+
+### Properties
+- Map `TOSEntityLink`
+- Population `int`
+- TimeRespawn `int`

@@ -13,8 +13,20 @@
 - $ID `int` ClassID of the linked entity
 - Icon `string`
 - Name `string`
+- Url `string` Base URL for the linked entity
 
-# TOSEntityStat
+# TOSElement
+- DARK
+- EARTH
+- FIRE
+- HOLY
+- ICE
+- LIGHTNING
+- MELEE
+- POISON
+- PSYCHOKINESIS
+
+# TOSStat
 - CON
 - DEX
 - INT
@@ -68,8 +80,9 @@
 - DEFENSE_PHYSICAL
 - ACCURACY
 - EVASION
+- BLOCK - or BLK
 - BLOCK_PENETRATION
-- BLOCK_RATE - or Block
+- BLOCK_RATE
 - BLOCK_RATE_FINAL
 - CRITICAL_ATTACK
 - CRITICAL_DEFENSE

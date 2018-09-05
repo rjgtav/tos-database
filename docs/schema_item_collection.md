@@ -1,14 +1,11 @@
 ## TOSCollection :: TOSItem
 
 #### Properties
-
+- Bonus `TOSCollectionBonus[]`
 
 #### Links
-- Link_Bonuses `TOSCollectionBonus[]`
 - Link_Items `TOSEntityLink[]`
 
 ## TOSCollectionBonus
-
-#### Properties
-- Property `string`
-- Value `number`
+- Stat: string
+- Value: number

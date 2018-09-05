@@ -3,10 +3,10 @@
 #### Properties
 
 #### Links
-- Link_Ingredients `TOSRecipeIngredient[]`
-- Link_Target `TOSEntityLink[]`
+- Link_Materials `TOSRecipeMaterial[]`
+- Link_Target `TOSEntityLink`
 
-## TOSRecipeIngredient
+## TOSRecipeMaterial
 
 #### Properties
 - Item `TOSEntityLink`
