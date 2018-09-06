@@ -48,14 +48,17 @@ export abstract class CRUDService<T extends Comparable> {
     });
   }
 
-  public findAll(filter?: Filter, sort: Sort = new Sort(this.options.id, SortOrder.ASC)): Observable<T[]> {
+  public findAll(filter?: Filter[], sort?: Sort): Observable<T[]> {
     return this.load().pipe(map((data) => {
-      let sorter = data != null && data[0] != null ? data[0].$comparators[sort.column] : null;
+      let sorter = data != null && data[0] != null && sort != null ? data[0].$comparators[sort.column] : null;
           sorter = sorter != null ? sorter : (i, j) => (i < j) ? -1 : (i > j) ? 1 : 0;
 
-      return data
-          .filter((item) => filter == null || filter.filter(item))
-          .sort((a, b) => sorter(a[sort.column], b[sort.column]) * (sort.order == SortOrder.ASC ? 1 : -1))
+      if (filter != null)
+        data = data.filter((item) => filter == null || !filter.find(f => !f.filter(item)));
+      if (sort != null)
+        data = data.sort((a, b) => sorter(a[sort.column], b[sort.column]) * (sort.order == SortOrder.ASC ? 1 : -1));
+
+      return data;
     }));
   }
 

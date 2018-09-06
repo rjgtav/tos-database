@@ -1,0 +1,116 @@
+<div class="w-100"><hr></div>
+<h5 *ngIf="card">Stats (Card Battle)</h5>
+<h5 *ngIf="monster">Stats</h5>
+
+<div *ngIf="card">
+  <div class="row text-center">
+    <div class="col">
+      <table class="table table-borderless table-sm mb-0">
+        <thead>
+        <tr class="table-primary">
+          <th scope="col">Height</th>
+          <th scope="col">Legs</th>
+          <th scope="col">Weight</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{ card.Stat_Height }}</td>
+          <td>{{ card.Stat_Legs }}</td>
+          <td>{{ card.Stat_Weight }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="monster">
+  <div class="row text-center">
+    <div class="col">
+      <table class="table table-borderless table-sm">
+        <thead>
+        <tr class="table-primary">
+          <th scope="col">STR</th>
+          <th scope="col">CON</th>
+          <th scope="col">INT</th>
+          <th scope="col">SPR</th>
+          <th scope="col">DEX</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{ monster.Stat_STR }}</td>
+          <td>{{ monster.Stat_CON }}</td>
+          <td>{{ monster.Stat_INT }}</td>
+          <td>{{ monster.Stat_SPR }}</td>
+          <td>{{ monster.Stat_DEX }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col">
+      <table class="table table-borderless table-sm">
+        <thead>
+        <tr class="table-primary">
+          <th scope="col">Accuracy</th>
+          <th scope="col">Evasion</th>
+          <th scope="col">Defense</th>
+          <th scope="col">Magic Defense</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{ monster.Stat_Accuracy }}</td>
+          <td>{{ monster.Stat_Evasion }}</td>
+          <td>{{ monster.Stat_DEFENSE_PHYSICAL }}</td>
+          <td>{{ monster.Stat_DEFENSE_MAGICAL }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col">
+      <table class="table table-borderless table-sm">
+        <thead>
+        <tr class="table-primary">
+          <th scope="col">Critical Damage</th>
+          <th scope="col">Critical Defense</th>
+          <th scope="col">Critical Rate</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{ monster.Stat_CriticalDamage }}</td>
+          <td>{{ monster.Stat_CriticalDefense }}</td>
+          <td>{{ monster.Stat_CriticalRate }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col">
+      <table class="table table-borderless table-sm mb-0">
+        <thead>
+        <tr class="table-primary">
+          <th scope="col">Block Penetration</th>
+          <th scope="col">Block Rate</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{ monster.Stat_BlockPenetration }}</td>
+          <td>{{ monster.Stat_BlockRate }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

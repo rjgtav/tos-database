@@ -1,0 +1,34 @@
+<div class="row">
+  <div *ngFor="let filter of config"
+       class="col mb-2 text-left"
+       style="flex-grow: 0">
+
+    <label>{{ filter.label || filter.column }}</label>
+
+    <button class="btn btn-primary dropdown-toggle"
+            type="button"
+            [attachOutsideOnClick]="true"
+            [ngClass]="{ 'disabled': disabled }"
+            (click)="onOpen(filter)"
+            (clickOutside)="isOpen[filter.column] = false">
+      {{ value[filter.column]?.value || 'All' }}
+    </button>
+
+    <div class="dropdown-menu" [ngClass]="{ 'show': isOpen[filter.column] }">
+      <div *ngFor="let optionGroup of filter.groups; let i = index">
+
+        <div class="dropdown-header" *ngIf="optionGroup.header">{{ optionGroup.header }}</div>
+
+        <div class="dropdown-item cursor-pointer" *ngFor="let option of optionGroup.options"
+             [ngClass]="{ 'active': option?.toString() == value[filter.column]?.value }"
+             (click)="onSelect(filter, option)">
+          {{ option?.toString() || 'All' }}
+        </div>
+
+        <div class="dropdown-divider" *ngIf="i < filter.groups.length - 1"></div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

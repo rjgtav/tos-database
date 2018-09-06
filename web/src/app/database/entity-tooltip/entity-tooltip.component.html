@@ -1,0 +1,55 @@
+<div class="card bg-primary text-white" style="max-width: 480px; min-width: 480px;" *ngIf="entity && !card">
+  <div class="card-body">
+
+    <!-- Base Information -->
+    <div class="row">
+      <!-- Icon, Grade and Class -->
+      <app-entity-detail-ClassIconGrade [entity]="entity" [size]="'small'"></app-entity-detail-ClassIconGrade>
+
+      <div class="col">
+        <!-- Name and Material/Type -->
+        <app-entity-detail-MaterialNameType class="h5" [entity]="entity"></app-entity-detail-MaterialNameType>
+
+        <!-- CoolDown/Level, LifeTime, Weight, Price, Tradability -->
+        <app-entity-detail-Information [entity]="entity"></app-entity-detail-Information>
+
+      </div>
+    </div>
+
+    <!-- Gem -->
+    <app-entity-detail-Gem [divider]="true"
+                           [entity]="entity"></app-entity-detail-Gem>
+
+    <!-- Description -->
+    <app-entity-detail-Description *ngIf="item && !equipment"
+                                   [divider]="true"
+                                   [entity]="entity"></app-entity-detail-Description>
+
+    <!-- Physical and Magical Attack / Defense -->
+    <app-entity-detail-AttackDefense [entity]="entity"></app-entity-detail-AttackDefense>
+
+    <!-- Stats & Unidentified -->
+    <app-entity-detail-BonusStatsUnidentified [entity]="entity"></app-entity-detail-BonusStatsUnidentified>
+
+    <!-- Potential, Durability and Sockets / Base EXP and Class EXP -->
+    <app-entity-detail-DurabilityPotentialSockets [entity]="entity"></app-entity-detail-DurabilityPotentialSockets>
+
+  </div>
+
+</div>
+
+<div style="max-width: 363px; min-width: 363px;" *ngIf="card">
+
+  <!-- Card -->
+  <app-entity-detail-Card [entity]="entity"></app-entity-detail-Card>
+
+  <div class="card bg-primary text-white mt-3">
+    <div class="card-body">
+
+      <!-- Description -->
+      <app-entity-detail-Description [entity]="entity"></app-entity-detail-Description>
+
+    </div>
+  </div>
+
+</div>

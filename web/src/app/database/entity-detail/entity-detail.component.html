@@ -1,0 +1,156 @@
+<div class="container">
+
+  <div class="row">
+    <!-- Name and Material/Type -->
+    <app-entity-detail-MaterialNameType class="col h3" [entity]="entity" [idName]="true"></app-entity-detail-MaterialNameType>
+  </div>
+
+  <div class="row mb-4">
+
+    <div class="col-lg-6 mb-4 mt-5 pt-5" *ngIf="card">
+      <app-entity-detail-Card [entity]="card"></app-entity-detail-Card>
+    </div>
+
+    <div class="col-lg-6 mb-4 mt-4" *ngIf="!card">
+      <div class="card bg-primary m-auto text-white"
+           [style.minWidth]="sanitizer.bypassSecurityTrustStyle('calc(' + ICON_WIDTH + 'px + 2.5rem)')"
+           [style.maxWidth]="sanitizer.bypassSecurityTrustStyle('calc(' + ICON_WIDTH + 'px + 2.5rem)')">
+        <div class="card-body">
+          <!-- Icon, Grade and Class -->
+          <app-entity-detail-ClassIconGrade class="row" [entity]="entity" [labels]="true" [size]="equipment ? 'large' : 'small'"></app-entity-detail-ClassIconGrade>
+
+          <!-- Physical and Magical Attack / Defense -->
+          <app-entity-detail-AttackDefense [entity]="entity"></app-entity-detail-AttackDefense>
+
+          <!-- Potential, Durability and Sockets -->
+          <app-entity-detail-DurabilityPotentialSockets [entity]="entity"></app-entity-detail-DurabilityPotentialSockets>
+
+          <!-- Book Pages -->
+          <app-entity-detail-Book *ngIf="book?.getPages()"
+                                  [entity]="entity"></app-entity-detail-Book>
+
+          <!-- Collection Bonus-->
+          <app-entity-detail-BonusStatsUnidentified *ngIf="collection"
+                                                    [divider]="true"
+                                                    [entity]="entity"></app-entity-detail-BonusStatsUnidentified>
+
+          <!-- Gem Bonus -->
+          <app-entity-detail-Gem *ngIf="gem"
+                                 [divider]="true"
+                                 [entity]="gem"
+                                 [header]="true"></app-entity-detail-Gem>
+
+          <!-- Recipe Materials -->
+          <app-entity-detail-Table *ngIf="entity['Link_Materials']"
+                                   class="table-borderless"
+                                   [column]="'Link_Materials'"
+                                   [divider]="true"
+                                   [entity]="entity"
+                                   [header]="'Materials'"
+                                   [link]="'Item'"></app-entity-detail-Table>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+
+      <!-- Recipe Source (Crafted by) -->
+      <app-entity-detail-Table *ngIf="entity['Link_RecipeTarget']"
+                               class="table-borderless"
+                               [column]="'Link_RecipeTarget'"
+                               [entity]="entity"
+                               [header]="'Crafted by'"></app-entity-detail-Table>
+
+      <!-- Description -->
+      <app-entity-detail-Description [divider]="entity['Link_RecipeTarget']"
+                                     [entity]="entity"
+                                     [header]="true"></app-entity-detail-Description>
+
+      <!-- CoolDown/Level, LifeTime, Weight, Price, Tradability -->
+      <app-entity-detail-Information [entity]="entity"
+                                     [divider]="entity['Description'] || entity['DescriptionHTML']"
+                                     [header]="true"></app-entity-detail-Information>
+
+      <!-- Bonus Stats and Unidentified -->
+      <app-entity-detail-BonusStatsUnidentified *ngIf="!collection"
+                                                [entity]="entity"
+                                                [header]="true"></app-entity-detail-BonusStatsUnidentified>
+
+      <!-- Stats -->
+      <app-entity-detail-Stats *ngIf="card || monster"
+                               [entity]="entity"></app-entity-detail-Stats>
+
+      <!-- Set -->
+      <app-entity-detail-BonusStatsUnidentified *ngIf="equipment && equipment.Set"
+                                                [entity]="equipment.Set"
+                                                [header]="true"></app-entity-detail-BonusStatsUnidentified>
+
+      <!-- Recipe Target (Produces) -->
+      <app-entity-detail-Table *ngIf="entity['TargetAsList']"
+                               class="table-borderless"
+                               [column]="'TargetAsList'"
+                               [divider]="true"
+                               [entity]="entity"
+                               [header]="'Produces'"></app-entity-detail-Table>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <!-- Dropped by -->
+    <app-entity-detail-Table *ngIf="entity['Link_MonsterDrops']"
+                             class="col-md-6 mb-4"
+                             [column]="'Link_MonsterDrops'"
+                             [entity]="entity"
+                             [header]="'Dropped by'"
+                             [link]="'Monster'"></app-entity-detail-Table>
+
+    <!-- Found in -->
+    <app-entity-detail-Table *ngIf="entity['Link_Cubes']"
+                             class="col-md-6 mb-4"
+                             [column]="'Link_Cubes'"
+                             [entity]="entity"
+                             [header]="'Found in'"></app-entity-detail-Table>
+
+    <!-- Required for -->
+    <app-entity-detail-Table *ngIf="entity['Link_RecipeMaterial'] && !recipe"
+                             class="col-md-6 mb-4"
+                             [column]="'Link_RecipeMaterial'"
+                             [entity]="entity"
+                             [header]="'Required for'"></app-entity-detail-Table>
+
+    <!-- Collections -->
+    <app-entity-detail-Table *ngIf="entity['Link_Collections']"
+                             class="col-md-6 mb-4"
+                             [column]="'Link_Collections'"
+                             [entity]="entity"
+                             [header]="'Collections'"></app-entity-detail-Table>
+
+    <!-- Items -->
+    <app-entity-detail-Table *ngIf="entity['Link_Items']"
+                             class="col-md-6 mb-4"
+                             [column]="'Link_Items'"
+                             [entity]="entity"
+                             [header]="cube ? 'Drops' : 'Items'"></app-entity-detail-Table>
+
+    <!-- Drops -->
+    <app-entity-detail-Table *ngIf="entity['Link_Drops']"
+                             class="col-md-6 mb-4"
+                             [column]="'Link_Drops'"
+                             [entity]="entity"
+                             [header]="'Drops'"
+                             [link]="'Item'"></app-entity-detail-Table>
+
+    <!-- Spawn Locations -->
+    <app-entity-detail-Table *ngIf="entity['Link_Spawns']"
+                             class="col-md-6 mb-4"
+                             [column]="'Link_Spawns'"
+                             [entity]="entity"
+                             [header]="'Spawn Locations'"
+                             [link]="'Map'"></app-entity-detail-Table>
+
+  </div>
+
+</div>

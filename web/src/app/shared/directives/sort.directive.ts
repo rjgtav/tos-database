@@ -6,6 +6,7 @@ import {
   Input} from '@angular/core';
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {TOSGroupChildDirective, TOSGroupDirective} from "./group-child.directive";
+import {TOSListConfiguration} from "../../database/entity-list/entity-list.component";
 
 const PROVIDER_VALUE_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
@@ -53,7 +54,7 @@ export class TOSSortDirective extends TOSGroupChildDirective<TOSSortDirective, S
   }
 
   updateDisabled() {
-    this.disabled = this.label != null && this.label.length == 0 && this.column != null && this.column.length > 0;
+    this.disabled = this.disabled || this.label != null && this.label.length == 0 && this.column != null && this.column.length > 0;
   }
 
   updateValue(value: Sort) {
@@ -78,6 +79,12 @@ export class TOSSortDirective extends TOSGroupChildDirective<TOSSortDirective, S
 
 export class Sort {
   constructor(public column: string, public order: SortOrder) {}
+
+  static default(config: TOSListConfiguration): Sort {
+    return config.sortColumn
+      ? new Sort(config.sortColumn, SortOrder.ASC)
+      : null;
+  }
 
   public toString(): string {
     return this.column + ',' + this.order.toString();

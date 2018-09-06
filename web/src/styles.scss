@@ -1,3 +1,10 @@
+.carousel:focus {
+  outline: initial;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  cursor: pointer;
+}
 .carousel-indicators li {
   background: rgba(255, 255, 255, 0.25);
   margin-left: 0 !important;
@@ -16,13 +23,8 @@
 .text-multiline {
   white-space: pre-wrap !important;
 }
-
-.tos-equipment-grade {
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  border-radius: 8px;
-  vertical-align: text-bottom;
+.text-outline {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .tos-icon::after,

@@ -9,17 +9,13 @@ export class TOSItem extends TOSEntity {
   Weight: number;
 
   Link_Collections: TOSEntityLink[];
-  Link_Drops: TOSItemDropLink[];
-  Link_Recipes: TOSEntityLink[];
+  Link_Cubes: TOSEntityLink[];
+  Link_MonsterDrops: TOSItemDropLink[];
+  Link_RecipeTarget: TOSEntityLink[];
+  Link_RecipeMaterial: TOSEntityLink[];
 
   constructor(json: TOSItem) {
     super(json);
-
-    this.$ID = json.$ID;
-    this.$ID_NAME = json.$ID_NAME;
-    this.Description = json.Description.split("{nl}").join("\n");
-    this.Icon = json.Icon;
-    this.Name = json.Name;
 
     this.Price = json.Price;
     this.Tradability = json.Tradability;
@@ -31,11 +27,17 @@ export class TOSItem extends TOSEntity {
     this.Link_Collections = json.Link_Collections
       ? JSON.parse(json.Link_Collections + '').map(json => new TOSEntityLink(json))
       : null;
-    this.Link_Drops = json.Link_Drops
-      ? JSON.parse(json.Link_Drops + '').map(json => new TOSItemDropLink(json))
+    this.Link_Cubes = json.Link_Cubes
+      ? JSON.parse(json.Link_Cubes + '').map(json => new TOSEntityLink(json))
       : null;
-    this.Link_Recipes = json.Link_Recipes
-      ? JSON.parse(json.Link_Recipes + '').map(json => new TOSEntityLink(json))
+    this.Link_MonsterDrops = json.Link_MonsterDrops
+      ? JSON.parse(json.Link_MonsterDrops + '').map(json => new TOSItemDropLink(json))
+      : null;
+    this.Link_RecipeMaterial = json.Link_RecipeMaterial
+      ? JSON.parse(json.Link_RecipeMaterial + '').map(json => new TOSEntityLink(json))
+      : null;
+    this.Link_RecipeTarget = json.Link_RecipeTarget
+      ? JSON.parse(json.Link_RecipeTarget + '').map(json => new TOSEntityLink(json))
       : null;
   }
 
@@ -51,8 +53,8 @@ export class TOSItemDropLink {
   Monster: TOSEntityLink;
 
   public constructor(json: TOSItemDropLink) {
-    this.Chance = json.Chance;
-    this.Monster = json.Monster;
+    this.Chance = +json.Chance;
+    this.Monster = new TOSEntityLink(json.Monster);
   }
 
 }

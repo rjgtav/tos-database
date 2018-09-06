@@ -2,33 +2,38 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {TOSItemType} from "../../shared/domain/tos/item/tos-item.model";
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {TOSListConfiguration, TOSListTableType} from "../item-list/item-list.component";
+import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
+import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
 
 @Injectable()
 export class ItemListConfigurationResolver implements Resolve<TOSListConfiguration> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<TOSListConfiguration> | Promise<TOSListConfiguration> | TOSListConfiguration {
     return {
-      filterColumn: 'Type',
-      filterGroups: [
+      filter: [
         {
-          label: 'Items',
-          values: [
-            TOSItemType.CUBE,
-            TOSItemType.DRUG,
-            TOSItemType.EVENT,
-            TOSItemType.MATERIAL,
-            TOSItemType.QUEST,
-          ]
+          column: 'Type',
+          groups: [
+            {
+              options: [
+                TOSItemType.DRUG,
+                TOSItemType.EVENT,
+                TOSItemType.MATERIAL,
+                TOSItemType.PREMIUM,
+                TOSItemType.QUEST,
+              ]
+            },
+          ],
         },
       ],
 
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'Icon',  type: TOSListTableType.ICON,  width: 1, label: '', class: 'p-1' },
-        { value: '$ID',   type: TOSListTableType.TEXT,  width: 1, },
-        { value: 'Name',  type: TOSListTableType.TEXT,  },
-        { value: 'Type',  type: TOSListTableType.TEXT,  width: 1, },
+        { value: 'Icon',  type: TOSListTableColumnType.ICON,  label: '',
+          transformIcon: TOSEntity.getIcon },
+        { value: '$ID',   type: TOSListTableColumnType.TEXT,  isNotMobile: true },
+        { value: 'Name',  type: TOSListTableColumnType.TEXT,  isWide: true },
+        { value: 'Type',  type: TOSListTableColumnType.TEXT,  },
       ]
     };
   }

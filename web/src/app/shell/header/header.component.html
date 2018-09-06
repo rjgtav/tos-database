@@ -6,6 +6,8 @@
         <a ngbDropdownToggle class="nav-link dropdown-toggle" id="gameDropdown" role="button" aria-haspopup="true" aria-expanded="false">Game</a>
         <div ngbDropdownMenu aria-labelledby="gameDropdown" routerLinkActive="active">
           <a class="dropdown-item" style="color: grey" routerLink="game/achievements">Achievements</a>
+          <a class="dropdown-item" style="color: grey" routerLink="game/classes">Classes</a>
+          <a class="dropdown-item" style="color: grey" routerLink="game/treasures">Treasure Chests</a>
           <a class="dropdown-item" style="color: grey" routerLink="game/exp">EXP Tables</a>
           <a class="dropdown-item" style="color: grey" routerLink="game/npcs">NPCs</a>
           <a class="dropdown-item" style="color: grey" routerLink="game/quests">Quests</a>
@@ -16,15 +18,15 @@
         <a ngbDropdownToggle class="nav-link dropdown-toggle" id="databaseDropdown" role="button" aria-haspopup="true" aria-expanded="false">Database</a>
         <div ngbDropdownMenu aria-labelledby="databaseDropdown" routerLinkActive="active">
           <a class="dropdown-item" routerLink="database/books">Books</a>
-          <a class="dropdown-item" style="color: grey" routerLink="database/cards">Cards</a>
-          <a class="dropdown-item" style="color: grey" routerLink="database/collections">Collections</a>
-          <a class="dropdown-item" routerLink="database/equipment/armor" [queryParams]="{ 'filter': 'TypeEquipment,Bracelets' }">Equipment | Armor</a>
-          <a class="dropdown-item" routerLink="database/equipment/weapons" [queryParams]="{ 'filter': 'TypeEquipment,Crossbows' }">Equipment | Weapons</a>
-          <a class="dropdown-item" style="color: grey" routerLink="database/gems">Gems</a>
-          <a class="dropdown-item" routerLink="database/items" [queryParams]="{ 'filter': 'Type,Material' }">Items</a>
-          <a class="dropdown-item" style="color: grey" routerLink="database/monsters">Monsters</a>
-          <a class="dropdown-item" style="color: grey" routerLink="database/premium">Premium</a>
-          <a class="dropdown-item" style="color: grey" routerLink="database/recipes">Recipes</a>
+          <a class="dropdown-item" routerLink="database/cards">Cards</a>
+          <a class="dropdown-item" routerLink="database/collections">Collections</a>
+          <a class="dropdown-item" routerLink="database/cubes">Cubes</a>
+          <a class="dropdown-item" routerLink="database/equipment">Equipment</a>
+          <a class="dropdown-item" routerLink="database/equipment-sets">Equipment Sets</a>
+          <a class="dropdown-item" routerLink="database/gems">Gems</a>
+          <a class="dropdown-item" routerLink="database/items">Items</a>
+          <a class="dropdown-item" routerLink="database/monsters">Monsters</a>
+          <a class="dropdown-item" routerLink="database/recipes">Recipes</a>
         </div>
       </div>
     </div>

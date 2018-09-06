@@ -1,0 +1,128 @@
+<div class="mb-4">
+  <div class="row">
+    <!-- Filter -->
+    <app-entity-list-filter class="form-group col-md-6 col-xl-8"
+                            [config]="$config.filter"
+                            [disabled]="search"
+                            [model]="pageFilter"
+                            (modelChange)="onFilterChange($event)"
+                            *ngIf="$config.filter">
+    </app-entity-list-filter>
+
+    <!-- Search -->
+    <div class="form-group col-md-6 col-xl-4" [ngClass]="{ 'm-auto': !$config.filter }">
+      <label>Search</label>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Name, ClassID, ClassName" [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)" (keyup.esc)="onSearchToggle()">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" [disabled]="!search" (click)="onSearchToggle()">Clear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Table -->
+<table class="table table-hover" id="table">
+  <thead>
+    <tr tosSortGroup [ngModel]="pageSort" (ngModelChange)="onSortChange($event)" [disabled]="search">
+      <th *ngFor="let column of $config.tableColumns"
+          [ngClass]="{
+            'd-none': column.isNotMobile || column.isNotTablet,
+            'd-sm-table-cell': column.isNotMobile,
+            'd-lg-table-cell': column.isNotTablet,
+            'pl-1': [TOSListTableColumnType.ICON, TOSListTableColumnType.ICON_LINK].includes(column.type),
+            'pr-1': [TOSListTableColumnType.ICON, TOSListTableColumnType.ICON_LINK].includes(column.type)
+          }"
+          tosSort
+          [column]="column.value"
+          [label]="column.label"
+          [width]="column.isWide ? '' : 1" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data"
+        class="cursor-pointer"
+        [routerLink]="row.$ID"
+        (mouseenter)="tooltip = row"
+        (mouseleave)="tooltip = null" >
+      <td *ngFor="let column of $config.tableColumns"
+          [ngClass]="{
+            'd-none': column.isNotMobile || column.isNotTablet,
+            'd-sm-table-cell': column.isNotMobile,
+            'd-lg-table-cell': column.isNotTablet,
+            'p-1': [
+              TOSListTableColumnType.ICON,
+              TOSListTableColumnType.ICON_LINK,
+              TOSListTableColumnType.ICON_LINK_VALUE
+            ].includes(column.type)
+          }"
+          [style.whiteSpace]="column.isWide ? '' : 'nowrap'">
+
+        <div *ngIf="column.type == TOSListTableColumnType.BADGE" class="text-center text-sm-left">
+          <span>
+            <span class="tos-equipment-grade mr-sm-1" [style.background]="column.transformColor(row[column.value])"></span>
+            <span class="d-none d-sm-table-cell">{{ row[column.value] }}</span>
+          </span>
+        </div>
+
+        <div *ngIf="column.type == TOSListTableColumnType.ICON" class="text-center">
+          <img  height="40" width="40" [src]="column.transformIcon(row)" [title]="row[column.value] != column.transformIcon(row) ? row[column.value] : ''" />
+        </div>
+
+        <div *ngIf="column.type == TOSListTableColumnType.ICON_LINK" class="text-right">
+          <img *ngFor="let link of row[column.value]; let i = index"
+               height="40"
+               width="40"
+               [ngClass]="{ 'pr-1': i < row[column.value].length - 1 }"
+               [routerLink]="link.Url"
+               [src]="link.Icon"
+               (click)="$event.stopPropagation()"
+               (mouseenter)="tooltip = link"
+               (mouseleave)="tooltip = row" />
+        </div>
+
+        <div *ngIf="column.type == TOSListTableColumnType.ICON_LINK_VALUE" class="text-right">
+          <div *ngFor="let link of row[column.value]"
+               class="d-inline-block tos-image position-relative pr-1"
+               style="height: 40px; width: 40px; box-sizing: content-box"
+               [style.backgroundImage]="'url(\'' + column.transformLink(link)?.Icon + '\')'"
+               [routerLink]="column.transformLink(link)?.Url"
+               (click)="$event.stopPropagation()"
+               (mouseenter)="tooltip = column.transformLink(link)"
+               (mouseleave)="tooltip = row">
+            <span class="position-absolute text-outline"
+                  style="bottom: 0; right: 0.25rem;">{{ column.transformValue(link) }}</span>
+          </div>
+
+        </div>
+
+        <span *ngIf="column.type == TOSListTableColumnType.TEXT">
+          {{ row[column.value] }}
+        </span>
+
+        <div *ngIf="column.type == TOSListTableColumnType.TEXT_NUMBER" class="text-right">
+          {{ row[column.value] | number }}
+        </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Pagination -->
+<ngb-pagination
+  class="d-flex justify-content-center"
+  [collectionSize]="dataSize"
+  [page]="page"
+  [pageSize]="pageSize"
+  [maxSize]="5"
+  [boundaryLinks]="true"
+  [ellipses]="false"
+  [rotate]="true"
+  (pageChange)="onPageChange($event)"
+>
+</ngb-pagination>
+
+<!-- Tooltip -->
+<app-entity-tooltip [debug]="false" [tooltip]="tooltip"></app-entity-tooltip>

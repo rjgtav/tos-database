@@ -1,5 +1,4 @@
 import {Comparable} from "../../../service/CRUD.service";
-import {TOSEquipmentGrade} from "../item/equipment/tos-equipment.model";
 
 export abstract class TOSEntity extends Comparable {
   $ID: number;
@@ -11,24 +10,33 @@ export abstract class TOSEntity extends Comparable {
   protected constructor(json: TOSEntity) {
     super();
 
+    this.$comparators['$ID'] = (a: number, b: number) => {
+      let i = +a;
+      let j = +b;
+
+      return (i < j) ? -1 : (i > j) ? 1 : 0;
+    };
+
     this.$ID = json.$ID;
     this.$ID_NAME = json.$ID_NAME;
-    this.Description = json.Description.split("{nl}").join("\n");
-    this.Icon = json.Icon;
+    this.Description = json.Description ? json.Description.split("{nl}").join("\n") : null;
+    this.Icon = json.Icon ? 'assets/icons/' + json.Icon.toLowerCase() + '.png' : null;
     this.Name = json.Name;
+  }
+
+  static getIcon(entity: TOSEntity): string {
+    return entity.Icon;
   }
 
 }
 
-export class TOSEntityLink {
-  $ID: number;
-  Icon: string;
-  Name: string;
+export class TOSEntityLink extends TOSEntity {
+  Url: string;
 
   public constructor(json: TOSEntityLink) {
-    this.$ID = json.$ID;
-    this.Icon = json.Icon;
-    this.Name = json.Name;
+    super(json);
+
+    this.Url = '/database/' + json.Url + '/' + this.$ID;
   }
 
 }
@@ -38,6 +46,24 @@ export enum TOSClassTree {
   CLERIC = 'Cleric',
   SWORDSMAN = 'Swordsman',
   WIZARD = 'Wizard',
+}
+
+export enum TOSElement {
+  DARK = 'Dark',
+  EARTH = 'Earth',
+  FIRE = 'Fire',
+  HOLY = 'Holy',
+  ICE = 'Ice',
+  LIGHTNING = 'Lightning',
+  MELEE = 'None',
+  POISON = 'Poison',
+  PSYCHOKINESIS = 'Psychokinesis',
+}
+
+export namespace TOSElement {
+  export function getIcon(value: TOSElement): string {
+    return 'assets/images/element_' + value.toString().toLowerCase() + '.png';
+  }
 }
 
 export enum TOSStat {
@@ -94,6 +120,7 @@ export enum TOSStat {
   DEFENSE_PHYSICAL = 'Physical Defense',
   ACCURACY = 'Accuracy',
   EVASION = 'Evasion',
+  BLOCK = 'Block',
   BLOCK_PENETRATION = 'Block Penetration',
   BLOCK_RATE = 'Block Rate',
   BLOCK_RATE_FINAL = 'Final Block Rate',

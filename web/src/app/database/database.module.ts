@@ -3,23 +3,32 @@ import { CommonModule } from '@angular/common';
 
 import { DatabaseRoutingModule } from './database-routing.module';
 import { SharedModule } from "../shared/shared.module";
-import { ItemDetailComponent } from './item-detail/item-detail.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import {ItemListComponent} from "./item-list/item-list.component";
 import {FormsModule} from "@angular/forms";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-import {ItemTooltipComponent} from "./item-tooltip/item-tooltip.component";
-import {ItemDetailMaterialNameTypeComponent} from "./item-detail/item-detail-MaterialNameType/item-detail-MaterialNameType.component";
-import {ItemDetailChildComponent} from "./item-detail/item-detail-child.component";
-import {ItemDetailClassIconGradeComponent} from "./item-detail/item-detail-ClassIconGrade/item-detail-ClassIconGrade.component";
-import {ItemDetailInformationComponent} from "./item-detail/item-detail-Information/item-detail-Information.component";
-import {ItemDetailStatsUnidentifiedComponent} from "./item-detail/item-detail-StatsUnidentified/item-detail-StatsUnidentified.component";
-import {ItemDetailDurabilityPotentialSocketsComponent} from "./item-detail/item-detail-DurabilityPotentialSockets/item-detail-DurabilityPotentialSockets.component";
-import {ItemDetailAttackDefenseComponent} from "./item-detail/item-detail-AttackDefense/item-detail-AttackDefense.component";
+import { EntityListFilterComponent } from './entity-filter/entity-list-filter.component';
+import {ClickOutsideModule} from "ng-click-outside";
+import {EntityDetailComponent} from "./entity-detail/entity-detail.component";
+import {EntityDetailChildComponent} from "./entity-detail/entity-detail-child.component";
+import {EntityDetailAttackDefenseComponent} from "./entity-detail/entity-detail-AttackDefense/entity-detail-AttackDefense.component";
+import {EntityDetailClassIconGradeComponent} from "./entity-detail/entity-detail-ClassIconGrade/entity-detail-ClassIconGrade.component";
+import {EntityDetailDurabilityPotentialSocketsComponent} from "./entity-detail/entity-detail-DurabilityPotentialSockets/entity-detail-DurabilityPotentialSockets.component";
+import {EntityDetailInformationComponent} from "./entity-detail/entity-detail-Information/entity-detail-Information.component";
+import {EntityDetailMaterialNameTypeComponent} from "./entity-detail/entity-detail-MaterialNameType/entity-detail-MaterialNameType.component";
+import {EntityDetailBonusStatsUnidentifiedComponent} from "./entity-detail/entity-detail-BonusStatsUnidentified/entity-detail-BonusStatsUnidentified.component";
+import {EntityListComponent} from "./entity-list/entity-list.component";
+import {EntityTooltipComponent} from "./entity-tooltip/entity-tooltip.component";
+import {EntityDetailStatsComponent} from "./entity-detail/entity-detail-Stats/entity-detail-Stats.component";
+import { EntityDetailTableComponent } from './entity-detail/entity-detail-Table/entity-detail-Table.component';
+import { EntityDetailCardComponent } from './entity-detail/entity-detail-Card/entity-detail-Card.component';
+import { EntityDetailDescriptionComponent } from './entity-detail/entity-detail-Description/entity-detail-Description.component';
+import { EntityDetailGemComponent } from './entity-detail/entity-detail-Gem/entity-detail-Gem.component';
+import { EntityDetailBookComponent } from './entity-detail/entity-detail-Book/entity-detail-Book.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    ClickOutsideModule,
     DatabaseRoutingModule,
     FontAwesomeModule,
     FormsModule,
@@ -27,15 +36,22 @@ import {ItemDetailAttackDefenseComponent} from "./item-detail/item-detail-Attack
     SharedModule
   ],
   declarations: [
-    ItemDetailComponent, ItemDetailChildComponent,
-    ItemDetailAttackDefenseComponent,
-    ItemDetailClassIconGradeComponent,
-    ItemDetailDurabilityPotentialSocketsComponent,
-    ItemDetailInformationComponent,
-    ItemDetailMaterialNameTypeComponent,
-    ItemDetailStatsUnidentifiedComponent,
-    ItemListComponent,
-    ItemTooltipComponent,
+    EntityDetailComponent, EntityDetailChildComponent,
+    EntityDetailAttackDefenseComponent,
+    EntityDetailClassIconGradeComponent,
+    EntityDetailDurabilityPotentialSocketsComponent,
+    EntityDetailInformationComponent,
+    EntityDetailMaterialNameTypeComponent,
+    EntityDetailBonusStatsUnidentifiedComponent,
+    EntityDetailStatsComponent,
+    EntityDetailTableComponent,
+    EntityListComponent,
+    EntityTooltipComponent,
+    EntityListFilterComponent,
+    EntityDetailCardComponent,
+    EntityDetailDescriptionComponent,
+    EntityDetailGemComponent,
+    EntityDetailBookComponent,
   ]
 })
 export class DatabaseModule { }

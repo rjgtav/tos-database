@@ -1,0 +1,10 @@
+:host {
+  position: fixed;
+  transform: translateZ(0);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.table td {
+  border-top: none;
+}

@@ -1,0 +1,27 @@
+<div *ngIf="gem">
+  <div class="w-100" *ngIf="divider"><hr></div>
+  <h5 class="text-center" *ngIf="header && gem.TypeGem == TOSGemType.STATS">
+    <button class="btn btn-secondary"
+            type="button"
+            [disabled]="level == 1"
+            (click)="level = level - 1">-</button>
+
+    <span class="ml-2 mr-2">{{ 'Level ' + level }}</span>
+
+    <button class="btn btn-secondary"
+            type="button"
+            [disabled]="level == 10"
+            (click)="level = level + 1">+</button>
+  </h5>
+
+  <table class="table table-borderless mb-0">
+    <tbody>
+      <tr *ngFor="let entry of gem.getBonus(level) | keyvalue">
+        <td class="p-1 align-middle" width="1">
+          <img [src]="'assets/images/gem_effect_' + entry.key.toLowerCase() + '.png'" [title]="entry.key" />
+        </td>
+        <td [innerHTML]="entry.value.join('<br/>')"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

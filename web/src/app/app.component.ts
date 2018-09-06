@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({

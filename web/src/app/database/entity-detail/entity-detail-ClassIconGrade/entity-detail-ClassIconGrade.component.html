@@ -1,0 +1,29 @@
+<div class="col" *ngIf="!equipmentSet">
+  <div [style.minHeight]="ICON_HEIGHT + 'px'">
+    <div class="m-auto" [style.height]="ICON_HEIGHT + 'px'" [style.width]="ICON_WIDTH + 'px'">
+      <div class="tos-image position-absolute"
+           style="height: inherit; width: inherit;"
+           [style.backgroundImage]="'url(\'assets/images/equipment_grade_' + (equipment.Grade + '').toLowerCase() + '_' + size + '.png\')'"
+           *ngIf="equipment"
+      ></div>
+      <div class="tos-image position-absolute"
+           style="height: inherit; width: inherit;"
+           [style.backgroundImage]="'url(\'' + (card ? card.IconTooltip : entity.Icon) + '\')'"
+      ></div>
+      <div class="tos-image position-absolute"
+           style="height: 533px; width: 363px; transform: translateX(-17px) translateY(-81px);"
+           [style.backgroundImage]="'url(\'assets/images/card_frame_' + (card.TypeCard + '').toLowerCase() + '.png\')'"
+           *ngIf="card"
+      ></div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between mt-3 ml-auto mr-auto" *ngIf="equipment">
+    <div *ngFor="let classTree of [TOSClassTree.SWORDSMAN, TOSClassTree.WIZARD, TOSClassTree.ARCHER, TOSClassTree.CLERIC]">
+      <img [src]="'assets/images/equipment_class_' + classTree.toString().toLowerCase() + '_' + (equipment.isUsableBy(classTree) ? 'yes' : 'no') + '.png'" [style.verticalAlign]="'top'" />
+      <span class="ml-1" [ngClass]="{ 'text-muted': !equipment.isUsableBy(classTree) }" *ngIf="labels">
+        {{ classTree.toString() }}
+      </span>
+    </div>
+  </div>
+</div>

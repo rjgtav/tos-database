@@ -18,9 +18,12 @@ export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
   protected constructor(private service: CRUDService<T>) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | T {
+
     let page = +route.queryParams[CRUDResolver.PARAM_PAGE] || 1;
     let sort = Sort.valueOf(route.queryParams[CRUDResolver.PARAM_SORT]) || undefined;
-    let filter = Filter.valueOf(route.queryParams[CRUDResolver.PARAM_FILTER]) || null;
+    let filter = (route.queryParams[CRUDResolver.PARAM_FILTER] || '').split(';')
+      .map(filter => Filter.valueOf(filter))
+      .filter((filter) => filter) || undefined;
 
     let mapToPage = (data) => { return {
       size: data.length,

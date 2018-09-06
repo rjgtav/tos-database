@@ -73,6 +73,14 @@ export class TOSFilterDirective extends TOSGroupChildDirective<TOSFilterDirectiv
 export class Filter {
   constructor(public column: string, public value: string) {}
 
+  /*
+  static default(config: TOSListConfiguration): Filter {
+    return config.filter
+      ? new Filter(config.filter.column, config.filter.default.toString())
+      : null;
+  }
+  */
+
   public filter(item: any): boolean {
     return ('' + item[this.column]) == this.value;
   }
@@ -82,7 +90,7 @@ export class Filter {
   }
 
   public static valueOf(value: string): Filter {
-    if (value == null) return null;
+    if (value == null || value == '') return null;
 
     let parts = value.split(',');
     return new Filter(parts[0], parts[1]);
