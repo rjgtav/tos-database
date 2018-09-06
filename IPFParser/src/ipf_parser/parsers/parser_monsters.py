@@ -29,7 +29,7 @@ MONSTER_ELEMENT = enum(
 
 MONSTER_RACE = enum(
     'BEAST',
-    'DEVIL',
+    'DEMON',
     'INSECT',
     'MUTANT',
     'PLANT'
@@ -84,14 +84,15 @@ def parse_monsters(file_name):
         obj = {}
         obj['$ID'] = int(row['ClassID'])
         obj['$ID_NAME'] = row['ClassName']
-        obj['Description'] = parser_translations.parse_translation_key(row['Desc'])
+        obj['Description'] = parser_translations.translate(row['Desc'])
         obj['Icon'] = parser_assets.parse_entity_icon(row['Icon'])
-        obj['Name'] = parser_translations.parse_translation_key(row['Name'])
+        obj['Name'] = parser_translations.translate(row['Name'])
 
         obj['Armor'] = parse_equipment_material(row['ArmorMaterial'].upper())
-        obj['Element'] = MONSTER_ELEMENT.value_of[row['Attribute'].upper()]
+        obj['Element'] = parse_monsters_element(row['Attribute'].upper())
         obj['Level'] = int(row['Level'])
         obj['Race'] = parse_monsters_race(row['RaceType'].upper())
+        obj['Rank'] = MONSTER_RANK.value_of[row['MonRank'].upper()]
         obj['Size'] = MONSTER_SIZE.value_of[row['Size'].upper()]
         obj['EXP'] = int(tosutil.tos_mon_get_exp(row, monster_stat, monster_stat_type))
         obj['EXPClass'] = int(tosutil.tos_mon_get_jobexp(row, monster_stat, monster_stat_type))
@@ -102,12 +103,12 @@ def parse_monsters(file_name):
         obj['Stat_STR'] = int(tosutil.tos_mon_get_stat(row, 'STR'))
         obj['Stat_HP'] = int(tosutil.tos_mon_get_mhp(row, monster_stat_type))
         obj['Stat_SP'] = int(tosutil.tos_mon_get_msp(row))
-        obj['Stat_ATK_MIN'] = int(tosutil.tos_mon_get_minpatk(row, monster_stat_type))
-        obj['Stat_ATK_MAX'] = int(tosutil.tos_mon_get_maxpatk(row, monster_stat_type))
-        obj['Stat_DEF'] = int(tosutil.tos_mon_get_def(row, monster_stat_type))
-        obj['Stat_MATK_MIN'] = int(tosutil.tos_mon_get_minmatk(row, monster_stat_type))
-        obj['Stat_MATK_MAX'] = int(tosutil.tos_mon_get_maxmatk(row, monster_stat_type))
-        obj['Stat_MDEF'] = int(tosutil.tos_mon_get_mdef(row, monster_stat_type))
+        obj['Stat_ATTACK_MAGICAL_MAX'] = int(tosutil.tos_mon_get_maxmatk(row, monster_stat_type))
+        obj['Stat_ATTACK_MAGICAL_MIN'] = int(tosutil.tos_mon_get_minmatk(row, monster_stat_type))
+        obj['Stat_ATTACK_PHYSICAL_MAX'] = int(tosutil.tos_mon_get_maxpatk(row, monster_stat_type))
+        obj['Stat_ATTACK_PHYSICAL_MIN'] = int(tosutil.tos_mon_get_minpatk(row, monster_stat_type))
+        obj['Stat_DEFENSE_MAGICAL'] = int(tosutil.tos_mon_get_mdef(row, monster_stat_type))
+        obj['Stat_DEFENSE_PHYSICAL'] = int(tosutil.tos_mon_get_def(row, monster_stat_type))
         obj['Stat_Accuracy'] = int(tosutil.tos_mon_get_hr(row))
         obj['Stat_Evasion'] = int(tosutil.tos_mon_get_dr(row))
         obj['Stat_CriticalDamage'] = int(tosutil.tos_mon_get_crtatk(row))
@@ -115,15 +116,9 @@ def parse_monsters(file_name):
         obj['Stat_CriticalRate'] = int(tosutil.tos_mon_get_crthr(row))
         obj['Stat_BlockRate'] = int(tosutil.tos_mon_get_blk(row))
         obj['Stat_BlockPenetration'] = int(tosutil.tos_mon_get_blk_break(row))
-        obj['Type'] = MONSTER_RANK.value_of[row['MonRank'].upper()]
 
         obj['Link_Drops'] = []
-
-        # fix Icon depending on whether it is a boss monster
-        if obj['Type'] == MONSTER_RANK.BOSS:
-            obj['Icon'] = obj['Icon'].replace('fd_', '')
-        if obj['Type'] != MONSTER_RANK.BOSS and 'mon' not in obj['Icon']:
-            obj['Icon'] = 'mon_' + obj['Icon']
+        obj['Link_Spawns'] = []
 
         globals.monsters[obj['$ID']] = obj
         globals.monsters_by_name[obj['$ID_NAME']] = obj
@@ -131,10 +126,26 @@ def parse_monsters(file_name):
     ies_file.close()
 
 
+def parse_monsters_element(element):
+    return {
+        'DARK': MONSTER_ELEMENT.DARK,
+        'EARTH': MONSTER_ELEMENT.EARTH,
+        'FIRE': MONSTER_ELEMENT.FIRE,
+        'HOLY': MONSTER_ELEMENT.HOLY,
+        'ICE': MONSTER_ELEMENT.ICE,
+        'LIGHTING': MONSTER_ELEMENT.LIGHTNING,
+        'LIGHTNING': MONSTER_ELEMENT.LIGHTNING,
+        'MELEE': MONSTER_ELEMENT.MELEE,
+        'POISON': MONSTER_ELEMENT.POISON,
+        'SOUL': MONSTER_ELEMENT.SOUL,
+        '': None
+    }[element]
+
+
 def parse_monsters_race(race):
     return {
         'WIDLING': MONSTER_RACE.value_of['BEAST'],
-        'VELNIAS': MONSTER_RACE.value_of['DEVIL'],
+        'VELNIAS': MONSTER_RACE.value_of['DEMON'],
         'KLAIDA': MONSTER_RACE.value_of['INSECT'],
         'PARAMUNE': MONSTER_RACE.value_of['MUTANT'],
         'FORESTER': MONSTER_RACE.value_of['PLANT'],
@@ -157,6 +168,8 @@ def parse_monsters_statbase(file_name, destination):
 
 def parse_links():
     parse_links_drops()
+    parse_links_spawns()
+    return
 
 
 def parse_links_drops():
@@ -176,11 +189,41 @@ def parse_links_drops():
                 obj = {}
                 obj['Chance'] = int(row['DropRatio']) / 100.0
                 obj['Item'] = globals.get_item_link(row['ItemClassName'])
-                obj['Map'] = link_map = {} # TODO: maps are coming SOON (tm)
                 obj['Quantity_MAX'] = int(row['Money_Max'])
                 obj['Quantity_MIN'] = int(row['Money_Min'])
 
                 monster['Link_Drops'].append(obj)
+
+            ies_file.close()
+        except IOError:
+            continue
+
+
+def parse_links_spawns():
+    logging.debug('Parsing spawns for monsters...')
+
+    for id_map in globals.maps:
+        map = globals.maps[id_map]
+        file_name = ('GenType_' + map['$ID_NAME'] + '.ies').lower()
+
+        try:
+            ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies_mongen.ipf", file_name)
+            ies_file = open(ies_path, 'rb')
+            ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
+
+            for row in ies_reader:
+                if row['Faction'] != 'Monster':
+                    continue
+                if row['ClassType'] not in globals.monsters_by_name:
+                    continue
+
+                obj = {}
+                obj['Map'] = globals.get_map_link(map['$ID_NAME'])
+                obj['Population'] = int(row['MaxPop'])
+                obj['TimeRespawn'] = int(row['RespawnTime'])
+
+                monster = globals.monsters_by_name[row['ClassType']]
+                monster['Link_Spawns'].append(obj)
 
             ies_file.close()
         except IOError:

@@ -78,6 +78,7 @@ EQUIPMENT_STAT = enum(
     'DEFENSE_PHYSICAL',
     'ACCURACY',
     'EVASION',
+    'BLOCK',
     'BLOCK_PENETRATION',
     'BLOCK_RATE',
     'BLOCK_RATE_FINAL',
@@ -114,6 +115,7 @@ EQUIPMENT_STAT_COLUMNS = [
     'ADD_MDEF',
     'SkillRange',
     'BlockRate',
+    'BLK',
     'BLK_BREAK',
     'ASPD',
     'MSPD',
@@ -236,16 +238,14 @@ def parse_equipment():
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
-        equipment_id = int(row['ClassID'])
-
-        if equipment_id not in globals.equipment:
+        if int(row['ClassID']) not in globals.equipment:
             continue
 
         item_grade = equipment_grade[int(row['ItemGrade'])]
+        obj = globals.equipment[int(row['ClassID'])]
 
         # Add additional fields
-        obj = globals.equipment[equipment_id]
-        obj['Bonuses'] = []
+        obj['Bonus'] = []
         obj['Durability'] = int(row['MaxDur']) / 100
         obj['Durability'] = -1 if obj['Durability'] <= 0 else obj['Durability']
         obj['Grade'] = parse_equipment_grade(int(row['ItemGrade']))
@@ -258,6 +258,7 @@ def parse_equipment():
             1 if any(j in row['UseJob'] for j in ['All', 'Char2']) else 0,  # Wizard
         )
         obj['RequiredLevel'] = int(row['UseLv'])
+        obj['Set'] = None
         obj['Sockets'] = int(row['BaseSocket'])
         obj['SocketsLimit'] = int(row['MaxSocket_COUNT'])
         obj['Stars'] = int(row['ItemStar'])
@@ -282,22 +283,22 @@ def parse_equipment():
 
             row['ADD_FIRE'] = floor(lv * gradeRatio)
 
-        # Bonuses
+        # Bonus
         for stat in EQUIPMENT_STAT_COLUMNS:
             value = floor(float(row[stat]))
 
             if value != 0:
-                obj['Bonuses'].append([
-                    parse_equipment_stat(stat),
-                    value
+                obj['Bonus'].append([
+                    parse_equipment_stat(stat),     # Stat
+                    value                           # Value
                 ])
 
-        # More Bonuses
+        # More Bonus
         if 'OptDesc' in row and len(row['OptDesc']) > 0:
-            for bonus in parser_translations.parse_translation_key(row['OptDesc']).split('{nl}'):
-                obj['Bonuses'].append([
-                    EQUIPMENT_STAT.UNKNOWN,
-                    bonus.replace('-', '').strip()
+            for bonus in parser_translations.translate(row['OptDesc']).split('{nl}'):
+                obj['Bonus'].append([
+                    EQUIPMENT_STAT.UNKNOWN,         # Stat
+                    bonus.replace('-', '').strip()  # Value
                 ])
 
 
@@ -327,6 +328,7 @@ def parse_equipment_stat(stat):
         'ADD_MATK': EQUIPMENT_STAT.ATTACK_MAGICAL,
         'ADD_MINATK': EQUIPMENT_STAT.ATTACK_LIMIT_MIN,
         'ADD_MAXATK': EQUIPMENT_STAT.ATTACK_LIMIT_MAX,
+        'ADD_PATK': EQUIPMENT_STAT.ATTACK_PHYSICAL,
         'ADD_DEF': EQUIPMENT_STAT.DEFENSE_PHYSICAL,
         'CRTHR': EQUIPMENT_STAT.CRITICAL_RATE,
         'CRTATK': EQUIPMENT_STAT.CRITICAL_ATTACK,
@@ -344,6 +346,7 @@ def parse_equipment_stat(stat):
         'ADD_MDEF': EQUIPMENT_STAT.DEFENSE_MAGICAL,
         'SkillRange': EQUIPMENT_STAT.ATTACK_RANGE,
         'BlockRate': EQUIPMENT_STAT.BLOCK_RATE,
+        'BLK': EQUIPMENT_STAT.BLOCK,
         'BLK_BREAK': EQUIPMENT_STAT.BLOCK_PENETRATION,
         'MSPD': EQUIPMENT_STAT.MOVEMENT_SPEED,
         'MHP': EQUIPMENT_STAT.HP,
@@ -454,3 +457,28 @@ def parse_equipment_type_equipment(equipment):
     }
 
     return mapping[equipment] if equipment in mapping else None
+
+
+def parse_links():
+    parse_links_sets('setitem.ies')
+
+
+def parse_links_sets(file_name):
+    logging.debug('Parsing sets for equipment: %s...', file_name)
+
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', file_name)
+    ies_file = open(ies_path, 'rb')
+    ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
+
+    for row in ies_reader:
+        equipment_set = globals.equipment_sets_by_name[row['ClassName']]
+
+        # Parse items
+        for i in range(1, 8):
+            if row['ItemName_' + str(i)] not in globals.equipment_by_name:
+                continue
+
+            equipment = globals.equipment_by_name[row['ItemName_' + str(i)]]
+            equipment['Set'] = equipment_set
+
+    ies_file.close()

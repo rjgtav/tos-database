@@ -1,8 +1,8 @@
 # coding=utf-8
 from math import floor
 
-# all formulae in this file come from [calc_property_monster.lua, item_calculate.lua]
-# they and are copyrighted by © IMCGAMES CO., LTD. All Rights Reserved.
+# all formulae in this file come from [calc_property_monster.lua, item_calculate.lua] and are copyrighted by
+#                           ⓒ IMCGAMES CO., LTD. All Rights Reserved.
 
 # NOTE: all methods are ignoring buffs (BM properties) as it seems they are no longer used?
 

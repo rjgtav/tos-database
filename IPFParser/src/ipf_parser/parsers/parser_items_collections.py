@@ -5,6 +5,21 @@ import os
 from ipf_parser import constants, globals
 
 
+def parse():
+    parse_collections()
+
+
+def parse_collections():
+    logging.debug('Parsing collections...')
+
+    for id in globals.collections:
+        obj = globals.collections[id]
+
+        # Add additional fields
+        obj['Bonus'] = []
+        obj['Link_Items'] = []
+
+
 def parse_links():
     parse_links_items()
 
@@ -21,8 +36,6 @@ def parse_links_items():
             continue
 
         collection = globals.collections_by_name[row['ClassName']]
-        collection['Link_Bonuses'] = collection_bonuses = []
-        collection['Link_Items'] = collection_items = []
 
         # Parse items
         for i in range(1, 10):
@@ -31,18 +44,17 @@ def parse_links_items():
             if item_name == '':
                 continue
 
-            collection_items.append(globals.get_item_link(item_name))
+            collection['Link_Items'].append(globals.get_item_link(item_name))
 
-        # Parse bonuses
-        bonuses = (row['PropList'].split('/') + row['AccPropList'].split('/'))
-        bonuses = filter(lambda x: len(x) > 0, bonuses)
+        # Parse bonus
+        bonus = row['PropList'].split('/') + row['AccPropList'].split('/')
+        bonus = filter(lambda x: len(x) > 0, bonus)
 
-        for i in range(0, len(bonuses) / 2, 2):
-            obj = {}
-            obj['Property'] = parse_links_items_bonus_stat(bonuses[i])
-            obj['Value'] = int(bonuses[i + 1])
-
-            collection_bonuses.append(obj)
+        for i in range(0, len(bonus), 2):
+            collection['Bonus'].append([
+                parse_links_items_bonus_stat(bonus[i]),   # Property
+                int(bonus[i + 1])                         # Value
+            ])
 
     ies_file.close()
 

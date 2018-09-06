@@ -73,6 +73,7 @@ def unpack_file(file_name, source, destination):
 
 def unpack_patch():
     version = version_read()
+    version_new = False
 
     for file_name in sorted(os.listdir(constants.PATH_TOS_PATCH)):
         if version_as_int(version) >= version_as_int(file_name):
@@ -85,16 +86,23 @@ def unpack_patch():
 
         # Update version
         version_write(file_name)
+        version_new = True
+
+    return version_new
 
 
 def unpack_release():
     logging.debug('Unpacking initial release...')
-    if len(os.listdir(constants.PATH_PARSER_INPUT_IPF)) == 0:
-        for file_name in os.listdir(constants.PATH_TOS_DATA):
-            if not any(file_name.find(s) == 0 for s in IPF_WHITELIST):
-                continue
+    if len(os.listdir(constants.PATH_PARSER_INPUT_IPF)) > 0:
+        return False
 
-            unpack_file(file_name, constants.PATH_TOS_DATA, constants.PATH_PARSER_INPUT_IPF)
+    for file_name in os.listdir(constants.PATH_TOS_DATA):
+        if not any(file_name.find(s) == 0 for s in IPF_WHITELIST):
+            continue
+
+        unpack_file(file_name, constants.PATH_TOS_DATA, constants.PATH_PARSER_INPUT_IPF)
+
+    return True
 
 
 def unpack_translations():
@@ -110,7 +118,20 @@ def unpack_translations():
 
 
 def unpack():
+
     logging.debug('Unpacking...')
-    unpack_release()
-    unpack_patch()
+    version_new = False
+    version_new = unpack_release() or version_new
+    version_new = unpack_patch() or version_new
+    #version_new = True
+
+    # HotFix: make image assets lowercase
+    if version_new:
+        fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'baseskinset'))
+        fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'icon'))
+        fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_mongen.ipf'))
+
     unpack_translations()
+
+    return version_new
+

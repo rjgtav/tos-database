@@ -5,7 +5,7 @@ import os
 import xml.etree.ElementTree as ET
 
 from ipf_parser import constants, globals
-
+from ipf_parser.utils.stringutil import is_ascii
 
 TRANSLATION_PREFIX = '@dicID_^*$'
 TRANSLATION_SUFFIX = '$*^'
@@ -23,7 +23,7 @@ def parse_dictionary(translations):
 
     # example: <file name="xml\item_Equip.xml">
     for file in dictionary:
-        if any(s in file.get('name').lower() for s in ['xml\\item', 'xml\\item_colorspray', 'xml\\item_equip', 'xml\\item_quest', 'xml\\monster', 'xml_client\\dialogtext.xml']):
+        if any(s in file.get('name').lower() for s in ['xml_client\\dialog', 'xml\\item', 'xml\\legend', 'xml\\map', 'xml\\monster', 'xml\\setitem', 'xml\\socket']):
 
             # Map translations
             # <data original="없음_helmet" dicid="@dicID_^*$ITEM_20150317_000001$*^"/>
@@ -68,17 +68,26 @@ def parse_translations(language):
         translation_file = open(translation_path, 'rb')
 
         for row in csv.reader(translation_file, delimiter='\t', quotechar='"'):
-            result[row[0]] = row[1]
+            if len(row) > 1:
+                result[row[0]] = row[1]
 
         translation_file.close()
 
     return result
 
 
-def parse_translation_key(key):
-    key = unicode(key.replace('"', ''), 'utf-8')
+def translate(key):
+    try:
+        key = unicode(key.replace('"', ''), 'utf-8')
+    except TypeError:
+        pass
+
+    # In case the key is already in english, there's no need to translate
+    if is_ascii(key):
+        return key
 
     if key != '' and key not in globals.translations:
         logging.warn('Missing translation for key: %s', key)
+        return None
 
-    return globals.translations[key] if key in globals.translations else key
+    return globals.translations[key]

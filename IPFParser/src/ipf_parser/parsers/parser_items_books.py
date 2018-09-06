@@ -33,6 +33,6 @@ def parse_books_dialog():
             continue
 
         book = globals.books_by_name[row['ClassName']]
-        book['Text'] = parser_translations.parse_translation_key(row['Text'])
+        book['Text'] = parser_translations.translate(row['Text'])
 
     ies_file.close()

@@ -2,6 +2,14 @@ import os
 import shutil
 
 
+# Converts all children files to lower case
+def to_lower(path):
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if file != file.lower():
+                shutil.move(os.path.join(root, file), os.path.join(root, file.lower()))
+
+
 # Thanks to https://stackoverflow.com/a/7420617
 def move_tree(source, destination):
     for src_dir, dirs, files in os.walk(source):

@@ -22,8 +22,7 @@ def parse_recipes():
         del obj['Weight']
 
         # Add additional fields
-        obj['Link_Ingredients'] = []
-        obj['Link_Target'] = []
+        obj['Link_Materials'] = []
 
 
 def parse_links():
@@ -40,10 +39,10 @@ def parse_links_items():
     for row in ies_reader:
         recipe = globals.recipes_by_name[row['ClassName']]
         recipe['Link_Target'] = globals.get_item_link(row['TargetItem'])
-        recipe['Name'] = 'Recipe - '
+        recipe['Name'] = 'Recipe - Unknown'
 
         if recipe['Link_Target'] is not None:
-            recipe['Name'] += recipe['Link_Target']['Name']
+            recipe['Name'] = 'Recipe - ' + recipe['Link_Target']['Name']
 
         # Parse ingredients
         for i in range(1, 6):
@@ -54,42 +53,6 @@ def parse_links_items():
             obj['Item'] = globals.get_item_link(row['Item_' + str(i) + '_1'])
             obj['Quantity'] = int(row['Item_' + str(i) + '_1_Cnt'])
 
-            recipe['Link_Ingredients'].append(obj)
+            recipe['Link_Materials'].append(obj)
 
     ies_file.close()
-
-
-def parse_links_items_bonus_stat(stat):
-    return {
-        'CON_BM': 'CON',
-        'DEX_BM': 'DEX',
-        'INT_BM': 'INT',
-        'MNA_BM': 'SPR',
-        'STR_BM': 'STR',
-
-        'CRTATK_BM': 'Critical Attack',
-        'CRTHR_BM': 'Critical Rate',
-        'CRTDR_BM': 'Critical Defense',
-
-        'MHP_BM': 'Maximum HP',
-        'MSP_BM': 'Maximum SP',
-        'RHP_BM': 'HP Recovery',
-        'RSP_BM': 'SP Recovery',
-
-        'DEF_BM': 'Defense',
-        'MDEF_BM': 'Magic Defense',
-        'MATK_BM': 'Magic Attack',
-        'PATK_BM': 'Physical Attack',
-
-        'DR_BM': 'Evasion',
-        'HR_BM': 'Accuracy',
-        'MHR_BM': 'Magic Amplification',  # ???
-
-        'ResDark_BM': 'Dark Property Resistance',
-        'ResEarth_BM': 'Earth Property Resistance',
-        'ResHoly_BM': 'Holy Property Resistance',
-
-        'MaxSta_BM': 'Stamina',
-        'MaxAccountWarehouseCount': 'Team Storage Slots',
-        'MaxWeight_Bonus': 'Weight Limit',
-    }[stat]
