@@ -19,7 +19,7 @@ export class TOSCard extends TOSItem {
     this.DescriptionHTML = this.Description.split('{img star_mark 20 20}').join('<span class="text-warning">★</span>');
     this.Description = null;
 
-    this.IconTooltip = json.IconTooltip ? 'assets/icons/' + json.IconTooltip.toLowerCase() + '.png' : null;
+    this.IconTooltip = json.IconTooltip ? 'assets/icons/' + json.IconTooltip.toLowerCase() + '.jpg' : null;
     this.MonsterElement = Object.values(TOSElement)[+json.MonsterElement];
     this.MonsterRace = Object.values(TOSMonsterRace)[+json.MonsterRace];
     this.Stat_Height = +json.Stat_Height;

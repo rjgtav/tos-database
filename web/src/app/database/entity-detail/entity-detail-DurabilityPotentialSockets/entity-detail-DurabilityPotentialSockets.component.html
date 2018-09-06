@@ -5,7 +5,7 @@
     <div *ngIf="equipment">
       <div class="row">
         <div class="col-5">Potential</div>
-        <div class="col text-center">
+        <div class="col text-center text-white">
           <div class="rounded tos-bar" style="background: #528273;">
             {{ equipment.Potential + ' / ' + equipment.Potential }}
           </div>
@@ -14,7 +14,7 @@
 
       <div class="row mt-1">
         <div class="col-5">Durability</div>
-        <div class="col text-center">
+        <div class="col text-center text-white">
           <div class="rounded tos-bar" style="background: #B55108;">
             {{ equipment.Durability + ' / ' + equipment.Durability }}
           </div>
@@ -30,7 +30,7 @@
     <div *ngIf="monster">
       <div class="row mt-1">
         <div class="col-5">HP</div>
-        <div class="col text-center">
+        <div class="col text-center text-white">
           <div class="rounded tos-bar" style="background: linear-gradient(to bottom, #DE5900 0%, #BD4D00 80%);">
             {{ monster.Stat_HP | number }}
           </div>
@@ -39,7 +39,7 @@
 
       <div class="row mt-1">
         <div class="col-5">SP</div>
-        <div class="col text-center">
+        <div class="col text-center text-white">
           <div class="rounded tos-bar" style="background: linear-gradient(to bottom, #288CC9 0%, #1F72AF 80%);">
             {{ monster.Stat_SP | number }}
           </div>
@@ -48,7 +48,7 @@
 
       <div class="row mt-1">
         <div class="col-5">EXP</div>
-        <div class="col text-center">
+        <div class="col text-center text-white">
             <div class="rounded tos-bar" style="background: linear-gradient(to bottom, #F7D308 0%, #BDA208 80%);">
             {{ monster.EXP | number }}
           </div>
@@ -57,7 +57,7 @@
 
       <div class="row mt-1">
         <div class="col-5">Class EXP</div>
-        <div class="col text-center">
+        <div class="col text-center text-white">
           <div class="rounded tos-bar" style="background: linear-gradient(to bottom, #8CCF52 0%, #63A229 80%);">
             {{ monster.EXPClass | number }}
           </div>
