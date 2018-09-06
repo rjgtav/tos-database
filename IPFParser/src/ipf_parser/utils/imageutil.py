@@ -27,4 +27,4 @@ def optimize_to_png(before, size):
     if before != after:
         os.remove(before)
 
-    return before
+    return after

@@ -118,17 +118,16 @@ def unpack_translations():
 
 
 def unpack():
-
     logging.debug('Unpacking...')
     version_new = False
     version_new = unpack_release() or version_new
     version_new = unpack_patch() or version_new
-    #version_new = True
+    version_new = True
 
     # HotFix: make image assets lowercase
     if version_new:
-        fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'baseskinset'))
         fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'icon'))
+        fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'skin'))
         fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_mongen.ipf'))
 
     unpack_translations()

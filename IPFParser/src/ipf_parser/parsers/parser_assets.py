@@ -33,7 +33,7 @@ def parse_entity_icon(icon):
         icon_found = icon
     elif icon + '_f' in globals.assets_icons:
         icon_found = icon + '_f'
-    if icon + '_m' in globals.assets_icons:
+    elif icon + '_m' in globals.assets_icons:
         icon_found = icon + '_m'
 
     if icon_found is not None:
@@ -110,6 +110,7 @@ def parse_clean(version_new):
     if not version_new:
         return
 
+    logging.debug('Cleaning unused icons...')
     for icon in globals.assets_icons:
         if icon not in globals.assets_icons_used:
             path = os.path.join(constants.PATH_WEB_ASSETS_ICONS, icon)
