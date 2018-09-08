@@ -1,12 +1,15 @@
 import {TOSClassTree, TOSEntity, TOSEntityLink, TOSStat} from "../../entity/tos-entity.model";
 import {TOSItem} from "../tos-item.model";
+import {TOSDataService} from "../../data/tos-data.service";
 
 export class TOSEquipment extends TOSItem {
   Bonus: TOSEquipmentBonus[];
   Durability: number;
   Grade: TOSEquipmentGrade;
+  Level: number;
   Material: TOSEquipmentMaterial;
   Potential: number;
+  ReinforceRatio: number;
   RequiredClass: string;
   RequiredLevel: number;
   Set: TOSEquipmentSet;
@@ -37,8 +40,10 @@ export class TOSEquipment extends TOSItem {
       : null;
     this.Durability = +json.Durability;
     this.Grade = Object.values(TOSEquipmentGrade)[+json.Grade];
+    this.Level = +json.Level;
     this.Material = Object.values(TOSEquipmentMaterial)[+json.Material];
     this.Potential = +json.Potential;
+    this.ReinforceRatio = +json.ReinforceRatio;
     this.RequiredClass = json.RequiredClass;
     this.RequiredLevel = +json.RequiredLevel;
     this.Sockets = +json.Sockets;
@@ -62,6 +67,57 @@ export class TOSEquipment extends TOSItem {
   public isUsableBy(classTree: TOSClassTree): boolean {
     let index = Object.values(TOSClassTree).indexOf(classTree);
     return this.RequiredClass[index] == '1';
+  }
+
+  public isType1HWeapon(): boolean {
+    return [
+      TOSEquipmentType.ONE_HANDED_BOW,
+      TOSEquipmentType.ONE_HANDED_MACE,
+      TOSEquipmentType.RAPIER,
+      TOSEquipmentType.ONE_HANDED_STAFF,
+      TOSEquipmentType.ONE_HANDED_SPEAR,
+      TOSEquipmentType.ONE_HANDED_SWORD,
+    ].indexOf(this.TypeEquipment) > -1;
+  }
+  public isType2HWeapon(): boolean {
+    return [
+      TOSEquipmentType.TWO_HANDED_BOW,
+      TOSEquipmentType.TWO_HANDED_MACE,
+      TOSEquipmentType.TWO_HANDED_GUN,
+      TOSEquipmentType.TWO_HANDED_SPEAR,
+      TOSEquipmentType.TWO_HANDED_STAFF,
+      TOSEquipmentType.TWO_HANDED_SWORD,
+    ].indexOf(this.TypeEquipment) > -1;
+  }
+  public isTypeFashion(): boolean {
+    return [
+      TOSEquipmentType.COSTUME_ARMBAND,
+      TOSEquipmentType.COSTUME_EFFECT,
+      TOSEquipmentType.COSTUME_HAIR,
+      TOSEquipmentType.COSTUME_HAIR_ACCESSORY,
+      TOSEquipmentType.COSTUME_HELMET,
+      TOSEquipmentType.COSTUME_LENS,
+      TOSEquipmentType.COSTUME_OUTFIT,
+      TOSEquipmentType.COSTUME_SPECIAL,
+      TOSEquipmentType.COSTUME_TOY,
+      TOSEquipmentType.COSTUME_WING,
+    ].indexOf(this.TypeEquipment) > -1;
+  }
+
+  public AnvilATK(level: number) { return TOSDataService.Equipment.AnvilATK(this, level) }
+  public AnvilDEF(level: number) { return TOSDataService.Equipment.AnvilDEF(this, level) }
+  public AnvilSilver(level: number) { return TOSDataService.Equipment.AnvilSilver(this, level) }
+  public AnvilSilverTotal(level: number) { return Array.from({length: level + 1}, (x,i) => this.AnvilSilver(i)).reduce((a, b) => a + b, 0) }
+
+  public TranscendATKRatio(level: number) { return TOSDataService.Equipment.TranscendATKRatio(level); }
+  public TranscendMDEFRatio(level: number) { return TOSDataService.Equipment.TranscendMDEFRatio(level); }
+  public TranscendPDEFRatio(level: number) { return TOSDataService.Equipment.TranscendPDEFRatio(level); }
+  public TranscendShards(level: number) { return TOSDataService.Equipment.TranscendMaterial(this, level); }
+  public TranscendShardsTotal(level: number) {
+    for (var sum = 0, i = 1; i <= level; i ++)
+      sum += this.TranscendShards(i);
+
+    return sum;
   }
 
 }

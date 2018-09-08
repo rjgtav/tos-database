@@ -1,40 +1,39 @@
-<div class="row" *ngIf="
-    (equipment || monster) && (
-      entity['Stat_ATTACK_PHYSICAL_MIN'] ||
-      entity['Stat_ATTACK_PHYSICAL_MAX'] ||
-      entity['Stat_ATTACK_MAGICAL'] ||
-      entity['Stat_ATTACK_MAGICAL_MIN'] ||
-      entity['Stat_ATTACK_MAGICAL_MAX'] ||
-      entity['Stat_DEFENSE_PHYSICAL'] ||
-      entity['Stat_DEFENSE_MAGICAL']
-    )
-">
+<div class="row" *ngIf="AttackPhysical && AttackPhysical[0] || AttackMagical && AttackMagical[0] || DefensePhysical || DefenseMagical">
   <div class="col">
     <div class="w-100"><hr></div>
 
     <div class="bg-primary text-white p-2">
-      <div class="row" *ngIf="entity['Stat_ATTACK_PHYSICAL_MIN'] != 0 || entity['Stat_ATTACK_PHYSICAL_MAX'] != 0">
+      <div class="row" *ngIf="AttackPhysical && AttackPhysical[0]">
         <div class="col text-left tos-icon tos-icon-attack"><b>Physical Attack</b></div>
-        <div class="col text-right">{{ entity['Stat_ATTACK_PHYSICAL_MIN'] }} ~ {{ entity['Stat_ATTACK_PHYSICAL_MAX'] }}</div>
+        <div class="col text-right">
+          <span>{{ AttackPhysical[0] + anvilATK }}</span>
+          <span *ngIf="AttackPhysical[1]"> ~ {{ AttackPhysical[1] + anvilATK }}</span>
+        </div>
       </div>
 
-      <div class="row" *ngIf="
-        equipment && equipment.Stat_ATTACK_MAGICAL != 0 ||
-        monster && (monster.Stat_ATTACK_MAGICAL_MIN != 0 || monster.Stat_ATTACK_MAGICAL_MAX != 0)
-      ">
+      <div class="row" *ngIf="AttackMagical && AttackMagical[0]">
         <div class="col text-left tos-icon tos-icon-attack"><b>Magic Attack</b></div>
-        <div class="col text-right" *ngIf="equipment">{{ equipment.Stat_ATTACK_MAGICAL }}</div>
-        <div class="col text-right" *ngIf="monster">{{ monster.Stat_ATTACK_MAGICAL_MIN }} ~ {{ monster.Stat_ATTACK_MAGICAL_MAX}}</div>
+        <div class="col text-right">
+          <span>{{ AttackMagical[0] + anvilATK }}</span>
+          <span *ngIf="AttackMagical[1]"> ~ {{ AttackMagical[1] + anvilATK }}</span>
+        </div>
       </div>
 
-      <div class="row" *ngIf="entity['Stat_DEFENSE_PHYSICAL'] != 0">
+      <div class="row" *ngIf="DefensePhysical">
         <div class="col text-left tos-icon tos-icon-defense"><b>Physical Defense</b></div>
-        <div class="col text-right">{{ entity['Stat_DEFENSE_PHYSICAL'] }}</div>
+        <div class="col text-right">{{ DefensePhysical + anvilDEF }}</div>
       </div>
 
-      <div class="row" *ngIf="entity['Stat_DEFENSE_MAGICAL'] != 0">
+      <div class="row" *ngIf="DefenseMagical">
         <div class="col text-left tos-icon tos-icon-defense"><b>Magic Defense</b></div>
-        <div class="col text-right">{{ entity['Stat_DEFENSE_MAGICAL'] }}</div>
+        <div class="col text-right">{{ DefenseMagical + anvilDEF }}</div>
+      </div>
+
+      <div class="text-right" *ngIf="anvilLevel">
+        Anvil Enhancement <span class="text-success">▲</span> {{ anvilDEF || anvilATK }}
+      </div>
+      <div class="text-right" *ngIf="transcendLevel">
+        Transcendence <span class="text-success">▲</span> {{ (transcendATKRatio - 1) | percent }}
       </div>
     </div>
   </div>

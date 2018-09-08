@@ -1,18 +1,11 @@
 import {
-  Directive,
   ElementRef,
-  EventEmitter, forwardRef,
-  HostListener,
   Input,
-  OnChanges, OnDestroy,
-  Output,
-  SimpleChanges
+  OnDestroy,
 } from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
-import {C} from "@angular/core/src/render3";
+import {ControlValueAccessor} from "@angular/forms";
 
 export abstract class TOSGroupDirective<C extends TOSGroupChildDirective<C, V>, V> implements ControlValueAccessor {
-
 
   private _children: Set<C> = new Set<C>();
   private _disabled: boolean;

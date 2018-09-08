@@ -1,4 +1,4 @@
-import {Component, Input, NgZone, OnDestroy, SimpleChanges} from '@angular/core';
+import {ChangeDetectorRef, Component, Input, NgZone, OnDestroy, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {TOSEquipmentType} from "../../../shared/domain/tos/item/equipment/tos-equipment.model";
 
@@ -26,7 +26,7 @@ export class EntityDetailClassIconGradeComponent extends EntityDetailChildCompon
 
   private iconInterval;
 
-  constructor() { super() }
+  constructor(private changeDetector: ChangeDetectorRef) { super() }
 
   ngOnChanges(changes: SimpleChanges): void {
     super.ngOnChanges(changes);
@@ -49,6 +49,8 @@ export class EntityDetailClassIconGradeComponent extends EntityDetailChildCompon
             this.equipment.Icon = this.equipment.Icon.includes('_f')
               ? this.equipment.Icon.replace('_f', '_m')
               : this.equipment.Icon.replace('_m', '_f');
+
+            this.changeDetector.detectChanges();
           }, 1500)
         }
       }

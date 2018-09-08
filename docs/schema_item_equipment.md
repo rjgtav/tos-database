@@ -4,8 +4,10 @@
 - Bonus `{Stat: TOSEntityStat, Value: number}[]`
 - Durability `int`
 - Grade `TOSEquipmentGrade`
+- Level `int`
 - Material `TOSEquipmentMaterial`
 - Potential `int`
+- ReinforceRatio `double`
 - RequiredClass `boolean[]` Whether this equipment can be used by:
     - [0] Archer
     - [1] Cleric

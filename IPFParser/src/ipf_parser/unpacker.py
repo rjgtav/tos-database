@@ -122,7 +122,7 @@ def unpack():
     version_new = False
     version_new = unpack_release() or version_new
     version_new = unpack_patch() or version_new
-    version_new = True
+    #version_new = True
 
     # HotFix: make image assets lowercase
     if version_new:

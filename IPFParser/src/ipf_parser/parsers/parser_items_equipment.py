@@ -222,11 +222,12 @@ TYPE_EQUIPMENT_COSTUME_LIST = [
     TYPE_EQUIPMENT.COSTUME_WING
 ]
 
-equipment_grade = {}
+equipment_grade_ratios = {}
 
 
 def parse():
-    parse_equipment_statgrade()
+    parse_equipment_grade_ratios()
+    #parse_equipment_grade_ratios_to_typescript()
     parse_equipment()
 
 
@@ -241,7 +242,7 @@ def parse_equipment():
         if int(row['ClassID']) not in globals.equipment:
             continue
 
-        item_grade = equipment_grade[int(row['ItemGrade'])]
+        item_grade = equipment_grade_ratios[int(row['ItemGrade'])]
         obj = globals.equipment[int(row['ClassID'])]
 
         # Add additional fields
@@ -249,8 +250,10 @@ def parse_equipment():
         obj['Durability'] = int(row['MaxDur']) / 100
         obj['Durability'] = -1 if obj['Durability'] <= 0 else obj['Durability']
         obj['Grade'] = parse_equipment_grade(int(row['ItemGrade']))
+        obj['Level'] = tosutil.tos_item_get_lv(row)
         obj['Material'] = parse_equipment_material(row['Material'].upper())
         obj['Potential'] = int(row['MaxPR'])
+        obj['ReinforceRatio'] = int(row['ReinforceRatio']) / 100.0
         obj['RequiredClass'] = '%s%s%s%s' % (
             1 if any(j in row['UseJob'] for j in ['All', 'Char3']) else 0,  # Archer
             1 if any(j in row['UseJob'] for j in ['All', 'Char4']) else 0,  # Cleric
@@ -393,7 +396,7 @@ def parse_equipment_stat(stat):
     }[stat]
 
 
-def parse_equipment_statgrade():
+def parse_equipment_grade_ratios():
     logging.debug('Parsing equipment grade...')
 
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'item_grade.ies')
@@ -401,7 +404,7 @@ def parse_equipment_statgrade():
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
-        equipment_grade[int(row['Grade'])] = row
+        equipment_grade_ratios[int(row['Grade'])] = row
 
     ies_file.close()
 

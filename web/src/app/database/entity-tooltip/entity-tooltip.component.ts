@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   Input,
@@ -15,6 +16,7 @@ import {TOSCard} from "../../shared/domain/tos/item/card/tos-card.model";
 import {TOSMonsterRace} from "../../shared/domain/tos/monster/tos-monster.model";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-entity-tooltip',
   templateUrl: './entity-tooltip.component.html',
   styleUrls: ['./entity-tooltip.component.scss']

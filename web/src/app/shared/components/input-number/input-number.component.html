@@ -1,0 +1,24 @@
+<div class="align-items-center d-inline-flex w-100">
+  <button class="btn btn-secondary"
+          type="button"
+          [disabled]="min != null && model <= min"
+          (click)="onClick($event, -1)">-</button>
+
+  <span class="flex-grow-1 text-center"
+        [ngClass]="{ 'position-fixed': keyboardOpen, 'invisible': keyboardOpen }"
+        (click)="onKeyboard(true)"
+        (wheel)="onWheel($event)">
+    {{ (label ? label + ' ' : '') + model }}
+  </span>
+
+  <input class="form-control text-center p-0 border-0" type="number" [min]="min" [max]="max" #keyboard
+         (focusout)="onKeyboard(false)"
+         [ngClass]="{ 'position-fixed': !keyboardOpen, 'invisible': !keyboardOpen }"
+         [ngModel]="model"
+         (ngModelChange)="onModelChange($event)" />
+
+  <button class="btn btn-secondary"
+          type="button"
+          [disabled]="max != null && model >= max"
+          (click)="onClick($event, +1)">+</button>
+</div>

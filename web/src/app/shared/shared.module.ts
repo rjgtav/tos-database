@@ -13,20 +13,27 @@ import {TOSCubeResolver} from "./domain/tos/item/cube/tos-cube-resolver.service"
 import {TOSEquipmentSetResolver} from "./domain/tos/item/equipment/tos-equipment-set.resolver";
 import {TOSCardResolver} from "./domain/tos/item/card/tos-card.resolver";
 import {TOSGemResolver} from "./domain/tos/item/gem/tos-gem.resolver";
+import { TOSInputNumberComponent } from './components/input-number/input-number.component';
+import {ClickOutsideModule} from "ng-click-outside";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
+    ClickOutsideModule,
+    FormsModule,
   ],
   exports: [
     TOSFilterDirective, TOSFilterGroupDirective,
     TOSSortDirective, TOSSortGroupDirective,
     TOSTimePipe,
+    TOSInputNumberComponent,
   ],
   declarations: [
     TOSFilterDirective, TOSFilterGroupDirective,
     TOSSortDirective, TOSSortGroupDirective,
-    TOSTimePipe
+    TOSTimePipe,
+    TOSInputNumberComponent,
   ],
   providers: [
     TOSBookResolver,

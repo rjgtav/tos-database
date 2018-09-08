@@ -1,11 +1,10 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {TOSItem} from "../../shared/domain/tos/item/tos-item.model";
 import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
 import {TOSEquipment, TOSEquipmentSet} from "../../shared/domain/tos/item/equipment/tos-equipment.model";
 import {DomSanitizer} from "@angular/platform-browser";
 import {TOSBook} from "../../shared/domain/tos/item/book/tos-book.model";
-import {NgbSlideEvent} from "../../../../node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel";
 import {TOSCollection} from "../../shared/domain/tos/item/collection/tos-collection.model";
 import {TOSMonster} from "../../shared/domain/tos/monster/tos-monster.model";
 import {EntityDetailClassIconGradeComponent} from "./entity-detail-ClassIconGrade/entity-detail-ClassIconGrade.component";
@@ -16,6 +15,7 @@ import {TOSCard} from "../../shared/domain/tos/item/card/tos-card.model";
 import {TOSGem} from "../../shared/domain/tos/item/gem/tos-gem.model";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-entity-detail',
   templateUrl: './entity-detail.component.html',
   styleUrls: ['./entity-detail.component.scss']
@@ -35,6 +35,11 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
   item: TOSItem;
   monster: TOSMonster;
   recipe: TOSRecipe;
+
+  anvilAvailable: boolean;
+  anvilLevel: number = 0;
+  transcendAvailable: boolean;
+  transcendLevel: number = 0;
 
   private subscription: Subscription;
 
@@ -59,6 +64,10 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
       this.monster = this.entity instanceof TOSMonster ? this.entity as TOSMonster : null;
       this.recipe = this.entity instanceof TOSRecipe ? this.entity as TOSRecipe : null;
 
+      if (this.equipment) {
+        this.anvilAvailable = this.equipment.AnvilSilver(1) > 0;
+        this.transcendAvailable = this.equipment.TranscendShards(1) > 0;
+      }
       if (this.equipmentSet)
         this.router.navigate([this.equipmentSet.Link_Items[0].Url]);
     });

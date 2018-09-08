@@ -7,7 +7,7 @@ from ipf_parser import constants, globals
 from ipf_parser.globals import Link
 from ipf_parser.parsers import parser_translations, parser_items, parser_monsters, parser_items_collections, \
     parser_items_recipes, parser_items_equipment, parser_assets, parser_items_books, parser_maps, \
-    parser_items_equipment_sets, parser_items_cubes, parser_items_cards, parser_items_gems
+    parser_items_equipment_sets, parser_items_cubes, parser_items_cards, parser_items_gems, parser_typescript
 
 
 def csv_write(data, path):
@@ -56,6 +56,7 @@ def parse(version_new):
     parser_items_recipes.parse()
     parser_maps.parse()
     parser_monsters.parse()
+    parser_typescript.parse()
 
     # Parse links
     logging.debug('Parsing links...')

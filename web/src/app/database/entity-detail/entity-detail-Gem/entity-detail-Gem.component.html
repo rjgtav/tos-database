@@ -1,18 +1,9 @@
 <div *ngIf="gem">
   <div class="w-100" *ngIf="divider"><hr></div>
-  <h5 class="text-center" *ngIf="header && gem.TypeGem == TOSGemType.STATS">
-    <button class="btn btn-secondary"
-            type="button"
-            [disabled]="level == 1"
-            (click)="level = level - 1">-</button>
-
-    <span class="ml-2 mr-2">{{ 'Level ' + level }}</span>
-
-    <button class="btn btn-secondary"
-            type="button"
-            [disabled]="level == 10"
-            (click)="level = level + 1">+</button>
-  </h5>
+  <tos-input-number class="h5 text-center"
+                    [label]="'Level'"
+                    [min]="1" [max]="10"
+                    [(model)]="level"></tos-input-number>
 
   <table class="table table-borderless mb-0">
     <tbody>

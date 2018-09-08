@@ -24,6 +24,7 @@ import { EntityDetailCardComponent } from './entity-detail/entity-detail-Card/en
 import { EntityDetailDescriptionComponent } from './entity-detail/entity-detail-Description/entity-detail-Description.component';
 import { EntityDetailGemComponent } from './entity-detail/entity-detail-Gem/entity-detail-Gem.component';
 import { EntityDetailBookComponent } from './entity-detail/entity-detail-Book/entity-detail-Book.component';
+import { EntityDetailEnhancementComponent } from './entity-detail/entity-detail-Enhancement/entity-detail-Enhancement.component';
 
 @NgModule({
   imports: [
@@ -52,6 +53,7 @@ import { EntityDetailBookComponent } from './entity-detail/entity-detail-Book/en
     EntityDetailDescriptionComponent,
     EntityDetailGemComponent,
     EntityDetailBookComponent,
+    EntityDetailEnhancementComponent,
   ]
 })
 export class DatabaseModule { }

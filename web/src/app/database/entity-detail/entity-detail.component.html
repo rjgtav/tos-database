@@ -20,7 +20,13 @@
           <app-entity-detail-ClassIconGrade class="row" [entity]="entity" [labels]="true" [size]="equipment ? 'large' : 'small'"></app-entity-detail-ClassIconGrade>
 
           <!-- Physical and Magical Attack / Defense -->
-          <app-entity-detail-AttackDefense [entity]="entity"></app-entity-detail-AttackDefense>
+          <app-entity-detail-AttackDefense [anvilLevel]="anvilLevel"
+                                           [transcendLevel]="transcendLevel"
+                                           [entity]="entity"></app-entity-detail-AttackDefense>
+
+          <!-- Bonus Stats and Unidentified -->
+          <app-entity-detail-BonusStatsUnidentified [divider]="true"
+                                                    [entity]="entity"></app-entity-detail-BonusStatsUnidentified>
 
           <!-- Potential, Durability and Sockets -->
           <app-entity-detail-DurabilityPotentialSockets [entity]="entity"></app-entity-detail-DurabilityPotentialSockets>
@@ -28,11 +34,6 @@
           <!-- Book Pages -->
           <app-entity-detail-Book *ngIf="book?.getPages()"
                                   [entity]="entity"></app-entity-detail-Book>
-
-          <!-- Collection Bonus-->
-          <app-entity-detail-BonusStatsUnidentified *ngIf="collection"
-                                                    [divider]="true"
-                                                    [entity]="entity"></app-entity-detail-BonusStatsUnidentified>
 
           <!-- Gem Bonus -->
           <app-entity-detail-Gem *ngIf="gem"
@@ -72,19 +73,20 @@
                                      [divider]="entity['Description'] || entity['DescriptionHTML']"
                                      [header]="true"></app-entity-detail-Information>
 
-      <!-- Bonus Stats and Unidentified -->
-      <app-entity-detail-BonusStatsUnidentified *ngIf="!collection"
-                                                [entity]="entity"
+      <!-- Set -->
+      <app-entity-detail-BonusStatsUnidentified *ngIf="equipment && equipment.Set"
+                                                [entity]="equipment.Set"
                                                 [header]="true"></app-entity-detail-BonusStatsUnidentified>
 
       <!-- Stats -->
       <app-entity-detail-Stats *ngIf="card || monster"
                                [entity]="entity"></app-entity-detail-Stats>
 
-      <!-- Set -->
-      <app-entity-detail-BonusStatsUnidentified *ngIf="equipment && equipment.Set"
-                                                [entity]="equipment.Set"
-                                                [header]="true"></app-entity-detail-BonusStatsUnidentified>
+      <!-- Enhancement -->
+      <app-entity-detail-Enhancement *ngIf="equipment && (anvilAvailable || transcendAvailable)"
+                                     [(anvilLevel)]="anvilLevel"
+                                     [(transcendLevel)]="transcendLevel"
+                                     [entity]="entity"></app-entity-detail-Enhancement>
 
       <!-- Recipe Target (Produces) -->
       <app-entity-detail-Table *ngIf="entity['TargetAsList']"
