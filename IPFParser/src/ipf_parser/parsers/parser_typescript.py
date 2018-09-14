@@ -3,7 +3,7 @@ import logging
 import os
 
 from ipf_parser import constants
-from ipf_parser.parsers.parser_items_equipment import parse_equipment_grade
+from ipf_parser.parsers.parser_items_equipment import TOSEquipmentGrade
 
 
 def parse():
@@ -21,7 +21,7 @@ def parse_item_grade():
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
-        grade = parse_equipment_grade(int(row['Grade']))
+        grade = TOSEquipmentGrade.value_of(int(row['Grade']))
 
         if grade is None:
             continue

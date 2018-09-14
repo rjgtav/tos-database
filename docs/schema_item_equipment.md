@@ -29,17 +29,6 @@
 - Unidentified `bool`
 - UnidentifiedRandom `bool`
 
-
-## TOSEquipmentAttackType
-- PIERCING - or Aries
-- BOW - or Arrow
-- CANNON
-- GUN
-- SLASH
-- STRIKE
-- THRUST
-- UNKNOWN
-
 ## TOSEquipmentGrade
 - NORMAL - or White
 - MAGIC - or Blue

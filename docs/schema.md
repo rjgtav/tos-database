@@ -11,9 +11,22 @@
 
 #### Properties
 - $ID `int` ClassID of the linked entity
-- Icon `string`
+- Description `string`
 - Name `string`
+- Icon `string`
 - Url `string` Base URL for the linked entity
+
+# TOSAttackType
+- PIERCING - or Aries
+- BOW - or Arrow
+- CANNON
+- GUN
+- MAGIC
+- MELEE
+- SLASH
+- STRIKE
+- THRUST
+- UNKNOWN
 
 # TOSElement
 - DARK
@@ -36,6 +49,7 @@
 - HP_RECOVERY - or RHP
 - SP - or MSP
 - SP_RECOVERY - or RSP
+- SP_RECOVERY_TIME - or RSPTIME
 - ATTACK_ELEMENT_DARK
 - ATTACK_ELEMENT_EARTH
 - ATTACK_ELEMENT_FIRE
@@ -64,6 +78,7 @@
 - ATTACK_MAGICAL
 - ATTACK_MAGICAL_AMPLIFICATION
 - ATTACK_PHYSICAL
+- ATTACK_ANGLE - or SkillAngle
 - ATTACK_RANGE - or SkillRange
 - DEFENSE_ELEMENT_DARK
 - DEFENSE_ELEMENT_EARTH

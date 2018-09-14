@@ -4,16 +4,28 @@ import os
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_assets
-from ipf_parser.utils.enum import enum
+from ipf_parser.utils.tosenum import TOSEnum
 
-CARD_TYPE = enum(
-    'ATTACK',
-    'DEFENSE',
-    'LEGENDARY',
-    'REINFORCE',
-    'STATS',
-    'UTILITY',
-)
+
+class TOSCardType(TOSEnum):
+    ATTACK = 0
+    DEFENSE = 1
+    LEGENDARY = 2
+    REINFORCE = 3
+    STATS = 4
+    UTILITY = 5
+
+    @staticmethod
+    def value_of(string):
+        return {
+            'ATK': TOSCardType.ATTACK,
+            'DEF': TOSCardType.DEFENSE,
+            'LEG': TOSCardType.LEGENDARY,
+            'REINFORCE_CARD': TOSCardType.REINFORCE,
+            'STAT': TOSCardType.STATS,
+            'UTIL': TOSCardType.UTILITY,
+            '': None
+        }[string.upper()]
 
 
 def parse():
@@ -34,7 +46,7 @@ def parse_cards():
 
         obj = globals.cards_by_name[row['ClassName']]
         obj['IconTooltip'] = parser_assets.parse_entity_icon(row['TooltipImage'])
-        obj['TypeCard'] = parse_cards_type(row['CardGroupName'])
+        obj['TypeCard'] = TOSCardType.value_of(row['CardGroupName'])
 
     ies_file.close()
 
@@ -54,18 +66,6 @@ def parse_cards_battle():
         obj['Stat_Weight'] = int(row['BodyWeight'])
 
     ies_file.close()
-
-
-def parse_cards_type(key):
-    return {
-        'ATK': CARD_TYPE.ATTACK,
-        'DEF': CARD_TYPE.DEFENSE,
-        'LEG': CARD_TYPE.LEGENDARY,
-        'REINFORCE_CARD': CARD_TYPE.REINFORCE,
-        'STAT': CARD_TYPE.STATS,
-        'UTIL': CARD_TYPE.UTILITY,
-        '': None
-    }[key]
 
 
 def parse_links():

@@ -4,13 +4,21 @@ import os
 import xml.etree.ElementTree as ET
 
 from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations, parser_items_equipment
-from ipf_parser.utils.enum import enum
+from ipf_parser.parsers import parser_translations
+from ipf_parser.parsers.parser_items_equipment import TOSEquipmentStat
+from ipf_parser.utils.tosenum import TOSEnum
 
-GEM_TYPE = enum(
-    'SKILL',
-    'STATS',
-)
+
+class TOSGemType(TOSEnum):
+    SKILL = 0
+    STATS = 1
+
+    @staticmethod
+    def value_of(string):
+        return {
+            'GEM': TOSGemType.STATS,
+            'GEM_SKILL': TOSGemType.SKILL,
+        }[string.upper()]
 
 
 def parse():
@@ -32,7 +40,7 @@ def parse_gems():
         obj['BonusSubWeapon'] = []
         obj['BonusTopAndBottom'] = []
         obj['BonusWeapon'] = []
-        obj['TypeGem'] = parse_gems_type(row['EquipXpGroup'])
+        obj['TypeGem'] = TOSGemType.value_of(row['EquipXpGroup'])
 
     ies_file.close()
 
@@ -58,11 +66,11 @@ def parse_gems_bonus():
                 for prop in [bonus, penalty]:
                     if prop is not None and prop != 'None':
 
-                        if gem['TypeGem'] == GEM_TYPE.SKILL:
+                        if gem['TypeGem'] == TOSGemType.SKILL:
                             gem['Bonus' + parse_gems_slot(slot)].append({
                                 'Stat': parser_translations.translate(prop).replace('OptDesc/', '')
                             })
-                        elif gem['TypeGem'] == GEM_TYPE.STATS:
+                        elif gem['TypeGem'] == TOSGemType.STATS:
                             prop = prop.split('/')
                             prop[0] = 'ADD_DR' if prop[0] == 'DR' else prop[0]
                             prop[0] = 'ADD_DR' if prop[0] == 'DR' else prop[0]
@@ -73,7 +81,7 @@ def parse_gems_bonus():
                             prop[0] = 'ADD_DEF' if prop[0] == 'DEF' else prop[0]
 
                             gem['Bonus' + parse_gems_slot(slot)].append({
-                                'Stat': parser_items_equipment.parse_equipment_stat(prop[0]),
+                                'Stat': TOSEquipmentStat.value_of(prop[0]),
                                 'Value': int(prop[1])
                             })
 
@@ -89,13 +97,14 @@ def parse_gems_slot(key):
     }[key]
 
 
-def parse_gems_type(key):
-    return {
-        'Gem': GEM_TYPE.STATS,
-        'Gem_Skill': GEM_TYPE.SKILL,
-        '': None
-    }[key]
-
-
 def parse_links():
-    return  # TODO: link with skills
+    parse_links_skills()
+
+
+def parse_links_skills():
+    logging.debug('Parsing skills for gems...')
+
+    for gem in globals.gems.values():
+        skill = gem['$ID_NAME'][len('Gem_'):]
+        skill = globals.get_skill_link(skill)
+        gem['Link_Skill'] = skill

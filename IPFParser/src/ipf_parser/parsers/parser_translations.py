@@ -23,8 +23,18 @@ def parse_dictionary(translations):
 
     # example: <file name="xml\item_Equip.xml">
     for file in dictionary:
-        if any(s in file.get('name').lower() for s in ['xml_client\\dialog', 'xml\\item', 'xml\\legend', 'xml\\map', 'xml\\monster', 'xml\\setitem', 'xml\\socket']):
-
+        if any(s in file.get('name').lower() for s in [
+            'xml_ability\\ability',
+            'xml_client\\dialog',
+            'xml\\job',
+            'xml\\item',
+            'xml\\legend',
+            'xml\\map',
+            'xml\\monster',
+            'xml\\setitem',
+            'xml\\skill',
+            'xml\\socket'
+        ]):
             # Map translations
             # <data original="없음_helmet" dicid="@dicID_^*$ITEM_20150317_000001$*^"/>
             for data in file:

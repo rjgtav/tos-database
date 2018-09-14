@@ -3,10 +3,14 @@ from ipf_parser import constants
 assets_icons = {}
 assets_icons_used = []
 
+attributes = {}
+attributes_by_name = {}
 books = {}
 books_by_name = {}
 cards = {}
 cards_by_name = {}
+jobs = {}
+jobs_by_name = {}
 collections = {}
 collections_by_name = {}
 cubes = {}
@@ -26,6 +30,8 @@ monsters = {}
 monsters_by_name = {}
 recipes = {}
 recipes_by_name = {}
+skills = {}
+skills_by_name = {}
 translations = {}
 
 all_items_by_name = [
@@ -40,12 +46,20 @@ all_items_by_name = [
 ]
 
 
+def get_attribute_link(name):
+    return _get_entity_link(name, attributes_by_name)
+
+
 def get_book_link(name):
     return _get_entity_link(name, books_by_name)
 
 
 def get_card_link(name):
     return _get_entity_link(name, cards_by_name)
+
+
+def get_job_link(name):
+    return _get_entity_link(name, jobs_by_name)
 
 
 def get_collection_link(name):
@@ -97,13 +111,19 @@ def get_recipe_link(name):
     return _get_entity_link(name, recipes_by_name)
 
 
+def get_skill_link(name):
+    return _get_entity_link(name, skills_by_name)
+
+
 def _get_entity_link(name, collection):
     if name not in collection:
         return None
 
     collection_path = None
+    collection_path = constants.OUTPUT_ATTRIBUTES if collection == attributes_by_name else collection_path
     collection_path = constants.OUTPUT_BOOKS if collection == books_by_name else collection_path
     collection_path = constants.OUTPUT_CARDS if collection == cards_by_name else collection_path
+    collection_path = constants.OUTPUT_JOBS if collection == jobs_by_name else collection_path
     collection_path = constants.OUTPUT_COLLECTIONS if collection == collections_by_name else collection_path
     collection_path = constants.OUTPUT_CUBES if collection == cubes_by_name else collection_path
     collection_path = constants.OUTPUT_GEMS if collection == gems_by_name else collection_path
@@ -113,6 +133,7 @@ def _get_entity_link(name, collection):
     collection_path = constants.OUTPUT_MAPS if collection == maps_by_name else collection_path
     collection_path = constants.OUTPUT_MONSTERS if collection == monsters_by_name else collection_path
     collection_path = constants.OUTPUT_RECIPES if collection == recipes_by_name else collection_path
+    collection_path = constants.OUTPUT_SKILLS if collection == skills_by_name else collection_path
 
     return Link(collection[name], collection_path[:-4])
 

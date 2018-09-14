@@ -4,60 +4,91 @@ import os
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations, parser_assets
-from ipf_parser.parsers.parser_items_equipment import TYPE_EQUIPMENT_COSTUME_LIST, parse_equipment_type_equipment
-from ipf_parser.utils.enum import enum
+from ipf_parser.parsers.parser_items_equipment import TOSEquipmentType, TYPE_EQUIPMENT_COSTUME_LIST
+from ipf_parser.utils.tosenum import TOSEnum
 
-ITEM_GROUP = enum(
-    'ARMBAND',
-    'ARMOR',
-    'BOOK',
-    'CARD',
-    'COLLECTION',
-    'CUBE',
-    'DRUG',
-    'EQUIPMENT',
-    'EVENT',
-    'EXPORB',
-    'FISHINGROD',
-    'GEM',
-    'HELMET',
-    'ICOR',
-    'MAGICAMULET',
-    'MATERIAL',
-    'PASTEBAIT',
-    'PETARMOR',
-    'PETWEAPON',
-    'PREMIUM',
-    'QUEST',
-    'RECIPE',
-    'SUBWEAPON',
-    'UNUSED',
-    'WEAPON'
-)
+
+class TOSItemGroup(TOSEnum):
+    ARMBAND = 0
+    ARMOR = 1
+    BOOK = 2
+    CARD = 3
+    COLLECTION = 4
+    CUBE = 5
+    DRUG = 6
+    EQUIPMENT = 7
+    EVENT = 8
+    EXPORB = 9
+    FISHINGROD = 10
+    GEM = 11
+    HELMET = 12
+    ICOR = 13
+    MAGICAMULET = 14
+    MATERIAL = 15
+    PASTEBAIT = 16
+    PETARMOR = 17
+    PETWEAPON = 18
+    PREMIUM = 19
+    QUEST = 20
+    RECIPE = 21
+    SUBWEAPON = 22
+    UNUSED = 23
+    WEAPON = 24
+
+    @staticmethod
+    def value_of(string):
+        return {
+            'ARMBAND': TOSItemGroup.ARMBAND,
+            'ARMOR': TOSItemGroup.ARMOR,
+            'BOOK': TOSItemGroup.BOOK,
+            'CARD': TOSItemGroup.CARD,
+            'COLLECTION': TOSItemGroup.COLLECTION,
+            'CUBE': TOSItemGroup.CUBE,
+            'DRUG': TOSItemGroup.DRUG,
+            'EQUIPMENT': TOSItemGroup.EQUIPMENT,
+            'EVENT': TOSItemGroup.EVENT,
+            'EXPORB': TOSItemGroup.EXPORB,
+            'FISHINGROD': TOSItemGroup.FISHINGROD,
+            'GEM': TOSItemGroup.GEM,
+            'HELMET': TOSItemGroup.HELMET,
+            'ICOR': TOSItemGroup.ICOR,
+            'MAGICAMULET': TOSItemGroup.MAGICAMULET,
+            'MATERIAL': TOSItemGroup.MATERIAL,
+            'PASTEBAIT': TOSItemGroup.PASTEBAIT,
+            'PETARMOR': TOSItemGroup.PETARMOR,
+            'PETWEAPON': TOSItemGroup.PETWEAPON,
+            'PREMIUM': TOSItemGroup.PREMIUM,
+            'QUEST': TOSItemGroup.QUEST,
+            'RECIPE': TOSItemGroup.RECIPE,
+            'SUBWEAPON': TOSItemGroup.SUBWEAPON,
+            'UNUSED': TOSItemGroup.UNUSED,
+            'WEAPON': TOSItemGroup.WEAPON,
+        }[string.upper()]
+
 
 ITEM_GROUP_ITEM_WHITELIST = [
-    ITEM_GROUP.DRUG,
-    ITEM_GROUP.EVENT,
-    ITEM_GROUP.EXPORB,
-    ITEM_GROUP.FISHINGROD,
-    ITEM_GROUP.ICOR,
-    ITEM_GROUP.MATERIAL,
-    ITEM_GROUP.PASTEBAIT,
-    ITEM_GROUP.PREMIUM,
-    ITEM_GROUP.QUEST
+    TOSItemGroup.DRUG,
+    TOSItemGroup.EVENT,
+    TOSItemGroup.EXPORB,
+    TOSItemGroup.FISHINGROD,
+    TOSItemGroup.ICOR,
+    TOSItemGroup.MATERIAL,
+    TOSItemGroup.PASTEBAIT,
+    TOSItemGroup.PREMIUM,
+    TOSItemGroup.QUEST
 ]
 
 ITEM_GROUP_EQUIPMENT_WHITELIST = [
-    ITEM_GROUP.ARMOR,
-    ITEM_GROUP.EQUIPMENT,
-    ITEM_GROUP.SUBWEAPON,
-    ITEM_GROUP.WEAPON
+    TOSItemGroup.ARMOR,
+    TOSItemGroup.EQUIPMENT,
+    TOSItemGroup.SUBWEAPON,
+    TOSItemGroup.WEAPON
 ]
 
 ITEM_GROUP_FASHION_WHITELIST = [
-    ITEM_GROUP.ARMBAND,
-    ITEM_GROUP.HELMET,
-    ITEM_GROUP.PREMIUM,
+    TOSItemGroup.ARMBAND,
+    TOSItemGroup.HELMET,
+    TOSItemGroup.PREMIUM,
 ]
 
 
@@ -79,8 +110,8 @@ def parse_items(file_name):
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
-        item_type = ITEM_GROUP.RECIPE if file_name == 'recipe.ies' else ITEM_GROUP.value_of[row['GroupName'].upper()]
-        item_type_equipment = parse_equipment_type_equipment(row['ClassType'].upper()) if 'ClassType' in row else None
+        item_type = TOSItemGroup.RECIPE if file_name == 'recipe.ies' else TOSItemGroup.value_of(row['GroupName'])
+        item_type_equipment = TOSEquipmentType.value_of(row['ClassType']) if 'ClassType' in row else None
 
         #logging.debug('Parsing item: %s :: %s', row['ClassID'], row['ClassName'])
 
@@ -109,23 +140,23 @@ def parse_items(file_name):
         obj['Link_RecipeTarget'] = []
         obj['Link_RecipeMaterial'] = []
 
-        if item_type == ITEM_GROUP.BOOK:
+        if item_type == TOSItemGroup.BOOK:
             globals.books[obj['$ID']] = obj
             globals.books_by_name[obj['$ID_NAME']] = obj
-        elif item_type == ITEM_GROUP.CARD:
+        elif item_type == TOSItemGroup.CARD:
             globals.cards[obj['$ID']] = obj
             globals.cards_by_name[obj['$ID_NAME']] = obj
-        elif item_type == ITEM_GROUP.COLLECTION:
+        elif item_type == TOSItemGroup.COLLECTION:
             globals.collections[obj['$ID']] = obj
             globals.collections_by_name[obj['$ID_NAME']] = obj
-        elif item_type == ITEM_GROUP.CUBE:
+        elif item_type == TOSItemGroup.CUBE:
             globals.cubes[obj['$ID']] = obj
             globals.cubes_by_name[obj['$ID_NAME']] = obj
             globals.cubes_by_stringarg[row['StringArg']] = obj
-        elif item_type == ITEM_GROUP.GEM:
+        elif item_type == TOSItemGroup.GEM:
             globals.gems[obj['$ID']] = obj
             globals.gems_by_name[obj['$ID_NAME']] = obj
-        elif item_type == ITEM_GROUP.RECIPE:
+        elif item_type == TOSItemGroup.RECIPE:
             globals.recipes[obj['$ID']] = obj
             globals.recipes_by_name[obj['$ID_NAME']] = obj
         elif item_type in ITEM_GROUP_ITEM_WHITELIST and file_name != 'item_Equip.ies':
