@@ -6,10 +6,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from "@angular/router";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {ClickOutsideModule} from "ng-click-outside";
 
 @NgModule({
   imports: [
     CommonModule,
+    ClickOutsideModule,
     NgbModule,
     FontAwesomeModule,
     RouterModule

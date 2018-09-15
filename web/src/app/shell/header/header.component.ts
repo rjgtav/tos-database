@@ -1,6 +1,5 @@
 import { Component} from '@angular/core';
-
-const KEY_THEME = 'theme';
+import {Theme, ThemeService} from "../../shared/service/theme.service";
 
 @Component({
   selector: 'app-header',
@@ -8,35 +7,10 @@ const KEY_THEME = 'theme';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  $Theme = Theme;
+  Theme = Theme;
 
-  style: Element;
-  theme: Theme;
+  isOpenDatabase: boolean;
 
-  constructor() {
-    this.style = document.getElementById('bootstrap-theme');
-    this.setTheme((+localStorage.getItem(KEY_THEME) as Theme) || Theme.LIGHT);
-  }
+  constructor(public theme: ThemeService) {}
 
-  toggleTheme() {
-    this.setTheme(this.theme == Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
-  }
-
-  private setTheme(theme: Theme) {
-    let href: string = null;
-
-    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.min.css';
-    if (theme == Theme.DARK)  href = 'assets/themes/darkly.min.css';
-
-    localStorage.setItem(KEY_THEME, theme + '');
-    this.theme = theme;
-    this.style.setAttribute('href', href)
-  }
-
-}
-
-enum Theme {
-  UNKNOWN, // Workaround due to 0 being considered false
-  DARK,
-  LIGHT
 }
