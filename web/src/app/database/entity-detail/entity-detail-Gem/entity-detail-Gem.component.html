@@ -1,6 +1,6 @@
 <div *ngIf="gem">
   <div class="w-100" *ngIf="divider"><hr></div>
-  <tos-input-number class="h5 text-center"
+  <tos-input-number class="h5 text-center" *ngIf="enabled"
                     [label]="'Level'"
                     [min]="1" [max]="10"
                     [(model)]="level"></tos-input-number>

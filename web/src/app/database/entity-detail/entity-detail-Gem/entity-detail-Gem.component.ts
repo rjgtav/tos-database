@@ -13,6 +13,7 @@ export class EntityDetailGemComponent extends EntityDetailChildComponent {
   level: number = 1;
 
   @Input() divider: boolean;
+  @Input() enabled: boolean = true;
   @Input() header: boolean;
 
   constructor() { super(); }
