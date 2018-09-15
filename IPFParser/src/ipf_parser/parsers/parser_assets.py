@@ -7,12 +7,10 @@ from ipf_parser import constants, globals
 from ipf_parser.utils import imageutil
 
 
-CATEGORY_CARD = ['bosscard2', 'sub_card3']
-CATEGORY_SIZE = {  # width, height
+IMAGE_SIZE = {  # top, left, width, height
     'bosscard2': (330, 440),
     'sub_card3': (330, 440),
     'item_tooltip_icon': (80, 80),
-    'item_rank': (80, 80),
     '256_equip_icons': (256, 256),
     '256_costume_icons': (256, 256),
     'acc_item': (256, 256),
@@ -20,6 +18,31 @@ CATEGORY_SIZE = {  # width, height
     'item': (80, 80),
     'payment': (80, 80),
 }
+
+
+WHITELIST_BASESKINSET = [
+    'bosscard2',
+    'sub_card3'
+]
+WHITELIST_ITEMICON = [
+    'item_tooltip_icon',
+    '256_equip_icons',
+    '256_costume_icons',
+    'acc_item',
+    'hair_accesory',
+    'item',
+    'payment'
+]
+WHITELIST_SKILLICON = [
+    'wizard_skillicon',
+    'archer_skillicon',
+    'cleric_skillicon',
+    'warrior_skillicon',
+    'abilityicon_warrior',
+    'abilityicon_wizard',
+    'abilityicon_archer',
+    'abilityicon_cleric'
+]
 
 
 def parse_entity_icon(icon):
@@ -49,6 +72,7 @@ def parse(version_new):
     logging.debug('Parsing assets...')
 
     parse_icons('baseskinset.xml', version_new)
+    parse_icons('classicon.xml', version_new)
     parse_icons('itemicon.xml', version_new)
     parse_icons('mongem.xml', version_new)
     parse_icons('monillust.xml', version_new)
@@ -68,21 +92,23 @@ def parse_icons(file_name, version_new):
 
         # example: <image name="icon_wizar_energyBolt" file="\icon\skill\wizard\icon_wizar_energyBolt.png" />
         for image in imagelist:
-            if image.get('file') is None:
+            if image.get('file') is None or image.get('name') is None:
                 continue
-            if file_name != 'baseskinset.xml' and '.tga' in image.get('file'):
+            if file_name == 'baseskinset.xml' and image_category not in WHITELIST_BASESKINSET:
                 continue
-            if file_name == 'baseskinset.xml' and image_category not in CATEGORY_CARD:
+            if file_name == 'itemicon.xml' and image_category not in WHITELIST_ITEMICON:
+                continue
+            if file_name == 'skillicon.xml' and image_category not in WHITELIST_SKILLICON:
                 continue
 
             image_file = image.get('file').split('\\')[-1].lower()
-            image_size = image.get('imgrect').split(' ')  # top, left, width, height
-            image_size = (int(image_size[2]), int(image_size[3]))
+            image_name = image.get('name').lower()
+            image_rect = tuple(int(x) for x in image.get('imgrect').split()) if len(image.get('imgrect')) else None  # top, left, width, height
 
             # Copy icon to web assets folder
             copy_from = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', *image.get('file').lower().split('\\')[:-1])
             copy_from = os.path.join(copy_from, image_file)
-            copy_to = os.path.join(constants.PATH_WEB_ASSETS_ICONS, image_file)
+            copy_to = os.path.join(constants.PATH_WEB_ASSETS_ICONS, image_name)
 
             if not os.path.isfile(copy_from):
                 # Note for future self:
@@ -93,17 +119,16 @@ def parse_icons(file_name, version_new):
             if version_new:
                 shutil.copy(copy_from, copy_to)
 
-                # Resize, Optimize and convert to JPG/PNG
-                if image_category in CATEGORY_SIZE:
-                    image_size = CATEGORY_SIZE[image_category]
+                # Crop, Resize, Optimize and convert to JPG/PNG
+                image_mode = 'RGB' if image_category in WHITELIST_BASESKINSET else 'RGBA'
+                image_size = IMAGE_SIZE[image_category] if image_category in IMAGE_SIZE else (image_rect[2], image_rect[3])
+                image_size = (80, 80) if file_name == 'classicon.xml' else image_size
+                image_size = (80, 80) if file_name == 'skillicon.xml' else image_size
 
-                if imagelist.get('category') in CATEGORY_CARD:
-                    imageutil.optimize_to_jpg(copy_to, image_size)
-                else:
-                    imageutil.optimize_to_png(copy_to, image_size)
+                imageutil.optimize(copy_to, image_mode, image_rect, image_size)
 
             # Store mapping for later use
-            globals.assets_icons[image.get('name').lower()] = image_file[:-4]
+            globals.assets_icons[image_name] = image_name
 
 
 def parse_clean(version_new):

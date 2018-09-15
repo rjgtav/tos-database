@@ -1,28 +1,20 @@
+import logging
 from PIL import Image
 import os
 
 
-def optimize_to_jpg(before, size):
-    after = before[:-4] + '.jpg'
+def optimize(before, mode, rect, size):
+    extension = '.jpg' if mode == 'RGB' else '.png'
+    format = 'JPEG' if mode == 'RGB' else 'PNG'
+    quality = 80 if mode == 'RGB' else 1
+
+    after = (before[:-4] if '.' == before[-4] else before) + extension
 
     image = Image.open(before)
-    image = image if '.jpg' in before else image.convert('RGB')
-    image = image.resize(size, Image.ANTIALIAS) if size < image.size else image
-    image = image.save(after, 'JPEG', optimize=True, quality=80)
-
-    if before != after:
-        os.remove(before)
-
-    return after
-
-
-def optimize_to_png(before, size):
-    after = before[:-4] + '.png'
-
-    image = Image.open(before)
-    image = image if '.png' in before else image.convert('RGBA')
-    image = image.resize(size, Image.ANTIALIAS) if size < image.size else image
-    image = image.save(before, 'PNG', optimize=True, quality=1)
+    image = image.convert(mode) if image.mode != mode else image
+    image = image.crop((rect[0], rect[1], rect[0] + rect[2], rect[1] + rect[3])) if (rect[2], rect[3]) != image.size else image
+    image = image.resize((size[0], size[1]), Image.ANTIALIAS) if size < image.size else image
+    image = image.save(after, format, optimize=True, quality=quality)
 
     if before != after:
         os.remove(before)
