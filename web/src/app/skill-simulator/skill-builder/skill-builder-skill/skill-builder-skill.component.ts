@@ -23,9 +23,16 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   skillLevel: number;
   skillLevelMax: number;
 
+  subscriptionJobs: Subscription;
   subscriptionLevel: Subscription;
 
   constructor(private skillSimulatorService: SkillSimulatorService) { }
+
+  private update() {
+    this.skillLevelMax = this.build.skillLevelMax(this.skill);
+    this.skillIncrementAvailablePlus = this.build.skillIncrementLevelAvailable(this.skill, 1);
+    this.skillIncrementAvailableMinus = this.build.skillIncrementLevelAvailable(this.skill, -1);
+  }
 
   onIncrementClick(event: MouseEvent, delta: number, rollOver?: boolean) {
     event.preventDefault();
@@ -34,15 +41,15 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
 
   onSkillLevelsChange(value: { [key: number]: number }) {
     this.skillLevel = value[this.skill.$ID];
-    this.skillLevelMax = this.build.skillLevelMax(this.skill);
-
-    this.skillIncrementAvailablePlus = this.build.skillIncrementLevelAvailable(this.skill, 1);
-    this.skillIncrementAvailableMinus = this.build.skillIncrementLevelAvailable(this.skill, -1);
+    this.update();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.build || changes.skill) {
       this.attributes = this.skillSimulatorService.AttributesBySkill[this.skill.$ID];
+
+      this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
+      this.subscriptionJobs = this.build.Jobs.subscribe(value => this.update());
 
       this.subscriptionLevel && this.subscriptionLevel.unsubscribe();
       this.subscriptionLevel = this.build.skillLevels(this.job).subscribe(value => this.onSkillLevelsChange(value));
@@ -50,6 +57,7 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
     this.subscriptionLevel && this.subscriptionLevel.unsubscribe();
   }
 

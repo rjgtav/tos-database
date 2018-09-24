@@ -154,7 +154,7 @@ export class TOSSkill extends TOSEntity {
       ? Math.min(this.levelMax, (circle - this.RequiredCircle + 1) * this.LevelPerCircle)
       : this.levelMax;
   }
-  SP(level: number): number { return this.sp + this.SPPerLevel * level }
+  SP(level: number): number { return Math.floor(this.sp + this.SPPerLevel * (level - 1)) }
 
   get BasicPoison(): number { return this.prop_BasicPoison; }
   get LvUpSpendPoison(): number { return this.prop_LvUpSpendPoison; }
