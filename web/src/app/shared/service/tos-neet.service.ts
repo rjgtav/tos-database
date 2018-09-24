@@ -26,7 +26,7 @@ export class TOSNeetService {
       if (job == null) // HotFix: for example tos-th has the wrong ClassID for some classes
         continue;
 
-      build.jobAdd(job);
+      build.jobAdd(job, this.skillSimulatorService.SkillsByJob[job.$ID]);
 
       if (jobsDecoded.indexOf(job) == -1)
         jobsDecoded.push(job)

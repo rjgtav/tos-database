@@ -13,7 +13,7 @@ export class TOSMonsterService extends CRUDService<TOSMonster> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/monsters.csv',
-      searchKeys: ['$ID', '$ID_NAME', 'Name'],
+      searchKeys: ['$ID_NAME', 'Name'],
       step: (row: TOSMonster) => new TOSMonster(row)
     });
   }

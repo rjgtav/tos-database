@@ -87,7 +87,7 @@ def get_item_link(name):
         return {
             '$ID': -1,
             '$ID_NAME': None,
-            'Icon': 'icon_item_silver2',
+            'Icon': 'icon_item_silver',
             'Name': 'Silver'
         }
     else:

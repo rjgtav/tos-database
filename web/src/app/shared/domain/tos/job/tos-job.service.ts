@@ -13,7 +13,7 @@ export class TOSJobService extends CRUDService<TOSJob> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/jobs.csv',
-      searchKeys: ['$ID', '$ID_NAME', 'Name'],
+      searchKeys: ['$ID_NAME', 'Name'],
       step: (row: TOSJob) => new TOSJob(row)
     });
   }

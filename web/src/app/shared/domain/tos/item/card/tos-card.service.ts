@@ -13,7 +13,7 @@ export class TOSCardService extends CRUDService<TOSCard> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/cards.csv',
-      searchKeys: ['$ID', '$ID_NAME', 'Name'],
+      searchKeys: ['$ID_NAME', 'Name'],
       step: (row: TOSCard) => new TOSCard(row)
     });
   }

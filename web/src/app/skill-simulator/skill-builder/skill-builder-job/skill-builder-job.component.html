@@ -20,18 +20,27 @@
         <!-- Class Name & Class Attributes & Skill Points -->
         <div class="col pr-0" *ngIf="circle == 1">
           <div class="d-flex flex-row align-items-center justify-content-between">
-            <h3 style="line-height: 1">
-              <span [style.lineHeight]="attributes ? '' : '64px'">{{ job.Name }}</span><br *ngIf="attributes"/>
-              <img *ngFor="let attribute of attributes" class="mr-1" width="32" height="32"
+            <h4 class="mb-0" style="line-height: 1">
+              <span style="font-size: 115%;" [style.lineHeight]="attributes ? '' : '64px'">
+                {{ job.Name }}
+              </span>
+
+              <br *ngIf="attributes"/>
+
+              <img *ngFor="let attribute of attributes" class="mr-1 mt-1" width="32" height="32"
                    [src]="attribute.Icon"
                    [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
                    (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
                    (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/><br/>
 
               <span class="d-inline d-md-none badge badge-primary" style="font-size: 18px">{{ skillPoints + ' points' }}</span>
-            </h3>
+            </h4>
 
-            <h5 class="d-none d-md-inline-block">
+            <h5 class="d-none d-md-inline-flex mb-0 pr-3 align-items-center">
+              <span class="mr-2">
+                <fa-icon *ngFor="let circle of job.CircleAvailable" [icon]="['fas', 'star']"
+                         [ngClass]="{ 'text-warning': circle <= circles.length }"></fa-icon>
+              </span>
               <span class="badge badge-primary mr-1" style="font-size: 18px;">{{ skillPoints + ' points' }}</span>
               <img class="d-none d-md-inline-block" [src]="job.Icon" width="64" height="64" />
             </h5>

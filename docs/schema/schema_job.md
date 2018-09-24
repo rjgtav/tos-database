@@ -16,7 +16,7 @@
 
 #### Links
 - Link_Attributes `TOSEntityLink[]`
-- Link_Skills `TOSSkillLink[]`
+- Link_Skills `TOSEntityLink[]`
 
 ### TOSJobDifficulty
 - EASY
@@ -40,9 +40,3 @@
 - SUPPORT
 - SUPPORT_CONTROL
 - SUPPORT_PARTY
-
-## TOSSkillLink
-
-#### Properties
-- Skill `TOSEntityLink`
-- Attributes `TOSEntityLink[]`

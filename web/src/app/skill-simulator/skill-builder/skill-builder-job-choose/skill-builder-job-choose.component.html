@@ -7,17 +7,20 @@
                                           [rank]="rank"></app-skill-builder-rank-indicator>
 
         <div class="col">
-          <h3 class="mb-3" style="line-height: 64px;">Choose a Class</h3>
+          <h4 class="mb-3">
+            <span style="font-size: 115%; line-height: 64px;">Choose a Class</span>
+          </h4>
         </div>
     </div>
 
     <!-- Class list -->
     <div class="row">
-      <a *ngFor="let job of jobsAvailable" class="col-6 col-sm-4 col-md-3 mb-3 text-center tos-job" [href]="'#' + job.Name"
+      <a *ngFor="let job of jobsAvailable; let i = index" class="col-6 col-sm-4 col-md-3 mb-3 text-center tos-job"
+         [href]="'#' + job.Name"
          (click)="onJobClick($event, job)">
         <img [src]="job.Icon" /><br/>
         <fa-icon *ngFor="let circle of job.CircleAvailable" [icon]="['fas', 'star']"
-                 [ngClass]="{ 'text-warning': build.jobCircle(job) + 1 >= circle}"></fa-icon><br/>
+                 [ngClass]="{ 'text-warning': jobsCircles[i] + 1 >= circle}"></fa-icon><br/>
         <span class="h5">{{ job.Name }}</span>
       </a>
     </div>

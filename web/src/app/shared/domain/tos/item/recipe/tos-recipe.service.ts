@@ -13,7 +13,7 @@ export class TOSRecipeService extends CRUDService<TOSRecipe> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/recipes.csv',
-      searchKeys: ['$ID', '$ID_NAME', 'Name'],
+      searchKeys: ['$ID_NAME', 'Name'],
       step: (row: TOSRecipe) => new TOSRecipe(row)
     });
   }

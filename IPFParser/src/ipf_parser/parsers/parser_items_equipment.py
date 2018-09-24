@@ -297,8 +297,8 @@ class TOSEquipmentType(TOSEnum):
 
 # from shared.ipf/item_calculate.lua
 EQUIPMENT_STAT_COLUMNS = [
-    'MINATK',
-    'MAXATK',
+    #'MINATK',
+    #'MAXATK',
     'ADD_MINATK',
     'ADD_MAXATK',
     'ADD_MATK',
@@ -504,8 +504,8 @@ def parse_equipment():
         if 'OptDesc' in row and len(row['OptDesc']) > 0:
             for bonus in parser_translations.translate(row['OptDesc']).split('{nl}'):
                 obj['Bonus'].append([
-                    TOSEquipmentStat.UNKNOWN,         # Stat
-                    bonus.replace('-', '').strip()  # Value
+                    TOSEquipmentStat.UNKNOWN,           # Stat
+                    bonus.replace('-', '').strip()      # Value
                 ])
 
 

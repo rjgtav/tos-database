@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {Subscription} from "rxjs";
 import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {SkillSimulatorService} from "../../skill-simulator.service";
@@ -14,6 +14,7 @@ export class SkillBuilderJobChooseComponent implements OnChanges, OnDestroy {
   @Input() build: TOSSimulatorBuild;
 
   jobsAvailable: TOSJob[];
+  jobsCircles: number[];
   rank: number;
 
   subscriptionJobs: Subscription;
@@ -23,7 +24,7 @@ export class SkillBuilderJobChooseComponent implements OnChanges, OnDestroy {
   onJobClick(event: MouseEvent, job: TOSJob) {
     event.preventDefault();
 
-    this.build.jobAdd(job);
+    this.build.jobAdd(job, this.skillSimulatorService.SkillsByJob[job.$ID]);
   }
 
   onJobsChange(jobs: TOSJob[]) {
@@ -31,6 +32,7 @@ export class SkillBuilderJobChooseComponent implements OnChanges, OnDestroy {
     this.jobsAvailable = this.rank > 1
       ? this.skillSimulatorService.JobsByClassTree[this.build.JobTree].filter(value => this.build.jobUnlockAvailable(value))
       : this.skillSimulatorService.JobsStarter;
+    this.jobsCircles = this.jobsAvailable.map(value => this.build.jobCircle(value))
   }
 
   ngOnChanges(changes: SimpleChanges): void {

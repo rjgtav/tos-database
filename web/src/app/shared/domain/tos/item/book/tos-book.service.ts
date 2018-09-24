@@ -13,7 +13,7 @@ export class TOSBookService extends CRUDService<TOSBook> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/books.csv',
-      searchKeys: ['$ID', '$ID_NAME', 'Name'],
+      searchKeys: ['$ID_NAME', 'Name'],
       step: (row: TOSBook) => new TOSBook(row)
     });
   }

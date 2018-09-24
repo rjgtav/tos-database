@@ -13,7 +13,7 @@ export class TOSSkillService extends CRUDService<TOSSkill> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/skills.csv',
-      searchKeys: ['$ID', '$ID_NAME', 'Name'],
+      searchKeys: ['$ID_NAME', 'Name'],
       step: (row: TOSSkill) => new TOSSkill(row)
     });
   }

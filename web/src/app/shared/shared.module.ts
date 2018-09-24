@@ -9,7 +9,7 @@ import {TOSBookResolver} from "./domain/tos/item/book/tos-book.resolver";
 import {TOSCollectionResolver} from "./domain/tos/item/collection/tos-collection.resolver";
 import {TOSMonsterResolver} from "./domain/tos/monster/tos-monster.resolver";
 import {TOSRecipeResolver} from "./domain/tos/item/recipe/tos-recipe.resolver";
-import {TOSCubeResolver} from "./domain/tos/item/cube/tos-cube-resolver.service";
+import {TOSCubeResolver} from "./domain/tos/item/cube/tos-cube.resolver";
 import {TOSEquipmentSetResolver} from "./domain/tos/item/equipment/tos-equipment-set.resolver";
 import {TOSCardResolver} from "./domain/tos/item/card/tos-card.resolver";
 import {TOSGemResolver} from "./domain/tos/item/gem/tos-gem.resolver";

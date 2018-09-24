@@ -13,7 +13,7 @@ export class TOSGemService extends CRUDService<TOSGem> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/gems.csv',
-      searchKeys: ['$ID', '$ID_NAME', 'Name'],
+      searchKeys: ['$ID_NAME', 'Name'],
       step: (row: TOSGem) => new TOSGem(row)
     });
   }

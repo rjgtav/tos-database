@@ -90,7 +90,7 @@ export class TOSMonsterDropLink {
 
   constructor(json: TOSMonsterDropLink) {
     this.Chance = +json.Chance;
-    this.Item = json.Item != null ? new TOSEntityLink(json.Item) : null;
+    this.Item = json.Item ? new TOSEntityLink(json.Item) : null;
     this.Quantity_MAX = +json.Quantity_MAX;
     this.Quantity_MIN = +json.Quantity_MIN;
   }

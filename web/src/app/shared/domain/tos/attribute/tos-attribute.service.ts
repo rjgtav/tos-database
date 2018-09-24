@@ -13,7 +13,7 @@ export class TOSAttributeService extends CRUDService<TOSAttribute> {
     super(http, papa, {
       id: '$ID',
       path: 'assets/data/attributes.csv',
-      searchKeys: ['$ID', '$ID_NAME', 'Name'],
+      searchKeys: ['$ID_NAME', 'Name'],
       step: (row: TOSAttribute) => new TOSAttribute(row)
     });
   }

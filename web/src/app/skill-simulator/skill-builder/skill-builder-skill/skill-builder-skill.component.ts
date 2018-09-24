@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {Subscription} from "rxjs";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
@@ -18,19 +18,26 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   @Input() skill: TOSSkill;
 
   attributes: TOSAttribute[];
-  skillLevels: { [key: number]: number };
+  skillIncrementAvailablePlus: boolean;
+  skillIncrementAvailableMinus: boolean;
+  skillLevel: number;
+  skillLevelMax: number;
 
   subscriptionLevel: Subscription;
 
   constructor(private skillSimulatorService: SkillSimulatorService) { }
 
-  onIncrementClick(event: MouseEvent, delta: number) {
+  onIncrementClick(event: MouseEvent, delta: number, rollOver?: boolean) {
     event.preventDefault();
-    this.build.skillIncrementLevel(this.skill, delta);
+    this.build.skillIncrementLevel(this.skill, delta, rollOver);
   }
-  onIncrementClickDouble(event: MouseEvent) {
-    event.preventDefault();
-    this.build.skillIncrementLevelToggle(this.skill);
+
+  onSkillLevelsChange(value: { [key: number]: number }) {
+    this.skillLevel = value[this.skill.$ID];
+    this.skillLevelMax = this.build.skillLevelMax(this.skill);
+
+    this.skillIncrementAvailablePlus = this.build.skillIncrementLevelAvailable(this.skill, 1);
+    this.skillIncrementAvailableMinus = this.build.skillIncrementLevelAvailable(this.skill, -1);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -38,7 +45,7 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
       this.attributes = this.skillSimulatorService.AttributesBySkill[this.skill.$ID];
 
       this.subscriptionLevel && this.subscriptionLevel.unsubscribe();
-      this.subscriptionLevel = this.build.skillLevels(this.job).subscribe(value => this.skillLevels = value);
+      this.subscriptionLevel = this.build.skillLevels(this.job).subscribe(value => this.onSkillLevelsChange(value));
     }
   }
 

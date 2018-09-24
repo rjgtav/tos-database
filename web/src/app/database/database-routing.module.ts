@@ -16,7 +16,7 @@ import {TOSRecipeResolver} from "../shared/domain/tos/item/recipe/tos-recipe.res
 import {RecipeListConfigurationResolver} from "./resolvers/recipe-list-configuration.resolver";
 import {EquipmentSetListConfigurationResolver} from "./resolvers/equipment-set-list-configuration.resolver";
 import {CubeListConfigurationResolver} from "./resolvers/cube-list-configuration.resolver";
-import {TOSCubeResolver} from "../shared/domain/tos/item/cube/tos-cube-resolver.service";
+import {TOSCubeResolver} from "../shared/domain/tos/item/cube/tos-cube.resolver";
 import {TOSEquipmentSetResolver} from "../shared/domain/tos/item/equipment/tos-equipment-set.resolver";
 import {CardListConfigurationResolver} from "./resolvers/card-list-configuration.resolver";
 import {TOSCardResolver} from "../shared/domain/tos/item/card/tos-card.resolver";

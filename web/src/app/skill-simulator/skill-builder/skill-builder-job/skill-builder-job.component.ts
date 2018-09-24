@@ -1,6 +1,14 @@
-import {Component, EventEmitter, Input, OnChanges, OnDestroy, Output, SimpleChanges} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnDestroy,
+  Output,
+  SimpleChanges
+} from '@angular/core';
 import {Subscription} from "rxjs";
-import {TOSEntity} from "../../../shared/domain/tos/entity/tos-entity.model";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {SkillSimulatorService} from "../../skill-simulator.service";
@@ -18,6 +26,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   @Input() job: TOSJob;
 
   attributes: TOSAttribute[];
+  circle: number;
   circles: number[];
   circlesRemove: boolean[];
   ranks: number[];
@@ -35,6 +44,10 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
     this.circlesRemove = new Array(this.ranks.length);
   }
 
+  onSkillPointsChange(value: number) {
+    this.skillPoints = value
+  }
+
   onRankRemove(rank: number) {
     this.build.jobRemove(rank);
   }
@@ -48,7 +61,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
       this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
 
       this.subscriptionSkillPoints && this.subscriptionSkillPoints.unsubscribe();
-      this.subscriptionSkillPoints = this.build.skillPoints(this.job).subscribe(value => this.skillPoints = value);
+      this.subscriptionSkillPoints = this.build.skillPoints(this.job).subscribe(value => this.onSkillPointsChange(value));
     }
   }
 
