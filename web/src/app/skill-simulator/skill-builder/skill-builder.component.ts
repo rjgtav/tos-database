@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {TOSJob} from "../../shared/domain/tos/job/tos-job.model";
 import {Subscription} from "rxjs";
 import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
@@ -30,6 +30,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
   subscriptionTooltip: Subscription;
 
   constructor(
+    private changeDetector: ChangeDetectorRef,
     private route: ActivatedRoute,
     private router: Router,
     private skillSimulatorService: SkillSimulatorService,
@@ -50,14 +51,19 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
       return;
     }
 
+
     if (value[PARAM_TOSNEET]) {
       this.build = this.tosNeetService.decode(value[PARAM_TOSNEET]);
       this.buildSubscribe();
-    }
-    if (value[PARAM_BUILD]) {
+    } else if (value[PARAM_BUILD]) {
       this.build = TOSSimulatorBuild.base64Decode(value[PARAM_BUILD], this.skillSimulatorService);
       this.buildSubscribe();
+    } else {
+      this.build = new TOSSimulatorBuild();
+      this.buildSubscribe();
     }
+
+    this.changeDetector.detectChanges();
   }
 
   onJobsChange(jobs: TOSJob[]) {

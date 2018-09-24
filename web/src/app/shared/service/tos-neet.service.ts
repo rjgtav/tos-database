@@ -23,6 +23,9 @@ export class TOSNeetService {
       let jobClassName = 'Char' + jobTree + "_" + parseInt(ranksEncoded[i], 36);
 
       let job = this.skillSimulatorService.JobsByClassName[jobClassName];
+      if (job == null) // HotFix: for example tos-th has the wrong ClassID for some classes
+        continue;
+
       build.jobAdd(job);
 
       if (jobsDecoded.indexOf(job) == -1)
@@ -35,6 +38,8 @@ export class TOSNeetService {
 
       for (let j = 0; j < skillsEncoded.length; j += 2) {
         let job = jobsDecoded[i - 1];
+
+
         let skillClassID = this.skillSimulatorService.SkillsByJob[job.$ID][0].$ID;
             skillClassID = parseInt(skillsEncoded[j], 36) + (skillClassID - skillClassID % 100);
         let skillLevel = parseInt(skillsEncoded[j + 1], 36);
