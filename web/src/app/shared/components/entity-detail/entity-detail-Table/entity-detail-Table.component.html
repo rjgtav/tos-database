@@ -1,0 +1,27 @@
+<div>
+  <div class="w-100" *ngIf="divider"><hr></div>
+  <h5>{{ header }}</h5>
+  <div style="max-height: calc(49px * 4.5); overflow-y: auto;">
+    <table class="table table-hover">
+      <tbody>
+        <a class="d-table-row" *ngFor="let row of entity[column]" [routerLink]="(link ? row[link] : row).Url">
+          <td class="p-1" width="1" *ngIf="(link ? row[link] : row).Icon">
+            <img height="40" width="40" [src]="(link ? row[link] : row).Icon" />
+          </td>
+
+          <td>
+            {{ (link ? row[link] : row).Name }}
+            <span *ngIf="row.Quantity_MAX">&times; {{ row.Quantity_MIN }} ~ {{ row.Quantity_MAX}}</span>
+          </td>
+
+          <td *ngIf="item && link == 'Monster'" width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
+          <td *ngIf="monster && link == 'Item'" width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
+          <td *ngIf="monster && link == 'Map'" class="text-nowrap" width="1">{{ (row.TimeRespawn / 1000) | tosTime }}</td>
+          <td *ngIf="monster && link == 'Map'" class="text-nowrap" width="1">&times; {{ row.Population }}</td>
+          <td *ngIf="recipe && link == 'Item'" class="text-nowrap" width="1">&times; {{ row.Quantity }}</td>
+
+        </a>
+      </tbody>
+    </table>
+  </div>
+</div>

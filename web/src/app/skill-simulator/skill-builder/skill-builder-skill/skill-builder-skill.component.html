@@ -1,0 +1,35 @@
+<div class="m-auto" style="width: 250px;">
+  <div class="d-flex flex-row">
+    <!-- Plus and Minus -->
+    <div class="d-flex flex-column justify-content-around mr-1" style="height: 64px">
+      <a [ngClass]="{ 'invisible': !build.skillIncrementLevelAvailable(skill, 1) }" href="#plus"
+         (click)="onIncrementClick($event, 1)">
+        <fa-icon class="align-top" [icon]="['fas', 'plus-circle']"></fa-icon>
+      </a>
+      <a [ngClass]="{ 'invisible': !build.skillIncrementLevelAvailable(skill, -1) }" href="#minus"
+         (click)="onIncrementClick($event, -1)">
+        <fa-icon class="align-bottom" [icon]="['fas', 'minus-circle']"></fa-icon>
+      </a>
+    </div>
+
+    <!-- Icon & Level -->
+    <div class="position-relative tos-skill mr-1">
+      <img [src]="skill.Icon" />
+      <h4 class="font-weight-bold mb-0 pointer-disable position-absolute text-center text-outline text-white w-100">
+        {{ skillLevels[skill.$ID] + '/' + build.skillLevelMax(skill) }}
+      </h4>
+    </div>
+
+    <!-- Name & Attributes -->
+    <div class="d-flex flex-column">
+      <h5>{{ skill.Name }}</h5>
+      <div>
+        <img *ngFor="let attribute of attributes" class="pr-1" width="32" height="32"
+             [src]="attribute.Icon"
+             [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
+             (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
+             (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/>
+      </div>
+    </div>
+  </div>
+</div>

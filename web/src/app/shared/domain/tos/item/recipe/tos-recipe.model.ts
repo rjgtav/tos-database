@@ -16,10 +16,7 @@ export class TOSRecipe extends TOSItem {
         //.filter(link => link && link.Item)
       : null;
 
-    this.Link_Target = json.Link_Target
-      ? new TOSEntityLink(JSON.parse(json.Link_Target + ''))
-      : null;
-
+    this.Link_Target = json.Link_Target ? new TOSEntityLink(json.Link_Target) : null;
   }
 
   get TargetAsList(): TOSEntityLink[] {

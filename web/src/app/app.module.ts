@@ -14,9 +14,22 @@ import { ShellModule }        from './shell/shell.module';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {faClock} from "@fortawesome/free-regular-svg-icons";
 import { faGithub, faTwitch } from "@fortawesome/free-brands-svg-icons";
-import {faHeart, faMoon, faSignOutAlt, faSearch, faSun, faTimes, faWeightHanging} from "@fortawesome/free-solid-svg-icons";
+import {
+  faBolt,
+  faHeart,
+  faMinusCircle,
+  faMoon,
+  faPlusCircle,
+  faSignOutAlt,
+  faSearch,
+  faStar,
+  faSun,
+  faTimesCircle,
+  faWeightHanging,
+  faTrashAlt, faTint
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faClock, faGithub, faHeart, faMoon, faSearch, faSignOutAlt, faSun, faTimes, faTwitch, faWeightHanging);
+library.add(faBolt, faClock, faGithub, faHeart, faMinusCircle, faMoon, faPlusCircle, faTrashAlt, faSearch, faSignOutAlt, faSun, faStar, faTimesCircle, faTint, faTwitch, faWeightHanging);
 
 @NgModule({
   declarations: [

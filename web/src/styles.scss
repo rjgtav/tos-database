@@ -20,13 +20,13 @@ body {
   margin-right: 0 !important;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .page-link:not([aria-label]) {
   min-width: 50px;
   text-align: center;
+}
+
+.pointer-disable {
+  pointer-events: none;
 }
 
 .text-multiline {

@@ -88,7 +88,7 @@ export class TOSMonsterDropLink {
   Quantity_MAX: number;
   Quantity_MIN: number;
 
-  public constructor(json: TOSMonsterDropLink) {
+  constructor(json: TOSMonsterDropLink) {
     this.Chance = +json.Chance;
     this.Item = json.Item != null ? new TOSEntityLink(json.Item) : null;
     this.Quantity_MAX = +json.Quantity_MAX;
@@ -102,7 +102,7 @@ export class TOSMonsterSpawnLink {
   Population: number;
   TimeRespawn: number;
 
-  public constructor(json: TOSMonsterSpawnLink) {
+  constructor(json: TOSMonsterSpawnLink) {
     this.Map = new TOSEntityLink(json.Map);
     this.Population = +json.Population;
     this.TimeRespawn = +json.TimeRespawn;

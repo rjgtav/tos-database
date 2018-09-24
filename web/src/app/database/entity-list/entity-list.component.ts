@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Subscription} from "rxjs/internal/Subscription";
 import {TOSEntity, TOSEntityLink} from "../../shared/domain/tos/entity/tos-entity.model";
@@ -6,7 +6,6 @@ import {CRUDResolver} from "../../shared/service/CRUD.resolver";
 import {Filter} from "../../shared/directives/filter.directive";
 import {Sort} from "../../shared/directives/sort.directive";
 import {EntityListFilter} from "../entity-filter/entity-list-filter.component";
-import {TOSMonsterRank} from "../../shared/domain/tos/monster/tos-monster.model";
 
 @Component({
   selector: 'app-entity-list',
@@ -16,11 +15,11 @@ import {TOSMonsterRank} from "../../shared/domain/tos/monster/tos-monster.model"
 export class EntityListComponent implements OnDestroy, OnInit {
   readonly TOSListTableColumnType = TOSListTableColumnType;
 
-  $config: TOSListConfiguration;
+  config: TOSListConfiguration;
 
   data: TOSEntity[];
   dataSize: number;
-  subscriptionRouter: Subscription;
+  subscription: Subscription;
 
   page: number;
   pageSize: number = CRUDResolver.PAGE_SIZE;
@@ -45,22 +44,22 @@ export class EntityListComponent implements OnDestroy, OnInit {
 
     this.toggleFilter = false;
     this.tooltip = null;
-    this.router.navigate(['.'], { fragment: 'table', queryParams: params, relativeTo: this.route })
+    this.router.navigate(['.'], { fragment: 'top', queryParams: params, relativeTo: this.route })
   }
 
   ngOnDestroy() {
-    this.subscriptionRouter ? this.subscriptionRouter.unsubscribe() : null;
+    this.subscription ? this.subscription.unsubscribe() : null;
   }
 
   ngOnInit() {
-    this.subscriptionRouter = this.route.queryParamMap.subscribe((params: ParamMap) => {
-      this.$config = this.route.snapshot.data.configuration as TOSListConfiguration;
+    this.subscription = this.route.queryParamMap.subscribe((params: ParamMap) => {
+      this.config = this.route.snapshot.data.configuration as TOSListConfiguration;
 
       this.data = this.route.snapshot.data.response.items as TOSEntity[];
       this.dataSize = this.route.snapshot.data.response.size;
 
       this.page = +params.get(CRUDResolver.PARAM_PAGE) || 1;
-      this.pageSort = Sort.valueOf(params.get(CRUDResolver.PARAM_SORT)) || Sort.default(this.$config);
+      this.pageSort = Sort.valueOf(params.get(CRUDResolver.PARAM_SORT)) || Sort.default(this.config);
       this.pageFilter = (params.get(CRUDResolver.PARAM_FILTER) || '').split(';')
         .map(filter => Filter.valueOf(filter))
         .filter((filter) => filter);

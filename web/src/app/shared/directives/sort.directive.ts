@@ -10,7 +10,7 @@ import {TOSListConfiguration} from "../../database/entity-list/entity-list.compo
 
 const PROVIDER_VALUE_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => TOSSortGroupDirective),
+  useExisting: forwardRef(() => SortGroupDirective),
   multi: true
 };
 
@@ -19,7 +19,7 @@ const PROVIDER_VALUE_ACCESSOR = {
   host: {'role': 'group'},
   providers: [PROVIDER_VALUE_ACCESSOR]
 })
-export class TOSSortGroupDirective extends TOSGroupDirective<TOSSortDirective, Sort> {}
+export class SortGroupDirective extends TOSGroupDirective<SortDirective, Sort> {}
 
 @Directive({
   selector: '[tosSort]',
@@ -28,7 +28,7 @@ export class TOSSortGroupDirective extends TOSGroupDirective<TOSSortDirective, S
     '[style.white-space]': '"nowrap"',
   }
 })
-export class TOSSortDirective extends TOSGroupChildDirective<TOSSortDirective, Sort> {
+export class SortDirective extends TOSGroupChildDirective<SortDirective, Sort> {
 
   private _column: string;
   private _label: string;
@@ -41,7 +41,7 @@ export class TOSSortDirective extends TOSGroupChildDirective<TOSSortDirective, S
   get label(): string { return this._label; }
   set label(label: string) { this._label = label; this.updateDisabled(); }
 
-  constructor(private _group: TOSSortGroupDirective, private _element: ElementRef) {
+  constructor(private _group: SortGroupDirective, private _element: ElementRef) {
     super(_group, _element);
   }
 

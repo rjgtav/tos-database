@@ -1,0 +1,7 @@
+<span class="bg-primary"></span>
+<span class="bg-primary" style="transform: rotate(45deg)"></span>
+<h5 *ngIf="!remove" class="d-flex h-100 w-100 m-0 text-white align-items-center justify-content-center">{{ rank }}</h5>
+<a *ngIf="remove" class="d-flex h-100 w-100 text-white align-items-center justify-content-center" style="transform: scale(1.5)" href="#remove"
+   (click)="onRemoveClick($event)">
+  <fa-icon [icon]="['fas', 'trash-alt']"></fa-icon>
+</a>

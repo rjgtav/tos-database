@@ -7,9 +7,9 @@ const TIME_DAY: number = TIME_HOUR * 24;
 @Pipe({
   name: 'tosTime'
 })
-export class TOSTimePipe implements PipeTransform {
+export class TimePipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: any, args?: any): string {
     value = +value;
 
     let days = Math.floor(value / TIME_DAY);

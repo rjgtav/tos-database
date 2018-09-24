@@ -1,0 +1,79 @@
+<div *ngIf="attribute || item || monster || skill">
+  <div class="w-100" *ngIf="divider"><hr></div>
+  <h5 *ngIf="header">Information</h5>
+
+  <!-- CoolDown/Level/Cooldown and LifeTime/Size/SP -->
+  <div class="row pt-2 text-nowrap" *ngIf="attribute || item || monster || skill">
+    <div class="col" *ngIf="skill || item && !equipment"><h6>
+      <fa-icon class="mr-1" [icon]="['far', 'clock']"></fa-icon>
+      {{ ((item ? item.TimeCoolDown : skill.CoolDown) | tosTime) || 'No cooldown' }}</h6>
+    </div>
+    <div class="col" *ngIf="equipment || monster"><h6>
+      Level {{ equipment?.RequiredLevel || monster?.Level }}</h6>
+    </div>
+    <div class="col" *ngIf="attribute"><h6>
+      Maximum Level: {{ attribute.LevelMax }}</h6>
+    </div>
+
+    <div class="col text-right">
+      <h6 *ngIf="item">{{ item.TimeLifeTime ? ('Expires in ' + (item.TimeLifeTime | tosTime)) : 'No expiration' }}</h6>
+      <h6 *ngIf="monster">{{ monster.Size }}</h6>
+      <h6 *ngIf="skill">{{ skill.SP(build.skillLevel(skill)) }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
+    </div>
+  </div>
+
+  <!-- Weight and Price -->
+  <div class="row text-nowrap" *ngIf="item || skill">
+    <div class="col" *ngIf="item"><h6>
+      <fa-icon class="mr-1" [icon]="['fas', 'weight-hanging']"></fa-icon>
+      {{ (item.Weight | number) || 0 }}</h6>
+    </div>
+    <div class="col" *ngIf="skill && skill.OverHeat"><h6>
+      <fa-icon class="mr-2" [icon]="['fas', 'bolt']"></fa-icon>
+      {{ skill.OverHeat }} overheat</h6>
+    </div>
+
+
+    <div class="col text-right" *ngIf="item">
+      <h6 class="tos-icon tos-icon-price">{{ item.Price }}</h6>
+    </div>
+  </div>
+
+  <!-- Element and Race -->
+  <div class="row text-nowrap" *ngIf="monster">
+    <div class="col">
+      <h6>
+        <img class="align-middle mr-1"
+             height="24"
+             width="24"
+             [src]="'assets/images/element_' + monster.Element.toString().toLowerCase() + '.png'" />
+        <span>{{ monster.Element }}</span>
+      </h6>
+    </div>
+    <div class="col">
+      <h6 class="text-right">
+        <span>{{ monster.Race }}</span>
+        <img class="align-middle ml-1"
+             height="24"
+             width="24"
+             [src]="'assets/images/monster_race_' + monster.Race.toString().toLowerCase() + '.png'" />
+      </h6>
+    </div>
+  </div>
+
+  <!-- Tradability -->
+  <div class="row mt-1" *ngIf="item">
+    <div class="col">
+      <table class="table table-sm text-center mb-0">
+        <tbody>
+        <tr>
+          <td [class]="item.isTradable(TOSItemTradability.MARKET) ? 'table-success' : 'table-secondary'" >{{ TOSItemTradability.MARKET }}</td>
+          <td [class]="item.isTradable(TOSItemTradability.PLAYER) ? 'table-success' : 'table-secondary'" >{{ TOSItemTradability.PLAYER }}</td>
+          <td [class]="item.isTradable(TOSItemTradability.SHOP) ? 'table-success' : 'table-secondary'" >{{ TOSItemTradability.SHOP }}</td>
+          <td [class]="item.isTradable(TOSItemTradability.TEAM) ? 'table-success' : 'table-secondary'" >{{ TOSItemTradability.TEAM }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

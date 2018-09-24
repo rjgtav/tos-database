@@ -1,0 +1,45 @@
+<div class="w-100"><hr></div>
+<h5>Enhancement</h5>
+
+<table class="table table-borderless table-sm text-center">
+  <tbody>
+    <!-- Anvil -->
+    <tr *ngIf="anvilAvailable" class="table-primary">
+      <th width="120">Anvil</th>
+      <th>Bonus</th>
+      <th>Silver</th>
+      <th>Total</th>
+    </tr>
+    <tr *ngIf="anvilAvailable">
+      <td>
+        <tos-input-number [min]="0"
+                          [max]="40"
+                          [model]="anvilLevel"
+                          (modelChange)="onAnvilChange($event)"></tos-input-number>
+      </td>
+      <td class="align-middle">{{ anvilBonus }}</td>
+      <td class="align-middle">{{ anvilSilver | number }}</td>
+      <td class="align-middle">{{ anvilSilverTotal | number }}</td>
+    </tr>
+
+    <!-- Transcendence -->
+    <tr *ngIf="transcendAvailable" class="table-primary" style="border-top: 16px solid transparent;">
+      <th width="120">Transcendence</th>
+      <th>Bonus</th>
+      <th class="text-nowrap">Blessed Gems</th>
+      <th>Total</th>
+    </tr>
+    <tr *ngIf="transcendAvailable">
+      <td>
+        <tos-input-number [min]="0"
+                          [max]="10"
+                          [model]="transcendLevel"
+                          (modelChange)="onTranscendChange($event)"></tos-input-number>
+      </td>
+      <td class="align-middle">{{ transcendBonus | percent }}</td>
+      <td class="align-middle">{{ transcendShards }}</td>
+      <td class="align-middle">{{ transcendShardsTotal }}</td>
+    </tr>
+
+  </tbody>
+</table>

@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: './database/database.module#DatabaseModule'
   },
   {
+    path: 'simulator',
+    loadChildren: './skill-simulator/skill-simulator.module#SkillSimulatorModule'
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
@@ -14,7 +18,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })],
+  imports: [RouterModule.forRoot(routes, {
+    anchorScrolling: 'enabled',
+    onSameUrlNavigation: 'ignore',
+    scrollPositionRestoration: 'disabled' // Note: as of angular 6.1, when 'enabled', we can't disable it for specific routes (e.g. the simulator)
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

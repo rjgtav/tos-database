@@ -19,11 +19,11 @@
 
         <div class="dropdown-header" *ngIf="optionGroup.header">{{ optionGroup.header }}</div>
 
-        <div class="dropdown-item cursor-pointer" *ngFor="let option of optionGroup.options"
-             [ngClass]="{ 'active': option?.toString() == value[filter.column]?.value }"
-             (click)="onSelect(filter, option)">
+        <a class="dropdown-item" *ngFor="let option of optionGroup.options" [href]="'#' + option?.toString() || 'All'"
+           [ngClass]="{ 'active': option?.toString() == value[filter.column]?.value }"
+           (click)="onSelect($event, filter, option)">
           {{ option?.toString() || 'All' }}
-        </div>
+        </a>
 
         <div class="dropdown-divider" *ngIf="i < filter.groups.length - 1"></div>
       </div>

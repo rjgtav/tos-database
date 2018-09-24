@@ -1,0 +1,10 @@
+<!-- Selected Classes -->
+<app-skill-builder-job *ngFor="let job of jobs"
+                       [build]="build"
+                       [job]="job"></app-skill-builder-job>
+
+<!-- Select a Class -->
+<app-skill-builder-job-choose [build]="build"></app-skill-builder-job-choose>
+
+<!-- Tooltip -->
+<app-entity-tooltip [build]="build" [debug]="false" [tooltip]="tooltip"></app-entity-tooltip>

@@ -38,7 +38,8 @@ export class EntityListFilterComponent implements OnChanges {
     this.isOpen[filter.column] = !this.isOpen[filter.column]
   }
 
-  onSelect(filter: EntityListFilter, option: string) {
+  onSelect(event: MouseEvent, filter: EntityListFilter, option: string) {
+    event.preventDefault();
     if (this.disabled) return;
 
     let result: Filter[] = [];

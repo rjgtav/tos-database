@@ -17,9 +17,9 @@ export abstract class TOSEntity extends Comparable {
       return (i < j) ? -1 : (i > j) ? 1 : 0;
     };
 
-    this.$ID = json.$ID;
+    this.$ID = +json.$ID;
     this.$ID_NAME = json.$ID_NAME;
-    this.Description = json.Description ? json.Description.split("{nl}").join("\n") : null;
+    this.Description = json.Description ? json.Description.replace(/{nl}/g, '\n') : null;
     this.Icon = json.Icon ? 'assets/icons/' + json.Icon.toLowerCase() + '.png' : null;
     this.Name = json.Name;
   }
@@ -34,11 +34,24 @@ export class TOSEntityLink extends TOSEntity {
   Url: string;
 
   public constructor(json: TOSEntityLink) {
-    super(json);
+    super(json = (typeof json == 'string') ? JSON.parse(json) : json);
 
     this.Url = '/database/' + json.Url + '/' + this.$ID;
   }
 
+}
+
+export enum TOSAttackType {
+  PIERCING = 'Piercing',
+  BOW = 'Missile: Bow',
+  CANNON = 'Missile: Cannon',
+  GUN = 'Missile: Gun',
+  MAGIC = 'Magic',
+  MELEE = 'Melee',
+  SLASH = 'Slash',
+  STRIKE = 'Strike',
+  THRUST = 'Thrust',
+  UNKNOWN = '',
 }
 
 export enum TOSClassTree {

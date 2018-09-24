@@ -1,21 +1,23 @@
-<div class="mb-4">
+<div class="mb-4" id="top">
   <div class="row">
     <!-- Filter -->
     <app-entity-list-filter class="form-group col-md-6 col-xl-8"
-                            [config]="$config.filter"
+                            [config]="config.filter"
                             [disabled]="search"
                             [model]="pageFilter"
                             (modelChange)="onFilterChange($event)"
-                            *ngIf="$config.filter">
+                            *ngIf="config.filter">
     </app-entity-list-filter>
 
     <!-- Search -->
-    <div class="form-group col-md-6 col-xl-4" [ngClass]="{ 'm-auto': !$config.filter }">
+    <div class="form-group col-md-6 col-xl-4" [ngClass]="{ 'm-auto': !config.filter }">
       <label>Search</label>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Name, ClassID, ClassName" [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)" (keyup.esc)="onSearchToggle()">
         <div class="input-group-append">
-          <button class="btn btn-primary" type="button" [disabled]="!search" (click)="onSearchToggle()">Clear</button>
+          <button class="btn btn-primary" type="button" [disabled]="!search" (click)="onSearchToggle()">
+            <fa-icon [icon]="['fas', 'times-circle']"></fa-icon>
+          </button>
         </div>
       </div>
     </div>
@@ -23,10 +25,10 @@
 </div>
 
 <!-- Table -->
-<table class="table table-hover" id="table">
+<table class="table table-hover">
   <thead>
     <tr tosSortGroup [ngModel]="pageSort" (ngModelChange)="onSortChange($event)" [disabled]="search">
-      <th *ngFor="let column of $config.tableColumns"
+      <th *ngFor="let column of config.tableColumns"
           [ngClass]="{
             'd-none': column.isNotMobile || column.isNotTablet,
             'd-sm-table-cell': column.isNotMobile,
@@ -41,12 +43,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of data"
-        class="cursor-pointer"
-        [routerLink]="row.$ID"
-        (mouseenter)="tooltip = row"
-        (mouseleave)="tooltip = null" >
-      <td *ngFor="let column of $config.tableColumns"
+    <a *ngFor="let row of data" class="d-table-row"
+       [routerLink]="row.$ID"
+       (mouseenter)="tooltip = row"
+       (mouseleave)="tooltip = null" >
+      <td *ngFor="let column of config.tableColumns"
           [ngClass]="{
             'd-none': column.isNotMobile || column.isNotTablet,
             'd-sm-table-cell': column.isNotMobile,
@@ -91,7 +92,7 @@
                (click)="$event.stopPropagation()"
                (mouseenter)="tooltip = column.transformLink(link)"
                (mouseleave)="tooltip = row">
-            <span class="position-absolute text-outline"
+            <span class="position-absolute text-outline text-white"
                   style="bottom: 0; right: 0.25rem;">{{ column.transformValue(link) }}</span>
           </div>
 
@@ -106,7 +107,7 @@
         </div>
 
       </td>
-    </tr>
+    </a>
   </tbody>
 </table>
 

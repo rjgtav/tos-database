@@ -9,7 +9,7 @@ import {TOSGroupChildDirective, TOSGroupDirective} from "./group-child.directive
 
 const PROVIDER_VALUE_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => TOSFilterGroupDirective),
+  useExisting: forwardRef(() => FilterGroupDirective),
   multi: true
 };
 
@@ -18,7 +18,7 @@ const PROVIDER_VALUE_ACCESSOR = {
   host: {'role': 'group'},
   providers: [PROVIDER_VALUE_ACCESSOR]
 })
-export class TOSFilterGroupDirective extends TOSGroupDirective<TOSFilterDirective, Filter> {
+export class FilterGroupDirective extends TOSGroupDirective<FilterDirective, Filter> {
 
   @Input('column')
   column: string;
@@ -26,7 +26,7 @@ export class TOSFilterGroupDirective extends TOSGroupDirective<TOSFilterDirectiv
   @Input('toggle')
   toggle: boolean;
 
-  public onChildChange(child: TOSFilterDirective) {
+  public onChildChange(child: FilterDirective) {
     let value = child.getNewValue();
         child = value == null ? null : child;
 
@@ -47,18 +47,18 @@ export class TOSFilterGroupDirective extends TOSGroupDirective<TOSFilterDirectiv
     '[style.white-space]': '"nowrap"',
   }
 })
-export class TOSFilterDirective extends TOSGroupChildDirective<TOSFilterDirective, Filter> {
+export class FilterDirective extends TOSGroupChildDirective<FilterDirective, Filter> {
 
   @Input('value')
   value: string;
 
-  constructor(private _group: TOSFilterGroupDirective, private _element: ElementRef) {
+  constructor(private _group: FilterGroupDirective, private _element: ElementRef) {
     super(_group, _element);
   }
 
   getNewValue(): Filter {
     return this.value
-      ? new Filter((this.$group as TOSFilterGroupDirective).column, this.value)
+      ? new Filter((this.$group as FilterGroupDirective).column, this.value)
       : null;
   }
 

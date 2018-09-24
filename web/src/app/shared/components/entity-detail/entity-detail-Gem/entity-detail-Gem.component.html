@@ -1,0 +1,17 @@
+<div class="bg-primary text-white p-2 mt-3" *ngIf="gem">
+  <tos-input-number class="h5 text-center" *ngIf="editable && gem.TypeGem != TOSGemType.SKILL"
+                    [label]="'Level'"
+                    [min]="1" [max]="10"
+                    [(model)]="level"></tos-input-number>
+
+  <table class="table table-borderless mb-0">
+    <tbody>
+      <tr *ngFor="let entry of gem.getBonus(level) | keyvalue">
+        <td class="p-1 align-middle" width="1">
+          <img [src]="'assets/images/gem_effect_' + entry.key.toLowerCase() + '.png'" [title]="entry.key" />
+        </td>
+        <td [innerHTML]="entry.value.join('<br/>')"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

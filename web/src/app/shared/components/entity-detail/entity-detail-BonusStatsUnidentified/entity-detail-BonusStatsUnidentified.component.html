@@ -1,0 +1,50 @@
+<div *ngIf="(collection || equipment || equipmentSet) && (entity['Bonus'] && entity['Bonus'] != [] || entity['Unidentified'] || entity['UnidentifiedRandom'])">
+  <div *ngIf="divider" class="w-100"><hr></div>
+  <h5 *ngIf="header && collection">Bonus</h5>
+  <h5 *ngIf="header && equipment">Stats</h5>
+  <h5 *ngIf="header && equipmentSet">Set</h5>
+
+  <div class="row" *ngIf="!equipmentSet">
+    <div class="col">
+      <div class="row" *ngFor="let bonus of entity['Bonus']">
+        <div class="col" *ngIf="bonus.Value">
+          {{ bonus.Stat }}
+          <span class="text-success" *ngIf="bonus.Value > 0">▲</span>
+          <span class="text-danger" *ngIf="bonus.Value < 0">▼</span>
+          {{ Math.abs(bonus.Value) }}
+        </div>
+        <div class="col" *ngIf="bonus.ValueHTML" [innerHTML]="'- ' + bonus.ValueHTML"></div>
+      </div>
+
+      <div class="row">
+        <div class="col text-muted" *ngIf="equipment?.Unidentified">*Unidentified</div>
+        <div class="col text-muted" *ngIf="equipment?.UnidentifiedRandom">*Unidentified with random stats</div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-borderless" *ngIf="equipmentSet">
+    <tbody>
+      <tr class="table-primary" *ngIf="header">
+        <th scope="row" class="text-nowrap" width="1">{{ equipmentSet.Name }}</th>
+        <td class="p-1">
+          <a *ngFor="let link of equipmentSet.Link_Items; let i = index" [routerLink]="link.Url">
+            <img class="cursor-pointer border-white"
+                 height="40"
+                 width="40"
+                 [ngClass]="{
+                    'border': router.url == link.Url,
+                    'pr-1': i < equipmentSet.Link_Items.length - 1
+                 }"
+                 [src]="link.Icon" />
+          </a>
+        </td>
+      </tr>
+      <tr *ngFor="let entry of equipmentSet.Bonus | keyvalue">
+        <th scope="row" class="text-nowrap" width="1">{{ entry.key }}+ Pieces</th>
+        <td><div *ngFor="let bonus of entry.value" [innerHTML]="bonus.ValueHTML"></div></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

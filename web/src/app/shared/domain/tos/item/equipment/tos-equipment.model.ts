@@ -1,4 +1,4 @@
-import {TOSClassTree, TOSEntity, TOSEntityLink, TOSStat} from "../../entity/tos-entity.model";
+import {TOSAttackType, TOSClassTree, TOSEntity, TOSEntityLink, TOSStat} from "../../entity/tos-entity.model";
 import {TOSItem} from "../tos-item.model";
 import {TOSDataService} from "../../data/tos-data.service";
 
@@ -21,7 +21,7 @@ export class TOSEquipment extends TOSItem {
   Stat_ATTACK_PHYSICAL_MIN: number;
   Stat_DEFENSE_MAGICAL: number;
   Stat_DEFENSE_PHYSICAL: number;
-  TypeAttack: TOSEquipmentAttackType;
+  TypeAttack: TOSAttackType;
   TypeEquipment: TOSEquipmentType;
   Unidentified: boolean;
   UnidentifiedRandom: boolean;
@@ -54,7 +54,7 @@ export class TOSEquipment extends TOSItem {
     this.Stat_ATTACK_PHYSICAL_MIN = +json.Stat_ATTACK_PHYSICAL_MIN;
     this.Stat_DEFENSE_MAGICAL = +json.Stat_DEFENSE_MAGICAL;
     this.Stat_DEFENSE_PHYSICAL = +json.Stat_DEFENSE_PHYSICAL;
-    this.TypeAttack = Object.values(TOSEquipmentAttackType)[+json.TypeAttack];
+    this.TypeAttack = Object.values(TOSAttackType)[+json.TypeAttack];
     this.TypeEquipment = Object.values(TOSEquipmentType)[+json.TypeEquipment];
     this.Unidentified = (json.Unidentified + '') == 'True';
     this.UnidentifiedRandom = (json.UnidentifiedRandom + '') == 'True';
@@ -120,17 +120,6 @@ export class TOSEquipment extends TOSItem {
     return sum;
   }
 
-}
-
-export enum TOSEquipmentAttackType {
-  PIERCING = 'Piercing',
-  BOW = 'Missile: Bow',
-  CANNON = 'Missile: Cannon',
-  GUN = 'Missile: Gun',
-  SLASH = 'Slash',
-  STRIKE = 'Strike',
-  THRUST = 'Thrust',
-  UNKNOWN = '',
 }
 
 export class TOSEquipmentBonus {

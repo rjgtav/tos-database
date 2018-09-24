@@ -2,53 +2,52 @@
 
   <div class="row">
     <!-- Name and Material/Type -->
-    <app-entity-detail-MaterialNameType class="col h3" [entity]="entity" [idName]="true"></app-entity-detail-MaterialNameType>
+    <tos-entity-detail-MaterialNameType class="col h3" [entity]="entity" [idName]="true"></tos-entity-detail-MaterialNameType>
   </div>
 
   <div class="row mb-4">
 
     <div class="col-lg-6 mb-4 mt-5 pt-5" *ngIf="card">
-      <app-entity-detail-Card [entity]="card"></app-entity-detail-Card>
+      <tos-entity-detail-Card [entity]="card"></tos-entity-detail-Card>
     </div>
 
     <div class="col-lg-6 mb-4 mt-4" *ngIf="!card">
       <div class="card bg-light m-auto"
-           [style.minWidth]="sanitizer.bypassSecurityTrustStyle('calc(' + ICON_WIDTH + 'px + 2.5rem)')"
-           [style.maxWidth]="sanitizer.bypassSecurityTrustStyle('calc(' + ICON_WIDTH + 'px + 2.5rem)')">
+           [style.minWidth]="('calc(' + ICON_WIDTH + 'px + 2.5rem)') | sanitizeCSS"
+           [style.maxWidth]="('calc(' + ICON_WIDTH + 'px + 2.5rem)') | sanitizeCSS">
         <div class="card-body">
           <!-- Icon, Grade and Class -->
-          <app-entity-detail-ClassIconGrade class="row" [entity]="entity" [labels]="true" [size]="equipment ? 'large' : 'small'"></app-entity-detail-ClassIconGrade>
+          <tos-entity-detail-ClassIconGrade class="row" [entity]="entity" [labels]="true" [size]="equipment ? 'large' : 'small'"></tos-entity-detail-ClassIconGrade>
 
           <!-- Physical and Magical Attack / Defense -->
-          <app-entity-detail-AttackDefense [anvilLevel]="anvilLevel"
+          <tos-entity-detail-AttackDefense [anvilLevel]="anvilLevel"
                                            [transcendLevel]="transcendLevel"
-                                           [entity]="entity"></app-entity-detail-AttackDefense>
+                                           [entity]="entity"></tos-entity-detail-AttackDefense>
 
           <!-- Bonus Stats and Unidentified -->
-          <app-entity-detail-BonusStatsUnidentified [divider]="true"
-                                                    [entity]="entity"></app-entity-detail-BonusStatsUnidentified>
+          <tos-entity-detail-BonusStatsUnidentified [divider]="true"
+                                                    [entity]="entity"></tos-entity-detail-BonusStatsUnidentified>
 
           <!-- Potential, Durability and Sockets -->
-          <app-entity-detail-DurabilityPotentialSockets [entity]="entity"></app-entity-detail-DurabilityPotentialSockets>
+          <tos-entity-detail-DurabilityPotentialSockets [entity]="entity"></tos-entity-detail-DurabilityPotentialSockets>
 
           <!-- Book Pages -->
-          <app-entity-detail-Book *ngIf="book?.getPages()"
-                                  [entity]="entity"></app-entity-detail-Book>
+          <tos-entity-detail-Book *ngIf="book?.getPages()"
+                                  [entity]="entity"></tos-entity-detail-Book>
 
           <!-- Gem Bonus -->
-          <app-entity-detail-Gem *ngIf="gem"
-                                 [divider]="true"
+          <tos-entity-detail-Gem *ngIf="gem"
                                  [entity]="gem"
-                                 [header]="true"></app-entity-detail-Gem>
+                                 [header]="true"></tos-entity-detail-Gem>
 
           <!-- Recipe Materials -->
-          <app-entity-detail-Table *ngIf="entity['Link_Materials']"
+          <tos-entity-detail-Table *ngIf="entity['Link_Materials']"
                                    class="table-borderless"
                                    [column]="'Link_Materials'"
                                    [divider]="true"
                                    [entity]="entity"
                                    [header]="'Materials'"
-                                   [link]="'Item'"></app-entity-detail-Table>
+                                   [link]="'Item'"></tos-entity-detail-Table>
 
         </div>
       </div>
@@ -57,44 +56,44 @@
     <div class="col-lg-6">
 
       <!-- Recipe Source (Crafted by) -->
-      <app-entity-detail-Table *ngIf="entity['Link_RecipeTarget']"
+      <tos-entity-detail-Table *ngIf="entity['Link_RecipeTarget']"
                                class="table-borderless"
                                [column]="'Link_RecipeTarget'"
                                [entity]="entity"
-                               [header]="'Crafted by'"></app-entity-detail-Table>
+                               [header]="'Crafted by'"></tos-entity-detail-Table>
 
       <!-- Description -->
-      <app-entity-detail-Description [divider]="entity['Link_RecipeTarget']"
+      <tos-entity-detail-Description [divider]="entity['Link_RecipeTarget']"
                                      [entity]="entity"
-                                     [header]="true"></app-entity-detail-Description>
+                                     [header]="true"></tos-entity-detail-Description>
 
       <!-- CoolDown/Level, LifeTime, Weight, Price, Tradability -->
-      <app-entity-detail-Information [entity]="entity"
+      <tos-entity-detail-Information [entity]="entity"
                                      [divider]="entity['Description'] || entity['DescriptionHTML']"
-                                     [header]="true"></app-entity-detail-Information>
+                                     [header]="true"></tos-entity-detail-Information>
 
       <!-- Set -->
-      <app-entity-detail-BonusStatsUnidentified *ngIf="equipment && equipment.Set"
+      <tos-entity-detail-BonusStatsUnidentified *ngIf="equipment && equipment.Set"
                                                 [entity]="equipment.Set"
-                                                [header]="true"></app-entity-detail-BonusStatsUnidentified>
+                                                [header]="true"></tos-entity-detail-BonusStatsUnidentified>
 
       <!-- Stats -->
-      <app-entity-detail-Stats *ngIf="card || monster"
-                               [entity]="entity"></app-entity-detail-Stats>
+      <tos-entity-detail-Stats *ngIf="card || monster"
+                               [entity]="entity"></tos-entity-detail-Stats>
 
       <!-- Enhancement -->
-      <app-entity-detail-Enhancement *ngIf="equipment && (anvilAvailable || transcendAvailable)"
+      <tos-entity-detail-Enhancement *ngIf="equipment && (anvilAvailable || transcendAvailable)"
                                      [(anvilLevel)]="anvilLevel"
                                      [(transcendLevel)]="transcendLevel"
-                                     [entity]="entity"></app-entity-detail-Enhancement>
+                                     [entity]="entity"></tos-entity-detail-Enhancement>
 
       <!-- Recipe Target (Produces) -->
-      <app-entity-detail-Table *ngIf="entity['TargetAsList']"
+      <tos-entity-detail-Table *ngIf="entity['TargetAsList']"
                                class="table-borderless"
                                [column]="'TargetAsList'"
                                [divider]="true"
                                [entity]="entity"
-                               [header]="'Produces'"></app-entity-detail-Table>
+                               [header]="'Produces'"></tos-entity-detail-Table>
 
     </div>
 
@@ -102,56 +101,56 @@
 
   <div class="row">
     <!-- Dropped by -->
-    <app-entity-detail-Table *ngIf="entity['Link_MonsterDrops']"
+    <tos-entity-detail-Table *ngIf="entity['Link_MonsterDrops']"
                              class="col-md-6 mb-4"
                              [column]="'Link_MonsterDrops'"
                              [entity]="entity"
                              [header]="'Dropped by'"
-                             [link]="'Monster'"></app-entity-detail-Table>
+                             [link]="'Monster'"></tos-entity-detail-Table>
 
     <!-- Found in -->
-    <app-entity-detail-Table *ngIf="entity['Link_Cubes']"
+    <tos-entity-detail-Table *ngIf="entity['Link_Cubes']"
                              class="col-md-6 mb-4"
                              [column]="'Link_Cubes'"
                              [entity]="entity"
-                             [header]="'Found in'"></app-entity-detail-Table>
+                             [header]="'Found in'"></tos-entity-detail-Table>
 
     <!-- Required for -->
-    <app-entity-detail-Table *ngIf="entity['Link_RecipeMaterial'] && !recipe"
+    <tos-entity-detail-Table *ngIf="entity['Link_RecipeMaterial'] && !recipe"
                              class="col-md-6 mb-4"
                              [column]="'Link_RecipeMaterial'"
                              [entity]="entity"
-                             [header]="'Required for'"></app-entity-detail-Table>
+                             [header]="'Required for'"></tos-entity-detail-Table>
 
     <!-- Collections -->
-    <app-entity-detail-Table *ngIf="entity['Link_Collections']"
+    <tos-entity-detail-Table *ngIf="entity['Link_Collections']"
                              class="col-md-6 mb-4"
                              [column]="'Link_Collections'"
                              [entity]="entity"
-                             [header]="'Collections'"></app-entity-detail-Table>
+                             [header]="'Collections'"></tos-entity-detail-Table>
 
     <!-- Items -->
-    <app-entity-detail-Table *ngIf="entity['Link_Items']"
+    <tos-entity-detail-Table *ngIf="entity['Link_Items']"
                              class="col-md-6 mb-4"
                              [column]="'Link_Items'"
                              [entity]="entity"
-                             [header]="cube ? 'Drops' : 'Items'"></app-entity-detail-Table>
+                             [header]="cube ? 'Drops' : 'Items'"></tos-entity-detail-Table>
 
     <!-- Drops -->
-    <app-entity-detail-Table *ngIf="entity['Link_Drops']"
+    <tos-entity-detail-Table *ngIf="entity['Link_Drops']"
                              class="col-md-6 mb-4"
                              [column]="'Link_Drops'"
                              [entity]="entity"
                              [header]="'Drops'"
-                             [link]="'Item'"></app-entity-detail-Table>
+                             [link]="'Item'"></tos-entity-detail-Table>
 
     <!-- Spawn Locations -->
-    <app-entity-detail-Table *ngIf="entity['Link_Spawns']"
+    <tos-entity-detail-Table *ngIf="entity['Link_Spawns']"
                              class="col-md-6 mb-4"
                              [column]="'Link_Spawns'"
                              [entity]="entity"
                              [header]="'Spawn Locations'"
-                             [link]="'Map'"></app-entity-detail-Table>
+                             [link]="'Map'"></tos-entity-detail-Table>
 
   </div>
 

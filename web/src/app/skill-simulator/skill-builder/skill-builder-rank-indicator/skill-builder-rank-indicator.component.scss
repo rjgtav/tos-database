@@ -1,0 +1,21 @@
+* {
+  position: absolute;
+}
+
+:host {
+  display: block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+span {
+  width: 45px;
+  height: 45px;
+  left: 9px;
+  top: 9px;
+}
+
+a:hover {
+  opacity: 0.5;
+}

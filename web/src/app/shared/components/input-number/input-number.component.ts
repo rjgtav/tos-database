@@ -14,7 +14,7 @@ import {
   templateUrl: './input-number.component.html',
   styleUrls: ['./input-number.component.scss']
 })
-export class TOSInputNumberComponent implements OnChanges {
+export class InputNumberComponent implements OnChanges {
 
   @Input() max: number;
   @Input() min: number;
