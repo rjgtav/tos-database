@@ -2,32 +2,34 @@
 
 #### Properties
 - CircleMax `int`
-- ClassTree `TOSClassTree`
-- ClassType `TOSClassControlType[]`
-- Difficulty `TOSClassDifficulty`
+- JobDifficulty `TOSJobDifficulty`
+- JobTree `TOSJobTree`
+- JobType `TOSJobType[]`
 - IsHidden `boolean`
 - IsSecret `boolean`
 - Rank `int`
-- Stat_RateHP `number`
-- Stat_RateSP `number`
-- base stats?
+- Stat_CON `number`
+- Stat_DEX `number`
+- Stat_INT `number`
+- Stat_SPR `number`
+- Stat_STR `number`
 
 #### Links
 - Link_Attributes `TOSEntityLink[]`
 - Link_Skills `TOSSkillLink[]`
 
-### TOSClassTree
+### TOSJobDifficulty
+- EASY
+- NORMAL
+- HARD
+
+### TOSJobTree
 - ARCHER
 - CLERIC
 - WARRIOR
 - WIZARD
 
-### TOSClassDifficulty
-- EASY
-- NORMAL
-- HARD
-
-### TOSClassControlType
+### TOSJobType
 - ATTACK
 - ATTACK_INSTALL
 - ATTACK_MANEUVERING
