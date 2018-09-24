@@ -46,18 +46,11 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
   item: TOSItem;
   skill: TOSSkill;
 
-  private readonly disabled: boolean;
-
   constructor(private element: ElementRef, private ngbTooltipConfig: NgbTooltipConfig, private zone: NgZone) {
-    this.disabled = ngbTooltipConfig.disableTooltip;
     this.onMouseLeave();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.disabled) return;
-
-    if (this.disabled) return;
-
     if (changes.tooltip) {
       if (this.tooltip) {
         this.entity = this.tooltip;
