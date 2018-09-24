@@ -21,7 +21,7 @@ def parse_attributes():
             obj = {}
             obj['$ID'] = int(row['ClassID'])
             obj['$ID_NAME'] = row['ClassName']
-            obj['Description'] = parser_translations.translate(row['Desc']) + '\n'
+            obj['Description'] = parser_translations.translate(row['Desc']) + '{nl}'
             obj['Icon'] = parser_assets.parse_entity_icon(row['Icon'])
             obj['Name'] = parser_translations.translate(row['Name'])
 
@@ -63,7 +63,7 @@ def parse_links_jobs():
             with open(ies_path, 'rb') as ies_file:
                 for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                     attribute = globals.attributes_by_name[row['ClassName']]
-                    attribute['Description'] = attribute['Description'] + '\n{b}' + parser_translations.translate(row['UnlockDesc']) + '{b}'
+                    attribute['Description'] = attribute['Description'] + '{nl}{b}' + parser_translations.translate(row['UnlockDesc']) + '{b}'
                     attribute['LevelMax'] = int(row['MaxLevel'])
 
                     # Parse attribute unlock

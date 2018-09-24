@@ -17,6 +17,7 @@ export class TOSAttribute extends TOSEntity {
     super(json);
 
     this.DescriptionHTML = this.Description.replace(/{b}(.+){b}/g, '<b>$1</b>');
+    this.DescriptionHTML = this.DescriptionHTML.replace(/{nl}/g, '\n');
     this.Description = null;
 
     this.IsToggleable = (json.IsToggleable + '') == 'TRUE';
