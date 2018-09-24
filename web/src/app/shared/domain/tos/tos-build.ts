@@ -185,13 +185,11 @@ export class TOSSimulatorBuild implements TOSBuild {
       && skillLevels + delta >= 0
       && skillLevels + delta <=  skill.LevelMax(this.jobCircle(skill.Link_Job));
   }
-  skillIncrementLevelLimit(skill: TOSSkill, delta: number): void {
+  skillIncrementLevelToggle(skill: TOSSkill): void {
     let level = this.skillLevel(skill);
     let levelMax = this.skillLevelMax(skill);
 
-    if (delta > 0) {
-      if (level == levelMax) return;
-
+    if (level < levelMax) {
       // Level skill to maximum possible value
       for (let l = levelMax; l >= 0; l --) {
         if (this.skillIncrementLevelAvailable(skill, l - level)) {
