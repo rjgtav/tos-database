@@ -6,15 +6,29 @@ import subprocess
 from ipf_parser import constants
 from utils import fileutil
 
-IPF_WHITELIST = [
-    'addon',
-    'global',
-    'ies',
-    'script',
-    'language',
-    'shared',
-    'ui',
-    'xml'
+IPF_BLACKLIST = [
+    'animation.ipf',
+    'bg.ipf',
+    'bg_hi.ipf',
+    'bg_hi2.ipf',
+    'bg_hi3.ipf',
+    'bg_lightcell.ipf',
+    'bg_texture.ipf',
+    'char_hi.ipf',
+    'char_texture.ipf',
+    'char_texture_low.ipf',
+    'deadslice.ipf',
+    'decal.ipf',
+    'effect.ipf',
+    'etc.ipf',
+    'item_hi.ipf',
+    'item_texture.ipf',
+    'item_texture_low.ipf',
+    'shader.ipf',
+    'sound.ipf',
+    'sprite.ipf',
+    'SumAni.ipf',
+    'templatepc.ipf',
 ]
 
 
@@ -61,7 +75,7 @@ def unpack_file(file_name, source, destination):
 
     # Clean result
     for file_name in os.listdir(destination_extract):
-        if not any(file_name.find(s) == 0 for s in IPF_WHITELIST):
+        if any(file_name == s for s in IPF_BLACKLIST):
             shutil.rmtree(os.path.join(destination, '..', 'extract', file_name))
 
     # Move result to destination directory
@@ -97,7 +111,7 @@ def unpack_release():
         return False
 
     for file_name in os.listdir(constants.PATH_TOS_DATA):
-        if not any(file_name.find(s) == 0 for s in IPF_WHITELIST):
+        if any(file_name == s for s in IPF_BLACKLIST):
             continue
 
         unpack_file(file_name, constants.PATH_TOS_DATA, constants.PATH_PARSER_INPUT_IPF)
