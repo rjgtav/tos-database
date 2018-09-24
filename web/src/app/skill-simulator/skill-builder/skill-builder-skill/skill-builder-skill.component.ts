@@ -28,6 +28,10 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
     event.preventDefault();
     this.build.skillIncrementLevel(this.skill, delta);
   }
+  onIncrementClickDouble(event: MouseEvent, delta: number) {
+    event.preventDefault();
+    this.build.skillIncrementLevelLimit(this.skill, delta);
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.build || changes.skill) {

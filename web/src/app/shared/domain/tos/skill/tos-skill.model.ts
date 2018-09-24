@@ -151,7 +151,7 @@ export class TOSSkill extends TOSEntity {
   }
   LevelMax(circle?: number): number {
     return circle != undefined
-      ? (circle - this.RequiredCircle + 1) * this.LevelPerCircle
+      ? Math.min(this.levelMax, (circle - this.RequiredCircle + 1) * this.LevelPerCircle)
       : this.levelMax;
   }
   SP(level: number): number { return this.sp + this.SPPerLevel * level }
