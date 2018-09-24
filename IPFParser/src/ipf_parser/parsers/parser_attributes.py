@@ -21,19 +21,19 @@ def parse_attributes():
             obj = {}
             obj['$ID'] = int(row['ClassID'])
             obj['$ID_NAME'] = row['ClassName']
-            obj['Description'] = parser_translations.translate(row['Desc'])
+            obj['Description'] = parser_translations.translate(row['Desc']) + '\n'
             obj['Icon'] = parser_assets.parse_entity_icon(row['Icon'])
             obj['Name'] = parser_translations.translate(row['Name'])
 
             obj['IsToggleable'] = row['AlwaysActive'] == 'NO'
 
-            obj['Price'] = None
             obj['LevelMax'] = -1
-            obj['Time'] = None
-            obj['UnlockLevel'] = -1
+            obj['UpgradePrice'] = None
+            obj['UpgradeTime'] = None
             obj['Link_Jobs'] = []
             obj['Link_Skill'] = None
-            obj['Link_Unlock'] = None
+            obj['Link_UnlockJob'] = []
+            obj['Link_UnlockSkill'] = None
 
             globals.attributes[obj['$ID']] = obj
             globals.attributes_by_name[obj['$ID_NAME']] = obj
@@ -56,28 +56,35 @@ def parse_links_jobs():
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
 
-            # If this class is still under development, skip
+            # If this job is still under development, skip
             if not os.path.isfile(ies_path):
                 continue
 
             with open(ies_path, 'rb') as ies_file:
                 for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                     attribute = globals.attributes_by_name[row['ClassName']]
+                    attribute['Description'] = attribute['Description'] + '\n{b}' + parser_translations.translate(row['UnlockDesc']) + '{b}'
                     attribute['LevelMax'] = int(row['MaxLevel'])
-                    attribute['UnlockLevel'] = int(row['UnlockArgNum'])
 
                     # Parse attribute unlock
-                    attribute['Link_Unlock'] =\
-                        globals.get_job_link(row['UnlockArgStr']) if row['UnlockArgStr'] in globals.jobs_by_name else \
-                        globals.get_skill_link(row['UnlockArgStr']) if row['UnlockArgStr'] in globals.skills_by_name else None
+                    if row['UnlockArgStr'] in globals.jobs_by_name:
+                        attribute['Link_UnlockJob'].append({
+                            'Job': globals.get_job_link(row['UnlockArgStr']),
+                            'Level': int(row['UnlockArgNum'])
+                        })
+                    elif row['UnlockArgStr'] in globals.skills_by_name:
+                        attribute['Link_UnlockSkill'] = {
+                            'Level': int(row['UnlockArgNum']),
+                            'Skill': globals.get_skill_link(row['UnlockArgStr'])
+                        }
 
                     # Parse attribute cost
                     if row['ScrCalcPrice']:
-                        attribute['Price'] = [
+                        attribute['UpgradePrice'] = [
                             LUA[row['ScrCalcPrice']](None, row['ClassName'], l, attribute['LevelMax'])[0]
                             for l in range(int(row['MaxLevel']))
                         ]
-                        attribute['Time'] = [
+                        attribute['UpgradeTime'] = [
                             LUA[row['ScrCalcPrice']](None, row['ClassName'], l, attribute['LevelMax'])[1]
                             for l in range(int(row['MaxLevel']))
                         ]
@@ -103,3 +110,38 @@ def parse_links_skills():
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             attribute = globals.attributes[int(row['ClassID'])]
             attribute['Link_Skill'] = globals.get_skill_link(row['SkillCategory'])
+
+
+def parse_clean():
+    attributes_to_remove = []
+
+    # Find which attributes are no longer active
+    for attribute in globals.attributes.values():
+        found = False
+
+        for job in globals.jobs.values():
+            for link in job['Link_Attributes']:
+                if link.entity['$ID'] == attribute['$ID']:
+                    if attribute['$ID'] == 114002:
+                        logging.debug('found at: %s', job['Name'])
+
+                    found = True
+                    break
+
+            if found:
+                break
+
+        if not found:
+            attributes_to_remove.append(attribute)
+
+    # Remove all inactive attributes
+    for attribute in attributes_to_remove:
+        del globals.attributes[attribute['$ID']]
+        del globals.attributes_by_name[attribute['$ID_NAME']]
+
+        attribute_id = attribute['$ID']
+
+        for job in globals.jobs.values():
+            job['Link_Attributes'] = [link for link in job['Link_Attributes'] if link.entity['$ID'] != attribute_id]
+        for skill in globals.skills.values():
+            skill['Link_Attributes'] = [link for link in skill['Link_Attributes'] if link.entity['$ID'] != attribute_id]

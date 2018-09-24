@@ -79,6 +79,7 @@ def parse(version_new):
 
     # Clean unused data
     parser_assets.parse_clean(version_new)
+    parser_attributes.parse_clean()
 
     logging.debug('Writing CSVs...')
 

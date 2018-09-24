@@ -86,6 +86,7 @@ def get_item_link(name):
     if name == 'Moneybag1':
         return {
             '$ID': -1,
+            '$ID_NAME': None,
             'Icon': 'icon_item_silver2',
             'Name': 'Silver'
         }
@@ -155,6 +156,7 @@ class Link:
     def dict(self):
         return {
             '$ID': self.entity['$ID'],
+            '$ID_NAME': self.entity['$ID_NAME'],
             'Icon': self.entity['Icon'],
             'Name': self.entity['Name'],
             'Url': self.collection,

@@ -8,11 +8,11 @@ from ipf_parser.utils import luautil
 logging.basicConfig(format='[%(asctime)s] [%(levelname)s]\t%(message)s', datefmt='%Y-%m-%d %I:%M:%S', level=logging.DEBUG)
 logging.getLogger('PIL').setLevel(logging.WARN)
 
-# Initialize
-luautil.init()
-
 # Unpack latest game files
 version_new = unpacker.unpack()
+
+# Initialize LUA environment
+luautil.init()
 
 # Parse
 parser.parse(version_new)

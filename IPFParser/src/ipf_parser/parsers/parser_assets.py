@@ -22,12 +22,14 @@ IMAGE_SIZE = {  # top, left, width, height
 
 WHITELIST_BASESKINSET = [
     'bosscard2',
-    'sub_card3'
+    'sub_card3',
+    'wearing_weapon',
 ]
 WHITELIST_ITEMICON = [
     'item_tooltip_icon',
     '256_equip_icons',
     '256_costume_icons',
+    '256_weapone_icons',
     'acc_item',
     'hair_accesory',
     'item',
@@ -41,7 +43,13 @@ WHITELIST_SKILLICON = [
     'abilityicon_warrior',
     'abilityicon_wizard',
     'abilityicon_archer',
-    'abilityicon_cleric'
+    'abilityicon_cleric',
+    'abilityicon_common',
+]
+
+WHITELIST_RGB = [
+    'bosscard2',
+    'sub_card3',
 ]
 
 
@@ -54,6 +62,8 @@ def parse_entity_icon(icon):
 
     if icon in globals.assets_icons:
         icon_found = icon
+    elif 'icon_' + icon in globals.assets_icons:
+        icon_found = 'icon_' + icon
     elif icon + '_f' in globals.assets_icons:
         icon_found = icon + '_f'
     elif icon + '_m' in globals.assets_icons:
@@ -120,7 +130,7 @@ def parse_icons(file_name, version_new):
                 shutil.copy(copy_from, copy_to)
 
                 # Crop, Resize, Optimize and convert to JPG/PNG
-                image_mode = 'RGB' if image_category in WHITELIST_BASESKINSET else 'RGBA'
+                image_mode = 'RGB' if image_category in WHITELIST_RGB else 'RGBA'
                 image_size = IMAGE_SIZE[image_category] if image_category in IMAGE_SIZE else (image_rect[2], image_rect[3])
                 image_size = (80, 80) if file_name == 'classicon.xml' else image_size
                 image_size = (80, 80) if file_name == 'skillicon.xml' else image_size

@@ -191,27 +191,5 @@ def lua_function_compile(function):
     return lua.execute(function + '\nreturn ' + lua_function_name(function))
 
 
-def lua_function_to_javascript(function):
-    result = []
-
-    for line in function.splitlines()[1:-1]:  # ignore function header and ending
-        line = line.replace('--.*$', '')  # remove comments
-
-        if len(line.strip()) == 0:  # ignore empty lines
-            continue
-        if 'GetSkillOwner' in line:  # ignore 'player character' variable attribution
-            continue
-        if 'GetAbility' in line:
-            # TODO: link attribute and replace variable name
-            continue
-
-        line = line.replace(r'(abil)', 'attribute')
-        line = line.replace(r'(pc)', 'player')
-
-        result.append(line)
-
-    return result
-
-
 def lua_function_name(function):
     return function[function.index('function ') + len('function '):function.index('(')]

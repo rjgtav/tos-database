@@ -7,7 +7,7 @@ from ipf_parser.parsers import parser_translations, parser_assets
 from ipf_parser.utils.tosenum import TOSEnum
 
 
-class TOSClassDifficulty(TOSEnum):
+class TOSJobDifficulty(TOSEnum):
     EASY = 0
     NORMAL = 1
     HARD = 2
@@ -15,14 +15,14 @@ class TOSClassDifficulty(TOSEnum):
     @staticmethod
     def value_of(string):
         return {
-            'EASY': TOSClassDifficulty.EASY,
-            'NORMAL': TOSClassDifficulty.NORMAL,
-            'HARD': TOSClassDifficulty.HARD,
+            'EASY': TOSJobDifficulty.EASY,
+            'NORMAL': TOSJobDifficulty.NORMAL,
+            'HARD': TOSJobDifficulty.HARD,
             '': None,
         }[string.upper()]
 
 
-class TOSClassTree(TOSEnum):
+class TOSJobTree(TOSEnum):
     ARCHER = 0
     CLERIC = 1
     WARRIOR = 2
@@ -31,14 +31,14 @@ class TOSClassTree(TOSEnum):
     @staticmethod
     def value_of(string):
         return {
-            'ARCHER': TOSClassTree.ARCHER,
-            'CLERIC': TOSClassTree.CLERIC,
-            'WARRIOR': TOSClassTree.WARRIOR,
-            'WIZARD': TOSClassTree.WIZARD,
+            'ARCHER': TOSJobTree.ARCHER,
+            'CLERIC': TOSJobTree.CLERIC,
+            'WARRIOR': TOSJobTree.WARRIOR,
+            'WIZARD': TOSJobTree.WIZARD,
         }[string.upper()]
 
 
-class TOSClassType(TOSEnum):
+class TOSJobType(TOSEnum):
     ATTACK = 0
     ATTACK_INSTALL = 1
     ATTACK_MOBILITY = 2
@@ -53,18 +53,18 @@ class TOSClassType(TOSEnum):
     @staticmethod
     def value_of(string):
         return {
-            'ATTACK': TOSClassType.ATTACK,
-            'CONTROL': TOSClassType.SUPPORT_CONTROL,
-            'CRAFT': TOSClassType.CRAFTING,
-            'CRAFTING': TOSClassType.CRAFTING,
-            'DEFENSE': TOSClassType.DEFENSE,
-            'INSTALL TYPE ATTACK': TOSClassType.ATTACK_INSTALL,
-            'MANEUVERING ATTACK': TOSClassType.ATTACK_MOBILITY,
-            'OFFENSE': TOSClassType.ATTACK,
-            'PARTY': TOSClassType.SUPPORT_PARTY,
-            'PROVOKE': TOSClassType.DEFENSE_PROVOKE,
-            'SUMMON': TOSClassType.ATTACK_SUMMON,
-            'SUPPORT': TOSClassType.SUPPORT,
+            'ATTACK': TOSJobType.ATTACK,
+            'CONTROL': TOSJobType.SUPPORT_CONTROL,
+            'CRAFT': TOSJobType.CRAFTING,
+            'CRAFTING': TOSJobType.CRAFTING,
+            'DEFENSE': TOSJobType.DEFENSE,
+            'INSTALL TYPE ATTACK': TOSJobType.ATTACK_INSTALL,
+            'MANEUVERING ATTACK': TOSJobType.ATTACK_MOBILITY,
+            'OFFENSE': TOSJobType.ATTACK,
+            'PARTY': TOSJobType.SUPPORT_PARTY,
+            'PROVOKE': TOSJobType.DEFENSE_PROVOKE,
+            'SUMMON': TOSJobType.ATTACK_SUMMON,
+            'SUPPORT': TOSJobType.SUPPORT,
             '': None
         }[string.upper()]
 
@@ -87,13 +87,18 @@ def parse_classes():
             obj['Icon'] = parser_assets.parse_entity_icon(row['Icon'])
             obj['Name'] = parser_translations.translate(row['Name'])
 
-            obj['CicleMax'] = int(row['MaxCircle'])
-            obj['ClassTree'] = TOSClassTree.value_of(row['CtrlType'])
-            obj['ClassType'] = [TOSClassType.value_of(v.strip()) for v in parser_translations.translate(row['ControlType']).split(',')]
-            obj['Difficulty'] = TOSClassDifficulty.value_of(parser_translations.translate(row['ControlDifficulty']))
+            obj['CircleMax'] = int(row['MaxCircle'])
+            obj['JobDifficulty'] = TOSJobDifficulty.value_of(parser_translations.translate(row['ControlDifficulty']))
+            obj['JobTree'] = TOSJobTree.value_of(row['CtrlType'])
+            obj['JobType'] = [TOSJobType.value_of(v.strip()) for v in parser_translations.translate(row['ControlType']).split(',')] if len(row['ControlType']) else None
             obj['IsHidden'] = row['HiddenJob'] == 'YES'
-            obj['IsSecret'] = obj['IsHidden'] and row['RemoveBan'] == 'YES'
+            obj['IsSecret'] = obj['IsHidden'] and row['RemoveBan'] == 'ON'
             obj['Rank'] = int(row['Rank'])
+            obj['Stat_CON'] = int(row['CON'])
+            obj['Stat_DEX'] = int(row['DEX'])
+            obj['Stat_INT'] = int(row['INT'])
+            obj['Stat_SPR'] = int(row['MNA'])
+            obj['Stat_STR'] = int(row['STR'])
 
             obj['Link_Attributes'] = []
             obj['Link_Skills'] = []
@@ -110,15 +115,21 @@ def parse_links():
 def parse_links_attributes():
     logging.debug('Parsing attributes for jobs...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability.ies')
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            attribute = globals.get_attribute_link(row['ClassName'])
+            job = globals.jobs_by_name[row['ClassName']]
 
-            for j in row['Job'].split(';'):
-                if j in globals.jobs_by_name:
-                    job = globals.jobs_by_name[j]
+            ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
+
+            # If this job is still under development, skip
+            if not os.path.isfile(ies_path):
+                continue
+
+            with open(ies_path, 'rb') as ies_file:
+                for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+                    attribute = globals.get_attribute_link(row['ClassName'])
                     job['Link_Attributes'].append(attribute)
 
 
