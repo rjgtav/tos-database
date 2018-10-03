@@ -18,7 +18,7 @@
     <div class="col text-right">
       <h6 *ngIf="item">{{ item.TimeLifeTime ? ('Expires in ' + (item.TimeLifeTime | tosTime)) : 'No expiration' }}</h6>
       <h6 *ngIf="monster">{{ monster.Size }}</h6>
-      <h6 *ngIf="skill">{{ skill.SP(build.skillLevel(skill)) }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
+      <h6 *ngIf="skill">{{ skill.SP(level) }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
     </div>
   </div>
 

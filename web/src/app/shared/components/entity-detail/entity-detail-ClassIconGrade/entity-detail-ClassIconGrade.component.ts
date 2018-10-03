@@ -34,8 +34,8 @@ export class EntityDetailClassIconGradeComponent extends EntityDetailChildCompon
     if (changes.entity) {
       clearInterval(this.iconInterval);
 
-      if (this.equipment) {
-        // In case it's a class costume (with no male/female suffix), flip between the two
+      // In case it's a class costume (with no male/female suffix), flip between the two
+      if (this.equipment && this.equipment.Icon) {
         let isClassCostume =
           this.equipment.TypeEquipment == TOSEquipmentType.COSTUME_OUTFIT &&
           !this.equipment.Name.includes('(Female)') &&

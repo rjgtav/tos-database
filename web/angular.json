@@ -147,8 +147,25 @@
   },
   "defaultProject": "web",
   "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      },
+      "class": {
+        "spec": false
+      },
+      "directive": {
+        "spec": false
+      },
+      "module": {
+        "spec": false
+      },
+      "pipe": {
+        "spec": false
+      },
+      "service": {
+        "spec": false
+      }
     }
   }
 }

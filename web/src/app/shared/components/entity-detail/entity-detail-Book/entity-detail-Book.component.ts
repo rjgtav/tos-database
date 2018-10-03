@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {NgbSlideEvent, NgbSlideEventDirection} from "@ng-bootstrap/ng-bootstrap/carousel/carousel";
 
 @Component({
   selector: 'tos-entity-detail-Book',
@@ -13,9 +12,9 @@ export class EntityDetailBookComponent extends EntityDetailChildComponent {
 
   constructor() { super() }
 
-  onSlide(event: NgbSlideEvent) {
-    if (event.direction == NgbSlideEventDirection.LEFT)   this.page ++;
-    if (event.direction == NgbSlideEventDirection.RIGHT)  this.page --;
+  onSlide(event: any) {
+    if (event.direction == 'left')   this.page ++;
+    if (event.direction == 'right')  this.page --;
   }
 
 

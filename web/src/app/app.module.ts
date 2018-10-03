@@ -40,7 +40,7 @@ library.add(faBolt, faClock, faGithub, faHeart, faMinusCircle, faMoon, faPlusCir
     HttpClientModule,
 
     FontAwesomeModule,
-    NgbModule.forRoot(),
+    NgbModule,
     PapaParseModule,
 
     SharedModule,

@@ -1,0 +1,28 @@
+<div class="row justify-content-center">
+  <div *ngFor="let job of jobs; let i = index" class="position-relative"
+       (mouseenter)="jobsHover[i] = true"
+       (mouseleave)="jobsHover[i] = false">
+
+    <!-- Icon -->
+    <app-skill-builder-job-icon style="height: 4rem; width: 4rem"
+                                [circle]="jobsCircle[i]"
+                                [job]="job"
+                                [size]="'xs'"></app-skill-builder-job-icon>
+
+    <!-- Name -->
+    <div class="text-center text-multiline" style="user-select: none"
+         [style.opacity]="jobsHover[i] ? 1 : 0">{{ job.Name.replace(' ', '\n') }}</div>
+
+    <!-- Delete -->
+    <a *ngIf="jobsHover[i]" href="#remove"
+       class="d-flex align-items-center rounded-circle justify-content-center position-absolute text-white"
+       style="background: rgba(0, 0, 0, 0.5); height: 3rem; width: 3rem; left: 0.5rem; top: 0.5rem"
+       (click)="onRemoveClick($event, i + 1)">
+      <fa-icon [icon]="faTrashAlt"></fa-icon>
+    </a>
+  </div>
+
+  <!-- Next rank -->
+  <app-skill-builder-job-rank *ngIf="jobs.length > 0 && jobs.length < build.RankLimit" [rank]="jobs.length + 1"></app-skill-builder-job-rank>
+
+</div>

@@ -5,11 +5,11 @@ import {SkillSimulatorService} from "../../skill-simulator.service";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 
 @Component({
-  selector: 'app-skill-builder-job-choose',
-  templateUrl: './skill-builder-job-choose.component.html',
-  styleUrls: ['./skill-builder-job-choose.component.scss']
+  selector: 'app-skill-builder-job-selector',
+  templateUrl: './skill-builder-job-selector.component.html',
+  styleUrls: ['./skill-builder-job-selector.component.scss']
 })
-export class SkillBuilderJobChooseComponent implements OnChanges, OnDestroy {
+export class SkillBuilderJobSelectorComponent implements OnChanges, OnDestroy {
 
   @Input() build: TOSSimulatorBuild;
 

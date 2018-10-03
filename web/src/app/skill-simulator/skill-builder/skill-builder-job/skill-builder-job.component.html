@@ -1,68 +1,79 @@
-<div class="d-none d-md-block" *ngIf="!job.IsSecret">
-  <img class="position-absolute" style="top: 16px; right: calc(100% + 4px); transform: scale(0.9)" [src]="job.IconGIFFemale" />
-  <img class="position-absolute" style="top: 16px; left: calc(100% + 4px); transform: scale(0.9)" [src]="job.IconGIFMale" />
-</div>
+<div class="card shadow mb-2">
 
-<div class="card shadow mb-3">
-  <div class="card-body">
-    <div *ngFor="let circle of circles; let i = index"
-         (mouseenter)="circlesRemove[i] = true"
-         (mouseleave)="circlesRemove[i] = false">
+  <!-- Skill Points -->
+  <div class="d-none d-sm-block position-absolute badge badge-primary rounded-0" style="top: 0; right: 0; font-size: inherit">
+    {{ skillPoints }} points
+  </div>
+  <div class="d-sm-none position-absolute bg-primary text-white w-100" style="padding: 10px">
+    <div class="d-flex justify-content-end align-items-center" style="height: 3rem;">
 
-      <!-- Rank indicator -->
-      <div class="row mb-3" [ngClass]="{ 'align-items-center': circle > 1 }">
-        <app-skill-builder-rank-indicator [style.margin]="circle > 1 ? '-0.75rem 0 -0.75rem 1rem' : '0 0 0 1rem'"
-                                          [style.transform]="circle > 1 ? 'scale(0.75)' : 'scale(1)'"
-                                          [rank]="ranks[circle - 1]"
-                                          [remove]="circlesRemove[i]"
-                                          (removeChange)="onRankRemove($event)"></app-skill-builder-rank-indicator>
+      <a href="#remove"
+         class="d-flex align-items-center justify-content-center bg-white text-primary rounded-circle mr-2"
+         style="background: rgba(0, 0, 0, 0.5); height: 2.5rem; width: 2.5rem"
+         (click)="onRemoveClick($event)">
+        <fa-icon [icon]="faTrashAlt"></fa-icon>
+      </a>
 
-        <!-- Class Name & Class Attributes & Skill Points -->
-        <div class="col pr-0" *ngIf="circle == 1">
-          <div class="d-flex flex-row align-items-center justify-content-between">
-            <h4 class="mb-0" style="line-height: 1">
-              <span style="font-size: 115%;" [style.lineHeight]="attributes ? '' : '64px'">
-                {{ job.Name }}
-              </span>
+      <span>{{ skillPoints }} points</span>
 
-              <br *ngIf="attributes"/>
+    </div>
+  </div>
 
-              <img *ngFor="let attribute of attributes" class="mr-1 mt-1" width="32" height="32"
-                   [src]="attribute.Icon"
-                   [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
-                   (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
-                   (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/><br/>
 
-              <span class="d-inline d-md-none badge badge-primary" style="font-size: 18px">{{ skillPoints + ' points' }}</span>
-            </h4>
+  <!-- Job header -->
+  <div class="position-absolute bg-primary text-white pl-4 pl-sm-3 pr-2" style="padding: 10px" (click)="isOpen = !isOpen">
+    <div class="d-flex flex-row jus align-items-center" style="width: calc(215px - 1rem);">
 
-            <h5 class="d-none d-md-inline-flex mb-0 pr-3 align-items-center">
-              <span class="mr-2">
-                <fa-icon *ngFor="let circle of job.CircleAvailable" [icon]="['fas', 'star']"
-                         [ngClass]="{ 'text-warning': circle <= circles.length }"></fa-icon>
-              </span>
-              <span class="badge badge-primary mr-1" style="font-size: 18px;">{{ skillPoints + ' points' }}</span>
-              <img class="d-none d-md-inline-block" [src]="job.Icon" width="64" height="64" />
-            </h5>
-          </div>
-        </div>
+      <!-- Job Icon & Circle -->
+      <app-skill-builder-job-icon [circle]="circles.length" style="width: 3rem; height: 3rem;"
+                                  [job]="job"
+                                  [size]="'xs'"></app-skill-builder-job-icon>
 
-        <!-- Rank divider -->
-        <div class="col" *ngIf="circle > 1">
-          <hr />
-        </div>
-      </div>
+      <!-- Job Name & Job Attributes -->
+      <div class="pl-2">
 
-      <!-- Choose skills -->
-      <div class="row">
-          <app-skill-builder-skill *ngFor="let skill of skillsByCircle[circle]" class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3"
-                                   [build]="build"
-                                   [job]="job"
-                                   [skill]="skill"
-                                   (mouseenter)="$event.relatedTarget && build.tooltipSkillShow(skill, true)"
-                                   (mouseleave)="$event.relatedTarget && build.tooltipSkillShow(skill, false)"></app-skill-builder-skill>
+        <span [style.lineHeight]="attributes ? '' : '3rem'">
+          {{ job.Name }}
+        </span>
+
+        <br *ngIf="attributes"/>
+
+        <img *ngFor="let attribute of attributes" class="mr-1 tos-attribute"
+             [src]="attribute.Icon"
+             [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
+             (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
+             (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/>
+
       </div>
 
     </div>
   </div>
+
+  <!-- Mobile: open/close -->
+  <div class="d-sm-none position-absolute text-white" style="padding: 10px; left: -2px">
+    <div class="d-flex align-items-center" style="height: 3rem;">
+      <fa-icon class="position-absolute d-block d-sm-none mr-1 text-white" [icon]="isOpen ? faMinus : faPlus"></fa-icon>
+    </div>
+  </div>
+
+  <!-- Job Skills -->
+  <div class="card-body">
+
+    <div class="row flex-column flex-sm-row flex-wrap ml-auto justify-content-center justify-content-sm-start"
+         style="margin-bottom: -1rem;">
+
+      <app-skill-builder-skill [ngClass]="{ 'mb-0': !isOpen, 'mb-3': isOpen }"></app-skill-builder-skill>
+
+      <!-- Choose skills -->
+      <app-skill-builder-skill *ngFor="let skill of skills" class="mb-3"
+                               [ngClass]="{ 'd-none': !isOpen, 'd-sm-block': !isOpen }"
+                               [build]="build"
+                               [job]="job"
+                               [skill]="skill"
+                               (mouseenter)="$event.relatedTarget && build.tooltipSkillShow(skill, true)"
+                               (mouseleave)="$event.relatedTarget && build.tooltipSkillShow(skill, false)"></app-skill-builder-skill>
+
+    </div>
+  </div>
+
 </div>

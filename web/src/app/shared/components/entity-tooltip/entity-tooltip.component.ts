@@ -52,18 +52,14 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.tooltip) {
-      if (this.tooltip) {
-        this.entity = this.tooltip;
+      this.tooltip ? this.onMouseEnter() : this.onMouseLeave();
 
-        this.card = this.entity instanceof TOSCard ? this.entity as TOSCard : null;
-        this.attribute = this.entity instanceof TOSAttribute ? this.entity as TOSAttribute : null;
-        this.equipment = this.entity instanceof TOSEquipment ? this.entity as TOSEquipment : null;
-        this.item = this.entity instanceof TOSItem ? this.entity as TOSItem : null;
-        this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
-        this.onMouseEnter();
-      } else {
-        this.onMouseLeave()
-      }
+      this.entity = this.tooltip;
+      this.card = this.entity instanceof TOSCard ? this.entity as TOSCard : null;
+      this.attribute = this.entity instanceof TOSAttribute ? this.entity as TOSAttribute : null;
+      this.equipment = this.entity instanceof TOSEquipment ? this.entity as TOSEquipment : null;
+      this.item = this.entity instanceof TOSItem ? this.entity as TOSItem : null;
+      this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
     }
   }
 

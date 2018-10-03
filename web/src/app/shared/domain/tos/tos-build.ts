@@ -55,9 +55,8 @@ export class TOSSimulatorBuild implements TOSBuild {
 
   get Jobs(): Observable<TOSJob[]> { return this.jobs.asObservable(); }
   get JobTree(): TOSJobTree { return this.jobTree; }
-  get Rank(): number {
-    return this.jobs.getValue().length;
-  }
+  get Rank(): number { return this.jobs.getValue().length; }
+  get RankLimit(): number { return RANK_LIMIT; }
 
   attributeUnlockAvailable(jobs?: { $ID: number, Circle: number }[], skill?: { $ID: number, Level: number }): boolean {
     if (jobs)

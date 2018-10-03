@@ -14,6 +14,7 @@ import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {SkillSimulatorService} from "../../skill-simulator.service";
 import {TOSAttribute} from "../../../shared/domain/tos/attribute/tos-attribute.model";
 import {TOSSkill} from "../../../shared/domain/tos/skill/tos-skill.model";
+import {faMinus, faPlus, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-skill-builder-job',
@@ -22,14 +23,19 @@ import {TOSSkill} from "../../../shared/domain/tos/skill/tos-skill.model";
 })
 export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
 
+  faTrashAlt = faTrashAlt;
+  faMinus = faMinus;
+  faPlus = faPlus;
+
   @Input() build: TOSSimulatorBuild;
   @Input() job: TOSJob;
 
   attributes: TOSAttribute[];
-  circle: number;
   circles: number[];
   circlesRemove: boolean[];
+  isOpen: boolean;
   ranks: number[];
+  skills: TOSSkill[];
   skillsByCircle: {[key: number]: TOSSkill[]};
   skillPoints: number;
 
@@ -42,14 +48,18 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
     this.ranks = this.build.jobRanks(this.job);
     this.circles = Array.from({length: this.ranks.length}, (x,i) => i + 1);
     this.circlesRemove = new Array(this.ranks.length);
+    this.skills = this.skillSimulatorService.SkillsByJob[this.job.$ID].filter(skill => skill.RequiredCircle <= this.circles.length );
+  }
+
+  onRemoveClick(event: MouseEvent) {
+    event.preventDefault();
+
+    let rank = this.build.jobRanks(this.job).pop();
+    this.build.jobRemove(rank);
   }
 
   onSkillPointsChange(value: number) {
     this.skillPoints = value
-  }
-
-  onRankRemove(rank: number) {
-    this.build.jobRemove(rank);
   }
 
   ngOnChanges(changes: SimpleChanges): void {

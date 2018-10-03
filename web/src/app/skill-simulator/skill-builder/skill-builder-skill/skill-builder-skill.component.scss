@@ -1,17 +1,25 @@
-fa-icon {
-  font-size: 1.5rem;
+.tos-skill-controls {
+  height: 3rem;
+}
+.tos-skill-controls fa-icon {
+  font-size: 1.25rem;
   line-height: 1;
 }
 
+.tos-attribute {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .tos-skill {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
 }
 .tos-skill img {
   width: inherit;
   height: inherit;
   user-select: none;
 }
-.tos-skill h4 {
+.tos-skill h6 {
   bottom: 0;
 }

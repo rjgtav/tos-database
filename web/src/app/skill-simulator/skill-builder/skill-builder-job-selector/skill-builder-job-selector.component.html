@@ -1,0 +1,26 @@
+<div class="card mb-3 shadow" *ngIf="jobsAvailable.length">
+  <div class="card-body">
+
+    <!-- Choose a class -->
+    <div class="row align-items-center mb-3">
+
+      <app-skill-builder-job-rank class="ml-3" [rank]="rank"></app-skill-builder-job-rank>
+      <h4 class="col mb-0"><span>Choose a Class</span></h4>
+
+    </div>
+
+    <!-- Class list -->
+    <div class="row justify-content-center">
+      <a *ngFor="let job of jobsAvailable; let i = index" class="col-4 col-sm-3 col-md-2 mb-3 tos-job"
+         [href]="'#' + job.Name"
+         (click)="onJobClick($event, job)">
+        <app-skill-builder-job-icon class="m-auto"
+                                    [circle]="jobsCircles[i] + 1"
+                                    [job]="job"
+                                    [size]="'xs'"></app-skill-builder-job-icon>
+        <div class="text-center w-100">{{ job.Name }}</div>
+      </a>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.tos-job img {
+  transition: all .4s ease;
+}
+.tos-job:hover img {
+  transform: translateY(-8px);
+}
+
+.tos-job fa-icon {
+  color: #bbb;
+  filter: drop-shadow( 0 0 1px #666 );
+  stroke: white;
+  stroke-width: 3rem;
+}

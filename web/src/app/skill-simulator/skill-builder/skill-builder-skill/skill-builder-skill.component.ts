@@ -25,18 +25,25 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
 
   subscriptionJobs: Subscription;
   subscriptionLevel: Subscription;
+  subscriptionPoints: Subscription;
 
   constructor(private skillSimulatorService: SkillSimulatorService) { }
 
   private update() {
-    this.skillLevelMax = this.build.skillLevelMax(this.skill);
-    this.skillIncrementAvailablePlus = this.build.skillIncrementLevelAvailable(this.skill, 1);
-    this.skillIncrementAvailableMinus = this.build.skillIncrementLevelAvailable(this.skill, -1);
+    if (this.build) {
+      this.skillIncrementAvailablePlus = this.build.skillIncrementLevelAvailable(this.skill, 1);
+      this.skillIncrementAvailableMinus = this.build.skillIncrementLevelAvailable(this.skill, -1);
+    }
   }
 
   onIncrementClick(event: MouseEvent, delta: number, rollOver?: boolean) {
     event.preventDefault();
     this.build.skillIncrementLevel(this.skill, delta, rollOver);
+  }
+
+  onJobsChange(value: TOSJob[]) {
+    this.skillLevelMax = this.build.skillLevelMax(this.skill);
+    this.update();
   }
 
   onSkillLevelsChange(value: { [key: number]: number }) {
@@ -49,16 +56,20 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
       this.attributes = this.skillSimulatorService.AttributesBySkill[this.skill.$ID];
 
       this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
-      this.subscriptionJobs = this.build.Jobs.subscribe(value => this.update());
+      this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
 
       this.subscriptionLevel && this.subscriptionLevel.unsubscribe();
       this.subscriptionLevel = this.build.skillLevels(this.job).subscribe(value => this.onSkillLevelsChange(value));
+
+      this.subscriptionPoints && this.subscriptionPoints.unsubscribe();
+      this.subscriptionPoints = this.build.skillPoints(this.job).subscribe(value => this.update())
     }
   }
 
   ngOnDestroy(): void {
     this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
     this.subscriptionLevel && this.subscriptionLevel.unsubscribe();
+    this.subscriptionPoints && this.subscriptionPoints.unsubscribe();
   }
 
 }

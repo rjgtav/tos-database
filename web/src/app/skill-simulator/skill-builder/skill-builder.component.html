@@ -1,10 +1,13 @@
+<!-- Select/Remove a Rank -->
+<app-skill-builder-job-rank-selector class="d-none d-sm-block" [build]="build"></app-skill-builder-job-rank-selector>
+
+<!-- Select a Class -->
+<app-skill-builder-job-selector [build]="build"></app-skill-builder-job-selector>
+
 <!-- Selected Classes -->
 <app-skill-builder-job *ngFor="let job of jobs"
                        [build]="build"
                        [job]="job"></app-skill-builder-job>
-
-<!-- Select a Class -->
-<app-skill-builder-job-choose [build]="build"></app-skill-builder-job-choose>
 
 <!-- Tooltip -->
 <app-entity-tooltip class="d-none d-md-block"
