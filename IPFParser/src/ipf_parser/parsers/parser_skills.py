@@ -82,17 +82,8 @@ def parse_skills():
             obj['Link_Gem'] = None
             obj['Link_Job'] = None
 
-            # Spot fixes TODO: remove on the next patch?
-            if obj['$ID_NAME'] == 'Cataphract_Rush':
-                obj['Effect'] = obj['Effect'].replace('#(CaptionRatio3}', '#{CaptionRatio3}#')
-
             # Parse effects
             for effect in re.findall(r'{(.*?)}', obj['Effect']):
-                # Spot fixes TODO: remove on the next patch?
-                if obj['$ID_NAME'] == 'Kriwi_DivineStigma' and effect == 'CaptionRatio3':
-                    obj['Effect'] = re.sub(r'\bCaptionRatio3\b', 'CaptionTime', obj['Effect'])
-                    effect = 'CaptionTime'
-
                 if effect in EFFECT_DEPRECATE:
                     # Hotfix: sometimes IMC changes which effects are used, however they forgot to properly communicate to the translation team.
                     # This code is responsible for fixing that and warning so the in-game translations can be fixed
