@@ -1,12 +1,12 @@
 import {Injectable} from "@angular/core";
-import {SkillSimulatorService} from "../../skill-simulator/skill-simulator.service";
-import {TOSJob} from "../domain/tos/job/tos-job.model";
-import {TOSSimulatorBuild} from "../domain/tos/tos-build";
+import {SkillSimulatorService} from "../../../skill-simulator/skill-simulator.service";
+import {TOSSimulatorBuild} from "../../domain/tos/tos-build";
+import {TOSJob} from "../../domain/tos/job/tos-job.model";
 
 @Injectable({
   providedIn: 'root'
 })
-export class TOSNeetService {
+export class TosNeetService {
 
   constructor(private skillSimulatorService: SkillSimulatorService) {}
 

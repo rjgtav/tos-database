@@ -13,7 +13,12 @@ export class TOSSkill extends TOSEntity {
     'var value = 0;',
     'var zone = null;',
   ];
-  private static readonly STATS_RUNTIME = { // Additional stats (besides CON, DEX, INT, STR, SPR) used by the formulas
+  private static readonly STATS_RUNTIME = { // Player stats used by the formulas
+    'CON': TOSStat.CON,
+    'DEX': TOSStat.DEX,
+    'INT': TOSStat.INT,
+    'MNA': TOSStat.SPR,
+    'STR': TOSStat.STR,
     'Lv': 'Level',
     'HR': TOSStat.ACCURACY,
     'MHP': TOSStat.HP,
@@ -135,7 +140,10 @@ export class TOSSkill extends TOSEntity {
       let prop = match[1];
       let value = this.effectToValue(this['effect' + prop], level, stats);
 
-      dependencies = dependencies.concat(value.dependencies);
+      for (let dependency of value.dependencies)
+        if (dependencies.indexOf(dependency) == -1)
+          dependencies.push(dependency)
+
       effect = effect.replace(match[0], value.value + (value.dependencies.length ? '*' : ''));
     }
 
@@ -232,11 +240,9 @@ export class TOSSkill extends TOSEntity {
       // Match player properties (e.g. value = value + pc.MINPATK * (Monk2_abil.Level*0.2))
       while (match = regexPlayer.exec(line)) {
         let prop: string = match[1];
+            pc[prop] = pc[prop] || 1;
 
-        if (pc[prop] == undefined) {
-          dependencies.push(TOSSkill.STATS_RUNTIME[prop] + '');
-          pc[prop] = 1;
-        }
+        dependencies.push(TOSSkill.STATS_RUNTIME[prop] + '');
       }
 
       // Match skill properties (e.g. local value = skill.SklAtkAdd + (skill.Level - 1) * skill.SklAtkAddByLevel;)

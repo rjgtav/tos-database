@@ -1,8 +1,8 @@
 <div class="m-auto" style="width: 215px; height: 3rem">
   <div *ngIf="skill">
-    <div class="d-flex flex-row">
+    <div class="position-relative d-flex flex-row">
       <!-- Plus and Minus -->
-      <div class="d-flex d-sm-none flex-column h-100 justify-content-around mr-1 tos-skill-controls">
+      <div class="position-absolute d-flex d-sm-none flex-column h-100 justify-content-around tos-skill-controls">
         <a [ngClass]="{ 'invisible': !skillIncrementAvailablePlus }" href="#plus"
            (click)="onIncrementClick($event, 1)">
           <fa-icon class="align-top" [icon]="['fas', 'plus-circle']"></fa-icon>
@@ -27,7 +27,7 @@
       <div class="d-flex flex-column">
         <span>{{ skill.Name }}</span>
         <div>
-          <img *ngFor="let attribute of attributes" class="mr-1 tos-attribute"
+          <img *ngFor="let attribute of attributes" class="tos-attribute"
                [src]="attribute.Icon"
                [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
                (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"

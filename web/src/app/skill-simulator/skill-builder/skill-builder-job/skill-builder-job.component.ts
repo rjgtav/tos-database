@@ -48,7 +48,9 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
     this.ranks = this.build.jobRanks(this.job);
     this.circles = Array.from({length: this.ranks.length}, (x,i) => i + 1);
     this.circlesRemove = new Array(this.ranks.length);
-    this.skills = this.skillSimulatorService.SkillsByJob[this.job.$ID].filter(skill => skill.RequiredCircle <= this.circles.length );
+    this.skills = this.skillSimulatorService.SkillsByJob[this.job.$ID]
+      .filter(skill => skill.RequiredCircle <= this.circles.length)
+      .sort((a, b) => a.RequiredCircle - b.RequiredCircle);
   }
 
   onRemoveClick(event: MouseEvent) {

@@ -18,18 +18,16 @@ import {
   faBolt,
   faHeart,
   faMinusCircle,
-  faMoon,
   faPlusCircle,
   faSignOutAlt,
   faSearch,
   faStar,
-  faSun,
   faTimesCircle,
   faWeightHanging,
   faTrashAlt, faTint
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBolt, faClock, faGithub, faHeart, faMinusCircle, faMoon, faPlusCircle, faTrashAlt, faSearch, faSignOutAlt, faSun, faStar, faTimesCircle, faTint, faTwitch, faWeightHanging);
+library.add(faBolt, faClock, faGithub, faHeart, faMinusCircle, faPlusCircle, faTrashAlt, faSearch, faSignOutAlt, faStar, faTimesCircle, faTint, faTwitch, faWeightHanging);
 
 @NgModule({
   declarations: [

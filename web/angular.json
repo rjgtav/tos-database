@@ -13,7 +13,8 @@
           "spec": false
         },
         "@schematics/angular:component": {
-          "spec": false
+          "spec": false,
+          "styleext": "scss"
         },
         "@schematics/angular:directive": {
           "spec": false
@@ -47,7 +48,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules_patched/html2canvas/dist/html2canvas.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,7 +97,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -145,27 +148,5 @@
       }
     }
   },
-  "defaultProject": "web",
-  "schematics": {
-    "@schematics/angular": {
-      "component": {
-        "spec": false
-      },
-      "class": {
-        "spec": false
-      },
-      "directive": {
-        "spec": false
-      },
-      "module": {
-        "spec": false
-      },
-      "pipe": {
-        "spec": false
-      },
-      "service": {
-        "spec": false
-      }
-    }
-  }
+  "defaultProject": "web"
 }

@@ -29,6 +29,7 @@
     "bootstrap": "^4.1.2",
     "core-js": "^2.5.4",
     "fuzzysort": "^1.1.4",
+    "html2canvas": "github:niklasvh/html2canvas#pull/1653/head",
     "jquery": "^3.3.1",
     "ng-click-outside": "^4.0.0",
     "ngx-papaparse": "^1.2.5",

@@ -1,7 +1,7 @@
-<div class="card shadow mb-2">
+<div class="card shadow mb-3">
 
   <!-- Skill Points -->
-  <div class="d-none d-sm-block position-absolute badge badge-primary rounded-0" style="top: 0; right: 0; font-size: inherit">
+  <div class="d-none d-sm-block position-absolute badge badge-primary rounded-0" style="top: -0.5rem; right: -0.5rem; font-size: inherit">
     {{ skillPoints }} points
   </div>
   <div class="d-sm-none position-absolute bg-primary text-white w-100" style="padding: 10px">
@@ -9,20 +9,20 @@
 
       <a href="#remove"
          class="d-flex align-items-center justify-content-center bg-white text-primary rounded-circle mr-2"
-         style="background: rgba(0, 0, 0, 0.5); height: 2.5rem; width: 2.5rem"
+         style="background: rgba(0, 0, 0, 0.5); height: 2.5rem; width: 2.5rem; z-index: 1"
          (click)="onRemoveClick($event)">
         <fa-icon [icon]="faTrashAlt"></fa-icon>
       </a>
 
-      <span>{{ skillPoints }} points</span>
+      <span style="z-index: 1">{{ skillPoints }} points</span>
 
     </div>
   </div>
 
 
   <!-- Job header -->
-  <div class="position-absolute bg-primary text-white pl-4 pl-sm-3 pr-2" style="padding: 10px" (click)="isOpen = !isOpen">
-    <div class="d-flex flex-row jus align-items-center" style="width: calc(215px - 1rem);">
+  <div class="position-absolute bg-primary text-white pl-4 pl-sm-3 pr-0" style="padding: 10px" (click)="isOpen = !isOpen">
+    <div class="d-flex flex-row jus align-items-center" style="width: calc(215px + 8px - 1rem);">
 
       <!-- Job Icon & Circle -->
       <app-skill-builder-job-icon [circle]="circles.length" style="width: 3rem; height: 3rem;"
@@ -38,7 +38,7 @@
 
         <br *ngIf="attributes"/>
 
-        <img *ngFor="let attribute of attributes" class="mr-1 tos-attribute"
+        <img *ngFor="let attribute of attributes" class="tos-attribute"
              [src]="attribute.Icon"
              [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
              (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
@@ -57,7 +57,7 @@
   </div>
 
   <!-- Job Skills -->
-  <div class="card-body">
+  <div class="card-body" style="padding-top: 10px; padding-bottom: 10px">
 
     <div class="row flex-column flex-sm-row flex-wrap ml-auto justify-content-center justify-content-sm-start"
          style="margin-bottom: -1rem;">

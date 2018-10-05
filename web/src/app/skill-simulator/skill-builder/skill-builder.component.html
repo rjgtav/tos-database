@@ -1,10 +1,39 @@
-<!-- Select/Remove a Rank -->
+<div class="row justify-content-between justify-content-sm-end ml-0 mr-0 mb-3">
+  <button type="button" class="btn d-none d-sm-inline-block mr-3"
+          [ngClass]="{
+            'btn-primary': !sharingAsImage,
+            'btn-warning': sharingAsImage
+          }"
+          [disabled]="!jobs || !jobs.length"
+          (click)="shareAsImage()">
+    <fa-icon class="mr-1" [icon]="faImage"></fa-icon>
+    <span>{{ sharingAsImage ? 'Generating Image...' : 'Share as Image' }}</span>
+  </button>
+
+  <button type="button" class="btn"
+          [ngClass]="{
+            'btn-primary': !sharingAsUrl && !tinyUrl,
+            'btn-warning': sharingAsUrl,
+            'btn-success': tinyUrl
+          }"
+          [disabled]="!jobs || !jobs.length"
+          (click)="shareAsUrl()">
+    <fa-icon class="mr-1" [icon]="faLink"></fa-icon>
+    <span>{{ sharingAsUrl ? 'Generating URL...' : tinyUrl ? 'Copy URL' : 'Share as URL'}}</span>
+  </button>
+</div>
+
+<!-- Select Stats -->
+<app-skill-builder-stat-selector *ngIf="jobs?.length"
+                                 [build]="build"></app-skill-builder-stat-selector>
+
+<!-- Remove a Rank -->
 <app-skill-builder-job-rank-selector class="d-none d-sm-block" [build]="build"></app-skill-builder-job-rank-selector>
 
-<!-- Select a Class -->
+<!-- Select a Job -->
 <app-skill-builder-job-selector [build]="build"></app-skill-builder-job-selector>
 
-<!-- Selected Classes -->
+<!-- Jobs -->
 <app-skill-builder-job *ngFor="let job of jobs"
                        [build]="build"
                        [job]="job"></app-skill-builder-job>

@@ -46,11 +46,14 @@
         <fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon>
         treeofsavior.com
       </a>
+      <a class="nav-item nav-link ml-1 mr-1" href="http://feedback.userreport.com/e23e275c-deb8-4560-9434-070fc22b6208" target="_blank" ngbTooltip="Feedback" placement="bottom">
+        <fa-icon [icon]="faCommentAlt"></fa-icon>
+      </a>
       <a class="nav-item nav-link ml-1 mr-1" (click)="theme.toggle()" ngbTooltip="Toggle Theme" placement="bottom">
-        <fa-icon [icon]="['fas', theme.is(Theme.LIGHT) ? 'moon' : 'sun']"></fa-icon>
+        <fa-icon [icon]="theme.is(Theme.LIGHT) ? faMoon : faSun"></fa-icon>
       </a>
       <a class="nav-item nav-link ml-1 mr-1" href="https://github.com/rjgtav/tos-database" target="_blank">
-        <fa-icon [icon]="['fab', 'github']" [size]="'2x'"></fa-icon>
+        <fa-icon [icon]="faGithub" [size]="'2x'"></fa-icon>
       </a>
     </div>
   </div>
