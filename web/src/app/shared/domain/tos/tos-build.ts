@@ -58,11 +58,7 @@ export class TOSSimulatorBuild implements TOSBuild {
   private tooltipSkill: TOSSkill;
 
   constructor() {
-    // Bonus stat points:
-    // + 40 > Hidden & Revelation Quests
-    // + 12 > Zemyna Statues
-    // More info: https://forum.treeofsavior.com/t/extra-stat-point-quests-guide/390257
-    this.statsPoints.next(LEVEL_LIMIT + 49 - 1);
+    this.rankResetStats();
   }
 
   get Jobs(): Observable<TOSJob[]> { return this.jobs.asObservable(); }
@@ -191,6 +187,10 @@ export class TOSSimulatorBuild implements TOSBuild {
       }
     }
 
+    // Reset stats
+    if (rank == 1)
+      this.rankResetStats();
+
     this.Change.emit();
   }
 
@@ -271,6 +271,16 @@ export class TOSSimulatorBuild implements TOSBuild {
       && this.statsBonus[stat] + delta >= 0;
   }
 
+  private rankResetStats(): void {
+    this.stats.CON = this.stats.DEX = this.stats.INT = this.stats.SPR = this.stats.STR = 0;
+    this.statsBonus.CON = this.statsBonus.DEX = this.statsBonus.INT = this.statsBonus.SPR = this.statsBonus.STR = 0;
+
+    // Bonus stat points:
+    // + 40 > Hidden & Revelation Quests
+    // + 12 > Zemyna Statues
+    // More info: https://forum.treeofsavior.com/t/extra-stat-point-quests-guide/390257
+    this.statsPoints.next(LEVEL_LIMIT + 49 - 1);
+  }
   private rankResetSkillLevels(job: TOSJob): void {
     let skillLevels = this.skillLevelsByJob[job.$ID]
       ? this.skillLevelsByJob[job.$ID].getValue()
