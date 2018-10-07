@@ -38,16 +38,16 @@ export class TOSSkill extends TOSEntity {
   };
 
   private readonly effect: string;
-  private readonly effectCaptionRatio: string[];
-  private readonly effectCaptionRatio2: string[];
-  private readonly effectCaptionRatio3: string[];
-  private readonly effectCaptionTime: string[];
-  private readonly effectSkillAtkAdd: string[];
-  private readonly effectSkillFactor: string[];
-  private readonly effectSkillSR: string[];
-  private readonly effectSpendItemCount: string[];
-  private readonly effectSpendPoison: string[];
-  private readonly effectSpendSP: string[];
+  private readonly effect_CaptionRatio: string[];
+  private readonly effect_CaptionRatio2: string[];
+  private readonly effect_CaptionRatio3: string[];
+  private readonly effect_CaptionTime: string[];
+  private readonly effect_SkillAtkAdd: string[];
+  private readonly effect_SkillFactor: string[];
+  private readonly effect_SkillSR: string[];
+  private readonly effect_SpendItemCount: string[];
+  private readonly effect_SpendPoison: string[];
+  private readonly effect_SpendSP: string[];
   private readonly levelMax: number;
   private readonly prop_BasicPoison: number;
   private readonly prop_LvUpSpendPoison: number;
@@ -62,6 +62,8 @@ export class TOSSkill extends TOSEntity {
   readonly CoolDown: number;
   readonly DescriptionHTML: string;
   readonly Element: TOSElement;
+  readonly IsBunsin: boolean;
+  readonly IsSimony: boolean;
   readonly LevelPerCircle: number;
   readonly OverHeat: number;
   readonly RequiredCircle: number;
@@ -84,17 +86,39 @@ export class TOSSkill extends TOSEntity {
 
     this.CoolDown = +json.CoolDown;
     this.effect = this.tooltipToHTML(json['Effect'] + '');
-    this.effectCaptionRatio = this.effectFromJSON(json['EffectCaptionRatio']);
-    this.effectCaptionRatio2 = this.effectFromJSON(json['EffectCaptionRatio2']);
-    this.effectCaptionRatio3 = this.effectFromJSON(json['EffectCaptionRatio3']);
-    this.effectCaptionTime = this.effectFromJSON(json['EffectCaptionTime']);
-    this.effectSkillAtkAdd = this.effectFromJSON(json['EffectSkillAtkAdd']);
-    this.effectSkillFactor = this.effectFromJSON(json['EffectSkillFactor']);
-    this.effectSkillSR = this.effectFromJSON(json['EffectSkillSR']);
-    this.effectSpendItemCount = this.effectFromJSON(json['EffectSpendItemCount']);
-    this.effectSpendPoison = this.effectFromJSON(json['EffectSpendPoison']);
-    this.effectSpendSP = this.effectFromJSON(json['EffectSpendSP']);
+    this.effect_CaptionRatio = json['Effect_CaptionRatio']
+      ? JSON.parse(json['Effect_CaptionRatio'])
+      : null;
+    this.effect_CaptionRatio2 = json['Effect_CaptionRatio2']
+      ? JSON.parse(json['Effect_CaptionRatio2'])
+      : null;
+    this.effect_CaptionRatio3 = json['Effect_CaptionRatio3']
+      ? JSON.parse(json['Effect_CaptionRatio3'])
+      : null;
+    this.effect_CaptionTime = json['Effect_CaptionTime']
+      ? JSON.parse(json['Effect_CaptionTime'])
+      : null;
+    this.effect_SkillAtkAdd = json['Effect_SkillAtkAdd']
+      ? JSON.parse(json['Effect_SkillAtkAdd'])
+      : null;
+    this.effect_SkillFactor = json['Effect_SkillFactor']
+      ? JSON.parse(json['Effect_SkillFactor'])
+      : null;
+    this.effect_SkillSR = json['Effect_SkillSR']
+      ? JSON.parse(json['Effect_SkillSR'])
+      : null;
+    this.effect_SpendItemCount = json['Effect_SpendItemCount']
+      ? JSON.parse(json['Effect_SpendItemCount'])
+      : null;
+    this.effect_SpendPoison = json['Effect_SpendPoison']
+      ? JSON.parse(json['Effect_SpendPoison'])
+      : null;
+    this.effect_SpendSP = json['Effect_SpendSP']
+      ? JSON.parse(json['Effect_SpendSP'])
+      : null;
     this.Element = Object.values(TOSElement)[+json.Element];
+    this.IsBunsin = (json.IsBunsin + '') == 'True';
+    this.IsSimony = (json.IsSimony + '') == 'True';
     this.levelMax = +json['LevelMax'];
     this.LevelPerCircle = +json.LevelPerCircle;
     this.OverHeat = +json.OverHeat;
@@ -113,7 +137,7 @@ export class TOSSkill extends TOSEntity {
         .map(json => new TOSSkillRequiredStance(json))
       : null;
     this.RequiredStanceCompanion = Object.values(TOSSkillRequiredStanceCompanion)[+json.RequiredStanceCompanion];
-    this.RequiredSubWeapon = (json.RequiredSubWeapon + '') == 'YES';
+    this.RequiredSubWeapon = (json.RequiredSubWeapon + '') == 'True';
     this.sp = +json['SP'];
     this.SPPerLevel = +json.SPPerLevel;
     this.TypeAttack = Object.values(TOSAttackType)[+json.TypeAttack];
@@ -138,7 +162,7 @@ export class TOSSkill extends TOSEntity {
     while (match = regexEffect.exec(this.effect)) {
       // console.log('prop:', match[1]);
       let prop = match[1];
-      let value = this.effectToValue(this['effect' + prop], level, stats);
+      let value = this.effectToValue(this['effect_' + prop], level, stats);
 
       for (let dependency of value.dependencies)
         if (dependencies.indexOf(dependency) == -1)
@@ -250,7 +274,7 @@ export class TOSSkill extends TOSEntity {
         let prop: string = match[1];
 
         if (prop == 'SkillFactor')
-          skill[prop] = this.effectToValue(this.effectSkillFactor, level, stats).value;
+          skill[prop] = this.effectToValue(this.effect_SkillFactor, level, stats).value;
         else if (prop != 'Level')
           skill[prop] = this[prop]
       }

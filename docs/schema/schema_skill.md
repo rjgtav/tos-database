@@ -3,11 +3,13 @@
 #### Properties
 - CoolDown `int`
 - Effect `string`
-- EffectSkillFactor `string`
-- EffectCaptionRatio `string`
-- EffectCaptionRatio2 `string`
-- EffectCaptionRatio3 `string`
+- Effect_SkillFactor `string`
+- Effect_CaptionRatio `string`
+- Effect_CaptionRatio2 `string`
+- Effect_CaptionRatio3 `string`
 - Element `TOSElement`
+- IsBunsin `boolean`
+- IsSimony `boolean`
 - LevelMax `int`
 - LevelPerCircle `int`
 - OverHeat `int`

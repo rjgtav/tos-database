@@ -13,17 +13,33 @@ export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
   stats: string[] = [TOSStat.STR, TOSStat.CON, TOSStat.INT, TOSStat.SPR, TOSStat.DEX];
   statsPoints: number;
 
-
   @Input() build: TOSSimulatorBuild;
 
   private subscriptionStatsPoints: Subscription;
 
-  constructor() { }
+  constructor() {}
+
+  onIncrementChange(event: Event, stat: string) {
+    let max = 9999;
+    let min = this.build.StatsBase[stat];
+
+    let value = Math.max(min, Math.min(max, +event.target['value']));
+    let delta = value - this.build.Stats[stat];
+
+    if (this.build.statIncrementLevelAvailable(stat, delta))
+      this.build.statIncrementLevel(stat, delta);
+
+    event.target['value'] = value;
+  }
 
   onIncrementClick(event: MouseEvent, stat: string, delta: number) {
     event.preventDefault();
 
-    delta *= event.shiftKey ? 20 : 1;
+    delta *= event.shiftKey
+      ? 10
+      : event.ctrlKey
+        ? 100
+        : 1;
 
     if (this.build.statIncrementLevelAvailable(stat, delta))
       this.build.statIncrementLevel(stat, delta);

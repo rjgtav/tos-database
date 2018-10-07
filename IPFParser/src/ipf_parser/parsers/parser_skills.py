@@ -9,7 +9,6 @@ from ipf_parser.parsers import parser_translations, parser_assets
 from ipf_parser.parsers.parser_enums import TOSElement, TOSAttackType
 from ipf_parser.utils import luautil
 from ipf_parser.utils.tosenum import TOSEnum
-from ipf_parser.overrides.override_skills import OVERRIDE_SKILLS
 
 
 EFFECT_DEPRECATE = {
@@ -36,6 +35,8 @@ EFFECTS = []
 
 def parse():
     parse_skills()
+    parse_skills_overheats()
+    parse_skills_simony()
     parse_skills_stances()
 
 
@@ -43,7 +44,7 @@ def parse_skills():
     logging.debug('Parsing skills...')
 
     LUA = luautil.load_script('calc_property_skill.lua', '*', False)
-    EMBED_SCR_ABIL_ADD_SKILLFACTOR = parse_skills_lua_clean(LUA['SCR_ABIL_ADD_SKILLFACTOR'][:-1])
+    EMBED_SCR_ABIL_ADD_SKILLFACTOR = luautil.lua_function_source(LUA['SCR_ABIL_ADD_SKILLFACTOR'][:-1])
 
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'skill.ies')
 
@@ -59,6 +60,7 @@ def parse_skills():
             obj['CoolDown'] = int(row['BasicCoolDown']) / 1000
             obj['Effect'] = parser_translations.translate(row['Caption2'])
             obj['Element'] = TOSElement.value_of(row['Attribute'])
+            obj['IsBunsin'] = row['CoolDown'] == 'SCR_GET_SKL_COOLDOWN_BUNSIN' or (row['CoolDown'] and 'Bunshin_Debuff' in LUA[row['CoolDown']])
             obj['Prop_BasicPoison'] = int(row['BasicPoison'])
             obj['Prop_LvUpSpendPoison'] = int(row['LvUpSpendPoison'])
             obj['Prop_SklAtkAdd'] = float(row['SklAtkAdd'])
@@ -74,9 +76,13 @@ def parse_skills():
             obj['SPPerLevel'] = float(row['LvUpSpendSp'])
             obj['TypeAttack'] = TOSAttackType.value_of(row['AttackType'])
 
+            obj['IsSimony'] = False
             obj['LevelMax'] = -1
             obj['LevelPerCircle'] = -1
-            obj['OverHeat'] = 0
+            obj['OverHeat'] = {
+                'Value': int(row['SklUseOverHeat']),
+                'Group': row['OverHeatGroup']
+            }
             obj['RequiredCircle'] = -1
             obj['Link_Attributes'] = []
             obj['Link_Gem'] = None
@@ -95,22 +101,22 @@ def parse_skills():
                     obj['Effect'] = re.sub(r'\b' + re.escape(effect_deprecate) + r'\b', effect, obj['Effect'])
 
                 if effect in row:
-                    key = 'Effect' + effect
+                    key = 'Effect_' + effect
 
                     if key not in EFFECTS:
-                        EFFECTS.append('Effect' + effect)
+                        EFFECTS.append('Effect_' + effect)
 
                     if row[effect] != 'ZERO':
                         obj[key] = []
 
                         # Replace function calls with function source code
-                        for line in parse_skills_lua_clean(LUA[row[effect]]):
+                        for line in luautil.lua_function_source(LUA[row[effect]]):
                             if 'SCR_ABIL_ADD_SKILLFACTOR' in line:
                                 obj[key] = obj[key] + EMBED_SCR_ABIL_ADD_SKILLFACTOR
                             else:
                                 obj[key].append(line)
 
-                        obj[key] = parse_skills_lua_to_javascript(parse_skills_lua_format(obj[key]))
+                        obj[key] = parse_skills_lua_to_javascript(obj[key])
                     else:
                         # Hotfix: similar to the hotfix above
                         logging.warning('[%32s] Deprecated effect [%s] in Effect', obj['$ID_NAME'], effect)
@@ -128,117 +134,18 @@ def parse_skills():
             if effect not in skill:
                 skill[effect] = None
 
-    # Manual overrides
-    for id in OVERRIDE_SKILLS:
-        skill = globals.skills[id]
-
-        for key in OVERRIDE_SKILLS[id]:
-            skill[key] = OVERRIDE_SKILLS[id][key]
-
-
-def parse_skills_lua_clean(source):
-    result = []
-
-    for line in source.splitlines():
-        line = line.strip()
-
-        # Remove empty lines
-        if len(line) == 0:
-            continue
-
-        # Remove comment-only lines
-        if line.startswith('--'):
-            continue
-
-        result.append(line)
-
-    return result[1:-1]  # remove 'function' and 'end'
-
-
-def parse_skills_lua_format(source):
-    level = 0
-    result = []
-
-    for line in source:
-        # Apply extra spaces (1/2)
-        if line.find('if ') == 0:
-            result.append('')
-
-        # Apply indentation
-        if 'end' == line:
-            level = level - 1
-
-        result.append((level * 4) * ' ' + line)
-
-        if line.find('if ') == 0:
-            level = level + 1
-
-        # Apply extra spaces (2/2)
-        if 'end' == line:
-            result.append('')
-
-    return result
-
-
-def parse_skills_lua_parse_argument(text, direction):
-    i = 0
-    parenthesis = 0
-    parenthesis_open = '(' if direction == 1 else ')'
-    parenthesis_close = ')' if direction == 1 else '('
-
-    text = text[::-1] if direction == -1 else text
-    text = text + ' '  # hotfix: so i never stops at an interesting character
-
-    for i in range(len(text)):
-        char = text[i]
-
-        if char in (' ', '\n', parenthesis_close) and i > 0 and parenthesis == 0:
-            break
-
-        if char == parenthesis_open:
-            parenthesis = parenthesis + 1
-        if char == parenthesis_close:
-            parenthesis = parenthesis - 1
-
-    return text[:i][::-1] if direction == -1 else text[:i]
-
 
 def parse_skills_lua_to_javascript(source):
     result = []
 
-    for line in source:
+    for line in luautil.lua_function_source_to_javascript(source):
         if 'GetSkillOwner(skill)' in line:
             continue
         if 'GetZoneName(pc)' in line:
             continue
-        if line.strip().startswith('--'):
-            continue
 
-        if '^' in line:
-            parts = line.split('^')
-            for i in range(len(parts)):
-                if i == len(parts) - 1:
-                    break
-
-                part_left = parse_skills_lua_parse_argument(parts[i], -1)
-                part_right = parse_skills_lua_parse_argument(parts[i + 1], 1)
-
-                line = line.replace('^', '')
-                line = line.replace(part_left, 'Math.pow(' + part_left)
-                line = line.replace(part_right, ', ' + part_right + ')')
-
-        line = line.replace('--', '//')
-        line = line.replace('~=', '!=')
-        line = line.replace('local ', 'var ')
-        line = line.replace('math.', 'Math.')
         line = line.replace('SCR_CALC_BASIC_DEF(pc)', 'pc.DEF')
         line = line.replace('SCR_CALC_BASIC_MDEF(pc)', 'pc.MDEF')
-        line = re.sub(r'\band\b', ' && ', line)
-        line = re.sub(r'\bor\b', ' || ', line)
-        line = re.sub(r'\bend\b', '}', line)
-        line = re.sub(r'\belse\b', '} else {', line)
-        line = re.sub(r'\bnil\b', 'null', line)
-        line = re.sub(r'if (.+) then', r'if (\1) {', line)
         line = re.sub(r'TryGetProp\(pc, \"(.+)\"\)', r'pc.\1', line)
         line = re.sub(r'GetAbilityAddSpendValue\(pc, skill\.ClassName, \"(.+)\"\)', r'skill.\1', line)
 
@@ -247,8 +154,47 @@ def parse_skills_lua_to_javascript(source):
     return result
 
 
+def parse_skills_overheats():
+    logging.debug('Parsing skills overheats...')
+
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'cooldown.ies')
+    with open(ies_path, 'rb') as ies_file:
+        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            # We're only interested in overheats
+            if row['IsOverHeat'] != 'YES':
+                continue
+
+            skill = None
+
+            for obj in globals.skills.values():
+                if isinstance(obj['OverHeat'], (dict,)) and row['ClassName'] == obj['OverHeat']['Group']:
+                    skill = obj
+                    break
+
+            # If skill isn't available, ignore
+            if skill is None:
+                continue
+
+            skill['OverHeat'] = int(row['MaxOverTime']) / skill['OverHeat']['Value'] if skill['OverHeat']['Value'] > 0 else 0
+
+    # Clear skills with no OverHeat information
+    for skill in globals.skills.values():
+        if isinstance(skill['OverHeat'], (dict,)):
+            skill['OverHeat'] = 0
+
+
+def parse_skills_simony():
+    logging.debug('Parsing skills simony...')
+
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'skill_Simony.ies')
+    with open(ies_path, 'rb') as ies_file:
+        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            skill = globals.skills[int(row['ClassID'])]
+            skill['IsSimony'] = True
+
+
 def parse_skills_stances():
-    logging.debug('Parsing stances for skills...')
+    logging.debug('Parsing skills stances...')
 
     stance_list = []
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'stance.ies')

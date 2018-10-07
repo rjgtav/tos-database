@@ -1,4 +1,5 @@
 import {TOSEntity, TOSEntityLink} from "../entity/tos-entity.model";
+import {TOSBuild} from "../tos-build";
 
 export class TOSJob extends TOSEntity {
 
@@ -61,6 +62,19 @@ export class TOSJob extends TOSEntity {
   get IconGIFMale() {
     let name = this.Name == 'Cryomancer' ? 'Cryomancers' : this.Name; // hotfix
     return 'https://treeofsavior.com/img/class/class_character/' + name.split(' ').join('').toLowerCase() + '_m.gif';
+  }
+
+  unlockAvailable(build: TOSBuild): boolean {
+    let extra = true;
+
+    if (this.$ID_NAME == 'Char4_12') // Chaplain
+      extra = build.jobCircle(4002) >= 3; // Priest
+
+    return 1==1
+      && extra
+      && build.Rank + 1 <= build.RankLimit
+      && build.Rank + 1 >= this.Rank
+      && build.jobCircle(this.$ID) < this.CircleMax;
   }
 
 }

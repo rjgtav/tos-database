@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {Subscription} from "rxjs";
+import {faDiscord, faTwitch} from "@fortawesome/free-brands-svg-icons";
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,9 @@ import {Subscription} from "rxjs";
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnDestroy, OnInit {
+  faDiscord = faDiscord;
+  faTwitch = faTwitch;
+
   isLightTheme: boolean;
   subscription: Subscription;
 

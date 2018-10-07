@@ -59,7 +59,7 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
       this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
 
       this.subscriptionLevel && this.subscriptionLevel.unsubscribe();
-      this.subscriptionLevel = this.build.skillLevels(this.job).subscribe(value => this.onSkillLevelsChange(value));
+      this.subscriptionLevel = this.build.skillLevels(this.job.$ID).subscribe(value => this.onSkillLevelsChange(value));
 
       this.subscriptionPoints && this.subscriptionPoints.unsubscribe();
       this.subscriptionPoints = this.build.skillPoints(this.job).subscribe(value => this.update())

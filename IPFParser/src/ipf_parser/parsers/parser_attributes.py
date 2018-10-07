@@ -1,6 +1,7 @@
 import csv
 import logging
 import os
+import re
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations, parser_assets
@@ -28,15 +29,39 @@ def parse_attributes():
             obj['IsToggleable'] = row['AlwaysActive'] == 'NO'
 
             obj['LevelMax'] = -1
+            obj['Unlock'] = None
             obj['UpgradePrice'] = None
             obj['UpgradeTime'] = None
             obj['Link_Jobs'] = []
             obj['Link_Skill'] = None
-            obj['Link_UnlockJob'] = []
-            obj['Link_UnlockSkill'] = None
 
             globals.attributes[obj['$ID']] = obj
             globals.attributes_by_name[obj['$ID_NAME']] = obj
+
+
+def parse_attributes_lua_to_javascript(source, arg_str, arg_num):
+    result = []
+
+    for line in luautil.lua_function_source_to_javascript(source):
+        line = line.replace('jobName', "'" + arg_str + "'")
+        line = line.replace('limitLevel', arg_num)
+        line = line.replace('sklName', "'" + arg_str + "'")
+
+        regex = 'GetJobGradeByName\(pc, (?:\'|")(.+)(?:\'|")\)'
+        search = re.search(regex, line)
+        if search:
+            job = globals.jobs_by_name[search.group(1)]
+            line = re.sub(regex, 'GetJobGrade(' + str(job['$ID']) + ')', line)
+
+        regex = 'GetSkill\(pc, (?:\'|")(.+)(?:\'|")\)'
+        search = re.search(regex, line)
+        if search:
+            skill = globals.skills_by_name[search.group(1)]
+            line = re.sub(regex, 'GetSkill(' + str(skill['$ID']) + ')', line)
+
+        result.append(line)
+
+    return result
 
 
 def parse_links():
@@ -48,6 +73,7 @@ def parse_links_jobs():
     logging.debug("Parsing jobs for attributes...")
 
     LUA = luautil.load_script('ability_price.lua', '*')
+    LUA_UNLOCK = luautil.load_script('ability_unlock.lua', '*', False)
 
     # Parse level, unlock and formula
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')
@@ -67,16 +93,11 @@ def parse_links_jobs():
                     attribute['LevelMax'] = int(row['MaxLevel'])
 
                     # Parse attribute unlock
-                    if row['UnlockArgStr'] in globals.jobs_by_name:
-                        attribute['Link_UnlockJob'].append({
-                            'Job': globals.get_job_link(row['UnlockArgStr']),
-                            'Level': int(row['UnlockArgNum'])
-                        })
-                    elif row['UnlockArgStr'] in globals.skills_by_name:
-                        attribute['Link_UnlockSkill'] = {
-                            'Level': int(row['UnlockArgNum']),
-                            'Skill': globals.get_skill_link(row['UnlockArgStr'])
-                        }
+                    attribute['Unlock'] = parse_attributes_lua_to_javascript(
+                        luautil.lua_function_source(LUA_UNLOCK[row['UnlockScr']]),
+                        row['UnlockArgStr'],
+                        row['UnlockArgNum']
+                    )
 
                     # Parse attribute cost
                     if row['ScrCalcPrice']:

@@ -1,10 +1,10 @@
 <div class="row justify-content-center">
-  <div *ngFor="let job of jobs; let i = index" class="position-relative"
+  <div *ngFor="let job of jobs; let i = index" class="position-relative" style="width: 4rem"
        (mouseenter)="jobsHover[i] = true"
        (mouseleave)="jobsHover[i] = false">
 
     <!-- Icon -->
-    <app-skill-builder-job-icon style="height: 4rem; width: 4rem"
+    <app-skill-builder-job-icon class="w-100" style="height: 4rem;"
                                 [circle]="jobsCircle[i]"
                                 [job]="job"
                                 [size]="'xs'"></app-skill-builder-job-icon>

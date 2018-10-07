@@ -45,7 +45,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   constructor(private skillSimulatorService: SkillSimulatorService) { }
 
   onJobsChange(value: TOSJob[]) {
-    this.ranks = this.build.jobRanks(this.job);
+    this.ranks = this.build.jobRanks(this.job.$ID);
     this.circles = Array.from({length: this.ranks.length}, (x,i) => i + 1);
     this.circlesRemove = new Array(this.ranks.length);
     this.skills = this.skillSimulatorService.SkillsByJob[this.job.$ID]
@@ -56,7 +56,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   onRemoveClick(event: MouseEvent) {
     event.preventDefault();
 
-    let rank = this.build.jobRanks(this.job).pop();
+    let rank = this.ranks.pop();
     this.build.jobRemove(rank);
   }
 
