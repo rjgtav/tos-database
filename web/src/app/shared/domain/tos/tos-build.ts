@@ -4,9 +4,11 @@ import {TOSSkill} from "./skill/tos-skill.model";
 import {EventEmitter} from "@angular/core";
 import {TOSEntity} from "./entity/tos-entity.model";
 import {TOSAttribute} from "./attribute/tos-attribute.model";
-import {SkillSimulatorService} from "../../../skill-simulator/skill-simulator.service";
 import {logging} from "selenium-webdriver";
 import {not} from "rxjs/internal-compatibility";
+import {TOSSkillRepository} from "./skill/tos-skill.repository";
+import {TOSJobRepository} from "./job/tos-job.repository";
+import {TOSRepositoryService} from "./tos-repository.service";
 
 const LEVEL_LIMIT: number = 390;
 const RANK_LIMIT: number = 10; // TODO: find a way to retrieve this value from the game files
@@ -17,10 +19,9 @@ export interface TOSBuild {
   Rank: number;
   RankLimit: number;
 
-  attributeUnlockAvailable(jobs?: { $ID: number, Circle: number }[], skill?: { $ID: number, Level: number }): boolean;
-  jobCircle(job$ID: number): number;
-  skillLevel(skill$ID: number): number;
-  skillLevels(job$ID: number): Observable<{ [key: number]: number }>;
+  jobCircle(job: TOSJob): number;
+  skillLevel(skill: TOSSkill): number;
+  jobSkillLevels(job: TOSJob): Observable<{ [key: number]: number }>;
   tooltipSkillEffect(skill: TOSSkill): string;
 
 }
@@ -46,7 +47,6 @@ export class TOSSimulatorBuild implements TOSBuild {
   private readonly jobs: BehaviorSubject<TOSJob[]> = new BehaviorSubject([]);
   private jobTree: TOSJobTree;
 
-  private readonly skills: { [key: number]: TOSSkill } = {};
   private readonly skillLevelsByJob: { [key: number]: BehaviorSubject<{ [key: number]: number }> } = {};
   private readonly skillPointsByJob: { [key: number]: BehaviorSubject<number> } = {};
 
@@ -85,29 +85,15 @@ export class TOSSimulatorBuild implements TOSBuild {
   }
   get StatsPoints(): Observable<number> { return this.statsPoints.asObservable(); }
 
-  attributeUnlockAvailable(jobs?: { $ID: number, Circle: number }[], skill?: { $ID: number, Level: number }): boolean {
-    if (jobs)
-      for (let job of jobs)
-        if (this.jobCircle(job.$ID) >= job.Circle)
-          return true;
-
-    if (skill)
-      for (let skillLevels of Object.values(this.skillLevelsByJob).map(value => value.getValue()))
-        if ((skillLevels[skill.$ID] || -1) >= skill.Level)
-          return true;
-
-    return !jobs && !skill;
-  }
-
-  static base64Decode(text: string, skillSimulatorService: SkillSimulatorService): TOSSimulatorBuild {
+  static base64Decode(text: string): TOSSimulatorBuild {
     let build: TOSSimulatorBuild = new TOSSimulatorBuild();
     let encoded: TOSBuildEncoded = JSON.parse(atob(text));
 
     encoded.jobs.forEach(value => {
-      let job = skillSimulatorService.JobsByClassName[value];
-      build.jobAdd(job, skillSimulatorService.SkillsByJob[job.$ID]);
+      let job = TOSRepositoryService.findJobsByIdName(value);
+      build.jobAdd(job)
     });
-    Object.entries(encoded.skills || {}).forEach(value => build.skillIncrementLevel(skillSimulatorService.Skills[value[0]], value[1]));
+    Object.entries(encoded.skills || {}).forEach(value => build.skillIncrementLevel(TOSRepositoryService.findSkillsById(+value[0]), value[1]));
     Object.entries(encoded.stats || {}).forEach(value => build.statIncrementLevel(value[0], value[1]));
 
     return build;
@@ -129,9 +115,7 @@ export class TOSSimulatorBuild implements TOSBuild {
       : '';
   }
 
-  jobAdd(job: TOSJob, skills: TOSSkill[]): void {
-    skills.forEach(value => this.skills[value.$ID] = value);
-
+  jobAdd(job: TOSJob): void {
     if (this.Rank >= RANK_LIMIT)
       throw new Error('Rank limit of ' + RANK_LIMIT + ' has been reached');
 
@@ -146,7 +130,7 @@ export class TOSSimulatorBuild implements TOSBuild {
     }
 
     // Initialize skill levels & points
-    this.rankResetSkillPoints(job, this.jobCircle(job.$ID) + 1);
+    this.rankResetSkillPoints(job, this.jobCircle(job) + 1);
     this.rankResetSkillLevels(job);
 
     // Propagate update
@@ -156,8 +140,8 @@ export class TOSSimulatorBuild implements TOSBuild {
     this.jobs.next(jobs);
     this.Change.emit();
   }
-  jobCircle(job$ID: number): number {
-    return this.jobs.getValue().filter(value => value.$ID == job$ID).length;
+  jobCircle(job: TOSJob): number {
+    return this.jobs.getValue().filter(value => value.$ID == job.$ID).length;
   }
   jobRanks(job$ID: number): number[] {
     return this.jobs.getValue().reduce((accumulator, value, index) => {
@@ -171,7 +155,7 @@ export class TOSSimulatorBuild implements TOSBuild {
     // Remove associated skills and skillPoints
     for (let r = jobs.length - 1; r >= rank - 1; r --) {
       let job = jobs[r];
-      let circle = this.jobCircle(job.$ID);
+      let circle = this.jobCircle(job);
 
       // Update circle
       this.jobs.next(jobs.slice(0, r));
@@ -182,7 +166,7 @@ export class TOSSimulatorBuild implements TOSBuild {
       } else {
 
         // Reset skill levels & points
-        this.rankResetSkillPoints(job, this.jobCircle(job.$ID));
+        this.rankResetSkillPoints(job, this.jobCircle(job));
         this.rankResetSkillLevels(job);
       }
     }
@@ -192,6 +176,9 @@ export class TOSSimulatorBuild implements TOSBuild {
       this.rankResetStats();
 
     this.Change.emit();
+  }
+  jobSkillLevels(job: TOSJob): Observable<{ [key: number]: number }> {
+    return this.skillLevelsByJob[job.$ID].asObservable();
   }
 
   skillIncrementLevel(skill: TOSSkill, delta: number, rollOver?: boolean) {
@@ -233,16 +220,13 @@ export class TOSSimulatorBuild implements TOSBuild {
     return 1==1
       && skillPoints - delta >= 0
       && skillLevels + delta >= 0
-      && skillLevels + delta <=  skill.LevelMax(this.jobCircle(skill.Link_Job.$ID));
+      && skillLevels + delta <=  skill.LevelMax(this.jobCircle(skill.Link_Job));
   }
-  skillLevel(skill$ID: number): number {
-    return this.skillLevelsByJob[this.skills[skill$ID].Link_Job.$ID].getValue()[skill$ID];
-  }
-  skillLevels(job$ID: number): Observable<{ [key: number]: number }> {
-    return this.skillLevelsByJob[job$ID].asObservable();
+  skillLevel(skill: TOSSkill): number {
+    return this.skillLevelsByJob[skill.Link_Job.$ID].getValue()[skill.$ID];
   }
   skillLevelMax(skill: TOSSkill): number {
-    return skill.LevelMax(this.jobCircle(skill.Link_Job.$ID));
+    return skill.LevelMax(this.jobCircle(skill.Link_Job));
   }
   skillPoints(job: { $ID: number }): Observable<number> {
     return this.skillPointsByJob[job.$ID].asObservable();
@@ -300,7 +284,7 @@ export class TOSSimulatorBuild implements TOSBuild {
       Object.entries(skillLevels)
         .forEach(value => {
           let delta = value[1];
-          let skill = this.skills[value[0]];
+          let skill = TOSRepositoryService.findSkillsById(+value[0]);
           let skillPoints = this.skillPointsByJob[job.$ID].getValue();
 
           if (delta) {
@@ -317,7 +301,7 @@ export class TOSSimulatorBuild implements TOSBuild {
   }
 
   tooltipSkillEffect(skill: TOSSkill): string {
-    return skill.Effect(this.skillLevel(skill.$ID), this.Stats);
+    return skill.Effect(this.skillLevel(skill), this.Stats);
   }
   tooltipSkillShow(skill: TOSSkill, show: boolean): void {
     this.tooltipSkill = show ? skill : null;

@@ -1,41 +1,44 @@
-import {TOSElement, TOSEntity, TOSEntityLink} from "../entity/tos-entity.model";
+import {TOSElement, TOSEntity} from "../entity/tos-entity.model";
 import {TOSEquipmentMaterial} from "../item/equipment/tos-equipment.model";
+import {TOSItem} from "../item/tos-item.model";
+import {TOSRepositoryService} from "../tos-repository.service";
+import {TOSMap} from "../map/tos-map.model";
 
 export class TOSMonster extends TOSEntity {
-  Armor: TOSEquipmentMaterial;
-  Element: TOSElement;
-  Level: number;
-  Race: TOSMonsterRace;
-  Rank: TOSMonsterRank;
-  Size: TOSMonsterSize;
-  EXP: number;
-  EXPClass: number;
-  Stat_CON: number;
-  Stat_DEX: number;
-  Stat_INT: number;
-  Stat_SPR: number;
-  Stat_STR: number;
-  Stat_HP: number;
-  Stat_SP: number;
-  Stat_ATTACK_MAGICAL_MAX: number;
-  Stat_ATTACK_MAGICAL_MIN: number;
-  Stat_DEFENSE_MAGICAL: number;
-  Stat_ATTACK_PHYSICAL_MAX: number;
-  Stat_ATTACK_PHYSICAL_MIN: number;
-  Stat_DEFENSE_PHYSICAL: number;
-  Stat_Accuracy: number;
-  Stat_Evasion: number;
-  Stat_CriticalDamage: number;
-  Stat_CriticalDefense: number;
-  Stat_CriticalRate: number;
-  Stat_BlockPenetration: number;
-  Stat_BlockRate: number;
+  private link_Drops: TOSMonsterDropLink[];
+  private link_Spawns: TOSMonsterSpawnLink[];
 
-  Link_Drops: TOSMonsterDropLink[];
-  Link_Spawns: TOSMonsterSpawnLink[];
+  readonly Armor: TOSEquipmentMaterial;
+  readonly Element: TOSElement;
+  readonly Level: number;
+  readonly Race: TOSMonsterRace;
+  readonly Rank: TOSMonsterRank;
+  readonly Size: TOSMonsterSize;
+  readonly EXP: number;
+  readonly EXPClass: number;
+  readonly Stat_CON: number;
+  readonly Stat_DEX: number;
+  readonly Stat_INT: number;
+  readonly Stat_SPR: number;
+  readonly Stat_STR: number;
+  readonly Stat_HP: number;
+  readonly Stat_SP: number;
+  readonly Stat_ATTACK_MAGICAL_MAX: number;
+  readonly Stat_ATTACK_MAGICAL_MIN: number;
+  readonly Stat_DEFENSE_MAGICAL: number;
+  readonly Stat_ATTACK_PHYSICAL_MAX: number;
+  readonly Stat_ATTACK_PHYSICAL_MIN: number;
+  readonly Stat_DEFENSE_PHYSICAL: number;
+  readonly Stat_Accuracy: number;
+  readonly Stat_Evasion: number;
+  readonly Stat_CriticalDamage: number;
+  readonly Stat_CriticalDefense: number;
+  readonly Stat_CriticalRate: number;
+  readonly Stat_BlockPenetration: number;
+  readonly Stat_BlockRate: number;
 
-  constructor(json: TOSMonster) {
-    super(json);
+  constructor(private json: TOSMonster) {
+    super(json, 'monsters');
 
     this.$comparators['Rank'] = TOSMonsterRank.comparator;
     this.$comparators['Size'] = TOSMonsterSize.comparator;
@@ -68,29 +71,43 @@ export class TOSMonster extends TOSEntity {
     this.Stat_CriticalRate = +json.Stat_CriticalRate;
     this.Stat_BlockPenetration = +json.Stat_BlockPenetration;
     this.Stat_BlockRate = +json.Stat_BlockRate;
+  }
 
-    this.Link_Drops = json.Link_Drops
-      ? JSON
-        .parse(json.Link_Drops + '')
-        .map(json => new TOSMonsterDropLink(json))
-        //.filter(link => link.Item != null)
-      : null;
-    this.Link_Spawns = json.Link_Spawns
-      ? JSON.parse(json.Link_Spawns + '').map(json => new TOSMonsterSpawnLink(json))
-      : null;
+  get Link_Drops(): TOSMonsterDropLink[] {
+    return this.link_Drops = this.link_Drops
+      ? this.link_Drops
+      : this.json.Link_Drops
+        ? JSON
+            .parse(this.json.Link_Drops + '')
+            .map(value => new TOSMonsterDropLink(value))
+        : null;
+  }
+
+  get Link_Spawns(): TOSMonsterSpawnLink[] {
+    return this.link_Spawns = this.link_Spawns
+      ? this.link_Spawns
+      : this.json.Link_Spawns
+        ? JSON
+          .parse(this.json.Link_Spawns + '')
+          .map(value => new TOSMonsterSpawnLink(value))
+        : null;
   }
 
 }
 
 export class TOSMonsterDropLink {
   Chance: number;
-  Item: TOSEntityLink;
+  Item: TOSItem;
   Quantity_MAX: number;
   Quantity_MIN: number;
 
   constructor(json: TOSMonsterDropLink) {
     this.Chance = +json.Chance;
-    this.Item = json.Item ? new TOSEntityLink(json.Item) : null;
+    this.Item = json.Item
+      ? !isNaN(+json.Item)
+        ? TOSRepositoryService.findItemsById(+json.Item)
+        : new TOSItem(json.Item, null)
+      : null;
     this.Quantity_MAX = +json.Quantity_MAX;
     this.Quantity_MIN = +json.Quantity_MIN;
   }
@@ -98,12 +115,12 @@ export class TOSMonsterDropLink {
 }
 
 export class TOSMonsterSpawnLink {
-  Map: TOSEntityLink;
+  Map: TOSMap;
   Population: number;
   TimeRespawn: number;
 
   constructor(json: TOSMonsterSpawnLink) {
-    this.Map = new TOSEntityLink(json.Map);
+    this.Map = TOSRepositoryService.findMapsById(+json.Map);
     this.Population = +json.Population;
     this.TimeRespawn = +json.TimeRespawn;
   }
@@ -173,8 +190,4 @@ export namespace TOSMonsterSize {
     if (value == TOSMonsterSize.XL) return 3;
   }
 
-}
-
-export enum TOSMonsterType {
-  
 }

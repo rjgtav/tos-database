@@ -1,20 +1,22 @@
 import {TOSItem} from "../tos-item.model";
-import {TOSEntityLink, TOSStat} from "../../entity/tos-entity.model";
+import {TOSStat} from "../../entity/tos-entity.model";
+import {TOSSkill} from "../../skill/tos-skill.model";
+import {TOSRepositoryService} from "../../tos-repository.service";
 
 export class TOSGem extends TOSItem {
   static readonly SLOTS = ['TopAndBottom', 'Boots', 'Gloves', 'Weapon', 'SubWeapon'];
 
-  BonusBoots: TOSGemBonus[];
-  BonusGloves: TOSGemBonus[];
-  BonusSubWeapon: TOSGemBonus[];
-  BonusTopAndBottom: TOSGemBonus[];
-  BonusWeapon: TOSGemBonus[];
-  TypeGem: TOSGemType;
+  private link_Skill: TOSSkill;
 
-  Link_Skill: TOSEntityLink;
+  readonly BonusBoots: TOSGemBonus[];
+  readonly BonusGloves: TOSGemBonus[];
+  readonly BonusSubWeapon: TOSGemBonus[];
+  readonly BonusTopAndBottom: TOSGemBonus[];
+  readonly BonusWeapon: TOSGemBonus[];
+  readonly TypeGem: TOSGemType;
 
   constructor(json: TOSGem) {
-    super(json);
+    super(json, 'gems');
 
     for (let slot of TOSGem.SLOTS) {
       this['Bonus' + slot] = json['Bonus' + slot]
@@ -25,7 +27,14 @@ export class TOSGem extends TOSItem {
     }
 
     this.TypeGem = Object.values(TOSGemType)[+json.TypeGem];
-    this.Link_Skill = json.Link_Skill ? new TOSEntityLink(json.Link_Skill) : null;
+  }
+
+  get Link_Skill(): TOSSkill {
+    return this.link_Skill = this.link_Skill
+      ? this.link_Skill
+      : (this.json as TOSGem).Link_Skill
+        ? TOSRepositoryService.findSkillsById(+(this.json as TOSGem).Link_Skill)
+        : null;
   }
 
   getBonus(level: number): { [key:string]: TOSGemBonus[]} {

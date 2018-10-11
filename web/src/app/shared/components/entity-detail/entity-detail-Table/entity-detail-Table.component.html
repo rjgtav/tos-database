@@ -4,21 +4,24 @@
   <div style="max-height: calc(49px * 4.5); overflow-y: auto;">
     <table class="table table-hover">
       <tbody>
-        <a class="d-table-row" *ngFor="let row of entity[column]" [routerLink]="(link ? row[link] : row).Url">
-          <td class="p-1" width="1" *ngIf="(link ? row[link] : row).Icon">
-            <img height="40" width="40" [src]="(link ? row[link] : row).Icon" />
+        <a *ngFor="let row of data" class="d-table-row"
+           [routerLink]="rowLink(row).Url"
+           (mouseenter)="tooltipChange.emit(rowLink(row))"
+           (mouseleave)="tooltipChange.emit(null)">
+          <td class="p-1" width="1" *ngIf="rowLink(row).Icon">
+            <img height="40" width="40" [src]="rowLink(row).Icon" />
           </td>
 
           <td>
-            {{ (link ? row[link] : row).Name }}
+            {{ rowLink(row).Name }}
             <span *ngIf="row.Quantity_MAX">&times; {{ row.Quantity_MIN }} ~ {{ row.Quantity_MAX}}</span>
           </td>
 
-          <td *ngIf="item && link == 'Monster'" width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
-          <td *ngIf="monster && link == 'Item'" width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
-          <td *ngIf="monster && link == 'Map'" class="text-nowrap" width="1">{{ (row.TimeRespawn / 1000) | tosTime }}</td>
-          <td *ngIf="monster && link == 'Map'" class="text-nowrap" width="1">&times; {{ row.Population }}</td>
-          <td *ngIf="recipe && link == 'Item'" class="text-nowrap" width="1">&times; {{ row.Quantity }}</td>
+          <td *ngIf="item && instanceOf(rowLink(row), TOSMonster)" width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
+          <td *ngIf="monster && instanceOf(rowLink(row), TOSItem)" width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
+          <td *ngIf="monster && instanceOf(rowLink(row), TOSMap)" class="text-nowrap" width="1">{{ (row.TimeRespawn / 1000) | tosTime }}</td>
+          <td *ngIf="monster && instanceOf(rowLink(row), TOSMap)" class="text-nowrap" width="1">&times; {{ row.Population }}</td>
+          <td *ngIf="recipe && instanceOf(rowLink(row), TOSRecipe)" class="text-nowrap" width="1">&times; {{ row.Quantity }}</td>
 
         </a>
       </tbody>

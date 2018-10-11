@@ -17,6 +17,7 @@ import {TOSMonsterRace} from "../../domain/tos/monster/tos-monster.model";
 import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
 import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
 import {TOSBuild} from "../../domain/tos/tos-build";
+import {TOSMap} from "../../domain/tos/map/tos-map.model";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -44,6 +45,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
   card: TOSCard;
   equipment: TOSEquipment;
   item: TOSItem;
+  map: TOSMap;
   skill: TOSSkill;
 
   constructor(private element: ElementRef, private ngbTooltipConfig: NgbTooltipConfig, private zone: NgZone) {
@@ -59,6 +61,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
       this.attribute = this.entity instanceof TOSAttribute ? this.entity as TOSAttribute : null;
       this.equipment = this.entity instanceof TOSEquipment ? this.entity as TOSEquipment : null;
       this.item = this.entity instanceof TOSItem ? this.entity as TOSItem : null;
+      this.map = this.entity instanceof TOSMap ? this.entity as TOSMap : null;
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
     }
   }

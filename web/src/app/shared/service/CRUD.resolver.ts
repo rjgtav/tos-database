@@ -1,9 +1,9 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
-import {Observable} from "rxjs";
-import {Comparable, CRUDService} from "./CRUD.service";
+import {Observable, of} from "rxjs";
 import {Sort} from "../directives/sort.directive";
 import {Filter} from "../directives/filter.directive";
 import {map} from "rxjs/operators";
+import {Comparable} from "../domain/tos/entity/tos-entity.model";
 
 export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
 
@@ -15,7 +15,10 @@ export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
   public static readonly PARAM_SEARCH: string = 'search';
   public static readonly PARAM_SORT: string = 'sort';
 
-  protected constructor(private service: CRUDService<T>) {}
+  protected constructor(
+    private findAll: (filter?: Filter[], sort?: Sort) => T[],
+    private findById: ($ID: number) => T,
+    private search: (pattern: string) => Observable<T[]>) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | T {
 
@@ -25,18 +28,23 @@ export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
       .map(filter => Filter.valueOf(filter))
       .filter((filter) => filter) || undefined;
 
-    let mapToPage = (data) => { return {
+    let mapToPage = (data: T[]): CRUDPage<T> => { return {
       size: data.length,
       items: data.slice((page - 1) * CRUDResolver.PAGE_SIZE, page * CRUDResolver.PAGE_SIZE)
     }};
 
     if (route.params[CRUDResolver.PARAM_ID])
-      return this.service.findById(route.params[CRUDResolver.PARAM_ID]);
+      return this.findById(route.params[CRUDResolver.PARAM_ID]);
 
     if (route.queryParams[CRUDResolver.PARAM_SEARCH])
-      return this.service.search(route.queryParams[CRUDResolver.PARAM_SEARCH]).pipe(map(mapToPage));
+      return this.search(route.queryParams[CRUDResolver.PARAM_SEARCH]).pipe(map(mapToPage));
 
-    return this.service.findAll(filter, sort).pipe(map(mapToPage));
+    return of(mapToPage(this.findAll(filter, sort)));
   }
 
+}
+
+export interface CRUDPage<T> {
+  size: number,
+  items: T[],
 }

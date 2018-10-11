@@ -1,7 +1,13 @@
-import {TOSEntity, TOSEntityLink} from "../entity/tos-entity.model";
+import {TOSEntity} from "../entity/tos-entity.model";
 import {TOSBuild} from "../tos-build";
+import {TOSJob} from "../job/tos-job.model";
+import {TOSSkill} from "../skill/tos-skill.model";
+import {TOSRepositoryService} from "../tos-repository.service";
 
 export class TOSAttribute extends TOSEntity {
+  private link_Jobs: TOSJob[];
+  private link_Skill: TOSSkill;
+
   readonly DescriptionHTML: string;
   readonly IsToggleable: boolean;
   readonly LevelMax: number;
@@ -9,11 +15,8 @@ export class TOSAttribute extends TOSEntity {
   readonly UpgradePrice: number[];
   readonly UpgradeTime: number[];
 
-  readonly Link_Jobs: TOSEntityLink[];
-  readonly Link_Skill: TOSEntityLink;
-
-  constructor(json: TOSAttribute) {
-    super(json);
+  constructor(private json: TOSAttribute) {
+    super(json, 'attributes');
 
     this.DescriptionHTML = this.Description.replace(/{b}(.+){b}/g, '<b>$1</b>');
     this.DescriptionHTML = this.DescriptionHTML.replace(/{nl}/g, '\n');
@@ -30,13 +33,24 @@ export class TOSAttribute extends TOSEntity {
     this.UpgradeTime = json.UpgradeTime
       ? JSON.parse(json.UpgradeTime + '')
       : null;
+  }
 
-    this.Link_Jobs = json.Link_Jobs
-      ? JSON
-        .parse(json.Link_Jobs + '')
-        .map(json => new TOSEntityLink(json))
-      : null;
-    this.Link_Skill = json.Link_Skill ? new TOSEntityLink(json.Link_Skill) : null;
+  get Link_Jobs(): TOSJob[] {
+    return this.link_Jobs = this.link_Jobs
+      ? this.link_Jobs
+      : this.json.Link_Jobs
+        ? JSON
+          .parse(this.json.Link_Jobs + '')
+          .map(value => TOSRepositoryService.findJobsById(value))
+        : null;
+  }
+
+  get Link_Skill(): TOSSkill {
+    return this.link_Skill = this.link_Skill
+      ? this.link_Skill
+      : this.json.Link_Skill
+          ? TOSRepositoryService.findSkillsById(+this.json.Link_Skill)
+          : null;
   }
 
   unlockAvailable(build: TOSBuild): boolean {
@@ -46,10 +60,14 @@ export class TOSAttribute extends TOSEntity {
       let regexSkill = /GetSkill\((.+)\)/g;
       let match: RegExpExecArray;
 
-      while (match = regexJobGrade.exec(line))
-        line = line.replace(match[0], build.jobCircle(+match[1]) + '');
-      while (match = regexSkill.exec(line))
-        line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(+match[1]) }));
+      while (match = regexJobGrade.exec(line)) {
+        let job = TOSRepositoryService.findJobsById(+match[1]);
+        line = line.replace(match[0], build.jobCircle(job) + '');
+      }
+      while (match = regexSkill.exec(line)) {
+        let skill = TOSRepositoryService.findSkillsById(+match[1]);
+        line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
+      }
 
       line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
@@ -62,16 +80,6 @@ export class TOSAttribute extends TOSEntity {
     func.push('}())');
 
     return eval(func.join('\n')) == 'UNLOCK';
-    /*
-    return build.attributeUnlockAvailable(
-      this.Link_UnlockJob
-        ? this.Link_UnlockJob.map(value => { return { $ID: value.Job.$ID, Circle: value.Level } })
-        : null,
-      this.Link_UnlockSkill
-        ? { $ID: this.Link_UnlockSkill.Skill.$ID, Level: this.Link_UnlockSkill.Level }
-        : null
-    );
-    */
   }
 
 }

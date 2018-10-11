@@ -1,20 +1,21 @@
 import {TOSItem} from "../tos-item.model";
-import {TOSEntityLink} from "../../entity/tos-entity.model";
+import {TOSRepositoryService} from "../../tos-repository.service";
 
 export class TOSCube extends TOSItem {
-
-  Link_Items: TOSEntityLink[];
+  private link_Items: TOSItem[];
 
   constructor(json: TOSCube) {
-    super(json);
+    super(json, 'cubes');
+  }
 
-    this.Link_Items = json.Link_Items
-      ? JSON
-        .parse(json.Link_Items + '')
-        .map(json => json != null ? new TOSEntityLink(json) : json)
-        //.filter(link => link != null)
-      : null;
-
+  get Link_Items(): TOSItem[] {
+    return this.link_Items = this.link_Items
+      ? this.link_Items
+      : (this.json as TOSCube).Link_Items
+        ? JSON
+          .parse((this.json as TOSCube).Link_Items + '')
+          .map(value => TOSRepositoryService.findItemsById(value))
+        : null;
   }
 
 }

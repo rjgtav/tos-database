@@ -1,21 +1,21 @@
-<div class="col" *ngIf="!equipmentSet">
+<div *ngIf="!equipmentSet">
   <div class="m-auto" [style.width]="ICON_WIDTH + 'px'">
     <div class="w-100" [style.height]="ICON_HEIGHT + 'px'">
-      <div class="position-relative w-100 h-100">
-        <div class="tos-image position-absolute"
-             style="height: inherit; width: inherit;"
-             [style.backgroundImage]="'url(\'assets/images/equipment_grade_' + (equipment.Grade + '').toLowerCase() + '_' + size + '.png\')'"
+      <div class="position-relative d-flex align-items-center justify-content-center w-100 h-100">
+        <img class="position-absolute"
+             style="max-height: 100%; max-width: 100%;"
+             [src]="'assets/images/equipment_grade_' + (equipment.Grade + '').toLowerCase() + '_' + size + '.png'"
              *ngIf="equipment"
-        ></div>
-        <div class="tos-image position-absolute"
-             style="height: inherit; width: inherit;"
-             [style.backgroundImage]="'url(\'' + (card ? card.IconTooltip : entity.Icon) + '\')'"
-        ></div>
-        <div class="tos-image position-absolute"
-             style="height: 533px; width: 363px; transform: translateX(-17px) translateY(-81px);"
-             [style.backgroundImage]="'url(\'assets/images/card_frame_' + (card.TypeCard + '').toLowerCase() + '.png\')'"
+        />
+        <img class="position-relative m-auto"
+             style="max-height: 100%; max-width: 100%;"
+             [src]="card ? card.IconTooltip : entity.Icon"
+        />
+        <img class="position-absolute"
+             style="height: 533px; width: 363px; transform: translateY(-33px);"
+             [src]="'assets/images/card_frame_' + (card.TypeCard + '').toLowerCase() + '.png'"
              *ngIf="card"
-        ></div>
+        />
       </div>
     </div>
 

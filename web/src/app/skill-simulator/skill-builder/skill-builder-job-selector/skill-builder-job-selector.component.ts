@@ -1,8 +1,10 @@
 import {Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {Subscription} from "rxjs";
 import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
-import {SkillSimulatorService} from "../../skill-simulator.service";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
+import {TOSSkillRepository} from "../../../shared/domain/tos/skill/tos-skill.repository";
+import {TOSJobRepository} from "../../../shared/domain/tos/job/tos-job.repository";
+import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
 
 @Component({
   selector: 'app-skill-builder-job-selector',
@@ -19,20 +21,20 @@ export class SkillBuilderJobSelectorComponent implements OnChanges, OnDestroy {
 
   subscriptionJobs: Subscription;
 
-  constructor(private skillSimulatorService: SkillSimulatorService) {}
+  constructor() {}
 
   onJobClick(event: MouseEvent, job: TOSJob) {
     event.preventDefault();
 
-    this.build.jobAdd(job, this.skillSimulatorService.SkillsByJob[job.$ID]);
+    this.build.jobAdd(job);
   }
 
   onJobsChange(jobs: TOSJob[]) {
     this.rank = this.build.Rank + 1;
     this.jobsAvailable = this.rank > 1
-      ? this.skillSimulatorService.JobsByClassTree[this.build.JobTree].filter(value => value.unlockAvailable(this.build))
-      : this.skillSimulatorService.JobsStarter;
-    this.jobsCircles = this.jobsAvailable.map(value => this.build.jobCircle(value.$ID))
+      ? TOSRepositoryService.findJobsByTree(this.build.JobTree).filter(value => value.unlockAvailable(this.build))
+      : TOSRepositoryService.findJobs().filter(value => value.Rank == 1);
+    this.jobsCircles = this.jobsAvailable.map(value => this.build.jobCircle(value))
   }
 
   ngOnChanges(changes: SimpleChanges): void {

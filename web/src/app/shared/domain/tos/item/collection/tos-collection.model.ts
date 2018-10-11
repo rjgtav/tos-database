@@ -1,13 +1,13 @@
 import {TOSItem} from "../tos-item.model";
-import {TOSEntityLink} from "../../entity/tos-entity.model";
+import {TOSRepositoryService} from "../../tos-repository.service";
 
 export class TOSCollection extends TOSItem {
-  Bonus: TOSCollectionBonus[];
+  private link_Items: TOSItem[];
 
-  Link_Items: TOSEntityLink[];
+  readonly Bonus: TOSCollectionBonus[];
 
   constructor(json: TOSCollection) {
-    super(json);
+    super(json, 'collections');
 
     this.Bonus = json.Bonus
       ? JSON
@@ -15,14 +15,16 @@ export class TOSCollection extends TOSItem {
         .map(json => new TOSCollectionBonus(json))
         .sort()
       : null;
+  }
 
-    this.Link_Items = json.Link_Items
-      ? JSON
-        .parse(json.Link_Items + '')
-        .map(json => json != null ? new TOSEntityLink(json) : json)
-        //.filter(link => link != null)
-      : null;
-
+  get Link_Items(): TOSItem[] {
+    return this.link_Items = this.link_Items
+      ? this.link_Items
+      : (this.json as TOSCollection).Link_Items
+        ? JSON
+          .parse((this.json as TOSCollection).Link_Items + '')
+          .map(value => TOSRepositoryService.findItemsById(value))
+        : null;
   }
 
 }

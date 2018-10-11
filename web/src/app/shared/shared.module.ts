@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {SortDirective, SortGroupDirective} from './directives/sort.directive';
 import {FilterDirective, FilterGroupDirective} from "./directives/filter.directive";
@@ -40,6 +40,8 @@ import {RouterModule} from "@angular/router";
 import {SanitizeCSSPipe} from "./directives/sanitize-css.pipe";
 import {SanitizeHTMLPipe} from "./directives/sanitize-html.pipe";
 import { EntityDetailFormulaComponent } from './components/entity-detail/entity-detail-Formula/entity-detail-Formula.component';
+import {HttpClient} from "@angular/common/http";
+import {TOSRepositoryService} from "./domain/tos/tos-repository.service";
 
 @NgModule({
   imports: [
@@ -111,6 +113,7 @@ import { EntityDetailFormulaComponent } from './components/entity-detail/entity-
     EntityDetailFormulaComponent,
   ],
   providers: [
+    { provide: APP_INITIALIZER, useFactory: TOSRepositoryService.factory, deps: [HttpClient], multi: true },
     TOSAttributeResolver,
     TOSBookResolver,
     TOSCardResolver,

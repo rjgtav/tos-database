@@ -1,10 +1,10 @@
-<div class="card bg-light shadow ml-3" style="width: 480px;" *ngIf="entity && !card">
+<div class="card bg-light shadow ml-3" style="width: 480px;" *ngIf="entity && !card && !map">
   <div class="card-body">
 
     <!-- Base Information -->
     <div class="row">
       <!-- Icon, Grade and Class -->
-      <tos-entity-detail-ClassIconGrade [entity]="entity" [size]="'small'"></tos-entity-detail-ClassIconGrade>
+      <tos-entity-detail-ClassIconGrade class="ml-3 mr-3" [entity]="entity" [size]="'small'"></tos-entity-detail-ClassIconGrade>
 
       <div class="col pl-0">
         <!-- Name and Material/Type -->

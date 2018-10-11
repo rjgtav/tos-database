@@ -1,7 +1,13 @@
-import {TOSEntity, TOSEntityLink} from "../entity/tos-entity.model";
+import {TOSEntity} from "../entity/tos-entity.model";
 import {TOSBuild} from "../tos-build";
+import {TOSItem} from "../item/tos-item.model";
+import {TOSRepositoryService} from "../tos-repository.service";
+import {TOSAttribute} from "../attribute/tos-attribute.model";
+import {TOSSkill} from "../skill/tos-skill.model";
 
 export class TOSJob extends TOSEntity {
+  private link_Attributes: TOSAttribute[];
+  private link_Skills: TOSSkill[];
 
   readonly CircleMax: number;
   readonly JobDifficulty: TOSJobDifficulty;
@@ -16,11 +22,9 @@ export class TOSJob extends TOSEntity {
   readonly Stat_SPR: number;
   readonly Stat_STR: number;
 
-  Link_Attributes: TOSEntityLink[];
-  Link_Skills: TOSEntityLink[];
 
-  constructor(json: TOSJob) {
-    super(json);
+  constructor(private json: TOSJob) {
+    super(json, 'jobs');
 
     this.CircleMax = +json.CircleMax;
     this.JobDifficulty = Object.values(TOSJobDifficulty)[+json.JobDifficulty];
@@ -38,17 +42,26 @@ export class TOSJob extends TOSEntity {
     this.Stat_INT = +json.Stat_INT;
     this.Stat_SPR = +json.Stat_SPR;
     this.Stat_STR = +json.Stat_STR;
+  }
 
-    this.Link_Attributes = json.Link_Attributes
-      ? JSON
-        .parse(json.Link_Attributes + '')
-        .map(json => new TOSEntityLink(json))
-      : null;
-    this.Link_Skills = json.Link_Skills
-      ? JSON
-        .parse(json.Link_Skills + '')
-        .map(json => new TOSEntityLink(json))
-      : null;
+  get Link_Attributes(): TOSItem[] {
+    return this.link_Attributes = this.link_Attributes
+      ? this.link_Attributes
+      : this.json.Link_Attributes
+        ? JSON
+          .parse(this.json.Link_Attributes + '')
+          .map(value => TOSRepositoryService.findAttributesById(value))
+        : null;
+  }
+
+  get Link_Skills(): TOSItem[] {
+    return this.link_Skills = this.link_Skills
+      ? this.link_Skills
+      : this.json.Link_Skills
+        ? JSON
+          .parse(this.json.Link_Skills + '')
+          .map(value => TOSRepositoryService.findSkillsById(value))
+        : null;
   }
 
   get CircleAvailable(): number[] {
@@ -68,13 +81,13 @@ export class TOSJob extends TOSEntity {
     let extra = true;
 
     if (this.$ID_NAME == 'Char4_12') // Chaplain
-      extra = build.jobCircle(4002) >= 3; // Priest
+      extra = build.jobCircle(TOSRepositoryService.findJobsById(4002)) >= 3; // Priest
 
     return 1==1
       && extra
       && build.Rank + 1 <= build.RankLimit
       && build.Rank + 1 >= this.Rank
-      && build.jobCircle(this.$ID) < this.CircleMax;
+      && build.jobCircle(this) < this.CircleMax;
   }
 
 }

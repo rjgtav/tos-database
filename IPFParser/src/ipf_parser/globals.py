@@ -154,13 +154,14 @@ class Link:
         return str(self.dict())
 
     def dict(self):
-        return {
-            '$ID': self.entity['$ID'],
-            '$ID_NAME': self.entity['$ID_NAME'],
-            'Icon': self.entity['Icon'],
-            'Name': self.entity['Name'],
-            'Url': self.collection,
-        }
+        return self.entity['$ID']
+        #return {
+        #    '$ID': self.entity['$ID'],
+        #    '$ID_NAME': self.entity['$ID_NAME'],
+        #    'Icon': self.entity['Icon'],
+        #    'Name': self.entity['Name'],
+        #    'Url': self.collection,
+        #}
 
     @staticmethod
     def to_dict(obj, level=2):

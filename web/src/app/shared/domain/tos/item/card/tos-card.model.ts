@@ -14,7 +14,7 @@ export class TOSCard extends TOSItem {
   TypeCard: TOSCardType;
 
   constructor(json: TOSCard) {
-    super(json);
+    super(json, 'cards');
 
     this.DescriptionHTML = this.Description.split('{img star_mark 20 20}').join('<span class="text-warning">★</span>');
     this.Description = null;

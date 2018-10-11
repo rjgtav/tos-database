@@ -2,13 +2,14 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnDes
 import {TOSJob} from "../../shared/domain/tos/job/tos-job.model";
 import {Subscription} from "rxjs";
 import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
-import {TOSBuild, TOSSimulatorBuild} from "../../shared/domain/tos/tos-build";
+import {TOSSimulatorBuild} from "../../shared/domain/tos/tos-build";
 import {ActivatedRoute, Params, Router} from "@angular/router";
-import {SkillSimulatorService} from "../skill-simulator.service";
 import {faImage, faLink} from "@fortawesome/free-solid-svg-icons";
 import {TosNeetService} from "../../shared/service/integrations/tos-neet.service";
 import {TinyUrlService} from "../../shared/service/integrations/tiny-url.service";
 import {ClipboardService} from "../../shared/service/clipboard.service";
+import {TOSSkillRepository} from "../../shared/domain/tos/skill/tos-skill.repository";
+import {TOSJobRepository} from "../../shared/domain/tos/job/tos-job.repository";
 
 const PARAM_BUILD = 'build';
 const PARAM_TINYURL = 'tinyurl';
@@ -46,9 +47,8 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
     private element: ElementRef,
     private route: ActivatedRoute,
     private router: Router,
-    private skillSimulatorService: SkillSimulatorService,
     private tinyUrlService: TinyUrlService,
-    private tosNeetService: TosNeetService
+    private tosNeetService: TosNeetService,
   ) {}
 
   private buildSubscribe() {
@@ -145,7 +145,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
           this.router.navigate(['.'], { queryParams, relativeTo: this.route });
         });
     } else if (value[PARAM_BUILD]) {
-      this.build = TOSSimulatorBuild.base64Decode(value[PARAM_BUILD], this.skillSimulatorService);
+      this.build = TOSSimulatorBuild.base64Decode(value[PARAM_BUILD]);
       this.buildSubscribe();
     } else {
       this.build = new TOSSimulatorBuild();

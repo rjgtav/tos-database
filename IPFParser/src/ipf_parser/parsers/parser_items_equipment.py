@@ -465,7 +465,6 @@ def parse_equipment():
             1 if any(j in row['UseJob'] for j in ['All', 'Char2']) else 0,  # Wizard
         )
         obj['RequiredLevel'] = int(row['UseLv'])
-        obj['Set'] = None
         obj['Sockets'] = int(row['BaseSocket'])
         obj['SocketsLimit'] = int(row['MaxSocket_COUNT'])
         obj['Stars'] = int(row['ItemStar'])
@@ -478,6 +477,8 @@ def parse_equipment():
         obj['TypeEquipment'] = item_type_equipment
         obj['Unidentified'] = int(row['NeedAppraisal']) == 1
         obj['UnidentifiedRandom'] = int(row['NeedRandomOption']) == 1
+
+        obj['Link_Set'] = None
 
         # HotFix: if it's a Rapier, use THRUST as the TypeAttack
         if obj['TypeEquipment'] == TOSEquipmentType.RAPIER:
@@ -534,7 +535,7 @@ def parse_links_sets(file_name):
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
-        equipment_set = globals.equipment_sets_by_name[row['ClassName']]
+        equipment_set = globals.get_equipment_set_link(row['ClassName'])
 
         # Parse items
         for i in range(1, 8):
@@ -542,6 +543,6 @@ def parse_links_sets(file_name):
                 continue
 
             equipment = globals.equipment_by_name[row['ItemName_' + str(i)]]
-            equipment['Set'] = equipment_set
+            equipment['Link_Set'] = equipment_set
 
     ies_file.close()

@@ -40,6 +40,8 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
   transcendAvailable: boolean;
   transcendLevel: number = 0;
 
+  tooltip: TOSEntity;
+
   private subscription: Subscription;
 
   constructor(private route: ActivatedRoute, private router: Router) { }

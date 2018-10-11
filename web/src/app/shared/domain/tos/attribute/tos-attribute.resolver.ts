@@ -1,13 +1,17 @@
 import {Injectable} from "@angular/core";
 import {CRUDResolver} from "../../../service/CRUD.resolver";
-import {TOSAttributeService} from "./tos-attribute.service";
 import {TOSAttribute} from "./tos-attribute.model";
+import {TOSRepositoryService} from "../tos-repository.service";
 
 @Injectable()
 export class TOSAttributeResolver extends CRUDResolver<TOSAttribute> {
 
-  constructor(service: TOSAttributeService) {
-    super(service);
+  constructor() {
+    super(
+      TOSRepositoryService.findAttributes,
+      TOSRepositoryService.findAttributesById,
+      TOSRepositoryService.searchAttributes,
+    );
   }
 
 }

@@ -1,8 +1,11 @@
-import {TOSAttackType, TOSClassTree, TOSEntity, TOSEntityLink, TOSStat} from "../../entity/tos-entity.model";
+import {TOSAttackType, TOSClassTree, TOSEntity, TOSStat} from "../../entity/tos-entity.model";
 import {TOSItem} from "../tos-item.model";
 import {TOSDataService} from "../../data/tos-data.service";
+import {TOSRepositoryService} from "../../tos-repository.service";
 
 export class TOSEquipment extends TOSItem {
+  private link_Set: TOSEquipmentSet;
+
   Bonus: TOSEquipmentBonus[];
   Durability: number;
   Grade: TOSEquipmentGrade;
@@ -12,7 +15,6 @@ export class TOSEquipment extends TOSItem {
   ReinforceRatio: number;
   RequiredClass: string;
   RequiredLevel: number;
-  Set: TOSEquipmentSet;
   Sockets: number;
   SocketsLimit: number;
   Stars: number;
@@ -26,9 +28,8 @@ export class TOSEquipment extends TOSItem {
   Unidentified: boolean;
   UnidentifiedRandom: boolean;
 
-
   constructor(json: TOSEquipment) {
-    super(json);
+    super(json, 'equipment');
 
     this.$comparators['Grade'] = TOSEquipmentGrade.comparator;
 
@@ -58,18 +59,22 @@ export class TOSEquipment extends TOSItem {
     this.TypeEquipment = Object.values(TOSEquipmentType)[+json.TypeEquipment];
     this.Unidentified = (json.Unidentified + '') == 'True';
     this.UnidentifiedRandom = (json.UnidentifiedRandom + '') == 'True';
-
-    this.Set = json.Set
-      ? new TOSEquipmentSet(JSON.parse(json.Set + ''))
-      : null;
   }
 
-  public isUsableBy(classTree: TOSClassTree): boolean {
+  get Link_Set(): TOSEquipmentSet {
+    return this.link_Set = this.link_Set
+      ? this.link_Set
+      : (this.json as TOSEquipment).Link_Set
+        ? TOSRepositoryService.findEquipmentSetsById(+(this.json as TOSEquipment).Link_Set)
+        : null;
+  }
+
+  isUsableBy(classTree: TOSClassTree): boolean {
     let index = Object.values(TOSClassTree).indexOf(classTree);
     return this.RequiredClass[index] == '1';
   }
 
-  public isType1HWeapon(): boolean {
+  isType1HWeapon(): boolean {
     return [
       TOSEquipmentType.ONE_HANDED_BOW,
       TOSEquipmentType.ONE_HANDED_MACE,
@@ -79,7 +84,7 @@ export class TOSEquipment extends TOSItem {
       TOSEquipmentType.ONE_HANDED_SWORD,
     ].indexOf(this.TypeEquipment) > -1;
   }
-  public isType2HWeapon(): boolean {
+  isType2HWeapon(): boolean {
     return [
       TOSEquipmentType.TWO_HANDED_BOW,
       TOSEquipmentType.TWO_HANDED_MACE,
@@ -89,7 +94,7 @@ export class TOSEquipment extends TOSItem {
       TOSEquipmentType.TWO_HANDED_SWORD,
     ].indexOf(this.TypeEquipment) > -1;
   }
-  public isTypeFashion(): boolean {
+  isTypeFashion(): boolean {
     return [
       TOSEquipmentType.COSTUME_ARMBAND,
       TOSEquipmentType.COSTUME_EFFECT,
@@ -185,6 +190,8 @@ export enum  TOSEquipmentMaterial {
 
 // Note: we can't put this one on a separate class otherwise it generates a circular dependency
 export class TOSEquipmentSet extends TOSEntity {
+  private link_Items: TOSItem[];
+
   Bonus2: string;
   Bonus3: string;
   Bonus4: string;
@@ -192,10 +199,8 @@ export class TOSEquipmentSet extends TOSEntity {
   Bonus6: string;
   Bonus7: string;
 
-  Link_Items: TOSEntityLink[];
-
-  constructor(json: TOSEquipmentSet) {
-    super(json);
+  constructor(private json: TOSEquipmentSet) {
+    super(json, null);
 
     this.Bonus2 = json.Bonus2;
     this.Bonus3 = json.Bonus3;
@@ -203,16 +208,24 @@ export class TOSEquipmentSet extends TOSEntity {
     this.Bonus5 = json.Bonus5;
     this.Bonus6 = json.Bonus6;
     this.Bonus7 = json.Bonus7;
-
-    this.Link_Items = json.Link_Items
-      ? (typeof json.Link_Items == 'string' ? JSON.parse(json.Link_Items + '') : json.Link_Items)
-        .map(json => json != null ? new TOSEntityLink(json) : json)
-        .filter(link => link != null) // TODO: while we don't finish implementing the entire dataset
-      : null;
-
   }
 
-  public get Bonus(): { [key:number]: TOSEquipmentBonus[]} {
+  get Url(): string {
+    return this.Link_Items[0].Url;
+  }
+
+  get Link_Items(): TOSItem[] {
+    return this.link_Items = this.link_Items
+      ? this.link_Items
+      : (this.json as TOSEquipmentSet).Link_Items
+        ? JSON
+          .parse((this.json as TOSEquipmentSet).Link_Items + '')
+          .map(value => TOSRepositoryService.findItemsById(value))
+          .filter(value => value != null)
+        : null;
+  }
+
+  get Bonus(): { [key:number]: TOSEquipmentBonus[]} {
     return [this.Bonus2, this.Bonus3, this.Bonus4, this.Bonus5, this.Bonus6, this.Bonus7]
       .map(bonusGroup => (bonusGroup || '')
         .split('{nl}')

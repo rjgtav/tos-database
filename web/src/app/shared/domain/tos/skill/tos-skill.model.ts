@@ -1,5 +1,10 @@
-import {TOSAttackType, TOSElement, TOSEntity, TOSEntityLink, TOSStat} from "../entity/tos-entity.model";
+import {TOSAttackType, TOSElement, TOSEntity, TOSStat} from "../entity/tos-entity.model";
 import {TOSBuildStats} from "../tos-build";
+import {TOSItem} from "../item/tos-item.model";
+import {TOSRepositoryService} from "../tos-repository.service";
+import {TOSAttribute} from "../attribute/tos-attribute.model";
+import {TOSGem} from "../item/gem/tos-gem.model";
+import {TOSJob} from "../job/tos-job.model";
 
 export class TOSSkill extends TOSEntity {
   private static readonly LUA_CONTEXT: string[] = [ // Some global functions used by the formulas
@@ -59,6 +64,10 @@ export class TOSSkill extends TOSEntity {
   private readonly prop_SpendItemBaseCount: number;
   private readonly sp: number;
 
+  private link_Attributes: TOSAttribute[];
+  private link_Gem: TOSGem;
+  private link_Job: TOSJob;
+
   readonly CoolDown: number;
   readonly DescriptionHTML: string;
   readonly Element: TOSElement;
@@ -74,12 +83,8 @@ export class TOSSkill extends TOSEntity {
   readonly TypeAttack: TOSAttackType;
 
 
-  readonly Link_Attributes: TOSEntityLink[];
-  readonly Link_Gem: TOSEntityLink;
-  readonly Link_Job: TOSEntityLink;
-
-  constructor(json: TOSSkill) {
-    super(json);
+  constructor(private json: TOSSkill) {
+    super(json, 'skills');
 
     this.DescriptionHTML = this.tooltipToHTML(this.Description);
     this.Description = null;
@@ -141,14 +146,32 @@ export class TOSSkill extends TOSEntity {
     this.sp = +json['SP'];
     this.SPPerLevel = +json.SPPerLevel;
     this.TypeAttack = Object.values(TOSAttackType)[+json.TypeAttack];
+  }
 
-    this.Link_Attributes = json.Link_Attributes
-      ? JSON
-        .parse(json.Link_Attributes + '')
-        .map(json => new TOSEntityLink(json))
-      : null;
-    this.Link_Gem = json.Link_Gem ? new TOSEntityLink(json.Link_Gem) : null;
-    this.Link_Job = json.Link_Job ? new TOSEntityLink(json.Link_Job) : null;
+  get Link_Attributes(): TOSItem[] {
+    return this.link_Attributes = this.link_Attributes
+      ? this.link_Attributes
+      : this.json.Link_Attributes
+        ? JSON
+          .parse(this.json.Link_Attributes + '')
+          .map(value => TOSRepositoryService.findAttributesById(value))
+        : null;
+  }
+
+  get Link_Gem(): TOSGem {
+    return this.link_Gem = this.link_Gem
+      ? this.link_Gem
+      : this.json.Link_Gem
+        ? TOSRepositoryService.findGemsById(+this.json.Link_Gem)
+        : null;
+  }
+
+  get Link_Job(): TOSJob {
+    return this.link_Job = this.link_Job
+      ? this.link_Job
+      : this.json.Link_Job
+        ? TOSRepositoryService.findJobsById(+this.json.Link_Job)
+        : null;
   }
 
   Effect(level: number, stats: TOSBuildStats): string {

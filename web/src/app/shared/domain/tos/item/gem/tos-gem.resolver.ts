@@ -1,13 +1,17 @@
 import {Injectable} from "@angular/core";
 import {CRUDResolver} from "../../../../service/CRUD.resolver";
-import {TOSGemService} from "./tos-gem.service";
 import {TOSGem} from "./tos-gem.model";
+import {TOSRepositoryService} from "../../tos-repository.service";
 
 @Injectable()
 export class TOSGemResolver extends CRUDResolver<TOSGem> {
 
-  constructor(service: TOSGemService) {
-    super(service);
+  constructor() {
+    super(
+      TOSRepositoryService.findGems,
+      TOSRepositoryService.findGemsById,
+      TOSRepositoryService.searchGems,
+    );
   }
 
 }

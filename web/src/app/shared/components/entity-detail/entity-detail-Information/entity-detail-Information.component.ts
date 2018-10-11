@@ -34,7 +34,7 @@ export class EntityDetailInformationComponent extends EntityDetailChildComponent
 
     if (this.build && this.skill) {
       this.subscriptionLevels && this.subscriptionLevels.unsubscribe();
-      this.subscriptionLevels = this.build.skillLevels(this.skill.Link_Job.$ID).subscribe(value => this.onSkillLevelsChange(value));
+      this.subscriptionLevels = this.build.jobSkillLevels(this.skill.Link_Job).subscribe(value => this.onSkillLevelsChange(value));
     }
   }
 

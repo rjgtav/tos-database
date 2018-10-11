@@ -1,0 +1,404 @@
+$ID,$ID_NAME,Icon,Name
+11,barrack,,Lodge
+12,barrack_2,,Pyromancer Room
+13,barrack_noble,,Banquet Hall
+14,barrack4,,Pub
+15,opening_zone_1,,Opening Zone
+16,track_underfortress_59_2,,Laima Directing
+17,guild_agit_1,,Guild Hangout
+18,guild_mission_1,,Guild Mission
+19,login,,Login Screen
+100,test_zone2,,Test 2
+101,test_zone,,Test Zone
+102,black_zone,,Black Zone
+103,boss_zone,,Boss Zone
+104,test_qa,,Test Zone White
+105,test_blue,,Test Zone Blue
+108,test_material,,Test Zone Material
+109,d_velniasprison_trackzone,,For Directing
+110,guildhouse,,Guild Hangout
+111,mission_test,,Mission_test
+112,minigame_zone,,Mini Game Zone
+113,onehour_test1,,Mission Test per Hour 1
+114,mission_test2,,Mission Test 2
+116,mission_flag,,Capture the Flag
+501,raid_siauliai1,,Siauliai Raid
+502,onehour_cmine1,,Crystal Mine Raid
+503,id_catacomb_03,,Catacombs Raid
+504,raid_thorn1,,Thorn Forest Raid
+505,mission_rokas_01,,Canyon Area Mission
+506,mission_zachariel_01,,Royal Mausoleum Mission
+507,mission_remains_01,,Collapsed Residential Quarters
+508,mission_firetower_01,,Mage Tower Mission
+509,mission_chaple_01,,Cathedral Mission
+510,mission_huevillage_01,,Seven Valley Mission
+511,mission_gele_01,,Gele Plateau Mission
+512,mission_godnessdefence,,Protect the Goddess Statue
+513,id_catacomb_03_event,,Halloween Event
+514,f_gele_kepa_event,,Kepa Army
+515,d_prison_62_1_event,,Ashaq Underground Prison
+517,mission_gele_01_event,,Pledge of the Blade Certificate
+520,mission_groundtower_1,,Earth Tower Lolopanther Area
+521,mission_groundtower_2,,Earth Tower Solmiki Area
+522,E_f_katyn_12_Mission,,Letas Stream Mission
+523,c_firemage_event,,Laboratory
+524,E_c_fedimian,,Fedimian Under Attack
+525,id_catacomb_04_event,,Underground Grave of Ritinis
+526,E_f_tableland_11_1,,Vedas Plateau
+527,VIVID_c_Klaipe,,Rainbow Klaipeda
+528,VIVID_c_orsha,,Rainbow Orsha
+529,VIVID_c_fedimian,,Rainbow Fedimian
+530,Steam_f_coral_44_1,,[Event] The Cursed Shore
+700,f_pilgrimroad_41_1_event,,Treasure Chest Event
+701,c_highlander_event,,Highlander Master's Stamp [Event]
+702,f_playground,,Royal Soccer Field
+703,f_huevillage_58_1_event,,[Event] Veja Ravine
+704,f_coral_44_2_event,,[Event] Aitheo Coast
+981,c_fedimian,,Fedimian
+1001,c_Klaipe,,Klaipeda
+1002,c_highlander,,Highlander Master's Training Hall
+1003,c_voodoo,,Bokor Master's Home
+1004,c_firemage,,Pyromancer Master's Lab
+1005,c_request_1,,Building Structure
+1006,c_orsha,,Orsha
+1007,c_nunnery,,Saalus Convent
+1008,c_barber_dress,,Beauty Shop
+1021,f_siauliai_west,,West Siauliai Woods
+1031,f_siauliai_est,,Unused-Siauliai
+1032,f_siauliai_2,,East Siauliai Woods
+1041,f_siauliai_out,,Miners' Village
+1051,d_cmine_01,,Crystal Mine 1F
+1061,d_cmine_02,,Crystal Mine 2F
+1071,d_cmine_6,,Crystal Mine 3F
+1081,f_katyn_7,,Entrance of Kateen Forest
+1082,f_katyn_7_2,,Owl Burial Ground
+1091,d_cmine_8,,Crystal Mine Lot 2 - 1F
+1101,d_cmine_9,,Crystal Mine Lot 2 - 2F
+1111,f_katyn_10,,Karolis Springs
+1121,f_siauliai_11,,f_siauliai_11
+1122,f_siauliai_11_re,,Paupys Crossing
+1131,f_katyn_12,,Letas Stream
+1141,f_katyn_13,,Poslinkis Forest
+1142,f_katyn_13_2,,Secret Room
+1143,f_katyn_13_3,,Arrow Path
+1151,f_katyn_14,,Saknis Plains
+1161,f_siauliai_15,,f_siauliai_15
+1162,f_siauliai_15_re,,Woods of the Linked Bridges
+1171,f_siauliai_16,,Lemprasa Pond
+1172,f_siauliai_46_1,,Spring Light Woods
+1173,f_siauliai_46_2,,Uskis Arable Land
+1174,f_siauliai_46_3,,Vilna Forest
+1175,f_siauliai_46_4,,Dina Bee Farm
+1176,f_siauliai_47_4,,Baron Allerno 
+1180,f_siauliai_50_1,,Gytis Settlement Area
+1181,f_katyn_17,,Bladelight Basin
+1191,f_katyn_18,,Kule Peak
+1201,d_thorn_19,,Gate Route
+1211,d_thorn_20,,Sirdgela Forest
+1221,d_thorn_21,,Kvailas Forest
+1231,d_thorn_22,,Dvasia Peak
+1241,d_thorn_23,,Sunset Flag Forest
+1251,f_rokas_24,,Gateway of the Great King
+1261,f_rokas_25,,Ramstis Ridge
+1271,f_rokas_26,,Overlong Bridge Valley
+1281,f_rokas_27,,Akmens Ridge
+1291,f_rokas_28,,Tiltas Valley
+1301,f_rokas_29,,Rukas Plateau
+1311,f_rokas_30,,King's Plateau
+1321,f_rokas_31,,Zachariel Crossroads
+1331,d_zachariel_32,,Royal Mausoleum 1F
+1341,d_zachariel_33,,Royal Mausoleum 2F
+1351,d_zachariel_34,,Royal Mausoleum 3F
+1361,d_zachariel_35,,Royal Mausoleum 4F
+1371,d_zachariel_36,,Royal Mausoleum 5F
+1381,id_catacomb_01,,Guards Graveyard
+1391,id_catacomb_02,,Valius' Eternal Resting Place
+1411,id_catacomb_04,,Underground Grave of Ritinis
+1421,f_remains_37,,Stele Road
+1431,f_remains_38,,Goddess' Ancient Garden
+1441,f_remains_39,,Escanciu Village
+1451,f_remains_40,,Fedimian Suburbs
+1461,d_firetower_41,,Mage Tower 1F
+1471,d_firetower_42,,Mage Tower 2F
+1481,d_firetower_43,,Mage Tower 3F
+1491,d_firetower_44,,Mage Tower 4F
+1501,d_firetower_45,,Mage Tower 5F
+1511,f_pilgrimroad_46,,Starving Demon's Way
+1521,f_pilgrimroad_47,,Pilgrim Path
+1531,f_pilgrimroad_48,,Manahas
+1541,f_pilgrimroad_49,,Genar Field
+1542,f_pilgrimroad_31_1,,Feretory Hills
+1543,f_pilgrimroad_31_2,,Sutatis Trade Route
+1544,f_pilgrimroad_31_3,,Mochia Forest
+1551,f_pilgrimroad_50,,Altar Way
+1561,f_pilgrimroad_51,,Forest of Prayer
+1571,f_pilgrimroad_52,,Apsimesti Crossroads
+1581,d_cathedral_53,,Main Building
+1591,d_cathedral_54,,Grand Corridor
+1601,f_pilgrimroad_55,,Penitence Route
+1611,d_cathedral_56,,Sanctuary
+1631,f_flash_58,,Dingofasil District
+1641,f_flash_59,,Verkti Square
+1651,f_flash_60,,Roxona Market
+1661,f_flash_61,,Ruklys Street
+1681,f_flash_63,,Downtown
+1691,f_flash_64,,Inner Enceinte District
+1701,d_underfortress_65,,Sentry Bailey
+1711,d_underfortress_66,,Drill Ground of Confliction
+1721,d_underfortress_67,,Resident Quarter
+1731,d_underfortress_68,,Storage Quarter
+1741,d_underfortress_69,,Fortress Battlegrounds
+1751,f_tableland_70,,Ibre Plateau
+1761,f_tableland_71,,Grand Yard Mesa
+1771,f_tableland_72,,Sventimas Exile
+1781,f_tableland_73,,Kadumel Cliff
+1791,f_tableland_74,,Steel Heights
+1831,d_prison_78,,Kalejimas Visiting Room
+1841,d_prison_79,,Storage
+1851,d_prison_80,,Solitary Cells
+1861,d_prison_81,,Workshop
+1871,d_prison_82,,Investigation Room
+1881,f_3cmlake_83,,Pelke Shrine Ruins
+1891,f_3cmlake_84,,Absenta Reservoir
+1901,f_3cmlake_85,,Barynwell 85 Waters
+1911,f_3cmlake_86,,Barynwell 86 Waters
+1921,f_3cmlake_87,,Barynwell 87 Waters
+1931,d_startower_88,,Astral Tower 1F
+1941,d_startower_89,,Astral Tower 4F
+1951,d_startower_90,,Astral Tower 12F
+1961,d_startower_91,,Astral Tower 20F
+1971,d_startower_92,,Astral Tower 21F
+1981,f_castle_93,,Outer Wall District 11
+1982,f_castle_94,,Inner Wall District 10
+1983,f_castle_95,,Outer Wall District 13
+1984,f_castle_96,,Outer Wall District 14
+1985,f_castle_98,,Outer Wall District 15
+1986,f_castle_97,,City Wall District 10
+1987,f_castle_99,,City Wall District 11
+1988,f_castle_101,,Inner Wall District 13
+1989,f_castle_100,,City Wall District 12
+1990,f_castle_102,,Outer Wall District 16
+1991,f_dcapital_103,,Taniel I Commemorative Orb
+1992,f_dcapital_104,,Closed Town 104
+1993,f_dcapital_105,,Baltinel Memorial
+1994,f_dcapital_106,,Gliehel Memorial
+1995,f_dcapital_107,,Frienel Memorial
+2000,d_dcapital_108,,Closed Dungeon 108
+2001,siege_warfare,,Siege: Area of Ruins
+2010,d_dcapital_109,,Closed Dungeon 119
+2020,d_dcapital_110,,Closed Dungeon 110
+2030,d_dcapital_111,,Closed Dungeon 111
+2040,d_dcapital_112,,Closed Dungeon 112
+2051,f_katyn_45_1,,Grynas Trails
+2061,f_katyn_45_2,,Grynas Training Camp
+2071,f_katyn_45_3,,Grynas Hills
+2081,f_gele_57_1,,Srautas Gorge
+2082,f_gele_57_2,,Gele Plateau
+2083,f_gele_57_3,,Nefritas Cliff
+2084,f_gele_57_4,,Tenet Garden
+2085,d_chapel_57_5,,Tenet Church B1
+2086,d_chapel_57_6,,Tenet Church 1F
+2087,d_chapel_57_7,,Tenet Church 2F
+2088,f_huevillage_58_1,,Veja Ravine
+2089,f_huevillage_58_2,,Vieta Gorge
+2090,f_huevillage_58_3,,Cobalt Forest
+2091,f_huevillage_58_4,,Septyni Glen
+2101,f_whitetrees_23_1,,Emmet Forest
+2111,f_maple_23_2,,Pystis Forest
+2121,f_whitetrees_23_3,,Syla Forest
+2131,f_tableland_28_1,,Mesafasla
+2141,f_tableland_28_2,,Stogas Plateau
+2300,f_farm_49_1,,Greene Manor
+2301,f_farm_49_2,,Shaton Farm
+2302,f_farm_49_3,,Shaton Reservoir
+2401,p_cathedral_1,,Passage of the Recluse
+2402,p_cathedral_2,,Underground Passage 3
+2411,p_catacomb_1,,Mullers Passage
+2412,p_catacomb_2,,Underground Passage 4
+2421,f_pilgrimroad_41_1,,Thaumas Trail
+2431,f_pilgrimroad_41_2,,Salvia Forest
+2441,f_pilgrimroad_41_3,,Rasvoy Lake
+2451,f_pilgrimroad_41_4,,Sekta Forest
+2461,f_pilgrimroad_41_5,,Ouaas Memorial
+2471,d_abbey_41_6,,Maven Abbey
+2481,id_catacomb_33_1,,Sienakal Graveyard
+2491,id_catacomb_33_2,,Carlyle's Mausoleum
+2501,d_thorn_39_1,,Viltis Forest
+2511,d_thorn_39_2,,Glade Hillroad
+2521,d_thorn_39_3,,Laukyme Swamp
+2531,d_abbey_39_4,,Tyla Monastery
+2541,f_rokas_36_1,,Galeed Plateau
+2551,f_pilgrimroad_36_2,,Fasika Plateau
+2561,f_remains_37_1,,Nuoridin Falls
+2571,f_remains_37_2,,Namu Temple Ruins
+2581,f_remains_37_3,,Istora Ruins
+3000,f_dcapital_18_1,,Closed Town 18_1
+3010,f_dcapital_18_2,,Closed Town 18_2
+3020,d_castle_19_1,,City Wall District 3
+3030,d_castle_19_2,,City Wall District 4
+3040,f_castle_20_1,,Outer Wall District 9
+3050,f_castle_20_2,,Inner Wall District 9
+3060,f_castle_20_3,,Inner Wall District 8
+3070,f_castle_20_4,,City Wall District 8
+3080,f_dcapital_20_5,,Jeromel Park
+3090,f_dcapital_20_6,,Jonael Commemorative Orb
+3100,f_whitetrees_21_1,,Yudejan Forest
+3110,f_whitetrees_21_2,,Nobreer Forest
+3120,f_whitetrees_22_1,,Teresh Forest
+3130,f_whitetrees_22_2,,Tekel Shelter
+3140,f_whitetrees_22_3,,Izoliacjia Plateau
+3150,d_abbey_22_4,,Narvas Temple
+3160,d_abbey_22_5,,Narvas Temple Annex
+3170,d_fantasylibrary_48_1,,Sausis Room 9
+3180,d_fantasylibrary_48_2,,Sausis Room 10
+3190,d_fantasylibrary_48_3,,Valandis Room 2
+3200,d_fantasylibrary_48_4,,Valandis Room 3
+3210,d_fantasylibrary_48_5,,Valandis Room 91
+3220,f_3cmlake_27_1,,Valandis Room 27
+3221,f_3cmlake_27_2,,Maven 31 Waters
+3223,f_3cmlake_27_3,,Maven 32 Waters
+3230,f_maple_24_1,,Maple Forest 24_1
+3240,f_maple_24_2,,Maple Forest 24_2
+3250,f_maple_24_3,,Maple Forest 24_3
+3260,f_maple_25_1,,Nheto Forest
+3270,f_maple_25_2,,Svalphinghas Forest
+3280,f_maple_25_3,,Lhadar Forest
+3290,id_catacomb_25_4,,Timerys Temple
+3300,f_whitetrees_56_1,,Mishekan Forest
+3310,d_underfortress_30_1,,Ruklys Hall of Fame
+3320,d_underfortress_30_2,,Extension
+3330,d_underfortress_30_3,,Evacuation Residential District
+3340,f_flash_29_1,,Coastal Fortress
+3350,f_coral_32_1,,Cranto Coast
+3360,f_coral_32_2,,Igti Coast
+3370,f_orchard_32_3,,Bellai Rainforest
+3380,f_orchard_32_4,,Seir Rainforest
+3390,f_orchard_34_1,,Alemeth Forest
+3400,f_orchard_34_2,,Zeraha
+3410,f_orchard_34_3,,Barha Forest
+3420,f_siauliai_35_1,,Nahash Forest
+3430,f_coral_35_2,,Vera Coast
+3440,d_abbey_35_3,,Elgos Monastery Annex
+3450,d_abbey_35_4,,Elgos Abbey Main Building
+3460,id_catacomb_38_1,,Videntis Shrine
+3470,id_catacomb_38_2,,Mokusul Chamber
+3480,d_velniasprison_54_1,,2nd Demon Prison
+3530,f_coral_44_1,,Zeteor Coast
+3540,f_coral_44_2,,Iotheo Coast
+3550,f_coral_44_3,,Epherotao Coast
+3560,d_limestonecave_52_1,,Tevhrin Stalactite Cave Section 1
+3570,d_limestonecave_52_2,,Tevhrin Stalactite Cave Section 2
+3580,d_limestonecave_52_3,,Tevhrin Stalactite Cave Section 3
+3590,d_limestonecave_52_4,,Tevhrin Stalactite Cave Section 4
+3600,d_limestonecave_52_5,,Tevhrin Stalactite Cave Section 5
+3610,d_velniasprison_51_1,,Demon Prison District 1
+3620,d_velniasprison_51_2,,Demon Prison District 2
+3630,d_velniasprison_51_3,,Demon Prison District 4
+3640,d_velniasprison_51_4,,Demon Prison District 3
+3650,d_velniasprison_51_5,,Demon Prison District 5
+3660,d_limestonecave_55_1,,Alembique Cave
+3670,f_bracken_42_1,,Khonot Forest
+3680,f_bracken_42_2,,Khamadon Forest
+3690,f_bracken_43_1,,Arcus Forest
+3700,f_bracken_43_2,,Phamer Forest
+3710,f_bracken_43_3,,Ziburynas Forest
+3720,f_bracken_43_4,,Mollogheo Forest
+3730,f_farm_47_1,,Tenants' Farm
+3740,f_farm_47_2,,Aqueduct Bridge Area
+3750,f_farm_47_3,,Myrkiti Farm
+3760,f_tableland_11_1,,Vedas Plateau
+3770,f_3cmlake_26_1,,Lanko 26 Waters
+3780,f_3cmlake_26_2,,Lanko 22 Waters
+3790,f_dcapital_53_1,,Closed Town 53_1
+3800,d_itemdungeon_1,,Item Dungeon
+3810,d_underfortress_59_1,,Royal Mausoleum Workers Lodge
+3820,d_underfortress_59_2,,Royal Mausoleum Constructors' Chapel
+3830,d_underfortress_59_3,,Royal Mausoleum Storage
+3840,d_startower_60_1,,Residence of the Fallen Legwyn Family
+3850,d_firetower_61_1,,Roxona Reconstruction Agency West Building
+3860,d_firetower_61_2,,Roxona Reconstruction Agency East Building
+3870,ID_startower,,Fallen Legwyn Family Dungeon
+3880,ID_firetower,,Archmage Tower Dungeon
+3890,id_chaple,,Underground Chapel Dungeon
+3900,id_catacomb,,Catacombs Underground Dungeon
+3910,d_prison_62_1,,Ashaq Underground Prison 1F
+3920,d_prison_62_2,,Ashaq Underground Prison 2F
+3930,d_prison_62_3,,Ashaq Underground Prison 3F
+3940,id_remains,,Area of Ruins Dungeon
+3950,id_thorn,,Vine Forest Dungeon
+3960,f_bracken_63_1,,Koru Jungle
+3970,f_bracken_63_2,,Knidos Jungle
+3980,f_bracken_63_3,,Dadan Jungle
+3990,d_abbey_64_1,,Novaha Assembly Hall
+4000,d_abbey_64_2,,Novaha Annex
+4010,d_abbey_64_3,,Novaha Institute
+4020,f_castle_65_1,,Delmore Hamlet
+4030,f_castle_65_2,,Delmore Manor
+4040,f_castle_65_3,,Delmore Outskirts
+4050,d_cmine_66_1,,Nevellet Quarry 1F
+4060,d_cmine_66_2,,Nevellet Quarry 2F
+4070,d_castle_67_1,,Topes Fortress 1F
+4080,d_castle_67_2,,Topes Fortress 2F
+4090,d_underfortress_68_1,,Sicarius 1F
+4100,d_underfortress_68_2,,Sicarius 2F
+4110,id_catacomb2,,Underground Catacombs Dungeon2
+4120,id_underfortress,,Deep Underground Prison Dungeon
+4130,gid_firetower_01,,Mage Tower Guild Mission
+4140,gid_thorn_01,,Thorn Forest Guild Mission
+4150,gid_zachariel_01,,Royal Mausoleum Guild Mission
+4160,gid_rokas_01,,Canyon Belt Guild Mission
+4170,gid_velniasprison_51_3,,Demon Prison Guild Mission
+4180,id_remains3,,Monument of Desire Dungeon
+4190,id_thorn2,,Hollow Thorn Forest
+4200,id_castle,,Blue Fortress Dungeon
+4210,id_firetower_02,,Mage Tower Instanced Dungeon
+4220,guild_mission_2_pvp,,Regional Guild Battle
+4221,guild_mission_3_pvp,,Regional Guild Battle : Lost Temple
+4230,mission_f_remains_38,,Area of Ruins
+4240,id_velniasprison_01,,Darkness Property Instanced Dungeon
+4250,id_maple_01,,Ground Property Instanced Dungeon
+4260,mission_abbey_uphill,,Uphill Defense
+4270,d_firetower_69_1,,Zima Suecourt
+4280,d_firetower_69_2,,Martuis Storage Room
+4290,mission_d_castle_67_2,,Roxona Underground Facility Mission
+4291,mission_d_castle_67_2_nunnery,,Saalus Convent Castle Mission
+4300,mission_d_cmine_66_1,,Mine Mission
+4310,mission_d_abbey_39_4,,Monastery Mission
+4320,mission_f_3cmlake_84,,Lake Mission
+4330,mission_d_abbey_35_3,,Convent
+4340,mission_f_3cmlake_26_1,,Lanko 26 Waters
+4690,pvp_battlerumble,,Battle Rumble
+4700,mission_fantasylibrary_1,,Former Fantasy Library : Sausis Room 9
+4710,id_castle2,,Castle Dungeon
+4730,d_limestonecave_73_1,,Tavorh Cave
+4780,d_prison_75_1,,Narcon Prison
+4800,d_startower_76_1,,Natarh Watchtower
+4810,d_startower_76_2,,Nazarene Tower
+4820,d_velniasprison_77_1,,Tatenye Prison
+4840,d_cathedral_78_1,,Neighport Church East Building
+4860,d_zachariel_79_1,,Sjarejo Chamber
+4870,d_zachariel_79_2,,Netanmalek Mausoleum
+4890,d_catacomb_80_1,,Rancid Labyrinth
+4900,d_catacomb_80_2,,Balaam Camp Site
+4910,d_catacomb_80_3,,Michmas Temple
+4920,d_raidboss_velcoffer,,Velcoffer's Nest
+4930,d_limestonecave_71_2,,Limestone Cave 71_2
+4931,d_limestonecave_71_1,,Baubas Cave
+4940,id_whitetrees1,,The First Refuge
+4950,d_limestonecave_70_1,,Sulivinas Lair
+4960,c_Klaipe_event,,Halloween Dungeon - Creepy Klaipeda
+4961,d_castle_agario,,Halloween Dungeon - Creepy Klaipeda
+4970,id_d_cmine_66_2,,Nevellet Quarry Dungeon
+4971,id_3cmlake_26_1,,Lanko Lake Dungeon
+8000,f_nicopolis_81_1,,Starry Town
+8010,f_nicopolis_81_2,,Feline Post Town
+8020,f_nicopolis_81_3,,Spell Tome Town
+8021,pvp_Mine,,PvP Mine Lawless Zone
+8022,d_solo_dungeon,,Remnants of Bernice Dungeon
+8023,mission_whitetrees_56_1,,Mishekan Forest
+9996,GuildColony_f_pilgrimroad_49,,Genar Field
+9997,GuildColony_f_siauliai_47_4,,Baron Allerno 
+9998,GuildColony_f_farm_47_2,,Aqueduct Bridge Area
+10001,mission_instance,,MissionInstance
+20000,infinite_map,,Infinite Map
+20010,pvp_tournament,,Team Battle League Tournament

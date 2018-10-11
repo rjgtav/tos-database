@@ -1,13 +1,17 @@
 import {Injectable} from "@angular/core";
 import {CRUDResolver} from "../../../../service/CRUD.resolver";
-import {TOSCardService} from "./tos-card.service";
 import {TOSCard} from "./tos-card.model";
+import {TOSRepositoryService} from "../../tos-repository.service";
 
 @Injectable()
 export class TOSCardResolver extends CRUDResolver<TOSCard> {
 
-  constructor(service: TOSCardService) {
-    super(service);
+  constructor() {
+    super(
+      TOSRepositoryService.findCards,
+      TOSRepositoryService.findCardsById,
+      TOSRepositoryService.searchCards,
+    );
   }
 
 }

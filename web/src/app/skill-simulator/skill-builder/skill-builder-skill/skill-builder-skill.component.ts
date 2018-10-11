@@ -3,8 +3,9 @@ import {Subscription} from "rxjs";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {TOSSkill} from "../../../shared/domain/tos/skill/tos-skill.model";
-import {SkillSimulatorService} from "../../skill-simulator.service";
 import {TOSAttribute} from "../../../shared/domain/tos/attribute/tos-attribute.model";
+import {TOSAttributeRepository} from "../../../shared/domain/tos/attribute/tos-attribute.repository";
+import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
 
 @Component({
   selector: 'app-skill-builder-skill',
@@ -27,7 +28,7 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   subscriptionLevel: Subscription;
   subscriptionPoints: Subscription;
 
-  constructor(private skillSimulatorService: SkillSimulatorService) { }
+  constructor() { }
 
   private update() {
     if (this.build) {
@@ -53,13 +54,13 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.build || changes.skill) {
-      this.attributes = this.skillSimulatorService.AttributesBySkill[this.skill.$ID];
+      this.attributes = TOSRepositoryService.findAttributesBySkill(this.skill.$ID);
 
       this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
       this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
 
       this.subscriptionLevel && this.subscriptionLevel.unsubscribe();
-      this.subscriptionLevel = this.build.skillLevels(this.job.$ID).subscribe(value => this.onSkillLevelsChange(value));
+      this.subscriptionLevel = this.build.jobSkillLevels(this.job).subscribe(value => this.onSkillLevelsChange(value));
 
       this.subscriptionPoints && this.subscriptionPoints.unsubscribe();
       this.subscriptionPoints = this.build.skillPoints(this.job).subscribe(value => this.update())

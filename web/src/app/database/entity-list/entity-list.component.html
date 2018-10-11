@@ -44,7 +44,7 @@
   </thead>
   <tbody>
     <a *ngFor="let row of data" class="d-table-row"
-       [routerLink]="row.$ID"
+       [routerLink]="row.Url"
        (mouseenter)="tooltip = row"
        (mouseleave)="tooltip = null" >
       <td *ngFor="let column of config.tableColumns"

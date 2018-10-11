@@ -1,36 +1,44 @@
 import {TOSItem} from "../tos-item.model";
-import {TOSEntityLink} from "../../entity/tos-entity.model";
+import {TOSRepositoryService} from "../../tos-repository.service";
 
 export class TOSRecipe extends TOSItem {
-
-  Link_Materials: TOSRecipeMaterial[];
-  Link_Target: TOSEntityLink;
+  private link_Materials: TOSRecipeMaterial[];
+  private link_Target: TOSItem;
 
   constructor(json: TOSRecipe) {
-    super(json);
-
-    this.Link_Materials = json.Link_Materials
-      ? JSON
-        .parse(json.Link_Materials + '')
-        .map(json => json ? new TOSRecipeMaterial(json) : null)
-        //.filter(link => link && link.Item)
-      : null;
-
-    this.Link_Target = json.Link_Target ? new TOSEntityLink(json.Link_Target) : null;
+    super(json, 'recipes');
   }
 
-  get TargetAsList(): TOSEntityLink[] {
+  get Link_Materials(): TOSRecipeMaterial[] {
+    return this.link_Materials = this.link_Materials
+      ? this.link_Materials
+      : (this.json as TOSRecipe).Link_Materials
+        ? JSON
+          .parse((this.json as TOSRecipe).Link_Materials + '')
+          .map(value => new TOSRecipeMaterial(value))
+        : null;
+  }
+
+  get Link_Target(): TOSItem {
+    return this.link_Target = this.link_Target
+      ? this.link_Target
+      : (this.json as TOSRecipe).Link_Target
+        ? TOSRepositoryService.findItemsById(+(this.json as TOSRecipe).Link_Target)
+        : null;
+  }
+
+  get TargetAsList(): TOSItem[] {
     return this.Link_Target ? [this.Link_Target] : null;
   }
 
 }
 
 export class TOSRecipeMaterial {
-  Item: TOSEntityLink;
+  Item: TOSItem;
   Quantity: number;
 
   constructor(json: TOSRecipeMaterial) {
-    this.Item = new TOSEntityLink(json.Item);
+    this.Item = TOSRepositoryService.findItemsById(+json.Item);
     this.Quantity = +json.Quantity;
   }
 

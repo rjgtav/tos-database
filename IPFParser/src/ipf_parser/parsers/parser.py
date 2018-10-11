@@ -94,6 +94,7 @@ def parse(version_new):
     csv_write(globals.gems.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_GEMS))
     csv_write(globals.items.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_ITEMS))
     csv_write(globals.jobs.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_JOBS))
+    csv_write(globals.maps.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_MAPS))
     csv_write(globals.monsters.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_MONSTERS))
     csv_write(globals.recipes.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_RECIPES))
     csv_write(globals.skills.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_SKILLS))

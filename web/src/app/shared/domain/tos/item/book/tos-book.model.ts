@@ -4,7 +4,7 @@ export class TOSBook extends TOSItem {
   Text: string;
 
   constructor(json: TOSBook) {
-    super(json);
+    super(json, 'books');
 
     this.Text = json.Text
       .split('{nl}{np}').join('{np}') // Remove endlines at the end of pages

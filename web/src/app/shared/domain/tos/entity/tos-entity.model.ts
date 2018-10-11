@@ -1,4 +1,6 @@
-import {Comparable} from "../../../service/CRUD.service";
+export abstract class Comparable {
+  $comparators: { [key: string]: (a, b) => -1 | 0 | 1; } = {}
+}
 
 export abstract class TOSEntity extends Comparable {
   $ID: number;
@@ -6,8 +8,9 @@ export abstract class TOSEntity extends Comparable {
   Description: string;
   Icon: string;
   Name: string;
+  Url: string;
 
-  protected constructor(json: TOSEntity) {
+  protected constructor(json: TOSEntity, url: string) {
     super();
 
     this.$comparators['$ID'] = (a: number, b: number) => {
@@ -22,21 +25,13 @@ export abstract class TOSEntity extends Comparable {
     this.Description = json.Description ? json.Description.replace(/{nl}/g, '\n') : null;
     this.Icon = json.Icon ? 'assets/icons/' + json.Icon.toLowerCase() + '.png' : null;
     this.Name = json.Name;
+
+    if (url)
+      this.Url = '/database/' + url + '/' + this.$ID;
   }
 
   static getIcon(entity: TOSEntity): string {
     return entity.Icon;
-  }
-
-}
-
-export class TOSEntityLink extends TOSEntity {
-  Url: string;
-
-  public constructor(json: TOSEntityLink) {
-    super(json = (typeof json == 'string') ? JSON.parse(json) : json);
-
-    this.Url = '/database/' + json.Url + '/' + this.$ID;
   }
 
 }

@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Subscription} from "rxjs/internal/Subscription";
-import {TOSEntity, TOSEntityLink} from "../../shared/domain/tos/entity/tos-entity.model";
-import {CRUDResolver} from "../../shared/service/CRUD.resolver";
+import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
+import {CRUDPage, CRUDResolver} from "../../shared/service/CRUD.resolver";
 import {Filter} from "../../shared/directives/filter.directive";
 import {Sort} from "../../shared/directives/sort.directive";
 import {EntityListFilter} from "../entity-filter/entity-list-filter.component";
@@ -55,8 +55,9 @@ export class EntityListComponent implements OnDestroy, OnInit {
     this.subscription = this.route.queryParamMap.subscribe((params: ParamMap) => {
       this.config = this.route.snapshot.data.configuration as TOSListConfiguration;
 
-      this.data = this.route.snapshot.data.response.items as TOSEntity[];
-      this.dataSize = this.route.snapshot.data.response.size;
+      let response = this.route.snapshot.data.response as CRUDPage<TOSEntity>;
+      this.data = response.items;
+      this.dataSize = response.size;
 
       this.page = +params.get(CRUDResolver.PARAM_PAGE) || 1;
       this.pageSort = Sort.valueOf(params.get(CRUDResolver.PARAM_SORT)) || Sort.default(this.config);
@@ -124,7 +125,7 @@ interface TOSListTableColumn {
 
   transformColor?: (value: any) => string
   transformIcon?: (value: any) => string
-  transformLink?: (value: any) => TOSEntityLink
+  transformLink?: (value: any) => TOSEntity
   transformValue?: (value: any) => number
 }
 
