@@ -3,6 +3,7 @@ import * as fuzzysort from 'fuzzysort';
 import {Comparable} from "../domain/tos/entity/tos-entity.model";
 import {Filter} from "../directives/filter.directive";
 import {Sort, SortOrder} from "../directives/sort.directive";
+import {isDevMode} from "@angular/core";
 
 
 export abstract class CRUDRepository<T extends Comparable> {
@@ -29,8 +30,9 @@ export abstract class CRUDRepository<T extends Comparable> {
     return this.loader = this.loader || Observable.create(observable => {
       this.data = [];
       this.dataById = {};
+      this.options.path = (!isDevMode() ? '/tos-database' : '') + this.options.path;
 
-      window['Papa']['SCRIPT_PATH'] = '/assets/js/papaparse.min.js';
+      window['Papa']['SCRIPT_PATH'] = 'assets/js/papaparse.min.js';
       window['Papa'].parse(this.options.path, {
         download: true,
         header: true,
