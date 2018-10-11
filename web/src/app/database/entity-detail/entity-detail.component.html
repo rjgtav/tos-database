@@ -2,7 +2,7 @@
 
   <div class="row">
     <!-- Name and Material/Type -->
-    <tos-entity-detail-MaterialNameType class="col h3" [entity]="entity" [idName]="true"></tos-entity-detail-MaterialNameType>
+    <tos-entity-detail-MaterialNameType class="col h4 mb-3" [entity]="entity" [idName]="true"></tos-entity-detail-MaterialNameType>
   </div>
 
   <div class="row mb-4">
@@ -11,7 +11,7 @@
       <tos-entity-detail-Card [entity]="card"></tos-entity-detail-Card>
     </div>
 
-    <div class="col-lg-6 mb-4 mt-4" *ngIf="!card">
+    <div class="col-lg-6 mb-4" *ngIf="!card">
       <div class="card bg-light m-auto"
            [style.minWidth]="('calc(' + ICON_WIDTH + 'px + 2.5rem)') | sanitizeCSS"
            [style.maxWidth]="('calc(' + ICON_WIDTH + 'px + 2.5rem)') | sanitizeCSS">
