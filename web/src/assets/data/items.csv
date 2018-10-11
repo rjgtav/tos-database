@@ -333,6 +333,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490315,Chess01_Box,Use to select one of the following items.{nl} - Ebony Rook Costume (Male) x1{nl} - Ivory Pawn Costume (Female) x1,icon_item_chess_box01,,,,,,Rook and Pawn Costume Selection Box,0,0.0,0.0,0001,19,1.0
 490316,Chess02_Box,Use to select one of the following items.{nl} - Ebony Bishop Costume (Male) x1{nl} - Ivory Knight Costume (Female) x1,icon_item_chess_box02,,,,,,Bishop and Knight Costume Selection Box,0,0.0,0.0,0001,19,1.0
 490317,Chess03_Box,Use to select one of the following items.{nl} - Ebony King Costume (Male) x1{nl} - Ivory Queen Costume (Female) x1,icon_item_chess_box03,,,,,,King and Queen Costume Selection Box,0,0.0,0.0,0001,19,1.0
+490319,Inspector01_Box,Use to select one of the following costumes.{nl} - Royal Envoy Costume (Male) x1{nl} - Royal Envoy Costume (Female) x1,icon_item_inspector01_box,,,,,,Royal Envoy Costume Selection Box,0,0.0,0.0,0001,19,1.0
+490320,Inspector02_Box,Use to select one of the following costumes.{nl} - Court Scholar Costume (Male) x1{nl} - Court Scholar Costume (Female) x1,icon_item_inspector02_box,,,,,,Court Scholar Costume Selection Box,0,0.0,0.0,0001,19,1.0
+490321,Inspector03_Box,Use to select one of the following costumes.{nl} - Black Ceremonial Robes (Male) x1{nl} - Black Ceremonial Robes (Female) x1,icon_item_inspector03_box,,,,,,Black Ceremonial Robes Selection Box,0,0.0,0.0,0001,19,1.0
+490322,MoonRabbit_Box,Use to obtain all of the following items.{nl} - Moon Rabbit Costume x1{nl} - Moon Rabbit Helmet x1,icon_item_moonrabbit_box,,,,,,Moon Rabbit Costume Set,0,0.0,0.0,0001,19,1.0
 491001,PremiumToken_60d,Grants Token benefits to all your characters in the server for 60 days. See remaining time under Character Info.{nl}[Token Benefits]{nl} - Able to learn attributes instantaneously{nl} - Reduced Market commission fee (30% {img white_right_arrow 16 16} 10%){nl} - Able to list up to 10 items on the Market{nl} - Able to register items in Market outside min./max. price limits{nl} - Able to retrieve Market silver instantaneously{nl}- Movement speed +3{nl} - +50% EXP from hunting monsters{nl}(Stacks with EXP Tome effects){nl}- Team Storage slots +30{nl} - Able to use Premium Gestures{nl} - Able to use Personal Trade up to 60 times,icon_item_token,,,,,,Token: 60 Days,0,0.0,0.0,0000,19,0.0
 491002,DLC_BOX1,Right-click to obtain the following items:{nl} - 650 TP{nl} - Token (60 Days){nl} - Hair Accessory - Popolion Doll{nl} - Hair Accessory - Hanaming Doll{nl} - Hoglan Companion Voucher{nl} - Stat Reset Potion{nl} - Skill Reset Potion{nl},icon_item_premiumpackage_1,,,,,,Founder's Server : Exclusive Access 1,0,0.0,0.0,0000,19,0.0
 491003,steam_Premium_tpBox_650,Use to obtain 650 TP.,icon_item_tpbox_360,,,,,,650 TP,0,0.0,0.0,0000,19,0.0
@@ -5728,7 +5732,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900127,Event_160908_2,An ingredient to make dumplings. Highly sought after by Honey Dumpling enthusiasts.,icon_item_sugar,,,,"[3026, 3027]",,Sugar,0,0.0,0.0,1111,15,1.0
 900128,Event_160908_3,An ingredient to make dumpling dough. Place the fillings inside the dough to make your dumplings.,icon_item_ricepowder,,,,"[3026, 3027]",,Flour,0,0.0,0.0,1111,15,1.0
 900129,Event_160908_4,An ingredient to make dumplings. It looks nice and ripe.,icon_item_chestnuts,,,,"[3026, 3027]",,Chestnut,0,0.0,0.0,1111,15,1.0
-900130,Event_160908_5,"A sweet dumpling made of various ingredients. It may look difficult to cook, but the tasty treat is worth it. {nl} Increases +2 movement speed, +5000 maximum HP and SP for 15 minutes.",icon_item_songpyeon,,,,,[3026],Sweet Dumpling,0,900.0,0.0,1111,6,1.0
+900130,Event_160908_5,"A sweet dumpling made of various ingredients. It may look difficult to cook, but the tasty treat is worth it. {nl} Increases +2 movement speed, +5000 maximum HP and SP for 15 minutes (will be deleted at the end of the event period).",icon_item_songpyeon,,,,,[3026],Sweet Dumpling,0,900.0,0.0,1111,6,1.0
 900131,Event_160908_6,"A king-size dumpling made of several ingredients. It smells sweet and looks absolutely delicious. {nl} Grants everyone in your party +4 movement speed, +1 AoE attack ratio and +25% EXP gain.",icon_item_large_songpyeon,,,,,[3027],Jumbo Dumpling,0,1800.0,0.0,1111,6,1.0
 900132,Event_160908_7,"A king-size dumpling made of several ingredients. It smells sweet and looks absolutely delicious. {nl} Grants your party members +4 movement speed, +1 AoE attack ratio and +25% EXP gains.",icon_item_largehoney_songpyeon,,,,,,Honey Dumpling,0,1800.0,0.0,1111,6,1.0
 900136,Event_160929_4,Restores your HP and SP by 512 every 2 seconds for 15 seconds. Right-click to use. Cooldown of 100 seconds.,item_hpsp_potion_1,,,,,,Icicle Recovery Potion Lv1 [Event],0,100.0,1209600.0,0000,6,20.0
@@ -5750,7 +5754,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900202,161215Event_NexonCash_1,N/A,icon_item_event_50000cash,,,,,,N/A,1,0.0,0.0,0000,8,0.0
 900203,161215Event_NexonCash_2,N/A,icon_item_event_luckychance,,,,,,N/A,1,0.0,0.0,0000,8,0.0
 900204,misc_paperBox_party_30d,Use it when you need attention.,icon_item_paperbox,,,,,,Cardboard Box (30 Days),20,1.0,2592000.0,0010,6,1.0
-900205,Event_160908_6_14d,"A king-size dumpling made of several ingredients. It smells sweet and looks absolutely delicious. {nl} Grants everyone in your party +4 movement speed, +1 AoE attack ratio and +25% EXP gain.",icon_item_large_songpyeon,,,,,,Jumbo Dumpling (14 Days),0,1800.0,1209600.0,0000,6,1.0
+900205,Event_160908_6_14d,"A king-size dumpling made of several ingredients. It smells sweet and looks absolutely delicious. {nl} Grants your party members +4 movement speed, +1 AoE attack ratio and +25% EXP gains.",icon_item_large_songpyeon,,,,,,Jumbo Dumpling (14 Days),0,1800.0,1209600.0,0000,6,1.0
 900206,Event_Ability_Coupon_1,Attribute Coupon,,,,,,,Attribute Discount Coupon,1,0.0,0.0,0000,8,0.0
 900207,Event_Ability_Coupon_2,Attribute Coupon,,,,,,,Attribute Discount Coupon 2,1,0.0,0.0,0000,8,0.0
 900208,Event_Ability_Coupon_3,Attribute Coupon,,,,,,,Attribute Discount Coupon 3,1,0.0,0.0,0000,8,0.0
@@ -5860,7 +5864,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900338,Event_1706_Doppelsoeldner1,A badge that will prove yourself to the Doppelsoeldner Master.,icon_item_gem_pendent1,,,,,,Mercenary Badge,1,0.0,0.0,0001,8,1.0
 900339,Event_1706_Doppelsoeldner_Potion,Right-click to use.{nl}Increases physical and magic defense by +100 for 1 hour.,icon_item_defensive_potion,,,,,,Pledge of the Blade Potion,0,5.0,0.0,0001,8,1.0
 900340,Event_Steam_Wedding_Card,An invitation to a wedding.{nl}Deliver it to the guest to whom it is addressed.,icon_item_event_invitation2,,,,,,Invitation,0,0.0,1800.0,0000,15,0.0
-900341,Event_Steam_Wedding_Fire,Fire it up and enjoy with your party.{nl}Grants 60 minutes of +2 movement speed and +50% EXP gains to all party members.,icon_item_firework,,,,,,Party Firecracker (14 Days),0,3600.0,1209600.0,0000,15,0.0
+900341,Event_Steam_Wedding_Fire,Fire it up and enjoy with your party.{nl}Grants 60 minutes of +2 movement speed and +50% EXP gains to all party members.,icon_item_firework,,,,,,Party Firecracker (14 Days),0,3600.0,1209600.0,0000,6,0.0
 900342,Event_Umbrella,"Increases EXP gains, movement speed and max. HP with each stack for 30 minutes. Maximum of 5 stacks. ",icon_item_umbrella,,,,,,Colorful Umbrella,0,10.0,0.0,0000,6,0.0
 900343,Event_Umbrella_Box_1,A colorful water drop.{nl}What secrets could it hold?,icon_item_slimejelly_purple,,,,,,Purple Drop,0,0.0,0.0,0001,8,0.0
 900344,Event_Umbrella_Box_2,A colorful water drop.{nl}What secrets could it hold?,icon_item_slimejelly_red,,,,,,Red Drop,0,0.0,0.0,0001,8,0.0
@@ -6111,7 +6115,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904084,WEB_PROPOSAL_1_ACHIEVE_BOX,Title given to players selected for the monthly BEST event.,icon_item_holyark,,,,,,Title - Little Lightbulb,0,0.0,0.0,0001,6,1.0
 904085,WEB_PROPOSAL_2_ACHIEVE_BOX,Title given to players selected for the monthly BEST event 5 times.,icon_item_holyark,,,,,,Title - Idea Bank,0,0.0,0.0,0001,6,1.0
 904086,WEB_PROPOSAL_3_ACHIEVE_BOX,Title given to players selected for the monthly BEST event 10 times.,icon_item_holyark,,,,,,Title - Idea Master,0,0.0,0.0,0001,6,1.0
+904093,EVENT_1809_CHUSEOK_MOON_PIECE,Event item. Bring it to the corresponding NPC to participate in the event.{nl}Will be deleted at the end of the event.,icon_item_topaz_piece,,,,,,Full Moon Fragment,0,0.0,0.0,0001,15,0.1
+904094,EVENT_1809_CHUSEOK_MOON_ACHIEVE_BOX,Title box awarded for the Out Comes the Full Moon event.,icon_item_holyark,,,,,,Title - Waiting for a Full Moon,0,0.0,0.0,0001,6,1.0
 910001,Scroll_SkillItem,A scroll used to record a particular skill.,golemmagicitem1,,,,,,Skill Scroll,5,0.0,0.0,1111,6,1.0
 910002,Default_Sprout,A long stem that tastes slightly spicy. {nl}Obtained from Kepas.,item_icon_sprout,,,,,,Sprout,1,0.0,0.0,1111,15,1.0
 910003,Default_Deadplants,A long stem that tastes slightly spicy. {nl}Obtained from Kepas.,item_icon_witheredplants,,,,,,Withered Plant,1,0.0,0.0,1111,15,1.0
 910004,Zombie_Capsule,A Bokor can summon zombies by using this capsule. You must know the [Zombify] skill in order to use it and the maximum zombie count is the same as from [Zombify].,icon_item_zombiecapsule_01,,,,,,Zombie Capsule,5,5.0,0.0,0010,6,1.0
+1000001,Gacha_HairAcc_022,Use to obtain two Goddess' Blessed Cube x10 +1.,icon_item_hairgacha_22,,,,,,Goddess' Blessed Cube x20 +2 Box,0,0.0,0.0,0001,19,0.0
