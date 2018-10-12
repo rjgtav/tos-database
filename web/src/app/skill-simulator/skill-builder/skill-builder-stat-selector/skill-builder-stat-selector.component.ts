@@ -10,11 +10,13 @@ import {Subscription} from "rxjs";
 })
 export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
 
+  rank: number;
   stats: string[] = [TOSStat.STR, TOSStat.CON, TOSStat.INT, TOSStat.SPR, TOSStat.DEX];
   statsPoints: number;
 
   @Input() build: TOSSimulatorBuild;
 
+  private subscriptionJobs: Subscription;
   private subscriptionStatsPoints: Subscription;
 
   constructor() {}
@@ -47,12 +49,16 @@ export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.build) {
+      this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
+      this.subscriptionJobs = this.build.Jobs.subscribe(value => this.rank = this.build.Rank);
+
       this.subscriptionStatsPoints && this.subscriptionStatsPoints.unsubscribe();
       this.subscriptionStatsPoints = this.build.StatsPoints.subscribe(value => this.statsPoints = value)
     }
   }
 
   ngOnDestroy(): void {
+    this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
     this.subscriptionStatsPoints && this.subscriptionStatsPoints.unsubscribe();
   }
 

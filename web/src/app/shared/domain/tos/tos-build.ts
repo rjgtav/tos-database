@@ -93,7 +93,9 @@ export class TOSSimulatorBuild implements TOSBuild {
       let job = TOSRepositoryService.findJobsByIdName(value);
       build.jobAdd(job)
     });
-    Object.entries(encoded.skills || {}).forEach(value => build.skillIncrementLevel(TOSRepositoryService.findSkillsById(+value[0]), value[1]));
+    Object.entries(encoded.skills || {})
+      .filter(value => TOSRepositoryService.findSkillsById(+value[0]))
+      .forEach(value => build.skillIncrementLevel(TOSRepositoryService.findSkillsById(+value[0]), value[1]));
     Object.entries(encoded.stats || {}).forEach(value => build.statIncrementLevel(value[0], value[1]));
 
     return build;

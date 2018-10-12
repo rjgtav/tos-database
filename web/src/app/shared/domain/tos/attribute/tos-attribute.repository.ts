@@ -34,11 +34,10 @@ export class TOSAttributeRepository extends CRUDRepository<TOSAttribute> {
       // Skill attribute
       let skills = this.attributesBySkill[groupBySkill] = this.attributesBySkill[groupBySkill] || [];
           skills.push(entity);
-    }
-    if (groupByJobs) {
+    } else if (groupByJobs) {
       // Job attribute
       groupByJobs.forEach(job => {
-        let attributes = this.attributesByJob[job.$ID] = this.attributesByJob[job.$ID] || [];
+        let attributes = this.attributesByJob[job] = this.attributesByJob[job] || [];
             attributes.push(entity);
       });
     }

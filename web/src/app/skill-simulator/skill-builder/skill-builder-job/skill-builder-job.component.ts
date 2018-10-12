@@ -11,8 +11,6 @@ import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {TOSAttribute} from "../../../shared/domain/tos/attribute/tos-attribute.model";
 import {TOSSkill} from "../../../shared/domain/tos/skill/tos-skill.model";
 import {faMinus, faPlus, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
-import {TOSAttributeRepository} from "../../../shared/domain/tos/attribute/tos-attribute.repository";
-import {TOSSkillRepository} from "../../../shared/domain/tos/skill/tos-skill.repository";
 import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
 
 @Component({

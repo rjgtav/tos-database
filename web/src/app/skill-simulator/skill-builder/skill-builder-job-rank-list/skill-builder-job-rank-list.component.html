@@ -23,6 +23,7 @@
   </div>
 
   <!-- Next rank -->
-  <app-skill-builder-job-rank *ngIf="jobs.length > 0 && jobs.length < build.RankLimit" [rank]="jobs.length + 1"></app-skill-builder-job-rank>
+  <app-skill-builder-job-rank *ngIf="jobs.length < build.RankLimit" class="mb-3"
+                              [rank]="jobs.length + 1"></app-skill-builder-job-rank>
 
 </div>

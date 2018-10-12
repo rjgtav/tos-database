@@ -32,8 +32,14 @@ export class SkillBuilderJobSelectorComponent implements OnChanges, OnDestroy {
   onJobsChange(jobs: TOSJob[]) {
     this.rank = this.build.Rank + 1;
     this.jobsAvailable = this.rank > 1
-      ? TOSRepositoryService.findJobsByTree(this.build.JobTree).filter(value => value.unlockAvailable(this.build))
-      : TOSRepositoryService.findJobs().filter(value => value.Rank == 1);
+      ? TOSRepositoryService.findJobsByTree(this.build.JobTree)
+        .filter(value => value.unlockAvailable(this.build))
+        .sort((a, b) => {
+          if (a.Rank != b.Rank) return a.Rank - b.Rank
+          return a.Name < b.Name ? -1 : a.Name > b.Name ? 1 : 0;
+        })
+      : TOSRepositoryService.findJobs()
+        .filter(value => value.Rank == 1);
     this.jobsCircles = this.jobsAvailable.map(value => this.build.jobCircle(value))
   }
 
