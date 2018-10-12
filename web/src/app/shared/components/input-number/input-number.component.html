@@ -1,5 +1,5 @@
 <div class="align-items-center d-inline-flex w-100">
-  <button class="btn btn-secondary"
+  <button class="btn btn-primary"
           type="button"
           [disabled]="min != null && model <= min"
           (click)="onClick($event, -1)">-</button>
@@ -17,7 +17,7 @@
          [ngModel]="model"
          (ngModelChange)="onModelChange($event)" />
 
-  <button class="btn btn-secondary"
+  <button class="btn btn-primary"
           type="button"
           [disabled]="max != null && model >= max"
           (click)="onClick($event, +1)">+</button>
