@@ -140,6 +140,10 @@ def parse_links_skills():
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            # Ignore discarded skills (e.g. Bokor's 'Summon: ' skills)
+            if row['SkillName'] not in globals.skills_by_name:
+                continue
+
             job = '_'.join(row['ClassName'].split('_')[:2])
             job = globals.jobs_by_name[job]
             job['Link_Skills'].append(globals.get_skill_link(row['SkillName']))

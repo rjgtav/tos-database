@@ -57,6 +57,9 @@ def parse_skills():
             obj['Icon'] = parser_assets.parse_entity_icon(row['Icon'])
             obj['Name'] = parser_translations.translate(row['Name'])
 
+            if obj['Name'].find('Summon:') == 0:
+                continue
+
             obj['CoolDown'] = int(row['BasicCoolDown']) / 1000
             obj['Effect'] = parser_translations.translate(row['Caption2'])
             obj['Element'] = TOSElement.value_of(row['Attribute'])
@@ -299,6 +302,10 @@ def parse_links_jobs():
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            # Ignore discarded skills (e.g. Bokor's 'Summon: ' skills)
+            if row['SkillName'] not in globals.skills_by_name:
+                continue
+
             skill = globals.skills_by_name[row['SkillName']]
             skill['LevelMax'] = int(row['MaxLevel'])
             skill['LevelPerCircle'] = int(row['LevelPerGrade'])
