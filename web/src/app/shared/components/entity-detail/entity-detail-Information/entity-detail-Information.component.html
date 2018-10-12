@@ -23,7 +23,7 @@
   </div>
 
   <!-- Weight and Price -->
-  <div class="row text-nowrap" *ngIf="item || skill && (skill.IsBunsin || skill.IsSimony)">
+  <div class="row text-nowrap" *ngIf="item || skill">
     <div class="col" *ngIf="item"><h6>
       <fa-icon class="mr-1" [icon]="['fas', 'weight-hanging']"></fa-icon>
       {{ (item.Weight | number) || 0 }}</h6>
@@ -34,7 +34,7 @@
     </div>
 
 
-    <div class="col text-right" *ngIf="item || skill">
+    <div class="col text-right" *ngIf="item || skill && (skill.IsBunsin || skill.IsSimony)">
       <h6 *ngIf="item" class="tos-icon tos-icon-price">{{ item.Price }}</h6>
       <h6 *ngIf="skill">{{ skill.IsBunsin ? 'Cloneable by Shinobi' : skill.IsSimony ? 'Craftable by Pardoner' : '' }}</h6>
     </div>
