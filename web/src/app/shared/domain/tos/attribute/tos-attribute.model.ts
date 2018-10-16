@@ -67,7 +67,7 @@ export class TOSAttribute extends TOSEntity {
   public Price(level: number) { return this.UpgradePrice[level]; }
   public PriceTotal(level: number) { return Array.from({length: level + 1}, (x,i) => this.Price(i)).reduce((a, b) => a + b, 0) }
 
-  unlockAvailable(build: TOSBuild, job: TOSJob): boolean {
+  unlockAvailable(build: TOSBuild): boolean {
     // Prepare JobGrade and Skill
     return Object
       .values(this.UnlockArgs)
