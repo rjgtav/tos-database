@@ -22,7 +22,9 @@ export class EntityDetailSkillFormulaComponent extends EntityDetailChildComponen
     super.ngOnChanges(changes);
 
     if (this.build && this.skill) {
-      this.tabs = this.skill.EffectProps.map(match => match[1]);
+      this.tabs = this.skill.EffectProps
+        .map(match => match[1])
+        .filter((value, index, self) => self.indexOf(value) === index);
       this.tabs.map(tab => this.tabsHTML[tab] = this.build.skillEffectFormula(this.skill, tab));
 
       this.active = this.tabs[0];
