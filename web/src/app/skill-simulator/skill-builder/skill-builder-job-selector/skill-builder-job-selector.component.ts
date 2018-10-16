@@ -2,8 +2,6 @@ import {Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/co
 import {Subscription} from "rxjs";
 import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
-import {TOSSkillRepository} from "../../../shared/domain/tos/skill/tos-skill.repository";
-import {TOSJobRepository} from "../../../shared/domain/tos/job/tos-job.repository";
 import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
 
 @Component({
@@ -35,7 +33,7 @@ export class SkillBuilderJobSelectorComponent implements OnChanges, OnDestroy {
       ? TOSRepositoryService.findJobsByTree(this.build.JobTree)
         .filter(value => value.unlockAvailable(this.build))
         .sort((a, b) => {
-          if (a.Rank != b.Rank) return a.Rank - b.Rank
+          if (a.Rank != b.Rank) return a.Rank - b.Rank;
           return a.Name < b.Name ? -1 : a.Name > b.Name ? 1 : 0;
         })
       : TOSRepositoryService.findJobs()
@@ -44,10 +42,10 @@ export class SkillBuilderJobSelectorComponent implements OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.build) {
-      this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
+    this.ngOnDestroy();
+
+    if (changes.build)
       this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
-    }
   }
 
   ngOnDestroy(): void {

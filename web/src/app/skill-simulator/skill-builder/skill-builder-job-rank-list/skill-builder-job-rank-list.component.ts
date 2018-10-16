@@ -43,10 +43,10 @@ export class SkillBuilderJobRankListComponent implements OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.build) {
-      this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
+    this.ngOnDestroy();
+
+    if (this.build)
       this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
-    }
   }
 
   ngOnDestroy(): void {

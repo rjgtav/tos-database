@@ -35,11 +35,10 @@ export class EntityDetailSkillComponent extends EntityDetailChildComponent imple
 
   ngOnChanges(changes: SimpleChanges) {
     super.ngOnChanges(changes);
+    this.ngOnDestroy();
 
-    if (this.build && this.skill) {
-      this.subscriptionLevels && this.subscriptionLevels.unsubscribe();
+    if (this.build && this.skill)
       this.subscriptionLevels = this.build.jobSkillLevels(this.skill.Link_Job).subscribe(value => this.onSkillLevelsChange(value));
-    }
   }
 
   ngOnDestroy(): void {

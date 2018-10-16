@@ -48,11 +48,10 @@ export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.build) {
-      this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
-      this.subscriptionJobs = this.build.Jobs.subscribe(value => this.rank = this.build.Rank);
+    this.ngOnDestroy();
 
-      this.subscriptionStatsPoints && this.subscriptionStatsPoints.unsubscribe();
+    if (changes.build) {
+      this.subscriptionJobs = this.build.Jobs.subscribe(value => this.rank = this.build.Rank);
       this.subscriptionStatsPoints = this.build.StatsPoints.subscribe(value => this.statsPoints = value)
     }
   }

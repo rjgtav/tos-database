@@ -53,16 +53,13 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    this.ngOnDestroy();
+
     if (changes.build || changes.skill) {
       this.attributes = TOSRepositoryService.findAttributesBySkill(this.skill.$ID);
 
-      this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
       this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
-
-      this.subscriptionLevel && this.subscriptionLevel.unsubscribe();
       this.subscriptionLevel = this.build.jobSkillLevels(this.job).subscribe(value => this.onSkillLevelsChange(value));
-
-      this.subscriptionPoints && this.subscriptionPoints.unsubscribe();
       this.subscriptionPoints = this.build.skillPoints(this.job).subscribe(value => this.update())
     }
   }

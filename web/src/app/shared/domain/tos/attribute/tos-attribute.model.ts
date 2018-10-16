@@ -42,6 +42,8 @@ export class TOSAttribute extends TOSEntity {
         .parse(json.UpgradePrice + '')
         .map(value => +value)
       : null;
+
+    this.unlockAvailable = this.unlockAvailable.bind(this);
   }
 
   get Link_Jobs(): TOSJob[] {
@@ -67,36 +69,38 @@ export class TOSAttribute extends TOSEntity {
 
   unlockAvailable(build: TOSBuild, job: TOSJob): boolean {
     // Prepare JobGrade and Skill
-    let unlockArg = this.UnlockArgs[job.$ID];
+    return Object
+      .values(this.UnlockArgs)
+      .find(unlockArg => {
+        let unlock = this.Unlock.map(line => {
+          let regexJobGrade = /GetJobGradeByName\(pc, ['"](.+)['"]\)/g;
+          let regexSkill = /GetSkill\(pc, ['"](.+)['"]\)/g;
+          let match: RegExpExecArray;
 
-    let unlock = this.Unlock.map(line => {
-      let regexJobGrade = /GetJobGradeByName\(pc, ['"](.+)['"]\)/g;
-      let regexSkill = /GetSkill\(pc, ['"](.+)['"]\)/g;
-      let match: RegExpExecArray;
+          line = line.replace('jobName', "'" + unlockArg.UnlockArgStr + "'");
+          line = line.replace('limitLevel', unlockArg.UnlockArgNum + '');
+          line = line.replace('sklName', "'" + unlockArg.UnlockArgStr + "'");
+          line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
-      line = line.replace('jobName', "'" + unlockArg.UnlockArgStr + "'");
-      line = line.replace('limitLevel', unlockArg.UnlockArgNum + '');
-      line = line.replace('sklName', "'" + unlockArg.UnlockArgStr + "'");
-      line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
+          while (match = regexJobGrade.exec(line)) {
+            let job = TOSRepositoryService.findJobsByIdName(match[1]);
+            line = line.replace(match[0], build.jobCircle(job) + '');
+          }
+          while (match = regexSkill.exec(line)) {
+            let skill = TOSRepositoryService.findSkillsByIdName(match[1]);
+            line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
+          }
 
-      while (match = regexJobGrade.exec(line)) {
-        let job = TOSRepositoryService.findJobsByIdName(match[1]);
-        line = line.replace(match[0], build.jobCircle(job) + '');
-      }
-      while (match = regexSkill.exec(line)) {
-        let skill = TOSRepositoryService.findSkillsByIdName(match[1]);
-        line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
-      }
+          return line;
+        });
 
-      return line;
-    });
+        let func: string[] = [];
+        func.push('(function () {');
+        func = func.concat(unlock);
+        func.push('}())');
 
-    let func: string[] = [];
-    func.push('(function () {');
-    func = func.concat(unlock);
-    func.push('}())');
-
-    return eval(func.join('\n')) == 'UNLOCK';
+        return eval(func.join('\n')) == 'UNLOCK';
+      }) != null;
   }
 
 }
