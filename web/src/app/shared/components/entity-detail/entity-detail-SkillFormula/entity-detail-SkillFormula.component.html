@@ -1,0 +1,18 @@
+<div *ngIf="build && skill">
+  <div class="w-100" *ngIf="divider"><hr></div>
+  <h5>Formulas</h5>
+
+  <ul class="nav nav-tabs flex-nowrap" style="overflow-x: auto; overflow-y: hidden; border-bottom: 0 !important">
+    <li *ngFor="let tab of tabs" class="nav-item">
+      <a class="nav-link"
+         [ngClass]="{ 'active': active == tab}"
+         [href]="'#' + tab"
+         (click)="onTabClick($event, tab)">{{ tab }}</a>
+    </li>
+  </ul>
+
+  <div class="card" style="border-top: 0 !important; border-top-left-radius: 0">
+    <div class="card-body text-monospace text-multiline"
+         [innerHTML]="tabsHTML[active] | sanitizeHTML"></div>
+  </div>
+</div>

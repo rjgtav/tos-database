@@ -33,6 +33,7 @@ export abstract class TOSRepositoryService {
 
   static findAttributes = TOSRepositoryService.attributeRepository.findAll;
   static findAttributesById = TOSRepositoryService.attributeRepository.findById;
+  static findAttributesByIdName = TOSRepositoryService.attributeRepository.findByIdName;
   static findAttributesByJob = TOSRepositoryService.attributeRepository.findByJob;
   static findAttributesBySkill = TOSRepositoryService.attributeRepository.findBySkill;
 
@@ -76,6 +77,7 @@ export abstract class TOSRepositoryService {
 
   static findSkills = TOSRepositoryService.skillRepository.findAll;
   static findSkillsById = TOSRepositoryService.skillRepository.findById;
+  static findSkillsByIdName = TOSRepositoryService.skillRepository.findByIdName;
   static findSkillsByJob = TOSRepositoryService.skillRepository.findByJob;
 
   static searchAttributes = TOSRepositoryService.attributeRepository.search;

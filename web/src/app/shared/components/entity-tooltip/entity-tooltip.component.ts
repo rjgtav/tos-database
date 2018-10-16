@@ -18,6 +18,7 @@ import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
 import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
 import {TOSBuild} from "../../domain/tos/tos-build";
 import {TOSMap} from "../../domain/tos/map/tos-map.model";
+import {TOSJob} from "../../domain/tos/job/tos-job.model";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -45,6 +46,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
   card: TOSCard;
   equipment: TOSEquipment;
   item: TOSItem;
+  job: TOSJob;
   map: TOSMap;
   skill: TOSSkill;
 
@@ -61,6 +63,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
       this.attribute = this.entity instanceof TOSAttribute ? this.entity as TOSAttribute : null;
       this.equipment = this.entity instanceof TOSEquipment ? this.entity as TOSEquipment : null;
       this.item = this.entity instanceof TOSItem ? this.entity as TOSItem : null;
+      this.job = this.entity instanceof TOSJob ? this.entity as TOSJob : null;
       this.map = this.entity instanceof TOSMap ? this.entity as TOSMap : null;
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
     }

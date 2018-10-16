@@ -7,8 +7,8 @@ import {CRUDRepository} from "../../../service/CRUD.repository";
 })
 export class TOSJobRepository extends CRUDRepository<TOSJob> {
 
-  private jobsByClassName: {[key: string]: TOSJob} = {};
-  private jobsByTree: {[key: string]: TOSJob[]} = {};
+  private readonly jobsByIdName: {[key: string]: TOSJob} = {};
+  private readonly jobsByTree: {[key: string]: TOSJob[]} = {};
 
   constructor() {
     super({
@@ -22,15 +22,15 @@ export class TOSJobRepository extends CRUDRepository<TOSJob> {
     this.findByTree = this.findByTree.bind(this);
   }
 
-  findByIdName($ID_NAME: string) { return this.jobsByClassName[$ID_NAME]; }
-  findByTree(tree: TOSJobTree) { return this.jobsByTree[tree]; }
+  findByIdName($ID_NAME: string): TOSJob { return this.jobsByIdName[$ID_NAME]; }
+  findByTree(tree: TOSJobTree): TOSJob[] { return this.jobsByTree[tree]; }
 
   private step(row: TOSJob): TOSJob {
     let entity = new TOSJob(row);
     let groupByIdName = entity.$ID_NAME;
     let groupByTree = entity.JobTree;
 
-    this.jobsByClassName[groupByIdName] = entity;
+    this.jobsByIdName[groupByIdName] = entity;
 
     let jobs = this.jobsByTree[groupByTree] = this.jobsByTree[groupByTree] || [];
         jobs.push(entity);

@@ -5,13 +5,14 @@ import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {faTrashAlt} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
-  selector: 'app-skill-builder-job-rank-selector',
+  selector: 'app-skill-builder-job-rank-list',
   templateUrl: './skill-builder-job-rank-list.component.html',
   styleUrls: ['./skill-builder-job-rank-list.component.scss']
 })
 export class SkillBuilderJobRankListComponent implements OnChanges, OnDestroy {
 
   faTrashAlt = faTrashAlt;
+  TOSBuild = TOSBuild;
 
   @Input() build: TOSSimulatorBuild;
 

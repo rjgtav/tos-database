@@ -4,30 +4,33 @@ import {Subscription} from "rxjs";
 import {TOSBuild} from "../../../domain/tos/tos-build";
 
 @Component({
-  selector: 'tos-entity-detail-formula',
-  templateUrl: './entity-detail-Formula.component.html',
-  styleUrls: ['./entity-detail-Formula.component.scss']
+  selector: 'tos-entity-detail-Skill',
+  templateUrl: './entity-detail-Skill.component.html',
+  styleUrls: ['./entity-detail-Skill.component.scss']
 })
-export class EntityDetailFormulaComponent extends EntityDetailChildComponent implements OnChanges, OnDestroy {
+export class EntityDetailSkillComponent extends EntityDetailChildComponent implements OnChanges, OnDestroy {
 
   @Input() build: TOSBuild;
   @Input() divider: boolean;
+  @Input() input: boolean;
 
-  id: number;
-  formulaHTML: string;
-  level: number;
+  effectHTML: string;
+  skillLevel: number;
   subscriptionLevels: Subscription;
 
   constructor(private changeDetector: ChangeDetectorRef) { super() }
 
   onSkillLevelsChange(value: { [key: number]: number }) {
-    if (value[this.skill.$ID] == this.level && this.id == this.skill.$ID) return;
+    if (value[this.skill.$ID] == this.skillLevel) return;
 
-    this.formulaHTML = this.build.tooltipSkillEffect(this.skill);
-    this.id = this.skill.$ID;
-    this.level = value[this.skill.$ID];
+    this.skillLevel = value[this.skill.$ID];
+    this.effectHTML = this.build.skillEffect(this.skill, this.input);
 
     this.changeDetector.detectChanges();
+  }
+
+  onSkillLevelChange(value: number) {
+    this.build.skillLevelIncrement(this.skill, value - this.skillLevel);
   }
 
   ngOnChanges(changes: SimpleChanges) {

@@ -1,5 +1,6 @@
 <div>
   {{ entity.Name }}<br/>
-  <small class="text-muted">{{ titleSmall }}</small>
-  <small class="text-muted" *ngIf="idName">{{ ' · ' + entity.$ID + ' · ' + entity.$ID_NAME }}</small>
+  <small class="text-muted" *ngIf="titleSmall">{{ titleSmall }}</small>
+  <small class="text-muted" *ngIf="titleSmall && idName"> · </small>
+  <small class="text-muted" *ngIf="idName">{{ entity.$ID + ' · ' + entity.$ID_NAME }}</small>
 </div>

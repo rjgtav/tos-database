@@ -72,13 +72,13 @@
         </div>
 
         <div *ngIf="column.type == TOSListTableColumnType.ICON_LINK" class="text-right">
-          <img *ngFor="let link of row[column.value]; let i = index"
+          <img *ngFor="let link of (column.transformValue ? column.transformValue(row[column.value]) : row[column.value]); let i = index"
                height="40"
                width="40"
-               [ngClass]="{ 'pr-1': i < row[column.value].length - 1 }"
+               [ngClass]="{ 'pr-1': i < (column.transformValue ? column.transformValue(row[column.value]) : row[column.value]).length - 1 }"
                [routerLink]="link.Url"
                [src]="link.Icon"
-               (click)="$event.stopPropagation()"
+               (click)="$event.stopPropagation() && $event.stopImmediatePropagation()"
                (mouseenter)="tooltip = link"
                (mouseleave)="tooltip = row" />
         </div>
@@ -99,6 +99,10 @@
         </div>
 
         <span *ngIf="column.type == TOSListTableColumnType.TEXT">
+          {{ row[column.value] }}
+        </span>
+
+        <span *ngIf="column.type == TOSListTableColumnType.TEXT_MULTILINE" class="text-multiline">
           {{ row[column.value] }}
         </span>
 

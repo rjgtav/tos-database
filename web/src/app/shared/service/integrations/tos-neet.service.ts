@@ -49,7 +49,7 @@ export class TosNeetService {
         let skill = TOSRepositoryService.findSkillsById(skillClassID);
 
         if (skill && skills.indexOf(skill) > -1)
-          build.skillIncrementLevel(skill, skillLevel);
+          build.skillLevelIncrement(skill, skillLevel);
       }
     }
 

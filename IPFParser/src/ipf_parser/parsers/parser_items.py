@@ -274,7 +274,9 @@ def parse_links_recipes(items_by_name):
                 continue
 
             item = items_by_name[item_name]
-            item['Link_RecipeMaterial'].append(recipe)
+
+            if recipe not in item['Link_RecipeMaterial']:
+                item['Link_RecipeMaterial'].append(recipe)
 
         # Parse recipe target (i.e. which recipe produces us)
         item_name = row['TargetItem']

@@ -14,10 +14,12 @@
       <a *ngFor="let job of jobsAvailable; let i = index" class="col-4 col-sm-3 col-md-2 mb-3 tos-job"
          [href]="'#' + job.Name"
          (click)="onJobClick($event, job)">
-        <app-skill-builder-job-icon class="m-auto"
-                                    [circle]="jobsCircles[i] + 1"
-                                    [job]="job"
-                                    [size]="'xs'"></app-skill-builder-job-icon>
+        <tos-entity-detail-JobIcon class="m-auto"
+                                   [circle]="jobsCircles[i] + 1"
+                                   [job]="job"
+                                   [size]="'xs'"
+                                   (mouseenter)="build.tooltipJobShow(job, true)"
+                                   (mouseleave)="build.tooltipJobShow(job, false)"></tos-entity-detail-JobIcon>
         <div class="text-center w-100">{{ job.Name }}</div>
       </a>
     </div>

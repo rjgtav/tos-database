@@ -8,18 +8,21 @@ export class TOSAttribute extends TOSEntity {
   private link_Jobs: TOSJob[];
   private link_Skill: TOSSkill;
 
+  readonly DescriptionRequiredHTML: string;
   readonly DescriptionHTML: string;
   readonly IsToggleable: boolean;
   readonly LevelMax: number;
   readonly Unlock: string[];
+  readonly UnlockArgs: { [key: number]: TOSAttributeUnlockArg };
   readonly UpgradePrice: number[];
-  readonly UpgradeTime: number[];
 
   constructor(private json: TOSAttribute) {
     super(json, 'attributes');
 
-    this.DescriptionHTML = this.Description.replace(/{b}(.+){b}/g, '<b>$1</b>');
-    this.DescriptionHTML = this.DescriptionHTML.replace(/{nl}/g, '\n');
+    this.DescriptionHTML = this.Description.replace(/{nl}/g, '\n');
+    this.DescriptionRequiredHTML = json['DescriptionRequired'] || '';
+    this.DescriptionRequiredHTML = this.DescriptionRequiredHTML.replace(/{nl}/g, '\n');
+    this.DescriptionRequiredHTML = this.DescriptionRequiredHTML.replace(/{b}(.+){b}/g, '<b>$1</b>');
     this.Description = null;
 
     this.IsToggleable = (json.IsToggleable + '') == 'True';
@@ -27,11 +30,17 @@ export class TOSAttribute extends TOSEntity {
     this.Unlock = json.Unlock
       ? JSON.parse(json.Unlock + '')
       : null;
-    this.UpgradePrice = json.UpgradePrice
-      ? JSON.parse(json.UpgradePrice + '')
+    this.UnlockArgs = json.UnlockArgs
+      ? Object.entries(JSON.parse(json.UnlockArgs + ''))
+        .reduce((accumulator, value) => {
+          accumulator[value[0]] = value[1];
+          return accumulator;
+        }, {})
       : null;
-    this.UpgradeTime = json.UpgradeTime
-      ? JSON.parse(json.UpgradeTime + '')
+    this.UpgradePrice = json.UpgradePrice
+      ? JSON
+        .parse(json.UpgradePrice + '')
+        .map(value => +value)
       : null;
   }
 
@@ -53,23 +62,31 @@ export class TOSAttribute extends TOSEntity {
           : null;
   }
 
-  unlockAvailable(build: TOSBuild): boolean {
+  public Price(level: number) { return this.UpgradePrice[level]; }
+  public PriceTotal(level: number) { return Array.from({length: level + 1}, (x,i) => this.Price(i)).reduce((a, b) => a + b, 0) }
+
+  unlockAvailable(build: TOSBuild, job: TOSJob): boolean {
     // Prepare JobGrade and Skill
+    let unlockArg = this.UnlockArgs[job.$ID];
+
     let unlock = this.Unlock.map(line => {
-      let regexJobGrade = /GetJobGrade\((.+)\)/g;
-      let regexSkill = /GetSkill\((.+)\)/g;
+      let regexJobGrade = /GetJobGradeByName\(pc, ['"](.+)['"]\)/g;
+      let regexSkill = /GetSkill\(pc, ['"](.+)['"]\)/g;
       let match: RegExpExecArray;
 
+      line = line.replace('jobName', "'" + unlockArg.UnlockArgStr + "'");
+      line = line.replace('limitLevel', unlockArg.UnlockArgNum + '');
+      line = line.replace('sklName', "'" + unlockArg.UnlockArgStr + "'");
+      line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
+
       while (match = regexJobGrade.exec(line)) {
-        let job = TOSRepositoryService.findJobsById(+match[1]);
+        let job = TOSRepositoryService.findJobsByIdName(match[1]);
         line = line.replace(match[0], build.jobCircle(job) + '');
       }
       while (match = regexSkill.exec(line)) {
-        let skill = TOSRepositoryService.findSkillsById(+match[1]);
+        let skill = TOSRepositoryService.findSkillsByIdName(match[1]);
         line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
       }
-
-      line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
       return line;
     });
@@ -80,6 +97,17 @@ export class TOSAttribute extends TOSEntity {
     func.push('}())');
 
     return eval(func.join('\n')) == 'UNLOCK';
+  }
+
+}
+
+export class TOSAttributeUnlockArg {
+  readonly UnlockArgStr: string;
+  readonly UnlockArgNum: number;
+
+  constructor(json: TOSAttributeUnlockArg) {
+    this.UnlockArgStr = json.UnlockArgStr;
+    this.UnlockArgNum = +json.UnlockArgNum;
   }
 
 }

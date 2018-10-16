@@ -11,7 +11,8 @@ export class RecipeListConfigurationResolver implements Resolve<TOSListConfigura
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'TargetAsList',    type: TOSListTableColumnType.ICON_LINK,       label: '' },
+        { value: 'Link_Target',     type: TOSListTableColumnType.ICON_LINK,       label: '',
+          transformValue: (o) => [o] },
         { value: '$ID',             type: TOSListTableColumnType.TEXT,            isNotMobile: true },
         { value: 'Name',            type: TOSListTableColumnType.TEXT,            isWide: true},
         { value: 'Link_Materials',  type: TOSListTableColumnType.ICON_LINK_VALUE, label: 'Materials', isNotMobile: true,

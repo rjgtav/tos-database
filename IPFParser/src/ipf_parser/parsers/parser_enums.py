@@ -13,6 +13,20 @@ class TOSElement(TOSEnum):
     SOUL = 8
 
     @staticmethod
+    def to_string(value):
+        return {
+            TOSElement.DARK: 'Dark',
+            TOSElement.EARTH: 'Earth',
+            TOSElement.FIRE: 'Fire',
+            TOSElement.HOLY: 'Holy',
+            TOSElement.ICE: 'Ice',
+            TOSElement.LIGHTNING: 'Lightning',
+            TOSElement.MELEE: 'None',
+            TOSElement.POISON: 'Poison',
+            TOSElement.SOUL: 'Soul',
+        }[value]
+
+    @staticmethod
     def value_of(string):
         return {
             'DARK': TOSElement.DARK,
@@ -30,28 +44,49 @@ class TOSElement(TOSEnum):
 
 
 class TOSAttackType(TOSEnum):
-    PIERCING = 0
-    BOW = 1
-    CANNON = 2
-    GUN = 3
-    MAGIC = 4
-    MELEE = 5
-    SLASH = 6
-    STRIKE = 7
-    THRUST = 8
-    UNKNOWN = 9
+    BUFF = 0
+    MAGIC = 1
+    MISSILE = 2
+    MISSILE_BOW = 3
+    MISSILE_CANNON = 4
+    MISSILE_GUN = 5
+    MELEE = 6
+    MELEE_PIERCING = 7
+    MELEE_SLASH = 8
+    MELEE_STRIKE = 9
+    MELEE_THRUST = 10
+    UNKNOWN = 11
+
+    @staticmethod
+    def to_string(value):
+        return {
+            TOSAttackType.BUFF: 'Buff',
+            TOSAttackType.MAGIC: 'Magic',
+            TOSAttackType.MISSILE: 'Missile',
+            TOSAttackType.MISSILE_BOW: 'Bow',
+            TOSAttackType.MISSILE_CANNON: 'Cannon',
+            TOSAttackType.MISSILE_GUN: 'Gun',
+            TOSAttackType.MELEE: 'Physical',
+            TOSAttackType.MELEE_PIERCING: 'Piercing',
+            TOSAttackType.MELEE_SLASH: 'Slash',
+            TOSAttackType.MELEE_STRIKE: 'Strike',
+            TOSAttackType.MELEE_THRUST: 'Thrust',
+            TOSAttackType.UNKNOWN: '',
+        }[value]
 
     @staticmethod
     def value_of(string):
         return {
-            'ARIES': TOSAttackType.PIERCING,
-            'ARROW': TOSAttackType.BOW,
-            'CANNON': TOSAttackType.CANNON,
-            'GUN': TOSAttackType.GUN,
+            'ARIES': TOSAttackType.MELEE_PIERCING,
+            'ARROW': TOSAttackType.MISSILE_BOW,
+            'CANNON': TOSAttackType.MISSILE_CANNON,
+            'GUN': TOSAttackType.MISSILE_GUN,
             'HOLY': None,  # HotFix: obsolete skill #40706 uses it
             'MAGIC': TOSAttackType.MAGIC,
             'MELEE': TOSAttackType.MELEE,
-            'SLASH': TOSAttackType.SLASH,
-            'STRIKE': TOSAttackType.STRIKE,
+            'MISSILE': TOSAttackType.MISSILE,
+            'SLASH': TOSAttackType.MELEE_SLASH,
+            'STRIKE': TOSAttackType.MELEE_STRIKE,
+            'THRUST': TOSAttackType.MELEE_THRUST,
             '': TOSAttackType.UNKNOWN
         }[string.upper()]

@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="row mt-3 ml-auto mr-auto" *ngIf="skill">
+    <div class="row ml-auto mr-auto justify-content-center" *ngIf="skill">
       <div *ngFor="let stance of skill.RequiredStance">
         <img [src]="stance.Icon" />
       </div>

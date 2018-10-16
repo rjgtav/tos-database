@@ -1,5 +1,5 @@
 <div class="w-100"><hr></div>
-<h5>Enhancement</h5>
+<h5 *ngIf="header">{{ header }}</h5>
 
 <table class="table table-borderless table-sm text-center">
   <tbody>
@@ -20,6 +20,25 @@
       <td class="align-middle">{{ anvilBonus }}</td>
       <td class="align-middle">{{ anvilSilver | number }}</td>
       <td class="align-middle">{{ anvilSilverTotal | number }}</td>
+    </tr>
+
+    <!-- Attribute -->
+    <tr *ngIf="attributeAvailable" class="table-primary">
+      <th width="120">Level</th>
+      <th>Attribute Points</th>
+      <th>Silver</th>
+      <th>Total</th>
+    </tr>
+    <tr *ngIf="attributeAvailable">
+      <td>
+        <tos-input-number [min]="0"
+                          [max]="attribute.LevelMax"
+                          [model]="attributeLevel"
+                          (modelChange)="onAttributeChange($event)"></tos-input-number>
+      </td>
+      <td class="align-middle">{{ attributePoints | number }}</td>
+      <td class="align-middle">{{ attributeSilver | number }}</td>
+      <td class="align-middle">{{ attributeSilverTotal | number }}</td>
     </tr>
 
     <!-- Transcendence -->

@@ -22,46 +22,22 @@ def parse_attributes():
             obj = {}
             obj['$ID'] = int(row['ClassID'])
             obj['$ID_NAME'] = row['ClassName']
-            obj['Description'] = parser_translations.translate(row['Desc']) + '{nl}'
+            obj['Description'] = parser_translations.translate(row['Desc']).strip() + '{nl}'
             obj['Icon'] = parser_assets.parse_entity_icon(row['Icon'])
             obj['Name'] = parser_translations.translate(row['Name'])
 
             obj['IsToggleable'] = row['AlwaysActive'] == 'NO'
 
+            obj['DescriptionRequired'] = None
             obj['LevelMax'] = -1
             obj['Unlock'] = None
+            obj['UnlockArgs'] = {}
             obj['UpgradePrice'] = None
-            obj['UpgradeTime'] = None
             obj['Link_Jobs'] = []
             obj['Link_Skill'] = None
 
             globals.attributes[obj['$ID']] = obj
             globals.attributes_by_name[obj['$ID_NAME']] = obj
-
-
-def parse_attributes_lua_to_javascript(source, arg_str, arg_num):
-    result = []
-
-    for line in luautil.lua_function_source_to_javascript(source):
-        line = line.replace('jobName', "'" + arg_str + "'")
-        line = line.replace('limitLevel', arg_num)
-        line = line.replace('sklName', "'" + arg_str + "'")
-
-        regex = 'GetJobGradeByName\(pc, (?:\'|")(.+)(?:\'|")\)'
-        search = re.search(regex, line)
-        if search:
-            job = globals.jobs_by_name[search.group(1)]
-            line = re.sub(regex, 'GetJobGrade(' + str(job['$ID']) + ')', line)
-
-        regex = 'GetSkill\(pc, (?:\'|")(.+)(?:\'|")\)'
-        search = re.search(regex, line)
-        if search:
-            skill = globals.skills_by_name[search.group(1)]
-            line = re.sub(regex, 'GetSkill(' + str(skill['$ID']) + ')', line)
-
-        result.append(line)
-
-    return result
 
 
 def parse_links():
@@ -80,6 +56,7 @@ def parse_links_jobs():
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            job = globals.jobs_by_name[row['ClassName']]
             ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
 
             # If this job is still under development, skip
@@ -89,37 +66,31 @@ def parse_links_jobs():
             with open(ies_path, 'rb') as ies_file:
                 for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                     attribute = globals.attributes_by_name[row['ClassName']]
-                    attribute['Description'] = attribute['Description'] + '{nl}{b}' + parser_translations.translate(row['UnlockDesc']) + '{b}'
+                    attribute['DescriptionRequired'] = attribute['DescriptionRequired'] if attribute['DescriptionRequired'] else ''
+                    attribute['DescriptionRequired'] = attribute['DescriptionRequired'] + '{nl}{b}' + parser_translations.translate(row['UnlockDesc']) + '{b}'
                     attribute['LevelMax'] = int(row['MaxLevel'])
-
-                    # Parse attribute unlock
-                    attribute['Unlock'] = parse_attributes_lua_to_javascript(
-                        luautil.lua_function_source(LUA_UNLOCK[row['UnlockScr']]),
-                        row['UnlockArgStr'],
-                        row['UnlockArgNum']
-                    )
 
                     # Parse attribute cost
                     if row['ScrCalcPrice']:
                         attribute['UpgradePrice'] = [
                             LUA[row['ScrCalcPrice']](None, row['ClassName'], l, attribute['LevelMax'])[0]
-                            for l in range(int(row['MaxLevel']))
-                        ]
-                        attribute['UpgradeTime'] = [
-                            LUA[row['ScrCalcPrice']](None, row['ClassName'], l, attribute['LevelMax'])[1]
-                            for l in range(int(row['MaxLevel']))
+                            for l in range(int(row['MaxLevel']) + 1)
                         ]
 
-    # Parse jobs
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability.ies')
+                    # Parse attribute job
+                    attribute['Link_Jobs'].append(globals.get_job_link(job['$ID_NAME']))
 
-    with open(ies_path, 'rb') as ies_file:
-        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            attribute = globals.attributes_by_name[row['ClassName']]
-            attribute['Link_Jobs'] = [
-                globals.get_job_link(j) for j in row['Job'].split(';')
-                if j in globals.jobs_by_name
-            ]
+                    # Parse attribute unlock
+                    attribute['Unlock'] = luautil.lua_function_source_to_javascript(
+                        luautil.lua_function_source(
+                            LUA_UNLOCK[row['UnlockScr']]
+                        )
+                    ) if attribute['Unlock'] is None else attribute['Unlock']
+
+                    attribute['UnlockArgs'][job['$ID']] = {
+                        'UnlockArgStr': row['UnlockArgStr'],
+                        'UnlockArgNum': row['UnlockArgNum'],
+                    }
 
 
 def parse_links_skills():
@@ -143,9 +114,6 @@ def parse_clean():
         for job in globals.jobs.values():
             for link in job['Link_Attributes']:
                 if link.entity['$ID'] == attribute['$ID']:
-                    if attribute['$ID'] == 114002:
-                        logging.debug('found at: %s', job['Name'])
-
                     found = True
                     break
 

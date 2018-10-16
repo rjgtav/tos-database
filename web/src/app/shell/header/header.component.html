@@ -6,7 +6,6 @@
     <ul class="navbar-nav">
       <!--
         <a class="dropdown-item" style="color: grey" routerLink="game/achievements">Achievements</a>
-        <a class="dropdown-item" style="color: grey" routerLink="game/classes">Classes</a>
         <a class="dropdown-item" style="color: grey" routerLink="game/treasures">Treasure Chests</a>
         <a class="dropdown-item" style="color: grey" routerLink="game/exp">EXP Tables</a>
         <a class="dropdown-item" style="color: grey" routerLink="game/npcs">NPCs</a>
@@ -21,6 +20,7 @@
            (clickOutside)="isOpenDatabase = false"
            routerLinkActive="active">Database
           <div class="dropdown-menu" [ngClass]="{ 'show': isOpenDatabase }">
+            <div class="dropdown-header">Items</div>
             <a class="dropdown-item" routerLink="database/books">Books</a>
             <a class="dropdown-item" routerLink="database/cards">Cards</a>
             <a class="dropdown-item" routerLink="database/collections">Collections</a>
@@ -29,8 +29,15 @@
             <a class="dropdown-item" routerLink="database/equipment-sets">Equipment Sets</a>
             <a class="dropdown-item" routerLink="database/gems">Gems</a>
             <a class="dropdown-item" routerLink="database/items">Items</a>
-            <a class="dropdown-item" routerLink="database/monsters">Monsters</a>
             <a class="dropdown-item" routerLink="database/recipes">Recipes</a>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-header">Player</div>
+            <a class="dropdown-item" routerLink="database/attributes">Attributes</a>
+            <a class="dropdown-item" routerLink="database/classes">Classes</a>
+            <a class="dropdown-item" routerLink="database/skills">Skills</a>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-header">World</div>
+            <a class="dropdown-item" routerLink="database/monsters">Monsters</a>
           </div>
         </a>
       </li>

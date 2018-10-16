@@ -8,6 +8,8 @@ import {EntityDetailChildComponent} from "../entity-detail-child.component";
 })
 export class EntityDetailEnhancementComponent extends EntityDetailChildComponent implements OnChanges {
 
+  @Input() header: string;
+
   @Input() anvilLevel: number;
   @Output() anvilLevelChange: EventEmitter<number> = new EventEmitter();
 
@@ -16,6 +18,11 @@ export class EntityDetailEnhancementComponent extends EntityDetailChildComponent
   anvilSilver: number = 0;
   anvilSilverTotal: number = 0;
 
+  attributeAvailable: boolean;
+  attributeLevel: number = 0;
+  attributePoints: number = 0;
+  attributeSilver: number = 0;
+  attributeSilverTotal: number = 0;
 
   @Input() transcendLevel: number;
   @Output() transcendLevelChange: EventEmitter<number> = new EventEmitter();
@@ -30,8 +37,9 @@ export class EntityDetailEnhancementComponent extends EntityDetailChildComponent
   ngOnChanges(changes: SimpleChanges) {
     super.ngOnChanges(changes);
 
-    this.anvilAvailable = this.equipment.AnvilSilver(1) > 0;
-    this.transcendAvailable = this.equipment.TranscendShards(1) > 0;
+    this.anvilAvailable = this.equipment && this.equipment.AnvilSilver(1) > 0;
+    this.attributeAvailable = !!this.attribute;
+    this.transcendAvailable = this.equipment && this.equipment.TranscendShards(1) > 0;
   }
 
   onAnvilChange(newValue) {
@@ -43,6 +51,15 @@ export class EntityDetailEnhancementComponent extends EntityDetailChildComponent
     this.anvilBonus = this.equipment.AnvilDEF(this.anvilLevel) || this.equipment.AnvilATK(this.anvilLevel);
     this.anvilSilver = this.equipment.AnvilSilver(this.anvilLevel);
     this.anvilSilverTotal = this.equipment.AnvilSilverTotal(this.anvilLevel);
+  }
+
+  onAttributeChange(newValue) {
+    if (this.attributeLevel == newValue) return;
+
+    this.attributeLevel = newValue;
+    this.attributePoints = this.attribute.Price(this.attributeLevel);
+    this.attributeSilver = this.attributePoints * 1000;
+    this.attributeSilverTotal = this.attribute.PriceTotal(this.attributeLevel) * 1000;
   }
 
   onTranscendChange(newValue) {

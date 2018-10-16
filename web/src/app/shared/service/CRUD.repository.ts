@@ -38,7 +38,11 @@ export abstract class CRUDRepository<T extends Comparable> {
         header: true,
         skipEmptyLines: true,
         worker: true,
-        complete: (results) => complete(observable),
+        complete: (results) => {
+          if (this.options.loadComplete)
+            this.data = this.options.loadComplete(this.data);
+          complete(observable)
+        },
         step: (results, parser) => {
           let entry: T = this.options.loadStep(results.data[0]);
           this.data.push(entry);
@@ -87,5 +91,6 @@ interface TOSRepositoryOptions<T> {
   id: string;
   path: string;
   searchKeys: string[];
+  loadComplete?: (data: T[]) => T[];
   loadStep: (row: T) => T;
 }

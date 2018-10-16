@@ -482,7 +482,7 @@ def parse_equipment():
 
         # HotFix: if it's a Rapier, use THRUST as the TypeAttack
         if obj['TypeEquipment'] == TOSEquipmentType.RAPIER:
-            obj['TypeAttack'] = TOSAttackType.THRUST
+            obj['TypeAttack'] = TOSAttackType.MELEE_THRUST
 
         # HotFix: in case it doesn't give physical nor magical defense (e.g. agny necklace)
         if 'ADD_FIRE' in row['BasicTooltipProp'].split(','):

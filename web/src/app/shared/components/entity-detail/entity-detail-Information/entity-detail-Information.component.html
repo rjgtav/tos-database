@@ -1,42 +1,62 @@
-<div *ngIf="attribute || item || monster || skill">
+<div *ngIf="attribute || item || job || monster || skill">
   <div class="w-100" *ngIf="divider"><hr></div>
   <h5 *ngIf="header">Information</h5>
 
-  <!-- CoolDown/Level/Cooldown and LifeTime/Size/SP -->
-  <div class="row pt-2 text-nowrap" *ngIf="attribute || item || monster || skill">
+  <!-- Level/Difficulty/CoolDown and Toggleable/LifeTime/Rank/Size/SP -->
+  <div class="row pt-2 text-nowrap" *ngIf="attribute || item || job || monster || skill">
+    <div class="col" *ngIf="attribute || equipment || job || monster">
+      <h6 *ngIf="attribute">Maximum Level: {{ attribute.LevelMax }}</h6>
+      <h6 *ngIf="job" class="d-flex flex-row">
+        <span class="badge badge-primary pt-1 pb-1 text-left">Difficulty</span>
+        <span class="col pt-1 pb-1 text-right">{{ job.JobDifficulty }}</span>
+      </h6>
+      <h6 *ngIf="equipment || monster">Level {{ equipment?.RequiredLevel || monster?.Level }}</h6>
+    </div>
     <div class="col" *ngIf="skill || item && !equipment"><h6>
       <fa-icon class="mr-1" [icon]="['far', 'clock']"></fa-icon>
       {{ ((item ? item.TimeCoolDown : skill.CoolDown) | tosTime) || 'No cooldown' }}</h6>
     </div>
-    <div class="col" *ngIf="equipment || monster"><h6>
-      Level {{ equipment?.RequiredLevel || monster?.Level }}</h6>
-    </div>
-    <div class="col" *ngIf="attribute"><h6>
-      Maximum Level: {{ attribute.LevelMax }}</h6>
-    </div>
 
     <div class="col text-right">
+      <h6 *ngIf="attribute">{{ attribute.IsToggleable ? 'Toggleable' : '' }}</h6>
       <h6 *ngIf="item">{{ item.TimeLifeTime ? ('Expires in ' + (item.TimeLifeTime | tosTime)) : 'No expiration' }}</h6>
+      <h6 *ngIf="job" class="d-flex flex-row">
+        <span class="badge badge-primary pt-1 pb-1 text-left">Rank</span>
+        <span class="col pt-1 pb-1 text-right">{{ job.Rank }}</span>
+      </h6>
       <h6 *ngIf="monster">{{ monster.Size }}</h6>
-      <h6 *ngIf="skill">{{ skill.SP(level) }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
+      <h6 *ngIf="skill">{{ skill.SP(level ? level : 1) }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
     </div>
   </div>
 
-  <!-- Weight and Price -->
-  <div class="row text-nowrap" *ngIf="item || skill">
+  <!-- Weight/Type/OverHeat and Price/Shinobi+Simony -->
+  <div class="row text-nowrap" *ngIf="item || job || skill">
     <div class="col" *ngIf="item"><h6>
       <fa-icon class="mr-1" [icon]="['fas', 'weight-hanging']"></fa-icon>
       {{ (item.Weight | number) || 0 }}</h6>
+    </div>
+    <div class="col" *ngIf="job">
+      <h6 *ngIf="job" class="d-flex flex-row">
+        <span class="badge badge-primary pt-1 pb-1 text-left">Type</span>
+        <span class="col pt-1 pb-1 text-right">{{ job.JobType.join(', ') }}</span>
+      </h6>
     </div>
     <div class="col" *ngIf="skill && skill.OverHeat"><h6>
       <fa-icon class="ml-1 mr-1" [icon]="['fas', 'bolt']"></fa-icon>
       {{ skill.OverHeat }} overheat</h6>
     </div>
 
-
-    <div class="col text-right" *ngIf="item || skill && (skill.IsBunsin || skill.IsSimony)">
+    <div class="col text-right" *ngIf="item || skill">
       <h6 *ngIf="item" class="tos-icon tos-icon-price">{{ item.Price }}</h6>
-      <h6 *ngIf="skill">{{ skill.IsBunsin ? 'Cloneable by Shinobi' : skill.IsSimony ? 'Craftable by Pardoner' : '' }}</h6>
+      <h6 *ngIf="skill && (skill.IsEnchanter || skill.IsPardoner || skill.IsShinobi)">
+        {{ skill.IsEnchanter
+            ? 'Craftable by Enchanter'
+            : skill.IsPardoner
+                ? 'Craftable by Pardoner'
+                : skill.IsShinobi
+                    ? 'Cloneable by Shinobi'
+                    : '' }}
+      </h6>
     </div>
   </div>
 
@@ -47,8 +67,8 @@
         <img class="align-middle mr-1"
              height="24"
              width="24"
-             [src]="'assets/images/element_' + monster.Element.toString().toLowerCase() + '.png'" />
-        <span>{{ monster.Element }}</span>
+             [src]="'assets/images/element_' + entity['Element'].toString().toLowerCase() + '.png'" />
+        <span>{{ entity['Element'] }}</span>
       </h6>
     </div>
     <div class="col">

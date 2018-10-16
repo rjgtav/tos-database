@@ -11,18 +11,18 @@
         <tos-entity-detail-MaterialNameType class="h5" [entity]="entity"></tos-entity-detail-MaterialNameType>
 
         <!-- Description -->
-        <tos-entity-detail-Description *ngIf="skill"
+        <tos-entity-detail-Description *ngIf="job"
                                        [entity]="entity"></tos-entity-detail-Description>
 
-        <!-- Formulas -->
-        <tos-entity-detail-formula *ngIf="skill"
-                                   [build]="build"
-                                   [divider]="true"
-                                   [entity]="entity"></tos-entity-detail-formula>
+        <!-- Skill -->
+        <tos-entity-detail-Skill [build]="build"
+                                 [entity]="entity"></tos-entity-detail-Skill>
 
         <!-- CoolDown/Level, LifeTime, Weight, Price, Tradability -->
-        <tos-entity-detail-Information [build]="build"
-                                       [entity]="entity"></tos-entity-detail-Information>
+        <tos-entity-detail-Information *ngIf="!skill"
+                                       [build]="build"
+                                       [entity]="entity"
+                                       [divider]="skill"></tos-entity-detail-Information>
 
       </div>
     </div>

@@ -11,6 +11,7 @@ import {TOSRecipe} from "../../domain/tos/item/recipe/tos-recipe.model";
 import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
 import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
 import {TOSMap} from "../../domain/tos/map/tos-map.model";
+import {TOSJob} from "../../domain/tos/job/tos-job.model";
 
 @Component({ template: '' })
 export class EntityDetailChildComponent {
@@ -31,6 +32,7 @@ export class EntityDetailChildComponent {
   equipmentSet: TOSEquipmentSet;
   gem: TOSGem;
   item: TOSItem;
+  job: TOSJob;
   map: TOSMap;
   monster: TOSMonster;
   recipe: TOSRecipe;
@@ -49,6 +51,7 @@ export class EntityDetailChildComponent {
       this.equipmentSet = this.entity instanceof TOSEquipmentSet ? this.entity as TOSEquipmentSet : null;
       this.gem = this.entity instanceof TOSGem ? this.entity as TOSGem : null;
       this.item = this.entity instanceof TOSItem ? this.entity as TOSItem : null;
+      this.job = this.entity instanceof TOSJob ? this.entity as TOSJob : null;
       this.map = this.entity instanceof TOSMap ? this.entity as TOSMap : null;
       this.monster = this.entity instanceof TOSMonster ? this.entity as TOSMonster : null;
       this.recipe = this.entity instanceof TOSRecipe ? this.entity as TOSRecipe : null;

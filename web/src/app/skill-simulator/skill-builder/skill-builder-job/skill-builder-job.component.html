@@ -25,22 +25,23 @@
     <div class="d-flex flex-row jus align-items-center" style="width: calc(215px + 8px - 1rem);">
 
       <!-- Job Icon & Circle -->
-      <app-skill-builder-job-icon [circle]="circles.length" style="width: 3rem; height: 3rem;"
+      <tos-entity-detail-JobIcon [circle]="circles.length" style="width: 3rem; height: 3rem;"
                                   [job]="job"
-                                  [size]="'xs'"></app-skill-builder-job-icon>
+                                  [size]="'xs'"></tos-entity-detail-JobIcon>
 
       <!-- Job Name & Job Attributes -->
       <div class="pl-2">
 
-        <span [style.lineHeight]="attributes ? '' : '3rem'">
+        <a class="text-white" [style.lineHeight]="attributes ? '' : '3rem'"
+           [routerLink]="job.Url">
           {{ job.Name }}
-        </span>
+        </a>
 
         <br *ngIf="attributes"/>
 
         <img *ngFor="let attribute of attributes" class="tos-attribute"
              [src]="attribute.Icon"
-             [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
+             [style.opacity]="attribute.unlockAvailable(build, job) ? 1 : 0.5"
              (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
              (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/>
 

@@ -126,7 +126,7 @@ interface TOSListTableColumn {
   transformColor?: (value: any) => string
   transformIcon?: (value: any) => string
   transformLink?: (value: any) => TOSEntity
-  transformValue?: (value: any) => number
+  transformValue?: (value: any) => any
 }
 
 export enum TOSListTableColumnType {
@@ -135,5 +135,6 @@ export enum TOSListTableColumnType {
   ICON_LINK,
   ICON_LINK_VALUE,
   TEXT,
+  TEXT_MULTILINE,
   TEXT_NUMBER,
 }

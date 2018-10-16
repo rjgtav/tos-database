@@ -7,6 +7,7 @@ import re
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations, parser_assets
 from ipf_parser.parsers.parser_enums import TOSElement, TOSAttackType
+from ipf_parser.parsers.parser_jobs import TOSJobTree
 from ipf_parser.utils import luautil
 from ipf_parser.utils.tosenum import TOSEnum
 
@@ -63,7 +64,7 @@ def parse_skills():
             obj['CoolDown'] = int(row['BasicCoolDown']) / 1000
             obj['Effect'] = parser_translations.translate(row['Caption2'])
             obj['Element'] = TOSElement.value_of(row['Attribute'])
-            obj['IsBunsin'] = row['CoolDown'] == 'SCR_GET_SKL_COOLDOWN_BUNSIN' or (row['CoolDown'] and 'Bunshin_Debuff' in LUA[row['CoolDown']])
+            obj['IsShinobi'] = row['CoolDown'] == 'SCR_GET_SKL_COOLDOWN_BUNSIN' or (row['CoolDown'] and 'Bunshin_Debuff' in LUA[row['CoolDown']])
             obj['Prop_BasicPoison'] = int(row['BasicPoison'])
             obj['Prop_LvUpSpendPoison'] = int(row['LvUpSpendPoison'])
             obj['Prop_SklAtkAdd'] = float(row['SklAtkAdd'])
@@ -77,9 +78,9 @@ def parse_skills():
             obj['RequiredSubWeapon'] = row['UseSubweaponDamage'] == 'YES'
             obj['SP'] = int(math.floor(float(row['BasicSP'])))
             obj['SPPerLevel'] = float(row['LvUpSpendSp'])
-            obj['TypeAttack'] = TOSAttackType.value_of(row['AttackType'])
 
-            obj['IsSimony'] = False
+            obj['IsEnchanter'] = False
+            obj['IsPardoner'] = False
             obj['LevelMax'] = -1
             obj['LevelPerCircle'] = -1
             obj['OverHeat'] = {
@@ -87,9 +88,34 @@ def parse_skills():
                 'Group': row['OverHeatGroup']
             }
             obj['RequiredCircle'] = -1
+            obj['TypeAttack'] = []
             obj['Link_Attributes'] = []
             obj['Link_Gem'] = None
             obj['Link_Job'] = None
+
+            # Parse TypeAttack
+            if row['ValueType'] == 'Buff':
+                obj['TypeAttack'].append(TOSAttackType.BUFF)
+            if row['ClassType'] is not None:
+                obj['TypeAttack'].append(TOSAttackType.value_of(row['ClassType']))
+            if row['AttackType'] is not None:
+                obj['TypeAttack'].append(TOSAttackType.value_of(row['AttackType']))
+
+            obj['TypeAttack'] = list(set(obj['TypeAttack']))
+            obj['TypeAttack'] = [attack for attack in obj['TypeAttack'] if attack is not None and attack != TOSAttackType.UNKNOWN]
+
+            # Add missing Description header
+            if not re.match(r'{#.+}{ol}(\[.+?\]){\/}{\/}{nl}', obj['Description']):
+                header = ['[' + TOSAttackType.to_string(attack) + ']' for attack in obj['TypeAttack']]
+
+                header_color = ''
+                header_color = '993399' if TOSAttackType.MAGIC in obj['TypeAttack'] else header_color
+                header_color = 'DD5500' if TOSAttackType.MELEE in obj['TypeAttack'] else header_color
+
+                if TOSAttackType.MAGIC in obj['TypeAttack'] and obj['Element'] != TOSElement.MELEE:
+                    header.append('[' + TOSElement.to_string(obj['Element']) + ']')
+
+                obj['Description'] = '{#' + header_color + '}{ol}' + ' - '.join(header) + '{/}{/}{nl}' + obj['Description']
 
             # Parse effects
             for effect in re.findall(r'{(.*?)}', obj['Effect']):
@@ -193,7 +219,8 @@ def parse_skills_simony():
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             skill = globals.skills[int(row['ClassID'])]
-            skill['IsSimony'] = True
+            skill['IsEnchanter'] = True
+            skill['IsPardoner'] = True
 
 
 def parse_skills_stances():
@@ -312,4 +339,6 @@ def parse_links_jobs():
             skill['RequiredCircle'] = int(row['UnlockGrade'])
 
             job = '_'.join(row['ClassName'].split('_')[:2])
+            skill['IsEnchanter'] = globals.jobs_by_name[job]['JobTree'] == TOSJobTree.WIZARD if skill['IsEnchanter'] else False
+            skill['IsPardoner'] = globals.jobs_by_name[job]['JobTree'] == TOSJobTree.CLERIC if skill['IsPardoner'] else False
             skill['Link_Job'] = globals.get_job_link(job)

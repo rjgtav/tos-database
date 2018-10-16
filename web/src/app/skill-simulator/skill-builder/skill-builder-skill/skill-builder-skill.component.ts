@@ -32,14 +32,14 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
 
   private update() {
     if (this.build) {
-      this.skillIncrementAvailablePlus = this.build.skillIncrementLevelAvailable(this.skill, 1);
-      this.skillIncrementAvailableMinus = this.build.skillIncrementLevelAvailable(this.skill, -1);
+      this.skillIncrementAvailablePlus = this.build.skillLevelIncrementAvailable(this.skill, 1);
+      this.skillIncrementAvailableMinus = this.build.skillLevelIncrementAvailable(this.skill, -1);
     }
   }
 
   onIncrementClick(event: MouseEvent, delta: number, rollOver?: boolean) {
     event.preventDefault();
-    this.build.skillIncrementLevel(this.skill, delta, rollOver);
+    this.build.skillLevelIncrement(this.skill, delta, rollOver);
   }
 
   onJobsChange(value: TOSJob[]) {

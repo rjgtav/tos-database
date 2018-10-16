@@ -24,7 +24,7 @@ export class TOSJob extends TOSEntity {
 
 
   constructor(private json: TOSJob) {
-    super(json, 'jobs');
+    super(json, 'classes');
 
     this.CircleMax = +json.CircleMax;
     this.JobDifficulty = Object.values(TOSJobDifficulty)[+json.JobDifficulty];
@@ -33,6 +33,7 @@ export class TOSJob extends TOSEntity {
       JSON
         .parse(json.JobType + '')
         .map(json => Object.values(TOSJobType)[+json])
+        .sort()
       : null;
     this.IsHidden = (json.IsHidden + '') == 'True';
     this.IsSecret = (json.IsSecret + '') == 'True';
@@ -44,7 +45,7 @@ export class TOSJob extends TOSEntity {
     this.Stat_STR = +json.Stat_STR;
   }
 
-  get Link_Attributes(): TOSItem[] {
+  get Link_Attributes(): TOSAttribute[] {
     return this.link_Attributes = this.link_Attributes
       ? this.link_Attributes
       : this.json.Link_Attributes
@@ -54,7 +55,7 @@ export class TOSJob extends TOSEntity {
         : null;
   }
 
-  get Link_Skills(): TOSItem[] {
+  get Link_Skills(): TOSSkill[] {
     return this.link_Skills = this.link_Skills
       ? this.link_Skills
       : this.json.Link_Skills
@@ -68,13 +69,16 @@ export class TOSJob extends TOSEntity {
     return Array.from(Array(this.CircleMax).keys(), n => n + 1)
   }
 
-  get IconGIFFemale() {
+  get IconAnimations(): string[] {
+    if (this.IsSecret || this.IsHidden || this.Rank > TOSBuild.RankLimit)
+      return null;
+
     let name = this.Name == 'Cryomancer' ? 'Cryomancers' : this.Name; // hotfix
-    return 'https://treeofsavior.com/img/class/class_character/' + name.split(' ').join('').toLowerCase() + '_f.gif';
-  }
-  get IconGIFMale() {
-    let name = this.Name == 'Cryomancer' ? 'Cryomancers' : this.Name; // hotfix
-    return 'https://treeofsavior.com/img/class/class_character/' + name.split(' ').join('').toLowerCase() + '_m.gif';
+        name = name.split(' ').join('').toLowerCase();
+    return [
+      'https://treeofsavior.com/img/class/class_character/' + name + '_f.gif',
+      'https://treeofsavior.com/img/class/class_character/' + name + '_m.gif'
+    ];
   }
 
   unlockAvailable(build: TOSBuild): boolean {
@@ -85,7 +89,7 @@ export class TOSJob extends TOSEntity {
 
     return 1==1
       && extra
-      && build.Rank + 1 <= build.RankLimit
+      && build.Rank + 1 <= TOSBuild.RankLimit
       && build.Rank + 1 >= this.Rank
       && build.jobCircle(this) < this.CircleMax;
   }
@@ -94,8 +98,8 @@ export class TOSJob extends TOSEntity {
 
 export enum  TOSJobDifficulty {
   EASY = 'Easy',
-  NORMAL = 'Normal',
   HARD = 'Hard',
+  NORMAL = 'Normal',
 }
 
 export enum TOSJobTree {

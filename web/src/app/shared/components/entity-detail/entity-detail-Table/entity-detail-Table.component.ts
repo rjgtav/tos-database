@@ -1,8 +1,7 @@
-import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {TOSEntity} from "../../../domain/tos/entity/tos-entity.model";
 import {TOSMonster} from "../../../domain/tos/monster/tos-monster.model";
-import {TOSRecipe} from "../../../domain/tos/item/recipe/tos-recipe.model";
 import {TOSItem} from "../../../domain/tos/item/tos-item.model";
 import {TOSMap} from "../../../domain/tos/map/tos-map.model";
 
@@ -16,16 +15,13 @@ export class EntityDetailTableComponent extends EntityDetailChildComponent {
   TOSItem = TOSItem;
   TOSMap = TOSMap;
   TOSMonster = TOSMonster;
-  TOSRecipe = TOSRecipe;
 
-  @Input() column: string;
+  @Input() data: any[];
   @Input() link: string;
   @Input() divider: boolean;
   @Input() header: string;
 
   @Output() tooltipChange: EventEmitter<TOSEntity> = new EventEmitter();
-
-  data: any[];
 
   constructor() { super() }
 
@@ -36,13 +32,5 @@ export class EntityDetailTableComponent extends EntityDetailChildComponent {
   rowLink(row: any) {
     return this.link ? row[this.link] : row
   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    super.ngOnChanges(changes);
-
-    if (this.entity)
-      this.data = this.entity[this.column];
-  }
-
 
 }

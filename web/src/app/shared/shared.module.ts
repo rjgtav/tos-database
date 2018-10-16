@@ -39,9 +39,12 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {RouterModule} from "@angular/router";
 import {SanitizeCSSPipe} from "./directives/sanitize-css.pipe";
 import {SanitizeHTMLPipe} from "./directives/sanitize-html.pipe";
-import { EntityDetailFormulaComponent } from './components/entity-detail/entity-detail-Formula/entity-detail-Formula.component';
 import {HttpClient} from "@angular/common/http";
 import {TOSRepositoryService} from "./domain/tos/tos-repository.service";
+import {EntityDetailSkillComponent} from "./components/entity-detail/entity-detail-Skill/entity-detail-Skill.component";
+import {EntityDetailSkillFormulaComponent} from "./components/entity-detail/entity-detail-SkillFormula/entity-detail-SkillFormula.component";
+import {EntityDetailJobIconComponent} from "./components/entity-detail/entity-detail-JobIcon/skill-builder-job-icon.component";
+import {EntityDetailJobAnimationComponent} from "./components/entity-detail/entity-detail-JobAnimation/entity-detail-JobAnimation.component";
 
 @NgModule({
   imports: [
@@ -57,13 +60,18 @@ import {TOSRepositoryService} from "./domain/tos/tos-repository.service";
     EntityDetailAttackDefenseComponent,
     EntityDetailBookComponent,
     EntityDetailCardComponent,
+    EntityDetailChildComponent,
     EntityDetailClassIconGradeComponent,
     EntityDetailDescriptionComponent,
     EntityDetailDurabilityPotentialSocketsComponent,
     EntityDetailEnhancementComponent,
     EntityDetailGemComponent,
     EntityDetailInformationComponent,
+    EntityDetailJobAnimationComponent,
+    EntityDetailJobIconComponent,
     EntityDetailMaterialNameTypeComponent,
+    EntityDetailSkillComponent,
+    EntityDetailSkillFormulaComponent,
     EntityDetailBonusStatsUnidentifiedComponent,
     EntityDetailStatsComponent,
     EntityDetailTableComponent,
@@ -91,8 +99,12 @@ import {TOSRepositoryService} from "./domain/tos/tos-repository.service";
     EntityDetailDescriptionComponent,
     EntityDetailDurabilityPotentialSocketsComponent,
     EntityDetailEnhancementComponent,
+    EntityDetailSkillComponent,
+    EntityDetailSkillFormulaComponent,
     EntityDetailGemComponent,
     EntityDetailInformationComponent,
+    EntityDetailJobAnimationComponent,
+    EntityDetailJobIconComponent,
     EntityDetailMaterialNameTypeComponent,
     EntityDetailBonusStatsUnidentifiedComponent,
     EntityDetailStatsComponent,
@@ -110,7 +122,6 @@ import {TOSRepositoryService} from "./domain/tos/tos-repository.service";
     SanitizeCSSPipe,
     SanitizeHTMLPipe,
     TimePipe,
-    EntityDetailFormulaComponent,
   ],
   providers: [
     { provide: APP_INITIALIZER, useFactory: TOSRepositoryService.factory, deps: [HttpClient], multi: true },

@@ -22,12 +22,33 @@ import {CardListConfigurationResolver} from "./resolvers/card-list-configuration
 import {TOSCardResolver} from "../shared/domain/tos/item/card/tos-card.resolver";
 import {GemListConfigurationResolver} from "./resolvers/gem-list-configuration.resolver";
 import {TOSGemResolver} from "../shared/domain/tos/item/gem/tos-gem.resolver";
+import {TOSAttributeResolver} from "../shared/domain/tos/attribute/tos-attribute.resolver";
+import {AttributeListConfigurationResolver} from "./resolvers/attribute-list-configuration.resolver";
+import {SkillListConfigurationResolver} from "./resolvers/skill-list-configuration.resolver";
+import {TOSSkillResolver} from "../shared/domain/tos/skill/tos-skill.resolver";
+import {JobListConfigurationResolver} from "./resolvers/job-list-configuration.resolver";
+import {TOSJobResolver} from "../shared/domain/tos/job/tos-job.resolver";
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'items',
     pathMatch: 'full'
+  },
+  {
+    path: 'attributes',
+    component: EntityListComponent,
+    resolve: {
+      configuration: AttributeListConfigurationResolver,
+      response: TOSAttributeResolver,
+    },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  {
+    path: 'attributes/:id',
+    component: EntityDetailComponent,
+    resolve: { response: TOSAttributeResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'books',
@@ -57,6 +78,21 @@ const routes: Routes = [
     path: 'cards/:id',
     component: EntityDetailComponent,
     resolve: { response: TOSCardResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  {
+    path: 'classes',
+    component: EntityListComponent,
+    resolve: {
+      configuration: JobListConfigurationResolver,
+      response: TOSJobResolver,
+    },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  {
+    path: 'classes/:id',
+    component: EntityDetailComponent,
+    resolve: { response: TOSJobResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
@@ -179,12 +215,28 @@ const routes: Routes = [
     resolve: { response: TOSRecipeResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
+  {
+    path: 'skills',
+    component: EntityListComponent,
+    resolve: {
+      configuration: SkillListConfigurationResolver,
+      response: TOSSkillResolver,
+    },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  {
+    path: 'skills/:id',
+    component: EntityDetailComponent,
+    resolve: { response: TOSSkillResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
   providers: [
+    AttributeListConfigurationResolver,
     BookListConfigurationResolver,
     CardListConfigurationResolver,
     CollectionListConfigurationResolver,
@@ -193,8 +245,10 @@ const routes: Routes = [
     EquipmentSetListConfigurationResolver,
     GemListConfigurationResolver,
     ItemListConfigurationResolver,
+    JobListConfigurationResolver,
     MonsterListConfigurationResolver,
     RecipeListConfigurationResolver,
+    SkillListConfigurationResolver,
   ]
 })
 export class DatabaseRoutingModule { }

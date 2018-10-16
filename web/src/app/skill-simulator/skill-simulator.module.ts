@@ -10,7 +10,6 @@ import { SkillBuilderSkillComponent } from './skill-builder/skill-builder-skill/
 import {SkillBuilderJobSelectorComponent} from "./skill-builder/skill-builder-job-selector/skill-builder-job-selector.component";
 import {SkillBuilderJobRankComponent} from "./skill-builder/skill-builder-job-rank/skill-builder-job-rank.component";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-import { SkillBuilderJobIconComponent } from './skill-builder/skill-builder-job-icon/skill-builder-job-icon.component';
 import {SkillBuilderJobRankListComponent} from "./skill-builder/skill-builder-job-rank-list/skill-builder-job-rank-list.component";
 import { SkillBuilderStatSelectorComponent } from './skill-builder/skill-builder-stat-selector/skill-builder-stat-selector.component';
 import {FormsModule} from "@angular/forms";
@@ -32,7 +31,6 @@ import {FormsModule} from "@angular/forms";
     SkillBuilderJobRankComponent,
     SkillBuilderSkillComponent,
     SkillBuilderJobRankListComponent,
-    SkillBuilderJobIconComponent,
     SkillBuilderStatSelectorComponent
   ]
 })

@@ -25,13 +25,15 @@
 
       <!-- Name & Attributes -->
       <div class="d-flex flex-column">
-        <span>{{ skill.Name }}</span>
+        <a [routerLink]="skill.Url">{{ skill.Name }}</a>
         <div>
-          <img *ngFor="let attribute of attributes" class="tos-attribute"
-               [src]="attribute.Icon"
-               [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
-               (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
-               (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/>
+          <a *ngFor="let attribute of attributes" [routerLink]="attribute.Url">
+            <img class="tos-attribute"
+                 [src]="attribute.Icon"
+                 [style.opacity]="attribute.unlockAvailable(build, job) ? 1 : 0.5"
+                 (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
+                 (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/>
+          </a>
         </div>
       </div>
     </div>

@@ -1,2 +1,6 @@
 a { color: inherit; }
 a:hover { text-decoration: underline; }
+
+a:first-child td {
+  border: 0 !important;
+}

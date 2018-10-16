@@ -9,15 +9,15 @@ from ipf_parser.utils.tosenum import TOSEnum
 
 class TOSJobDifficulty(TOSEnum):
     EASY = 0
-    NORMAL = 1
-    HARD = 2
+    HARD = 1
+    NORMAL = 2
 
     @staticmethod
     def value_of(string):
         return {
             'EASY': TOSJobDifficulty.EASY,
-            'NORMAL': TOSJobDifficulty.NORMAL,
             'HARD': TOSJobDifficulty.HARD,
+            'NORMAL': TOSJobDifficulty.NORMAL,
             '': None,
         }[string.upper()]
 
