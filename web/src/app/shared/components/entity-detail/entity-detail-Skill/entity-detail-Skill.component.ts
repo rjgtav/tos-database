@@ -21,8 +21,6 @@ export class EntityDetailSkillComponent extends EntityDetailChildComponent imple
   constructor(private changeDetector: ChangeDetectorRef) { super() }
 
   onSkillLevelsChange(value: { [key: number]: number }) {
-    if (value[this.skill.$ID] == this.skillLevel) return;
-
     this.skillLevel = value[this.skill.$ID];
     this.effectHTML = this.build.skillEffect(this.skill, this.input);
 
