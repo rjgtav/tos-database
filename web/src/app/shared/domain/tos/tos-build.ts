@@ -205,10 +205,11 @@ export abstract class TOSBuild {
     this.statsBonus.CON = this.statsBonus.DEX = this.statsBonus.INT = this.statsBonus.SPR = this.statsBonus.STR = 0;
 
     // Bonus stat points:
+    // + 390 - 1 > Level limit
     // + 40 > Hidden & Revelation Quests
     // + 12 > Zemyna Statues
     // More info: https://forum.treeofsavior.com/t/extra-stat-point-quests-guide/390257
-    this.statsPoints.next(LEVEL_LIMIT + 49 - 1);
+    this.statsPoints.next(LEVEL_LIMIT - 1 + 40 + 12);
   }
   private rankResetSkillLevels(job: TOSJob): void {
     let skillLevels = this.skillLevelsByJob[job.$ID]

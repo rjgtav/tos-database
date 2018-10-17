@@ -7,8 +7,9 @@ if [ "$1" == "" ]; then
     exit
 fi
 
-# 1. Build angular application
+# 1. Build angular application (twice to make sure it is built correctly...)
 echo -e "Building angular application..."
+ng build --prod --base-href "https://rjgtav.github.io/tos-database/"
 ng build --prod --base-href "https://rjgtav.github.io/tos-database/"
 cp -rf ./dist/web/index.html ./dist/web/404.html # Hack: make GitHub redirect all unknown URLs to index.html
 
