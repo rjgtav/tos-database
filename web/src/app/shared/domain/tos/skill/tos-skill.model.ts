@@ -1,6 +1,5 @@
 import {TOSAttackType, TOSElement, TOSEntity, TOSStat} from "../entity/tos-entity.model";
 import {TOSBuildStats} from "../tos-build";
-import {TOSItem} from "../item/tos-item.model";
 import {TOSRepositoryService} from "../tos-repository.service";
 import {TOSAttribute} from "../attribute/tos-attribute.model";
 import {TOSGem} from "../item/gem/tos-gem.model";
@@ -246,7 +245,7 @@ export class TOSSkill extends TOSEntity {
     let dependencies: string[] = [];
     let effect = this.effectProp(prop);
     let pc: object = { CON: stats.CON, DEX: stats.DEX, INT: stats.INT, MNA: stats.SPR, STR: stats.STR };
-    let skill: object = { Level: Math.max(1, level) };
+    let skill: object = { Level: Math.max(1, level), SP: this.sp };
     let match: RegExpExecArray;
 
     // Prepare player and skill
@@ -269,7 +268,7 @@ export class TOSSkill extends TOSEntity {
 
         if (prop == 'SkillFactor')
           skill[prop] = this.effectToValue(prop, level, stats).value;
-        else if (prop != 'Level')
+        else if (skill[prop] == undefined)
           skill[prop] = this[prop]
       }
     });
@@ -283,8 +282,7 @@ export class TOSSkill extends TOSEntity {
     func = func.concat(effect);
     func.push('}())');
 
-    //console.log('Executing effect function:\n', func.join('\n'));
-
+    //console.log('Executing effect (', prop, ') function:\n', func.join('\n'));
     return { dependencies, func, pc, skill };
   }
   private effectToHuman(level: number, prop: string, stats: TOSBuildStats): string {
@@ -335,52 +333,6 @@ export class TOSSkill extends TOSEntity {
     return result
       .slice(1, result.length - 1)
       .join('\n');
-    /* TODO:
-
-    //let attributes: {regex: RegExp, replace: string}[] = [];
-    let result: string[] = [];
-
-    let regexAttribute = /(local .+= )GetAbility\(pc, "(.+)"\)/g;
-    let regexSkill = /(?:skill\.(\w+))+/g;
-    let regexTryGetProp = /TryGetProp\((.+),.*"(.+)"\)/g;
-    let match: RegExpExecArray;
-
-    for (let line of effect) {
-      let lineOriginal = line;
-      let isPlayerDeclaration: boolean = line.indexOf('GetSkillOwner(skill)') != -1;
-
-      if (isPlayerDeclaration)
-        continue;
-
-      // Match attribute declaration (e.g. local abil = GetAbility(pc, "Peltasta11"))
-      while (match = regexAttribute.exec(lineOriginal)) {
-        let attribute = this.Link_Attributes.find(value => value.$ID_NAME == match[2]);
-        line = match[1] + '[Attribute ' + attribute.Name + ']';
-      }
-
-      // Match property retrieval (e.g. local abilLevel = TryGetProp(abil, "Level"))
-      while (match = regexTryGetProp.exec(lineOriginal)) {
-        line = line.replace(match[0], match[1] + '.' + match[2]);
-      }
-
-      while (match = regexSkill.exec(lineOriginal)) {
-        if (this[match[1]] && match[1] != 'Level')
-          line = line.replace(match[0], this[match[1]]);
-        else
-          line = line.replace(match[0], '[Skill ' + match[1] + ']');
-      }
-
-      // Minor syntax adjustments
-      line = line.replace('~=', 'not');
-      line = line.replace('nil', 'None');
-      line = line.replace('local ', 'var ');
-      line = line.replace('math', 'Math');
-
-      result.push(line);
-    }
-
-    return result.join('\n');
-    */
   }
   private effectToValue(prop: string, level: number, stats: TOSBuildStats): { dependencies: string[], value: number } {
     let effect = this.effectToEval(prop, level, stats, true);
