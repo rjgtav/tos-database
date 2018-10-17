@@ -70,8 +70,9 @@ export class TOSJob extends TOSEntity {
   }
 
   get IconAnimations(): string[] {
-    if (this.IsSecret || this.IsHidden || this.Rank > TOSBuild.RankLimit)
-      return null;
+    if (this.IsSecret || this.Rank > TOSBuild.RankLimit)
+      if (this.$ID_NAME != 'Char1_18')
+        return null;
 
     let name = this.Name == 'Cryomancer' ? 'Cryomancers' : this.Name; // hotfix
         name = name.split(' ').join('').toLowerCase();

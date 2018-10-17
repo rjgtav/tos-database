@@ -37,7 +37,7 @@ export class JobListConfigurationResolver implements Resolve<TOSListConfiguratio
         },
       ],
 
-      sortColumn: '$ID',
+      sortColumn: 'JobTree',
 
       tableColumns: [
         { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '',

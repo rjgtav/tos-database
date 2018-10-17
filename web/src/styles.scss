@@ -15,9 +15,8 @@ body {
   cursor: pointer;
 }
 .carousel-indicators li {
-  background: rgba(255, 255, 255, 0.25);
   margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin-right: 1px !important;
 }
 
 .page-link:not([aria-label]) {
