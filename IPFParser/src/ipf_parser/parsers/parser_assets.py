@@ -1,9 +1,13 @@
+import csv
+import httplib
 import logging
 import os
 import shutil
+import urllib
 import xml.etree.ElementTree as ET
 
 from ipf_parser import constants, globals
+from ipf_parser.parsers import parser_translations
 from ipf_parser.utils import imageutil
 
 
@@ -88,6 +92,8 @@ def parse(version_new):
     parse_icons('monillust.xml', version_new)
     parse_icons('skillicon.xml', version_new)
 
+    parse_images_jobs(version_new)
+
 
 def parse_icons(file_name, version_new):
     logging.debug('Parsing icons from %s...', file_name)
@@ -139,6 +145,39 @@ def parse_icons(file_name, version_new):
 
             # Store mapping for later use
             globals.assets_icons[image_name] = image_name
+
+
+def parse_images_jobs(version_new):
+    #if not version_new:
+    #    return
+
+    logging.debug('Parsing images for jobs...')
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')
+
+    with open(ies_path, 'rb') as ies_file:
+        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            image_path = os.path.join(constants.PATH_WEB_ASSETS_IMAGES, 'classes', row['ClassName'])
+            image_path_f = image_path + '_f.gif'
+            image_path_m = image_path + '_m.gif'
+
+            if os.path.exists(image_path_f):
+                continue
+
+            name = parser_translations.translate(row['Name'])
+            name = 'Cryomancers' if name == 'Cryomancer' else name
+            name = ''.join(name.split(' ')).lower()
+
+            conn = httplib.HTTPSConnection('treeofsavior.com')
+            conn.request('HEAD', '/img/class/class_character/' + name + '_f.gif')
+
+            response = conn.getresponse()
+            conn.close()
+
+            if response.status != 200:
+                continue
+
+            urllib.urlretrieve('https://treeofsavior.com/img/class/class_character/' + name + '_f.gif', image_path_f)
+            urllib.urlretrieve('https://treeofsavior.com/img/class/class_character/' + name + '_m.gif', image_path_m)
 
 
 def parse_clean(version_new):

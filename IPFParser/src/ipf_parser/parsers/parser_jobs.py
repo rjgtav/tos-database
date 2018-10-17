@@ -1,6 +1,8 @@
 import csv
+import httplib
 import logging
 import os
+import urllib
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations, parser_assets
@@ -70,10 +72,10 @@ class TOSJobType(TOSEnum):
 
 
 def parse():
-    parse_classes()
+    parse_jobs()
 
 
-def parse_classes():
+def parse_jobs():
     logging.debug('Parsing jobs...')
 
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')
@@ -105,6 +107,25 @@ def parse_classes():
 
             globals.jobs[obj['$ID']] = obj
             globals.jobs_by_name[obj['$ID_NAME']] = obj
+
+
+def parse_jobs_gif(name):
+    name = 'Cryomancers' if name == 'Cryomancer' else name
+    name = ''.join(name.split(' ')).lower()
+
+    conn = httplib.HTTPSConnection('treeofsavior.com')
+    conn.request('HEAD', '/img/class/class_character/' + name + '_f.gif')
+
+    response = conn.getresponse()
+    conn.close()
+
+    if response.status == 200:
+        urllib.urlretrieve(
+            'https://treeofsavior.com/img/class/class_character/' + name + '_f.gif',
+            os.path.join(constants.PATH_WEB_ASSETS_IMAGES, 'classes', name + '_f.gif')
+        )
+
+    return name
 
 
 def parse_links():

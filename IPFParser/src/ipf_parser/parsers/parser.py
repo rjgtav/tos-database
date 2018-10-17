@@ -41,11 +41,11 @@ def csv_write(data, path):
 
 def parse(version_new):
     # Parse assets
+    parser_translations.parse()
     parser_assets.parse(version_new)
 
     # Parse data
     logging.debug('Parsing data...')
-    parser_translations.parse()
     parser_attributes.parse()
     parser_items.parse()
     parser_items_books.parse()

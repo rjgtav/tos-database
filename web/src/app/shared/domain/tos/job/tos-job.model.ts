@@ -70,15 +70,12 @@ export class TOSJob extends TOSEntity {
   }
 
   get IconAnimations(): string[] {
-    if (this.IsSecret || this.Rank > TOSBuild.RankLimit)
-      if (this.$ID_NAME != 'Char1_18')
+    if (this.Rank > TOSBuild.RankLimit)
         return null;
 
-    let name = this.Name == 'Cryomancer' ? 'Cryomancers' : this.Name; // hotfix
-        name = name.split(' ').join('').toLowerCase();
     return [
-      'https://treeofsavior.com/img/class/class_character/' + name + '_f.gif',
-      'https://treeofsavior.com/img/class/class_character/' + name + '_m.gif'
+      'assets/images/classes/' + this.$ID_NAME + '_f.gif',
+      'assets/images/classes/' + this.$ID_NAME + '_m.gif',
     ];
   }
 
