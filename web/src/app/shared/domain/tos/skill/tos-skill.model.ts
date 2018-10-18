@@ -367,7 +367,7 @@ export class TOSSkillRequiredStance {
 }
 
 export enum TOSSkillRequiredStanceCompanion {
-  BOTH = 'Both',
+  BOTH = 'Yes',
   NO = 'No',
-  YES = 'Yes'
+  YES = 'Exclusive'
 }

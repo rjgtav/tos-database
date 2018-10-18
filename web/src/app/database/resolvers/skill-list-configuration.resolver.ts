@@ -3,7 +3,7 @@ import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
 import {TOSElement, TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
-import {TOSSkill} from "../../shared/domain/tos/skill/tos-skill.model";
+import {TOSSkill, TOSSkillRequiredStanceCompanion} from "../../shared/domain/tos/skill/tos-skill.model";
 import {TOSMonster} from "../../shared/domain/tos/monster/tos-monster.model";
 
 @Injectable()
@@ -11,6 +11,19 @@ export class SkillListConfigurationResolver implements Resolve<TOSListConfigurat
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<TOSListConfiguration> | Promise<TOSListConfiguration> | TOSListConfiguration {
     return {
       filter: [
+        {
+          column: 'RequiredStanceCompanion',
+          label: 'Companion',
+          groups: [
+            {
+              options: [
+                TOSSkillRequiredStanceCompanion.YES,
+                TOSSkillRequiredStanceCompanion.NO,
+                TOSSkillRequiredStanceCompanion.BOTH,
+              ]
+            }
+          ]
+        },
         {
           column: 'Element',
           groups: [

@@ -77,9 +77,9 @@ export class TOSAttribute extends TOSEntity {
           let regexSkill = /GetSkill\(pc, ['"](.+)['"]\)/g;
           let match: RegExpExecArray;
 
-          line = line.replace('jobName', "'" + unlockArg.UnlockArgStr + "'");
-          line = line.replace('limitLevel', unlockArg.UnlockArgNum + '');
-          line = line.replace('sklName', "'" + unlockArg.UnlockArgStr + "'");
+          line = line.replace(/\bjobName\b/g, "'" + unlockArg.UnlockArgStr + "'");
+          line = line.replace(/\blimitLevel\b/g, unlockArg.UnlockArgNum + '');
+          line = line.replace(/\bsklName\b/g, "'" + unlockArg.UnlockArgStr + "'");
           line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
           while (match = regexJobGrade.exec(line)) {
@@ -99,6 +99,7 @@ export class TOSAttribute extends TOSEntity {
         func = func.concat(unlock);
         func.push('}())');
 
+        //console.log('unlockAvailable', func.join('\n'), this.UnlockArgs);
         return eval(func.join('\n')) == 'UNLOCK';
       }) != null;
   }

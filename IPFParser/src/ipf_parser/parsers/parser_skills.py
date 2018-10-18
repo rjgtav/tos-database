@@ -274,7 +274,7 @@ def parse_skills_stances():
                 'Name': 'All'
             })
 
-        if skill['RequiredStanceCompanion'] == TOSRequiredStanceCompanion.YES:
+        if skill['RequiredStanceCompanion'] in [TOSRequiredStanceCompanion.BOTH, TOSRequiredStanceCompanion.YES]:
             stances_main_weapon.append({
                 'Icon': parser_assets.parse_entity_icon('weapon_companion'),
                 'Name': 'Companion'
