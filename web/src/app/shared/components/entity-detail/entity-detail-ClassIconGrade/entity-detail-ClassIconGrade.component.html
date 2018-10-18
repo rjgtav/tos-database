@@ -3,7 +3,7 @@
     <div class="w-100" [style.height]="ICON_HEIGHT + 'px'">
       <div class="position-relative d-flex align-items-center justify-content-center w-100 h-100">
         <img class="position-absolute"
-             style="max-height: 100%; max-width: 100%;"
+             style="max-height: 100%; max-width: 100%; left: 0; top: 0"
              [src]="'assets/images/equipment_grade_' + (equipment.Grade + '').toLowerCase() + '_' + size + '.png'"
              *ngIf="equipment"
         />
@@ -12,7 +12,7 @@
              [src]="card ? card.IconTooltip : entity.Icon"
         />
         <img class="position-absolute"
-             style="height: 533px; width: 363px; transform: translateY(-33px);"
+             style="height: 533px; width: 363px; transform: translateY(-33px); left: 0; top: 0"
              [src]="'assets/images/card_frame_' + (card.TypeCard + '').toLowerCase() + '.png'"
              *ngIf="card"
         />
