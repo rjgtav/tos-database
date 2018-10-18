@@ -64,7 +64,7 @@ export class TOSAttribute extends TOSEntity {
           : null;
   }
 
-  public Price(level: number) { return this.UpgradePrice[level]; }
+  public Price(level: number) { return level > 0 ? this.UpgradePrice[level - 1] : 0; }
   public PriceTotal(level: number) { return Array.from({length: level + 1}, (x,i) => this.Price(i)).reduce((a, b) => a + b, 0) }
 
   unlockAvailable(build: TOSBuild): boolean {

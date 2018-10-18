@@ -32,7 +32,7 @@ def parse_attributes():
             obj['LevelMax'] = -1
             obj['Unlock'] = None
             obj['UnlockArgs'] = {}
-            obj['UpgradePrice'] = None
+            obj['UpgradePrice'] = []
             obj['Link_Jobs'] = []
             obj['Link_Skill'] = None
 
@@ -72,10 +72,9 @@ def parse_links_jobs():
 
                     # Parse attribute cost
                     if row['ScrCalcPrice']:
-                        attribute['UpgradePrice'] = [
-                            LUA[row['ScrCalcPrice']](None, row['ClassName'], lv, attribute['LevelMax'])[0]
-                            for lv in range(int(row['MaxLevel']) + 1)
-                        ]
+                        for lv in range(int(row['MaxLevel'])):
+                            attribute['UpgradePrice'].append(LUA[row['ScrCalcPrice']](None, row['ClassName'], lv, attribute['LevelMax'])[0])
+                        attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
 
                     # Parse attribute job
                     attribute['Link_Jobs'].append(globals.get_job_link(job['$ID_NAME']))
