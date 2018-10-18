@@ -73,8 +73,8 @@ def parse_links_jobs():
                     # Parse attribute cost
                     if row['ScrCalcPrice']:
                         attribute['UpgradePrice'] = [
-                            LUA[row['ScrCalcPrice']](None, row['ClassName'], l, attribute['LevelMax'])[0]
-                            for l in range(int(row['MaxLevel']) + 1)
+                            LUA[row['ScrCalcPrice']](None, row['ClassName'], lv, attribute['LevelMax'])[0]
+                            for lv in range(int(row['MaxLevel']) + 1)
                         ]
 
                     # Parse attribute job

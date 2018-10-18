@@ -107,10 +107,14 @@ def init():
         function GET_UPGRADE_ADD_MDEF_RATIO(item, ignoreTranscend) return 0 end
         function GET_REINFORCE_ADD_VALUE(prop, item, ignoreReinf, reinfBonusValue) return 0 end
         function GET_REINFORCE_ADD_VALUE_ATK(item, ignoreReinf, reinfBonusValue, basicTooltipProp) return 0 end
+        function IS_MORU_DISCOUNT_50_PERCENT(item) return false end
+        function IS_MORU_FREE_PRICE(item) return false end
         function OVERRIDE_INHERITANCE_PROPERTY(item) end
         function GetExProp(entity, name) return 0 end
+        function GetItemOwner(item) return {} end
         function GetServerNation() end
         function GetServerGroupID() end
+        function IsPVPServer(itemOwner) end
         function IMCRandom(min, max) return 0 end
         function MakeItemOptionByOptionSocket(item) end
     ''')

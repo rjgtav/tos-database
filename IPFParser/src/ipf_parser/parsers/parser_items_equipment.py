@@ -423,11 +423,16 @@ def parse_equipment():
         'GET_BASIC_MATK',
         'INIT_ARMOR_PROP',
         'INIT_WEAPON_PROP',
+        'SCR_GET_ITEM_GRADE_RATIO',
         'SCR_REFRESH_ACC',
         'SCR_REFRESH_ARMOR',
         'SCR_REFRESH_WEAPON',
-        'SCR_GET_ITEM_GRADE_RATIO',
+        'GET_REINFORCE_ADD_VALUE_ATK',
+        'GET_REINFORCE_ADD_VALUE',
+        'GET_REINFORCE_PRICE',
     ])
+    LUA_REINFORCE = luautil.load_script('lib_reinforce_131014.lua', ['GET_REINFORCE_PRICE'])
+    LUA_TRANSCEND = luautil.load_script('item_transcend_shared.lua', ['GET_TRANSCEND_MATERIAL_COUNT'])
 
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'item_Equip.ies')
     ies_file = open(ies_path, 'rb')
@@ -450,6 +455,9 @@ def parse_equipment():
                 LUA['SCR_REFRESH_ARMOR'](row)
 
         # Add additional fields
+        obj['AnvilATK'] = []
+        obj['AnvilDEF'] = []
+        obj['AnvilPrice'] = []
         obj['Bonus'] = []
         obj['Durability'] = int(row['MaxDur']) / 100
         obj['Durability'] = -1 if obj['Durability'] <= 0 else obj['Durability']
@@ -457,7 +465,6 @@ def parse_equipment():
         obj['Level'] = int(row['ItemLv']) if int(row['ItemLv']) > 0 else int(row['UseLv'])
         obj['Material'] = TOSEquipmentMaterial.value_of(row['Material'])
         obj['Potential'] = int(row['MaxPR'])
-        obj['ReinforceRatio'] = int(row['ReinforceRatio']) / 100.0
         obj['RequiredClass'] = '%s%s%s%s' % (
             1 if any(j in row['UseJob'] for j in ['All', 'Char3']) else 0,  # Archer
             1 if any(j in row['UseJob'] for j in ['All', 'Char4']) else 0,  # Cleric
@@ -473,6 +480,7 @@ def parse_equipment():
         obj['Stat_ATTACK_PHYSICAL_MAX'] = int(row['MAXATK']) if 'MAXATK' in row else 0
         obj['Stat_DEFENSE_MAGICAL'] = int(row['MDEF']) if 'MDEF' in row else 0
         obj['Stat_DEFENSE_PHYSICAL'] = int(row['DEF']) if 'DEF' in row else 0
+        obj['TranscendPrice'] = []
         obj['TypeAttack'] = TOSAttackType.value_of(row['AttackType'])
         obj['TypeEquipment'] = item_type_equipment
         obj['Unidentified'] = int(row['NeedAppraisal']) == 1
@@ -491,6 +499,17 @@ def parse_equipment():
 
             row['ADD_FIRE'] = floor(lv * gradeRatio)
 
+        # Anvil
+        for lv in range(40):
+            row['Reinforce_2'] = lv
+            obj['AnvilATK'].append(LUA['GET_REINFORCE_ADD_VALUE_ATK'](row, 0, 1, None))
+            obj['AnvilDEF'].append(LUA['GET_REINFORCE_ADD_VALUE'](None, row, 0, 0))
+            obj['AnvilPrice'].append(LUA_REINFORCE['GET_REINFORCE_PRICE'](row, {}, None))
+
+        obj['AnvilPrice'] = [value for value in obj['AnvilPrice'] if value > 0]
+        obj['AnvilATK'] = [value for value in obj['AnvilATK'] if value > 0] if len(obj['AnvilPrice']) > 0 else None
+        obj['AnvilDEF'] = [value for value in obj['AnvilDEF'] if value > 0] if len(obj['AnvilPrice']) > 0 else None
+
         # Bonus
         for stat in EQUIPMENT_STAT_COLUMNS:
             value = floor(float(row[stat]))
@@ -508,6 +527,13 @@ def parse_equipment():
                     TOSEquipmentStat.UNKNOWN,           # Stat
                     bonus.replace('-', '').strip()      # Value
                 ])
+
+        # Transcendence
+        for lv in range(10):
+            row['Transcend'] = lv
+            obj['TranscendPrice'].append(LUA_TRANSCEND['GET_TRANSCEND_MATERIAL_COUNT'](row, None))
+
+        obj['TranscendPrice'] = [value for value in obj['TranscendPrice'] if value > 0]
 
 
 def parse_equipment_grade_ratios():

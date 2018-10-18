@@ -1,13 +1,15 @@
 ## TOSEquipment :: TOSItem
 
 #### Properties
-- Bonus `{Stat: TOSEntityStat, Value: number}[]`
+- AnvilATK `double[]`
+- AnvilDEF `double[]`
+- AnvilPrice: `double[]`
+- Bonus `{Stat: TOSEntityStat, Value: double}[]`
 - Durability `int`
 - Grade `TOSEquipmentGrade`
 - Level `int`
 - Material `TOSEquipmentMaterial`
 - Potential `int`
-- ReinforceRatio `double`
 - RequiredClass `boolean[]` Whether this equipment can be used by:
     - [0] Archer
     - [1] Cleric
@@ -15,7 +17,6 @@
     - [3] Wizard
 - RequiredGender ?? - maybe put this one just on costumes/premium
 - RequiredLevel `int`
-- Set `TOSEquipmentSet`
 - Sockets `int`
 - SocketsLimit `int`
 - Stars `int`
@@ -24,10 +25,14 @@
 - Stat_ATTACK_PHYSICAL_MIN `int`
 - Stat_DEFENSE_MAGICAL `int`
 - Stat_DEFENSE_PHYSICAL `int`
+- TranscendPrice `double[]`
 - TypeAttack `TOSEquipmentAttackType`
 - TypeEquipment `TOSEquipmentType`
 - Unidentified `bool`
 - UnidentifiedRandom `bool`
+
+#### Links
+- Link_Set `TOSEquipmentSet`
 
 ## TOSEquipmentGrade
 - NORMAL - or White

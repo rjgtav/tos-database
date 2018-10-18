@@ -104,7 +104,7 @@
                                [entity]="entity"></tos-entity-detail-Stats>
 
       <!-- Enhancement -->
-      <tos-entity-detail-Enhancement *ngIf="attribute || equipment && (anvilAvailable || transcendAvailable)"
+      <tos-entity-detail-Enhancement *ngIf="attribute || equipment && (equipment.IsAnvilAvailable || equipment.IsTranscendAvailable)"
                                      [header]="attribute ? 'Cost' : 'Enhancement'"
                                      [(anvilLevel)]="anvilLevel"
                                      [(transcendLevel)]="transcendLevel"

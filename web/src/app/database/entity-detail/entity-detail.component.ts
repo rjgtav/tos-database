@@ -43,9 +43,7 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
   recipe: TOSRecipe;
   skill: TOSSkill;
 
-  anvilAvailable: boolean;
   anvilLevel: number = 0;
-  transcendAvailable: boolean;
   transcendLevel: number = 0;
 
   tooltip: TOSEntity;
@@ -76,10 +74,6 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
       this.recipe = this.entity instanceof TOSRecipe ? this.entity as TOSRecipe : null;
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
 
-      if (this.equipment) {
-        this.anvilAvailable = this.equipment.AnvilSilver(1) > 0;
-        this.transcendAvailable = this.equipment.TranscendShards(1) > 0;
-      }
       if (this.skill) {
         this.build = new TOSDatabaseBuild();
         for (let i = 0; i < this.skill.Link_Job.CircleMax; i ++)

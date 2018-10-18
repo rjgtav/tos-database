@@ -21,8 +21,8 @@
 
     <div class="row justify-content-between mt-3 ml-auto mr-auto" *ngIf="equipment">
       <div *ngFor="let classTree of [TOSClassTree.SWORDSMAN, TOSClassTree.WIZARD, TOSClassTree.ARCHER, TOSClassTree.CLERIC]">
-        <img [src]="'assets/images/equipment_class_' + classTree.toString().toLowerCase() + '_' + (equipment.isUsableBy(classTree) ? 'yes' : 'no') + '.png'" style="vertical-align: top" />
-        <span class="ml-1" [ngClass]="{ 'text-muted': !equipment.isUsableBy(classTree) }" *ngIf="labels">
+        <img [src]="'assets/images/equipment_class_' + classTree.toString().toLowerCase() + '_' + (equipment.IsUsableBy(classTree) ? 'yes' : 'no') + '.png'" style="vertical-align: top" />
+        <span class="ml-1" [ngClass]="{ 'text-muted': !equipment.IsUsableBy(classTree) }" *ngIf="labels">
           {{ classTree.toString() }}
         </span>
       </div>

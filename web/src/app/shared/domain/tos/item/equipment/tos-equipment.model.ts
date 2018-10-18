@@ -4,35 +4,48 @@ import {TOSDataService} from "../../data/tos-data.service";
 import {TOSRepositoryService} from "../../tos-repository.service";
 
 export class TOSEquipment extends TOSItem {
+  private readonly anvilATK: number[];
+  private readonly anvilDEF: number[];
+  private readonly anvilPrice: number[];
+  private readonly transcendPrice: number[];
+
   private link_Set: TOSEquipmentSet;
 
-  Bonus: TOSEquipmentBonus[];
-  Durability: number;
-  Grade: TOSEquipmentGrade;
-  Level: number;
-  Material: TOSEquipmentMaterial;
-  Potential: number;
-  ReinforceRatio: number;
-  RequiredClass: string;
-  RequiredLevel: number;
-  Sockets: number;
-  SocketsLimit: number;
-  Stars: number;
-  Stat_ATTACK_MAGICAL: number;
-  Stat_ATTACK_PHYSICAL_MAX: number;
-  Stat_ATTACK_PHYSICAL_MIN: number;
-  Stat_DEFENSE_MAGICAL: number;
-  Stat_DEFENSE_PHYSICAL: number;
-  TypeAttack: TOSAttackType;
-  TypeEquipment: TOSEquipmentType;
-  Unidentified: boolean;
-  UnidentifiedRandom: boolean;
+  readonly Bonus: TOSEquipmentBonus[];
+  readonly Durability: number;
+  readonly Grade: TOSEquipmentGrade;
+  readonly Level: number;
+  readonly Material: TOSEquipmentMaterial;
+  readonly Potential: number;
+  readonly RequiredClass: string;
+  readonly RequiredLevel: number;
+  readonly Sockets: number;
+  readonly SocketsLimit: number;
+  readonly Stars: number;
+  readonly Stat_ATTACK_MAGICAL: number;
+  readonly Stat_ATTACK_PHYSICAL_MAX: number;
+  readonly Stat_ATTACK_PHYSICAL_MIN: number;
+  readonly Stat_DEFENSE_MAGICAL: number;
+  readonly Stat_DEFENSE_PHYSICAL: number;
+  readonly TypeAttack: TOSAttackType;
+  readonly TypeEquipment: TOSEquipmentType;
+  readonly Unidentified: boolean;
+  readonly UnidentifiedRandom: boolean;
 
   constructor(json: TOSEquipment) {
     super(json, 'equipment');
 
     this.$comparators['Grade'] = TOSEquipmentGrade.comparator;
 
+    this.anvilATK = json['AnvilATK']
+      ? JSON.parse(json['AnvilATK'] + '')
+      : null;
+    this.anvilDEF = json['AnvilDEF']
+      ? JSON.parse(json['AnvilDEF'] + '')
+      : null;
+    this.anvilPrice = json['AnvilPrice']
+      ? JSON.parse(json['AnvilPrice'] + '')
+      : null;
     this.Bonus = json.Bonus
       ? JSON
         .parse(json.Bonus + '')
@@ -44,7 +57,6 @@ export class TOSEquipment extends TOSItem {
     this.Level = +json.Level;
     this.Material = Object.values(TOSEquipmentMaterial)[+json.Material];
     this.Potential = +json.Potential;
-    this.ReinforceRatio = +json.ReinforceRatio;
     this.RequiredClass = json.RequiredClass;
     this.RequiredLevel = +json.RequiredLevel;
     this.Sockets = +json.Sockets;
@@ -55,6 +67,9 @@ export class TOSEquipment extends TOSItem {
     this.Stat_ATTACK_PHYSICAL_MIN = +json.Stat_ATTACK_PHYSICAL_MIN;
     this.Stat_DEFENSE_MAGICAL = +json.Stat_DEFENSE_MAGICAL;
     this.Stat_DEFENSE_PHYSICAL = +json.Stat_DEFENSE_PHYSICAL;
+    this.transcendPrice = json['TranscendPrice']
+      ? JSON.parse(json['TranscendPrice'] + '')
+      : null;
     this.TypeAttack = Object.values(TOSAttackType)[+json.TypeAttack];
     this.TypeEquipment = Object.values(TOSEquipmentType)[+json.TypeEquipment];
     this.Unidentified = (json.Unidentified + '') == 'True';
@@ -69,12 +84,18 @@ export class TOSEquipment extends TOSItem {
         : null;
   }
 
-  isUsableBy(classTree: TOSClassTree): boolean {
+  get IsAnvilAvailable(): boolean {
+    return (this.AnvilATK(1) > 0 || this.AnvilDEF(1) > 0) && this.AnvilPrice(1) > 0;
+  }
+  get IsTranscendAvailable(): boolean {
+    return this.TranscendPrice(1) > 0;
+  }
+  IsUsableBy(classTree: TOSClassTree): boolean {
     let index = Object.values(TOSClassTree).indexOf(classTree);
     return this.RequiredClass[index] == '1';
   }
 
-  isType1HWeapon(): boolean {
+  IsType1HWeapon(): boolean {
     return [
       TOSEquipmentType.ONE_HANDED_BOW,
       TOSEquipmentType.ONE_HANDED_MACE,
@@ -84,7 +105,7 @@ export class TOSEquipment extends TOSItem {
       TOSEquipmentType.ONE_HANDED_SWORD,
     ].indexOf(this.TypeEquipment) > -1;
   }
-  isType2HWeapon(): boolean {
+  IsType2HWeapon(): boolean {
     return [
       TOSEquipmentType.TWO_HANDED_BOW,
       TOSEquipmentType.TWO_HANDED_MACE,
@@ -94,7 +115,7 @@ export class TOSEquipment extends TOSItem {
       TOSEquipmentType.TWO_HANDED_SWORD,
     ].indexOf(this.TypeEquipment) > -1;
   }
-  isTypeFashion(): boolean {
+  IsTypeFashion(): boolean {
     return [
       TOSEquipmentType.COSTUME_ARMBAND,
       TOSEquipmentType.COSTUME_EFFECT,
@@ -109,18 +130,18 @@ export class TOSEquipment extends TOSItem {
     ].indexOf(this.TypeEquipment) > -1;
   }
 
-  public AnvilATK(level: number) { return TOSDataService.Equipment.AnvilATK(this, level) }
-  public AnvilDEF(level: number) { return TOSDataService.Equipment.AnvilDEF(this, level) }
-  public AnvilSilver(level: number) { return TOSDataService.Equipment.AnvilSilver(this, level) }
-  public AnvilSilverTotal(level: number) { return Array.from({length: level + 1}, (x,i) => this.AnvilSilver(i)).reduce((a, b) => a + b, 0) }
+  AnvilATK(level: number) { return level > 0 && this.anvilATK ? this.anvilATK[level - 1] : 0 }
+  AnvilDEF(level: number) { return level > 0 && this.anvilDEF ? this.anvilDEF[level - 1] : 0 }
+  AnvilPrice(level: number) { return level > 0 && this.anvilPrice ? this.anvilPrice[level - 1] : 0 }
+  AnvilPriceTotal(level: number) { return Array.from({length: level + 1}, (x, i) => this.AnvilPrice(i)).reduce((a, b) => a + b, 0) }
 
-  public TranscendATKRatio(level: number) { return TOSDataService.Equipment.TranscendATKRatio(level); }
-  public TranscendMDEFRatio(level: number) { return TOSDataService.Equipment.TranscendMDEFRatio(level); }
-  public TranscendPDEFRatio(level: number) { return TOSDataService.Equipment.TranscendPDEFRatio(level); }
-  public TranscendShards(level: number) { return TOSDataService.Equipment.TranscendMaterial(this, level); }
-  public TranscendShardsTotal(level: number) {
+  TranscendATKRatio(level: number) { return TOSDataService.Equipment.TranscendATKRatio(level); }
+  TranscendMDEFRatio(level: number) { return TOSDataService.Equipment.TranscendMDEFRatio(level); }
+  TranscendPDEFRatio(level: number) { return TOSDataService.Equipment.TranscendPDEFRatio(level); }
+  TranscendPrice(level: number) { return level > 0 && this.transcendPrice ? this.transcendPrice[level - 1] : 0 }
+  TranscendPriceTotal(level: number) {
     for (var sum = 0, i = 1; i <= level; i ++)
-      sum += this.TranscendShards(i);
+      sum += this.TranscendPrice(i);
 
     return sum;
   }

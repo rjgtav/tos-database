@@ -37,9 +37,9 @@ export class EntityDetailEnhancementComponent extends EntityDetailChildComponent
   ngOnChanges(changes: SimpleChanges) {
     super.ngOnChanges(changes);
 
-    this.anvilAvailable = this.equipment && this.equipment.AnvilSilver(1) > 0;
+    this.anvilAvailable = this.equipment && this.equipment.IsAnvilAvailable;
     this.attributeAvailable = !!this.attribute;
-    this.transcendAvailable = this.equipment && this.equipment.TranscendShards(1) > 0;
+    this.transcendAvailable = this.equipment && this.equipment.IsTranscendAvailable;
   }
 
   onAnvilChange(newValue) {
@@ -49,8 +49,8 @@ export class EntityDetailEnhancementComponent extends EntityDetailChildComponent
     this.anvilLevelChange.emit(newValue);
 
     this.anvilBonus = this.equipment.AnvilDEF(this.anvilLevel) || this.equipment.AnvilATK(this.anvilLevel);
-    this.anvilSilver = this.equipment.AnvilSilver(this.anvilLevel);
-    this.anvilSilverTotal = this.equipment.AnvilSilverTotal(this.anvilLevel);
+    this.anvilSilver = this.equipment.AnvilPrice(this.anvilLevel);
+    this.anvilSilverTotal = this.equipment.AnvilPriceTotal(this.anvilLevel);
   }
 
   onAttributeChange(newValue) {
@@ -69,8 +69,8 @@ export class EntityDetailEnhancementComponent extends EntityDetailChildComponent
     this.transcendLevelChange.emit(newValue);
 
     this.transcendBonus = this.equipment.TranscendATKRatio(this.transcendLevel);
-    this.transcendShards = this.equipment.TranscendShards(this.transcendLevel);
-    this.transcendShardsTotal = this.equipment.TranscendShardsTotal(this.transcendLevel);
+    this.transcendShards = this.equipment.TranscendPrice(this.transcendLevel);
+    this.transcendShardsTotal = this.equipment.TranscendPriceTotal(this.transcendLevel);
   }
 
   onWheel(event) {} // Do nothing.. just so the user can use the wheel to control the input
