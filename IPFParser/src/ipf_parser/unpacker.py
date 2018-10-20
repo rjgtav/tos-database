@@ -4,6 +4,7 @@ import shutil
 import subprocess
 
 from ipf_parser import constants
+from ipf_parser.parsers.parser_enums import TOSRegion
 from utils import fileutil
 
 IPF_BLACKLIST = [
@@ -131,7 +132,10 @@ def unpack_translations():
     shutil.copytree(source, destination)
 
 
-def unpack():
+def unpack(region):
+    if region != TOSRegion.iTOS:
+        return False
+
     logging.debug('Unpacking...')
     version_new = False
     version_new = unpack_release() or version_new

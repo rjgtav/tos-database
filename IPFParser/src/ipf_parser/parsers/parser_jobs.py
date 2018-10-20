@@ -1,3 +1,4 @@
+# coding=utf-8
 import csv
 import httplib
 import logging
@@ -18,8 +19,11 @@ class TOSJobDifficulty(TOSEnum):
     def value_of(string):
         return {
             'EASY': TOSJobDifficulty.EASY,
+            u'쉬움': TOSJobDifficulty.EASY,
             'HARD': TOSJobDifficulty.HARD,
+            u'어려움': TOSJobDifficulty.HARD,
             'NORMAL': TOSJobDifficulty.NORMAL,
+            u'보통': TOSJobDifficulty.NORMAL,
             '': None,
         }[string.upper()]
 
@@ -56,17 +60,30 @@ class TOSJobType(TOSEnum):
     def value_of(string):
         return {
             'ATTACK': TOSJobType.ATTACK,
+            u'공격': TOSJobType.ATTACK,
             'CONTROL': TOSJobType.SUPPORT_CONTROL,
-            'CRAFT': TOSJobType.CRAFTING,
+            u'조련': TOSJobType.SUPPORT_CONTROL,
+            'CRAFT': TOSJobType.CRAFTING,  # TODO: remove on next patch?
+            u'제작': TOSJobType.CRAFTING,
             'CRAFTING': TOSJobType.CRAFTING,
+            u'제작': TOSJobType.CRAFTING,
             'DEFENSE': TOSJobType.DEFENSE,
+            u'방어': TOSJobType.DEFENSE,
             'INSTALL TYPE ATTACK': TOSJobType.ATTACK_INSTALL,
+            u'설치형 공격': TOSJobType.ATTACK_INSTALL,
             'MANEUVERING ATTACK': TOSJobType.ATTACK_MOBILITY,
-            'OFFENSE': TOSJobType.ATTACK,
+            u'기동형 공격': TOSJobType.ATTACK_MOBILITY,
+            'OFFENSE': TOSJobType.ATTACK,  # TODO: remove on next patch?
+            u'공격': TOSJobType.ATTACK,
             'PARTY': TOSJobType.SUPPORT_PARTY,
+            u'파티': TOSJobType.SUPPORT_PARTY,
             'PROVOKE': TOSJobType.DEFENSE_PROVOKE,
+            u'도발': TOSJobType.DEFENSE_PROVOKE,
             'SUMMON': TOSJobType.ATTACK_SUMMON,
+            u'소환': TOSJobType.ATTACK_SUMMON,
             'SUPPORT': TOSJobType.SUPPORT,
+            u'지원': TOSJobType.SUPPORT,
+            u'보조': TOSJobType.SUPPORT,
             '': None
         }[string.upper()]
 

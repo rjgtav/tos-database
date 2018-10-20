@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations
+from ipf_parser.parsers.parser_enums import TOSRegion
 from ipf_parser.utils import imageutil
 
 
@@ -82,7 +83,7 @@ def parse_entity_icon(icon):
         return icon
 
 
-def parse(version_new):
+def parse(region, version_new):
     logging.debug('Parsing assets...')
 
     parse_icons('baseskinset.xml', version_new)
@@ -92,7 +93,7 @@ def parse(version_new):
     parse_icons('monillust.xml', version_new)
     parse_icons('skillicon.xml', version_new)
 
-    parse_images_jobs(version_new)
+    parse_images_jobs(region, version_new)
 
 
 def parse_icons(file_name, version_new):
@@ -100,7 +101,6 @@ def parse_icons(file_name, version_new):
 
     data_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'baseskinset', file_name)
     data = ET.parse(data_path).getroot()
-
 
     # example: <imagelist category="Monster_icon_boss_02">
     for imagelist in data:
@@ -147,9 +147,9 @@ def parse_icons(file_name, version_new):
             globals.assets_icons[image_name] = image_name
 
 
-def parse_images_jobs(version_new):
-    #if not version_new:
-    #    return
+def parse_images_jobs(region, version_new):
+    if not version_new or region != TOSRegion.iTOS:
+        return
 
     logging.debug('Parsing images for jobs...')
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')

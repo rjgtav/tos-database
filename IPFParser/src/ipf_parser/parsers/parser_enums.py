@@ -1,6 +1,29 @@
 from ipf_parser.utils.tosenum import TOSEnum
 
 
+class TOSRegion(TOSEnum):
+    iTOS = 0
+    kTEST = 1
+    kTOS = 2
+
+    @staticmethod
+    def to_string(value):
+        return {
+            TOSRegion.iTOS: 'iTOS',
+            TOSRegion.kTEST: 'kTEST',
+            TOSRegion.kTOS: 'kTOS',
+        }[value]
+
+    @staticmethod
+    def value_of(string):
+        return {
+            'iTOS': TOSRegion.iTOS,
+            'kTEST': TOSRegion.kTEST,
+            'kTOS': TOSRegion.kTOS,
+            '': None
+        }[string]
+
+
 class TOSElement(TOSEnum):
     DARK = 0
     EARTH = 1

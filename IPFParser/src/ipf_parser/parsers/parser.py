@@ -1,4 +1,4 @@
-import csv
+import unicodecsv as csv
 import json
 import logging
 import os
@@ -7,8 +7,9 @@ from ipf_parser import constants, globals
 from ipf_parser.globals import Link
 from ipf_parser.parsers import parser_translations, parser_items, parser_monsters, parser_items_collections, \
     parser_items_recipes, parser_items_equipment, parser_assets, parser_items_books, parser_maps, \
-    parser_items_equipment_sets, parser_items_cubes, parser_items_cards, parser_items_gems, parser_typescript, \
+    parser_items_equipment_sets, parser_items_cubes, parser_items_cards, parser_items_gems, \
     parser_skills, parser_jobs, parser_attributes
+from ipf_parser.utils import luautil
 
 
 def csv_write(data, path):
@@ -39,10 +40,13 @@ def csv_write(data, path):
     file.close()
 
 
-def parse(version_new):
+def parse(region, version_new):
+    # Initialize LUA environment
+    luautil.init()
+
     # Parse assets
-    parser_translations.parse()
-    parser_assets.parse(version_new)
+    parser_translations.parse(region)
+    parser_assets.parse(region, version_new)
 
     # Parse data
     logging.debug('Parsing data...')
@@ -60,7 +64,6 @@ def parse(version_new):
     parser_maps.parse()
     parser_monsters.parse()
     parser_skills.parse()
-    parser_typescript.parse()
 
     # Parse links
     logging.debug('Parsing links...')

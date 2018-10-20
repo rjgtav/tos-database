@@ -5,13 +5,18 @@ import os
 import xml.etree.ElementTree as ET
 
 from ipf_parser import constants, globals
+from ipf_parser.parsers.parser_enums import TOSRegion
 from ipf_parser.utils.stringutil import is_ascii
 
 TRANSLATION_PREFIX = '@dicID_^*$'
 TRANSLATION_SUFFIX = '$*^'
 
 
-def parse():
+def parse(region):
+    if region != TOSRegion.iTOS:
+        globals.translations = False
+        return
+
     translations = parse_translations('English')
     parse_dictionary(translations)
 
@@ -94,6 +99,8 @@ def translate(key):
 
     # In case the key is already in english, there's no need to translate
     if is_ascii(key):
+        return key
+    if not globals.translations:
         return key
 
     if key != '' and key not in globals.translations:
