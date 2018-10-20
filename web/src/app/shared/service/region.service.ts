@@ -56,8 +56,11 @@ export class RegionService implements CanActivate {
     let regionNew = '/' + TOSRegion.toUrl(region) + '/';
 
     let url = this.router.routerState.snapshot.url.replace(regionOld, regionNew);
+
+    if (url.indexOf('?') > 0)
         url = url.slice(0, url.indexOf('?'));
 
+    //console.log('regionSelect', regionOld, regionNew, url)
     this.router.navigate([url], { queryParamsHandling: 'merge' });
   }
 

@@ -25,7 +25,7 @@ export abstract class CRUDRepository<T extends Comparable> {
       this.data = [];
       this.dataById = {};
       let path = (!isDevMode() ? '/tos-database' : '') + this.options.path;
-          path = this.options.path.replace('data/', 'data' + RegionService.RegionUrl(''));
+          path = path.replace('data/', 'data' + RegionService.RegionUrl(''));
 
       window['Papa']['SCRIPT_PATH'] = 'assets/js/papaparse.min.js';
       window['Papa'].parse(path, {
