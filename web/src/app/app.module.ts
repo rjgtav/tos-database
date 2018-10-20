@@ -23,6 +23,7 @@ import {
   faWeightHanging,
   faTrashAlt, faTint
 } from "@fortawesome/free-solid-svg-icons";
+import {LoadingBarModule} from "@ngx-loading-bar/core";
 
 library.add(faBolt, faClock, faHeart, faMinusCircle, faPlusCircle, faTrashAlt, faSearch, faStar, faTimesCircle, faTint, faWeightHanging);
 
@@ -36,6 +37,7 @@ library.add(faBolt, faClock, faHeart, faMinusCircle, faPlusCircle, faTrashAlt, f
 
     FontAwesomeModule,
     NgbModule,
+    LoadingBarModule.forRoot(),
 
     SharedModule,
     AppRoutingModule,

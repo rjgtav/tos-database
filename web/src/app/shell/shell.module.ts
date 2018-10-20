@@ -7,14 +7,16 @@ import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from "@angular/router";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {ClickOutsideModule} from "ng-click-outside";
+import {LoadingBarModule} from "@ngx-loading-bar/core";
 
 @NgModule({
   imports: [
     CommonModule,
     ClickOutsideModule,
-    NgbModule,
     FontAwesomeModule,
-    RouterModule
+    LoadingBarModule,
+    NgbModule,
+    RouterModule,
   ],
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
   exports: [LayoutComponent]

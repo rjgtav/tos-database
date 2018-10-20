@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark mb-5" style="background: #002A3A;">
-  <a class="navbar-brand mr-4 p-0 order-0" routerLink="/">
+  <a class="navbar-brand mr-4 p-0 order-0" [routerLink]="routerLink('')">
     <img src="assets/images/logo_tos.png" height="47" style="transform: scale(1.25)" />
   </a>
   <div class="navbar-expand m-auto m-sm-0 order-2 order-sm-1 pb-2 pb-sm-0 pt-3 pt-sm-0">
@@ -63,7 +63,7 @@
           </div>
         </a>
       </li>
-      <a class="nav-item nav-link ml-1 mr-1" href="http://feedback.userreport.com/e23e275c-deb8-4560-9434-070fc22b6208" target="_blank" ngbTooltip="Feedback" placement="bottom">
+      <a class="nav-item nav-link ml-1 mr-1 d-none d-sm-inline-block" href="http://feedback.userreport.com/e23e275c-deb8-4560-9434-070fc22b6208" target="_blank" ngbTooltip="Feedback" placement="bottom">
         <fa-icon [icon]="faCommentAlt"></fa-icon>
       </a>
       <a class="nav-item nav-link ml-1 mr-1" (click)="theme.toggle()" ngbTooltip="Toggle Theme" placement="bottom">
@@ -74,5 +74,10 @@
       </a>
     </ul>
   </div>
+
+  <ngx-loading-bar class="position-absolute w-100" style="left: 0; bottom: 0"
+                   [color]="'#006bbe'"
+                   [fixed]="false"
+                   [includeSpinner]="false"></ngx-loading-bar>
 </nav>
 

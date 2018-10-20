@@ -10,6 +10,7 @@ import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {TOSRepositoryService} from "../domain/tos/tos-repository.service";
 import {map} from "rxjs/operators";
+import {LoadingBarService} from "@ngx-loading-bar/core";
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +37,7 @@ export class RegionService implements CanActivate {
       : null;
   }
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private loadingBar: LoadingBarService, private route: ActivatedRoute, private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     let segments = state.url.split('/').filter(value => value.length);
@@ -47,7 +48,7 @@ export class RegionService implements CanActivate {
 
     //console.log('canActivate', regionOld, '=>', regionNew, 'state', segments)
     return TOSRepositoryService
-      .load(regionOld != regionNew)
+      .load(this.loadingBar, regionOld != regionNew)
       .pipe(map(value => true));
   }
 

@@ -14,6 +14,7 @@ import {TOSMapRepository} from "./map/tos-map.repository";
 import {TOSMonsterRepository} from "./monster/tos-monster.repository";
 import {TOSSkillRepository} from "./skill/tos-skill.repository";
 import {tap} from "rxjs/operators";
+import {LoadingBarService} from "@ngx-loading-bar/core";
 
 export abstract class TOSRepositoryService {
 
@@ -98,25 +99,34 @@ export abstract class TOSRepositoryService {
   static searchRecipes = TOSRepositoryService.recipeRepository.search;
   static searchSkills = TOSRepositoryService.skillRepository.search;
 
-  static load(force: boolean = false) {
-    return !this.isLoaded || force
-    ? forkJoin([
-        TOSRepositoryService.attributeRepository.load(),
-        TOSRepositoryService.bookRepository.load(),
-        TOSRepositoryService.cardRepository.load(),
-        TOSRepositoryService.collectionRepository.load(),
-        TOSRepositoryService.cubeRepository.load(),
-        TOSRepositoryService.equipmentRepository.load(),
-        TOSRepositoryService.equipmentSetRepository.load(),
-        TOSRepositoryService.gemRepository.load(),
-        TOSRepositoryService.itemRepository.load(),
-        TOSRepositoryService.jobRepository.load(),
-        TOSRepositoryService.mapRepository.load(),
-        TOSRepositoryService.monsterRepository.load(),
-        TOSRepositoryService.recipeRepository.load(),
-        TOSRepositoryService.skillRepository.load(),
-      ]).pipe(tap(value => this.isLoaded = true))
-    : of(null)
+  static load(loadingBar: LoadingBarService, force: boolean = false) {
+    let load = !this.isLoaded || force;
+    let loadProgress = 0;
+    let loadList = load ? [
+      TOSRepositoryService.attributeRepository.load(),
+      TOSRepositoryService.bookRepository.load(),
+      TOSRepositoryService.cardRepository.load(),
+      TOSRepositoryService.collectionRepository.load(),
+      TOSRepositoryService.cubeRepository.load(),
+      TOSRepositoryService.equipmentRepository.load(),
+      TOSRepositoryService.equipmentSetRepository.load(),
+      TOSRepositoryService.gemRepository.load(),
+      TOSRepositoryService.itemRepository.load(),
+      TOSRepositoryService.jobRepository.load(),
+      TOSRepositoryService.mapRepository.load(),
+      TOSRepositoryService.monsterRepository.load(),
+      TOSRepositoryService.recipeRepository.load(),
+      TOSRepositoryService.skillRepository.load(),
+    ] : null;
+
+    if (load) {
+      loadingBar.set(0);
+      loadList = loadList.map(value => value.pipe(tap(value => loadingBar.set(loadProgress += 100 / (loadList.length + 1)))));
+    }
+
+    return load
+      ? forkJoin(loadList).pipe(tap(value => this.isLoaded = loadingBar.complete() || true))
+      : of(null)
   }
 
 }
