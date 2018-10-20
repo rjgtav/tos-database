@@ -14,18 +14,13 @@ export class EntityDetailInformationComponent extends EntityDetailChildComponent
   @Input() divider: boolean;
   @Input() header: boolean;
 
-  id: number;
-  level: number;
+  skillLevel: number;
   subscriptionLevels: Subscription;
 
   constructor(private changeDetector: ChangeDetectorRef) { super() }
 
   onSkillLevelsChange(value: { [key: number]: number }) {
-    if (value[this.skill.$ID] == this.level && this.id == this.skill.$ID) return;
-
-    this.id = this.skill.$ID;
-    this.level = value[this.skill.$ID];
-
+    this.skillLevel = value[this.skill.$ID];
     this.changeDetector.detectChanges();
   }
 

@@ -2,7 +2,6 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
-import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
 
 @Injectable()
 export class AttributeListConfigurationResolver implements Resolve<TOSListConfiguration> {
@@ -11,8 +10,7 @@ export class AttributeListConfigurationResolver implements Resolve<TOSListConfig
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '',
-          transformIcon: TOSEntity.getIcon },
+        { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '' },
         { value: '$ID',             type: TOSListTableColumnType.TEXT,      isNotMobile: true },
         { value: 'Name',            type: TOSListTableColumnType.TEXT,      isWide: true},
         { value: 'DescriptionHTML', type: TOSListTableColumnType.TEXT,      label: 'Description', isNotMobile: true, isWide: true},

@@ -80,8 +80,7 @@ export class SkillListConfigurationResolver implements Resolve<TOSListConfigurat
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '',
-          transformIcon: TOSEntity.getIcon },
+        { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '' },
         { value: '$ID',             type: TOSListTableColumnType.TEXT,      isNotMobile: true },
         { value: 'Name',            type: TOSListTableColumnType.TEXT,      isWide: true},
         { value: 'RequiredCircle',  type: TOSListTableColumnType.TEXT,      label: 'Circle'},

@@ -3,6 +3,7 @@ import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faCommentAlt, faMoon} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
+import {RegionService} from "../../shared/service/region.service";
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,7 @@ import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
 })
 export class HeaderComponent {
   Theme = Theme;
+  RegionService = RegionService;
 
   faCommentAlt = faCommentAlt;
   faGithub = faGithub;
@@ -18,7 +20,16 @@ export class HeaderComponent {
   faSun = faSun;
 
   isOpenDatabase: boolean;
+  isOpenRegion: boolean;
 
-  constructor(public theme: ThemeService) {}
+  constructor(private regionService: RegionService, public theme: ThemeService) {}
+
+  routerLink(url: string): string {
+    return RegionService.RegionUrl(url);
+  }
+
+  regionSelect(region: any) {
+    this.regionService.regionRelect(region);
+  }
 
 }

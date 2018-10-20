@@ -1,8 +1,8 @@
 <nav class="navbar navbar-dark mb-5" style="background: #002A3A;">
-  <a class="navbar-brand mr-4 p-0" routerLink="/">
+  <a class="navbar-brand mr-4 p-0 order-0" routerLink="/">
     <img src="assets/images/logo_tos.png" height="47" style="transform: scale(1.25)" />
   </a>
-  <div class="navbar-expand">
+  <div class="navbar-expand m-auto m-sm-0 order-2 order-sm-1 pb-2 pb-sm-0 pt-3 pt-sm-0">
     <ul class="navbar-nav">
       <!--
         <a class="dropdown-item" style="color: grey" routerLink="game/achievements">Achievements</a>
@@ -21,38 +21,48 @@
            routerLinkActive="active">Database
           <div class="dropdown-menu" [ngClass]="{ 'show': isOpenDatabase }">
             <div class="dropdown-header">Items</div>
-            <a class="dropdown-item" routerLink="database/books">Books</a>
-            <a class="dropdown-item" routerLink="database/cards">Cards</a>
-            <a class="dropdown-item" routerLink="database/collections">Collections</a>
-            <a class="dropdown-item" routerLink="database/cubes">Cubes</a>
-            <a class="dropdown-item" routerLink="database/equipment">Equipment</a>
-            <a class="dropdown-item" routerLink="database/equipment-sets">Equipment Sets</a>
-            <a class="dropdown-item" routerLink="database/gems">Gems</a>
-            <a class="dropdown-item" routerLink="database/items">Items</a>
-            <a class="dropdown-item" routerLink="database/recipes">Recipes</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/books')">Books</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/cards')">Cards</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/collections')">Collections</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/cubes')">Cubes</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/equipment')">Equipment</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/equipment-sets')">Equipment Sets</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/gems')">Gems</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/items')">Items</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/recipes')">Recipes</a>
             <div class="dropdown-divider"></div>
             <div class="dropdown-header">Player</div>
-            <a class="dropdown-item" routerLink="database/attributes">Attributes</a>
-            <a class="dropdown-item" routerLink="database/classes">Classes</a>
-            <a class="dropdown-item" routerLink="database/skills">Skills</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/attributes')">Attributes</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/classes')">Classes</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/skills')">Skills</a>
             <div class="dropdown-divider"></div>
             <div class="dropdown-header">World</div>
-            <a class="dropdown-item" routerLink="database/monsters">Monsters</a>
+            <a class="dropdown-item" [routerLink]="routerLink('database/monsters')">Monsters</a>
           </div>
         </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link tos-link" routerLink="simulator" routerLinkActive="active">Skill Simulator</a>
+        <a class="nav-link tos-link" [routerLink]="routerLink('simulator')" routerLinkActive="active">Skill Simulator</a>
       </li>
     </ul>
   </div>
-  <div class="navbar-expand ml-auto">
-    <div class="navbar-nav align-items-center">
-      <a class="nav-item nav-link ml-1 mr-1 d-none d-md-inline" href="https://treeofsavior.com/">
-        <fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon>
-        treeofsavior.com
-      </a>
+  <div class="navbar-expand ml-auto order-1 order-sm-2">
+    <ul class="navbar-nav align-items-center">
+      <!-- Region selector -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle tos-link" style="text-transform: initial;"
+           [attachOutsideOnClick]="true"
+           (click)="isOpenRegion = !isOpenRegion; $event.preventDefault()"
+           (clickOutside)="isOpenRegion = false">{{ RegionService.Region }}
+          <div class="dropdown-menu" [ngClass]="{ 'show': isOpenRegion }">
+            <a *ngFor="let region of RegionService.Regions" class="dropdown-item" style="text-transform: initial;"
+               [href]="'#' + region"
+               [ngClass]="{ 'active': RegionService.Region == region }"
+               (click)="regionSelect(region)">{{ region }}</a>
+          </div>
+        </a>
+      </li>
       <a class="nav-item nav-link ml-1 mr-1" href="http://feedback.userreport.com/e23e275c-deb8-4560-9434-070fc22b6208" target="_blank" ngbTooltip="Feedback" placement="bottom">
         <fa-icon [icon]="faCommentAlt"></fa-icon>
       </a>
@@ -62,7 +72,7 @@
       <a class="nav-item nav-link ml-1 mr-1" href="https://github.com/rjgtav/tos-database" target="_blank">
         <fa-icon [icon]="faGithub" [size]="'2x'"></fa-icon>
       </a>
-    </div>
+    </ul>
   </div>
 </nav>
 

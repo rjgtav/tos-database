@@ -4,13 +4,13 @@ import {Comparable} from "../domain/tos/entity/tos-entity.model";
 import {Filter} from "../directives/filter.directive";
 import {Sort, SortOrder} from "../directives/sort.directive";
 import {isDevMode} from "@angular/core";
+import {RegionService} from "./region.service";
 
 
 export abstract class CRUDRepository<T extends Comparable> {
 
   private data: T[] = null;
   private dataById: { [id: number] : T; } = null;
-  private loader: Observable<T[]>;
 
   protected constructor(private options: TOSRepositoryOptions<T>) {
     this.findAll = this.findAll.bind(this);
@@ -19,21 +19,16 @@ export abstract class CRUDRepository<T extends Comparable> {
   }
 
   public load(): Observable<T[]> {
-    let complete = (observable) => {
-      observable.next(this.data);
-      observable.complete();
-    };
+    this.data = null;
 
-    if (this.data != null)
-      return Observable.create(complete);
-
-    return this.loader = this.loader || Observable.create(observable => {
+    return Observable.create(observable => {
       this.data = [];
       this.dataById = {};
-      this.options.path = (!isDevMode() ? '/tos-database' : '') + this.options.path;
+      let path = (!isDevMode() ? '/tos-database' : '') + this.options.path;
+          path = this.options.path.replace('data/', 'data' + RegionService.RegionUrl(''));
 
       window['Papa']['SCRIPT_PATH'] = 'assets/js/papaparse.min.js';
-      window['Papa'].parse(this.options.path, {
+      window['Papa'].parse(path, {
         download: true,
         header: true,
         skipEmptyLines: true,
@@ -41,7 +36,9 @@ export abstract class CRUDRepository<T extends Comparable> {
         complete: (results) => {
           if (this.options.loadComplete)
             this.data = this.options.loadComplete(this.data);
-          complete(observable)
+
+          observable.next(this.data);
+          observable.complete();
         },
         step: (results, parser) => {
           let entry: T = this.options.loadStep(results.data[0]);

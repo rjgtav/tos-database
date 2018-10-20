@@ -1,6 +1,5 @@
 import {TOSAttackType, TOSClassTree, TOSEntity, TOSStat} from "../../entity/tos-entity.model";
 import {TOSItem} from "../tos-item.model";
-import {TOSDataService} from "../../data/tos-data.service";
 import {TOSRepositoryService} from "../../tos-repository.service";
 
 export class TOSEquipment extends TOSItem {
@@ -135,9 +134,9 @@ export class TOSEquipment extends TOSItem {
   AnvilPrice(level: number) { return level > 0 && this.anvilPrice ? this.anvilPrice[level - 1] : 0 }
   AnvilPriceTotal(level: number) { return Array.from({length: level + 1}, (x, i) => this.AnvilPrice(i)).reduce((a, b) => a + b, 0) }
 
-  TranscendATKRatio(level: number) { return TOSDataService.Equipment.TranscendATKRatio(level); }
-  TranscendMDEFRatio(level: number) { return TOSDataService.Equipment.TranscendMDEFRatio(level); }
-  TranscendPDEFRatio(level: number) { return TOSDataService.Equipment.TranscendPDEFRatio(level); }
+  TranscendATKRatio(level: number) { return level * 0.1; }
+  TranscendMDEFRatio(level: number) { return level * 0.1; }
+  TranscendPDEFRatio(level: number) { return level * 0.1; }
   TranscendPrice(level: number) { return level > 0 && this.transcendPrice ? this.transcendPrice[level - 1] : 0 }
   TranscendPriceTotal(level: number) {
     for (var sum = 0, i = 1; i <= level; i ++)

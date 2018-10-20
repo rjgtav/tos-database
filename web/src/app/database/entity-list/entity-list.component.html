@@ -68,7 +68,9 @@
         </div>
 
         <div *ngIf="column.type == TOSListTableColumnType.ICON" class="text-center">
-          <img  height="40" width="40" [src]="column.transformIcon(row)" [title]="row[column.value] != column.transformIcon(row) ? row[column.value] : ''" />
+          <img height="40" width="40"
+               [src]="column.transformIcon ? column.transformIcon(row) : row[column.value]"
+               [title]="(column.transformIcon ? column.transformIcon(row) : row[column.value]) != row[column.value] ? row[column.value] : ''" />
         </div>
 
         <div *ngIf="column.type == TOSListTableColumnType.ICON_LINK" class="text-right">

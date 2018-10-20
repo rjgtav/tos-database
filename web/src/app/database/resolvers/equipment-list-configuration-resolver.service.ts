@@ -109,8 +109,7 @@ export class EquipmentListConfigurationResolver implements Resolve<TOSListConfig
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'Icon',          type: TOSListTableColumnType.ICON,        label: '',
-          transformIcon: TOSEntity.getIcon },
+        { value: 'Icon',          type: TOSListTableColumnType.ICON,        label: '' },
         { value: '$ID',           type: TOSListTableColumnType.TEXT,        isNotMobile: true },
         { value: 'Name',          type: TOSListTableColumnType.TEXT,        isWide: true },
         { value: 'Material',      type: TOSListTableColumnType.TEXT,        isNotMobile: true },

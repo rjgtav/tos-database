@@ -1,10 +1,9 @@
-import {ChangeDetectionStrategy, Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {Subscription} from "rxjs";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {TOSSkill} from "../../../shared/domain/tos/skill/tos-skill.model";
 import {TOSAttribute} from "../../../shared/domain/tos/attribute/tos-attribute.model";
-import {TOSAttributeRepository} from "../../../shared/domain/tos/attribute/tos-attribute.repository";
 import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
 
 @Component({

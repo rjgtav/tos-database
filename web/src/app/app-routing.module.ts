@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {RegionService} from "./shared/service/region.service";
 
 const routes: Routes = [
   {
@@ -10,19 +11,42 @@ const routes: Routes = [
     path: 'simulator',
     loadChildren: './skill-simulator/skill-simulator.module#SkillSimulatorModule'
   },
+];
+
+const routesRegion: Routes = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'itos',
+    pathMatch: 'full'
+  },
+  {
+    path: 'itos',
+    canActivate: [RegionService],
+    children: routes,
+  },
+  {
+    path: 'ktest',
+    children: routes,
+    canActivate: [RegionService],
+  },
+  {
+    path: 'ktos',
+    children: routes,
+    canActivate: [RegionService],
+  },
+  {
+    matcher: RegionService.UrlMatcher,
+    redirectTo: 'itos/:redirect',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
+  imports: [RouterModule.forRoot(routesRegion, {
     anchorScrolling: 'enabled',
     onSameUrlNavigation: 'ignore',
     scrollPositionRestoration: 'disabled' // Note: as of angular 6.1, when 'enabled', we can't disable it for specific routes (e.g. the simulator)
   })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

@@ -1,4 +1,4 @@
-import {APP_INITIALIZER, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {SortDirective, SortGroupDirective} from './directives/sort.directive';
 import {FilterDirective, FilterGroupDirective} from "./directives/filter.directive";
@@ -39,8 +39,6 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {RouterModule} from "@angular/router";
 import {SanitizeCSSPipe} from "./directives/sanitize-css.pipe";
 import {SanitizeHTMLPipe} from "./directives/sanitize-html.pipe";
-import {HttpClient} from "@angular/common/http";
-import {TOSRepositoryService} from "./domain/tos/tos-repository.service";
 import {EntityDetailSkillComponent} from "./components/entity-detail/entity-detail-Skill/entity-detail-Skill.component";
 import {EntityDetailSkillFormulaComponent} from "./components/entity-detail/entity-detail-SkillFormula/entity-detail-SkillFormula.component";
 import {EntityDetailJobIconComponent} from "./components/entity-detail/entity-detail-JobIcon/skill-builder-job-icon.component";
@@ -124,7 +122,6 @@ import {EntityDetailJobAnimationComponent} from "./components/entity-detail/enti
     TimePipe,
   ],
   providers: [
-    { provide: APP_INITIALIZER, useFactory: TOSRepositoryService.factory, deps: [HttpClient], multi: true },
     TOSAttributeResolver,
     TOSBookResolver,
     TOSCardResolver,

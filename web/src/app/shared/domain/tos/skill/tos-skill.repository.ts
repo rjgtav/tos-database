@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import {TOSSkill} from "./tos-skill.model";
 import {CRUDRepository} from "../../../service/CRUD.repository";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TOSSkillRepository extends CRUDRepository<TOSSkill> {
 
-  private readonly skillsByIdName: {[key: string]: TOSSkill} = {};
-  private readonly skillsByJob: {[key: number]: TOSSkill[]} = {};
+  private skillsByIdName: {[key: string]: TOSSkill};
+  private skillsByJob: {[key: number]: TOSSkill[]};
 
   constructor() {
     super({
@@ -25,6 +26,13 @@ export class TOSSkillRepository extends CRUDRepository<TOSSkill> {
 
   findByIdName($ID_NAME: string): TOSSkill { return this.skillsByIdName[$ID_NAME]; }
   findByJob(job$ID: number): TOSSkill[] { return this.skillsByJob[job$ID]; }
+
+  load(): Observable<TOSSkill[]> {
+    this.skillsByIdName = {};
+    this.skillsByJob = {};
+
+    return super.load();
+  }
 
   private step(row: TOSSkill): TOSSkill {
     let entity = new TOSSkill(row);

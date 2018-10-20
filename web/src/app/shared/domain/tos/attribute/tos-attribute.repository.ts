@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import {TOSAttribute} from "./tos-attribute.model";
 import {CRUDRepository} from "../../../service/CRUD.repository";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TOSAttributeRepository extends CRUDRepository<TOSAttribute> {
 
-  private readonly attributesByIdName: {[key: string]: TOSAttribute} = {};
-  private readonly attributesByJob: {[key: number]: TOSAttribute[]} = {};
-  private readonly attributesBySkill: {[key: number]: TOSAttribute[]} = {};
+  private attributesByIdName: {[key: string]: TOSAttribute};
+  private attributesByJob: {[key: number]: TOSAttribute[]};
+  private attributesBySkill: {[key: number]: TOSAttribute[]};
 
   constructor() {
     super({
@@ -27,6 +28,14 @@ export class TOSAttributeRepository extends CRUDRepository<TOSAttribute> {
   findByIdName($ID_NAME: string): TOSAttribute { return this.attributesByIdName[$ID_NAME]; }
   findByJob(job$ID: number): TOSAttribute[] { return this.attributesByJob[job$ID]; }
   findBySkill(skill$ID: number): TOSAttribute[] { return this.attributesBySkill[skill$ID]; }
+
+  load(): Observable<TOSAttribute[]> {
+    this.attributesByIdName = {};
+    this.attributesByJob = {};
+    this.attributesBySkill = {};
+
+    return super.load();
+  }
 
   private step(row: TOSAttribute): TOSAttribute {
     let entity = new TOSAttribute(row);

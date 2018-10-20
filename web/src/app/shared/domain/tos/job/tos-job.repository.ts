@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import {TOSJob, TOSJobTree} from "./tos-job.model";
 import {CRUDRepository} from "../../../service/CRUD.repository";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TOSJobRepository extends CRUDRepository<TOSJob> {
 
-  private readonly jobsByIdName: {[key: string]: TOSJob} = {};
-  private readonly jobsByTree: {[key: string]: TOSJob[]} = {};
+  private jobsByIdName: {[key: string]: TOSJob};
+  private jobsByTree: {[key: string]: TOSJob[]};
 
   constructor() {
     super({
@@ -24,6 +25,13 @@ export class TOSJobRepository extends CRUDRepository<TOSJob> {
 
   findByIdName($ID_NAME: string): TOSJob { return this.jobsByIdName[$ID_NAME]; }
   findByTree(tree: TOSJobTree): TOSJob[] { return this.jobsByTree[tree]; }
+
+  load(): Observable<TOSJob[]> {
+    this.jobsByIdName = {};
+    this.jobsByTree = {};
+
+    return super.load();
+  }
 
   private step(row: TOSJob): TOSJob {
     let entity = new TOSJob(row);

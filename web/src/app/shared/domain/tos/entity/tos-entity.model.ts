@@ -1,14 +1,17 @@
+import {RegionService} from "../../../service/region.service";
+
 export abstract class Comparable {
   $comparators: { [key: string]: (a, b) => -1 | 0 | 1; } = {}
 }
 
 export abstract class TOSEntity extends Comparable {
-  $ID: number;
-  $ID_NAME: string;
+  private readonly url: string;
+
+  readonly $ID: number;
+  readonly $ID_NAME: string;
   Description: string;
   Icon: string;
-  Name: string;
-  Url: string;
+  readonly Name: string;
 
   protected constructor(json: TOSEntity, url: string) {
     super();
@@ -27,11 +30,11 @@ export abstract class TOSEntity extends Comparable {
     this.Name = json.Name;
 
     if (url)
-      this.Url = '/database/' + url + '/' + this.$ID;
+      this.url = '/database/' + url + '/' + this.$ID;
   }
 
-  static getIcon(entity: TOSEntity): string {
-    return entity.Icon;
+  get Url(): string {
+    return RegionService.RegionUrl(this.url);
   }
 
 }

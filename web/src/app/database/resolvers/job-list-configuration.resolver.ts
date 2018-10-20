@@ -40,8 +40,7 @@ export class JobListConfigurationResolver implements Resolve<TOSListConfiguratio
       sortColumn: 'JobTree',
 
       tableColumns: [
-        { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '',
-          transformIcon: TOSEntity.getIcon },
+        { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '' },
         { value: '$ID',             type: TOSListTableColumnType.TEXT,      isNotMobile: true },
         { value: 'Name',            type: TOSListTableColumnType.TEXT,      isWide: true},
         { value: 'CircleMax',       type: TOSListTableColumnType.TEXT,      label: 'Circles'},

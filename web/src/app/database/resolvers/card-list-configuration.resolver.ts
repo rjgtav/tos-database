@@ -32,8 +32,7 @@ export class CardListConfigurationResolver implements Resolve<TOSListConfigurati
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'Icon',            type: TOSListTableColumnType.ICON,  label: '',
-          transformIcon: TOSEntity.getIcon },
+        { value: 'Icon',            type: TOSListTableColumnType.ICON,  label: '' },
         { value: '$ID',             type: TOSListTableColumnType.TEXT,  isNotMobile: true },
         { value: 'Name',            type: TOSListTableColumnType.TEXT,  isWide: true},
         { value: 'MonsterElement',  type: TOSListTableColumnType.ICON,  label: 'Element', isNotMobile: true,
