@@ -68,7 +68,8 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Materials,Link_MonsterDrops,L
 9025,R_Old_Socket_Gold,icon_item_recipe_misc1,,"[642926, 642931, 642929]","[{""Item"": 9025, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 10}]",,[9025],,643018,Recipe - 오래된 황금 소켓,0,0000,21
 9027,R_misc_ore24,icon_item_recipe_misc1,,,"[{""Item"": 9027, ""Quantity"": 1}, {""Item"": 649009, ""Quantity"": 5}, {""Item"": 649004, ""Quantity"": 50}]",,[9027],,649027,Recipe - 펠트레민,0,0010,21
 9028,R_misc_ore25,icon_item_recipe_misc1,,,"[{""Item"": 9028, ""Quantity"": 1}, {""Item"": 645694, ""Quantity"": 5}, {""Item"": 649004, ""Quantity"": 50}]",,[9028],,649028,Recipe - 울스터마이트,0,0010,21
-9029,R_GuildColony_Item_mysticCristal,icon_item_recipe_misc1,,,"[{""Item"": 9029, ""Quantity"": 1}, {""Item"": 490005, ""Quantity"": 2}]",,[9029],,651005,Recipe - [콜로니전] 신비한 크리스탈,100,0010,21
+9029,R_GuildColony_Item_mysticCristal,icon_item_recipe_misc1,,,"[{""Item"": 9029, ""Quantity"": 1}, {""Item"": 490005, ""Quantity"": 2}]",,[9029],,651005,Recipe - [콜로니전] 신비한 크리스탈,100,0011,21
+9030,R_GuildColony_Item_AoE_Revive_Scroll,icon_item_recipe_misc1,,,"[{""Item"": 9030, ""Quantity"": 1}, {""Item"": 490005, ""Quantity"": 10}]",,[9030],,651006,Recipe - [콜로니전] 광역 부활 주문서,100,0011,21
 10006,R_SWD01_109,icon_item_weapon_misc1,[642158],,"[{""Item"": 10006, ""Quantity"": 1}, {""Item"": 645446, ""Quantity"": 16}]",,[10006],,101109,Recipe - 크리스,0,1111,21
 10008,R_SWD01_116,icon_item_weapon_misc1,,,"[{""Item"": 10008, ""Quantity"": 1}, {""Item"": 645462, ""Quantity"": 13}, {""Item"": 645573, ""Quantity"": 2}]",,[10008],,101116,Recipe - 모플라,0,1111,21
 10010,R_SWD02_101,icon_item_weapon_misc3,,,"[{""Item"": 10010, ""Quantity"": 1}, {""Item"": 645307, ""Quantity"": 2}]",,[10010],,102101,Recipe - 판토 소드,0,1111,21
