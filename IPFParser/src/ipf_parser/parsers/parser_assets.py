@@ -1,10 +1,13 @@
 import csv
 import httplib
 import logging
+import multiprocessing
 import os
 import shutil
 import urllib
 import xml.etree.ElementTree as ET
+from functools import partial
+from multiprocessing import Pool
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations
@@ -103,48 +106,55 @@ def parse_icons(file_name, version_new):
     data = ET.parse(data_path).getroot()
 
     # example: <imagelist category="Monster_icon_boss_02">
-    for imagelist in data:
-        image_category = imagelist.get('category')
+    # example: <image name="icon_wizar_energyBolt" file="\icon\skill\wizard\icon_wizar_energyBolt.png" />
+    data = [(image, imagelist) for imagelist in data for image in imagelist]
 
-        # example: <image name="icon_wizar_energyBolt" file="\icon\skill\wizard\icon_wizar_energyBolt.png" />
-        for image in imagelist:
-            if image.get('file') is None or image.get('name') is None:
-                continue
-            if file_name == 'baseskinset.xml' and image_category not in WHITELIST_BASESKINSET:
-                continue
-            if file_name == 'itemicon.xml' and image_category not in WHITELIST_ITEMICON:
-                continue
-            if file_name == 'skillicon.xml' and image_category not in WHITELIST_SKILLICON:
-                continue
+    pool = Pool(processes=multiprocessing.cpu_count())
+    pool.map(partial(parse_icons_step, file_name, version_new), data)
+    pool.terminate()
 
-            image_file = image.get('file').split('\\')[-1].lower()
-            image_name = image.get('name').lower()
-            image_rect = tuple(int(x) for x in image.get('imgrect').split()) if len(image.get('imgrect')) else None  # top, left, width, height
 
-            # Copy icon to web assets folder
-            copy_from = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', *image.get('file').lower().split('\\')[:-1])
-            copy_from = os.path.join(copy_from, image_file)
-            copy_to = os.path.join(constants.PATH_WEB_ASSETS_ICONS, image_name)
+def parse_icons_step(file_name, version_new, work):
+    image = work[0]
+    image_category = work[1].get('category')
 
-            if not os.path.isfile(copy_from):
-                # Note for future self:
-                # if you find missing files due to wrong casing, go to the Hotfix at unpacker.py and force lowercase
-                #logging.warning('Non-existing icon: %s', copy_from)
-                continue
+    if image.get('file') is None or image.get('name') is None:
+        return
+    if file_name == 'baseskinset.xml' and image_category not in WHITELIST_BASESKINSET:
+        return
+    if file_name == 'itemicon.xml' and image_category not in WHITELIST_ITEMICON:
+        return
+    if file_name == 'skillicon.xml' and image_category not in WHITELIST_SKILLICON:
+        return
 
-            if version_new:
-                shutil.copy(copy_from, copy_to)
+    image_file = image.get('file').split('\\')[-1].lower()
+    image_name = image.get('name').lower()
+    image_rect = tuple(int(x) for x in image.get('imgrect').split()) if len(image.get('imgrect')) else None  # top, left, width, height
 
-                # Crop, Resize, Optimize and convert to JPG/PNG
-                image_mode = 'RGB' if image_category in WHITELIST_RGB else 'RGBA'
-                image_size = IMAGE_SIZE[image_category] if image_category in IMAGE_SIZE else (image_rect[2], image_rect[3])
-                image_size = (80, 80) if file_name == 'classicon.xml' else image_size
-                image_size = (80, 80) if file_name == 'skillicon.xml' else image_size
+    # Copy icon to web assets folder
+    copy_from = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', *image.get('file').lower().split('\\')[:-1])
+    copy_from = os.path.join(copy_from, image_file)
+    copy_to = os.path.join(constants.PATH_WEB_ASSETS_ICONS, image_name)
 
-                imageutil.optimize(copy_to, image_mode, image_rect, image_size)
+    if not os.path.isfile(copy_from):
+        # Note for future self:
+        # if you find missing files due to wrong casing, go to the Hotfix at unpacker.py and force lowercase
+        #logging.warning('Non-existing icon: %s', copy_from)
+        return
 
-            # Store mapping for later use
-            globals.assets_icons[image_name] = image_name
+    if version_new:
+        shutil.copy(copy_from, copy_to)
+
+        # Crop, Resize, Optimize and convert to JPG/PNG
+        image_mode = 'RGB' if image_category in WHITELIST_RGB else 'RGBA'
+        image_size = IMAGE_SIZE[image_category] if image_category in IMAGE_SIZE else (image_rect[2], image_rect[3])
+        image_size = (80, 80) if file_name == 'classicon.xml' else image_size
+        image_size = (80, 80) if file_name == 'skillicon.xml' else image_size
+
+        imageutil.optimize(copy_to, image_mode, image_rect, image_size)
+
+    # Store mapping for later use
+    globals.assets_icons[image_name] = image_name
 
 
 def parse_images_jobs(region, version_new):
