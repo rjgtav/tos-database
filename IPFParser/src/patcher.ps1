@@ -9,8 +9,8 @@ $paths['kTEST'] = "C:\Games\TreeOfSavior Test"
 $processes = @("*Client_tos.exe", "*Steam.exe")
 
 # 1. Stash pending changes
-git add --all
-git stash
+bash -c "git add --all"
+bash -c "git stash"
 
 foreach ($region in $paths.keys) {
     $date = Get-Date -UFormat "+%Y-%m-%d"
@@ -36,9 +36,9 @@ foreach ($region in $paths.keys) {
     # 5. Commit new changes (if available)
     if (git status --porcelain |Where {$_ -match '^\?\?'}) {
         Write-Host "[$( $region )] Commiting..."
-        git add --all
-        git commit -m "[$( $region )] Updated database as of $( $date )"
-        git push
+        bash -c "git add --all"
+        bash -c "git commit -m ""[$( $region )] Updated database as of $( $date )"""
+        bash -c "git push"
 
         $deploy = $true
     }
@@ -51,4 +51,4 @@ if ($deploy) {
 }
 
 # 7. Pop pending changes
-git stash pop
+bash -c "git stash pop"
