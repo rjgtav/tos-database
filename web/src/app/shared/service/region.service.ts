@@ -20,7 +20,7 @@ export class RegionService implements CanActivate {
   private static region: TOSRegion;
 
   static get Region(): TOSRegion { return RegionService.region = RegionService.region || TOSRegion.iTOS; }
-  static get Regions(): TOSRegion[] { return [TOSRegion.iTOS, TOSRegion.kTOS, TOSRegion.kTEST] }
+  static get Regions(): TOSRegion[] { return [TOSRegion.iTOS, TOSRegion.jTOS, TOSRegion.kTOS, TOSRegion.kTEST] }
 
   static RegionUrl(url: string): string {
     return '/' + TOSRegion.toUrl(this.Region) + (url.startsWith('/') ? '' : '/') + url;
@@ -69,6 +69,7 @@ export class RegionService implements CanActivate {
 
 enum TOSRegion {
   iTOS = 'iTOS',
+  jTOS = 'jTOS',
   kTEST = 'kTOS (Test)',
   kTOS = 'kTOS',
 }
@@ -78,6 +79,7 @@ namespace TOSRegion {
   export function toUrl(value: TOSRegion): string {
     switch (value) {
       case TOSRegion.iTOS:  return 'itos';
+      case TOSRegion.jTOS:  return 'jtos';
       case TOSRegion.kTOS:  return 'ktos';
       case TOSRegion.kTEST:  return 'ktest';
     }

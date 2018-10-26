@@ -25,6 +25,11 @@ const routesRegion: Routes = [
     children: routes,
   },
   {
+    path: 'jtos',
+    canActivate: [RegionService],
+    children: routes,
+  },
+  {
     path: 'ktest',
     children: routes,
     canActivate: [RegionService],
