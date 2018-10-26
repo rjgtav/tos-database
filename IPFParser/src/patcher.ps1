@@ -16,7 +16,6 @@ foreach ($region in $paths.keys) {
     $date = Get-Date -UFormat "+%Y-%m-%d"
     $path = $paths[$region]
 
-    Write-Host "git commit -m ""[$( $region )] Updated database as of $( $date )"""
     # 2. Problematic processes (e.g. TOS Client, Steam) (if running)
     foreach ($process in $processes) {
         $process = Get-Process | Where-Object {$_.Path -like $process}
@@ -38,7 +37,7 @@ foreach ($region in $paths.keys) {
     if (git status --porcelain) {
         Write-Host "[$( $region )] Commiting..."
         bash -c "git add --all"
-        bash -c "git commit -m """"[$( $region )] Updated database as of $( $date )"""""
+        bash -c "git commit -m \""[$( $region )] Updated database as of $( $date )\"""
         bash -c "git push"
 
         $deploy = $true
@@ -48,7 +47,7 @@ foreach ($region in $paths.keys) {
 # 6. Deploy the updated database
 if ($deploy) {
     Write-Host "Deploying..."
-    bash -c "../web/deploy-gh-pages.sh """"Updated database as of $( $date )"""""
+    bash -c "../web/deploy-gh-pages.sh \""Updated database as of $( $date )\"""
 }
 
 # 7. Pop pending changes
