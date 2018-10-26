@@ -74,29 +74,31 @@
         </div>
 
         <div *ngIf="column.type == TOSListTableColumnType.ICON_LINK" class="text-right">
-          <img *ngFor="let link of (column.transformValue ? column.transformValue(row[column.value]) : row[column.value]); let i = index"
-               height="40"
-               width="40"
-               [ngClass]="{ 'pr-1': i < (column.transformValue ? column.transformValue(row[column.value]) : row[column.value]).length - 1 }"
-               [routerLink]="link.Url"
-               [src]="link.Icon"
-               (click)="$event.stopPropagation() && $event.stopImmediatePropagation()"
-               (mouseenter)="tooltip = link"
-               (mouseleave)="tooltip = row" />
+          <a *ngFor="let link of (column.transformValue ? column.transformValue(row[column.value]) : row[column.value]); let i = index"
+             [routerLink]="link.Url">
+            <img height="40"
+                 width="40"
+                 [ngClass]="{ 'pr-1': i < (column.transformValue ? column.transformValue(row[column.value]) : row[column.value]).length - 1 }"
+                 [routerLink]="link.Url"
+                 [src]="link.Icon"
+                 (click)="false"
+                 (mouseenter)="tooltip = link"
+                 (mouseleave)="tooltip = row" />
+          </a>
         </div>
 
         <div *ngIf="column.type == TOSListTableColumnType.ICON_LINK_VALUE" class="text-right">
-          <div *ngFor="let link of row[column.value]"
-               class="d-inline-block tos-image position-relative pr-1"
-               style="height: 40px; width: 40px; box-sizing: content-box"
-               [style.backgroundImage]="'url(\'' + column.transformLink(link)?.Icon + '\')'"
-               [routerLink]="column.transformLink(link)?.Url"
-               (click)="$event.stopPropagation()"
-               (mouseenter)="tooltip = column.transformLink(link)"
-               (mouseleave)="tooltip = row">
+          <a *ngFor="let link of row[column.value]"
+             class="d-inline-block tos-image position-relative pr-1"
+             style="height: 40px; width: 40px; box-sizing: content-box"
+             [style.backgroundImage]="'url(\'' + column.transformLink(link)?.Icon + '\')'"
+             [routerLink]="column.transformLink(link)?.Url"
+             (click)="false"
+             (mouseenter)="tooltip = column.transformLink(link)"
+             (mouseleave)="tooltip = row">
             <span class="position-absolute text-outline text-white"
                   style="bottom: 0; right: 0.25rem;">{{ column.transformValue(link) }}</span>
-          </div>
+          </a>
 
         </div>
 

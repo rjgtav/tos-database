@@ -80,8 +80,6 @@ export class TOSAttribute extends TOSEntity {
           let match: RegExpExecArray;
 
           line = line.replace(/\bjobName\b/g, "'" + unlockArg.UnlockArgStr + "'");
-          line = line.replace(/\blimitLevel\b/g, unlockArg.UnlockArgNum + '');
-          line = line.replace(/\blimitRank\b/g, build.Rank + '');
           line = line.replace(/\bsklName\b/g, "'" + unlockArg.UnlockArgStr + "'");
           line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
@@ -99,6 +97,8 @@ export class TOSAttribute extends TOSEntity {
 
         let func: string[] = [];
         func.push('(function () {');
+        func.push('var limitLevel = ' + unlockArg.UnlockArgNum + ';');
+        func.push('var limitRank = ' + unlockArg.UnlockArgNum + ';');
         func = func.concat(unlock);
         func.push('}())');
 

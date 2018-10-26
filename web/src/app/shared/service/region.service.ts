@@ -23,7 +23,9 @@ export class RegionService implements CanActivate {
   static get Regions(): TOSRegion[] { return [TOSRegion.iTOS, TOSRegion.jTOS, TOSRegion.kTOS, TOSRegion.kTEST] }
 
   static RegionUrl(url: string): string {
-    return '/' + TOSRegion.toUrl(this.Region) + (url.startsWith('/') ? '' : '/') + url;
+    return url
+      ? '/' + TOSRegion.toUrl(this.Region) + (url.startsWith('/') ? '' : '/') + url
+      : '/' + TOSRegion.toUrl(this.Region) + '/';
   }
 
   static UrlMatcher(segments: UrlSegment[], group: UrlSegmentGroup, route: Route): UrlMatchResult {
