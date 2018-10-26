@@ -51,7 +51,7 @@ def version_write(version):
 
 
 def unpack_file(file_name, source, destination):
-    logging.debug('Unpacking file: %s' % file_name)
+    logging.debug('Unpacking file: %s => %s' % (os.path.join(source, file_name), os.path.join(destination, file_name)))
 
     # Copy ipf file from Tree of Savior's installation to destination directory
     shutil.copy(
@@ -69,7 +69,7 @@ def unpack_file(file_name, source, destination):
         stdin=None, stdout=None, stderr=None, shell=False
     )
 
-    destination_extract = os.path.join(destination, '..', 'extract')
+    destination_extract = os.path.join(constants.PATH_PARSER_INPUT_IPF, '..', '..', 'extract')
 
     # Delete ipf file
     os.remove(os.path.join(destination, file_name))
@@ -77,7 +77,7 @@ def unpack_file(file_name, source, destination):
     # Clean result
     for file_name in os.listdir(destination_extract):
         if any(file_name == s for s in IPF_BLACKLIST):
-            shutil.rmtree(os.path.join(destination, '..', 'extract', file_name))
+            shutil.rmtree(os.path.join(destination_extract, file_name))
 
     # Move result to destination directory
     fileutil.move_tree(destination_extract, destination)
@@ -120,22 +120,24 @@ def unpack_release():
     return True
 
 
-def unpack_translations():
+def unpack_translations(region):
     logging.debug('Unpacking translations...')
 
-    destination = os.path.join(constants.PATH_PARSER_INPUT_TRANSLATIONS, 'English')
-    source = os.path.join(constants.PATH_TOS_RELEASE_LANGUAGEDATA, 'English')
+    language = None
+    language = 'English' if region == TOSRegion.iTOS else language
+    language = 'Japanese' if region == TOSRegion.jTOS else language
 
-    if os.path.exists(destination):
-        shutil.rmtree(destination)
+    if language:
+        destination = os.path.join(constants.PATH_PARSER_INPUT_TRANSLATIONS, language)
+        source = os.path.join(constants.PATH_TOS_RELEASE_LANGUAGEDATA, language)
 
-    shutil.copytree(source, destination)
+        if os.path.exists(destination):
+            shutil.rmtree(destination)
+
+        shutil.copytree(source, destination)
 
 
 def unpack(region):
-    if region != TOSRegion.iTOS:
-        return False
-
     logging.debug('Unpacking...')
     version_new = False
     version_new = unpack_release() or version_new
@@ -148,7 +150,7 @@ def unpack(region):
         fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'skin'))
         fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_mongen.ipf'))
 
-    unpack_translations()
+    unpack_translations(region)
 
     return version_new
 

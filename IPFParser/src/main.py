@@ -16,7 +16,6 @@ constants.region(region)
 
 # Patch the game with the latest version
 version_new = unpacker.unpack(region)
-version_new = version_new or region != TOSRegion.iTOS
 
 # Parse
 parser.parse(region, version_new)

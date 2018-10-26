@@ -13,12 +13,12 @@ TRANSLATION_SUFFIX = '$*^'
 
 
 def parse(region):
-    if region != TOSRegion.iTOS:
-        globals.translations = False
-        return
+    translations = None
+    translations = parse_translations('English') if region == TOSRegion.iTOS else translations
+    translations = parse_translations('Japanese') if region == TOSRegion.jTOS else translations
 
-    translations = parse_translations('English')
-    parse_dictionary(translations)
+    if translations:
+        parse_dictionary(translations)
 
 
 def parse_dictionary(translations):
@@ -50,11 +50,10 @@ def parse_dictionary(translations):
                 for dicid in value.split(TRANSLATION_SUFFIX):  # Sometimes there are multiple ids in a single entry (as translations are re-used)
                     if TRANSLATION_PREFIX in dicid:
                         dicid = dicid[dicid.index(TRANSLATION_PREFIX) + len(TRANSLATION_PREFIX):]
-                        translation = translations[dicid] if dicid in translations else dicid
-
                         if dicid not in translations:
-                            logging.warn('Missing translation for dicid: %s', dicid)
+                            logging.warn('Missing translation for dicid: (%s)', dicid)
 
+                        translation = translations[dicid] if dicid in translations else dicid
                         value_translated = value_translated.replace(TRANSLATION_PREFIX + dicid + TRANSLATION_SUFFIX, translation)
 
                 globals.translations[key] = value_translated
@@ -84,7 +83,7 @@ def parse_translations(language):
 
         for row in csv.reader(translation_file, delimiter='\t', quotechar='"'):
             if len(row) > 1:
-                result[row[0]] = row[1]
+                result[row[0]] = unicode(row[1], 'utf-8')
 
         translation_file.close()
 

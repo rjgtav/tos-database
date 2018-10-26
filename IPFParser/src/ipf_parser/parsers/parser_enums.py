@@ -3,13 +3,15 @@ from ipf_parser.utils.tosenum import TOSEnum
 
 class TOSRegion(TOSEnum):
     iTOS = 0
-    kTEST = 1
-    kTOS = 2
+    jTOS = 1
+    kTEST = 2
+    kTOS = 3
 
     @staticmethod
     def to_string(value):
         return {
             TOSRegion.iTOS: 'iTOS',
+            TOSRegion.jTOS: 'jTOS',
             TOSRegion.kTEST: 'kTEST',
             TOSRegion.kTOS: 'kTOS',
         }[value]
@@ -18,6 +20,7 @@ class TOSRegion(TOSEnum):
     def value_of(string):
         return {
             'iTOS': TOSRegion.iTOS,
+            'jTOS': TOSRegion.jTOS,
             'kTEST': TOSRegion.kTEST,
             'kTOS': TOSRegion.kTOS,
             '': None

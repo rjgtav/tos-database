@@ -1,3 +1,4 @@
+import logging
 import os
 
 from ipf_parser.parsers.parser_enums import TOSRegion
@@ -17,11 +18,13 @@ OUTPUT_MONSTERS = 'monsters.csv'
 OUTPUT_RECIPES = 'recipes.csv'
 OUTPUT_SKILLS = 'skills.csv'
 
-PATH_TOS = '/mnt/c/Games/steamapps/common/TreeOfSavior'
-PATH_TOS_DATA = os.path.join(PATH_TOS, 'data')
-PATH_TOS_PATCH = os.path.join(PATH_TOS, 'patch')
-PATH_TOS_RELEASE = os.path.join(PATH_TOS, 'release')
-PATH_TOS_RELEASE_LANGUAGEDATA = os.path.join(PATH_TOS_RELEASE, 'languageData')
+PATH_GAMES = 'C:\\Games' if os.name == 'nt' else '/mnt/c/Games'
+
+PATH_TOS = None
+PATH_TOS_DATA = None
+PATH_TOS_PATCH = None
+PATH_TOS_RELEASE = None
+PATH_TOS_RELEASE_LANGUAGEDATA = None
 
 PATH_PARSER = os.path.join('..', 'IPFParser')
 PATH_PARSER_INPUT_IPF = None
@@ -39,10 +42,29 @@ PATH_WEB_ASSETS_IMAGES = os.path.join(PATH_WEB_ASSETS, 'images')
 
 
 def region(region):
-    global PATH_PARSER_INPUT_IPF, PATH_PARSER_INPUT_VERSION, PATH_WEB_ASSETS_DATA
-    region = TOSRegion.to_string(region)
+    global\
+        PATH_TOS,\
+        PATH_TOS_DATA,\
+        PATH_TOS_PATCH,\
+        PATH_TOS_RELEASE,\
+        PATH_TOS_RELEASE_LANGUAGEDATA,\
+        PATH_PARSER_INPUT_IPF,\
+        PATH_PARSER_INPUT_VERSION,\
+        PATH_WEB_ASSETS_DATA
 
-    PATH_PARSER_INPUT_IPF = os.path.join(PATH_PARSER, 'input_ipf', region)
+    region_str = TOSRegion.to_string(region)
+
+    PATH_TOS = os.path.join(PATH_GAMES, 'steamapps', 'common', 'TreeOfSavior') if region == TOSRegion.iTOS else PATH_TOS
+    PATH_TOS = os.path.join(PATH_GAMES, 'TreeofSaviorJP') if region == TOSRegion.jTOS else PATH_TOS
+    PATH_TOS = os.path.join(PATH_GAMES, 'TreeofSavior') if region == TOSRegion.kTOS else PATH_TOS
+    PATH_TOS = os.path.join(PATH_GAMES, 'TreeofSavior Test') if region == TOSRegion.kTEST else PATH_TOS
+
+    PATH_TOS_DATA = os.path.join(PATH_TOS, 'data')
+    PATH_TOS_PATCH = os.path.join(PATH_TOS, 'patch')
+    PATH_TOS_RELEASE = os.path.join(PATH_TOS, 'release')
+    PATH_TOS_RELEASE_LANGUAGEDATA = os.path.join(PATH_TOS_RELEASE, 'languageData')
+
+    PATH_PARSER_INPUT_IPF = os.path.join(PATH_PARSER, 'input_ipf', region_str)
     PATH_PARSER_INPUT_VERSION = os.path.join(PATH_PARSER_INPUT_IPF, 'version')
 
-    PATH_WEB_ASSETS_DATA = os.path.join(PATH_WEB_ASSETS, 'data', region)
+    PATH_WEB_ASSETS_DATA = os.path.join(PATH_WEB_ASSETS, 'data', region_str)
