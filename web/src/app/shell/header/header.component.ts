@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faCommentAlt, faMoon} from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,7 @@ import {RegionService} from "../../shared/service/region.service";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   Theme = Theme;
   RegionService = RegionService;
 
@@ -21,6 +21,7 @@ export class HeaderComponent {
 
   isOpenDatabase: boolean;
   isOpenRegion: boolean;
+  isGithub: boolean;
 
   constructor(private regionService: RegionService, public theme: ThemeService) {}
 
@@ -30,6 +31,10 @@ export class HeaderComponent {
 
   regionSelect(region: any) {
     this.regionService.regionRelect(region);
+  }
+
+  ngOnInit(): void {
+    this.isGithub = location.href.indexOf('github.io') > 0;
   }
 
 }
