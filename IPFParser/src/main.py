@@ -1,4 +1,5 @@
 import logging
+import os
 import sys
 
 from ipf_parser import unpacker, constants
@@ -9,6 +10,9 @@ from ipf_parser.parsers.parser_enums import TOSRegion
 
 logging.basicConfig(format='[%(asctime)s] [%(levelname)s]\t%(message)s', datefmt='%Y-%m-%d %I:%M:%S', level=logging.DEBUG)
 logging.getLogger('PIL').setLevel(logging.WARN)
+
+# Configure working directory
+os.chdir(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
 
 # Parse region
 region = TOSRegion.value_of(sys.argv[1]) if len(sys.argv) == 2 else TOSRegion.iTOS
