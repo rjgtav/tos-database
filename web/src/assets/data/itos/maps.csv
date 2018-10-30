@@ -385,6 +385,7 @@ $ID,$ID_NAME,Icon,Name
 4930,d_limestonecave_71_2,,Limestone Cave 71_2
 4931,d_limestonecave_71_1,,Baubas Cave
 4940,id_whitetrees1,,The First Refuge
+4941,id_Nicopolis_01,,Magic Research Facility
 4950,d_limestonecave_70_1,,Sulivinas Lair
 4960,c_Klaipe_event,,Halloween Dungeon - Creepy Klaipeda
 4961,d_castle_agario,,Halloween Dungeon - Creepy Klaipeda
@@ -399,6 +400,7 @@ $ID,$ID_NAME,Icon,Name
 9996,GuildColony_f_pilgrimroad_49,,Genar Field
 9997,GuildColony_f_siauliai_47_4,,Baron Allerno 
 9998,GuildColony_f_farm_47_2,,Aqueduct Bridge Area
+10000,id_abbey_raid,,Asiomage Testing Grounds
 10001,mission_instance,,MissionInstance
 20000,infinite_map,,Infinite Map
 20010,pvp_tournament,,Team Battle League Tournament
