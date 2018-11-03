@@ -12,11 +12,11 @@ RewriteCond %{HTTP_HOST} ^www.tos.guru$ [NC]
 RewriteRule ^(.*)$ https://tos.guru/$1 [R=301,L]
 
 # cache CSS, JS and Images for 1 month
-<filesMatch "(?!.*(min\.css|min\.js))(^.*\.(css|js|gif|ico|jpg|jpeg|png)$)">
+<filesMatch "(?!.*(lib\.css|lib\.js))(^.*\.(css|js|gif|ico|jpg|jpeg|png)$)">
   Header set Cache-Control "max-age=2592000, public"
 </filesMatch>
 
-# cache CSV, static dependencies for 1 week
-<filesMatch ".(csv|min\.css|min\.js)$">
+# cache CSV, JSON, static dependencies for 1 week
+<filesMatch ".(csv|json|lib\.css|lib\.js)$">
   Header set Cache-Control "max-age=604800, public"
 </filesMatch>
