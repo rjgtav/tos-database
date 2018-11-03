@@ -16,7 +16,7 @@ foreach ($region in $paths.keys) {
     $date = Get-Date -UFormat "+%Y-%m-%d"
     $path = $paths[$region]
 
-    # 2. Problematic processes (e.g. TOS Client, Steam) (if running)
+    # 2. Kill problematic processes (e.g. TOS Client, Steam) (if running)
     foreach ($process in $processes) {
         $process = Get-Process | Where-Object {$_.Path -like $process}
         if ($process) {
@@ -29,11 +29,23 @@ foreach ($region in $paths.keys) {
     Write-Host "[$( $region )] Patching..."
     & $exe | Out-Null
 
-    # 4. Run parser
-    Write-Host "[$( $region )] Parsing..."
-    bash -c "python src/main.py $( $region )"
+    # 4. Kill problematic processes (e.g. TOS Client, Steam) (if running)
+    foreach ($process in $processes) {
+        $process = Get-Process | Where-Object {$_.Path -like $process}
+        if ($process) {
+            $process.Kill()
+        }
+    }
 
-    # 5. Commit new changes (if available)
+    # 5. Run parser
+    Write-Host "[$( $region )] Parsing..."
+    bash -c "python ../IPFParser/src/main.py $( $region )"
+
+    # 6. Run indexer
+    Write-Host "[$( $region )] Indexing..."
+    bash -c "pushd tos-search && node index.js $( $region ) && popd"
+
+    # 7. Commit new changes (if available)
     if (git status --porcelain) {
         Write-Host "[$( $region )] Commiting..."
         bash -c "git add --all"
@@ -44,11 +56,11 @@ foreach ($region in $paths.keys) {
     }
 }
 
-# 6. Deploy the updated database
+# 8. Deploy the updated database
 if ($deploy) {
     Write-Host "Deploying..."
-    bash -c "../web/deploy-gh-pages.sh \""Updated database as of $( $date )\"""
+    bash -c "./deploy.sh \""Updated database as of $( $date )\"""
 }
 
-# 7. Pop pending changes
+# 9. Pop pending changes
 bash -c "git stash pop"

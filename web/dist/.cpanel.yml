@@ -1,4 +1,5 @@
 deployment:
   tasks:
   - export DEPLOYPATH=/home/mpqwcvul/public_html/
-  - /bin/cp -rf * $DEPLOYPATH
+  - /bin/rm -rf $DEPLOYPATH/*
+  - /bin/cp -rf . $DEPLOYPATH
