@@ -1,0 +1,17 @@
+{
+  "name": "tos-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lunr": "^2.3.4",
+    "lunr-languages": "^1.0.0",
+    "open-korean-text-node": "^2.2.0",
+    "papaparse": "^4.6.1"
+  }
+}
