@@ -220,7 +220,7 @@ export class TOSEquipmentSet extends TOSEntity {
   Bonus7: string;
 
   constructor(private json: TOSEquipmentSet) {
-    super(json, null);
+    super(json, 'equipment-sets');
 
     this.Bonus2 = json.Bonus2;
     this.Bonus3 = json.Bonus3;

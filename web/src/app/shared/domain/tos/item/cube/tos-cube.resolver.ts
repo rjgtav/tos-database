@@ -1,6 +1,5 @@
 import {Injectable} from "@angular/core";
 import {CRUDResolver} from "../../../../service/CRUD.resolver";
-import {TOSCubeRepository} from "./tos-cube.repository";
 import {TOSCube} from "./tos-cube.model";
 import {TOSRepositoryService} from "../../tos-repository.service";
 
@@ -11,7 +10,6 @@ export class TOSCubeResolver extends CRUDResolver<TOSCube> {
     super(
       TOSRepositoryService.findCubes,
       TOSRepositoryService.findCubesById,
-      TOSRepositoryService.searchCubes,
     );
   }
 

@@ -10,7 +10,6 @@ export class TOSMonsterResolver extends CRUDResolver<TOSMonster> {
     super(
       TOSRepositoryService.findMonsters,
       TOSRepositoryService.findMonstersById,
-      TOSRepositoryService.searchMonsters,
     );
   }
 

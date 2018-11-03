@@ -12,13 +12,12 @@ export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
   public static readonly PARAM_ID: string = 'id';
   public static readonly PARAM_FILTER: string = 'filter';
   public static readonly PARAM_PAGE: string = 'page';
-  public static readonly PARAM_SEARCH: string = 'search';
   public static readonly PARAM_SORT: string = 'sort';
 
   protected constructor(
     private findAll: (filter?: Filter[], sort?: Sort) => T[],
-    private findById: ($ID: number) => T,
-    private search: (pattern: string) => Observable<T[]>) {}
+    private findById: ($ID: number) => T
+  ) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | T {
 
@@ -35,9 +34,6 @@ export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
 
     if (route.params[CRUDResolver.PARAM_ID])
       return this.findById(route.params[CRUDResolver.PARAM_ID]);
-
-    if (route.queryParams[CRUDResolver.PARAM_SEARCH])
-      return this.search(route.queryParams[CRUDResolver.PARAM_SEARCH]).pipe(map(mapToPage));
 
     return of(mapToPage(this.findAll(filter, sort)));
   }

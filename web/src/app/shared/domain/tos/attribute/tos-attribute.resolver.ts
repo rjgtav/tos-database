@@ -10,7 +10,6 @@ export class TOSAttributeResolver extends CRUDResolver<TOSAttribute> {
     super(
       TOSRepositoryService.findAttributes,
       TOSRepositoryService.findAttributesById,
-      TOSRepositoryService.searchAttributes,
     );
   }
 

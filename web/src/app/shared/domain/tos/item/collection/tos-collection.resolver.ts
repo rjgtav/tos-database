@@ -10,7 +10,6 @@ export class TOSCollectionResolver extends CRUDResolver<TOSCollection> {
     super(
       TOSRepositoryService.findCollections,
       TOSRepositoryService.findCollectionsById,
-      TOSRepositoryService.searchCollections,
     );
   }
 

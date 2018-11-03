@@ -10,7 +10,6 @@ export class TOSRecipeResolver extends CRUDResolver<TOSRecipe> {
     super(
       TOSRepositoryService.findRecipes,
       TOSRepositoryService.findRecipesById,
-      TOSRepositoryService.searchRecipes,
     );
   }
 

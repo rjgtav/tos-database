@@ -1,0 +1,55 @@
+<!-- Query -->
+<div class="input-group align-items-center position-relative">
+  <input type="text" class="border-0 form-control"
+         [attachOutsideOnClick]="true"
+         [ngModel]="query" (ngModelChange)="onQueryChange($event)"
+         [disabled]="!isLoadedRepository || !isLoadedSearch"
+         [placeholder]="!isLoadedRepository || !isLoadedSearch ? 'Loading search...' : 'ClassID, ClassName, Description, Name'"
+         (clickOutside)="onOpen(false)"
+         (focus)="onOpen(true)"
+         (keyup.arrowup)="onKeyboardSelect(-1)"
+         (keyup.arrowdown)="onKeyboardSelect(1)"
+         (keyup.enter)="onKeyboardNavigate(keyboardSelected)"
+         (keyup.esc)="onOpen(false)">
+  <a class="position-absolute pl-3 pr-3 pb-2 pt-2 text-white-50" style="right: 0; z-index: 3"
+     [href]="query ? '#clear' : ''"
+     (click)="query && onClear($event)">
+    <fa-icon [icon]="query ? faTimes : faSearch"></fa-icon>
+  </a>
+</div>
+
+<!-- Results -->
+<div class="card position-absolute shadow w-100" style="z-index: 3" *ngIf="open && results && results.length">
+  <div class="card-body" style="max-height: 100%; overflow-y: auto">
+    <table class="table table-hover mb-0">
+      <tbody>
+        <a *ngFor="let entity of results; index as i" class="d-table-row"
+           [ngClass]="{'bg-secondary': keyboardSelected == i }"
+           [routerLink]="entity.Url"
+           (mouseenter)="tooltip = entity"
+           (mouseleave)="tooltip = null">
+
+          <!-- Icon -->
+          <td width="1" class="p-1">
+            <div class="text-center">
+              <img height="40" width="40" [src]="entity.Icon" />
+            </div>
+          </td>
+
+          <!-- Name -->
+          <td class="align-middle">{{ entity.Name }}</td>
+
+          <!-- Dataset -->
+          <td width="1" class="align-middle text-right">
+            <span class="badge badge-primary">{{ entity.Dataset.toUpperCase() }}</span>
+          </td>
+        </a>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Tooltip -->
+<app-entity-tooltip class="d-none d-md-block"
+                    [debug]="false"
+                    [tooltip]="tooltip"></app-entity-tooltip>

@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {TOSItem} from "../../shared/domain/tos/item/tos-item.model";
 import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
@@ -44,13 +44,14 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
   skill: TOSSkill;
 
   anvilLevel: number = 0;
+  initialized: boolean;
   transcendLevel: number = 0;
 
   tooltip: TOSEntity;
 
   private subscription: Subscription;
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private changeDetector: ChangeDetectorRef, private route: ActivatedRoute, private router: Router) { }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
@@ -79,6 +80,9 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
         for (let i = 0; i < this.skill.Link_Job.CircleMax; i ++)
           this.build.jobAdd(this.skill.Link_Job);
       }
+
+      if (this.initialized) this.changeDetector.detectChanges();
+      this.initialized = true;
     });
   }
 

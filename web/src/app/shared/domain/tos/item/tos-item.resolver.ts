@@ -10,7 +10,6 @@ export class TOSItemResolver extends CRUDResolver<TOSItem> {
     super(
       TOSRepositoryService.findItems,
       TOSRepositoryService.findItemsById,
-      TOSRepositoryService.searchItems,
     );
   }
 

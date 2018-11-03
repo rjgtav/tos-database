@@ -2,7 +2,7 @@
   <a class="navbar-brand mr-4 p-0 order-0" [routerLink]="routerLink('')">
     <img src="assets/images/logo_tos.png" height="47" style="transform: scale(1.25)" />
   </a>
-  <div class="navbar-expand m-auto m-sm-0 order-2 order-sm-1 pb-2 pb-sm-0 pt-3 pt-sm-0">
+  <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
     <ul class="navbar-nav">
       <!--
         <a class="dropdown-item" style="color: grey" routerLink="game/achievements">Achievements</a>
@@ -40,14 +40,31 @@
             <a class="dropdown-item" [routerLink]="routerLink('database/monsters')">Monsters</a>
           </div>
         </a>
+
       </li>
 
       <li class="nav-item">
         <a class="nav-link tos-link" [routerLink]="routerLink('simulator')" routerLinkActive="active">Skill Simulator</a>
       </li>
+
+      <li class="nav-item d-lg-none">
+        <a class="nav-link tos-link" (click)="isOpenSearch = !isOpenSearch">
+          &nbsp;<fa-icon [icon]="faSearch"></fa-icon>&nbsp;
+        </a>
+      </li>
+
     </ul>
   </div>
-  <div class="navbar-expand ml-auto order-1 order-sm-2">
+
+  <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"
+       [ngClass]="{ 'd-flex': isOpenSearch }">
+      <tos-header-search class="flex-grow-1 ml-lg-3 mr-lg-3"></tos-header-search>
+  </div>
+
+  <div class="order-2 w-100 d-md-none"></div>
+  <div class="order-4 w-100 d-lg-none"></div>
+
+  <div class="navbar-expand order-1 order-md-3">
     <ul class="navbar-nav align-items-center">
       <!-- Region selector -->
       <li class="nav-item dropdown">
@@ -63,7 +80,7 @@
           </div>
         </a>
       </li>
-      <a class="nav-item nav-link ml-1 mr-1 d-none d-sm-inline-block" href="http://feedback.userreport.com/e23e275c-deb8-4560-9434-070fc22b6208" target="_blank" ngbTooltip="Feedback" placement="bottom">
+      <a class="nav-item nav-link ml-1 mr-1 d-none d-md-inline-block" href="http://feedback.userreport.com/e23e275c-deb8-4560-9434-070fc22b6208" target="_blank" ngbTooltip="Feedback" placement="bottom">
         <fa-icon [icon]="faCommentAlt"></fa-icon>
       </a>
       <a class="nav-item nav-link ml-1 mr-1" (click)="theme.toggle()" ngbTooltip="Toggle Theme" placement="bottom">

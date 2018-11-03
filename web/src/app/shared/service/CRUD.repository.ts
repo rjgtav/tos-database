@@ -1,10 +1,9 @@
 import {Observable} from "rxjs/internal/Observable";
-import * as fuzzysort from 'fuzzysort';
 import {Comparable} from "../domain/tos/entity/tos-entity.model";
 import {Filter} from "../directives/filter.directive";
 import {Sort, SortOrder} from "../directives/sort.directive";
-import {isDevMode} from "@angular/core";
-import {RegionService} from "./region.service";
+import {TOSRegionService} from "./tos-region.service";
+import {Subscriber} from "rxjs";
 
 
 export abstract class CRUDRepository<T extends Comparable> {
@@ -15,38 +14,43 @@ export abstract class CRUDRepository<T extends Comparable> {
   protected constructor(private options: TOSRepositoryOptions<T>) {
     this.findAll = this.findAll.bind(this);
     this.findById = this.findById.bind(this);
-    this.search = this.search.bind(this);
   }
 
-  public load(): Observable<T[]> {
-    this.data = null;
+  public load(force: boolean = false): Observable<T[]> {
+    let complete = (subscriber: Subscriber<T[]>) => {
+      if (this.options.loadComplete)
+        this.data = this.options.loadComplete(this.data);
 
-    return Observable.create(observable => {
-      this.data = [];
-      this.dataById = {};
-      let path = (!isDevMode() ? '/tos-database' : '') + this.options.path;
-          path = path.replace('data/', 'data' + RegionService.RegionUrl(''));
+      subscriber.next(this.data);
+      subscriber.complete();
+    };
+    let step = (results) => {
+      let entry: T = this.options.loadStep(results.data[0]);
+      this.data.push(entry);
+      this.dataById[entry[this.options.id]] = entry;
+    };
 
-      window['Papa']['SCRIPT_PATH'] = 'assets/js/papaparse.min.js';
-      window['Papa'].parse(path, {
-        download: true,
-        header: true,
-        skipEmptyLines: true,
-        worker: true,
-        complete: (results) => {
-          if (this.options.loadComplete)
-            this.data = this.options.loadComplete(this.data);
+    this.data = force ? [] : this.data || [];
+    this.dataById = force ? {} : this.dataById || {};
 
-          observable.next(this.data);
-          observable.complete();
-        },
-        step: (results, parser) => {
-          let entry: T = this.options.loadStep(results.data[0]);
-          this.data.push(entry);
-          this.dataById[entry[this.options.id]] = entry;
-        },
+    return this.data.length
+      ? Observable.create(complete)
+      : Observable.create(subscriber => {
+        this.data = force ? [] : this.data || [];
+        this.dataById = force ? {} : this.dataById || {};
+        let path = (location.href.indexOf('github') > 0 ? '/tos-database' : '') + this.options.path;
+            path = path.replace('data/', 'data' + TOSRegionService.RegionUrl(''));
+
+        window['Papa']['SCRIPT_PATH'] = 'assets/js/papaparse.min.js';
+        window['Papa'].parse(path, {
+          download: true,
+          header: true,
+          skipEmptyLines: true,
+          worker: true,
+          complete: () => complete(subscriber),
+          step,
+        });
       });
-    });
   }
 
   public findAll(filter?: Filter[], sort?: Sort): T[] {
@@ -64,22 +68,6 @@ export abstract class CRUDRepository<T extends Comparable> {
 
   public findById($ID: number): T {
     return this.dataById[$ID];
-  }
-
-  public search(pattern: string): Observable<T[]> {
-    return Observable.create(observable => {
-      this.load().subscribe((data) => {
-        fuzzysort.goAsync(pattern, data, {
-          allowTypo: true,
-          keys: this.options.searchKeys,
-          limit: 512,
-          threshold: -512
-        }).then((result) => {
-          observable.next(result.map((entry) => entry.obj));
-          observable.complete();
-        });
-      });
-    })
   }
 
 }

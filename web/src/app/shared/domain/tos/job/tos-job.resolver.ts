@@ -10,7 +10,6 @@ export class TOSJobResolver extends CRUDResolver<TOSJob> {
     super(
       TOSRepositoryService.findJobs,
       TOSRepositoryService.findJobsById,
-      TOSRepositoryService.searchJobs,
     );
   }
 

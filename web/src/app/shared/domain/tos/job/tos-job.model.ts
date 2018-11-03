@@ -1,6 +1,5 @@
 import {TOSEntity} from "../entity/tos-entity.model";
 import {TOSBuild} from "../tos-build";
-import {TOSItem} from "../item/tos-item.model";
 import {TOSRepositoryService} from "../tos-repository.service";
 import {TOSAttribute} from "../attribute/tos-attribute.model";
 import {TOSSkill} from "../skill/tos-skill.model";

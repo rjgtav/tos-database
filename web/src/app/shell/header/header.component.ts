@@ -1,32 +1,34 @@
 import {Component, OnInit} from '@angular/core';
 import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
-import {faCommentAlt, faMoon} from "@fortawesome/free-solid-svg-icons";
+import {faCommentAlt, faMoon, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
-import {RegionService} from "../../shared/service/region.service";
+import {TOSRegionService} from "../../shared/service/tos-region.service";
 
 @Component({
-  selector: 'app-header',
+  selector: 'tos-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   Theme = Theme;
-  RegionService = RegionService;
+  RegionService = TOSRegionService;
 
   faCommentAlt = faCommentAlt;
   faGithub = faGithub;
   faMoon = faMoon;
+  faSearch = faSearch;
   faSun = faSun;
 
   isOpenDatabase: boolean;
   isOpenRegion: boolean;
+  isOpenSearch: boolean;
   isGithub: boolean;
 
-  constructor(private regionService: RegionService, public theme: ThemeService) {}
+  constructor(private regionService: TOSRegionService, public theme: ThemeService) {}
 
   routerLink(url: string): string {
-    return RegionService.RegionUrl(url);
+    return TOSRegionService.RegionUrl(url);
   }
 
   regionSelect(region: any) {

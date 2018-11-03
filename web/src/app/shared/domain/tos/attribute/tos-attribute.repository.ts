@@ -29,12 +29,12 @@ export class TOSAttributeRepository extends CRUDRepository<TOSAttribute> {
   findByJob(job$ID: number): TOSAttribute[] { return this.attributesByJob[job$ID]; }
   findBySkill(skill$ID: number): TOSAttribute[] { return this.attributesBySkill[skill$ID]; }
 
-  load(): Observable<TOSAttribute[]> {
-    this.attributesByIdName = {};
-    this.attributesByJob = {};
-    this.attributesBySkill = {};
+  load(force: boolean = false): Observable<TOSAttribute[]> {
+    this.attributesByIdName = force ? {} : this.attributesByIdName || {};
+    this.attributesByJob = force ? {} : this.attributesByJob || {};
+    this.attributesBySkill = force ? {} : this.attributesBySkill || {};
 
-    return super.load();
+    return super.load(force);
   }
 
   private step(row: TOSAttribute): TOSAttribute {

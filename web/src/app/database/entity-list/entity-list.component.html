@@ -1,33 +1,18 @@
-<div class="mb-4" id="top">
-  <div class="row">
-    <!-- Filter -->
+<div id="top">
+  <!-- Filter -->
+  <div class="row mb-4" *ngIf="config.filter">
     <app-entity-list-filter class="form-group col-md-6 col-xl-8"
                             [config]="config.filter"
-                            [disabled]="search"
                             [model]="pageFilter"
-                            (modelChange)="onFilterChange($event)"
-                            *ngIf="config.filter">
+                            (modelChange)="onFilterChange($event)">
     </app-entity-list-filter>
-
-    <!-- Search -->
-    <div class="form-group col-md-6 col-xl-4" [ngClass]="{ 'm-auto': !config.filter }">
-      <label>Search</label>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Name, ClassID, ClassName" [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)" (keyup.esc)="onSearchToggle()">
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button" [disabled]="!search" (click)="onSearchToggle()">
-            <fa-icon [icon]="['fas', 'times-circle']"></fa-icon>
-          </button>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
 <!-- Table -->
 <table class="table table-hover">
   <thead>
-    <tr tosSortGroup [ngModel]="pageSort" (ngModelChange)="onSortChange($event)" [disabled]="search">
+    <tr tosSortGroup [ngModel]="pageSort" (ngModelChange)="onSortChange($event)">
       <th *ngFor="let column of config.tableColumns"
           [ngClass]="{
             'd-none': column.isNotMobile || column.isNotTablet,

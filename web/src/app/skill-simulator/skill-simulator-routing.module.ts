@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {SkillBuilderComponent} from "./skill-builder/skill-builder.component";
-import {RegionService} from "../shared/service/region.service";
+import {TOSRegionService} from "../shared/service/tos-region.service";
 
 const routes: Routes = [
   {
     path: '',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: SkillBuilderComponent,
   },
 ];

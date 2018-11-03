@@ -10,7 +10,6 @@ export class TOSGemResolver extends CRUDResolver<TOSGem> {
     super(
       TOSRepositoryService.findGems,
       TOSRepositoryService.findGemsById,
-      TOSRepositoryService.searchGems,
     );
   }
 

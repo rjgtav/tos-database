@@ -10,7 +10,6 @@ export class TOSSkillResolver extends CRUDResolver<TOSSkill> {
     super(
       TOSRepositoryService.findSkills,
       TOSRepositoryService.findSkillsById,
-      TOSRepositoryService.searchSkills,
     );
   }
 

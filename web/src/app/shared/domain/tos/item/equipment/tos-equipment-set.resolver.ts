@@ -10,7 +10,6 @@ export class TOSEquipmentSetResolver extends CRUDResolver<TOSEquipmentSet> {
     super(
       TOSRepositoryService.findEquipmentSets,
       TOSRepositoryService.findEquipmentSetsById,
-      TOSRepositoryService.searchEquipmentSets,
     );
   }
 

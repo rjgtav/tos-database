@@ -30,17 +30,13 @@ export class EntityListComponent implements OnDestroy, OnInit {
   toggleFilter: boolean = false;
   tooltip: TOSEntity;
 
-  search: boolean;
-  searchText: string;
-
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   private reload() {
     let params = {};
       params[CRUDResolver.PARAM_FILTER] = this.pageFilter ? this.pageFilter.join(';') : null;
       params[CRUDResolver.PARAM_PAGE] = this.page;
-      params[CRUDResolver.PARAM_SEARCH] = this.searchText;
-      params[CRUDResolver.PARAM_SORT] = this.search ? null : this.pageSort;
+      params[CRUDResolver.PARAM_SORT] = this.pageSort;
 
     this.toggleFilter = false;
     this.tooltip = null;
@@ -64,9 +60,6 @@ export class EntityListComponent implements OnDestroy, OnInit {
       this.pageFilter = (params.get(CRUDResolver.PARAM_FILTER) || '').split(';')
         .map(filter => Filter.valueOf(filter))
         .filter((filter) => filter);
-
-      this.searchText = params.get(CRUDResolver.PARAM_SEARCH) || null;
-      this.search = this.search || (this.searchText || '').length > 0;
     });
   }
 
@@ -81,20 +74,6 @@ export class EntityListComponent implements OnDestroy, OnInit {
 
   onPageChange(page: number) {
     this.page = page;
-    this.reload();
-  }
-
-  onSearchChange(searchText: string) {
-    this.page = 1;
-    this.searchText = searchText;
-    this.search = (searchText || '').length > 0;
-    this.reload();
-  }
-  onSearchToggle() {
-    this.page = 1;
-    this.search = !this.search;
-    this.searchText = null;
-
     this.reload();
   }
 

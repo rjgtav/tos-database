@@ -23,8 +23,8 @@ export class ThemeService {
   private set(theme: Theme) {
     let href: string = null;
 
-    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.min.css';
-    if (theme == Theme.DARK)  href = 'assets/themes/darkly.min.css';
+    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.lib.css';
+    if (theme == Theme.DARK)  href = 'assets/themes/darkly.lib.css';
 
     this.theme = theme;
     this.themeChange.emit(this.theme);

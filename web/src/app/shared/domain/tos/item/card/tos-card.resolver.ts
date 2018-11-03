@@ -10,7 +10,6 @@ export class TOSCardResolver extends CRUDResolver<TOSCard> {
     super(
       TOSRepositoryService.findCards,
       TOSRepositoryService.findCardsById,
-      TOSRepositoryService.searchCards,
     );
   }
 

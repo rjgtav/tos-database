@@ -1,4 +1,4 @@
-import {RegionService} from "../../../service/region.service";
+import {TOSRegionService} from "../../../service/tos-region.service";
 
 export abstract class Comparable {
   $comparators: { [key: string]: (a, b) => -1 | 0 | 1; } = {}
@@ -9,6 +9,7 @@ export abstract class TOSEntity extends Comparable {
 
   readonly $ID: number;
   readonly $ID_NAME: string;
+  readonly Dataset: string;
   Description: string;
   Icon: string;
   readonly Name: string;
@@ -25,16 +26,15 @@ export abstract class TOSEntity extends Comparable {
 
     this.$ID = +json.$ID;
     this.$ID_NAME = json.$ID_NAME;
+    this.Dataset = url.split('-').map(value => value[0].toUpperCase() + value.slice(1)).join(' ');
     this.Description = json.Description ? json.Description.replace(/{nl}/g, '\n') : null;
     this.Icon = json.Icon ? 'assets/icons/' + json.Icon.toLowerCase() + '.png' : null;
     this.Name = json.Name;
-
-    if (url)
-      this.url = '/database/' + url + '/' + this.$ID;
+    this.url = '/database/' + url + '/' + this.$ID;
   }
 
   get Url(): string {
-    return RegionService.RegionUrl(this.url);
+    return TOSRegionService.RegionUrl(this.url);
   }
 
 }

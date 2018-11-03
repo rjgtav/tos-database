@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {RegionService} from "./shared/service/region.service";
+import {TOSRegionService} from "./shared/service/tos-region.service";
 
 const routes: Routes = [
   {
@@ -21,26 +21,30 @@ const routesRegion: Routes = [
   },
   {
     path: 'itos',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     children: routes,
   },
   {
     path: 'jtos',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     children: routes,
   },
   {
     path: 'ktest',
     children: routes,
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
   },
   {
     path: 'ktos',
     children: routes,
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
   },
   {
-    matcher: RegionService.UrlMatcher,
+    matcher: TOSRegionService.UrlMatcher,
     redirectTo: 'itos/:redirect',
     pathMatch: 'full'
   }

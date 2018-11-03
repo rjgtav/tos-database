@@ -28,7 +28,7 @@ import {SkillListConfigurationResolver} from "./resolvers/skill-list-configurati
 import {TOSSkillResolver} from "../shared/domain/tos/skill/tos-skill.resolver";
 import {JobListConfigurationResolver} from "./resolvers/job-list-configuration.resolver";
 import {TOSJobResolver} from "../shared/domain/tos/job/tos-job.resolver";
-import {RegionService} from "../shared/service/region.service";
+import {TOSRegionService} from "../shared/service/tos-region.service";
 
 const routes: Routes = [
   {
@@ -38,7 +38,8 @@ const routes: Routes = [
   },
   {
     path: 'attributes',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: AttributeListConfigurationResolver,
@@ -48,14 +49,16 @@ const routes: Routes = [
   },
   {
     path: 'attributes/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSAttributeResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'books',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: BookListConfigurationResolver,
@@ -65,14 +68,16 @@ const routes: Routes = [
   },
   {
     path: 'books/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSBookResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'cards',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: CardListConfigurationResolver,
@@ -82,14 +87,16 @@ const routes: Routes = [
   },
   {
     path: 'cards/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSCardResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'classes',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: JobListConfigurationResolver,
@@ -99,14 +106,16 @@ const routes: Routes = [
   },
   {
     path: 'classes/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSJobResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'collections',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: CollectionListConfigurationResolver,
@@ -116,14 +125,16 @@ const routes: Routes = [
   },
   {
     path: 'collections/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSCollectionResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'cubes',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: CubeListConfigurationResolver,
@@ -133,14 +144,16 @@ const routes: Routes = [
   },
   {
     path: 'cubes/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSCubeResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'equipment',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: EquipmentListConfigurationResolver,
@@ -150,14 +163,16 @@ const routes: Routes = [
   },
   {
     path: 'equipment/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSEquipmentResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'equipment-sets',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: EquipmentSetListConfigurationResolver,
@@ -167,14 +182,16 @@ const routes: Routes = [
   },
   {
     path: 'equipment-sets/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSEquipmentSetResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'gems',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: GemListConfigurationResolver,
@@ -184,14 +201,16 @@ const routes: Routes = [
   },
   {
     path: 'gems/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSGemResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'items',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: ItemListConfigurationResolver,
@@ -201,14 +220,16 @@ const routes: Routes = [
   },
   {
     path: 'items/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSItemResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'monsters',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: MonsterListConfigurationResolver,
@@ -218,14 +239,16 @@ const routes: Routes = [
   },
   {
     path: 'monsters/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSMonsterResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'recipes',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: RecipeListConfigurationResolver,
@@ -235,14 +258,16 @@ const routes: Routes = [
   },
   {
     path: 'recipes/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSRecipeResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {
     path: 'skills',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityListComponent,
     resolve: {
       configuration: SkillListConfigurationResolver,
@@ -252,7 +277,8 @@ const routes: Routes = [
   },
   {
     path: 'skills/:id',
-    canActivate: [RegionService],
+    canActivate: [TOSRegionService],
+    canDeactivate: [TOSRegionService],
     component: EntityDetailComponent,
     resolve: { response: TOSSkillResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',

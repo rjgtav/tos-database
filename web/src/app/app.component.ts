@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,19 @@ import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
 })
 export class AppComponent {
 
-  constructor(private ngbTooltipConfig: NgbTooltipConfig) {
+  private page: string;
+
+  constructor(private ngbTooltipConfig: NgbTooltipConfig, private router: Router) {
     this.ngbTooltipConfig.disableTooltip = !!('ontouchstart' in window || navigator.msMaxTouchPoints);
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        let pageOld = this.page;
+        let pageNew = this.page = event.urlAfterRedirects.split('?')[0];
+
+        if (pageOld != pageNew)
+          window['dataLayer'].push({event: 'pageview', page: {path: pageNew }});
+      }
+    });
   }
 
 }

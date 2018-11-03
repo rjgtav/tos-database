@@ -11,7 +11,6 @@ export class TOSBookResolver extends CRUDResolver<TOSBook> {
     super(
       TOSRepositoryService.findBooks,
       TOSRepositoryService.findBooksById,
-      TOSRepositoryService.searchBooks,
     );
   }
 

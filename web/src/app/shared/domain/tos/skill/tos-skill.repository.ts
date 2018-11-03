@@ -27,11 +27,11 @@ export class TOSSkillRepository extends CRUDRepository<TOSSkill> {
   findByIdName($ID_NAME: string): TOSSkill { return this.skillsByIdName[$ID_NAME]; }
   findByJob(job$ID: number): TOSSkill[] { return this.skillsByJob[job$ID]; }
 
-  load(): Observable<TOSSkill[]> {
-    this.skillsByIdName = {};
-    this.skillsByJob = {};
+  load(force: boolean = false): Observable<TOSSkill[]> {
+    this.skillsByIdName = force ? {} : this.skillsByIdName || {};
+    this.skillsByJob = force ? {} : this.skillsByJob || {};
 
-    return super.load();
+    return super.load(force);
   }
 
   private step(row: TOSSkill): TOSSkill {

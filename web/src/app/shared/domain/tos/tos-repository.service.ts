@@ -1,6 +1,6 @@
 import {TOSBookRepository} from "./item/book/tos-book.repository";
 import {TOSCollectionRepository} from "./item/collection/tos-collection.repository";
-import {forkJoin, Observable, of} from "rxjs";
+import {BehaviorSubject, forkJoin, Observable, of} from "rxjs";
 import {TOSCubeRepository} from "./item/cube/tos-cube.repository";
 import {TOSAttributeRepository} from "./attribute/tos-attribute.repository";
 import {TOSCardRepository} from "./item/card/tos-card.repository";
@@ -33,7 +33,9 @@ export abstract class TOSRepositoryService {
   private static readonly recipeRepository: TOSRecipeRepository = new TOSRecipeRepository();
   private static readonly skillRepository: TOSSkillRepository = new TOSSkillRepository();
 
-  private static isLoaded: boolean;
+  private static isLoaded: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  private static isLoading: boolean;
+  private static loadProgress: number;
 
   static findAttributes = TOSRepositoryService.attributeRepository.findAll;
   static findAttributesById = TOSRepositoryService.attributeRepository.findById;
@@ -84,49 +86,57 @@ export abstract class TOSRepositoryService {
   static findSkillsByIdName = TOSRepositoryService.skillRepository.findByIdName;
   static findSkillsByJob = TOSRepositoryService.skillRepository.findByJob;
 
-  static searchAttributes = TOSRepositoryService.attributeRepository.search;
-  static searchBooks = TOSRepositoryService.bookRepository.search;
-  static searchCards = TOSRepositoryService.cardRepository.search;
-  static searchCollections = TOSRepositoryService.collectionRepository.search;
-  static searchCubes = TOSRepositoryService.cubeRepository.search;
-  static searchEquipment = TOSRepositoryService.equipmentRepository.search;
-  static searchEquipmentSets = TOSRepositoryService.equipmentSetRepository.search;
-  static searchGems = TOSRepositoryService.gemRepository.search;
-  static searchItems = TOSRepositoryService.itemRepository.search;
-  static searchJobs = TOSRepositoryService.jobRepository.search;
-  static searchMaps = TOSRepositoryService.mapRepository.search;
-  static searchMonsters = TOSRepositoryService.monsterRepository.search;
-  static searchRecipes = TOSRepositoryService.recipeRepository.search;
-  static searchSkills = TOSRepositoryService.skillRepository.search;
+  static get IsLoaded(): Observable<boolean> {
+    return this.isLoaded.asObservable();
+  }
 
   static load(loadingBar: LoadingBarService, force: boolean = false) {
-    let load = !this.isLoaded || force;
-    let loadProgress = 0;
-    let loadList = load ? [
-      TOSRepositoryService.attributeRepository.load(),
-      TOSRepositoryService.bookRepository.load(),
-      TOSRepositoryService.cardRepository.load(),
-      TOSRepositoryService.collectionRepository.load(),
-      TOSRepositoryService.cubeRepository.load(),
-      TOSRepositoryService.equipmentRepository.load(),
-      TOSRepositoryService.equipmentSetRepository.load(),
-      TOSRepositoryService.gemRepository.load(),
-      TOSRepositoryService.itemRepository.load(),
-      TOSRepositoryService.jobRepository.load(),
-      TOSRepositoryService.mapRepository.load(),
-      TOSRepositoryService.monsterRepository.load(),
-      TOSRepositoryService.recipeRepository.load(),
-      TOSRepositoryService.skillRepository.load(),
-    ] : null;
-
-    if (load) {
+    let load = (force || !this.isLoaded.getValue()) && !this.isLoading;
+    let loadComplete = () => {
+      //console.log('loadComplete', this.isLoaded.getValue());
+      if (!this.isLoaded.getValue()) {
+        loadingBar.complete();
+        this.isLoaded.next(true);
+        this.isLoading = false;
+        this.loadProgress = 0;
+      }
+    };
+    let loadProgress = () => {
+      //console.log('loadProgress', this.isLoaded.getValue(), this.loadProgress);
+      if (!this.isLoaded.getValue())
+        loadingBar.set(this.loadProgress += 100 / (repositories.length + 1));
+    };
+    let loadStart = () => {
+      //console.log('loadStart', this.isLoaded.getValue(), force);
       loadingBar.set(0);
-      loadList = loadList.map(value => value.pipe(tap(value => loadingBar.set(loadProgress += 100 / (loadList.length + 1)))));
-    }
+      this.isLoaded.next(false);
+      this.isLoading = true;
+      this.loadProgress = 0;
+    };
+
+    let repositories = [
+      TOSRepositoryService.attributeRepository,
+      TOSRepositoryService.bookRepository,
+      TOSRepositoryService.cardRepository,
+      TOSRepositoryService.collectionRepository,
+      TOSRepositoryService.cubeRepository,
+      TOSRepositoryService.equipmentRepository,
+      TOSRepositoryService.equipmentSetRepository,
+      TOSRepositoryService.gemRepository,
+      TOSRepositoryService.itemRepository,
+      TOSRepositoryService.jobRepository,
+      TOSRepositoryService.mapRepository,
+      TOSRepositoryService.monsterRepository,
+      TOSRepositoryService.recipeRepository,
+      TOSRepositoryService.skillRepository,
+    ].map(value => value.load(force).pipe(tap(loadProgress)));
+
+    if (load)
+      loadStart();
 
     return load
-      ? forkJoin(loadList).pipe(tap(value => this.isLoaded = loadingBar.complete() || true))
-      : of(null)
+      ? forkJoin(repositories).pipe(tap(loadComplete))
+      : of(null);
   }
 
 }

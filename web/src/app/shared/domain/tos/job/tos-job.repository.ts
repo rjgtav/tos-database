@@ -26,11 +26,11 @@ export class TOSJobRepository extends CRUDRepository<TOSJob> {
   findByIdName($ID_NAME: string): TOSJob { return this.jobsByIdName[$ID_NAME]; }
   findByTree(tree: TOSJobTree): TOSJob[] { return this.jobsByTree[tree]; }
 
-  load(): Observable<TOSJob[]> {
-    this.jobsByIdName = {};
-    this.jobsByTree = {};
+  load(force: boolean = false): Observable<TOSJob[]> {
+    this.jobsByIdName = force ? {} : this.jobsByIdName || {};
+    this.jobsByTree = force ? {} : this.jobsByTree || {};
 
-    return super.load();
+    return super.load(force);
   }
 
   private step(row: TOSJob): TOSJob {

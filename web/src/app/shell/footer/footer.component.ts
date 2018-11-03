@@ -4,7 +4,7 @@ import {Subscription} from "rxjs";
 import {faDiscord, faTwitch} from "@fortawesome/free-brands-svg-icons";
 
 @Component({
-  selector: 'app-footer',
+  selector: 'tos-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
