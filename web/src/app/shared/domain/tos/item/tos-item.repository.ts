@@ -1,31 +1,16 @@
-import { Injectable } from '@angular/core';
 import {TOSItem} from "./tos-item.model";
 import {CRUDRepository} from "../../../service/CRUD.repository";
-import {TOSRepositoryService} from "../tos-repository.service";
+import {TOSDataSet} from "../tos-domain";
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TOSItemRepository extends CRUDRepository<TOSItem> {
 
-  constructor() {
+  static readonly instance: TOSItemRepository = new TOSItemRepository();
+
+  private constructor() {
     super({
-      id: '$ID',
-      path: '/assets/data/items.csv',
-      searchKeys: ['$ID_NAME', 'Name'],
+      dataset: TOSDataSet.ITEMS,
       loadStep: (row: TOSItem) => new TOSItem(row, 'items')
     });
-  }
-
-  findById($ID: number): TOSItem {
-    return super.findById($ID)
-      || TOSRepositoryService.findBooksById($ID)
-      || TOSRepositoryService.findCardsById($ID)
-      || TOSRepositoryService.findCollectionsById($ID)
-      || TOSRepositoryService.findCubesById($ID)
-      || TOSRepositoryService.findEquipmentById($ID)
-      || TOSRepositoryService.findGemsById($ID)
-      || TOSRepositoryService.findRecipesById($ID)
   }
 
 }

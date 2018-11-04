@@ -1,17 +1,14 @@
-import { Injectable } from '@angular/core';
 import {TOSMonster} from "./tos-monster.model";
 import {CRUDRepository} from "../../../service/CRUD.repository";
+import {TOSDataSet} from "../tos-domain";
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TOSMonsterRepository extends CRUDRepository<TOSMonster> {
 
-  constructor() {
+  static readonly instance: TOSMonsterRepository = new TOSMonsterRepository();
+
+  private constructor() {
     super({
-      id: '$ID',
-      path: '/assets/data/monsters.csv',
-      searchKeys: ['$ID_NAME', 'Name'],
+      dataset: TOSDataSet.MONSTERS,
       loadStep: (row: TOSMonster) => new TOSMonster(row)
     });
   }

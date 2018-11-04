@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {TOSEntity} from "../../../domain/tos/entity/tos-entity.model";
+import {TOSEntity} from "../../../domain/tos/tos-entity.model";
 import {TOSMonster} from "../../../domain/tos/monster/tos-monster.model";
 import {TOSItem} from "../../../domain/tos/item/tos-item.model";
 import {TOSMap} from "../../../domain/tos/map/tos-map.model";

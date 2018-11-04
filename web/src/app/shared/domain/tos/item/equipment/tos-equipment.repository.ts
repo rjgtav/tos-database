@@ -1,17 +1,14 @@
-import { Injectable } from '@angular/core';
 import {TOSEquipment} from "./tos-equipment.model";
 import {CRUDRepository} from "../../../../service/CRUD.repository";
+import {TOSDataSet} from "../../tos-domain";
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TOSEquipmentRepository extends CRUDRepository<TOSEquipment> {
 
-  constructor() {
+  static readonly instance: TOSEquipmentRepository = new TOSEquipmentRepository();
+
+  private constructor() {
     super({
-      id: '$ID',
-      path: '/assets/data/equipment.csv',
-      searchKeys: ['$ID_NAME', 'Name'],
+      dataset: TOSDataSet.EQUIPMENT,
       loadStep: (row: TOSEquipment) => new TOSEquipment(row)
     });
   }

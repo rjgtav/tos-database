@@ -1,36 +1,26 @@
-import { Injectable } from '@angular/core';
-import {TOSJob, TOSJobTree} from "./tos-job.model";
+import {TOSJob} from "./tos-job.model";
 import {CRUDRepository} from "../../../service/CRUD.repository";
 import {Observable} from "rxjs";
+import {TOSDomainService} from "../tos-domain.service";
+import {TOSDataSet} from "../tos-domain";
+import {TOSRegion} from "../../tos-region";
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TOSJobRepository extends CRUDRepository<TOSJob> {
 
-  private jobsByIdName: {[key: string]: TOSJob};
-  private jobsByTree: {[key: string]: TOSJob[]};
+  static readonly instance = new TOSJobRepository();
 
-  constructor() {
+  private constructor() {
     super({
-      id: '$ID',
-      path: '/assets/data/jobs.csv',
-      searchKeys: ['$ID_NAME', 'Name'],
+      dataset: TOSDataSet.JOBS,
       loadStep: (row: TOSJob) => this.step(row)
     });
-
-    this.findByIdName = this.findByIdName.bind(this);
-    this.findByTree = this.findByTree.bind(this);
   }
 
-  findByIdName($ID_NAME: string): TOSJob { return this.jobsByIdName[$ID_NAME]; }
-  findByTree(tree: TOSJobTree): TOSJob[] { return this.jobsByTree[tree]; }
+  load(force: boolean, region: TOSRegion): Observable<boolean> {
+    TOSDomainService.jobsByIdName = force ? {} : TOSDomainService.jobsByIdName || {};
+    TOSDomainService.jobsByTree = force ? {} : TOSDomainService.jobsByTree || {};
 
-  load(force: boolean = false): Observable<TOSJob[]> {
-    this.jobsByIdName = force ? {} : this.jobsByIdName || {};
-    this.jobsByTree = force ? {} : this.jobsByTree || {};
-
-    return super.load(force);
+    return super.load(force, region);
   }
 
   private step(row: TOSJob): TOSJob {
@@ -38,9 +28,9 @@ export class TOSJobRepository extends CRUDRepository<TOSJob> {
     let groupByIdName = entity.$ID_NAME;
     let groupByTree = entity.JobTree;
 
-    this.jobsByIdName[groupByIdName] = entity;
+    TOSDomainService.jobsByIdName[groupByIdName] = entity;
 
-    let jobs = this.jobsByTree[groupByTree] = this.jobsByTree[groupByTree] || [];
+    let jobs = TOSDomainService.jobsByTree[groupByTree] = TOSDomainService.jobsByTree[groupByTree] || [];
         jobs.push(entity);
 
     return entity;

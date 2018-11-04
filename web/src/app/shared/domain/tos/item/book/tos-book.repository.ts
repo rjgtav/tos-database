@@ -1,13 +1,14 @@
 import {TOSBook} from "./tos-book.model";
 import {CRUDRepository} from "../../../../service/CRUD.repository";
+import {TOSDataSet} from "../../tos-domain";
 
 export class TOSBookRepository extends CRUDRepository<TOSBook> {
 
-  constructor() {
+  static readonly instance: TOSBookRepository = new TOSBookRepository();
+
+  private constructor() {
     super({
-      id: '$ID',
-      path: '/assets/data/books.csv',
-      searchKeys: ['$ID_NAME', 'Name'],
+      dataset: TOSDataSet.BOOKS,
       loadStep: (row: TOSBook) => new TOSBook(row)
     });
   }

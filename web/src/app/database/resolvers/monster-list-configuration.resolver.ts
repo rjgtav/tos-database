@@ -1,15 +1,15 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {TOSElement, TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
+import {TOSMonster} from "../../shared/domain/tos/monster/tos-monster.model";
+import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
 import {
-  TOSMonster,
+  TOSElement,
+  TOSEquipmentMaterial,
   TOSMonsterRace,
   TOSMonsterRank,
   TOSMonsterSize
-} from "../../shared/domain/tos/monster/tos-monster.model";
-import {TOSEquipmentMaterial} from "../../shared/domain/tos/item/equipment/tos-equipment.model";
-import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
+} from "../../shared/domain/tos/tos-domain";
 
 @Injectable()
 export class MonsterListConfigurationResolver implements Resolve<TOSListConfiguration> {

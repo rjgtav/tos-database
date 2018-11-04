@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import {faSearch, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {TOSSearchService} from "../../../shared/service/tos-search.service";
-import {TOSEntity} from "../../../shared/domain/tos/entity/tos-entity.model";
+import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
 import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
 import {Router} from "@angular/router";
 

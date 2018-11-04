@@ -1,15 +1,14 @@
-import {TOSEntity} from "../entity/tos-entity.model";
+import {TOSEntity} from "../tos-entity.model";
 import {TOSBuild} from "../tos-build";
-import {TOSJob} from "../job/tos-job.model";
-import {TOSSkill} from "../skill/tos-skill.model";
-import {TOSRepositoryService} from "../tos-repository.service";
+import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSJob, ITOSSkill} from "../tos-domain";
+import {TOSDomainService} from "../tos-domain.service";
 
-export class TOSAttribute extends TOSEntity {
-  private link_Jobs: TOSJob[];
-  private link_Skill: TOSSkill;
+export class TOSAttribute extends TOSEntity implements ITOSAttribute {
+  private description: string;
+  private descriptionRequired: string;
+  private link_Jobs: ITOSJob[];
+  private link_Skill: ITOSSkill;
 
-  readonly DescriptionRequiredHTML: string;
-  readonly DescriptionHTML: string;
   readonly IsToggleable: boolean;
   readonly LevelMax: number;
   readonly Unlock: string[];
@@ -18,12 +17,6 @@ export class TOSAttribute extends TOSEntity {
 
   constructor(private json: TOSAttribute) {
     super(json, 'attributes');
-
-    this.DescriptionHTML = this.Description.replace(/{nl}/g, '\n');
-    this.DescriptionRequiredHTML = json['DescriptionRequired'] || '';
-    this.DescriptionRequiredHTML = this.DescriptionRequiredHTML.replace(/{nl}/g, '\n');
-    this.DescriptionRequiredHTML = this.DescriptionRequiredHTML.replace(/{b}(.+){b}/g, '<b>$1</b>');
-    this.Description = null;
 
     this.IsToggleable = (json.IsToggleable + '') == 'True';
     this.LevelMax = +json.LevelMax;
@@ -46,21 +39,32 @@ export class TOSAttribute extends TOSEntity {
     this.unlockAvailable = this.unlockAvailable.bind(this);
   }
 
-  get Link_Jobs(): TOSJob[] {
+  get Description(): string {
+    return this.description = this.description
+      ? this.description
+      : this.json.Description.replace(/{nl}/g, '\n');
+  }
+  get DescriptionRequired(): string {
+    return this.descriptionRequired = this.descriptionRequired
+      ? this.descriptionRequired
+      : this.json.DescriptionRequired.replace(/{nl}/g, '\n').replace(/{b}?(.*){b}/g, '<b>$1</b>');
+  }
+
+  get Link_Jobs(): ITOSJob[] {
     return this.link_Jobs = this.link_Jobs
       ? this.link_Jobs
       : this.json.Link_Jobs
         ? JSON
           .parse(this.json.Link_Jobs + '')
-          .map(value => TOSRepositoryService.findJobsById(value))
+          .map(value => TOSDomainService.jobsById[value])
         : null;
   }
 
-  get Link_Skill(): TOSSkill {
+  get Link_Skill(): ITOSSkill {
     return this.link_Skill = this.link_Skill
       ? this.link_Skill
       : this.json.Link_Skill
-          ? TOSRepositoryService.findSkillsById(+this.json.Link_Skill)
+          ? TOSDomainService.skillsById[+this.json.Link_Skill]
           : null;
   }
 
@@ -84,11 +88,11 @@ export class TOSAttribute extends TOSEntity {
           line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
           while (match = regexJobGrade.exec(line)) {
-            let job = TOSRepositoryService.findJobsByIdName(match[1]);
+            let job = TOSDomainService.jobsByIdName[match[1]];
             line = line.replace(match[0], build.jobCircle(job) + '');
           }
           while (match = regexSkill.exec(line)) {
-            let skill = TOSRepositoryService.findSkillsByIdName(match[1]);
+            let skill = TOSDomainService.skillsByIdName[match[1]];
             line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
           }
 
@@ -109,7 +113,7 @@ export class TOSAttribute extends TOSEntity {
 
 }
 
-export class TOSAttributeUnlockArg {
+export class TOSAttributeUnlockArg implements ITOSAttributeUnlockArg {
   readonly UnlockArgStr: string;
   readonly UnlockArgNum: number;
 

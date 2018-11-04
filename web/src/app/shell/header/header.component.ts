@@ -4,6 +4,7 @@ import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faCommentAlt, faMoon, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
 import {TOSRegionService} from "../../shared/service/tos-region.service";
+import {TOSUrlService} from "../../shared/service/tos-url.service";
 
 @Component({
   selector: 'tos-header',
@@ -28,7 +29,7 @@ export class HeaderComponent implements OnInit {
   constructor(private regionService: TOSRegionService, public theme: ThemeService) {}
 
   routerLink(url: string): string {
-    return TOSRegionService.RegionUrl(url);
+    return TOSUrlService.Route(TOSRegionService.Region, url);
   }
 
   regionSelect(region: any) {

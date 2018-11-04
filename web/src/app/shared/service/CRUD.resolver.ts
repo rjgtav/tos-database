@@ -1,11 +1,13 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable, of} from "rxjs";
-import {Sort} from "../directives/sort.directive";
+import {Sort, SortOrder} from "../directives/sort.directive";
 import {Filter} from "../directives/filter.directive";
-import {map} from "rxjs/operators";
-import {Comparable} from "../domain/tos/entity/tos-entity.model";
+import {CRUDRepository} from "./CRUD.repository";
+import {TOSEntity} from "../domain/tos/tos-entity.model";
+import {TOSDataSet} from "../domain/tos/tos-domain";
+import {TOSDomainService} from "../domain/tos/tos-domain.service";
 
-export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
+export abstract class CRUDResolver<T extends TOSEntity> implements Resolve<T> {
 
   public static readonly PAGE_SIZE: number = 15;
 
@@ -14,10 +16,7 @@ export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
   public static readonly PARAM_PAGE: string = 'page';
   public static readonly PARAM_SORT: string = 'sort';
 
-  protected constructor(
-    private findAll: (filter?: Filter[], sort?: Sort) => T[],
-    private findById: ($ID: number) => T
-  ) {}
+  protected constructor(private dataset: TOSDataSet) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | T {
 
@@ -36,6 +35,23 @@ export abstract class CRUDResolver<T extends Comparable> implements Resolve<T> {
       return this.findById(route.params[CRUDResolver.PARAM_ID]);
 
     return of(mapToPage(this.findAll(filter, sort)));
+  }
+
+  private findAll(filter?: Filter[], sort?: Sort): T[] {
+    let data = TOSDomainService[TOSDataSet.getProperty(this.dataset)];
+    let sorter = data && sort ? data[0].$comparators[sort.column] : null;
+    sorter = sorter ? sorter : (i, j) => (i < j) ? -1 : (i > j) ? 1 : 0;
+
+    if (filter)
+      data = data.filter((item) => !filter || !filter.find(f => !f.filter(item)));
+    if (sort)
+      data = data.sort((a, b) => sorter(a[sort.column], b[sort.column]) * (sort.order == SortOrder.ASC ? 1 : -1));
+
+    return data;
+  }
+
+  private findById($ID: number): T {
+    return TOSDomainService[TOSDataSet.getProperty(this.dataset) + 'ById'][$ID];
   }
 
 }

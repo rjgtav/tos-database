@@ -1,6 +1,6 @@
 import {ChangeDetectorRef, Component, Input, NgZone, OnDestroy, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {TOSEquipmentType} from "../../../domain/tos/item/equipment/tos-equipment.model";
+import {TOSEquipmentType} from "../../../domain/tos/tos-domain";
 
 @Component({
   selector: 'tos-entity-detail-ClassIconGrade',
@@ -24,9 +24,22 @@ export class EntityDetailClassIconGradeComponent extends EntityDetailChildCompon
   ICON_HEIGHT: number;
   ICON_WIDTH: number;
 
-  private iconInterval;
+  private iconInterval: any;
+  private iconIntervalChange: boolean;
 
   constructor(private changeDetector: ChangeDetectorRef) { super() }
+
+  get Icon(): string {
+    if (this.card)
+      return this.card.IconTooltip;
+
+    if (this.equipment && this.iconInterval)
+      return this.iconIntervalChange
+        ? this.equipment.Icon.replace('_f', '_m')
+        : this.equipment.Icon.replace('_m', '_f');
+
+    return this.entity.Icon;
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     super.ngOnChanges(changes);
@@ -46,10 +59,7 @@ export class EntityDetailClassIconGradeComponent extends EntityDetailChildCompon
 
         if (isClassCostume) {
           this.iconInterval = setInterval(() => {
-            this.equipment.Icon = this.equipment.Icon.includes('_f')
-              ? this.equipment.Icon.replace('_f', '_m')
-              : this.equipment.Icon.replace('_m', '_f');
-
+            this.iconIntervalChange = !this.iconIntervalChange;
             this.changeDetector.detectChanges();
           }, 1500)
         }

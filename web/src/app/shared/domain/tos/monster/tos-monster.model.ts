@@ -1,10 +1,18 @@
-import {TOSElement, TOSEntity} from "../entity/tos-entity.model";
-import {TOSEquipmentMaterial} from "../item/equipment/tos-equipment.model";
+import {TOSEntity} from "../tos-entity.model";
 import {TOSItem} from "../item/tos-item.model";
-import {TOSRepositoryService} from "../tos-repository.service";
-import {TOSMap} from "../map/tos-map.model";
+import {
+  ITOSItem,
+  ITOSMap,
+  ITOSMonster, ITOSMonsterDropLink, ITOSMonsterSpawnLink,
+  TOSElement,
+  TOSEquipmentMaterial,
+  TOSMonsterRace,
+  TOSMonsterRank,
+  TOSMonsterSize
+} from "../tos-domain";
+import {TOSDomainService} from "../tos-domain.service";
 
-export class TOSMonster extends TOSEntity {
+export class TOSMonster extends TOSEntity implements ITOSMonster{
   private link_Drops: TOSMonsterDropLink[];
   private link_Spawns: TOSMonsterSpawnLink[];
 
@@ -95,9 +103,9 @@ export class TOSMonster extends TOSEntity {
 
 }
 
-export class TOSMonsterDropLink {
+export class TOSMonsterDropLink implements ITOSMonsterDropLink {
   Chance: number;
-  Item: TOSItem;
+  Item: ITOSItem;
   Quantity_MAX: number;
   Quantity_MIN: number;
 
@@ -105,8 +113,8 @@ export class TOSMonsterDropLink {
     this.Chance = +json.Chance;
     this.Item = json.Item
       ? !isNaN(+json.Item)
-        ? TOSRepositoryService.findItemsById(+json.Item)
-        : new TOSItem(json.Item, null)
+        ? TOSDomainService.itemsByIdLink(+json.Item)
+        : new TOSItem(json.Item as TOSItem, null)
       : null;
     this.Quantity_MAX = +json.Quantity_MAX;
     this.Quantity_MIN = +json.Quantity_MIN;
@@ -114,80 +122,15 @@ export class TOSMonsterDropLink {
 
 }
 
-export class TOSMonsterSpawnLink {
-  Map: TOSMap;
+export class TOSMonsterSpawnLink implements ITOSMonsterSpawnLink {
+  Map: ITOSMap;
   Population: number;
   TimeRespawn: number;
 
   constructor(json: TOSMonsterSpawnLink) {
-    this.Map = TOSRepositoryService.findMapsById(+json.Map);
+    this.Map = TOSDomainService.mapsById[+json.Map];
     this.Population = +json.Population;
     this.TimeRespawn = +json.TimeRespawn;
-  }
-
-}
-
-export enum TOSMonsterRace {
-  BEAST = 'Beast',
-  DEMON = 'Demon',
-  INSECT = 'Insect',
-  MUTANT = 'Mutant',
-  PLANT = 'Plant',
-}
-
-export namespace TOSMonsterRace {
-
-  export function getIcon(value: TOSMonsterRace): string {
-    return 'assets/images/monster_race_' + value.toString().toLowerCase() + '.png';
-  }
-
-}
-
-export enum TOSMonsterRank {
-  BOSS = 'Boss',
-  ELITE = 'Elite',
-  NORMAL = 'Normal',
-  SPECIAL = 'Special',
-}
-
-export namespace TOSMonsterRank {
-
-  export function comparator(a: TOSMonsterRank, b: TOSMonsterRank): -1 | 0 | 1 {
-    let i = TOSMonsterRank.getOrder(a);
-    let j = TOSMonsterRank.getOrder(b);
-
-    return (i < j) ? -1 : (i > j) ? 1 : 0;
-  }
-
-  export function getOrder(value: TOSMonsterRank) {
-    if (value == TOSMonsterRank.NORMAL) return 0;
-    if (value == TOSMonsterRank.ELITE)  return 1;
-    if (value == TOSMonsterRank.BOSS)   return 2;
-  }
-
-}
-
-export enum TOSMonsterSize {
-  S = 'S',
-  M = 'M',
-  L = 'L',
-  XL = 'XL'
-}
-
-export namespace TOSMonsterSize {
-
-  export function comparator(a: TOSMonsterSize, b: TOSMonsterSize): -1 | 0 | 1 {
-    let i = TOSMonsterSize.getOrder(a);
-    let j = TOSMonsterSize.getOrder(b);
-
-    return (i < j) ? -1 : (i > j) ? 1 : 0;
-  }
-
-  export function getOrder(value: TOSMonsterSize) {
-    if (value == TOSMonsterSize.S)  return 0;
-    if (value == TOSMonsterSize.M)  return 1;
-    if (value == TOSMonsterSize.L)  return 2;
-    if (value == TOSMonsterSize.XL) return 3;
   }
 
 }

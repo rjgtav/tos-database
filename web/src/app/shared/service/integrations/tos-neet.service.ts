@@ -1,9 +1,7 @@
 import {Injectable} from "@angular/core";
 import {TOSSimulatorBuild} from "../../domain/tos/tos-build";
-import {TOSJob} from "../../domain/tos/job/tos-job.model";
-import {TOSSkillRepository} from "../../domain/tos/skill/tos-skill.repository";
-import {TOSJobRepository} from "../../domain/tos/job/tos-job.repository";
-import {TOSRepositoryService} from "../../domain/tos/tos-repository.service";
+import {ITOSJob} from "../../domain/tos/tos-domain";
+import {TOSDomainService} from "../../domain/tos/tos-domain.service";
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +14,7 @@ export class TosNeetService {
     let build: TOSSimulatorBuild = new TOSSimulatorBuild();
 
     let partsEncoded = encoded.split('.');
-    let jobsDecoded: TOSJob[] = [];
+    let jobsDecoded: ITOSJob[] = [];
     let ranksEncoded = partsEncoded[0];
 
     // Decode ranks
@@ -24,7 +22,7 @@ export class TosNeetService {
       let jobTree = ranksEncoded[0];
       let jobClassName = 'Char' + jobTree + "_" + parseInt(ranksEncoded[i], 36);
 
-      let job = TOSRepositoryService.findJobsByIdName(jobClassName);
+      let job = TOSDomainService.jobsByIdName[jobClassName];
       if (job == null) // HotFix: for example tos-th has the wrong ClassID for some classes
         continue;
 
@@ -41,12 +39,12 @@ export class TosNeetService {
       for (let j = 0; j < skillsEncoded.length; j += 2) {
         let job = jobsDecoded[i - 1];
 
-        let skills = TOSRepositoryService.findSkillsByJob(job.$ID);
+        let skills = TOSDomainService.skillsByJob[job.$ID];
         let skillClassID = skills[0].$ID;
             skillClassID = parseInt(skillsEncoded[j], 36) + (skillClassID - skillClassID % 100);
         let skillLevel = parseInt(skillsEncoded[j + 1], 36);
 
-        let skill = TOSRepositoryService.findSkillsById(skillClassID);
+        let skill = TOSDomainService.skillsById[skillClassID];
 
         if (skill && skills.indexOf(skill) > -1)
           build.skillLevelIncrement(skill, skillLevel);

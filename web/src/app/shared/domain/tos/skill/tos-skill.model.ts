@@ -1,11 +1,17 @@
-import {TOSAttackType, TOSElement, TOSEntity, TOSStat} from "../entity/tos-entity.model";
+import {TOSEntity} from "../tos-entity.model";
 import {TOSBuildStats} from "../tos-build";
-import {TOSRepositoryService} from "../tos-repository.service";
-import {TOSAttribute} from "../attribute/tos-attribute.model";
-import {TOSGem} from "../item/gem/tos-gem.model";
-import {TOSJob} from "../job/tos-job.model";
+import {
+  ITOSAttribute, ITOSGem, ITOSJob,
+  ITOSSkill,
+  ITOSSkillRequiredStance,
+  TOSAttackType,
+  TOSElement,
+  TOSSkillRequiredStanceCompanion,
+  TOSStat
+} from "../tos-domain";
+import {TOSDomainService} from "../tos-domain.service";
 
-export class TOSSkill extends TOSEntity {
+export class TOSSkill extends TOSEntity implements ITOSSkill {
   private static readonly LUA_CONTEXT: string[] = [ // Some global functions used by the formulas
     'var GetAbility = (a, b) => null;',
     'var GetExProp = (a, b) => null;',
@@ -63,9 +69,10 @@ export class TOSSkill extends TOSEntity {
   private readonly prop_SpendItemBaseCount: number;
   private readonly sp: number;
 
-  private link_Attributes: TOSAttribute[];
-  private link_Gem: TOSGem;
-  private link_Job: TOSJob;
+  private description: string;
+  private link_Attributes: ITOSAttribute[];
+  private link_Gem: ITOSGem;
+  private link_Job: ITOSJob;
 
   readonly CoolDown: number;
   readonly DescriptionHTML: string;
@@ -82,12 +89,8 @@ export class TOSSkill extends TOSEntity {
   readonly SPPerLevel: number;
   readonly TypeAttack: TOSAttackType;
 
-
   constructor(private json: TOSSkill) {
     super(json, 'skills');
-
-    this.DescriptionHTML = this.tooltipToHTML(this.Description);
-    this.Description = null;
 
     this.CoolDown = +json.CoolDown;
     this.effect = this.tooltipToHTML(json['Effect'] + '');
@@ -149,29 +152,35 @@ export class TOSSkill extends TOSEntity {
     this.TypeAttack = Object.values(TOSAttackType)[+json.TypeAttack];
   }
 
-  get Link_Attributes(): TOSAttribute[] {
+  get Description(): string {
+    return this.description = this.description
+      ? this.description
+      : this.tooltipToHTML(this.json.Description);
+  }
+
+  get Link_Attributes(): ITOSAttribute[] {
     return this.link_Attributes = this.link_Attributes
       ? this.link_Attributes
       : this.json.Link_Attributes
         ? JSON
           .parse(this.json.Link_Attributes + '')
-          .map(value => TOSRepositoryService.findAttributesById(value))
+          .map(value => TOSDomainService.attributesById[value])
         : null;
   }
 
-  get Link_Gem(): TOSGem {
+  get Link_Gem(): ITOSGem {
     return this.link_Gem = this.link_Gem
       ? this.link_Gem
       : this.json.Link_Gem
-        ? TOSRepositoryService.findGemsById(+this.json.Link_Gem)
+        ? TOSDomainService.gemsById[+this.json.Link_Gem]
         : null;
   }
 
-  get Link_Job(): TOSJob {
+  get Link_Job(): ITOSJob {
     return this.link_Job = this.link_Job
       ? this.link_Job
       : this.json.Link_Job
-        ? TOSRepositoryService.findJobsById(+this.json.Link_Job)
+        ? TOSDomainService.jobsById[+this.json.Link_Job]
         : null;
   }
 
@@ -301,7 +310,7 @@ export class TOSSkill extends TOSEntity {
       let regexSkill = /(?:skill\.(\w+))+/g;
 
       while (match = regexAbility.exec(lineOriginal)) {
-        let attribute = TOSRepositoryService.findAttributesByIdName(match[1]);
+        let attribute = TOSDomainService.attributesByIdName[match[1]];
         if (attribute)
           line = line.replace(match[0], '<b>[' + attribute.Name + ']</b>');
       }
@@ -352,11 +361,13 @@ export class TOSSkill extends TOSEntity {
       description = description.replace(match[0], '<span style="color: ' + match[1] + '">' + match[2] + '</span>');
     }
 
-    return description.replace(/{\/}/g, '');
+    return description
+      .replace(/{\/}/g, '')
+      .replace(/{nl}/g, '\n');
   }
 }
 
-export class TOSSkillRequiredStance {
+export class TOSSkillRequiredStance implements ITOSSkillRequiredStance {
   Icon: string;
   Name: string;
 
@@ -364,10 +375,4 @@ export class TOSSkillRequiredStance {
     this.Icon = 'assets/icons/' + json.Icon + '.png';
     this.Name = json.Name;
   }
-}
-
-export enum TOSSkillRequiredStanceCompanion {
-  BOTH = 'Yes',
-  NO = 'No',
-  YES = 'Exclusive'
 }

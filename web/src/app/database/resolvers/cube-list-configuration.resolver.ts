@@ -2,7 +2,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
-import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
+import {TOSEntity} from "../../shared/domain/tos/tos-entity.model";
 
 @Injectable()
 export class CubeListConfigurationResolver implements Resolve<TOSListConfiguration> {

@@ -1,9 +1,8 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
-import {TOSItemType} from "../../shared/domain/tos/item/tos-item.model";
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
+import {TOSItemType} from "../../shared/domain/tos/tos-domain";
 
 @Injectable()
 export class ItemListConfigurationResolver implements Resolve<TOSListConfiguration> {

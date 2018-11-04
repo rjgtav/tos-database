@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {TOSGemType} from "../../../domain/tos/item/gem/tos-gem.model";
+import {TOSGemType} from "../../../domain/tos/tos-domain";
 
 @Component({
   selector: 'tos-entity-detail-Gem',

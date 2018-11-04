@@ -1,11 +1,12 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Subscription} from "rxjs/internal/Subscription";
-import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
+import {TOSEntity} from "../../shared/domain/tos/tos-entity.model";
 import {CRUDPage, CRUDResolver} from "../../shared/service/CRUD.resolver";
 import {Filter} from "../../shared/directives/filter.directive";
 import {Sort} from "../../shared/directives/sort.directive";
 import {EntityListFilter} from "../entity-filter/entity-list-filter.component";
+import {ITOSEntity} from "../../shared/domain/tos/tos-domain";
 
 @Component({
   selector: 'app-entity-list',
@@ -104,7 +105,7 @@ interface TOSListTableColumn {
 
   transformColor?: (value: any) => string
   transformIcon?: (value: any) => string
-  transformLink?: (value: any) => TOSEntity
+  transformLink?: (value: any) => ITOSEntity
   transformValue?: (value: any) => any
 }
 

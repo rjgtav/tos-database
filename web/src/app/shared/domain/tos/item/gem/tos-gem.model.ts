@@ -1,25 +1,22 @@
 import {TOSItem} from "../tos-item.model";
-import {TOSStat} from "../../entity/tos-entity.model";
-import {TOSSkill} from "../../skill/tos-skill.model";
-import {TOSRepositoryService} from "../../tos-repository.service";
+import {ITOSGem, ITOSGemBonus, ITOSSkill, TOSGemSlot, TOSGemType, TOSStat} from "../../tos-domain";
+import {TOSDomainService} from "../../tos-domain.service";
 
-export class TOSGem extends TOSItem {
-  static readonly SLOTS = ['TopAndBottom', 'Boots', 'Gloves', 'Weapon', 'SubWeapon'];
+export class TOSGem extends TOSItem implements ITOSGem {
+  private readonly bonusBoots: TOSGemBonus[];
+  private readonly bonusGloves: TOSGemBonus[];
+  private readonly bonusSubWeapon: TOSGemBonus[];
+  private readonly bonusTopAndBottom: TOSGemBonus[];
+  private readonly bonusWeapon: TOSGemBonus[];
+  private link_Skill: ITOSSkill;
 
-  private link_Skill: TOSSkill;
-
-  readonly BonusBoots: TOSGemBonus[];
-  readonly BonusGloves: TOSGemBonus[];
-  readonly BonusSubWeapon: TOSGemBonus[];
-  readonly BonusTopAndBottom: TOSGemBonus[];
-  readonly BonusWeapon: TOSGemBonus[];
   readonly TypeGem: TOSGemType;
 
   constructor(json: TOSGem) {
     super(json, 'gems');
 
-    for (let slot of TOSGem.SLOTS) {
-      this['Bonus' + slot] = json['Bonus' + slot]
+    for (let slot of Object.values(TOSGemSlot)) {
+      this['bonus' + slot] = json['Bonus' + slot]
         ? JSON
           .parse(json['Bonus' + slot] + '')
           .map(json => new TOSGemBonus(json))
@@ -29,21 +26,22 @@ export class TOSGem extends TOSItem {
     this.TypeGem = Object.values(TOSGemType)[+json.TypeGem];
   }
 
-  get Link_Skill(): TOSSkill {
+  get Link_Skill(): ITOSSkill {
     return this.link_Skill = this.link_Skill
       ? this.link_Skill
       : (this.json as TOSGem).Link_Skill
-        ? TOSRepositoryService.findSkillsById(+(this.json as TOSGem).Link_Skill)
+        ? TOSDomainService.skillsById[+(this.json as TOSGem).Link_Skill]
         : null;
   }
 
-  getBonus(level: number): { [key:string]: TOSGemBonus[]} {
-    return TOSGem.SLOTS
+  Bonus(level: number): { [key:string]: TOSGemBonus[]} {
+    return Object
+      .values(TOSGemSlot)
       .reduce((result, slot, i) => {
-        if (this['Bonus' + slot])
+        if (this['bonus' + slot])
           result[slot] = [
-            this['Bonus' + slot][(level - 1) * 2],
-            this['Bonus' + slot][(level - 1) * 2 + 1]
+            this['bonus' + slot][(level - 1) * 2],
+            this['bonus' + slot][(level - 1) * 2 + 1]
           ];
 
         return result;
@@ -52,9 +50,9 @@ export class TOSGem extends TOSItem {
 
 }
 
-export class TOSGemBonus {
+export class TOSGemBonus implements ITOSGemBonus {
   Slot: TOSGemSlot;
-  Stat: String | TOSStat;
+  Stat: string | TOSStat;
   Value: number;
 
   constructor(json: TOSGemBonus) {
@@ -74,17 +72,4 @@ export class TOSGemBonus {
     return string;
   }
 
-}
-
-export enum TOSGemType {
-  SKILL = 'Skill',
-  STATS = 'Stats',
-}
-
-export enum TOSGemSlot {
-  BOOTS = 'Boots',
-  GLOVES = 'Gloves',
-  SUBWEAPON = 'Sub Weapon',
-  TOPLEG = 'Top/Bottom',
-  WEAPON = 'Weapon'
 }

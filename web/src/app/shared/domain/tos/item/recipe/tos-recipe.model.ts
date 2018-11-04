@@ -1,9 +1,10 @@
 import {TOSItem} from "../tos-item.model";
-import {TOSRepositoryService} from "../../tos-repository.service";
+import {ITOSItem, ITOSRecipe, ITOSRecipeMaterial} from "../../tos-domain";
+import {TOSDomainService} from "../../tos-domain.service";
 
-export class TOSRecipe extends TOSItem {
+export class TOSRecipe extends TOSItem implements ITOSRecipe {
   private link_Materials: TOSRecipeMaterial[];
-  private link_Target: TOSItem;
+  private link_Target: ITOSItem;
 
   constructor(json: TOSRecipe) {
     super(json, 'recipes');
@@ -19,26 +20,22 @@ export class TOSRecipe extends TOSItem {
         : null;
   }
 
-  get Link_Target(): TOSItem {
+  get Link_Target(): ITOSItem {
     return this.link_Target = this.link_Target
       ? this.link_Target
       : (this.json as TOSRecipe).Link_Target
-        ? TOSRepositoryService.findItemsById(+(this.json as TOSRecipe).Link_Target)
+        ? TOSDomainService.itemsByIdLink(+(this.json as TOSRecipe).Link_Target)
         : null;
-  }
-
-  get TargetAsList(): TOSItem[] {
-    return this.Link_Target ? [this.Link_Target] : null;
   }
 
 }
 
-export class TOSRecipeMaterial {
-  Item: TOSItem;
+export class TOSRecipeMaterial implements ITOSRecipeMaterial {
+  Item: ITOSItem;
   Quantity: number;
 
   constructor(json: TOSRecipeMaterial) {
-    this.Item = TOSRepositoryService.findItemsById(+json.Item);
+    this.Item = TOSDomainService.itemsByIdLink(+json.Item);
     this.Quantity = +json.Quantity;
   }
 

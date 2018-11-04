@@ -2,11 +2,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
-import {TOSElement, TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
-import {TOSEquipmentMaterial} from "../../shared/domain/tos/item/equipment/tos-equipment.model";
-import {TOSCard, TOSCardType} from "../../shared/domain/tos/item/card/tos-card.model";
-import {TOSMonster, TOSMonsterRace} from "../../shared/domain/tos/monster/tos-monster.model";
-import {TOSGemType} from "../../shared/domain/tos/item/gem/tos-gem.model";
+import {TOSGemType} from "../../shared/domain/tos/tos-domain";
 
 @Injectable()
 export class GemListConfigurationResolver implements Resolve<TOSListConfiguration> {

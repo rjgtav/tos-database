@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
-import {TOSStat} from "../../../shared/domain/tos/entity/tos-entity.model";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {Subscription} from "rxjs";
+import {TOSStat} from "../../../shared/domain/tos/tos-domain";
 
 @Component({
   selector: 'app-skill-builder-stat-selector',

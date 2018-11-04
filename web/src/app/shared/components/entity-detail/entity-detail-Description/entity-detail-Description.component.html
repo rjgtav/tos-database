@@ -2,6 +2,5 @@
   <div class="w-100" *ngIf="divider"><hr></div>
   <h5 *ngIf="header">Description</h5>
 
-  <p class="text-multiline mb-0" *ngIf="entity['Description']">{{ entity['Description'] }}</p>
-  <p class="text-multiline mb-0" *ngIf="entity['DescriptionHTML']" [innerHTML]="(entity['DescriptionHTML'] + (entity['DescriptionRequiredHTML'] || '')) | sanitizeHTML"></p>
+  <p class="text-multiline mb-0" [innerHTML]="(entity['Description'] + entity['DescriptionRequired']) | sanitizeHTML"></p>
 </div>

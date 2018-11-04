@@ -10,11 +10,11 @@ export class AttributeListConfigurationResolver implements Resolve<TOSListConfig
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '' },
-        { value: '$ID',             type: TOSListTableColumnType.TEXT,      isNotMobile: true },
-        { value: 'Name',            type: TOSListTableColumnType.TEXT,      isWide: true},
-        { value: 'DescriptionHTML', type: TOSListTableColumnType.TEXT,      label: 'Description', isNotMobile: true, isWide: true},
-        { value: 'Link_Skill',      type: TOSListTableColumnType.ICON_LINK, label: 'Skill',
+        { value: 'Icon',          type: TOSListTableColumnType.ICON,            label: '' },
+        { value: '$ID',           type: TOSListTableColumnType.TEXT,            isNotMobile: true },
+        { value: 'Name',          type: TOSListTableColumnType.TEXT,            isWide: true},
+        { value: 'Description',   type: TOSListTableColumnType.TEXT_MULTILINE,  label: 'Description', isNotMobile: true, isWide: true},
+        { value: 'Link_Skill',    type: TOSListTableColumnType.ICON_LINK,       label: 'Skill',
           transformValue: (o) => o ? [o] : null },
       ]
     };

@@ -1,17 +1,14 @@
-import { Injectable } from '@angular/core';
 import {TOSCollection} from "./tos-collection.model";
 import {CRUDRepository} from "../../../../service/CRUD.repository";
+import {TOSDataSet} from "../../tos-domain";
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TOSCollectionRepository extends CRUDRepository<TOSCollection> {
 
-  constructor() {
+  static readonly instance: TOSCollectionRepository = new TOSCollectionRepository();
+
+  private constructor() {
     super({
-      id: '$ID',
-      path: '/assets/data/collections.csv',
-      searchKeys: ['$ID_NAME', 'Name'],
+      dataset: TOSDataSet.COLLECTIONS,
       loadStep: (row: TOSCollection) => new TOSCollection(row)
     });
   }

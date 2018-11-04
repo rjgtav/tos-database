@@ -1,8 +1,8 @@
 import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 import {TOSBuild, TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {Subscription} from "rxjs";
-import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {faTrashAlt} from "@fortawesome/free-solid-svg-icons";
+import {ITOSJob} from "../../../shared/domain/tos/tos-domain";
 
 @Component({
   selector: 'app-skill-builder-job-rank-list',
@@ -16,7 +16,7 @@ export class SkillBuilderJobRankListComponent implements OnChanges, OnDestroy {
 
   @Input() build: TOSSimulatorBuild;
 
-  jobs: TOSJob[];
+  jobs: ITOSJob[];
   jobsCircle: number[];
   jobsHover: boolean[];
 
@@ -29,7 +29,7 @@ export class SkillBuilderJobRankListComponent implements OnChanges, OnDestroy {
     this.build.jobRemove(rank);
   }
 
-  onJobsChange(value: TOSJob[]) {
+  onJobsChange(value: ITOSJob[]) {
     this.jobs = value;
     this.jobsCircle = [];
     this.jobsHover = [];

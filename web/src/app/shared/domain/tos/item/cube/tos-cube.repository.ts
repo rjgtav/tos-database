@@ -1,17 +1,14 @@
-import { Injectable } from '@angular/core';
 import {TOSCube} from "./tos-cube.model";
 import {CRUDRepository} from "../../../../service/CRUD.repository";
+import {TOSDataSet} from "../../tos-domain";
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TOSCubeRepository extends CRUDRepository<TOSCube> {
 
-  constructor() {
+  static readonly instance: TOSCubeRepository = new TOSCubeRepository();
+
+  private constructor() {
     super({
-      id: '$ID',
-      path: '/assets/data/cubes.csv',
-      searchKeys: ['$ID_NAME', 'Name'],
+      dataset: TOSDataSet.CUBES,
       loadStep: (row: TOSCube) => new TOSCube(row)
     });
   }

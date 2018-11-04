@@ -2,8 +2,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
-import {TOSElement, TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
-import {TOSJobDifficulty, TOSJobTree, TOSJobType} from "../../shared/domain/tos/job/tos-job.model";
+import {TOSJobDifficulty, TOSJobTree} from "../../shared/domain/tos/tos-domain";
 
 @Injectable()
 export class JobListConfigurationResolver implements Resolve<TOSListConfiguration> {
@@ -11,7 +10,8 @@ export class JobListConfigurationResolver implements Resolve<TOSListConfiguratio
     return {
       filter: [
         {
-          column: 'Difficulty',
+          column: 'JobDifficulty',
+          label: 'Difficulty',
           groups: [
             {
               options: [
@@ -23,7 +23,8 @@ export class JobListConfigurationResolver implements Resolve<TOSListConfiguratio
           ]
         },
         {
-          column: 'Tree',
+          column: 'JobTree',
+          label: 'Tree',
           groups: [
             {
               options: [

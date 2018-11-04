@@ -1,6 +1,7 @@
-import {TOSEntity} from "../entity/tos-entity.model";
+import {TOSEntity} from "../tos-entity.model";
+import {ITOSMap} from "../tos-domain";
 
-export class TOSMap extends TOSEntity {
+export class TOSMap extends TOSEntity implements ITOSMap {
 
   constructor(json: TOSMap) {
     super(json, 'maps');

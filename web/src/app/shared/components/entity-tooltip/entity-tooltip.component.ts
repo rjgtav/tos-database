@@ -9,16 +9,22 @@ import {
   SimpleChanges
 } from '@angular/core';
 import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
-import {TOSItem, TOSItemTradability} from "../../domain/tos/item/tos-item.model";
-import {TOSClassTree, TOSElement, TOSEntity, TOSStat} from "../../domain/tos/entity/tos-entity.model";
+import {TOSItem} from "../../domain/tos/item/tos-item.model";
+import {TOSEntity} from "../../domain/tos/tos-entity.model";
 import {TOSCard} from "../../domain/tos/item/card/tos-card.model";
 import {TOSEquipment} from "../../domain/tos/item/equipment/tos-equipment.model";
-import {TOSMonsterRace} from "../../domain/tos/monster/tos-monster.model";
 import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
 import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
 import {TOSBuild} from "../../domain/tos/tos-build";
 import {TOSMap} from "../../domain/tos/map/tos-map.model";
 import {TOSJob} from "../../domain/tos/job/tos-job.model";
+import {
+  TOSClassTree,
+  TOSElement,
+  TOSEquipmentType,
+  TOSItemTradability,
+  TOSMonsterRace, TOSStat
+} from "../../domain/tos/tos-domain";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -31,7 +37,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
   readonly TOSClassTree = TOSClassTree;
   readonly TOSElement = TOSElement;
   readonly TOSMonsterRace = TOSMonsterRace;
-  readonly TOSEquipmentType = TOSEquipment;
+  readonly TOSEquipmentType = TOSEquipmentType;
   readonly TOSItemTradable = TOSItemTradability;
   readonly TOSStat = TOSStat;
 

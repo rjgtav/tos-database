@@ -1,13 +1,8 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {
-  TOSEquipmentGrade,
-  TOSEquipmentMaterial,
-  TOSEquipmentType
-} from "../../shared/domain/tos/item/equipment/tos-equipment.model";
-import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
+import {TOSEquipmentGrade, TOSEquipmentMaterial, TOSEquipmentType} from "../../shared/domain/tos/tos-domain";
 
 @Injectable()
 export class EquipmentListConfigurationResolver implements Resolve<TOSListConfiguration> {

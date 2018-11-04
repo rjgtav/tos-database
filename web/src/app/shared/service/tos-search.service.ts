@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable, of, Subscriber} from "rxjs";
-import {TOSRegionService} from "./tos-region.service";
-import {TOSRepositoryService} from "../domain/tos/tos-repository.service";
-import {TOSEntity} from "../domain/tos/entity/tos-entity.model";
+import {TOSEntity} from "../domain/tos/tos-entity.model";
+import {TOSUrlService} from "./tos-url.service";
+import {TOSDomainService} from "../domain/tos/tos-domain.service";
+import {TOSRegion} from "../domain/tos-region";
+import {TOSDataSet} from "../domain/tos/tos-domain";
 
 @Injectable({
   providedIn: 'root'
@@ -29,14 +31,11 @@ export class TOSSearchService {
     return this.isLoaded.asObservable();
   }
 
-  public load(force: boolean = false) {
-    let path = (location.href.indexOf('github') > 0 ? '/tos-database' : '') + '/assets/data/index.json';
-        path = path.replace('data/', 'data' + TOSRegionService.RegionUrl(''));
-
+  public load(force: boolean, region: TOSRegion) {
     if ((!this.isLoaded.getValue() || force) && !this.isLoading) {
       this.isLoaded.next(false);
       this.isLoading = true;
-      this.worker.postMessage({ cmd: 'load', url: path });
+      this.worker.postMessage({ cmd: 'load', url: TOSUrlService.Asset(region, '/assets/data/index.json') });
     }
   }
 
@@ -68,23 +67,9 @@ export class TOSSearchService {
           .map((value: object) => {
             let file = value['ref'].split('#')[0];
             let id = +value['ref'].split('#')[1];
+            let dataset = Object.values(TOSDataSet).find(value2 => file == value2);
 
-            if (file == 'attributes')     return TOSRepositoryService.findAttributesById(id);
-            if (file == 'books')          return TOSRepositoryService.findBooksById(id);
-            if (file == 'cards')          return TOSRepositoryService.findCardsById(id);
-            if (file == 'collections')    return TOSRepositoryService.findCollectionsById(id);
-            if (file == 'cubes')          return TOSRepositoryService.findCubesById(id);
-            if (file == 'equipment')      return TOSRepositoryService.findEquipmentById(id);
-            if (file == 'equipment_sets') return TOSRepositoryService.findEquipmentSetsById(id);
-            if (file == 'gems')           return TOSRepositoryService.findGemsById(id);
-            if (file == 'items')          return TOSRepositoryService.findItemsById(id);
-            if (file == 'jobs')           return TOSRepositoryService.findJobsById(id);
-            if (file == 'maps')           return TOSRepositoryService.findMapsById(id);
-            if (file == 'monsters')       return TOSRepositoryService.findMonstersById(id);
-            if (file == 'recipes')        return TOSRepositoryService.findRecipesById(id);
-            if (file == 'skills')         return TOSRepositoryService.findSkillsById(id);
-
-            return null;
+            return TOSDomainService[TOSDataSet.getProperty(dataset) + 'ById'][id];
           });
 
         this.subscriberSearch && this.subscriberSearch.next(result);

@@ -1,17 +1,14 @@
-import { Injectable } from '@angular/core';
 import {TOSGem} from "./tos-gem.model";
 import {CRUDRepository} from "../../../../service/CRUD.repository";
+import {TOSDataSet} from "../../tos-domain";
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TOSGemRepository extends CRUDRepository<TOSGem> {
 
-  constructor() {
+  static readonly instance: TOSGemRepository = new TOSGemRepository();
+
+  private constructor() {
     super({
-      id: '$ID',
-      path: '/assets/data/gems.csv',
-      searchKeys: ['$ID_NAME', 'Name'],
+      dataset: TOSDataSet.GEMS,
       loadStep: (row: TOSGem) => new TOSGem(row)
     });
   }

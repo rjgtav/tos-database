@@ -1,7 +1,7 @@
 import {Component, Input, SimpleChanges} from "@angular/core";
-import {TOSClassTree, TOSElement, TOSEntity} from "../../domain/tos/entity/tos-entity.model";
-import {TOSItem, TOSItemTradability} from "../../domain/tos/item/tos-item.model";
-import {TOSMonster, TOSMonsterRace} from "../../domain/tos/monster/tos-monster.model";
+import {TOSEntity} from "../../domain/tos/tos-entity.model";
+import {TOSItem} from "../../domain/tos/item/tos-item.model";
+import {TOSMonster} from "../../domain/tos/monster/tos-monster.model";
 import {TOSBook} from "../../domain/tos/item/book/tos-book.model";
 import {TOSCard} from "../../domain/tos/item/card/tos-card.model";
 import {TOSCollection} from "../../domain/tos/item/collection/tos-collection.model";
@@ -9,9 +9,10 @@ import {TOSGem} from "../../domain/tos/item/gem/tos-gem.model";
 import {TOSEquipment, TOSEquipmentSet} from "../../domain/tos/item/equipment/tos-equipment.model";
 import {TOSRecipe} from "../../domain/tos/item/recipe/tos-recipe.model";
 import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
-import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
 import {TOSMap} from "../../domain/tos/map/tos-map.model";
 import {TOSJob} from "../../domain/tos/job/tos-job.model";
+import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
+import {TOSClassTree, TOSElement, TOSItemTradability, TOSMonsterRace} from "../../domain/tos/tos-domain";
 
 @Component({ template: '' })
 export class EntityDetailChildComponent {

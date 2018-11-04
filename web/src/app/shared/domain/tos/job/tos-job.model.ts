@@ -1,12 +1,11 @@
-import {TOSEntity} from "../entity/tos-entity.model";
+import {TOSEntity} from "../tos-entity.model";
 import {TOSBuild} from "../tos-build";
-import {TOSRepositoryService} from "../tos-repository.service";
-import {TOSAttribute} from "../attribute/tos-attribute.model";
-import {TOSSkill} from "../skill/tos-skill.model";
+import {ITOSAttribute, ITOSJob, ITOSSkill, TOSJobDifficulty, TOSJobTree, TOSJobType} from "../tos-domain";
+import {TOSDomainService} from "../tos-domain.service";
 
-export class TOSJob extends TOSEntity {
-  private link_Attributes: TOSAttribute[];
-  private link_Skills: TOSSkill[];
+export class TOSJob extends TOSEntity implements ITOSJob {
+  private link_Attributes: ITOSAttribute[];
+  private link_Skills: ITOSSkill[];
 
   readonly CircleMax: number;
   readonly JobDifficulty: TOSJobDifficulty;
@@ -44,23 +43,23 @@ export class TOSJob extends TOSEntity {
     this.Stat_STR = +json.Stat_STR;
   }
 
-  get Link_Attributes(): TOSAttribute[] {
+  get Link_Attributes(): ITOSAttribute[] {
     return this.link_Attributes = this.link_Attributes
       ? this.link_Attributes
       : this.json.Link_Attributes
         ? JSON
           .parse(this.json.Link_Attributes + '')
-          .map(value => TOSRepositoryService.findAttributesById(value))
+          .map(value => TOSDomainService.attributesById[value])
         : null;
   }
 
-  get Link_Skills(): TOSSkill[] {
+  get Link_Skills(): ITOSSkill[] {
     return this.link_Skills = this.link_Skills
       ? this.link_Skills
       : this.json.Link_Skills
         ? JSON
           .parse(this.json.Link_Skills + '')
-          .map(value => TOSRepositoryService.findSkillsById(value))
+          .map(value => TOSDomainService.skillsById[value])
         : null;
   }
 
@@ -82,7 +81,7 @@ export class TOSJob extends TOSEntity {
     let extra = true;
 
     if (this.$ID_NAME == 'Char4_12') // Chaplain
-      extra = build.jobCircle(TOSRepositoryService.findJobsById(4002)) >= 3; // Priest
+      extra = build.jobCircle(TOSDomainService.jobsById[4002]) >= 3; // Priest
 
     return 1==1
       && extra
@@ -91,30 +90,4 @@ export class TOSJob extends TOSEntity {
       && build.jobCircle(this) < this.CircleMax;
   }
 
-}
-
-export enum  TOSJobDifficulty {
-  EASY = 'Easy',
-  HARD = 'Hard',
-  NORMAL = 'Normal',
-}
-
-export enum TOSJobTree {
-  ARCHER = 'Archer',
-  CLERIC = 'Cleric',
-  WARRIOR = 'Warrior',
-  WIZARD = 'Wizard',
-}
-
-export enum TOSJobType {
-  ATTACK = 'Attack',
-  ATTACK_INSTALL = 'Attack with Installations',
-  ATTACK_MANEUVERING = 'Attack with Mobility',
-  ATTACK_SUMMON = 'Attack with Summons',
-  CRAFTING = 'Crafting',
-  DEFENSE = 'Defense',
-  DEFENSE_PROVOKE = 'Defense with Provoke',
-  SUPPORT = 'Support',
-  SUPPORT_CONTROL = 'Support with Control',
-  SUPPORT_PARTY = 'Support with Party',
 }

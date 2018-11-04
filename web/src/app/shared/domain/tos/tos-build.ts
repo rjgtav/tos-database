@@ -1,11 +1,8 @@
-import {TOSJob, TOSJobTree} from "./job/tos-job.model";
 import {BehaviorSubject, Observable} from "rxjs";
-import {TOSSkill} from "./skill/tos-skill.model";
 import {EventEmitter} from "@angular/core";
-import {TOSEntity} from "./entity/tos-entity.model";
-import {TOSAttribute} from "./attribute/tos-attribute.model";
-import {TOSRepositoryService} from "./tos-repository.service";
 import {take, tap} from "rxjs/operators";
+import {ITOSAttribute, ITOSEntity, ITOSJob, ITOSSkill, TOSJobTree} from "./tos-domain";
+import {TOSDomainService} from "./tos-domain.service";
 
 const LEVEL_LIMIT: number = 390;
 const RANK_LIMIT: number = 10; // TODO: find a way to retrieve this value from the game files
@@ -13,7 +10,7 @@ const SKILL_POINTS_PER_CIRCLE: number = 15; // TODO: find a way to retrieve this
 
 export abstract class TOSBuild {
 
-  private readonly jobs: BehaviorSubject<TOSJob[]> = new BehaviorSubject([]);
+  private readonly jobs: BehaviorSubject<ITOSJob[]> = new BehaviorSubject([]);
   private jobTree: TOSJobTree;
 
   private readonly skillLevelsByJob: { [key: number]: BehaviorSubject<{ [key: number]: number }> } = {};
@@ -29,7 +26,7 @@ export abstract class TOSBuild {
 
   static get RankLimit(): number { return RANK_LIMIT; }
 
-  get Jobs(): Observable<TOSJob[]> { return this.jobs.asObservable(); }
+  get Jobs(): Observable<ITOSJob[]> { return this.jobs.asObservable(); }
   get JobTree(): TOSJobTree { return this.jobTree; }
   get Rank(): number { return this.jobs.getValue().length; }
   get Stats(): TOSBuildStats {
@@ -61,7 +58,7 @@ export abstract class TOSBuild {
   }
   get StatsPoints(): Observable<number> { return this.statsPoints.asObservable(); }
 
-  jobAdd(job: TOSJob): void {
+  jobAdd(job: ITOSJob): void {
     if (this.Rank >= RANK_LIMIT)
       throw new Error('Rank limit of ' + RANK_LIMIT + ' has been reached');
 
@@ -85,7 +82,7 @@ export abstract class TOSBuild {
 
     this.jobs.next(jobs);
   }
-  jobCircle(job: TOSJob): number {
+  jobCircle(job: ITOSJob): number {
     return this.jobs.getValue().filter(value => value.$ID == job.$ID).length;
   }
   jobRanks(job$ID: number): number[] {
@@ -120,20 +117,20 @@ export abstract class TOSBuild {
     if (rank == 1)
       this.rankResetStats();
   }
-  jobSkillLevels(job: TOSJob): Observable<{ [key: number]: number }> {
+  jobSkillLevels(job: ITOSJob): Observable<{ [key: number]: number }> {
     return this.skillLevelsByJob[job.$ID].asObservable();
   }
 
-  skillEffect(skill: TOSSkill, showFactors: boolean): string {
+  skillEffect(skill: ITOSSkill, showFactors: boolean): string {
     return skill.Effect(this.skillLevel(skill), this.Stats, showFactors);
   }
-  skillEffectFormula(skill: TOSSkill, prop: string): string {
+  skillEffectFormula(skill: ITOSSkill, prop: string): string {
     return skill.EffectFormula(this.skillLevel(skill), prop, this.Stats);
   }
-  skillLevel(skill: TOSSkill): number {
+  skillLevel(skill: ITOSSkill): number {
     return this.skillLevelsByJob[skill.Link_Job.$ID].getValue()[skill.$ID];
   }
-  skillLevelIncrement(skill: TOSSkill, delta: number, rollOver?: boolean) {
+  skillLevelIncrement(skill: ITOSSkill, delta: number, rollOver?: boolean) {
     if (!this.skillLevelsByJob[skill.Link_Job.$ID] || !this.skillPointsByJob[skill.Link_Job.$ID])
       return;
 
@@ -160,7 +157,7 @@ export abstract class TOSBuild {
     skillPoints -= delta;
     this.skillPointsByJob[skill.Link_Job.$ID].next(skillPoints);
   }
-  skillLevelIncrementAvailable(skill: TOSSkill, delta: number): boolean {
+  skillLevelIncrementAvailable(skill: ITOSSkill, delta: number): boolean {
     if (!this.skillLevelsByJob[skill.Link_Job.$ID] || !this.skillPointsByJob[skill.Link_Job.$ID])
       return false;
 
@@ -172,7 +169,7 @@ export abstract class TOSBuild {
       && skillLevels + delta >= 0
       && skillLevels + delta <=  skill.LevelMax(this.jobCircle(skill.Link_Job));
   }
-  skillLevelMax(skill: TOSSkill): number {
+  skillLevelMax(skill: ITOSSkill): number {
     return skill.LevelMax(this.jobCircle(skill.Link_Job));
   }
   skillPoints(job: { $ID: number }): Observable<number> {
@@ -211,7 +208,7 @@ export abstract class TOSBuild {
     // More info: https://forum.treeofsavior.com/t/extra-stat-point-quests-guide/390257
     this.statsPoints.next(LEVEL_LIMIT - 1 + 40 + 12);
   }
-  private rankResetSkillLevels(job: TOSJob): void {
+  private rankResetSkillLevels(job: ITOSJob): void {
     let skillLevels = this.skillLevelsByJob[job.$ID]
       ? this.skillLevelsByJob[job.$ID].getValue()
       : null;
@@ -230,7 +227,7 @@ export abstract class TOSBuild {
       Object.entries(skillLevels)
         .forEach(value => {
           let delta = value[1];
-          let skill = TOSRepositoryService.findSkillsById(+value[0]);
+          let skill = TOSDomainService.skillsById[+value[0]];
           let skillPoints = this.skillPointsByJob[job.$ID].getValue();
 
           if (delta) {
@@ -241,7 +238,7 @@ export abstract class TOSBuild {
           }
         });
   }
-  private rankResetSkillPoints(job: TOSJob, circle: number): void {
+  private rankResetSkillPoints(job: ITOSJob, circle: number): void {
     this.skillPointsByJob[job.$ID] = this.skillPointsByJob[job.$ID] || new BehaviorSubject<number>(0);
     this.skillPointsByJob[job.$ID].next(SKILL_POINTS_PER_CIRCLE * circle);
   }
@@ -270,23 +267,23 @@ export class TOSDatabaseBuild extends TOSBuild {
 
 export class TOSSimulatorBuild extends TOSBuild {
   public readonly Change: EventEmitter<void> = new EventEmitter();
-  public readonly Tooltip: EventEmitter<TOSEntity> = new EventEmitter();
+  public readonly Tooltip: EventEmitter<ITOSEntity> = new EventEmitter();
 
-  private tooltipAttribute: TOSAttribute;
-  private tooltipJob: TOSJob;
-  private tooltipSkill: TOSSkill;
+  private tooltipAttribute: ITOSAttribute;
+  private tooltipJob: ITOSJob;
+  private tooltipSkill: ITOSSkill;
 
   static base64Decode(text: string): TOSSimulatorBuild {
     let build: TOSSimulatorBuild = new TOSSimulatorBuild();
     let encoded: TOSBuildEncoded = JSON.parse(atob(text));
 
     encoded.jobs.forEach(value => {
-      let job = TOSRepositoryService.findJobsByIdName(value);
+      let job = TOSDomainService.jobsByIdName[value];
       build.jobAdd(job)
     });
     Object.entries(encoded.skills || {})
-      .filter(value => TOSRepositoryService.findSkillsById(+value[0]))
-      .forEach(value => build.skillLevelIncrement(TOSRepositoryService.findSkillsById(+value[0]), value[1]));
+      .filter(value => TOSDomainService.skillsById[+value[0]])
+      .forEach(value => build.skillLevelIncrement(TOSDomainService.skillsById[+value[0]], value[1]));
     Object.entries(encoded.stats || {}).forEach(value => build.statIncrementLevel(value[0], value[1]));
 
     return build;
@@ -301,7 +298,7 @@ export class TOSSimulatorBuild extends TOSBuild {
     ).subscribe();
 
     jobs
-      .map(value => TOSRepositoryService.findJobsByIdName(value))
+      .map(value => TOSDomainService.jobsByIdName[value])
       .forEach(value => value.Link_Skills
         .filter(skill => build.skillLevel(skill) > 0)
         .forEach(skill => skills[skill.$ID] = build.skillLevel(skill))
@@ -314,7 +311,7 @@ export class TOSSimulatorBuild extends TOSBuild {
 
   constructor() { super() }
 
-  jobAdd(job: TOSJob): void {
+  jobAdd(job: ITOSJob): void {
     super.jobAdd(job);
     this.Change.emit();
   }
@@ -323,7 +320,7 @@ export class TOSSimulatorBuild extends TOSBuild {
     this.Change.emit();
   }
 
-  skillLevelIncrement(skill: TOSSkill, delta: number, rollOver?: boolean) {
+  skillLevelIncrement(skill: ITOSSkill, delta: number, rollOver?: boolean) {
     super.skillLevelIncrement(skill, delta, rollOver);
     this.Change.emit();
   }
@@ -333,15 +330,15 @@ export class TOSSimulatorBuild extends TOSBuild {
     this.Change.emit();
   }
 
-  tooltipAttributeShow(attribute: TOSAttribute, show: boolean) {
+  tooltipAttributeShow(attribute: ITOSAttribute, show: boolean) {
     this.tooltipAttribute = show ? attribute : null;
     this.Tooltip.emit(this.tooltipAttribute || this.tooltipSkill || this.tooltipJob);
   }
-  tooltipJobShow(job: TOSJob, show: boolean) {
+  tooltipJobShow(job: ITOSJob, show: boolean) {
     this.tooltipJob = show ? job : null;
     this.Tooltip.emit(this.tooltipAttribute || this.tooltipSkill || this.tooltipJob);
   }
-  tooltipSkillShow(skill: TOSSkill, show: boolean): void {
+  tooltipSkillShow(skill: ITOSSkill, show: boolean): void {
     this.tooltipSkill = show ? skill : null;
     this.Tooltip.emit(this.tooltipAttribute || this.tooltipSkill || this.tooltipJob);
   }

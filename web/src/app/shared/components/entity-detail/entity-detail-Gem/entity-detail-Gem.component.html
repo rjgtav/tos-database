@@ -6,7 +6,7 @@
 
   <table class="table table-borderless mb-0">
     <tbody>
-      <tr *ngFor="let entry of gem.getBonus(level) | keyvalue">
+      <tr *ngFor="let entry of gem.Bonus(level) | keyvalue">
         <td class="p-1 align-middle" width="1">
           <img class="bg-primary rounded-circle p-2" [src]="'assets/images/gem_effect_' + entry.key.toLowerCase() + '.png'" [title]="entry.key" />
         </td>

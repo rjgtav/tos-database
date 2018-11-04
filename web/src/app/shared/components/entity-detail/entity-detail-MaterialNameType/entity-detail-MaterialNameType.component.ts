@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {TOSEquipmentType} from "../../../domain/tos/item/equipment/tos-equipment.model";
+import {TOSEquipmentType} from "../../../domain/tos/tos-domain";
 
 @Component({
   selector: 'tos-entity-detail-MaterialNameType',

@@ -1,8 +1,9 @@
 import {TOSItem} from "../tos-item.model";
-import {TOSRepositoryService} from "../../tos-repository.service";
+import {ITOSCollection, ITOSCollectionBonus, ITOSItem} from "../../tos-domain";
+import {TOSDomainService} from "../../tos-domain.service";
 
-export class TOSCollection extends TOSItem {
-  private link_Items: TOSItem[];
+export class TOSCollection extends TOSItem implements ITOSCollection {
+  private link_Items: ITOSItem[];
 
   readonly Bonus: TOSCollectionBonus[];
 
@@ -17,20 +18,20 @@ export class TOSCollection extends TOSItem {
       : null;
   }
 
-  get Link_Items(): TOSItem[] {
+  get Link_Items(): ITOSItem[] {
     return this.link_Items = this.link_Items
       ? this.link_Items
       : (this.json as TOSCollection).Link_Items
         ? JSON
           .parse((this.json as TOSCollection).Link_Items + '')
-          .map(value => TOSRepositoryService.findItemsById(value))
+          .map(value => TOSDomainService.itemsByIdLink(value))
         : null;
   }
 
 }
 
-export class TOSCollectionBonus {
-  Stat: String;
+export class TOSCollectionBonus implements ITOSCollectionBonus {
+  Stat: string;
   Value: number;
 
   constructor(json: string[]) {

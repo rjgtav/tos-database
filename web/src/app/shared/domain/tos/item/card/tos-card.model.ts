@@ -1,23 +1,19 @@
 import {TOSItem} from "../tos-item.model";
-import {TOSElement} from "../../entity/tos-entity.model";
-import {TOSMonsterRace} from "../../monster/tos-monster.model";
+import {ITOSCard, TOSCardType, TOSElement, TOSMonsterRace} from "../../tos-domain";
 
-export class TOSCard extends TOSItem {
-  DescriptionHTML: string;
-  IconTooltip: string;
+export class TOSCard extends TOSItem implements ITOSCard {
+  private description: string;
 
-  MonsterElement: TOSElement;
-  MonsterRace: TOSMonsterRace;
-  Stat_Height: number;
-  Stat_Legs: number;
-  Stat_Weight: number;
-  TypeCard: TOSCardType;
+  readonly IconTooltip: string;
+  readonly MonsterElement: TOSElement;
+  readonly MonsterRace: TOSMonsterRace;
+  readonly Stat_Height: number;
+  readonly Stat_Legs: number;
+  readonly Stat_Weight: number;
+  readonly TypeCard: TOSCardType;
 
   constructor(json: TOSCard) {
     super(json, 'cards');
-
-    this.DescriptionHTML = this.Description.split('{img star_mark 20 20}').join('<span class="text-warning">★</span>');
-    this.Description = null;
 
     this.IconTooltip = json.IconTooltip ? 'assets/icons/' + json.IconTooltip.toLowerCase() + '.jpg' : null;
     this.MonsterElement = Object.values(TOSElement)[+json.MonsterElement];
@@ -28,13 +24,10 @@ export class TOSCard extends TOSItem {
     this.TypeCard = Object.values(TOSCardType)[+json.TypeCard];
   }
 
-}
+  get Description(): string {
+    return this.description = this.description
+      ? this.description
+      : this.json.Description.split('{img star_mark 20 20}').join('<span class="text-warning">★</span>');
+  }
 
-export enum TOSCardType {
-  ATTACK = 'Attack',
-  DEFENSE = 'Defense',
-  LEGENDARY = 'Legendary',
-  REINFORCE = 'Reinforce Cards',
-  STATS = 'Stats',
-  UTILITY = 'Utility'
 }

@@ -8,10 +8,9 @@ import {
 import {Subscription} from "rxjs";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
-import {TOSAttribute} from "../../../shared/domain/tos/attribute/tos-attribute.model";
-import {TOSSkill} from "../../../shared/domain/tos/skill/tos-skill.model";
 import {faMinus, faPlus, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
-import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
+import {TOSDomainService} from "../../../shared/domain/tos/tos-domain.service";
+import {ITOSAttribute, ITOSJob, ITOSSkill} from "../../../shared/domain/tos/tos-domain";
 
 @Component({
   selector: 'app-skill-builder-job',
@@ -27,12 +26,12 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   @Input() build: TOSSimulatorBuild;
   @Input() job: TOSJob;
 
-  attributes: TOSAttribute[];
+  attributes: ITOSAttribute[];
   circles: number[];
   circlesRemove: boolean[];
   isOpen: boolean;
   ranks: number[];
-  skills: TOSSkill[];
+  skills: ITOSSkill[];
   skillPoints: number;
 
   subscriptionJobs: Subscription;
@@ -40,11 +39,11 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
 
   constructor() { }
 
-  onJobsChange(value: TOSJob[]) {
+  onJobsChange(value: ITOSJob[]) {
     this.ranks = this.build.jobRanks(this.job.$ID);
     this.circles = Array.from({length: this.ranks.length}, (x,i) => i + 1);
     this.circlesRemove = new Array(this.ranks.length);
-    this.skills = TOSRepositoryService.findSkillsByJob(this.job.$ID)
+    this.skills = TOSDomainService.skillsByJob[this.job.$ID]
       .filter(skill => skill.RequiredCircle <= this.circles.length)
       .sort((a, b) => a.RequiredCircle - b.RequiredCircle);
   }
@@ -64,7 +63,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
     this.ngOnDestroy();
 
     if (changes.build || changes.job) {
-      this.attributes = TOSRepositoryService.findAttributesByJob(this.job.$ID);
+      this.attributes = TOSDomainService.attributesByJob[this.job.$ID];
 
       this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
       this.subscriptionSkillPoints = this.build.skillPoints(this.job).subscribe(value => this.onSkillPointsChange(value));

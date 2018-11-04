@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {TOSItem} from "../../shared/domain/tos/item/tos-item.model";
-import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
+import {TOSEntity} from "../../shared/domain/tos/tos-entity.model";
 import {TOSEquipment, TOSEquipmentSet} from "../../shared/domain/tos/item/equipment/tos-equipment.model";
 import {TOSBook} from "../../shared/domain/tos/item/book/tos-book.model";
 import {TOSCollection} from "../../shared/domain/tos/item/collection/tos-collection.model";

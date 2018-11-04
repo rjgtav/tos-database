@@ -1,15 +1,13 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit} from '@angular/core';
-import {TOSJob} from "../../shared/domain/tos/job/tos-job.model";
 import {Subscription} from "rxjs";
-import {TOSEntity} from "../../shared/domain/tos/entity/tos-entity.model";
+import {TOSEntity} from "../../shared/domain/tos/tos-entity.model";
 import {TOSSimulatorBuild} from "../../shared/domain/tos/tos-build";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {faImage, faLink} from "@fortawesome/free-solid-svg-icons";
 import {TosNeetService} from "../../shared/service/integrations/tos-neet.service";
 import {TinyUrlService} from "../../shared/service/integrations/tiny-url.service";
 import {ClipboardService} from "../../shared/service/clipboard.service";
-import {TOSSkillRepository} from "../../shared/domain/tos/skill/tos-skill.repository";
-import {TOSJobRepository} from "../../shared/domain/tos/job/tos-job.repository";
+import {ITOSJob} from "../../shared/domain/tos/tos-domain";
 
 const PARAM_BUILD = 'build';
 const PARAM_TINYURL = 'tinyurl';
@@ -28,7 +26,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
 
   build: TOSSimulatorBuild = new TOSSimulatorBuild();
   buildChanged: boolean;
-  jobs: TOSJob[];
+  jobs: ITOSJob[];
 
   sharingAsImage: boolean;
   sharingAsUrl: boolean;
@@ -155,7 +153,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
     this.changeDetector.detectChanges();
   }
 
-  onJobsChange(jobs: TOSJob[]) {
+  onJobsChange(jobs: ITOSJob[]) {
     let unique = [];
 
     for (let job of jobs)

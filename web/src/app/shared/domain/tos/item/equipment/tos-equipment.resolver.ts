@@ -1,16 +1,11 @@
 import {Injectable} from "@angular/core";
 import {TOSEquipment} from "./tos-equipment.model";
 import {CRUDResolver} from "../../../../service/CRUD.resolver";
-import {TOSRepositoryService} from "../../tos-repository.service";
+import {TOSDataSet} from "../../tos-domain";
 
 @Injectable()
 export class TOSEquipmentResolver extends CRUDResolver<TOSEquipment> {
 
-  constructor() {
-    super(
-      TOSRepositoryService.findEquipment,
-      TOSRepositoryService.findEquipmentById,
-    );
-  }
+  constructor() { super(TOSDataSet.EQUIPMENT); }
 
 }
