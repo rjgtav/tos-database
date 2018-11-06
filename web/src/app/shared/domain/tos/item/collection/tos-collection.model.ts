@@ -1,5 +1,5 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSCollection, ITOSCollectionBonus, ITOSItem} from "../../tos-domain";
+import {ITOSCollection, ITOSCollectionBonus, ITOSItem, TOSDataSet} from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
 
 export class TOSCollection extends TOSItem implements ITOSCollection {
@@ -8,7 +8,7 @@ export class TOSCollection extends TOSItem implements ITOSCollection {
   readonly Bonus: TOSCollectionBonus[];
 
   constructor(json: TOSCollection) {
-    super(json, 'collections');
+    super(TOSDataSet.COLLECTIONS, json);
 
     this.Bonus = json.Bonus
       ? JSON

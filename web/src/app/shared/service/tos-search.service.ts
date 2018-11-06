@@ -63,13 +63,12 @@ export class TOSSearchService {
         break;
       case 'query':
         let result = event.data.result
-          .slice(0, 15) // Limit search results
           .map((value: object) => {
             let file = value['ref'].split('#')[0];
             let id = +value['ref'].split('#')[1];
             let dataset = Object.values(TOSDataSet).find(value2 => file == value2);
 
-            return TOSDomainService[TOSDataSet.getProperty(dataset) + 'ById'][id];
+            return TOSDomainService[TOSDataSet.toProperty(dataset) + 'ById'][id];
           });
 
         this.subscriberSearch && this.subscriberSearch.next(result);

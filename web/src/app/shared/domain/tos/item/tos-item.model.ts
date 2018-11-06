@@ -4,7 +4,7 @@ import {
   ITOSCube,
   ITOSItem,
   ITOSMonster,
-  ITOSRecipe,
+  ITOSRecipe, TOSDataSet,
   TOSItemTradability,
   TOSItemType
 } from "../tos-domain";
@@ -24,8 +24,8 @@ export class TOSItem extends TOSEntity implements ITOSItem {
   readonly Type: TOSItemType;
   readonly Weight: number;
 
-  constructor(protected json: TOSItem, url: string) {
-    super(json, url);
+  constructor(dataset: TOSDataSet, protected json: TOSItem) {
+    super(dataset, json);
 
     this.Price = json.Price;
     this.Tradability = json.Tradability;

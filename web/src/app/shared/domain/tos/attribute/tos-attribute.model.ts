@@ -1,6 +1,6 @@
 import {TOSEntity} from "../tos-entity.model";
 import {TOSBuild} from "../tos-build";
-import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSJob, ITOSSkill} from "../tos-domain";
+import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSJob, ITOSSkill, TOSDataSet} from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
 
 export class TOSAttribute extends TOSEntity implements ITOSAttribute {
@@ -16,7 +16,7 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
   readonly UpgradePrice: number[];
 
   constructor(private json: TOSAttribute) {
-    super(json, 'attributes');
+    super(TOSDataSet.ATTRIBUTES, json);
 
     this.IsToggleable = (json.IsToggleable + '') == 'True';
     this.LevelMax = +json.LevelMax;

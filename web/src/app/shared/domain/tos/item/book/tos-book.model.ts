@@ -1,11 +1,11 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSBook} from "../../tos-domain";
+import {ITOSBook, TOSDataSet} from "../../tos-domain";
 
 export class TOSBook extends TOSItem implements ITOSBook{
   readonly Pages: string[];
 
   constructor(json: TOSBook) {
-    super(json, 'books');
+    super(TOSDataSet.BOOKS, json);
 
     this.Pages = json['Text']
       ? (json['Text'] as string)

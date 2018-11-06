@@ -1,10 +1,16 @@
+$background: rgba(0, 0, 0, 0.25);
+
 :host {
   position: relative;
   display: block;
-  background: rgba(0, 0, 0, 0.25);
+  background: $background;
   max-width: 640px;
   min-width: 320px;
 }
+
+button.dropdown-toggle { background: transparent; }
+button.dropdown-toggle:focus { background: $background; box-shadow: none; }
+button.dropdown-toggle:hover { background: $background; }
 
 input {
   background: transparent;
@@ -12,7 +18,7 @@ input {
 }
 
 input:focus {
-  background: rgba(0, 0, 0, 0.25);
+  background: $background;
   box-shadow: initial;
   color: white;
 }
@@ -23,3 +29,7 @@ input:disabled {
 tbody > *:first-child td {
   border-top: none;
 }
+
+.dropdown-item:hover { color: white !important; }
+.text-white-50:focus,
+.text-white-50:hover { color: white !important; }

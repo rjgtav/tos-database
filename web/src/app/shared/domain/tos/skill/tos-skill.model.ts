@@ -1,10 +1,13 @@
 import {TOSEntity} from "../tos-entity.model";
 import {TOSBuildStats} from "../tos-build";
 import {
-  ITOSAttribute, ITOSGem, ITOSJob,
+  ITOSAttribute,
+  ITOSGem,
+  ITOSJob,
   ITOSSkill,
   ITOSSkillRequiredStance,
   TOSAttackType,
+  TOSDataSet,
   TOSElement,
   TOSSkillRequiredStanceCompanion,
   TOSStat
@@ -75,7 +78,6 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   private link_Job: ITOSJob;
 
   readonly CoolDown: number;
-  readonly DescriptionHTML: string;
   readonly Element: TOSElement;
   readonly IsEnchanter: boolean;
   readonly IsPardoner: boolean;
@@ -90,7 +92,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   readonly TypeAttack: TOSAttackType;
 
   constructor(private json: TOSSkill) {
-    super(json, 'skills');
+    super(TOSDataSet.SKILLS, json);
 
     this.CoolDown = +json.CoolDown;
     this.effect = this.tooltipToHTML(json['Effect'] + '');

@@ -44,10 +44,10 @@ export abstract class CRUDRepository<T extends TOSEntity> {
       });
   }
 
-  private get data(): T[] { return TOSDomainService[TOSDataSet.getProperty(this.options.dataset)]; }
-  private set data(value: T[]) { TOSDomainService[TOSDataSet.getProperty(this.options.dataset)] = value; }
-  private get dataById(): { [key: number] : T; } { return TOSDomainService[TOSDataSet.getProperty(this.options.dataset) + 'ById']; }
-  private set dataById(value: { [key: number] : T; }) { TOSDomainService[TOSDataSet.getProperty(this.options.dataset) + 'ById'] = value; }
+  private get data(): T[] { return TOSDomainService[TOSDataSet.toProperty(this.options.dataset)]; }
+  private set data(value: T[]) { TOSDomainService[TOSDataSet.toProperty(this.options.dataset)] = value; }
+  private get dataById(): { [key: number] : T; } { return TOSDomainService[TOSDataSet.toProperty(this.options.dataset) + 'ById']; }
+  private set dataById(value: { [key: number] : T; }) { TOSDomainService[TOSDataSet.toProperty(this.options.dataset) + 'ById'] = value; }
 
 }
 

@@ -49,7 +49,38 @@ export enum TOSDataSet {
   SKILLS = 'skills',
 }
 export namespace TOSDataSet {
-  export function getLabel(value: TOSDataSet): string {
+  export const VALUES: { label: string, options: TOSDataSet[] }[] = [
+    {
+      label: 'Items',
+      options: [
+        TOSDataSet.BOOKS,
+        TOSDataSet.CARDS,
+        TOSDataSet.COLLECTIONS,
+        TOSDataSet.CUBES,
+        TOSDataSet.EQUIPMENT,
+        TOSDataSet.EQUIPMENT_SETS,
+        TOSDataSet.GEMS,
+        TOSDataSet.ITEMS,
+        TOSDataSet.RECIPES,
+      ],
+    },
+    {
+      label: 'Player',
+      options: [
+        TOSDataSet.ATTRIBUTES,
+        TOSDataSet.JOBS,
+        TOSDataSet.SKILLS,
+      ],
+    },
+    {
+      label: 'World',
+      options: [
+        TOSDataSet.MONSTERS,
+      ],
+    }
+  ];
+
+  export function toLabel(value: TOSDataSet): string {
     if (value == TOSDataSet.JOBS) return 'Classes';
 
     return value.toString() // Convert to Human Form
@@ -57,11 +88,15 @@ export namespace TOSDataSet {
       .map(value => value[0].toUpperCase() + value.slice(1))
       .join(' ');
   }
-  export function getProperty(value: TOSDataSet): string {
+  export function toProperty(value: TOSDataSet): string {
     return value.toString() // Convert to camelCase
       .split('-')
       .map((value, index) => index > 0 ? value[0].toUpperCase() + value.slice(1) : value)
       .join('');
+  }
+  export function toUrl(value: TOSDataSet) {
+    if (value == TOSDataSet.JOBS) return 'classes';
+    return value.toString();
   }
 }
 

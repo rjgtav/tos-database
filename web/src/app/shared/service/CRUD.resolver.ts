@@ -38,7 +38,7 @@ export abstract class CRUDResolver<T extends TOSEntity> implements Resolve<T> {
   }
 
   private findAll(filter?: Filter[], sort?: Sort): T[] {
-    let data = TOSDomainService[TOSDataSet.getProperty(this.dataset)];
+    let data = TOSDomainService[TOSDataSet.toProperty(this.dataset)];
     let sorter = data && sort ? data[0].$comparators[sort.column] : null;
     sorter = sorter ? sorter : (i, j) => (i < j) ? -1 : (i > j) ? 1 : 0;
 
@@ -51,7 +51,7 @@ export abstract class CRUDResolver<T extends TOSEntity> implements Resolve<T> {
   }
 
   private findById($ID: number): T {
-    return TOSDomainService[TOSDataSet.getProperty(this.dataset) + 'ById'][$ID];
+    return TOSDomainService[TOSDataSet.toProperty(this.dataset) + 'ById'][$ID];
   }
 
 }

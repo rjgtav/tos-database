@@ -1,5 +1,5 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSGem, ITOSGemBonus, ITOSSkill, TOSGemSlot, TOSGemType, TOSStat} from "../../tos-domain";
+import {ITOSGem, ITOSGemBonus, ITOSSkill, TOSDataSet, TOSGemSlot, TOSGemType, TOSStat} from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
 
 export class TOSGem extends TOSItem implements ITOSGem {
@@ -13,7 +13,7 @@ export class TOSGem extends TOSItem implements ITOSGem {
   readonly TypeGem: TOSGemType;
 
   constructor(json: TOSGem) {
-    super(json, 'gems');
+    super(TOSDataSet.GEMS, json);
 
     for (let slot of Object.values(TOSGemSlot)) {
       this['bonus' + slot] = json['Bonus' + slot]

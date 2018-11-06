@@ -1,12 +1,12 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSCube, ITOSItem} from "../../tos-domain";
+import {ITOSCube, ITOSItem, TOSDataSet} from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
 
 export class TOSCube extends TOSItem implements ITOSCube {
   private link_Items: TOSItem[];
 
   constructor(json: TOSCube) {
-    super(json, 'cubes');
+    super(TOSDataSet.CUBES, json);
   }
 
   get Link_Items(): ITOSItem[] {

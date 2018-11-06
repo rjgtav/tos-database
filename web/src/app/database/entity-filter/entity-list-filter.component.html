@@ -15,7 +15,7 @@
     </button>
 
     <div class="dropdown-menu" [ngClass]="{ 'show': isOpen[filter.column] }">
-      <div *ngFor="let optionGroup of filter.groups; let i = index">
+      <div *ngFor="let optionGroup of filter.groups; index as i">
 
         <div class="dropdown-header" *ngIf="optionGroup.header">{{ optionGroup.header }}</div>
 

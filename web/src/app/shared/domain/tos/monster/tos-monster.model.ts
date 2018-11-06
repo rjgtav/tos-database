@@ -3,7 +3,10 @@ import {TOSItem} from "../item/tos-item.model";
 import {
   ITOSItem,
   ITOSMap,
-  ITOSMonster, ITOSMonsterDropLink, ITOSMonsterSpawnLink,
+  ITOSMonster,
+  ITOSMonsterDropLink,
+  ITOSMonsterSpawnLink,
+  TOSDataSet,
   TOSElement,
   TOSEquipmentMaterial,
   TOSMonsterRace,
@@ -46,7 +49,7 @@ export class TOSMonster extends TOSEntity implements ITOSMonster{
   readonly Stat_BlockRate: number;
 
   constructor(private json: TOSMonster) {
-    super(json, 'monsters');
+    super(TOSDataSet.MONSTERS, json);
 
     this.$comparators['Rank'] = TOSMonsterRank.comparator;
     this.$comparators['Size'] = TOSMonsterSize.comparator;
@@ -114,7 +117,7 @@ export class TOSMonsterDropLink implements ITOSMonsterDropLink {
     this.Item = json.Item
       ? !isNaN(+json.Item)
         ? TOSDomainService.itemsByIdLink(+json.Item)
-        : new TOSItem(json.Item as TOSItem, null)
+        : new TOSItem(null, json.Item as TOSItem)
       : null;
     this.Quantity_MAX = +json.Quantity_MAX;
     this.Quantity_MIN = +json.Quantity_MIN;

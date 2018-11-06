@@ -5,6 +5,7 @@ import {faCommentAlt, faMoon, faSearch} from "@fortawesome/free-solid-svg-icons"
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
 import {TOSRegionService} from "../../shared/service/tos-region.service";
 import {TOSUrlService} from "../../shared/service/tos-url.service";
+import {TOSDataSet} from "../../shared/domain/tos/tos-domain";
 
 @Component({
   selector: 'tos-header',
@@ -12,8 +13,9 @@ import {TOSUrlService} from "../../shared/service/tos-url.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  Theme = Theme;
   RegionService = TOSRegionService;
+  Theme = Theme;
+  TOSDataSet = TOSDataSet;
 
   faCommentAlt = faCommentAlt;
   faGithub = faGithub;

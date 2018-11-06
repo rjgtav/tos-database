@@ -1,5 +1,5 @@
 import {TOSUrlService} from "../../service/tos-url.service";
-import {ITOSEntity} from "./tos-domain";
+import {ITOSEntity, TOSDataSet} from "./tos-domain";
 
 export abstract class Comparable {
   $comparators: { [key: string]: (a, b) => -1 | 0 | 1; } = {}
@@ -12,10 +12,10 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
 
   readonly $ID: number;
   readonly $ID_NAME: string;
-  readonly Dataset: string;
+  readonly Dataset: TOSDataSet;
   readonly Name: string;
 
-  protected constructor(json: TOSEntity, url: string) {
+  protected constructor(dataset: TOSDataSet, json: TOSEntity) {
     super();
 
     this.$comparators['$ID'] = (a: number, b: number) => {
@@ -27,11 +27,11 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
 
     this.$ID = +json.$ID;
     this.$ID_NAME = json.$ID_NAME;
-    this.Dataset = url ? url.split('-').map(value => value[0].toUpperCase() + value.slice(1)).join(' ') : '';
+    this.Dataset = dataset;
     this.description$ = json['Description'] ? json['Description'].replace(/{nl}/g, '\n') : null;
     this.icon = json['Icon'] ? 'assets/icons/' + json['Icon'].toLowerCase() + '.png' : null;
     this.Name = json.Name;
-    this.url = '/database/' + url + '/' + this.$ID;
+    this.url = '/database/' + TOSDataSet.toUrl(dataset) + '/' + this.$ID;
   }
 
   get Description(): string { return this.description$; }

@@ -9,7 +9,7 @@ export class TOSItemRepository extends CRUDRepository<TOSItem> {
   private constructor() {
     super({
       dataset: TOSDataSet.ITEMS,
-      loadStep: (row: TOSItem) => new TOSItem(row, 'items')
+      loadStep: (row: TOSItem) => new TOSItem(TOSDataSet.ITEMS, row)
     });
   }
 

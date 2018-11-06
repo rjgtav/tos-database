@@ -1,5 +1,5 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSCard, TOSCardType, TOSElement, TOSMonsterRace} from "../../tos-domain";
+import {ITOSCard, TOSCardType, TOSDataSet, TOSElement, TOSMonsterRace} from "../../tos-domain";
 
 export class TOSCard extends TOSItem implements ITOSCard {
   private description: string;
@@ -13,7 +13,7 @@ export class TOSCard extends TOSItem implements ITOSCard {
   readonly TypeCard: TOSCardType;
 
   constructor(json: TOSCard) {
-    super(json, 'cards');
+    super(TOSDataSet.CARDS, json);
 
     this.IconTooltip = json.IconTooltip ? 'assets/icons/' + json.IconTooltip.toLowerCase() + '.jpg' : null;
     this.MonsterElement = Object.values(TOSElement)[+json.MonsterElement];

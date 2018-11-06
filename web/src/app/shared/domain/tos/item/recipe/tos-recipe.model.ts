@@ -1,5 +1,5 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSItem, ITOSRecipe, ITOSRecipeMaterial} from "../../tos-domain";
+import {ITOSItem, ITOSRecipe, ITOSRecipeMaterial, TOSDataSet} from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
 
 export class TOSRecipe extends TOSItem implements ITOSRecipe {
@@ -7,7 +7,7 @@ export class TOSRecipe extends TOSItem implements ITOSRecipe {
   private link_Target: ITOSItem;
 
   constructor(json: TOSRecipe) {
-    super(json, 'recipes');
+    super(TOSDataSet.RECIPES, json);
   }
 
   get Link_Materials(): TOSRecipeMaterial[] {

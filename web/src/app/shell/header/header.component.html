@@ -20,24 +20,12 @@
            (clickOutside)="isOpenDatabase = false"
            routerLinkActive="active">Database
           <div class="dropdown-menu" [ngClass]="{ 'show': isOpenDatabase }">
-            <div class="dropdown-header">Items</div>
-            <a class="dropdown-item" [routerLink]="routerLink('database/books')">Books</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/cards')">Cards</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/collections')">Collections</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/cubes')">Cubes</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/equipment')">Equipment</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/equipment-sets')">Equipment Sets</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/gems')">Gems</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/items')">Items</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/recipes')">Recipes</a>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-header">Player</div>
-            <a class="dropdown-item" [routerLink]="routerLink('database/attributes')">Attributes</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/classes')">Classes</a>
-            <a class="dropdown-item" [routerLink]="routerLink('database/skills')">Skills</a>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-header">World</div>
-            <a class="dropdown-item" [routerLink]="routerLink('database/monsters')">Monsters</a>
+            <div *ngFor="let group of TOSDataSet.VALUES; index as i">
+              <div class="dropdown-header">{{ group.label }}</div>
+              <a class="dropdown-item" *ngFor="let option of group.options"
+                 [routerLink]="routerLink('database/' + TOSDataSet.toUrl(option))">{{ TOSDataSet.toLabel(option) }}</a>
+              <div class="dropdown-divider" *ngIf="i < TOSDataSet.VALUES.length - 1"></div>
+            </div>
           </div>
         </a>
 

@@ -2,10 +2,15 @@ import {TOSEntity} from "../../tos-entity.model";
 import {TOSItem} from "../tos-item.model";
 import {
   ITOSEquipment,
-  ITOSEquipmentBonus, ITOSEquipmentSet, ITOSItem,
-  TOSAttackType, TOSClassTree,
+  ITOSEquipmentBonus,
+  ITOSEquipmentSet,
+  ITOSItem,
+  TOSAttackType,
+  TOSClassTree,
+  TOSDataSet,
   TOSEquipmentGrade,
-  TOSEquipmentMaterial, TOSEquipmentType,
+  TOSEquipmentMaterial,
+  TOSEquipmentType,
   TOSStat
 } from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
@@ -40,7 +45,7 @@ export class TOSEquipment extends TOSItem implements ITOSEquipment {
   readonly UnidentifiedRandom: boolean;
 
   constructor(json: TOSEquipment) {
-    super(json, 'equipment');
+    super(TOSDataSet.EQUIPMENT, json);
 
     this.$comparators['Grade'] = TOSEquipmentGrade.comparator;
 
@@ -149,7 +154,7 @@ export class TOSEquipmentSet extends TOSEntity implements ITOSEquipmentSet {
   private link_Items: TOSItem[];
 
   constructor(private json: TOSEquipmentSet) {
-    super(json, 'equipment-sets');
+    super(TOSDataSet.EQUIPMENT_SETS, json);
 
     this.bonus2 = json['Bonus2'];
     this.bonus3 = json['Bonus3'];
@@ -159,9 +164,8 @@ export class TOSEquipmentSet extends TOSEntity implements ITOSEquipmentSet {
     this.bonus7 = json['Bonus7'];
   }
 
-  get Url(): string {
-    return this.Link_Items[0].Url;
-  }
+  get Icon(): string { return this.Link_Items[0].Icon }
+  get Url(): string { return this.Link_Items[0].Url; }
 
   get Link_Items(): ITOSItem[] {
     return this.link_Items = this.link_Items

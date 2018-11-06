@@ -1,6 +1,6 @@
 import {TOSEntity} from "../tos-entity.model";
 import {TOSBuild} from "../tos-build";
-import {ITOSAttribute, ITOSJob, ITOSSkill, TOSJobDifficulty, TOSJobTree, TOSJobType} from "../tos-domain";
+import {ITOSAttribute, ITOSJob, ITOSSkill, TOSDataSet, TOSJobDifficulty, TOSJobTree, TOSJobType} from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
 
 export class TOSJob extends TOSEntity implements ITOSJob {
@@ -22,7 +22,7 @@ export class TOSJob extends TOSEntity implements ITOSJob {
 
 
   constructor(private json: TOSJob) {
-    super(json, 'classes');
+    super(TOSDataSet.JOBS, json);
 
     this.CircleMax = +json.CircleMax;
     this.JobDifficulty = Object.values(TOSJobDifficulty)[+json.JobDifficulty];

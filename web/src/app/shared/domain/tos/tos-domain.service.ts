@@ -13,7 +13,6 @@ import {
   ITOSMonster,
   ITOSRecipe,
   ITOSSkill,
-  TOSDataSet
 } from "./tos-domain";
 
 export abstract class TOSDomainService {
