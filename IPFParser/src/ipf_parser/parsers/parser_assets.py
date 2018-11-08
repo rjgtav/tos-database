@@ -195,7 +195,7 @@ def parse_clean(version_new):
         return
 
     logging.debug('Cleaning unused icons...')
-    for key, value in globals.assets_icons.iteritems():
+    for key in globals.assets_icons.keys():
         if key not in globals.assets_icons_used:
             path = os.path.join(constants.PATH_WEB_ASSETS_ICONS, key)
 
