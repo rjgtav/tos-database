@@ -43,7 +43,7 @@ foreach ($region in $paths.keys) {
 
     # 6. Run indexer
     Write-Host "[$( $region )] Indexing..."
-    bash -c "pushd tos-search && node index.js $( $region ) && popd"
+    bash -c "pushd ../tos-search && node index.js $( $region ) && popd"
 
     # 7. Commit new changes (if available)
     if (git status --porcelain) {
