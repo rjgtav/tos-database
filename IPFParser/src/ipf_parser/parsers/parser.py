@@ -81,7 +81,7 @@ def parse(region, version_new):
     parser_skills.parse_links()
 
     # Clean unused data
-    parser_assets.parse_clean(version_new)
+    # parser_assets.parse_clean(version_new) # Note: we can't clean unused icons as they can be used by another region
     parser_attributes.parse_clean()
 
     logging.debug('Writing CSVs...')
