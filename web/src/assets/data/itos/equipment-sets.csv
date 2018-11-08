@@ -52,4 +52,4 @@ $ID,$ID_NAME,Bonus2,Bonus3,Bonus4,Bonus5,Bonus6,Bonus7,Link_Items,Name
 55,set_055,,,,,,,[11132],Territory Wars Beta Set
 56,set_056,,ENH: Necklaces and bracelets gain +10 critical rate per enhancement stage starting at stage 11{nl} {nl}TRA: Necklaces and bracelets gain +5 critical rate per transcendence stage{nl} {nl} (Max. critical rate increase: 350),,,,,"[584115, 604115, 604115]",Nepagristas Set
 57,set_057,,Attacking enemies of level 400 and below from the back ignores their block chances.,,,,,"[584116, 604116, 604116]",Nematomas Set
-58,set_058,,"Transfers 50% of your max. HP and physical/magic defense to your summons.{nl} {nl}Transfers up to:{nl}Max. HP 30,000{nl}Defense 6,000",,,,,"[584117, 604117, 604117]",Rangovas Set
+58,set_058,,"Grants 50% of your max. HP and physical/magic defense to your summons.{nl} {nl}Grants up to:{nl}Max. HP 30,000{nl}Defense 6,000",,,,,"[584117, 604117, 604117]",Rangovas Set
