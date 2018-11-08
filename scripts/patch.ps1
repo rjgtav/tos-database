@@ -41,12 +41,11 @@ foreach ($region in $paths.keys) {
     Write-Host "[$( $region )] Parsing..."
     bash -c "python ../IPFParser/src/main.py $( $region )"
 
-    # 6. Run indexer
-    Write-Host "[$( $region )] Indexing..."
-    bash -c "pushd ../tos-search && node index.js $( $region ) && popd"
-
-    # 7. Commit new changes (if available)
+    # 6. Run indexer and commit new changes (if available)
     if (git status --porcelain) {
+        Write-Host "[$( $region )] Indexing..."
+        bash -c "pushd ../tos-search && node index.js $( $region ) && popd"
+
         Write-Host "[$( $region )] Commiting..."
         bash -c "git add --all"
         bash -c "git commit -m \""[$( $region )] Updated database as of $( $date )\"""
@@ -56,11 +55,11 @@ foreach ($region in $paths.keys) {
     }
 }
 
-# 8. Deploy the updated database
+# 7. Deploy the updated database
 if ($deploy) {
     Write-Host "Deploying..."
     bash -c "./deploy.sh \""Updated database as of $( $date )\"""
 }
 
-# 9. Pop pending changes
+# 8. Pop pending changes
 bash -c "git stash pop"
