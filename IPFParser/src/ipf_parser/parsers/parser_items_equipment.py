@@ -525,7 +525,7 @@ def parse_equipment():
             for bonus in parser_translations.translate(row['OptDesc']).split('{nl}'):
                 obj['Bonus'].append([
                     TOSEquipmentStat.UNKNOWN,           # Stat
-                    bonus.replace('-', '').strip()      # Value
+                    bonus.replace('- ', '').strip()     # Value
                 ])
 
         # Transcendence
