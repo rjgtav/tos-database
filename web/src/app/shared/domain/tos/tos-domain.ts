@@ -83,13 +83,13 @@ export namespace TOSDataSet {
   export function toLabel(value: TOSDataSet): string {
     if (value == TOSDataSet.JOBS) return 'Classes';
 
-    return value.toString() // Convert to Human Form
+    return (value || '').toString() // Convert to Human Form
       .split('-')
       .map(value => value[0].toUpperCase() + value.slice(1))
       .join(' ');
   }
   export function toProperty(value: TOSDataSet): string {
-    return value.toString() // Convert to camelCase
+    return (value || '').toString() // Convert to camelCase
       .split('-')
       .map((value, index) => index > 0 ? value[0].toUpperCase() + value.slice(1) : value)
       .join('');

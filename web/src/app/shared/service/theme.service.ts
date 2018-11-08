@@ -1,4 +1,5 @@
 import {EventEmitter, Injectable, OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 const KEY_THEME = 'theme';
 
@@ -11,7 +12,7 @@ export class ThemeService {
   private theme: Theme;
   private themeChange: EventEmitter<Theme> = new EventEmitter();
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.style = document.getElementById('bootstrap-theme');
     this.set((+localStorage.getItem(KEY_THEME) as Theme) || Theme.LIGHT);
   }
@@ -21,14 +22,17 @@ export class ThemeService {
   toggle() { this.set(this.theme == Theme.LIGHT ? Theme.DARK : Theme.LIGHT) }
 
   private set(theme: Theme) {
-    let href: string = null;
+    let url: string = null;
 
-    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.lib.css';
-    if (theme == Theme.DARK)  href = 'assets/themes/darkly.lib.css';
+    if (theme == Theme.LIGHT) url = 'assets/themes/flatly.lib.css';
+    if (theme == Theme.DARK)  url = 'assets/themes/darkly.lib.css';
 
     this.theme = theme;
     this.themeChange.emit(this.theme);
-    this.style.setAttribute('href', href);
+
+    this.http
+      .get(url, { responseType: "text" })
+      .subscribe(value => this.style.innerHTML = value);
 
     localStorage.setItem(KEY_THEME, theme + '');
   }

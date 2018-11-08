@@ -11,6 +11,19 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 RewriteCond %{HTTP_HOST} ^www.tos.guru$ [NC]
 RewriteRule ^(.*)$ https://tos.guru/$1 [R=301,L]
 
+# thanks to https://stackoverflow.com/a/34705199
+# If an existing asset or directory is requested go to it as it is
+# If the requested pattern is file and file doesn't exist, send 404
+# otherwise use history router
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+RewriteCond %{REQUEST_URI} ^(\/[a-z_\-\s0-9\.]+)+\.[a-zA-Z]{2,4}$
+RewriteRule ^ - [L,R=404]
+
+RewriteRule ^ /index.html
+
 # cache CSS, JS and Images for 1 month
 <filesMatch "(?!.*(lib\.css|lib\.js))(^.*\.(css|js|gif|ico|jpg|jpeg|png)$)">
   Header set Cache-Control "max-age=2592000, public"
