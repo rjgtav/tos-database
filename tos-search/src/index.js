@@ -5,11 +5,15 @@ const fs = require('fs'),
       path = require('path')
 ;
 
-require('./node_modules/lunr-languages/lunr.multi.js')(lunr);
-require('./node_modules/lunr-languages/lunr.stemmer.support.js')(lunr);
-require('./node_modules/lunr-languages/tinyseg.js')(lunr);
-require('./node_modules/lunr-languages/lunr.jp.js')(lunr);
+require('../node_modules/lunr-languages/lunr.multi.js')(lunr);
+require('../node_modules/lunr-languages/lunr.stemmer.support.js')(lunr);
+require('../node_modules/lunr-languages/tinyseg.js')(lunr);
+require('../node_modules/lunr-languages/lunr.jp.js')(lunr);
 require('./lunr.kr.js')(lunr, openKoreanText);
+
+function log(...msg) {
+    console.log('[tos-search]', '[' + REGION + ']', ...msg);
+}
 
 const REGION_ITOS = 'iTOS';
 const REGION_JTOS = 'jTOS';
@@ -21,21 +25,28 @@ if ([REGION_ITOS, REGION_JTOS, REGION_KTEST, REGION_KTOS].indexOf(REGION) === -1
     throw Error('Invalid region: ' + REGION);
 
 let documents = {};
-let folder = path.join(__dirname, '..', 'web', 'src', 'assets', 'data', REGION.toLowerCase());
+let folder = path.join(__dirname, '..', '..', 'web', 'src', 'assets', 'data', REGION.toLowerCase());
 
 // Load Documents
-console.log('Loading documents...');
+log('Loading documents...');
 let files = fs.readdirSync(folder);
     files.forEach((fileName) => {
+        if (fileName.indexOf('.csv') === -1)
+            return;
+
+        log('Papa parsing ' + fileName + '...');
+        let dataset = fileName.slice(0, fileName.indexOf('.'));
+        let file = fs.readFileSync(path.join(folder, fileName), 'utf8');
+
         documents[fileName] = [];
-        file = fs.readFileSync(path.join(folder, fileName), 'utf8');
+
         papa.parse(file, { dynamicTyping: true, header: true, skipEmptyLines: true })
             .data
             .forEach((row) => documents[fileName].push(row));
     });
 
 // Build index
-console.log('Building index...');
+log('Building index...');
 var idx = lunr(function () {
     if (REGION === REGION_JTOS)
         this.use(lunr.multiLanguage('en', 'jp'));
@@ -67,5 +78,5 @@ var idx = lunr(function () {
 });
 
 // Save index
-console.log('Saving Index...');
+log('Saving Index...');
 fs.writeFileSync(path.join(folder, 'index.json'), JSON.stringify(idx));
