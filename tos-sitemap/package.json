@@ -1,0 +1,15 @@
+{
+  "name": "tos-sitemap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "papaparse": "^4.6.1",
+    "xmlbuilder": "^10.1.1"
+  }
+}
