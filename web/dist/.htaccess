@@ -11,6 +11,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 RewriteCond %{HTTP_HOST} ^www.tos.guru$ [NC]
 RewriteRule ^(.*)$ https://tos.guru/$1 [R=301,L]
 
+# deal with Angular routes
 # thanks to https://stackoverflow.com/a/34705199
 # If an existing asset or directory is requested go to it as it is
 # If the requested pattern is file and file doesn't exist, send 404
@@ -24,12 +25,5 @@ RewriteRule ^ - [L,R=404]
 
 RewriteRule ^ /index.html
 
-# cache CSS, JS and Images for 1 month
-<filesMatch "(?!.*(lib\.css|lib\.js))(^.*\.(css|js|gif|ico|jpg|jpeg|png)$)">
-  Header set Cache-Control "max-age=2592000, public"
-</filesMatch>
-
-# cache CSV, JSON, static dependencies for 1 week
-<filesMatch ".(csv|json|lib\.css|lib\.js)$">
-  Header set Cache-Control "max-age=604800, public"
-</filesMatch>
+# More info: https://www.fastly.com/blog/stale-while-revalidate-stale-if-error-available-today
+Header set Cache-Control "public, max-age=86400, stale-while-revalidate=604800, stale-if-error=604800"
