@@ -523,6 +523,9 @@ def parse_equipment():
         # More Bonus
         if 'OptDesc' in row and len(row['OptDesc']) > 0:
             for bonus in parser_translations.translate(row['OptDesc']).split('{nl}'):
+                bonus = bonus.strip()
+                bonus = bonus[bonus.index('-'):] if '-' in bonus else bonus
+
                 obj['Bonus'].append([
                     TOSEquipmentStat.UNKNOWN,           # Stat
                     bonus.replace('- ', '').strip()     # Value
