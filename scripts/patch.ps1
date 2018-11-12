@@ -45,11 +45,11 @@ foreach ($region in $paths.keys) {
     if (git status --porcelain) {
         # 6.1. Run indexer
         Write-Host "[$( $region )] Indexing..."
-        bash -c "pushd ../tos-search && node index.js $( $region ) && popd"
+        bash -c "pushd ../tos-search && node src/index.js $( $region ) && popd"
 
         # 6.2. Run sitemapper
         Write-Host "[$( $region )] Sitemapping..."
-        bash -c "pushd ../tos-sitemap && node index.js $( $region ) && popd"
+        bash -c "pushd ../tos-sitemap && node src/index.js $( $region ) && popd"
 
         Write-Host "[$( $region )] Commiting..."
         bash -c "git add --all"
