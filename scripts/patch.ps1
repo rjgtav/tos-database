@@ -41,10 +41,15 @@ foreach ($region in $paths.keys) {
     Write-Host "[$( $region )] Parsing..."
     bash -c "python ../IPFParser/src/main.py $( $region )"
 
-    # 6. Run indexer and commit new changes (if available)
+    # 6. Commit new changes (if available)
     if (git status --porcelain) {
+        # 6.1. Run indexer
         Write-Host "[$( $region )] Indexing..."
         bash -c "pushd ../tos-search && node index.js $( $region ) && popd"
+
+        # 6.2. Run sitemapper
+        Write-Host "[$( $region )] Sitemapping..."
+        bash -c "pushd ../tos-sitemap && node index.js $( $region ) && popd"
 
         Write-Host "[$( $region )] Commiting..."
         bash -c "git add --all"
