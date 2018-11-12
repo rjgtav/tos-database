@@ -45,20 +45,20 @@ cp -rf ./dist/.cpanel.yml ./dist/web/.cpanel.yml
 cp -rf ./dist/.htaccess ./dist/web/.htaccess
 
 # Create tree object
-echo -e "Creating tree object..."
-git add -f ./dist/
-treeId=$(git write-tree --prefix=web/dist/web)
-git reset ./dist/
+# echo -e "Creating tree object..."
+# git add -f ./dist/
+# treeId=$(git write-tree --prefix=web/dist/web)
+# git reset ./dist/
 
 # Create a commit for the tree
-echo -e "Creating commit for tree ${treeId}"
-commitId=$(git commit-tree -p tos-guru -m "$1" ${treeId})
+# echo -e "Creating commit for tree ${treeId}"
+# commitId=$(git commit-tree -p tos-guru -m "$1" ${treeId})
 
 # Update tos-guru to point to the new commit
-echo -e "Updating tos-guru to point to ${commitId}"
-git update-ref refs/heads/tos-guru ${commitId}
+# echo -e "Updating tos-guru to point to ${commitId}"
+# git update-ref refs/heads/tos-guru ${commitId}
 
 # 5. Push
-git push origin tos-guru:tos-guru
+# git push origin tos-guru:tos-guru
 
 popd
