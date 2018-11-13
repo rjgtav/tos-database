@@ -184,6 +184,7 @@ export enum TOSEquipmentType {
   ONE_HANDED_STAFF = 'Rods',
   ONE_HANDED_SWORD = 'Swords',
   RAPIER = 'Rapiers',
+  SEAL = 'Seals',
   SHIELD = 'Shields',
   SHOES = 'Shoes',
   TOP = 'Shirts',
@@ -261,6 +262,7 @@ export enum TOSJobDifficulty {
 export enum TOSJobTree {
   ARCHER = 'Archer',
   CLERIC = 'Cleric',
+  SCOUT = 'Scout',
   WARRIOR = 'Warrior',
   WIZARD = 'Wizard',
 }
@@ -405,6 +407,7 @@ export enum TOSStat {
   BLOCK_RATE = 'Block Rate',
   BLOCK_RATE_FINAL = 'Final Block Rate',
   CRITICAL_ATTACK = 'Critical Attack',
+  CRITICAL_ATTACK_MAGICAL = 'Critical Magic Attack',
   CRITICAL_DEFENSE = 'Critical Resistance',
   CRITICAL_RATE = 'Critical Rate',
   AOE_ATTACK_RATIO = 'AoE Attack Ratio',

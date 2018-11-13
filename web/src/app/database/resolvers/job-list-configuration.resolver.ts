@@ -30,6 +30,7 @@ export class JobListConfigurationResolver implements Resolve<TOSListConfiguratio
               options: [
                 TOSJobTree.ARCHER,
                 TOSJobTree.CLERIC,
+                TOSJobTree.SCOUT,
                 TOSJobTree.WARRIOR,
                 TOSJobTree.WIZARD,
               ]
