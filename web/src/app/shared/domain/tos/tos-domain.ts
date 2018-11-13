@@ -82,6 +82,7 @@ export namespace TOSDataSet {
 
   export function toLabel(value: TOSDataSet): string {
     if (value == TOSDataSet.JOBS) return 'Classes';
+    if (value == null || (value + '') == '') return null;
 
     return (value || '').toString() // Convert to Human Form
       .split('-')

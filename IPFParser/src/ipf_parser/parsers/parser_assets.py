@@ -44,15 +44,21 @@ WHITELIST_ITEMICON = [
     'payment'
 ]
 WHITELIST_SKILLICON = [
-    'wizard_skillicon',
+    'skillicon',
     'archer_skillicon',
     'cleric_skillicon',
+    'scout_skillicon',
     'warrior_skillicon',
+    'wizard_skillicon',
+    'common_skillicon',
+    'summon_skillicon',
+    'abilityicon',
+    'abilityicon_archer',
+    'abilityicon_common',
+    'abilityicon_cleric',
+    'abilityicon_scout',
     'abilityicon_warrior',
     'abilityicon_wizard',
-    'abilityicon_archer',
-    'abilityicon_cleric',
-    'abilityicon_common',
 ]
 
 WHITELIST_RGB = [

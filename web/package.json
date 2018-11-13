@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --progress=true --sourceMap=false --verbose",
+    "start": "ng serve --progress=true --verbose",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
