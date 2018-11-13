@@ -1,4 +1,5 @@
 import csv
+import logging
 import os
 import re
 from lupa import LuaRuntime
@@ -188,6 +189,10 @@ def init():
 def load_ies(ies_name):
     ies_data = []
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies.ipf", ies_name)
+
+    if not os.path.exists(ies_path):
+        logging.warn('Missing ies file: %s', ies_path)
+        return
 
     with open(ies_path, 'rb') as ies_file:
         ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
