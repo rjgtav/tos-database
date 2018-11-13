@@ -31,9 +31,10 @@ class TOSItemGroup(TOSEnum):
     PREMIUM = 19
     QUEST = 20
     RECIPE = 21
-    SUBWEAPON = 22
-    UNUSED = 23
-    WEAPON = 24
+    SEAL = 22
+    SUBWEAPON = 23
+    UNUSED = 24
+    WEAPON = 25
 
     @staticmethod
     def value_of(string):
@@ -60,6 +61,7 @@ class TOSItemGroup(TOSEnum):
             'PREMIUM': TOSItemGroup.PREMIUM,
             'QUEST': TOSItemGroup.QUEST,
             'RECIPE': TOSItemGroup.RECIPE,
+            'SEAL': TOSItemGroup.SEAL,
             'SUBWEAPON': TOSItemGroup.SUBWEAPON,
             'UNUSED': TOSItemGroup.UNUSED,
             'WEAPON': TOSItemGroup.WEAPON,

@@ -49,6 +49,17 @@ def init():
             return data[math.floor(id)]
         end
         
+        function GetClassList(ies_key)
+            return ies_by_ClassID[string.lower(ies_key)]
+        end
+        function GetClassByNameFromList(data, key)
+            for id, row in pairs(data) do
+                if TryGetProp(row, "ClassName") == key then
+                    return row
+                end
+            end
+        end 
+        
         function MinMaxCorrection(value, min, max)
             if value < min then
                 return min
@@ -81,6 +92,21 @@ def init():
               end
            end
            return list
+        end
+        
+        -- https://stackoverflow.com/a/664557 some LUA table helper functions
+        function table.set(t) -- set of list
+          local u = { }
+          for _, v in ipairs(t) do u[v] = true end
+          return u
+        end
+        function table.find(f, l) -- find element v of l satisfying f(v)
+          for _, v in ipairs(l) do
+            if f(v) then
+              return v
+            end
+          end
+          return nil
         end
         
         function TryGetProp(item, prop)
@@ -117,6 +143,8 @@ def init():
         function IsPVPServer(itemOwner) end
         function IMCRandom(min, max) return 0 end
         function MakeItemOptionByOptionSocket(item) end
+        function SCR_EVENT_1811_WEEKEND_CHECK(key) return 'NO' end
+        function SCR_PVP_ITEM_LV_GRADE_REINFORCE_SET(item, lv, grade, reinforceValue, reinforceRatio) return lv, grade, reinforceValue, reinforceRatio end
     ''')
 
     # Initialize ies data
@@ -124,17 +152,24 @@ def init():
         ies_by_ClassID = {}
         ies_by_ClassName = {}
         
-        function ies_ADD(ies, data)
-            by_ClassID = {}
-            by_ClassName = {}
+        function ies_ADD(key, data)
+            _by_ClassID = {}
+            _by_ClassName = {}
             
-            for i, row in python.enumerate(data) do
-                by_ClassID[math.floor(row["ClassID"])] = row
-                by_ClassName[row["ClassName"]] = row
+            if ies_by_ClassID[key] ~= nil then
+                _by_ClassID = ies_by_ClassID[key]
+            end
+            if ies_by_ClassName[key] ~= nil then
+                _by_ClassName = ies_by_ClassName[key]
             end
             
-            ies_by_ClassID[ies] = by_ClassID
-            ies_by_ClassName[ies] = by_ClassName
+            for i, row in python.enumerate(data) do
+                _by_ClassID[math.floor(row["ClassID"])] = row
+                _by_ClassName[row["ClassName"]] = row
+            end
+            
+            ies_by_ClassID[key] = _by_ClassID
+            ies_by_ClassName[key] = _by_ClassName
         end
         
         return ies_ADD
@@ -142,7 +177,11 @@ def init():
 
     ies_ADD('item', load_ies('item_Equip.ies'))
     ies_ADD('item_grade', load_ies('item_grade.ies'))
+    ies_ADD('monster', load_ies('monster.ies'))
+    ies_ADD('monster', load_ies('monster_event.ies'))
+    ies_ADD('monster', load_ies('Monster_solo_dungeon.ies'))
     ies_ADD('stat_monster', load_ies('statbase_monster.ies'))
+    ies_ADD('stat_monster_race', load_ies('statbase_monster_race.ies'))
     ies_ADD('stat_monster_type', load_ies('statbase_monster_type.ies'))
 
 
@@ -154,6 +193,16 @@ def load_ies(ies_name):
         ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
         for row in ies_reader:
+            # auto cast to int/float if possible
+            for key in row.keys():
+                try:
+                    row[key] = int(row[key])
+                except ValueError:
+                    try:
+                        row[key] = float(row[key])
+                    except ValueError:
+                        row[key] = row[key]
+
             ies_data.append(row)
 
     return ies_data

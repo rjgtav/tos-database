@@ -68,6 +68,7 @@ def parse_links_items_bonus_stat(stat):
         'STR_BM': 'STR',
 
         'CRTATK_BM': 'Critical Attack',
+        'CRTMATK_BM': 'Critical Magic Attack',
         'CRTHR_BM': 'Critical Rate',
         'CRTDR_BM': 'Critical Defense',
 

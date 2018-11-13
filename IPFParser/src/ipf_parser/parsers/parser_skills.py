@@ -218,6 +218,10 @@ def parse_skills_simony():
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'skill_Simony.ies')
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            if int(row['ClassID']) not in globals.skills:
+                logging.error('Unknown skill: %d', int(row['ClassID']))
+                continue
+
             skill = globals.skills[int(row['ClassID'])]
             skill['IsEnchanter'] = True
             skill['IsPardoner'] = True
@@ -335,8 +339,8 @@ def parse_links_jobs():
 
             skill = globals.skills_by_name[row['SkillName']]
             skill['LevelMax'] = int(row['MaxLevel'])
-            skill['LevelPerCircle'] = int(row['LevelPerGrade'])
-            skill['RequiredCircle'] = int(row['UnlockGrade'])
+            skill['LevelPerCircle'] = int(row['LevelPerGrade']) if 'LevelPerGrade' in row else 0
+            skill['RequiredCircle'] = int(row['UnlockGrade']) if 'UnlockGrade' in row else 0
 
             job = '_'.join(row['ClassName'].split('_')[:2])
             skill['IsEnchanter'] = globals.jobs_by_name[job]['JobTree'] == TOSJobTree.WIZARD if skill['IsEnchanter'] else False

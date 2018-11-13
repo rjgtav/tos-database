@@ -109,15 +109,16 @@ class TOSEquipmentStat(TOSEnum):
     BLOCK_RATE = 58
     BLOCK_RATE_FINAL = 59
     CRITICAL_ATTACK = 60
-    CRITICAL_DEFENSE = 61
-    CRITICAL_RATE = 62
-    AOE_ATTACK_RATIO = 63
-    AOE_DEFENSE_RATIO = 64
-    MOVEMENT_SPEED = 65
-    LOOTING_CHANCE = 66
-    STAMINA = 67
-    STAMINA_RECOVERY = 68
-    UNKNOWN = 69
+    CRITICAL_ATTACK_MAGICAL = 61
+    CRITICAL_DEFENSE = 62
+    CRITICAL_RATE = 63
+    AOE_ATTACK_RATIO = 64
+    AOE_DEFENSE_RATIO = 65
+    MOVEMENT_SPEED = 66
+    LOOTING_CHANCE = 67
+    STAMINA = 68
+    STAMINA_RECOVERY = 69
+    UNKNOWN = 70
 
     @staticmethod
     def value_of(string):
@@ -137,6 +138,7 @@ class TOSEquipmentStat(TOSEnum):
             'CRTHR': TOSEquipmentStat.CRITICAL_RATE,
             'CRTATK': TOSEquipmentStat.CRITICAL_ATTACK,
             'CRTDR': TOSEquipmentStat.CRITICAL_DEFENSE,
+            'CRTMATK': TOSEquipmentStat.CRITICAL_ATTACK_MAGICAL,
             'HR': TOSEquipmentStat.ACCURACY,
             'DR': TOSEquipmentStat.EVASION,
             'ADD_HR': TOSEquipmentStat.ACCURACY,
@@ -245,15 +247,16 @@ class TOSEquipmentType(TOSEnum):
     ONE_HANDED_STAFF = 21
     ONE_HANDED_SWORD = 22
     RAPIER = 23
-    SHIELD = 24
-    SHOES = 25
-    TOP = 26
-    TWO_HANDED_BOW = 27
-    TWO_HANDED_GUN = 28
-    TWO_HANDED_MACE = 29
-    TWO_HANDED_SPEAR = 30
-    TWO_HANDED_STAFF = 31
-    TWO_HANDED_SWORD = 32
+    SEAL = 24
+    SHIELD = 25
+    SHOES = 26
+    TOP = 27
+    TWO_HANDED_BOW = 28
+    TWO_HANDED_GUN = 29
+    TWO_HANDED_MACE = 30
+    TWO_HANDED_SPEAR = 31
+    TWO_HANDED_STAFF = 32
+    TWO_HANDED_SWORD = 33
 
     @staticmethod
     def value_of(string):
@@ -279,6 +282,7 @@ class TOSEquipmentType(TOSEnum):
             'PISTOL': TOSEquipmentType.ONE_HANDED_GUN,
             'RAPIER': TOSEquipmentType.RAPIER,
             'RING': TOSEquipmentType.BRACELET,
+            'SEAL': TOSEquipmentType.SEAL,
             'SHIELD': TOSEquipmentType.SHIELD,
             'SHIRT': TOSEquipmentType.TOP,
             'SPEAR': TOSEquipmentType.ONE_HANDED_SPEAR,
@@ -426,6 +430,7 @@ def parse_equipment():
         'SCR_GET_ITEM_GRADE_RATIO',
         'SCR_REFRESH_ACC',
         'SCR_REFRESH_ARMOR',
+        'SCR_REFRESH_HAIRACC',
         'SCR_REFRESH_WEAPON',
         'GET_REINFORCE_ADD_VALUE_ATK',
         'GET_REINFORCE_ADD_VALUE',
@@ -446,13 +451,10 @@ def parse_equipment():
         item_type_equipment = TOSEquipmentType.value_of(row['ClassType'].upper())
         obj = globals.equipment[int(row['ClassID'])]
 
-        if row['GroupName'].upper() in ['SUBWEAPON', 'WEAPON']:
-            LUA['SCR_REFRESH_WEAPON'](row)
-        else:
-            if item_type_equipment in [TOSEquipmentType.BRACELET, TOSEquipmentType.NECKLACE]:
-                LUA['SCR_REFRESH_ACC'](row, None, None, None)
-            else:
-                LUA['SCR_REFRESH_ARMOR'](row)
+        if row['RefreshScp']:
+            # Hotfix: ClassID 635061 has its tooltip broken on Re:Build
+            if len(row['BasicTooltipProp']) and row['ClassID'] not in ['635061']:
+                LUA[row['RefreshScp']](row)
 
         # Add additional fields
         obj['AnvilATK'] = []
@@ -500,11 +502,16 @@ def parse_equipment():
             row['ADD_FIRE'] = floor(lv * gradeRatio)
 
         # Anvil
-        for lv in range(40):
-            row['Reinforce_2'] = lv
-            obj['AnvilATK'].append(LUA['GET_REINFORCE_ADD_VALUE_ATK'](row, 0, 1, None))
-            obj['AnvilDEF'].append(LUA['GET_REINFORCE_ADD_VALUE'](None, row, 0, 0))
-            obj['AnvilPrice'].append(LUA_REINFORCE['GET_REINFORCE_PRICE'](row, {}, None))
+        if any(prop in row['BasicTooltipProp'] for prop in ['ATK', 'DEF', 'MATK', 'MDEF']):
+            for lv in range(40):
+                row['Reinforce_2'] = lv
+
+                if any(prop in row['BasicTooltipProp'] for prop in ['DEF', 'MDEF']):
+                    obj['AnvilDEF'].append(LUA['GET_REINFORCE_ADD_VALUE'](None, row, 0, 0))
+                    obj['AnvilPrice'].append(LUA_REINFORCE['GET_REINFORCE_PRICE'](row, {}, None))
+                if any(prop in row['BasicTooltipProp'] for prop in ['ATK', 'MATK']):
+                    obj['AnvilATK'].append(LUA['GET_REINFORCE_ADD_VALUE_ATK'](row, 0, 1, None))
+                    obj['AnvilPrice'].append(LUA_REINFORCE['GET_REINFORCE_PRICE'](row, {}, None))
 
         obj['AnvilPrice'] = [value for value in obj['AnvilPrice'] if value > 0]
         obj['AnvilATK'] = [value for value in obj['AnvilATK'] if value > 0] if len(obj['AnvilPrice']) > 0 else None
@@ -512,13 +519,14 @@ def parse_equipment():
 
         # Bonus
         for stat in EQUIPMENT_STAT_COLUMNS:
-            value = floor(float(row[stat]))
+            if stat in row:
+                value = floor(float(row[stat]))
 
-            if value != 0:
-                obj['Bonus'].append([
-                    TOSEquipmentStat.value_of(stat),    # Stat
-                    value                               # Value
-                ])
+                if value != 0:
+                    obj['Bonus'].append([
+                        TOSEquipmentStat.value_of(stat),    # Stat
+                        value                               # Value
+                    ])
 
         # More Bonus
         if 'OptDesc' in row and len(row['OptDesc']) > 0:

@@ -28,14 +28,16 @@ class TOSJobDifficulty(TOSEnum):
 class TOSJobTree(TOSEnum):
     ARCHER = 0
     CLERIC = 1
-    WARRIOR = 2
-    WIZARD = 3
+    SCOUT = 2
+    WARRIOR = 3
+    WIZARD = 4
 
     @staticmethod
     def value_of(string):
         return {
             'ARCHER': TOSJobTree.ARCHER,
             'CLERIC': TOSJobTree.CLERIC,
+            'SCOUT': TOSJobTree.SCOUT,
             'WARRIOR': TOSJobTree.WARRIOR,
             'WIZARD': TOSJobTree.WIZARD,
         }[string.upper()]

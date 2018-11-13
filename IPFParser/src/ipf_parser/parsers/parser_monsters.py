@@ -109,6 +109,8 @@ def parse_monsters(file_name):
         'SCR_Get_MON_BLK',
         'SCR_Get_MON_BLK_BREAK',
         'SCR_MON_ITEM_ARMOR_CALC',
+        'SCR_MON_ITEM_ARMOR_DEF_CALC',
+        'SCR_MON_ITEM_ARMOR_MDEF_CALC',
         'SCR_MON_ITEM_WEAPON_CALC',
         'SCR_MON_ITEM_GRADE_RATE',
         'SCR_MON_ITEM_REINFORCE_ARMOR_CALC',
