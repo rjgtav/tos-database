@@ -192,7 +192,7 @@ def load_ies(ies_name):
 
     if not os.path.exists(ies_path):
         logging.warn('Missing ies file: %s', ies_path)
-        return
+        return []
 
     with open(ies_path, 'rb') as ies_file:
         ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
