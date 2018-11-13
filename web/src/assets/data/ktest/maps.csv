@@ -382,6 +382,7 @@ $ID,$ID_NAME,Icon,Name
 4940,id_whitetrees1,,첫 번째 피난처
 4941,id_Nicopolis_01,,마법 실험 구역
 4950,d_limestonecave_70_1,,슬리비나스 레어
+4951,d_limestonecave_70_1_rest,,슬리비나스 레어
 4960,c_Klaipe_event,,할로윈 던전
 4961,d_castle_agario,,할로윈 던전
 4970,id_d_cmine_66_2,,네밸랫 광산 던전
@@ -397,5 +398,6 @@ $ID,$ID_NAME,Icon,Name
 9998,GuildColony_f_farm_47_2,,수로교 지역
 10000,id_abbey_raid,,아시오 메이지의 실험실
 10001,mission_instance,,MissionInstance
+10002,uniq_startower_raid,,별의 탑 폐쇄 구역
 20000,infinite_map,,무한맵
 20010,pvp_tournament,,팀 배틀 리그 토너먼트

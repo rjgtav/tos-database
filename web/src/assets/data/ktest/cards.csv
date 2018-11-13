@@ -14,7 +14,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644014,card_Ravinepede,[슬롯 장착 효과] STA 포션 종류 효과 +[★]%,icon_item_card_util,025_boss_ravinepede,,,41236,,,,7,4,라바인피드 카드,500,210,1,164,0.0,0.0,1111,3,5,1.0
 644015,card_Rajatoad,[슬롯 장착 효과] 찌르기류 무기 착용 시 물리 공격력 +[★*7],icon_item_card_atk,097_boss_rajatoad,[642013],,41226,,,,4,0,라자토드 카드,500,151,4,275,0.0,0.0,1111,3,0,1.0
 644016,card_Rocktortuga,[슬롯 장착 효과] 땅 속성 몬스터 처치 시 [★]% 확률로 SP 5% 회복,icon_item_card_util,046_boss_rocktortuga,,,41233,,,,1,3,락토르투가 카드,500,400,2,2472,0.0,0.0,1111,3,5,1.0
-644017,card_lecifer,[슬롯 장착 효과] 마법 증폭 +[★*10],icon_item_card_atk,030_boss_lecifer,,,800043,,,,0,1,렉시퍼 카드,500,213,2,123,0.0,0.0,1111,3,0,1.0
+644017,card_lecifer,[슬롯 장착 효과] 마법 치명타 공격력 +[★*10],icon_item_card_atk,030_boss_lecifer,,,800043,,,,0,1,렉시퍼 카드,500,213,2,123,0.0,0.0,1111,3,0,1.0
 644018,card_Reaverpede,[슬롯 장착 효과] 중형 몬스터에게 주는 대미지[★/2]% 증가,icon_item_card_atk,051_boss_reaverpede,,,800044,,,,7,2,리버피드 카드,500,276,6,1200,0.0,0.0,1111,3,0,1.0
 644019,card_spector_gh,[슬롯 장착 효과] SP 포션 종류 효과 +[★]%,icon_item_card_util,010_boss_spector_gh,,,800045,,,,0,1,리카우스 카드,500,230,2,76,0.0,0.0,1111,3,5,1.0
 644022,card_mineloader,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 상대방에게 3초간 감전 상태,icon_item_card_util,092_boss_mineloader,[642014],"[642904, 642921]",800024,,,,5,3,마인로더 카드,500,345,4,863,0.0,0.0,1111,3,5,1.0
@@ -145,6 +145,8 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644910,Legend_card_FrosterLord,[슬롯 장착 효과] 소환수의 최소 공격력과 최대 공격력의 차이가 [★ * 10]% 감소{nl}(10LV 달성 시 소환수의 최소 공격력이 최대 공격력과 동일하게 변경됩니다.),icon_item_card_legend,149_boss_frosterlord,,[642927],800076,,,,0,1,마군주 프로스터 로드 카드,0,,,,0.0,0.0,1111,3,2,1.0
 644911,Legend_card_Acio,[슬롯 장착 효과] 치명타 발생 +[★ * 15],icon_item_card_legend,152_boss_asio,,[642929],59154,,,,5,0,아시오 메이지 카드,0,,,,0.0,0.0,1111,3,2,1.0
 644912,Legend_card_Wastrel,[슬롯 장착 효과] 최대 HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,[642931],59172,,,,0,3,웨이스트럴 카드,0,,,,0.0,0.0,1111,3,2,1.0
+644913,Legend_card_ignas,[슬롯 장착 효과] 치명타 공격시 [★ * 5]% 확률로 6초 동안 은신합니다.,icon_item_card_legend,154_boss_ignas,,[642934],800089,,,,0,1,이그나스 카드,0,,,,0.0,0.0,1111,3,2,1.0
+644914,Legend_card_boruta,[슬롯 장착 효과] 야수형 몬스터에게 대미지 [★ * 5]% 증가 ,icon_item_card_legend,155_boss_boruta,,,59208,,,,0,0,보루타 카드,0,,,,0.0,0.0,1111,3,2,1.0
 650001,legend_reinforce_card_lv1,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV4까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,찢어진 레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
 650002,legend_reinforce_card_lv2,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV6까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,오래된 레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
 650003,legend_reinforce_card_lv3,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV8까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
