@@ -33,33 +33,6 @@ WHITELIST_BASESKINSET = [
     'sub_card3',
     'wearing_weapon',
 ]
-WHITELIST_ITEMICON = [
-    'item_tooltip_icon',
-    '256_equip_icons',
-    '256_costume_icons',
-    '256_weapone_icons',
-    'acc_item',
-    'hair_accesory',
-    'item',
-    'payment'
-]
-WHITELIST_SKILLICON = [
-    'skillicon',
-    'archer_skillicon',
-    'cleric_skillicon',
-    'scout_skillicon',
-    'warrior_skillicon',
-    'wizard_skillicon',
-    'common_skillicon',
-    'summon_skillicon',
-    'abilityicon',
-    'abilityicon_archer',
-    'abilityicon_common',
-    'abilityicon_cleric',
-    'abilityicon_scout',
-    'abilityicon_warrior',
-    'abilityicon_wizard',
-]
 
 WHITELIST_RGB = [
     'bosscard2',
@@ -127,10 +100,6 @@ def parse_icons_step(file_name, version_new, work):
     if image.get('file') is None or image.get('name') is None:
         return
     if file_name == 'baseskinset.xml' and image_category not in WHITELIST_BASESKINSET:
-        return
-    if file_name == 'itemicon.xml' and image_category not in WHITELIST_ITEMICON:
-        return
-    if file_name == 'skillicon.xml' and image_category not in WHITELIST_SKILLICON:
         return
 
     image_file = image.get('file').split('\\')[-1].lower()

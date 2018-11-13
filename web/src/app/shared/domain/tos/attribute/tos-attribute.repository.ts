@@ -28,7 +28,9 @@ export class TOSAttributeRepository extends CRUDRepository<TOSAttribute> {
     let entity = new TOSAttribute(row);
     let groupByIdName = entity.$ID_NAME;
     let groupBySkill = +row.Link_Skill;
-    let groupByJobs = JSON.parse((row.Link_Jobs || []) + '');
+    let groupByJobs = row.Link_Jobs
+      ? JSON.parse((row.Link_Jobs || []) + '')
+      : null;
 
     TOSDomainService.attributesByIdName[groupByIdName] = entity;
 

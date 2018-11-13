@@ -14,6 +14,7 @@ export class SEOService {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         let url = event.urlAfterRedirects;
+            url = url.indexOf('?') > 0 ? url.slice(0, url.indexOf('?')) : url;
         let urlTitle = 'Tree of Savior | Open-source Database and Skill Simulator';
         let urlDescription = `
           A fan-made and open-source Database & Simulator for Tree of Savior.
