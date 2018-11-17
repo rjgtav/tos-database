@@ -81,9 +81,7 @@ def parse_links_jobs():
 
                     # Parse attribute unlock
                     attribute['Unlock'] = luautil.lua_function_source_to_javascript(
-                        luautil.lua_function_source(
-                            LUA_UNLOCK[row['UnlockScr']]
-                        )
+                        luautil.lua_function_source(LUA_UNLOCK[row['UnlockScr']])[1:-1]  # remove 'function' and 'end'
                     ) if not attribute['Unlock'] and row['UnlockScr'] else attribute['Unlock']
 
                     attribute['UnlockArgs'][job['$ID']] = {

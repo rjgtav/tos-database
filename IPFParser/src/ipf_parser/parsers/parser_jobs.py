@@ -7,6 +7,7 @@ import urllib
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations, parser_assets
+from ipf_parser.parsers.parser_enums import TOSRegion
 from ipf_parser.utils.tosenum import TOSEnum
 
 
@@ -73,8 +74,11 @@ class TOSJobType(TOSEnum):
         }[string]
 
 
-def parse():
+def parse(region):
     parse_jobs()
+
+    if region == TOSRegion.kTEST:
+        parse_jobs_stats()
 
 
 def parse_jobs():
@@ -96,13 +100,18 @@ def parse_jobs():
             obj['JobTree'] = TOSJobTree.value_of(row['CtrlType'])
             obj['JobType'] = [TOSJobType.value_of(v.strip()) for v in row['ControlType'].split(',')] if len(row['ControlType']) else None
             obj['IsHidden'] = row['HiddenJob'] == 'YES'
-            obj['IsSecret'] = obj['IsHidden'] and row['RemoveBan'] == 'ON'
+            obj['IsSecret'] = obj['IsHidden'] and len(row['PreFunction']) > 0
             obj['Rank'] = int(row['Rank'])
             obj['Stat_CON'] = int(row['CON'])
             obj['Stat_DEX'] = int(row['DEX'])
             obj['Stat_INT'] = int(row['INT'])
             obj['Stat_SPR'] = int(row['MNA'])
             obj['Stat_STR'] = int(row['STR'])
+            obj['StatBase_CON'] = 0
+            obj['StatBase_DEX'] = 0
+            obj['StatBase_INT'] = 0
+            obj['StatBase_SPR'] = 0
+            obj['StatBase_STR'] = 0
 
             obj['Link_Attributes'] = []
             obj['Link_Skills'] = []
@@ -111,23 +120,25 @@ def parse_jobs():
             globals.jobs_by_name[obj['$ID_NAME']] = obj
 
 
-def parse_jobs_gif(name):
-    name = 'Cryomancers' if name == 'Cryomancer' else name
-    name = ''.join(name.split(' ')).lower()
+def parse_jobs_stats():
+    logging.debug('Parsing base stats for jobs...')
 
-    conn = httplib.HTTPSConnection('treeofsavior.com')
-    conn.request('HEAD', '/img/class/class_character/' + name + '_f.gif')
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'statbase_pc.ies')
 
-    response = conn.getresponse()
-    conn.close()
+    with open(ies_path, 'rb') as ies_file:
+        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            if not len(row['ClassName']):
+                continue
 
-    if response.status == 200:
-        urllib.urlretrieve(
-            'https://treeofsavior.com/img/class/class_character/' + name + '_f.gif',
-            os.path.join(constants.PATH_WEB_ASSETS_IMAGES, 'classes', name + '_f.gif')
-        )
+            job_tree = TOSJobTree.value_of(row['ClassName'])
 
-    return name
+            for job in globals.jobs.values():
+                if job['JobTree'] == job_tree:
+                    job['StatBase_CON'] = int(row['CON'])
+                    job['StatBase_DEX'] = int(row['DEX'])
+                    job['StatBase_INT'] = int(row['INT'])
+                    job['StatBase_SPR'] = int(row['MNA'])
+                    job['StatBase_STR'] = int(row['STR'])
 
 
 def parse_links():

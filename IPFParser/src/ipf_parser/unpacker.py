@@ -86,9 +86,8 @@ def unpack_file(file_name, source, destination):
     shutil.rmtree(destination_extract)
 
 
-def unpack_patch():
-    version = version_read()
-    version_new = False
+def unpack_patch(version):
+    version_new = version
 
     for file_name in sorted(os.listdir(constants.PATH_TOS_PATCH)):
         if version_as_int(version) >= version_as_int(file_name):
@@ -100,8 +99,8 @@ def unpack_patch():
         unpack_file(file_name, constants.PATH_TOS_PATCH, constants.PATH_PARSER_INPUT_IPF)
 
         # Update version
-        version_write(file_name)
-        version_new = True
+        version_new = file_name
+        version_write(version_new)
 
     return version_new
 
@@ -109,15 +108,13 @@ def unpack_patch():
 def unpack_release():
     logging.debug('Unpacking initial release...')
     if len(os.listdir(constants.PATH_PARSER_INPUT_IPF)) > 0:
-        return False
+        return
 
     for file_name in os.listdir(constants.PATH_TOS_DATA):
         if any(file_name == s for s in IPF_BLACKLIST):
             continue
 
         unpack_file(file_name, constants.PATH_TOS_DATA, constants.PATH_PARSER_INPUT_IPF)
-
-    return True
 
 
 def unpack_translations(region):
@@ -139,18 +136,17 @@ def unpack_translations(region):
 
 def unpack(region):
     logging.debug('Unpacking...')
-    version_new = False
-    version_new = unpack_release() or version_new
-    version_new = unpack_patch() or version_new
-    #version_new = True
+    unpack_release()
+
+    version = version_read()
+    version_new = unpack_patch(version)
 
     # HotFix: make image assets lowercase
-    if version_new:
+    if version != version_new:
         fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'icon'))
         fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'skin'))
         fileutil.to_lower(os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_mongen.ipf'))
 
     unpack_translations(region)
 
-    return version_new
-
+    return version_as_int(version), version_as_int(version_new)

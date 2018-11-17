@@ -65,20 +65,20 @@ def parse_entity_icon(icon):
         return icon
 
 
-def parse(region, version_new):
+def parse(region, version_update):
     logging.debug('Parsing assets...')
 
-    parse_icons('baseskinset.xml', version_new)
-    parse_icons('classicon.xml', version_new)
-    parse_icons('itemicon.xml', version_new)
-    parse_icons('mongem.xml', version_new)
-    parse_icons('monillust.xml', version_new)
-    parse_icons('skillicon.xml', version_new)
+    parse_icons('baseskinset.xml', version_update)
+    parse_icons('classicon.xml', version_update)
+    parse_icons('itemicon.xml', version_update)
+    parse_icons('mongem.xml', version_update)
+    parse_icons('monillust.xml', version_update)
+    parse_icons('skillicon.xml', version_update)
 
-    parse_images_jobs(region, version_new)
+    parse_images_jobs(region, version_update)
 
 
-def parse_icons(file_name, version_new):
+def parse_icons(file_name, version_update):
     logging.debug('Parsing icons from %s...', file_name)
 
     data_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'baseskinset', file_name)
@@ -89,11 +89,11 @@ def parse_icons(file_name, version_new):
     data = [(image, imagelist) for imagelist in data for image in imagelist]
 
     pool = Pool(processes=multiprocessing.cpu_count())
-    pool.map(partial(parse_icons_step, file_name, version_new), data)
+    pool.map(partial(parse_icons_step, file_name, version_update), data)
     pool.terminate()
 
 
-def parse_icons_step(file_name, version_new, work):
+def parse_icons_step(file_name, version_update, work):
     image = work[0]
     image_category = work[1].get('category')
 
@@ -117,7 +117,7 @@ def parse_icons_step(file_name, version_new, work):
         #logging.warning('Non-existing icon: %s', copy_from)
         return
 
-    if version_new:
+    if version_update:
         shutil.copy(copy_from, copy_to)
 
         # Crop, Resize, Optimize and convert to JPG/PNG
@@ -132,8 +132,8 @@ def parse_icons_step(file_name, version_new, work):
     globals.assets_icons[image_name] = image_name
 
 
-def parse_images_jobs(region, version_new):
-    if not version_new or region != TOSRegion.iTOS:
+def parse_images_jobs(region, version_update):
+    if not version_update or region != TOSRegion.iTOS:
         return
 
     logging.debug('Parsing images for jobs...')
@@ -165,8 +165,8 @@ def parse_images_jobs(region, version_new):
             urllib.urlretrieve('https://treeofsavior.com/img/class/class_character/' + name + '_m.gif', image_path_m)
 
 
-def parse_clean(version_new):
-    if not version_new:
+def parse_clean(version_update):
+    if not version_update:
         return
 
     logging.debug('Cleaning unused icons...')

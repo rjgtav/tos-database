@@ -311,7 +311,7 @@ EQUIPMENT_STAT_COLUMNS = [
     #'DEF',
     #'MDEF',
     'PATK',
-    #'MATK',
+    'MATK',
     'CRTHR',
     'CRTATK',
     'CRTDR',
@@ -326,6 +326,7 @@ EQUIPMENT_STAT_COLUMNS = [
     'MNA',
     'SR',
     'SDR',
+    'CRTMATK',
     'MHR',
     'ADD_MHR',
     #'MGP',
@@ -467,9 +468,10 @@ def parse_equipment():
         obj['Level'] = int(row['ItemLv']) if int(row['ItemLv']) > 0 else int(row['UseLv'])
         obj['Material'] = TOSEquipmentMaterial.value_of(row['Material'])
         obj['Potential'] = int(row['MaxPR'])
-        obj['RequiredClass'] = '%s%s%s%s' % (
+        obj['RequiredClass'] = '%s%s%s%s%s' % (
             1 if any(j in row['UseJob'] for j in ['All', 'Char3']) else 0,  # Archer
             1 if any(j in row['UseJob'] for j in ['All', 'Char4']) else 0,  # Cleric
+            1 if any(j in row['UseJob'] for j in ['All', 'Char5']) else 0,  # Scout
             1 if any(j in row['UseJob'] for j in ['All', 'Char1']) else 0,  # Swordsman
             1 if any(j in row['UseJob'] for j in ['All', 'Char2']) else 0,  # Wizard
         )

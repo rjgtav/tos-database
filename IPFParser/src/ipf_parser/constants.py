@@ -35,6 +35,7 @@ PATH_UNPACKER = os.path.join('..', 'IPFUnpacker')
 PATH_UNPACKER_EXE = os.path.join(PATH_UNPACKER, 'ipf_unpack')
 
 PATH_WEB = os.path.join('..', 'web')
+PATH_WEB_APP = os.path.join(PATH_WEB, 'src', 'app')
 PATH_WEB_ASSETS = os.path.join(PATH_WEB, 'src', 'assets')
 PATH_WEB_ASSETS_DATA = None
 PATH_WEB_ASSETS_ICONS = os.path.join(PATH_WEB_ASSETS, 'icons')

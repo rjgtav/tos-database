@@ -6,7 +6,7 @@ import re
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations, parser_assets
-from ipf_parser.parsers.parser_enums import TOSElement, TOSAttackType
+from ipf_parser.parsers.parser_enums import TOSElement, TOSAttackType, TOSRegion
 from ipf_parser.parsers.parser_jobs import TOSJobTree
 from ipf_parser.utils import luautil
 from ipf_parser.utils.tosenum import TOSEnum
@@ -34,32 +34,37 @@ class TOSRequiredStanceCompanion(TOSEnum):
 EFFECTS = []
 
 
-def parse():
-    parse_skills()
+def parse(region):
+    parse_skills(region)
     parse_skills_overheats()
     parse_skills_simony()
     parse_skills_stances()
 
 
-def parse_skills():
+def parse_skills(region):
     logging.debug('Parsing skills...')
 
     LUA = luautil.load_script('calc_property_skill.lua', '*', False)
-    EMBED_SCR_ABIL_ADD_SKILLFACTOR = luautil.lua_function_source(LUA['SCR_ABIL_ADD_SKILLFACTOR'][:-1])
+    LUA_EMBEDDED = [
+        'SCR_ABIL_ADD_SKILLFACTOR',
+        'SCR_ABIL_ADD_SKILLFACTOR_TOOLTIP',
+        'SCR_REINFORCEABILITY_TOOLTIP',
+    ]
 
     ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'skill.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            # Ignore 'Common_' skills (e.g. Bokor's Summon abilities)
+            if row['ClassName'].find('Common_') == 0:
+                continue
+
             obj = {}
             obj['$ID'] = int(row['ClassID'])
             obj['$ID_NAME'] = row['ClassName']
             obj['Description'] = parser_translations.translate(row['Caption'])
             obj['Icon'] = parser_assets.parse_entity_icon(row['Icon'])
             obj['Name'] = parser_translations.translate(row['Name'])
-
-            if obj['Name'].find('Summon:') == 0:
-                continue
 
             obj['CoolDown'] = int(row['BasicCoolDown']) / 1000
             obj['Effect'] = parser_translations.translate(row['Caption2'])
@@ -86,7 +91,7 @@ def parse_skills():
             obj['OverHeat'] = {
                 'Value': int(row['SklUseOverHeat']),
                 'Group': row['OverHeatGroup']
-            }
+            } if region != TOSRegion.kTEST else int(row['SklUseOverHeat'])  # Re:Build overheat is now simpler to calculate
             obj['RequiredCircle'] = -1
             obj['TypeAttack'] = []
             obj['Link_Attributes'] = []
@@ -138,14 +143,16 @@ def parse_skills():
                     if row[effect] != 'ZERO':
                         obj[key] = []
 
-                        # Replace function calls with function source code
-                        for line in luautil.lua_function_source(LUA[row[effect]]):
-                            if 'SCR_ABIL_ADD_SKILLFACTOR' in line:
-                                obj[key] = obj[key] + EMBED_SCR_ABIL_ADD_SKILLFACTOR
-                            else:
-                                obj[key].append(line)
+                        # Replace embedded function calls with their source code
+                        for line in luautil.lua_function_source(LUA[row[effect]])[1:-1]:  # remove 'function' and 'end'
+                            for embed in LUA_EMBEDDED:
+                                if embed in line:
+                                    obj[key] = luautil.lua_function_source(LUA[embed]) + obj[key]
+                                    break
 
-                        obj[key] = parse_skills_lua_to_javascript(obj[key])
+                            obj[key].append(line)
+
+                        obj[key] = parse_skills_lua_to_javascript(row, obj[key])
                     else:
                         # Hotfix: similar to the hotfix above
                         logging.warning('[%32s] Deprecated effect [%s] in Effect', obj['$ID_NAME'], effect)
@@ -164,15 +171,32 @@ def parse_skills():
                 skill[effect] = None
 
 
-def parse_skills_lua_to_javascript(source):
+def parse_skills_lua_to_javascript(skill, source):
     result = []
+    reinforceAbilName = '"' + skill['ReinforceAbility'] + '"' if 'ReinforceAbility' in skill else None
 
-    for line in luautil.lua_function_source_to_javascript(source):
+    for line in source:
         if 'GetSkillOwner(skill)' in line:
             continue
         if 'GetZoneName(pc)' in line:
             continue
+        if 'local reinfabil = ' in line:
+            continue
+        if 'local reinforceAbilName = ' in line:
+            continue
+        if 'SCR_GET_SPEND_ITEM_Alchemist_SprinkleHPPotion' in line:
+            continue
+        if 'SCR_GET_SPEND_ITEM_Alchemist_SprinkleSPPotion' in line:
+            continue
 
+        if reinforceAbilName:
+            line = line.replace('reinfabil', reinforceAbilName)
+            line = line.replace('reinforceAbilName', reinforceAbilName)
+            line = line.replace('TryGetProp(skill, "ReinforceAbility")', reinforceAbilName)
+
+        line = line.replace('basicsp', 'basicSP')  # freaking LUA being case insensitive!
+        line = line.replace('TryGetProp(hpPotion, "NumberArg1", 0)', '395 // @rjgtav: using Lv 15 Condensed HP Potion')
+        line = line.replace('TryGetProp(spPotion, "NumberArg1", 0)', '131 // @rjgtav: using Lv 15 Condensed SP Potion')
         line = line.replace('SCR_CALC_BASIC_DEF(pc)', 'pc.DEF')
         line = line.replace('SCR_CALC_BASIC_MDEF(pc)', 'pc.MDEF')
         line = re.sub(r'TryGetProp\(pc, \"(.+)\"\)', r'pc.\1', line)
@@ -180,7 +204,7 @@ def parse_skills_lua_to_javascript(source):
 
         result.append(line)
 
-    return result
+    return luautil.lua_function_source_to_javascript(result)
 
 
 def parse_skills_overheats():
@@ -333,7 +357,7 @@ def parse_links_jobs():
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            # Ignore discarded skills (e.g. Bokor's 'Summon: ' skills)
+            # Ignore discarded skills
             if row['SkillName'] not in globals.skills_by_name:
                 continue
 

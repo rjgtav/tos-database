@@ -269,30 +269,40 @@ def lua_function_source(function):
 
         result.append(line)
 
-    return result[1:-1]  # remove 'function' and 'end'
+    return result
 
 
 def lua_function_source_format(function_source):
     level = 0
+    level_length = [0, 0]
     result = []
 
     for line in function_source:
+
         # Apply extra spaces (1/2)
         if line.find('if ') == 0:
+            level_length[-1] = level_length[-1] + 1
             result.append('')
 
-        # Apply indentation
+        # Apply indentation (1/2)
         if 'end' == line:
             level = level - 1
 
         result.append((level * 4) * ' ' + line)
 
-        if line.find('if ') == 0:
+        # Apply indentation (2/2)
+        if line.find('if ') == 0 or line.find('function ') == 0:
             level = level + 1
+            level_length.append(0)
+        else:
+            level_length[-1] = level_length[-1] + 1
 
         # Apply extra spaces (2/2)
         if 'end' == line:
-            result.append('')
+            if level_length[-1] > 2:
+                result.append('')
+
+            level_length.pop()
 
     return result
 
@@ -317,6 +327,7 @@ def lua_function_source_to_javascript(function_source):
                 line = line.replace(part_left, 'Math.pow(' + part_left)
                 line = line.replace(part_right, ', ' + part_right + ')')
 
+        line = line + ' {' if line.find('function ') == 0 else line
         line = line.replace('~=', '!=')
         line = line.replace('local ', 'var ')
         line = line.replace('math.', 'Math.')
@@ -325,6 +336,7 @@ def lua_function_source_to_javascript(function_source):
         line = re.sub(r'\bor\b', ' || ', line)
         line = re.sub(r'\bend\b', '}', line)
         line = re.sub(r'\belse\b', '} else {', line)
+        line = re.sub(r'\belseif\b', '} else if', line)
         line = re.sub(r'\bnil\b', 'null', line)
         line = re.sub(r'if (.+) then', r'if (\1) {', line)
 
