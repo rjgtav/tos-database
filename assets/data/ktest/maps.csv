@@ -1,0 +1,403 @@
+$ID,$ID_NAME,Icon,Name
+11,barrack,,숙소
+12,barrack_2,,파이로맨서 룸
+13,barrack_noble,,연회장
+14,barrack4,,주점
+15,opening_zone_1,,오프닝 존
+16,track_underfortress_59_2,,라이마 연출
+17,guild_agit_1,,길드 아지트
+18,guild_mission_1,,길드 미션
+19,login,,로그인 화면
+100,test_zone2,,테스트2
+101,test_zone,,테스트존
+102,black_zone,,블랙존
+103,boss_zone,,보스 존
+104,test_qa,,테스트존 화이트
+105,test_blue,,테스트존 블루
+108,test_material,,테스트존 메테리얼
+109,d_velniasprison_trackzone,,연출용
+110,guildhouse,,길드 아지트
+111,mission_test,,미션_테스트
+112,minigame_zone,,미니게임 존
+113,onehour_test1,,1시간별 미션 테스트1
+114,mission_test2,,미션_테스트2
+116,mission_flag,,깃발뺏기
+501,raid_siauliai1,,샤울레이 레이드
+502,onehour_cmine1,,수정광산 레이드
+503,id_catacomb_03,,카타콤 레이드
+504,raid_thorn1,,가시숲 레이드
+505,mission_rokas_01,,협곡지대 미션
+506,mission_zachariel_01,,왕릉 미션
+507,mission_remains_01,,무너진 저택가
+508,mission_firetower_01,,마법사의 탑 미션
+509,mission_chaple_01,,성당 미션
+510,mission_huevillage_01,,칠채곡 미션
+511,mission_gele_01,,겔리고원 미션
+512,mission_godnessdefence,,여신상 수호
+513,id_catacomb_03_event,,할로윈 이벤트
+514,f_gele_kepa_event,,케파 군단
+515,d_prison_62_1_event,,아샤크 지하 감옥
+517,mission_gele_01_event,,칼날서약 용병단의 능력 증명
+520,mission_groundtower_1,,대지의 탑 롤로팬서 구간
+521,mission_groundtower_2,,대지의 탑 솔미키 구간
+523,c_firemage_event,,연구실
+527,VIVID_c_Klaipe,,비비드 클라페다
+528,VIVID_c_orsha,,비비드 오르샤
+529,VIVID_c_fedimian,,비비드 페디미안
+700,f_pilgrimroad_41_1_event,,괴도 트팡 이벤트
+701,c_highlander_event,,하이랜더 마스터의 도장[이벤트]
+702,f_playground,,천하제일 축구장
+703,f_huevillage_58_1_event,,[이벤트]베야 골짜기
+704,f_coral_44_2_event,,[이벤트]아이테오 해안
+981,c_fedimian,,페디미안
+1001,c_Klaipe,,클라페다
+1002,c_highlander,,하이랜더 마스터의 도장
+1003,c_voodoo,,보코르 마스터의 집
+1004,c_firemage,,파이로맨서 마스터의 연구실
+1005,c_request_1,,건물 내부
+1006,c_orsha,,오르샤
+1007,c_nunnery,,살러스 수녀원
+1008,c_barber_dress,,뷰티샵
+1021,f_siauliai_west,,샤울레이 서쪽 숲
+1031,f_siauliai_est,,미사용-샤울레이 동쪽 숲-past
+1032,f_siauliai_2,,샤울레이 동쪽 숲
+1041,f_siauliai_out,,샤울레이 광산 마을
+1051,d_cmine_01,,수정광산 1층
+1061,d_cmine_02,,수정광산 2층
+1071,d_cmine_6,,수정광산 3층
+1081,f_katyn_7,,카틴 숲 입구
+1082,f_katyn_7_2,,매너클 묘지
+1091,d_cmine_8,,수정광산 2광구 1층
+1101,d_cmine_9,,수정광산 2광구 2층
+1111,f_katyn_10,,카롤리스 샘터
+1121,f_siauliai_11,,f_siauliai_11
+1122,f_siauliai_11_re,,파우피스 나루
+1131,f_katyn_12,,레타스 개울가
+1141,f_katyn_13,,포슬린키스 숲
+1142,f_katyn_13_2,,밀실
+1143,f_katyn_13_3,,화살길
+1151,f_katyn_14,,사크니스 벌판
+1161,f_siauliai_15,,f_siauliai_15
+1162,f_siauliai_15_re,,덧댄다리 숲
+1171,f_siauliai_16,,렘파라사 연못
+1172,f_siauliai_46_1,,봄볕나무 숲
+1173,f_siauliai_46_2,,우키스 경작지
+1174,f_siauliai_46_3,,빌나 숲
+1175,f_siauliai_46_4,,다이나 양봉지
+1176,f_siauliai_47_4,,아렐르노 남작령
+1180,f_siauliai_50_1,,기티스의 개척지
+1181,f_katyn_17,,칼빛 분지
+1191,f_katyn_18,,쿨레 고개
+1201,d_thorn_19,,관문로
+1211,d_thorn_20,,시르드겔라 숲
+1221,d_thorn_21,,크바일라스 숲
+1231,d_thorn_22,,드바시아 고개
+1241,d_thorn_23,,해진깃발숲
+1251,f_rokas_24,,대왕의 관문
+1261,f_rokas_25,,람스티스 협곡
+1271,f_rokas_26,,긴다리 계곡
+1281,f_rokas_27,,아크멘스 능선
+1291,f_rokas_28,,틸타스 협곡
+1301,f_rokas_29,,루카스 고원
+1311,f_rokas_30,,왕의 고원
+1321,f_rokas_31,,자카리엘 교차로
+1331,d_zachariel_32,,왕릉 1층
+1341,d_zachariel_33,,왕릉 2층
+1351,d_zachariel_34,,왕릉 3층
+1361,d_zachariel_35,,왕릉 4층
+1371,d_zachariel_36,,왕릉 5층
+1381,id_catacomb_01,,파수꾼의 묘역
+1391,id_catacomb_02,,발류스의 영면지
+1411,id_catacomb_04,,리티니스 지하묘
+1421,f_remains_37,,비석로
+1431,f_remains_38,,여신의 옛뜰
+1441,f_remains_39,,에산치우 마을
+1451,f_remains_40,,페디미안 외곽
+1461,d_firetower_41,,마법사의 탑 1층
+1471,d_firetower_42,,마법사의 탑 2층
+1481,d_firetower_43,,마법사의 탑 3층
+1491,d_firetower_44,,마법사의 탑 4층
+1501,d_firetower_45,,마법사의 탑 5층
+1511,f_pilgrimroad_46,,큰아귀 길
+1521,f_pilgrimroad_47,,필그림 들길
+1531,f_pilgrimroad_48,,마나하스
+1541,f_pilgrimroad_49,,게나르 평원
+1542,f_pilgrimroad_31_1,,페레토리 구릉
+1543,f_pilgrimroad_31_2,,수타티스 교역로
+1544,f_pilgrimroad_31_3,,모치아 숲
+1551,f_pilgrimroad_50,,제단로
+1561,f_pilgrimroad_51,,기원의 숲
+1571,f_pilgrimroad_52,,압시메스티 교차로
+1581,d_cathedral_53,,대성당 본당
+1591,d_cathedral_54,,대성당 대회랑
+1601,f_pilgrimroad_55,,대성당 참회로
+1611,d_cathedral_56,,대성당 지성소
+1631,f_flash_58,,딩고파실 지구
+1641,f_flash_59,,베르크티 광장
+1651,f_flash_60,,록소나 장터
+1661,f_flash_61,,루클리스 거리
+1681,f_flash_63,,중심시가
+1691,f_flash_64,,내성곽지구
+1701,d_underfortress_65,,대지의 요새 전초구역
+1711,d_underfortress_66,,대지의 요새 대립의 훈련장
+1721,d_underfortress_67,,대지의 요새 거주구역
+1731,d_underfortress_68,,대지의 요새 저장구역
+1741,d_underfortress_69,,대지의 요새 결전지
+1751,f_tableland_70,,이브레 고원
+1761,f_tableland_71,,마당 고원
+1771,f_tableland_72,,스벤티마스 유형지
+1781,f_tableland_73,,카듀멜 절벽
+1791,f_tableland_74,,강철 고원
+1831,d_prison_78,,칼레이마스 접견소
+1841,d_prison_79,,칼레이마스 보관실
+1851,d_prison_80,,칼레이마스 독방구역
+1861,d_prison_81,,칼레이마스 작업장
+1871,d_prison_82,,칼레이마스 심문실
+1881,f_3cmlake_83,,펠케 신전터
+1891,f_3cmlake_84,,압셈타 수원지
+1901,f_3cmlake_85,,바린웰 85수역
+1911,f_3cmlake_86,,바린웰 86수역
+1921,f_3cmlake_87,,바린웰 87수역
+1931,d_startower_88,,별의 탑 1층
+1941,d_startower_89,,별의 탑 4층
+1951,d_startower_90,,별의 탑 12층
+1961,d_startower_91,,별의 탑 20층
+1971,d_startower_92,,별의 탑 21층
+1981,f_castle_93,,외성벽 제 11구역
+1982,f_castle_94,,내성벽 제 10구역
+1983,f_castle_95,,외성벽 제 13구역
+1984,f_castle_96,,외성벽 제 14구역
+1985,f_castle_98,,외성벽 제 15구역
+1986,f_castle_97,,도심성벽 제 10구역
+1987,f_castle_99,,도심성벽 제 11구역
+1988,f_castle_101,,내성벽 제 13구역
+1989,f_castle_100,,도심성벽 제 12구역
+1990,f_castle_102,,외성벽 제 16구역
+1991,f_dcapital_103,,타니엘 1세 기념구
+1992,f_dcapital_104,,폐도 104
+1993,f_dcapital_105,,발티넬 기념구
+1994,f_dcapital_106,,글리헬 기념구
+1995,f_dcapital_107,,프리넬 기념구
+2000,d_dcapital_108,,폐도던전108
+2001,siege_warfare,,공성전 : 유적지대
+2010,d_dcapital_109,,폐도던전119
+2020,d_dcapital_110,,폐도던전110
+2030,d_dcapital_111,,폐도던전111
+2040,d_dcapital_112,,폐도던전112
+2051,f_katyn_45_1,,그리나스 숲길
+2061,f_katyn_45_2,,그리나스 수련장
+2071,f_katyn_45_3,,그리나스 구릉지
+2081,f_gele_57_1,,스라우타스 협곡
+2082,f_gele_57_2,,겔리 고원
+2083,f_gele_57_3,,네프리타스 벼랑
+2084,f_gele_57_4,,테넷 화원
+2085,d_chapel_57_5,,테넷 성당 지하 1층
+2086,d_chapel_57_6,,테넷 성당 지상 1층
+2087,d_chapel_57_7,,테넷 성당 지상 2층
+2088,f_huevillage_58_1,,베야 골짜기
+2089,f_huevillage_58_2,,비에타 계곡
+2090,f_huevillage_58_3,,코발트 숲
+2091,f_huevillage_58_4,,셉티니 골
+2101,f_whitetrees_23_1,,에메트 숲
+2111,f_maple_23_2,,피스티스 숲
+2121,f_whitetrees_23_3,,실라 숲
+2131,f_tableland_28_1,,메사파슬라
+2141,f_tableland_28_2,,스토가스 고원
+2300,f_farm_49_1,,그린가의 장원
+2301,f_farm_49_2,,샤튼 농장
+2302,f_farm_49_3,,샤튼 저수구역
+2401,p_cathedral_1,,은둔자의 통로
+2402,p_cathedral_2,,지하통로 3
+2411,p_catacomb_1,,뮬러스 통로
+2412,p_catacomb_2,,지하통로 4
+2421,f_pilgrimroad_41_1,,타우마스 숲길
+2431,f_pilgrimroad_41_2,,살비야스 숲
+2441,f_pilgrimroad_41_3,,래스보이 호숫가
+2451,f_pilgrimroad_41_4,,섹타 숲
+2461,f_pilgrimroad_41_5,,오아쓰 기념지
+2471,d_abbey_41_6,,메이번 대수도원
+2481,id_catacomb_33_1,,시에나칼 묘역
+2491,id_catacomb_33_2,,칼라일의 영묘
+2501,d_thorn_39_1,,빌티스 숲
+2511,d_thorn_39_2,,글라데 언덕길
+2521,d_thorn_39_3,,라우키메 저습지
+2531,d_abbey_39_4,,틸라 수도원
+2541,f_rokas_36_1,,갈르엣 평야
+2551,f_pilgrimroad_36_2,,파사카 협곡
+2561,f_remains_37_1,,누오로딘 폭포
+2571,f_remains_37_2,,나뮤 사원터
+2581,f_remains_37_3,,이스토라 유적지
+3000,f_dcapital_18_1,,폐도 18_1
+3010,f_dcapital_18_2,,폐도 18_2
+3020,d_castle_19_1,,도심성벽 제 3구역
+3030,d_castle_19_2,,도심성벽 제 4구역
+3040,f_castle_20_1,,외성벽 제 9구역
+3050,f_castle_20_2,,내성벽 제 9구역
+3060,f_castle_20_3,,내성벽 제 8구역
+3070,f_castle_20_4,,도심성벽 제 8구역
+3080,f_dcapital_20_5,,제로멜 공원
+3090,f_dcapital_20_6,,요나엘 기념구
+3100,f_whitetrees_21_1,,유데이안 숲
+3110,f_whitetrees_21_2,,노브리어 숲
+3120,f_whitetrees_22_1,,테레쉬 숲
+3130,f_whitetrees_22_2,,테켈 피난지
+3140,f_whitetrees_22_3,,이졸라챠 고원
+3150,d_abbey_22_4,,나르바스 사원
+3160,d_abbey_22_5,,나르바스 사원 별관
+3170,d_fantasylibrary_48_1,,사우시스 9관
+3180,d_fantasylibrary_48_2,,사우시스 10관
+3190,d_fantasylibrary_48_3,,발란디스 2관
+3200,d_fantasylibrary_48_4,,발란디스 3관
+3210,d_fantasylibrary_48_5,,발란디스 91관
+3220,f_3cmlake_27_1,,바린웰 27수역
+3221,f_3cmlake_27_2,,메이번 31수역
+3223,f_3cmlake_27_3,,메이번 32수역
+3230,f_maple_24_1,,단풍숲 24_1
+3240,f_maple_24_2,,단풍숲 24_2
+3250,f_maple_24_3,,단풍숲 24_3
+3260,f_maple_25_1,,네토 숲
+3270,f_maple_25_2,,스팔빈가스 숲
+3280,f_maple_25_3,,라다르 숲
+3290,id_catacomb_25_4,,티메리스 사원
+3300,f_whitetrees_56_1,,미쉐칸 숲
+3310,d_underfortress_30_1,,대지의 요새 루클리스 전당
+3320,d_underfortress_30_2,,대지의 요새 확장구역
+3330,d_underfortress_30_3,,대지의 요새 피난거주구
+3340,f_flash_29_1,,연안요새
+3350,f_coral_32_1,,크란토 연안
+3360,f_coral_32_2,,이기티 연안
+3370,f_orchard_32_3,,벨라이 숲
+3380,f_orchard_32_4,,세이르 숲
+3390,f_orchard_34_1,,알레멧 숲
+3400,f_orchard_34_2,,제라하
+3410,f_orchard_34_3,,바르하 숲
+3420,f_siauliai_35_1,,나하스 숲
+3430,f_coral_35_2,,베라 연안
+3440,d_abbey_35_3,,엘고스 수도원 별관
+3450,d_abbey_35_4,,엘고스 수도원 본원
+3460,id_catacomb_38_1,,바이덴티스 신당
+3470,id_catacomb_38_2,,모크슬 묘실
+3480,d_velniasprison_54_1,,제2 마족수감소
+3530,f_coral_44_1,,제테오 해안
+3540,f_coral_44_2,,아이테오 해안
+3550,f_coral_44_3,,에페로타오 해안
+3560,d_limestonecave_52_1,,테브린 종유동 1구역
+3570,d_limestonecave_52_2,,테브린 종유동 2구역
+3580,d_limestonecave_52_3,,테브린 종유동 3구역
+3590,d_limestonecave_52_4,,테브린 종유동 4구역
+3600,d_limestonecave_52_5,,테브린 종유동 5구역
+3610,d_velniasprison_51_1,,마족수감소 1구역
+3620,d_velniasprison_51_2,,마족수감소 2구역
+3630,d_velniasprison_51_3,,마족수감소 4구역
+3640,d_velniasprison_51_4,,마족수감소 3구역
+3650,d_velniasprison_51_5,,마족수감소 5구역
+3660,d_limestonecave_55_1,,알렘빅 동굴
+3670,f_bracken_42_1,,코노트 숲
+3680,f_bracken_42_2,,카마돈 숲
+3690,f_bracken_43_1,,아르커스 숲
+3700,f_bracken_43_2,,파마르 숲
+3710,f_bracken_43_3,,지부리나스 숲
+3720,f_bracken_43_4,,몰로게오 숲
+3730,f_farm_47_1,,테넌츠 농장
+3740,f_farm_47_2,,수로교 지역
+3750,f_farm_47_3,,미르키티 농장
+3760,f_tableland_11_1,,베다 고원
+3770,f_3cmlake_26_1,,란코 26수역
+3780,f_3cmlake_26_2,,란코 22수역
+3790,f_dcapital_53_1,,폐도 53_1
+3800,d_itemdungeon_1,,아이템 던전
+3810,d_underfortress_59_1,,왕릉 노역자 숙소
+3820,d_underfortress_59_2,,왕릉 건축자 예배당
+3830,d_underfortress_59_3,,왕릉 적재소
+3840,d_startower_60_1,,쇠락한 르귄가문의 저택
+3850,d_firetower_61_1,,록소나 재건단 서관
+3860,d_firetower_61_2,,록소나 재건단 동관
+3870,ID_startower,,쇠락한 르귄가문의 던전
+3880,ID_firetower,,대마법사의 타워
+3890,id_chaple,,성당 지하 던전
+3900,id_catacomb,,카타콤 지하 던전
+3910,d_prison_62_1,,아샤크 지하 감옥 1층
+3920,d_prison_62_2,,아샤크 지하 감옥 2층
+3930,d_prison_62_3,,아샤크 지하 감옥 3층
+3940,id_remains,,유적지대 던전
+3950,id_thorn,,덩굴 숲 던전
+3960,f_bracken_63_1,,코루 숲
+3970,f_bracken_63_2,,크니도스 숲
+3980,f_bracken_63_3,,다단 숲
+3990,d_abbey_64_1,,노바하 공회소
+4000,d_abbey_64_2,,노바하 별관
+4010,d_abbey_64_3,,노바하 본원
+4020,f_castle_65_1,,델무어 소작촌
+4030,f_castle_65_2,,델무어 장원
+4040,f_castle_65_3,,델무어 외성
+4050,d_cmine_66_1,,네밸랫 광산 1층
+4060,d_cmine_66_2,,네밸랫 광산 2층
+4070,d_castle_67_1,,토페스 보루 1층
+4080,d_castle_67_2,,토페스 보루 2층
+4090,d_underfortress_68_1,,시카리오스 1층
+4100,d_underfortress_68_2,,시카리오스 2층
+4110,id_catacomb2,,카타콤 지하 던전2
+4120,id_underfortress,,깊숙한 지하감옥 던전
+4130,gid_firetower_01,,마법사의 탑 길드 미션
+4140,gid_thorn_01,,가시숲 길드 미션
+4150,gid_zachariel_01,,왕릉 길드 미션
+4160,gid_rokas_01,,협곡지대 길드 미션
+4170,gid_velniasprison_51_3,,마족수감소 길드 미션
+4180,id_remains3,,염원의 비석로 던전
+4190,id_thorn2,,공허의 가시숲
+4200,id_castle,,푸른 요새 던전
+4210,id_firetower_02,,마법사의 탑 인던
+4220,guild_mission_2_pvp,,통합 길드배틀
+4221,guild_mission_3_pvp,,통합 길드배틀 : 로스트 템플
+4230,mission_f_remains_38,,유적지대
+4240,id_velniasprison_01,,암속성 인던
+4250,id_maple_01,,지속성 인던
+4260,mission_abbey_uphill,,업힐 디펜스
+4270,d_firetower_69_1,,지마 수코트
+4280,d_firetower_69_2,,마르튀스 저장실
+4290,mission_d_castle_67_2,,록소나 지하시설 미션
+4291,mission_d_castle_67_2_nunnery,,살러스 수녀원 캐슬 미션
+4300,mission_d_cmine_66_1,,광산 미션
+4310,mission_d_abbey_39_4,,수도원 미션
+4320,mission_f_3cmlake_84,,호수 미션
+4330,mission_d_abbey_35_3,,수녀원
+4340,mission_f_3cmlake_26_1,,란코 26수역
+4690,pvp_battlerumble,,배틀럼블
+4700,mission_fantasylibrary_1,,과거 환상도서관 : 사우시스 9 관
+4710,id_castle2,,캐슬 던전
+4730,d_limestonecave_73_1,,타보르 동굴
+4780,d_prison_75_1,,나콘 감옥
+4800,d_startower_76_1,,나타흐 망루
+4810,d_startower_76_2,,나자레느 탑
+4820,d_velniasprison_77_1,,타테나이 수감소
+4840,d_cathedral_78_1,,네이포트 성당 동관
+4860,d_zachariel_79_1,,샤레저 묘실
+4870,d_zachariel_79_2,,네탄멜레크 영묘
+4890,d_catacomb_80_1,,랜시드 미로
+4900,d_catacomb_80_2,,밸러암 주둔지
+4910,d_catacomb_80_3,,미크마쉬 사원
+4920,d_raidboss_velcoffer,,벨코퍼의 둥지
+4930,d_limestonecave_71_2,,종유동굴 71_2
+4931,d_limestonecave_71_1,,바우바스 동굴
+4940,id_whitetrees1,,첫 번째 피난처
+4941,id_Nicopolis_01,,마법 실험 구역
+4950,d_limestonecave_70_1,,슬리비나스 레어
+4951,d_limestonecave_70_1_rest,,슬리비나스 레어
+4960,c_Klaipe_event,,할로윈 던전
+4961,d_castle_agario,,할로윈 던전
+4970,id_d_cmine_66_2,,네밸랫 광산 던전
+4971,id_3cmlake_26_1,,란코 호수 던전
+8000,f_nicopolis_81_1,,스타리 타운
+8010,f_nicopolis_81_2,,펠라인 포스트 타운
+8020,f_nicopolis_81_3,,스펠토움 타운
+8021,pvp_Mine,,PVP 광산 무법지대
+8022,d_solo_dungeon,,베르니케의 파편 던전
+8023,mission_whitetrees_56_1,,미쉐칸 숲
+9996,GuildColony_f_pilgrimroad_49,,게나르 평원
+9997,GuildColony_f_siauliai_47_4,,아렐르노 남작령
+9998,GuildColony_f_farm_47_2,,수로교 지역
+10000,id_abbey_raid,,아시오 메이지의 실험실
+10001,mission_instance,,MissionInstance
+10002,uniq_startower_raid,,별의 탑 폐쇄 구역
+20000,infinite_map,,무한맵
+20010,pvp_tournament,,팀 배틀 리그 토너먼트
