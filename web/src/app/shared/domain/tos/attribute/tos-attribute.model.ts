@@ -1,7 +1,7 @@
 import {TOSEntity} from "../tos-entity.model";
-import {TOSBuild} from "../tos-build";
-import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSJob, ITOSSkill, TOSDataSet} from "../tos-domain";
+import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSBuild, ITOSJob, ITOSSkill, TOSDataSet} from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
+import {LEVEL_LIMIT} from "../tos-build";
 
 export class TOSAttribute extends TOSEntity implements ITOSAttribute {
   private description: string;
@@ -71,14 +71,16 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
   public Price(level: number) { return level > 0 ? this.UpgradePrice[level - 1] : 0; }
   public PriceTotal(level: number) { return Array.from({length: level + 1}, (x,i) => this.Price(i)).reduce((a, b) => a + b, 0) }
 
-  unlockAvailable(build: TOSBuild): boolean {
+  unlockAvailable(build: ITOSBuild): boolean {
     if (!this.Unlock)  return true;
 
     // Prepare JobGrade and Skill
     return Object
       .values(this.UnlockArgs)
       .find(unlockArg => {
+        let pc: object = { Lv: LEVEL_LIMIT };
         let unlock = this.Unlock.map(line => {
+          let regexGetProp = /TryGetProp\((.+), "(.+)"\)/g;
           let regexJobGrade = /GetJobGradeByName\(pc, ['"](.+)['"]\)/g;
           let regexSkill = /GetSkill\(pc, ['"](.+)['"]\)/g;
           let match: RegExpExecArray;
@@ -87,6 +89,9 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
           line = line.replace(/\bsklName\b/g, "'" + unlockArg.UnlockArgStr + "'");
           line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
+          while (match = regexGetProp.exec(line)) {
+            line = line.replace(match[0], match[1] + '.' + match[2]);
+          }
           while (match = regexJobGrade.exec(line)) {
             let job = TOSDomainService.jobsByIdName[match[1]];
             line = line.replace(match[0], build.jobCircle(job) + '');
@@ -101,8 +106,11 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
 
         let func: string[] = [];
         func.push('(function () {');
+        func.push('var abilIES = null;');
+        func.push('var levelFix = ' + unlockArg.UnlockArgNum + ';');
         func.push('var limitLevel = ' + unlockArg.UnlockArgNum + ';');
         func.push('var limitRank = ' + unlockArg.UnlockArgNum + ';');
+        func.push('var pc = ' + JSON.stringify(pc) + ';');
         func = func.concat(unlock);
         func.push('}())');
 

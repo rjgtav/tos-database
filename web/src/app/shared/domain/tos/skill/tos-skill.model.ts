@@ -1,7 +1,6 @@
 import {TOSEntity} from "../tos-entity.model";
-import {TOSBuildStats} from "../tos-build";
 import {
-  ITOSAttribute,
+  ITOSAttribute, ITOSBuildStats,
   ITOSGem,
   ITOSJob,
   ITOSSkill,
@@ -45,9 +44,11 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
     'MAXATK': TOSStat.ATTACK_LIMIT_MAX,
     'MAXMATK': 'Maximum Magic Attack',
     'MAXPATK': 'Minimum Physical Attack',
+    'MAXPATK_SUB': 'Maximum Physical Attack (Sub-Weapon)',
     'MINATK': TOSStat.ATTACK_LIMIT_MIN,
     'MINMATK': 'Minimum Magic Attack',
     'MINPATK': 'Minimum Physical Attack',
+    'MINPATK_SUB': 'Minimum Physical Attack (Sub-Weapon)',
   };
 
   private readonly effect: string;
@@ -186,7 +187,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
         : null;
   }
 
-  Effect(level: number, stats: TOSBuildStats, showFactors: boolean): string {
+  Effect(level: number, stats: ITOSBuildStats, showFactors: boolean): string {
     //console.log('effect:', this.effect);
     let dependencies: string[] = [];
     let effect: string = this.effect;
@@ -218,7 +219,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
     //console.log(this.effectSkillFactor.join('\n'))
     //lua.run({ skill: { SklFactor: this.prop_SklFactor, SklFactorByLevel: this.prop_SklFactorByLevel, Level: this.level.getValue() }}, this.effectSkillFactor.join('\n'), onResult);
   }
-  EffectFormula(level: number, prop: string, stats: TOSBuildStats): string {
+  EffectFormula(level: number, prop: string, stats: ITOSBuildStats): string {
     return this.effectToHuman(level, prop, stats);
   }
   get EffectProps(): string[] {
@@ -252,7 +253,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   private effectProp(prop: string): string[] {
     return this['effect_' + prop];
   }
-  private effectToEval(prop: string, level: number, stats: TOSBuildStats, includeContext: boolean): { dependencies: string[], func: string[], pc: any, skill: any} {
+  private effectToEval(prop: string, level: number, stats: ITOSBuildStats, includeContext: boolean): { dependencies: string[], func: string[], pc: any, skill: any} {
     let dependencies: string[] = [];
     let effect = this.effectProp(prop);
     let pc: object = { CON: stats.CON, DEX: stats.DEX, INT: stats.INT, MNA: stats.SPR, STR: stats.STR };
@@ -296,7 +297,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
     //console.log('Executing effect (', prop, ') function:\n', func.join('\n'));
     return { dependencies, func, pc, skill };
   }
-  private effectToHuman(level: number, prop: string, stats: TOSBuildStats): string {
+  private effectToHuman(level: number, prop: string, stats: ITOSBuildStats): string {
     let effect = this.effectToEval(prop, level, stats, false);
     let match: RegExpExecArray;
     let result: string[] = [];
@@ -307,7 +308,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
 
       // Note: we need to reset these on every new line so it doesn't skip matches
       let regexAbility = /GetAbility\(pc, ["'](.+)["']\)/g;
-      let regexGetProp = /TryGetProp\((.+), "(.+)"\)/g;
+      let regexGetProp = /TryGetProp\((\w+), "(\w+)"\)/g;
       let regexPlayer = /(?:pc\.(\w+))+/g;
       let regexSkill = /(?:skill\.(\w+))+/g;
 
@@ -345,7 +346,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       .slice(1, result.length - 1)
       .join('\n');
   }
-  private effectToValue(prop: string, level: number, stats: TOSBuildStats): { dependencies: string[], value: number } {
+  private effectToValue(prop: string, level: number, stats: ITOSBuildStats): { dependencies: string[], value: number } {
     let effect = this.effectToEval(prop, level, stats, true);
     return { dependencies: effect.dependencies, value: eval(effect.func.join('\n')) };
   }

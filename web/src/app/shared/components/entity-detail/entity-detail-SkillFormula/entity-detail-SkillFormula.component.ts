@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {TOSBuild} from "../../../domain/tos/tos-build";
+import {ITOSBuild} from "../../../domain/tos/tos-domain";
 
 @Component({
   selector: 'tos-entity-detail-SkillFormula',
@@ -9,7 +9,7 @@ import {TOSBuild} from "../../../domain/tos/tos-build";
 })
 export class EntityDetailSkillFormulaComponent extends EntityDetailChildComponent implements OnChanges {
 
-  @Input() build: TOSBuild;
+  @Input() build: ITOSBuild;
   @Input() divider: boolean;
 
   active: string;

@@ -19,7 +19,7 @@
   </div>
 
   <!-- Next rank -->
-  <app-skill-builder-job-rank *ngIf="jobs.length < TOSBuild.RankLimit" class="mb-3"
-                              [rank]="jobs.length + 1"></app-skill-builder-job-rank>
+  <app-skill-builder-job-rank *ngIf="build.Rank < RANK_LIMIT" class="mb-3"
+                              [rank]="build.Rank + 1"></app-skill-builder-job-rank>
 
 </div>

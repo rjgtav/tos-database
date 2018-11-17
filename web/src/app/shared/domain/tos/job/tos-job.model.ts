@@ -1,7 +1,16 @@
 import {TOSEntity} from "../tos-entity.model";
-import {TOSBuild} from "../tos-build";
-import {ITOSAttribute, ITOSJob, ITOSSkill, TOSDataSet, TOSJobDifficulty, TOSJobTree, TOSJobType} from "../tos-domain";
+import {
+  ITOSAttribute,
+  ITOSBuild,
+  ITOSJob,
+  ITOSSkill,
+  TOSDataSet,
+  TOSJobDifficulty,
+  TOSJobTree,
+  TOSJobType
+} from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
+import {RANK_LIMIT} from "../tos-build";
 
 export class TOSJob extends TOSEntity implements ITOSJob {
   private link_Attributes: ITOSAttribute[];
@@ -19,7 +28,11 @@ export class TOSJob extends TOSEntity implements ITOSJob {
   readonly Stat_INT: number;
   readonly Stat_SPR: number;
   readonly Stat_STR: number;
-
+  readonly StatBase_CON: number;
+  readonly StatBase_DEX: number;
+  readonly StatBase_INT: number;
+  readonly StatBase_SPR: number;
+  readonly StatBase_STR: number;
 
   constructor(private json: TOSJob) {
     super(TOSDataSet.JOBS, json);
@@ -41,6 +54,11 @@ export class TOSJob extends TOSEntity implements ITOSJob {
     this.Stat_INT = +json.Stat_INT;
     this.Stat_SPR = +json.Stat_SPR;
     this.Stat_STR = +json.Stat_STR;
+    this.StatBase_CON = +json.StatBase_CON;
+    this.StatBase_DEX = +json.StatBase_DEX;
+    this.StatBase_INT = +json.StatBase_INT;
+    this.StatBase_SPR = +json.StatBase_SPR;
+    this.StatBase_STR = +json.StatBase_STR;
   }
 
   get Link_Attributes(): ITOSAttribute[] {
@@ -68,26 +86,13 @@ export class TOSJob extends TOSEntity implements ITOSJob {
   }
 
   get IconAnimations(): string[] {
-    if (this.Rank > TOSBuild.RankLimit)
+    if (this.Rank > RANK_LIMIT)
         return null;
 
     return [
       'assets/images/classes/' + this.$ID_NAME + '_f.gif',
       'assets/images/classes/' + this.$ID_NAME + '_m.gif',
     ];
-  }
-
-  unlockAvailable(build: TOSBuild): boolean {
-    let extra = true;
-
-    if (this.$ID_NAME == 'Char4_12') // Chaplain
-      extra = build.jobCircle(TOSDomainService.jobsById[4002]) >= 3; // Priest
-
-    return 1==1
-      && extra
-      && build.Rank + 1 <= TOSBuild.RankLimit
-      && build.Rank + 1 >= this.Rank
-      && build.jobCircle(this) < this.CircleMax;
   }
 
 }

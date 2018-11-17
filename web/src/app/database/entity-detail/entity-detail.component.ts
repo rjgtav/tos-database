@@ -16,6 +16,7 @@ import {TOSAttribute} from "../../shared/domain/tos/attribute/tos-attribute.mode
 import {TOSSkill} from "../../shared/domain/tos/skill/tos-skill.model";
 import {TOSDatabaseBuild} from "../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../shared/domain/tos/job/tos-job.model";
+import {TOSRegionService} from "../../shared/service/tos-region.service";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -76,7 +77,7 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
 
       if (this.skill) {
-        this.build = new TOSDatabaseBuild();
+        this.build = TOSDatabaseBuild.new(TOSRegionService.Region);
         for (let i = 0; i < this.skill.Link_Job.CircleMax; i ++)
           this.build.jobAdd(this.skill.Link_Job);
       }

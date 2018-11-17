@@ -40,7 +40,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   constructor() { }
 
   onJobsChange(value: ITOSJob[]) {
-    this.ranks = this.build.jobRanks(this.job.$ID);
+    this.ranks = this.build.jobRanks(this.job);
     this.circles = Array.from({length: this.ranks.length}, (x,i) => i + 1);
     this.circlesRemove = new Array(this.ranks.length);
     this.skills = TOSDomainService.skillsByJob[this.job.$ID]

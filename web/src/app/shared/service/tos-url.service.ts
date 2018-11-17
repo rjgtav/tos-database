@@ -1,10 +1,19 @@
 import {TOSRegion} from "../domain/tos-region";
 
+const VERSION = {
+  'iTOS': '227234001001', /* iTOS-needle */
+  'jTOS': '226260001001', /* jTOS-needle */
+  'kTOS': '225152001001', /* kTOS-needle */
+  'kTEST': '228126001001', /* kTEST-needle */
+};
+
 export abstract class TOSUrlService {
 
   static Asset(region: TOSRegion, url: string): string {
-    if (url.indexOf('data/') > -1)
+    if (url.indexOf('data/') > -1) {
       url = url.replace('data/', 'data/' + (TOSRegion.toUrl(region) || this.region) + '/');
+      url = url + '?version=' + VERSION[region];
+    }
 
     return this.join(this.origin, url);
   }
@@ -14,7 +23,7 @@ export abstract class TOSUrlService {
   }
 
   private static join(url1: string, url2: string) {
-    return url1 + (url2.startsWith('/') ? '' : '/') + url2;
+    return url1 + ((url1.endsWith('/') || url2.startsWith('/')) ? '' : '/') + url2;
   }
 
   private static get origin(): string {

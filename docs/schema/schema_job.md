@@ -13,6 +13,11 @@
 - Stat_INT `number`
 - Stat_SPR `number`
 - Stat_STR `number`
+- StatBase_CON `number`
+- StatBase_DEX `number`
+- StatBase_INT `number`
+- StatBase_SPR `number`
+- StatBase_STR `number`
 
 #### Links
 - Link_Attributes `TOSEntityLink[]`

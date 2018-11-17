@@ -1,7 +1,7 @@
 import {ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {Subscription} from "rxjs";
-import {TOSBuild} from "../../../domain/tos/tos-build";
+import {ITOSBuild} from "../../../domain/tos/tos-domain";
 
 @Component({
   selector: 'tos-entity-detail-Skill',
@@ -10,7 +10,7 @@ import {TOSBuild} from "../../../domain/tos/tos-build";
 })
 export class EntityDetailSkillComponent extends EntityDetailChildComponent implements OnChanges, OnDestroy {
 
-  @Input() build: TOSBuild;
+  @Input() build: ITOSBuild;
   @Input() divider: boolean;
   @Input() input: boolean;
 

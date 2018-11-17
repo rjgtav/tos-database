@@ -1,7 +1,8 @@
 /*====================================================================================================================+
  | Enums
  *====================================================================================================================*/
-import {TOSBuild, TOSBuildStats} from "./tos-build";
+import {Observable} from "rxjs";
+import {TOSUrlService} from "../../service/tos-url.service";
 
 export enum TOSAttackType {
   PIERCING = 'Piercing',
@@ -28,6 +29,7 @@ export enum TOSCardType {
 export enum TOSClassTree {
   ARCHER = 'Archer',
   CLERIC = 'Cleric',
+  SCOUT = 'Scout',
   SWORDSMAN = 'Swordsman',
   WIZARD = 'Wizard',
 }
@@ -426,11 +428,59 @@ export namespace TOSStat {
 
     return (i < j) ? -1 : (i > j) ? 1 : 0;
   }
+  export function icon(stat: TOSStat) {
+    return TOSUrlService.Asset(null, 'assets/images/simulator_stat_' + stat.toLowerCase() + '.png');
+  }
 }
 
 /*====================================================================================================================+
  | Interfaces
  *====================================================================================================================*/
+export interface ITOSBuild {
+  Jobs: Observable<ITOSJob[]>;
+  JobTree: TOSJobTree;
+  Rank: number;
+  Stats: ITOSBuildStats;
+  StatsBase: ITOSBuildStats;
+  StatsBonus: ITOSBuildStats;
+  StatsPoints: Observable<number>;
+  Version: number;
+
+  jobAdd(job: ITOSJob): void;
+  jobCircle(job: ITOSJob): number;
+  jobCircleMax(job: ITOSJob): number;
+  jobRanks(job: ITOSJob): number[];
+  jobRemove(rank: number): void;
+  jobSkillLevels(job: ITOSJob): Observable<{ [key: number]: number }>;
+  jobUnlockAvailable(job: ITOSJob): boolean;
+
+  skillEffect(skill: ITOSSkill, showFactors: boolean): string;
+  skillEffectFormula(skill: ITOSSkill, prop: string): string;
+  skillLevel(skill: ITOSSkill): number;
+  skillLevelMax(skill: ITOSSkill): number;
+  skillLevelIncrement(skill: ITOSSkill, delta: number, rollOver?: boolean): void;
+  skillLevelIncrementAvailable(skill: ITOSSkill, delta: number): boolean;
+  skillPoints(job: ITOSJob): Observable<number>;
+  skillPointsMax(job: ITOSJob) : number;
+
+  statsIncrementLevel(stat: string, delta: number): void;
+  statsIncrementLevelAvailable(stat: string, delta: number): boolean;
+  statsPointsMax(): number;
+}
+export interface ITOSBuildEncoded {
+  jobs: string[],
+  skills: { [key: number]: number },
+  stats: ITOSBuildStats,
+  version: number,
+}
+export interface ITOSBuildStats {
+  CON: number,
+  DEX: number,
+  INT: number,
+  SPR: number,
+  STR: number,
+}
+
 export interface ITOSEntity {
   $ID: number;
   $ID_NAME: string;
@@ -570,13 +620,16 @@ export interface ITOSJob extends ITOSEntity {
   Stat_INT: number;
   Stat_SPR: number;
   Stat_STR: number;
+  StatBase_CON: number;
+  StatBase_DEX: number;
+  StatBase_INT: number;
+  StatBase_SPR: number;
+  StatBase_STR: number;
 
   CircleAvailable: number[];
   IconAnimations: string[];
   Link_Attributes: ITOSAttribute[];
   Link_Skills: ITOSSkill[];
-
-  unlockAvailable(build: TOSBuild): boolean;
 }
 
 export interface ITOSMap extends ITOSEntity {
@@ -656,8 +709,8 @@ export interface ITOSSkill extends ITOSEntity {
   Link_Gem: ITOSGem;
   Link_Job: ITOSJob;
 
-  Effect(level: number, stats: TOSBuildStats, showFactors: boolean): string;
-  EffectFormula(level: number, prop: string, stats: TOSBuildStats): string;
+  Effect(level: number, stats: ITOSBuildStats, showFactors: boolean): string;
+  EffectFormula(level: number, prop: string, stats: ITOSBuildStats): string;
   LevelMax(circle?: number): number;
 }
 export interface ITOSSkillRequiredStance {

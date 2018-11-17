@@ -1,16 +1,10 @@
 let origin = location.origin + '/';
     origin = origin + (origin.indexOf('github.io') > 0 ? 'tos-database/' : '');
+let versionIndex = location.href.indexOf('version=');
+let version = location.href.slice(versionIndex + 8, versionIndex + 18);
 
 // Load lunr.js
-// Note: tinyseg.min.js needs to load before lunr.ja otherwise it fails to boot
-self['importScripts'](
-  origin + 'assets/js/lunr.min.js',
-  origin + 'assets/js/lunr.multi.min.js',
-  origin + 'assets/js/lunr.stemmer.support.min.js',
-  origin + 'assets/js/tinyseg.min.js',
-  origin + 'assets/js/lunr.ja.min.js',
-  origin + 'assets/js/lunr.kr.min.js',
-);
+self['importScripts'](origin + 'assets/js/lunr.min.js?version=' + version);
 
 let idx = null;
 

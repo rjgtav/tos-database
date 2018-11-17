@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
-import {TOSBuild, TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
+import {RANK_LIMIT, TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {Subscription} from "rxjs";
 import {faTrashAlt} from "@fortawesome/free-solid-svg-icons";
 import {ITOSJob} from "../../../shared/domain/tos/tos-domain";
@@ -12,7 +12,7 @@ import {ITOSJob} from "../../../shared/domain/tos/tos-domain";
 export class SkillBuilderJobRankListComponent implements OnChanges, OnDestroy {
 
   faTrashAlt = faTrashAlt;
-  TOSBuild = TOSBuild;
+  RANK_LIMIT = RANK_LIMIT;
 
   @Input() build: TOSSimulatorBuild;
 

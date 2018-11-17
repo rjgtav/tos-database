@@ -62,7 +62,7 @@ export class TOSEquipment extends TOSItem implements ITOSEquipment {
       ? JSON
         .parse(json.Bonus + '')
         .map(json => new TOSEquipmentBonus(json))
-        .sort((a, b) => TOSStat.comparator(a.Stat, b.Stat))
+        //.sort((a, b) => TOSStat.comparator(a.Stat, b.Stat))
       : null;
     this.Durability = +json.Durability;
     this.Grade = Object.values(TOSEquipmentGrade)[+json.Grade];

@@ -10,6 +10,8 @@ import {TOSStat} from "../../../shared/domain/tos/tos-domain";
 })
 export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
 
+  TOSStat = TOSStat;
+
   rank: number;
   stats: string[] = [TOSStat.STR, TOSStat.CON, TOSStat.INT, TOSStat.SPR, TOSStat.DEX];
   statsPoints: number;
@@ -28,8 +30,8 @@ export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
     let value = Math.max(min, Math.min(max, +event.target['value']));
     let delta = value - this.build.Stats[stat];
 
-    if (this.build.statIncrementLevelAvailable(stat, delta))
-      this.build.statIncrementLevel(stat, delta);
+    if (this.build.statsIncrementLevelAvailable(stat, delta))
+      this.build.statsIncrementLevel(stat, delta);
 
     event.target['value'] = value;
   }
@@ -43,8 +45,8 @@ export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
         ? 100
         : 1;
 
-    if (this.build.statIncrementLevelAvailable(stat, delta))
-      this.build.statIncrementLevel(stat, delta);
+    if (this.build.statsIncrementLevelAvailable(stat, delta))
+      this.build.statsIncrementLevel(stat, delta);
   }
 
   ngOnChanges(changes: SimpleChanges): void {

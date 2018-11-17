@@ -22,7 +22,7 @@ export class TOSSearchService {
   constructor() {
     TOSSearchService.instance = this;
 
-    this.worker = new Worker('assets/js/lunr.worker.lib.js');
+    this.worker = new Worker('assets/js/lunr.worker.lib.js?version=2018-11-17');
     this.worker.addEventListener('error', this.onWorkerError.bind(this));
     this.worker.addEventListener('message', this.onWorkerMessage.bind(this));
   }

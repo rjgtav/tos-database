@@ -97,6 +97,12 @@ export class EquipmentListConfigurationResolver implements Resolve<TOSListConfig
                 TOSEquipmentType.SHIELD,
               ]
             },
+            {
+              header: 'Seals',
+              options: [
+                TOSEquipmentType.SEAL,
+              ]
+            },
           ],
         }
       ],

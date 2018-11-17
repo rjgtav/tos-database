@@ -2,6 +2,7 @@ import {Injectable} from "@angular/core";
 import {TOSSimulatorBuild} from "../../domain/tos/tos-build";
 import {ITOSJob} from "../../domain/tos/tos-domain";
 import {TOSDomainService} from "../../domain/tos/tos-domain.service";
+import {TOSRegionService} from "../tos-region.service";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class TosNeetService {
   constructor() {}
 
   decode(encoded: string): TOSSimulatorBuild {
-    let build: TOSSimulatorBuild = new TOSSimulatorBuild();
+    let build: TOSSimulatorBuild = TOSSimulatorBuild.new(TOSRegionService.Region);
 
     let partsEncoded = encoded.split('.');
     let jobsDecoded: ITOSJob[] = [];

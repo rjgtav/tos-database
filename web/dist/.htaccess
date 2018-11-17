@@ -11,19 +11,35 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 RewriteCond %{HTTP_HOST} ^www.tos.guru$ [NC]
 RewriteRule ^(.*)$ https://tos.guru/$1 [R=301,L]
 
-# deal with Angular routes
-# thanks to https://stackoverflow.com/a/34705199
+########################################################################################################################
+# Angular routes
+# Thanks to https://stackoverflow.com/a/34705199
+########################################################################################################################
 # If an existing asset or directory is requested go to it as it is
-# If the requested pattern is file and file doesn't exist, send 404
-# otherwise use history router
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
 RewriteRule ^ - [L]
 
+# If the requested pattern is file and file doesn't exist, send 404
 RewriteCond %{REQUEST_URI} ^(\/[a-z_\-\s0-9\.]+)+\.[a-zA-Z]{2,4}$
 RewriteRule ^ - [L,R=404]
 
+# otherwise use history router
 RewriteRule ^ /index.html
 
+########################################################################################################################
+# Cache configuration
 # More info: https://www.fastly.com/blog/stale-while-revalidate-stale-if-error-available-today
+########################################################################################################################
+# cache everything else for 1 day, revalidate for 1 week
 Header set Cache-Control "public, max-age=86400, stale-while-revalidate=604800, stale-if-error=604800"
+
+# cache Images for 1 month, revalidate for 1 week
+<filesMatch ".(gif|ico|jpg|jpeg|png)$">
+  Header set Cache-Control "public, max-age=2592000, stale-while-revalidate=604800, stale-if-error=604800"
+</filesMatch>
+
+# cache CSS, CSV, JS, JSON for 15 days, revalidate for 1 week
+<filesMatch ".(css|csv|js|json)$">
+  Header set Cache-Control "public, max-age=1296000, stale-while-revalidate=604800, stale-if-error=604800"
+</filesMatch>

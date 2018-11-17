@@ -12,15 +12,17 @@
              [src]="Icon"
         />
         <img class="position-absolute"
-             style="height: 533px; width: 363px; transform: translateY(-33px);"
+             style="height: 533px; width: 363px; transform: translateY(-35px);"
              [src]="'assets/images/card_frame_' + (card.TypeCard + '').toLowerCase() + '.png'"
              *ngIf="card"
         />
       </div>
     </div>
 
-    <div class="row justify-content-between mt-3 ml-auto mr-auto" *ngIf="equipment">
-      <div *ngFor="let classTree of [TOSClassTree.SWORDSMAN, TOSClassTree.WIZARD, TOSClassTree.ARCHER, TOSClassTree.CLERIC]">
+    <div class="row justify-content-around ml-auto mr-auto" *ngIf="equipment"
+         [ngClass]="{ 'mt-2': !labels }">
+      <div *ngFor="let classTree of [TOSClassTree.ARCHER, TOSClassTree.SCOUT, TOSClassTree.SWORDSMAN, TOSClassTree.CLERIC, TOSClassTree.WIZARD]" class="col-4 p-0"
+           [ngClass]="{ 'mt-3': labels, 'mt-1': !labels }">
         <img [src]="'assets/images/equipment_class_' + classTree.toString().toLowerCase() + '_' + (equipment.IsUsableBy(classTree) ? 'yes' : 'no') + '.png'" style="vertical-align: top" />
         <span class="ml-1" [ngClass]="{ 'text-muted': !equipment.IsUsableBy(classTree) }" *ngIf="labels">
           {{ classTree.toString() }}

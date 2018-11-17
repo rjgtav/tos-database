@@ -2,6 +2,7 @@ import {EventEmitter, Injectable, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
 const KEY_THEME = 'theme';
+const VERSION = '2018-11-17';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +32,7 @@ export class ThemeService {
     this.themeChange.emit(this.theme);
 
     this.http
-      .get(url, { responseType: "text" })
+      .get(url + '?version=' + VERSION, { responseType: "text" })
       .subscribe(value => this.style.innerHTML = value);
 
     localStorage.setItem(KEY_THEME, theme + '');

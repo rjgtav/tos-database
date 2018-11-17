@@ -15,10 +15,10 @@ import {TOSCard} from "../../domain/tos/item/card/tos-card.model";
 import {TOSEquipment} from "../../domain/tos/item/equipment/tos-equipment.model";
 import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
 import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
-import {TOSBuild} from "../../domain/tos/tos-build";
 import {TOSMap} from "../../domain/tos/map/tos-map.model";
 import {TOSJob} from "../../domain/tos/job/tos-job.model";
 import {
+  ITOSBuild,
   TOSClassTree,
   TOSElement,
   TOSEquipmentType,
@@ -43,7 +43,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
 
   private _isVisible: boolean;
 
-  @Input() build: TOSBuild;
+  @Input() build: ITOSBuild;
   @Input() debug: boolean;
   @Input() tooltip: TOSEntity;
 

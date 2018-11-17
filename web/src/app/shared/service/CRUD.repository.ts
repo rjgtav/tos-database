@@ -29,10 +29,14 @@ export abstract class CRUDRepository<T extends TOSEntity> {
     let dataById = this.dataById = force ? {} : this.dataById || {};
     let path = 'assets/data/' + this.options.dataset.toString() + '.csv';
 
+    let versionText = document.getElementById('script-papaparse').getAttribute('src');
+    let versionIndex = versionText.indexOf('version=');
+    let version = versionText.slice(versionIndex + 8, versionIndex + 18);
+
     return data.length
       ? Observable.create(complete)
       : Observable.create(subscriber => {
-        window['Papa']['SCRIPT_PATH'] = 'assets/js/papaparse.min.js';
+        window['Papa']['SCRIPT_PATH'] = 'assets/js/papaparse.min.js?version=' + version;
         window['Papa'].parse(TOSUrlService.Asset(region, path), {
           download: true,
           header: true,
