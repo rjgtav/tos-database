@@ -39,9 +39,9 @@ pushd ../web
 # Build angular application
 echo -e "Building angular application..."
 ng build --prod --base-href "https://tos.guru/"
-cp -rf ./dist/web/index.html ./dist/web/404.html # Hack: make GitHub redirect all unknown URLs to index.html
-cp -rf ./dist/.cpanel.yml ./dist/web/.cpanel.yml
+cp -rf ./dist/web/index.html ./dist/web/404.html
 cp -rf ./dist/.htaccess ./dist/web/.htaccess
+cp -rf ./dist/robots.txt ./dist/web/robots.txt
 
 # Upload to tos.guru
 echo -e "Uploading to tos.guru..."

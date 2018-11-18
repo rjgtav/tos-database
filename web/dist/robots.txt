@@ -1,0 +1,5 @@
+User-agent: *
+Sitemap: https://tos.guru/assets/sitemap/itos.sitemap.xml
+Sitemap: https://tos.guru/assets/sitemap/jtos.sitemap.xml
+Sitemap: https://tos.guru/assets/sitemap/ktos.sitemap.xml
+Sitemap: https://tos.guru/assets/sitemap/ktest.sitemap.xml
