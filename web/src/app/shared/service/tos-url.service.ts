@@ -4,7 +4,7 @@ const VERSION = {
   'iTOS': '228616001001', /* iTOS-needle */
   'jTOS': '226260001001', /* jTOS-needle */
   'kTOS': '225152001001', /* kTOS-needle */
-  'kTEST': '228126001001', /* kTEST-needle */
+  'kTEST': '228645001001', /* kTEST-needle */
 };
 
 export abstract class TOSUrlService {

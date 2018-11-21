@@ -146,7 +146,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644911,Legend_card_Acio,[슬롯 장착 효과] 치명타 발생 +[★ * 15],icon_item_card_legend,152_boss_asio,,[642929],59154,,,,5,0,아시오 메이지 카드,0,,,,0.0,0.0,1111,3,2,1.0
 644912,Legend_card_Wastrel,[슬롯 장착 효과] 최대 HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,[642931],59172,,,,0,3,웨이스트럴 카드,0,,,,0.0,0.0,1111,3,2,1.0
 644913,Legend_card_ignas,[슬롯 장착 효과] 치명타 공격시 [★ * 5]% 확률로 6초 동안 은신합니다.,icon_item_card_legend,154_boss_ignas,,[642934],800089,,,,0,1,이그나스 카드,0,,,,0.0,0.0,1111,3,2,1.0
-644914,Legend_card_boruta,[슬롯 장착 효과] 야수형 몬스터에게 대미지 [★ * 5]% 증가 ,icon_item_card_legend,155_boss_boruta,,,59208,,,,0,0,보루타 카드,0,,,,0.0,0.0,1111,3,2,1.0
+644914,Legend_card_boruta,[슬롯 장착 효과] 보스 몬스터에게 대미지 [★ * 5]% 증가 ,icon_item_card_legend,155_boss_boruta,,,59208,,,,0,0,보루타 카드,0,,,,0.0,0.0,1111,3,2,1.0
 650001,legend_reinforce_card_lv1,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV4까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,찢어진 레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
 650002,legend_reinforce_card_lv2,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV6까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,오래된 레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
 650003,legend_reinforce_card_lv3,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV8까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
