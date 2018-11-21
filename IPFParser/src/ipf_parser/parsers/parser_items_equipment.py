@@ -311,7 +311,7 @@ EQUIPMENT_STAT_COLUMNS = [
     #'DEF',
     #'MDEF',
     'PATK',
-    'MATK',
+    #'MATK',
     'CRTHR',
     'CRTATK',
     'CRTDR',

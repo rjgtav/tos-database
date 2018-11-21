@@ -462,6 +462,7 @@ export interface ITOSBuild {
   skillLevelIncrementAvailable(skill: ITOSSkill, delta: number): boolean;
   skillPoints(job: ITOSJob): Observable<number>;
   skillPointsMax(job: ITOSJob) : number;
+  skillSP(skill: ITOSSkill): number;
 
   statsIncrementLevel(stat: string, delta: number): void;
   statsIncrementLevelAvailable(stat: string, delta: number): boolean;
@@ -702,16 +703,16 @@ export interface ITOSSkill extends ITOSEntity {
   RequiredStance: ITOSSkillRequiredStance[];
   RequiredStanceCompanion: TOSSkillRequiredStanceCompanion;
   RequiredSubWeapon: boolean;
-  SPPerLevel: number;
   TypeAttack: TOSAttackType;
 
   Link_Attributes: ITOSAttribute[];
   Link_Gem: ITOSGem;
   Link_Job: ITOSJob;
 
-  Effect(level: number, stats: ITOSBuildStats, showFactors: boolean): string;
-  EffectFormula(level: number, prop: string, stats: ITOSBuildStats): string;
+  Effect(build: ITOSBuild, showFactors: boolean): string;
+  EffectFormula(prop: string, build: ITOSBuild): string;
   LevelMax(circle?: number): number;
+  SP(build: ITOSBuild) : number;
 }
 export interface ITOSSkillRequiredStance {
   Icon: string;

@@ -2,6 +2,8 @@ import {ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, SimpleChanges
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {Subscription} from "rxjs";
 import {ITOSBuild} from "../../../domain/tos/tos-domain";
+import {TOSDatabaseBuild} from "../../../domain/tos/tos-build";
+import {TOSRegionService} from "../../../service/tos-region.service";
 
 @Component({
   selector: 'tos-entity-detail-Skill',
@@ -35,8 +37,14 @@ export class EntityDetailSkillComponent extends EntityDetailChildComponent imple
     super.ngOnChanges(changes);
     this.ngOnDestroy();
 
-    if (this.build && this.skill)
+    if (changes.entity && this.skill) {
+      if (!this.build) {
+        this.build = TOSDatabaseBuild.new(TOSRegionService.Region);
+        this.build.jobAdd(this.skill.Link_Job);
+      }
+
       this.subscriptionLevels = this.build.jobSkillLevels(this.skill.Link_Job).subscribe(value => this.onSkillLevelsChange(value));
+    }
   }
 
   ngOnDestroy(): void {

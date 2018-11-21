@@ -25,7 +25,7 @@
         <span class="col pt-1 pb-1 text-right">{{ job.Rank }}</span>
       </h6>
       <h6 *ngIf="monster">{{ monster.Size }}</h6>
-      <h6 *ngIf="skill">{{ skill.SP(skillLevel ? skillLevel : 1) }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
+      <h6 *ngIf="skill">{{ build.skillSP(skill) }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
     </div>
   </div>
 

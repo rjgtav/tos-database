@@ -37,7 +37,9 @@ export class HeaderSearchComponent {
 
   constructor(private changeDetector: ChangeDetectorRef, private router: Router, private search: TOSSearchService) {
     TOSRepositoryService.IsLoaded.subscribe(value => this.isLoadedRepository = value);
-    search.IsLoaded.subscribe(value => this.isLoadedSearch = value);
+
+    search.Loaded$.subscribe(value => this.isLoadedSearch = value);
+    search.Result$.subscribe(value => this.onQueryResult(value));
   }
 
   onClear() {
@@ -98,9 +100,7 @@ export class HeaderSearchComponent {
           .map((value, index) => index == words.length - 1 ? value + '*' : '+' + value)
           .join(' ');
 
-    this.search
-      .search(query)
-      .subscribe(value => this.onQueryResult(value));
+    this.search.search(query);
   }
   onQueryResult(results: TOSEntity[]) {
     this.results = results;

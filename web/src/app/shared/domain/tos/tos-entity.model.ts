@@ -33,11 +33,17 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
       ? TOSUrlService.Asset(null, 'assets/icons/' + json['Icon'] + '.png')
       : null;
     this.Name = json.Name;
-    this.url = '/database/' + TOSDataSet.toUrl(dataset) + '/' + this.$ID;
+    this.url = dataset
+      ? '/database/' + TOSDataSet.toUrl(dataset) + '/' + this.$ID
+      : null;
   }
 
   get Description(): string { return this.description$; }
   get Icon(): string { return this.icon; }
-  get Url(): string { return TOSUrlService.Route(null, this.url); }
+  get Url(): string {
+    return this.url
+      ? TOSUrlService.Route(null, this.url)
+      : null;
+  }
 
 }

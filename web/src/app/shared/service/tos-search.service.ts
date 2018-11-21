@@ -16,7 +16,8 @@ export class TOSSearchService {
 
   private isLoaded: BehaviorSubject<boolean> = new BehaviorSubject(false);
   private isLoading: boolean;
-  private subscriberSearch: Subscriber<string[]>;
+  private searchObservable: Observable<TOSEntity[]> = Observable.create((subscriber) => this.searchSubscriber = subscriber);
+  private searchSubscriber: Subscriber<string[]>;
   private readonly worker: Worker;
 
   constructor() {
@@ -27,8 +28,11 @@ export class TOSSearchService {
     this.worker.addEventListener('message', this.onWorkerMessage.bind(this));
   }
 
-  get IsLoaded(): Observable<boolean> {
+  get Loaded$(): Observable<boolean> {
     return this.isLoaded.asObservable();
+  }
+  get Result$(): Observable<TOSEntity[]> {
+    return this.searchObservable;
   }
 
   public load(force: boolean, region: TOSRegion) {
@@ -39,20 +43,19 @@ export class TOSSearchService {
     }
   }
 
-  public search(query: string): Observable<TOSEntity[]> {
-    if (query == '' || query.length <= 2)
-      return of([]);
+  public search(query: string): void {
+    if (query == '' || query.length <= 2) {
+      this.searchSubscriber.next([]);
+      return
+    }
 
-    return Observable.create((subscriber) => {
-      this.subscriberSearch = subscriber;
-      this.worker.postMessage({ cmd: 'query', query })
-    });
+    this.worker.postMessage({ cmd: 'query', query })
   }
 
   private onWorkerError(event: any) {
-    this.subscriberSearch && this.subscriberSearch.next([]);
-    this.subscriberSearch && this.subscriberSearch.complete();
-    this.subscriberSearch = null;
+    this.searchSubscriber && this.searchSubscriber.next([]);
+    this.searchSubscriber && this.searchSubscriber.complete();
+    this.searchSubscriber = null;
   }
   private onWorkerMessage(event: any) {
     //console.log('onWorkerMessage', event.data);
@@ -71,9 +74,7 @@ export class TOSSearchService {
             return TOSDomainService[TOSDataSet.toProperty(dataset) + 'ById'][id];
           });
 
-        this.subscriberSearch && this.subscriberSearch.next(result);
-        this.subscriberSearch && this.subscriberSearch.complete();
-        this.subscriberSearch = null;
+        this.searchSubscriber.next(result);
         break;
     }
   }

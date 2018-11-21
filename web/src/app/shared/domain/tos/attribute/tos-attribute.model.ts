@@ -1,7 +1,7 @@
 import {TOSEntity} from "../tos-entity.model";
 import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSBuild, ITOSJob, ITOSSkill, TOSDataSet} from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
-import {LEVEL_LIMIT} from "../tos-build";
+import {LUAService} from "../../../service/lua.service";
 
 export class TOSAttribute extends TOSEntity implements ITOSAttribute {
   private description: string;
@@ -74,49 +74,21 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
   unlockAvailable(build: ITOSBuild): boolean {
     if (!this.Unlock)  return true;
 
-    // Prepare JobGrade and Skill
-    return Object
+    return !!Object
       .values(this.UnlockArgs)
       .find(unlockArg => {
-        let pc: object = { Lv: LEVEL_LIMIT };
-        let unlock = this.Unlock.map(line => {
-          let regexGetProp = /TryGetProp\((.+), "(.+)"\)/g;
-          let regexJobGrade = /GetJobGradeByName\(pc, ['"](.+)['"]\)/g;
-          let regexSkill = /GetSkill\(pc, ['"](.+)['"]\)/g;
-          let match: RegExpExecArray;
+        let source = this.Unlock;
+        let context = {
+          'abilIES': null,
+          'jobName': "'" + unlockArg.UnlockArgStr + "'",
+          'sklName': "'" + unlockArg.UnlockArgStr + "'",
+          'levelFix': unlockArg.UnlockArgNum,
+          'limitLevel': unlockArg.UnlockArgNum,
+          'limitRank': unlockArg.UnlockArgNum,
+        };
 
-          line = line.replace(/\bjobName\b/g, "'" + unlockArg.UnlockArgStr + "'");
-          line = line.replace(/\bsklName\b/g, "'" + unlockArg.UnlockArgStr + "'");
-          line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
-
-          while (match = regexGetProp.exec(line)) {
-            line = line.replace(match[0], match[1] + '.' + match[2]);
-          }
-          while (match = regexJobGrade.exec(line)) {
-            let job = TOSDomainService.jobsByIdName[match[1]];
-            line = line.replace(match[0], build.jobCircle(job) + '');
-          }
-          while (match = regexSkill.exec(line)) {
-            let skill = TOSDomainService.skillsByIdName[match[1]];
-            line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
-          }
-
-          return line;
-        });
-
-        let func: string[] = [];
-        func.push('(function () {');
-        func.push('var abilIES = null;');
-        func.push('var levelFix = ' + unlockArg.UnlockArgNum + ';');
-        func.push('var limitLevel = ' + unlockArg.UnlockArgNum + ';');
-        func.push('var limitRank = ' + unlockArg.UnlockArgNum + ';');
-        func.push('var pc = ' + JSON.stringify(pc) + ';');
-        func = func.concat(unlock);
-        func.push('}())');
-
-        //console.log('unlockAvailable', func.join('\n'), this.UnlockArgs);
-        return eval(func.join('\n')) == 'UNLOCK';
-      }) != null;
+        return LUAService.eval(build, source, context) == 'UNLOCK';
+      });
   }
 
 }

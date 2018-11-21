@@ -121,10 +121,10 @@ abstract class TOSBuild implements ITOSBuild {
   abstract jobUnlockAvailable(job: ITOSJob): boolean;
 
   skillEffect(skill: ITOSSkill, showFactors: boolean): string {
-    return skill.Effect(this.skillLevel(skill), this.Stats, showFactors);
+    return skill.Effect(this, showFactors);
   }
   skillEffectFormula(skill: ITOSSkill, prop: string): string {
-    return skill.EffectFormula(this.skillLevel(skill), prop, this.Stats);
+    return skill.EffectFormula(prop, this);
   }
   skillLevel(skill: ITOSSkill): number {
     return this.skillLevelsByJob[skill.Link_Job.$ID].getValue()[skill.$ID];
@@ -173,6 +173,9 @@ abstract class TOSBuild implements ITOSBuild {
     return this.skillPointsByJob[job.$ID].asObservable();
   }
   abstract skillPointsMax(job: ITOSJob) : number;
+  skillSP(skill: ITOSSkill): number {
+    return skill.SP(this);
+  }
 
   statsIncrementLevel(stat: string, delta: number) {
     if (this.statsBonus[stat] == undefined)
@@ -416,6 +419,7 @@ export class TOSDatabaseBuild implements ITOSBuild {
   skillLevelMax(skill: ITOSSkill): number { return this.build.skillLevelMax(skill); }
   skillPoints(job: ITOSJob): Observable<number> { return this.build.skillPoints(job); }
   skillPointsMax(job: ITOSJob) : number { return this.build.skillPointsMax(job); }
+  skillSP(skill: ITOSSkill): number { return this.build.skillSP(skill); }
 
   statsIncrementLevel(stat: string, delta: number): void { this.build.statsIncrementLevel(stat, delta); }
   statsIncrementLevelAvailable(stat: string, delta: number): boolean { return this.build.statsIncrementLevelAvailable(stat, delta); }
@@ -513,6 +517,7 @@ export class TOSSimulatorBuild implements ITOSBuild {
   skillLevelMax(skill: ITOSSkill): number { return this.build.skillLevelMax(skill); }
   skillPoints(job: ITOSJob): Observable<number> { return this.build.skillPoints(job); }
   skillPointsMax(job: ITOSJob) : number { return this.build.skillPointsMax(job); }
+  skillSP(skill: ITOSSkill): number { return this.build.skillSP(skill); }
 
   statsIncrementLevel(stat: string, delta: number): void {
     this.build.statsIncrementLevel(stat, delta);

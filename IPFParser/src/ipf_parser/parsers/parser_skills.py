@@ -48,6 +48,7 @@ def parse_skills(region):
     LUA_EMBEDDED = [
         'SCR_ABIL_ADD_SKILLFACTOR',
         'SCR_ABIL_ADD_SKILLFACTOR_TOOLTIP',
+        'SCR_Get_SpendSP',
         'SCR_REINFORCEABILITY_TOOLTIP',
     ]
 
@@ -71,7 +72,9 @@ def parse_skills(region):
             obj['Element'] = TOSElement.value_of(row['Attribute'])
             obj['IsShinobi'] = row['CoolDown'] == 'SCR_GET_SKL_COOLDOWN_BUNSIN' or (row['CoolDown'] and 'Bunshin_Debuff' in LUA[row['CoolDown']])
             obj['Prop_BasicPoison'] = int(row['BasicPoison'])
+            obj['Prop_BasicSP'] = int(math.floor(float(row['BasicSP'])))
             obj['Prop_LvUpSpendPoison'] = int(row['LvUpSpendPoison'])
+            obj['Prop_LvUpSpendSp'] = float(row['LvUpSpendSp'])
             obj['Prop_SklAtkAdd'] = float(row['SklAtkAdd'])
             obj['Prop_SklAtkAddByLevel'] = float(row['SklAtkAddByLevel'])
             obj['Prop_SklFactor'] = float(row['SklFactor'])
@@ -81,8 +84,6 @@ def parse_skills(region):
             obj['RequiredStance'] = row['ReqStance']
             obj['RequiredStanceCompanion'] = TOSRequiredStanceCompanion.value_of(row['EnableCompanion'])
             obj['RequiredSubWeapon'] = row['UseSubweaponDamage'] == 'YES'
-            obj['SP'] = int(math.floor(float(row['BasicSP'])))
-            obj['SPPerLevel'] = float(row['LvUpSpendSp'])
 
             obj['IsEnchanter'] = False
             obj['IsPardoner'] = False
@@ -94,6 +95,7 @@ def parse_skills(region):
             } if region != TOSRegion.kTEST else int(row['SklUseOverHeat'])  # Re:Build overheat is now simpler to calculate
             obj['RequiredCircle'] = -1
             obj['TypeAttack'] = []
+            obj['SP'] = None
             obj['Link_Attributes'] = []
             obj['Link_Gem'] = None
             obj['Link_Job'] = None
@@ -137,41 +139,55 @@ def parse_skills(region):
                 if effect in row:
                     key = 'Effect_' + effect
 
+                    # HotFix: make sure all skills have the same Effect columns (1/2)
                     if key not in EFFECTS:
                         EFFECTS.append('Effect_' + effect)
 
                     if row[effect] != 'ZERO':
-                        obj[key] = []
-
-                        # Replace embedded function calls with their source code
-                        for line in luautil.lua_function_source(LUA[row[effect]])[1:-1]:  # remove 'function' and 'end'
-                            for embed in LUA_EMBEDDED:
-                                if embed in line:
-                                    obj[key] = luautil.lua_function_source(LUA[embed]) + obj[key]
-                                    break
-
-                            obj[key].append(line)
-
-                        obj[key] = parse_skills_lua_to_javascript(row, obj[key])
+                        obj[key] = parse_skills_lua_source(LUA, LUA_EMBEDDED, row[effect])
+                        obj[key] = parse_skills_lua_source_to_javascript(row, obj[key])
                     else:
                         # Hotfix: similar to the hotfix above
                         logging.warning('[%32s] Deprecated effect [%s] in Effect', obj['$ID_NAME'], effect)
-
                         obj[key] = None
                 else:
                     continue
 
+            # Parse SP formula
+            if row['SpendSP']:
+                obj['SP'] = parse_skills_lua_source(LUA, LUA_EMBEDDED, row['SpendSP'])
+                obj['SP'] = parse_skills_lua_source_to_javascript(row, obj['SP'])
+
             globals.skills[obj['$ID']] = obj
             globals.skills_by_name[obj['$ID_NAME']] = obj
 
-    # HotFix: make sure all skills have the same Effect columns
+    # HotFix: make sure all skills have the same Effect columns (2/2)
     for skill in globals.skills.values():
         for effect in EFFECTS:
             if effect not in skill:
                 skill[effect] = None
 
 
-def parse_skills_lua_to_javascript(skill, source):
+def parse_skills_lua_source(LUA, LUA_EMBEDDED, function):
+    result = []
+
+    if function not in LUA:
+        logging.warn('Unknown LUA function: %s', function)
+        return result
+
+    # Replace embedded function calls with their source code
+    for line in luautil.lua_function_source(LUA[function])[1:-1]:  # remove 'function' and 'end'
+        for embed in LUA_EMBEDDED:
+            if embed in line:
+                result = luautil.lua_function_source(LUA[embed]) + result
+                break
+
+        result.append(line)
+
+    return result
+
+
+def parse_skills_lua_source_to_javascript(skill, source):
     result = []
     reinforceAbilName = '"' + skill['ReinforceAbility'] + '"' if 'ReinforceAbility' in skill else None
 
@@ -200,7 +216,7 @@ def parse_skills_lua_to_javascript(skill, source):
         line = line.replace('SCR_CALC_BASIC_DEF(pc)', 'pc.DEF')
         line = line.replace('SCR_CALC_BASIC_MDEF(pc)', 'pc.MDEF')
         line = re.sub(r'TryGetProp\(pc, \"(.+)\"\)', r'pc.\1', line)
-        line = re.sub(r'GetAbilityAddSpendValue\(pc, skill\.ClassName, \"(.+)\"\)', r'skill.\1', line)
+        line = re.sub(r'GetAbilityAddSpendValue\(pc, skill\.ClassName, \"(.+)\"\)', '0', line)  # TODO: support calculating the extra SP cost caused by attributes
 
         result.append(line)
 

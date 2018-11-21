@@ -24,9 +24,10 @@ export class EntityDetailSkillFormulaComponent extends EntityDetailChildComponen
     if (this.build && this.skill) {
       this.tabs = this.skill.EffectProps
         .map(match => match[1])
-        .filter((value, index, self) => self.indexOf(value) === index);
-      this.tabs.map(tab => this.tabsHTML[tab] = this.build.skillEffectFormula(this.skill, tab));
+        .filter((value, index, self) => self.indexOf(value) === index)
+        .concat(['sp']);
 
+      this.tabs.map(tab => this.tabsHTML[tab] = this.build.skillEffectFormula(this.skill, tab));
       this.active = this.tabs[0];
     }
   }
