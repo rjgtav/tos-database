@@ -1,0 +1,61 @@
+<h2>Welcome to tos.guru!</h2>
+
+<div class="row">
+
+  <div class="col-lg-6">
+    <p>
+      This is an open-source database for Tree of Savior, a game being developed by IMC Games.<br/>
+    </p>
+
+    <p>
+      It is still in active development, taking multiple updates per week, with the latest patches and new features.<br/>
+      <span class="badge badge-success">Re:Build</span> patch is already supported, and currently available only on <b>kTEST</b> region, which can be changed at the top right<br/>
+    </p>
+
+    <p>
+      Currently, a <a [routerLink]="routerLink('simulator')">Skill Simulator</a> is available, making use of the in-game formulas to calculate skill damage, skill SP costs and attribute unlock logic.<br/>
+    </p>
+
+    <p>
+      A Database is also available, and currently supports the following datasets:
+    </p>
+    <ul *ngFor="let group of TOSDataSet.VALUES; index as i">
+      <li *ngFor="let option of group.options">
+        <a [routerLink]="routerLink('database/' + TOSDataSet.toUrl(option))">{{ TOSDataSet.toLabel(option) }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="card bg-light">
+      <div class="card-header">
+        Changelog
+      </div>
+      <div class="card-body">
+        <h6>2018-11-20</h6>
+        <ul>
+          <li>[Fixed] Magical Attack no longer appears duplicated on an Equipment stats. Thanks @Crevox</li>
+          <li>[Fixed] Skill SP calculation now uses the in-game formulas @</li>
+          <li>[Fixed] Search now returns the correct results even on slower machines. Thanks @TermiNekoEXence</li>
+          <li>[Fixed] Removed invalid search results from the search index. Thanks @Mia</li>
+          <li>[Fixed] Monster detail page is no longer crashing</li>
+          <li>[New] Added SP formulas to Skill detail page</li>
+          <li>[New] Added a homepage with a brief introduction and a changelog</li>
+          <li>[Updated] Updated iTOS, jTOS, kTOS and kTEST to the latest versions</li>
+        </ul>
+
+        <h6>2018-11-16</h6>
+        <ul>
+          <li>[Fixed] Chaplain is no longer considered a Secret class. Thanks @Laynaria</li>
+          <li>[Fixed] 'Summon'-like skills have been purged from all databases. Thanks @Hillgarm</li>
+          <li>[Fixed] Re:Build Simulator builds are again able to be shared around</li>
+          <li>[Improved] When no more skill points are available, and you left click a skill at level < levelMax, it now goes back to 0. Thanks @PetroSpark</li>
+          <li>[Improved] Added 'Usable by Scout' icon to equipment tooltip and detail pages</li>
+          <li>[Improved] Updated cards' frames to the latest design. Thanks @Crevox</li>
+          <li>[New] Added Stats to Re:Build Simulator</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>

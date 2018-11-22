@@ -8,15 +8,23 @@ const routes: Routes = [
     loadChildren: './database/database.module#DatabaseModule'
   },
   {
+    path: 'home',
+    loadChildren: './home/home.module#HomeModule'
+  },
+  {
     path: 'simulator',
     loadChildren: './skill-simulator/skill-simulator.module#SkillSimulatorModule'
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
   },
 ];
 
 const routesRegion: Routes = [
   {
     path: '',
-    redirectTo: 'itos',
+    redirectTo: '/itos/home',
     pathMatch: 'full'
   },
   {
@@ -45,7 +53,7 @@ const routesRegion: Routes = [
   },
   {
     matcher: TOSRegionService.UrlMatcher,
-    redirectTo: 'itos/:redirect',
+    redirectTo: '/itos/:redirect',
     pathMatch: 'full'
   }
 ];
@@ -53,6 +61,7 @@ const routesRegion: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routesRegion, {
     anchorScrolling: 'enabled',
+    //enableTracing: true,
     onSameUrlNavigation: 'ignore',
     scrollPositionRestoration: 'disabled' // Note: as of angular 6.1, when 'enabled', we can't disable it for specific routes (e.g. the simulator)
   })],
