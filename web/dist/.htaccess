@@ -31,9 +31,6 @@ RewriteRule ^ /index.html
 # Cache configuration
 # More info: https://www.fastly.com/blog/stale-while-revalidate-stale-if-error-available-today
 ########################################################################################################################
-# cache everything else for 1 day, revalidate for 1 week
-Header set Cache-Control "public, max-age=86400, stale-while-revalidate=604800, stale-if-error=604800"
-
 # cache Images for 1 month, revalidate for 1 week
 <filesMatch ".(gif|ico|jpg|jpeg|png)$">
   Header set Cache-Control "public, max-age=2592000, stale-while-revalidate=604800, stale-if-error=604800"
@@ -42,4 +39,9 @@ Header set Cache-Control "public, max-age=86400, stale-while-revalidate=604800, 
 # cache CSS, CSV, JS, JSON for 15 days, revalidate for 1 week
 <filesMatch ".(css|csv|js|json)$">
   Header set Cache-Control "public, max-age=1296000, stale-while-revalidate=604800, stale-if-error=604800"
+</filesMatch>
+
+# cache XML for 1 week, revalidate for 1 week
+<filesMatch ".(html|xml)$">
+  Header set Cache-Control "public, max-age=604800, stale-while-revalidate=604800, stale-if-error=604800"
 </filesMatch>
