@@ -99,7 +99,7 @@ export class LUAService {
     source = source.map(line => {
       // Note: we need to reset these on every new line so it doesn't skip matches
       let lineOriginal = line;
-      let regexGetJobGrade = /GetJobGradeByName\(pc, ['"](.+)['"]\)/g;
+      let regexGetJobGrade = /GetJobGradeByName\(pc, (.+)\)/g;
       let regexGetProp = /TryGetProp\((\w+), "(\w+)"\)/g;
       let regexGetSkill = /GetSkill\(pc, (.+)\)/g;
       let regexPlayer = /(?:pc\.(\w+))+/g;
@@ -115,14 +115,15 @@ export class LUAService {
 
       // GetJobGrade(pc, job) - return the circle of the requested job
       while (match = regexGetJobGrade.exec(lineOriginal)) {
-        let job = TOSDomainService.jobsByIdName[match[1]];
+        let jobName = (['"', "'"].indexOf(match[1][0]) == 0 ? match[1] : context[match[1]]).slice(1, -1);
+        let job = TOSDomainService.jobsByIdName[jobName];
+
         line = line.replace(match[0], build.jobCircle(job) + '');
       }
 
       // GetSkill(pc, skill) - return a reference of the requested skill (with level)
       while (match = regexGetSkill.exec(lineOriginal)) {
-        let skillName = ['"', "'"].indexOf(match[1][0]) == -1 ? context[match[1]] : match[1];
-            skillName = skillName.slice(1, -1);
+        let skillName = (['"', "'"].indexOf(match[1][0]) == 0 ? match[1] : context[match[1]]).slice(1, -1);
         let skill = TOSDomainService.skillsByIdName[skillName];
 
         line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
@@ -178,7 +179,7 @@ export class LUAService {
     func = func.concat(source);
     func.push('}())');
 
-    //console.log('eval', func.join('\n'), 'value', eval(func.join('\n')));
+    //console.log('eval', func.join('\n'));
     return { dependencies, func };
   }
 
