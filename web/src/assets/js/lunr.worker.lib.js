@@ -28,7 +28,11 @@ self.onmessage = function (event) {
     // Search the index
     case 'query':
       let query = event.data.query;
-      let result = idx.search(query);
+      let result = [];
+
+      try {
+        result = idx.search(query);
+      } catch (e) {}
 
       self.postMessage({ cmd: 'query', result });
       break;
