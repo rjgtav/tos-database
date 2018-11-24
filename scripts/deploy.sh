@@ -52,7 +52,9 @@ lftp -c "
     open 'ftp://$USER:$PASS@$HOST';
     lcd $LOCAL;
     cd $REMOTE;
-    mirror --delete --ignore-time --only-newer --reverse --verbose
+    mirror --delete --ignore-time --only-newer --reverse --verbose --exclude 404.html --exclude index.html;
+    put -O $REMOTE 404.html;
+    put -O $REMOTE index.html;
 "
 
 popd
