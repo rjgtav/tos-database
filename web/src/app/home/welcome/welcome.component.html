@@ -24,6 +24,12 @@
         <a [routerLink]="routerLink('database/' + TOSDataSet.toUrl(option))">{{ TOSDataSet.toLabel(option) }}</a>
       </li>
     </ul>
+
+    <p>
+      <b>Found an issue?</b><br/>
+      <b>Try clearing your browser's cache by hitting <kbd>Ctrl + Shift + R</kbd> or the appropriate shortcut</b><br/>
+      <b>If still present, please report it through the Feedback or via PM on Discord</b>
+    </p>
   </div>
 
   <div class="col-lg-6">
@@ -32,10 +38,17 @@
         Changelog
       </div>
       <div class="card-body">
-        <h6>2018-11-20</h6>
+        <h6>2018-11-24</h6>
+        <ul>
+          <li>[Fixed] kTEST Simulator no longer crashes on certain classes. Thanks @Laynaria</li>
+          <li>[Fixed] kTEST Gems (red, green, blue, white) are now showing all stat bonuses. Thanks @KriLanze + @Cotoco</li>
+          <li>[Fixed] iTOS, jTOS and kTOS are now able to level their skills again on the Skill detail page. Thanks @TermiNekoEXence</li>
+        </ul>
+
+        <h6>2018-11-21</h6>
         <ul>
           <li>[Fixed] Magical Attack no longer appears duplicated on an Equipment stats. Thanks @Crevox</li>
-          <li>[Fixed] Skill SP calculation now uses the in-game formulas @</li>
+          <li>[Fixed] Skill SP calculation now uses the in-game formulas</li>
           <li>[Fixed] Search now returns the correct results even on slower machines. Thanks @TermiNekoEXence</li>
           <li>[Fixed] Removed invalid search results from the search index. Thanks @Mia</li>
           <li>[Fixed] Monster detail page is no longer crashing</li>
