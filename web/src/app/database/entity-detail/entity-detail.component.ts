@@ -78,10 +78,12 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
 
       if (this.skill) {
         this.build = TOSDatabaseBuild.new(TOSRegionService.Region);
+        this.build.jobAdd(this.skill.Link_Job); // Note: we need to add them 3 times, as on pre-Re:Build the level max scales with the selected Job circle
+        this.build.jobAdd(this.skill.Link_Job);
         this.build.jobAdd(this.skill.Link_Job);
       }
 
-      if (this.initialized) this.changeDetector.detectChanges();
+      this.initialized && this.changeDetector.detectChanges();
       this.initialized = true;
     });
   }
