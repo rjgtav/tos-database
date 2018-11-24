@@ -42,6 +42,6 @@ RewriteRule ^ /index.html
 </filesMatch>
 
 # cache XML for 1 week, revalidate for 1 week
-<filesMatch ".(html|xml)$">
+<filesMatch ".(xml)$">
   Header set Cache-Control "public, max-age=604800, stale-while-revalidate=604800, stale-if-error=604800"
 </filesMatch>
