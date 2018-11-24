@@ -1,7 +1,6 @@
 import csv
 import logging
 import os
-import re
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations, parser_assets

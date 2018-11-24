@@ -5,6 +5,7 @@ import xml.etree.ElementTree as ET
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations
+from ipf_parser.parsers.parser_enums import TOSRegion
 from ipf_parser.parsers.parser_items_equipment import TOSEquipmentStat
 from ipf_parser.utils.tosenum import TOSEnum
 
@@ -21,9 +22,9 @@ class TOSGemType(TOSEnum):
         }[string.upper()]
 
 
-def parse():
+def parse(region):
     parse_gems()
-    parse_gems_bonus()
+    parse_gems_bonus(region)
 
 
 def parse_gems():
@@ -45,11 +46,14 @@ def parse_gems():
     ies_file.close()
 
 
-def parse_gems_bonus():
+def parse_gems_bonus(region):
     logging.debug('Parsing gems bonus...')
 
     xml_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'xml.ipf', 'socket_property.xml')
     xml = ET.parse(xml_path).getroot()
+
+    SLOTS = ['TopLeg', 'HandOrFoot', 'MainOrSubWeapon'] if region == TOSRegion.kTEST else\
+            ['TopLeg', 'Foot', 'Hand', 'Weapon', 'SubWeapon']
 
     # example: <Item Name="gem_circle_1">
     for item in xml:
@@ -59,41 +63,37 @@ def parse_gems_bonus():
             if level.get('Level') == '0':
                 continue
 
-            for slot in ['TopLeg', 'Foot', 'Hand', 'Weapon', 'SubWeapon']:
+            for slot in SLOTS:
                 bonus = level.get('PropList_' + slot)
                 penalty = level.get('PropList_' + slot + '_Penalty')
 
-                for prop in [bonus, penalty]:
-                    if prop is not None and prop != 'None':
+                for slot in (slot.split('Or') if 'Or' in slot else [slot]): # support for Re:Build 2-in-1 slots
+                    for prop in [bonus, penalty]:
+                        if prop is not None and prop != 'None':
+                            if gem['TypeGem'] == TOSGemType.SKILL:
+                                gem['Bonus' + parse_gems_slot(slot)].append({
+                                    'Stat': parser_translations.translate(prop).replace('OptDesc/', '')
+                                })
+                            elif gem['TypeGem'] == TOSGemType.STATS:
+                                prop_slot = prop.split('/')
 
-                        if gem['TypeGem'] == TOSGemType.SKILL:
-                            gem['Bonus' + parse_gems_slot(slot)].append({
-                                'Stat': parser_translations.translate(prop).replace('OptDesc/', '')
-                            })
-                        elif gem['TypeGem'] == TOSGemType.STATS:
-                            prop = prop.split('/')
-                            prop[0] = 'ADD_DR' if prop[0] == 'DR' else prop[0]
-                            prop[0] = 'ADD_DR' if prop[0] == 'DR' else prop[0]
-                            prop[0] = 'ADD_HR' if prop[0] == 'HR' else prop[0]
-                            prop[0] = 'ADD_MATK' if prop[0] == 'MATK' else prop[0]
-                            prop[0] = 'ADD_MDEF' if prop[0] == 'MDEF' else prop[0]
-                            prop[0] = 'ADD_PATK' if prop[0] == 'PATK' else prop[0]
-                            prop[0] = 'ADD_DEF' if prop[0] == 'DEF' else prop[0]
+                                stat = TOSEquipmentStat.value_of('ADD_' + prop_slot[0])
+                                stat = TOSEquipmentStat.value_of(prop_slot[0]) if stat is None else stat
 
-                            gem['Bonus' + parse_gems_slot(slot)].append({
-                                'Stat': TOSEquipmentStat.value_of(prop[0]),
-                                'Value': int(prop[1])
-                            })
+                                gem['Bonus' + parse_gems_slot(slot)].append({
+                                    'Stat': stat,
+                                    'Value': int(prop_slot[1])
+                                })
 
 
 def parse_gems_slot(key):
     return {
         'Foot': 'Boots',
         'Hand': 'Gloves',
-        'TopLeg': 'TopAndBottom',
+        'Main': 'Weapon',
         'SubWeapon': 'SubWeapon',
+        'TopLeg': 'TopAndBottom',
         'Weapon': 'Weapon',
-        '': None
     }[key]
 
 

@@ -122,7 +122,7 @@ class TOSEquipmentStat(TOSEnum):
 
     @staticmethod
     def value_of(string):
-        return {
+        values = {
             'MINATK': TOSEquipmentStat.ATTACK_LIMIT_MIN,
             'MAXATK': TOSEquipmentStat.ATTACK_LIMIT_MAX,
             'ADD_MINATK': TOSEquipmentStat.ATTACK_LIMIT_MIN,
@@ -217,9 +217,9 @@ class TOSEquipmentStat(TOSEnum):
             'RareOption_DodgeRate': TOSEquipmentStat.UNKNOWN,
             'RareOption_BlockBreakRate': TOSEquipmentStat.UNKNOWN,
             'RareOption_BlockRate': TOSEquipmentStat.UNKNOWN,
+        }
 
-
-        }[string]
+        return values[string] if string in values else None
 
 
 class TOSEquipmentType(TOSEnum):
@@ -332,6 +332,7 @@ EQUIPMENT_STAT_COLUMNS = [
     #'MGP',
     'AddSkillMaxR',
     'SkillRange',
+    'SkillWidthRange',
     'SkillAngle',
     'BlockRate',
     'BLK',

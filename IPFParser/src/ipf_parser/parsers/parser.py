@@ -56,7 +56,7 @@ def parse(region, version_update):
     parser_items_cards.parse()
     parser_items_collections.parse()
     parser_items_cubes.parse()
-    parser_items_gems.parse()
+    parser_items_gems.parse(region)
     parser_items_equipment.parse()
     parser_items_equipment_sets.parse()
     parser_items_recipes.parse()
