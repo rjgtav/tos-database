@@ -46,9 +46,9 @@ let files = fs.readdirSync(folder_data);
 
 // Add additional URLs
 let url = xml.ele('url');
-        url.ele('loc', 'https://tos.guru/' + REGION.toLowerCase() + '/simulator');
-        url.ele('lastmod', new Date().toISOString().slice(0, 10));
-        url.ele('changefreq', 'weekly');
+    url.ele('loc', 'https://tos.guru/' + REGION.toLowerCase() + '/simulator');
+    url.ele('lastmod', new Date().toISOString().slice(0, 10));
+    url.ele('changefreq', 'weekly');
 
 log("Saving...");
 fs.writeFileSync(path.join(folder_sitemap, REGION.toLowerCase() + '.sitemap.xml'), xml.end());
