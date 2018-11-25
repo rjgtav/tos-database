@@ -42,10 +42,6 @@ foreach ($region in $paths.keys) {
     Write-Host "[$( $region )] Parsing..."
     bash -c "python ../IPFParser/src/main.py $( $region )"
 
-    if ($LastExitCode > 0) {
-        Write-Error "Something happened while parsing. Aborting..."
-    }
-
     # 6. Commit new changes (if available)
     if (git status --porcelain) {
         # 6.1. Run indexer

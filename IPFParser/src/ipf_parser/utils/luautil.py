@@ -128,6 +128,7 @@ def init():
         function APPLY_RANDOM_OPTION(item) end
         function APPLY_RARE_RANDOM_OPTION(item) end
         function CALC_PCBANG_GROWTH_ITEM_LEVEL(item) end
+        function CALC_GROWTH_ITEM_LEVEL(item) end
         function GET_ITEM_LEVEL(item) return 0 end
         function GET_UPGRADE_ADD_ATK_RATIO(item, ignoreTranscend) return 0 end
         function GET_UPGRADE_ADD_DEF_RATIO(item, ignoreTranscend) return 0 end
