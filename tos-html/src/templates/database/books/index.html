@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../../assets/flatly.lib.css">
+</head>
+<body>
+    <h1>Books</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>$ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="$LOOP$">
+                <td><img src="#{data[$i].Icon}#" /></td>
+                <td>#{data[$i].$ID}#</td>
+                <td>#{data[$i].Name}#</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
