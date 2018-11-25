@@ -1,3 +1,4 @@
+$ErrorActionPreference = "Stop"
 $deploy = $false
 
 $paths = @{}
@@ -40,6 +41,10 @@ foreach ($region in $paths.keys) {
     # 5. Run parser
     Write-Host "[$( $region )] Parsing..."
     bash -c "python ../IPFParser/src/main.py $( $region )"
+
+    if ($LastExitCode > 0) {
+        Write-Error "Something happened while parsing. Aborting..."
+    }
 
     # 6. Commit new changes (if available)
     if (git status --porcelain) {
