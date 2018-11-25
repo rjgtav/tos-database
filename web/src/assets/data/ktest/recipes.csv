@@ -64,7 +64,7 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Materials,Link_MonsterDrops,L
 9018,R_BlessedStone_Multi,icon_item_recipe_misc1,,,"[{""Item"": 9018, ""Quantity"": 1}, {""Item"": 645783, ""Quantity"": 10}]",,[9018],,646045,Recipe - 여신의 축복석,5000,0000,21
 9019,R_3CMLAKE262_SQ04,icon_item_recipe_misc1,,,"[{""Item"": 9019, ""Quantity"": 1}, {""Item"": 666180, ""Quantity"": 1}, {""Item"": 666182, ""Quantity"": 16}]",,[9019],,666181,Recipe - 마법 제거 폭탄,0,0000,21
 9020,R_3CMLAKE262_SQ10,icon_item_recipe_misc1,,,"[{""Item"": 9020, ""Quantity"": 1}, {""Item"": 666179, ""Quantity"": 18}, {""Item"": 666183, ""Quantity"": 12}, {""Item"": 666184, ""Quantity"": 3}]",,[9020],,666185,Recipe - 호수의 정기를 담은 수액,0,0000,21
-9024,R_Dungeon_Key01,icon_item_recipe_misc1,,,"[{""Item"": 9024, ""Quantity"": 1}, {""Item"": 645783, ""Quantity"": 2}, {""Item"": 649004, ""Quantity"": 5}, {""Item"": 649203, ""Quantity"": 5}]",,[9024],,680000,Recipe - 레이드 포탈 스톤,0,0000,21
+9024,R_Dungeon_Key01,icon_item_recipe_misc1,,,"[{""Item"": 9024, ""Quantity"": 1}, {""Item"": 649026, ""Quantity"": 15}, {""Item"": 649025, ""Quantity"": 30}]",,[9024],,680000,Recipe - 레이드 포탈 스톤,0,1111,21
 9025,R_Old_Socket_Gold,icon_item_recipe_misc1,,"[642926, 642931, 642929, 642934]","[{""Item"": 9025, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 10}]",,[9025],,643018,Recipe - 오래된 황금 소켓,0,0000,21
 9027,R_misc_ore24,icon_item_recipe_misc1,,,"[{""Item"": 9027, ""Quantity"": 1}, {""Item"": 649009, ""Quantity"": 5}, {""Item"": 649004, ""Quantity"": 50}]",,[9027],,649027,Recipe - 펠트레민,0,0010,21
 9028,R_misc_ore25,icon_item_recipe_misc1,,,"[{""Item"": 9028, ""Quantity"": 1}, {""Item"": 645694, ""Quantity"": 5}, {""Item"": 649004, ""Quantity"": 50}]",,[9028],,649028,Recipe - 울스터마이트,0,0010,21
