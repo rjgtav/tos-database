@@ -1,8 +1,6 @@
-import {EventEmitter, Injectable, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {EventEmitter, Injectable} from '@angular/core';
 
 const KEY_THEME = 'theme';
-const VERSION = '2018-11-17';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +11,7 @@ export class ThemeService {
   private theme: Theme;
   private themeChange: EventEmitter<Theme> = new EventEmitter();
 
-  constructor(private http: HttpClient) {
+  constructor() {
     this.style = document.getElementById('bootstrap-theme');
     this.set((+localStorage.getItem(KEY_THEME) as Theme) || Theme.LIGHT);
   }
@@ -23,17 +21,16 @@ export class ThemeService {
   toggle() { this.set(this.theme == Theme.LIGHT ? Theme.DARK : Theme.LIGHT) }
 
   private set(theme: Theme) {
-    let url: string = null;
+    let href: string = this.style.getAttribute('href');
+    let version: string = href.slice(href.indexOf('?version='));
 
-    if (theme == Theme.LIGHT) url = 'assets/themes/flatly.lib.css';
-    if (theme == Theme.DARK)  url = 'assets/themes/darkly.lib.css';
+    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.lib.css';
+    if (theme == Theme.DARK)  href = 'assets/themes/darkly.lib.css';
+
 
     this.theme = theme;
     this.themeChange.emit(this.theme);
-
-    this.http
-      .get(url + '?version=' + VERSION, { responseType: "text" })
-      .subscribe(value => this.style.innerHTML = value);
+    this.style.setAttribute('href', href + version);
 
     localStorage.setItem(KEY_THEME, theme + '');
   }
