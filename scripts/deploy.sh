@@ -36,12 +36,24 @@ pushd ../web
 #################################################################
 # 2. Deploy to tos.guru
 #################################################################
+# Backup pre-rendered files
+mv ./dist/web/itos ./dist/web-backup/itos
+mv ./dist/web/jtos ./dist/web-backup/jtos
+mv ./dist/web/ktest ./dist/web-backup/ktest
+mv ./dist/web/ktos ./dist/web-backup/ktos
+
 # Build angular application
 echo -e "Building angular application..."
 ng build --prod --base-href "https://tos.guru/"
 cp -rf ./dist/web/index.html ./dist/web/404.html
 cp -rf ./dist/.htaccess ./dist/web/.htaccess
 cp -rf ./dist/robots.txt ./dist/web/robots.txt
+
+# Restore pre-rendered files
+mv ./dist/web-backup/itos ./dist/web/itos
+mv ./dist/web-backup/jtos ./dist/web/jtos
+mv ./dist/web-backup/ktest ./dist/web/ktest
+mv ./dist/web-backup/ktos ./dist/web/ktos
 
 # Upload to tos.guru
 echo -e "Uploading to tos.guru..."
@@ -52,7 +64,7 @@ lftp -c "
     open 'ftp://$USER:$PASS@$HOST';
     lcd $LOCAL;
     cd $REMOTE;
-    mirror --delete --ignore-time --only-newer --reverse --verbose --exclude 404.html --exclude index.html;
+    mirror --delete --ignore-time --only-newer --reverse --parallel=4 --verbose --exclude 404.html --exclude index.html;
     put -O $REMOTE 404.html;
     put -O $REMOTE index.html;
 "
