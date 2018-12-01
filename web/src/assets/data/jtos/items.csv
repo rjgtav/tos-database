@@ -5932,6 +5932,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902122,Achieve_Fanart_JP_02,第2回イラストコンテストに応募した啓示者に支給される称号です。 マウス右側クリックで使います。,icon_item_holyark,,,,,,称号 - 第2回イラストコンテスト挑戦者,0,0.0,0.0,0001,6,0.0
 902123,EVENT_JP_Contest_2018,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_eventcube3,,,,,,2018イラストコンテスト限定キューブ,0,0.0,0.0,0001,8,0.0
 902124,Event_Fedimian_Cube_2018,フェディミアンを護りきった啓示者に与えられる報酬 です。,icon_item_eventcube2,,,,,,2018フェディミアン守護キューブ,0,0.0,0.0,0000,8,1.0
+902135,Achieve_Event_Happy_Ever_After,いつまでも幸せに暮らしましたとさ,icon_item_holyark,,,,,,Title - Happy Ever After,0,0.0,0.0,0001,6,0.0
+902136,Achieve_Event_Wonderful_ToS_life,この素晴らしき世界,icon_item_holyark,,,,,,Title - Wonderful ToS life,0,0.0,0.0,0001,6,0.0
 904000,EVENT_1802_MASTER_KEY1,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_1,,,,,,マスターの試験券(初級),0,0.0,0.0,0001,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,マスターの訓練報酬としてもらったアイテムです。{nl}5個以上集めるとマスターの試験イベントガイドが無限の可能性のキューブと交換してくれます,icon_item_gimmick_spcrystal,,,,,,小さな可能性の欠片,0,0.0,0.0,0001,15,1.0
 904003,EVENT_1802_MASTER_KEY2,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_2,,,,,,マスターの試験券(中級),0,0.0,0.0,0001,15,1.0
