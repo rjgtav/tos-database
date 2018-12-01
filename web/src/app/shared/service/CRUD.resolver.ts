@@ -2,7 +2,6 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {Observable, of} from "rxjs";
 import {Sort, SortOrder} from "../directives/sort.directive";
 import {Filter} from "../directives/filter.directive";
-import {CRUDRepository} from "./CRUD.repository";
 import {TOSEntity} from "../domain/tos/tos-entity.model";
 import {TOSDataSet} from "../domain/tos/tos-domain";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";

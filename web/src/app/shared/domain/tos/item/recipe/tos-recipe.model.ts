@@ -3,30 +3,13 @@ import {ITOSItem, ITOSRecipe, ITOSRecipeMaterial, TOSDataSet} from "../../tos-do
 import {TOSDomainService} from "../../tos-domain.service";
 
 export class TOSRecipe extends TOSItem implements ITOSRecipe {
-  private link_Materials: TOSRecipeMaterial[];
-  private link_Target: ITOSItem;
 
   constructor(json: TOSRecipe) {
     super(TOSDataSet.RECIPES, json);
   }
 
-  get Link_Materials(): TOSRecipeMaterial[] {
-    return this.link_Materials = this.link_Materials
-      ? this.link_Materials
-      : (this.json as TOSRecipe).Link_Materials
-        ? JSON
-          .parse((this.json as TOSRecipe).Link_Materials + '')
-          .map(value => new TOSRecipeMaterial(value))
-        : null;
-  }
-
-  get Link_Target(): ITOSItem {
-    return this.link_Target = this.link_Target
-      ? this.link_Target
-      : (this.json as TOSRecipe).Link_Target
-        ? TOSDomainService.itemsByIdLink(+(this.json as TOSRecipe).Link_Target)
-        : null;
-  }
+  get Link_Materials() { return this.$lazyPropertyJSONArray('Link_Materials', value => new TOSRecipeMaterial(value)) }
+  get Link_Target() { return this.$lazyPropertyLink('Link_Target', value => TOSDomainService.itemsByIdLink(value)) }
 
 }
 

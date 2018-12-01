@@ -1,8 +1,8 @@
 <div class="w-100"><hr></div>
-<h5 class="text-center">{{ 'Page ' + page + ' of ' + book.Pages.length }}</h5>
+<h5 class="text-center">{{ 'Page ' + page + ' of ' + pages.length }}</h5>
 
-<ngb-carousel class="row" style="min-height: 25rem;" [interval]="false" [wrap]="false" (slide)="onSlide($event)" #carousel>
-  <ng-template ngbSlide *ngFor="let page of book.Pages">
+<ngb-carousel class="row" style="min-height: 25rem;" [interval]="false" [wrap]="false" (slide)="onSlide($event)">
+  <ng-template ngbSlide *ngFor="let page of pages">
     <p class="pl-5 pr-5 pb-5 text-multiline">{{ page }}</p>
   </ng-template>
 </ngb-carousel>

@@ -2,32 +2,27 @@ import {TOSItem} from "../tos-item.model";
 import {ITOSCard, TOSCardType, TOSDataSet, TOSElement, TOSMonsterRace} from "../../tos-domain";
 
 export class TOSCard extends TOSItem implements ITOSCard {
-  private description: string;
-
-  readonly IconTooltip: string;
-  readonly MonsterElement: TOSElement;
-  readonly MonsterRace: TOSMonsterRace;
-  readonly Stat_Height: number;
-  readonly Stat_Legs: number;
-  readonly Stat_Weight: number;
-  readonly TypeCard: TOSCardType;
 
   constructor(json: TOSCard) {
     super(TOSDataSet.CARDS, json);
-
-    this.IconTooltip = json.IconTooltip ? 'assets/icons/' + json.IconTooltip.toLowerCase() + '.jpg' : null;
-    this.MonsterElement = Object.values(TOSElement)[+json.MonsterElement];
-    this.MonsterRace = Object.values(TOSMonsterRace)[+json.MonsterRace];
-    this.Stat_Height = +json.Stat_Height;
-    this.Stat_Legs = +json.Stat_Legs;
-    this.Stat_Weight = +json.Stat_Weight;
-    this.TypeCard = Object.values(TOSCardType)[+json.TypeCard];
   }
 
-  get Description(): string {
-    return this.description = this.description
-      ? this.description
-      : this.json.Description.split('{img star_mark 20 20}').join('<span class="text-warning">★</span>');
+  get Description() { return this.$lazyPropertyStringMultiline('Description')
+    .split('{img star_mark 20 20}')
+    .join('<span class="text-warning">★</span>')
   }
+  get IconTooltip() {
+    let icon = this.$lazyPropertyString('IconTooltip');
+
+    return icon
+      ? 'assets/icons/' + icon.toLowerCase() + '.jpg'
+      : null;
+  }
+  get MonsterElement() { return this.$lazyPropertyEnum('MonsterElement', TOSElement) }
+  get MonsterRace() { return this.$lazyPropertyEnum('MonsterRace', TOSMonsterRace) }
+  get Stat_Height() { return this.$lazyPropertyNumber('Stat_Height') }
+  get Stat_Legs() { return this.$lazyPropertyNumber('Stat_Legs') }
+  get Stat_Weight() { return this.$lazyPropertyNumber('Stat_Weight') }
+  get TypeCard() { return this.$lazyPropertyEnum('TypeCard', TOSCardType) }
 
 }

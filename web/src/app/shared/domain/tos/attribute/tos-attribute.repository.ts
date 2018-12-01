@@ -4,49 +4,38 @@ import {TOSAttribute} from "./tos-attribute.model";
 import {TOSDomainService} from "../tos-domain.service";
 import {TOSDataSet} from "../tos-domain";
 import {TOSRegion} from "../../tos-region";
+import {ArrayUtils} from "../../../utils/array-utils";
 
 export class TOSAttributeRepository extends CRUDRepository<TOSAttribute> {
 
   static readonly instance = new TOSAttributeRepository();
 
   private constructor() {
-    super({
-      dataset: TOSDataSet.ATTRIBUTES,
-      loadStep: (row: TOSAttribute) => this.step(row)
-    });
+    super(TOSDataSet.ATTRIBUTES);
+
+    TOSDomainService.$loader[TOSDomainService.ATTRIBUTES] = () => this.Attributes;
+    TOSDomainService.$loader[TOSDomainService.ATTRIBUTES_BY_ID] = () => this.AttributesById;
+    TOSDomainService.$loader[TOSDomainService.ATTRIBUTES_BY_ID_NAME] = () => this.AttributesByIdName;
+    TOSDomainService.$loader[TOSDomainService.ATTRIBUTES_BY_JOB] = () => this.AttributesByJob;
+    TOSDomainService.$loader[TOSDomainService.ATTRIBUTES_BY_SKILL] = () => this.AttributesBySkill;
   }
+
+  get Attributes() { return this.$data.map(value => new TOSAttribute(value)) }
+  get AttributesById() { return ArrayUtils.reduce(TOSDomainService.attributes, '$ID') }
+  get AttributesByIdName() { return ArrayUtils.reduce(TOSDomainService.attributes, '$ID_NAME') }
+  get AttributesByJob() { return ArrayUtils.reduce(TOSDomainService.attributes, 'Link_Jobs.$ID', true) }
+  get AttributesBySkill() { return ArrayUtils.reduce(TOSDomainService.attributes, 'Link_Skill.$ID', true) }
 
   load(force: boolean, region: TOSRegion): Observable<boolean> {
-    TOSDomainService.attributesByIdName = force ? {} : TOSDomainService.attributesByIdName || {};
-    TOSDomainService.attributesByJob = force ? {} : TOSDomainService.attributesByJob || {};
-    TOSDomainService.attributesBySkill = force ? {} : TOSDomainService.attributesBySkill || {};
-
-    return super.load(force, region);
-  }
-
-  private step(row: TOSAttribute): TOSAttribute {
-    let entity = new TOSAttribute(row);
-    let groupByIdName = entity.$ID_NAME;
-    let groupBySkill = +row.Link_Skill;
-    let groupByJobs = row.Link_Jobs
-      ? JSON.parse((row.Link_Jobs || []) + '')
-      : null;
-
-    TOSDomainService.attributesByIdName[groupByIdName] = entity;
-
-    if (groupBySkill) {
-      // Skill attribute
-      let skills = TOSDomainService.attributesBySkill[groupBySkill] = TOSDomainService.attributesBySkill[groupBySkill] || [];
-          skills.push(entity);
-    } else if (groupByJobs) {
-      // Job attribute
-      groupByJobs.forEach(job => {
-        let attributes = TOSDomainService.attributesByJob[job] = TOSDomainService.attributesByJob[job] || [];
-            attributes.push(entity);
-      });
+    if (force) {
+      TOSDomainService.clear(TOSDomainService.ATTRIBUTES);
+      TOSDomainService.clear(TOSDomainService.ATTRIBUTES_BY_ID);
+      TOSDomainService.clear(TOSDomainService.ATTRIBUTES_BY_ID_NAME);
+      TOSDomainService.clear(TOSDomainService.ATTRIBUTES_BY_JOB);
+      TOSDomainService.clear(TOSDomainService.ATTRIBUTES_BY_SKILL);
     }
 
-    return entity;
+    return super.load(force, region);
   }
 
 }

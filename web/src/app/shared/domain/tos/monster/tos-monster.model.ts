@@ -10,99 +10,51 @@ import {
   TOSElement,
   TOSEquipmentMaterial,
   TOSMonsterRace,
-  TOSMonsterRank,
-  TOSMonsterSize
+  TOSMonsterRank, TOSMonsterRankService,
+  TOSMonsterSize, TOSMonsterSizeService
 } from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
 
-export class TOSMonster extends TOSEntity implements ITOSMonster{
-  private link_Drops: TOSMonsterDropLink[];
-  private link_Spawns: TOSMonsterSpawnLink[];
-
-  readonly Armor: TOSEquipmentMaterial;
-  readonly Element: TOSElement;
-  readonly Level: number;
-  readonly Race: TOSMonsterRace;
-  readonly Rank: TOSMonsterRank;
-  readonly Size: TOSMonsterSize;
-  readonly EXP: number;
-  readonly EXPClass: number;
-  readonly Stat_CON: number;
-  readonly Stat_DEX: number;
-  readonly Stat_INT: number;
-  readonly Stat_SPR: number;
-  readonly Stat_STR: number;
-  readonly Stat_HP: number;
-  readonly Stat_SP: number;
-  readonly Stat_ATTACK_MAGICAL_MAX: number;
-  readonly Stat_ATTACK_MAGICAL_MIN: number;
-  readonly Stat_DEFENSE_MAGICAL: number;
-  readonly Stat_ATTACK_PHYSICAL_MAX: number;
-  readonly Stat_ATTACK_PHYSICAL_MIN: number;
-  readonly Stat_DEFENSE_PHYSICAL: number;
-  readonly Stat_Accuracy: number;
-  readonly Stat_Evasion: number;
-  readonly Stat_CriticalDamage: number;
-  readonly Stat_CriticalDefense: number;
-  readonly Stat_CriticalRate: number;
-  readonly Stat_BlockPenetration: number;
-  readonly Stat_BlockRate: number;
+export class TOSMonster extends TOSEntity implements ITOSMonster {
 
   constructor(private json: TOSMonster) {
     super(TOSDataSet.MONSTERS, json);
 
-    this.$comparators['Rank'] = TOSMonsterRank.comparator;
-    this.$comparators['Size'] = TOSMonsterSize.comparator;
-
-    this.Armor = Object.values(TOSEquipmentMaterial)[+json.Armor];
-    this.Element = Object.values(TOSElement)[+json.Element];
-    this.Level = +json.Level;
-    this.Race = Object.values(TOSMonsterRace)[+json.Race];
-    this.Rank = Object.values(TOSMonsterRank)[+json.Rank];
-    this.Size = Object.values(TOSMonsterSize)[+json.Size];
-    this.EXP = +json.EXP;
-    this.EXPClass = +json.EXPClass;
-    this.Stat_CON = +json.Stat_CON;
-    this.Stat_DEX = +json.Stat_DEX;
-    this.Stat_INT = +json.Stat_INT;
-    this.Stat_SPR = +json.Stat_SPR;
-    this.Stat_STR = +json.Stat_STR;
-    this.Stat_HP = +json.Stat_HP;
-    this.Stat_SP = +json.Stat_SP;
-    this.Stat_ATTACK_MAGICAL_MAX = +json.Stat_ATTACK_MAGICAL_MAX;
-    this.Stat_ATTACK_MAGICAL_MIN = +json.Stat_ATTACK_MAGICAL_MIN;
-    this.Stat_ATTACK_PHYSICAL_MAX = +json.Stat_ATTACK_PHYSICAL_MAX;
-    this.Stat_ATTACK_PHYSICAL_MIN = +json.Stat_ATTACK_PHYSICAL_MIN;
-    this.Stat_DEFENSE_MAGICAL = +json.Stat_DEFENSE_MAGICAL;
-    this.Stat_DEFENSE_PHYSICAL = +json.Stat_DEFENSE_PHYSICAL;
-    this.Stat_Accuracy = +json.Stat_Accuracy;
-    this.Stat_Evasion = +json.Stat_Evasion;
-    this.Stat_CriticalDamage = +json.Stat_CriticalDamage;
-    this.Stat_CriticalDefense = +json.Stat_CriticalDefense;
-    this.Stat_CriticalRate = +json.Stat_CriticalRate;
-    this.Stat_BlockPenetration = +json.Stat_BlockPenetration;
-    this.Stat_BlockRate = +json.Stat_BlockRate;
+    this.$comparators['Rank'] = TOSMonsterRankService.comparator;
+    this.$comparators['Size'] = TOSMonsterSizeService.comparator;
   }
 
-  get Link_Drops(): TOSMonsterDropLink[] {
-    return this.link_Drops = this.link_Drops
-      ? this.link_Drops
-      : this.json.Link_Drops
-        ? JSON
-            .parse(this.json.Link_Drops + '')
-            .map(value => new TOSMonsterDropLink(value))
-        : null;
-  }
+  get Armor() { return this.$lazyPropertyEnum('Armor', TOSEquipmentMaterial) }
+  get Element() { return this.$lazyPropertyEnum('Element', TOSElement) }
+  get EXP() { return this.$lazyPropertyNumber('EXP') }
+  get EXPClass() { return this.$lazyPropertyNumber('EXPClass') }
+  get Level() { return this.$lazyPropertyNumber('Level') }
+  get Race() { return this.$lazyPropertyEnum('Race', TOSMonsterRace) }
+  get Rank() { return this.$lazyPropertyEnum('Rank', TOSMonsterRank) }
+  get Size() { return this.$lazyPropertyEnum('Size', TOSMonsterSize) }
+  get Stat_CON() { return this.$lazyPropertyNumber('Stat_CON') }
+  get Stat_DEX() { return this.$lazyPropertyNumber('Stat_DEX') }
+  get Stat_INT() { return this.$lazyPropertyNumber('Stat_INT') }
+  get Stat_SPR() { return this.$lazyPropertyNumber('Stat_SPR') }
+  get Stat_STR() { return this.$lazyPropertyNumber('Stat_STR') }
+  get Stat_HP() { return this.$lazyPropertyNumber('Stat_HP') }
+  get Stat_SP() { return this.$lazyPropertyNumber('Stat_SP') }
+  get Stat_ATTACK_MAGICAL_MAX() { return this.$lazyPropertyNumber('Stat_ATTACK_MAGICAL_MAX') }
+  get Stat_ATTACK_MAGICAL_MIN() { return this.$lazyPropertyNumber('Stat_ATTACK_MAGICAL_MIN') }
+  get Stat_ATTACK_PHYSICAL_MAX() { return this.$lazyPropertyNumber('Stat_ATTACK_PHYSICAL_MAX') }
+  get Stat_ATTACK_PHYSICAL_MIN() { return this.$lazyPropertyNumber('Stat_ATTACK_PHYSICAL_MIN') }
+  get Stat_DEFENSE_MAGICAL() { return this.$lazyPropertyNumber('Stat_DEFENSE_MAGICAL') }
+  get Stat_DEFENSE_PHYSICAL() { return this.$lazyPropertyNumber('Stat_DEFENSE_PHYSICAL') }
+  get Stat_Accuracy() { return this.$lazyPropertyNumber('Stat_Accuracy') }
+  get Stat_Evasion() { return this.$lazyPropertyNumber('Stat_Evasion') }
+  get Stat_CriticalDamage() { return this.$lazyPropertyNumber('Stat_CriticalDamage') }
+  get Stat_CriticalDefense() { return this.$lazyPropertyNumber('Stat_CriticalDefense') }
+  get Stat_CriticalRate() { return this.$lazyPropertyNumber('Stat_CriticalRate') }
+  get Stat_BlockPenetration() { return this.$lazyPropertyNumber('Stat_BlockPenetration') }
+  get Stat_BlockRate() { return this.$lazyPropertyNumber('Stat_BlockRate') }
 
-  get Link_Spawns(): TOSMonsterSpawnLink[] {
-    return this.link_Spawns = this.link_Spawns
-      ? this.link_Spawns
-      : this.json.Link_Spawns
-        ? JSON
-          .parse(this.json.Link_Spawns + '')
-          .map(value => new TOSMonsterSpawnLink(value))
-        : null;
-  }
+  get Link_Drops() { return this.$lazyPropertyJSONArray('Link_Drops', value => new TOSMonsterDropLink(value)) }
+  get Link_Spawns() { return this.$lazyPropertyJSONArray('Link_Spawns', value => new TOSMonsterSpawnLink(value)) }
 
 }
 

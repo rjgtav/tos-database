@@ -2,7 +2,12 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
-import {TOSEquipmentGrade, TOSEquipmentMaterial, TOSEquipmentType} from "../../shared/domain/tos/tos-domain";
+import {
+  TOSEquipmentGrade,
+  TOSEquipmentGradeService,
+  TOSEquipmentMaterial,
+  TOSEquipmentType
+} from "../../shared/domain/tos/tos-domain";
 
 @Injectable()
 export class EquipmentListConfigurationResolver implements Resolve<TOSListConfiguration> {
@@ -115,7 +120,7 @@ export class EquipmentListConfigurationResolver implements Resolve<TOSListConfig
         { value: 'Name',          type: TOSListTableColumnType.TEXT,        isWide: true },
         { value: 'Material',      type: TOSListTableColumnType.TEXT,        isNotMobile: true },
         { value: 'Grade',         type: TOSListTableColumnType.BADGE,
-          transformColor: TOSEquipmentGrade.getColor },
+          transformColor: TOSEquipmentGradeService.getColor },
         { value: 'RequiredLevel', type: TOSListTableColumnType.TEXT_NUMBER, label: 'Level' },
         { value: 'TypeEquipment', type: TOSListTableColumnType.TEXT,        isNotMobile: true, label: 'Type' },
       ]

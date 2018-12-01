@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {TOSEquipmentType} from "../../../domain/tos/tos-domain";
+import {TOSEquipmentType, TOSEquipmentTypeService} from "../../../domain/tos/tos-domain";
 
 @Component({
   selector: 'tos-entity-detail-MaterialNameType',
@@ -15,7 +15,7 @@ export class EntityDetailMaterialNameTypeComponent extends EntityDetailChildComp
 
   get titleSmall(): string {
     if (this.equipment)
-      return TOSEquipmentType.toStringFull(this.equipment.TypeEquipment) +
+      return TOSEquipmentTypeService.toStringFull(this.equipment.TypeEquipment) +
         (this.equipment.Material ? ' [' + this.equipment.Material + ']' : '') +
         (this.equipment.TypeAttack ? ' [' + this.equipment.TypeAttack + ']' : '');
     else if (this.monster)

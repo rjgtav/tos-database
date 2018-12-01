@@ -55,6 +55,7 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
     if (changes.build || changes.skill) {
       this.attributes = TOSDomainService.attributesBySkill[this.skill.$ID];
 
+
       this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
       this.subscriptionLevel = this.build.jobSkillLevels(this.job).subscribe(value => this.onSkillLevelsChange(value));
       this.subscriptionPoints = this.build.skillPoints(this.job).subscribe(value => this.update())

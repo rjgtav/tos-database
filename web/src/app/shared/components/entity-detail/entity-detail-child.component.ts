@@ -12,15 +12,21 @@ import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
 import {TOSMap} from "../../domain/tos/map/tos-map.model";
 import {TOSJob} from "../../domain/tos/job/tos-job.model";
 import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
-import {TOSClassTree, TOSElement, TOSItemTradability, TOSMonsterRace} from "../../domain/tos/tos-domain";
+import {
+  TOSClassTree,
+  TOSElement,
+  TOSElementService,
+  TOSItemTradability,
+  TOSMonsterRace, TOSMonsterRaceService
+} from "../../domain/tos/tos-domain";
 
 @Component({ template: '' })
 export class EntityDetailChildComponent {
   readonly Math = Math;
   readonly TOSClassTree = TOSClassTree;
-  readonly TOSElement = TOSElement;
+  readonly TOSElementService = TOSElementService;
   readonly TOSItemTradability = TOSItemTradability;
-  readonly TOSMonsterRace = TOSMonsterRace;
+  readonly TOSMonsterRaceService = TOSMonsterRaceService;
 
   @Input('entity')
   entity: TOSEntity;

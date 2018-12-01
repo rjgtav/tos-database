@@ -121,7 +121,7 @@ abstract class TOSBuild implements ITOSBuild {
   abstract jobUnlockAvailable(job: ITOSJob): boolean;
 
   skillEffect(skill: ITOSSkill, showFactors: boolean): string {
-    return skill.Effect(this, showFactors);
+    return skill.EffectDescription(this, showFactors);
   }
   skillEffectFormula(skill: ITOSSkill, prop: string): string {
     return skill.EffectFormula(prop, this);
@@ -174,7 +174,7 @@ abstract class TOSBuild implements ITOSBuild {
   }
   abstract skillPointsMax(job: ITOSJob) : number;
   skillSP(skill: ITOSSkill): number {
-    return skill.SP(this);
+    return skill.SPCost(this);
   }
 
   statsIncrementLevel(stat: string, delta: number) {

@@ -1,47 +1,31 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSGem, ITOSGemBonus, ITOSSkill, TOSDataSet, TOSGemSlot, TOSGemType, TOSStat} from "../../tos-domain";
+import {ITOSGem, ITOSGemBonus, TOSDataSet, TOSGemSlot, TOSGemType, TOSStat} from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
 
 export class TOSGem extends TOSItem implements ITOSGem {
-  private readonly bonusBoots: TOSGemBonus[];
-  private readonly bonusGloves: TOSGemBonus[];
-  private readonly bonusSubWeapon: TOSGemBonus[];
-  private readonly bonusTopAndBottom: TOSGemBonus[];
-  private readonly bonusWeapon: TOSGemBonus[];
-  private link_Skill: ITOSSkill;
-
-  readonly TypeGem: TOSGemType;
 
   constructor(json: TOSGem) {
     super(TOSDataSet.GEMS, json);
-
-    for (let slot of Object.values(TOSGemSlot)) {
-      this['bonus' + slot] = json['Bonus' + slot]
-        ? JSON
-          .parse(json['Bonus' + slot] + '')
-          .map(json => new TOSGemBonus(json))
-        : null;
-    }
-
-    this.TypeGem = Object.values(TOSGemType)[+json.TypeGem];
   }
 
-  get Link_Skill(): ITOSSkill {
-    return this.link_Skill = this.link_Skill
-      ? this.link_Skill
-      : (this.json as TOSGem).Link_Skill
-        ? TOSDomainService.skillsById[+(this.json as TOSGem).Link_Skill]
-        : null;
-  }
+  get BonusBoots() { return this.$lazyPropertyJSONArray('BonusBoots', value => new TOSGemBonus(value)) }
+  get BonusGloves() { return this.$lazyPropertyJSONArray('BonusGloves', value => new TOSGemBonus(value)) }
+  get BonusSubWeapon() { return this.$lazyPropertyJSONArray('BonusSubWeapon', value => new TOSGemBonus(value)) }
+  get BonusTopAndBottom() { return this.$lazyPropertyJSONArray('BonusTopAndBottom', value => new TOSGemBonus(value)) }
+  get BonusWeapon() { return this.$lazyPropertyJSONArray('BonusWeapon', value => new TOSGemBonus(value)) }
+
+  get Link_Skill() { return this.$lazyPropertyLink('Link_Skill', value => TOSDomainService.skillsById[value] )}
+
+  get TypeGem() { return this.$lazyPropertyEnum('TypeGem', TOSGemType) }
 
   Bonus(level: number): { [key:string]: TOSGemBonus[]} {
     return Object
       .values(TOSGemSlot)
       .reduce((result, slot, i) => {
-        if (this['bonus' + slot])
+        if (this['Bonus' + slot])
           result[slot] = [
-            this['bonus' + slot][(level - 1) * 2],
-            this['bonus' + slot][(level - 1) * 2 + 1]
+            this['Bonus' + slot][(level - 1) * 2],
+            this['Bonus' + slot][(level - 1) * 2 + 1]
           ];
 
         return result;

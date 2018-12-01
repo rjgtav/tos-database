@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable, of, Subscriber} from "rxjs";
+import {BehaviorSubject, Observable, Subscriber} from "rxjs";
 import {TOSEntity} from "../domain/tos/tos-entity.model";
 import {TOSUrlService} from "./tos-url.service";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
@@ -23,7 +23,7 @@ export class TOSSearchService {
   constructor() {
     TOSSearchService.instance = this;
 
-    this.worker = new Worker('assets/js/lunr.worker.lib.js?version=2018-11-22');
+    this.worker = new Worker(document.getElementById('preload-lunr').getAttribute('href'));
     this.worker.addEventListener('error', this.onWorkerError.bind(this));
     this.worker.addEventListener('message', this.onWorkerMessage.bind(this));
   }
@@ -53,6 +53,7 @@ export class TOSSearchService {
   }
 
   private onWorkerError(event: any) {
+    //console.error('onWorkerError', event)
     this.searchSubscriber && this.searchSubscriber.next([]);
     this.searchSubscriber && this.searchSubscriber.complete();
     this.searchSubscriber = null;

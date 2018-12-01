@@ -4,9 +4,9 @@ import {Injectable} from "@angular/core";
 import {TOSMonster} from "../../shared/domain/tos/monster/tos-monster.model";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
 import {
-  TOSElement,
+  TOSElement, TOSElementService,
   TOSEquipmentMaterial,
-  TOSMonsterRace,
+  TOSMonsterRace, TOSMonsterRaceService,
   TOSMonsterRank,
   TOSMonsterSize
 } from "../../shared/domain/tos/tos-domain";
@@ -97,10 +97,10 @@ export class MonsterListConfigurationResolver implements Resolve<TOSListConfigur
         { value: 'Name',    type: TOSListTableColumnType.TEXT,        isWide: true},
         { value: 'Armor',   type: TOSListTableColumnType.TEXT,        isNotMobile: true },
         { value: 'Element', type: TOSListTableColumnType.ICON,        isNotMobile: true,
-          transformIcon: (o: TOSMonster) => TOSElement.getIcon(o.Element) },
+          transformIcon: (o: TOSMonster) => TOSElementService.getIcon(o.Element) },
         { value: 'Level',   type: TOSListTableColumnType.TEXT_NUMBER, },
         { value: 'Race',    type: TOSListTableColumnType.ICON,        isNotMobile: true,
-          transformIcon: (o: TOSMonster) => TOSMonsterRace.getIcon(o.Race) },
+          transformIcon: (o: TOSMonster) => TOSMonsterRaceService.getIcon(o.Race) },
         { value: 'Rank',    type: TOSListTableColumnType.TEXT,        },
         { value: 'Size',    type: TOSListTableColumnType.TEXT,        isNotMobile: true },
       ]

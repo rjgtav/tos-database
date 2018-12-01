@@ -1,7 +1,6 @@
 import {TOSEntity} from "../tos-entity.model";
 import {
   ITOSAttribute,
-  ITOSBuild,
   ITOSJob,
   ITOSSkill,
   TOSDataSet,
@@ -13,86 +12,43 @@ import {TOSDomainService} from "../tos-domain.service";
 import {RANK_LIMIT} from "../tos-build";
 
 export class TOSJob extends TOSEntity implements ITOSJob {
-  private link_Attributes: ITOSAttribute[];
-  private link_Skills: ITOSSkill[];
-
-  readonly CircleMax: number;
-  readonly JobDifficulty: TOSJobDifficulty;
-  readonly JobTree: TOSJobTree;
-  readonly JobType: TOSJobType[];
-  readonly IsHidden: boolean;
-  readonly IsSecret: boolean;
-  readonly Rank: number;
-  readonly Stat_CON: number;
-  readonly Stat_DEX: number;
-  readonly Stat_INT: number;
-  readonly Stat_SPR: number;
-  readonly Stat_STR: number;
-  readonly StatBase_CON: number;
-  readonly StatBase_DEX: number;
-  readonly StatBase_INT: number;
-  readonly StatBase_SPR: number;
-  readonly StatBase_STR: number;
 
   constructor(private json: TOSJob) {
     super(TOSDataSet.JOBS, json);
-
-    this.CircleMax = +json.CircleMax;
-    this.JobDifficulty = Object.values(TOSJobDifficulty)[+json.JobDifficulty];
-    this.JobTree = Object.values(TOSJobTree)[+json.JobTree];
-    this.JobType = json.JobType ?
-      JSON
-        .parse(json.JobType + '')
-        .map(json => Object.values(TOSJobType)[+json])
-        .sort()
-      : null;
-    this.IsHidden = (json.IsHidden + '') == 'True';
-    this.IsSecret = (json.IsSecret + '') == 'True';
-    this.Rank = +json.Rank;
-    this.Stat_CON = +json.Stat_CON;
-    this.Stat_DEX = +json.Stat_DEX;
-    this.Stat_INT = +json.Stat_INT;
-    this.Stat_SPR = +json.Stat_SPR;
-    this.Stat_STR = +json.Stat_STR;
-    this.StatBase_CON = +json.StatBase_CON;
-    this.StatBase_DEX = +json.StatBase_DEX;
-    this.StatBase_INT = +json.StatBase_INT;
-    this.StatBase_SPR = +json.StatBase_SPR;
-    this.StatBase_STR = +json.StatBase_STR;
   }
+
+  get CircleAvailable(): number[] { return Array.from(Array(this.CircleMax).keys(), n => n + 1) }
+  get CircleMax() { return this.$lazyPropertyNumber('CircleMax') }
+  get IconAnimations(): string[] {
+    return this.Rank > RANK_LIMIT
+      ? null
+      : [
+        'assets/images/classes/' + this.$ID_NAME + '_f.gif',
+        'assets/images/classes/' + this.$ID_NAME + '_m.gif',
+      ];
+  }
+  get IsHidden() { return this.$lazyPropertyBoolean('IsHidden') }
+  get IsSecret() { return this.$lazyPropertyBoolean('IsSecret') }
+  get JobDifficulty() { return this.$lazyPropertyEnum('JobDifficulty', TOSJobDifficulty) }
+  get JobTree() { return this.$lazyPropertyEnum('JobTree', TOSJobTree) }
+  get JobType() { return this.$lazyPropertyJSONArray('JobType', (value) => Object.values(TOSJobType)[value]) }
+  get Rank() { return this.$lazyPropertyNumber('Rank') }
+  get Stat_CON() { return this.$lazyPropertyNumber('Stat_CON') }
+  get Stat_DEX() { return this.$lazyPropertyNumber('Stat_DEX') }
+  get Stat_INT() { return this.$lazyPropertyNumber('Stat_INT') }
+  get Stat_SPR() { return this.$lazyPropertyNumber('Stat_SPR') }
+  get Stat_STR() { return this.$lazyPropertyNumber('Stat_STR') }
+  get StatBase_CON() { return this.$lazyPropertyNumber('StatBase_CON') }
+  get StatBase_DEX() { return this.$lazyPropertyNumber('StatBase_DEX') }
+  get StatBase_INT() { return this.$lazyPropertyNumber('StatBase_INT') }
+  get StatBase_SPR() { return this.$lazyPropertyNumber('StatBase_SPR') }
+  get StatBase_STR() { return this.$lazyPropertyNumber('StatBase_STR') }
 
   get Link_Attributes(): ITOSAttribute[] {
-    return this.link_Attributes = this.link_Attributes
-      ? this.link_Attributes
-      : this.json.Link_Attributes
-        ? JSON
-          .parse(this.json.Link_Attributes + '')
-          .map(value => TOSDomainService.attributesById[value])
-        : null;
+    return this.$lazyPropertyJSONArray('Link_Attributes', (value) => TOSDomainService.attributesById[value]);
   }
-
   get Link_Skills(): ITOSSkill[] {
-    return this.link_Skills = this.link_Skills
-      ? this.link_Skills
-      : this.json.Link_Skills
-        ? JSON
-          .parse(this.json.Link_Skills + '')
-          .map(value => TOSDomainService.skillsById[value])
-        : null;
-  }
-
-  get CircleAvailable(): number[] {
-    return Array.from(Array(this.CircleMax).keys(), n => n + 1)
-  }
-
-  get IconAnimations(): string[] {
-    if (this.Rank > RANK_LIMIT)
-        return null;
-
-    return [
-      'assets/images/classes/' + this.$ID_NAME + '_f.gif',
-      'assets/images/classes/' + this.$ID_NAME + '_m.gif',
-    ];
+    return this.$lazyPropertyJSONArray('Link_Skills', (value) => TOSDomainService.skillsById[value]);
   }
 
 }

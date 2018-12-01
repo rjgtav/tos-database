@@ -114,7 +114,7 @@ export enum TOSElement {
   POISON = 'Poison',
   PSYCHOKINESIS = 'Psychokinesis',
 }
-export namespace TOSElement {
+export namespace TOSElementService {
   export function getIcon(value: TOSElement): string {
     return 'assets/images/element_' + value.toString().toLowerCase() + '.png';
   }
@@ -127,11 +127,11 @@ export enum TOSEquipmentGrade {
   RARE = 'Rare',
   UNIQUE = 'Unique',
 }
-export namespace TOSEquipmentGrade {
+export namespace TOSEquipmentGradeService {
 
   export function comparator(a: TOSEquipmentGrade, b: TOSEquipmentGrade): -1 | 0 | 1 {
-    let i = TOSEquipmentGrade.getOrder(a);
-    let j = TOSEquipmentGrade.getOrder(b);
+    let i = TOSEquipmentGradeService.getOrder(a);
+    let j = TOSEquipmentGradeService.getOrder(b);
 
     return (i < j) ? -1 : (i > j) ? 1 : 0;
   }
@@ -198,7 +198,7 @@ export enum TOSEquipmentType {
   TWO_HANDED_STAFF = 'Staffs',
   TWO_HANDED_SWORD = '2H Swords',
 }
-export namespace TOSEquipmentType {
+export namespace TOSEquipmentTypeService {
   export function toStringFull(value: TOSEquipmentType) {
     if (value == TOSEquipmentType.COSTUME_LENS)           return 'Lens';
     if (value == TOSEquipmentType.COSTUME_HAIR_ACCESSORY) return 'Hair Accessory';
@@ -289,7 +289,7 @@ export enum TOSMonsterRace {
   MUTANT = 'Mutant',
   PLANT = 'Plant',
 }
-export namespace TOSMonsterRace {
+export namespace TOSMonsterRaceService {
   export function getIcon(value: TOSMonsterRace): string {
     return 'assets/images/monster_race_' + value.toString().toLowerCase() + '.png';
   }
@@ -301,11 +301,11 @@ export enum TOSMonsterRank {
   NORMAL = 'Normal',
   SPECIAL = 'Special',
 }
-export namespace TOSMonsterRank {
+export namespace TOSMonsterRankService {
 
   export function comparator(a: TOSMonsterRank, b: TOSMonsterRank): -1 | 0 | 1 {
-    let i = TOSMonsterRank.getOrder(a);
-    let j = TOSMonsterRank.getOrder(b);
+    let i = TOSMonsterRankService.getOrder(a);
+    let j = TOSMonsterRankService.getOrder(b);
 
     return (i < j) ? -1 : (i > j) ? 1 : 0;
   }
@@ -324,11 +324,11 @@ export enum TOSMonsterSize {
   L = 'L',
   XL = 'XL'
 }
-export namespace TOSMonsterSize {
+export namespace TOSMonsterSizeService {
 
   export function comparator(a: TOSMonsterSize, b: TOSMonsterSize): -1 | 0 | 1 {
-    let i = TOSMonsterSize.getOrder(a);
-    let j = TOSMonsterSize.getOrder(b);
+    let i = TOSMonsterSizeService.getOrder(a);
+    let j = TOSMonsterSizeService.getOrder(b);
 
     return (i < j) ? -1 : (i > j) ? 1 : 0;
   }
@@ -500,6 +500,8 @@ export interface ITOSItem extends ITOSEntity {
   Weight: number;
   Link_Collections: ITOSCollection[];
   Link_Cubes: ITOSCube[];
+
+  isTradable(tradable: TOSItemTradability): boolean;
 }
 
 export interface ITOSAttribute extends ITOSEntity {
@@ -514,6 +516,8 @@ export interface ITOSAttribute extends ITOSEntity {
 
   Price(level: number): number;
   PriceTotal(level: number): number;
+
+  unlockAvailable(build: ITOSBuild): boolean;
 }
 export interface ITOSAttributeUnlockArg {
   UnlockArgStr: string;
@@ -521,7 +525,7 @@ export interface ITOSAttributeUnlockArg {
 }
 
 export interface ITOSBook extends ITOSItem {
-  Pages: string[];
+  Pages: string;
 }
 
 export interface ITOSCard extends ITOSItem {
@@ -609,12 +613,14 @@ export interface ITOSGemBonus {
 }
 
 export interface ITOSJob extends ITOSEntity {
+  CircleAvailable: number[];
   CircleMax: number;
+  IconAnimations: string[];
+  IsHidden: boolean;
+  IsSecret: boolean;
   JobDifficulty: TOSJobDifficulty;
   JobTree: TOSJobTree;
   JobType: TOSJobType[];
-  IsHidden: boolean;
-  IsSecret: boolean;
   Rank: number;
   Stat_CON: number;
   Stat_DEX: number;
@@ -627,8 +633,6 @@ export interface ITOSJob extends ITOSEntity {
   StatBase_SPR: number;
   StatBase_STR: number;
 
-  CircleAvailable: number[];
-  IconAnimations: string[];
   Link_Attributes: ITOSAttribute[];
   Link_Skills: ITOSSkill[];
 }
@@ -709,10 +713,10 @@ export interface ITOSSkill extends ITOSEntity {
   Link_Gem: ITOSGem;
   Link_Job: ITOSJob;
 
-  Effect(build: ITOSBuild, showFactors: boolean): string;
+  EffectDescription(build: ITOSBuild, showFactors: boolean): string;
   EffectFormula(prop: string, build: ITOSBuild): string;
   LevelMax(circle?: number): number;
-  SP(build: ITOSBuild) : number;
+  SPCost(build: ITOSBuild) : number;
 }
 export interface ITOSSkillRequiredStance {
   Icon: string;

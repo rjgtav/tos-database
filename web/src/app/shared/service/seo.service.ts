@@ -22,7 +22,7 @@ export class SEOService {
         `;
 
         if (url.indexOf('/simulator') > 0) {
-          urlTitle = 'Skill Simulator | Tree of Savior';
+          urlTitle = 'Skill Simulator - Tree of Savior';
           urlDescription = `Plan your builds and share with other players.`;
         }
         if (url.indexOf('/database') > 0) {
@@ -33,10 +33,10 @@ export class SEOService {
           if (id) {
             let entity = TOSDomainService[TOSDataSet.toProperty(dataset) + 'ById'][id] as TOSEntity;
 
-            urlTitle = entity.Name + ' | ' + TOSDataSet.toLabel(dataset) + ' | Tree of Savior';
+            urlTitle = entity.Name + ' - ' + TOSDataSet.toLabel(dataset) + ' - Tree of Savior';
             urlDescription = entity.Description;
           } else {
-            urlTitle = TOSDataSet.toLabel(dataset) + ' | Tree of Savior';
+            urlTitle = TOSDataSet.toLabel(dataset) + ' - Tree of Savior';
             urlDescription = 'List of ' + TOSDataSet.toLabel(dataset) + ', with advanced filtering and sorting';
           }
 

@@ -3,7 +3,13 @@ import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
 import {TOSCard} from "../../shared/domain/tos/item/card/tos-card.model";
-import {TOSCardType, TOSElement, TOSMonsterRace} from "../../shared/domain/tos/tos-domain";
+import {
+  TOSCardType,
+  TOSElement,
+  TOSElementService,
+  TOSMonsterRace,
+  TOSMonsterRaceService
+} from "../../shared/domain/tos/tos-domain";
 
 @Injectable()
 export class CardListConfigurationResolver implements Resolve<TOSListConfiguration> {
@@ -35,9 +41,9 @@ export class CardListConfigurationResolver implements Resolve<TOSListConfigurati
         { value: '$ID',             type: TOSListTableColumnType.TEXT,  isNotMobile: true },
         { value: 'Name',            type: TOSListTableColumnType.TEXT,  isWide: true},
         { value: 'MonsterElement',  type: TOSListTableColumnType.ICON,  label: 'Element', isNotMobile: true,
-          transformIcon: (o: TOSCard) => TOSElement.getIcon(o.MonsterElement) },
+          transformIcon: (o: TOSCard) => TOSElementService.getIcon(o.MonsterElement) },
         { value: 'MonsterRace',     type: TOSListTableColumnType.ICON,  label: 'Race', isNotMobile: true,
-          transformIcon: (o: TOSCard) => TOSMonsterRace.getIcon(o.MonsterRace) },
+          transformIcon: (o: TOSCard) => TOSMonsterRaceService.getIcon(o.MonsterRace) },
         { value: 'TypeCard',        type: TOSListTableColumnType.TEXT,  label: 'Type' },
       ]
     };

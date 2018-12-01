@@ -14,6 +14,7 @@ export class LUAService {
     'var GetAbility = (a, b) => null;',
     'var GetExProp = (a, b) => null;',
     'var GetSumOfEquipItem = (a, b) => 0;',
+    'var TryGetProp = (a, b) => a && a[b];',
     'var IsBuffApplied = (a, b) => null;',
     'var IsPVPServer = (a) => 0;',
     'var skillOwner = pc;',
@@ -61,6 +62,7 @@ export class LUAService {
         func = func.map((line) => {
           // Note: we need to reset these on every new line so it doesn't skip matches
           let lineOriginal = line;
+          let regexGetProp = /TryGetProp\((\w+), "(\w+)"\)/g;
           let regexAbility = /GetAbility\(pc, ["'](.+)["']\)/g;
           let match: RegExpExecArray;
 
@@ -69,6 +71,11 @@ export class LUAService {
           line = line.replace(/!=/g, 'not');
           line = line.replace(/&&/g, 'and');
           line = line.replace(/null/g, 'Null');
+
+          // TryGetProp(a, b) - return the 'b' property of the 'a' object
+          while (match = regexGetProp.exec(lineOriginal)) {
+            line = line.replace(match[0], match[1] + '.' + match[2]);
+          }
 
           // GetAbility(pc, ability) - replace with attribute name
           while (match = regexAbility.exec(lineOriginal)) {
@@ -100,18 +107,12 @@ export class LUAService {
       // Note: we need to reset these on every new line so it doesn't skip matches
       let lineOriginal = line;
       let regexGetJobGrade = /GetJobGradeByName\(pc, (.+)\)/g;
-      let regexGetProp = /TryGetProp\((\w+), "(\w+)"\)/g;
       let regexGetSkill = /GetSkill\(pc, (.+)\)/g;
       let regexPlayer = /(?:pc\.(\w+))+/g;
       let regexSkill = /(?:skill\.(\w+))+/g;
       let match: RegExpExecArray;
 
       line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
-
-      // TryGetProp(a, b) - return the 'b' property of the 'a' object
-      while (match = regexGetProp.exec(lineOriginal)) {
-        line = line.replace(match[0], match[1] + '.' + match[2]);
-      }
 
       // GetJobGrade(pc, job) - return the circle of the requested job
       while (match = regexGetJobGrade.exec(lineOriginal)) {

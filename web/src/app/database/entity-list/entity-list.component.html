@@ -76,7 +76,7 @@
           <a *ngFor="let link of row[column.value]"
              class="d-inline-block tos-image position-relative pr-1"
              style="height: 40px; width: 40px; box-sizing: content-box"
-             [style.backgroundImage]="'url(\'' + column.transformLink(link)?.Icon + '\')'"
+             [style.backgroundImage]="'url(\'' + column.transformLink(link)?.Icon + '\')' | sanitizeCSS"
              [routerLink]="column.transformLink(link)?.Url"
              (click)="false"
              (mouseenter)="tooltip = column.transformLink(link)"

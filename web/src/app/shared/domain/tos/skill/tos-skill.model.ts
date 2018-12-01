@@ -1,8 +1,6 @@
 import {TOSEntity} from "../tos-entity.model";
 import {
-  ITOSAttribute, ITOSBuild,
-  ITOSGem,
-  ITOSJob,
+  ITOSBuild,
   ITOSSkill,
   ITOSSkillRequiredStance,
   TOSAttackType,
@@ -15,150 +13,59 @@ import {LUAService} from "../../../service/lua.service";
 
 export class TOSSkill extends TOSEntity implements ITOSSkill {
 
-  private readonly effect: string;
-  private readonly effect_CaptionRatio: string[];
-  private readonly effect_CaptionRatio2: string[];
-  private readonly effect_CaptionRatio3: string[];
-  private readonly effect_CaptionTime: string[];
-  private readonly effect_SkillAtkAdd: string[];
-  private readonly effect_SkillFactor: string[];
-  private readonly effect_SkillSR: string[];
-  private readonly effect_SpendItemCount: string[];
-  private readonly effect_SpendPoison: string[];
-  private readonly effect_SpendSP: string[];
-  private readonly levelMax: number;
-  private readonly prop_BasicPoison: number;
-  private readonly prop_BasicSP: number;
-  private readonly prop_LvUpSpendPoison: number;
-  private readonly prop_LvUpSpendSp: number;
-  private readonly prop_SklAtkAdd: number;
-  private readonly prop_SklAtkAddByLevel: number;
-  private readonly prop_SklFactor: number;
-  private readonly prop_SklFactorByLevel: number;
-  private readonly prop_SklSR: number;
-  private readonly prop_SpendItemBaseCount: number;
-  private readonly sp: string;
-
-  private description: string;
-  private link_Attributes: ITOSAttribute[];
-  private link_Gem: ITOSGem;
-  private link_Job: ITOSJob;
-
-  readonly CoolDown: number;
-  readonly Element: TOSElement;
-  readonly IsEnchanter: boolean;
-  readonly IsPardoner: boolean;
-  readonly IsShinobi: boolean;
-  readonly LevelPerCircle: number;
-  readonly OverHeat: number;
-  readonly RequiredCircle: number;
-  readonly RequiredStance: TOSSkillRequiredStance[];
-  readonly RequiredStanceCompanion: TOSSkillRequiredStanceCompanion;
-  readonly RequiredSubWeapon: boolean;
-  readonly TypeAttack: TOSAttackType;
-
-  constructor(private json: TOSSkill) {
+  constructor(json: TOSSkill) {
     super(TOSDataSet.SKILLS, json);
-
-    this.CoolDown = +json.CoolDown;
-    this.effect = this.tooltipToHTML(json['Effect'] + '');
-    this.effect_CaptionRatio = json['Effect_CaptionRatio']
-      ? JSON.parse(json['Effect_CaptionRatio'])
-      : null;
-    this.effect_CaptionRatio2 = json['Effect_CaptionRatio2']
-      ? JSON.parse(json['Effect_CaptionRatio2'])
-      : null;
-    this.effect_CaptionRatio3 = json['Effect_CaptionRatio3']
-      ? JSON.parse(json['Effect_CaptionRatio3'])
-      : null;
-    this.effect_CaptionTime = json['Effect_CaptionTime']
-      ? JSON.parse(json['Effect_CaptionTime'])
-      : null;
-    this.effect_SkillAtkAdd = json['Effect_SkillAtkAdd']
-      ? JSON.parse(json['Effect_SkillAtkAdd'])
-      : null;
-    this.effect_SkillFactor = json['Effect_SkillFactor']
-      ? JSON.parse(json['Effect_SkillFactor'])
-      : null;
-    this.effect_SkillSR = json['Effect_SkillSR']
-      ? JSON.parse(json['Effect_SkillSR'])
-      : null;
-    this.effect_SpendItemCount = json['Effect_SpendItemCount']
-      ? JSON.parse(json['Effect_SpendItemCount'])
-      : null;
-    this.effect_SpendPoison = json['Effect_SpendPoison']
-      ? JSON.parse(json['Effect_SpendPoison'])
-      : null;
-    this.effect_SpendSP = json['Effect_SpendSP']
-      ? JSON.parse(json['Effect_SpendSP'])
-      : null;
-    this.Element = Object.values(TOSElement)[+json.Element];
-    this.IsEnchanter = (json.IsEnchanter + '') == 'True';
-    this.IsPardoner = (json.IsPardoner + '') == 'True';
-    this.IsShinobi = (json.IsShinobi + '') == 'True';
-    this.levelMax = +json['LevelMax'];
-    this.LevelPerCircle = +json.LevelPerCircle;
-    this.OverHeat = +json.OverHeat;
-    this.prop_BasicPoison = +json['Prop_BasicPoison'];
-    this.prop_BasicSP = +json['Prop_BasicSP'];
-    this.prop_LvUpSpendPoison = +json['Prop_LvUpSpendPoison'];
-    this.prop_LvUpSpendSp = +json['Prop_LvUpSpendSp'];
-    this.prop_SklAtkAdd = +json['Prop_SklAtkAdd'];
-    this.prop_SklAtkAddByLevel = +json['Prop_SklAtkAddByLevel'];
-    this.prop_SklFactor = +json['Prop_SklFactor'];
-    this.prop_SklFactorByLevel = +json['Prop_SklFactorByLevel'];
-    this.prop_SklSR = +json['Prop_SklSR'];
-    this.prop_SpendItemBaseCount = +json['Prop_SpendItemBaseCount'];
-    this.RequiredCircle = +json.RequiredCircle;
-    this.RequiredStance = json.RequiredStance
-      ? JSON
-        .parse(json.RequiredStance + '')
-        .map(json => new TOSSkillRequiredStance(json))
-      : null;
-    this.RequiredStanceCompanion = Object.values(TOSSkillRequiredStanceCompanion)[+json.RequiredStanceCompanion];
-    this.RequiredSubWeapon = (json.RequiredSubWeapon + '') == 'True';
-    this.sp = json['SP']
-      ? JSON.parse(json['SP'] + '')
-      : null;
-    this.TypeAttack = Object.values(TOSAttackType)[+json.TypeAttack];
   }
 
-  get Description(): string {
-    return this.description = this.description
-      ? this.description
-      : this.tooltipToHTML(this.json.Description);
-  }
+  get Description() { return this.$lazyPropertyStringMultiline('Description', value => this.tooltipToHTML(value)) }
+  get CoolDown() { return this.$lazyPropertyNumber('CoolDown') }
 
-  get Link_Attributes(): ITOSAttribute[] {
-    return this.link_Attributes = this.link_Attributes
-      ? this.link_Attributes
-      : this.json.Link_Attributes
-        ? JSON
-          .parse(this.json.Link_Attributes + '')
-          .map(value => TOSDomainService.attributesById[value])
-        : null;
-  }
+  get Effect(): string { return this.$lazyPropertyStringMultiline('Effect', value => this.tooltipToHTML(value)) }
+  get Effect_CaptionRatio(): string[] { return this.$lazyPropertyJSONArray('Effect_CaptionRatio') as string[] }
+  get Effect_CaptionRatio2(): string[] { return this.$lazyPropertyJSONArray('Effect_CaptionRatio2') as string[] }
+  get Effect_CaptionRatio3(): string[] { return this.$lazyPropertyJSONArray('Effect_CaptionRatio3') as string[] }
+  get Effect_CaptionTime(): string[] { return this.$lazyPropertyJSONArray('Effect_CaptionTime') as string[] }
+  get Effect_SkillAtkAdd(): string[] { return this.$lazyPropertyJSONArray('Effect_SkillAtkAdd') as string[] }
+  get Effect_SkillFactor(): string[] { return this.$lazyPropertyJSONArray('Effect_SkillFactor') as string[] }
+  get Effect_SkillSR(): string[] { return this.$lazyPropertyJSONArray('Effect_SkillSR') as string[] }
+  get Effect_SpendItemCount(): string[] { return this.$lazyPropertyJSONArray('Effect_SpendItemCount') as string[] }
+  get Effect_SpendPoison(): string[] { return this.$lazyPropertyJSONArray('Effect_SpendPoison') as string[] }
+  get Effect_SpendSP(): string[] { return this.$lazyPropertyJSONArray('Effect_SpendSP') as string[] }
+  get SP(): string[] { return this.$lazyPropertyJSONArray('SP') as string[] }
 
-  get Link_Gem(): ITOSGem {
-    return this.link_Gem = this.link_Gem
-      ? this.link_Gem
-      : this.json.Link_Gem
-        ? TOSDomainService.gemsById[+this.json.Link_Gem]
-        : null;
-  }
+  get Element() { return this.$lazyPropertyEnum('Element', TOSElement) }
+  get IsEnchanter() { return this.$lazyPropertyBoolean('IsEnchanter') }
+  get IsPardoner() { return this.$lazyPropertyBoolean('IsPardoner') }
+  get IsShinobi() { return this.$lazyPropertyBoolean('IsShinobi') }
+  get LevelPerCircle() { return this.$lazyPropertyNumber('LevelPerCircle') }
 
-  get Link_Job(): ITOSJob {
-    return this.link_Job = this.link_Job
-      ? this.link_Job
-      : this.json.Link_Job
-        ? TOSDomainService.jobsById[+this.json.Link_Job]
-        : null;
-  }
+  get Link_Attributes() { return this.$lazyPropertyJSONArray('Link_Attributes', value => TOSDomainService.attributesById[value]) }
+  get Link_Gem() { return this.$lazyPropertyLink('Link_Gem', value => TOSDomainService.gemsById[value]) }
+  get Link_Job() { return this.$lazyPropertyLink('Link_Job', value => TOSDomainService.jobsById[value]) }
 
-  Effect(build: ITOSBuild, showFactors: boolean): string {
-    //console.log('effect:', this.effect);
+  get OverHeat() { return this.$lazyPropertyNumber('OverHeat') }
+
+  get Prop_BasicPoison() { return this.$lazyPropertyNumber('Prop_BasicPoison') }
+  get Prop_BasicSP() { return this.$lazyPropertyNumber('Prop_BasicSP') }
+  get Prop_LvUpSpendPoison() { return this.$lazyPropertyNumber('Prop_LvUpSpendPoison') }
+  get Prop_LvUpSpendSp() { return this.$lazyPropertyNumber('Prop_LvUpSpendSp') }
+  get Prop_SklAtkAdd() { return this.$lazyPropertyNumber('Prop_SklAtkAdd') }
+  get Prop_SklAtkAddByLevel() { return this.$lazyPropertyNumber('Prop_SklAtkAddByLevel') }
+  get Prop_SklFactor() { return this.$lazyPropertyNumber('Prop_SklFactor') }
+  get Prop_SklFactorByLevel() { return this.$lazyPropertyNumber('Prop_SklFactorByLevel') }
+  get Prop_SklSR() { return this.$lazyPropertyNumber('Prop_SklSR') }
+  get Prop_SpendItemBaseCount() { return this.$lazyPropertyNumber('Prop_SpendItemBaseCount') }
+
+  get RequiredCircle() { return this.$lazyPropertyNumber('RequiredCircle') }
+  get RequiredStance() { return this.$lazyPropertyJSONArray('RequiredStance', value => new TOSSkillRequiredStance(value)) }
+  get RequiredStanceCompanion() { return this.$lazyPropertyEnum('RequiredStanceCompanion', TOSSkillRequiredStanceCompanion) }
+  get RequiredSubWeapon() { return this.$lazyPropertyBoolean('RequiredSubWeapon') }
+  get TypeAttack() { return this.$lazyPropertyEnum('TypeAttack', TOSAttackType) }
+
+  EffectDescription(build: ITOSBuild, showFactors: boolean): string {
+    //console.log('effect:', this.Effect);
     let dependencies: string[] = [];
-    let effect: string = this.effect;
+    let effect: string = this.Effect;
     let level = build.skillLevel(this);
 
     // Match effect properties (e.g. #{SkillFactor}#%{nl}AoE Attack Ratio: #{SkillSR}
@@ -194,19 +101,22 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
     let regexEffect = /(?:#{(\w+)}#)+/g;
     let result = [];
 
-    while (match = regexEffect.exec(this.effect))
+    while (match = regexEffect.exec(this.Effect))
       result.push(match);
 
     return result;
   }
 
   LevelMax(circle?: number): number {
+    let levelMax = +this.$json['LevelMax'];
+
     return circle != undefined
-      ? Math.min(this.levelMax, (circle - this.RequiredCircle + 1) * this.LevelPerCircle)
-      : this.levelMax;
+      ? Math.min(levelMax, (circle - this.RequiredCircle + 1) * this.LevelPerCircle)
+      : levelMax;
   }
-  SP(build: ITOSBuild): number {
-    return this.effectToEval('sp', build).value;
+
+  SPCost(build: ITOSBuild): number {
+    return this.effectToEval('SP', build).value;
   }
 
   private effectContext(prop: string, build: ITOSBuild, human?: boolean): object {
@@ -218,18 +128,18 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       STR: build.Stats.STR,
     } : null;
     let skill = {
-      'BasicPoison': this.prop_BasicPoison,
-      'BasicSP': this.prop_BasicSP,
+      'BasicPoison': this.Prop_BasicPoison,
+      'BasicSP': this.Prop_BasicSP,
       'ClassName': '"' + this.$ID_NAME + '"',
       'Level': Math.max(1, build.skillLevel(this)),
-      'LvUpSpendPoison': this.prop_LvUpSpendPoison,
-      'LvUpSpendSp': this.prop_LvUpSpendSp,
-      'SklAtkAdd': this.prop_SklAtkAdd,
-      'SklAtkAddByLevel': this.prop_SklAtkAddByLevel,
-      'SklFactor': this.prop_SklFactor,
-      'SklFactorByLevel': this.prop_SklFactorByLevel,
-      'SklSR': this.prop_SklSR,
-      'SpendItemBaseCount': this.prop_SpendItemBaseCount,
+      'LvUpSpendPoison': this.Prop_LvUpSpendPoison,
+      'LvUpSpendSp': this.Prop_LvUpSpendSp,
+      'SklAtkAdd': this.Prop_SklAtkAdd,
+      'SklAtkAddByLevel': this.Prop_SklAtkAddByLevel,
+      'SklFactor': this.Prop_SklFactor,
+      'SklFactorByLevel': this.Prop_SklFactorByLevel,
+      'SklSR': this.Prop_SklSR,
+      'SpendItemBaseCount': this.Prop_SpendItemBaseCount,
     };
 
     if (prop != 'SkillFactor' && this.effectSource('SkillFactor'))
@@ -253,7 +163,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   private effectSource(prop: string): string[] {
     return this[prop] != undefined
       ? this[prop]
-      : this['effect_' + prop];
+      : this['Effect_' + prop];
   }
 
   private tooltipToHTML(description: string): string {
@@ -269,9 +179,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       description = description.replace(match[0], '<span style="color: ' + match[1] + '">' + match[2] + '</span>');
     }
 
-    return description
-      .replace(/{\/}/g, '')
-      .replace(/{nl}/g, '\n');
+    return description.replace(/{\/}/g, '');
   }
 }
 
