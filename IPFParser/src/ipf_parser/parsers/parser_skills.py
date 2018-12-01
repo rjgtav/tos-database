@@ -386,3 +386,25 @@ def parse_links_jobs():
             skill['IsEnchanter'] = globals.jobs_by_name[job]['JobTree'] == TOSJobTree.WIZARD if skill['IsEnchanter'] else False
             skill['IsPardoner'] = globals.jobs_by_name[job]['JobTree'] == TOSJobTree.CLERIC if skill['IsPardoner'] else False
             skill['Link_Job'] = globals.get_job_link(job)
+
+
+def parse_clean():
+    skills_to_remove = []
+
+    # Find which skills are no longer active
+    for skill in globals.skills.values():
+        if skill['Link_Job'] is None:
+            skills_to_remove.append(skill)
+
+    # Remove all inactive skills
+    for skill in skills_to_remove:
+        del globals.skills[skill['$ID']]
+        del globals.skills_by_name[skill['$ID_NAME']]
+
+        skill_id = skill['$ID']
+
+        for attribute in globals.attributes.values():
+            if attribute['Link_Skill'] and attribute['Link_Skill']['$ID'] == skill_id:
+                attribute['Link_Skill'] = None
+        for job in globals.jobs.values():
+            job['Link_Skills'] = [link for link in job['Link_Skills'] if link.entity['$ID'] != skill_id]
