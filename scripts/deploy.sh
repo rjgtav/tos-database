@@ -37,10 +37,10 @@ pushd ../web
 # 2. Deploy to tos.guru
 #################################################################
 # Backup pre-rendered files
-mv ./dist/web/itos ./dist/web-backup/itos
-mv ./dist/web/jtos ./dist/web-backup/jtos
-mv ./dist/web/ktest ./dist/web-backup/ktest
-mv ./dist/web/ktos ./dist/web-backup/ktos
+mv ./dist/web/itos ./dist/web-backup
+mv ./dist/web/jtos ./dist/web-backup
+mv ./dist/web/ktest ./dist/web-backup
+mv ./dist/web/ktos ./dist/web-backup
 
 # Build angular application
 echo -e "Building angular application..."
@@ -50,10 +50,10 @@ cp -rf ./dist/.htaccess ./dist/web/.htaccess
 cp -rf ./dist/robots.txt ./dist/web/robots.txt
 
 # Restore pre-rendered files
-mv ./dist/web-backup/itos ./dist/web/itos
-mv ./dist/web-backup/jtos ./dist/web/jtos
-mv ./dist/web-backup/ktest ./dist/web/ktest
-mv ./dist/web-backup/ktos ./dist/web/ktos
+mv ./dist/web-backup/itos ./dist/web
+mv ./dist/web-backup/jtos ./dist/web
+mv ./dist/web-backup/ktest ./dist/web
+mv ./dist/web-backup/ktos ./dist/web
 
 # Upload to tos.guru
 echo -e "Uploading to tos.guru..."
