@@ -4,17 +4,17 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644003,card_Gorgon,[슬롯 장착 효과] 때리기류 방어력 +[★*10],icon_item_card_def,064_boss_gorgon,,,800042,,,,0,1,고르곤 카드,500,190,4,1360,0.0,0.0,1111,3,1,1.0
 644004,card_Golem,[슬롯 장착 효과] HP 포션 종류 사용 시 10초간 물리 방어력 +[★]%,icon_item_card_def,003_boss_golem,,,450221,,,,1,3,골렘 카드,500,215,2,6192,0.0,0.0,1111,3,1,1.0
 644005,card_Grinender,[슬롯 장착 효과] 공중형 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,056_boss_grinender,,,41374,,,,2,3,그라이넨더 카드,500,305,1,214,0.0,0.0,1111,3,0,1.0
-644006,card_Glass_mole,[슬롯 장착 효과] SP 포션 종류 사용 시 6초간 물리 공격력 +[★]%,icon_item_card_atk,012_boss_glass_mole,,,41367,,,,4,0,글래스몰 카드,500,192,4,860,0.0,0.0,1111,3,0,1.0
+644006,card_Glass_mole,[슬롯 장착 효과] SP 포션 종류 사용 시 6초간 물리 대미지 +[★]%,icon_item_card_atk,012_boss_glass_mole,,,41367,,,,4,0,글래스몰 카드,500,192,4,860,0.0,0.0,1111,3,0,1.0
 644007,card_ginklas,[슬롯 장착 효과] 판금 갑옷 대상에게 주는 대미지[★/2]% 증가,icon_item_card_atk,091_boss_ginklas,[642013],,41208,,[18018],,2,3,긴클라스 카드,500,320,2,1053,0.0,0.0,1111,3,0,1.0
 644008,card_NetherBovine,[슬롯 장착 효과] 힘 스탯 +[★],icon_item_card_stat,026_boss_netherbovine,,,800001,,,,0,1,네더보바인 카드,500,195,4,966,0.0,0.0,1111,3,4,1.0
 644009,card_necrovanter,[슬롯 장착 효과] 어둠 속성 추가 대미지 +[★*10],icon_item_card_util,044_boss_necrovanter,[642011],"[642907, 642919]",800002,,,,0,1,네크로벤터 카드,500,416,1,144,0.0,0.0,1111,3,5,1.0
-644010,card_deadbone,[슬롯 장착 효과] 치명타 공격력 +[★*20],icon_item_card_atk,014_boss_deadbone,,,41203,,,,0,3,데드본 카드,500,333,2,207,0.0,0.0,1111,3,0,1.0
+644010,card_deadbone,[슬롯 장착 효과] 물리 치명타 공격력 +[★*20],icon_item_card_atk,014_boss_deadbone,,,41203,,,,0,3,데드본 카드,500,333,2,207,0.0,0.0,1111,3,0,1.0
 644011,card_Devilglove,[슬롯 장착 효과] 변이형 속성 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,072_boss_devilglove,,,41385,,,,0,3,데블글로브 카드,500,127,5,98,0.0,0.0,1111,3,0,1.0
 644012,card_Denoptic,[슬롯 장착 효과] 마법 방어력 +[★*10],icon_item_card_def,024_boss_denoptic,,,41368,,,,7,3,덴옵틱 카드,500,388,6,205,0.0,0.0,1111,3,1,1.0
 644014,card_Ravinepede,[슬롯 장착 효과] STA 포션 종류 효과 +[★]%,icon_item_card_util,025_boss_ravinepede,,,41236,,,,7,4,라바인피드 카드,500,210,1,164,0.0,0.0,1111,3,5,1.0
 644015,card_Rajatoad,[슬롯 장착 효과] 찌르기류 무기 착용 시 물리 공격력 +[★*7],icon_item_card_atk,097_boss_rajatoad,[642013],,41226,,,,4,0,라자토드 카드,500,151,4,275,0.0,0.0,1111,3,0,1.0
 644016,card_Rocktortuga,[슬롯 장착 효과] 땅 속성 몬스터 처치 시 [★]% 확률로 SP 5% 회복,icon_item_card_util,046_boss_rocktortuga,,,41233,,,,1,3,락토르투가 카드,500,400,2,2472,0.0,0.0,1111,3,5,1.0
-644017,card_lecifer,[슬롯 장착 효과] 마법 증폭 +[★*10],icon_item_card_atk,030_boss_lecifer,,,800043,,,,0,1,렉시퍼 카드,500,213,2,123,0.0,0.0,1111,3,0,1.0
+644017,card_lecifer,[슬롯 장착 효과] 마법 치명타 공격력 +[★*10],icon_item_card_atk,030_boss_lecifer,,,800043,,,,0,1,렉시퍼 카드,500,213,2,123,0.0,0.0,1111,3,0,1.0
 644018,card_Reaverpede,[슬롯 장착 효과] 중형 몬스터에게 주는 대미지[★/2]% 증가,icon_item_card_atk,051_boss_reaverpede,,,800044,,,,7,2,리버피드 카드,500,276,6,1200,0.0,0.0,1111,3,0,1.0
 644019,card_spector_gh,[슬롯 장착 효과] SP 포션 종류 효과 +[★]%,icon_item_card_util,010_boss_spector_gh,,,800045,,,,0,1,리카우스 카드,500,230,2,76,0.0,0.0,1111,3,5,1.0
 644022,card_mineloader,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 상대방에게 3초간 감전 상태,icon_item_card_util,092_boss_mineloader,[642014],"[642904, 642921]",800024,,,,5,3,마인로더 카드,500,345,4,863,0.0,0.0,1111,3,5,1.0
@@ -60,7 +60,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644063,card_Iltiswort,[슬롯 장착 효과] 식물형 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,017_boss_iltiswort,[642013],,41214,,,,7,4,일티스워트 카드,500,308,1,512,0.0,0.0,1111,3,0,1.0
 644064,card_GiantWoodGoblin_red,[슬롯 장착 효과] 천 갑옷 대상에게 주는 대미지[★/2]% 증가,icon_item_card_atk,062_boss_giantwoodgoblin_red,,,41215,,,,2,4,자이언트 레드 우드 카드,500,551,2,1429,0.0,0.0,1111,3,0,1.0
 644065,card_GiantWoodGoblin,[슬롯 장착 효과] 스턴 상태 이상에 걸린 대상에게 주는 대미지[★]% 증가,icon_item_card_atk,061_boss_giantwoodgoblin,,,41386,,,,7,4,자이언트 우드 고블린 카드,500,552,2,1428,0.0,0.0,1111,3,0,1.0
-644067,card_Chapparition,[슬롯 장착 효과] SP 포션 종류 사용 시 6초간 마법 공격력 +[★]%,icon_item_card_atk,068_boss_chapparition,[642011],,800011,,"[13026, 13028, 30122, 33029]",,0,1,채퍼리션 카드,500,254,1,108,0.0,0.0,1111,3,0,1.0
+644067,card_Chapparition,[슬롯 장착 효과] SP 포션 종류 사용 시 6초간 마법 대미지 +[★]%,icon_item_card_atk,068_boss_chapparition,[642011],,800011,,"[13026, 13028, 30122, 33029]",,0,1,채퍼리션 카드,500,254,1,108,0.0,0.0,1111,3,0,1.0
 644068,card_chafer,[슬롯 장착 효과] 곤충형 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,023_boss_chafer,[642012],,800052,,,,7,2,체이퍼 카드,500,235,2,217,0.0,0.0,1111,3,0,1.0
 644070,card_Carapace,[슬롯 장착 효과] 얼음 속성 몬스터 처치 시 [★]% 확률로 SP 5% 회복,icon_item_card_util,098_boss_carapace,,,800053,,,,4,2,캐러페이스 카드,500,240,6,338,0.0,0.0,1111,3,5,1.0
 644072,card_onion_the_great,[슬롯 장착 효과] 대형 몬스터에게 주는 대미지[★/2]% 증가,icon_item_card_atk,058_boss_onion_the_great,,,41201,,,,0,3,케파치프틴 카드,500,465,2,680,0.0,0.0,1111,3,0,1.0
@@ -145,6 +145,8 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644910,Legend_card_FrosterLord,[슬롯 장착 효과] 소환수의 최소 공격력과 최대 공격력의 차이가 [★ * 10]% 감소{nl}(10LV 달성 시 소환수의 최소 공격력이 최대 공격력과 동일하게 변경됩니다.),icon_item_card_legend,149_boss_frosterlord,,[642927],800076,,,,0,1,마군주 프로스터 로드 카드,0,,,,0.0,0.0,1111,3,2,1.0
 644911,Legend_card_Acio,[슬롯 장착 효과] 치명타 발생 +[★ * 15],icon_item_card_legend,152_boss_asio,,[642929],59154,,,,5,0,아시오 메이지 카드,0,,,,0.0,0.0,1111,3,2,1.0
 644912,Legend_card_Wastrel,[슬롯 장착 효과] 최대 HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,[642931],59172,,,,0,3,웨이스트럴 카드,0,,,,0.0,0.0,1111,3,2,1.0
+644913,Legend_card_ignas,[슬롯 장착 효과] 치명타 공격시 [★ * 5]% 확률로 6초 동안 은신합니다.,icon_item_card_legend,154_boss_ignas,,[642934],800089,,,,0,1,이그나스 카드,0,,,,0.0,0.0,1111,3,2,1.0
+644914,Legend_card_boruta,[슬롯 장착 효과] 보스 몬스터에게 대미지 [★ * 5]% 증가 ,icon_item_card_legend,155_boss_boruta,,,59208,,,,0,0,보루타 카드,0,,,,0.0,0.0,1111,3,2,1.0
 650001,legend_reinforce_card_lv1,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV4까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,찢어진 레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
 650002,legend_reinforce_card_lv2,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV6까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,오래된 레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
 650003,legend_reinforce_card_lv3,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV8까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,레전드 강화용 카드,0,,,,0.0,0.0,1111,3,3,1.0
