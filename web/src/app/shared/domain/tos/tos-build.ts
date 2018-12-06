@@ -384,7 +384,7 @@ class TOSBuild_20 extends TOSBuild {
 export class TOSDatabaseBuild implements ITOSBuild {
 
   static new(region: TOSRegion): TOSDatabaseBuild {
-    let build = region == TOSRegion.kTEST
+    let build = TOSRegion.isRebuild(region)
       ? new TOSBuild_20()
       : new TOSBuild_10();
 
@@ -474,7 +474,7 @@ export class TOSSimulatorBuild implements ITOSBuild {
   }
 
   static new(region: TOSRegion): TOSSimulatorBuild {
-    let build = region == TOSRegion.kTEST
+    let build = TOSRegion.isRebuild(region)
       ? new TOSBuild_20()
       : new TOSBuild_10();
 
