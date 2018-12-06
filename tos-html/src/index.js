@@ -25,6 +25,7 @@ let folder_database = path.join(__dirname, '..', '..', 'web', 'src', 'assets', '
 let folder_dist = path.join(__dirname, '..', '..', 'web', 'dist', 'web');
 let folder_dist_database = path.join(folder_dist, REGION.toLowerCase(), 'database');
 let folder_dist_home = path.join(folder_dist, REGION.toLowerCase(), 'home');
+let folder_dist_region = path.join(folder_dist, REGION.toLowerCase());
 let folder_template = path.join(__dirname, 'templates');
 let folder_template_database = path.join(folder_template, 'database');
 
@@ -100,6 +101,7 @@ let outputHome = fs.readFileSync(path.join(folder_app, 'home', 'welcome', 'welco
 
 fs.ensureDirSync(path.join(folder_dist_home));
 fs.writeFileSync(path.join(folder_dist_home, 'index.html'), outputHome);
+fs.writeFileSync(path.join(folder_dist_region, 'index.html'), outputHome);
 fs.writeFileSync(path.join(folder_dist, 'index.html'), outputHome);
 fs.writeFileSync(path.join(folder_dist, 'index.backup.html'), templateBase); // Backup base html page for next use
 
