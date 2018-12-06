@@ -122,9 +122,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 642807,Gacha_G_007,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube1,,,,,,,Attok Cube,0,0.0,0.0,0000,5,5.0
 642808,Gacha_G_008,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube1,,,,"[{""Map"": null, ""Chance"": 100.0, ""Monster"": 58567}]",,,Sausis Cube,0,0.0,0.0,0000,5,5.0
 642809,Gacha_G_009,It seems to contain something special. Right-click to open.{nl}Item list:{nl}- Practonium x1{nl}- Mithril x20{nl}- Keista Restoration Potion Lv4 x20,icon_item_jewelrybox_close,,,,,,[3030],Mystical Cube,0,0.0,0.0,0000,5,0.0
-642810,Gacha_G_010,It's a not-so-stable cube. It shows movement to revert back to its original property.{nl}Item list:{nl}- Practonium x1{nl}- Mithril x20{nl}- Keista Restoration Potion Lv4 x20,icon_item_eventbox_gem,,,,,,,Unstable Cube,0,0.0,0.0,0000,5,1.0
+642810,Gacha_G_010,It's a not-so-stable cube. It shows movement to revert back to its original property.{nl}Item list:{nl}- Practonium x1{nl}- Mithril x20{nl}- Keista Restoration Potion Lv4 x20,icon_item_eventbox_gem,,,,,,,Unstable Cube,0,0.0,18000.0,0000,5,1.0
 642811,Gacha_G_011,It seems to contain something special. Right-click to open.{nl}Item list:{nl}- Practonium x1{nl}- Mithril x20{nl}- Keista Restoration Potion Lv4 x20,icon_item_jewelrybox_close,,,,,,,Mystical Cube,0,0.0,0.0,0000,5,0.0
-642812,Gacha_G_012,It's a not-so-stable cube. It shows movement to revert back to its original property.{nl}Item list:{nl}- Practonium x1{nl}- Mithril x20{nl}- Keista Restoration Potion Lv4 x20,icon_item_eventbox_gem,,,,,,,Unstable Cube,0,0.0,0.0,0000,5,1.0
+642812,Gacha_G_012,It's a not-so-stable cube. It shows movement to revert back to its original property.{nl}Item list:{nl}- Practonium x1{nl}- Mithril x20{nl}- Keista Restoration Potion Lv4 x20,icon_item_eventbox_gem,,,,,,,Unstable Cube,0,0.0,18000.0,0000,5,1.0
 642813,Gacha_G_013,Contains a random recipe. Right-click to use.,icon_item_paperbox,,,,,,"[40001, 40002, 40003, 40004, 40005, 40006, 40007, 40008, 40009, 40010, 40011, 40012, 40013, 40014, 40017, 40037]",Cardboard Cube,0,0.0,0.0,0000,5,0.0
 642814,Gacha_H_001,"A cube obtained from the Bokor Master. It contains an item from one of the following collections: Fasika Plateau, Galeed Plateau. Right-click to open.",icon_item_cube4,,,,,,,First Collexia Cube,0,0.0,0.0,0000,5,5.0
 642815,Gacha_H_002,"A cube obtained from Merrisa. It contains an item from one of the following collections: Manahas, Genar Field. Right-click to open.",icon_item_cube4,,,,,,,Second Collexia Cube,0,0.0,0.0,0000,5,5.0
@@ -191,9 +191,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 801001,Cube_Challenge_02,It seems to contain something unknown. {nl}Right-click to use.,icon_item_challenge_cube_01,,,,,,,Lv 200 Challenge Cube,0,0.0,0.0,0001,5,1.0
 801002,Cube_Challenge_01_Add,It seems to contain something unknown. {nl}Right-click to use.,icon_item_challenge_cube_02,,,,,,,Shining Lv 300 Challenge Cube,0,0.0,0.0,0001,5,1.0
 801003,Cube_Challenge_03,It seems to contain something unknown. {nl}Right-click to use.,icon_item_challenge_cube_01,,,,,,,Lv 100 Challenge Cube,0,0.0,0.0,0001,5,1.0
-900133,Event_160929_1,It seems to contain something unknown. {nl}Right-click to use.,icon_item_eventcube1,,,,,,,Black Cube,0,2.0,0.0,0000,5,1.0
-900134,Event_160929_2,It seems to contain something unknown. {nl}Right-click to use.,icon_item_eventcube2,,,,,,,Silver Cube,0,2.0,0.0,0000,5,1.0
-900135,Event_160929_3,It seems to contain something unknown. {nl}Right-click to use.,icon_item_eventcube3,,,,,,,Gold Cube,0,2.0,0.0,0000,5,1.0
+900133,Event_160929_1,It seems to contain something unknown. {nl}Right-click to use.,icon_item_eventcube1,,,,,,,Black Cube,0,2.0,86400.0,0000,5,1.0
+900134,Event_160929_2,It seems to contain something unknown. {nl}Right-click to use.,icon_item_eventcube2,,,,,,,Silver Cube,0,2.0,86400.0,0000,5,1.0
+900135,Event_160929_3,It seems to contain something unknown. {nl}Right-click to use.,icon_item_eventcube3,,,,,,,Gold Cube,0,2.0,86400.0,0000,5,1.0
 900147,Event_170117_1,Contains an unknown object. Right-click to use.,icon_item_eventcube1,,,,,,,Prison Cube,0,0.0,0.0,0000,5,5.0
 900148,Event_SakuraCube_170405,It seems to contain something unknown. {nl}Right-click to use.,icon_item_sakuracube,,,,,,,Cherry Blossom Cube,0,0.0,0.0,0000,5,0.0
 900149,Event_170404_1,It seems to contain something unknown. {nl}Right-click to use.,icon_item_eventcube2,,,,,,,LV1 Daily Cube,0,0.0,0.0,0000,5,0.0
@@ -215,8 +215,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 900229,Event_Valen_Choco_cube_11,A cube received as a reward for giving the Girl in Love some Valentine Chocolates. Right-click to use.,icon_item_eventcube3,,,,,,,Chocolate Cube No. 10,0,0.0,0.0,0000,5,0.0
 900236,Event_WhiteDay_Cube_1,An event item.,event_whiteday_cube_1,,,,,,,Cookie House Cube,0,0.0,0.0,0000,5,0.0
 900237,Event_Cupon_Giftbox,A box obtained from using the coupon.,icon_item_giftbox_4,,,,,,,Gift Box,0,0.0,0.0,0000,5,0.0
-900239,Event_ManWooCube_1,"A cube obtained from a little trickster.{nl}It doesn't look ""legit"" at all.",icon_item_eventbox_qm,,,,,,,Totally Legit Cube,0,3600.0,0.0,0000,5,1.0
-900270,Event_1704_CashBox,A gift blessed by the goddesses. Right-click to use.,icon_item_giftbox_1,,,,,,,Blessed Gift,0,0.0,0.0,0000,5,0.0
+900239,Event_ManWooCube_1,"A cube obtained from a little trickster.{nl}It doesn't look ""legit"" at all.",icon_item_eventbox_qm,,,,,,,Totally Legit Cube,0,3600.0,604800.0,0000,5,1.0
+900270,Event_1704_CashBox,A gift blessed by the goddesses. Right-click to use.,icon_item_giftbox_1,,,,,,,Blessed Gift,0,0.0,3600.0,0000,5,0.0
 902010,Event_BlueCube_Lv1,Gives one random item when used.{nl} - Talt{nl} - Fortune Cookie{nl} - 500 Attribute Points{nl} - Advanced Gem Abrasive (14 Days),icon_item_eventbox_gem,,,,,,,LV1 Blue Cube,0,0.0,0.0,0000,5,0.0
 902011,Event_BlueCube_Lv2,Gives one random item when used.{nl} - Talt{nl} - Fortune Cookie{nl} - 500 Attribute Points{nl} - Advanced Gem Abrasive (14 Days){nl} - Silver Anvil (14 Days),icon_item_eventbox_gem,,,,,,,LV2 Blue Cube,0,0.0,0.0,0000,5,0.0
 902012,Event_BlueCube_Lv3,Gives one random item when used.{nl} - Talt{nl} - Fortune Cookie{nl} - 500 Attribute Points{nl} - Advanced Gem Abrasive (14 Days){nl} - Silver Anvil (14 Days){nl}   - Golden Anvil (14 Days),icon_item_eventbox_gem,,,,,,,LV3 Blue Cube,0,0.0,0.0,0000,5,0.0
@@ -234,4 +234,4 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 904041,EVENT_1805_SLATE_CUBE,Contains items awarded for participating in the Secret Stone Plate Message event.{nl}This item will be removed at the end of the event period.,icon_item_eventcube2,,,,,,,Lena's Thank You Cube,0,0.0,0.0,0001,5,0.0
 904049,EVENT_1806_STORY_1_CUBE,Use to receive a random item from the rewards list.{nl}Will be automatically deleted at the end of the event period.,icon_item_eventcube3,,,,,,,Astral Tower Hero Cube,0,0.0,0.0,0001,5,0.0
 904057,EVENT_1807_BALL_CUBE,Use to receive a random item from the rewards list.{nl}Will be deleted when the event period ends.,icon_item_summer_box,,,,,,,Summer Party Box,0,0.0,0.0,0001,5,0.0
-904083,EVENT_1807_HOTTIME_BOX,"Win up to 10,000 Attribute Points!{nl}Can be used by characters of level 50 and above.{nl}Will be automatically deleted at the end of the event period.",icon_item_eventbox_qm,,,,,,,[R10] Lucky Box (1 Hour),0,0.0,0.0,0000,5,0.0
+904083,EVENT_1807_HOTTIME_BOX,"Win up to 10,000 Attribute Points!{nl}Can be used by characters of level 50 and above.{nl}Will be automatically deleted at the end of the event period.",icon_item_eventbox_qm,,,,,,,[R10] Lucky Box (1 Hour),0,0.0,3600.0,0000,5,0.0
