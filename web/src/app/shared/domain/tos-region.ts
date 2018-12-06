@@ -7,6 +7,10 @@ export enum TOSRegion {
 
 export namespace TOSRegion {
 
+  export function isRebuild(value: TOSRegion) {
+    return value == TOSRegion.kTEST || value == TOSRegion.kTOS;
+  }
+
   export function toUrl(value: TOSRegion): string {
     switch (value) {
       case TOSRegion.iTOS:  return 'itos';

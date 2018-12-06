@@ -92,7 +92,7 @@ def parse_skills(region):
             obj['OverHeat'] = {
                 'Value': int(row['SklUseOverHeat']),
                 'Group': row['OverHeatGroup']
-            } if region != TOSRegion.kTEST else int(row['SklUseOverHeat'])  # Re:Build overheat is now simpler to calculate
+            } if not TOSRegion.is_rebuild(region) else int(row['SklUseOverHeat'])  # Re:Build overheat is now simpler to calculate
             obj['RequiredCircle'] = -1
             obj['TypeAttack'] = []
             obj['SP'] = None

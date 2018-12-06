@@ -52,7 +52,7 @@ def parse_gems_bonus(region):
     xml_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'xml.ipf', 'socket_property.xml')
     xml = ET.parse(xml_path).getroot()
 
-    SLOTS = ['TopLeg', 'HandOrFoot', 'MainOrSubWeapon'] if region == TOSRegion.kTEST else\
+    SLOTS = ['TopLeg', 'HandOrFoot', 'MainOrSubWeapon'] if TOSRegion.is_rebuild(region) else\
             ['TopLeg', 'Foot', 'Hand', 'Weapon', 'SubWeapon']
 
     # example: <Item Name="gem_circle_1">

@@ -77,7 +77,7 @@ class TOSJobType(TOSEnum):
 def parse(region):
     parse_jobs()
 
-    if region == TOSRegion.kTEST:
+    if TOSRegion.is_rebuild(region):
         parse_jobs_stats()
 
 

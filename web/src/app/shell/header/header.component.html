@@ -64,7 +64,7 @@
             <a *ngFor="let region of RegionService.Regions" class="dropdown-item" style="text-transform: initial;"
                [href]="'#' + region"
                [ngClass]="{ 'active': RegionService.Region == region }"
-               (click)="regionSelect(region)">{{ region }}&nbsp;<span class="badge badge-success" *ngIf="region == TOSRegion.kTEST">Re:Build</span></a>
+               (click)="regionSelect(region)">{{ region }}&nbsp;<span class="badge badge-success" *ngIf="TOSRegion.isRebuild(region)">Re:Build</span></a>
           </div>
         </a>
       </li>

@@ -8,6 +8,10 @@ class TOSRegion(TOSEnum):
     kTOS = 3
 
     @staticmethod
+    def is_rebuild(value):
+        return value in [TOSRegion.kTEST, TOSRegion.kTOS]
+
+    @staticmethod
     def to_string(value):
         return {
             TOSRegion.iTOS: 'iTOS',
