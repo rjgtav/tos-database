@@ -1,6 +1,6 @@
 $ID,$ID_NAME,Bonus2,Bonus3,Bonus4,Bonus5,Bonus6,Bonus7,Link_Items,Name
 1,set_001,AoE Attack Ratio {img green_up_arrow 16 16} 1,,,,,,"[522110, 532110]",Light Plate Set
-2,set_002,Defense {img green_up_arrow 16 16} 6,,,,,,"[null, 532111]",Zega Set
+2,set_002,Defense {img green_up_arrow 16 16} 6,,,,,,[532111],Zega Set
 3,set_003,Additional Dark Attack {img green_up_arrow 16 16} 30,,,,,,"[522112, 532112]",Magi Set
 4,set_004,Movement Speed {img green_up_arrow 16 16} 5,,,,,,"[522113, 532113]",Jude Set
 5,set_005,Fire Property Attack {img green_up_arrow 16 16} 15,,,,,,"[522114, 532114]",Ismin Set

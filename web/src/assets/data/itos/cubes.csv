@@ -226,6 +226,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 902033,Event_CurseDoor_Cube,It seems to contain something unknown. {nl}Right-click to use.,icon_item_eventcube1,,,,,,,Cursed Doll Cube,0,0.0,0.0,0001,5,0.0
 902061,EVENT_1801_ORB_ARMORBOX,Use to obtain a random Lv 350 Primus armor item.{nl}Will be deleted after the event period.,icon_item_event_armorbox1,,,,,,,Armor Cube,0,0.0,0.0,0001,5,0.0
 902062,EVENT_1801_ORB_WEAPONBOX,Use to obtain a random Lv 350 Primus weapon/subweapon item.{nl}Will be deleted after the event period.,icon_item_event_weaponbox1,,,,,,,Weapon Cube,0,0.0,0.0,0001,5,0.0
+902137,EVENT_1812_ORB_ARMORBOX,Use to receive one random Lv 380 Primus armor item.,icon_item_event_armorbox1,,,,,,,Armor Cube,0,0.0,0.0,0001,5,0.0
+902138,EVENT_1812_ORB_WEAPONBOX,Use to receive one random Lv 380 Primus weapon/subweapon item.,icon_item_event_weaponbox1,,,,,,,Weapon Cube,0,0.0,0.0,0001,5,0.0
+902139,Event_BlueCube_Lv6_1812,Use to obtain a random reward item.{nl}Will be deleted after the event period.,icon_item_eventbox_blue,,,,,,,Blue Cube,0,0.0,0.0,0001,5,0.0
 904002,EVENT_1802_MASTER_REWARD_CUBE,A reward obtained from training with the master.{nl}Use to receive a random item from the reward's list.{nl}Will be deleted when the event period ends.,icon_item_eventcube1,,,,,,,Infinite Potential Cube,0,0.0,0.0,0001,5,0.0
 904014,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_1_2,Use to receive a random item from the rewards list.{nl}Will be deleted when the event period ends.,icon_item_eventcube1,,,,,,,Sapling Cube,0,0.0,0.0,0001,5,0.0
 904015,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_3_4,Use to receive a random item from the rewards list.{nl}Will be deleted when the event period ends.,icon_item_eventcube2,,,,,,,Tree Cube,0,0.0,0.0,0001,5,0.0
