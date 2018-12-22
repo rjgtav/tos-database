@@ -8,7 +8,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644007,card_ginklas,[슬롯 장착 효과] 판금 갑옷 대상에게 주는 대미지[★/2]% 증가,icon_item_card_atk,091_boss_ginklas,[642013],,41208,,[18018],,2,3,긴클라스 카드,500,320,2,1053,0.0,0.0,1111,3,0,1.0
 644008,card_NetherBovine,[슬롯 장착 효과] 힘 스탯 +[★],icon_item_card_stat,026_boss_netherbovine,,,800001,,,,0,1,네더보바인 카드,500,195,4,966,0.0,0.0,1111,3,4,1.0
 644009,card_necrovanter,[슬롯 장착 효과] 어둠 속성 추가 대미지 +[★*10],icon_item_card_util,044_boss_necrovanter,[642011],"[642907, 642919]",800002,,,,0,1,네크로벤터 카드,500,416,1,144,0.0,0.0,1111,3,5,1.0
-644010,card_deadbone,[슬롯 장착 효과] 치명타 공격력 +[★*20],icon_item_card_atk,014_boss_deadbone,,,41203,,,,0,3,데드본 카드,500,333,2,207,0.0,0.0,1111,3,0,1.0
+644010,card_deadbone,[슬롯 장착 효과] 물리 치명타 공격력 +[★*20],icon_item_card_atk,014_boss_deadbone,,,41203,,,,0,3,데드본 카드,500,333,2,207,0.0,0.0,1111,3,0,1.0
 644011,card_Devilglove,[슬롯 장착 효과] 변이형 속성 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,072_boss_devilglove,,,41385,,,,0,3,데블글로브 카드,500,127,5,98,0.0,0.0,1111,3,0,1.0
 644012,card_Denoptic,[슬롯 장착 효과] 마법 방어력 +[★*10],icon_item_card_def,024_boss_denoptic,,,41368,,,,7,3,덴옵틱 카드,500,388,6,205,0.0,0.0,1111,3,1,1.0
 644014,card_Ravinepede,[슬롯 장착 효과] STA 포션 종류 효과 +[★]%,icon_item_card_util,025_boss_ravinepede,,,41236,,,,7,4,라바인피드 카드,500,210,1,164,0.0,0.0,1111,3,5,1.0
