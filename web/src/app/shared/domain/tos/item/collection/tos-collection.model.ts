@@ -1,7 +1,8 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSCollection, ITOSCollectionBonus, TOSDataSet, TOSStat} from "../../tos-domain";
+import {ITOSCollection, ITOSCollectionBonus, ITOSItem, TOSDataSet} from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
 import {ArrayUtils} from "../../../../utils/array-utils";
+import {Observable} from "rxjs";
 
 export class TOSCollection extends TOSItem implements ITOSCollection {
 
@@ -10,7 +11,7 @@ export class TOSCollection extends TOSItem implements ITOSCollection {
   }
 
   get Bonus() { return this.$lazyPropertyJSONArray('Bonus', value => new TOSCollectionBonus(value), ArrayUtils.sort) }
-  get Link_Items() { return this.$lazyPropertyJSONArray('Link_Items', value => TOSDomainService.itemsByIdLink(value)) }
+  get Link_Items() { return this.$lazyPropertyLink('Link_Items', value => TOSDomainService.itemsByIdLink(value)) as Observable<ITOSItem[]> }
 
 }
 

@@ -17,6 +17,15 @@ import {TOSSkill} from "../../shared/domain/tos/skill/tos-skill.model";
 import {TOSDatabaseBuild} from "../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../shared/domain/tos/job/tos-job.model";
 import {TOSRegionService} from "../../shared/service/tos-region.service";
+import {AttributeListConfigurationResolver} from "../resolvers/attribute-list-configuration.resolver";
+import {CollectionListConfigurationResolver} from "../resolvers/collection-list-configuration.resolver";
+import {GemListConfigurationResolver} from "../resolvers/gem-list-configuration.resolver";
+import {ItemListConfigurationResolver} from "../resolvers/item-list-configuration.resolver";
+import {JobListConfigurationResolver} from "../resolvers/job-list-configuration.resolver";
+import {SkillListConfigurationResolver} from "../resolvers/skill-list-configuration.resolver";
+import {RecipeListConfigurationResolver} from "../resolvers/recipe-list-configuration.resolver";
+import {MonsterListConfigurationResolver} from "../resolvers/monster-list-configuration.resolver";
+import {CubeListConfigurationResolver} from "../resolvers/cube-list-configuration.resolver";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -25,6 +34,19 @@ import {TOSRegionService} from "../../shared/service/tos-region.service";
   styleUrls: ['./entity-detail.component.scss']
 })
 export class EntityDetailComponent implements OnDestroy, OnInit {
+  readonly COLUMNS_ATTRIBUTES = AttributeListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_COLLECTIONS = CollectionListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_CUBES = CubeListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_GEMS = GemListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_ITEMS = ItemListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_ITEMS_DROPS = ItemListConfigurationResolver.COLUMNS_DROPS;
+  readonly COLUMNS_JOBS = JobListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_SKILLS = SkillListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_RECIPES_MATERIALS = RecipeListConfigurationResolver.COLUMNS_MATERIALS;
+  readonly COLUMNS_RECIPES = RecipeListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_MONSTERS_DROPS = MonsterListConfigurationResolver.COLUMNS_DROPS;
+  readonly COLUMNS_MONSTERS_SPAWNS = MonsterListConfigurationResolver.COLUMNS_SPAWNS;
+
   readonly ICON_WIDTH = EntityDetailClassIconGradeComponent.ICON_LARGE_WIDTH;
 
   build: TOSDatabaseBuild;
@@ -50,16 +72,18 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
 
   tooltip: TOSEntity;
 
-  private subscription: Subscription;
+  private subscriptionRoute: Subscription;
+  private subscriptionSkill: Subscription;
 
   constructor(private changeDetector: ChangeDetectorRef, private route: ActivatedRoute, private router: Router) { }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this.subscriptionRoute && this.subscriptionRoute.unsubscribe();
+    this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
   }
 
   ngOnInit() {
-    this.subscription = this.route.data.subscribe(({ response }) => {
+    this.subscriptionRoute = this.route.data.subscribe(({ response }) => {
       this.entity = response as TOSEntity;
 
       this.attribute = this.entity instanceof TOSAttribute ? this.entity as TOSAttribute : null;
@@ -77,13 +101,19 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
 
       if (this.skill) {
-        this.build = TOSDatabaseBuild.new(TOSRegionService.Region);
-        this.build.jobAdd(this.skill.Link_Job); // Note: we need to add them 3 times, as on pre-Re:Build the level max scales with the selected Job circle
-        this.build.jobAdd(this.skill.Link_Job);
-        this.build.jobAdd(this.skill.Link_Job);
+        this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
+        this.subscriptionSkill = this.skill.Link_Job.subscribe(async value => {
+          let build = TOSDatabaseBuild.new(TOSRegionService.Region);
+          await build.jobAdd$(value); // Note: we need to add them 3 times, as on pre-Re:Build the level max scales with the selected Job circle
+          await build.jobAdd$(value);
+          await build.jobAdd$(value);
+
+          this.build = build;
+          this.changeDetector.detectChanges();
+        });
       }
 
-      this.initialized && this.changeDetector.detectChanges();
+      this.changeDetector.detectChanges();
       this.initialized = true;
     });
   }

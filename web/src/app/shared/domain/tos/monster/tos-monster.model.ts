@@ -4,16 +4,20 @@ import {
   ITOSItem,
   ITOSMap,
   ITOSMonster,
-  ITOSMonsterDropLink,
-  ITOSMonsterSpawnLink,
+  ITOSMonsterDrop,
+  ITOSMonsterSpawn,
   TOSDataSet,
   TOSElement,
   TOSEquipmentMaterial,
   TOSMonsterRace,
-  TOSMonsterRank, TOSMonsterRankService,
-  TOSMonsterSize, TOSMonsterSizeService
+  TOSMonsterRank,
+  TOSMonsterRankService,
+  TOSMonsterSize,
+  TOSMonsterSizeService
 } from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
+import {Observable} from "rxjs";
+import {fromPromise} from "rxjs/internal-compatibility";
 
 export class TOSMonster extends TOSEntity implements ITOSMonster {
 
@@ -53,39 +57,58 @@ export class TOSMonster extends TOSEntity implements ITOSMonster {
   get Stat_BlockPenetration() { return this.$lazyPropertyNumber('Stat_BlockPenetration') }
   get Stat_BlockRate() { return this.$lazyPropertyNumber('Stat_BlockRate') }
 
-  get Link_Drops() { return this.$lazyPropertyJSONArray('Link_Drops', value => new TOSMonsterDropLink(value)) }
-  get Link_Spawns() { return this.$lazyPropertyJSONArray('Link_Spawns', value => new TOSMonsterSpawnLink(value)) }
+  get Link_Drops() { return this.$lazyPropertyLink('Link_Drops', value => this.TOSMonsterDropFactory(value)) as Observable<TOSMonsterDrop[]> }
+  get Link_Spawns() { return this.$lazyPropertyLink('Link_Spawns', value => this.TOSMonsterSpawn(value)) as Observable<TOSMonsterSpawn[]> }
+
+  private TOSMonsterDropFactory(value: TOSMonsterDrop): Observable<TOSMonsterDrop> {
+    return fromPromise((async () => {
+      let object = new TOSMonsterDrop(value);
+          object.Item = !isNaN(+object.Item)
+            ? await TOSDomainService.itemsByIdLink(+object.Item).toPromise()
+            : new TOSItem(null, object.Item as TOSItem);
+
+      return object;
+    })());
+  }
+  private TOSMonsterSpawn(value: TOSMonsterSpawn): Observable<TOSMonsterSpawn> {
+    return fromPromise((async () => {
+      let object = new TOSMonsterSpawn(value);
+          object.Map = await TOSDomainService.mapsById(+object.Map).toPromise();
+
+      return object;
+    })());
+  }
 
 }
 
-export class TOSMonsterDropLink implements ITOSMonsterDropLink {
+export class TOSMonsterDrop implements ITOSMonsterDrop {
   Chance: number;
   Item: ITOSItem;
   Quantity_MAX: number;
   Quantity_MIN: number;
 
-  constructor(json: TOSMonsterDropLink) {
+  constructor(json: TOSMonsterDrop) {
     this.Chance = +json.Chance;
-    this.Item = json.Item
-      ? !isNaN(+json.Item)
-        ? TOSDomainService.itemsByIdLink(+json.Item)
-        : new TOSItem(null, json.Item as TOSItem)
-      : null;
+    this.Item = json.Item;
     this.Quantity_MAX = +json.Quantity_MAX;
     this.Quantity_MIN = +json.Quantity_MIN;
   }
 
+  get Url() { return this.Item.Url };
+
 }
 
-export class TOSMonsterSpawnLink implements ITOSMonsterSpawnLink {
+export class TOSMonsterSpawn implements ITOSMonsterSpawn {
   Map: ITOSMap;
   Population: number;
   TimeRespawn: number;
 
-  constructor(json: TOSMonsterSpawnLink) {
-    this.Map = TOSDomainService.mapsById[+json.Map];
+  constructor(json: TOSMonsterSpawn) {
+    this.Map = json.Map;
     this.Population = +json.Population;
     this.TimeRespawn = +json.TimeRespawn;
   }
+
+  get Url() { return this.Map.Url };
 
 }

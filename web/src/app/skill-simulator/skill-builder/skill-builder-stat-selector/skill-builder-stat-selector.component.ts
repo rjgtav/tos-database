@@ -1,16 +1,25 @@
-import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges
+} from '@angular/core';
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {Subscription} from "rxjs";
-import {TOSStat} from "../../../shared/domain/tos/tos-domain";
+import {TOSStat, TOSStatService} from "../../../shared/domain/tos/tos-domain";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-skill-builder-stat-selector',
   templateUrl: './skill-builder-stat-selector.component.html',
   styleUrls: ['./skill-builder-stat-selector.component.scss']
 })
 export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
 
-  TOSStat = TOSStat;
+  TOSStatService = TOSStatService;
 
   rank: number;
   stats: string[] = [TOSStat.STR, TOSStat.CON, TOSStat.INT, TOSStat.SPR, TOSStat.DEX];
@@ -21,7 +30,7 @@ export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
   private subscriptionJobs: Subscription;
   private subscriptionStatsPoints: Subscription;
 
-  constructor() {}
+  constructor(private changeDetector: ChangeDetectorRef) {}
 
   onIncrementChange(event: Event, stat: string) {
     let max = 9999;
@@ -49,12 +58,22 @@ export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
       this.build.statsIncrementLevel(stat, delta);
   }
 
+  onJobChange() {
+    this.rank = this.build.Rank;
+    this.changeDetector.markForCheck();
+  }
+
+  onStatsPointsChange(value: number) {
+    this.statsPoints = value;
+    this.changeDetector.markForCheck();
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
     this.ngOnDestroy();
 
     if (changes.build) {
-      this.subscriptionJobs = this.build.Jobs.subscribe(value => this.rank = this.build.Rank);
-      this.subscriptionStatsPoints = this.build.StatsPoints.subscribe(value => this.statsPoints = value)
+      this.subscriptionJobs = this.build.Job$.subscribe(value => this.onJobChange());
+      this.subscriptionStatsPoints = this.build.StatsPoints$.subscribe(value => this.onStatsPointsChange(value))
     }
   }
 

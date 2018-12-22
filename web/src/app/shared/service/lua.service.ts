@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {ITOSBuild, TOSStat} from "../domain/tos/tos-domain";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
 import {LEVEL_LIMIT} from "../domain/tos/tos-build";
+import {Observable} from "rxjs";
+import {fromPromise} from "rxjs/internal-compatibility";
 
 @Injectable({
   providedIn: 'root'
@@ -52,136 +54,150 @@ export class LUAService {
 
   constructor() { }
 
-  static eval(build: ITOSBuild, source: string[], context?: object): string | number {
-    let func = this.parse(build, source, context).func;
-    return eval(func.join('\n'));
+  static eval(build: ITOSBuild, source: string[], context?: object): Observable<string | number> {
+    return fromPromise((async () => {
+      let func = (await this.parse(build, source, context).toPromise()).func;
+      return eval(func.join('\n'));
+    })())
   }
 
-  static human(build: ITOSBuild, source: string[], context?: object): string {
-    let func = this.parse(build, source, context, true).func;
-        func = func.map((line) => {
-          // Note: we need to reset these on every new line so it doesn't skip matches
-          let lineOriginal = line;
-          let regexGetProp = /TryGetProp\((\w+), "(\w+)"\)/g;
-          let regexAbility = /GetAbility\(pc, ["'](.+)["']\)/g;
-          let match: RegExpExecArray;
+  static human(build: ITOSBuild, source: string[], context?: object): Observable<string> {
+    return fromPromise((async () => {
+      let func = (await this.parse(build, source, context, true).toPromise()).func;
+          func = await Promise.all(func.map(async (line) => {
+            // Note: we need to reset these on every new line so it doesn't skip matches
+            let lineOriginal = line;
+            let regexGetProp = /TryGetProp\((\w+), "(\w+)"\)/g;
+            let regexAbility = /GetAbility\(pc, ["'](.+)["']\)/g;
+            let match: RegExpExecArray;
 
-          line = line.replace(/\/\*{b}\*\/(.+)\/\*{b}\*\//g, '<b>$1</b>');  // Apply bolds
-          line = line.replace(/(?:pc\.(\w+))+/g, 'player.$1');              // Rename pc to player
-          line = line.replace(/!=/g, 'not');
-          line = line.replace(/&&/g, 'and');
-          line = line.replace(/null/g, 'Null');
+            line = line.replace(/\/\*{b}\*\/(.+?)\/\*{b}\*\//g, '<b>$1</b>');  // Apply bolds
+            line = line.replace(/(?:pc\.(\w+))+/g, 'player.$1');              // Rename pc to player
+            line = line.replace(/!=/g, 'not');
+            line = line.replace(/&&/g, 'and');
+            line = line.replace(/null/g, 'Null');
 
-          // TryGetProp(a, b) - return the 'b' property of the 'a' object
-          while (match = regexGetProp.exec(lineOriginal)) {
-            line = line.replace(match[0], match[1] + '.' + match[2]);
-          }
+            // TryGetProp(a, b) - return the 'b' property of the 'a' object
+            while (match = regexGetProp.exec(lineOriginal)) {
+              line = line.replace(match[0], match[1] + '.' + match[2]);
+            }
 
-          // GetAbility(pc, ability) - replace with attribute name
-          while (match = regexAbility.exec(lineOriginal)) {
-            let attribute = TOSDomainService.attributesByIdName[match[1]];
-            if (attribute)
-              line = line.replace(match[0], '<b>[' + attribute.Name + ']</b>');
-          }
+            // GetAbility(pc, ability) - replace with attribute name
+            while (match = regexAbility.exec(lineOriginal)) {
+              let attribute = await TOSDomainService.attributesByIdName(match[1]).toPromise();
+              if (attribute)
+                line = line.replace(match[0], '<b>[' + attribute.Name + ']</b>');
+              else
+                line = line.replace(match[0], 'Null');
+            }
 
-          return line;
-        });
+            return line;
+          }));
 
-    return func
-      .slice(1, -1)
-      .join('\n');
+      return func
+        .slice(1, -1)
+        .join('\n');
+    })());
   }
 
-  static parse(build: ITOSBuild, source: string[], context?: object, human?: boolean): { dependencies: string[], func: string[] } {
-    let dependencies: string[] = [];
-    let skill = context && context['skill'] || {};
-    let player = context && context['player'] || {};
-        player.ClassName = 'PC';
-        player.Lv = LEVEL_LIMIT; // TODO: get level from build
+  static parse(build: ITOSBuild, source: string[], context?: object, human?: boolean): Observable<{ dependencies: string[], func: string[] }> {
+    return fromPromise((async () => {
+      let dependencies: string[] = [];
+      let skill = context && context['skill'] || {};
+      let player = context && context['player'] || {};
+          player.ClassName = 'PC';
+          player.Lv = LEVEL_LIMIT; // TODO: get level from build
 
-    context && delete context['skill'];
-    context && delete context['player'];
+      context && delete context['skill'];
+      context && delete context['player'];
 
-    // Process source code
-    source = source.map(line => {
-      // Note: we need to reset these on every new line so it doesn't skip matches
-      let lineOriginal = line;
-      let regexGetJobGrade = /GetJobGradeByName\(pc, (.+)\)/g;
-      let regexGetSkill = /GetSkill\(pc, (.+)\)/g;
-      let regexPlayer = /(?:pc\.(\w+))+/g;
-      let regexSkill = /(?:skill\.(\w+))+/g;
-      let match: RegExpExecArray;
+      // Process source code
+      source = await Promise.all(source.map(async line => {
+        // Note: we need to reset these on every new line so it doesn't skip matches
+        let lineOriginal = line;
+        let regexGetJobGrade = /GetJobGradeByName\(pc, (.+)\)/g;
+        let regexGetSkill = /GetSkill\(pc, (.+)\)/g;
+        let regexPlayer = /(?:pc\.(\w+))+/g;
+        let regexSkill = /(?:skill\.(\w+))+/g;
+        let match: RegExpExecArray;
 
-      line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
+        line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
-      // GetJobGrade(pc, job) - return the circle of the requested job
-      while (match = regexGetJobGrade.exec(lineOriginal)) {
-        let jobName = (['"', "'"].indexOf(match[1][0]) > -1 ? match[1] : context[match[1]]).slice(1, -1);
-        let job = TOSDomainService.jobsByIdName[jobName];
+        // GetJobGrade(pc, job) - return the circle of the requested job
+        while (match = regexGetJobGrade.exec(lineOriginal)) {
+          let jobName = (['"', "'"].indexOf(match[1][0]) > -1 ? match[1] : context[match[1]]).slice(1, -1);
+          let job = await TOSDomainService.jobsByIdName(jobName).toPromise();
 
-        line = line.replace(match[0], build.jobCircle(job) + '');
-      }
-
-      // GetSkill(pc, skill) - return a reference of the requested skill (with level)
-      while (match = regexGetSkill.exec(lineOriginal)) {
-        let skillName = (['"', "'"].indexOf(match[1][0]) > -1 ? match[1] : context[match[1]]).slice(1, -1);
-        let skill = TOSDomainService.skillsByIdName[skillName];
-
-        line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
-      }
-
-      // Player properties - replace available properties in-place, make remaining ones bold
-      while (match = regexPlayer.exec(lineOriginal)) {
-        let prop: string = match[1];
-
-        if (player[prop] != undefined && prop != 'Lv') {
-          line = line.replace(match[0], player[prop]);
-        } else {
-          line = line.replace(match[0], '/*{b}*/' + match[0] + '/*{b}*/')
+          line = line.replace(match[0], build.jobCircle(job) + '');
         }
 
-        player[prop] = player[prop] || 1;
+        // GetSkill(pc, skill) - return a reference of the requested skill (with level)
+        while (match = regexGetSkill.exec(lineOriginal)) {
+          let skillName = (['"', "'"].indexOf(match[1][0]) > -1 ? match[1] : context[match[1]]).slice(1, -1);
+          let skill = await TOSDomainService.skillsByIdName(skillName).toPromise();
 
-        // Note: some stats are runtime only (e.g. MINPATK)
-        dependencies.push(LUAService.STATS_RUNTIME[prop] + '');
+          line = line.replace(match[0], JSON.stringify({ LevelByDB: build.skillLevel(skill) }));
+        }
+
+        // Player properties - replace available properties in-place, make remaining ones bold
+        while (match = regexPlayer.exec(lineOriginal)) {
+          let prop: string = match[1];
+
+          if (player[prop] != undefined && prop != 'Lv') {
+            line = line.replace(match[0], player[prop]);
+          } else {
+            // Note: we need to slice in case there are multiple occurrences on the string (as we replace with the same matched value)
+            line =
+              line.slice(0, match.index) +
+              line.slice(match.index).replace(match[0], '/*{b}*/' + match[0] + '/*{b}*/')
+          }
+
+          player[prop] = player[prop] || 1;
+
+          // Note: some stats are runtime only (e.g. MINPATK)
+          dependencies.push(LUAService.STATS_RUNTIME[prop] + '');
+        }
+
+        // Skill properties - replace available properties in-place, make remaining ones bold
+        while (match = regexSkill.exec(lineOriginal)) {
+          let prop: string = match[1];
+
+          if (skill[prop] != undefined && prop != 'Level')
+            line = line.replace(match[0], skill[prop]);
+          else
+            // Note: we need to slice in case there are multiple occurrences on the string (as we replace with the same matched value)
+            line =
+              line.slice(0, match.index) +
+              line.slice(match.index).replace(match[0], '/*{b}*/' + match[0] + '/*{b}*/')
+        }
+
+        return line;
+      }));
+
+      let func: string[] = [];
+          func.push('(function () {');
+
+      // Initialize context
+      if (!human) {
+        func.push('var pc = ' + JSON.stringify(player) + ';');
+        func.push('var skill = ' + JSON.stringify(skill) + ';');
+        func = func.concat(LUAService.LUA_CONTEXT);
+
+        Object
+          .keys(context)
+          .forEach(key => {
+            let value = typeof context[key] == 'object' ? JSON.parse(context[key]) : context[key];
+            func.push('var ' + key + ' = ' + value + ';')
+          });
       }
 
-      // Skill properties - replace available properties in-place, make remaining ones bold
-      while (match = regexSkill.exec(lineOriginal)) {
-        let prop: string = match[1];
+      // Execute
+      func = func.concat(source);
+      func.push('}())');
 
-        if (skill[prop] != undefined && prop != 'Level')
-          line = line.replace(match[0], skill[prop]);
-        else
-          line = line.replace(match[0], '/*{b}*/' + match[0] + '/*{b}*/')
-      }
-
-      return line;
-    });
-
-    let func: string[] = [];
-        func.push('(function () {');
-
-    // Initialize context
-    if (!human) {
-      func.push('var pc = ' + JSON.stringify(player) + ';');
-      func.push('var skill = ' + JSON.stringify(skill) + ';');
-      func = func.concat(LUAService.LUA_CONTEXT);
-
-      Object
-        .keys(context)
-        .forEach(key => {
-          let value = typeof context[key] == 'object' ? JSON.parse(context[key]) : context[key];
-          func.push('var ' + key + ' = ' + value + ';')
-        });
-    }
-
-    // Execute
-    func = func.concat(source);
-    func.push('}())');
-
-    //console.log('eval', func.join('\n'));
-    return { dependencies, func };
+      //console.log('eval', func.join('\n'));
+      return { dependencies, func };
+    })())
   }
 
 }

@@ -1,13 +1,22 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges
+} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {ITOSBuild} from "../../../domain/tos/tos-domain";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-entity-detail-SkillFormula',
   templateUrl: './entity-detail-SkillFormula.component.html',
   styleUrls: ['./entity-detail-SkillFormula.component.scss']
 })
-export class EntityDetailSkillFormulaComponent extends EntityDetailChildComponent implements OnChanges {
+export class EntityDetailSkillFormulaComponent extends EntityDetailChildComponent implements OnChanges, OnDestroy {
 
   @Input() build: ITOSBuild;
   @Input() divider: boolean;
@@ -16,7 +25,7 @@ export class EntityDetailSkillFormulaComponent extends EntityDetailChildComponen
   tabs: string[];
   tabsHTML: { [key: string]: string } = {};
 
-  constructor() { super(); }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector); }
 
   ngOnChanges(changes: SimpleChanges) {
     super.ngOnChanges(changes);
@@ -27,9 +36,19 @@ export class EntityDetailSkillFormulaComponent extends EntityDetailChildComponen
         .filter((value, index, self) => self.indexOf(value) === index)
         .concat(['SP']);
 
-      this.tabs.map(tab => this.tabsHTML[tab] = this.build.skillEffectFormula(this.skill, tab));
       this.active = this.tabs[0];
+      this.tabs.map(tab => this.build
+        .skillEffectFormula$(this.skill, tab)
+        .subscribe((value) => {
+          this.tabsHTML[tab] = value;
+          this.changeDetector.markForCheck();
+        })
+      );
     }
+  }
+
+  ngOnDestroy(): void {
+    this.changeDetector.detach();
   }
 
   onTabClick(event: MouseEvent, tab: string) {

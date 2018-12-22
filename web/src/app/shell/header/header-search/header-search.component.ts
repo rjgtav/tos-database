@@ -1,19 +1,28 @@
-import {ChangeDetectorRef, Component, ElementRef, ViewChild} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild
+} from '@angular/core';
 import {faSearch, faTimes} from "@fortawesome/free-solid-svg-icons";
-import {TOSSearchService} from "../../../shared/service/tos-search.service";
+import {TOSSearchResult, TOSSearchService} from "../../../shared/service/tos-search.service";
 import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
 import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
 import {Router} from "@angular/router";
 import {TOSDataSet} from "../../../shared/domain/tos/tos-domain";
-
-const RESULTS_LIMIT = 16;
+import {fromEvent, Observable, Subscription} from "rxjs";
+import {debounceTime} from "rxjs/operators";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-header-search',
   templateUrl: './header-search.component.html',
   styleUrls: ['./header-search.component.scss']
 })
-export class HeaderSearchComponent {
+export class HeaderSearchComponent implements OnDestroy, OnInit {
 
   faSearch = faSearch;
   faTimes = faTimes;
@@ -23,40 +32,62 @@ export class HeaderSearchComponent {
   isLoadedRepository: boolean;
   isLoadedSearch: boolean;
 
-  filter: TOSDataSet;
+  isLoadMore: boolean;
   isOpen: boolean;
-  isOpenFilter: boolean;
+  isOpenDataset: boolean;
   keyboardSelected: number;
   query: string;
+  queryDataset: TOSDataSet;
+  queryPage: number;
+  queryPrevious: string;
+  queryPreviousDataset: TOSDataSet;
+  queryPreviousPage: number;
   results: TOSEntity[];
-  resultsLimit: number = RESULTS_LIMIT;
-  resultsSliced: TOSEntity[];
   tooltip: TOSEntity;
 
-  @ViewChild('queryInput') queryInput: ElementRef;
+  input$: Observable<any>;
+  @ViewChild('input') input: ElementRef;
 
-  constructor(private changeDetector: ChangeDetectorRef, private router: Router, private search: TOSSearchService) {
-    TOSRepositoryService.IsLoaded.subscribe(value => this.isLoadedRepository = value);
+  subscriptionInput: Subscription;
+  subscriptionLoad: Subscription;
 
-    search.Loaded$.subscribe(value => this.isLoadedSearch = value);
-    search.Result$.subscribe(value => this.onQueryResult(value));
+  constructor(
+    private changeDetector: ChangeDetectorRef,
+    private repositoryService: TOSRepositoryService,
+    private router: Router,
+    private search: TOSSearchService
+  ) {
+    this.repositoryService.IsLoaded$.subscribe(value => this.isLoadedRepository = value);
+    this.subscriptionLoad = search.isLoaded$.subscribe(value => this.onLoad(value));
+  }
+
+  ngOnInit(): void {
+    this.input$ = fromEvent(this.input.nativeElement, 'keyup').pipe(debounceTime(200));
+    this.subscriptionInput = this.input$.subscribe(value => this.onInputChange());
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptionInput && this.subscriptionInput.unsubscribe();
+    this.subscriptionLoad && this.subscriptionLoad.unsubscribe();
   }
 
   onClear() {
-    this.filter = null;
     this.isOpen = false;
     this.query = null;
+    this.queryDataset = null;
+    this.queryPage = 0;
+    this.queryPrevious = null;
+    this.queryPreviousDataset = null;
     this.results = null;
-    this.resultsSliced = null;
     this.tooltip = null;
   }
 
-  onFilterChange(event: MouseEvent, filter: TOSDataSet) {
+  onDatasetChange(event: MouseEvent, dataset: TOSDataSet) {
     event && event.preventDefault();
 
-    this.filter = filter;
+    this.queryDataset = dataset;
     this.onFocus(false);
-    this.onQueryChange(this.query);
+    this.onInputChange();
   }
 
   onFocus(value: boolean) {
@@ -64,7 +95,7 @@ export class HeaderSearchComponent {
     this.isOpen = value;
     this.tooltip = null;
 
-    value && this.queryInput.nativeElement.focus();
+    value && this.input.nativeElement.focus();
   }
 
   onKeyboardNavigate(i: number) {
@@ -79,34 +110,51 @@ export class HeaderSearchComponent {
     }
   }
 
-  onLoadMore() {
-    this.resultsLimit += RESULTS_LIMIT;
+  onLoad(loaded: boolean) {
+    this.isLoadedSearch = loaded;
+    if (!loaded) this.onClear();
 
+    this.changeDetector.markForCheck();
+  }
+  onLoadMore() {
+    this.queryPage ++;
     this.onFocus(true);
-    this.onQueryChange(this.query);
+    this.onInputChange();
   }
 
-  onQueryChange(query: string = '') {
-    if (this.query != query)
-      this.resultsLimit = RESULTS_LIMIT;
+  onInputChange() {
+    // Ignore empty and duplicate queries
+    if (this.query == null || this.query == '' || this.query.length <= 2) return this.onQueryResult({ page: 0, response: []});
+    if (this.query == this.queryPrevious && this.queryPage == this.queryPreviousPage) return;
 
-    this.query = query;
-    this.query = query = this.query.trim();
-    this.query = query = this.query.replace(/[~*+]/g, '');
+    if (this.query != this.queryPrevious || this.queryDataset != this.queryPreviousDataset) {
+      this.isLoadMore = true;
+      this.queryPage = 0;
+      this.results = [];
+    }
+
+    this.query = this.query.trim().replace(/[~*+]/g, '');
+    this.queryPrevious = this.query;
+    this.queryPreviousDataset = this.queryDataset;
+    this.queryPreviousPage = this.queryPage;
 
     // Hotfix: deal with incomplete queries and make sure multi word queries use an AND
+    let query = this.query;
     let words = query.split(' ');
         query = words
           .map((value, index) => index == words.length - 1 ? value + '*' : '+' + value)
           .join(' ');
 
-    this.search.search(query);
+    this.search
+      .search(this.queryDataset, query, this.queryPage)
+      .subscribe(value => this.onQueryResult(value));
   }
-  onQueryResult(results: TOSEntity[]) {
-    this.results = results;
-    this.resultsSliced = this.results
-      .filter(value => this.filter == null || this.filter == value.Dataset)
-      .slice(0, this.resultsLimit); // Limit search results for performance
+  onQueryResult(result: TOSSearchResult) {
+    if (result) {
+      this.results = result.page == 0 ? result.response : this.results.concat(result.response);
+      this.isLoadMore = result.response.length > 0; // Disable 'Load more' in case no more results are being returned
+    }
+
     this.tooltip = null;
 
     this.onFocus(true);

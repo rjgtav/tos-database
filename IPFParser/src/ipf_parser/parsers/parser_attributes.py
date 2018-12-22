@@ -32,7 +32,7 @@ def parse_attributes():
             obj['Unlock'] = None
             obj['UnlockArgs'] = {}
             obj['UpgradePrice'] = []
-            obj['Link_Jobs'] = []
+            obj['Link_Jobs'] = row['Job']
             obj['Link_Skill'] = None
 
             globals.attributes[obj['$ID']] = obj
@@ -41,6 +41,7 @@ def parse_attributes():
 
 def parse_links():
     parse_links_jobs()
+    parse_links_jobs_extra()
     parse_links_skills()
 
 
@@ -76,6 +77,7 @@ def parse_links_jobs():
                         attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
 
                     # Parse attribute job
+                    attribute['Link_Jobs'] = [] if isinstance(attribute['Link_Jobs'], basestring) else attribute['Link_Jobs']
                     attribute['Link_Jobs'].append(globals.get_job_link(job['$ID_NAME']))
 
                     # Parse attribute unlock
@@ -87,6 +89,29 @@ def parse_links_jobs():
                         'UnlockArgStr': row['UnlockArgStr'],
                         'UnlockArgNum': row['UnlockArgNum'],
                     }
+
+
+def parse_links_jobs_extra():
+    logging.debug("Parsing jobs for attributes (extra)...")
+
+    # Parse attributes with no unlock requirements (therefore aren't in the job .ies files) (e.g. SwordMastery_DEForATK)
+    for attribute in globals.attributes.values():
+        link_attribute = globals.get_attribute_link(attribute['$ID_NAME'])
+
+        if isinstance(attribute['Link_Jobs'], basestring):
+            link_jobs = []
+            attribute_jobs = [name for name in attribute['Link_Jobs'].split(';') if len(name)]
+
+            if len(attribute_jobs) <= 1:
+                continue
+
+            for job in [globals.jobs_by_name[name] for name in attribute_jobs]:
+                link_job = globals.get_job_link(job['$ID_NAME'])
+                link_jobs.append(link_job)
+
+                job['Link_Attributes'].append(link_attribute)
+
+            attribute['Link_Jobs'] = link_jobs
 
 
 def parse_links_skills():
@@ -105,18 +130,7 @@ def parse_clean():
 
     # Find which attributes are no longer active
     for attribute in globals.attributes.values():
-        found = False
-
-        for job in globals.jobs.values():
-            for link in job['Link_Attributes']:
-                if link.entity['$ID'] == attribute['$ID']:
-                    found = True
-                    break
-
-            if found:
-                break
-
-        if not found:
+        if not attribute['Link_Jobs'] and not attribute['Link_Skill']:
             attributes_to_remove.append(attribute)
 
     # Remove all inactive attributes

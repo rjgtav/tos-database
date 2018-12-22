@@ -1,30 +1,12 @@
 <div>
   <div class="w-100" *ngIf="divider"><hr></div>
   <h5>{{ header }}</h5>
-  <div style="max-height: calc(49px * 4.5); overflow-y: auto;">
-    <table class="table table-hover mb-0">
-      <tbody>
-        <a *ngFor="let row of data" class="d-table-row"
-           [routerLink]="rowLink(row).Url"
-           (mouseenter)="tooltipChange.emit(rowLink(row))"
-           (mouseleave)="tooltipChange.emit(null)">
-          <td class="p-1" width="1" *ngIf="rowLink(row).Icon">
-            <img height="40" width="40" [src]="rowLink(row).Icon" />
-          </td>
 
-          <td>
-            {{ rowLink(row).Name }}
-            <span *ngIf="row.Quantity_MAX">&times; {{ row.Quantity_MIN }} ~ {{ row.Quantity_MAX}}</span>
-          </td>
-
-          <td *ngIf="item && instanceOf(rowLink(row), TOSMonster)" width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
-          <td *ngIf="monster && instanceOf(rowLink(row), TOSItem)" width="1">{{ (row.Chance / 100) | percent:'1.1-2' }}</td>
-          <td *ngIf="monster && instanceOf(rowLink(row), TOSMap)" class="text-nowrap" width="1">{{ (row.TimeRespawn / 1000) | tosTime }}</td>
-          <td *ngIf="monster && instanceOf(rowLink(row), TOSMap)" class="text-nowrap" width="1">&times; {{ row.Population }}</td>
-          <td *ngIf="recipe && instanceOf(rowLink(row), TOSItem)" class="text-nowrap" width="1">&times; {{ row.Quantity }}</td>
-
-        </a>
-      </tbody>
-    </table>
-  </div>
+  <tos-entity-table class="d-block" style="max-height: calc(49px * 4.5); overflow-y: auto;"
+                    [columns]="columns"
+                    [data]="data"
+                    [header]="false"
+                    [hideMobile]="true"
+                    [hideTablet]="true"
+  ></tos-entity-table>
 </div>

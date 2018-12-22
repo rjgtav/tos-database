@@ -1,6 +1,6 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectorRef, Component, Input} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {TOSEquipmentType, TOSEquipmentTypeService} from "../../../domain/tos/tos-domain";
+import {TOSEquipmentTypeService} from "../../../domain/tos/tos-domain";
 
 @Component({
   selector: 'tos-entity-detail-MaterialNameType',
@@ -11,11 +11,11 @@ export class EntityDetailMaterialNameTypeComponent extends EntityDetailChildComp
 
   @Input() idName: boolean;
 
-  constructor() { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
   get titleSmall(): string {
     if (this.equipment)
-      return TOSEquipmentTypeService.toStringFull(this.equipment.TypeEquipment) +
+      return TOSEquipmentTypeService.toStringHuman(this.equipment.TypeEquipment) +
         (this.equipment.Material ? ' [' + this.equipment.Material + ']' : '') +
         (this.equipment.TypeAttack ? ' [' + this.equipment.TypeAttack + ']' : '');
     else if (this.monster)

@@ -1,15 +1,8 @@
 import {TOSEntity} from "../tos-entity.model";
-import {
-  ITOSAttribute,
-  ITOSJob,
-  ITOSSkill,
-  TOSDataSet,
-  TOSJobDifficulty,
-  TOSJobTree,
-  TOSJobType
-} from "../tos-domain";
+import {ITOSAttribute, ITOSJob, ITOSSkill, TOSDataSet, TOSJobDifficulty, TOSJobTree, TOSJobType} from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
 import {RANK_LIMIT} from "../tos-build";
+import {Observable} from "rxjs";
 
 export class TOSJob extends TOSEntity implements ITOSJob {
 
@@ -29,6 +22,7 @@ export class TOSJob extends TOSEntity implements ITOSJob {
   }
   get IsHidden() { return this.$lazyPropertyBoolean('IsHidden') }
   get IsSecret() { return this.$lazyPropertyBoolean('IsSecret') }
+  get IsStarter() { return this.$lazyPropertyBoolean('IsStarter') }
   get JobDifficulty() { return this.$lazyPropertyEnum('JobDifficulty', TOSJobDifficulty) }
   get JobTree() { return this.$lazyPropertyEnum('JobTree', TOSJobTree) }
   get JobType() { return this.$lazyPropertyJSONArray('JobType', (value) => Object.values(TOSJobType)[value]) }
@@ -44,11 +38,8 @@ export class TOSJob extends TOSEntity implements ITOSJob {
   get StatBase_SPR() { return this.$lazyPropertyNumber('StatBase_SPR') }
   get StatBase_STR() { return this.$lazyPropertyNumber('StatBase_STR') }
 
-  get Link_Attributes(): ITOSAttribute[] {
-    return this.$lazyPropertyJSONArray('Link_Attributes', (value) => TOSDomainService.attributesById[value]);
-  }
-  get Link_Skills(): ITOSSkill[] {
-    return this.$lazyPropertyJSONArray('Link_Skills', (value) => TOSDomainService.skillsById[value]);
-  }
+  get Link_Attributes() { return this.$lazyPropertyLink('Link_Attributes', value => TOSDomainService.attributesById(value)) as Observable<ITOSAttribute[]> }
+  get Link_Skills() { return this.$lazyPropertyLink('Link_Skills', value => TOSDomainService.skillsById(value)) as Observable<ITOSSkill[]> }
+  get Link_Skills$ID() { return this.$lazyPropertyLinkOriginal('Link_Skills') as number[] }
 
 }

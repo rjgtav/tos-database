@@ -1,8 +1,21 @@
+import {Observable} from "rxjs";
+import {TOSUrlService} from "../../service/tos-url.service";
+
 /*====================================================================================================================+
  | Enums
  *====================================================================================================================*/
-import {Observable} from "rxjs";
-import {TOSUrlService} from "../../service/tos-url.service";
+interface EnumService<T> {
+  groupBy(): { header?: string, options: any[] }[];
+  indexOf(value: T): number;
+  toString(value: T): string;
+}
+function EnumServiceFactory<T>(enumeration: T): EnumService<any> {
+  return {
+    groupBy: () => [{ options: Object.values(enumeration) }],
+    indexOf: (value: T) => Object.values(enumeration).indexOf(value),
+    toString: (value: T) => Object.values(enumeration)[+value] + ''
+  }
+}
 
 export enum TOSAttackType {
   PIERCING = 'Piercing',
@@ -25,6 +38,7 @@ export enum TOSCardType {
   STATS = 'Stats',
   UTILITY = 'Utility'
 }
+export const TOSCardTypeService = EnumServiceFactory(TOSCardType);
 
 export enum TOSClassTree {
   ARCHER = 'Archer',
@@ -53,6 +67,14 @@ export enum TOSDataSet {
 export namespace TOSDataSet {
   export const VALUES: { label: string, options: TOSDataSet[] }[] = [
     {
+      label: 'Character',
+      options: [
+        TOSDataSet.ATTRIBUTES,
+        TOSDataSet.JOBS,
+        TOSDataSet.SKILLS,
+      ],
+    },
+    {
       label: 'Items',
       options: [
         TOSDataSet.BOOKS,
@@ -64,14 +86,6 @@ export namespace TOSDataSet {
         TOSDataSet.GEMS,
         TOSDataSet.ITEMS,
         TOSDataSet.RECIPES,
-      ],
-    },
-    {
-      label: 'Player',
-      options: [
-        TOSDataSet.ATTRIBUTES,
-        TOSDataSet.JOBS,
-        TOSDataSet.SKILLS,
       ],
     },
     {
@@ -114,11 +128,12 @@ export enum TOSElement {
   POISON = 'Poison',
   PSYCHOKINESIS = 'Psychokinesis',
 }
-export namespace TOSElementService {
-  export function getIcon(value: TOSElement): string {
-    return 'assets/images/element_' + value.toString().toLowerCase() + '.png';
-  }
-}
+
+export const
+  TOSElementService = EnumServiceFactory(TOSElement) as EnumService<TOSElement> & {
+    icon(value: TOSElement): string
+  };
+  TOSElementService.icon = (value: TOSElement) => 'assets/images/element_' + value.toString().toLowerCase() + '.png';
 
 export enum TOSEquipmentGrade {
   LEGENDARY = 'Legendary',
@@ -127,32 +142,32 @@ export enum TOSEquipmentGrade {
   RARE = 'Rare',
   UNIQUE = 'Unique',
 }
-export namespace TOSEquipmentGradeService {
-
-  export function comparator(a: TOSEquipmentGrade, b: TOSEquipmentGrade): -1 | 0 | 1 {
-    let i = TOSEquipmentGradeService.getOrder(a);
-    let j = TOSEquipmentGradeService.getOrder(b);
+export const
+  TOSEquipmentGradeService = EnumServiceFactory(TOSEquipmentGrade) as EnumService<TOSEquipmentGrade> & {
+    comparator(a: TOSEquipmentGrade, b: TOSEquipmentGrade): -1 | 0 | 1;
+    color(value: TOSEquipmentGrade): string;
+    order(value: TOSEquipmentGrade): number;
+  };
+  TOSEquipmentGradeService.comparator = (a: TOSEquipmentGrade, b: TOSEquipmentGrade) => {
+    let i = TOSEquipmentGradeService.order(a);
+    let j = TOSEquipmentGradeService.order(b);
 
     return (i < j) ? -1 : (i > j) ? 1 : 0;
-  }
-
-  export function getColor(value: TOSEquipmentGrade): string {
+  };
+  TOSEquipmentGradeService.color = (value: TOSEquipmentGrade) => {
     if (value == TOSEquipmentGrade.NORMAL)    return '#999999';
     if (value == TOSEquipmentGrade.MAGIC)     return '#42BAF7';
     if (value == TOSEquipmentGrade.RARE)      return '#CE69EF';
     if (value == TOSEquipmentGrade.UNIQUE)    return '#EF6900';
     if (value == TOSEquipmentGrade.LEGENDARY) return '#F4E409';
-  }
-
-  export function getOrder(value: TOSEquipmentGrade) {
+  };
+  TOSEquipmentGradeService.order = (value: TOSEquipmentGrade) => {
     if (value == TOSEquipmentGrade.NORMAL)    return 0;
     if (value == TOSEquipmentGrade.MAGIC)     return 1;
     if (value == TOSEquipmentGrade.RARE)      return 2;
     if (value == TOSEquipmentGrade.UNIQUE)    return 3;
     if (value == TOSEquipmentGrade.LEGENDARY) return 4;
-  }
-
-}
+  };
 
 export enum  TOSEquipmentMaterial {
   CLOTH = 'Cloth',
@@ -161,6 +176,7 @@ export enum  TOSEquipmentMaterial {
   PLATE = 'Plate',
   UNKNOWN = '',
 }
+export const TOSEquipmentMaterialService = EnumServiceFactory(TOSEquipmentMaterial);
 
 export enum TOSEquipmentType {
   BOTTOM = 'Pants',
@@ -198,8 +214,76 @@ export enum TOSEquipmentType {
   TWO_HANDED_STAFF = 'Staffs',
   TWO_HANDED_SWORD = '2H Swords',
 }
-export namespace TOSEquipmentTypeService {
-  export function toStringFull(value: TOSEquipmentType) {
+export const
+  TOSEquipmentTypeService = EnumServiceFactory(TOSEquipmentType) as EnumService<TOSEquipmentType> & {
+    toStringHuman(value: TOSEquipmentType): string
+  };
+  TOSEquipmentTypeService.groupBy = () => [
+    {
+      header: 'Armor',
+      options: [
+        TOSEquipmentType.BRACELET,
+        TOSEquipmentType.GLOVES,
+        TOSEquipmentType.NECKLACE,
+        TOSEquipmentType.BOTTOM,
+        TOSEquipmentType.TOP,
+        TOSEquipmentType.SHOES,
+      ]
+    },
+    {
+      header: 'Fashion',
+      options: [
+        TOSEquipmentType.COSTUME_ARMBAND,
+        TOSEquipmentType.COSTUME_EFFECT,
+        TOSEquipmentType.COSTUME_HAIR,
+        TOSEquipmentType.COSTUME_HAIR_ACCESSORY,
+        TOSEquipmentType.COSTUME_HELMET,
+        TOSEquipmentType.COSTUME_LENS,
+        TOSEquipmentType.COSTUME_OUTFIT,
+        TOSEquipmentType.COSTUME_SPECIAL,
+        TOSEquipmentType.COSTUME_TOY,
+        TOSEquipmentType.COSTUME_WING,
+      ]
+    },
+    {
+      header: '1-Handed Weapons',
+      options: [
+        TOSEquipmentType.ONE_HANDED_BOW,
+        TOSEquipmentType.ONE_HANDED_MACE,
+        TOSEquipmentType.RAPIER,
+        TOSEquipmentType.ONE_HANDED_STAFF,
+        TOSEquipmentType.ONE_HANDED_SPEAR,
+        TOSEquipmentType.ONE_HANDED_SWORD,
+      ]
+    },
+    {
+      header: '2-Handed Weapons',
+      options: [
+        TOSEquipmentType.TWO_HANDED_BOW,
+        TOSEquipmentType.CANNON,
+        TOSEquipmentType.TWO_HANDED_MACE,
+        TOSEquipmentType.TWO_HANDED_GUN,
+        TOSEquipmentType.TWO_HANDED_SPEAR,
+        TOSEquipmentType.TWO_HANDED_STAFF,
+        TOSEquipmentType.TWO_HANDED_SWORD,
+      ]
+    },
+    {
+      header: 'Sub Weapons',
+      options: [
+        TOSEquipmentType.DAGGER,
+        TOSEquipmentType.ONE_HANDED_GUN,
+        TOSEquipmentType.SHIELD,
+      ]
+    },
+    {
+      header: 'Seals',
+      options: [
+        TOSEquipmentType.SEAL,
+      ]
+    },
+  ];
+  TOSEquipmentTypeService.toStringHuman = (value: TOSEquipmentType) => {
     if (value == TOSEquipmentType.COSTUME_LENS)           return 'Lens';
     if (value == TOSEquipmentType.COSTUME_HAIR_ACCESSORY) return 'Hair Accessory';
 
@@ -208,13 +292,14 @@ export namespace TOSEquipmentTypeService {
     result = result.endsWith('s') ? result.substr(0, result.length - 1) : result;
 
     return result;
-  }
-}
+  };
 
 export enum TOSGemType {
   SKILL = 'Skill',
   STATS = 'Stats',
 }
+export const TOSGemTypeService = EnumServiceFactory(TOSGemType);
+
 export enum TOSGemSlot {
   BOOTS = 'Boots',
   GLOVES = 'Gloves',
@@ -222,6 +307,7 @@ export enum TOSGemSlot {
   TOPBOTTOM = 'TopAndBottom',
   WEAPON = 'Weapon'
 }
+export const TOSGemSlotService = EnumServiceFactory(TOSGemSlot);
 
 export enum TOSItemTradability {
   MARKET = 'Market',
@@ -229,6 +315,8 @@ export enum TOSItemTradability {
   SHOP = 'NPC Shops',
   TEAM = 'Team Storage'
 }
+export const TOSItemTradabilityService = EnumServiceFactory(TOSItemTradability);
+
 export enum TOSItemType {
   ARMBAND = 'Arm Band',
   ARMOR = 'Armor',
@@ -252,16 +340,32 @@ export enum TOSItemType {
   PREMIUM = 'Premium',
   QUEST = 'Quest',
   RECIPE = 'Recipe',
+  SEAL = 'Seal',
   SUBWEAPON = 'Sub Weapon',
   UNUSED = 'Unused',
   WEAPON = 'Weapon',
 }
+export const
+  TOSItemTypeService = EnumServiceFactory(TOSItemType);
+  TOSItemTypeService.groupBy = () => [
+    {
+      options: [
+        TOSItemType.DRUG,
+        TOSItemType.EVENT,
+        TOSItemType.MATERIAL,
+        TOSItemType.PREMIUM,
+        TOSItemType.QUEST,
+      ]
+    },
+  ];
 
 export enum TOSJobDifficulty {
   EASY = 'Easy',
   HARD = 'Hard',
   NORMAL = 'Normal',
 }
+export const TOSJobDifficultyService = EnumServiceFactory(TOSJobDifficulty);
+
 export enum TOSJobTree {
   ARCHER = 'Archer',
   CLERIC = 'Cleric',
@@ -269,6 +373,8 @@ export enum TOSJobTree {
   WARRIOR = 'Warrior',
   WIZARD = 'Wizard',
 }
+export const TOSJobTreeService = EnumServiceFactory(TOSJobTree);
+
 export enum TOSJobType {
   ATTACK = 'Attack',
   ATTACK_INSTALL = 'Attack with Installations',
@@ -281,6 +387,7 @@ export enum TOSJobType {
   SUPPORT_CONTROL = 'Support with Control',
   SUPPORT_PARTY = 'Support with Party',
 }
+export const TOSJobTypeService = EnumServiceFactory(TOSJobType);
 
 export enum TOSMonsterRace {
   BEAST = 'Beast',
@@ -289,11 +396,13 @@ export enum TOSMonsterRace {
   MUTANT = 'Mutant',
   PLANT = 'Plant',
 }
-export namespace TOSMonsterRaceService {
-  export function getIcon(value: TOSMonsterRace): string {
+export const
+  TOSMonsterRaceService = EnumServiceFactory(TOSMonsterRace) as EnumService<TOSMonsterRace> & {
+    icon(value: TOSMonsterRace): string
+  };
+  TOSMonsterRaceService.icon = (value: TOSMonsterRace) => {
     return 'assets/images/monster_race_' + value.toString().toLowerCase() + '.png';
-  }
-}
+  };
 
 export enum TOSMonsterRank {
   BOSS = 'Boss',
@@ -301,22 +410,22 @@ export enum TOSMonsterRank {
   NORMAL = 'Normal',
   SPECIAL = 'Special',
 }
-export namespace TOSMonsterRankService {
-
-  export function comparator(a: TOSMonsterRank, b: TOSMonsterRank): -1 | 0 | 1 {
-    let i = TOSMonsterRankService.getOrder(a);
-    let j = TOSMonsterRankService.getOrder(b);
+export const
+  TOSMonsterRankService = EnumServiceFactory(TOSMonsterRank) as EnumService<TOSMonsterRank> & {
+    comparator(a: TOSMonsterRank, b: TOSMonsterRank): -1 | 0 | 1;
+    order(value: TOSMonsterRank): number;
+  };
+  TOSMonsterRankService.comparator = (a: TOSMonsterRank, b: TOSMonsterRank) => {
+    let i = TOSMonsterRankService.order(a);
+    let j = TOSMonsterRankService.order(b);
 
     return (i < j) ? -1 : (i > j) ? 1 : 0;
-  }
-
-  export function getOrder(value: TOSMonsterRank) {
+  };
+  TOSMonsterRankService.order = (value: TOSMonsterRank) => {
     if (value == TOSMonsterRank.NORMAL) return 0;
     if (value == TOSMonsterRank.ELITE)  return 1;
     if (value == TOSMonsterRank.BOSS)   return 2;
-  }
-
-}
+  };
 
 export enum TOSMonsterSize {
   S = 'S',
@@ -324,29 +433,30 @@ export enum TOSMonsterSize {
   L = 'L',
   XL = 'XL'
 }
-export namespace TOSMonsterSizeService {
-
-  export function comparator(a: TOSMonsterSize, b: TOSMonsterSize): -1 | 0 | 1 {
-    let i = TOSMonsterSizeService.getOrder(a);
-    let j = TOSMonsterSizeService.getOrder(b);
+export const
+  TOSMonsterSizeService = EnumServiceFactory(TOSMonsterSize) as EnumService<TOSMonsterSize> & {
+    comparator(a: TOSMonsterSize, b: TOSMonsterSize): -1 | 0 | 1;
+    order(value: TOSMonsterSize): number;
+  };
+  TOSMonsterSizeService.comparator = (a: TOSMonsterSize, b: TOSMonsterSize) => {
+    let i = TOSMonsterSizeService.order(a);
+    let j = TOSMonsterSizeService.order(b);
 
     return (i < j) ? -1 : (i > j) ? 1 : 0;
-  }
-
-  export function getOrder(value: TOSMonsterSize) {
+  };
+  TOSMonsterSizeService.order = (value: TOSMonsterSize) => {
     if (value == TOSMonsterSize.S)  return 0;
     if (value == TOSMonsterSize.M)  return 1;
     if (value == TOSMonsterSize.L)  return 2;
     if (value == TOSMonsterSize.XL) return 3;
-  }
-
-}
+  };
 
 export enum TOSSkillRequiredStanceCompanion {
   BOTH = 'Yes',
   NO = 'No',
   YES = 'Exclusive'
 }
+export const TOSSkillRequiredStanceCompanionService = EnumServiceFactory(TOSSkillRequiredStanceCompanion);
 
 export enum TOSStat {
   CON = 'CON',
@@ -421,48 +531,52 @@ export enum TOSStat {
   STAMINA_RECOVERY = 'Stamina Recovery',
   UNKNOWN = ''
 }
-export namespace TOSStat {
-  export function comparator(a: TOSStat, b: TOSStat): -1 | 0 | 1 {
+export const
+  TOSStatService = EnumServiceFactory(TOSStat) as EnumService<TOSStat> & {
+    comparator(a: TOSStat, b: TOSStat): -1 | 0 | 1;
+    icon(stat: TOSStat): string;
+  };
+  TOSStatService.comparator = (a: TOSStat, b: TOSStat) => {
     let i = Object.values(TOSStat).indexOf(a);
     let j = Object.values(TOSStat).indexOf(b);
 
     return (i < j) ? -1 : (i > j) ? 1 : 0;
-  }
-  export function icon(stat: TOSStat) {
+  };
+  TOSStatService.icon = (stat: TOSStat) => {
     return TOSUrlService.Asset(null, 'assets/images/simulator_stat_' + stat.toLowerCase() + '.png');
-  }
-}
+  };
 
 /*====================================================================================================================+
  | Interfaces
  *====================================================================================================================*/
 export interface ITOSBuild {
-  Jobs: Observable<ITOSJob[]>;
+  Job$: Observable<ITOSJob>;
+  Jobs: ITOSJob[];
   JobTree: TOSJobTree;
   Rank: number;
+  Skill$: Observable<ITOSSkill>;
   Stats: ITOSBuildStats;
   StatsBase: ITOSBuildStats;
   StatsBonus: ITOSBuildStats;
-  StatsPoints: Observable<number>;
+  StatsPoints$: Observable<number>;
   Version: number;
 
-  jobAdd(job: ITOSJob): void;
-  jobCircle(job: ITOSJob): number;
+  jobAdd$(job: ITOSJob): Promise<void>;
+  jobCircle(job: ITOSJob): number; // TODO: Remove after Re:Build releases globally
   jobCircleMax(job: ITOSJob): number;
-  jobRanks(job: ITOSJob): number[];
-  jobRemove(rank: number): void;
-  jobSkillLevels(job: ITOSJob): Observable<{ [key: number]: number }>;
-  jobUnlockAvailable(job: ITOSJob): boolean;
+  jobRanks(job: ITOSJob): number[]; // TODO: Remove after Re:Build releases globally
+  jobRemove$(rank: number): Promise<void>;
+  jobUnlockAvailable$(job: ITOSJob): Observable<boolean>;
 
-  skillEffect(skill: ITOSSkill, showFactors: boolean): string;
-  skillEffectFormula(skill: ITOSSkill, prop: string): string;
+  skillEffect$(skill: ITOSSkill, showFactors: boolean): Observable<string>;
+  skillEffectFormula$(skill: ITOSSkill, prop: string): Observable<string>;
   skillLevel(skill: ITOSSkill): number;
-  skillLevelMax(skill: ITOSSkill): number;
-  skillLevelIncrement(skill: ITOSSkill, delta: number, rollOver?: boolean): void;
-  skillLevelIncrementAvailable(skill: ITOSSkill, delta: number): boolean;
-  skillPoints(job: ITOSJob): Observable<number>;
+  skillLevelIncrement$(skill: ITOSSkill, delta: number, rollOver?: boolean): Promise<void>;
+  skillLevelIncrementAvailable$(skill: ITOSSkill, delta: number): Observable<boolean>;
+  skillLevelMax$(skill: ITOSSkill): Observable<number>;
+  skillPoints(job: ITOSJob): number;
   skillPointsMax(job: ITOSJob) : number;
-  skillSP(skill: ITOSSkill): number;
+  skillSP$(skill: ITOSSkill): Observable<number>;
 
   statsIncrementLevel(stat: string, delta: number): void;
   statsIncrementLevelAvailable(stat: string, delta: number): boolean;
@@ -491,6 +605,7 @@ export interface ITOSEntity {
   Name: string;
   Url: string;
 }
+
 export interface ITOSItem extends ITOSEntity {
   Price: number;
   TimeCoolDown: number;
@@ -498,10 +613,18 @@ export interface ITOSItem extends ITOSEntity {
   Tradability: string;
   Type: string;
   Weight: number;
-  Link_Collections: ITOSCollection[];
-  Link_Cubes: ITOSCube[];
+  Link_Collections: Observable<ITOSCollection[]>;
+  Link_Cubes: Observable<ITOSCube[]>;
+  Link_MonsterDrops: Observable<ITOSItemDrop[]>;
+  Link_RecipeMaterial: Observable<ITOSRecipe>;
+  Link_RecipeTarget: Observable<ITOSRecipe>;
 
   isTradable(tradable: TOSItemTradability): boolean;
+}
+export interface ITOSItemDrop {
+  Chance: number;
+  Monster: ITOSMonster;
+  Url: string;
 }
 
 export interface ITOSAttribute extends ITOSEntity {
@@ -511,13 +634,14 @@ export interface ITOSAttribute extends ITOSEntity {
   Unlock: string[];
   UnlockArgs: { [key: number]: ITOSAttributeUnlockArg };
 
-  Link_Jobs: ITOSJob[];
-  Link_Skill: ITOSSkill;
+  Link_Jobs: Observable<ITOSJob[]>;
+  Link_Skill: Observable<ITOSSkill>;
 
   Price(level: number): number;
   PriceTotal(level: number): number;
 
-  unlockAvailable(build: ITOSBuild): boolean;
+  unlockAvailable(build: ITOSBuild): Observable<boolean>;
+  unlockAvailableCheck(args: string[]): boolean;
 }
 export interface ITOSAttributeUnlockArg {
   UnlockArgStr: string;
@@ -540,7 +664,7 @@ export interface ITOSCard extends ITOSItem {
 
 export interface ITOSCollection extends ITOSItem {
   Bonus: ITOSCollectionBonus[];
-  Link_Items: ITOSItem[];
+  Link_Items: Observable<ITOSItem[]>;
 }
 export interface ITOSCollectionBonus {
   Stat: string;
@@ -548,7 +672,7 @@ export interface ITOSCollectionBonus {
 }
 
 export interface ITOSCube extends ITOSItem {
-  Link_Items: ITOSItem[];
+  Link_Items: Observable<ITOSItem[]>;
 }
 
 export interface ITOSEquipment extends ITOSItem {
@@ -574,7 +698,7 @@ export interface ITOSEquipment extends ITOSItem {
 
   IsAnvilAvailable: boolean;
   IsTranscendAvailable: boolean;
-  Link_Set: ITOSEquipmentSet;
+  Link_Set: Observable<ITOSEquipmentSet>;
 
   AnvilATK(level: number): number;
   AnvilDEF(level: number): number;
@@ -597,12 +721,15 @@ export interface ITOSEquipmentBonus {
 
 export interface ITOSEquipmentSet extends ITOSEntity {
   Bonus: { [key:number]: ITOSEquipmentBonus[] }
-  Link_Items: ITOSItem[];
+  Icon$: Observable<string>;
+  Url$: Observable<string>;
+
+  Link_Items: Observable<ITOSItem[]>;
 }
 
 export interface ITOSGem extends ITOSItem {
   TypeGem: TOSGemType;
-  Link_Skill: ITOSSkill;
+  Link_Skill: Observable<ITOSSkill>;
 
   Bonus(level: number): { [key:string]: ITOSGemBonus[]};
 }
@@ -618,6 +745,7 @@ export interface ITOSJob extends ITOSEntity {
   IconAnimations: string[];
   IsHidden: boolean;
   IsSecret: boolean;
+  IsStarter: boolean;
   JobDifficulty: TOSJobDifficulty;
   JobTree: TOSJobTree;
   JobType: TOSJobType[];
@@ -633,8 +761,9 @@ export interface ITOSJob extends ITOSEntity {
   StatBase_SPR: number;
   StatBase_STR: number;
 
-  Link_Attributes: ITOSAttribute[];
-  Link_Skills: ITOSSkill[];
+  Link_Attributes: Observable<ITOSAttribute[]>;
+  Link_Skills: Observable<ITOSSkill[]>;
+  Link_Skills$ID: number[];
 }
 
 export interface ITOSMap extends ITOSEntity {
@@ -671,28 +800,31 @@ export interface ITOSMonster extends ITOSEntity {
   Stat_BlockPenetration: number;
   Stat_BlockRate: number;
 
-  Link_Drops: ITOSMonsterDropLink[];
-  Link_Spawns: ITOSMonsterSpawnLink[];
+  Link_Drops: Observable<ITOSMonsterDrop[]>;
+  Link_Spawns: Observable<ITOSMonsterSpawn[]>;
 }
-export interface ITOSMonsterDropLink {
+export interface ITOSMonsterDrop {
   Chance: number;
   Item: ITOSItem;
   Quantity_MAX: number;
   Quantity_MIN: number;
+  Url: string;
 }
-export interface ITOSMonsterSpawnLink {
+export interface ITOSMonsterSpawn {
   Map: ITOSMap;
   Population: number;
   TimeRespawn: number;
+  Url: string;
 }
 
 export interface ITOSRecipe extends ITOSItem {
-  Link_Materials: ITOSRecipeMaterial[];
-  Link_Target: ITOSItem;
+  Link_Materials: Observable<ITOSRecipeMaterial[]>;
+  Link_Target: Observable<ITOSItem>;
 }
 export interface ITOSRecipeMaterial {
   Item: ITOSItem;
   Quantity: number;
+  Url: string;
 }
 
 export interface ITOSSkill extends ITOSEntity {
@@ -709,14 +841,15 @@ export interface ITOSSkill extends ITOSEntity {
   RequiredSubWeapon: boolean;
   TypeAttack: TOSAttackType;
 
-  Link_Attributes: ITOSAttribute[];
-  Link_Gem: ITOSGem;
-  Link_Job: ITOSJob;
+  Link_Attributes: Observable<ITOSAttribute[]>;
+  Link_Gem: Observable<ITOSGem>;
+  Link_Job: Observable<ITOSJob>;
+  Link_Job$ID: number;
 
-  EffectDescription(build: ITOSBuild, showFactors: boolean): string;
-  EffectFormula(prop: string, build: ITOSBuild): string;
+  EffectDescription(build: ITOSBuild, showFactors: boolean): Observable<string>;
+  EffectFormula(prop: string, build: ITOSBuild): Observable<string>;
   LevelMax(circle?: number): number;
-  SPCost(build: ITOSBuild) : number;
+  SPCost(build: ITOSBuild): Observable<number>;
 }
 export interface ITOSSkillRequiredStance {
   Icon: string;

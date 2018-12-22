@@ -1,5 +1,5 @@
 <div class="row">
-  <div *ngFor="let filter of config"
+  <div *ngFor="let filter of config; index as i"
        class="col mb-2 text-left"
        style="flex-grow: 0">
 
@@ -11,21 +11,21 @@
             [ngClass]="{ 'disabled': disabled }"
             (click)="onOpen(filter)"
             (clickOutside)="isOpen[filter.column] = false">
-      {{ value[filter.column]?.value || 'All' }}
+      {{ value[filter.column] ? filter.toString(value[filter.column].value) : 'All' }}
     </button>
 
     <div class="dropdown-menu" [ngClass]="{ 'show': isOpen[filter.column] }">
-      <div *ngFor="let optionGroup of filter.groups; index as i">
+      <div *ngFor="let optionGroup of optionGroups[i]; index as j">
 
         <div class="dropdown-header" *ngIf="optionGroup.header">{{ optionGroup.header }}</div>
 
         <a class="dropdown-item" *ngFor="let option of optionGroup.options" [href]="'#' + option?.toString() || 'All'"
-           [ngClass]="{ 'active': option?.toString() == value[filter.column]?.value }"
+           [ngClass]="{ 'active': option && filter.indexOf(option) == value[filter.column]?.value }"
            (click)="onSelect($event, filter, option)">
-          {{ option?.toString() || 'All' }}
+          {{ option || 'All' }}
         </a>
 
-        <div class="dropdown-divider" *ngIf="i < filter.groups.length - 1"></div>
+        <div class="dropdown-divider" *ngIf="j < optionGroups[i].length - 1"></div>
       </div>
 
     </div>

@@ -1,6 +1,7 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSGem, ITOSGemBonus, TOSDataSet, TOSGemSlot, TOSGemType, TOSStat} from "../../tos-domain";
+import {ITOSGem, ITOSGemBonus, ITOSSkill, TOSDataSet, TOSGemSlot, TOSGemType, TOSStat} from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
+import {Observable} from "rxjs";
 
 export class TOSGem extends TOSItem implements ITOSGem {
 
@@ -14,7 +15,7 @@ export class TOSGem extends TOSItem implements ITOSGem {
   get BonusTopAndBottom() { return this.$lazyPropertyJSONArray('BonusTopAndBottom', value => new TOSGemBonus(value)) }
   get BonusWeapon() { return this.$lazyPropertyJSONArray('BonusWeapon', value => new TOSGemBonus(value)) }
 
-  get Link_Skill() { return this.$lazyPropertyLink('Link_Skill', value => TOSDomainService.skillsById[value] )}
+  get Link_Skill() { return this.$lazyPropertyLink('Link_Skill', value => TOSDomainService.skillsById(value)) as Observable<ITOSSkill> }
 
   get TypeGem() { return this.$lazyPropertyEnum('TypeGem', TOSGemType) }
 

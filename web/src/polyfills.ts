@@ -56,9 +56,9 @@
  * user can disable parts of macroTask/DomEvents patch by setting following flags
  */
 
- // (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
- // (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
- // (window as any).__zone_symbol__BLACK_LISTED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
+ (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
+ (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
+ (window as any).__zone_symbol__BLACK_LISTED_EVENTS = ['scroll', 'mouseenter', 'mouseleave', 'mousemove', 'mouseover', 'mouseout', 'mousewheel', 'pointermove', 'keypress', 'keyup'];
 
  /*
  * in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js
@@ -69,10 +69,7 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'zone.js/dist/zone';  // Included with Angular CLI.
-
-
-
+import 'zone.js/dist/zone'; // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
@@ -81,3 +78,6 @@ import 'core-js/es6/object';
 import 'core-js/es6/promise';
 import 'core-js/es7/array';
 import 'core-js/es7/object';
+
+// https://github.com/angular/angular/issues/23428 -sigh-
+//(window as any)['Zone'] = { current: { get: function() {} } };

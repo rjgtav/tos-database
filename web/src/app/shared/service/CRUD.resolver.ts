@@ -1,7 +1,5 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
-import {Observable, of} from "rxjs";
-import {Sort, SortOrder} from "../directives/sort.directive";
-import {Filter} from "../directives/filter.directive";
+import {Observable} from "rxjs";
 import {TOSEntity} from "../domain/tos/tos-entity.model";
 import {TOSDataSet} from "../domain/tos/tos-domain";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
@@ -18,44 +16,30 @@ export abstract class CRUDResolver<T extends TOSEntity> implements Resolve<T> {
   protected constructor(private dataset: TOSDataSet) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | T {
-
-    let page = +route.queryParams[CRUDResolver.PARAM_PAGE] || 1;
-    let sort = Sort.valueOf(route.queryParams[CRUDResolver.PARAM_SORT]) || undefined;
-    let filter = (route.queryParams[CRUDResolver.PARAM_FILTER] || '').split(';')
-      .map(filter => Filter.valueOf(filter))
-      .filter((filter) => filter) || undefined;
-
-    let mapToPage = (data: T[]): CRUDPage<T> => { return {
-      size: data.length,
-      items: data.slice((page - 1) * CRUDResolver.PAGE_SIZE, page * CRUDResolver.PAGE_SIZE)
-    }};
+    let dataset = TOSDataSet.toProperty(this.dataset);
 
     if (route.params[CRUDResolver.PARAM_ID])
-      return this.findById(route.params[CRUDResolver.PARAM_ID]);
+      return TOSDomainService[dataset + 'ById'](+route.params[CRUDResolver.PARAM_ID]);
 
-    return of(mapToPage(this.findAll(filter, sort)));
-  }
+    let page: CRUDPage = {
+      filter: route.queryParams[CRUDResolver.PARAM_FILTER],
+      pageNumber: +route.queryParams[CRUDResolver.PARAM_PAGE] || 1,
+      pageSize: CRUDResolver.PAGE_SIZE,
+      sort: route.queryParams[CRUDResolver.PARAM_SORT],
+    };
 
-  private findAll(filter?: Filter[], sort?: Sort): T[] {
-    let data = TOSDomainService[TOSDataSet.toProperty(this.dataset)];
-    let sorter = data && sort ? data[0].$comparators[sort.column] : null;
-    sorter = sorter ? sorter : (i, j) => (i < j) ? -1 : (i > j) ? 1 : 0;
-
-    if (filter)
-      data = data.filter((item) => !filter || !filter.find(f => !f.filter(item)));
-    if (sort)
-      data = data.sort((a, b) => sorter(a[sort.column], b[sort.column]) * (sort.order == SortOrder.ASC ? 1 : -1));
-
-    return data;
-  }
-
-  private findById($ID: number): T {
-    return TOSDomainService[TOSDataSet.toProperty(this.dataset) + 'ById'][$ID];
+    return TOSDomainService[dataset](page);
   }
 
 }
 
-export interface CRUDPage<T> {
+export interface CRUDPageResult<T> {
   size: number,
-  items: T[],
+  result: T[],
+}
+export interface CRUDPage {
+  filter: string;
+  pageNumber: number;
+  pageSize: number;
+  sort: string;
 }

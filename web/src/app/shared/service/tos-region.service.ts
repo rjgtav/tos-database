@@ -1,10 +1,14 @@
 import {
   ActivatedRoute,
   ActivatedRouteSnapshot,
-  CanActivate, CanDeactivate,
-  Route, Router, RouterStateSnapshot,
+  CanActivate,
+  CanDeactivate,
+  Route,
+  Router,
+  RouterStateSnapshot,
   UrlMatchResult,
-  UrlSegment, UrlSegmentGroup
+  UrlSegment,
+  UrlSegmentGroup
 } from "@angular/router";
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
@@ -35,7 +39,13 @@ export class TOSRegionService implements CanActivate, CanDeactivate<any> {
       : null;
   }
 
-  constructor(private loadingBar: LoadingBarService, private route: ActivatedRoute, private router: Router, private search: TOSSearchService) {}
+  constructor(
+    private loadingBar: LoadingBarService,
+    private repositoryService: TOSRepositoryService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private search: TOSSearchService,
+  ) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     let segments = state.url.split('/').filter(value => value.length);
@@ -50,23 +60,22 @@ export class TOSRegionService implements CanActivate, CanDeactivate<any> {
     this.search.load(force, regionNew);
 
     //console.log('canActivate', regionOld, '=>', regionNew)
-    return TOSRepositoryService
+    return this.repositoryService
       .load(force, this.loadingBar, regionNew)
       .pipe(map(value => true));
   }
 
   canDeactivate(component: any, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    return TOSRepositoryService.IsLoaded;
+    return this.repositoryService.IsLoaded$;
   }
 
   regionRelect(region: TOSRegion) {
+    // Update url
     let regionOld = '/' + TOSRegion.toUrl(TOSRegionService.region);
     let regionNew = '/' + TOSRegion.toUrl(region);
 
     let url = this.router.routerState.snapshot.url.replace(regionOld, regionNew);
-
-    if (url.indexOf('?') > 0)
-        url = url.slice(0, url.indexOf('?'));
+        url = url.indexOf('?') > 0 ? url.slice(0, url.indexOf('?')) : url;
 
     //console.log('regionSelect', regionOld, regionNew, url)
     this.router.navigate([url], { queryParamsHandling: 'merge' });

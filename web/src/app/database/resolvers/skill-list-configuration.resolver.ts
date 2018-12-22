@@ -1,90 +1,65 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
-import {TOSElement, TOSSkillRequiredStanceCompanion} from "../../shared/domain/tos/tos-domain";
+import {TOSListConfiguration} from "../entity-list/entity-list.component";
+import {TOSElementService, TOSSkillRequiredStanceCompanionService} from "../../shared/domain/tos/tos-domain";
+import {TableCellIconPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-icon.pipe";
+import {TableCellTextPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-text.pipe";
+import {TableCellNumberPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-number.pipe";
+import {TableCellLinkPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-link.pipe";
 
 @Injectable()
 export class SkillListConfigurationResolver implements Resolve<TOSListConfiguration> {
+
+  static readonly COLUMNS = [
+    { label: '',              pipe: new TableCellIconPipeDefinition('Icon'), class: 'p-1 text-center' },
+    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
+    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
+    { label: 'Circle',        pipe: new TableCellNumberPipeDefinition('RequiredCircle') },
+    { label: 'Class',         pipe: new TableCellLinkPipeDefinition('Link_Job'), class: 'p-1'}
+  ];
+
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<TOSListConfiguration> | Promise<TOSListConfiguration> | TOSListConfiguration {
     return {
       filter: [
         {
           column: 'RequiredStanceCompanion',
           label: 'Companion',
-          groups: [
-            {
-              options: [
-                TOSSkillRequiredStanceCompanion.YES,
-                TOSSkillRequiredStanceCompanion.NO,
-                TOSSkillRequiredStanceCompanion.BOTH,
-              ]
-            }
-          ]
+          groupBy: TOSSkillRequiredStanceCompanionService.groupBy,
+          indexOf: TOSSkillRequiredStanceCompanionService.indexOf,
+          toString: TOSSkillRequiredStanceCompanionService.toString,
         },
         {
           column: 'Element',
-          groups: [
-            {
-              options: [
-                TOSElement.DARK,
-                TOSElement.EARTH,
-                TOSElement.FIRE,
-                TOSElement.HOLY,
-                TOSElement.ICE,
-                TOSElement.LIGHTNING,
-                TOSElement.MELEE,
-                TOSElement.POISON,
-                TOSElement.PSYCHOKINESIS,
-              ]
-            }
-          ]
+          groupBy: TOSElementService.groupBy,
+          indexOf: TOSElementService.indexOf,
+          toString: TOSElementService.toString,
         },
         {
           column: 'IsEnchanter',
           label: 'Enchanter',
-          groups: [
-            {
-              options: [
-                true,
-              ]
-            }
-          ]
+          groupBy: () => [{ options: ['Yes'] }],
+          indexOf: value => value == 'Yes' ? -1 : -2,
+          toString: value => value ? 'Yes' : null,
         },
         {
           column: 'IsPardoner',
           label: 'Pardoner',
-          groups: [
-            {
-              options: [
-                true,
-              ]
-            }
-          ]
+          groupBy: () => [{ options: ['Yes'] }],
+          indexOf: value => value == 'Yes' ? -1 : -2,
+          toString: value => value ? 'Yes' : null,
         },
         {
           column: 'IsShinobi',
           label: 'Shinobi',
-          groups: [
-            {
-              options: [
-                true,
-              ]
-            }
-          ]
+          groupBy: () => [{ options: ['Yes'] }],
+          indexOf: value => value == 'Yes' ? -1 : -2,
+          toString: value => value ? 'Yes' : null,
         },
       ],
 
       sortColumn: '$ID',
-
-      tableColumns: [
-        { value: 'Icon',            type: TOSListTableColumnType.ICON,      label: '' },
-        { value: '$ID',             type: TOSListTableColumnType.TEXT,      isNotMobile: true },
-        { value: 'Name',            type: TOSListTableColumnType.TEXT,      isWide: true},
-        { value: 'RequiredCircle',  type: TOSListTableColumnType.TEXT,      label: 'Circle'},
-        { value: 'Link_Job',        type: TOSListTableColumnType.ICON_LINK, label: 'Class',
-          transformValue: (o) => o ? [o] : null },
-      ]
+      tableColumns: SkillListConfigurationResolver.COLUMNS,
     };
   }
 }

@@ -1,5 +1,6 @@
 import {TOSUrlService} from "../../service/tos-url.service";
 import {ITOSEntity, TOSDataSet} from "./tos-domain";
+import {forkJoin, isObservable, Observable, ReplaySubject} from "rxjs";
 
 const COMPARATOR_ID = (a: number, b: number) => {
   let i = +a;
@@ -43,6 +44,8 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
         : null;
   }
 
+  static trackBy(index: number, entity: TOSEntity) { return entity.$ID; }
+
   protected $lazyPropertyBoolean(prop: string): boolean {
     return this.$json[prop] = typeof this.$json[prop] == 'boolean'
       ? this.$json[prop]
@@ -54,14 +57,6 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
       ? this.$json[prop]
       : this.$json[prop] != undefined
         ? Object.values(enumeration)[+this.$json[prop]]
-        : null;
-  }
-
-  protected $lazyPropertyLink<T>(prop: string, mapper: (value: any) => T = (value) => value): T {
-    return this.$json[prop] = typeof this.$json[prop] == 'object'
-      ? this.$json[prop]
-      : this.$json[prop]
-        ? mapper(this.$json[prop])
         : null;
   }
 
@@ -85,6 +80,39 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
     this.$json[prop] && Object
       .keys(this.$json[prop])
       .forEach((key) => this.$json[prop][key] = mapper && mapper(this.$json[prop][key]) || this.$json[prop][key]);
+
+    return this.$json[prop];
+  }
+
+  protected $lazyPropertyLink<T>(prop: string, mapper: (value: any) => Observable<T>): Observable<T> | Observable<T[]> {
+    if (isObservable(this.$json[prop]))
+      return this.$json[prop] as Observable<T>;
+
+    if (this.$json[prop]) {
+      let subject = new ReplaySubject<T>(1);
+      let observable = typeof this.$json[prop] == 'string' && JSON.parse(this.$json[prop]) || this.$json[prop];
+          observable = this.$json[prop + '$original'] = observable;
+          observable = Array.isArray(observable) && observable.map(mapper) || mapper(observable);
+          observable = Array.isArray(observable) && forkJoin(observable) || observable;
+          observable.subscribe(value => {
+            subject.next(value);
+            subject.complete();
+          });
+
+      return this.$json[prop] = subject.asObservable();
+    }
+
+    return null;
+  }
+
+  protected $lazyPropertyLinkOriginal(propOriginal: string) : number | number[] {
+    let prop = propOriginal + '$original';
+
+    if (this.$json[prop] && typeof this.$json[prop] != 'string')
+      return this.$json[prop];
+
+    this.$json[prop] = this.$json[prop] || this.$json[propOriginal];
+    this.$json[prop] = typeof this.$json[prop] == 'string' && JSON.parse(this.$json[prop]) || this.$json[prop + '$original'];
 
     return this.$json[prop];
   }

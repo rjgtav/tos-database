@@ -14,15 +14,12 @@
       -->
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle tos-link"
-           [attachOutsideOnClick]="true"
-           (click)="isOpenDatabase = !isOpenDatabase; $event.preventDefault()"
-           (clickOutside)="isOpenDatabase = false"
-           routerLinkActive="active">Database
-          <div class="dropdown-menu" [ngClass]="{ 'show': isOpenDatabase }">
+        <a class="nav-link dropdown-toggle tos-link" routerLinkActive="active">
+          Database
+          <div class="dropdown-menu">
             <div *ngFor="let group of TOSDataSet.VALUES; index as i">
               <div class="dropdown-header">{{ group.label }}</div>
-              <a class="dropdown-item" *ngFor="let option of group.options"
+              <a *ngFor="let option of group.options" class="dropdown-item" routerLinkActive="active"
                  [routerLink]="routerLink('database/' + TOSDataSet.toUrl(option))">{{ TOSDataSet.toLabel(option) }}</a>
               <div class="dropdown-divider" *ngIf="i < TOSDataSet.VALUES.length - 1"></div>
             </div>
@@ -56,11 +53,9 @@
     <ul class="navbar-nav align-items-center">
       <!-- Region selector -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle tos-link" style="text-transform: initial;"
-           [attachOutsideOnClick]="true"
-           (click)="isOpenRegion = !isOpenRegion; $event.preventDefault()"
-           (clickOutside)="isOpenRegion = false">{{ RegionService.Region }}
-          <div class="dropdown-menu" [ngClass]="{ 'show': isOpenRegion }">
+        <a class="nav-link dropdown-toggle tos-link" style="text-transform: initial;">
+          {{ RegionService.Region }}
+          <div class="dropdown-menu">
             <a *ngFor="let region of RegionService.Regions" class="dropdown-item" style="text-transform: initial;"
                [href]="'#' + region"
                [ngClass]="{ 'active': RegionService.Region == region }"

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {ApplicationRef, Injectable} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
 import {TOSDataSet} from "../domain/tos/tos-domain";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
@@ -10,8 +10,8 @@ import {Meta, Title} from "@angular/platform-browser";
 })
 export class SEOService {
 
-  constructor(private meta: Meta, private router: Router, private title: Title) {
-    this.router.events.subscribe(event => {
+  constructor(private application: ApplicationRef, private meta: Meta, private router: Router, private title: Title) {
+    this.router.events.subscribe(async event => {
       if (event instanceof NavigationEnd) {
         let url = event.urlAfterRedirects;
             url = url.indexOf('?') > 0 ? url.slice(0, url.indexOf('?')) : url;
@@ -31,7 +31,7 @@ export class SEOService {
           let id = parts.length > 1 ? +parts[1] : null;
 
           if (id) {
-            let entity = TOSDomainService[TOSDataSet.toProperty(dataset) + 'ById'][id] as TOSEntity;
+            let entity = await TOSDomainService[TOSDataSet.toProperty(dataset) + 'ById'](id).toPromise() as TOSEntity;
 
             urlTitle = entity.Name + ' - ' + TOSDataSet.toLabel(dataset) + ' - Tree of Savior';
             urlDescription = entity.Description;
@@ -42,8 +42,9 @@ export class SEOService {
 
         }
 
-        this.title.setTitle(urlTitle);
+        this.application.tick(); // Note: with NgZone disabled, we need to manually tick() on every route navigation
         this.meta.updateTag({ name: 'description', content: urlDescription });
+        this.title.setTitle(urlTitle);
       }
     });
   }

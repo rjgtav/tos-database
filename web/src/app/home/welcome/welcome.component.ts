@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {TOSUrlService} from "../../shared/service/tos-url.service";
 import {TOSRegionService} from "../../shared/service/tos-region.service";
 import {TOSDataSet} from "../../shared/domain/tos/tos-domain";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']

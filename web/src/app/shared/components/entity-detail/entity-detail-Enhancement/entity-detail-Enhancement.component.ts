@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
+import {ChangeDetectorRef, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 
 @Component({
@@ -32,7 +32,7 @@ export class EntityDetailEnhancementComponent extends EntityDetailChildComponent
   transcendShards: number = 0;
   transcendShardsTotal: number = 0;
 
-  constructor() { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
   ngOnChanges(changes: SimpleChanges) {
     super.ngOnChanges(changes);

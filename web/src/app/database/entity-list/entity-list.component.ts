@@ -1,21 +1,20 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Subscription} from "rxjs/internal/Subscription";
 import {TOSEntity} from "../../shared/domain/tos/tos-entity.model";
-import {CRUDPage, CRUDResolver} from "../../shared/service/CRUD.resolver";
+import {CRUDPageResult, CRUDResolver} from "../../shared/service/CRUD.resolver";
 import {Filter} from "../../shared/directives/filter.directive";
 import {Sort} from "../../shared/directives/sort.directive";
 import {EntityListFilter} from "../entity-filter/entity-list-filter.component";
-import {ITOSEntity} from "../../shared/domain/tos/tos-domain";
+import {EntityTableColumn} from "../../shared/components/entity-table/entity-table.component";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-entity-list',
   templateUrl: './entity-list.component.html',
   styleUrls: ['./entity-list.component.scss']
 })
 export class EntityListComponent implements OnDestroy, OnInit {
-  readonly TOSListTableColumnType = TOSListTableColumnType;
-
   config: TOSListConfiguration;
 
   data: TOSEntity[];
@@ -31,7 +30,11 @@ export class EntityListComponent implements OnDestroy, OnInit {
   toggleFilter: boolean = false;
   tooltip: TOSEntity;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private changeDetector: ChangeDetectorRef,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   private reload() {
     let params = {};
@@ -52,8 +55,8 @@ export class EntityListComponent implements OnDestroy, OnInit {
     this.subscription = this.route.queryParamMap.subscribe((params: ParamMap) => {
       this.config = this.route.snapshot.data.configuration as TOSListConfiguration;
 
-      let response = this.route.snapshot.data.response as CRUDPage<TOSEntity>;
-      this.data = response.items;
+      let response = this.route.snapshot.data.response as CRUDPageResult<TOSEntity>;
+      this.data = response.result;
       this.dataSize = response.size;
 
       this.page = +params.get(CRUDResolver.PARAM_PAGE) || 1;
@@ -61,6 +64,8 @@ export class EntityListComponent implements OnDestroy, OnInit {
       this.pageFilter = (params.get(CRUDResolver.PARAM_FILTER) || '').split(';')
         .map(filter => Filter.valueOf(filter))
         .filter((filter) => filter);
+
+      this.changeDetector.markForCheck();
     });
   }
 
@@ -91,30 +96,5 @@ export interface TOSListConfiguration {
   filter?: EntityListFilter[]
 
   sortColumn: string
-  tableColumns: TOSListTableColumn[]
-}
-
-interface TOSListTableColumn {
-  value: string
-  type: TOSListTableColumnType
-  label?: string
-
-  isNotMobile?: boolean
-  isNotTablet?: boolean
-  isWide?: boolean
-
-  transformColor?: (value: any) => string
-  transformIcon?: (value: any) => string
-  transformLink?: (value: any) => ITOSEntity
-  transformValue?: (value: any) => any
-}
-
-export enum TOSListTableColumnType {
-  BADGE,
-  ICON,
-  ICON_LINK,
-  ICON_LINK_VALUE,
-  TEXT,
-  TEXT_MULTILINE,
-  TEXT_NUMBER,
+  tableColumns: EntityTableColumn[]
 }

@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
   <div *ngFor="let job of jobs; let i = index" class="position-relative" style="width: 4rem"
-       (mouseenter)="jobsHover[i] = true; build.tooltipJobShow(job, true)"
-       (mouseleave)="jobsHover[i] = false; build.tooltipJobShow(job, false)">
+       (mouseenter)="jobsHover[i] = true; build.tooltip(job, true)"
+       (mouseleave)="jobsHover[i] = false; build.tooltip(job, false)">
 
     <!-- Icon -->
     <tos-entity-detail-JobIcon class="w-100" style="height: 4rem;"

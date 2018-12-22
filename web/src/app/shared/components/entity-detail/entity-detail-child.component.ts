@@ -1,4 +1,4 @@
-import {Component, Input, SimpleChanges} from "@angular/core";
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, SimpleChanges} from "@angular/core";
 import {TOSEntity} from "../../domain/tos/tos-entity.model";
 import {TOSItem} from "../../domain/tos/item/tos-item.model";
 import {TOSMonster} from "../../domain/tos/monster/tos-monster.model";
@@ -12,15 +12,12 @@ import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
 import {TOSMap} from "../../domain/tos/map/tos-map.model";
 import {TOSJob} from "../../domain/tos/job/tos-job.model";
 import {TOSAttribute} from "../../domain/tos/attribute/tos-attribute.model";
-import {
-  TOSClassTree,
-  TOSElement,
-  TOSElementService,
-  TOSItemTradability,
-  TOSMonsterRace, TOSMonsterRaceService
-} from "../../domain/tos/tos-domain";
+import {TOSClassTree, TOSElementService, TOSItemTradability, TOSMonsterRaceService} from "../../domain/tos/tos-domain";
 
-@Component({ template: '' })
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: ''
+})
 export class EntityDetailChildComponent {
   readonly Math = Math;
   readonly TOSClassTree = TOSClassTree;
@@ -28,8 +25,7 @@ export class EntityDetailChildComponent {
   readonly TOSItemTradability = TOSItemTradability;
   readonly TOSMonsterRaceService = TOSMonsterRaceService;
 
-  @Input('entity')
-  entity: TOSEntity;
+  @Input() entity: TOSEntity;
 
   attribute: TOSAttribute;
   book: TOSBook;
@@ -45,8 +41,7 @@ export class EntityDetailChildComponent {
   recipe: TOSRecipe;
   skill: TOSSkill;
 
-
-  constructor() { }
+  constructor(protected changeDetector: ChangeDetectorRef) { }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.entity) {

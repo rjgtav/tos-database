@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="description" content="#{seo-description}#">
@@ -20,19 +20,23 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
 
-  <!-- Google AdSense --><!-- TODO: include in the tag manager? -->
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=1;
-    (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-9300861956050704", enable_page_level_ads: true });
-  </script>
-
   <!-- Additional Styles -->
   <link rel="stylesheet" href="assets/themes/flatly.lib.css?version=2018-11-17" id="bootstrap-theme">
 
   <!-- Additional Dependencies -->
-  <link rel="preload" href="assets/js/lunr.worker.lib.js?version=2018-11-22" as="javascript" id="preload-lunr">
-  <script type="text/javascript" src="assets/js/papaparse.min.js?version=2018-11-17&papaworker" id="preload-papaparse"></script>
+  <link rel="preload" href="assets/js/lunr.min.js?version=2018-12-18" as="script">
+  <link rel="preload" href="assets/js/lunr.worker.js?version=2018-12-18" as="script" id="preload-lunr">
+  <link rel="preload" href="assets/js/papaparse.min.js?version=2018-12-18" as="script">
+  <link rel="preload" href="assets/js/papaparse.worker.js?version=2018-12-18" as="script" id="preload-papaparse">
+
+  <!-- Trigger 'Translate' button -->
+  <script type="text/javascript">
+    var lang = 'ko';
+    if (location.href.indexOf('/itos/') > 0)  lang = 'en';
+    if (location.href.indexOf('/jtos/') > 0)  lang = 'ja';
+
+    document.getElementsByTagName('html')[0].setAttribute('lang', lang);
+  </script>
 
 </head>
 <body>

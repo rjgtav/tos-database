@@ -1,9 +1,18 @@
-import {ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges
+} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {Subscription} from "rxjs";
-import {ITOSBuild} from "../../../domain/tos/tos-domain";
+import {ITOSBuild, ITOSSkill} from "../../../domain/tos/tos-domain";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-entity-detail-Information',
   templateUrl: './entity-detail-Information.component.html',
   styleUrls: ['./entity-detail-Information.component.scss']
@@ -14,24 +23,32 @@ export class EntityDetailInformationComponent extends EntityDetailChildComponent
   @Input() divider: boolean;
   @Input() header: boolean;
 
-  subscriptionLevels: Subscription;
+  skillSP: number;
+  subscriptionSkill: Subscription;
 
-  constructor(private changeDetector: ChangeDetectorRef) { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
-  onSkillLevelsChange(value: { [key: number]: number }) {
-    this.changeDetector.detectChanges();
+  async onSkillChange(value: ITOSSkill) {
+    if (value == null || value.$ID == this.skill.$ID) {
+      this.skillSP = await this.skill.SPCost(this.build).toPromise();
+      this.changeDetector.markForCheck();
+    }
   }
 
   ngOnChanges(changes: SimpleChanges) {
     super.ngOnChanges(changes);
-    this.ngOnDestroy();
 
-    if (this.build && this.skill)
-      this.subscriptionLevels = this.build.jobSkillLevels(this.skill.Link_Job).subscribe(value => this.onSkillLevelsChange(value));
+    if (this.build && this.skill) {
+      this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
+      this.subscriptionSkill = this.build.Skill$.subscribe(value => this.onSkillChange(value));
+
+      this.onSkillChange(null);
+    }
   }
 
   ngOnDestroy(): void {
-    this.subscriptionLevels && this.subscriptionLevels.unsubscribe();
+    this.changeDetector.detach();
+    this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
   }
 
 

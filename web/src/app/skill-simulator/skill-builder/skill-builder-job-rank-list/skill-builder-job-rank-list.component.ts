@@ -1,10 +1,19 @@
-import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges
+} from '@angular/core';
 import {RANK_LIMIT, TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {Subscription} from "rxjs";
 import {faTrashAlt} from "@fortawesome/free-solid-svg-icons";
 import {ITOSJob} from "../../../shared/domain/tos/tos-domain";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-skill-builder-job-rank-list',
   templateUrl: './skill-builder-job-rank-list.component.html',
   styleUrls: ['./skill-builder-job-rank-list.component.scss']
@@ -22,15 +31,15 @@ export class SkillBuilderJobRankListComponent implements OnChanges, OnDestroy {
 
   subscriptionJobs: Subscription;
 
-  constructor() { }
+  constructor(private changeDetector: ChangeDetectorRef) { }
 
   onRemoveClick(event: MouseEvent, rank: number) {
     event.preventDefault();
-    this.build.jobRemove(rank);
+    this.build.jobRemove$(rank);
   }
 
-  onJobsChange(value: ITOSJob[]) {
-    this.jobs = value;
+  onJobChange() {
+    this.jobs = this.build.Jobs;
     this.jobsCircle = [];
     this.jobsHover = [];
 
@@ -40,16 +49,19 @@ export class SkillBuilderJobRankListComponent implements OnChanges, OnDestroy {
 
       return accumulator;
     }, {});
+
+    this.changeDetector.markForCheck();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.ngOnDestroy();
-
-    if (this.build)
-      this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
+    if (this.build) {
+      this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
+      this.subscriptionJobs = this.build.Job$.subscribe(value => this.onJobChange());
+    }
   }
 
   ngOnDestroy(): void {
+    this.changeDetector.detach();
     this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
   }
 

@@ -1,15 +1,10 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
-import {TOSCard} from "../../shared/domain/tos/item/card/tos-card.model";
-import {
-  TOSCardType,
-  TOSElement,
-  TOSElementService,
-  TOSMonsterRace,
-  TOSMonsterRaceService
-} from "../../shared/domain/tos/tos-domain";
+import {TOSListConfiguration} from "../entity-list/entity-list.component";
+import {TOSCardTypeService, TOSElementService, TOSMonsterRaceService,} from "../../shared/domain/tos/tos-domain";
+import {TableCellIconPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-icon.pipe";
+import {TableCellTextPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-text.pipe";
 
 @Injectable()
 export class CardListConfigurationResolver implements Resolve<TOSListConfiguration> {
@@ -19,32 +14,21 @@ export class CardListConfigurationResolver implements Resolve<TOSListConfigurati
         {
           column: 'TypeCard',
           label: 'Type',
-          groups: [
-            {
-              options: [
-                TOSCardType.ATTACK,
-                TOSCardType.DEFENSE,
-                TOSCardType.LEGENDARY,
-                TOSCardType.REINFORCE,
-                TOSCardType.STATS,
-                TOSCardType.UTILITY,
-              ]
-            }
-          ]
+          groupBy: TOSCardTypeService.groupBy,
+          indexOf: TOSCardTypeService.indexOf,
+          toString: TOSCardTypeService.toString,
         },
       ],
 
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'Icon',            type: TOSListTableColumnType.ICON,  label: '' },
-        { value: '$ID',             type: TOSListTableColumnType.TEXT,  isNotMobile: true },
-        { value: 'Name',            type: TOSListTableColumnType.TEXT,  isWide: true},
-        { value: 'MonsterElement',  type: TOSListTableColumnType.ICON,  label: 'Element', isNotMobile: true,
-          transformIcon: (o: TOSCard) => TOSElementService.getIcon(o.MonsterElement) },
-        { value: 'MonsterRace',     type: TOSListTableColumnType.ICON,  label: 'Race', isNotMobile: true,
-          transformIcon: (o: TOSCard) => TOSMonsterRaceService.getIcon(o.MonsterRace) },
-        { value: 'TypeCard',        type: TOSListTableColumnType.TEXT,  label: 'Type' },
+        { label: '',              pipe: new TableCellIconPipeDefinition('Icon'), class: 'p-1 text-center' },
+        { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
+        { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
+        { label: 'Element',       pipe: new TableCellIconPipeDefinition('MonsterElement', null, TOSElementService.icon), class: 'p-1 text-center', hideMobile: true },
+        { label: 'Race',          pipe: new TableCellIconPipeDefinition('MonsterRace', null, TOSMonsterRaceService.icon), class: 'p-1 text-center', hideMobile: true },
+        { label: 'Type',          pipe: new TableCellTextPipeDefinition('TypeCard') },
       ]
     };
   }

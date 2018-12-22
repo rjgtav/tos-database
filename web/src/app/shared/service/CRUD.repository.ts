@@ -1,42 +1,96 @@
 import {Observable} from "rxjs/internal/Observable";
-import {Subscriber} from "rxjs";
-import {TOSUrlService} from "./tos-url.service";
+import {Subject} from "rxjs";
 import {TOSDataSet} from "../domain/tos/tos-domain";
 import {TOSEntity} from "../domain/tos/tos-entity.model";
 import {TOSRegion} from "../domain/tos-region";
+import {map} from "rxjs/operators";
+import {TOSUrlService} from "./tos-url.service";
+import {CRUDPage, CRUDPageResult} from "./CRUD.resolver";
 
 
 export abstract class CRUDRepository<T extends TOSEntity> {
 
-  private data: T[];
+  private MESSAGE_ID: number = 0;
 
-  protected constructor(private dataset: TOSDataSet) {}
+  private readonly worker: Worker;
+  private readonly workerHandlers: { [key: number]: Subject<any> } = {};
 
-  public load(force: boolean, region: TOSRegion): Observable<boolean> {
-    let complete = (result, subscriber: Subscriber<boolean>) => {
-      this.data = result.data;
-
-      subscriber.next(true);
-      subscriber.complete();
-    };
-
-    let data = this.data = force ? [] : this.data || [];
-    let path = 'assets/data/' + this.dataset.toString() + '.csv';
-
-    return data.length
-      ? Observable.create(complete)
-      : Observable.create(subscriber => {
-        window['Papa']['SCRIPT_PATH'] = document.getElementById('preload-papaparse').getAttribute('src');
-        window['Papa'].parse(TOSUrlService.Asset(region, path), {
-          download: true,
-          header: true,
-          skipEmptyLines: true,
-          worker: true,
-          complete: (result) => complete(result, subscriber),
-        });
-      });
+  protected constructor(
+    private dataset: TOSDataSet,
+    private factory: (value: T) => T,
+    private groupBy: CRUDGroupBy[],
+  ) {
+    this.worker = new Worker(document.getElementById('preload-papaparse').getAttribute('href'));
+    this.worker.onmessage = this.onMessage.bind(this);
   }
 
-  protected get $data(): T[] { return this.data; }
+  public load(force: boolean, region: TOSRegion): Observable<boolean> {
+    let groupBy = this.groupBy;
+    let url = 'assets/data/' + this.dataset.toString() + '.csv';
+        url = TOSUrlService.Asset(region, url);
 
+    return this.postMessage(WorkerCommand.LOAD, { groupBy, url });
+  }
+
+  public find(page: CRUDPage) : Observable<CRUDPageResult<T>> {
+    return this
+      .postMessage(WorkerCommand.FIND, { page })
+      .pipe(map((value: CRUDPageResult<T>) => {
+        return {
+          result: value.result.map(value => value && this.factory(value)),
+          size: value.size,
+        }
+      }));
+  }
+  public findBy(key: boolean | number | string, group: string): Observable<T | T[]> {
+    return this
+      .postMessage(WorkerCommand.FIND, { key, group })
+      .pipe(map((value: CRUDPageResult<T>) => {
+        return Array.isArray(value.result)
+          ? value.result.map(value => value && this.factory(value))
+          : value.result && this.factory(value.result)
+      }));
+  }
+
+  private onMessage(event: MessageEvent) {
+    let message = event.data as WorkerMessage;
+    let subject = this.workerHandlers[message.id];
+    //console.log('onWorkerMessage', this.dataset, message);
+
+    subject.next(message.payload);
+    subject.complete();
+
+    this.workerHandlers[message.id] = null;
+  }
+
+  private postMessage<T>(cmd: WorkerCommand, payload?: object): Observable<any> {
+    //console.trace('postMessage', this.dataset, cmd);
+    let message = {
+      cmd,
+      id: this.MESSAGE_ID++,
+      payload
+    };
+
+    this.workerHandlers[message.id] = new Subject();
+    this.worker.postMessage(message);
+
+    return this.workerHandlers[message.id].asObservable();
+  }
+
+}
+
+export interface CRUDGroupBy {
+  key: string,
+  forceArray?: boolean,
+  forceBoolean?: boolean,
+}
+
+enum WorkerCommand {
+  FIND = 'find',
+  LOAD = 'load',
+}
+interface WorkerMessage {
+  cmd: WorkerCommand,
+  id: number,
+  payload?: any
 }

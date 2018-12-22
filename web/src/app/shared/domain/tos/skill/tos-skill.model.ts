@@ -1,6 +1,9 @@
 import {TOSEntity} from "../tos-entity.model";
 import {
+  ITOSAttribute,
   ITOSBuild,
+  ITOSGem,
+  ITOSJob,
   ITOSSkill,
   ITOSSkillRequiredStance,
   TOSAttackType,
@@ -10,6 +13,9 @@ import {
 } from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
 import {LUAService} from "../../../service/lua.service";
+import {Observable} from "rxjs";
+import {fromPromise} from "rxjs/internal-compatibility";
+import {map} from "rxjs/operators";
 
 export class TOSSkill extends TOSEntity implements ITOSSkill {
 
@@ -39,9 +45,10 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   get IsShinobi() { return this.$lazyPropertyBoolean('IsShinobi') }
   get LevelPerCircle() { return this.$lazyPropertyNumber('LevelPerCircle') }
 
-  get Link_Attributes() { return this.$lazyPropertyJSONArray('Link_Attributes', value => TOSDomainService.attributesById[value]) }
-  get Link_Gem() { return this.$lazyPropertyLink('Link_Gem', value => TOSDomainService.gemsById[value]) }
-  get Link_Job() { return this.$lazyPropertyLink('Link_Job', value => TOSDomainService.jobsById[value]) }
+  get Link_Attributes() { return this.$lazyPropertyLink('Link_Attributes', value => TOSDomainService.attributesById(value)) as Observable<ITOSAttribute[]> }
+  get Link_Gem() { return this.$lazyPropertyLink('Link_Gem', value => TOSDomainService.gemsById(value)) as Observable<ITOSGem> }
+  get Link_Job() { return this.$lazyPropertyLink('Link_Job', value => TOSDomainService.jobsById(value)) as Observable<ITOSJob> }
+  get Link_Job$ID() { return this.$lazyPropertyLinkOriginal('Link_Job') as number }
 
   get OverHeat() { return this.$lazyPropertyNumber('OverHeat') }
 
@@ -62,38 +69,40 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   get RequiredSubWeapon() { return this.$lazyPropertyBoolean('RequiredSubWeapon') }
   get TypeAttack() { return this.$lazyPropertyEnum('TypeAttack', TOSAttackType) }
 
-  EffectDescription(build: ITOSBuild, showFactors: boolean): string {
-    //console.log('effect:', this.Effect);
-    let dependencies: string[] = [];
-    let effect: string = this.Effect;
-    let level = build.skillLevel(this);
+  EffectDescription(build: ITOSBuild, showFactors: boolean): Observable<string> {
+    return fromPromise((async () => {
+      //console.log('effect:', this.Effect);
+      let dependencies: string[] = [];
+      let effect: string = this.Effect;
+      let level = await build.skillLevel(this);
 
-    // Match effect properties (e.g. #{SkillFactor}#%{nl}AoE Attack Ratio: #{SkillSR}
-    this.EffectProps.forEach(match => {
-      // console.log('prop:', match[1]);
-      let prop = match[1];
-      let result = this.effectToEval(prop, build);
+      // Match effect properties (e.g. #{SkillFactor}#%{nl}AoE Attack Ratio: #{SkillSR}
+      await Promise.all(this.EffectProps.map(async match => {
+        // console.log('prop:', match[1]);
+        let prop = match[1];
+        let result = await this.effectToEval(prop, build).toPromise();
 
-      for (let dependency of result.dependencies)
-        if (dependencies.indexOf(dependency) == -1)
-          dependencies.push(dependency);
+        for (let dependency of result.dependencies)
+          if (dependencies.indexOf(dependency) == -1)
+            dependencies.push(dependency);
 
-      if (showFactors && level == 0) {
-        effect = effect.replace(match[0], '<b>[' + prop + ']</b>')
-      } else {
-        effect = effect.replace(match[0], result.value + (result.dependencies.length ? '*' : ''));
+        if (showFactors && level == 0) {
+          effect = effect.replace(match[0], '<b>[' + prop + ']</b>')
+        } else {
+          effect = effect.replace(match[0], result.value + (result.dependencies.length ? '*' : ''));
+        }
+      }));
+
+      // Add dependencies (if available)
+      if (dependencies) {
+        effect = effect + '\n';
+        dependencies.forEach(value => effect = effect + "\n* Depends on Character's " + value);
       }
-    });
 
-    // Add dependencies (if available)
-    if (dependencies) {
-      effect = effect + '\n';
-      dependencies.forEach(value => effect = effect + "\n* Depends on Character's " + value);
-    }
-
-    return effect.replace(/{nl}/g, '\n');
+      return effect.replace(/{nl}/g, '\n');
+    })())
   }
-  EffectFormula(prop: string, build: ITOSBuild): string {
+  EffectFormula(prop: string, build: ITOSBuild): Observable<string> {
     return this.effectToHuman(prop, build);
   }
   get EffectProps(): string[] {
@@ -115,50 +124,62 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       : levelMax;
   }
 
-  SPCost(build: ITOSBuild): number {
-    return this.effectToEval('SP', build).value;
+  SPCost(build: ITOSBuild): Observable<number> {
+    return this
+      .effectToEval('SP', build)
+      .pipe(map(value => value.value));
   }
 
-  private effectContext(prop: string, build: ITOSBuild, human?: boolean): object {
-    let player = !human ? {
-      CON: build.Stats.CON,
-      DEX: build.Stats.DEX,
-      INT: build.Stats.INT,
-      MNA: build.Stats.SPR,
-      STR: build.Stats.STR,
-    } : null;
-    let skill = {
-      'BasicPoison': this.Prop_BasicPoison,
-      'BasicSP': this.Prop_BasicSP,
-      'ClassName': '"' + this.$ID_NAME + '"',
-      'Level': Math.max(1, build.skillLevel(this)),
-      'LvUpSpendPoison': this.Prop_LvUpSpendPoison,
-      'LvUpSpendSp': this.Prop_LvUpSpendSp,
-      'SklAtkAdd': this.Prop_SklAtkAdd,
-      'SklAtkAddByLevel': this.Prop_SklAtkAddByLevel,
-      'SklFactor': this.Prop_SklFactor,
-      'SklFactorByLevel': this.Prop_SklFactorByLevel,
-      'SklSR': this.Prop_SklSR,
-      'SpendItemBaseCount': this.Prop_SpendItemBaseCount,
-    };
+  private effectContext(prop: string, build: ITOSBuild, human?: boolean): Observable<object> {
+    return fromPromise((async () => {
+      let player = !human && {
+        CON: build.Stats.CON,
+        DEX: build.Stats.DEX,
+        INT: build.Stats.INT,
+        MNA: build.Stats.SPR,
+        STR: build.Stats.STR,
+      };
+      let skill = {
+        'BasicPoison': this.Prop_BasicPoison,
+        'BasicSP': this.Prop_BasicSP,
+        'ClassName': '"' + this.$ID_NAME + '"',
+        'Level': Math.max(1, build.skillLevel(this)),
+        'LvUpSpendPoison': this.Prop_LvUpSpendPoison,
+        'LvUpSpendSp': this.Prop_LvUpSpendSp,
+        'SklAtkAdd': this.Prop_SklAtkAdd,
+        'SklAtkAddByLevel': this.Prop_SklAtkAddByLevel,
+        'SklFactor': this.Prop_SklFactor,
+        'SklFactorByLevel': this.Prop_SklFactorByLevel,
+        'SklSR': this.Prop_SklSR,
+        'SpendItemBaseCount': this.Prop_SpendItemBaseCount,
+      };
 
-    if (prop != 'SkillFactor' && this.effectSource('SkillFactor'))
-      skill['SkillFactor'] = this.effectToEval('SkillFactor', build).value;
 
-    return { player, skill }
+      if (prop != 'SkillFactor' && this.effectSource('SkillFactor'))
+        skill['SkillFactor'] = (await this.effectToEval('SkillFactor', build).toPromise()).value;
+
+      return { player, skill }
+    })());
   }
-  private effectToEval(prop: string, build: ITOSBuild): { dependencies: string[], value: number } {
-    let source = this.effectSource(prop);
-    let context = this.effectContext(prop, build);
+  private effectToEval(prop: string, build: ITOSBuild): Observable<{ dependencies: string[], value: number }> {
+    return fromPromise((async () => {
+      let source = this.effectSource(prop);
+      let context = await this.effectContext(prop, build).toPromise();
 
-    let result = LUAService.parse(build, source, context);
-    return { dependencies: result.dependencies, value: eval(result.func.join('\n')) };
+      let result = await LUAService.parse(build, source, context).toPromise();
+      let value = eval(result.func.join('\n')) as number;
+          value = parseFloat(value.toFixed(4)); // Remove trailing 0s
+
+      return { dependencies: result.dependencies, value };
+    })());
   }
-  private effectToHuman(prop: string, build: ITOSBuild): string {
-    let source = this.effectSource(prop);
-    let context = this.effectContext(prop, build, true);
+  private effectToHuman(prop: string, build: ITOSBuild): Observable<string> {
+    return fromPromise((async () => {
+      let source = this.effectSource(prop);
+      let context = await this.effectContext(prop, build, true).toPromise();
 
-    return LUAService.human(build, source, context);
+      return await LUAService.human(build, source, context).toPromise();
+    })())
   }
   private effectSource(prop: string): string[] {
     return this[prop] != undefined

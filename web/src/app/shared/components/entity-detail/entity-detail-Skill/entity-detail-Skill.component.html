@@ -1,11 +1,11 @@
-<div *ngIf="skill">
+<div *ngIf="build && skill">
   <div class="w-100" *ngIf="divider"><hr></div>
 
   <tos-input-number class="h5 text-center mt-3 mb-3" *ngIf="input"
                     [label]="'Level'"
-                    [min]="0" [max]="build.skillLevelMax(skill)"
+                    [min]="0" [max]="build.skillLevelMax$(skill) | async"
                     [model]="skillLevel"
-                    (modelChange)="onSkillLevelChange($event)"></tos-input-number>
+                    (modelChange)="onSkillLevelIncrement($event)"></tos-input-number>
 
   <!-- Description -->
   <tos-entity-detail-Description [entity]="entity"></tos-entity-detail-Description>

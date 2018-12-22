@@ -1,36 +1,35 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {ChangeDetectorRef, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {TOSEntity} from "../../../domain/tos/tos-entity.model";
-import {TOSMonster} from "../../../domain/tos/monster/tos-monster.model";
-import {TOSItem} from "../../../domain/tos/item/tos-item.model";
-import {TOSMap} from "../../../domain/tos/map/tos-map.model";
+import {Observable, Subscription} from "rxjs";
+import {EntityTableColumn} from "../../entity-table/entity-table.component";
 
 @Component({
   selector: 'tos-entity-detail-Table',
   templateUrl: './entity-detail-Table.component.html',
   styleUrls: ['./entity-detail-Table.component.scss']
 })
-export class EntityDetailTableComponent extends EntityDetailChildComponent {
+export class EntityDetailTableComponent extends EntityDetailChildComponent implements OnChanges {
 
-  TOSItem = TOSItem;
-  TOSMap = TOSMap;
-  TOSMonster = TOSMonster;
-
-  @Input() data: any[];
-  @Input() link: string;
+  @Input() columns: EntityTableColumn[];
+  @Input() data$: Observable<any[]>;
   @Input() divider: boolean;
   @Input() header: string;
 
-  @Output() tooltipChange: EventEmitter<TOSEntity> = new EventEmitter();
+  public data: any[];
+  private subscriptionData: Subscription;
 
-  constructor() { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
-  instanceOf(entity: TOSEntity, classe: any) {
-    return entity instanceof classe;
-  }
+  ngOnChanges(changes: SimpleChanges): void {
+    super.ngOnChanges(changes);
 
-  rowLink(row: any) {
-    return this.link ? row[this.link] : row
+    if (changes.data$) {
+      this.subscriptionData && this.subscriptionData.unsubscribe();
+      this.subscriptionData = this.data$.subscribe(value => {
+        this.data = Array.isArray(value) ? value : [value];
+        this.changeDetector.detectChanges();
+      });
+    }
   }
 
 }

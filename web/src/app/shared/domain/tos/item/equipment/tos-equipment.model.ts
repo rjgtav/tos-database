@@ -8,12 +8,16 @@ import {
   TOSAttackType,
   TOSClassTree,
   TOSDataSet,
-  TOSEquipmentGrade, TOSEquipmentGradeService,
+  TOSEquipmentGrade,
+  TOSEquipmentGradeService,
   TOSEquipmentMaterial,
   TOSEquipmentType,
-  TOSStat
+  TOSStat,
+  TOSStatService
 } from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
+import {Observable} from "rxjs";
+import {map} from "rxjs/operators";
 
 export class TOSEquipment extends TOSItem implements ITOSEquipment {
   constructor(json: TOSEquipment) {
@@ -22,14 +26,14 @@ export class TOSEquipment extends TOSItem implements ITOSEquipment {
     this.$comparators['Grade'] = TOSEquipmentGradeService.comparator;
   }
 
-  get Bonus() { return this.$lazyPropertyJSONArray('Bonus', value => new TOSEquipmentBonus(value), (a, b) => TOSStat.comparator(a.Stat, b.Stat)) }
+  get Bonus() { return this.$lazyPropertyJSONArray('Bonus', value => new TOSEquipmentBonus(value), (a, b) => TOSStatService.comparator(a.Stat, b.Stat)) }
   get Durability() { return this.$lazyPropertyNumber('Durability') }
   get Grade() { return this.$lazyPropertyEnum('Grade', TOSEquipmentGrade) }
 
   get IsAnvilAvailable(): boolean { return (this.AnvilATK(1) > 0 || this.AnvilDEF(1) > 0) && this.AnvilPrice(1) > 0; }
   get IsTranscendAvailable(): boolean { return this.TranscendPrice(1) > 0; }
 
-  get Link_Set(): ITOSEquipmentSet { return this.$lazyPropertyLink('Link_Set', value => TOSDomainService.equipmentSetsById[value] ) }
+  get Link_Set() { return this.$lazyPropertyLink('Link_Set', value => TOSDomainService.equipmentSetsById(value)) as Observable<ITOSEquipmentSet> }
 
   get Level() { return this.$lazyPropertyNumber('Level') }
   get Material() { return this.$lazyPropertyEnum('Material', TOSEquipmentMaterial) }
@@ -48,7 +52,6 @@ export class TOSEquipment extends TOSItem implements ITOSEquipment {
   get TypeEquipment() { return this.$lazyPropertyEnum('TypeEquipment', TOSEquipmentType) }
   get Unidentified() { return this.$lazyPropertyBoolean('Unidentified') }
   get UnidentifiedRandom() { return this.$lazyPropertyBoolean('UnidentifiedRandom') }
-
 
   IsUsableBy(classTree: TOSClassTree): boolean {
     let index = Object.values(TOSClassTree).indexOf(classTree);
@@ -129,12 +132,11 @@ export class TOSEquipmentSet extends TOSEntity implements ITOSEquipmentSet {
   get Bonus5() { return this.$lazyPropertyString('Bonus5') }
   get Bonus6() { return this.$lazyPropertyString('Bonus6') }
   get Bonus7() { return this.$lazyPropertyString('Bonus7') }
-  get Icon(): string { return this.Link_Items[0].Icon }
+  get Icon():string { throw new Error('Unsupported operation') }
+  get Icon$() { return this.Link_Items.pipe(map(value => value && value[0].Icon)) }
+  get Url(): string { throw new Error('Unsupported operation') }
+  get Url$() { return this.Link_Items.pipe(map(value => value && value[0].Url)) }
 
-  get Link_Items() { return this.$lazyPropertyJSONArray('Link_Items', value => TOSDomainService.itemsByIdLink(value)) }
-
-  get Url(): string {
-    return this.Link_Items && this.Link_Items[0].Url;
-  }
+  get Link_Items() { return this.$lazyPropertyLink('Link_Items', value => TOSDomainService.itemsByIdLink(value)) as Observable<ITOSItem[]> }
 
 }

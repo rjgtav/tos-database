@@ -1,13 +1,17 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
+import {TOSListConfiguration} from "../entity-list/entity-list.component";
 import {
   TOSEquipmentGrade,
   TOSEquipmentGradeService,
-  TOSEquipmentMaterial,
-  TOSEquipmentType
+  TOSEquipmentMaterialService,
+  TOSEquipmentTypeService
 } from "../../shared/domain/tos/tos-domain";
+import {TableCellIconPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-icon.pipe";
+import {TableCellTextPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-text.pipe";
+import {TableCellNumberPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-number.pipe";
+import {TableCellBadgePipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-badge.pipe";
 
 @Injectable()
 export class EquipmentListConfigurationResolver implements Resolve<TOSListConfiguration> {
@@ -16,113 +20,35 @@ export class EquipmentListConfigurationResolver implements Resolve<TOSListConfig
       filter: [
         {
           column: 'Grade',
-          groups: [
-            {
-              options: [
-                TOSEquipmentGrade.NORMAL,
-                TOSEquipmentGrade.MAGIC,
-                TOSEquipmentGrade.RARE,
-                TOSEquipmentGrade.UNIQUE,
-                TOSEquipmentGrade.LEGENDARY,
-              ]
-            }
-          ]
+          groupBy: TOSEquipmentGradeService.groupBy,
+          indexOf: TOSEquipmentGradeService.indexOf,
+          toString: TOSEquipmentGradeService.toString,
         },
         {
           column: 'Material',
-          groups: [
-            {
-              options: [
-                TOSEquipmentMaterial.CLOTH,
-                TOSEquipmentMaterial.GHOST,
-                TOSEquipmentMaterial.LEATHER,
-                TOSEquipmentMaterial.PLATE,
-              ]
-            }
-          ]
+          groupBy: TOSEquipmentMaterialService.groupBy,
+          indexOf: TOSEquipmentMaterialService.indexOf,
+          toString: TOSEquipmentMaterialService.toString,
         },
         {
           column: 'TypeEquipment',
           label: 'Type',
-          groups: [
-            {
-              header: 'Armor',
-              options: [
-                TOSEquipmentType.BRACELET,
-                TOSEquipmentType.GLOVES,
-                TOSEquipmentType.NECKLACE,
-                TOSEquipmentType.BOTTOM,
-                TOSEquipmentType.TOP,
-                TOSEquipmentType.SHOES,
-              ]
-            },
-            {
-              header: 'Fashion',
-              options: [
-                TOSEquipmentType.COSTUME_ARMBAND,
-                TOSEquipmentType.COSTUME_EFFECT,
-                TOSEquipmentType.COSTUME_HAIR,
-                TOSEquipmentType.COSTUME_HAIR_ACCESSORY,
-                TOSEquipmentType.COSTUME_HELMET,
-                TOSEquipmentType.COSTUME_LENS,
-                TOSEquipmentType.COSTUME_OUTFIT,
-                TOSEquipmentType.COSTUME_SPECIAL,
-                TOSEquipmentType.COSTUME_TOY,
-                TOSEquipmentType.COSTUME_WING,
-              ]
-            },
-            {
-              header: '1-Handed Weapons',
-              options: [
-                TOSEquipmentType.ONE_HANDED_BOW,
-                TOSEquipmentType.ONE_HANDED_MACE,
-                TOSEquipmentType.RAPIER,
-                TOSEquipmentType.ONE_HANDED_STAFF,
-                TOSEquipmentType.ONE_HANDED_SPEAR,
-                TOSEquipmentType.ONE_HANDED_SWORD,
-              ]
-            },
-            {
-              header: '2-Handed Weapons',
-              options: [
-                TOSEquipmentType.TWO_HANDED_BOW,
-                TOSEquipmentType.TWO_HANDED_MACE,
-                TOSEquipmentType.TWO_HANDED_GUN,
-                TOSEquipmentType.TWO_HANDED_SPEAR,
-                TOSEquipmentType.TWO_HANDED_STAFF,
-                TOSEquipmentType.TWO_HANDED_SWORD,
-              ]
-            },
-            {
-              header: 'Sub Weapons',
-              options: [
-                TOSEquipmentType.CANNON,
-                TOSEquipmentType.DAGGER,
-                TOSEquipmentType.ONE_HANDED_GUN,
-                TOSEquipmentType.SHIELD,
-              ]
-            },
-            {
-              header: 'Seals',
-              options: [
-                TOSEquipmentType.SEAL,
-              ]
-            },
-          ],
+          groupBy: TOSEquipmentTypeService.groupBy,
+          indexOf: TOSEquipmentTypeService.indexOf,
+          toString: TOSEquipmentTypeService.toString,
         }
       ],
 
       sortColumn: '$ID',
 
       tableColumns: [
-        { value: 'Icon',          type: TOSListTableColumnType.ICON,        label: '' },
-        { value: '$ID',           type: TOSListTableColumnType.TEXT,        isNotMobile: true },
-        { value: 'Name',          type: TOSListTableColumnType.TEXT,        isWide: true },
-        { value: 'Material',      type: TOSListTableColumnType.TEXT,        isNotMobile: true },
-        { value: 'Grade',         type: TOSListTableColumnType.BADGE,
-          transformColor: TOSEquipmentGradeService.getColor },
-        { value: 'RequiredLevel', type: TOSListTableColumnType.TEXT_NUMBER, label: 'Level' },
-        { value: 'TypeEquipment', type: TOSListTableColumnType.TEXT,        isNotMobile: true, label: 'Type' },
+        { label: '',              pipe: new TableCellIconPipeDefinition('Icon'), class: 'p-1 text-center' },
+        { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
+        { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
+        { label: 'Material',      pipe: new TableCellTextPipeDefinition('Material'), hideMobile: true },
+        { label: 'Grade',         pipe: new TableCellBadgePipeDefinition('Grade', (o: TOSEquipmentGrade) => TOSEquipmentGradeService.color(o)), hideMobile: true },
+        { label: 'Level',         pipe: new TableCellNumberPipeDefinition('RequiredLevel') },
+        { label: 'Type',          pipe: new TableCellTextPipeDefinition('TypeEquipment'), class: 'text-nowrap', hideMobile: true },
       ]
     };
   }

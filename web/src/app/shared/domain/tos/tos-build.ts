@@ -1,6 +1,6 @@
-import {BehaviorSubject, Observable} from "rxjs";
+import {BehaviorSubject, Observable, of} from "rxjs";
 import {EventEmitter} from "@angular/core";
-import {take, tap} from "rxjs/operators";
+import {map} from "rxjs/operators";
 import {
   ITOSAttribute,
   ITOSBuild,
@@ -13,6 +13,7 @@ import {
 } from "./tos-domain";
 import {TOSDomainService} from "./tos-domain.service";
 import {TOSRegion} from "../tos-region";
+import {fromPromise} from "rxjs/internal-compatibility";
 
 export const LEVEL_LIMIT: number = 390;
 export const RANK_LIMIT: number = 10; // TODO: find a way to retrieve this value from the game files
@@ -20,11 +21,14 @@ const SKILL_POINTS_PER_CIRCLE: number = 15; // TODO: find a way to retrieve this
 
 abstract class TOSBuild implements ITOSBuild {
 
-  protected readonly jobs: BehaviorSubject<ITOSJob[]> = new BehaviorSubject([]);
+  private jobs: ITOSJob[] = [];
+  private readonly jobCirclesById: { [key: number]: number } = {};
+  private readonly jobChange: BehaviorSubject<ITOSJob> = new BehaviorSubject(null);
   private jobTree: TOSJobTree;
 
-  private readonly skillLevelsByJob: { [key: number]: BehaviorSubject<{ [key: number]: number }> } = {};
-  private readonly skillPointsByJob: { [key: number]: BehaviorSubject<number> } = {};
+  private readonly skillChange: BehaviorSubject<ITOSSkill> = new BehaviorSubject(null);
+  private readonly skillLevelsById: { [key: number]: number } = {};
+  private readonly skillPointsByJob: { [key: number]: number } = {};
 
   private readonly statsPoints: BehaviorSubject<number> = new BehaviorSubject(0);
   private readonly statsBonus: ITOSBuildStats = { CON: 0, DEX: 0, INT: 0, SPR: 0, STR: 0 };
@@ -33,9 +37,11 @@ abstract class TOSBuild implements ITOSBuild {
     this.buildResetStats();
   }
 
-  get Jobs(): Observable<ITOSJob[]> { return this.jobs.asObservable(); }
-  get JobTree(): TOSJobTree { return this.jobTree; }
-  get Rank(): number { return this.jobs.getValue().length; }
+  get Job$(): Observable<ITOSJob> { return this.jobChange.asObservable() }
+  get Jobs(): ITOSJob[] { return this.jobs }
+  get JobTree(): TOSJobTree { return this.jobTree }
+  get Rank(): number { return this.jobs.length }
+  get Skill$(): Observable<ITOSSkill> { return this.skillChange.asObservable() }
   get Stats(): ITOSBuildStats {
     let statsBase = this.StatsBase;
     let statsBonus = this.StatsBonus;
@@ -58,10 +64,10 @@ abstract class TOSBuild implements ITOSBuild {
       STR: this.statsBonus.STR,
     };
   }
-  get StatsPoints(): Observable<number> { return this.statsPoints.asObservable(); }
+  get StatsPoints$(): Observable<number> { return this.statsPoints.asObservable() }
   abstract get Version(): number;
 
-  jobAdd(job: ITOSJob): void {
+  async jobAdd$(job: ITOSJob): Promise<void> {
     if (this.Rank >= RANK_LIMIT)
       throw new Error('Rank limit of ' + RANK_LIMIT + ' has been reached');
 
@@ -69,45 +75,45 @@ abstract class TOSBuild implements ITOSBuild {
     if (this.Rank + 1 == 1)
       this.jobTree = job.JobTree;
 
+    // Initialize job circle
+    this.jobs.push(job);
+    this.jobCirclesById[job.$ID] = this.jobCirclesById[job.$ID] || 0;
+    this.jobCirclesById[job.$ID] ++;
+    this.jobChange.next(job);
+
     // Initialize skill levels & points
     this.buildResetSkillPoints(job);
-    this.buildResetSkillLevels(job);
-
-    // Propagate update
-    let jobs = this.jobs.getValue();
-        jobs.push(job);
-
-    this.jobs.next(jobs);
+    await this.buildResetSkillLevels$(job);
   }
-  jobCircle(job: ITOSJob): number { // TODO: Remove after Re:Build releases globally
-    return this.jobs.getValue().filter(value => value.$ID == job.$ID).length;
+  jobCircle(job: ITOSJob): number {
+    return this.jobCirclesById[job.$ID] || 0;
   }
   abstract jobCircleMax(job: ITOSJob): number;
-  jobRanks(job: ITOSJob): number[] { // TODO: Remove after Re:Build releases globally
-    return this.jobs.getValue().reduce((accumulator, value, index) => {
+  jobRanks(job: ITOSJob): number[] {
+    return this.jobs.reduce((accumulator, value, index) => {
       if (value.$ID == job.$ID) accumulator.push(index + 1);
       return accumulator;
     }, []);
   }
-  jobRemove(rank: number): void {
-    let jobs = this.jobs.getValue();
-
-    // Remove associated skills and skillPoints
-    for (let r = jobs.length - 1; r >= rank - 1; r --) {
-      let job = jobs[r];
-      let circle = this.jobCircle(job);
+  async jobRemove$(rank: number): Promise<void> {
+    // Remove associated skills and skillPoints$
+    for (let r = this.jobs.length - 1; r >= rank - 1; r --) {
+      let job = this.jobs[r];
+      let circle = await this.jobCircle(job);
 
       // Update circle
-      this.jobs.next(jobs.slice(0, r));
+      this.jobs = this.jobs.slice(0, r);
+      this.jobCirclesById[job.$ID] --;
+      this.jobChange.next(job);
 
       if (circle == 1) {
-        delete this.skillLevelsByJob[job.$ID];
+        job.Link_Skills$ID.forEach(value => delete this.skillLevelsById[value]);
+        delete this.jobCirclesById[job.$ID];
         delete this.skillPointsByJob[job.$ID];
       } else {
-
         // Reset skill levels & points
         this.buildResetSkillPoints(job);
-        this.buildResetSkillLevels(job);
+        await this.buildResetSkillLevels$(job);
       }
     }
 
@@ -115,67 +121,50 @@ abstract class TOSBuild implements ITOSBuild {
     if (rank == 1)
       this.buildResetStats();
   }
-  jobSkillLevels(job: ITOSJob): Observable<{ [key: number]: number }> {
-    return this.skillLevelsByJob[job.$ID].asObservable();
-  }
-  abstract jobUnlockAvailable(job: ITOSJob): boolean;
+  abstract jobUnlockAvailable$(job: ITOSJob): Observable<boolean>;
 
-  skillEffect(skill: ITOSSkill, showFactors: boolean): string {
+  skillEffect$(skill: ITOSSkill, showFactors: boolean): Observable<string> {
     return skill.EffectDescription(this, showFactors);
   }
-  skillEffectFormula(skill: ITOSSkill, prop: string): string {
+  skillEffectFormula$(skill: ITOSSkill, prop: string): Observable<string> {
     return skill.EffectFormula(prop, this);
   }
-  skillLevel(skill: ITOSSkill): number {
-    return this.skillLevelsByJob[skill.Link_Job.$ID].getValue()[skill.$ID];
-  }
-  abstract skillLevelMax(skill: ITOSSkill): number;
-  skillLevelIncrement(skill: ITOSSkill, delta: number, rollOver?: boolean) {
-    if (!this.skillLevelsByJob[skill.Link_Job.$ID] || !this.skillPointsByJob[skill.Link_Job.$ID])
-      return;
+  skillLevel(skill: ITOSSkill): number { return this.skillLevelsById[skill.$ID] }
 
-    let skillLevels = this.skillLevelsByJob[skill.Link_Job.$ID].getValue();
-    let skillPoints = this.skillPointsByJob[skill.Link_Job.$ID].getValue();
+  abstract skillLevelMax$(skill: ITOSSkill): Observable<number>; // TODO: after Re:Build we can switch from an Observable to a plain number
+  async skillLevelIncrement$(skill: ITOSSkill, delta: number, rollOver?: boolean) {
+    let skillLevel = this.skillLevel(skill);
+    let skillPoints = this.skillPointsByJob[skill.Link_Job$ID];
 
-    if (!this.skillLevelIncrementAvailable(skill, delta)) {
-      let level = skillLevels[skill.$ID];
-      let levelMax = this.skillLevelMax(skill);
+    if (!(await this.skillLevelIncrementAvailable$(skill, delta).toPromise())) {
+      let levelMax = await this.skillLevelMax$(skill).toPromise();
 
-      if (rollOver && level == 0)
+      if (rollOver && skillLevel == 0)
         delta = Math.min(levelMax, skillPoints);
-      else if (rollOver && (level == levelMax || skillPoints == 0))
-        delta = -level;
+      else if (rollOver && (skillLevel == levelMax || skillPoints == 0))
+        delta = -skillLevel;
       else
         throw new Error("Can't increment " + skill.$ID_NAME + "'s level or it gets out of bounds");
     }
 
-    // Update skill level
-    skillLevels[skill.$ID] += delta;
-    this.skillLevelsByJob[skill.Link_Job.$ID].next(skillLevels);
-
-    // Update skill points
-    skillPoints -= delta;
-    this.skillPointsByJob[skill.Link_Job.$ID].next(skillPoints);
+    // Propagate update
+    this.skillLevelsById[skill.$ID] += delta;
+    this.skillPointsByJob[skill.Link_Job$ID] -= delta;
+    this.skillChange.next(skill);
   }
-  skillLevelIncrementAvailable(skill: ITOSSkill, delta: number): boolean {
-    if (!this.skillLevelsByJob[skill.Link_Job.$ID] || !this.skillPointsByJob[skill.Link_Job.$ID])
-      return false;
+  skillLevelIncrementAvailable$(skill: ITOSSkill, delta: number): Observable<boolean> { // TODO: after Re:Build we can switch from an Observable to a plain boolean
+    let skillLevel = this.skillLevelsById[skill.$ID];
+    let skillPoints = this.skillPointsByJob[skill.Link_Job$ID];
 
-    let skillPoints = this.skillPointsByJob[skill.Link_Job.$ID].getValue();
-    let skillLevels = this.skillLevelsByJob[skill.Link_Job.$ID].getValue()[skill.$ID];
-
-    return 1==1
+    return fromPromise((async () => 1==1
       && skillPoints - delta >= 0
-      && skillLevels + delta >= 0
-      && skillLevels + delta <=  this.skillLevelMax(skill);
+      && skillLevel + delta >= 0
+      && skillLevel + delta <= await this.skillLevelMax$(skill).toPromise()
+    )());
   }
-  skillPoints(job: { $ID: number }): Observable<number> {
-    return this.skillPointsByJob[job.$ID].asObservable();
-  }
-  abstract skillPointsMax(job: ITOSJob) : number;
-  skillSP(skill: ITOSSkill): number {
-    return skill.SPCost(this);
-  }
+  skillPoints(job: { $ID: number }): number { return this.skillPointsByJob[job.$ID] }
+  skillPointsMax(job: ITOSJob) : number { return SKILL_POINTS_PER_CIRCLE * this.jobCircle(job) }
+  skillSP$(skill: ITOSSkill): Observable<number> { return skill.SPCost(this) }
 
   statsIncrementLevel(stat: string, delta: number) {
     if (this.statsBonus[stat] == undefined)
@@ -199,40 +188,33 @@ abstract class TOSBuild implements ITOSBuild {
   }
   abstract statsPointsMax(): number;
 
-  private buildResetSkillLevels(job: ITOSJob): void {
-    let skillLevels = this.skillLevelsByJob[job.$ID]
-      ? this.skillLevelsByJob[job.$ID].getValue()
-      : null;
+  private async buildResetSkillLevels$(job: ITOSJob) {
+    let skillLevels: { [key: number]: number } = {};
 
     // Reset skill levels
-    this.skillLevelsByJob[job.$ID] = this.skillLevelsByJob[job.$ID] || new BehaviorSubject<{ [key: number]: number }>({});
-    this.skillLevelsByJob[job.$ID].next(
-      job.Link_Skills.reduce((accumulator, value) => {
-        accumulator[value.$ID] = 0;
-        return accumulator;
-      }, {})
-    );
+    job.Link_Skills$ID.forEach(value => {
+      skillLevels[value] = this.skillLevelsById[value];
+      this.skillLevelsById[value] = 0;
+    });
 
     // Restore previous skill levels
-    if (skillLevels)
-      Object
-        .entries(skillLevels)
-        .forEach(value => {
-          let delta = value[1];
-          let skill = TOSDomainService.skillsById[+value[0]];
-          let skillPoints = this.skillPointsByJob[job.$ID].getValue();
+    for (let skill$ID in skillLevels) {
+      let delta = skillLevels[skill$ID];
+      let skill = await TOSDomainService.skillsById(+skill$ID).toPromise();
+      let skillPoints = this.skillPointsByJob[job.$ID];
 
-          if (delta) {
-            if (this.skillLevelIncrementAvailable(skill, delta))
-              this.skillLevelIncrement(skill, delta);
-            else
-              this.skillLevelIncrement(skill, Math.min(this.skillLevelMax(skill), skillPoints));
-          }
-        });
+      if (delta > 0) {
+        if (this.skillLevelIncrementAvailable$(skill, delta))
+          await this.skillLevelIncrement$(skill, delta);
+        else
+          await this.skillLevelIncrement$(skill, Math.min(await this.skillLevelMax$(skill).toPromise(), skillPoints));
+      }
+
+      this.skillChange.next(skill);
+    }
   }
-  private buildResetSkillPoints(job: ITOSJob): void {
-    this.skillPointsByJob[job.$ID] = this.skillPointsByJob[job.$ID] || new BehaviorSubject<number>(0);
-    this.skillPointsByJob[job.$ID].next(this.skillPointsMax(job));
+  private buildResetSkillPoints(job: ITOSJob) {
+    this.skillPointsByJob[job.$ID] = this.skillPointsMax(job);
   }
   private buildResetStats(): void {
     this.statsBonus.CON = this.statsBonus.DEX = this.statsBonus.INT = this.statsBonus.SPR = this.statsBonus.STR = 0;
@@ -245,7 +227,7 @@ class TOSBuild_10 extends TOSBuild {
 
   private readonly stats: ITOSBuildStats = { CON: 0, DEX: 0, INT: 0, SPR: 0, STR: 0 };
 
-  constructor() { super(); }
+  constructor() { super() }
 
   get StatsBase(): ITOSBuildStats {
     return {
@@ -260,46 +242,38 @@ class TOSBuild_10 extends TOSBuild {
     return 1.0;
   }
 
-  jobAdd(job: ITOSJob): void {
-    super.jobAdd(job);
-
-    if (this.Rank == 1) {
+  async jobAdd$(job: ITOSJob): Promise<void> {
+    if (this.Rank + 1== 1) {
       this.stats.CON = job.Stat_CON;
       this.stats.DEX = job.Stat_DEX;
       this.stats.INT = job.Stat_INT;
       this.stats.SPR = job.Stat_SPR;
       this.stats.STR = job.Stat_STR;
     }
+
+    await super.jobAdd$(job);
   }
   jobCircleMax(job: ITOSJob): number {
     return job.CircleMax;
   }
 
-  jobRemove(rank: number): void {
-    super.jobRemove(rank);
+  jobUnlockAvailable$(job: ITOSJob): Observable<boolean> {
+    return fromPromise((async () => {
+      let extra = true;
 
-    // Reset stats
-    if (rank == 1)
-      this.stats.CON = this.stats.DEX = this.stats.INT = this.stats.SPR = this.stats.STR = 0;
-  }
-  jobUnlockAvailable(job: ITOSJob): boolean {
-    let extra = true;
+      if (job.$ID_NAME == 'Char4_12') // Chaplain
+        extra = this.jobCircle(await TOSDomainService.jobsById(4002).toPromise()) >= 3; // Priest
 
-    if (job.$ID_NAME == 'Char4_12') // Chaplain
-      extra = this.jobCircle(TOSDomainService.jobsById[4002]) >= 3; // Priest
-
-    return 1==1
-      && extra
-      && this.Rank + 1 <= RANK_LIMIT
-      && this.Rank + 1 >= job.Rank
-      && this.jobCircle(job) < this.jobCircleMax(job);
+      return 1==1
+        && extra
+        && this.Rank + 1 <= RANK_LIMIT
+        && this.Rank + 1 >= job.Rank
+        && this.jobCircle(job) < this.jobCircleMax(job);
+    })());
   }
 
-  skillLevelMax(skill: ITOSSkill): number {
-    return skill.LevelMax(this.jobCircle(skill.Link_Job));
-  }
-  skillPointsMax(job: ITOSJob) : number {
-    return SKILL_POINTS_PER_CIRCLE * (this.jobCircle(job) + 1);
+  skillLevelMax$(skill: ITOSSkill): Observable<number> {
+    return skill.Link_Job.pipe(map(value => skill.LevelMax(this.jobCircle(value))));
   }
 
   statsPointsMax(): number {
@@ -315,18 +289,17 @@ class TOSBuild_10 extends TOSBuild {
 
 class TOSBuild_20 extends TOSBuild {
 
-  constructor() { super(); }
+  constructor() { super() }
 
   get Rank(): number {
-    let jobs = this.jobs.getValue();
-    return (jobs.length > 0 ? 1 : 0) + Math.max((jobs.length - 1) * 3, 0);
+    return (this.Jobs.length > 0 ? 1 : 0) + Math.max((this.Jobs.length - 1) * 3, 0);
   }
   get Version(): number {
     return 2.0;
   }
 
   get StatsBase(): ITOSBuildStats {
-    let jobs = this.jobs.getValue();
+    let jobs = this.Jobs;
     let jobsStarter = jobs[0];
     let stats = jobs.reduce((previousValue, currentValue) => {
       previousValue.CON += currentValue.Stat_CON;
@@ -347,29 +320,18 @@ class TOSBuild_20 extends TOSBuild {
     };
   }
 
-  jobCircle(job: ITOSJob): number {
-    let jobs = this.jobs.getValue();
-    return jobs.indexOf(job) == -1
-      ? 0
-      : this.jobCircleMax(job);
-  }
-  jobCircleMax(job: ITOSJob): number {
-    return job.Rank == 1 ? 1 : 3;
-  }
-  jobUnlockAvailable(job: ITOSJob): boolean {
-    return 1==1
+  jobCircle(job: ITOSJob): number { return super.jobCircle(job) ? this.jobCircleMax(job) : 0 }
+  jobCircleMax(job: ITOSJob): number { return job.Rank == 1 ? 1 : 3 }
+  jobUnlockAvailable$(job: ITOSJob): Observable<boolean> {
+    return of(1==1
       && this.Rank + 1 <= RANK_LIMIT
       && this.Rank + 1 >= job.Rank
       && (!job.IsSecret || this.Rank + 1 > 2)
-      && this.jobCircle(job) < this.jobCircleMax(job);
+      && this.jobCircle(job) < this.jobCircleMax(job)
+    );
   }
 
-  skillLevelMax(skill: ITOSSkill): number {
-    return skill.LevelMax();
-  }
-  skillPointsMax(job: ITOSJob) : number {
-    return SKILL_POINTS_PER_CIRCLE * this.jobCircleMax(job);
-  }
+  skillLevelMax$(skill: ITOSSkill): Observable<number> { return of(skill.LevelMax()) }
 
   statsPointsMax(): number {
     // Bonus stat points:
@@ -393,83 +355,80 @@ export class TOSDatabaseBuild implements ITOSBuild {
 
   private constructor(private build: TOSBuild) {}
 
-  get JobTree(): TOSJobTree { return this.build.JobTree }
-  get Jobs(): Observable<ITOSJob[]> { return this.build.Jobs; }
-  get Rank(): number { return this.build.Rank; }
-  get Stats(): ITOSBuildStats { return this.build.Stats; }
-  get StatsBase(): ITOSBuildStats { return this.build.StatsBase; }
-  get StatsBonus(): ITOSBuildStats { return this.build.StatsBonus; }
-  get StatsPoints(): Observable<number> { return this.build.StatsPoints; }
-  get Version(): number { return this.build.Version; }
+  get Job$() { return this.build.Job$ }
+  get Jobs() { return this.build.Jobs }
+  get JobTree() { return this.build.JobTree }
+  get Rank() { return this.build.Rank }
+  get Skill$() { return this.build.Skill$ }
+  get Stats() { return this.build.Stats }
+  get StatsBase() { return this.build.StatsBase }
+  get StatsBonus() { return this.build.StatsBonus }
+  get StatsPoints$() { return this.build.StatsPoints$ }
+  get Version() { return this.build.Version }
 
-  jobAdd(job: ITOSJob): void { this.build.jobAdd(job); }
-  jobCircle(job: ITOSJob): number { return this.build.jobCircle(job); }
-  jobCircleMax(job:ITOSJob): number { return this.build.jobCircleMax(job); }
+  async jobAdd$(job: ITOSJob) { await this.build.jobAdd$(job) }
+  jobCircle(job: ITOSJob) { return this.build.jobCircle(job) }
+  jobCircleMax(job:ITOSJob): number { return this.build.jobCircleMax(job) }
+  jobRanks(job: ITOSJob): number[] { return this.build.jobRanks(job) }
+  async jobRemove$(rank: number) { await this.build.jobRemove$(rank) }
+  jobUnlockAvailable$(job: ITOSJob) { return this.build.jobUnlockAvailable$(job) }
 
-  jobRanks(job: ITOSJob): number[] { return this.build.jobRanks(job); }
-  jobRemove(rank: number): void { this.build.jobRemove(rank); }
-  jobSkillLevels(job: ITOSJob): Observable<{ [p: number]: number }> { return this.build.jobSkillLevels(job); }
-  jobUnlockAvailable(job: ITOSJob): boolean { return this.build.jobUnlockAvailable(job); }
+  skillEffect$(skill: ITOSSkill, showFactors: boolean) { return this.build.skillEffect$(skill, showFactors) }
+  skillEffectFormula$(skill: ITOSSkill, prop: string) { return this.build.skillEffectFormula$(skill, prop) }
+  skillLevel(skill: ITOSSkill) { return this.build.skillLevel(skill) }
+  async skillLevelIncrement$(skill: ITOSSkill, delta: number, rollOver?: boolean) { await this.build.skillLevelIncrement$(skill, delta, rollOver) }
+  skillLevelIncrementAvailable$(skill: ITOSSkill, delta: number) { return this.build.skillLevelIncrementAvailable$(skill, delta) }
+  skillLevelMax$(skill: ITOSSkill) { return this.build.skillLevelMax$(skill) }
+  skillPoints(job: ITOSJob) { return this.build.skillPoints(job) }
+  skillPointsMax(job: ITOSJob) { return this.build.skillPointsMax(job) }
+  skillSP$(skill: ITOSSkill) { return this.build.skillSP$(skill) }
 
-  skillEffect(skill: ITOSSkill, showFactors: boolean): string { return this.build.skillEffect(skill, showFactors); }
-  skillEffectFormula(skill: ITOSSkill, prop: string): string { return this.build.skillEffectFormula(skill, prop); }
-  skillLevel(skill: ITOSSkill): number { return this.build.skillLevel(skill); }
-  skillLevelIncrement(skill: ITOSSkill, delta: number, rollOver?: boolean): void { this.build.skillLevelIncrement(skill, delta, rollOver); }
-  skillLevelIncrementAvailable(skill: ITOSSkill, delta: number): boolean { return this.build.skillLevelIncrementAvailable(skill, delta); }
-  skillLevelMax(skill: ITOSSkill): number { return this.build.skillLevelMax(skill); }
-  skillPoints(job: ITOSJob): Observable<number> { return this.build.skillPoints(job); }
-  skillPointsMax(job: ITOSJob) : number { return this.build.skillPointsMax(job); }
-  skillSP(skill: ITOSSkill): number { return this.build.skillSP(skill); }
-
-  statsIncrementLevel(stat: string, delta: number): void { this.build.statsIncrementLevel(stat, delta); }
-  statsIncrementLevelAvailable(stat: string, delta: number): boolean { return this.build.statsIncrementLevelAvailable(stat, delta); }
-  statsPointsMax(): number { return this.build.statsPointsMax(); }
+  statsIncrementLevel(stat: string, delta: number) { this.build.statsIncrementLevel(stat, delta) }
+  statsIncrementLevelAvailable(stat: string, delta: number) { return this.build.statsIncrementLevelAvailable(stat, delta) }
+  statsPointsMax() { return this.build.statsPointsMax() }
 
 }
 
 export class TOSSimulatorBuild implements ITOSBuild {
-  public readonly Change: EventEmitter<void> = new EventEmitter();
   public readonly Tooltip: EventEmitter<ITOSEntity> = new EventEmitter();
 
-  private tooltipAttribute: ITOSAttribute;
-  private tooltipJob: ITOSJob;
-  private tooltipSkill: ITOSSkill;
+  static base64Decode(region: TOSRegion, text: string): Observable<TOSSimulatorBuild> {
+    return fromPromise((async () => {
+      let build: TOSSimulatorBuild = TOSSimulatorBuild.new(region);
+      let encoded: ITOSBuildEncoded = JSON.parse(atob(text));
 
-  static base64Decode(region: TOSRegion, text: string): TOSSimulatorBuild {
-    let build: TOSSimulatorBuild = TOSSimulatorBuild.new(region);
-    let encoded: ITOSBuildEncoded = JSON.parse(atob(text));
+      if (build.Version == encoded.version) {
+        // Parse jobs
+        let jobs = await Promise.all(encoded.jobs.map(value => TOSDomainService.jobsByIdName(value).toPromise()));
+        for (let job of jobs) await build.jobAdd$(job);
 
-    if (build.Version == encoded.version) {
-      encoded.jobs.forEach(value => {
-        let job = TOSDomainService.jobsByIdName[value];
-        build.jobAdd(job)
-      });
-      Object.entries(encoded.skills || {})
-        .filter(value => TOSDomainService.skillsById[+value[0]])
-        .forEach(value => build.skillLevelIncrement(TOSDomainService.skillsById[+value[0]], value[1]));
-      Object.entries(encoded.stats || {}).forEach(value => build.statsIncrementLevel(value[0], value[1]));
-    }
+        // Parse skills
+        for (let skill$ID of Object.keys(encoded.skills || {})) {
+          let skill =
+            await TOSDomainService.skillsById(+skill$ID).toPromise();
+            await build.skillLevelIncrement$(skill, encoded.skills[skill$ID]);
+        }
 
-    return build;
+        // Parse stats
+        for (let stat of Object.keys(encoded.stats || {}))
+          build.statsIncrementLevel(stat, encoded.stats[stat]);
+      }
+
+      return build;
+    })());
   }
-  static base64Encode(build: TOSSimulatorBuild): string {
-    let jobs = [];
-    let skills = {};
-
-    build.Jobs.pipe(
-      take(1),
-      tap(value => jobs = value.map(job => job.$ID_NAME))
-    ).subscribe();
-
-    jobs
-      .map(value => TOSDomainService.jobsByIdName[value])
-      .forEach(value => value.Link_Skills
-        .filter(skill => build.skillLevel(skill) > 0)
-        .forEach(skill => skills[skill.$ID] = build.skillLevel(skill))
-      );
+  static async base64Encode(build: TOSSimulatorBuild): Promise<string> {
+    let jobs = build.Jobs.map(value => value.$ID_NAME);
+    let skills = await Promise.all(build.Jobs.map(value => value.Link_Skills.toPromise()));
+    let skillLevels: { [key: number]: number } = {};
+        skills
+          .forEach(value => value
+            .filter(value => build.skillLevel(value) > 0)
+            .forEach(value => skillLevels[value.$ID] = build.skillLevel(value)))
+    ;
 
     return jobs.length
-      ? btoa(JSON.stringify({ jobs, skills, stats: build.StatsBonus, version: build.Version }))
+      ? btoa(JSON.stringify({ jobs, skills: skillLevels, stats: build.StatsBonus, version: build.Version }))
       : '';
   }
 
@@ -483,60 +442,41 @@ export class TOSSimulatorBuild implements ITOSBuild {
 
   private constructor(private build: TOSBuild) {}
 
-  get JobTree(): TOSJobTree { return this.build.JobTree }
-  get Jobs(): Observable<ITOSJob[]> { return this.build.Jobs; }
-  get Rank(): number { return this.build.Rank; }
-  get Stats(): ITOSBuildStats { return this.build.Stats; }
-  get StatsBase(): ITOSBuildStats { return this.build.StatsBase; }
-  get StatsBonus(): ITOSBuildStats { return this.build.StatsBonus; }
-  get StatsPoints(): Observable<number> { return this.build.StatsPoints; }
-  get Version(): number { return this.build.Version; }
+  get Job$() { return this.build.Job$ }
+  get Jobs() { return this.build.Jobs }
+  get JobTree() { return this.build.JobTree }
+  get Rank() { return this.build.Rank }
+  get Skill$() { return this.build.Skill$ }
+  get Stats() { return this.build.Stats }
+  get StatsBase() { return this.build.StatsBase }
+  get StatsBonus() { return this.build.StatsBonus }
+  get StatsPoints$() { return this.build.StatsPoints$ }
+  get Version() { return this.build.Version }
 
-  jobAdd(job: ITOSJob): void {
-    this.build.jobAdd(job);
-    this.Change.emit();
-  }
-  jobCircle(job: ITOSJob): number { return this.build.jobCircle(job); }
-  jobCircleMax(job:ITOSJob): number { return this.build.jobCircleMax(job); }
-  jobRanks(job: ITOSJob): number[] { return this.build.jobRanks(job); }
-  jobRemove(rank: number): void {
-    this.build.jobRemove(rank);
-    this.Change.emit();
-  }
-  jobSkillLevels(job: ITOSJob): Observable<{ [p: number]: number }> { return this.build.jobSkillLevels(job); }
-  jobUnlockAvailable(job: ITOSJob): boolean { return this.build.jobUnlockAvailable(job); }
+  async jobAdd$(job: ITOSJob) { await this.build.jobAdd$(job); }
+  jobCircle(job: ITOSJob) { return this.build.jobCircle(job) }
+  jobCircleMax(job:ITOSJob) { return this.build.jobCircleMax(job) }
+  jobRanks(job: ITOSJob) { return this.build.jobRanks(job) }
+  async jobRemove$(rank: number) { await this.build.jobRemove$(rank); }
+  jobUnlockAvailable$(job: ITOSJob) { return this.build.jobUnlockAvailable$(job) }
 
-  skillEffect(skill: ITOSSkill, showFactors: boolean): string { return this.build.skillEffect(skill, showFactors); }
-  skillEffectFormula(skill: ITOSSkill, prop: string): string { return this.build.skillEffectFormula(skill, prop); }
-  skillLevel(skill: ITOSSkill): number { return this.build.skillLevel(skill); }
-  skillLevelIncrement(skill: ITOSSkill, delta: number, rollOver?: boolean): void {
-    this.build.skillLevelIncrement(skill, delta, rollOver);
-    this.Change.emit();
-  }
-  skillLevelIncrementAvailable(skill: ITOSSkill, delta: number): boolean { return this.build.skillLevelIncrementAvailable(skill, delta); }
-  skillLevelMax(skill: ITOSSkill): number { return this.build.skillLevelMax(skill); }
-  skillPoints(job: ITOSJob): Observable<number> { return this.build.skillPoints(job); }
-  skillPointsMax(job: ITOSJob) : number { return this.build.skillPointsMax(job); }
-  skillSP(skill: ITOSSkill): number { return this.build.skillSP(skill); }
+  skillEffect$(skill: ITOSSkill, showFactors: boolean) { return this.build.skillEffect$(skill, showFactors) }
+  skillEffectFormula$(skill: ITOSSkill, prop: string) { return this.build.skillEffectFormula$(skill, prop) }
+  skillLevel(skill: ITOSSkill) { return this.build.skillLevel(skill) }
 
-  statsIncrementLevel(stat: string, delta: number): void {
-    this.build.statsIncrementLevel(stat, delta);
-    this.Change.emit();
-  }
-  statsIncrementLevelAvailable(stat: string, delta: number): boolean { return this.build.statsIncrementLevelAvailable(stat, delta); }
-  statsPointsMax(): number { return this.build.statsPointsMax(); }
+  async skillLevelIncrement$(skill: ITOSSkill, delta: number, rollOver?: boolean) { await this.build.skillLevelIncrement$(skill, delta, rollOver); }
+  skillLevelIncrementAvailable$(skill: ITOSSkill, delta: number) { return this.build.skillLevelIncrementAvailable$(skill, delta) }
+  skillLevelMax$(skill: ITOSSkill) { return this.build.skillLevelMax$(skill) }
+  skillPoints(job: ITOSJob) { return this.build.skillPoints(job) }
+  skillPointsMax(job: ITOSJob) { return this.build.skillPointsMax(job) }
+  skillSP$(skill: ITOSSkill) { return this.build.skillSP$(skill) }
 
-  tooltipAttributeShow(attribute: ITOSAttribute, show: boolean) {
-    this.tooltipAttribute = show ? attribute : null;
-    this.Tooltip.emit(this.tooltipAttribute || this.tooltipSkill || this.tooltipJob);
-  }
-  tooltipJobShow(job: ITOSJob, show: boolean) {
-    this.tooltipJob = show ? job : null;
-    this.Tooltip.emit(this.tooltipAttribute || this.tooltipSkill || this.tooltipJob);
-  }
-  tooltipSkillShow(skill: ITOSSkill, show: boolean): void {
-    this.tooltipSkill = show ? skill : null;
-    this.Tooltip.emit(this.tooltipAttribute || this.tooltipSkill || this.tooltipJob);
+  statsIncrementLevel(stat: string, delta: number): void { this.build.statsIncrementLevel(stat, delta); }
+  statsIncrementLevelAvailable(stat: string, delta: number): boolean { return this.build.statsIncrementLevelAvailable(stat, delta) }
+  statsPointsMax(): number { return this.build.statsPointsMax() }
+
+  tooltip(entity: ITOSAttribute | ITOSJob | ITOSSkill, show: boolean) {
+    this.Tooltip.emit(show && entity)
   }
 
 }

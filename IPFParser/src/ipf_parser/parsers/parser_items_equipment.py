@@ -510,7 +510,7 @@ def parse_equipment():
                 row['Reinforce_2'] = lv
 
                 if any(prop in row['BasicTooltipProp'] for prop in ['DEF', 'MDEF']):
-                    obj['AnvilDEF'].append(LUA['GET_REINFORCE_ADD_VALUE'](None, row, 0, 0))
+                    obj['AnvilDEF'].append(LUA['GET_REINFORCE_ADD_VALUE'](None, row, 0, 1))
                     obj['AnvilPrice'].append(LUA_REINFORCE['GET_REINFORCE_PRICE'](row, {}, None))
                 if any(prop in row['BasicTooltipProp'] for prop in ['ATK', 'MATK']):
                     obj['AnvilATK'].append(LUA['GET_REINFORCE_ADD_VALUE_ATK'](row, 0, 1, None))

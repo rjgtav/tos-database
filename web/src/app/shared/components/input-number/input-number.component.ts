@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -10,6 +11,7 @@ import {
 } from '@angular/core';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-input-number',
   templateUrl: './input-number.component.html',
   styleUrls: ['./input-number.component.scss']

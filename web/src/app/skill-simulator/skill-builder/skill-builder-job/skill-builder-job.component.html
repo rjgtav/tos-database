@@ -28,8 +28,8 @@
       <tos-entity-detail-JobIcon [circle]="circles.length" style="width: 3rem; height: 3rem;"
                                  [job]="job"
                                  [size]="'xs'"
-                                 (mouseenter)="build.tooltipJobShow(job, true)"
-                                 (mouseleave)="build.tooltipJobShow(job, false)"></tos-entity-detail-JobIcon>
+                                 (mouseenter)="build.tooltip(job, true)"
+                                 (mouseleave)="build.tooltip(job, false)"></tos-entity-detail-JobIcon>
 
       <!-- Job Name & Job Attributes -->
       <div class="pl-2">
@@ -41,11 +41,13 @@
 
         <br *ngIf="attributes"/>
 
-        <img *ngFor="let attribute of attributes" class="tos-attribute"
-             [src]="attribute.Icon"
-             [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
-             (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
-             (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/>
+        <a *ngFor="let attribute of attributes; index as i; trackBy: TOSEntity.trackBy" [routerLink]="attribute.Url">
+          <img class="tos-attribute"
+               [src]="attribute.Icon"
+               [style.opacity]="attributesUnlock && attributesUnlock[i] ? 1 : 0.5"
+               (mouseenter)="build.tooltip(attribute, true)"
+               (mouseleave)="build.tooltip(attribute, false)"/>
+        </a>
 
       </div>
 
@@ -68,13 +70,11 @@
       <app-skill-builder-skill [ngClass]="{ 'mb-0': !isOpen, 'mb-3': isOpen }"></app-skill-builder-skill>
 
       <!-- Choose skills -->
-      <app-skill-builder-skill *ngFor="let skill of skills" class="mb-3"
+      <app-skill-builder-skill *ngFor="let skill of skills; trackBy: TOSEntity.trackBy" class="mb-3"
                                [ngClass]="{ 'd-none': !isOpen, 'd-sm-block': !isOpen }"
                                [build]="build"
                                [job]="job"
-                               [skill]="skill"
-                               (mouseenter)="$event.relatedTarget && build.tooltipSkillShow(skill, true)"
-                               (mouseleave)="$event.relatedTarget && build.tooltipSkillShow(skill, false)"></app-skill-builder-skill>
+                               [skill]="skill"></app-skill-builder-skill>
 
     </div>
   </div>

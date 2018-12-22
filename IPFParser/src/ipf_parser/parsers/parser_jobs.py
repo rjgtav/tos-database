@@ -1,9 +1,7 @@
 # coding=utf-8
 import csv
-import httplib
 import logging
 import os
-import urllib
 
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations, parser_assets
@@ -101,6 +99,7 @@ def parse_jobs():
             obj['JobType'] = [TOSJobType.value_of(v.strip()) for v in row['ControlType'].split(',')] if len(row['ControlType']) else None
             obj['IsHidden'] = row['HiddenJob'] == 'YES'
             obj['IsSecret'] = obj['IsHidden'] and len(row['PreFunction']) > 0
+            obj['IsStarter'] = int(row['Rank']) == 1
             obj['Rank'] = int(row['Rank'])
             obj['Stat_CON'] = int(row['CON'])
             obj['Stat_DEX'] = int(row['DEX'])

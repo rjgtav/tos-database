@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectorRef, Component, Input} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 
 @Component({
@@ -11,6 +11,6 @@ export class EntityDetailDescriptionComponent extends EntityDetailChildComponent
   @Input() divider: boolean;
   @Input() header: boolean;
 
-  constructor() { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
 }

@@ -35,7 +35,7 @@
 <app-skill-builder-job-selector [build]="build"></app-skill-builder-job-selector>
 
 <!-- Jobs -->
-<app-skill-builder-job *ngFor="let job of jobs"
+<app-skill-builder-job *ngFor="let job of jobs; trackBy: TOSEntity.trackBy"
                        [build]="build"
                        [job]="job"></app-skill-builder-job>
 

@@ -1,4 +1,4 @@
-<div class="card mb-3 shadow" *ngIf="jobsAvailable.length">
+<div class="card mb-3 shadow" *ngIf="jobsAvailable && jobsAvailable.length">
   <div class="card-body">
 
     <!-- Choose a class -->
@@ -13,13 +13,13 @@
     <div class="row" [style.justifyContent]="rank <= 3 ? 'center' : ''">
       <a *ngFor="let job of jobsAvailable; let i = index" class="col-4 col-sm-3 col-md-2 mb-3 tos-job"
          [href]="'#' + job.Name"
-         (click)="onJobClick($event, job)">
+         (click)="onJobClick($event, job)"
+         (mouseenter)="build.tooltip(job, true)"
+         (mouseleave)="build.tooltip(job, false)">
         <tos-entity-detail-JobIcon class="m-auto"
-                                   [circle]="jobsCircles[i] + 1"
+                                   [circle]="build.jobCircle(job) + 1"
                                    [job]="job"
-                                   [size]="'xs'"
-                                   (mouseenter)="build.tooltipJobShow(job, true)"
-                                   (mouseleave)="build.tooltipJobShow(job, false)"></tos-entity-detail-JobIcon>
+                                   [size]="'xs'"></tos-entity-detail-JobIcon>
         <div class="text-center w-100">{{ job.Name }}</div>
       </a>
     </div>

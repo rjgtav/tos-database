@@ -3,9 +3,8 @@
   position: relative;
 }
 
-.dropdown-header {
-  text-transform: initial !important;
-}
+.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-header { text-transform: initial !important; }
 
 .navbar-nav .nav-item {
   position: relative;

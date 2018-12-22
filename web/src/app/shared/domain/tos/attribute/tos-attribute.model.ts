@@ -1,14 +1,14 @@
 import {TOSEntity} from "../tos-entity.model";
-import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSBuild, TOSDataSet} from "../tos-domain";
+import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSBuild, ITOSJob, ITOSSkill, TOSDataSet} from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
 import {LUAService} from "../../../service/lua.service";
+import {Observable} from "rxjs";
+import {fromPromise} from "rxjs/internal-compatibility";
 
 export class TOSAttribute extends TOSEntity implements ITOSAttribute {
 
   constructor(json: TOSAttribute) {
     super(TOSDataSet.ATTRIBUTES, json);
-
-    this.unlockAvailable = this.unlockAvailable.bind(this);
   }
 
   get DescriptionRequired() { return this.$lazyPropertyStringMultiline('DescriptionRequired', value => '<br/>' + value) }
@@ -18,22 +18,17 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
   get UnlockArgs() { return this.$lazyPropertyJSONObject('UnlockArgs', value => new TOSAttributeUnlockArg(value)) }
   get UpgradePrice() { return this.$lazyPropertyJSONArray('UpgradePrice') as number[] }
 
-  get Link_Jobs() {
-    return this.$lazyPropertyJSONArray('Link_Jobs', (value) => TOSDomainService.jobsById[value]);
-  }
-  get Link_Skill() {
-    return this.$lazyPropertyLink('Link_Skill', (value) => TOSDomainService.skillsById[value]);
-  }
+  get Link_Jobs() { return this.$lazyPropertyLink('Link_Jobs', (value) => TOSDomainService.jobsById(value)) as Observable<ITOSJob[]> }
+  get Link_Skill() { return this.$lazyPropertyLink('Link_Skill', (value) => TOSDomainService.skillsById(value)) as Observable<ITOSSkill> }
 
   public Price(level: number) { return level > 0 && this.UpgradePrice ? this.UpgradePrice[level - 1] : 0 }
   public PriceTotal(level: number) { return Array.from({length: level + 1}, (x,i) => this.Price(i)).reduce((a, b) => a + b, 0) }
 
   unlockAvailable(build: ITOSBuild) {
-    if (!this.Unlock)  return true;
+    return fromPromise((async () => {
+      if (!this.Unlock)  return true;
 
-    return !!Object
-      .values(this.UnlockArgs)
-      .find(unlockArg => {
+      for (let unlockArg of Object.values(this.UnlockArgs)) {
         let source = this.Unlock;
         let context = {
           'abilIES': null,
@@ -44,8 +39,22 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
           'limitRank': unlockArg.UnlockArgNum,
         };
 
-        return LUAService.eval(build, source, context) == 'UNLOCK';
-      });
+        let unlock = (await LUAService.eval(build, source, context).toPromise());
+        if (unlock === 'UNLOCK')
+          return true;
+      }
+
+      return false;
+    })());
+  }
+  unlockAvailableCheck(args: string[]): boolean {
+    if (this.UnlockArgs != null)
+      for (let attributeUnlock of Object.values(this.UnlockArgs))
+        for (let value of args)
+          if (value == attributeUnlock.UnlockArgStr)
+            return true;
+
+    return false;
   }
 
 }

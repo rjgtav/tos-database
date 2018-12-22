@@ -1,5 +1,6 @@
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   ElementRef,
   Input,
@@ -23,8 +24,11 @@ import {
   TOSElement,
   TOSEquipmentType,
   TOSItemTradability,
-  TOSMonsterRace, TOSStat
+  TOSMonsterRace,
+  TOSStat
 } from "../../domain/tos/tos-domain";
+import {TOSDatabaseBuild} from "../../domain/tos/tos-build";
+import {TOSRegionService} from "../../service/tos-region.service";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -56,7 +60,12 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
   map: TOSMap;
   skill: TOSSkill;
 
-  constructor(private element: ElementRef, private ngbTooltipConfig: NgbTooltipConfig, private zone: NgZone) {
+  constructor(
+    private changeDetector: ChangeDetectorRef,
+    private element: ElementRef,
+    private ngbTooltipConfig: NgbTooltipConfig,
+    private zone: NgZone
+  ) {
     this.onMouseLeave();
   }
 
@@ -72,6 +81,20 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
       this.job = this.entity instanceof TOSJob ? this.entity as TOSJob : null;
       this.map = this.entity instanceof TOSMap ? this.entity as TOSMap : null;
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
+
+      if (this.skill) {
+        if (this.build == null) {
+          this.skill.Link_Job.subscribe(async value => {
+            let build = TOSDatabaseBuild.new(TOSRegionService.Region);
+            await build.jobAdd$(value); // Note: we need to add them 3 times, as on pre-Re:Build the level max scales with the selected Job circle
+            await build.jobAdd$(value);
+            await build.jobAdd$(value);
+
+            this.build = build;
+            this.changeDetector.markForCheck();
+          });
+        }
+      }
     }
   }
 
@@ -100,11 +123,13 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
   private onMouseMove = (e: MouseEvent) => {
     e.preventDefault();
 
-    let top = 0, bottom = window.innerHeight - this.element.nativeElement.clientHeight - 16;
-    let left = 0, right = window.innerWidth - this.element.nativeElement.clientWidth - 16;
+    this.zone.runOutsideAngular(() => {
+      let top = 0, bottom = window.innerHeight - this.element.nativeElement.clientHeight - 16;
+      let left = 0, right = window.innerWidth - this.element.nativeElement.clientWidth - 16;
 
-    this.element.nativeElement.style.left = Math.max(left, Math.min(right, e.clientX)) + 'px';
-    this.element.nativeElement.style.top = Math.max(top, Math.min(bottom, e.clientY)) + 'px';
+      this.element.nativeElement.style.left = Math.max(left, Math.min(right, e.clientX)) + 'px';
+      this.element.nativeElement.style.top = Math.max(top, Math.min(bottom, e.clientY)) + 'px';
+    })
   }
 
 }

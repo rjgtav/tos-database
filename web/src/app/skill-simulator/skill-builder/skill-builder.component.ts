@@ -9,7 +9,6 @@ import {TinyUrlService} from "../../shared/service/integrations/tiny-url.service
 import {ClipboardService} from "../../shared/service/clipboard.service";
 import {ITOSJob} from "../../shared/domain/tos/tos-domain";
 import {TOSRegionService} from "../../shared/service/tos-region.service";
-import {TOSRegion} from "../../shared/domain/tos-region";
 
 const PARAM_BUILD = 'build';
 const PARAM_TINYURL = 'tinyurl';
@@ -25,10 +24,11 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
 
   faImage = faImage;
   faLink = faLink;
+  TOSEntity = TOSEntity;
 
   build: TOSSimulatorBuild = TOSSimulatorBuild.new(TOSRegionService.Region);
   buildChanged: boolean;
-  jobs: ITOSJob[];
+  jobs: ITOSJob[] = [];
 
   sharingAsImage: boolean;
   sharingAsUrl: boolean;
@@ -36,9 +36,10 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
 
   tooltip: TOSEntity;
 
-  subscriptionBuild: Subscription;
+  subscriptionSkill: Subscription;
   subscriptionQueryParams: Subscription;
-  subscriptionJobs: Subscription;
+  subscriptionJob: Subscription;
+  subscriptionStatsPoints: Subscription;
   subscriptionTooltip: Subscription;
 
   constructor(
@@ -52,12 +53,14 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
   ) {}
 
   private buildSubscribe() {
-    this.subscriptionBuild && this.subscriptionBuild.unsubscribe();
-    this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
+    this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
+    this.subscriptionJob && this.subscriptionJob.unsubscribe();
+    this.subscriptionStatsPoints && this.subscriptionStatsPoints.unsubscribe();
     this.subscriptionTooltip && this.subscriptionTooltip.unsubscribe();
 
-    this.subscriptionBuild = this.build.Change.subscribe(value => this.onBuildChange());
-    this.subscriptionJobs = this.build.Jobs.subscribe(value => this.onJobsChange(value));
+    this.subscriptionSkill = this.build.Skill$.subscribe(value => this.onBuildChange());
+    this.subscriptionJob = this.build.Job$.subscribe(value => this.onJobChange(value));
+    this.subscriptionStatsPoints = this.build.StatsPoints$.subscribe(value => this.onBuildChange());
     this.subscriptionTooltip = this.build.Tooltip.subscribe(value => this.tooltip = value);
   }
 
@@ -93,14 +96,14 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
     });
   }
 
-  shareAsUrl() {
+  async shareAsUrl() {
     if (this.tinyUrl) {
       this.clipboardService.write(this.tinyUrl);
       return;
     }
 
     let urlBase = location.protocol + '//' + location.host + location.pathname;
-    let url = urlBase + '?' + PARAM_BUILD + '=' + TOSSimulatorBuild.base64Encode(this.build);
+    let url = urlBase + '?' + PARAM_BUILD + '=' + await TOSSimulatorBuild.base64Encode(this.build);
 
     this.tinyUrl = null;
     this.sharingAsUrl = true;
@@ -115,25 +118,39 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
       })
   }
 
-  onBuildChange() {
+  async onBuildChange() {
     this.buildChanged = true;
 
     let queryParams = {};
-        queryParams[PARAM_BUILD] = TOSSimulatorBuild.base64Encode(this.build);
+        queryParams[PARAM_BUILD] = await TOSSimulatorBuild.base64Encode(this.build);
 
     this.router.navigate(['.'], { queryParams, relativeTo: this.route });
   }
 
-  onQueryParamsChange(value: Params) {
+  onJobChange(job: ITOSJob) {
+    let jobs = this.build.Jobs;
+    let unique = [];
+    let uniqueIDs = [];
+
+    for (let job of jobs)
+      if (uniqueIDs.indexOf(job.$ID) == -1) {
+        unique.push(job);
+        uniqueIDs.push(job.$ID);
+      }
+
+    this.jobs = unique;
+    this.onBuildChange();
+  }
+
+  async onQueryParamsChange(value: Params) {
     if (this.buildChanged) {
       this.buildChanged = false;
       this.tinyUrl = null;
       return;
     }
 
-
     if (value[PARAM_TOSNEET]) {
-      this.build = this.tosNeetService.decode(value[PARAM_TOSNEET]);
+      this.build = await this.tosNeetService.decode(value[PARAM_TOSNEET]).toPromise();
       this.buildSubscribe();
     } else if (value[PARAM_TINYURL]) {
       this.tinyUrlService
@@ -145,7 +162,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
           this.router.navigate(['.'], { queryParams, relativeTo: this.route });
         });
     } else if (value[PARAM_BUILD]) {
-      this.build = TOSSimulatorBuild.base64Decode(TOSRegionService.Region, value[PARAM_BUILD]);
+      this.build = await TOSSimulatorBuild.base64Decode(TOSRegionService.Region, value[PARAM_BUILD]).toPromise();
       this.buildSubscribe();
     } else {
       this.build = TOSSimulatorBuild.new(TOSRegionService.Region);
@@ -155,25 +172,16 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
     this.changeDetector.detectChanges();
   }
 
-  onJobsChange(jobs: ITOSJob[]) {
-    let unique = [];
-
-    for (let job of jobs)
-      if (unique.indexOf(job) == -1)
-        unique.push(job);
-
-    this.jobs = unique;
-  }
-
   ngOnInit() {
     this.subscriptionQueryParams = this.route.queryParams.subscribe(value => this.onQueryParamsChange(value));
     this.buildSubscribe();
   }
 
   ngOnDestroy(): void {
-    this.subscriptionBuild && this.subscriptionBuild.unsubscribe();
+    this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
     this.subscriptionQueryParams && this.subscriptionQueryParams.unsubscribe();
-    this.subscriptionJobs && this.subscriptionJobs.unsubscribe();
+    this.subscriptionJob && this.subscriptionJob.unsubscribe();
+    this.subscriptionStatsPoints && this.subscriptionStatsPoints.unsubscribe();
     this.subscriptionTooltip && this.subscriptionTooltip.unsubscribe();
   }
 

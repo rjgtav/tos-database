@@ -25,7 +25,7 @@
         <span class="col pt-1 pb-1 text-right">{{ job.Rank }}</span>
       </h6>
       <h6 *ngIf="monster">{{ monster.Size }}</h6>
-      <h6 *ngIf="skill">{{ build.skillSP(skill) }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
+      <h6 *ngIf="skill">{{ skillSP }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
     </div>
   </div>
 
@@ -38,7 +38,7 @@
     <div class="col" *ngIf="job">
       <h6 *ngIf="job" class="d-flex flex-row">
         <span class="badge badge-primary pt-1 pb-1 text-left">Type</span>
-        <span class="col pt-1 pb-1 text-right">{{ job.JobType?.join(', ') }}</span>
+        <span class="col pt-1 pb-1 text-right">{{ job.JobType ? job.JobType.join(', ') : '' }}</span>
       </h6>
     </div>
     <div class="col" *ngIf="skill && skill.OverHeat"><h6>

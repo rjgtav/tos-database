@@ -1,9 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  forwardRef,
-  HostListener,
-  Input} from '@angular/core';
+import {Directive, ElementRef, forwardRef, HostListener, Input} from '@angular/core';
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {TOSGroupChildDirective, TOSGroupDirective} from "./group-child.directive";
 
@@ -50,7 +45,7 @@ export class FilterGroupDirective extends TOSGroupDirective<FilterDirective, Fil
 export class FilterDirective extends TOSGroupChildDirective<FilterDirective, Filter> {
 
   @Input('value')
-  value: string;
+  value: number;
 
   constructor(private _group: FilterGroupDirective, private _element: ElementRef) {
     super(_group, _element);
@@ -71,28 +66,16 @@ export class FilterDirective extends TOSGroupChildDirective<FilterDirective, Fil
 }
 
 export class Filter {
-  constructor(public column: string, public value: string) {}
-
-  /*
-  static default(config: TOSListConfiguration): Filter {
-    return config.filter
-      ? new Filter(config.filter.column, config.filter.default.toString())
-      : null;
-  }
-  */
-
-  public filter(item: any): boolean {
-    return ('' + item[this.column]) == this.value;
-  }
+  constructor(public column: string, public value: number) {}
 
   public toString(): string {
     return this.column + ',' + this.value;
   }
 
   public static valueOf(value: string): Filter {
-    if (value == null || value == '') return null;
+    if (value == null || (value + '') == '') return null;
 
     let parts = value.split(',');
-    return new Filter(parts[0], parts[1]);
+    return new Filter(parts[0], +parts[1]);
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 
 @Component({
@@ -8,6 +8,6 @@ import {EntityDetailChildComponent} from "../entity-detail-child.component";
 })
 export class EntityDetailDurabilityPotentialSocketsComponent extends EntityDetailChildComponent {
 
-  constructor() { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
 }

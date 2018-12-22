@@ -16,19 +16,29 @@ import {TOSGemRepository} from "./item/gem/tos-gem.repository";
 import {TOSSkillRepository} from "./skill/tos-skill.repository";
 import {TOSCollectionRepository} from "./item/collection/tos-collection.repository";
 import {TOSRegion} from "../tos-region";
+import {Injectable, Injector} from "@angular/core";
 
-export abstract class TOSRepositoryService {
+@Injectable({
+  providedIn: 'root'
+})
+export class TOSRepositoryService {
 
-  private static isLoaded: BehaviorSubject<boolean> = new BehaviorSubject(false);
-  private static isLoading: boolean;
-  private static loadProgress: number;
+  private isLoaded: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  private isLoading: boolean;
+  private loadProgress: number;
 
-  static get IsLoaded(): Observable<boolean> {
+  constructor(private injector: Injector) {}
+
+  get IsLoaded$(): Observable<boolean> {
     return this.isLoaded.asObservable();
   }
 
-  static load(force: boolean, loadingBar: LoadingBarService, region: TOSRegion) {
+  load(force: boolean, loadingBar: LoadingBarService, region: TOSRegion) {
     let load = (force || !this.isLoaded.getValue()) && !this.isLoading;
+
+    if (!load)
+      return of(null);
+
     let loadComplete = () => {
       //console.log('loadComplete', this.isLoaded.getValue());
       if (!this.isLoaded.getValue()) {
@@ -51,29 +61,26 @@ export abstract class TOSRepositoryService {
       this.loadProgress = 0;
     };
 
+    loadStart();
+
     let repositories = [
-      TOSAttributeRepository.instance,
-      TOSBookRepository.instance,
-      TOSCardRepository.instance,
-      TOSCollectionRepository.instance,
-      TOSCubeRepository.instance,
-      TOSEquipmentRepository.instance,
-      TOSEquipmentSetRepository.instance,
-      TOSGemRepository.instance,
-      TOSItemRepository.instance,
-      TOSJobRepository.instance,
-      TOSMapRepository.instance,
-      TOSMonsterRepository.instance,
-      TOSRecipeRepository.instance,
-      TOSSkillRepository.instance,
+      this.injector.get(TOSAttributeRepository),
+      this.injector.get(TOSBookRepository),
+      this.injector.get(TOSCardRepository),
+      this.injector.get(TOSCollectionRepository),
+      this.injector.get(TOSCubeRepository),
+      this.injector.get(TOSEquipmentRepository),
+      this.injector.get(TOSEquipmentSetRepository),
+      this.injector.get(TOSGemRepository),
+      this.injector.get(TOSItemRepository),
+      this.injector.get(TOSJobRepository),
+      this.injector.get(TOSMapRepository),
+      this.injector.get(TOSMonsterRepository),
+      this.injector.get(TOSRecipeRepository),
+      this.injector.get(TOSSkillRepository),
     ].map(value => value.load(force, region).pipe(tap(loadProgress)));
 
-    if (load)
-      loadStart();
-
-    return load
-      ? forkJoin(repositories).pipe(tap(loadComplete))
-      : of(null);
+    return forkJoin(repositories).pipe(tap(loadComplete));
   }
 
 }

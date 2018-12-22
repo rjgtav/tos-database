@@ -1,11 +1,19 @@
-import {ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges
+} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {Subscription} from "rxjs";
 import {ITOSBuild} from "../../../domain/tos/tos-domain";
-import {TOSDatabaseBuild} from "../../../domain/tos/tos-build";
-import {TOSRegionService} from "../../../service/tos-region.service";
+import {filter} from "rxjs/operators";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-entity-detail-Skill',
   templateUrl: './entity-detail-Skill.component.html',
   styleUrls: ['./entity-detail-Skill.component.scss']
@@ -18,37 +26,37 @@ export class EntityDetailSkillComponent extends EntityDetailChildComponent imple
 
   effectHTML: string;
   skillLevel: number;
-  subscriptionLevels: Subscription;
+  subscriptionSkill: Subscription;
 
-  constructor(private changeDetector: ChangeDetectorRef) { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
-  onSkillLevelsChange(value: { [key: number]: number }) {
-    this.skillLevel = value[this.skill.$ID];
-    this.effectHTML = this.build.skillEffect(this.skill, this.input);
-
-    this.changeDetector.detectChanges();
+  async onSkillChange() {
+    this.skillLevel = this.build.skillLevel(this.skill);
+    this.effectHTML = await this.build.skillEffect$(this.skill, this.input).toPromise();
+    this.changeDetector.markForCheck();
   }
 
-  onSkillLevelChange(value: number) {
-    this.build.skillLevelIncrement(this.skill, value - this.skillLevel);
+  onSkillLevelIncrement(value: number) {
+    this.build.skillLevelIncrement$(this.skill, value - this.skillLevel);
   }
 
   ngOnChanges(changes: SimpleChanges) {
     super.ngOnChanges(changes);
-    this.ngOnDestroy();
 
-    if (changes.entity && this.skill) {
-      if (!this.build) {
-        this.build = TOSDatabaseBuild.new(TOSRegionService.Region);
-        this.build.jobAdd(this.skill.Link_Job);
-      }
+    if (this.build && this.skill) {
+      this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
+      this.subscriptionSkill = this.build.Skill$
+        .pipe(filter(value => value && value.$ID == this.skill.$ID))
+        .subscribe(value => this.onSkillChange());
 
-      this.subscriptionLevels = this.build.jobSkillLevels(this.skill.Link_Job).subscribe(value => this.onSkillLevelsChange(value));
+      this.onSkillChange()
+    } else if (!this.skill) {
+      this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
     }
   }
 
   ngOnDestroy(): void {
-    this.subscriptionLevels && this.subscriptionLevels.unsubscribe();
+    this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
   }
 
 }

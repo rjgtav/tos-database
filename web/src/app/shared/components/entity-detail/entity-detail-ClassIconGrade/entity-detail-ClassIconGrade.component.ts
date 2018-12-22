@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, Input, NgZone, OnDestroy, SimpleChanges} from '@angular/core';
+import {ChangeDetectorRef, Component, Input, OnDestroy, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {TOSEquipmentType} from "../../../domain/tos/tos-domain";
 
@@ -27,7 +27,7 @@ export class EntityDetailClassIconGradeComponent extends EntityDetailChildCompon
   private iconInterval: any;
   private iconIntervalChange: boolean;
 
-  constructor(private changeDetector: ChangeDetectorRef) { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
   get Icon(): string {
     if (this.card)

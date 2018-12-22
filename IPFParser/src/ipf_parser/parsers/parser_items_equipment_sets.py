@@ -60,6 +60,9 @@ def parse_links_items(file_name):
             if item_name == '':
                 continue
 
-            equipment_set['Link_Items'].append(globals.get_item_link(item_name))
+            item = globals.get_item_link(item_name)
+
+            if item is not None:
+                equipment_set['Link_Items'].append(item)
 
     ies_file.close()

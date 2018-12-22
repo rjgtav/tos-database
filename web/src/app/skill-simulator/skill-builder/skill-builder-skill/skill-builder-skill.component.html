@@ -4,22 +4,24 @@
       <!-- Plus and Minus -->
       <div class="position-absolute d-flex d-sm-none flex-column h-100 justify-content-around tos-skill-controls">
         <a [ngClass]="{ 'invisible': !skillIncrementAvailablePlus }" href="#plus"
-           (click)="onIncrementClick($event, 1)">
+           (click)="onSkillLevelIncrementClick($event, 1)">
           <fa-icon class="align-top" [icon]="['fas', 'plus-circle']"></fa-icon>
         </a>
         <a [ngClass]="{ 'invisible': !skillIncrementAvailableMinus }" href="#minus"
-           (click)="onIncrementClick($event, -1)">
+           (click)="onSkillLevelIncrementClick($event, -1)">
           <fa-icon class="align-bottom" [icon]="['fas', 'minus-circle']"></fa-icon>
         </a>
       </div>
 
       <!-- Icon & Level -->
       <div class="position-relative tos-skill mr-1" style="cursor: pointer"
-           (click)="onIncrementClick($event, 1, true)"
-           (contextmenu)="onIncrementClick($event, -1, true)">
+           (click)="onSkillLevelIncrementClick($event, 1, true)"
+           (contextmenu)="onSkillLevelIncrementClick($event, -1, true)"
+           (mouseenter)="build.tooltip(skill, true)"
+           (mouseleave)="build.tooltip(skill, false)">
         <img [src]="skill.Icon" />
         <h6 class="font-weight-bold mb-0 pointer-disable position-absolute text-center text-outline text-white w-100">
-          {{ skillLevel + '/' + skillLevelMax }}
+          {{ skillLevel  + '/' + skillLevelMax }}
         </h6>
       </div>
 
@@ -27,12 +29,12 @@
       <div class="d-flex flex-column">
         <a [routerLink]="skill.Url">{{ skill.Name }}</a>
         <div>
-          <a *ngFor="let attribute of attributes" [routerLink]="attribute.Url">
+          <a *ngFor="let attribute of attributes; index as i; trackBy: TOSEntity.trackBy" [routerLink]="attribute.Url">
             <img class="tos-attribute"
                  [src]="attribute.Icon"
-                 [style.opacity]="attribute.unlockAvailable(build) ? 1 : 0.5"
-                 (mouseenter)="$event.relatedTarget && build.tooltipAttributeShow(attribute, true)"
-                 (mouseleave)="$event.relatedTarget && build.tooltipAttributeShow(attribute, false)"/>
+                 [style.opacity]="attributesUnlock && attributesUnlock[i] ? 1 : 0.5"
+                 (mouseenter)="$event.relatedTarget && build.tooltip(attribute, true)"
+                 (mouseleave)="$event.relatedTarget && build.tooltip(attribute, false)"/>
           </a>
         </div>
       </div>

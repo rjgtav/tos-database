@@ -1,23 +1,36 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
-import {TOSListConfiguration, TOSListTableColumnType} from "../entity-list/entity-list.component";
+import {TOSListConfiguration} from "../entity-list/entity-list.component";
+import {
+  TableCellTextPipeDefinition,
+  TableCellTextPipeFormat
+} from "../../shared/components/entity-table/pipes/table-cell-text.pipe";
+import {TableCellLinkPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-link.pipe";
 import {TOSRecipeMaterial} from "../../shared/domain/tos/item/recipe/tos-recipe.model";
+import {TableCellIconPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-icon.pipe";
 
 @Injectable()
 export class RecipeListConfigurationResolver implements Resolve<TOSListConfiguration> {
+
+  static readonly COLUMNS = [
+    { label: '',              pipe: new TableCellLinkPipeDefinition('Link_Target'), class: 'p-1' },
+    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
+    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
+    { label: 'Materials',     pipe: new TableCellLinkPipeDefinition('Link_Materials', (o: TOSRecipeMaterial) => o.Item, (o: TOSRecipeMaterial) => o.Quantity), class: 'p-1 text-nowrap' }
+  ];
+
+  static readonly COLUMNS_MATERIALS = [
+    { label: '',              pipe: new TableCellIconPipeDefinition('Icon', (o: TOSRecipeMaterial) => o.Item), class: 'p-1 text-center' },
+    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID', null, (o: TOSRecipeMaterial) => o.Item), hideMobile: true },
+    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name', null, (o: TOSRecipeMaterial) => o.Item), wide: true },
+    { label: 'Quantity',      pipe: new TableCellTextPipeDefinition('Quantity', TableCellTextPipeFormat.QUANTITY), class: 'text-nowrap' },
+  ];
+
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<TOSListConfiguration> | Promise<TOSListConfiguration> | TOSListConfiguration {
     return {
       sortColumn: '$ID',
-
-      tableColumns: [
-        { value: 'Link_Target',     type: TOSListTableColumnType.ICON_LINK,       label: '',
-          transformValue: (o) => [o] },
-        { value: '$ID',             type: TOSListTableColumnType.TEXT,            isNotMobile: true },
-        { value: 'Name',            type: TOSListTableColumnType.TEXT,            isWide: true},
-        { value: 'Link_Materials',  type: TOSListTableColumnType.ICON_LINK_VALUE, label: 'Materials', isNotMobile: true,
-          transformLink: (o: TOSRecipeMaterial) => o.Item, transformValue: (o: TOSRecipeMaterial) => o.Quantity },
-      ]
+      tableColumns: RecipeListConfigurationResolver.COLUMNS,
     };
   }
 }

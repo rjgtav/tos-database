@@ -1,6 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectorRef, Component, Input} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'tos-entity-detail-BonusStatsUnidentified',
@@ -15,6 +14,6 @@ export class EntityDetailBonusStatsUnidentifiedComponent extends EntityDetailChi
   @Input('header')
   header: boolean;
 
-  constructor(public router: Router) { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
 }

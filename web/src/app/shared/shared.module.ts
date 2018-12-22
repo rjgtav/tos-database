@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, DecimalPipe, PercentPipe} from '@angular/common';
 import {SortDirective, SortGroupDirective} from './directives/sort.directive';
 import {FilterDirective, FilterGroupDirective} from "./directives/filter.directive";
 import {TimePipe} from './directives/time.pipe';
@@ -13,7 +13,7 @@ import {TOSCubeResolver} from "./domain/tos/item/cube/tos-cube.resolver";
 import {TOSEquipmentSetResolver} from "./domain/tos/item/equipment/tos-equipment-set.resolver";
 import {TOSCardResolver} from "./domain/tos/item/card/tos-card.resolver";
 import {TOSGemResolver} from "./domain/tos/item/gem/tos-gem.resolver";
-import { InputNumberComponent } from './components/input-number/input-number.component';
+import {InputNumberComponent} from './components/input-number/input-number.component';
 import {ClickOutsideModule} from "ng-click-outside";
 import {FormsModule} from "@angular/forms";
 import {TOSAttributeResolver} from "./domain/tos/attribute/tos-attribute.resolver";
@@ -43,6 +43,14 @@ import {EntityDetailSkillComponent} from "./components/entity-detail/entity-deta
 import {EntityDetailSkillFormulaComponent} from "./components/entity-detail/entity-detail-SkillFormula/entity-detail-SkillFormula.component";
 import {EntityDetailJobIconComponent} from "./components/entity-detail/entity-detail-JobIcon/skill-builder-job-icon.component";
 import {EntityDetailJobAnimationComponent} from "./components/entity-detail/entity-detail-JobAnimation/entity-detail-JobAnimation.component";
+import {EntityTableComponent} from './components/entity-table/entity-table.component';
+import {TableCellPipe} from "./components/entity-table/pipes/table-cell.pipe";
+import {TableCellNumberPipe} from "./components/entity-table/pipes/table-cell-number.pipe";
+import {TableCellTextPipe} from './components/entity-table/pipes/table-cell-text.pipe';
+import {TableCellIconPipe} from "./components/entity-table/pipes/table-cell-icon.pipe";
+import {TableCellLinkPipe} from "./components/entity-table/pipes/table-cell-link.pipe";
+import {TableCellBadgePipe} from "./components/entity-table/pipes/table-cell-badge.pipe";
+import {EntityDetailEquipmentSetComponent} from "./components/entity-detail/entity-detail-EquipmentSet/entity-detail-EquipmentSet.component";
 
 @NgModule({
   imports: [
@@ -63,6 +71,7 @@ import {EntityDetailJobAnimationComponent} from "./components/entity-detail/enti
     EntityDetailDescriptionComponent,
     EntityDetailDurabilityPotentialSocketsComponent,
     EntityDetailEnhancementComponent,
+    EntityDetailEquipmentSetComponent,
     EntityDetailGemComponent,
     EntityDetailInformationComponent,
     EntityDetailJobAnimationComponent,
@@ -73,6 +82,7 @@ import {EntityDetailJobAnimationComponent} from "./components/entity-detail/enti
     EntityDetailBonusStatsUnidentifiedComponent,
     EntityDetailStatsComponent,
     EntityDetailTableComponent,
+    EntityTableComponent,
     EntityTooltipComponent,
     InputNumberComponent,
 
@@ -85,11 +95,17 @@ import {EntityDetailJobAnimationComponent} from "./components/entity-detail/enti
     // Pipes
     SanitizeCSSPipe,
     SanitizeHTMLPipe,
+    TableCellBadgePipe,
+    TableCellIconPipe,
+    TableCellLinkPipe,
+    TableCellNumberPipe,
+    TableCellTextPipe,
     TimePipe,
   ],
   declarations: [
     // Components
     EntityDetailAttackDefenseComponent,
+    EntityDetailBonusStatsUnidentifiedComponent,
     EntityDetailBookComponent,
     EntityDetailCardComponent,
     EntityDetailChildComponent,
@@ -97,16 +113,17 @@ import {EntityDetailJobAnimationComponent} from "./components/entity-detail/enti
     EntityDetailDescriptionComponent,
     EntityDetailDurabilityPotentialSocketsComponent,
     EntityDetailEnhancementComponent,
-    EntityDetailSkillComponent,
-    EntityDetailSkillFormulaComponent,
+    EntityDetailEquipmentSetComponent,
     EntityDetailGemComponent,
     EntityDetailInformationComponent,
     EntityDetailJobAnimationComponent,
     EntityDetailJobIconComponent,
     EntityDetailMaterialNameTypeComponent,
-    EntityDetailBonusStatsUnidentifiedComponent,
+    EntityDetailSkillComponent,
+    EntityDetailSkillFormulaComponent,
     EntityDetailStatsComponent,
     EntityDetailTableComponent,
+    EntityTableComponent,
     EntityTooltipComponent,
     InputNumberComponent,
 
@@ -119,9 +136,22 @@ import {EntityDetailJobAnimationComponent} from "./components/entity-detail/enti
     // Pipes
     SanitizeCSSPipe,
     SanitizeHTMLPipe,
+    TableCellPipe,
+    TableCellBadgePipe,
+    TableCellIconPipe,
+    TableCellLinkPipe,
+    TableCellNumberPipe,
+    TableCellTextPipe,
     TimePipe,
   ],
   providers: [
+    DecimalPipe,
+    PercentPipe,
+    TableCellBadgePipe,
+    TableCellIconPipe,
+    TableCellLinkPipe,
+    TableCellNumberPipe,
+    TableCellTextPipe,
     TOSAttributeResolver,
     TOSBookResolver,
     TOSCardResolver,

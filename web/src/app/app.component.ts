@@ -1,9 +1,10 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
 import {NavigationEnd, Router} from "@angular/router";
 import {SEOService} from "./shared/service/seo.service";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

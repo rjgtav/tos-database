@@ -11,7 +11,6 @@ from ipf_parser.parsers.parser_jobs import TOSJobTree
 from ipf_parser.utils import luautil
 from ipf_parser.utils.tosenum import TOSEnum
 
-
 EFFECT_DEPRECATE = {
     'SkillAtkAdd': 'SkillFactor'
 }
@@ -119,7 +118,7 @@ def parse_skills(region):
                 header_color = '993399' if TOSAttackType.MAGIC in obj['TypeAttack'] else header_color
                 header_color = 'DD5500' if TOSAttackType.MELEE in obj['TypeAttack'] else header_color
 
-                if TOSAttackType.MAGIC in obj['TypeAttack'] and obj['Element'] != TOSElement.MELEE:
+                if obj['Element'] != TOSElement.MELEE:
                     header.append('[' + TOSElement.to_string(obj['Element']) + ']')
 
                 obj['Description'] = '{#' + header_color + '}{ol}' + ' - '.join(header) + '{/}{/}{nl}' + obj['Description']
@@ -290,7 +289,7 @@ def parse_skills_stances():
 
                 if index == -1:
                     continue
-                if skill['RequiredStance'] == 'TwoHandBow' and stance['Name'] == 'Bow':
+                if skill['RequiredStance'] == 'TwoHandBow' and stance['ClassName'] == 'Bow':
                     continue
                 if 'Artefact' in stance['Name']:
                     continue

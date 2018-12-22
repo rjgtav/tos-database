@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {ChangeDetectorRef, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 
 @Component({
@@ -17,7 +17,7 @@ export class EntityDetailAttackDefenseComponent extends EntityDetailChildCompone
   transcendMDEFRatio: number = 1;
   transcendPDEFRatio: number = 1;
 
-  constructor() { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
   get AttackPhysical(): number[] {
     if (this.equipment)

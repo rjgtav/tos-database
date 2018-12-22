@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faCommentAlt, faMoon, faSearch} from "@fortawesome/free-solid-svg-icons";
@@ -9,11 +9,12 @@ import {TOSDataSet} from "../../shared/domain/tos/tos-domain";
 import {TOSRegion} from "../../shared/domain/tos-region";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   RegionService = TOSRegionService;
   Theme = Theme;
   TOSDataSet = TOSDataSet;
@@ -25,23 +26,20 @@ export class HeaderComponent implements OnInit {
   faSearch = faSearch;
   faSun = faSun;
 
-  isOpenDatabase: boolean;
-  isOpenRegion: boolean;
   isOpenSearch: boolean;
-  isGithub: boolean;
 
-  constructor(private regionService: TOSRegionService, public theme: ThemeService) {}
+  constructor(
+    private regionService: TOSRegionService,
+    public theme: ThemeService
+  ) {}
 
   routerLink(url: string): string {
     return TOSUrlService.Route(TOSRegionService.Region, url);
   }
 
-  regionSelect(region: any) {
+  regionSelect(region: any): boolean {
     this.regionService.regionRelect(region);
-  }
-
-  ngOnInit(): void {
-    this.isGithub = location.href.indexOf('github.io') > 0;
+    return false;
   }
 
 }

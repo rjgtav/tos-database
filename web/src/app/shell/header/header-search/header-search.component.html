@@ -1,8 +1,8 @@
 <!-- Query -->
 <div class="input-group align-items-center position-relative">
-  <input type="text" class="border-0 form-control" #queryInput
+  <input type="text" class="border-0 form-control" #input
          [attachOutsideOnClick]="true"
-         [ngModel]="query" (ngModelChange)="onQueryChange($event)"
+         [(ngModel)]="query"
          [disabled]="!isLoadedRepository || !isLoadedSearch"
          [placeholder]="!isLoadedRepository || !isLoadedSearch ? 'Loading search...' : 'ClassID, ClassName, Description, Name'"
          (clickOutside)="onFocus(false)"
@@ -22,20 +22,20 @@
     <button class="btn dropdown-toggle text-white-50"
             type="button"
             [attachOutsideOnClick]="true"
-            (click)="isOpenFilter = !isOpenFilter"
-            (clickOutside)="isOpenFilter = false">
-      {{ filter ? TOSDataSet.toLabel(filter) : 'All' }}
+            (click)="isOpenDataset = !isOpenDataset"
+            (clickOutside)="isOpenDataset = false">
+      {{ queryDataset ? TOSDataSet.toLabel(queryDataset) : 'All' }}
     </button>
-    <div class="dropdown-menu dropdown-menu-right" [ngClass]="{ 'show': isOpenFilter }">
+    <div class="dropdown-menu dropdown-menu-right" [ngClass]="{ 'show': isOpenDataset }">
       <a class="dropdown-item" href="#all"
-         [ngClass]="{'active': filter == null }"
-         (click)="onFilterChange($event, null)">All</a>
+         [ngClass]="{'active': queryDataset == null }"
+         (click)="onDatasetChange($event, null)">All</a>
 
       <div *ngFor="let group of TOSDataSet.VALUES; index as i">
         <div class="dropdown-header">{{ group.label }}</div>
         <a class="dropdown-item" *ngFor="let option of group.options" [href]="'#' + option"
-           [ngClass]="{'active': filter == option }"
-           (click)="onFilterChange($event, option)">{{ TOSDataSet.toLabel(option) }}</a>
+           [ngClass]="{'active': queryDataset == option }"
+           (click)="onDatasetChange($event, option)">{{ TOSDataSet.toLabel(option) }}</a>
         <div class="dropdown-divider" *ngIf="i < TOSDataSet.VALUES.length - 1"></div>
       </div>
     </div>
@@ -45,11 +45,11 @@
 
 <!-- Results -->
 <div class="card position-absolute shadow w-100" style="max-height: calc(100vh - 9rem); overflow-y: auto; z-index: 3"
-     *ngIf="isOpen && resultsSliced && resultsSliced.length > 0">
+     *ngIf="isOpen && results && results.length > 0">
   <div class="card-body">
     <table class="table table-hover mb-0">
       <tbody>
-        <a *ngFor="let entity of resultsSliced; index as i" class="d-table-row"
+        <a *ngFor="let entity of results; index as i" class="d-table-row"
            [ngClass]="{'bg-secondary': keyboardSelected == i }"
            [routerLink]="entity.Url"
            (mouseenter)="tooltip = entity"
@@ -73,7 +73,7 @@
       </tbody>
     </table>
 
-    <div *ngIf="resultsLimit < results.length" class="d-flex flex-row justify-content-center mt-3"
+    <div *ngIf="isLoadMore" class="d-flex flex-row justify-content-center mt-3"
          (click)="onLoadMore()">
       <button class="btn btn-primary">Load more</button>
     </div>

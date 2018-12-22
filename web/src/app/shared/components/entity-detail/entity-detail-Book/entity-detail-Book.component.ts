@@ -1,4 +1,4 @@
-import {Component, OnChanges, SimpleChanges} from '@angular/core';
+import {ChangeDetectorRef, Component, OnChanges, SimpleChanges} from '@angular/core';
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 
 @Component({
@@ -11,7 +11,7 @@ export class EntityDetailBookComponent extends EntityDetailChildComponent implem
   page: number = 1;
   pages: string[];
 
-  constructor() { super() }
+  constructor(changeDetector: ChangeDetectorRef) { super(changeDetector) }
 
   ngOnChanges(changes: SimpleChanges): void {
     super.ngOnChanges(changes);
