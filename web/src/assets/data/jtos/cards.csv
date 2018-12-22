@@ -143,6 +143,8 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644908,Legend_card_PantoRex,[スロット装着効果] 野獣型モンスターに与えるダメージ[★*7]%アップ,icon_item_card_legend,150_boss_pantorex,,,,,,,,,異端者のパントレックスカード,0,,,,0.0,0.0,1111,3,2,1.0
 644909,Legend_card_Velcoffer,[スロット装着効果]モンスターから受けるダメージ[★×3]%ダウン,icon_item_card_legend,136_raid_boss_blackgargoyle,,[642916],58690,,,,0,0,ベルカッパーカード,0,,,,0.0,0.0,1111,3,2,1.0
 644910,Legend_card_FrosterLord,[スロット装着効果] 召喚獣の最小攻撃力と最大攻撃力の差が[★ * 10]%ダウン{nl}(10LVを達成すると召喚獣の最小攻撃力が最大攻撃力と同じ数値に変更されます。),icon_item_card_legend,149_boss_frosterlord,,[642927],800076,,,,0,1,魔将フロスターロッドカード,0,,,,0.0,0.0,1111,3,2,1.0
+644911,Legend_card_Acio,[スロット装着効果] クリティカル発生+[★ * 15],icon_item_card_legend,152_boss_asio,,,,,,,,,アシオメイジカード,0,,,,0.0,0.0,1111,3,2,1.0
+644912,Legend_card_Wastrel,[スロット装着効果] 最大HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,,,,,,,,ウェイストラルカード,0,,,,0.0,0.0,1111,3,2,1.0
 650001,legend_reinforce_card_lv1,レジェンドカード強化に使用できる強化用カードです。LV4まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,破れたレジェンド強化用カード,0,,,,0.0,0.0,1111,3,3,1.0
 650002,legend_reinforce_card_lv2,レジェンドカード強化に使用できる強化用カードです。LV6まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,古びたレジェンド強化用カード,0,,,,0.0,0.0,1111,3,3,1.0
 650003,legend_reinforce_card_lv3,レジェンドカード強化に使用できる強化用カードです。LV8まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,レジェンド強化用カード,0,,,,0.0,0.0,1111,3,3,1.0
