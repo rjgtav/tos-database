@@ -228,35 +228,36 @@ class TOSEquipmentType(TOSEnum):
     CANNON = 2
     CHARM = 3
     COSTUME_ARMBAND = 4
-    COSTUME_EFFECT = 5
-    COSTUME_HAIR = 6
-    COSTUME_HAIR_ACCESSORY = 7
-    COSTUME_HELMET = 8
-    COSTUME_LENS = 9
-    COSTUME_OUTFIT = 10
-    COSTUME_SPECIAL = 11
-    COSTUME_TOY = 12
-    COSTUME_WING = 13
-    DAGGER = 14
-    GLOVES = 15
-    NECKLACE = 16
-    ONE_HANDED_BOW = 17
-    ONE_HANDED_GUN = 18
-    ONE_HANDED_MACE = 19
-    ONE_HANDED_SPEAR = 20
-    ONE_HANDED_STAFF = 21
-    ONE_HANDED_SWORD = 22
-    RAPIER = 23
-    SEAL = 24
-    SHIELD = 25
-    SHOES = 26
-    TOP = 27
-    TWO_HANDED_BOW = 28
-    TWO_HANDED_GUN = 29
-    TWO_HANDED_MACE = 30
-    TWO_HANDED_SPEAR = 31
-    TWO_HANDED_STAFF = 32
-    TWO_HANDED_SWORD = 33
+    COSTUME_DOLL = 5
+    COSTUME_EFFECT = 6
+    COSTUME_HAIR = 7
+    COSTUME_HAIR_ACCESSORY = 8
+    COSTUME_HELMET = 9
+    COSTUME_LENS = 10
+    COSTUME_OUTFIT = 11
+    COSTUME_SPECIAL = 12
+    COSTUME_TOY = 13
+    COSTUME_WING = 14
+    DAGGER = 15
+    GLOVES = 16
+    NECKLACE = 17
+    ONE_HANDED_BOW = 18
+    ONE_HANDED_GUN = 19
+    ONE_HANDED_MACE = 20
+    ONE_HANDED_SPEAR = 21
+    ONE_HANDED_STAFF = 22
+    ONE_HANDED_SWORD = 23
+    RAPIER = 24
+    SEAL = 25
+    SHIELD = 26
+    SHOES = 27
+    TOP = 28
+    TWO_HANDED_BOW = 29
+    TWO_HANDED_GUN = 30
+    TWO_HANDED_MACE = 31
+    TWO_HANDED_SPEAR = 32
+    TWO_HANDED_STAFF = 33
+    TWO_HANDED_SWORD = 34
 
     @staticmethod
     def value_of(string):
@@ -267,6 +268,7 @@ class TOSEquipmentType(TOSEnum):
             'BOW': TOSEquipmentType.ONE_HANDED_BOW,
             'CANNON': TOSEquipmentType.CANNON,
             'CHARM': TOSEquipmentType.CHARM,
+            'DOLL': TOSEquipmentType.COSTUME_DOLL,
             'DAGGER': TOSEquipmentType.DAGGER,
             'EFFECTCOSTUME': TOSEquipmentType.COSTUME_EFFECT,
             'GLOVES': TOSEquipmentType.GLOVES,

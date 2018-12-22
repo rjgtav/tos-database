@@ -184,6 +184,7 @@ export enum TOSEquipmentType {
   CANNON = 'Cannons',
   CHARM = 'Charm',
   COSTUME_ARMBAND = 'Armband',
+  COSTUME_DOLL = 'Doll',
   COSTUME_EFFECT = 'Effect Costumes',
   COSTUME_HAIR = 'Hair',
   COSTUME_HAIR_ACCESSORY = 'Hair Accessories',
@@ -234,6 +235,7 @@ export const
       header: 'Fashion',
       options: [
         TOSEquipmentType.COSTUME_ARMBAND,
+        TOSEquipmentType.COSTUME_DOLL,
         TOSEquipmentType.COSTUME_EFFECT,
         TOSEquipmentType.COSTUME_HAIR,
         TOSEquipmentType.COSTUME_HAIR_ACCESSORY,
