@@ -104,6 +104,6 @@ def translate(key):
 
     if key != '' and key not in globals.translations:
         logging.warn('Missing translation for key: %s', key)
-        return None
+        return key
 
     return globals.translations[key]
