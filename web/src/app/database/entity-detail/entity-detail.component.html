@@ -94,9 +94,16 @@
                                      [header]="true"></tos-entity-detail-Information>
 
       <!-- Set -->
-      <tos-entity-detail-EquipmentSet *ngIf="equipment && equipment.Link_Set"
-                                      [entity]="equipment.Link_Set | async"
-                                      [header]="true"></tos-entity-detail-EquipmentSet>
+      <tos-entity-detail-Table *ngIf="equipment && equipment.Link_Set" class="table-borderless"
+                               [columns]="COLUMNS_SET"
+                               [data$]="equipment.Link_Set"
+                               [divider]="true"
+                               [entity]="entity"
+                               [header]="'Set'"
+                               [themeInvert]="true">
+      </tos-entity-detail-Table>
+      <tos-entity-detail-BonusStatsUnidentified *ngIf="equipment && equipment.Link_Set"
+                                                [entity]="equipment.Link_Set | async"></tos-entity-detail-BonusStatsUnidentified>
 
       <!-- Stats -->
       <tos-entity-detail-Stats *ngIf="card || monster"
@@ -161,12 +168,12 @@
                              [header]="'Attributes'"
     ></tos-entity-detail-Table>
 
-    <!-- Skills -->
-    <tos-entity-detail-Table *ngIf="entity['Link_Skills']" class="col-md-6 mb-4"
-                             [columns]="COLUMNS_SKILLS"
-                             [data$]="entity['Link_Skills']"
+    <!-- Collections -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Collections']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_COLLECTIONS"
+                             [data$]="entity['Link_Collections']"
                              [entity]="entity"
-                             [header]="'Skills'"
+                             [header]="'Collections'"
     ></tos-entity-detail-Table>
 
     <!-- Dropped by -->
@@ -177,6 +184,14 @@
                              [header]="'Dropped by'">
     </tos-entity-detail-Table>
 
+    <!-- Drops -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Drops']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_MONSTERS_DROPS"
+                             [data$]="entity['Link_Drops']"
+                             [entity]="entity"
+                             [header]="'Drops'">
+    </tos-entity-detail-Table>
+
     <!-- Found in -->
     <tos-entity-detail-Table *ngIf="entity['Link_Cubes']" class="col-md-6 mb-4"
                              [columns]="COLUMNS_CUBES"
@@ -184,22 +199,6 @@
                              [entity]="entity"
                              [header]="'Found in'">
     </tos-entity-detail-Table>
-
-    <!-- Required for -->
-    <tos-entity-detail-Table *ngIf="entity['Link_RecipeMaterial'] && !recipe" class="col-md-6 mb-4"
-                             [columns]="COLUMNS_RECIPES"
-                             [data$]="entity['Link_RecipeMaterial']"
-                             [entity]="entity"
-                             [header]="'Required for'">
-    </tos-entity-detail-Table>
-
-    <!-- Collections -->
-    <tos-entity-detail-Table *ngIf="entity['Link_Collections']" class="col-md-6 mb-4"
-                             [columns]="COLUMNS_COLLECTIONS"
-                             [data$]="entity['Link_Collections']"
-                             [entity]="entity"
-                             [header]="'Collections'"
-    ></tos-entity-detail-Table>
 
     <!-- Items -->
     <tos-entity-detail-Table *ngIf="entity['Link_Items']" class="col-md-6 mb-4"
@@ -209,13 +208,22 @@
                              [header]="cube ? 'Drops' : 'Items'">
     </tos-entity-detail-Table>
 
-    <!-- Drops -->
-    <tos-entity-detail-Table *ngIf="entity['Link_Drops']" class="col-md-6 mb-4"
-                             [columns]="COLUMNS_MONSTERS_DROPS"
-                             [data$]="entity['Link_Drops']"
+
+    <!-- Required for -->
+    <tos-entity-detail-Table *ngIf="entity['Link_RecipeMaterial'] && !recipe" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_RECIPES"
+                             [data$]="entity['Link_RecipeMaterial']"
                              [entity]="entity"
-                             [header]="'Drops'">
+                             [header]="'Required for'">
     </tos-entity-detail-Table>
+
+    <!-- Skills -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Skills']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_SKILLS"
+                             [data$]="entity['Link_Skills']"
+                             [entity]="entity"
+                             [header]="'Skills'"
+    ></tos-entity-detail-Table>
 
     <!-- Spawn Locations -->
     <tos-entity-detail-Table *ngIf="entity['Link_Spawns']" class="col-md-6 mb-4"

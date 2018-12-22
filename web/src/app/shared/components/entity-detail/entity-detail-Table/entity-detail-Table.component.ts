@@ -14,6 +14,7 @@ export class EntityDetailTableComponent extends EntityDetailChildComponent imple
   @Input() data$: Observable<any[]>;
   @Input() divider: boolean;
   @Input() header: string;
+  @Input() themeInvert: boolean;
 
   public data: any[];
   private subscriptionData: Subscription;

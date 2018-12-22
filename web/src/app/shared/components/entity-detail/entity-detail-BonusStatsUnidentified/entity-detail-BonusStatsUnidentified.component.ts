@@ -9,7 +9,7 @@ import {EntityDetailChildComponent} from "../entity-detail-child.component";
 export class EntityDetailBonusStatsUnidentifiedComponent extends EntityDetailChildComponent {
 
   @Input('divider')
-  divider: boolean = true;
+  divider: boolean;
 
   @Input('header')
   header: boolean;

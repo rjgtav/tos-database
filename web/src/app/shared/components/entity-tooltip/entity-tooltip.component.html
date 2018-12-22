@@ -38,11 +38,9 @@
     <!-- Physical and Magical Attack / Defense -->
     <tos-entity-detail-AttackDefense [entity]="entity"></tos-entity-detail-AttackDefense>
 
-    <!-- Set -->
-    <tos-entity-detail-EquipmentSet [entity]="entity"></tos-entity-detail-EquipmentSet>
-
     <!-- Stats & Unidentified -->
-    <tos-entity-detail-BonusStatsUnidentified [entity]="entity"></tos-entity-detail-BonusStatsUnidentified>
+    <tos-entity-detail-BonusStatsUnidentified [divider]="true"
+                                              [entity]="entity"></tos-entity-detail-BonusStatsUnidentified>
 
     <!-- Potential, Durability and Sockets / Base EXP and Class EXP -->
     <tos-entity-detail-DurabilityPotentialSockets [entity]="entity"></tos-entity-detail-DurabilityPotentialSockets>

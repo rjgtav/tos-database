@@ -50,7 +50,6 @@ import {TableCellTextPipe} from './components/entity-table/pipes/table-cell-text
 import {TableCellIconPipe} from "./components/entity-table/pipes/table-cell-icon.pipe";
 import {TableCellLinkPipe} from "./components/entity-table/pipes/table-cell-link.pipe";
 import {TableCellBadgePipe} from "./components/entity-table/pipes/table-cell-badge.pipe";
-import {EntityDetailEquipmentSetComponent} from "./components/entity-detail/entity-detail-EquipmentSet/entity-detail-EquipmentSet.component";
 
 @NgModule({
   imports: [
@@ -71,7 +70,6 @@ import {EntityDetailEquipmentSetComponent} from "./components/entity-detail/enti
     EntityDetailDescriptionComponent,
     EntityDetailDurabilityPotentialSocketsComponent,
     EntityDetailEnhancementComponent,
-    EntityDetailEquipmentSetComponent,
     EntityDetailGemComponent,
     EntityDetailInformationComponent,
     EntityDetailJobAnimationComponent,
@@ -113,7 +111,6 @@ import {EntityDetailEquipmentSetComponent} from "./components/entity-detail/enti
     EntityDetailDescriptionComponent,
     EntityDetailDurabilityPotentialSocketsComponent,
     EntityDetailEnhancementComponent,
-    EntityDetailEquipmentSetComponent,
     EntityDetailGemComponent,
     EntityDetailInformationComponent,
     EntityDetailJobAnimationComponent,

@@ -26,6 +26,7 @@ import {SkillListConfigurationResolver} from "../resolvers/skill-list-configurat
 import {RecipeListConfigurationResolver} from "../resolvers/recipe-list-configuration.resolver";
 import {MonsterListConfigurationResolver} from "../resolvers/monster-list-configuration.resolver";
 import {CubeListConfigurationResolver} from "../resolvers/cube-list-configuration.resolver";
+import {EquipmentSetListConfigurationResolver} from "../resolvers/equipment-set-list-configuration.resolver";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -41,9 +42,10 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
   readonly COLUMNS_ITEMS = ItemListConfigurationResolver.COLUMNS;
   readonly COLUMNS_ITEMS_DROPS = ItemListConfigurationResolver.COLUMNS_DROPS;
   readonly COLUMNS_JOBS = JobListConfigurationResolver.COLUMNS;
-  readonly COLUMNS_SKILLS = SkillListConfigurationResolver.COLUMNS;
   readonly COLUMNS_RECIPES_MATERIALS = RecipeListConfigurationResolver.COLUMNS_MATERIALS;
   readonly COLUMNS_RECIPES = RecipeListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_SET = EquipmentSetListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_SKILLS = SkillListConfigurationResolver.COLUMNS;
   readonly COLUMNS_MONSTERS_DROPS = MonsterListConfigurationResolver.COLUMNS_DROPS;
   readonly COLUMNS_MONSTERS_SPAWNS = MonsterListConfigurationResolver.COLUMNS_SPAWNS;
 
