@@ -3,7 +3,7 @@ import {TOSRegion} from "../domain/tos-region";
 const VERSION = {
   'iTOS': '233164001001', /* iTOS-needle */
   'jTOS': '233240001001', /* jTOS-needle */
-  'kTOS': '231587001001', /* kTOS-needle */
+  'kTOS': '233658001001', /* kTOS-needle */
   'kTEST': '233478001001', /* kTEST-needle */
 };
 
