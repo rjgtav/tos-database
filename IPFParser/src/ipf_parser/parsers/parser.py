@@ -1,7 +1,8 @@
-import unicodecsv as csv
 import json
 import logging
 import os
+
+import unicodecsv as csv
 
 from ipf_parser import constants, globals
 from ipf_parser.globals import Link
@@ -20,12 +21,10 @@ def csv_write(data, path):
 
             # Clean lists and convert to JSON
             if isinstance(cell, (list,)):
-                data[row][col] = filter(lambda x: x is not None, cell)
+                cell = filter(lambda x: x is not None, cell)
+                cell.sort()
 
-                if len(cell) == 0:
-                    data[row][col] = None
-                else:
-                    data[row][col] = json.dumps(cell)
+                data[row][col] = json.dumps(cell) if len(cell) > 0 else None
             elif isinstance(cell, (dict,)):
                 data[row][col] = json.dumps(cell)
 

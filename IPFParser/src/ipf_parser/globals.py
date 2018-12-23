@@ -1,5 +1,6 @@
-from ipf_parser import constants
 from multiprocessing import Manager
+
+from ipf_parser import constants
 
 assets_icons = Manager().dict()
 assets_icons_used = []
@@ -143,6 +144,9 @@ def _get_entity_link(name, collection):
 # Helper class to delay the toString operation
 # For example, Recipes only have their name calculated after the parse_links operation
 class Link:
+
+    def __eq__(self, other):
+        return self.entity['$ID'] == other.entity['$ID']
 
     def __init__(self, entity, collection):
         self.entity = entity

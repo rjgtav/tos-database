@@ -32,7 +32,7 @@ def parse_attributes():
             obj['Unlock'] = None
             obj['UnlockArgs'] = {}
             obj['UpgradePrice'] = []
-            obj['Link_Jobs'] = row['Job']
+            obj['Link_Jobs'] = []
             obj['Link_Skill'] = None
 
             globals.attributes[obj['$ID']] = obj
@@ -77,7 +77,6 @@ def parse_links_jobs():
                         attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
 
                     # Parse attribute job
-                    attribute['Link_Jobs'] = [] if isinstance(attribute['Link_Jobs'], basestring) else attribute['Link_Jobs']
                     attribute['Link_Jobs'].append(globals.get_job_link(job['$ID_NAME']))
 
                     # Parse attribute unlock
@@ -95,23 +94,16 @@ def parse_links_jobs_extra():
     logging.debug("Parsing jobs for attributes (extra)...")
 
     # Parse attributes with no unlock requirements (therefore aren't in the job .ies files) (e.g. SwordMastery_DEForATK)
-    for attribute in globals.attributes.values():
-        link_attribute = globals.get_attribute_link(attribute['$ID_NAME'])
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability.ies')
 
-        if isinstance(attribute['Link_Jobs'], basestring):
-            link_jobs = []
-            attribute_jobs = [name for name in attribute['Link_Jobs'].split(';') if len(name)]
+    with open(ies_path, 'rb') as ies_file:
+        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            if row['IsEquipItemAbil'] == 'YES':
+                attribute = globals.attributes_by_name[row['ClassName']]
 
-            if len(attribute_jobs) <= 1:
-                continue
-
-            for job in [globals.jobs_by_name[name] for name in attribute_jobs]:
-                link_job = globals.get_job_link(job['$ID_NAME'])
-                link_jobs.append(link_job)
-
-                job['Link_Attributes'].append(link_attribute)
-
-            attribute['Link_Jobs'] = link_jobs
+                for job in [globals.get_job_link(name) for name in row['Job'].split(';') if len(name)]:
+                    if job not in attribute['Link_Jobs']:
+                        attribute['Link_Jobs'].append(job)
 
 
 def parse_links_skills():

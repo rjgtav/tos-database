@@ -142,6 +142,7 @@ def parse_jobs_stats():
 
 def parse_links():
     parse_links_attributes()
+    parse_links_attributes_extra()
     parse_links_skills()
 
 
@@ -163,7 +164,25 @@ def parse_links_attributes():
             with open(ies_path, 'rb') as ies_file:
                 for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                     attribute = globals.get_attribute_link(row['ClassName'])
-                    job['Link_Attributes'].append(attribute)
+
+                    if row['ClassName'] not in [link.entity['$ID_NAME'] for link in job['Link_Attributes']]:
+                        job['Link_Attributes'].append(attribute)
+
+
+def parse_links_attributes_extra():
+    logging.debug('Parsing attributes for jobs (extra)...')
+
+    # Parse attributes with no unlock requirements (therefore aren't in the job .ies files) (e.g. SwordMastery_DEForATK)
+    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability.ies')
+
+    with open(ies_path, 'rb') as ies_file:
+        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            if row['IsEquipItemAbil'] == 'YES':
+                attribute = globals.get_attribute_link(row['ClassName'])
+
+                for job in [globals.jobs_by_name[name] for name in row['Job'].split(';') if len(name)]:
+                    if attribute not in job['Link_Attributes']:
+                        job['Link_Attributes'].append(attribute)
 
 
 def parse_links_skills():
