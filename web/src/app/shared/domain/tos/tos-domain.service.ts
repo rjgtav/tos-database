@@ -120,7 +120,7 @@ export abstract class TOSDomainService {
 
   public static jobs(page: CRUDPage): Observable<CRUDPageResult<ITOSJob>>                   { return this.$repository[TOSDomainService.JOBS].find(page) };
   public static jobsById($ID: number): Observable<ITOSJob>                                  { return this.$repository[TOSDomainService.JOBS].findBy($ID, TOSDomainService.JOBS_BY_ID) };
-  public static jobsByIdName($ID_NAME): Observable<ITOSJob>                                 { return this.$repository[TOSDomainService.JOBS].findBy($ID_NAME, TOSDomainService.JOBS_BY_ID_NAME) };
+  public static jobsByIdName($ID_NAME: string): Observable<ITOSJob>                         { return this.$repository[TOSDomainService.JOBS].findBy($ID_NAME, TOSDomainService.JOBS_BY_ID_NAME) };
   public static jobsByTree(jobTree: TOSJobTree): Observable<ITOSJob[]>                      { return this.$repository[TOSDomainService.JOBS].findBy(TOSJobTreeService.indexOf(jobTree), TOSDomainService.JOBS_BY_TREE) };
   public static jobsByStarter(isStarter: boolean): Observable<ITOSJob[]>                    { return this.$repository[TOSDomainService.JOBS].findBy(isStarter, TOSDomainService.JOBS_BY_STARTER) };
 

@@ -45,7 +45,7 @@ export class SkillBuilderJobSelectorComponent implements OnChanges, OnDestroy {
             .filter((value, index) => valueAvailable[index])
             .sort((a, b) => {
               if (a.Rank != b.Rank) return a.Rank - b.Rank;
-              return a.Name < b.Name ? -1 : a.Name > b.Name ? 1 : 0;
+              return a.$ID < b.$ID ? -1 : a.$ID > b.$ID ? 1 : 0;
             });
 
           this.changeDetector.markForCheck();
