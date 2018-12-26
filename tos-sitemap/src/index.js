@@ -38,7 +38,7 @@ let files = fs.readdirSync(folder_data);
             .data
             .forEach((row) => {
                 let url = xml.ele('url');
-                    url.ele('loc', 'https://tos.guru/' + REGION.toLowerCase() + '/database/' + dataset + '/' + row.$ID)
+                    url.ele('loc', 'https://tos.guru/' + REGION.toLowerCase() + '/database/' + dataset + '/' + row.$ID + '/');
                     url.ele('lastmod', new Date().toISOString().slice(0, 10));
                     url.ele('changefreq', 'weekly');
             });
