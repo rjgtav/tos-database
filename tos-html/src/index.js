@@ -1,4 +1,5 @@
 const
+    archiver = require('archiver'),
     fs = require('fs-extra'),
     papa = require('papaparse'),
     path = require('path')
@@ -20,14 +21,19 @@ const REGION = process.argv[2] || 'iTOS';
 if ([REGION_ITOS, REGION_JTOS, REGION_KTEST, REGION_KTOS].indexOf(REGION) === -1)
     throw Error('Invalid region: ' + REGION);
 
+let folder_archive_database = path.join(REGION.toLowerCase(), 'database');
+let folder_archive_home = path.join(REGION.toLowerCase(), 'home');
+let folder_archive_region = path.join(REGION.toLowerCase());
 let folder_app = path.join(__dirname, '..', '..', 'web', 'src', 'app');
 let folder_database = path.join(__dirname, '..', '..', 'web', 'src', 'assets', 'data', REGION.toLowerCase());
 let folder_dist = path.join(__dirname, '..', '..', 'web', 'dist', 'web');
-let folder_dist_database = path.join(folder_dist, REGION.toLowerCase(), 'database');
-let folder_dist_home = path.join(folder_dist, REGION.toLowerCase(), 'home');
-let folder_dist_region = path.join(folder_dist, REGION.toLowerCase());
 let folder_template = path.join(__dirname, 'templates');
 let folder_template_database = path.join(folder_template, 'database');
+
+// Initialize archive
+let output = fs.createWriteStream(path.join(folder_dist, REGION.toLowerCase() + '.zip'));
+let archive = archiver('zip', { zlib: { level: 9 }});
+    archive.pipe(output);
 
 // Generate template base
 let templateBase = fs.existsSync(path.join(folder_dist, 'index.backup.html'))
@@ -69,8 +75,7 @@ let files = fs.readdirSync(folder_database);
                 let outputDetail = templatePopulate(row, templateDetail);
                     outputDetail = templatePopulate(row, templateBase.replace(/#{content}#/g, outputDetail));
 
-                fs.ensureDirSync(path.join(folder_dist_database, dataset, row.$ID + ''));
-                fs.writeFileSync(path.join(folder_dist_database, dataset, row.$ID + '', 'index.html'), outputDetail);
+                archive.append(outputDetail, { name: path.join(folder_archive_database, dataset, row.$ID + '', 'index.html') });
 
                 // Update list page
                 if (templateListSize++ < 32)
@@ -86,8 +91,7 @@ let files = fs.readdirSync(folder_database);
         let outputList = templatePopulate(row, templateList);
             outputList = templatePopulate(row, templateBase.replace(/#{content}#/g, outputList));
 
-        fs.ensureDirSync(path.join(folder_dist_database, dataset));
-        fs.writeFileSync(path.join(folder_dist_database, dataset, 'index.html'), outputList);
+        archive.append(outputList, { name: path.join(folder_archive_database, dataset, 'index.html')});
     });
 
 // Generate home pages
@@ -99,9 +103,10 @@ let row = {};
 let outputHome = fs.readFileSync(path.join(folder_app, 'home', 'welcome', 'welcome.component.html'), 'utf8');
     outputHome = templatePopulate(row, templateBase.replace(/#{content}#/g, outputHome));
 
-fs.ensureDirSync(path.join(folder_dist_home));
-fs.writeFileSync(path.join(folder_dist_home, 'index.html'), outputHome);
-fs.writeFileSync(path.join(folder_dist_region, 'index.html'), outputHome);
+archive.append(outputHome, { name: path.join(folder_archive_home, 'index.html')});
+archive.append(outputHome, { name: path.join(folder_archive_region, 'index.html')});
+archive.finalize();
+
 fs.writeFileSync(path.join(folder_dist, 'index.html'), outputHome);
 fs.writeFileSync(path.join(folder_dist, 'index.backup.html'), templateBase); // Backup base html page for next use
 

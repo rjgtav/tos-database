@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "archiver": "^3.0.0",
     "fs-extra": "^7.0.1",
     "papaparse": "^4.6.2"
   }
