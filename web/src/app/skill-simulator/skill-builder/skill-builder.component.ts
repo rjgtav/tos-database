@@ -172,7 +172,6 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
       this.buildSubscribe();
     }
 
-    console.log('detectChanges', this.build)
     this.changeDetector.detectChanges();
   }
 

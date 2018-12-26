@@ -133,16 +133,16 @@ export class HeaderSearchComponent implements OnDestroy, OnInit {
       this.results = [];
     }
 
-    this.query = this.query.trim().replace(/[~*+]/g, '');
+    this.query = this.query.replace(/[~*+]/g, '');
     this.queryPrevious = this.query;
     this.queryPreviousDataset = this.queryDataset;
     this.queryPreviousPage = this.queryPage;
 
     // Hotfix: deal with incomplete queries and make sure multi word queries use an AND
-    let query = this.query;
+    let query = this.query.trim();
     let words = query.split(' ');
         query = words
-          .map((value, index) => index == words.length - 1 ? value + '*' : '+' + value)
+          .map((value, index) => index == words.length - 1 ? '+' + value + '*' : '+' + value)
           .join(' ');
 
     this.search
