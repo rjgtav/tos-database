@@ -62,9 +62,6 @@ var idx = lunr(function () {
     this.field('Name');
     this.field('Description');
 
-    // Books
-    this.field('Text');
-
     Object.entries(documents)
         .forEach(value => {
             let documents = value[1];
