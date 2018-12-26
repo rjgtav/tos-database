@@ -22,7 +22,10 @@ def csv_write(data, path):
             # Clean lists and convert to JSON
             if isinstance(cell, (list,)):
                 cell = filter(lambda x: x is not None, cell)
-                cell.sort()
+
+                # Sort list, in case it's a Link list
+                if len(cell) > 0 and isinstance(cell[0], Link):
+                    cell.sort()
 
                 data[row][col] = json.dumps(cell) if len(cell) > 0 else None
             elif isinstance(cell, (dict,)):

@@ -27,7 +27,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
   TOSEntity = TOSEntity;
 
   build: TOSSimulatorBuild = TOSSimulatorBuild.new(TOSRegionService.Region);
-  buildChanged: boolean;
+  buildChanged: number = 0;
   jobs: ITOSJob[] = [];
 
   sharingAsImage: boolean;
@@ -119,12 +119,15 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
   }
 
   async onBuildChange() {
-    this.buildChanged = true;
+    let encoded = await TOSSimulatorBuild.base64Encode(this.build);
 
-    let queryParams = {};
-        queryParams[PARAM_BUILD] = await TOSSimulatorBuild.base64Encode(this.build);
+    if (this.router.url.indexOf(encoded) == -1) {
+      let queryParams = {};
+          queryParams[PARAM_BUILD] = encoded;
 
-    this.router.navigate(['.'], { queryParams, relativeTo: this.route });
+      this.router.navigate(['.'], { queryParams, relativeTo: this.route });
+      this.buildChanged ++;
+    }
   }
 
   onJobChange(job: ITOSJob) {
@@ -143,8 +146,8 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
   }
 
   async onQueryParamsChange(value: Params) {
-    if (this.buildChanged) {
-      this.buildChanged = false;
+    if (this.buildChanged > 0) {
+      this.buildChanged --;
       this.tinyUrl = null;
       return;
     }
@@ -169,6 +172,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
       this.buildSubscribe();
     }
 
+    console.log('detectChanges', this.build)
     this.changeDetector.detectChanges();
   }
 

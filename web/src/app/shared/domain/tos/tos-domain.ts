@@ -736,7 +736,6 @@ export interface ITOSGem extends ITOSItem {
   Bonus(level: number): { [key:string]: ITOSGemBonus[]};
 }
 export interface ITOSGemBonus {
-  Slot: TOSGemSlot;
   Stat: string | TOSStat;
   Value: number;
 }

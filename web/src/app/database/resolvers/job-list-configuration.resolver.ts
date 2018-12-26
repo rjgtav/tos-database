@@ -5,7 +5,7 @@ import {TOSListConfiguration} from "../entity-list/entity-list.component";
 import {TOSJobDifficultyService, TOSJobTreeService} from "../../shared/domain/tos/tos-domain";
 import {TableCellIconPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-icon.pipe";
 import {TableCellTextPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-text.pipe";
-import {TableCellNumberPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-number.pipe";
+import {TableCellLinkPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-link.pipe";
 
 @Injectable()
 export class JobListConfigurationResolver implements Resolve<TOSListConfiguration> {
@@ -14,9 +14,8 @@ export class JobListConfigurationResolver implements Resolve<TOSListConfiguratio
     { label: '',              pipe: new TableCellIconPipeDefinition('Icon'), class: 'p-1 text-center' },
     { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
     { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
-    { label: 'Circles',       pipe: new TableCellNumberPipeDefinition('CircleMax') },
+    { label: 'Attributes',    pipe: new TableCellLinkPipeDefinition('Link_Attributes'), class: 'p-1 text-nowrap'  },
     { label: 'Difficulty',    pipe: new TableCellTextPipeDefinition('JobDifficulty'), hideMobile: true },
-    { label: 'Rank',          pipe: new TableCellNumberPipeDefinition('Rank') },
     { label: 'Tree',          pipe: new TableCellTextPipeDefinition('JobTree') },
   ];
 

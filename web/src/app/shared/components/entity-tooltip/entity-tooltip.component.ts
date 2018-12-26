@@ -30,6 +30,8 @@ import {
 import {TOSDatabaseBuild} from "../../domain/tos/tos-build";
 import {TOSRegionService} from "../../service/tos-region.service";
 
+const PADDING = 8;
+
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-entity-tooltip',
@@ -83,7 +85,8 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
 
       if (this.skill) {
-        if (this.build == null) {
+        if (this.build == null || this.build instanceof TOSDatabaseBuild) {
+          this.build = null;
           this.skill.Link_Job.subscribe(async value => {
             let build = TOSDatabaseBuild.new(TOSRegionService.Region);
             await build.jobAdd$(value); // Note: we need to add them 3 times, as on pre-Re:Build the level max scales with the selected Job circle
@@ -124,11 +127,16 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
     e.preventDefault();
 
     this.zone.runOutsideAngular(() => {
-      let top = 0, bottom = window.innerHeight - this.element.nativeElement.clientHeight - 16;
-      let left = 0, right = window.innerWidth - this.element.nativeElement.clientWidth - 16;
+      let x = e.clientX, y = e.clientY;
+      let height = this.element.nativeElement.clientHeight, width = this.element.nativeElement.clientWidth;
+      let top = 0, bottom = window.innerHeight - height - PADDING * 2;
+      let left = 0, right = window.innerWidth - width - PADDING * 2;
 
-      this.element.nativeElement.style.left = Math.max(left, Math.min(right, e.clientX)) + 'px';
-      this.element.nativeElement.style.top = Math.max(top, Math.min(bottom, e.clientY)) + 'px';
+      if (x > right)  x = x - width - PADDING;
+      if (y > bottom) y = y - height - PADDING;
+
+      this.element.nativeElement.style.left = Math.max(left, Math.min(right, x)) + 'px';
+      this.element.nativeElement.style.top = Math.max(top, Math.min(bottom, y)) + 'px';
     })
   }
 

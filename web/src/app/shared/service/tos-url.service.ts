@@ -1,10 +1,10 @@
 import {TOSRegion} from "../domain/tos-region";
 
 const VERSION = {
-  'iTOS': '233164001001_1', /* iTOS-needle */
-  'jTOS': '233240001001', /* jTOS-needle */
-  'kTOS': '233658001001', /* kTOS-needle */
-  'kTEST': '233478001001', /* kTEST-needle */
+  'iTOS': '233164001001_5', /* iTOS-needle */
+  'jTOS': '233240001001_5', /* jTOS-needle */
+  'kTOS': '233658001001_5', /* kTOS-needle */
+  'kTEST': '233478001001_5', /* kTEST-needle */
 };
 
 export abstract class TOSUrlService {

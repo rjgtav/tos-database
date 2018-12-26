@@ -36,12 +36,10 @@ export class TOSGem extends TOSItem implements ITOSGem {
 }
 
 export class TOSGemBonus implements ITOSGemBonus {
-  Slot: TOSGemSlot;
   Stat: string | TOSStat;
   Value: number;
 
   constructor(json: TOSGemBonus) {
-    this.Slot = Object.values(TOSGemSlot)[+json.Slot];
     this.Stat = Object.values(TOSStat)[+json.Stat] || json.Stat;
     this.Value = +json.Value;
   }

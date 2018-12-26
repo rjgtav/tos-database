@@ -110,7 +110,7 @@ abstract class TOSBuild implements ITOSBuild {
         job.Link_Skills$ID.forEach(value => delete this.skillLevelsById[value]);
         delete this.jobCirclesById[job.$ID];
         delete this.skillPointsByJob[job.$ID];
-      } else {
+      } else if (circle > 0) {
         // Reset skill levels & points
         this.buildResetSkillPoints(job);
         await this.buildResetSkillLevels$(job);

@@ -5,7 +5,6 @@ import {TOSListConfiguration} from "../entity-list/entity-list.component";
 import {TOSElementService, TOSSkillRequiredStanceCompanionService} from "../../shared/domain/tos/tos-domain";
 import {TableCellIconPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-icon.pipe";
 import {TableCellTextPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-text.pipe";
-import {TableCellNumberPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-number.pipe";
 import {TableCellLinkPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-link.pipe";
 
 @Injectable()
@@ -15,7 +14,7 @@ export class SkillListConfigurationResolver implements Resolve<TOSListConfigurat
     { label: '',              pipe: new TableCellIconPipeDefinition('Icon'), class: 'p-1 text-center' },
     { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
     { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
-    { label: 'Circle',        pipe: new TableCellNumberPipeDefinition('RequiredCircle') },
+    { label: 'Attributes',    pipe: new TableCellLinkPipeDefinition('Link_Attributes'), class: 'p-1 text-nowrap'  },
     { label: 'Class',         pipe: new TableCellLinkPipeDefinition('Link_Job'), class: 'p-1'}
   ];
 

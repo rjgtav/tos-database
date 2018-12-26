@@ -9,9 +9,7 @@ import {
 } from '@angular/core';
 import {Subscription} from "rxjs";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
-import {TOSJob} from "../../../shared/domain/tos/job/tos-job.model";
 import {faMinus, faPlus, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
-import {TOSDomainService} from "../../../shared/domain/tos/tos-domain.service";
 import {ITOSAttribute, ITOSJob, ITOSSkill} from "../../../shared/domain/tos/tos-domain";
 import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
 
@@ -29,7 +27,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   TOSEntity = TOSEntity;
 
   @Input() build: TOSSimulatorBuild;
-  @Input() job: TOSJob;
+  @Input() job: ITOSJob;
 
   attributes: ITOSAttribute[];
   attributesUnlock: boolean[];
@@ -48,7 +46,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   ngOnChanges(changes: SimpleChanges): void {
     if (this.build && this.job) {
       this.subscriptionAttributes && this.subscriptionAttributes.unsubscribe();
-      this.subscriptionAttributes = TOSDomainService.attributesByJob(this.job).subscribe(value => this.onAttributesChange(value));
+      this.subscriptionAttributes = this.job.Link_Attributes && this.job.Link_Attributes.subscribe(value => this.onAttributesChange(value));
 
       this.subscriptionJob && this.subscriptionJob.unsubscribe();
       this.subscriptionJob = this.build.Job$.subscribe(value => this.onJobChange(value));
@@ -66,6 +64,8 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
     this.changeDetector.detach();
     this.subscriptionAttributes && this.subscriptionAttributes.unsubscribe();
     this.subscriptionJob && this.subscriptionJob.unsubscribe();
+    this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
+
   }
 
   onAttributesChange(value: ITOSAttribute[]) {
@@ -82,12 +82,13 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
       this.skillPoints = this.build.skillPoints(this.job);
 
       this.subscriptionSkills && this.subscriptionSkills.unsubscribe();
-      this.subscriptionSkills = TOSDomainService.skillsByJob(this.job).subscribe(value => this.onSkillsChange(value));
+      this.subscriptionSkills = this.job.Link_Skills.subscribe(value => this.onSkillsChange(value));
     }
 
     if (value) {
       // We need to check whether the attribute has unlocked for every job change
-      this.unlockAttributes([value.$ID_NAME]);
+      // Note: due to attributes that depend on rank change, we can't specify only the job ID in here
+      this.unlockAttributes(null);
     }
   }
 

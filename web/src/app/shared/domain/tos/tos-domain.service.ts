@@ -78,8 +78,6 @@ export abstract class TOSDomainService {
   public static attributes(page: CRUDPage): Observable<CRUDPageResult<ITOSAttribute>>       { return this.$repository[TOSDomainService.ATTRIBUTES].find(page) };
   public static attributesById($ID: number): Observable<ITOSAttribute>                      { return this.$repository[TOSDomainService.ATTRIBUTES].findBy($ID, TOSDomainService.ATTRIBUTES_BY_ID) };
   public static attributesByIdName($ID_NAME: string): Observable<ITOSAttribute>             { return this.$repository[TOSDomainService.ATTRIBUTES].findBy($ID_NAME, TOSDomainService.ATTRIBUTES_BY_ID_NAME) };
-  public static attributesByJob(job: ITOSJob): Observable<ITOSAttribute[]>                  { return this.$repository[TOSDomainService.ATTRIBUTES].findBy(job.$ID, TOSDomainService.ATTRIBUTES_BY_JOB) };
-  public static attributesBySkill(skill: ITOSSkill): Observable<ITOSAttribute[]>            { return this.$repository[TOSDomainService.ATTRIBUTES].findBy(skill.$ID, TOSDomainService.ATTRIBUTES_BY_SKILL) };
 
   public static books(page: CRUDPage): Observable<CRUDPageResult<ITOSBook>>                 { return this.$repository[TOSDomainService.BOOKS].find(page) };
   public static booksById($ID: number): Observable<ITOSBook>                                { return this.$repository[TOSDomainService.BOOKS].findBy($ID, TOSDomainService.BOOKS_BY_ID) };

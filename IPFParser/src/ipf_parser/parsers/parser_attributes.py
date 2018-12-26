@@ -33,7 +33,7 @@ def parse_attributes():
             obj['UnlockArgs'] = {}
             obj['UpgradePrice'] = []
             obj['Link_Jobs'] = []
-            obj['Link_Skill'] = None
+            obj['Link_Skill'] = row['SkillCategory']
 
             globals.attributes[obj['$ID']] = obj
             globals.attributes_by_name[obj['$ID_NAME']] = obj
@@ -41,7 +41,6 @@ def parse_attributes():
 
 def parse_links():
     parse_links_jobs()
-    parse_links_jobs_extra()
     parse_links_skills()
 
 
@@ -77,7 +76,8 @@ def parse_links_jobs():
                         attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
 
                     # Parse attribute job
-                    attribute['Link_Jobs'].append(globals.get_job_link(job['$ID_NAME']))
+                    if not attribute['Link_Skill'] or attribute['Link_Skill'] == 'All':
+                        attribute['Link_Jobs'].append(globals.get_job_link(job['$ID_NAME']))
 
                     # Parse attribute unlock
                     attribute['Unlock'] = luautil.lua_function_source_to_javascript(
@@ -90,31 +90,11 @@ def parse_links_jobs():
                     }
 
 
-def parse_links_jobs_extra():
-    logging.debug("Parsing jobs for attributes (extra)...")
-
-    # Parse attributes with no unlock requirements (therefore aren't in the job .ies files) (e.g. SwordMastery_DEForATK)
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability.ies')
-
-    with open(ies_path, 'rb') as ies_file:
-        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            if row['IsEquipItemAbil'] == 'YES':
-                attribute = globals.attributes_by_name[row['ClassName']]
-
-                for job in [globals.get_job_link(name) for name in row['Job'].split(';') if len(name)]:
-                    if job not in attribute['Link_Jobs']:
-                        attribute['Link_Jobs'].append(job)
-
-
 def parse_links_skills():
     logging.debug("Parsing skills for attributes...")
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability.ies')
-
-    with open(ies_path, 'rb') as ies_file:
-        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            attribute = globals.attributes[int(row['ClassID'])]
-            attribute['Link_Skill'] = globals.get_skill_link(row['SkillCategory'])
+    for attribute in globals.attributes.values():
+        attribute['Link_Skill'] = globals.get_skill_link(attribute['Link_Skill']) if attribute['Link_Skill'] != 'All' else None
 
 
 def parse_clean():
@@ -123,6 +103,8 @@ def parse_clean():
     # Find which attributes are no longer active
     for attribute in globals.attributes.values():
         if not attribute['Link_Jobs'] and not attribute['Link_Skill']:
+            attributes_to_remove.append(attribute)
+        if attribute['Link_Skill'] is not None and attribute['LevelMax'] == -1:
             attributes_to_remove.append(attribute)
 
     # Remove all inactive attributes

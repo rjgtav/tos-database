@@ -168,7 +168,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
 
       let result = await LUAService.parse(build, source, context).toPromise();
       let value = eval(result.func.join('\n')) as number;
-          value = parseFloat(value.toFixed(4)); // Remove trailing 0s
+          value = parseFloat(value.toFixed(2)); // Remove trailing 0s
 
       return { dependencies: result.dependencies, value };
     })());

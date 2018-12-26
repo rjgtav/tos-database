@@ -9,7 +9,6 @@ import {
 } from '@angular/core';
 import {Subscription} from "rxjs";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
-import {TOSDomainService} from "../../../shared/domain/tos/tos-domain.service";
 import {ITOSAttribute, ITOSJob, ITOSSkill} from "../../../shared/domain/tos/tos-domain";
 import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
 
@@ -78,7 +77,7 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.build && this.build || changes.skill && this.skill) {
       this.subscriptionAttributes && this.subscriptionAttributes.unsubscribe();
-      this.subscriptionAttributes = TOSDomainService.attributesBySkill(this.skill).subscribe(value => this.onAttributesChange(value));
+      this.subscriptionAttributes = this.skill.Link_Attributes && this.skill.Link_Attributes.subscribe(value => this.onAttributesChange(value));
 
       this.subscriptionJob && this.subscriptionJob.unsubscribe();
       this.subscriptionJob = this.build.Job$.subscribe(value => this.onJobChange(value));
