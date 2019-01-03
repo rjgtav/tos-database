@@ -6,7 +6,7 @@ const VERSION_HOTFIX = 0;
 const VERSION: { [key in TOSRegion]: string } = {
   'iTOS': '234446001001', /* iTOS-needle */
   'jTOS': '233760_001001.ipf', /* jTOS-needle */
-  'kTEST': '234350_001001.ipf', /* kTEST-needle */
+  'kTEST': '234350001001', /* kTEST-needle */
   'kTOS': '234620_001001.ipf', /* kTOS-needle */
 };
 
