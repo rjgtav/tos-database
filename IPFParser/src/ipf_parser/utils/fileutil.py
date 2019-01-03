@@ -5,6 +5,7 @@ import shutil
 # Removes all files inside a folder
 def clear(path):
     for file in os.listdir(path):
+        file = os.path.join(path, file)
         if os.path.isfile(file):
             os.unlink(file)
 
