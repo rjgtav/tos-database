@@ -149,4 +149,4 @@ def unpack(region):
 
     unpack_translations(region)
 
-    return version_as_int(version), version_as_int(version_new)
+    return version, version_new
