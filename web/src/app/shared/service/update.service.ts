@@ -7,7 +7,7 @@ const VERSION: { [key in TOSRegion]: string } = {
   'iTOS': '234446_001001.ipf', /* iTOS-needle */
   'jTOS': '233760_001001.ipf', /* jTOS-needle */
   'kTEST': '234350_001001.ipf', /* kTEST-needle */
-  'kTOS': '234521001001', /* kTOS-needle */
+  'kTOS': '234620_001001.ipf', /* kTOS-needle */
 };
 
 @Injectable({
