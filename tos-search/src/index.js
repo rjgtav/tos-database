@@ -40,11 +40,11 @@ let files = fs.readdirSync(folder);
         let dataset = fileName.slice(0, fileName.indexOf('.'));
         let file = fs.readFileSync(path.join(folder, fileName), 'utf8');
 
-        documents[fileName] = [];
+        documents[dataset] = [];
 
         papa.parse(file, { dynamicTyping: true, header: true, skipEmptyLines: true })
             .data
-            .forEach((row) => documents[fileName].push(row));
+            .forEach((row) => documents[dataset].push(row));
     });
 
 // Build index
@@ -67,10 +67,10 @@ var idx = lunr(function () {
     Object.entries(documents)
         .forEach(value => {
             let documents = value[1];
-            let fileName = value[0].split('.csv')[0];
+            let dataset = value[0];
 
             documents.forEach((doc) => {
-                doc['$ID_lunr'] = fileName + '#' + doc['$ID'];
+                doc['$ID_lunr'] = dataset + '#' + doc['$ID'];
                 this.add(doc)
             });
         })
