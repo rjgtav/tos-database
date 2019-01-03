@@ -2,6 +2,13 @@ import os
 import shutil
 
 
+# Removes all files inside a folder
+def clear(path):
+    for file in os.listdir(path):
+        if os.path.isfile(file):
+            os.unlink(file)
+
+
 # Converts all children files to lower case
 def to_lower(path):
     for root, dirs, files in os.walk(path):

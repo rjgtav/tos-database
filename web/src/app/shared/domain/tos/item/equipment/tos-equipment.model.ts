@@ -116,7 +116,7 @@ export class TOSEquipmentSet extends TOSEntity implements ITOSEquipmentSet {
   }
 
   get Bonus(): { [key:number]: TOSEquipmentBonus[]} {
-    return [this.Bonus2, this.Bonus3, this.Bonus4, this.Bonus5, this.Bonus6, this.Bonus7]
+    let result = [this.Bonus2, this.Bonus3, this.Bonus4, this.Bonus5, this.Bonus6, this.Bonus7]
       .map(bonusGroup => (bonusGroup || '')
         .split('{nl}')
         .map(bonus => bonus ? new TOSEquipmentBonus([TOSStat.UNKNOWN.toString(), bonus]) : null)
@@ -125,6 +125,8 @@ export class TOSEquipmentSet extends TOSEntity implements ITOSEquipmentSet {
         if (bonusGroup.length) result[i + 2] = bonusGroup;
         return result;
       }, {});
+
+    return result;
   }
   get Bonus2() { return this.$lazyPropertyString('Bonus2') }
   get Bonus3() { return this.$lazyPropertyString('Bonus3') }

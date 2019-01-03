@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <base href="/">
+  <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
   <title>#{seo-title}#</title>
 
@@ -20,23 +21,18 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
 
-  <!-- Additional Styles -->
-  <link rel="stylesheet" href="assets/themes/flatly.lib.css?version=2018-11-17" id="bootstrap-theme">
-
-  <!-- Additional Dependencies -->
-  <link rel="preload" href="assets/js/lunr.min.js?version=2018-12-18" as="script">
-  <link rel="preload" href="assets/js/lunr.worker.js?version=2018-12-18" as="script" id="preload-lunr">
-  <link rel="preload" href="assets/js/papaparse.min.js?version=2018-12-18" as="script">
-  <link rel="preload" href="assets/js/papaparse.worker.js?version=2018-12-18" as="script" id="preload-papaparse">
-
-  <!-- Trigger 'Translate' button -->
+  <!-- HotFix: trigger browser 'Translate' button -->
   <script type="text/javascript">
-    var lang = 'ko';
-    if (location.href.indexOf('/itos/') > 0)  lang = 'en';
-    if (location.href.indexOf('/jtos/') > 0)  lang = 'ja';
+    var lang = 'en';
+    if (location.href.indexOf('/jtos/') > 0)    lang = 'ja';
+    if (location.href.indexOf('/ktos/') > 0)    lang = 'ko';
+    if (location.href.indexOf('/ktest/') > 0)   lang = 'ko';
 
     document.getElementsByTagName('html')[0].setAttribute('lang', lang);
   </script>
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
 
 </head>
 <body>
@@ -44,6 +40,19 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
                     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HotFix: show user selected theme right from the get go -->
+  <script type="text/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
 
   <app-root>
     <!-- Specific CSS for the Server-Side Rendering -->
@@ -112,6 +121,11 @@
     </div>
 
   </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
 
 </body>
 </html>

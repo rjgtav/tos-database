@@ -1,19 +1,13 @@
 import {TOSRegion} from "../domain/tos-region";
 
-const VERSION = {
-  'iTOS': '233164001001_5', /* iTOS-needle */
-  'jTOS': '233240001001_5', /* jTOS-needle */
-  'kTOS': '233658001001_5', /* kTOS-needle */
-  'kTEST': '233478001001_5', /* kTEST-needle */
-};
-
 export abstract class TOSUrlService {
 
+  static readonly WORKER_DEXIE = () => TOSUrlService.Asset(null, 'assets/js/dexie.worker.js');
+  static readonly WORKER_PAPAPARSE = () => TOSUrlService.Asset(null, 'assets/js/papaparse.worker.js');
+
   static Asset(region: TOSRegion, url: string): string {
-    if (url.indexOf('data/') > -1) {
+    if (url.indexOf('data/') > -1)
       url = url.replace('data/', 'data/' + (TOSRegion.toUrl(region) || this.region) + '/');
-      url = url + '?version=' + VERSION[region];
-    }
 
     return this.join(this.origin, url);
   }

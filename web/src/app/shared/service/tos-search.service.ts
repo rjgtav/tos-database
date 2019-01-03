@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, forkJoin, Observable, of, Subject, Subscription} from "rxjs";
 import {TOSEntity} from "../domain/tos/tos-entity.model";
-import {TOSUrlService} from "./tos-url.service";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
 import {TOSRegion} from "../domain/tos-region";
-import {TOSDataSet} from "../domain/tos/tos-domain";
+import {TOSDataSet, TOSDataSetService} from "../domain/tos/tos-domain";
 import {map, switchMap} from "rxjs/operators";
+import {UpdateService} from "./update.service";
 
 @Injectable({
   providedIn: 'root'
@@ -24,22 +24,22 @@ export class TOSSearchService {
 
   private subscriptionLoad: Subscription;
 
-  constructor() {
+  constructor(private update: UpdateService) {
     TOSSearchService.instance = this;
 
-    this.worker = new Worker(document.getElementById('preload-lunr').getAttribute('href'));
+    this.worker = new Worker('assets/js/lunr.worker.js');
     this.worker.onmessage = this.onWorkerMessage.bind(this);
   }
 
   get isLoaded$(): Observable<boolean> { return this.isLoaded.asObservable(); }
 
-  public load(force: boolean, region: TOSRegion) {
-    if ((!this.isLoaded.getValue() || force)) {
+  public load(region: TOSRegion) {
+    if ((!this.isLoaded.getValue())) {
       this.isLoaded.next(false);
 
       this.subscriptionLoad && this.subscriptionLoad.unsubscribe();
       this.subscriptionLoad = this
-        .postMessage(WorkerCommand.LOAD, { url: TOSUrlService.Asset(region, '/assets/data/index.json') })
+        .postMessage(WorkerCommand.LOAD, { region, version: this.update.version(region) })
         .subscribe(value => this.isLoaded.next(true));
     }
   }
@@ -53,7 +53,7 @@ export class TOSSearchService {
             let id = +value['ref'].split('#')[1];
             let dataset = Object.values(TOSDataSet).find(value2 => file == value2);
 
-            return TOSDomainService[TOSDataSet.toProperty(dataset) + 'ById'](id) as Observable<TOSEntity>;
+            return TOSDomainService[TOSDataSetService.toProperty(dataset) + 'ById'](id) as Observable<TOSEntity>;
           })
         ) || of([])), // Read more: https://github.com/ReactiveX/rxjs/issues/2816
         map(value => ({ page, response: value }))
@@ -71,7 +71,7 @@ export class TOSSearchService {
     this.workerHandlers[message.id] = null;
   }
 
-  private postMessage<T>(cmd: WorkerCommand, payload?: object): Observable<any> {
+  private postMessage(cmd: WorkerCommand, payload?: object): Observable<any> {
     //console.trace('postMessage', this.dataset, cmd);
     let message = {
       cmd,

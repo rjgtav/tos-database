@@ -1,10 +1,8 @@
 let origin = location.origin + '/';
     origin = origin + (origin.indexOf('github.io') > 0 ? 'tos-database/' : '');
-let versionIndex = location.href.indexOf('version=');
-let version = location.href.slice(versionIndex + 8, versionIndex + 18);
 
 // Load lunr.js
-self['importScripts'](origin + 'assets/js/lunr.min.js?version=' + version);
+self['importScripts'](origin + 'assets/js/lunr.min.js');
 
 let idx = null;
 let PAGE_SIZE = 16;
@@ -17,8 +15,12 @@ self.onmessage = function (event) {
   switch (cmd) {
     // Load region's index
     case 'load':
+      let region = payload.region;
+      let version = payload.version;
+      let url = (origin + 'assets/data/' + region + '/index.' + version + '.json');
+
       let xhr = new XMLHttpRequest();
-          xhr.open('GET', payload.url, true);
+          xhr.open('GET', url, true);
           xhr.responseType = 'json';
           xhr.onload = () => {
             let json = xhr.response;

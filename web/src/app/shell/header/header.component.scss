@@ -1,6 +1,9 @@
+$color-info: #006bbe;
+
 :host {
   display: block;
   position: relative;
+  margin-bottom: 3rem;
 }
 
 .dropdown:hover .dropdown-menu { display: block; }
@@ -16,7 +19,7 @@
   transition: none;
 }
 .navbar-nav .nav-link:hover {
-  color: #006bbe;
+  color: $color-info;
 }
 
 .tos-link {
@@ -29,7 +32,7 @@
   position: absolute;
   left: 0;
   bottom: -6px;
-  background: #006bbe;
+  background: $color-info;
   width: 0;
   height: 2.6px;
   transition: all .2s ease-in;
@@ -39,3 +42,5 @@
 .tos-link.active.tos-link:before {
   width: 100%;
 }
+
+.bg-info { background-color: $color-info !important; }

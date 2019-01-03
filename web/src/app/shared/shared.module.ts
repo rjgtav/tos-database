@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule, DecimalPipe, PercentPipe} from '@angular/common';
 import {SortDirective, SortGroupDirective} from './directives/sort.directive';
 import {FilterDirective, FilterGroupDirective} from "./directives/filter.directive";
@@ -50,6 +50,7 @@ import {TableCellTextPipe} from './components/entity-table/pipes/table-cell-text
 import {TableCellIconPipe} from "./components/entity-table/pipes/table-cell-icon.pipe";
 import {TableCellLinkPipe} from "./components/entity-table/pipes/table-cell-link.pipe";
 import {TableCellBadgePipe} from "./components/entity-table/pipes/table-cell-badge.pipe";
+import {TOSDomainRepository} from "./domain/tos/tos-domain.repository";
 
 @NgModule({
   imports: [
@@ -141,27 +142,35 @@ import {TableCellBadgePipe} from "./components/entity-table/pipes/table-cell-bad
     TableCellTextPipe,
     TimePipe,
   ],
-  providers: [
-    DecimalPipe,
-    PercentPipe,
-    TableCellBadgePipe,
-    TableCellIconPipe,
-    TableCellLinkPipe,
-    TableCellNumberPipe,
-    TableCellTextPipe,
-    TOSAttributeResolver,
-    TOSBookResolver,
-    TOSCardResolver,
-    TOSCollectionResolver,
-    TOSCubeResolver,
-    TOSEquipmentResolver,
-    TOSEquipmentSetResolver,
-    TOSGemResolver,
-    TOSItemResolver,
-    TOSJobResolver,
-    TOSMonsterResolver,
-    TOSRecipeResolver,
-    TOSSkillResolver,
-  ]
 })
-export class SharedModule { }
+export class SharedModule {
+  // Read more: https://medium.com/@chrishouse/when-to-use-angulars-forroot-method-400094a0ebb7
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: SharedModule,
+      providers: [
+        DecimalPipe,
+        PercentPipe,
+        TableCellBadgePipe,
+        TableCellIconPipe,
+        TableCellLinkPipe,
+        TableCellNumberPipe,
+        TableCellTextPipe,
+        TOSAttributeResolver,
+        TOSBookResolver,
+        TOSCardResolver,
+        TOSCollectionResolver,
+        TOSCubeResolver,
+        TOSEquipmentResolver,
+        TOSEquipmentSetResolver,
+        TOSGemResolver,
+        TOSItemResolver,
+        TOSJobResolver,
+        TOSMonsterResolver,
+        TOSRecipeResolver,
+        TOSSkillResolver,
+        { provide: 'ITOSDomainRepository', useClass: TOSDomainRepository },
+      ]
+    }
+  }
+}

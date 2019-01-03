@@ -22,15 +22,13 @@ export class ThemeService {
 
   private set(theme: Theme) {
     let href: string = this.style.getAttribute('href');
-    let version: string = href.slice(href.indexOf('?version='));
 
-    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.lib.css';
-    if (theme == Theme.DARK)  href = 'assets/themes/darkly.lib.css';
-
+    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.min.css';
+    if (theme == Theme.DARK)  href = 'assets/themes/darkly.min.css';
 
     this.theme = theme;
     this.themeChange.emit(this.theme);
-    this.style.setAttribute('href', href + version);
+    this.style.setAttribute('href', href);
 
     localStorage.setItem(KEY_THEME, theme + '');
   }

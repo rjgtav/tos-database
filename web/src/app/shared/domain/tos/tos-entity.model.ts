@@ -1,5 +1,5 @@
 import {TOSUrlService} from "../../service/tos-url.service";
-import {ITOSEntity, TOSDataSet} from "./tos-domain";
+import {ITOSEntity, TOSDataSet, TOSDataSetService} from "./tos-domain";
 import {forkJoin, isObservable, Observable, ReplaySubject} from "rxjs";
 
 const COMPARATOR_ID = (a: number, b: number) => {
@@ -40,7 +40,7 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
     return this.url = this.url
       ? this.url
       : this.Dataset
-        ? TOSUrlService.Route(null, '/database/' + TOSDataSet.toUrl(this.Dataset) + '/' + this.$ID)
+        ? TOSUrlService.Route(null, '/database/' + TOSDataSetService.toUrl(this.Dataset) + '/' + this.$ID)
         : null;
   }
 
@@ -61,10 +61,9 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
   }
 
   protected $lazyPropertyJSONArray<T>(prop: string, mapper?: (value: any) => T, sorter?: (a: T, b: T) => -1 | 0 | 1): T[] {
-    if (Array.isArray(this.$json[prop]))
+    if (this.$json[prop] && this.$json[prop][0].constructor != Object.prototype.constructor && !Array.isArray(this.$json[prop][0]))
       return this.$json[prop];
 
-    this.$json[prop] = this.$json[prop] && JSON.parse(this.$json[prop]);
     this.$json[prop] = this.$json[prop] && mapper && this.$json[prop].map(mapper) || this.$json[prop];
     this.$json[prop] = this.$json[prop] && sorter && this.$json[prop].sort(sorter) || this.$json[prop];
     this.$json[prop] = this.$json[prop] && this.$json[prop].filter(value => !!value);
@@ -90,7 +89,7 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
 
     if (this.$json[prop]) {
       let subject = new ReplaySubject<T>(1);
-      let observable = typeof this.$json[prop] == 'string' && JSON.parse(this.$json[prop]) || this.$json[prop];
+      let observable = /* typeof this.$json[prop] == 'string' && JSON.parse(this.$json[prop]) || */this.$json[prop];
           observable = this.$json[prop + '$original'] = observable;
           observable = Array.isArray(observable) && observable.map(mapper) || mapper(observable);
           observable = Array.isArray(observable) && forkJoin(observable) || observable;
@@ -107,7 +106,10 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
 
   protected $lazyPropertyLinkOriginal(propOriginal: string) : number | number[] {
     let prop = propOriginal + '$original';
+    return this.$json[prop] = this.$json[prop] || this.$json[propOriginal];
 
+    // Note: we now store the parsed JSON in the IndexedDB
+    /*
     if (this.$json[prop] && typeof this.$json[prop] != 'string')
       return this.$json[prop];
 
@@ -115,6 +117,7 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
     this.$json[prop] = typeof this.$json[prop] == 'string' && JSON.parse(this.$json[prop]) || this.$json[prop + '$original'];
 
     return this.$json[prop];
+    */
   }
 
   protected $lazyPropertyNumber(prop: string, mapper = (value) => value): number {

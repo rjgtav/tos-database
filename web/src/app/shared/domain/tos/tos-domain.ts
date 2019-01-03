@@ -1,5 +1,7 @@
 import {Observable} from "rxjs";
 import {TOSUrlService} from "../../service/tos-url.service";
+import {TOSRegion} from "../tos-region";
+import {CRUDPage, CRUDPageResult} from "../../service/CRUD.resolver";
 
 /*====================================================================================================================+
  | Enums
@@ -64,7 +66,7 @@ export enum TOSDataSet {
   RECIPES = 'recipes',
   SKILLS = 'skills',
 }
-export namespace TOSDataSet {
+export namespace TOSDataSetService {
   export const VALUES: { label: string, options: TOSDataSet[] }[] = [
     {
       label: 'Character',
@@ -855,4 +857,23 @@ export interface ITOSSkill extends ITOSEntity {
 export interface ITOSSkillRequiredStance {
   Icon: string;
   Name: string;
+}
+
+/*====================================================================================================================+
+ | Extras
+ *====================================================================================================================*/
+export interface ITOSDomainRepository {
+  config: { [key in TOSDataSet]: ITOSDomainRepositoryConfiguration };
+
+  load(dataset: TOSDataSet, region: TOSRegion): Observable<object>;
+  find(dataset: TOSDataSet, page: CRUDPage): Observable<CRUDPageResult<any>>;
+  findByIndex(dataset: TOSDataSet, key: string, value: boolean | number | string, forceSingle?: boolean): Observable<any | any[]>;
+}
+interface ITOSDomainRepositoryConfiguration {
+  factory: (json: any) => any;
+  schema: ITOSDomainRepositorySchema;
+}
+interface ITOSDomainRepositorySchema {
+  primaryKey: string,
+  indexes?: string[],
 }

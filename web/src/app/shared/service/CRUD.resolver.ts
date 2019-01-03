@@ -1,7 +1,7 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
 import {Observable} from "rxjs";
 import {TOSEntity} from "../domain/tos/tos-entity.model";
-import {TOSDataSet} from "../domain/tos/tos-domain";
+import {TOSDataSet, TOSDataSetService} from "../domain/tos/tos-domain";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
 
 export abstract class CRUDResolver<T extends TOSEntity> implements Resolve<T> {
@@ -16,7 +16,7 @@ export abstract class CRUDResolver<T extends TOSEntity> implements Resolve<T> {
   protected constructor(private dataset: TOSDataSet) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | T {
-    let dataset = TOSDataSet.toProperty(this.dataset);
+    let dataset = TOSDataSetService.toProperty(this.dataset);
 
     if (route.params[CRUDResolver.PARAM_ID])
       return TOSDomainService[dataset + 'ById'](+route.params[CRUDResolver.PARAM_ID]);

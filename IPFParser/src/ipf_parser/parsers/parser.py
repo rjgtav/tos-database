@@ -10,10 +10,10 @@ from ipf_parser.parsers import parser_translations, parser_items, parser_monster
     parser_items_recipes, parser_items_equipment, parser_assets, parser_items_books, parser_maps, \
     parser_items_equipment_sets, parser_items_cubes, parser_items_cards, parser_items_gems, \
     parser_skills, parser_jobs, parser_attributes
-from ipf_parser.utils import luautil
+from ipf_parser.utils import luautil, fileutil
 
 
-def csv_write(data, path):
+def csv_write(data, dataset, version):
     # Clean data
     for row in range(len(data)):
         for col in data[row]:
@@ -32,7 +32,7 @@ def csv_write(data, path):
                 data[row][col] = json.dumps(cell)
 
     # Write to CSV
-    file = open(path, 'w')
+    file = open(os.path.join(constants.PATH_WEB_ASSETS_DATA, dataset + '.' + str(version) + '.csv'), 'w')
     writer = csv.DictWriter(
         file,
         delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(data[0].keys())
@@ -42,7 +42,9 @@ def csv_write(data, path):
     file.close()
 
 
-def parse(region, version_update):
+def parse(region, version, version_new):
+    version_update = version != version_new
+
     # Initialize LUA environment
     luautil.init()
 
@@ -90,17 +92,18 @@ def parse(region, version_update):
     logging.debug('Writing CSVs...')
 
     # Write parsed data to CSV
-    csv_write(globals.attributes.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_ATTRIBUTES))
-    csv_write(globals.books.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_BOOKS))
-    csv_write(globals.cards.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_CARDS))
-    csv_write(globals.collections.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_COLLECTIONS))
-    csv_write(globals.cubes.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_CUBES))
-    csv_write(globals.equipment.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_EQUIPMENT))
-    csv_write(globals.equipment_sets.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_EQUIPMENT_SETS))
-    csv_write(globals.gems.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_GEMS))
-    csv_write(globals.items.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_ITEMS))
-    csv_write(globals.jobs.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_JOBS))
-    csv_write(globals.maps.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_MAPS))
-    csv_write(globals.monsters.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_MONSTERS))
-    csv_write(globals.recipes.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_RECIPES))
-    csv_write(globals.skills.values(), os.path.join(constants.PATH_WEB_ASSETS_DATA, constants.OUTPUT_SKILLS))
+    fileutil.clear(constants.PATH_WEB_ASSETS_DATA)
+    csv_write(globals.attributes.values(), constants.OUTPUT_ATTRIBUTES, version_new)
+    csv_write(globals.books.values(), constants.OUTPUT_BOOKS, version_new)
+    csv_write(globals.cards.values(), constants.OUTPUT_CARDS, version_new)
+    csv_write(globals.collections.values(), constants.OUTPUT_COLLECTIONS, version_new)
+    csv_write(globals.cubes.values(), constants.OUTPUT_CUBES, version_new)
+    csv_write(globals.equipment.values(), constants.OUTPUT_EQUIPMENT, version_new)
+    csv_write(globals.equipment_sets.values(), constants.OUTPUT_EQUIPMENT_SETS, version_new)
+    csv_write(globals.gems.values(), constants.OUTPUT_GEMS, version_new)
+    csv_write(globals.items.values(), constants.OUTPUT_ITEMS, version_new)
+    csv_write(globals.jobs.values(), constants.OUTPUT_JOBS, version_new)
+    csv_write(globals.maps.values(), constants.OUTPUT_MAPS, version_new)
+    csv_write(globals.monsters.values(), constants.OUTPUT_MONSTERS, version_new)
+    csv_write(globals.recipes.values(), constants.OUTPUT_RECIPES, version_new)
+    csv_write(globals.skills.values(), constants.OUTPUT_SKILLS, version_new)

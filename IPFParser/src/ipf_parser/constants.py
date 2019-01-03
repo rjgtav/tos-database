@@ -1,22 +1,21 @@
-import logging
 import os
 
 from ipf_parser.parsers.parser_enums import TOSRegion
 
-OUTPUT_ATTRIBUTES = 'attributes.csv'
-OUTPUT_BOOKS = 'books.csv'
-OUTPUT_CARDS = 'cards.csv'
-OUTPUT_COLLECTIONS = 'collections.csv'
-OUTPUT_CUBES = 'cubes.csv'
-OUTPUT_GEMS = 'gems.csv'
-OUTPUT_JOBS = 'jobs.csv'
-OUTPUT_EQUIPMENT = 'equipment.csv'
-OUTPUT_EQUIPMENT_SETS = 'equipment-sets.csv'
-OUTPUT_ITEMS = 'items.csv'
-OUTPUT_MAPS = 'maps.csv'
-OUTPUT_MONSTERS = 'monsters.csv'
-OUTPUT_RECIPES = 'recipes.csv'
-OUTPUT_SKILLS = 'skills.csv'
+OUTPUT_ATTRIBUTES = 'attributes'
+OUTPUT_BOOKS = 'books'
+OUTPUT_CARDS = 'cards'
+OUTPUT_COLLECTIONS = 'collections'
+OUTPUT_CUBES = 'cubes'
+OUTPUT_GEMS = 'gems'
+OUTPUT_JOBS = 'jobs'
+OUTPUT_EQUIPMENT = 'equipment'
+OUTPUT_EQUIPMENT_SETS = 'equipment-sets'
+OUTPUT_ITEMS = 'items'
+OUTPUT_MAPS = 'maps'
+OUTPUT_MONSTERS = 'monsters'
+OUTPUT_RECIPES = 'recipes'
+OUTPUT_SKILLS = 'skills'
 
 PATH_GAMES = 'C:\\Games' if os.name == 'nt' else '/mnt/c/Games'
 

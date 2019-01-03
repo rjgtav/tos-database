@@ -73,9 +73,9 @@ import 'zone.js/dist/zone'; // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
-import 'core-js/es6/array';
-import 'core-js/es6/object';
-import 'core-js/es6/promise';
+//import 'core-js/es6/array';
+//import 'core-js/es6/object';
+//import 'core-js/es6/promise';
 import 'core-js/es7/array';
 import 'core-js/es7/object';
 

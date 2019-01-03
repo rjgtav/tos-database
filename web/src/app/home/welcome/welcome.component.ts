@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {TOSUrlService} from "../../shared/service/tos-url.service";
 import {TOSRegionService} from "../../shared/service/tos-region.service";
-import {TOSDataSet} from "../../shared/domain/tos/tos-domain";
+import {TOSDataSetService} from "../../shared/domain/tos/tos-domain";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -11,7 +11,7 @@ import {TOSDataSet} from "../../shared/domain/tos/tos-domain";
 })
 export class WelcomeComponent {
 
-  TOSDataSet = TOSDataSet;
+  TOSDataSetService = TOSDataSetService;
 
   constructor() { }
 

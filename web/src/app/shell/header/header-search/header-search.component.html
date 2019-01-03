@@ -3,8 +3,8 @@
   <input type="text" class="border-0 form-control" #input
          [attachOutsideOnClick]="true"
          [(ngModel)]="query"
-         [disabled]="!isLoadedRepository || !isLoadedSearch"
-         [placeholder]="!isLoadedRepository || !isLoadedSearch ? 'Loading search...' : 'ClassID, ClassName, Description, Name'"
+         [disabled]="!isLoadedSearch"
+         [placeholder]="!isLoadedSearch ? 'Loading search...' : 'ClassID, ClassName, Name'"
          (clickOutside)="onFocus(false)"
          (focus)="onFocus(true)"
          (keyup.arrowup)="onKeyboardSelect(-1)"
@@ -24,19 +24,19 @@
             [attachOutsideOnClick]="true"
             (click)="isOpenDataset = !isOpenDataset"
             (clickOutside)="isOpenDataset = false">
-      {{ queryDataset ? TOSDataSet.toLabel(queryDataset) : 'All' }}
+      {{ queryDataset ? TOSDataSetService.toLabel(queryDataset) : 'All' }}
     </button>
     <div class="dropdown-menu dropdown-menu-right" [ngClass]="{ 'show': isOpenDataset }">
       <a class="dropdown-item" href="#all"
          [ngClass]="{'active': queryDataset == null }"
          (click)="onDatasetChange($event, null)">All</a>
 
-      <div *ngFor="let group of TOSDataSet.VALUES; index as i">
+      <div *ngFor="let group of TOSDataSetService.VALUES; index as i">
         <div class="dropdown-header">{{ group.label }}</div>
         <a class="dropdown-item" *ngFor="let option of group.options" [href]="'#' + option"
            [ngClass]="{'active': queryDataset == option }"
-           (click)="onDatasetChange($event, option)">{{ TOSDataSet.toLabel(option) }}</a>
-        <div class="dropdown-divider" *ngIf="i < TOSDataSet.VALUES.length - 1"></div>
+           (click)="onDatasetChange($event, option)">{{ TOSDataSetService.toLabel(option) }}</a>
+        <div class="dropdown-divider" *ngIf="i < TOSDataSetService.VALUES.length - 1"></div>
       </div>
     </div>
   </div>
@@ -51,14 +51,14 @@
       <tbody>
         <a *ngFor="let entity of results; index as i" class="d-table-row"
            [ngClass]="{'bg-secondary': keyboardSelected == i }"
-           [routerLink]="entity.Url"
+           [routerLink]="entity['Url$'] ? (entity['Url$'] | async) : entity.Url"
            (mouseenter)="tooltip = entity"
            (mouseleave)="tooltip = null">
 
           <!-- Icon -->
           <td width="1" class="p-1">
             <div class="text-center">
-              <img height="40" width="40" [src]="entity.Icon" />
+              <img height="40" width="40" [src]="entity['Icon$'] ? (entity['Icon$'] | async) : entity.Icon" />
             </div>
           </td>
 
@@ -67,7 +67,7 @@
 
           <!-- Dataset -->
           <td width="1" class="align-middle text-right">
-            <span class="badge badge-primary">{{ TOSDataSet.toLabel(entity.Dataset).toUpperCase() }}</span>
+            <span class="badge badge-primary">{{ TOSDataSetService.toLabel(entity.Dataset).toUpperCase() }}</span>
           </td>
         </a>
       </tbody>

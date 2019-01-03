@@ -11,21 +11,22 @@ import {
   UrlSegmentGroup
 } from "@angular/router";
 import {Injectable} from "@angular/core";
-import {Observable} from "rxjs";
-import {TOSRepositoryService} from "../domain/tos/tos-repository.service";
-import {map} from "rxjs/operators";
-import {LoadingBarService} from "@ngx-loading-bar/core";
+import {BehaviorSubject, Observable} from "rxjs";
 import {TOSSearchService} from "./tos-search.service";
 import {TOSRegion} from "../domain/tos-region";
+import {UpdateService} from "./update.service";
+import {map} from "rxjs/operators";
+import {TOSDomainService} from "../domain/tos/tos-domain.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TOSRegionService implements CanActivate, CanDeactivate<any> {
 
-  private static region: TOSRegion;
+  private static region: BehaviorSubject<TOSRegion> = new BehaviorSubject(null);
 
-  static get Region(): TOSRegion { return TOSRegionService.region = TOSRegionService.region || TOSRegion.iTOS; }
+  static get Region(): TOSRegion { return TOSRegionService.region.getValue() }
+  static get Region$(): Observable<TOSRegion> { return TOSRegionService.region.asObservable(); }
   static get Regions(): TOSRegion[] { return [TOSRegion.iTOS, TOSRegion.jTOS, TOSRegion.kTOS, TOSRegion.kTEST] }
 
   static UrlMatcher(segments: UrlSegment[], group: UrlSegmentGroup, route: Route): UrlMatchResult {
@@ -40,45 +41,39 @@ export class TOSRegionService implements CanActivate, CanDeactivate<any> {
   }
 
   constructor(
-    private loadingBar: LoadingBarService,
-    private repositoryService: TOSRepositoryService,
+    private domain: TOSDomainService,
     private route: ActivatedRoute,
     private router: Router,
     private search: TOSSearchService,
+    private update: UpdateService,
   ) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     let segments = state.url.split('/').filter(value => value.length);
-    let regionOld = TOSRegionService.region;
-    let regionNew = TOSRegionService.region = segments.length
-      ? TOSRegion.valueOf(segments[0])
-      : TOSRegion.iTOS;
+    let region = segments.length ? TOSRegion.valueOf(segments[0]) : TOSRegion.iTOS;
 
-    let force = regionOld != regionNew;
+    TOSRegionService.region.next(region);
 
     // Load search in the background
-    this.search.load(force, regionNew);
+    this.search.load(region);
 
-    //console.log('canActivate', regionOld, '=>', regionNew)
-    return this.repositoryService
-      .load(force, this.loadingBar, regionNew)
-      .pipe(map(value => true));
+    // Check for updates
+    return this.update.updateAvailable(region)
+      ? this.domain.load$(region).pipe(map(value => { this.update.updateVersion(region); return true }))
+      : true;
   }
 
   canDeactivate(component: any, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    return this.repositoryService.IsLoaded$;
+    return !this.domain.isLoading;
   }
 
-  regionRelect(region: TOSRegion) {
+  regionSelect(region: TOSRegion) {
     // Update url
-    let regionOld = '/' + TOSRegion.toUrl(TOSRegionService.region);
+    let regionOld = '/' + TOSRegion.toUrl(TOSRegionService.Region);
     let regionNew = '/' + TOSRegion.toUrl(region);
-
-    let url = this.router.routerState.snapshot.url.replace(regionOld, regionNew);
-        url = url.indexOf('?') > 0 ? url.slice(0, url.indexOf('?')) : url;
-
     //console.log('regionSelect', regionOld, regionNew, url)
-    this.router.navigate([url], { queryParamsHandling: 'merge' });
+
+    location.href = this.router.routerState.snapshot.url.replace(regionOld, regionNew);
   }
 
 }

@@ -1,0 +1,15 @@
+<div class="d-flex align-items-center justify-content-center h-100 w-100" style="background: #002A3A;"
+     [ngClass]="{ 'show': updateAvailable }"
+     [style.transitionDuration]="updateAvailable ? '0.25s' : '1s'">
+  <div>
+    <img class="mb-4" src="assets/images/logo_tos.png">
+    <div class="progress">
+      <div class="progress-bar progress-bar-animated progress-bar-striped" style="background-color: #006bbe"
+           [style.width]="(updateProgress * 100 / updateTotal) + '%'"></div>
+    </div>
+    <div class="text-white text-center mt-2">
+      Updating database {{ updateProgress }}/{{ updateTotal}}...<br/>
+      <span class="font-italic text-muted">{{ updateVersion }}</span>
+    </div>
+  </div>
+</div>

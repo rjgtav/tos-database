@@ -1,0 +1,17 @@
+:host > div {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+
+  pointer-events: none;
+  z-index: 99999;
+
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+:host > div.show {
+  opacity: 1;
+}

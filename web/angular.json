@@ -36,7 +36,9 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "customWebpackConfig": { "path": "./webpack.config.js" },
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "outputPath": "dist/web",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -52,8 +54,9 @@
           "configurations": {
             "production": {
               "assets": [
-                "src/favicon.ico",
-                "src/assets"
+                { "glob": "**/*", "input": "src/assets/", "ignore": ["js/*"], "output": "/assets/" },
+                { "glob": "favicon.ico", "input": "src/", "output": "/" },
+                { "glob": "manifest.json", "input": "src/", "output": "/" }
               ],
               "fileReplacements": [
                 {
@@ -69,7 +72,8 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "serviceWorker": true
             }
           }
         },
@@ -102,8 +106,9 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              { "glob": "**/*", "input": "src/assets/", "ignore": ["js/*"], "output": "/assets/" },
+              { "glob": "favicon.ico", "input": "src/", "output": "/" },
+              { "glob": "manifest.json", "input": "src/", "output": "/" }
             ]
           }
         },

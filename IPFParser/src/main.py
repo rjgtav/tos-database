@@ -5,7 +5,6 @@ import sys
 
 from ipf_parser import unpacker, constants
 from ipf_parser.parsers import parser
-
 # Configure logging
 from ipf_parser.parsers.parser_enums import TOSRegion
 
@@ -21,13 +20,12 @@ constants.region(region)
 
 # Patch the game with the latest version
 version, version_new = unpacker.unpack(region)
-version_update = version != version_new
 
 # Parse
-parser.parse(region, version_update)
+parser.parse(region, version, version_new)
 
 # Save new version
-path = os.path.join(constants.PATH_WEB_APP, 'shared', 'service', 'tos-url.service.ts')
+path = os.path.join(constants.PATH_WEB_APP, 'shared', 'service', 'update.service.ts')
 regex = "'" + TOSRegion.to_string(region) + "': '(.*)', \/\* " + TOSRegion.to_string(region) + "-needle \*\/"
 regex_replace = "'" + TOSRegion.to_string(region) + "': '" + str(version_new) + "', /* " + TOSRegion.to_string(region) + "-needle */"
 

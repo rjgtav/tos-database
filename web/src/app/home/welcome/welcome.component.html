@@ -9,7 +9,7 @@
 
     <p>
       It is still in active development, taking multiple updates per week, with the latest patches and new features.<br/>
-      <span class="badge badge-success">Re:Build</span> patch is already supported, and currently available only on <b>kTEST</b> region, which can be changed at the top right<br/>
+      <span class="badge badge-success">Re:Build</span> patch is already supported, and currently available only on <b>kTEST</b> and <b>kTOS</b> regions, which can be changed at the top right<br/>
     </p>
 
     <p>
@@ -19,9 +19,9 @@
     <p>
       A Database is also available, and currently supports the following datasets:
     </p>
-    <ul *ngFor="let group of TOSDataSet.VALUES; index as i">
+    <ul *ngFor="let group of TOSDataSetService.VALUES; index as i">
       <li *ngFor="let option of group.options">
-        <a [routerLink]="routerLink('database/' + TOSDataSet.toUrl(option))">{{ TOSDataSet.toLabel(option) }}</a>
+        <a [routerLink]="routerLink('database/' + TOSDataSetService.toUrl(option))">{{ TOSDataSetService.toLabel(option) }}</a>
       </li>
     </ul>
 
@@ -38,6 +38,38 @@
         Changelog
       </div>
       <div class="card-body" style="max-height: calc(100vh - 16rem); overflow-y: auto">
+        <h6>2019-01-03</h6>
+        <ul>
+          <li>[Update] Updated iTOS, jTOS, kTOS and kTEST to the latest versions</li>
+          <li>[Improved] Added patch version to the loading screen and to the footer</li>
+        </ul>
+
+        <h6>2019-01-02</h6>
+        <ul>
+          <li>[Fixed] Page no longer shows white when switching regions and using the dark theme. Thanks @Crevox</li>
+          <li>[Fixed] Internal database no longer gets into a state with incomplete data</li>
+          <li>[Fixed] Offline mode is now working as intended</li>
+        </ul>
+
+        <h6>2019-01-01</h6>
+        <ul>
+          <li>Happy New Year! 🐷</li>
+          <li>[Fixed] Collections are no longer showing the wrong items in rare situations of duplicate IDs. Thanks @Zeucleio</li>
+          <li>[Fixed] Browsers now correctly prompt for translating the page when a foreign region is selected</li>
+          <li>[Fixed] Search no longer crashes when returning Equipment Sets. Thanks @Hillgarm and @Sujiru</li>
+          <li>[Fixed] Restored stat attributes for some discontinued items (e.g. CAN05_101). Thanks @Sujiru</li>
+          <li>[Improved] Significantly reduced the overall RAM usage (by around 50%)</li>
+          <li>[Improved] Significantly reduced loading time when no new updates are available</li>
+          <li>[Improved] Reduced search loading time by removing the 'Description' field from the index</li>
+          <li>[Improved] Updated cache from a time-based to a hash-based implementation, which will reduce the overall network traffic</li>
+          <li>[New] tos.guru is now available offline! Note: in order to save disk, images will be cached on demand</li>
+          <li>[New] tos.guru can now be installed on Mobile and on PC (Browser Menu -> Add to Home Screen)</li>
+          <li>[New] Added a new fullscreen loading animation when new database updates are available</li>
+          <li>[New] Added a new 'Update is Available' indicator to the top menu</li>
+          <li>[New] I now have a Patreon! Become a patron and support the development of tos.guru</li>
+          <li>[Removed] Older browsers no longer support tos.guru. For more information, check the browsers in green <a href="https://caniuse.com/serviceworkers">here</a></li>
+        </ul>
+
         <h6>2018-12-26</h6>
         <ul>
           <li>[Fixed] Skills of higher circles are now showing up correctly on the simulator. Thanks @Ramon</li>
@@ -119,7 +151,7 @@
           <li>[Fixed] Chaplain is no longer considered a Secret class. Thanks @Laynaria</li>
           <li>[Fixed] 'Summon'-like skills have been purged from all databases. Thanks @Hillgarm</li>
           <li>[Fixed] Re:Build Simulator builds are again able to be shared around</li>
-          <li>[Improved] When no more skill points are available, and you left click a skill at level < levelMax, it now goes back to 0. Thanks @PetroSpark</li>
+          <li>[Improved] When no more skill points are available, and you left click a skill at level &lt; levelMax, it now goes back to 0. Thanks @PetroSpark</li>
           <li>[Improved] Added 'Usable by Scout' icon to equipment tooltip and detail pages</li>
           <li>[Improved] Updated cards' frames to the latest design. Thanks @Crevox</li>
           <li>[New] Added Stats to Re:Build Simulator</li>

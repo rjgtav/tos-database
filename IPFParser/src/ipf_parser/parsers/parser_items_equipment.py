@@ -3,6 +3,8 @@ import logging
 import os
 from math import floor
 
+from lupa import LuaError
+
 from ipf_parser import constants, globals
 from ipf_parser.parsers import parser_translations
 from ipf_parser.parsers.parser_enums import TOSAttackType
@@ -455,10 +457,18 @@ def parse_equipment():
         item_type_equipment = TOSEquipmentType.value_of(row['ClassType'].upper())
         obj = globals.equipment[int(row['ClassID'])]
 
-        if row['RefreshScp']:
-            # Hotfix: ClassID 635061 has its tooltip broken on Re:Build
-            if len(row['BasicTooltipProp']) and row['ClassID'] not in ['635061']:
-                LUA[row['RefreshScp']](row)
+        # Calculate all properties using in-game formulas
+        tooltip_script = row['RefreshScp']
+        tooltip_script = 'SCR_REFRESH_ACC' if not tooltip_script and 'Accessory_' in row['MarketCategory'] else tooltip_script
+        tooltip_script = 'SCR_REFRESH_ARMOR' if not tooltip_script and 'Armor_' in row['MarketCategory'] else tooltip_script
+        tooltip_script = 'SCR_REFRESH_HAIRACC' if not tooltip_script and 'HairAcc_' in row['MarketCategory'] else tooltip_script
+        tooltip_script = 'SCR_REFRESH_WEAPON' if not tooltip_script and ('Weapon_' in row['MarketCategory'] or 'ChangeEquip_' in row['MarketCategory']) else tooltip_script
+
+        if tooltip_script:
+            try:
+                LUA[tooltip_script](row)
+            except LuaError:
+                logging.error('LUA error when calculating tooltip properties for $ID: %s', row['ClassID'])
 
         # Add additional fields
         obj['AnvilATK'] = []

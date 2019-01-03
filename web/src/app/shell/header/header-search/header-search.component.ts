@@ -10,9 +10,8 @@ import {
 import {faSearch, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {TOSSearchResult, TOSSearchService} from "../../../shared/service/tos-search.service";
 import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
-import {TOSRepositoryService} from "../../../shared/domain/tos/tos-repository.service";
 import {Router} from "@angular/router";
-import {TOSDataSet} from "../../../shared/domain/tos/tos-domain";
+import {TOSDataSet, TOSDataSetService} from "../../../shared/domain/tos/tos-domain";
 import {fromEvent, Observable, Subscription} from "rxjs";
 import {debounceTime} from "rxjs/operators";
 
@@ -27,9 +26,8 @@ export class HeaderSearchComponent implements OnDestroy, OnInit {
   faSearch = faSearch;
   faTimes = faTimes;
 
-  TOSDataSet = TOSDataSet;
+  TOSDataSetService = TOSDataSetService;
 
-  isLoadedRepository: boolean;
   isLoadedSearch: boolean;
 
   isLoadMore: boolean;
@@ -53,11 +51,9 @@ export class HeaderSearchComponent implements OnDestroy, OnInit {
 
   constructor(
     private changeDetector: ChangeDetectorRef,
-    private repositoryService: TOSRepositoryService,
     private router: Router,
     private search: TOSSearchService
   ) {
-    this.repositoryService.IsLoaded$.subscribe(value => this.isLoadedRepository = value);
     this.subscriptionLoad = search.isLoaded$.subscribe(value => this.onLoad(value));
   }
 

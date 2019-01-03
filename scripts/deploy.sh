@@ -36,37 +36,36 @@ pushd ../web
 #################################################################
 # 2. Deploy to tos.guru
 #################################################################
-# Backup pre-rendered files
-mv ./dist/web/itos ./dist/web-backup
-mv ./dist/web/jtos ./dist/web-backup
-mv ./dist/web/ktest ./dist/web-backup
-mv ./dist/web/ktos ./dist/web-backup
-
 # Build angular application
 echo -e "Building angular application..."
-ng build --prod --base-href "https://tos.guru/"
+npm run build-prod
 cp -rf ./dist/web/index.html ./dist/web/404.html
 cp -rf ./dist/.htaccess ./dist/web/.htaccess
 cp -rf ./dist/robots.txt ./dist/web/robots.txt
 
-# Restore pre-rendered files
-mv ./dist/web-backup/itos ./dist/web
-mv ./dist/web-backup/jtos ./dist/web
-mv ./dist/web-backup/ktest ./dist/web
-mv ./dist/web-backup/ktos ./dist/web
+# Pre-render URLs for web crawlers
+pushd ../tos-html
+node src/index.js
+node src/index.js jTOS
+node src/index.js kTOS
+node src/index.js kTEST
+popd
+
+# Patch service worker
+npm run ngsw-config
 
 # Upload to tos.guru
-echo -e "Uploading to tos.guru..."
-lftp -c "
-    set cmd:fail-exit yes;
-    set ftp:list-options -a;
-    set ftp:ssl-allow no;
-    open 'ftp://$USER:$PASS@$HOST';
-    lcd $LOCAL;
-    cd $REMOTE;
-    mirror --delete --ignore-time --only-newer --reverse --parallel=4 --verbose --exclude 404.html --exclude index.html;
-    put -O $REMOTE 404.html;
-    put -O $REMOTE index.html;
-"
+#echo -e "Uploading to tos.guru..."
+#lftp -c "
+#    set cmd:fail-exit yes;
+#    set ftp:list-options -a;
+#    set ftp:ssl-allow no;
+#    open 'ftp://$USER:$PASS@$HOST';
+#    lcd $LOCAL;
+#    cd $REMOTE;
+#    mirror --delete --ignore-time --only-newer --reverse --parallel=4 --verbose --exclude 404.html --exclude index.html;
+#    put -O $REMOTE 404.html;
+#    put -O $REMOTE index.html;
+#"
 
 popd

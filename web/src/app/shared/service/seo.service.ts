@@ -1,6 +1,6 @@
 import {ApplicationRef, Injectable} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
-import {TOSDataSet} from "../domain/tos/tos-domain";
+import {TOSDataSet, TOSDataSetService} from "../domain/tos/tos-domain";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
 import {TOSEntity} from "../domain/tos/tos-entity.model";
 import {Meta, Title} from "@angular/platform-browser";
@@ -27,17 +27,17 @@ export class SEOService {
         }
         if (url.indexOf('/database') > 0) {
           let parts = url.slice(url.indexOf('/database')).split('/').slice(2);
-          let dataset = Object.values(TOSDataSet).find(value => TOSDataSet.toUrl(value) == parts[0]);
+          let dataset = Object.values(TOSDataSet).find(value => TOSDataSetService.toUrl(value) == parts[0]);
           let id = parts.length > 1 ? +parts[1] : null;
 
           if (id) {
-            let entity = await TOSDomainService[TOSDataSet.toProperty(dataset) + 'ById'](id).toPromise() as TOSEntity;
+            let entity = await TOSDomainService[TOSDataSetService.toProperty(dataset) + 'ById'](id).toPromise() as TOSEntity;
 
-            urlTitle = entity.Name + ' - ' + TOSDataSet.toLabel(dataset) + ' - Tree of Savior';
+            urlTitle = entity.Name + ' - ' + TOSDataSetService.toLabel(dataset) + ' - Tree of Savior';
             urlDescription = entity.Description;
           } else {
-            urlTitle = TOSDataSet.toLabel(dataset) + ' - Tree of Savior';
-            urlDescription = 'List of ' + TOSDataSet.toLabel(dataset) + ', with advanced filtering and sorting';
+            urlTitle = TOSDataSetService.toLabel(dataset) + ' - Tree of Savior';
+            urlDescription = 'List of ' + TOSDataSetService.toLabel(dataset) + ', with advanced filtering and sorting';
           }
 
         }
