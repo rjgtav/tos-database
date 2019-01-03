@@ -21,9 +21,10 @@ constants.region(region)
 # Patch the game with the latest version
 version, version_new = unpacker.unpack(region)
 version_hotfix = '1'
+version_new = version_new + ('_hotfix_' + version_hotfix) if len(version_hotfix) else ''
 
 # Parse
-parser.parse(region, version, version_new + ('_hotfix_' + version_hotfix) if len(version_hotfix) else '')
+parser.parse(region, version, version_new)
 
 # Save new version
 path = os.path.join(constants.PATH_WEB_APP, 'shared', 'service', 'update.service.ts')
