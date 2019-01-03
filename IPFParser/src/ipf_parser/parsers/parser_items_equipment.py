@@ -482,11 +482,11 @@ def parse_equipment():
         obj['Material'] = TOSEquipmentMaterial.value_of(row['Material'])
         obj['Potential'] = int(row['MaxPR'])
         obj['RequiredClass'] = '%s%s%s%s%s' % (
-            1 if any(j in row['UseJob'] for j in ['All', 'Char3']) else 0,  # Archer
-            1 if any(j in row['UseJob'] for j in ['All', 'Char4']) else 0,  # Cleric
-            1 if any(j in row['UseJob'] for j in ['All', 'Char5']) else 0,  # Scout
-            1 if any(j in row['UseJob'] for j in ['All', 'Char1']) else 0,  # Swordsman
-            1 if any(j in row['UseJob'] for j in ['All', 'Char2']) else 0,  # Wizard
+            'T' if any(j in row['UseJob'] for j in ['All', 'Char3']) else 'F',  # Archer
+            'T' if any(j in row['UseJob'] for j in ['All', 'Char4']) else 'F',  # Cleric
+            'T' if any(j in row['UseJob'] for j in ['All', 'Char5']) else 'F',  # Scout
+            'T' if any(j in row['UseJob'] for j in ['All', 'Char1']) else 'F',  # Swordsman
+            'T' if any(j in row['UseJob'] for j in ['All', 'Char2']) else 'F',  # Wizard
         )
         obj['RequiredLevel'] = int(row['UseLv'])
         obj['Sockets'] = int(row['BaseSocket'])

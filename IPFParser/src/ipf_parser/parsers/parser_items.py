@@ -129,10 +129,10 @@ def parse_items(file_name):
         obj['TimeCoolDown'] = float(int(row['ItemCoolDown']) / 1000) if 'ItemCoolDown' in row else None
         obj['TimeLifeTime'] = float(int(row['LifeTime'])) if 'LifeTime' in row else None
         obj['Tradability'] = '%s%s%s%s' % (
-            1 if row['MarketTrade'] == 'YES' else 0,    # Market
-            1 if row['UserTrade'] == 'YES' else 0,      # Players
-            1 if row['ShopTrade'] == 'YES' else 0,      # Shop
-            1 if row['TeamTrade'] == 'YES' else 0,      # Team Storage
+            'T' if row['MarketTrade'] == 'YES' else 'F',    # Market
+            'T' if row['UserTrade'] == 'YES' else 'F',      # Players
+            'T' if row['ShopTrade'] == 'YES' else 'F',      # Shop
+            'T' if row['TeamTrade'] == 'YES' else 'F',      # Team Storage
         )
         obj['Type'] = item_type
         obj['Weight'] = float(row['Weight']) if 'Weight' in row else None

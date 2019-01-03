@@ -35,7 +35,7 @@ export class TOSItem extends TOSEntity implements ITOSItem {
 
   public isTradable(tradable: TOSItemTradability): boolean {
     let index = Object.values(TOSItemTradability).indexOf(tradable);
-    return this.Tradability && this.Tradability[index] == '1';
+    return this.Tradability && this.Tradability[index] == 'T';
   }
 
   private TOSItemDropLinkFactory(value: TOSItemDrop): Observable<TOSItemDrop> {

@@ -55,7 +55,7 @@ export class TOSEquipment extends TOSItem implements ITOSEquipment {
 
   IsUsableBy(classTree: TOSClassTree): boolean {
     let index = Object.values(TOSClassTree).indexOf(classTree);
-    return this.RequiredClass[index] == '1';
+    return this.RequiredClass[index] == 'T';
   }
 
   AnvilATK(level: number) {
