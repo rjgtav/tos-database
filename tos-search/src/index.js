@@ -26,8 +26,6 @@ if ([REGION_ITOS, REGION_JTOS, REGION_KTEST, REGION_KTOS].indexOf(REGION) === -1
 
 let documents = {};
 let folder = path.join(__dirname, '..', '..', 'web', 'src', 'assets', 'data', REGION.toLowerCase());
-let version = fs.readdirSync(folder)[0];
-    version = version.slice(version.indexOf('.') + 1, version.lastIndexOf('.'));
 
 // Load Documents
 log('Loading documents...');
@@ -78,4 +76,4 @@ var idx = lunr(function () {
 
 // Save index
 log('Saving Index...');
-fs.writeFileSync(path.join(folder, 'index.' + version + '.json'), JSON.stringify(idx));
+fs.writeFileSync(path.join(folder, 'index.json'), JSON.stringify(idx));
