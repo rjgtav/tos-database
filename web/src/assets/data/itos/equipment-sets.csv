@@ -1,0 +1,55 @@
+$ID,$ID_NAME,Bonus2,Bonus3,Bonus4,Bonus5,Bonus6,Bonus7,Link_Items,Name
+1,set_001,AoE Attack Ratio {img green_up_arrow 16 16} 1,,,,,,"[522110, 532110]",Light Plate Set
+2,set_002,Defense {img green_up_arrow 16 16} 6,,,,,,[532111],Zega Set
+3,set_003,Additional Dark Attack {img green_up_arrow 16 16} 30,,,,,,"[522112, 532112]",Magi Set
+4,set_004,Movement Speed {img green_up_arrow 16 16} 5,,,,,,"[522113, 532113]",Jude Set
+5,set_005,Fire Property Attack {img green_up_arrow 16 16} 15,,,,,,"[522114, 532114]",Ismin Set
+7,set_007,HP Recovery {img green_up_arrow 16 16} 16,All Stats {img green_up_arrow 16 16} 1,Adds an additional hit of {img green_up_arrow 16 16}12 Earth property damage to basic attacks,,,,"[502123, 512123, 522123, 532123]",Cafrisun Set
+8,set_008,Fire Property Resistance {img green_up_arrow 16 16} 16,,,,,,"[532150, 522150]",Riena Set
+9,set_009,Fire Property Resistance {img green_up_arrow 16 16} 16,,,,,,"[532151, 522151]",Riena Set
+10,set_010,Fire Property Resistance {img green_up_arrow 16 16} 16,,,,,,"[532152, 522152]",Riena Set
+11,set_011,Attack against Devil-type Targets {img green_up_arrow 16 16} 6,Attack against Devil-type Targets {img green_up_arrow 16 16} 8,1% chance per regular attack of increasing your attack on Demon targets by {img green_up_arrow 16 16} 157 for 30 sec,,,,"[502153, 512153, 522153, 532153]",Watcher Set
+12,set_012,All Stats {img green_up_arrow 16 16} 3,,,,,,"[603106, 583105]",Abomination Set
+13,set_013,CON {img green_up_arrow 16 16} 5,Stamina {img green_up_arrow 16 16} 10,"When hit by Earth property attacks, your regular attacks gain the Rage of Earth buff (1 Earth property attack per stack) for 10 sec{nl}Max. 30 stacks",,,,"[502154, 512154, 522154, 532154]",Earth Cloth Armor Set
+14,set_014,CON {img green_up_arrow 16 16} 5,Stamina {img green_up_arrow 16 16} 10,"When hit by Earth property attacks, your regular attacks gain the Rage of Earth buff (1 Earth property attack per stack) for 10 sec{nl}Max. 30 stacks",,,,"[502155, 512155, 522155, 532155]",Earth Leather Armor Set
+15,set_015,CON {img green_up_arrow 16 16} 5,Stamina {img green_up_arrow 16 16} 10,"When hit by Earth property attacks, your regular attacks gain the Rage of Earth buff (1 Earth property attack per stack) for 10 sec{nl}Max. 30 stacks",,,,"[502156, 512156, 522156, 532156]",Earth Plate Armor Set
+16,set_016,Dark Property Resistance {img green_up_arrow 16 16} 10,SPR {img green_up_arrow 16 16} 6,1% chance of recovering 200 SP for 5 seconds when attacked by a Devil-type enemy,,,,"[502157, 512157, 522157, 532157]",Legwyn Family's Cloth Armor Set
+17,set_017,Dark Property Resistance {img green_up_arrow 16 16} 10,SPR {img green_up_arrow 16 16} 6,1% chance of recovering 200 SP for 5 seconds when attacked by a Devil-type enemy,,,,"[502158, 512158, 522158, 532158]",Legwyn Family's Leather Armor Set
+18,set_018,Dark Property Resistance {img green_up_arrow 16 16} 10,SPR {img green_up_arrow 16 16} 6,1% chance of recovering 200 SP for 5 seconds when attacked by a Devil-type enemy,,,,"[502159, 512159, 522159, 532159]",Legwyn Family's Plate Armor Set
+19,set_019,Attack increases by {img green_up_arrow 16 16} 150% and evasion reduces by {img red_down_arrow 16 16} 188 when you attack an enemy from behind with Backstab,,,,,,"[183108, 113002]",Karacha Set
+20,set_020,DEX {img green_up_arrow 16 16} 6,,,,,,"[522187, 532187]",Velnia Monkey Set
+21,set_021,Magic Defense {img green_up_arrow 16 16} 5,Magic Defense {img green_up_arrow 16 16} 10,INT {img green_up_arrow 16 16} 15,,,,"[502188, 512188, 522188, 532188]",Elgos Set
+22,set_022,Physical Defense {img green_up_arrow 16 16} 5,Physical Defense {img green_up_arrow 16 16} 10,Evasion {img green_up_arrow 16 16} 15,,,,"[502189, 512189, 522189, 532189]",Ibre Set
+23,set_023,Dark Property Resistance {img green_up_arrow 16 16} 10,Dark Property Resistance {img green_up_arrow 16 16} 20,HP {img green_up_arrow 16 16}1020,,,,"[502190, 512190, 522190, 532190]",Grynas Set
+24,set_024,"Activates the stacking [Porapore]{nl}buff for 8 seconds when using physical attacks. Upon reaching 100 stacks, provides additional Holy and Darkness property damage equal to {img green_up_arrow 16 16}8% of your Magic Defense for 10 seconds.",,,,,,"[603103, 603104]",Poratore Set
+25,set_025,Add. Ice Property Damage {img green_up_arrow 16 16}12,Add. Ice Property Damage {img green_up_arrow 16 16}26,Pierce-type Defense {img green_up_arrow 16 16} 25,,,,"[503114, 513114, 523114, 533114]",Virtov Set
+26,set_026,Add. Ice Property Damage {img green_up_arrow 16 16}12,Add. Ice Property Damage {img green_up_arrow 16 16}26,Strike-type Defense {img green_up_arrow 16 16} 25,,,,"[503115, 513115, 523115, 533115]",Virtov Leather Set
+27,set_027,Add. Ice Property Damage {img green_up_arrow 16 16}12,Add. Ice Property Damage {img green_up_arrow 16 16}26,Slash-type Defense {img green_up_arrow 16 16} 25,,,,"[503116, 513116, 523116, 533116]",Virtov Plate Set
+28,set_028,SP Recovery {img green_up_arrow 16 16} 100,Add. Earth Property Damage {img green_up_arrow 16 16}42,INT {img green_up_arrow 16 16} 25,,,,"[504106, 514106, 524106, 534106]",Lolopanther Set
+29,set_029,Critical Rate {img green_up_arrow 16 16} 46,Add. Earth Property Damage {img green_up_arrow 16 16}42,DEX {img green_up_arrow 16 16} 25,,,,"[504107, 514107, 524107, 534107]",Lolopanther Leather Set
+30,set_030,HP Recovery {img green_up_arrow 16 16} 190,Add. Earth Property Damage {img green_up_arrow 16 16}42,STR {img green_up_arrow 16 16} 25,,,,"[504108, 514108, 524108, 534108]",Lolopanther Plate Set
+31,set_031,,Magic Defense {img green_up_arrow 16 16} 10,,,,,"[582119, 602116, 602116]",Bronza Set
+32,set_032,,Magic Defense {img green_up_arrow 16 16} 14,,,,,"[582120, 602117, 602117]",Argint Set
+33,set_033,,Magic Defense {img green_up_arrow 16 16} 18,,,,,"[582121, 602118, 602118]",Auru Set
+34,set_034,,Magic Defense {img green_up_arrow 16 16} 22,,,,,"[582122, 602119, 602119]",Platina Set
+35,set_035,HP Recovery {img green_up_arrow 16 16}240,All Stats {img green_up_arrow 16 16}6,Adds an additional hit of {img green_up_arrow 16 16}110 Ice property damage to basic attacks{nl}Increases STR and SPR by {img green_up_arrow 16 16}12,,,,"[502208, 512208, 522208, 532208]",Manahas Set
+36,set_036,,All Stats {img green_up_arrow 16 16}25,SP {img green_up_arrow 16 16}1437,,Add. Earth Property Damage {img green_up_arrow 16 16}162,Magic Attack {img green_up_arrow 16 16}571{nl}Magic Amplification {img green_up_arrow 16 16}69,"[534109, 524109, 514109, 504109, 584106, 604104, 604104]",Solmiki Cloth Set
+37,set_037,,All Stats {img green_up_arrow 16 16}25,Critical Attack {img green_up_arrow 16 16}225{nl}Accuracy {img green_up_arrow 16 16}100,,Evasion {img green_up_arrow 16 16}48{nl}Critical Rate {img green_up_arrow 16 16}72,Physical Attack {img green_up_arrow 16 16}818,"[534110, 524110, 514110, 504110, 584107, 604105, 604105]",Solmiki Leather Set
+38,set_038,,All Stats {img green_up_arrow 16 16}25,HP {img green_up_arrow 16 16}3942,,Physical Defense {img green_up_arrow 16 16}201{nl}5% chance of recovering 2% of your max HP every second for 5 sec when being attacked by Demon type enemies{nl}(Cooldown 10 sec),Magic Defense {img green_up_arrow 16 16}247{nl}Physical Attack {img green_up_arrow 16 16}571,"[534111, 524111, 514111, 504111, 584108, 604106, 604106]",Solmiki Plate Set
+39,set_039,Critical Rate {img green_up_arrow 16 16}30,Physical Attack {img green_up_arrow 16 16}120{nl}AoE Attack Ratio {img green_up_arrow 16 16}1{nl}Additional 1000-3000 damage on every 5th attack,,,,,"[584109, 604107, 604107]",Varpas Set
+40,set_040,Magic Amplification {img green_up_arrow 16 16}60,Magic Attack {img green_up_arrow 16 16}120{nl}AoE Attack Ratio {img green_up_arrow 16 16}1{nl}Additional 1000-3000 damage on every 5th attack,,,,,"[584110, 604108, 604108]",Verijo Set
+41,set_041,,,,,,,[11119],Guild Battle 1st Place Set
+42,set_042,,,,,,,[11120],Guild Battle 2nd Place Set
+43,set_043,,,,,,,[11121],Guild Battle 3rd Place Set
+44,set_044,Physical Defense {img green_up_arrow 16 16}50{nl}Magic Defense {img green_up_arrow 16 16}50,Attack on Large targets {img green_up_arrow 16 16} 200{nl}AoE attack ratio {img green_up_arrow 16 16} 1,,,,,"[580010, 600014, 600015]",Sugar Accessory Set
+45,set_045,CON {img green_up_arrow 16 16} 25,"Increases property attack in value equivalent to property resistance{nl}- Affected properties: Poison, Fire, Ice, Lightning, Dark, Holy, Earth, Psychokinesis{nl}- Max. 300 per property",,,,,"[584112, 604110, 604110]",Kite Moor Set
+46,set_046,AoE Attack Ratio {img green_up_arrow 16 16}1{nl}Critical Attack {img green_up_arrow 16 16}231,Chance of dealing 2000-3000 additional damage to a maximum of 10 enemies.{nl}- The chances increase depending on the number of enemies nearby.{nl}- Max. increase 20%,,,,,"[584114, 604112, 604112]",Frieno Set
+47,set_047,HP {img green_up_arrow 16 16}1023{nl}DEX {img green_up_arrow 16 16}10,"Increases physical and magic defense by 10 with every hit received. At 50 stacks, increase physical and magic defense by an extra 500 and maintain for 10 seconds.",,,,,"[584113, 604111, 604111]",Pasiuteset
+48,set_048,Magic Attack {img green_up_arrow 16 16}120,"Increases Magic Attack by 2 with each attack. At max 50 stacks, increase Magic Attack by an extra 250.",,,,,"[584111, 604109, 604109]",Lynnki Sit Set
+52,set_052,Physical Attack {img green_up_arrow 16 16}60{nl}Magic Attack {img green_up_arrow 16 16}60,Movement Speed {img green_up_arrow 16 16} 2,,,,,"[580013, 580014, 600027, 600027, 600026, 600026]",2018 White Day Set
+53,set_053,'Velcoffer's Nest' provides a damage reduction of 10%,,,,,,"[19004, 633093]",Velcoffer Costume Set
+54,set_054,,,,,,,[11131],Territory Wars Beta Set
+55,set_055,,,,,,,[11132],Territory Wars Beta Set
+56,set_056,,ENH: Necklaces and bracelets gain +10 critical rate per enhancement stage starting at stage 11{nl} {nl}TRA: Necklaces and bracelets gain +5 critical rate per transcendence stage{nl} {nl} (Max. critical rate increase: 350),,,,,"[584115, 604115, 604115]",Nepagristas Set
+57,set_057,,Attacking enemies of level 400 and below from the back ignores their block chances.,,,,,"[584116, 604116, 604116]",Nematomas Set
+58,set_058,,"Grants 50% of your max. HP and physical/magic defense to your summons.{nl} {nl}Grants up to:{nl}Max. HP 30,000{nl}Defense 6,000",,,,,"[584117, 604117, 604117]",Rangovas Set

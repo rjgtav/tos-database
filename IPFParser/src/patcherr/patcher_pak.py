@@ -11,9 +11,11 @@ PAK_BLACKLIST = [
     '.lua',
     'beforedata/',
     'bgm/',
+    'BlackCipher/',
     'loadingimg/',
     'Client_tos.exe',
     'hotkey',
+    'xigncode',
 ]
 
 OFFSET_FILE_NAME_LEN = 0

@@ -20,8 +20,8 @@ def patch():
         constants.PATH_INPUT_RELEASE_REVISION, constants.PATH_INPUT_RELEASE_REVISION_URL,
     )
 
-    version_new = 'patch_' + version_data_new + '_release_' + version_release_new
-    version_old = 'patch_' + version_data + '_release_' + version_release
+    version_new = 'patch_' + str(version_data_new) + '_release_' + str(version_release_new)
+    version_old = 'patch_' + str(version_data) + '_release_' + str(version_release)
 
     return version_old, version_new
 
