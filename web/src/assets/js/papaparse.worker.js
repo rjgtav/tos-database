@@ -17,8 +17,7 @@ self.onmessage = async function(event) {
       let dataset = message.dataset;
       let region = payload.region;
       let schema = payload.schema;
-      let version = payload.version;
-      let url = (origin + 'assets/data/' + region + '/' + dataset + '.' + version + '.csv').toLowerCase();
+      let url = (origin + 'assets/data/' + region + '/' + dataset + '.csv').toLowerCase();
 
       let database = await databaseInitialize(dataset, region, schema);
       let transaction = databaseTransaction(database);

@@ -16,7 +16,6 @@ import {TOSAttribute} from "../../shared/domain/tos/attribute/tos-attribute.mode
 import {TOSSkill} from "../../shared/domain/tos/skill/tos-skill.model";
 import {TOSDatabaseBuild} from "../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../shared/domain/tos/job/tos-job.model";
-import {TOSRegionService} from "../../shared/service/tos-region.service";
 import {AttributeListConfigurationResolver} from "../resolvers/attribute-list-configuration.resolver";
 import {CollectionListConfigurationResolver} from "../resolvers/collection-list-configuration.resolver";
 import {GemListConfigurationResolver} from "../resolvers/gem-list-configuration.resolver";
@@ -27,6 +26,7 @@ import {RecipeListConfigurationResolver} from "../resolvers/recipe-list-configur
 import {MonsterListConfigurationResolver} from "../resolvers/monster-list-configuration.resolver";
 import {CubeListConfigurationResolver} from "../resolvers/cube-list-configuration.resolver";
 import {EquipmentSetListConfigurationResolver} from "../resolvers/equipment-set-list-configuration.resolver";
+import {TOSRegionService} from "../../shared/domain/tos-region";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -105,7 +105,7 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
       if (this.skill) {
         this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
         this.subscriptionSkill = this.skill.Link_Job.subscribe(async value => {
-          let build = TOSDatabaseBuild.new(TOSRegionService.Region);
+          let build = TOSDatabaseBuild.new(TOSRegionService.get());
           await build.jobAdd$(value); // Note: we need to add them 3 times, as on pre-Re:Build the level max scales with the selected Job circle
           await build.jobAdd$(value);
           await build.jobAdd$(value);

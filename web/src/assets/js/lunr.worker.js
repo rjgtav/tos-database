@@ -16,8 +16,7 @@ self.onmessage = function (event) {
     // Load region's index
     case 'load':
       let region = payload.region;
-      let version = payload.version;
-      let url = (origin + 'assets/data/' + region + '/index.' + version + '.json').toLowerCase();
+      let url = (origin + 'assets/data/' + region + '/index.json').toLowerCase();
 
       let xhr = new XMLHttpRequest();
           xhr.open('GET', url, true);

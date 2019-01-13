@@ -54,6 +54,10 @@ popd
 # Patch service worker
 npm run ngsw-config
 
+# Rename ngsw.json to ngsw.js otherwise CloudFlare doesn't consider it as 'static'
+# https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
+mv ./dist/web/ngsw.json ./dist/web/ngsw.js
+
 # Upload to tos.guru
 #echo -e "Uploading to tos.guru..."
 #lftp -c "
@@ -69,3 +73,5 @@ npm run ngsw-config
 #"
 
 popd
+
+# TODO: clear initial assets from CloudFlare (the ones the service worker can't intercept)... plus the sitemaps

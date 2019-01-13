@@ -4,7 +4,7 @@ import {TOSRegion} from "../domain/tos-region";
 const KEY_VERSION = 'version';
 const VERSION_HOTFIX = 0;
 const VERSION: { [key in TOSRegion]: string } = {
-  'iTOS': '234446001001_hotfix_1', /* iTOS-needle */
+  'iTOS': '234929_release_234446', /* iTOS-needle */
   'jTOS': '233760001001_hotfix_1', /* jTOS-needle */
   'kTEST': '234350001001_hotfix_1', /* kTEST-needle */
   'kTOS': '234620001001_hotfix_1', /* kTOS-needle */
@@ -26,7 +26,7 @@ export class UpdateService {
   }
 
   version(region: TOSRegion) { return VERSION[region] + (VERSION_HOTFIX ? '_hotfix_' + VERSION_HOTFIX : ''); }
-  versionHuman(region: TOSRegion) { return region && (region.toString() + ' ~ Patch ' + this.version(region).replace('001001', '')) }
+  versionHuman(region: TOSRegion) { return region && (region.toString() + ' ~ ' + this.version(region)) }
 
   private versionOld(region: TOSRegion): string {
     return JSON.parse(localStorage.getItem(KEY_VERSION) || '{}')[region];

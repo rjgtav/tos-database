@@ -1,15 +1,63 @@
 <div class="d-flex align-items-center justify-content-center h-100 w-100" style="background: #002A3A;"
-     [ngClass]="{ 'show': updateAvailable }"
+     [ngClass]="{ 'show': updateAvailable && !updateComplete }"
+     [style.pointerEvents]="updateAvailable && updateProgress < 1 ? 'initial' : 'none'"
      [style.transitionDuration]="updateAvailable ? '0.25s' : '1s'">
-  <div>
-    <img class="mb-4" src="assets/images/logo_tos.png">
-    <div class="progress">
-      <div class="progress-bar progress-bar-animated progress-bar-striped" style="background-color: #006bbe"
-           [style.width]="(updateProgress * 100 / updateTotal) + '%'"></div>
+  <div class="text-center text-white">
+    <div *ngIf="installSupported">
+      <img class="mb-4" src="assets/images/logo_tos.png" />
+      <div *ngIf="!installComplete">
+        <div class="progress">
+          <div class="progress-bar progress-bar-animated progress-bar-striped"
+               [style.width]="(installProgress * 100 / installTotal) + '%'"></div>
+        </div>
+        <div class="mt-2" *ngIf="!installComplete">
+          Installing tos.guru {{ installProgress }}/{{ installTotal }}...
+        </div>
+      </div>
+      <div *ngIf="installComplete">
+        <div class="progress">
+          <div class="progress-bar progress-bar-animated progress-bar-striped"
+               [style.width]="(updateProgress * 100 / updateTotal) + '%'"></div>
+        </div>
+        <div class="mt-2" *ngIf="installComplete">
+          Updating database {{ updateProgress }}/{{ updateTotal}}...<br/>
+          <span class="font-italic text-muted">{{ updateVersion }}</span>
+        </div>
+      </div>
     </div>
-    <div class="text-white text-center mt-2">
-      Updating database {{ updateProgress }}/{{ updateTotal}}...<br/>
-      <span class="font-italic text-muted">{{ updateVersion }}</span>
+    <div *ngIf="!installSupported">
+      <img src="assets/images/emoticons/emoticon_0003.png" />
+      <div class="mt-5">It seems your browser doesn't support tos.guru :(</div>
+      <div class="text-left mt-5">
+        <b>Troubleshooting:</b>
+        <ul>
+          <li>Please make sure you aren't using Incognito/Private mode</li>
+          <li>Alternatively, you can use one of the following browsers:
+          </li>
+        </ul>
+        <div class="d-flex justify-content-around font-weight-bold text-center text-white mt-3">
+          <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" target="_blank" class="d-flex flex-column">
+            <img class="align-self-center" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" />
+            <span class="mt-1">Edge</span>
+          </a>
+          <a href="https://www.mozilla.org/" target="_blank" class="d-flex flex-column">
+            <img class="align-self-center" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" />
+            <span class="mt-1">Firefox</span>
+          </a>
+          <a href="https://www.google.com/chrome/" target="_blank" class="d-flex flex-column">
+            <img class="align-self-center" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" />
+            <span class="mt-1">Chrome</span>
+          </a>
+          <a href="https://www.apple.com/safari/" target="_blank" class="d-flex flex-column">
+            <img class="align-self-center" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" />
+            <span class="mt-1">Safari</span>
+          </a>
+          <a href="https://www.opera.com/" target="_blank" class="d-flex flex-column">
+            <img class="align-self-center" src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" />
+            <span class="mt-1">Opera</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

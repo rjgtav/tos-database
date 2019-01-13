@@ -12,7 +12,7 @@ import {
   TOSJobTree
 } from "./tos-domain";
 import {TOSDomainService} from "./tos-domain.service";
-import {TOSRegion} from "../tos-region";
+import {TOSRegion, TOSRegionService} from "../tos-region";
 import {fromPromise} from "rxjs/internal-compatibility";
 
 export const LEVEL_LIMIT: number = 390;
@@ -346,7 +346,7 @@ class TOSBuild_20 extends TOSBuild {
 export class TOSDatabaseBuild implements ITOSBuild {
 
   static new(region: TOSRegion): TOSDatabaseBuild {
-    let build = TOSRegion.isRebuild(region)
+    let build = TOSRegionService.isRebuild(region)
       ? new TOSBuild_20()
       : new TOSBuild_10();
 
@@ -433,7 +433,7 @@ export class TOSSimulatorBuild implements ITOSBuild {
   }
 
   static new(region: TOSRegion): TOSSimulatorBuild {
-    let build = TOSRegion.isRebuild(region)
+    let build = TOSRegionService.isRebuild(region)
       ? new TOSBuild_20()
       : new TOSBuild_10();
 

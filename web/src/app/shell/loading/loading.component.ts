@@ -1,8 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component} from '@angular/core';
 import {UpdateService} from "../../shared/service/update.service";
-import {TOSRegionService} from "../../shared/service/tos-region.service";
-import {TOSRegion} from "../../shared/domain/tos-region";
-import {TOSDomainService} from "../../shared/domain/tos/tos-domain.service";
+import {LoadingService} from "./loading.service";
+import {TOSRegionService} from "../../shared/domain/tos-region";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,37 +11,50 @@ import {TOSDomainService} from "../../shared/domain/tos/tos-domain.service";
 })
 export class LoadingComponent {
 
+  installComplete: boolean;
+  installProgress: number;
+  installSupported: boolean;
+  installTotal: number;
+
   updateAvailable: boolean;
+  updateComplete: boolean;
   updateProgress: number;
   updateTotal: number;
   updateVersion: string;
 
   constructor(
     private changeDetector: ChangeDetectorRef,
-    private domain: TOSDomainService,
-    private update: UpdateService
+    private loading: LoadingService,
+    private update: UpdateService,
   ) {
-    TOSRegionService.Region$.subscribe(value => this.onRegionChange(value));
-    this.domain.loadProgress$.subscribe(value => this.onUpdateProgress(value))
+    this.loading.updateProgress$.subscribe(value => this.onUpdateProgress(value));
+    this.loading.updateComplete$.subscribe(value => this.updateComplete = value);
+    this.loading.installComplete$.subscribe(value => this.installComplete = value);
+    this.loading.installProgress$.subscribe(value => this.onInstallProgress(value));
+
+    this.installSupported = this.loading.installSupported;
+    this.onUpdateAvailable();
   }
 
-  onRegionChange(value: TOSRegion) {
-    this.updateVersion = this.update.versionHuman(value);
-    this.onUpdateAvailable(value);
+  onInstallProgress(value: number) {
+    this.installProgress = Math.max(value, 0);
+    this.installTotal = Math.max(this.loading.installTotal, 0);
+    this.installTotal = isNaN(this.installTotal) ? 0 : this.installTotal;
+    this.changeDetector.markForCheck();
   }
 
-  onUpdateAvailable(region: TOSRegion) {
-    if (!region) return;
+  onUpdateAvailable() {
+    let region = TOSRegionService.get();
 
     this.updateAvailable = this.update.updateAvailable(region);
     this.updateAvailable && this.changeDetector.markForCheck();
+    this.updateVersion = this.update.versionHuman(region);
   }
   onUpdateProgress(value: number) {
     if (!this.updateAvailable) return;
 
     this.updateProgress = Math.max(value, 0);
-    this.updateTotal = this.domain.loadTotal;
-    this.updateAvailable = this.updateProgress < this.updateTotal;
+    this.updateTotal = this.loading.updateTotal;
     this.changeDetector.markForCheck();
   }
 

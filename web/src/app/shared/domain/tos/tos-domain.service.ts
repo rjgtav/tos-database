@@ -19,12 +19,12 @@ import {
   TOSJobTreeService,
 } from "./tos-domain";
 import {CRUDPage, CRUDPageResult} from "../../service/CRUD.resolver";
-import {BehaviorSubject, forkJoin, Observable} from "rxjs";
+import {Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal-compatibility";
 import {Inject, Injectable} from "@angular/core";
 import {TOSAttribute} from "./attribute/tos-attribute.model";
 import {TOSRegion} from "../tos-region";
-import {tap} from "rxjs/operators";
+import {UpdateService} from "../../service/update.service";
 
 @Injectable({
   providedIn: 'root'
@@ -32,31 +32,13 @@ import {tap} from "rxjs/operators";
 export class TOSDomainService {
 
   private static repository: ITOSDomainRepository;
-  private loadHandler: Observable<any>;
-  private loadProgress: BehaviorSubject<number> = new BehaviorSubject(-1);
 
-  constructor(@Inject('ITOSDomainRepository') private repository: ITOSDomainRepository) {
+  constructor(@Inject('ITOSDomainRepository') private repository: ITOSDomainRepository, private update: UpdateService) {
     TOSDomainService.repository = repository;
   }
 
-  get isLoading() { return this.loadProgress.getValue() >= 0 && this.loadProgress.getValue() < this.loadTotal }
-  get loadProgress$() { return this.loadProgress.asObservable() }
-  get loadTotal() { return Object.values(TOSDataSet).length }
-
-  load$(region: TOSRegion): Observable<any> {
-    if (this.isLoading)
-      return this.loadHandler;
-
-    this.loadProgress.next(0);
-
-    return this.loadHandler = forkJoin(
-      Object.values(TOSDataSet)
-        .map(value =>
-          this.repository
-            .load(value, region)
-            .pipe(tap(() => this.loadProgress.next(this.loadProgress.getValue() + 1)))
-        )
-    );
+  public load(dataset: TOSDataSet, region: TOSRegion): Observable<object> {
+    return this.repository.load(dataset, region);
   }
 
   //---------------------------------------------------------------------------

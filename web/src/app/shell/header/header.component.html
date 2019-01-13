@@ -54,12 +54,12 @@
       <!-- Region selector -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle tos-link" style="text-transform: initial;">
-          {{ RegionService.Region }}
+          {{ TOSRegionService.get() }}
           <div class="dropdown-menu">
-            <a *ngFor="let region of RegionService.Regions" class="dropdown-item" style="text-transform: initial;"
+            <a *ngFor="let region of REGION" class="dropdown-item" style="text-transform: initial;"
                [href]="'#' + region"
-               [ngClass]="{ 'active': RegionService.Region == region }"
-               (click)="regionSelect(region)">{{ region }}&nbsp;<span class="badge badge-success" *ngIf="TOSRegion.isRebuild(region)">Re:Build</span></a>
+               [ngClass]="{ 'active': TOSRegionService.get() == region }"
+               (click)="regionSelect(region)">{{ region }}&nbsp;<span class="badge badge-success" *ngIf="TOSRegionService.isRebuild(region)">Re:Build</span></a>
           </div>
         </a>
       </li>

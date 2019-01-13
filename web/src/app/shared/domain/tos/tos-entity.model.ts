@@ -32,7 +32,7 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
     let icon = this.$lazyPropertyString('Icon');
 
     return icon
-      ? TOSUrlService.Asset(null, 'assets/icons/' + icon + '.png')
+      ? TOSUrlService.Asset('assets/icons/' + icon + '.png')
       : null;
   }
   get Name(): string { return this.$lazyPropertyString('Name'); }
@@ -40,7 +40,7 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
     return this.url = this.url
       ? this.url
       : this.Dataset
-        ? TOSUrlService.Route(null, '/database/' + TOSDataSetService.toUrl(this.Dataset) + '/' + this.$ID)
+        ? TOSUrlService.Route('/database/' + TOSDataSetService.toUrl(this.Dataset) + '/' + this.$ID)
         : null;
   }
 

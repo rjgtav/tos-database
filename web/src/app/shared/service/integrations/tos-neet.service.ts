@@ -2,9 +2,9 @@ import {Injectable} from "@angular/core";
 import {TOSSimulatorBuild} from "../../domain/tos/tos-build";
 import {ITOSJob} from "../../domain/tos/tos-domain";
 import {TOSDomainService} from "../../domain/tos/tos-domain.service";
-import {TOSRegionService} from "../tos-region.service";
 import {Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal-compatibility";
+import {TOSRegionService} from "../../domain/tos-region";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class TosNeetService {
 
   decode(encoded: string): Observable<TOSSimulatorBuild> {
     return fromPromise((async () => {
-      let build: TOSSimulatorBuild = TOSSimulatorBuild.new(TOSRegionService.Region);
+      let build: TOSSimulatorBuild = TOSSimulatorBuild.new(TOSRegionService.get());
 
       let partsEncoded = encoded.split('.');
       let jobsDecoded: ITOSJob[] = [];

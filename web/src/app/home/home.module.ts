@@ -1,12 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { WelcomeComponent } from './welcome/welcome.component';
-import {HomeRoutingModule} from "./home-routing.module";
+import {NgModule} from '@angular/core';
+import {WelcomeComponent} from './welcome/welcome.component';
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   imports: [
-    CommonModule,
-    HomeRoutingModule,
+    SharedModule,
   ],
   declarations: [
     WelcomeComponent

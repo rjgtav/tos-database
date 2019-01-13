@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 import {Observable, Subject} from "rxjs";
 import {ITOSDomainRepository, TOSDataSet} from "./tos-domain";
 import {TOSUrlService} from "../../service/tos-url.service";
-import {TOSRegion} from "../tos-region";
+import {TOSRegion, TOSRegionService} from "../tos-region";
 import {CRUDPage, CRUDPageResult} from "../../service/CRUD.resolver";
 import {map} from "rxjs/operators";
 import {TOSAttribute} from "./attribute/tos-attribute.model";
@@ -18,8 +18,6 @@ import {TOSMap} from "./map/tos-map.model";
 import {TOSMonster} from "./monster/tos-monster.model";
 import {TOSRecipe} from "./item/recipe/tos-recipe.model";
 import {TOSSkill} from "./skill/tos-skill.model";
-import {TOSRegionService} from "../../service/tos-region.service";
-import {UpdateService} from "../../service/update.service";
 
 @Injectable({
   providedIn: 'root'
@@ -86,23 +84,20 @@ export class TOSDomainRepository implements ITOSDomainRepository {
   };
 
   private MESSAGE_ID: number = 0;
-  private region: TOSRegion;
 
-  private readonly workerDexie: Worker = new Worker(TOSUrlService.WORKER_DEXIE());
+  private workerDexie: Worker; // Note: we initialize it later so the Service Worker can intercept the call
   private readonly workerDexieHandler: { [key: number]: Subject<object> } = {};
   private readonly workerPapaparse: { [key in TOSDataSet]?: Worker } = {};
   private readonly workerPapaparseHandler: { [key in TOSDataSet]?: Subject<object> } = {};
 
-  constructor(private update: UpdateService) {
-    TOSRegionService.Region$.subscribe(value => this.region = value);
-
+  constructor() {
     this.onPapaparseMessage = this.onPapaparseMessage.bind(this);
     this.onDexieMessage = this.onDexieMessage.bind(this);
   }
 
   find(dataset: TOSDataSet, page: CRUDPage) {
     return this
-      .postDexieMessage(WorkerDexieCommand.FIND, { dataset, region: this.region, page })
+      .postDexieMessage(WorkerDexieCommand.FIND, { dataset, region: TOSRegionService.get(), page })
       .pipe(map((value: CRUDPageResult<any>) => {
         return {
           result: value.result.map(value => this.config[dataset].factory(value)),
@@ -112,7 +107,7 @@ export class TOSDomainRepository implements ITOSDomainRepository {
   }
   findByIndex(dataset: TOSDataSet, key: string, value: number | string, forceSingle?: boolean) {
     return this
-      .postDexieMessage(WorkerDexieCommand.FIND_BY_INDEX, { dataset, region: this.region, key, value })
+      .postDexieMessage(WorkerDexieCommand.FIND_BY_INDEX, { dataset, region: TOSRegionService.get(), key, value })
       .pipe(
         map((value: CRUDPageResult<any>) => value.result.map(value => this.config[dataset].factory(value))),
         map((value) => forceSingle ? value[0] : value)
@@ -124,7 +119,6 @@ export class TOSDomainRepository implements ITOSDomainRepository {
       : this.postPapaparseMessage(WorkerPapaparseCommand.LOAD, dataset, {
         region,
         schema: this.config[dataset].schema,
-        version: this.update.version(this.region)
       });
   }
 
@@ -157,7 +151,7 @@ export class TOSDomainRepository implements ITOSDomainRepository {
     let message: WorkerDexieMessage = { cmd, id, payload };
 
     let subject = this.workerDexieHandler[id] = new Subject();
-    let worker = this.workerDexie
+    let worker = this.workerDexie = this.workerDexie || new Worker(TOSUrlService.WORKER_DEXIE());
         worker.onmessage = this.onDexieMessage;
         worker.postMessage(message);
 

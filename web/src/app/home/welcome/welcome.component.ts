@@ -1,6 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {TOSUrlService} from "../../shared/service/tos-url.service";
-import {TOSRegionService} from "../../shared/service/tos-region.service";
 import {TOSDataSetService} from "../../shared/domain/tos/tos-domain";
 
 @Component({
@@ -16,7 +15,7 @@ export class WelcomeComponent {
   constructor() { }
 
   routerLink(url: string): string {
-    return TOSUrlService.Route(TOSRegionService.Region, url);
+    return TOSUrlService.Route(url);
   }
 
 }

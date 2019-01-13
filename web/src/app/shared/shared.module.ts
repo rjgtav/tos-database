@@ -91,6 +91,14 @@ import {TOSDomainRepository} from "./domain/tos/tos-domain.repository";
     SortDirective,
     SortGroupDirective,
 
+    // Modules
+    CommonModule,
+    ClickOutsideModule,
+    FontAwesomeModule,
+    FormsModule,
+    NgbModule,
+    RouterModule,
+
     // Pipes
     SanitizeCSSPipe,
     SanitizeHTMLPipe,

@@ -14,13 +14,21 @@ bundleWorker(['src/assets/js/papaparse.min.js', 'src/assets/js/papaparse.worker.
 // Minify HTML
 // minifyHTML('dist/web/index.html');
 
-// HotFix: for some reason the SW isn't finding the cache entries unless I specify ignoreVary to true
+// Patch Angular's default Service Worker implementation:
+// - Abuse the hashes so CloudFlare is able to cache assets for much longer
+// - Make sure the cache is being used
 console.log('Patching ngsw-worker.js...');
-ReplaceInfile.sync({
-  files: 'dist/web/ngsw-worker.js',
-  from: /cache.match\(req\)/g,
-  to: 'cache.match(req, { ignoreVary: true })',
-});
+let ngswWorker = fs.readFileSync('dist/web/ngsw-worker.js');
+let ngswWorkerBackup = fs.readFileSync('ngsw-worker.backup.js');
+
+if (!ngswWorker.equals(ngswWorkerBackup))
+  throw new Error('ngsw-worker has been updated! Please patch it before proceeding...');
+
+fs.writeFileSync('dist/web/ngsw-worker.js', fs.readFileSync('ngsw-worker.js'));
+
+console.log('Patching done!');
+
+//----------------------------------------------------------------------------------------------------------------------
 
 function bundleWorker(sources, destination) {
   console.log('Bundling', destination);
@@ -32,19 +40,23 @@ function bundleWorker(sources, destination) {
     return accumulator;
   }, {})).code;
 
-  let hash = sha1(data);
-  let extension = destination.slice(destination.lastIndexOf('.'));
-  let destinationHashed = destination.replace(extension, '.' + hash + extension);
+  fs.ensureFileSync(destination);
+  fs.writeFileSync(destination, data);
 
-  fs.ensureFileSync(destinationHashed);
-  fs.writeFileSync(destinationHashed, data);
+  // 2019-01-10: We are now applying a hash on the Service Worker directly, so we no longer need to include in the file name
+  // let hash = sha1(data);
+  // let extension = destination.slice(destination.lastIndexOf('.'));
+  // let destinationHashed = destination.replace(extension, '.' + hash + extension);
+
+  // fs.ensureFileSync(destinationHashed);
+  // fs.writeFileSync(destinationHashed, data);
 
   // Update URLs in main bundle with hashed versions
-  ReplaceInfile.sync({
-    files: getBundle('main.js'),
-    from: new RegExp(destination.slice(destination.lastIndexOf('/') + 1), 'g'),
-    to: destinationHashed.slice(destinationHashed.lastIndexOf('/') + 1),
-  })
+  // ReplaceInfile.sync({
+  //    files: getBundle('main.js'),
+  //    from: new RegExp(destination.slice(destination.lastIndexOf('/') + 1), 'g'),
+  //    to: destinationHashed.slice(destinationHashed.lastIndexOf('/') + 1),
+  // })
 }
 
 function getBundle(file) {

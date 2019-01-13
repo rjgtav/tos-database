@@ -28,7 +28,7 @@ import {
   TOSStat
 } from "../../domain/tos/tos-domain";
 import {TOSDatabaseBuild} from "../../domain/tos/tos-build";
-import {TOSRegionService} from "../../service/tos-region.service";
+import {TOSRegionService} from "../../domain/tos-region";
 
 const PADDING = 8;
 
@@ -88,7 +88,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
         if (this.build == null || this.build instanceof TOSDatabaseBuild) {
           this.build = null;
           this.skill.Link_Job.subscribe(async value => {
-            let build = TOSDatabaseBuild.new(TOSRegionService.Region);
+            let build = TOSDatabaseBuild.new(TOSRegionService.get());
             await build.jobAdd$(value); // Note: we need to add them 3 times, as on pre-Re:Build the level max scales with the selected Job circle
             await build.jobAdd$(value);
             await build.jobAdd$(value);

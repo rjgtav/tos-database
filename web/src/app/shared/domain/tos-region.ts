@@ -1,3 +1,10 @@
+const REBUILD: { [key in TOSRegion]: boolean } = {
+  'iTOS': false, /* iTOS-needle */
+  'jTOS': false, /* jTOS-needle */
+  'kTEST': true, /* kTEST-needle */
+  'kTOS': true, /* kTOS-needle */
+};
+
 export enum TOSRegion {
   iTOS = 'iTOS',
   jTOS = 'jTOS',
@@ -5,19 +12,39 @@ export enum TOSRegion {
   kTOS = 'kTOS',
 }
 
-export namespace TOSRegion {
+export namespace TOSRegionService {
 
-  export function isRebuild(value: TOSRegion) {
-    return value == TOSRegion.kTEST || value == TOSRegion.kTOS;
+  let Region: TOSRegion = null;
+
+  export function get() {
+    if (Region)
+      return Region;
+
+    for (let region of Object.values(TOSRegion))
+      if (location.href.indexOf(`/${ toUrl(region) }/`) > -1)
+        return region;
+
+    return TOSRegion.iTOS;
+  }
+  export function getUrl() {
+    return toUrl(get());
   }
 
-  export function toUrl(value: TOSRegion): string {
-    switch (value) {
-      case TOSRegion.iTOS:  return 'itos';
-      case TOSRegion.jTOS:  return 'jtos';
-      case TOSRegion.kTOS:  return 'ktos';
-      case TOSRegion.kTEST:  return 'ktest';
-    }
+  export function isRebuild(value: TOSRegion) {
+    return REBUILD[value];
+  }
+
+  export function select(region: TOSRegion) {
+    // Update url
+    let regionOld = `/${ toUrl(TOSRegionService.get()) }/`;
+    let regionNew = `/${ toUrl(region) }/`;
+    //console.log('region select', regionOld, regionNew, url)
+
+    location.href = location.href.replace(regionOld, regionNew);
+  }
+
+  function toUrl(value: TOSRegion): string {
+    return value.toString().toLowerCase();
   }
 
   export function valueOf(param: string): TOSRegion {

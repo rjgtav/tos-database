@@ -3,8 +3,8 @@ import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {Subscription} from "rxjs";
 import {faDiscord, faTwitch} from "@fortawesome/free-brands-svg-icons";
 import {UpdateService} from "../../shared/service/update.service";
-import {TOSRegionService} from "../../shared/service/tos-region.service";
-import {TOSRegion} from "../../shared/domain/tos-region";
+import {TOSRegionService} from "../../shared/domain/tos-region";
+import {LoadingService} from "../loading/loading.service";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -19,20 +19,16 @@ export class FooterComponent implements OnDestroy {
   isLightTheme: boolean;
   updateVersion: string;
 
-  subscription: Subscription;
+  subscriptionTheme: Subscription;
 
   constructor(
     private changeDetector: ChangeDetectorRef,
+    private loading: LoadingService,
     private theme: ThemeService,
     private update: UpdateService,
   ) {
-    TOSRegionService.Region$.subscribe(value => this.onRegionChange(value));
-    this.subscription = theme.subscribe(this.onThemeChange.bind(this));
-  }
-
-  onRegionChange(value: TOSRegion) {
-    this.updateVersion = this.update.versionHuman(value);
-    this.changeDetector.markForCheck();
+    this.loading.updateComplete$.subscribe(value => this.onUpdateComplete());
+    this.subscriptionTheme = theme.subscribe(this.onThemeChange.bind(this));
   }
 
   onThemeChange(theme: Theme) {
@@ -40,8 +36,13 @@ export class FooterComponent implements OnDestroy {
     this.changeDetector.markForCheck();
   }
 
+  onUpdateComplete() {
+    this.updateVersion = this.update.versionHuman(TOSRegionService.get());
+    this.changeDetector.markForCheck();
+  }
+
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.subscriptionTheme.unsubscribe();
   }
 
 }

@@ -8,7 +8,7 @@ import {TosNeetService} from "../../shared/service/integrations/tos-neet.service
 import {TinyUrlService} from "../../shared/service/integrations/tiny-url.service";
 import {ClipboardService} from "../../shared/service/clipboard.service";
 import {ITOSJob} from "../../shared/domain/tos/tos-domain";
-import {TOSRegionService} from "../../shared/service/tos-region.service";
+import {TOSRegionService} from "../../shared/domain/tos-region";
 
 const PARAM_BUILD = 'build';
 const PARAM_TINYURL = 'tinyurl';
@@ -26,7 +26,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
   faLink = faLink;
   TOSEntity = TOSEntity;
 
-  build: TOSSimulatorBuild = TOSSimulatorBuild.new(TOSRegionService.Region);
+  build: TOSSimulatorBuild = TOSSimulatorBuild.new(TOSRegionService.get());
   buildChanged: number = 0;
   jobs: ITOSJob[] = [];
 
@@ -165,10 +165,10 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
           this.router.navigate(['.'], { queryParams, relativeTo: this.route });
         });
     } else if (value[PARAM_BUILD]) {
-      this.build = await TOSSimulatorBuild.base64Decode(TOSRegionService.Region, value[PARAM_BUILD]).toPromise();
+      this.build = await TOSSimulatorBuild.base64Decode(TOSRegionService.get(), value[PARAM_BUILD]).toPromise();
       this.buildSubscribe();
     } else {
-      this.build = TOSSimulatorBuild.new(TOSRegionService.Region);
+      this.build = TOSSimulatorBuild.new(TOSRegionService.get());
       this.buildSubscribe();
     }
 

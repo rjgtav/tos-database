@@ -2,10 +2,11 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject, forkJoin, Observable, of, Subject, Subscription} from "rxjs";
 import {TOSEntity} from "../domain/tos/tos-entity.model";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
-import {TOSRegion} from "../domain/tos-region";
+import {TOSRegionService} from "../domain/tos-region";
 import {TOSDataSet, TOSDataSetService} from "../domain/tos/tos-domain";
 import {map, switchMap} from "rxjs/operators";
-import {UpdateService} from "./update.service";
+import {TOSUrlService} from "./tos-url.service";
+import {LoadingService} from "../../shell/loading/loading.service";
 
 @Injectable({
   providedIn: 'root'
@@ -19,30 +20,20 @@ export class TOSSearchService {
 
   private isLoaded: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  private readonly worker: Worker;
+  private worker: Worker; // Note: we initialize it later so the Service Worker can intercept the call
   private readonly workerHandlers: { [key: number]: Subject<any> } = {};
 
   private subscriptionLoad: Subscription;
 
-  constructor(private update: UpdateService) {
+  constructor(private loading: LoadingService) {
     TOSSearchService.instance = this;
 
-    this.worker = new Worker('assets/js/lunr.worker.js');
-    this.worker.onmessage = this.onWorkerMessage.bind(this);
+    this.onWorkerMessage = this.onWorkerMessage.bind(this);
+
+    this.loading.installComplete$.subscribe((value) => this.onInstallComplete(value));
   }
 
   get isLoaded$(): Observable<boolean> { return this.isLoaded.asObservable(); }
-
-  public load(region: TOSRegion) {
-    if ((!this.isLoaded.getValue())) {
-      this.isLoaded.next(false);
-
-      this.subscriptionLoad && this.subscriptionLoad.unsubscribe();
-      this.subscriptionLoad = this
-        .postMessage(WorkerCommand.LOAD, { region, version: this.update.version(region) })
-        .subscribe(value => this.isLoaded.next(true));
-    }
-  }
 
   public search(dataset: TOSDataSet, query: string, page: number): Observable<TOSSearchResult> {
     return this
@@ -58,6 +49,16 @@ export class TOSSearchService {
         ) || of([])), // Read more: https://github.com/ReactiveX/rxjs/issues/2816
         map(value => ({ page, response: value }))
       );
+  }
+
+  private onInstallComplete(value: boolean) {
+    console.log('search onInstallComplete',value)
+    this.isLoaded.next(false);
+
+    this.subscriptionLoad && this.subscriptionLoad.unsubscribe();
+    this.subscriptionLoad = this
+      .postMessage(WorkerCommand.LOAD, { region: TOSRegionService.get() })
+      .subscribe(value => this.isLoaded.next(true));
   }
 
   private onWorkerMessage(event: MessageEvent) {
@@ -79,10 +80,12 @@ export class TOSSearchService {
       payload
     };
 
-    this.workerHandlers[message.id] = new Subject();
-    this.worker.postMessage(message);
+    let subject = this.workerHandlers[message.id] = new Subject();
+    let worker = this.worker = this.worker || new Worker(TOSUrlService.WORKER_LUNR());
+        worker.onmessage = this.onWorkerMessage;
+        worker.postMessage(message);
 
-    return this.workerHandlers[message.id].asObservable();
+    return subject.asObservable();
   }
 
 }

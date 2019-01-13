@@ -1,19 +1,25 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {TOSRegionService} from "./shared/service/tos-region.service";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {RouteService} from "./shared/service/route.service";
+import {ROUTES_DATABASE} from "./database/database.route";
+import {ROUTES_HOME} from "./home/home.route";
+import {ROUTES_SKILL_SIMULATOR} from "./skill-simulator/skill-simulator.route";
+import {HomeModule} from "./home/home.module";
+import {DatabaseModule} from "./database/database.module";
+import {SkillSimulatorModule} from "./skill-simulator/skill-simulator.module";
 
-const routes: Routes = [
+const ROUTES_APP: Routes = [
   {
     path: 'database',
-    loadChildren: './database/database.module#DatabaseModule'
+    children: ROUTES_DATABASE,
   },
   {
     path: 'home',
-    loadChildren: './home/home.module#HomeModule'
+    children: ROUTES_HOME,
   },
   {
     path: 'simulator',
-    loadChildren: './skill-simulator/skill-simulator.module#SkillSimulatorModule'
+    children: ROUTES_SKILL_SIMULATOR,
   },
   {
     path: '**',
@@ -21,7 +27,7 @@ const routes: Routes = [
   },
 ];
 
-const routesRegion: Routes = [
+const ROUTES_REGION: Routes = [
   {
     path: '',
     redirectTo: '/itos/home',
@@ -29,42 +35,47 @@ const routesRegion: Routes = [
   },
   {
     path: 'itos',
-    canActivate: [TOSRegionService],
-    canDeactivate: [TOSRegionService],
-    children: routes,
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    children: ROUTES_APP,
   },
   {
     path: 'jtos',
-    canActivate: [TOSRegionService],
-    canDeactivate: [TOSRegionService],
-    children: routes,
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    children: ROUTES_APP,
   },
   {
     path: 'ktest',
-    children: routes,
-    canActivate: [TOSRegionService],
-    canDeactivate: [TOSRegionService],
+    children: ROUTES_APP,
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
   },
   {
     path: 'ktos',
-    children: routes,
-    canActivate: [TOSRegionService],
-    canDeactivate: [TOSRegionService],
+    children: ROUTES_APP,
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
   },
   {
-    matcher: TOSRegionService.UrlMatcher,
+    matcher: RouteService.UrlMatcher,
     redirectTo: '/itos/:redirect',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routesRegion, {
-    anchorScrolling: 'enabled',
-    //enableTracing: true,
-    onSameUrlNavigation: 'ignore',
-    scrollPositionRestoration: 'disabled' // Note: as of angular 6.1, when 'enabled', we can't disable it for specific routes (e.g. the simulator)
-  })],
+  imports: [
+    DatabaseModule,
+    HomeModule,
+    SkillSimulatorModule,
+    RouterModule.forRoot(ROUTES_REGION, {
+      anchorScrolling: 'enabled',
+      //enableTracing: true,
+      onSameUrlNavigation: 'ignore',
+      scrollPositionRestoration: 'disabled' // Note: as of angular 6.1, when 'enabled', we can't disable it for specific routes (e.g. the simulator)
+    })
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

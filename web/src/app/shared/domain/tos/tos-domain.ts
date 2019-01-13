@@ -547,7 +547,7 @@ export const
     return (i < j) ? -1 : (i > j) ? 1 : 0;
   };
   TOSStatService.icon = (stat: TOSStat) => {
-    return TOSUrlService.Asset(null, 'assets/images/simulator_stat_' + stat.toLowerCase() + '.png');
+    return TOSUrlService.Asset('assets/images/simulator_stat_' + stat.toLowerCase() + '.png');
   };
 
 /*====================================================================================================================+

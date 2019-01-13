@@ -6,7 +6,6 @@
   height: 100%;
   width: 100%;
 
-  pointer-events: none;
   z-index: 99999;
 
   opacity: 0;
@@ -15,3 +14,7 @@
 :host > div.show {
   opacity: 1;
 }
+
+a { color: white }
+
+.progress-bar { background-color: #006bbe }

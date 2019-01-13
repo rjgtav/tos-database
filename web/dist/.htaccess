@@ -35,17 +35,9 @@ RewriteRule ^ /index.html
 # Instead, we configure it via a CloudFlare's Page Rule
 
 ########################################################################################################################
-# GZip compression
+# Compression
 ########################################################################################################################
-<IfModule mod_filter.c>
-    AddOutputFilterByType DEFLATE "application/javascript" \
-                                  "application/json" \
-                                  "application/xml" \
-                                  "text/css" \
-                                  "text/csv" \
-                                  "text/html" \
-                                  "text/javascript" \
-                                  "text/plain" \
-                                  "text/xml"
+# CloudFlare applies compression to the following MIME types:
+# https://support.cloudflare.com/hc/en-us/articles/200168396-What-will-Cloudflare-compress-
 
-</IfModule>
+AddType text/plain .csv # Unfortunately CloudFlare doesn't compress text/csv

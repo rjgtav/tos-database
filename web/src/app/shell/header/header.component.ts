@@ -3,10 +3,9 @@ import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {faGithub, faPatreon} from "@fortawesome/free-brands-svg-icons";
 import {faCommentAlt, faMoon, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
-import {TOSRegionService} from "../../shared/service/tos-region.service";
 import {TOSUrlService} from "../../shared/service/tos-url.service";
 import {TOSDataSetService} from "../../shared/domain/tos/tos-domain";
-import {TOSRegion} from "../../shared/domain/tos-region";
+import {TOSRegion, TOSRegionService} from "../../shared/domain/tos-region";
 import {SwUpdate} from "@angular/service-worker";
 
 @Component({
@@ -16,7 +15,9 @@ import {SwUpdate} from "@angular/service-worker";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  RegionService = TOSRegionService;
+  readonly REGION = Object.values(TOSRegion);
+
+  TOSRegionService = TOSRegionService;
   Theme = Theme;
   TOSDataSetService = TOSDataSetService;
   TOSRegion = TOSRegion;
@@ -33,7 +34,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private changeDetector: ChangeDetectorRef,
-    private regionService: TOSRegionService,
     private swUpdate: SwUpdate,
     public theme: ThemeService
   ) {}
@@ -43,11 +43,11 @@ export class HeaderComponent implements OnInit {
   }
 
   routerLink(url: string): string {
-    return TOSUrlService.Route(TOSRegionService.Region, url);
+    return TOSUrlService.Route(url);
   }
 
   regionSelect(region: any): boolean {
-    this.regionService.regionSelect(region);
+    TOSRegionService.select(region);
     return false;
   }
 
