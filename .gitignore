@@ -1,8 +1,7 @@
 IPFParser/**/*.pyc
-IPFParser/input_ipf/
-IPFParser/input_patch/
-IPFParser/input_translations/
+IPFParser/input/
 IPFParser/output/
+logs/
 scripts/deploy-variables.sh
 *.xlsx
 
