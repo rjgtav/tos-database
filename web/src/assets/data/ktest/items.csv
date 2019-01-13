@@ -339,7 +339,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490333,Premium_RankReset_Point_Lv2,"클래스 변경 포인트가 500 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_2,,,,,,클래스 변경권 Lv.2,0,0.0,0.0,FFFT,19,0.0
 490334,Premium_RankReset_Point_Lv3,"클래스 변경 포인트가 1,000 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_3,,,,,,클래스 변경권 Lv.3,0,0.0,0.0,FFFT,19,0.0
 490335,Premium_Reset_Package,사용 시 아래의 구성물을 모두 획득할 수 있습니다.{nl} - 특성 초기화 포션 1개{nl} - 스킬 초기화 포션 1개,icon_item_reset_package,,,,,,스킬 + 특성 초기화 포션 패키지,0,0.0,0.0,FFFT,19,0.0
-490336,Rebuild_Master_Glass,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.{nl} [Rebuild] 패치 후 옵션 변경 케어 용도입니다. 1월 17일 일괄 삭제됩니다.",icon_item_magnifier_red,,,,,,[Rebuild] 장인의 돋보기,0,0.0,0.0,FFFT,19,0.0
+490336,Rebuild_Master_Glass,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.{nl} [Rebuild] 패치 후 옵션 변경 케어 용도입니다. 1월 24일 일괄 삭제됩니다.",icon_item_magnifier_red,,,,,,[Rebuild] 장인의 돋보기,0,0.0,0.0,FFFT,19,0.0
 490337,Nico_Box,사용 시 아래의 구성물 중 하나를 선택해 획득할 수 있습니다.{nl} - 니코폴리스 경비병 코스튬(남) 1개{nl} - 니코폴리스 경비병 코스튬(여) 1개,icon_item_nico_box,,,,,,니코폴리스 경비병 코스튬 선택 상자,0,0.0,0.0,FFFT,19,1.0
 490338,Wedding_Costume_Box03,사용 시 아래의 구성물 모두를 획득할 수 있습니다.{nl} - 콩닥콩닥 드레스(여) 1개{nl} - 콩닥콩닥 면사포 1개,icon_item_wedding_costume_box03,,,,,,콩닥콩닥 드레스와 면사포 상자,0,0.0,0.0,FFFT,19,1.0
 490339,Black_Sailor_Box,사용 시 아래의 구성물 중 하나를 선택해 획득할 수 있습니다.{nl} - 블랙 세일러복 코스튬(남) 1개{nl} - 블랙 세일러복 코스튬(여) 1개,icon_item_black_sailor_box,,,,,,블랙 세일러복 코스튬 선택 상자,0,0.0,0.0,FFFT,19,1.0
@@ -704,7 +704,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640134,Achieve_CBT3_RANK6_10,CBT3 기간동안 2~10번째로 6랭크에 도달한 유저에게 주어지는 칭호입니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_holyark,,,,,,칭호-아우슈리네의 영웅,0,0.0,0.0,FFFF,6,0.0
 640135,Scroll_SkillReset_CBT,사용한 스킬 포인트를 초기화 합니다.(CBT 테스터 전용),golemmagicitem2,,,,,,스킬 초기화 주문서,0,0.0,0.0,FFTF,6,10.0
 640139,Achieve_IamDeveloper,개발자입니다,icon_item_holyark,,,,,,칭호-개발자,0,0.0,0.0,FFFF,6,0.0
-640140,Drug_deadparts,사체 파편이 +30 증가합니다. 네크로맨서 마스터에게서 구입할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_potb,,,,,,파편 단지,100,0.0,0.0,FFTF,6,5.0
+640140,Drug_deadparts,사체 파편이 +30 증가합니다. 네크로맨서 마스터에게서 구입할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_potb,,,,,,사체 파편 단지,100,0.0,0.0,FFTF,6,5.0
 640141,expCard_Max,"캐릭터 경험치 106,850,628 상승합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_expcard,,,,,,Lv 170 경험치 부스터,0,0.0,0.0,FFFF,6,0.0
 640142,jexpCard_UpRank2,캐릭터의 클래스 레벨을 15로 올려줍니다.  마우스 오른쪽 클릭으로 사용합니다.,icon_item_classexp_rollback,,,,,,클래스 경험치 복구 카드 (1st),0,0.0,0.0,FFFF,6,0.0
 640143,jexpCard_UpRank3,캐릭터의 클래스 레벨을 45로 올려줍니다.  마우스 오른쪽 클릭으로 사용합니다.,icon_item_classexp_rollback,,,,,,클래스 경험치 복구 카드 (2nd),0,0.0,0.0,FFFF,6,0.0
@@ -716,7 +716,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640149,potion_hairColor_03,하얀색 헤어컬러를 획득합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_drug_str2,,,,,,염색약:하양,0,0.0,0.0,FFFF,6,0.0
 640150,potion_hairColor_04,분홍색 헤어컬러를 획득합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_drug_str2,,,,,,염색약:분홍,0,0.0,0.0,FFFF,6,0.0
 640151,Guild_Tower01,길드 타워를 건설할 수 있습니다. 필드에서만 사용 가능합니다.,icon_item_guildtower,,,,,,길드 타워,1,0.0,0.0,FFTF,6,100.0
-640152,food_companion,스태미나를 30 회복 시켜줍니다.{nl}사용가능 목록{nl} - 벨하이더 {nl} - 호글란 {nl} - 아기돼지 {nl} - 락스돈 {nl} - 아르마딜로 {nl} - 금강불개{nl} - 댄디 멍뭉이,icon_item_meat_01,,,,,,컴패니언 먹이,97,10.0,0.0,FFTF,6,1.0
+640152,food_companion,스태미나를 30 회복 시켜줍니다.{nl}사용가능 목록{nl} - 벨하이더 {nl} - 호글란 {nl} - 아기돼지 {nl} - 락스돈 {nl} - 아르마딜로 {nl} - 금강불개{nl} - 댄디 멍뭉이{nl} - 황금 복돼지,icon_item_meat_01,,,,,,컴패니언 먹이,97,10.0,0.0,FFTF,6,1.0
 640153,Guild_Academy01,24시간동안 길드원들의 마법 공격력을 증가시켜주는 구조물을 설치합니다. 길드 아지트 내에서만 설치할 수 있습니다.,icon_item_academy,,,,,[3023],아카데미,0,0.0,0.0,FFTF,6,100.0
 640154,Guild_Forge01,포지 설치 스킬 사용 시 소모됩니다.,icon_item_forge,,,,,[3024],포지,0,0.0,0.0,FFFF,15,1.0
 640155,Guild_ShieldCharger01,실드 차저 설치 스킬 사용 시 소모됩니다.,icon_item_shieldcharge,,,,,[3025],실드 차저,0,0.0,0.0,FFFF,15,1.0
@@ -1201,6 +1201,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641962,Event_drug_steam_team,"30분 동안 이동속도 +2, 물리 공격력 +50, 마법 공격력 +50 증가합니다. 마우스 오른쪽 클릭으로 사용합니다. 2월 8일 점검 시, 일괄 삭제됩니다.",item_speed_requid_3,,,,,,정착 지원 포션,0,30.0,0.0,FFFT,6,0.0
 641963,Premium_ChallengeModeReset,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,챌린지 모드 1회 입장권,0,5.0,0.0,TTFT,6,1.0
 641964,Uphill_Store_Point_10,사용하면 업힐 포인트 상점 포인트 10을 획득할 수 있습니다.{nl}해당 포인트는 업힐 포인트 상점에서 사용할 수 있습니다.,icon_item_annycoin_2,,,,,,업힐 디펜스 상점 포인트 : 10,0,0.0,0.0,FFFF,6,0.0
+641969,Event_190110_ChallengeModeReset_14d,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,챌린지 모드 1회 입장권 (14일),0,5.0,1209600.0,FFFT,6,1.0
 642501,Gacha_TP_001,사용하면 무언가 알 수 없는 것을 획득할 수 있을 것 같습니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.,icon_item_randombox,,,,,,레티샤의 비밀 큐브,0,0.0,0.0,FFFT,19,0.0
 642502,Gacha_EXP_001,사용 시 LV2 ~ 10 경험치 카드 중에 무작위로 3장을 획득할 수 있습니다.,icon_item_quest_00017,,,,,,경험치 카드 상자,0,0.0,0.0,FFFF,6,0.0
 642503,Gacha_Recipe_Wep,사용 시 LV220 무기 레시피 중에 무작위로 1장을 획득할 수 있습니다.,icon_item_luckybox_red,,,,,,Lv220 제작서 상자 - 무기,0,0.0,0.0,FFFF,6,0.0
@@ -2202,6 +2203,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 647010,misc_0529,하시사스 포션입니다. 마시면 일시적으로 신체 능력을 향상시켜 줍니다.,icon_item_misc04_112,,,,,,하시사스 포션,25,0.0,0.0,FFFF,15,1.0
 647011,misc_0530,고급 장비 제작 및 인장 강화에 사용되는 매우 희귀한 재료입니다.,icon_item_misc_misc_0530,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089]",,마정석,25,0.0,0.0,TTTT,15,1.0
 647012,misc_gemExpStone_randomQuest4_14d_Team,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFT,15,1.0
+647013,PVP_Misc_1_KOR_Reward,"콜로니전 승리를 기념하는 주화입니다.{nl}콜로니전 마켓 세금 보상을 대체해 지급되는 아이템입니다.{nl}2월 14일 점검 시, 일괄 삭제됩니다.",icon_item_coin_colony_01,,,,,,콜로니전 기념 주화 [보상용],100000,0.0,0.0,FFTT,15,1.0
 648501,emoticonItem_1,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 케파(기쁨),0,0.0,0.0,FFFF,6,1.0
 648502,emoticonItem_2,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 케파(슬픔),0,0.0,0.0,FFFF,6,1.0
 648503,kupole_emotion01,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 큐폴(데헷),0,0.0,0.0,FFFT,6,1.0
@@ -2846,7 +2848,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 650857,Event_1710_Thanksgiving_Coin_Sub,- 사용법{nl}동전 투호를 진행 중에 '투호 게임용  동전' 아이템을 사용하면 게이지가 증가하고 평타 공격으로 게이지 증가를 끊으면 게이지 양에 따라 동전을 던지는 힘이 결정됩니다.{nl}투호 안에 동전이 들어가면 정확도와 던진 거리에 따라 점수를 획득합니다.{nl}존 이동 시 진행 중이던 투호 점수와 '투호 게임용 동전'은 삭제됩니다.,icon_1710_thanksgiving_coin,,,,,,투호 게임용  동전,0,3.0,0.0,FFFF,8,0.0
 650858,Event_1806_Soccer_Ball,축구공,icon_1710_thanksgiving_coin,,,,,,축구공,0,3.0,0.0,FFFF,8,0.0
 651001,GuildColony_Item_Woodenwall_Trap,"600초 동안 상대 길드원의 진입을 막을 수 있는 구조물을 설치합니다.{nl}스팟 지역에 있는 점령 길드 인원만 사용할 수 있습니다.{nl}사용자가 스콰이어, 알케미스트, 파드너 클래스를 가진 경우 다음의 혜택을 받을 수 있습니다.{nl}    - 구조물 설치시 구조물의 내구도 20% 향상",icon_item_woodenwall_trap3,,,,,,[콜로니전] 목책,100,30.0,0.0,FFTT,6,1.0
-651002,GuildColony_Item_Ballista,"600초 동안 범위 내로 들어온 상대 길드원에게 화살을 단발 또는 연발로 발사해 피해를 주는 병기를 설치합니다.{nl}단발로 발사되는 화살은 관통, 넉백 및 기절 효과를 가지고 있습니다.{nl}스팟 지역에 있는 점령 길드 인원만 사용할 수 있습니다.{nl}사용자가 스콰이어, 알케미스트, 파드너 클래스를 가진 경우 다음의 혜택을 받을 수 있습니다.{nl}    - 구조물 설치시 구조물의 내구도, 공격력 20% 향상",icon_item_large_crossbow,,,,,,[콜로니전] 발리스타,100,30.0,0.0,FFTT,6,1.0
+651002,GuildColony_Item_Ballista,"600초 동안 범위 내로 들어온 상대 길드원에게 화살을 단발 또는 연발로 발사해 피해를 주는 병기를 설치합니다.{nl}단발로 발사되는 화살은 넉백 및 기절 효과를 가지고 있습니다.{nl}스팟 지역에 있는 점령 길드 인원만 사용할 수 있습니다.{nl}사용자가 스콰이어, 알케미스트, 파드너 클래스를 가진 경우 다음의 혜택을 받을 수 있습니다.{nl}    - 구조물 설치시 구조물의 내구도, 공격력 20% 향상",icon_item_large_crossbow,,,,,,[콜로니전] 발리스타,100,30.0,0.0,FFTT,6,1.0
 651003,GuildColony_Item_Siege_Tower,"600초 동안 전방의 상대 길드원이나 구조물을 공격하는 이동식 병기를 설치합니다.{nl}탑승 시, 운전 및 공격이 가능하며 최대 5명까지 탑승할 수 있습니다.{nl}스팟 지역에 있는 비점령 길드 인원만 사용할 수 있습니다.{nl}사용자가 스콰이어, 알케미스트, 파드너 클래스를 가진 경우 다음의 혜택을 받을 수 있습니다.{nl}    - 구조물 설치시 구조물의 내구도, 공격력 20% 향상",icon_item_siege_tower,,,,,,[콜로니전] 공성탑,100,30.0,0.0,FFTT,6,1.0
 651004,GuildColony_Item_Divine_Flag,180초 동안 해당 위치로 이동할 수 있는 깃발을 설치합니다.{nl}[콜로니전] 워프 주문서-콜로니전 아이템을 사용한 길드원들만 깃발 위치로 이동이 가능합니다.{nl}스팟 지역에 있는 비점령 길드 인원만 사용할 수 있습니다.{nl}재사용 대기시간은 길드원과 공유됩니다.,icon_item_divine_flag,,,,,,[콜로니전] 신성한 깃발,100,300.0,0.0,FFTT,6,1.0
 651005,GuildColony_Item_mysticCristal,전투 불능 시 신비한 크리스탈을 사용하여 제자리에서 부활할 수 있습니다.{nl}스팟 지역에서만 사용할 수 있습니다.,icon_item_soulcrystal_colony,,,,,[9029],[콜로니전] 신비한 크리스탈,0,300.0,0.0,FFFT,6,0.0
@@ -3802,7 +3804,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 664143,DCAPITAL107_SQ_9_ITEM,그리시아가 블라드에게 전달해달라고 부탁한 물건,icon_item_kupole_porket,,,,,,그리시아의 모든 것,0,0.0,0.0,FFFF,20,0.0
 664800,RVR_BK_KEYITEM_URVAS_1,아우스테야를 명으로 드래곤 보루타를 감시하던 큐폴 우르바스가 지니고 다니던 증표입니다.{nl}드래곤 보루타의 영역으로 진입하기 위하여 반드시 필요합니다.{nl}진입시 파괴됩니다.,icon_item_borutakey,,,,,,우르바스 증표,0,0.0,0.0,TFFT,15,0.0
 664801,RVR_BK_KEYITEM_EVENT_OPEN,"아우스테야를 명으로 드래곤 보루타를 감시하던 큐폴 우르바스가 지니고 다니던 증표입니다.{nl}드래곤 보루타의 영역으로 진입하기 위하여 반드시 필요합니다.{nl}진입시 파괴됩니다.{nl}19년 1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_borutakey,,,,,,[이벤트] 우르바스 증표,0,0.0,0.0,FFFT,15,0.0
-664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,왕국 보급 장교로부터 드래곤 보루타를 저지하는 데 충분히 기여했음을 증명할 수 있는 훈장입니다.{nl}길드 아지트의 '왕국 보급 장교 만프래다스'에게  아이템으로 교환할 수 있습니다.,icon_item_boruta_coin,,,,,,영예의 훈장 : 보루타,0,0.0,0.0,FFFF,15,0.0
+664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,왕국 보급 장교로부터 드래곤 보루타를 저지하는 데 충분히 기여했음을 증명할 수 있는 훈장입니다.{nl}길드 아지트의 '왕국 보급 장교 만프래다스'에게  아이템으로 교환할 수 있습니다.,icon_item_boruta_coin,,,,,,영예의 훈장 : 보루타,0,0.0,0.0,FFFT,15,0.0
 666000,FARM49_1_MQ01_ITEM,주황 리자드맨의 가죽. 이것으로 신비한 묘목의 반응을 보겠다고 합니다.,icon_item_misc_00011,,,,,,리자드맨의 가죽,0,0.0,0.0,FFFF,20,0.0
 666001,FARM49_1_MQ02_ITEM1,농장지기의 오두막 근처에서 채취한 토양 표본. 굉장히 오염되어 있습니다.,icon_item_powderb,,,,,,두 번째 오염된 토양 표본,0,0.0,0.0,FFFF,20,0.0
 666002,FARM49_1_MQ02_ITEM2,인적 없는 작업장 근처에서 채취한 토양 표본. 굉장히 오염되어 있습니다.,icon_item_powderb,,,,,,첫 번째 오염된 토양 표본,0,0.0,0.0,FFFF,20,0.0
@@ -6077,6 +6079,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904130,EVENT_1812_XMAS_WEAPON_BOX,"사용 시 [이벤트]웨이스트럴, 아시오 제작서 중 원하시는 제작서가 지급됩니다.{nl}제작한 웨이스트럴, 아시오 장비는 아이커 추출이 불가능 합니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_event_recipebox2,,,,,,[Re:Build] 380 유니크 무기 제작서 선택 상자,0,0.0,0.0,FFFT,19,1.0
 904131,EVENT_1812_XMAS_PENGUIN_BOX,"사용 시 다양한 펭귄 컴패니언 중 원하시는 펭귄 알이 지급됩니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_event_penguinbox,,,,,,[Re:Build] 펭귄 선택 상자,0,0.0,0.0,FFFT,19,1.0
 904132,EVENT_RankReset_Point_Lv3,"클래스 변경 포인트가 1,000 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_rankreset_paper_3,,,,,,[Re:Build] 클래스 변경권 Lv.3,0,0.0,0.0,FFFT,19,0.0
+904133,EVENT_190110_3DAY_BOX,"작심삼일 이벤트를 수행하여 받은 보상 상자입니다. 사용 시, 아이템을 획득할 수 있습니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_happybox_blue,,,,,,[이벤트]작심삼일 상자,0,0.0,0.0,FFFT,8,1.0
+904134,EVENT_190110_GOLDPIG_BOX,"황금돼지 이벤트를 수행하여 받은 보상 상자입니다. 사용 시, 아이템을 획득할 수 있습니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_happybox_red,,,,,,[이벤트]황금돼지 상자,0,0.0,0.0,FFFT,8,1.0
+904135,EVENT_190110_RankReset_Point_Lv1,"클래스 변경 포인트가 100 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_3,,,,,,클래스 변경권 Lv.1 (14일),0,0.0,1209600.0,FFFT,8,0.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,스킬 주문서,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,새싹,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,시든 식물,1,0.0,0.0,TTTT,15,1.0

@@ -53,7 +53,7 @@ def unpack(ipf):
             shutil.rmtree(os.path.join(ipf_extract, file_name))
 
     # Move extracted IPF files to data directory
-    fileutil.move_tree(ipf_extract, constants.PATH_INPUT_DATA_PATCH)
+    fileutil.move_tree(ipf_extract, constants.PATH_INPUT_DATA)
 
     # Remove extract directory
     shutil.rmtree(ipf_extract)

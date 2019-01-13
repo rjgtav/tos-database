@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {TOSRegion} from "../domain/tos-region";
 
 const KEY_VERSION = 'version';
-const VERSION_HOTFIX = 0;
+const VERSION_HOTFIX = 1;
 const VERSION: { [key in TOSRegion]: string } = {
   'iTOS': 'patch_234929_release_234446', /* iTOS-needle */
   'jTOS': 'patch_234991_release_234991', /* jTOS-needle */

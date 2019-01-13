@@ -795,7 +795,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640299,Achieve_EV_Luck2,「中吉」称号を獲得できるアイテム。右クリックで使用できます。,icon_item_holyark,,,,,,称号-中吉,0,0.0,0.0,FFFF,6,0.0
 640300,Achieve_EV_Luck3,「吉」称号を獲得できるアイテム。右クリックで使用できます。,icon_item_holyark,,,,,,称号-吉,0,0.0,0.0,FFFF,6,0.0
 640301,Achieve_EV_Luck4,「大吉」称号を獲得できるアイテム。右クリックで使用できます。,icon_item_holyark,,,,,,称号-大吉,0,0.0,0.0,FFFF,6,0.0
-640302,Drug_Fortunecookie,30分間重複回数によって経験値、移動速度、最大HPが増加し、最大5つまで重複まで可能です。,icon_item_fortunecookie,,,,,,フォーチュンクッキー,0,10.0,0.0,FFFF,6,0.0
+640302,Drug_Fortunecookie,獲得経験値、移動速度、最大HPが30分間増加します。最大5つまで重複可能です。,icon_item_fortunecookie,,,,,,フォーチュンクッキー,0,10.0,0.0,FFFF,6,0.0
 640303,Drug_Valentine_Choco,30分間、経験値獲得量と移動速度がアップします。最大5個まで重複可能です。,icon_item_chocolatebox,,,,,,バレンタインチョコ,0,10.0,0.0,FFFF,6,0.0
 640304,Achieve_Valentine2017_1,「甘い生活」称号を獲得できるアイテム。右クリックで使用できます。,icon_item_holyark,,,,,,称号-甘い生活,0,0.0,0.0,FFFF,6,0.0
 640305,Achieve_Valentine2017_2,「ダイエットは明日から」称号を獲得できるアイテム。右クリックで使用できます。,icon_item_holyark,,,,,,称号-ダイエットは明日から,0,0.0,0.0,FFFF,6,0.0

@@ -468,8 +468,9 @@ def parse_equipment():
         if tooltip_script:
             try:
                 LUA[tooltip_script](row)
-            except LuaError:
-                logging.error('LUA error when calculating tooltip properties for $ID: %s', row['ClassID'])
+            except LuaError as error:
+                if row['ClassID'] not in ['635061']:
+                    raise error
 
         # Add additional fields
         obj['AnvilATK'] = []

@@ -138,6 +138,7 @@ def init():
         function GET_REINFORCE_ADD_VALUE_ATK(item, ignoreReinf, reinfBonusValue, basicTooltipProp) return 0 end
         function IS_MORU_DISCOUNT_50_PERCENT(item) return false end
         function IS_MORU_FREE_PRICE(item) return false end
+        function MAKE_ITEM_OPTION_BY_OPTION_SOCKET(item) end
         function OVERRIDE_INHERITANCE_PROPERTY(item) end
         function GetExProp(entity, name) return 0 end
         function GetItemOwner(item) return {} end

@@ -9,7 +9,7 @@ import globals
 from parserr import parser_translations, parser_assets, parser_attributes, parser_items, parser_items_books, \
     parser_items_cards, parser_items_collections, parser_items_cubes, parser_items_gems, parser_items_equipment, \
     parser_items_equipment_sets, parser_items_recipes, parser_jobs, parser_maps, parser_monsters, parser_skills
-from utils import luautil, fileutil
+from utils import luautil
 
 
 def csv_write(data, dataset):
@@ -89,7 +89,6 @@ def parse(region, is_rebuild, is_version_new):
     logging.debug('Writing CSVs...')
 
     # Write parsed data to CSV
-    fileutil.clear(constants.PATH_WEB_ASSETS_DATA)
     csv_write(globals.attributes.values(), constants.OUTPUT_ATTRIBUTES)
     csv_write(globals.books.values(), constants.OUTPUT_BOOKS)
     csv_write(globals.cards.values(), constants.OUTPUT_CARDS)
