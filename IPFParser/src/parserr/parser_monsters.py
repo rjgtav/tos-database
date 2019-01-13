@@ -2,12 +2,14 @@ import csv
 import logging
 import os
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations, parser_assets
-from ipf_parser.parsers.parser_enums import TOSElement
-from ipf_parser.parsers.parser_items_equipment import TOSEquipmentMaterial
-from ipf_parser.utils import luautil
-from ipf_parser.utils.tosenum import TOSEnum
+import constants
+import globals
+from parserr import parser_assets
+from parserr import parser_translations
+from parserr.parser_enums import TOSElement
+from parserr.parser_items_equipment import TOSEquipmentMaterial
+from utils import luautil
+from utils.tosenum import TOSEnum
 
 
 class TOSMonsterRace(TOSEnum):
@@ -120,7 +122,7 @@ def parse_monsters(file_name):
         'SCR_SIZE_TYPE_RATE',
     ])
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies.ipf", file_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", file_name)
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -186,7 +188,7 @@ def parse_monsters(file_name):
 def parse_monsters_statbase(file_name, destination):
     logging.debug('Parsing %s...', file_name)
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies.ipf", file_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", file_name)
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -210,7 +212,7 @@ def parse_links_drops():
         file_name = monster['$ID_NAME'] + '.ies'
 
         try:
-            ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies_drop.ipf", file_name)
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_drop.ipf", file_name)
             ies_file = open(ies_path, 'rb')
             ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -237,7 +239,7 @@ def parse_links_spawns():
         file_name = ('GenType_' + map['$ID_NAME'] + '.ies').lower()
 
         try:
-            ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies_mongen.ipf", file_name)
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_mongen.ipf", file_name)
             ies_file = open(ies_path, 'rb')
             ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 

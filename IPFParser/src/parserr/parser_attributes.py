@@ -2,9 +2,11 @@ import csv
 import logging
 import os
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations, parser_assets
-from ipf_parser.utils import luautil
+import constants
+import globals
+from parserr import parser_assets
+from parserr import parser_translations
+from utils import luautil
 
 
 def parse():
@@ -14,7 +16,7 @@ def parse():
 def parse_attributes():
     logging.debug('Parsing attributes...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
@@ -51,12 +53,12 @@ def parse_links_jobs():
     LUA_UNLOCK = luautil.load_script('ability_unlock.lua', '*', False)
 
     # Parse level, unlock and formula
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             job = globals.jobs_by_name[row['ClassName']]
-            ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
 
             # If this job is still under development, skip
             if not os.path.isfile(ies_path):

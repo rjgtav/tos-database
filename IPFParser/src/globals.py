@@ -1,6 +1,6 @@
 from multiprocessing import Manager
 
-from ipf_parser import constants
+import constants
 
 assets_icons = Manager().dict()
 assets_icons_used = []

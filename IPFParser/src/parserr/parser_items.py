@@ -2,10 +2,12 @@ import csv
 import logging
 import os
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations, parser_assets
-from ipf_parser.parsers.parser_items_equipment import TOSEquipmentType, TYPE_EQUIPMENT_COSTUME_LIST
-from ipf_parser.utils.tosenum import TOSEnum
+import constants
+import globals
+from parserr import parser_assets
+from parserr import parser_translations
+from parserr.parser_items_equipment import TOSEquipmentType, TYPE_EQUIPMENT_COSTUME_LIST
+from utils.tosenum import TOSEnum
 
 
 class TOSItemGroup(TOSEnum):
@@ -108,7 +110,7 @@ def parse():
 def parse_items(file_name):
     logging.debug('Parsing %s...', file_name)
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies.ipf", file_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", file_name)
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -187,7 +189,7 @@ def parse_links():
 def parse_links_collections(items_by_name):
     logging.debug('Parsing collections for items...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'collection.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'collection.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -210,7 +212,7 @@ def parse_links_collections(items_by_name):
 def parse_links_cubes(items_by_name):
     logging.debug('Parsing cubes for items...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'reward_indun.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'reward_indun.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -235,7 +237,7 @@ def parse_links_monster_drops(items_by_name):
         monster_name = monster['$ID_NAME']
 
         try:
-            ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies_drop.ipf", monster_name + '.ies')
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_drop.ipf", monster_name + '.ies')
             ies_file = open(ies_path, 'rb')
             ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -262,7 +264,7 @@ def parse_links_monster_drops(items_by_name):
 def parse_links_recipes(items_by_name):
     logging.debug('Parsing recipes for items...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'recipe.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'recipe.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 

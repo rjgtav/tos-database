@@ -3,11 +3,11 @@ import logging
 import os
 import xml.etree.ElementTree as ET
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations
-from ipf_parser.parsers.parser_enums import TOSRegion
-from ipf_parser.parsers.parser_items_equipment import TOSEquipmentStat
-from ipf_parser.utils.tosenum import TOSEnum
+import constants
+import globals
+from parserr import parser_translations
+from parserr.parser_items_equipment import TOSEquipmentStat
+from utils.tosenum import TOSEnum
 
 
 class TOSGemType(TOSEnum):
@@ -22,15 +22,15 @@ class TOSGemType(TOSEnum):
         }[string.upper()]
 
 
-def parse(region):
+def parse(is_rebuild):
     parse_gems()
-    parse_gems_bonus(region)
+    parse_gems_bonus(is_rebuild)
 
 
 def parse_gems():
     logging.debug('Parsing gems...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'item_gem.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_gem.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -46,13 +46,13 @@ def parse_gems():
     ies_file.close()
 
 
-def parse_gems_bonus(region):
+def parse_gems_bonus(is_rebuild):
     logging.debug('Parsing gems bonus...')
 
-    xml_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'xml.ipf', 'socket_property.xml')
+    xml_path = os.path.join(constants.PATH_INPUT_DATA, 'xml.ipf', 'socket_property.xml')
     xml = ET.parse(xml_path).getroot()
 
-    SLOTS = ['TopLeg', 'HandOrFoot', 'MainOrSubWeapon'] if TOSRegion.is_rebuild(region) else\
+    SLOTS = ['TopLeg', 'HandOrFoot', 'MainOrSubWeapon'] if is_rebuild else\
             ['TopLeg', 'Foot', 'Hand', 'Weapon', 'SubWeapon']
 
     # example: <Item Name="gem_circle_1">

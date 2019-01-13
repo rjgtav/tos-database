@@ -4,9 +4,10 @@ import logging
 import os
 import xml.etree.ElementTree as ET
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers.parser_enums import TOSRegion
-from ipf_parser.utils.stringutil import is_ascii
+import constants
+import globals
+from parserr.parser_enums import TOSRegion
+from utils.stringutil import is_ascii
 
 TRANSLATION_PREFIX = '@dicID_^*$'
 TRANSLATION_SUFFIX = '$*^'
@@ -23,7 +24,7 @@ def parse(region):
 
 def parse_dictionary(translations):
     logging.debug('Parsing translations dictionary...')
-    dictionary_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'language.ipf', 'wholeDicID.xml')
+    dictionary_path = os.path.join(constants.PATH_INPUT_DATA, 'language.ipf', 'wholeDicID.xml')
     dictionary = ET.parse(dictionary_path).getroot()
 
     # example: <file name="xml\item_Equip.xml">
@@ -63,29 +64,18 @@ def parse_translations(language):
     logging.debug('Parsing translations for %s...', language)
     result = {}
 
-    for translation in [
-        'BADWORDS.tsv',
-        'ETC.tsv',
-        'INTL.tsv',
-        'ITEM.tsv',
-        'QUEST.tsv',
-        'QUEST_JOBSTEP.tsv',
-        'QUEST_LV_0100.tsv',
-        'QUEST_LV_0200.tsv',
-        'QUEST_LV_0300.tsv',
-        'QUEST_LV_0400.tsv',
-        'QUEST_UNUSED.tsv',
-        'SKILL.tsv',
-        'UI.tsv'
-    ]:
-        translation_path = os.path.join(constants.PATH_PARSER_INPUT_TRANSLATIONS, language, translation)
-        translation_file = open(translation_path, 'rb')
+    translation_folder = os.path.join(constants.PATH_INPUT_RELEASE, 'languageData', language)
 
-        for row in csv.reader(translation_file, delimiter='\t', quotechar='"'):
-            if len(row) > 1:
-                result[row[0]] = unicode(row[1], 'utf-8')
+    for translation in os.listdir(translation_folder):
+        translation_path = os.path.join(translation_folder, translation)
 
-        translation_file.close()
+        if '.tsv' not in translation:
+            continue
+
+        with open(translation_path, 'rb') as translation_file:
+            for row in csv.reader(translation_file, delimiter='\t', quotechar='"'):
+                if len(row) > 1:
+                    result[row[0]] = unicode(row[1], 'utf-8')
 
     return result
 

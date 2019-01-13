@@ -3,33 +3,46 @@ import os
 import re
 import sys
 
-from ipf_parser import unpacker, constants
-from ipf_parser.parsers import parser
-from ipf_parser.parsers.parser_enums import TOSRegion
-
-# Configure logging
-logging.basicConfig(format='[%(asctime)s] [%(levelname)s]\t%(message)s', datefmt='%Y-%m-%d %I:%M:%S', level=logging.DEBUG)
-logging.getLogger('PIL').setLevel(logging.WARN)
+import constants
+from parserr import parser
+from parserr.parser_enums import TOSRegion
+from patcherr import patcher
 
 # Configure working directory
 os.chdir(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
 
-# Parse region
+# Configure region
 region = TOSRegion.value_of(sys.argv[1]) if len(sys.argv) == 2 else TOSRegion.iTOS
 constants.region(region)
 
-# Patch the game with the latest version
-version, version_new = unpacker.unpack(region)
-version_hotfix = '1'
-version_new = version_new + ('_hotfix_' + version_hotfix) if len(version_hotfix) else ''
+# Configure logging
+logging.getLogger('PIL').setLevel(logging.WARN)
+logging.basicConfig(
+    format='[%(asctime)s] [' + TOSRegion.to_string(region) + '] [%(levelname)s]\t%(message)s',
+    datefmt='%Y-%m-%d %I:%M:%S',
+    level=logging.DEBUG
+)
 
-# Parse
-parser.parse(region, version, version_new)
+# Patch the game with the latest version
+version_old, version_new = patcher.patch()
+
+# Parse the game files
+is_rebuild = os.path.isfile(os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_Assassin.ies'))
+is_version_new = version_old != version_new
+parser.parse(region, is_rebuild, is_version_new)
 
 # Save new version
 path = os.path.join(constants.PATH_WEB_APP, 'shared', 'service', 'update.service.ts')
 regex = "'" + TOSRegion.to_string(region) + "': '(.*)', \/\* " + TOSRegion.to_string(region) + "-needle \*\/"
-regex_replace = "'" + TOSRegion.to_string(region) + "': '" + str(version_new) + "', /* " + TOSRegion.to_string(region) + "-needle */"
+regex_replace = "'" + TOSRegion.to_string(region) + "': '" + version_new + "', /* " + TOSRegion.to_string(region) + "-needle */"
+
+file = [re.sub(regex, regex_replace, line) for line in open(path, 'r').readlines()]
+open(path, 'w').writelines(file)
+
+# Save whether it's Re:Build TODO: Remove after Re:Build is available worldwide
+path = os.path.join(constants.PATH_WEB_APP, 'shared', 'domain', 'tos-region.ts')
+regex = "'" + TOSRegion.to_string(region) + "': (.*), \/\* " + TOSRegion.to_string(region) + "-needle \*\/"
+regex_replace = "'" + TOSRegion.to_string(region) + "': " + ('true' if is_rebuild else 'false') + ", /* " + TOSRegion.to_string(region) + "-needle */"
 
 file = [re.sub(regex, regex_replace, line) for line in open(path, 'r').readlines()]
 open(path, 'w').writelines(file)

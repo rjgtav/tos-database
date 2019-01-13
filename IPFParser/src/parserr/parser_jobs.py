@@ -3,10 +3,11 @@ import csv
 import logging
 import os
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations, parser_assets
-from ipf_parser.parsers.parser_enums import TOSRegion
-from ipf_parser.utils.tosenum import TOSEnum
+import constants
+import globals
+from parserr import parser_assets
+from parserr import parser_translations
+from utils.tosenum import TOSEnum
 
 
 class TOSJobDifficulty(TOSEnum):
@@ -72,17 +73,17 @@ class TOSJobType(TOSEnum):
         }[string]
 
 
-def parse(region):
+def parse(is_rebuild):
     parse_jobs()
 
-    if TOSRegion.is_rebuild(region):
+    if is_rebuild:
         parse_jobs_stats()
 
 
 def parse_jobs():
     logging.debug('Parsing jobs...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
@@ -122,7 +123,7 @@ def parse_jobs():
 def parse_jobs_stats():
     logging.debug('Parsing base stats for jobs...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'statbase_pc.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'statbase_pc.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
@@ -148,13 +149,13 @@ def parse_links():
 def parse_links_attributes():
     logging.debug('Parsing attributes for jobs...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             job = globals.jobs_by_name[row['ClassName']]
 
-            ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
 
             # If this job is still under development, skip
             if not os.path.isfile(ies_path):
@@ -171,7 +172,7 @@ def parse_links_attributes():
 def parse_links_skills():
     logging.debug('Parsing skills for jobs...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'skilltree.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skilltree.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):

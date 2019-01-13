@@ -7,9 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tos-search/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-sitemap/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-html/src" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/IPFParser/input_ipf" />
-      <excludeFolder url="file://$MODULE_DIR$/IPFParser/input_patch" />
-      <excludeFolder url="file://$MODULE_DIR$/IPFParser/input_translations" />
+      <excludeFolder url="file://$MODULE_DIR$/IPFParser/input" />
       <excludeFolder url="file://$MODULE_DIR$/IPFParser/output" />
       <excludeFolder url="file://$MODULE_DIR$/web/dist/web" />
     </content>

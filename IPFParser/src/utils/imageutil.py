@@ -1,6 +1,6 @@
-import logging
-from PIL import Image
 import os
+
+from PIL import Image
 
 
 def optimize(before, mode, rect, size):

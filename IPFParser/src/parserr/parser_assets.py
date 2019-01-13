@@ -9,11 +9,11 @@ import xml.etree.ElementTree as ET
 from functools import partial
 from multiprocessing import Pool
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations
-from ipf_parser.parsers.parser_enums import TOSRegion
-from ipf_parser.utils import imageutil
-
+import constants
+import globals
+import parser_translations
+from parserr.parser_enums import TOSRegion
+from utils import imageutil
 
 IMAGE_SIZE = {  # top, left, width, height
     'bosscard2': (330, 440),
@@ -81,7 +81,7 @@ def parse(region, version_update):
 def parse_icons(file_name, version_update):
     logging.debug('Parsing icons from %s...', file_name)
 
-    data_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', 'baseskinset', file_name)
+    data_path = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf', 'baseskinset', file_name)
     data = ET.parse(data_path).getroot()
 
     # example: <imagelist category="Monster_icon_boss_02">
@@ -107,7 +107,7 @@ def parse_icons_step(file_name, version_update, work):
     image_rect = tuple(int(x) for x in image.get('imgrect').split()) if len(image.get('imgrect')) else None  # top, left, width, height
 
     # Copy icon to web assets folder
-    copy_from = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ui.ipf', *image.get('file').lower().split('\\')[:-1])
+    copy_from = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf', *image.get('file').lower().split('\\')[:-1])
     copy_from = os.path.join(copy_from, image_file)
     copy_to = os.path.join(constants.PATH_WEB_ASSETS_ICONS, image_name)
 
@@ -137,7 +137,7 @@ def parse_images_jobs(region, version_update):
         return
 
     logging.debug('Parsing images for jobs...')
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'job.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):

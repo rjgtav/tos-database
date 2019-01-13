@@ -1,4 +1,4 @@
-from ipf_parser.utils.tosenum import TOSEnum
+from utils.tosenum import TOSEnum
 
 
 class TOSRegion(TOSEnum):
@@ -6,10 +6,6 @@ class TOSRegion(TOSEnum):
     jTOS = 1
     kTEST = 2
     kTOS = 3
-
-    @staticmethod
-    def is_rebuild(value):
-        return value in [TOSRegion.kTEST, TOSRegion.kTOS]
 
     @staticmethod
     def to_string(value):

@@ -2,7 +2,8 @@ import csv
 import logging
 import os
 
-from ipf_parser import constants, globals
+import constants
+import globals
 
 
 def parse():
@@ -32,7 +33,7 @@ def parse_links():
 def parse_links_items():
     logging.debug('Parsing items for recipes...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'recipe.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'recipe.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 

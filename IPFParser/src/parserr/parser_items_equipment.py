@@ -5,11 +5,12 @@ from math import floor
 
 from lupa import LuaError
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations
-from ipf_parser.parsers.parser_enums import TOSAttackType
-from ipf_parser.utils import luautil
-from ipf_parser.utils.tosenum import TOSEnum
+import constants
+import globals
+from parserr import parser_translations
+from parserr.parser_enums import TOSAttackType
+from utils import luautil
+from utils.tosenum import TOSEnum
 
 
 class TOSEquipmentGrade(TOSEnum):
@@ -445,7 +446,7 @@ def parse_equipment():
     LUA_REINFORCE = luautil.load_script('lib_reinforce_131014.lua', ['GET_REINFORCE_PRICE'])
     LUA_TRANSCEND = luautil.load_script('item_transcend_shared.lua', ['GET_TRANSCEND_MATERIAL_COUNT'])
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'item_Equip.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_Equip.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -565,7 +566,7 @@ def parse_equipment():
 def parse_equipment_grade_ratios():
     logging.debug('Parsing equipment grade...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'item_grade.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_grade.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -582,7 +583,7 @@ def parse_links():
 def parse_links_sets(file_name):
     logging.debug('Parsing sets for equipment: %s...', file_name)
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', file_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', file_name)
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 

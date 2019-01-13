@@ -2,8 +2,9 @@ import csv
 import logging
 import os
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations
+import constants
+import globals
+from parserr import parser_translations
 
 
 def parse():
@@ -14,7 +15,7 @@ def parse():
 def parse_equipment_sets(file_name):
     logging.debug('Parsing equipment sets...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', file_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', file_name)
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -46,7 +47,7 @@ def parse_links():
 def parse_links_items(file_name):
     logging.debug('Parsing items for equipment sets: %s...', file_name)
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', file_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', file_name)
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 

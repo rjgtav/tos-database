@@ -2,9 +2,10 @@ import csv
 import logging
 import os
 import re
+
 from lupa import LuaRuntime
 
-from ipf_parser import constants
+import constants
 
 
 # HotFix: don't throw errors when LUA is getting an unknown key
@@ -189,7 +190,7 @@ def init():
 
 def load_ies(ies_name):
     ies_data = []
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, "ies.ipf", ies_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", ies_name)
 
     if not os.path.exists(ies_path):
         logging.warn('Missing ies file: %s', ies_path)
@@ -218,7 +219,7 @@ def load_script(file_name, whitelist, compile=True):
     result = {}
     function_data = []
 
-    file_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'shared.ipf', 'script', file_name)
+    file_path = os.path.join(constants.PATH_INPUT_DATA, 'shared.ipf', 'script', file_name)
 
     with open(file_path, 'r') as file:
         for line in file:

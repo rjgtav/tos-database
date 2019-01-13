@@ -4,12 +4,14 @@ import math
 import os
 import re
 
-from ipf_parser import constants, globals
-from ipf_parser.parsers import parser_translations, parser_assets
-from ipf_parser.parsers.parser_enums import TOSElement, TOSAttackType, TOSRegion
-from ipf_parser.parsers.parser_jobs import TOSJobTree
-from ipf_parser.utils import luautil
-from ipf_parser.utils.tosenum import TOSEnum
+import constants
+import globals
+from parserr import parser_assets
+from parserr import parser_translations
+from parserr.parser_enums import TOSElement, TOSAttackType
+from parserr.parser_jobs import TOSJobTree
+from utils import luautil
+from utils.tosenum import TOSEnum
 
 EFFECT_DEPRECATE = {
     'SkillAtkAdd': 'SkillFactor'
@@ -33,14 +35,14 @@ class TOSRequiredStanceCompanion(TOSEnum):
 EFFECTS = []
 
 
-def parse(region):
-    parse_skills(region)
+def parse(is_rebuild):
+    parse_skills(is_rebuild)
     parse_skills_overheats()
     parse_skills_simony()
     parse_skills_stances()
 
 
-def parse_skills(region):
+def parse_skills(is_rebuild):
     logging.debug('Parsing skills...')
 
     LUA = luautil.load_script('calc_property_skill.lua', '*', False)
@@ -51,7 +53,7 @@ def parse_skills(region):
         'SCR_REINFORCEABILITY_TOOLTIP',
     ]
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'skill.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skill.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
@@ -91,7 +93,7 @@ def parse_skills(region):
             obj['OverHeat'] = {
                 'Value': int(row['SklUseOverHeat']),
                 'Group': row['OverHeatGroup']
-            } if not TOSRegion.is_rebuild(region) else int(row['SklUseOverHeat'])  # Re:Build overheat is now simpler to calculate
+            } if not is_rebuild else int(row['SklUseOverHeat'])  # Re:Build overheat is now simpler to calculate
             obj['RequiredCircle'] = -1
             obj['TypeAttack'] = []
             obj['SP'] = None
@@ -225,7 +227,7 @@ def parse_skills_lua_source_to_javascript(skill, source):
 def parse_skills_overheats():
     logging.debug('Parsing skills overheats...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'cooldown.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'cooldown.ies')
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             # We're only interested in overheats
@@ -254,7 +256,7 @@ def parse_skills_overheats():
 def parse_skills_simony():
     logging.debug('Parsing skills simony...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'skill_Simony.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skill_Simony.ies')
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             if int(row['ClassID']) not in globals.skills:
@@ -270,7 +272,7 @@ def parse_skills_stances():
     logging.debug('Parsing skills stances...')
 
     stance_list = []
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'stance.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'stance.ies')
 
     # Parse stances
     with open(ies_path, 'rb') as ies_file:
@@ -338,7 +340,7 @@ def parse_links():
 def parse_links_attributes():
     logging.debug('Parsing attributes for skills...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies_ability.ipf', 'ability.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
@@ -352,7 +354,7 @@ def parse_links_attributes():
 def parse_links_gems():
     logging.debug('Parsing gems for skills...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'item_gem.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_gem.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
@@ -368,7 +370,7 @@ def parse_links_gems():
 def parse_links_jobs():
     logging.debug('Parsing jobs for skills...')
 
-    ies_path = os.path.join(constants.PATH_PARSER_INPUT_IPF, 'ies.ipf', 'skilltree.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skilltree.ies')
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
