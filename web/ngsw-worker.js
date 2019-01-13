@@ -2710,7 +2710,10 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
     // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
     let url = req.url.replace('ngsw.json', 'ngsw.js');
 
-    return adapter.newRequest(url);
+    // Intercept only tos.guru related requests
+    return url.indexOf(location.origin) === 0
+      ? adapter.newRequest(url)
+      : req;
   };
 
   // HotFix: in order to make better use of CloudFlare, we request all assets along with their hash

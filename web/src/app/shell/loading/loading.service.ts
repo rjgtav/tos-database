@@ -49,7 +49,7 @@ export class LoadingService {
   get updateTotal() { return Object.values(TOSDataSet).length }
 
   private installCheck() {
-    console.log('installCheck');
+    //console.log('installCheck');
 
     // Angular's Service Worker works as follows:
     // - There's a ngsw:db:control Cache Storage which stores all control variables:
@@ -82,18 +82,18 @@ export class LoadingService {
                     });
                 }
 
-                console.log('manifests not yet available...');
+                //console.log('manifests not yet available...');
                 setTimeout(() => this.installCheck(), CACHE_WAIT)
               });
 
-          console.log('latest not yet available...');
+          //console.log('latest not yet available...');
           setTimeout(() => this.installCheck(), CACHE_WAIT)
         });
 
     this.cacheAssets
       .keys()
       .then(value => {
-        console.log('installProgress', value.length);
+        //console.log('installProgress', value.length);
         this.installProgress.next(value.length);
         this.installProgress.getValue() < this.installTotal
           ? setTimeout(() => this.installCheck(), CACHE_WAIT)
@@ -103,7 +103,7 @@ export class LoadingService {
 
   private updateCheck() {
     let region = TOSRegionService.get();
-    console.log('updateCheck', region);
+    //console.log('updateCheck', region);
 
     if (!this.update.updateAvailable(region))
       return this.onUpdateComplete();
@@ -116,7 +116,7 @@ export class LoadingService {
         this.domain
           .load(value, region)
           .pipe(tap(() => {
-            console.log('updateProgress', this.updateProgress.getValue() + 1);
+            //console.log('updateProgress', this.updateProgress.getValue() + 1);
             this.updateProgress.next(this.updateProgress.getValue() + 1);
             this.updateProgress.getValue() == this.updateTotal && this.onUpdateComplete();
           }))
@@ -125,13 +125,13 @@ export class LoadingService {
   }
 
   private onInstallComplete() {
-    console.log('onInstallComplete');
+    //console.log('onInstallComplete');
     this.installComplete.next(this.installSupported);
     this.updateCheck();
   }
 
   private onServiceWorkerReady() {
-    console.log('onServiceWorkerReady');
+    //console.log('onServiceWorkerReady');
 
     // Open cache database
     window.caches
@@ -143,7 +143,7 @@ export class LoadingService {
   }
 
   private onUpdateComplete() {
-    console.log('onUpdateComplete');
+    //console.log('onUpdateComplete');
     this.updateComplete.next(true);
   }
 
