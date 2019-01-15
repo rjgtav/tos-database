@@ -17,7 +17,7 @@ bundleWorker(['src/assets/js/papaparse.min.js', 'src/assets/js/papaparse.worker.
 // Patch Angular's default Service Worker implementation:
 // - Abuse the hashes so CloudFlare is able to cache assets for much longer
 // - Make sure the cache is being used
-console.log('Patching ngsw-worker.js...');
+console.log('Patching ngsw-worker.js');
 let ngswWorker = fs.readFileSync('dist/web/ngsw-worker.js');
 let ngswWorkerBackup = fs.readFileSync('ngsw-worker.backup.js');
 
@@ -25,8 +25,6 @@ if (!ngswWorker.equals(ngswWorkerBackup))
   throw new Error('ngsw-worker has been updated! Please patch it before proceeding...');
 
 fs.writeFileSync('dist/web/ngsw-worker.js', fs.readFileSync('ngsw-worker.js'));
-
-console.log('Patching done!');
 
 //----------------------------------------------------------------------------------------------------------------------
 

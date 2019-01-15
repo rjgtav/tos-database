@@ -52,7 +52,6 @@ export class TOSSearchService {
   }
 
   private onInstallComplete(value: boolean) {
-    console.log('search onInstallComplete',value)
     this.isLoaded.next(false);
 
     this.subscriptionLoad && this.subscriptionLoad.unsubscribe();
