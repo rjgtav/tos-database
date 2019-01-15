@@ -9,6 +9,8 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
 shared.singletonLock();
 
+// TODO: git pull
+
 console.log('+========================================================================+');
 console.log('| Patching...                                                            |');
 console.log('+========================================================================+');
@@ -46,11 +48,16 @@ for (let region of shared.REGIONS) {
     let changes = childProcess.execSync('git status --porcelain', { encoding: 'utf8', shell: true }).toString();
     if (changes.split('\n').length > 1) {
         console.log(`[${ region }] 4. Commit changes`);
-        result = childProcess.execSync(`git commit -m "Updated ${ region } as of ${ new Date().toISOString().slice(0, 10) }"`);
-        result.status !== 0 && slackError(new Error('Failed to commit //TODO: explode and tell slack'));
+        cwd = path.join('..');
 
-        result = childProcess.execSync(`git push`);
-        result.status !== 0 && slackError(new Error('Failed to push //TODO: explode and tell slack'));
+        result = childProcess.spawnSync(`git add .`, { cwd, shell: true, stdio: 'inherit' });
+        result.status !== 0 && shared.slackError(new Error('Failed to add //TODO: explode and tell slack'));
+
+        result = childProcess.spawnSync(`git commit -m "Updated ${ region } as of ${ new Date().toISOString().slice(0, 10) }"`, { cwd, shell: true, stdio: 'inherit' });
+        result.status !== 0 && shared.slackError(new Error('Failed to commit //TODO: explode and tell slack'));
+
+        result = childProcess.spawnSync(`git push`, { cwd, shell: true, stdio: 'inherit' });
+        result.status !== 0 && shared.slackError(new Error('Failed to push //TODO: explode and tell slack'));
 
         deploy = true;
     }

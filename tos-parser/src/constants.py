@@ -83,4 +83,4 @@ def region(region):
     PATH_INPUT_RELEASE_REVISION = os.path.join(PATH_INPUT, 'release.revision.txt')
     PATH_INPUT_RELEASE_REVISION_URL = URL_PATCH + 'release.revision.txt'
 
-    PATH_WEB_ASSETS_DATA = os.path.join(PATH_WEB_ASSETS, 'data', region_str)
+    PATH_WEB_ASSETS_DATA = os.path.join(PATH_WEB_ASSETS, 'data', region_str.lower())

@@ -1,5 +1,5 @@
 const REBUILD: { [key in TOSRegion]: boolean } = {
-  'iTOS': false, /* iTOS-needle */
+  'iTOS': true, /* iTOS-needle */
   'jTOS': false, /* jTOS-needle */
   'kTEST': true, /* kTEST-needle */
   'kTOS': true, /* kTOS-needle */

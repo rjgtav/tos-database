@@ -1,3 +1,4 @@
+**/*.pid
 /logs
 /node_modules
 /src/shared-variables.js

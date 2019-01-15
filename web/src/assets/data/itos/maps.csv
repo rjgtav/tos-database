@@ -54,6 +54,7 @@ $ID,$ID_NAME,Icon,Name
 702,f_playground,,Royal Soccer Field
 703,f_huevillage_58_1_event,,[Event] Veja Ravine
 704,f_coral_44_2_event,,[Event] Aitheo Coast
+710,c_Klaipe_event_1812,,Klaipeda
 981,c_fedimian,,Fedimian
 1001,c_Klaipe,,Klaipeda
 1002,c_highlander,,Highlander Master's Training Hall
@@ -279,7 +280,7 @@ $ID,$ID_NAME,Icon,Name
 3420,f_siauliai_35_1,,Nahash Forest
 3430,f_coral_35_2,,Vera Coast
 3440,d_abbey_35_3,,Elgos Monastery Annex
-3450,d_abbey_35_4,,Elgos Abbey Main Building
+3450,d_abbey_35_4,,Elgos Monastery Main Building
 3460,id_catacomb_38_1,,Videntis Shrine
 3470,id_catacomb_38_2,,Mokusul Chamber
 3480,d_velniasprison_54_1,,2nd Demon Prison
@@ -387,6 +388,7 @@ $ID,$ID_NAME,Icon,Name
 4940,id_whitetrees1,,The First Refuge
 4941,id_Nicopolis_01,,Magic Research Facility
 4950,d_limestonecave_70_1,,Sulivinas Lair
+4951,d_limestonecave_70_1_rest,,Sulivinas Lair
 4960,c_Klaipe_event,,Halloween Dungeon - Creepy Klaipeda
 4961,d_castle_agario,,Halloween Dungeon - Creepy Klaipeda
 4970,id_d_cmine_66_2,,Nevellet Quarry Dungeon
@@ -402,5 +404,6 @@ $ID,$ID_NAME,Icon,Name
 9998,GuildColony_f_farm_47_2,,Aqueduct Bridge Area
 10000,id_abbey_raid,,Asiomage Testing Grounds
 10001,mission_instance,,MissionInstance
+10002,uniq_startower_raid,,Astral Tower Closed Quarters
 20000,infinite_map,,Infinite Map
 20010,pvp_tournament,,Team Battle League Tournament

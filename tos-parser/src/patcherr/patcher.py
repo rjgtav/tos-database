@@ -7,6 +7,8 @@ import constants
 from libs import blowfish
 from patcherr import patcher_ipf, patcher_pak
 
+CHUNK_SIZE = 128 * 1024 * 1024  # 128MB of Chunk Size
+
 
 def patch():
     logging.debug('Patching...')
@@ -44,8 +46,11 @@ def patch_download(patch_path, patch_url, patch_ext, patch_unpack, revision_path
             logging.debug('Downloading %s...', patch_url + patch_name)
 
             patch_file = os.path.join(patch_path, patch_name)
+            patch_response = urllib2.urlopen(patch_url + patch_name)
+
             with open(patch_file, 'wb') as file:
-                file.write(urllib2.urlopen(patch_url + patch_name).read())
+                for chunk in iter(lambda: patch_response.read(CHUNK_SIZE), ''):
+                    file.write(chunk)
 
             # Extract patch
             patch_unpack(patch_name)

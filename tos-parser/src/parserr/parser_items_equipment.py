@@ -469,7 +469,8 @@ def parse_equipment():
             try:
                 LUA[tooltip_script](row)
             except LuaError as error:
-                if row['ClassID'] not in ['635061']:
+                if row['ClassID'] not in ['11130', '635061']:
+                    logging.error('LUA error when processing item ClassID: %s', row['ClassID'])
                     raise error
 
         # Add additional fields
