@@ -18,7 +18,7 @@ constants.region(region)
 # Configure logging
 logging.getLogger('PIL').setLevel(logging.WARN)
 logging.basicConfig(
-    format='[%(asctime)s] [' + TOSRegion.to_string(region) + '] [%(levelname)s]\t%(message)s',
+    format='[%(asctime)s] [%(levelname)s]\t[' + TOSRegion.to_string(region) + ']\t%(message)s',
     datefmt='%Y-%m-%d %I:%M:%S',
     level=logging.DEBUG
 )

@@ -35,7 +35,7 @@ PATH_INPUT_RELEASE_PATCH_URL = None
 PATH_INPUT_RELEASE_REVISION = None
 PATH_INPUT_RELEASE_REVISION_URL = None
 
-PATH_PARSER = os.path.join('..', 'IPFParser')
+PATH_PARSER = os.path.join('..', 'tos-parser')
 
 PATH_UNPACKER = os.path.join('..', 'IPFUnpacker')
 PATH_UNPACKER_EXE = os.path.join(PATH_UNPACKER, 'ipf_unpack')
