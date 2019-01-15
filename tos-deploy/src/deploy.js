@@ -18,7 +18,7 @@ console.log('+==================================================================
 let deploy = false;
 
 for (let region of shared.REGIONS) {
-    let arg, cwd, js, py, result;
+    let argv, cwd, js, py, result;
 
     // 1. Patcher & parser
     console.log(`[${ region }] 1. Patcher & parser`);
@@ -71,11 +71,11 @@ console.log('+==================================================================
 if (deploy || shared.IS_DEPLOY) {
     // 5. Build & Deploy
     console.log('5. Build & Deploy');
-    arg = process.argv.length === 3 ? process.argv[2] : '';
+    argv = process.argv.slice(2).join(' ');
     cwd = path.join('.');
     js = path.join(cwd, 'src', 'deploy-web.js');
 
-    result = childProcess.spawnSync(`node ${ js } ${ arg }`, { cwd, shell: true, stdio: 'inherit' });
+    result = childProcess.spawnSync(`node ${ js } ${ argv }`, { cwd, shell: true, stdio: 'inherit' });
     result.status !== 0 && shared.slackError(new Error('Failed to build & deploy //TODO: explode and tell slack'));
 
     // 6. Clear CloudFlare cache
