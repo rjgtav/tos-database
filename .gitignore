@@ -1,6 +1,3 @@
-IPFParser/**/*.pyc
-IPFParser/input/
-IPFParser/output/
 logs/
 scripts/deploy-variables.sh
 *.xlsx
