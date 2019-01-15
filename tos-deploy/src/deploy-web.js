@@ -42,7 +42,7 @@ result.status !== 0 && shared.slackError('Failed to patch service worker //TODO:
 
 // 'Rename' ngsw.json to ngsw.js otherwise CloudFlare doesn't consider it as 'static'. We need to keep the .json one as well for backwards compatibility
 // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
-fs.copySync(path.join(cwd, 'dist', 'web', 'ngsw.json'), path.join(cwd, 'dist', 'web', 'ngsw.js'));
+fsExtra.copySync(path.join(cwd, 'dist', 'web', 'ngsw.json'), path.join(cwd, 'dist', 'web', 'ngsw.js'));
 
 if (shared.IS_PROD) {
     // 5.4. Deploy on Apache
