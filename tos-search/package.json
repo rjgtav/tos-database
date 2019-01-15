@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "console-stamp": "^0.2.7",
     "lunr": "^2.3.4",
     "lunr-languages": "^1.0.0",
     "open-korean-text-node": "^2.2.0",

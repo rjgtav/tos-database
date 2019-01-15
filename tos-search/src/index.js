@@ -5,6 +5,9 @@ const fs = require('fs'),
       path = require('path')
 ;
 
+// Add timestamp to logs
+require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
+
 require('../node_modules/lunr-languages/lunr.multi.js')(lunr);
 require('../node_modules/lunr-languages/lunr.stemmer.support.js')(lunr);
 require('../node_modules/lunr-languages/tinyseg.js')(lunr);
@@ -12,7 +15,7 @@ require('../node_modules/lunr-languages/lunr.jp.js')(lunr);
 require('./lunr.kr.js')(lunr, openKoreanText);
 
 function log(...msg) {
-    console.log('[tos-search]', '[' + REGION + ']', ...msg);
+    console.log('[' + REGION + ']', '[tos-search]', ...msg);
 }
 
 const REGION_ITOS = 'iTOS';

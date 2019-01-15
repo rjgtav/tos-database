@@ -5,8 +5,11 @@ const
     path = require('path')
 ;
 
+// Add timestamp to logs
+require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
+
 function log(...msg) {
-    console.log('[tos-html]', '[' + REGION + ']', ...msg);
+    console.log('[' + REGION + ']', '[tos-html]', ...msg);
 }
 
 const PATTERN_TEMPLATE_LIST_ROW = '<tr class="d-table-row">';

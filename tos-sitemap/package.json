@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "console-stamp": "^0.2.7",
     "papaparse": "^4.6.1",
     "xmlbuilder": "^10.1.1"
   }

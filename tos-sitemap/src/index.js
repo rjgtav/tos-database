@@ -4,8 +4,11 @@ const builder = require('xmlbuilder'),
       path = require('path')
 ;
 
+// Add timestamp to logs
+require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
+
 function log(...msg) {
-    console.log('[tos-sitemap]', '[' + REGION + ']', ...msg);
+    console.log('[' + REGION + ']', '[tos-sitemap]', ...msg);
 }
 
 const REGION_ITOS = 'iTOS';
