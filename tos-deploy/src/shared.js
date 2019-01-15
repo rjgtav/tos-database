@@ -3,7 +3,8 @@ const
     path = require('path')
 ;
 
-exports.IS_PROD = process.argv.length >= 3 && process.argv[2].indexOf('prod') > -1;
+exports.IS_DEPLOY = process.argv.length > 2 && !!process.argv.find(value => value === 'deploy');
+exports.IS_PROD = process.argv.length > 2 && !!process.argv.find(value => value === 'prod');
 exports.REGIONS = ['iTOS', 'jTOS', 'kTOS', 'kTEST'];
 
 //======================================================================================================================

@@ -68,13 +68,12 @@ console.log('+==================================================================
 console.log('| Deploying...                                                           |');
 console.log('+========================================================================+');
 
-if (deploy) {
+if (deploy || shared.IS_DEPLOY) {
     // 5. Build & Deploy
     console.log('5. Build & Deploy');
     arg = process.argv.length === 3 ? process.argv[2] : '';
     cwd = path.join('.');
     js = path.join(cwd, 'src', 'deploy-web.js');
-
 
     result = childProcess.spawnSync(`node ${ js } ${ arg }`, { cwd, shell: true, stdio: 'inherit' });
     result.status !== 0 && shared.slackError(new Error('Failed to build & deploy //TODO: explode and tell slack'));
