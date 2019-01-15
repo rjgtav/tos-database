@@ -46,6 +46,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         ]);
 
         // CloudFlare has a limit of 1200 requests every 5 minutes
+        console.log(`[${ region }] Purging files by URL...`);
         await purgeFilesByUrl(urls);
         await new Promise((resolve) => setTimeout(() => resolve(), 5 * 61 * 1000));
     }
@@ -67,3 +68,6 @@ async function purgeFilesByUrl(files) {
             shared.slackError(new Error('Failed to purge cache //TODO: explode and tell slack'));
     }
 }
+
+// TODO: singleton lock/unlock is using filename wrongly, as all point to shared.js
+// TODO: clear main links first before the rest of the sitemap
