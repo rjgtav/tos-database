@@ -668,6 +668,8 @@
             // The request was successful. A cache-busted request is only necessary if the hashes
             // don't match. Compare them, making sure to clone the response so it can be used later
             // if it proves to be valid.
+            if ((req.url.indexOf('index.html') !== -1)) {
+              console.log('debug', Debug_arrayBufferToBase64(yield networkResult.clone().arrayBuffer()));
             const fetchedHash = sha1Binary(yield networkResult.clone().arrayBuffer());
             makeCacheBustedRequest = (fetchedHash !== canonicalHash);
           }
@@ -2728,5 +2730,15 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
 
     return adapter.newRequest(url);
   }
+
+  const Debug_arrayBufferToBase64 = (buffer) => {
+    var binary = '';
+    var bytes = new Uint8Array( buffer );
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+      binary += String.fromCharCode( bytes[ i ] );
+    }
+    return window.btoa( binary );
+  };
 
 }());

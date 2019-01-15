@@ -10,6 +10,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 shared.singletonLock();
 
 // TODO: git pull
+// TODO: implement slackError
 
 console.log('+========================================================================+');
 console.log('| Patching...                                                            |');
@@ -26,7 +27,7 @@ for (let region of shared.REGIONS) {
     py = path.join(cwd, 'src', 'main.py');
 
     result = childProcess.spawnSync(`python ${ py } ${ region }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError(new Error('Failed to patch //TODO: explode and tell slack'));
+    result.status !== 0 && shared.slackError('Failed to patch //TODO: explode and tell slack', result);
 
     // 2. Search index
     console.log(`[${ region }] 2. Search index`);
@@ -34,7 +35,7 @@ for (let region of shared.REGIONS) {
     js = path.join(cwd, 'src', 'index.js');
 
     result = childProcess.spawnSync(`node ${ js } ${ region }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError(new Error('Failed to search //TODO: explode and tell slack'));
+    result.status !== 0 && shared.slackError('Failed to search //TODO: explode and tell slack', result);
 
     // 3. Sitemap
     console.log(`[${ region }] 3. Sitemap`);
@@ -42,7 +43,7 @@ for (let region of shared.REGIONS) {
     js = path.join(cwd, 'src', 'index.js');
 
     result = childProcess.spawnSync(`node ${ js } ${ region }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError(new Error('Failed to sitemap //TODO: explode and tell slack'));
+    result.status !== 0 && shared.slackError('Failed to sitemap //TODO: explode and tell slack', result);
 
     // 4. Commit changes
     let changes = childProcess.execSync('git status --porcelain', { encoding: 'utf8', shell: true }).toString();
@@ -51,13 +52,13 @@ for (let region of shared.REGIONS) {
         cwd = path.join('..');
 
         result = childProcess.spawnSync(`git add .`, { cwd, shell: true, stdio: 'inherit' });
-        result.status !== 0 && shared.slackError(new Error('Failed to add //TODO: explode and tell slack'));
+        result.status !== 0 && shared.slackError('Failed to add //TODO: explode and tell slack', result);
 
         result = childProcess.spawnSync(`git commit -m "Updated ${ region } as of ${ new Date().toISOString().slice(0, 10) }"`, { cwd, shell: true, stdio: 'inherit' });
-        result.status !== 0 && shared.slackError(new Error('Failed to commit //TODO: explode and tell slack'));
+        result.status !== 0 && shared.slackError('Failed to commit //TODO: explode and tell slack', result);
 
         result = childProcess.spawnSync(`git push`, { cwd, shell: true, stdio: 'inherit' });
-        result.status !== 0 && shared.slackError(new Error('Failed to push //TODO: explode and tell slack'));
+        result.status !== 0 && shared.slackError('Failed to push //TODO: explode and tell slack', result);
 
         deploy = true;
     }
@@ -76,14 +77,14 @@ if (deploy || shared.IS_DEPLOY) {
     js = path.join(cwd, 'src', 'deploy-web.js');
 
     result = childProcess.spawnSync(`node ${ js } ${ argv }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError(new Error('Failed to build & deploy //TODO: explode and tell slack'));
+    result.status !== 0 && shared.slackError('Failed to build & deploy //TODO: explode and tell slack', result);
 
     // 6. Clear CloudFlare cache
     console.log('6. Clear CloudFlare cache');
     cwd = path.join('.');
     js = path.join(cwd, 'src', 'deploy-cloudflare.js');
 
-    childProcess.spawn(`node ${ js } > logs/cloudflare.log`, { cwd, detached: true, shell: true });
+    childProcess.spawn(`node ${ js } > logs/cloudflare.log &`, { cwd, detached: true, shell: true });
 }
 
 shared.singletonUnlock();

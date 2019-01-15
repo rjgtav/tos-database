@@ -12,7 +12,7 @@ exports.REGIONS = ['iTOS', 'jTOS', 'kTOS', 'kTEST'];
 //======================================================================================================================
 
 function singletonPID() {
-    return path.basename(__filename).replace('.js', '.pid');
+    return path.basename(process.argv[1]).replace('.js', '.pid');
 }
 function singletonPIDExists(pid) {
     try {
@@ -51,6 +51,7 @@ exports.singletonUnlock = function() {
     fs.unlinkSync(singletonPID());
 };
 
-exports.slackError = function(error) {
-    throw error; // TODO: explode and tell slack
+exports.slackError = function(message) {
+    console.error(...message);
+    throw new Error(Array.isArray(message) ? message[0] : message); // TODO: explode and tell slack
 };

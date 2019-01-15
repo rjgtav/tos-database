@@ -17,7 +17,7 @@ console.log('5.1. Build Angular application');
 cwd = path.join('..', 'web');
 
 result = childProcess.spawnSync(`npm run build-prod`, { cwd, shell: true, stdio: 'inherit' });
-result.status !== 0 && shared.slackError(new Error('Failed to build angular application //TODO: explode and tell slack'));
+result.status !== 0 && shared.slackError('Failed to build angular application //TODO: explode and tell slack', result);
 
 fs.copyFileSync(path.join(cwd, 'dist', 'web', 'index.html'), path.join(cwd, 'dist', 'web', '404.html'));
 fs.copyFileSync(path.join(cwd, 'dist', '.htaccess'), path.join(cwd, 'dist', 'web', '.htaccess'));
@@ -30,7 +30,7 @@ for (let region of shared.REGIONS) {
     js = path.join(cwd, 'src', 'index.js');
 
     result = childProcess.spawnSync(`node ${ js } ${ region }`, {cwd, shell: true, stdio: 'inherit'});
-    result.status !== 0 && shared.slackError(new Error('Failed to tos-html //TODO: explode and tell slack'));
+    result.status !== 0 && shared.slackError('Failed to tos-html //TODO: explode and tell slack', result);
 }
 
 // 5.3. Patch service worker
@@ -38,11 +38,11 @@ console.log('5.3. Patch service worker');
 cwd = path.join('..', 'web');
 
 result = childProcess.spawnSync(`npm run ngsw-config`, { cwd, shell: true, stdio: 'inherit' });
-result.status !== 0 && shared.slackError(new Error('Failed to patch service worker //TODO: explode and tell slack'));
+result.status !== 0 && shared.slackError('Failed to patch service worker //TODO: explode and tell slack', result);
 
-// Rename ngsw.json to ngsw.js otherwise CloudFlare doesn't consider it as 'static'
+// 'Rename' ngsw.json to ngsw.js otherwise CloudFlare doesn't consider it as 'static'. We need to keep the .json one as well for backwards compatibility
 // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
-fs.renameSync(path.join(cwd, 'dist', 'web', 'ngsw.json'), path.join(cwd, 'dist', 'web', 'ngsw.js'));
+fs.copySync(path.join(cwd, 'dist', 'web', 'ngsw.json'), path.join(cwd, 'dist', 'web', 'ngsw.js'));
 
 if (shared.IS_PROD) {
     // 5.4. Deploy on Apache
@@ -51,12 +51,12 @@ if (shared.IS_PROD) {
 
     for (let region of shared.REGIONS) {
         // 5.5. Unzip tos-html ( ͡° ͜ʖ ͡°)
-        console.log(`[ ${ region }] 5.5. Unzip tos-html`);
+        console.log(`[${ region }] 5.5. Unzip tos-html`);
         cwd = sharedVariables.APACHE_WWW;
         zip = path.join(cwd, region.toLowerCase() + '.zip');
 
         result = childProcess.spawnSync(`unzip -o -q ${ zip }`, {cwd, shell: true, stdio: 'inherit'});
-        result.status !== 0 && shared.slackError(new Error('Failed to unzip tos-html //TODO: explode and tell slack'));
+        result.status !== 0 && shared.slackError('Failed to unzip tos-html //TODO: explode and tell slack', result);
 
         fs.unlinkSync(zip);
     }
