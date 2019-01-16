@@ -84,7 +84,7 @@ if (deploy || shared.IS_DEPLOY) {
     cwd = path.join('.');
     js = path.join(cwd, 'src', 'deploy-cloudflare.js');
 
-    childProcess.spawn(`node ${ js } > logs/cloudflare.log &`, { cwd, detached: true, shell: true });
+    childProcess.spawn(`node ${ js } &>> logs/cloudflare.log`, { cwd, detached: true, shell: true });
 }
 
 shared.singletonUnlock();
