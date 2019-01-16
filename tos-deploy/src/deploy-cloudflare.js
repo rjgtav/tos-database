@@ -63,10 +63,15 @@ async function purgeFilesByUrl(region, files) {
         let end = Math.min(start + 30, files.length);
 
         console.log(`[${ region }] Purging URLs ${ start } ... ${ end } #${ ++request }`);
-        let response = await cf.zones.purgeCache(sharedVariables.CF_ZONE, { files: files.slice(start, end) });
+        await cf.zones
+            .purgeCache(sharedVariables.CF_ZONE, { files: files.slice(start, end) })
+            .catch(error => {
+                console.error('Failed to purge cache', error);
+                shared.slackError('Failed to purge cache //TODO: explode and tell slack', error)
+            });
 
-        if (!response.success)
-            shared.slackError('Failed to purge cache //TODO: explode and tell slack', response);
+        //if (!response.success)
+        //    shared.slackError('Failed to purge cache //TODO: explode and tell slack', response);
     }
 }
 

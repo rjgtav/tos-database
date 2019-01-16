@@ -670,6 +670,7 @@
             // if it proves to be valid.
             if ((req.url.indexOf('index.html') !== -1)) {
               console.log('debug', Debug_arrayBufferToBase64(yield networkResult.clone().arrayBuffer()));
+            }
             const fetchedHash = sha1Binary(yield networkResult.clone().arrayBuffer());
             makeCacheBustedRequest = (fetchedHash !== canonicalHash);
           }
