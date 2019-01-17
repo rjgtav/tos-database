@@ -7,7 +7,6 @@
     "start-prod": "http-server -c-1 -p4200 dist/web/",
     "build": "ng build",
     "build-prod": "ng build --prod",
-    "ngsw-config": "node ngsw-hotfix.js; ngsw-config dist/web ngsw-config.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -37,7 +36,6 @@
     "clean-css": "^4.2.1",
     "core-js": "^2.5.4",
     "fs-extra": "^7.0.1",
-    "html-minifier": "^3.5.21",
     "html-webpack-include-assets-plugin": "^1.0.6",
     "html-webpack-plugin": "^3.2.0",
     "html2canvas": "github:niklasvh/html2canvas#pull/1653/head",
@@ -45,12 +43,9 @@
     "minify": "^4.1.0",
     "ng-click-outside": "^4.0.0",
     "popper.js": "^1.14.3",
-    "replace-in-file": "^3.4.2",
     "rxjs": "^6.3.3",
-    "sha1": "^1.1.1",
     "sha1-from-file": "^2.0.1",
     "tslib": "^1.9.0",
-    "uglify-es": "^3.3.9",
     "webpack-merge-and-include-globally": "^2.1.11",
     "zone.js": "^0.8.26"
   },

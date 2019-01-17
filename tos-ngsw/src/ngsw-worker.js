@@ -668,10 +668,7 @@
             // The request was successful. A cache-busted request is only necessary if the hashes
             // don't match. Compare them, making sure to clone the response so it can be used later
             // if it proves to be valid.
-            if ((req.url.indexOf('index.html') !== -1)) {
-              console.log('debug', Debug_arrayBufferToBase64(yield networkResult.clone().arrayBuffer()));
-            }
-            const fetchedHash = sha1Binary(yield networkResult.clone().arrayBuffer());
+            const fetchedHash = sha1Binary(yield HotFix_cacheBusted_Kaspersky(networkResult, req));
             makeCacheBustedRequest = (fetchedHash !== canonicalHash);
           }
           // Make a cache busted request to the network, if necessary.
@@ -2708,6 +2705,26 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
   // HotFix: maybe due to CloudFlare changing some headers, we need to specify ignoreVary otherwise the cache always fails
   const HotFix_cache_match = (cache, req) => cache.match(req, { ignoreVary: true});
 
+  const HotFix_cacheBusted_Kaspersky = async (networkResult, request) => {
+    if (request.url.indexOf('index.html') === -1)
+      return await networkResult.clone().arrayBuffer();
+
+    // Thanks https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+    let stringToArrayBuffer = (string) => {
+      let buf = new ArrayBuffer(string.length * 1); // 1 byte for each char
+      let bufView = new Uint8Array(buf);
+          bufView.forEach((_, i) => bufView[i] = string.charCodeAt(i));
+
+      return buf;
+    };
+
+    let result = await networkResult.clone().text();
+        result = result.replace(/<script.*src=".*kaspersky.*labs.*><\/script>/g, '');
+        result = stringToArrayBuffer(result);
+
+    return result;
+  };
+
   const HotFix_safeFetch_Driver = (adapter, req) => {
     // CloudFlare's 'Ignore Query String' cache level only supports 'static' assets:
     // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
@@ -2731,15 +2748,5 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
 
     return adapter.newRequest(url);
   }
-
-  const Debug_arrayBufferToBase64 = (buffer) => {
-    var binary = '';
-    var bytes = new Uint8Array( buffer );
-    var len = bytes.byteLength;
-    for (var i = 0; i < len; i++) {
-      binary += String.fromCharCode( bytes[ i ] );
-    }
-    return btoa( binary );
-  };
 
 }());

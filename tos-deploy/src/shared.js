@@ -3,7 +3,7 @@ const
     path = require('path')
 ;
 
-exports.IS_DEPLOY = process.argv.length > 2 && !!process.argv.find(value => value === 'deploy');
+exports.IS_FORCE_DEPLOY = process.argv.length > 2 && !!process.argv.find(value => value === 'deploy');
 exports.IS_PROD = process.argv.length > 2 && !!process.argv.find(value => value === 'prod');
 exports.REGIONS = ['iTOS', 'jTOS', 'kTOS', 'kTEST'];
 

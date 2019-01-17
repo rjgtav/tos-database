@@ -35,9 +35,10 @@ for (let region of shared.REGIONS) {
 
 // 5.3. Patch service worker
 console.log('5.3. Patch service worker');
-cwd = path.join('..', 'web');
+cwd = path.join('..', 'tos-ngsw');
+js = path.join(cwd, 'src', 'ngsw-hotfix.js');
 
-result = childProcess.spawnSync(`npm run ngsw-config`, { cwd, shell: true, stdio: 'inherit' });
+result = childProcess.spawnSync(`node ${ js }`, { cwd, shell: true, stdio: 'inherit' });
 result.status !== 0 && shared.slackError('Failed to patch service worker //TODO: explode and tell slack', result);
 
 // 'Rename' ngsw.json to ngsw.js otherwise CloudFlare doesn't consider it as 'static'. We need to keep the .json one as well for backwards compatibility
