@@ -63,15 +63,19 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             console.log(`[${ region }] 4. Commit changes`);
             cwd = path.join('..');
 
+            console.log('git add');
             result = childProcess.spawnSync(`git add .`, { cwd, shell: true, stdio: 'inherit' });
             result.status !== 0 && shared.slackError('Failed to add //TODO: explode and tell slack', result);
 
+            console.log('git commit');
             result = childProcess.spawnSync(`git commit -m "Updated ${ region } as of ${ new Date().toISOString().slice(0, 10) }"`, { cwd, shell: true, stdio: 'inherit' });
             result.status !== 0 && shared.slackError('Failed to commit //TODO: explode and tell slack', result);
 
+            console.log('git push');
             result = childProcess.spawnSync(`git push`, { cwd, shell: true, stdio: 'inherit' });
             result.status !== 0 && shared.slackError('Failed to push //TODO: explode and tell slack', result);
 
+            console.log('git finished');
             is_new_patch = true;
         }
 
