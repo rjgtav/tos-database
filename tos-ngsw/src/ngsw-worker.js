@@ -2709,18 +2709,9 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
     if (request.url.indexOf('index.html') === -1)
       return await networkResult.clone().arrayBuffer();
 
-    // Thanks https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
-    let stringToArrayBuffer = (string) => {
-      let buf = new ArrayBuffer(string.length * 1); // 1 byte for each char
-      let bufView = new Uint8Array(buf);
-          bufView.forEach((_, i) => bufView[i] = string.charCodeAt(i));
-
-      return buf;
-    };
-
     let result = await networkResult.clone().text();
         result = result.replace(/<script.*src=".*kaspersky.*labs.*><\/script>/g, '');
-        result = stringToArrayBuffer(result);
+        result = Polyfill_TextEncoder().encode(result).buffer;
 
     return result;
   };
@@ -2747,6 +2738,19 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
           : url;
 
     return adapter.newRequest(url);
+  };
+
+  const Polyfill_TextEncoder = () => {
+    if (typeof TextEncoder === "undefined") {
+      let TextEncoder=function(){};
+          TextEncoder.prototype.encode=function(e){for(var f=e.length,b=-1,a="undefined"===typeof Uint8Array?Array(1.5*f):new Uint8Array(3*f),c,g,d=0;d!==f;){c=e.charCodeAt(d);d+=1;if(55296<=c&&56319>=c){if(d===f){a[b+=1]=239;a[b+=1]=191;a[b+=1]=189;break}g=e.charCodeAt(d);if(56320<=g&&57343>=g){if(c=1024*(c-55296)+g-56320+65536,d+=1,65535<c){a[b+=1]=240|c>>>18;a[b+=1]=128|c>>>12&63;a[b+=1]=128|c>>>6&63;a[b+=1]=128|c&63;continue}}else{a[b+=1]=239;a[b+=1]=191;a[b+=1]=189;continue}}127>=c?a[b+=1]=0|c:(2047>=
+          c?a[b+=1]=192|c>>>6:(a[b+=1]=224|c>>>12,a[b+=1]=128|c>>>6&63),a[b+=1]=128|c&63)}if("undefined"!==typeof Uint8Array)return a.subarray(0,b+1);a.length=b+1;return a};TextEncoder.prototype.toString=function(){return"[object TextEncoder]"};try{Object.defineProperty(TextEncoder.prototype,"encoding",{get:function(){if(TextEncoder.prototype.isPrototypeOf(this))return"utf-8";throw TypeError("Illegal invocation");}})}catch(e){TextEncoder.prototype.encoding="utf-8"}
+          "undefined"!==typeof Symbol&&(TextEncoder.prototype[Symbol.toStringTag]="TextEncoder");
+
+      return new TextEncoder();
+    }
+
+    return new TextEncoder();
   }
 
 }());

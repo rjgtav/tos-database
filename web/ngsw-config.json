@@ -6,12 +6,12 @@
       "installMode": "prefetch",
       "resources": {
         "files": [
-          "/favicon.png",
           "/index.html",
           "/*.css",
           "/*.js",
           "/assets/js/*.js",
-          "/assets/themes/*.css"
+          "/assets/themes/*.css",
+          "/assets/favicon.png"
         ]
       }
     }, {

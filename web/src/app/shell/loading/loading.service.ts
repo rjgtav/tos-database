@@ -9,7 +9,7 @@ import {TOSRegionService} from "../../shared/domain/tos-region";
 import {TOSDomainService} from "../../shared/domain/tos/tos-domain.service";
 
 const CACHE_KEY = 'app';
-const CACHE_WAIT = 125;
+const CACHE_WAIT = 250;
 
 @Injectable({
   providedIn: 'root'

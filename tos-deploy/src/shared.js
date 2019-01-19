@@ -28,7 +28,7 @@ exports.singletonLock = function(aggressive) {
 
     // Check if a previous instance is still running
     if (fs.existsSync(scriptPID)) {
-        let pid = +fs.readFileSync(scriptPID);
+        let pid = +fs.readFileSync(scriptPID, { encoding: 'utf8' });
 
         if (singletonPIDExists(pid)) {
             if (aggressive) { // Kill previous instance
