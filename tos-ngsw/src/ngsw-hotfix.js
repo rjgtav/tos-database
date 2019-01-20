@@ -30,10 +30,10 @@ let pathBackup = path.join('src', 'ngsw-worker.backup.js');
 let pathFrom = path.join('src', 'ngsw-worker.js');
 let pathTo = path.join('..', 'web', 'dist', 'web', 'ngsw-worker.js');
 
-let ngswWorker = fs.readFileSync(pathTo);
-let ngswWorkerBackup = fs.readFileSync(pathBackup);
+let ngswWorker = fs.readFileSync(pathTo, { encoding: 'utf8' }).trim();
+let ngswWorkerBackup = fs.readFileSync(pathBackup, { encoding: 'utf8' }).trim();
 
-if (!ngswWorker.equals(ngswWorkerBackup))
+if (ngswWorker !== ngswWorkerBackup)
   throw new Error('ngsw-worker has been updated! Please patch it before proceeding...');
 
 fs.writeFileSync(pathTo, fs.readFileSync(pathFrom));

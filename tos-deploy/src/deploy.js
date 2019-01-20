@@ -25,7 +25,6 @@ console.log('+==================================================================
 console.log('| Patching...                                                            |');
 console.log('+========================================================================+');
 
-console.log('revision', revision, revision_new, revision !== revision_new)
 let is_new_patch = false, is_new_revision = revision !== revision_new;
 let argv, cwd, js, py, result;
 
@@ -90,7 +89,7 @@ if (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY) {
     result.status !== 0 && shared.slackError('Failed to build & deploy //TODO: explode and tell slack', result);
 
     // Update revision
-    fs.writeFileSync(revision_path, revision_new);
+    fs.writeFileSync(revision_path, childProcess.execSync('git rev-parse HEAD').toString());
 } else {
     console.log('No new patch nor revision available. No deployment is needed.');
 }
