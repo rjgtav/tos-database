@@ -22,8 +22,20 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     fs.copyFileSync(path.join(cwd, 'dist', '.htaccess'), path.join(cwd, 'dist', 'web', '.htaccess'));
     fs.copyFileSync(path.join(cwd, 'dist', 'robots.txt'), path.join(cwd, 'dist', 'web', 'robots.txt'));
 
-    // 5.2. Patch service worker
-    console.log('5.2. Patch service worker');
+    if (shared.IS_PROD) {
+        for (let region of shared.REGIONS) {
+            // 5.2. Pre-render HTML for web crawlers
+            console.log(`[${region}] 5.2. Pre-render HTML for web crawlers`);
+            cwd = path.join('..', 'tos-html');
+            js = path.join(cwd, 'src', 'index.js');
+
+            result = childProcess.spawnSync(`node ${js} ${region}`, {cwd, shell: true, stdio: 'inherit'});
+            result.status !== 0 && shared.slackError('Failed to tos-html //TODO: explode and tell slack', result);
+        }
+    }
+
+    // 5.3. Patch service worker
+    console.log('5.3. Patch service worker');
     cwd = path.join('..', 'tos-ngsw');
     js = path.join(cwd, 'src', 'ngsw-hotfix.js');
 
@@ -34,17 +46,8 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
     fsExtra.copySync(path.join('..', 'web', 'dist', 'web', 'ngsw.json'), path.join('..', 'web', 'dist', 'web', 'ngsw.js'));
 
+
     if (shared.IS_PROD) {
-        for (let region of shared.REGIONS) {
-            // 5.3. Pre-render HTML for web crawlers
-            console.log(`[${ region }] 5.3. Pre-render HTML for web crawlers`);
-            cwd = path.join('..', 'tos-html');
-            js = path.join(cwd, 'src', 'index.js');
-
-            result = childProcess.spawnSync(`node ${ js } ${ region }`, {cwd, shell: true, stdio: 'inherit'});
-            result.status !== 0 && shared.slackError('Failed to tos-html //TODO: explode and tell slack', result);
-        }
-
         // 5.4. Deploy on Apache
         console.log('5.4. Deploy on Apache');
         cwd = path.join('..', 'web', 'dist', 'web');
