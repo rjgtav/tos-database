@@ -47,7 +47,8 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
         // 5.4. Deploy on Apache
         console.log('5.4. Deploy on Apache');
-        fsExtra.copySync(path.join(cwd, 'dist', 'web'), sharedVariables.APACHE_WWW);
+        cwd = path.join('..', 'web', 'dist', 'web');
+        fsExtra.copySync(cwd, sharedVariables.APACHE_WWW);
 
         for (let region of shared.REGIONS) {
             // 5.5. Unzip tos-html ( ͡° ͜ʖ ͡°)

@@ -52,6 +52,6 @@ exports.singletonUnlock = function() {
 };
 
 exports.slackError = function(message) {
-    console.error(...message);
-    throw new Error(Array.isArray(message) ? message[0] : message); // TODO: explode and tell slack
+    console.trace(...(Array.isArray(message) ? message : [message]));
+    process.exit(1); // TODO: explode and tell slack
 };
