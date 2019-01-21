@@ -83,12 +83,14 @@ export class TOSDomainRepository implements ITOSDomainRepository {
     }
   };
 
-  private MESSAGE_ID: number = 0;
+  private MESSAGE_DEXIE_ID: number = 0;
+  private MESSAGE_PAPAPARSE_ID: number = 0;
 
-  private workerDexie: Worker; // Note: we initialize it later so the Service Worker can intercept the call
+  // Note: we initialize workers later so the Service Worker can intercept the call
+  private workerDexie: Worker;
+  private workerPapaparse: Worker;
   private readonly workerDexieHandler: { [key: number]: Subject<object> } = {};
-  private readonly workerPapaparse: { [key in TOSDataSet]?: Worker } = {};
-  private readonly workerPapaparseHandler: { [key in TOSDataSet]?: Subject<object> } = {};
+  private readonly workerPapaparseHandler: { [key: number]: Subject<object> } = {};
 
   constructor() {
     this.onPapaparseMessage = this.onPapaparseMessage.bind(this);
@@ -114,9 +116,7 @@ export class TOSDomainRepository implements ITOSDomainRepository {
       );
   }
   load(dataset: TOSDataSet, region: TOSRegion) {
-    return this.workerPapaparseHandler[dataset]
-      ? this.workerPapaparseHandler[dataset].asObservable()
-      : this.postPapaparseMessage(WorkerPapaparseCommand.LOAD, dataset, {
+    return this.postPapaparseMessage(WorkerPapaparseCommand.LOAD, dataset, {
         region,
         schema: this.config[dataset].schema,
       });
@@ -134,20 +134,15 @@ export class TOSDomainRepository implements ITOSDomainRepository {
   private onPapaparseMessage(event: MessageEvent) {
     let message = event.data as WorkerPapaparseMessage;
 
-    let handler = this.workerPapaparseHandler[message.dataset] as Subject<object>;
+    let handler = this.workerPapaparseHandler[message.id] as Subject<object>;
         handler.next(message.payload);
         handler.complete();
 
-    let worker = this.workerPapaparse[message.dataset] as Worker;
-        worker.onmessage = null;
-        worker.terminate();
-
-    delete this.workerPapaparseHandler[message.dataset];
-    delete this.workerPapaparse[message.dataset];
+    delete this.workerPapaparseHandler[message.id];
   }
 
   private postDexieMessage(cmd: WorkerDexieCommand, payload?: object) {
-    let id = this.MESSAGE_ID ++;
+    let id = this.MESSAGE_DEXIE_ID ++;
     let message: WorkerDexieMessage = { cmd, id, payload };
 
     let subject = this.workerDexieHandler[id] = new Subject();
@@ -158,10 +153,11 @@ export class TOSDomainRepository implements ITOSDomainRepository {
     return subject.asObservable();
   }
   private postPapaparseMessage(cmd: WorkerPapaparseCommand, dataset: TOSDataSet, payload?: object): Observable<object> {
-    let message: WorkerPapaparseMessage = { cmd, dataset, payload };
+    let id = this.MESSAGE_PAPAPARSE_ID ++;
+    let message: WorkerPapaparseMessage = { cmd, dataset, id, payload };
 
-    let subject = this.workerPapaparseHandler[dataset] = new Subject();
-    let worker = this.workerPapaparse[dataset] = new Worker(TOSUrlService.WORKER_PAPAPARSE());
+    let subject = this.workerPapaparseHandler[id] = new Subject();
+    let worker = this.workerPapaparse = this.workerPapaparse || new Worker(TOSUrlService.WORKER_PAPAPARSE());
         worker.onmessage = this.onPapaparseMessage;
         worker.postMessage(message);
 
@@ -181,5 +177,6 @@ enum WorkerPapaparseCommand { LOAD = 'load' }
 interface WorkerPapaparseMessage {
   cmd: WorkerPapaparseCommand;
   dataset: string;
+  id: number;
   payload?: object;
 }

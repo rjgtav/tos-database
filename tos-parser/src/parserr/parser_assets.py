@@ -153,7 +153,7 @@ def parse_images_jobs(region, version_update):
             name = ''.join(name.split(' ')).lower()
 
             conn = httplib.HTTPSConnection('treeofsavior.com')
-            conn.request('HEAD', '/img/class/class_character/' + name + '_f.gif')
+            conn.request('HEAD', '/img/class2/class_character/' + name + '_f.gif')
 
             response = conn.getresponse()
             conn.close()

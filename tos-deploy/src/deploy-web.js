@@ -71,13 +71,21 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         let ngsw = JSON.parse(fs.readFileSync(path.join('..', 'web', 'dist', 'web', 'ngsw.js'), { encoding: 'utf8' }));
         let ngswAssetGroup = ngsw.assetGroups.find(value => value.name === 'app');
         let urls = ngswAssetGroup.urls.concat([
+            '/assets/images/logo_discord.png',
+            '/assets/images/logo_github.png',
+            '/assets/images/logo_github_white.png',
             '/assets/images/logo_imc.png',
+            '/assets/images/logo_imc_white.png',
+            '/assets/images/logo_patreon.png',
             '/assets/images/logo_tos.png',
+            '/assets/images/logo_twitch.png',
             '/ngsw.js',
             '/ngsw.json',
             '/ngsw-worker.js',
             // Note: manifest.json and PWA related assets will then be manually cleared
         ]);
+
+        // TODO: consider caching the HTML again (i.e. all URLs ending in a /) (although we'll suffer when clearing it from the cache...)
 
         urls = urls.map(value => 'https://tos.guru' + value);
 

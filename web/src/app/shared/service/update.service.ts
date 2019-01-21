@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {TOSRegion} from "../domain/tos-region";
+import {TOSRegion, TOSRegionService} from "../domain/tos-region";
 
 const KEY_VERSION = 'version';
 const VERSION_HOTFIX = 1;
 const VERSION: { [key in TOSRegion]: string } = {
   'iTOS': 'patch_235912_release_235766', /* iTOS-needle */
   'jTOS': 'patch_234991_release_235407', /* jTOS-needle */
-  'kTEST': 'patch_235297_release_235297', /* kTEST-needle */
+  'kTEST': 'patch_236162_release_236140', /* kTEST-needle */
   'kTOS': 'patch_235734_release_235734', /* kTOS-needle */
 };
 
@@ -15,21 +15,23 @@ const VERSION: { [key in TOSRegion]: string } = {
 })
 export class UpdateService {
 
-  constructor() { }
+  private region: TOSRegion;
 
-  updateAvailable(region: TOSRegion): boolean { return this.version(region) != this.versionOld(region) }
-  updateVersion(region: TOSRegion) {
+  constructor() {
+    this.region = TOSRegionService.get();
+  }
+
+  updateAvailable(): boolean { return this.version != this.versionOld }
+  updateVersion(clear?: boolean) {
     let version = JSON.parse(localStorage.getItem(KEY_VERSION) || '{}');
-        version[region] = this.version(region);
+        version[this.region] = clear ? '' : this.version;
 
     localStorage.setItem(KEY_VERSION, JSON.stringify(version));
   }
 
-  version(region: TOSRegion) { return VERSION[region] + (VERSION_HOTFIX ? '_hotfix_' + VERSION_HOTFIX : ''); }
-  versionHuman(region: TOSRegion) { return region && (region.toString() + ' ~ ' + this.version(region)) }
+  get version() { return VERSION[this.region] + (VERSION_HOTFIX ? '_hotfix_' + VERSION_HOTFIX : ''); }
+  get versionHuman() { return this.region && (this.region.toString() + ' • ' + this.version) }
 
-  private versionOld(region: TOSRegion): string {
-    return JSON.parse(localStorage.getItem(KEY_VERSION) || '{}')[region];
-  }
+  private get versionOld(): string { return JSON.parse(localStorage.getItem(KEY_VERSION) || '{}')[this.region]; }
 
 }

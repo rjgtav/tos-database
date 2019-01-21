@@ -1,10 +1,9 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {Subscription} from "rxjs";
-import {faDiscord, faTwitch} from "@fortawesome/free-brands-svg-icons";
 import {UpdateService} from "../../shared/service/update.service";
-import {TOSRegionService} from "../../shared/domain/tos-region";
 import {LoadingService} from "../loading/loading.service";
+import {TOSRegionService} from "../../shared/domain/tos-region";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -13,8 +12,6 @@ import {LoadingService} from "../loading/loading.service";
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnDestroy {
-  faDiscord = faDiscord;
-  faTwitch = faTwitch;
 
   isLightTheme: boolean;
   updateVersion: string;
@@ -31,13 +28,20 @@ export class FooterComponent implements OnDestroy {
     this.subscriptionTheme = theme.subscribe(this.onThemeChange.bind(this));
   }
 
+  onClearCacheClick(event: MouseEvent) {
+    event.preventDefault();
+
+    if (window.confirm(`Are you sure you want to clear the cache?\nEverything for ${ TOSRegionService.get() } will have to be downloaded again`))
+      this.loading.clear();
+  }
+
   onThemeChange(theme: Theme) {
     this.isLightTheme = theme == Theme.LIGHT;
     this.changeDetector.markForCheck();
   }
 
   onUpdateComplete() {
-    this.updateVersion = this.update.versionHuman(TOSRegionService.get());
+    this.updateVersion = this.update.versionHuman;
     this.changeDetector.markForCheck();
   }
 

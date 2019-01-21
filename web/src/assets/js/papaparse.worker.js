@@ -4,6 +4,8 @@ let origin = location.origin + '/';
 // Load papaparse
 self['importScripts'](origin + 'assets/js/papaparse.min.js');
 
+const TABLE_NAME = 'data';
+
 //===========================================================================================================
 //  Main
 //===========================================================================================================
@@ -18,72 +20,101 @@ self.onmessage = async function(event) {
       let region = payload.region;
       let schema = payload.schema;
       let url = (origin + 'assets/data/' + region + '/' + dataset + '.csv').toLowerCase();
+      let i = 0;
 
-      let database = await databaseInitialize(dataset, region, schema);
-      let transaction = databaseTransaction(database);
-      let request = null;
+      let database = new Database(dataset, region);
+          database.initialize(schema).then(() => {
+            Papa.parse(url, {
+              download: true,
+              header: true,
+              skipEmptyLines: true,
+              step: (results) => database.insert(results.data[0], i++),
+              complete: () => database.transaction.oncomplete = () => postResponse(message, payload),
+            });
+          });
 
-      Papa.parse(url, {
-        download: true,
-        header: true,
-        skipEmptyLines: true,
-        step: (results, parser) => request = databaseInsert(transaction, results.data[0]),
-        complete: () => {
-          if (request)  request.onsuccess = () => transaction.oncomplete = () => postResponse(message, payload);
-          else          postResponse(message, payload);
-        }
-      });
       break;
   }
 };
 
 //===========================================================================================================
+//  Classes
+//===========================================================================================================
+class Database {
+
+  constructor(dataset, region) {
+      this.$database = null;
+      this.$dataset = dataset;
+      this.$region = region;
+      this.$table = null;
+      this.$transaction = null;
+  }
+
+  initialize(schema) {
+    return new Promise((resolve, reject) => {
+      let databaseName = (this.$region + '/' + this.$dataset).toLowerCase();
+      let request = indexedDB.open(databaseName, new Date().getTime());
+          request.onblocked = reject;
+          request.onerror = reject;
+          request.onsuccess = () => resolve();
+
+          request.onupgradeneeded = (event) => {
+            this.$database = event.target.result;
+            this.$transaction = event.target.transaction;
+
+            // Remove all existing indexes
+            Array
+              .from(this.table.indexNames)
+              .forEach(index => this.table.deleteIndex(index));
+
+            // Create new indexes
+            schema.indexes && schema.indexes
+              .forEach(index => this.table.createIndex(index, index, { multiEntry: true }));
+
+            this.$transaction = null;
+          };
+    });
+  }
+
+  insert(row, i) {
+    return new Promise((resolve, reject) => {
+      // Initialize JSON and Number attributes
+      for (let key in row)
+        try {
+          if (!key.startsWith('Description') && row.hasOwnProperty(key) && typeof row[key] === 'string') {
+            if (row[key].startsWith('[') && row[key].endsWith(']'))       row[key] = JSON.parse(row[key]);
+            else if (row[key].startsWith('{') && row[key].endsWith('}'))  row[key] = JSON.parse(row[key]);
+            else if (row[key] && !isNaN(row[key]))                        row[key] = +row[key];
+          }
+        } catch (e) {}
+
+      // Clear table before starting bulk insert
+      i === 0 && this.table.clear();
+
+      let request = this.table.add(row);
+          request.onblocked = reject;
+          request.onerror = reject;
+          request.onsuccess = () => resolve();
+    });
+  }
+
+  get table() {
+    // Create table in case it doesn't exist yet
+    return this.$table = this.$table || this.$database.objectStoreNames.contains(TABLE_NAME)
+      ? this.transaction.objectStore(TABLE_NAME)
+      : this.$database.createObjectStore(TABLE_NAME, { keyPath: '$ID' });
+  }
+
+  get transaction() {
+    // Start readwrite transaction in case one isn't active yet
+    return this.$transaction = this.$transaction || this.$database.transaction([TABLE_NAME], 'readwrite');
+  }
+
+}
+
+//===========================================================================================================
 //  Methods
 //===========================================================================================================
-async function databaseInitialize(dataset, region, schema) {
-  let databaseCreate = (databaseName) => new Promise((resolve, reject) => {
-    let request = indexedDB.open(databaseName, 1);
-        request.onblocked = reject;
-        request.onerror = reject;
-        request.onsuccess = (event) => resolve(event.target.result);
-
-        request.onupgradeneeded = (event) => {
-          let database = event.target.result;
-          let table = database.createObjectStore('data', { keyPath: '$ID' });
-
-          for (let column of schema.indexes || [])
-            table.createIndex(column, column, { multiEntry: true });
-        };
-  });
-  let databaseDelete = (databaseName) => new Promise((resolve, reject) => {
-    let request = indexedDB.deleteDatabase(databaseName);
-        request.onerror = reject;
-        request.onsuccess = (event) => resolve(event);
-  });
-
-  let databaseName = (region + '/' + dataset).toLowerCase();
-
-         await databaseDelete(databaseName);
-  return await databaseCreate(databaseName);
-}
-function databaseInsert(transaction, object) {
-  // Initialize JSON and Number attributes
-  for (let key in object)
-    try {
-      if (!key.startsWith('Description') && object.hasOwnProperty(key) && typeof object[key] === 'string') {
-        if (object[key].startsWith('[') && object[key].endsWith(']'))       object[key] = JSON.parse(object[key]);
-        else if (object[key].startsWith('{') && object[key].endsWith('}'))  object[key] = JSON.parse(object[key]);
-        else if (object[key] && !isNaN(object[key]))                        object[key] = +object[key];
-      }
-    } catch (e) {}
-
-  // Optimization: inspired by Dixie.js, we only listen to the onsuccess of the final request
-  return transaction.objectStore('data').add(object);
-}
-function databaseTransaction(database) {
-  return database.transaction(['data'], 'readwrite');
-}
-
 function postResponse(message, payload) {
   self.postMessage(Object.assign(message, { payload }));
 }

@@ -1,7 +1,6 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {UpdateService} from "../../shared/service/update.service";
 import {LoadingService} from "./loading.service";
-import {TOSRegionService} from "../../shared/domain/tos-region";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,23 +8,28 @@ import {TOSRegionService} from "../../shared/domain/tos-region";
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.scss']
 })
-export class LoadingComponent {
+export class LoadingComponent implements OnInit, OnDestroy {
+
+  isClearCache: boolean;
+  isClearCacheAvailable: boolean;
+  isClearCacheAvailableTimeout: number;
 
   installComplete: boolean;
-  installProgress: number;
+  installProgress: number = 0;
   installSupported: boolean;
-  installTotal: number;
+  installTotal: number = 0;
 
   updateAvailable: boolean;
   updateComplete: boolean;
-  updateProgress: number;
-  updateTotal: number;
+  updateProgress: number = 0;
+  updateTotal: number = 0;
   updateVersion: string;
 
   constructor(
     private changeDetector: ChangeDetectorRef,
     private loading: LoadingService,
     private update: UpdateService,
+    private zone: NgZone,
   ) {
     this.loading.updateProgress$.subscribe(value => this.onUpdateProgress(value));
     this.loading.updateComplete$.subscribe(value => this.updateComplete = value);
@@ -36,6 +40,23 @@ export class LoadingComponent {
     this.onUpdateAvailable();
   }
 
+  ngOnInit(): void {
+    this.zone.runOutsideAngular(() => this.isClearCacheAvailableTimeout = setTimeout(() => {
+        this.isClearCacheAvailable = true;
+        this.changeDetector.markForCheck();
+      }, 5 * 1000
+    ));
+  }
+
+  ngOnDestroy(): void {
+    clearTimeout(this.isClearCacheAvailableTimeout);
+  }
+
+  onClearCacheClick() {
+    this.isClearCache = true;
+    this.loading.clear();
+  }
+
   onInstallProgress(value: number) {
     this.installProgress = Math.max(value, 0);
     this.installTotal = Math.max(this.loading.installTotal, 0);
@@ -44,11 +65,9 @@ export class LoadingComponent {
   }
 
   onUpdateAvailable() {
-    let region = TOSRegionService.get();
-
-    this.updateAvailable = this.update.updateAvailable(region);
+    this.updateAvailable = this.update.updateAvailable();
     this.updateAvailable && this.changeDetector.markForCheck();
-    this.updateVersion = this.update.versionHuman(region);
+    this.updateVersion = this.update.versionHuman;
   }
   onUpdateProgress(value: number) {
     if (!this.updateAvailable) return;

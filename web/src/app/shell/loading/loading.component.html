@@ -1,17 +1,18 @@
 <div class="d-flex align-items-center justify-content-center h-100 w-100" style="background: #002A3A;"
      [ngClass]="{ 'show': updateAvailable && !updateComplete }"
-     [style.pointerEvents]="updateAvailable && updateProgress < 1 ? 'initial' : 'none'"
+     [style.pointerEvents]="updateAvailable && !updateComplete ? 'initial' : 'none'"
      [style.transitionDuration]="updateAvailable ? '0.25s' : '1s'">
-  <div class="text-center text-white">
+  <div class="position-relative text-center text-white">
     <div *ngIf="installSupported">
-      <img class="mb-4" src="assets/images/logo_tos.png" />
+      <img class="mb-5" src="assets/images/logo_tos.png" />
+
       <div *ngIf="!installComplete">
         <div class="progress">
           <div class="progress-bar progress-bar-animated progress-bar-striped"
                [style.width]="(installProgress * 100 / installTotal) + '%'"></div>
         </div>
-        <div class="mt-2" *ngIf="!installComplete">
-          Installing tos.guru {{ installProgress }}/{{ installTotal }}...
+        <div class="mt-2">
+          Loading tos.guru... <span *ngIf="installProgress">{{ installProgress }}/{{ installTotal }}</span>
         </div>
       </div>
       <div *ngIf="installComplete">
@@ -19,16 +20,17 @@
           <div class="progress-bar progress-bar-animated progress-bar-striped"
                [style.width]="(updateProgress * 100 / updateTotal) + '%'"></div>
         </div>
-        <div class="mt-2" *ngIf="installComplete">
-          Updating database {{ updateProgress }}/{{ updateTotal}}...<br/>
+        <div class="mt-2">
+          Updating to the latest patch... <span *ngIf="updateProgress">{{ updateProgress }}/{{ updateTotal }}</span><br/>
           <span class="font-italic text-muted">{{ updateVersion }}</span>
         </div>
       </div>
     </div>
     <div *ngIf="!installSupported">
-      <img src="assets/images/emoticons/emoticon_0003.png" />
-      <div class="mt-5">It seems your browser doesn't support tos.guru :(</div>
-      <div class="text-left mt-5">
+      <img class="mb-5" src="assets/images/emoticons/emoticon_0003.png" />
+      <div>It seems your browser doesn't support tos.guru</div>
+      <hr class="border-white mt-5" />
+      <div class="text-left">
         <b>Troubleshooting:</b>
         <ul>
           <li>Please make sure you aren't using Incognito/Private mode</li>
@@ -58,6 +60,35 @@
           </a>
         </div>
       </div>
+      <hr class="border-white" />
+    </div>
+
+    <div class="d-flex justify-content-around font-weight-bold text-center text-white mt-5">
+      <a href="https://discord.gg/8g76NAA" target="_blank" class="d-flex flex-column">
+        <img class="align-self-center" src="assets/images/logo_discord.png" />
+        <span class="mt-1">Discord</span>
+      </a>
+      <a href="https://github.com/rjgtav/tos-database" target="_blank" class="d-flex flex-column">
+        <img class="align-self-center" src="assets/images/logo_github_white.png" />
+        <span class="mt-1">GitHub</span>
+      </a>
+      <a href="https://patreon.com/rjgtav" target="_blank" class="d-flex flex-column">
+        <img class="align-self-center" src="assets/images/logo_patreon.png" />
+        <span class="mt-1">Patreon</span>
+      </a>
+      <a href="https://www.twitch.tv/rjgtav" target="_blank" class="d-flex flex-column">
+        <img class="align-self-center" src="assets/images/logo_twitch.png" />
+        <span class="mt-1">Twitch</span>
+      </a>
+    </div>
+
+    <div class="position-absolute mt-5 text-center w-100" *ngIf="isClearCacheAvailable">
+      <div>Installation stuck?</div>
+      <button type="button" class="btn btn-danger mt-2"
+              [ngClass]="{ 'disabled': isClearCache }"
+              (click)="onClearCacheClick()">
+        {{ isClearCache ? 'Clearing cache...' : 'Clear cache' }}
+      </button>
     </div>
   </div>
 </div>

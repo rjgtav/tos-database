@@ -1,30 +1,28 @@
 <div class="container text-muted mb-3 mb-xl-0 pb-5 pb-xl-3" style="border-top-width: 2px">
   <hr>
   <div class="row">
-    <div class="col-12 col-lg-6 text-center text-lg-left pb-1">
-      <div class="w-100">
-        Made with <fa-icon class="text-danger" [icon]="['fas', 'heart']"></fa-icon> by&nbsp;
-        <a href="https://www.twitch.tv/rjgtav" ngbTooltip="Support the website" rel="noopener" target="_blank">
-          <span [ngStyle]="{ 'color': isLightTheme ? 'black' : 'white' }">rjgtav</span>&nbsp;
-          <span style="color: #6441A4"><fa-icon [icon]="faTwitch"></fa-icon></span>
-        </a>
-      </div>
-      <div class="w-100">
-        With the help of&nbsp;
-        <a href="https://discord.gg/8g76NAA" ngbTooltip="Thanks @Crevox, @Jiyuu, @KriLanze, @Palemoon, @Tekguel and more!" rel="noopener" target="_blank">
-          <span [ngStyle]="{ 'color': isLightTheme ? 'black' : 'white' }">awesome people</span>&nbsp;
-          <span style="color: #7289DA"><fa-icon [icon]="faDiscord"></fa-icon></span>
-        </a>
-      </div>
+    <div class="col-6 col-lg-3 order-0 text-left">
+      <a href="http://imc.co.kr/?mid=IMC_EN" target="_blank" ngbTooltip="© IMCGAMES CO. LTD.">
+        <img height="32" [src]="'assets/images/logo_imc' + (isLightTheme ? '.png' : '_white.png')" />
+      </a>
     </div>
-    <div class="col-12 col-lg-6 text-center text-lg-right">
-      <div class="w-100">
-        <a href="https://treeofsavior.com/" rel="noopener" target="_blank">Tree of Savior</a> is being developed by&nbsp;
-        <a href="http://imc.co.kr/?mid=IMC_EN" rel="noopener" target="_blank"><img height="22" [src]="'assets/images/logo_imc' + (isLightTheme ? '.png' : '_white.png')" /></a>
-      </div>
-      <div class="w-100">
-        {{ updateVersion }}
-      </div>
+    <a class="col-12 col-lg-6 order-2 text-center order-lg-1 d-flex" ngbTooltip="Clear cache" href="#clearCache"
+       (click)="onClearCacheClick($event)">
+      <div class="align-self-center flex-grow-1 text-muted">{{ updateVersion }}</div>
+    </a>
+    <div class="col-6 col-lg-3 order-1 text-right order-lg-2 mb-3 mb-lg-0">
+      <a href="https://discord.gg/8g76NAA" target="_blank" ngbTooltip="Thanks @Crevox, @Jiyuu, @KriLanze, @Palemoon, @Tekguel and more!">
+        <img class="align-self-center mr-2" height="32" src="assets/images/logo_discord.png" />
+      </a>
+      <a href="https://github.com/rjgtav/tos-database" target="_blank" ngbTooltip="Open-source!">
+        <img class="align-self-center mr-2" height="32" [src]="'assets/images/logo_github' + (isLightTheme ? '.png' : '_white.png')" />
+      </a>
+      <a href="https://patreon.com/rjgtav" target="_blank" ngbTooltip="Support the website">
+        <img class="align-self-center mr-2" height="32" src="assets/images/logo_patreon.png" />
+      </a>
+      <a href="https://www.twitch.tv/rjgtav" target="_blank" ngbTooltip="Follow the development" container="body">
+        <img class="align-self-center mr-2" height="32" src="assets/images/logo_twitch.png" />
+      </a>
     </div>
   </div>
 </div>

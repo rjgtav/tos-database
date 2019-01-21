@@ -1,7 +1,6 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {Theme, ThemeService} from "../../shared/service/theme.service";
-import {faGithub, faPatreon} from "@fortawesome/free-brands-svg-icons";
-import {faCommentAlt, faMoon, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faMoon, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
 import {TOSUrlService} from "../../shared/service/tos-url.service";
 import {TOSDataSetService} from "../../shared/domain/tos/tos-domain";
@@ -14,7 +13,7 @@ import {SwUpdate} from "@angular/service-worker";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   readonly REGION = Object.values(TOSRegion);
 
   TOSRegionService = TOSRegionService;
@@ -22,24 +21,33 @@ export class HeaderComponent implements OnInit {
   TOSDataSetService = TOSDataSetService;
   TOSRegion = TOSRegion;
 
-  faCommentAlt = faCommentAlt;
-  faGithub = faGithub;
   faMoon = faMoon;
-  faPatreon = faPatreon;
   faSearch = faSearch;
   faSun = faSun;
 
   isUpdateAvailable: boolean;
+  isUpdateCheck: boolean;
+  isUpdateCheckInterval: number;
   isOpenSearch: boolean;
 
   constructor(
     private changeDetector: ChangeDetectorRef,
     private swUpdate: SwUpdate,
-    public theme: ThemeService
+    public theme: ThemeService,
+    private zone: NgZone,
   ) {}
 
   ngOnInit(): void {
-    this.swUpdate.isEnabled && this.swUpdate.available.subscribe(value => this.updateAvailable())
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.available.subscribe(value => this.updateAvailable());
+
+      this.isUpdateCheckInterval = this.zone.runOutsideAngular(() => setInterval(() => this.updateCheck(), 30 * 60 * 1000));
+      this.updateCheck();
+    }
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.isUpdateCheckInterval);
   }
 
   routerLink(url: string): string {
@@ -53,11 +61,21 @@ export class HeaderComponent implements OnInit {
 
   update(event: MouseEvent) {
     event.preventDefault();
-    window.location.reload(true);
+
+    this.swUpdate.activateUpdate().then(value => window.location.reload(true));
   }
   updateAvailable() {
     this.isUpdateAvailable = true;
     this.changeDetector.markForCheck();
+  }
+  async updateCheck() {
+    this.isUpdateCheck = true;
+    this.changeDetector.detectChanges();
+
+    this.swUpdate.checkForUpdate().then(value => {
+      this.isUpdateCheck = false;
+      this.changeDetector.detectChanges();
+    });
   }
 
 }

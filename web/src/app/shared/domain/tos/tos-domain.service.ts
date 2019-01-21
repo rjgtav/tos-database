@@ -24,7 +24,6 @@ import {fromPromise} from "rxjs/internal-compatibility";
 import {Inject, Injectable} from "@angular/core";
 import {TOSAttribute} from "./attribute/tos-attribute.model";
 import {TOSRegion} from "../tos-region";
-import {UpdateService} from "../../service/update.service";
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +32,7 @@ export class TOSDomainService {
 
   private static repository: ITOSDomainRepository;
 
-  constructor(@Inject('ITOSDomainRepository') private repository: ITOSDomainRepository, private update: UpdateService) {
+  constructor(@Inject('ITOSDomainRepository') private repository: ITOSDomainRepository) {
     TOSDomainService.repository = repository;
   }
 

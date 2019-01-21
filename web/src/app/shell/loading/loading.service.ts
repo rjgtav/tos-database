@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, forkJoin} from "rxjs";
+import {BehaviorSubject} from "rxjs";
 import {SwUpdate} from "@angular/service-worker";
 import {UpdateService} from "../../shared/service/update.service";
-import {TOSDataSet} from "../../shared/domain/tos/tos-domain";
-import {filter, take, tap} from "rxjs/operators";
+import {TOSDataSet, TOSDataSetService} from "../../shared/domain/tos/tos-domain";
+import {filter, take} from "rxjs/operators";
 import {TOSRegionService} from "../../shared/domain/tos-region";
 import {TOSDomainService} from "../../shared/domain/tos/tos-domain.service";
 
@@ -19,7 +19,6 @@ export class LoadingService {
   private cacheAssets: Cache;
   private cacheControl: Cache;
   private installTotal_: number;
-
 
   private installComplete: BehaviorSubject<boolean> = new BehaviorSubject(false);
   private installProgress: BehaviorSubject<number> = new BehaviorSubject(-1);
@@ -47,6 +46,33 @@ export class LoadingService {
   get updateComplete$() { return this.updateComplete.pipe(filter(value => value), take(1)) }
   get updateProgress$() { return this.updateProgress.asObservable() }
   get updateTotal() { return Object.values(TOSDataSet).length }
+
+  async clear() {
+    // Clear cache
+    console.log('Clearing cache...');
+    await Promise
+      .all((await window.caches.keys())
+        .map(value => window.caches.delete(value)));
+
+    // Clear IndexedDB for the current region
+    console.log('Clearing IndexedDB...');
+    await Promise
+      .all(Object.values(TOSDataSet)
+        .map(value => new Promise((resolve) => {
+          let request = window.indexedDB.deleteDatabase(TOSRegionService.getUrl() + '/' + TOSDataSetService.toUrl(value));
+          request.onsuccess = () => resolve();
+        })));
+
+    // Clear version
+    console.log('Clearing version...');
+    this.update.updateVersion(true);
+
+    // Unregister service worker
+    console.log('Unregistering service worker...');
+    await Promise.all((await navigator.serviceWorker.getRegistrations()).map(value => value.unregister()));
+
+    location.reload(true);
+  }
 
   private installCheck() {
     //console.log('installCheck');
@@ -105,23 +131,24 @@ export class LoadingService {
     let region = TOSRegionService.get();
     //console.log('updateCheck', region);
 
-    if (!this.update.updateAvailable(region))
+    if (!this.update.updateAvailable())
       return this.onUpdateComplete();
 
     this.updateProgress.next(0);
 
-    forkJoin(Object
+    // Load one at a time, for reliability
+    Promise.all(Object
       .values(TOSDataSet)
       .map(value =>
         this.domain
-          .load(value, region)
-          .pipe(tap(() => {
+          .load(value, region).toPromise()
+          .then(value => {
             //console.log('updateProgress', this.updateProgress.getValue() + 1);
             this.updateProgress.next(this.updateProgress.getValue() + 1);
             this.updateProgress.getValue() == this.updateTotal && this.onUpdateComplete();
-          }))
+          })
       )
-    ).subscribe(() => this.update.updateVersion(region));
+    ).then(value => this.update.updateVersion())
   }
 
   private onInstallComplete() {

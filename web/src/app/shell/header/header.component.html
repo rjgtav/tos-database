@@ -55,7 +55,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle tos-link" style="text-transform: initial;">
           {{ TOSRegionService.get() }}
-          <div class="dropdown-menu">
+          <div class="dropdown-menu dropdown-menu-right">
             <a *ngFor="let region of REGION" class="dropdown-item" style="text-transform: initial;"
                [href]="'#' + region"
                [ngClass]="{ 'active': TOSRegionService.get() == region }"
@@ -63,26 +63,19 @@
           </div>
         </a>
       </li>
-      <a class="nav-item nav-link ml-1 mr-1 d-none d-md-inline-block" href="http://feedback.userreport.com/e23e275c-deb8-4560-9434-070fc22b6208" rel="noopener" target="_blank" ngbTooltip="Feedback" placement="bottom">
-        <fa-icon [icon]="faCommentAlt"></fa-icon>
-      </a>
-      <a class="nav-item nav-link ml-1 mr-1 d-none d-md-inline-block" href="https://patreon.com/rjgtav" rel="noopener" target="_blank" ngbTooltip="Become a Patron" placement="bottom">
-        <fa-icon [icon]="faPatreon"></fa-icon>
-      </a>
-      <a class="nav-item nav-link ml-1 mr-1" (click)="theme.toggle()" ngbTooltip="Toggle Theme" placement="bottom">
+      <a class="nav-item nav-link ml-1 mr-1" (click)="theme.toggle()" [ngbTooltip]="(theme.is(Theme.LIGHT) ? 'Dark' : 'Light') + ' Theme'" placement="bottom">
         <fa-icon [icon]="theme.is(Theme.LIGHT) ? faMoon : faSun"></fa-icon>
-      </a>
-      <a class="nav-item nav-link ml-1 mr-1" href="https://github.com/rjgtav/tos-database" rel="noopener" target="_blank">
-        <fa-icon [icon]="faGithub" [size]="'2x'"></fa-icon>
       </a>
     </ul>
   </div>
 
 </nav>
 
-<a class="text-white" href="#update" *ngIf="isUpdateAvailable" (click)="update($event)">
-  <div class="bg-info text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100">
-    A new version is available. Refresh to update
-  </div>
+<div class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-secondary" *ngIf="isUpdateCheck && !isUpdateAvailable">
+  Checking for updates...
+</div>
+<a class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-info d-block" *ngIf="isUpdateAvailable"
+   href="#update" (click)="update($event)">
+  A new version is available. Refresh to update
 </a>
 
