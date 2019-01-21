@@ -858,7 +858,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640294,Drug_DarkAtk_PC_02,캐릭터에 대한 어둠 속성 스킬 공격력이 5분간 중첩당 +7%씩 강해집니다. 최대 10중첩까지 가능합니다.,icon_item_seed_rr1,,,,,,공격 강화 포션:어둠 Lv2,32,0.0,0.0,FFTF,6,3.0
 640296,jexpCard_UpRank9,,,,,,,,기능 없음,0,0.0,0.0,FFFF,6,0.0
 640297,Achieve_TheGiftedArtist,크리스마스 아티스트 칭호를 얻을 수 있는 칭호 아이템입니다. 아이템 우클릭으로 사용하여 칭호를 획득할 수 있습니다.,icon_item_holyark,,,,,,칭호 - 크리스마스 아티스트,0,0.0,0.0,FFFF,6,0.0
-640302,Drug_Fortunecookie,"30분간 중첩에 따라 경험치, 이동속도, 최대HP가 증가하며, 최대 5중첩까지 가능합니다. 2월 22일 점검 시, 일괄 삭제됩니다.",icon_item_fortunecookie,,,,,,포춘 쿠키,0,10.0,0.0,FFFF,6,0.0
+640302,Drug_Fortunecookie,"30분간 중첩에 따라 경험치, 이동속도, 최대HP가 증가하며, 최대 5중첩까지 가능합니다. 2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_fortunecookie,,,,,,포춘 쿠키,0,10.0,0.0,FFFF,6,0.0
 640303,Drug_Valentine_Choco,"30분간 중첩에 따라 경험치 획득량과 이동속도가 증가하며, 최대 5중첩까지 가능합니다.",icon_item_chocolatebox,,,,,,발렌타인 초콜릿,0,10.0,0.0,FFFF,6,0.0
 640304,Achieve_Valentine2017_1,달콤한 인생 칭호를 얻을 수 있는 칭호 아이템입니다. 아이템 우클릭으로 사용하여 칭호를 획득할 수 있습니다.,icon_item_holyark,,,,,,칭호 - 달콤한 인생,0,0.0,0.0,FFFF,6,0.0
 640305,Achieve_Valentine2017_2,다이어트 내일부터 칭호를 얻을 수 있는 칭호 아이템입니다. 아이템 우클릭으로 사용하여 칭호를 획득할 수 있습니다.,icon_item_holyark,,,,,,칭호 - 다이어트 내일부터,0,0.0,0.0,FFFF,6,0.0
@@ -1290,6 +1290,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 643027,Transcend_Scroll_5_Event,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.{nl}1월 24일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,19,1.0
 643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다.{nl}랜덤 옵션 장비에만 사용할 수 있습니다. {nl} - 1월 31일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,[Rebuild] 100% 아이커 추출 키트: 랜덤 옵션,0,0.0,0.0,FFTF,15,4.0
 643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다.{nl}제작 유니크 장비에만 사용할 수 있습니다. {nl} - 1월 31일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,[Rebuild] 100% 아이커 추출 키트: 제작,0,0.0,0.0,FFTF,15,4.0
+643030,Transcend_Scroll_5_Event_2,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,19,1.0
 645001,Mic,목소리를 크게 키워줍니다.{nl}[/y 채팅내용] 으로 모든 지역에 채팅 내용을 보여줄 수 있습니다.,icon_item_mike,,,,,,확성기,0,0.0,0.0,FFFT,19,0.0
 645002,D_Bube_Mane,수정에 오래 노출된 부베들에게서만 얻을 수 있는 어두운 마석,icon_item_evilenergy_piece,,,,,,부베 마석,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,달콤한 향이 나는 꽃잎입니다. 하나밍에게서 획득합니다.,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,"[2001, 30102]",,하나밍 꽃잎,1,0.0,0.0,TTTT,15,1.0
@@ -1428,7 +1429,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 645265,misc_hanaming3,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_crystal_red,,,,,,하나밍의 결정,2,0.0,0.0,TTTT,15,1.0
 645266,misc_bokchoy2,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_onionroot,,,,,,치넨시 뿌리,2,0.0,0.0,TTTT,15,1.0
 645267,misc_infroRocktor2,껍질만 단단한 것이 아닙니다. 속도 튼튼합니다. 인프로 락터에게서 획득합니다.,icon_item_bone,"[642004, 642018]",,,"[15021, 16020]",,인프로 락터의 뼈,158,0.0,0.0,TTTT,15,1.0
-645268,misc_talt,몬스터들에게서 발견되는 정체불명의 보석입니다. 신비로운 빛깔로인해 수집가들이 많이 찾고있습니다. 길드를 성장시키는데 이용됩니다.,30_item_ore_talt,[642002],"[642906, 642901, 642902, 642903, 642904, 642905, 642907, 642908, 642909, 642910, 642913, 642911, 642914, 642914, 642915, 642915, 642918, 642919, 642920, 642921, 642922, 642924, 642924, 642923, 642923, 642925, 642925, 642928, 642928]",,"[3023, 3024, 3025]",,탈트,5000,0.0,0.0,TTTT,15,10.0
+645268,misc_talt,몬스터들에게서 발견되는 정체불명의 보석입니다. 신비로운 빛깔로인해 수집가들이 많이 찾고있습니다. 길드를 성장시키는데 이용됩니다.,30_item_ore_talt,[642002],"[642906, 642901, 642902, 642903, 642904, 642905, 642907, 642908, 642909, 642910, 642913, 642911, 642914, 642914, 642915, 642915, 642918, 642919, 642920, 642921, 642922, 642924, 642924, 642923, 642923, 642925, 642925, 642928, 642928, 642940, 642942, 642943, 642944, 642941]",,"[3023, 3024, 3025]",,탈트,5000,0.0,0.0,TTTT,15,10.0
 645269,misc_chupacabra2,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc_00007,"[642019, 642118]",,,"[30067, 35056, 35075, 35097]",,츄파카브라 가죽,8,0.0,0.0,TTTT,15,1.0
 645270,misc_chupacabra3,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_quest_00017,,,,,,츄파카브라 눈알,2,0.0,0.0,TTTT,15,1.0
 645271,misc_popolion2,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_bone,,,,,,포포리온의 뼈,2,0.0,0.0,TTTT,15,1.0
@@ -2201,9 +2202,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 647008,misc_0527,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc_0527,,,,"[50011, 50025, 50027, 50031, 400058, 400060, 400062, 400063]",,니코폴리스 펠라인,25,0.0,0.0,TTTT,15,1.0
 647009,misc_0528,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc_0529,,,,"[30569, 30571, 30573, 50004, 50018, 50020, 50022, 400037, 400038, 400039, 400040]",,로열 블레이드 파편,25,0.0,0.0,TTTT,15,1.0
 647010,misc_0529,하시사스 포션입니다. 마시면 일시적으로 신체 능력을 향상시켜 줍니다.,icon_item_misc04_112,,,,,,하시사스 포션,25,0.0,0.0,FFFF,15,1.0
-647011,misc_0530,고급 장비 제작 및 인장 강화에 사용되는 매우 희귀한 재료입니다.,icon_item_misc_misc_0530,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089]",,마정석,25,0.0,0.0,TTTT,15,1.0
+647011,misc_0530,고급 장비 제작 및 인장 강화에 사용되는 매우 희귀한 재료입니다.,icon_item_misc_misc_0530,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089, 34090, 34091, 34092, 34093]",,마정석,25,0.0,0.0,TTTT,15,1.0
 647012,misc_gemExpStone_randomQuest4_14d_Team,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFT,15,1.0
 647013,PVP_Misc_1_KOR_Reward,"콜로니전 승리를 기념하는 주화입니다.{nl}콜로니전 마켓 세금 보상을 대체해 지급되는 아이템입니다.{nl}2월 14일 점검 시, 일괄 삭제됩니다.",icon_item_coin_colony_01,,,,,,콜로니전 기념 주화 [보상용],100000,0.0,0.0,FFTT,15,1.0
+647014,misc_0531,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_iredian_misc01,,,,"[34090, 34091, 34092, 34093]",,이레디안 브로치,0,0.0,0.0,TTTT,15,1.0
+647015,misc_0532,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_iredian_misc02,,,,"[34090, 34091, 34092, 34093]",,이레디안 수정 조각,0,0.0,0.0,TTTT,15,1.0
 648501,emoticonItem_1,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 케파(기쁨),0,0.0,0.0,FFFF,6,1.0
 648502,emoticonItem_2,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 케파(슬픔),0,0.0,0.0,FFFF,6,1.0
 648503,kupole_emotion01,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 큐폴(데헷),0,0.0,0.0,FFFT,6,1.0
@@ -5877,7 +5880,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900311,Event_1705_Corsair_Potion,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}6월 22일 점검 시, 일괄 삭제됩니다.{nl}사용 시 1시간 동안 이동 속도 +5",icon_item_cprsair_potion,,,,,,해적단 포션,0,0.0,0.0,FFFT,8,1.0
 900313,Event_1705_Schwarzereiter_Paper,"황금노래 용병단에 요청한 의뢰가 완료되었음을 증명함.{nl}6월 29일 점검 시, 일괄 삭제됩니다.",icon_item_indulgence,,,,,,의뢰완료 확인증,1,0.0,0.0,FFFT,8,1.0
 900314,Event_1705_Schwarzereiter_Potion,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}1시간 동안 최대 HP +3000{nl}7월 6일 점검 시, 일괄 삭제됩니다.",icon_item_goldenmusic_potion,,,,,,황금노래 용병단원 포션,0,0.0,0.0,FFFT,8,1.0
-900315,Event_1706_Monk_Potion,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}1시간 동안 물리,마법 공격력 +100{nl}2월 22일 점검 시, 일괄 삭제됩니다.",icon_item_offensive_potion,,,,,,수행자의 포션,0,5.0,0.0,FFFT,8,1.0
+900315,Event_1706_Monk_Potion,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}1시간 동안 물리,마법 공격력 +100{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_offensive_potion,,,,,,수행자의 포션,0,5.0,0.0,FFFT,8,1.0
 900324,Event_Danoh_Item_1,"5분 동안 물리,마법 공격력을 +100 상승시켜줍니다.{nl}죽엽, 돼지고기, 찹쌀, 표고버섯, 쫑쯔 레서피와 함께 쫑쯔를 만들 수 있습니다.",icon_item_grassbladeg,,,,[40018],,죽엽,0,300.0,0.0,FFFT,6,1.0
 900325,Event_Danoh_Item_2,"5분 동안 물리,마법 공격력을 +100 상승시켜줍니다..{nl}죽엽, 돼지고기, 찹쌀, 표고버섯, 쫑쯔 레서피와 함께 쫑쯔를 만들 수 있습니다.",icon_item_meat_01,,,,[40018],,돼지고기,0,300.0,0.0,FFFT,6,1.0
 900326,Event_Danoh_Item_3,"15초 동안 2초 간격으로 매회 HP와 SP를 500 회복시켜줍니다.{nl}죽엽, 돼지고기, 찹쌀, 표고버섯, 쫑쯔 레서피와 함께 쫑쯔를 만들 수 있습니다.",icon_item_ricepowder,,,,[40018],,찹쌀,0,30.0,0.0,FFFT,6,1.0
@@ -5933,11 +5936,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902001,Event_1709_NewField_Coupon,"10분 동안 이동속도 +2, 물리 공격력 +50, 마법 공격력 +50 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.{nl}초대 이벤트 도우미에게 초대의 큐브로 교환 받으실 수 있습니다.{nl}11월 9일 점검 시, 일괄 삭제됩니다.",icon_item_gem_elemental17,,,,,,초대의 증표,0,30.0,0.0,FFFT,6,0.0
 902002,Event_1709_NewField_Cube,"11월 9일 점검 시, 일괄 삭제됩니다.",icon_item_eventcube3,,,,,,초대의 큐브,0,0.0,0.0,FFFT,8,0.0
 902003,Event_1709_NewField_Potion,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}11월 9일 점검 시, 일괄 삭제됩니다.{nl}사용 시 30분 동안 이동 속도 +3",item_speed_requid_3,,,,,,초대의 포션,0,0.0,0.0,FFFT,8,1.0
-902006,Event_Special_Blueorb,"사용시 아군 몬스터를 소환합니다.{nl}'이벤트 미션'에서만 사용 가능합니다.{nl}2월 22일 점검 시, 일괄 삭제됩니다.",icon_item_core_blue,,,,,,특별한 푸른 구슬,0,360.0,0.0,FFFT,8,1.0
-902007,Event_Special_Trap,"사용시 포획용 덫이 설치됩니다.{nl}2월 22일 점검 시, 일괄 삭제됩니다.",icon_item_pilgrim_trap,,,,,,특별한 포획용 덫,0,30.0,0.0,FFFT,8,1.0
+902006,Event_Special_Blueorb,"사용시 아군 몬스터를 소환합니다.{nl}'이벤트 미션'에서만 사용 가능합니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_core_blue,,,,,,특별한 푸른 구슬,0,360.0,0.0,FFFT,8,1.0
+902007,Event_Special_Trap,"사용시 포획용 덫이 설치됩니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_pilgrim_trap,,,,,,특별한 포획용 덫,0,30.0,0.0,FFFT,8,1.0
 902008,Event_1709_NewField_Box,초대에 응한 자 코스튬이 들어있는 상자입니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.,icon_item_giftbox_4,,,,,,초대에 응한 자 코스튬 상자,0,0.0,0.0,FFFT,8,1.0
-902009,Event_Special_Etcitem,"이벤트 재료 아이템입니다.{nl}포획한 몬스터 레벨을 증가시킬 수 있습니다.{nl}2월 22일 점검 시, 일괄 삭제됩니다.",icon_item_panto_core,,,,,,몬스터의 기운,0,0.0,0.0,TTFT,15,1.0
-902021,Event_Special_Etcitem2,"이벤트 재료 아이템입니다.{nl}쓸모있는 아이템으로 교환이 가능합니다.{nl}2월 22일 점검 시, 일괄 삭제됩니다.",rootcrystal_piece,,,,,,푸른색 조각,0,0.0,0.0,FFFT,8,1.0
+902009,Event_Special_Etcitem,"이벤트 재료 아이템입니다.{nl}포획한 몬스터 레벨을 증가시킬 수 있습니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_panto_core,,,,,,몬스터의 기운,0,0.0,0.0,FFFT,15,1.0
+902021,Event_Special_Etcitem2,"이벤트 재료 아이템입니다.{nl}쓸모있는 아이템으로 교환이 가능합니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",rootcrystal_piece,,,,,,푸른색 조각,0,0.0,0.0,FFFT,8,1.0
 902022,Event_Halloween_Squib,할로윈 축제를 위한 폭죽입니다. 마우스 우클릭으로 사용할 수 있습니다.,icon_item_firework,,,,,,할로윈 폭죽,0,3.0,0.0,FFFT,6,1.0
 902023,AGARIO_CANDY_REWARD,"기묘한 호박 모양 사탕. 이벤트 던전에서 얻을 수 있다.{nl}12월 7일 점검 시, 일괄 삭제됩니다.",icon_item_halloweencandy_set,,,,,,기묘한 사탕,10,0.0,0.0,FFFT,8,0.0
 902024,EVENT_1706_FREE_RANKRESET_REWARD_6RANKBOX,"마우스 오른쪽 버튼 클릭으로 사용합니다.1레벨에서만 사용 가능합니다.{nl}12월 7일 점검 시, 일괄 삭제됩니다.",icon_item_classsolution_box,,,,,,6랭크 레벨업 상자,0,0.0,0.0,FFFT,8,1.0
@@ -5950,7 +5953,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902045,EVENT_1712_XMAS_CUBE,"크리스마스 이벤트용 아이템입니다.{nl}12월24일, 25일 레티샤 옆에 생성되는 '레티샤의 성탄 선물' NPC에게 가지고 가면 보상 아이템을 받으실 수 있습니다.{nl}12월 28일 점검 시, 일괄 삭제됩니다.",icon_item_key5,,,,,,성탄 선물 열쇠,0,0.0,0.0,FFFT,8,1.0
 902046,Snow_Card_Book,눈 덮인 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}100레벨 이상 사용가능{nl}사용시 330LV의 보스 몬스터가 소환됩니다. 소환된 보스는 10분 후 사라집니다.{nl}필드에서만 사용할 수 있습니다.,icon_item_chrismas_card,,,,,,눈 덮인 몬스터 카드첩,0,60.0,0.0,FFFT,6,10.0
 902047,EVENT_1712_NEWYEAR_CARD,구원자님께 드리는 2018년 연하장입니다.,icon_item_event_invitation2,,,,,,연하장,1,0.0,0.0,FFFT,8,1.0
-902060,EVENT_1801_ORB_MISSION_KEY,"특별한 실험 미션에서 필요한 아이템 입니다.{nl}이벤트 알림판이 하루에 한번 지급합니다.{nl}2월 22일 점검 시, 일괄 삭제됩니다.",icon_item_annycoin_1,,,,,,푸른 구슬 던전 주화,0,0.0,0.0,FFFT,15,1.0
+902060,EVENT_1801_ORB_MISSION_KEY,"특별한 실험 미션에서 필요한 아이템 입니다.{nl}이벤트 알림판이 하루에 한번 지급합니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_annycoin_1,,,,,,푸른 구슬 던전 주화,0,0.0,0.0,FFFT,15,1.0
 902071,EVENT_1802_NEWYEAR_GOLDCOIN,"황금개의 이벤트 상점을 이용 시 사용합니다.3월 8일 점검 시, 일괄 삭제됩니다.",icon_item_goldcoin_event,,,,,,무술년 황금 코인,0,0.0,0.0,TFFT,15,1.0
 902072,EVENT_1802_NEWYEAR_FORTUNEPOUCH,"황금개가 선물하는 복주머니 입니다.사용 시 '무술년 황금 코인'을 획득합니다.3월 8일 점검 시, 일괄 삭제됩니다.",icon_item_fortunepouch,,,,,,무술년 복주머니,0,3.0,0.0,FFFT,6,1.0
 902073,EVENT_1802_NEWYEAR_ACHIEVE,"황금개가 선물하는 칭호 상자 입니다.3월 8일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,칭호 - 2018 대박맞은,0,0.0,0.0,FFFT,6,0.0
@@ -6061,8 +6064,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904108,EVENT_1811_NEWCLASS_BOX_OUL,아웃로 데스페라도 어타이어 코스튬이 들어있는 상자입니다.{nl}아웃로로 전직해야 사용 가능합니다.{nl}상자에서 획득한 코스튬은 팀창고를 사용할 수 없습니다. ,icon_item_jewelrybox,,,,,,아웃로 데스페라도 어타이어 코스튬 상자,0,0.0,0.0,FFFT,6,0.0
 904109,EVENT_1811_KUPOLE_COIN,"[Re:Build] 다이나의 특별 상점 이벤트 아이템입니다. NPC에게 전달해 이벤트에 참여하실 수 있습니다.{nl} 1월 24일 점검 시, 일괄 삭제됩니다.",icon_item_rebuild_coin,,,,,,[Re:Build] 기념 주화,0,0.0,0.0,FFFT,15,0.1
 904110,Costume_Exchange_Coupon,TP 상점 중 계열 코스튬 교환 탭에서 원하는 코스튬으로 교환할 수 있는 교환권입니다.,icon_item_exchange_costumecoupon,,,,,,계열 코스튬 교환권,0,0.0,0.0,FFFT,15,0.0
-904112,EVENT_1812_GILTINE_EQUIPITEM_BOX_1,사용 시 리스트 중 원하시는 제작서가 지급됩니다.,icon_item_event_recipebox1,,,,,,아시오 무기 제작서 선택상자,0,0.0,0.0,FFFT,19,1.0
-904113,EVENT_1812_GILTINE_EQUIPITEM_BOX_2,사용 시 리스트 중 원하시는 제작서가 지급됩니다.,icon_item_event_recipebox2,,,,,,웨이스트럴 무기 제작서 선택상자,0,0.0,0.0,FFFT,19,1.0
+904112,EVENT_1812_GILTINE_EQUIPITEM_BOX_1,"사용 시 리스트 중 원하시는 제작서가 지급됩니다.{nl}2/21(목) 점검 시, 일괄 삭제됩니다.",icon_item_event_recipebox1,,,,,,아시오 무기 제작서 선택상자,0,0.0,0.0,FFFT,19,1.0
+904113,EVENT_1812_GILTINE_EQUIPITEM_BOX_2,"사용 시 리스트 중 원하시는 제작서가 지급됩니다.{nl}2/21(목) 점검 시, 일괄 삭제됩니다.",icon_item_event_recipebox2,,,,,,웨이스트럴 무기 제작서 선택상자,0,0.0,0.0,FFFT,19,1.0
 904114,EVENT_1812_GILTINE_REWARD_BOX,"길티네 여신께서 전해준 선물이 담겨있습니다.{nl} 1월 24일 점검 시, 일괄 삭제됩니다.",icon_item_event_giltinebox,,,,,,길티네의 선물 상자,0,0.0,0.0,FFFT,8,1.0
 904116,KEDORA_40LV_WEAPON_BOX,사용 시 케도라 상단의 지원품 중 원하시는 장비가 지급됩니다.,icon_item_event_weaponbox1,,,,,,"케도라 상단의 지원 선택상자 (40레벨 무기, 방패)",0,0.0,0.0,FFFF,19,1.0
 904117,KEDORA_40LV_ARMOR_BOX,사용 시 케도라 상단의 지원품 중 원하시는 장비가 지급됩니다.,icon_item_event_armorbox1,,,,,,케도라 상단의 지원 선택상자 (40레벨 방어구),0,0.0,0.0,FFFF,19,1.0
@@ -6078,10 +6081,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904128,EVENT_1812_DAYCHECK_BALLOONBOX,"3주년 기념 출석체크 이벤트용 풍선 꾸러미 입니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_event_balloonbox,,,,,,3주년 풍선 꾸러미,0,0.0,0.0,FFFT,8,1.0
 904130,EVENT_1812_XMAS_WEAPON_BOX,"사용 시 [이벤트]웨이스트럴, 아시오 제작서 중 원하시는 제작서가 지급됩니다.{nl}제작한 웨이스트럴, 아시오 장비는 아이커 추출이 불가능 합니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_event_recipebox2,,,,,,[Re:Build] 380 유니크 무기 제작서 선택 상자,0,0.0,0.0,FFFT,19,1.0
 904131,EVENT_1812_XMAS_PENGUIN_BOX,"사용 시 다양한 펭귄 컴패니언 중 원하시는 펭귄 알이 지급됩니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_event_penguinbox,,,,,,[Re:Build] 펭귄 선택 상자,0,0.0,0.0,FFFT,19,1.0
-904132,EVENT_RankReset_Point_Lv3,"클래스 변경 포인트가 1,000 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_rankreset_paper_3,,,,,,[Re:Build] 클래스 변경권 Lv.3,0,0.0,0.0,FFFT,19,0.0
+904132,EVENT_RankReset_Point_Lv3,"클래스 변경 포인트가 1,000 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_rankreset_paper_3,,,,,,[이벤트] 클래스 변경권 Lv.3,0,0.0,0.0,FFFT,19,0.0
 904133,EVENT_190110_3DAY_BOX,"작심삼일 이벤트를 수행하여 받은 보상 상자입니다. 사용 시, 아이템을 획득할 수 있습니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_happybox_blue,,,,,,[이벤트]작심삼일 상자,0,0.0,0.0,FFFT,8,1.0
 904134,EVENT_190110_GOLDPIG_BOX,"황금돼지 이벤트를 수행하여 받은 보상 상자입니다. 사용 시, 아이템을 획득할 수 있습니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_happybox_red,,,,,,[이벤트]황금돼지 상자,0,0.0,0.0,FFFT,8,1.0
 904135,EVENT_190110_RankReset_Point_Lv1,"클래스 변경 포인트가 100 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_3,,,,,,클래스 변경권 Lv.1 (14일),0,0.0,1209600.0,FFFT,8,0.0
+904136,EVENT_LAB_1901_ACHIEVE_BOX,TOS 4기 연구원에게 주어지는 칭호,icon_item_holyark,,,,,,칭호 - TOS 4기 연구원,0,0.0,0.0,FFFT,6,1.0
+904137,EVENT_190124_RankReset_Point_Lv2,"클래스 변경 포인트가 500 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_2,,,,,,[이벤트]클래스 변경권 Lv.2(14일),0,0.0,1209600.0,FFFT,8,0.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,스킬 주문서,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,새싹,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,시든 식물,1,0.0,0.0,TTTT,15,1.0
