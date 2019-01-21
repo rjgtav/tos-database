@@ -43,7 +43,7 @@ export class LoadingComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.zone.runOutsideAngular(() => this.isClearCacheAvailableTimeout = setTimeout(() => {
         this.isClearCacheAvailable = true;
-        this.changeDetector.markForCheck();
+        this.changeDetector.detectChanges();
       }, 5 * 1000
     ));
   }
