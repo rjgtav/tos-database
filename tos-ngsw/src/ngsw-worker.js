@@ -2716,6 +2716,20 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
     return result;
   };
 
+  const HotFix_newRequest = (adapter, req, url) => {
+    return adapter.newRequest(url, {
+      method: req.method,
+      headers: req.headers,
+      body: req.body,
+      mode: req.mode,
+      credentials: req.credentials,
+      cache: req.cache,
+      redirect: req.redirect,
+      referrer: req.referrer,
+      integrity: req.integrity,
+    });
+  };
+
   const HotFix_safeFetch_Driver = (adapter, req) => {
     // CloudFlare's 'Ignore Query String' cache level only supports 'static' assets:
     // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
@@ -2723,7 +2737,7 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
 
     // Intercept only tos.guru related requests
     return url.indexOf(location.origin) === 0
-      ? adapter.newRequest(url)
+      ? HotFix_newRequest(adapter, req, url)
       : req;
   };
 
@@ -2737,7 +2751,7 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
           ? url + (url.indexOf('?') === -1 ? '?' : '&') + 'ngsw-hash=' + hashes.get(url)
           : url;
 
-    return adapter.newRequest(url);
+    return HotFix_newRequest(adapter, req, url);
   };
 
   const Polyfill_TextEncoder = () => {
