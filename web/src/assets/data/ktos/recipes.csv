@@ -58,8 +58,8 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Materials,Link_MonsterDrops,L
 9010,R_BlessedStone_1,icon_item_recipe_misc1,,,,,,,,Recipe - Unknown,10000,FFTF,21
 9011,R_BlessedStone_2,icon_item_recipe_misc1,,,,,,,,Recipe - Unknown,10000,FFTF,21
 9012,R_BlessedStone_3,icon_item_recipe_misc1,,,,,,,,Recipe - Unknown,10000,FFTF,21
-9013,R_Premium_boostToken02,icon_item_recipe_misc1,,,"[{""Item"": 9013, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}]",,[9013],,490094,Recipe - x4 경험의 서,100,FFTF,21
-9014,R_Premium_boostToken03,icon_item_recipe_misc1,,,"[{""Item"": 9014, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}]",,[9014],,490095,Recipe - x8 경험의 서,100,FFTF,21
+9013,R_Premium_boostToken02,icon_item_recipe_misc1,,,"[{""Item"": 9013, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}]",,[9013],,490094,Recipe - x4 경험의 서,50,FFTF,21
+9014,R_Premium_boostToken03,icon_item_recipe_misc1,,,"[{""Item"": 9014, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}]",,[9014],,490095,Recipe - x8 경험의 서,50,FFTF,21
 9015,R_misc_TruthMirror,icon_item_recipe_misc1,,,"[{""Item"": 9015, ""Quantity"": 1}, {""Item"": 645820, ""Quantity"": 8}]",,[9015],,645819,Recipe - 진실의 거울,199,FFFF,21
 9018,R_BlessedStone_Multi,icon_item_recipe_misc1,,,"[{""Item"": 9018, ""Quantity"": 1}, {""Item"": 645783, ""Quantity"": 10}]",,[9018],,646045,Recipe - 여신의 축복석,5000,FFFF,21
 9019,R_3CMLAKE262_SQ04,icon_item_recipe_misc1,,,"[{""Item"": 9019, ""Quantity"": 1}, {""Item"": 666180, ""Quantity"": 1}, {""Item"": 666182, ""Quantity"": 16}]",,[9019],,666181,Recipe - 마법 제거 폭탄,0,FFFF,21
@@ -897,6 +897,10 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Materials,Link_MonsterDrops,L
 34087,R_BRC05_002,icon_item_bracelet_misc5,,,"[{""Item"": 34087, ""Quantity"": 1}, {""Item"": 604110, ""Quantity"": 1}, {""Item"": 604117, ""Quantity"": 1}, {""Item"": 647011, ""Quantity"": 3}]",,[34087],,605002,Recipe - 드라코나스 카이트 무어 브레이슬릿,0,TTTT,21
 34088,R_BRC05_003,icon_item_bracelet_misc5,,,"[{""Item"": 34088, ""Quantity"": 1}, {""Item"": 604111, ""Quantity"": 1}, {""Item"": 604115, ""Quantity"": 1}, {""Item"": 647011, ""Quantity"": 3}]",,[34088],,605003,Recipe - 드라코나스 파시우테스 브레이슬릿,0,TTTT,21
 34089,R_BRC05_004,icon_item_bracelet_misc5,,,"[{""Item"": 34089, ""Quantity"": 1}, {""Item"": 604112, ""Quantity"": 1}, {""Item"": 603101, ""Quantity"": 1}, {""Item"": 647011, ""Quantity"": 3}]",,[34089],,605004,Recipe - 드라코나스 프리에노 브레이슬릿,0,TTTT,21
+34090,R_NECK04_118,icon_item_necklace_misc5,,,"[{""Item"": 34090, ""Quantity"": 1}, {""Item"": 647011, ""Quantity"": 2}, {""Item"": 647014, ""Quantity"": 37}, {""Item"": 647015, ""Quantity"": 60}]",,[34090],,584118,Recipe - 어비스 이레디안 네클리스,0,TTTT,21
+34091,R_BRC04_118,icon_item_bracelet_misc5,,,"[{""Item"": 34091, ""Quantity"": 1}, {""Item"": 647011, ""Quantity"": 1}, {""Item"": 647014, ""Quantity"": 20}, {""Item"": 647015, ""Quantity"": 50}]",,[34091],,604118,Recipe - 어비스 이레디안 브레이슬릿,0,TTTT,21
+34092,R_NECK04_119,icon_item_necklace_misc5,,,"[{""Item"": 34092, ""Quantity"": 1}, {""Item"": 647011, ""Quantity"": 2}, {""Item"": 647014, ""Quantity"": 37}, {""Item"": 647015, ""Quantity"": 60}]",,[34092],,584119,Recipe - 세비사 이레디안 네클리스,0,TTTT,21
+34093,R_BRC04_119,icon_item_bracelet_misc5,,,"[{""Item"": 34093, ""Quantity"": 1}, {""Item"": 647011, ""Quantity"": 1}, {""Item"": 647014, ""Quantity"": 20}, {""Item"": 647015, ""Quantity"": 50}]",,[34093],,604119,Recipe - 세비사 이레디안 브레이슬릿,0,TTTT,21
 35002,R_Hat_628024,icon_item_helm_misc1,,,"[{""Item"": 35002, ""Quantity"": 1}, {""Item"": 628023, ""Quantity"": 1}, {""Item"": 645153, ""Quantity"": 33}]",,[35002],,628024,Recipe - 둥지튼 병아리,500,TTTT,21
 35035,R_Hat_628052,icon_item_helm_misc1,,,"[{""Item"": 35035, ""Quantity"": 1}, {""Item"": 649002, ""Quantity"": 249}]",,[35035],,628052,Recipe - 강철 투구,500,TTTT,21
 35043,R_Hat_628043,icon_item_helm_misc1,,,"[{""Item"": 35043, ""Quantity"": 1}, {""Item"": 645134, ""Quantity"": 86}]",,[35043],,628043,Recipe - 산양 뿔,500,TTTT,21
