@@ -334,6 +334,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490340,Blue_Bunny_Box,使用すると、濃紺バニーボーイコスチューム(男)、濃紺バニーガールコスチューム(女)のどちらかを選択して獲得できます。,icon_item_blue_bunny_box,,,,,,濃紺バニーコスチューム選択ボックス,0,0.0,0.0,FFFT,19,1.0
 490380,2018_Christmas_Costume_Box1,使用すると、サンタコスチューム(男)、サンタコスチューム(女)のどちらかを選択して獲得できます。,icon_item_2018christmas_costume_box1,,,,,,サンタコスチューム選択箱,0,0.0,0.0,FFFT,19,1.0
 490381,2018_Christmas_Costume_Box2,使用すると、ゆきんこペンギンコスチューム、ゆきんこペンギンのかぶりものを選択して獲得できます。,icon_item_2018christmas_costume_box2,,,,,,ゆきんこペンギンコスチュームセット,0,0.0,0.0,FFFT,19,1.0
+490384,2019_goldPig_box,使用すると金ぴかピッグコスチューム、金ぴかピッグのかぶりものをどちらも獲得することができます。,icon_item_goldpig_box,,,,,,金ぴかピッグコスチュームセット,0,0.0,0.0,FFFT,19,1.0
 491026,Premium_Enchantchip_10,使用すると魔法付与スクロールを10個獲得します。右クリックで使用できます。,icon_item_enchantscroll_bundle,,,,,,魔法付与スクロール10個箱,0,0.0,0.0,FFFT,19,0.0
 491027,Mic_bundle10,使用するとメガホンを10個獲得します。右クリックで使用できます。,icon_item_mike_bundle,,,,,,メガホン10個箱,0,0.0,0.0,FFFF,19,0.0
 492001,Premium_eventTpBox_1,使用すると1TPを獲得します。,icon_item_tpbox_220,,,,,,1TP[プレゼント],0,0.0,0.0,FFFF,19,0.0
@@ -513,6 +514,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 495118,Beauty_HairCoupon_50_pc,ビューティショップ：ヘアサロンでヘアを購入する際、50%が割引されるクーポンです。{nl}他のヘア割引クーポンと重複して使用できません。,icon_item_haircoupon_50_pc,,,,,,[ネットカフェ] ヘア1回50%割引券,0,0.0,0.0,FFFT,19,1.0
 495119,Beauty_HairCoupon_100_pc,ビューティショップ：ヘアサロンでヘアを無料で利用できるクーポンです。{nl}他のヘア割引クーポンと重複して使用できません。,icon_item_haircoupon_100_pc,,,,,,[ネットカフェ] ヘア1回無料利用券,0,0.0,0.0,FFFT,19,1.0
 495120,Beauty_HairCoupon_100_30d,ビューティショップ：ヘアサロンでヘアを無料で利用できるクーポンです。{nl}他のヘア割引クーポンと重複して使用できません。,icon_item_haircoupon_100,,,,,,ヘア1回無料利用券 (30日),0,0.0,0.0,FFFF,19,1.0
+495121,Premium_Enchantchip14_Team,ヘアコスチュームに使用すると、ランダムにオプションが追加されます。オプションは最大3個まで生成できます。着用している装備には使用できません。右クリックで使用できます。獲得から14日間使用可能です。,icon_item_enchantscroll,,,,,,魔法付与スクロール(14日),0,0.0,0.0,FFFT,19,0.0
 495122,Premium_Abillitypoint_14d_Team,キャラクターに適用された特性を初期化します。,icon_item_abillityreset,,,,,,特性初期化ポーション (14日),0,0.0,0.0,FFFT,19,0.0
 500000,Premium_Vakarine,右クリックで使用すると、箱の中身を獲得できます。使用すると、28日間1日1回接続した当日のアイテムを支給します。,icon_item_vakarine_box,,,,,,ヴァカリネパッケージ,0,0.0,0.0,FFFT,19,0.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,スタミナ+5アップポーション,200,0.0,0.0,FFFF,6,1.0
@@ -1124,8 +1126,6 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641966,Adventurebook_ThirdRank_Reward2_1d,"右クリックで使用します。{nl} - アルマジロ専用コンパニオン交換券×7枚{nl} - x4経験の書×3個{nl} - 特性ポイント1,000(冒険日誌報酬)×1個{nl} - インスタンスダンジョン倍数トークン×3個{nl} - 300,000シルバー",icon_item_giftbox_4,,,,,,冒険日誌11～100位ランキング報酬(1日),0,0.0,0.0,FFFF,6,0.0
 641967,Adventurebook_FourthRank_Reward2_1d,"右クリックで使用します。{nl} - アルマジロ専用コンパニオン交換券×5枚{nl} - x4経験の書×2個{nl} - 特性ポイント500(冒険日誌報酬)×1個{nl} - インスタンスダンジョン倍数トークン×2個{nl} - 200,000シルバー",icon_item_giftbox_4,,,,,,冒険日誌101～200位ランキング報酬(1日),0,0.0,0.0,FFFF,6,0.0
 641968,Adventurebook_FifthRank_Reward2_1d,"右クリックで使用します。{nl} - アルマジロ専用コンパニオン交換券×4枚{nl} - x4経験の書×1個{nl} - 特性ポイント100(冒険日誌報酬)×3個{nl} - 100,000シルバー",icon_item_giftbox_4,,,,,,冒険日誌201～300位ランキング報酬(1日),0,0.0,0.0,FFFF,6,0.0
-641969,GM_SilverBox_1000,"使用すると、1,000 x所持量のシルバーを獲得できます。",icon_item_silverbox1,,,,,,"エラー報酬用シルバー支給ボックス : 1,000",0,0.0,0.0,FFFF,6,0.0
-641970,GM_SilverBox_10000,"使用すると、10,000 x所持量のシルバーを獲得できます。",icon_item_silverbox1,,,,,,"エラー報酬用シルバー支給ボックス : 10,000",0,0.0,0.0,FFFF,6,0.0
 642501,Gacha_TP_001,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_randombox,,,,,,レティーシャのシークレットキューブ,0,0.0,0.0,FFFT,19,0.0
 642502,Gacha_EXP_001,使用するとLV2～LV10経験値カードをランダムで3枚獲得できます。,icon_item_quest_00017,,,,,,経験値カードボックス,0,0.0,0.0,FFFF,6,0.0
 642503,Gacha_Recipe_Wep,使用すると、LV220武器製造書をランダムで1枚獲得できます。,icon_item_luckybox_red,,,,,,Lv220製造書ボックス-武器,0,0.0,0.0,FFFF,6,0.0
@@ -1215,10 +1215,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 642594,Gacha_TP_120_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_summer_marine_box,,,,,,2018マリンキューブ(女),0,0.0,0.0,FFFT,19,0.0
 642595,Gacha_TP_119_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_summer_marine_box,,,,,,2018マリンキューブ(男)x10+1,0,0.0,0.0,FFFT,19,0.0
 642596,Gacha_TP_120_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_summer_marine_box,,,,,,2018マリンキューブ(女)x10+1,0,0.0,0.0,FFFT,19,0.0
-642597,Gacha_TP_121_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_chess_box01,,,,,,{@st66b}最適化(Beta){/},0,0.0,0.0,FFFT,19,0.0
-642598,Gacha_TP_122_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_chess_box01,,,,,,{@st59}最適化(Beta)を適用します。{/},0,0.0,0.0,FFFT,19,0.0
-642599,Gacha_TP_121_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_chess_box01,,,,,,でのみ使用可能です。{nl}イベント終了後に一括削除されます。,0,0.0,0.0,FFFT,19,0.0
-642600,Gacha_TP_122_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_chess_box01,,,,,,使用するとモンスターを捕獲する特製の罠を仕掛けます。{nl}イベント終了後に一括削除されます。,0,0.0,0.0,FFFT,19,0.0
+642597,Gacha_TP_121_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_chess_box01,,,,,,チェックメイトキューブ(男),0,0.0,0.0,FFFT,19,0.0
+642598,Gacha_TP_122_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_chess_box01,,,,,,チェックメイトキューブ(女),0,0.0,0.0,FFFT,19,0.0
+642599,Gacha_TP_121_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_chess_box01,,,,,,チェックメイトキューブ(男)x10+1,0,0.0,0.0,FFFT,19,0.0
+642600,Gacha_TP_122_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_chess_box01,,,,,,チェックメイトキューブ(女)x10+1,0,0.0,0.0,FFFT,19,0.0
 642708,Gacha_E_008,使用すると、任意のアイテムを獲得できます。,icon_item_luckybox_red,,,,,,レッドラッキーボックス,0,0.0,0.0,FFFF,6,0.0
 642709,Gacha_E_009,使用すると、任意のアイテムを獲得できます。,icon_item_luckybox_blue,,,,,,ブルーラッキーボックス,0,0.0,0.0,FFFF,6,0.0
 642710,Gacha_E_010,使用すると、任意のアイテムを獲得できます。,icon_item_luckybox_orange,,,,,,オレンジラッキーボックス,0,0.0,0.0,FFFF,6,0.0
@@ -2252,6 +2252,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 649702,egg_022,冒険日誌報酬であるコンパニオン交換券で獲得したドードーの卵。右クリックで使用するとすぐにコンパニオンとして登録されます。{nl}このコンパニオンはコンパニオン搭乗スキルが無くても乗ることができます。,icon_item_egg_mrdodo,,,,,,ドードーの卵,2000,30.0,0.0,FFTF,6,10.0
 649703,egg_023,右クリックで使用可能。使用するとすぐにコンパニオンに登録されます。{nl}登録したコンパニオンはコンパニオン搭乗スキルがなくても搭乗できます。{nl}このコンパニオンを連れているとキャラクターの炎属性追加ダメージが増加するバフを得ます。{nl}リサイクルショップでメダルと交換できます。,icon_item_egg_weddingbird,,,,,,フェアリーカーディナルの卵,2000,0.0,0.0,TTFT,19,10.0
 649704,egg_024,冒険日誌報酬であるコンパニオン交換券で獲得したぶちピッグの卵。右クリックで使用するとすぐにコンパニオンとして登録されます。{nl}このコンパニオンはコンパニオン搭乗スキルが無くても乗ることができます。,icon_item_egg_piggy_spotted,,,,,,ぶちピッグの卵,2000,30.0,0.0,FFTF,6,10.0
+649706,egg_gold_pig,右クリックで使用可能。使用するとすぐにコンパニオンに登録されます。{nl}登録したコンパニオンはコンパニオン搭乗スキルがなくても搭乗できます。{nl}このコンパニオンを連れているとルーティングチャンスが+777がアップします。,item_icon_gold_pig,,,,,,金ぴかピッグの卵,2000,0.0,0.0,TTFT,19,10.0
 650011,Return_Scroll,記憶された地点に瞬間移動できる宝珠です。{nl}15分毎に1回使えます。,icon_item_orb_1,,,,,,望郷の玉,0,90.0,0.0,FFFF,20,0.0
 650012,Escape_Orb,現在いる地域内の一定の位置へ移動可能。右クリックで使用できます。クールタイム15分。,mercenarybadge,,,,,,帰還石,0,900.0,0.0,FFFF,15,0.0
 650013,Escape_Orb_orsha,現在いる地域内の一定の位置へ移動可能。右クリックで使用できます。クールタイム15分。,mercenarybadge,,,,,,帰還石,0,900.0,0.0,FFFF,15,0.0
@@ -3987,7 +3988,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 666237,MASTER_SAGE1_ITEM03,セージマスターが探している本。内容を読むことはできません。,icon_item_collection_00basic,,,,,,空間の書,0,10.0,0.0,FFFF,20,0.0
 667000,CATACOMB_33_1_SQ_04_FIRE,シギスからもらったマッチ。死者を火葬する時に使う。,icon_item_rod,,,,,,墓守のマッチ,0,5.0,0.0,FFFF,20,0.0
 667001,CATACOMB_33_1_SQ_05_DOLL,墓守の呪術が宿った人形。,icon_item_strawdoll1,,,,,,墓守のシャーマンドール,0,5.0,0.0,FFFF,20,0.0
-667002,CATACOMB_33_2_SQ_02_ORB,蘇った亡者から生前の思念を吸収する霊石。,icon_item_spirit_green,,,,,,思念石,0,20.0,0.0,FFFF,20,0.0
+667002,CATACOMB_33_2_SQ_02_ORB,蘇った亡者から生前の思念を吸収する霊石。,icon_item_spirit_green,,,,,,ETC_20150904_014445,0,20.0,0.0,FFFF,20,0.0
 667003,CATACOMB_33_2_SQ_03_BURN,簡単に火がつく性質の石。扱う時は火がつかないように注意する必要があります。,icon_item_misc_00004,,,,,,ギンタスの火打石,0,5.0,0.0,FFFF,20,0.0
 667004,CATACOMB_33_2_SQ_SYMBOL,思念に満ちた思念石。これを持って行けばマルギリスが教団の一員として認めてくれるそうです。,icon_item_spirit_green,,,,,,満たされた思念石,0,5.0,0.0,FFFF,20,0.0
 667005,CATACOMB_33_2_SQ_DOC,カリス地方の荘園所有者の名前が記載された名簿。火で燃やすには焚き火が必要です。,icon_item_collection_00basic,,,,,,荘園所有者名簿,0,5.0,0.0,FFFF,20,0.0
@@ -5706,7 +5707,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900131,Event_160908_6,豪華な材料を使って作った大王松餅。甘くて香ばしい香りが食欲をそそります。{nl}30分間PTメンバー全員の移動速度+4、広域攻撃比率+1、経験値25%アップさせます。,icon_item_large_songpyeon,,,,,[3027],大王松餅,0,1800.0,0.0,TTTT,6,1.0
 900132,Event_160908_7,豪華な材料をふんだんに使った大王蜜松餅。甘くて香ばしい香りが食欲をそそります。{nl}30分間PTメンバー全員の移動速度 +4、広域攻撃比率+1、経験値25%アップさせます。{nl} - 大盛りお雑煮とは重複されません。,icon_item_largehoney_songpyeon,,,,,,大王蜜松餅,0,1800.0,0.0,TTTT,6,1.0
 900136,Event_160929_4,15秒間、2秒間隔でHPとSPを512回復させます。右クリックで使用します。クールタイム100秒。,item_hpsp_potion_1,,,,,,アイシクル回復ポーションLV1[イベント],0,100.0,0.0,FFFF,6,20.0
-900137,Event_161027_2,ITEM_20170309_013725,icon_item_pumpkin,,,,,,カボチャキャンディ,0,1800.0,0.0,FFTF,6,1.0
+900137,Event_161027_2,,icon_item_pumpkin,,,,,,カボチャキャンディ,0,1800.0,0.0,FFTF,6,1.0
 900138,Event_161027_1,ジャック・オー・ランタン型のハロウィーンキューブです。マウス右ボタンクリックでアイテムを獲得することができます。(12月15日に一括削除されます),icon_item_event_halloweencube,,,,,,ハロウィーンキューブ,0,2.0,0.0,FFFF,8,0.0
 900139,Event_161025_poporion,ポポリオンぬいぐるみの抽選券。詳しい内容はお知らせをご確認ください。,icon_item_indulgence,,,,,,ポポリオンぬいぐるみ抽選券,1,0.0,0.0,FFFF,8,0.0
 900140,Event_161110_1,合格を願う気持ちが込められた合格の飴。ベタベタとくっつく飴のように、志望校にくっつくという意味を示します。30分間獲得する経験値が30%アップする効果があります。右クリックで使用します。(12月14日のメンテナンスで一括削除されます。),icon_item_event_candy,,,,,,合格の飴,0,1800.0,0.0,FFTF,6,1.0
@@ -5958,6 +5959,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902132,Event_Steam_Fishing_BOX6,380レベル未鑑定ユニーク装備アイテムを獲得することができます。{nl}獲得した装備アイテムは無制限ですべての取り引きが可能です。,icon_item_event_armorbox1,,,,,,未鑑定ユニークブーツ選択箱,0,0.0,0.0,FFFT,8,0.0
 902135,Achieve_Event_Happy_Ever_After,いつまでも幸せに暮らしましたとさ,icon_item_holyark,,,,,,Title - Happy Ever After,0,0.0,0.0,FFFT,6,0.0
 902136,Achieve_Event_Wonderful_ToS_life,この素晴らしき世界,icon_item_holyark,,,,,,Title - Wonderful ToS life,0,0.0,0.0,FFFT,6,0.0
+902142,Achieve_Event_Gold_Pig_JP,ファインディングピッグイベントでたくさんの豚を捕まえた猛者に送られる称号です。,icon_item_holyark,,,,,,称号 - 豚を追い求める者,0,0.0,0.0,FFFT,6,0.0
 904000,EVENT_1802_MASTER_KEY1,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_1,,,,,,マスターの試験券(初級),0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,マスターの訓練報酬としてもらったアイテムです。{nl}5個以上集めるとマスターの試験イベントガイドが無限の可能性のキューブと交換してくれます,icon_item_gimmick_spcrystal,,,,,,小さな可能性の欠片,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_2,,,,,,マスターの試験券(中級),0,0.0,0.0,FFFT,15,1.0
@@ -6039,6 +6041,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904094,EVENT_1809_CHUSEOK_MOON_ACHIEVE_BOX,満月育成大作戦でもらえる称号ボックスです。,icon_item_holyark,,,,,,称号 - 月よ月よ明るい月よ,0,0.0,0.0,FFFT,6,1.0
 904097,EVENT_1810_FALL_MAPLE_LEAF,紅葉祭りイベントアイテムです。NPCに渡して参加報酬と交換することができます。{nl} 10月25日のメンテナンスで一括削除されます。,icon_item_1810_fall1,,,,,,大きな紅葉の葉っぱ,0,0.0,0.0,FFFT,15,0.1
 904098,EVENT_1810_FALL_GINKGO_LEAF,紅葉祭りイベントアイテムです。NPCに渡して参加報酬と交換することができます。{nl} 10月25日のメンテナンスで一括削除されます。,icon_item_1810_fall2,,,,,,大きな黄金紅葉の葉っぱ,0,0.0,0.0,FFFT,15,0.1
+904100,Ability_Point_Stone_1000_14d_Team,"使用すると、特性ポイントが1,000増加します。右クリックで使用します。",icon_item_abilitypoint,,,,,,"特性ポイント1,000 (14日)",0,0.0,0.0,FFFT,8,1.0
+904105,Ability_Point_Stone_500_14d_Team,使用すると、特性ポイントが500増加します。右クリックで使用します。,icon_item_abilitypoint2,,,,,,特性ポイント500(14日),0,0.0,0.0,FFFT,8,1.0
 904106,EVENT_1810_HALLOWEEN_COSTUME_BOX,ジャック・オー・ランタンコスチュームが入っている箱です。 マウス右側ボタンクリックで使用できます。,icon_item_eventcube3,,,,,,{s18}ジャック・オー・ランタンコスチューム選択箱,0,0.0,0.0,FFFT,19,1.0
 910001,Scroll_SkillItem,特定のスキルを保存できるスクロールです。,golemmagicitem1,,,,,,スキル呪文書,5,0.0,0.0,TTTT,6,1.0
 910002,Default_Sprout,ケッピーから手に入る長い茎です。食べると少し辛いです。,item_icon_sprout,,,,,,新芽,1,0.0,0.0,TTTT,15,1.0
@@ -6065,3 +6069,5 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 1000025,Gacha_TP_132_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_randombox,,,,,,福袋キューブ(女),0,0.0,0.0,FFFT,19,0.0
 1000026,Gacha_TP_131_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_randombox_2,,,,,,福袋キューブ(男)x10+1,0,0.0,0.0,FFFT,19,0.0
 1000027,Gacha_TP_132_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_randombox_2,,,,,,福袋キューブ(女)x10+1,0,0.0,0.0,FFFT,19,0.0
+1000030,Gacha_TP_133_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_goldpig_box,,,,,,ジャージキューブ,0,0.0,0.0,FFFT,19,0.0
+1000031,Gacha_TP_133_11_JP,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_goldpig_box,,,,,,ジャージキューブx10+1,0,0.0,0.0,FFFT,19,0.0
