@@ -69,7 +69,7 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   }
 
   onAttributesChange(value: ITOSAttribute[]) {
-    this.attributes = value.filter(value => !value.Link_Skill);
+    this.attributes = value.filter(value => !value.Link_Skills);
     this.attributesUnlock = new Array(this.attributes.length);
     this.changeDetector.markForCheck();
     this.unlockAttributes(null);

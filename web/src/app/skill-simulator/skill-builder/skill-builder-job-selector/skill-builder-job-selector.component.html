@@ -10,7 +10,7 @@
     </div>
 
     <!-- Class list -->
-    <div class="row" [style.justifyContent]="rank <= 3 ? 'center' : ''">
+    <div class="row" [style.justifyContent]="rank == 1 ? 'center' : ''">
       <a *ngFor="let job of jobsAvailable; let i = index" class="col-4 col-sm-3 col-md-2 mb-3 tos-job"
          [href]="'#' + job.Name"
          (click)="onJobClick($event, job)"

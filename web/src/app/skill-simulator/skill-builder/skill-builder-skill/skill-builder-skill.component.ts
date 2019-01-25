@@ -28,8 +28,6 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
 
   attributes: ITOSAttribute[];
   attributesUnlock: boolean[];
-  skillIncrementAvailablePlus: boolean;
-  skillIncrementAvailableMinus: boolean;
   skillLevel: number = 0;
   skillLevelMax: number = 0;
 
@@ -39,9 +37,9 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
 
   constructor(private changeDetector: ChangeDetectorRef) {}
 
-  onSkillLevelIncrementClick(event: MouseEvent, delta: number, rollOver?: boolean) {
+  onSkillLevelIncrementClick(event: MouseEvent, delta: number) {
     event.preventDefault();
-    this.build.skillLevelIncrement$(this.skill, delta, rollOver);
+    this.build.skillLevelIncrement$(this.skill, delta, false, true);
   }
 
   onAttributesChange(value: ITOSAttribute[]) {
@@ -51,10 +49,8 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   }
 
   async onJobChange(value: ITOSJob) {
-    if (value == null || value.$ID == this.skill.Link_Job$ID) {
+    if (value == null || value.$ID == this.skill.Link_Job$ID)
       this.skillLevelMax = await this.build.skillLevelMax$(this.skill).toPromise();
-      this.skillIncrementAvailableCheck();
-    }
 
     if (value) {
       // We need to check whether the attribute has unlocked for every skill change
@@ -65,8 +61,6 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   onSkillChange(value: ITOSSkill) {
     if (value == null || value.$ID == this.skill.$ID)
       this.skillLevel = this.build.skillLevel(this.skill);
-    if (value == null || value.Link_Job$ID == this.skill.Link_Job$ID)
-      this.skillIncrementAvailableCheck();
 
     if (value) {
       // We need to check whether the attribute has unlocked for every skill change
@@ -96,14 +90,6 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
     this.subscriptionAttributes && this.subscriptionAttributes.unsubscribe();
     this.subscriptionJob && this.subscriptionJob.unsubscribe();
     this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
-  }
-
-  async skillIncrementAvailableCheck() {
-    if (this.build) {
-      this.skillIncrementAvailablePlus = await this.build.skillLevelIncrementAvailable$(this.skill, 1).toPromise();
-      this.skillIncrementAvailableMinus = await this.build.skillLevelIncrementAvailable$(this.skill, -1).toPromise();
-      this.changeDetector.markForCheck();
-    }
   }
 
   async unlockAttributes(args: string[]) {

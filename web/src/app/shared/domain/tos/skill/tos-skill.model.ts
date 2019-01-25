@@ -24,7 +24,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   }
 
   get Description() { return this.$lazyPropertyStringMultiline('Description', value => this.tooltipToHTML(value)) }
-  get CoolDown() { return this.$lazyPropertyNumber('CoolDown') }
+  get CoolDown(): string[] { return this.$lazyPropertyJSONArray('CoolDown') as string[] }
 
   get Effect(): string { return this.$lazyPropertyStringMultiline('Effect', value => this.tooltipToHTML(value)) }
   get Effect_CaptionRatio(): string[] { return this.$lazyPropertyJSONArray('Effect_CaptionRatio') as string[] }
@@ -37,7 +37,6 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   get Effect_SpendItemCount(): string[] { return this.$lazyPropertyJSONArray('Effect_SpendItemCount') as string[] }
   get Effect_SpendPoison(): string[] { return this.$lazyPropertyJSONArray('Effect_SpendPoison') as string[] }
   get Effect_SpendSP(): string[] { return this.$lazyPropertyJSONArray('Effect_SpendSP') as string[] }
-  get SP(): string[] { return this.$lazyPropertyJSONArray('SP') as string[] }
 
   get Element() { return this.$lazyPropertyEnum('Element', TOSElement) }
   get IsEnchanter() { return this.$lazyPropertyBoolean('IsEnchanter') }
@@ -52,6 +51,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
 
   get OverHeat() { return this.$lazyPropertyNumber('OverHeat') }
 
+  get Prop_BasicCoolDown() { return this.$lazyPropertyNumber('Prop_BasicCoolDown') }
   get Prop_BasicPoison() { return this.$lazyPropertyNumber('Prop_BasicPoison') }
   get Prop_BasicSP() { return this.$lazyPropertyNumber('Prop_BasicSP') }
   get Prop_LvUpSpendPoison() { return this.$lazyPropertyNumber('Prop_LvUpSpendPoison') }
@@ -67,7 +67,19 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   get RequiredStance() { return this.$lazyPropertyJSONArray('RequiredStance', value => new TOSSkillRequiredStance(value)) }
   get RequiredStanceCompanion() { return this.$lazyPropertyEnum('RequiredStanceCompanion', TOSSkillRequiredStanceCompanion) }
   get RequiredSubWeapon() { return this.$lazyPropertyBoolean('RequiredSubWeapon') }
+  get SP(): string[] { return this.$lazyPropertyJSONArray('SP') as string[] }
   get TypeAttack() { return this.$lazyPropertyEnum('TypeAttack', TOSAttackType) }
+
+  BuildCoolDown(build: ITOSBuild): Observable<number> {
+    return this
+      .effectToEval('CoolDown', build)
+      .pipe(map(value => value.value));
+  }
+  BuildSP(build: ITOSBuild): Observable<number> {
+    return this
+      .effectToEval('SP', build)
+      .pipe(map(value => value.value));
+  }
 
   EffectDescription(build: ITOSBuild, showFactors: boolean): Observable<string> {
     return fromPromise((async () => {
@@ -82,14 +94,15 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
         let prop = match[1];
         let result = await this.effectToEval(prop, build).toPromise();
 
-        for (let dependency of result.dependencies)
-          if (dependencies.indexOf(dependency) == -1)
-            dependencies.push(dependency);
+        if (result != null)
+          for (let dependency of result.dependencies)
+            if (dependencies.indexOf(dependency) == -1)
+              dependencies.push(dependency);
 
         if (showFactors && level == 0) {
           effect = effect.replace(match[0], '<b>[' + prop + ']</b>')
         } else {
-          effect = effect.replace(match[0], result.value + (result.dependencies.length ? '*' : ''));
+          effect = effect.replace(match[0], (result != null ? result.value : 0) + (result.dependencies.length ? '*' : ''));
         }
       }));
 
@@ -124,11 +137,6 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       : levelMax;
   }
 
-  SPCost(build: ITOSBuild): Observable<number> {
-    return this
-      .effectToEval('SP', build)
-      .pipe(map(value => value.value));
-  }
 
   private effectContext(prop: string, build: ITOSBuild, human?: boolean): Observable<object> {
     return fromPromise((async () => {
@@ -140,6 +148,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
         STR: build.Stats.STR,
       };
       let skill = {
+        'BasicCoolDown': this.Prop_BasicCoolDown,
         'BasicPoison': this.Prop_BasicPoison,
         'BasicSP': this.Prop_BasicSP,
         'ClassName': '"' + this.$ID_NAME + '"',
@@ -166,6 +175,9 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       let source = this.effectSource(prop);
       let context = await this.effectContext(prop, build).toPromise();
 
+      if (source == null)
+        return null;
+
       let result = await LUAService.parse(build, source, context).toPromise();
       let value = eval(result.func.join('\n')) as number;
           value = parseFloat(value.toFixed(2)); // Remove trailing 0s
@@ -178,29 +190,33 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       let source = this.effectSource(prop);
       let context = await this.effectContext(prop, build, true).toPromise();
 
-      return await LUAService.human(build, source, context).toPromise();
+      return source != null
+        ? await LUAService.human(build, source, context).toPromise()
+        : '';
     })())
   }
   private effectSource(prop: string): string[] {
-    return this[prop] != undefined
-      ? this[prop]
-      : this['Effect_' + prop];
+    return this[prop] || this['Effect_' + prop] || null;
   }
 
   private tooltipToHTML(description: string): string {
     if (description == null) return null;
 
-    let regexColor = /{(#.+?)}{ol}(\[.+?\]){\/}{\/}/g;
+    let regexColor = /{(#.+?)}(.+?){\/}/g;
     let match: RegExpExecArray;
 
     while (match = regexColor.exec(description)) {
-      if (match[2].indexOf('speedofatk'))
+      if (match[2].indexOf('speedofatk')) // TODO: No longer available in Re:Build
         match[2] = match[2].replace('{img tooltip_speedofatk}', ' <img src="assets/images/skill_attackspeed.png" /> ');
 
-      description = description.replace(match[0], '<span style="color: ' + match[1] + '">' + match[2] + '</span>');
+      description = description.replace(match[0], match[2].indexOf('[') != -1
+        ? `<span class="p-1 rounded text-white" style="background: ${ match[1] }; line-height: 2">${ match[2] }</span>`
+        : `<span class="font-weight-bold" style="color: ${ match[1] };">${ match[2] }</span>`
+      );
     }
 
-    return description.replace(/{\/}/g, '');
+    return description
+      .replace(/{\/}|{ol}/g, '');
   }
 }
 

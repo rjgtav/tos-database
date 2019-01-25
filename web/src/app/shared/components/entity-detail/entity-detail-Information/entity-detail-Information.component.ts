@@ -23,6 +23,7 @@ export class EntityDetailInformationComponent extends EntityDetailChildComponent
   @Input() divider: boolean;
   @Input() header: boolean;
 
+  skillCoolDown: number;
   skillSP: number;
   subscriptionSkill: Subscription;
 
@@ -30,7 +31,8 @@ export class EntityDetailInformationComponent extends EntityDetailChildComponent
 
   async onSkillChange(value: ITOSSkill) {
     if (value == null || value.$ID == this.skill.$ID) {
-      this.skillSP = await this.skill.SPCost(this.build).toPromise();
+      this.skillCoolDown = await this.skill.BuildCoolDown(this.build).toPromise() / 1000;
+      this.skillSP = await this.skill.BuildSP(this.build).toPromise();
       this.changeDetector.markForCheck();
     }
   }

@@ -14,7 +14,7 @@
     </div>
     <div class="col" *ngIf="skill || item && !equipment"><h6>
       <fa-icon class="mr-1" [icon]="['far', 'clock']"></fa-icon>
-      {{ ((item ? item.TimeCoolDown : skill.CoolDown) | tosTime) || 'No cooldown' }}</h6>
+      {{ ((item ? item.TimeCoolDown : skillCoolDown) | tosTime) || 'No cooldown' }}</h6>
     </div>
 
     <div class="col text-right">
@@ -37,7 +37,7 @@
     </div>
     <div class="col" *ngIf="job">
       <h6 *ngIf="job" class="d-flex flex-row">
-        <span class="badge badge-primary pt-1 pb-1 text-left">Type</span>
+        <span class="badge badge-primary pt-1 pb-1 text-left">Role</span>
         <span class="col pt-1 pb-1 text-right">{{ job.JobType ? job.JobType.join(', ') : '' }}</span>
       </h6>
     </div>

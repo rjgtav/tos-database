@@ -25,6 +25,7 @@ export class InputNumberComponent implements OnChanges {
   @Output() modelChange: EventEmitter<number> = new EventEmitter();
 
   @Input() label: string;
+  @Input() labelMax: number;
 
   @ViewChild('keyboard')
   keyboard: ElementRef;

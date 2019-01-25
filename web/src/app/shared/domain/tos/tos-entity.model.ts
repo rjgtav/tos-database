@@ -61,7 +61,9 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
   }
 
   protected $lazyPropertyJSONArray<T>(prop: string, mapper?: (value: any) => T, sorter?: (a: T, b: T) => -1 | 0 | 1): T[] {
-    if (this.$json[prop] && this.$json[prop][0].constructor != Object.prototype.constructor && !Array.isArray(this.$json[prop][0]))
+    let first = this.$json[prop] && this.$json[prop][0];
+
+    if (first && isNaN(first) && !Array.isArray(first) && first.constructor != Object.prototype.constructor)
       return this.$json[prop];
 
     this.$json[prop] = this.$json[prop] && mapper && this.$json[prop].map(mapper) || this.$json[prop];

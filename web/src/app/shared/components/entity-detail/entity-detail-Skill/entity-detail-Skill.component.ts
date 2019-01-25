@@ -37,7 +37,7 @@ export class EntityDetailSkillComponent extends EntityDetailChildComponent imple
   }
 
   onSkillLevelIncrement(value: number) {
-    this.build.skillLevelIncrement$(this.skill, value - this.skillLevel);
+    this.build.skillLevelIncrement$(this.skill, value - this.skillLevel, true);
   }
 
   ngOnChanges(changes: SimpleChanges) {

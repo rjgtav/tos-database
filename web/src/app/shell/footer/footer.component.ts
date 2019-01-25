@@ -3,7 +3,6 @@ import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {Subscription} from "rxjs";
 import {UpdateService} from "../../shared/service/update.service";
 import {LoadingService} from "../loading/loading.service";
-import {TOSRegionService} from "../../shared/domain/tos-region";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -31,7 +30,16 @@ export class FooterComponent implements OnDestroy {
   onClearCacheClick(event: MouseEvent) {
     event.preventDefault();
 
-    if (window.confirm(`Are you sure you want to clear the cache?\nEverything for ${ TOSRegionService.get() } will have to be downloaded again`))
+    let confirm = `
+      =====================================
+       Please close all other tos.guru tabs before proceeding
+      =====================================
+      
+      Are you sure you want to clear the cache?
+      Everything will have to be downloaded again
+    `;
+
+    if (window.confirm(confirm))
       this.loading.clear();
   }
 

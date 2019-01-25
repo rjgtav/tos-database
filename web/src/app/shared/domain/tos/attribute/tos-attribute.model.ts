@@ -19,7 +19,7 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
   get UpgradePrice() { return this.$lazyPropertyJSONArray('UpgradePrice') as number[] }
 
   get Link_Jobs() { return this.$lazyPropertyLink('Link_Jobs', (value) => TOSDomainService.jobsById(value)) as Observable<ITOSJob[]> }
-  get Link_Skill() { return this.$lazyPropertyLink('Link_Skill', (value) => TOSDomainService.skillsById(value)) as Observable<ITOSSkill> }
+  get Link_Skills() { return this.$lazyPropertyLink('Link_Skills', (value) => TOSDomainService.skillsById(value)) as Observable<ITOSSkill[]> }
 
   public Price(level: number) { return level > 0 && this.UpgradePrice ? this.UpgradePrice[level - 1] : 0 }
   public PriceTotal(level: number) { return Array.from({length: level + 1}, (x,i) => this.Price(i)).reduce((a, b) => a + b, 0) }

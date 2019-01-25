@@ -143,6 +143,10 @@ export class LUAService {
         while (match = regexPlayer.exec(lineOriginal)) {
           let prop: string = match[1];
 
+          // Hotfix: Ignore in case we're the left operand (e.g. skill.SklSr = 17)
+          if (lineOriginal.indexOf('=') > lineOriginal.indexOf(prop))
+            continue;
+
           if (player[prop] != undefined && prop != 'Lv') {
             line = line.replace(match[0], player[prop]);
           } else {
@@ -161,6 +165,10 @@ export class LUAService {
         // Skill properties - replace available properties in-place, make remaining ones bold
         while (match = regexSkill.exec(lineOriginal)) {
           let prop: string = match[1];
+
+          // Hotfix: Ignore in case we're the left operand (e.g. skill.SklSr = 17)
+          if (lineOriginal.indexOf('=') > lineOriginal.indexOf(prop))
+            continue;
 
           if (skill[prop] != undefined && prop != 'Level')
             line = line.replace(match[0], skill[prop]);

@@ -1,3 +1,7 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
 :host {
   display: block;
   position: relative;
@@ -6,4 +10,16 @@
 .tos-attribute {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.tos-job,
+.tos-skill {
+  display: flex;
+  align-items: center;
+  width: 215px;
+  padding: 10px;
+}
+
+@include media-breakpoint-down(xs) {
+  .tos-job, .tos-skill { width: 100%; }
 }

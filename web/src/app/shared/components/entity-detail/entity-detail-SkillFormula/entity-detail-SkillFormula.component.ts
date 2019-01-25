@@ -34,7 +34,7 @@ export class EntityDetailSkillFormulaComponent extends EntityDetailChildComponen
       this.tabs = this.skill.EffectProps
         .map(match => match[1])
         .filter((value, index, self) => self.indexOf(value) === index)
-        .concat(['SP']);
+        .concat(['CoolDown', 'SP']);
 
       this.active = this.tabs[0];
       this.tabs.map(tab => this.build

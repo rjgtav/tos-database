@@ -40,7 +40,7 @@ export class LoadingService {
 
   get installComplete$() { return this.installComplete.pipe(filter(value => value), take(1)) }
   get installProgress$() { return this.installProgress.asObservable() }
-  get installSupported() { return !!navigator.serviceWorker && !!window.indexedDB }
+  get installSupported() { return (!this.swUpdate.isEnabled || !!navigator.serviceWorker) && !!window.indexedDB }
   get installTotal() { return this.installTotal_ }
 
   get updateComplete$() { return this.updateComplete.pipe(filter(value => value), take(1)) }
@@ -48,11 +48,13 @@ export class LoadingService {
   get updateTotal() { return Object.values(TOSDataSet).length }
 
   async clear() {
-    // Clear cache
-    console.log('Clearing cache...');
-    await Promise
-      .all((await window.caches.keys())
-        .map(value => window.caches.delete(value)));
+    if (window.caches) {
+      // Clear cache
+      console.log('Clearing cache...');
+      await Promise
+        .all((await window.caches.keys())
+          .map(value => window.caches.delete(value)));
+    }
 
     // Clear IndexedDB for the current region
     console.log('Clearing IndexedDB...');
@@ -127,7 +129,7 @@ export class LoadingService {
       });
   }
 
-  private updateCheck() {
+  private async updateCheck() {
     let region = TOSRegionService.get();
     //console.log('updateCheck', region);
 
@@ -137,18 +139,15 @@ export class LoadingService {
     this.updateProgress.next(0);
 
     // Load one at a time, for reliability
-    Promise.all(Object
-      .values(TOSDataSet)
-      .map(value =>
-        this.domain
-          .load(value, region).toPromise()
-          .then(value => {
-            //console.log('updateProgress', this.updateProgress.getValue() + 1);
-            this.updateProgress.next(this.updateProgress.getValue() + 1);
-            this.updateProgress.getValue() == this.updateTotal && this.onUpdateComplete();
-          })
-      )
-    ).then(value => this.update.updateVersion())
+    for (let dataset of Object.values(TOSDataSet)) {
+      await this.domain.load(dataset, region).toPromise();
+
+      //console.log('updateProgress', this.updateProgress.getValue() + 1);
+      this.updateProgress.next(this.updateProgress.getValue() + 1);
+      this.updateProgress.getValue() == this.updateTotal && this.onUpdateComplete();
+    }
+
+    this.update.updateVersion();
   }
 
   private onInstallComplete() {

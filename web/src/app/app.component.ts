@@ -17,6 +17,7 @@ export class AppComponent {
     this.ngbTooltipConfig.disableTooltip = !!('ontouchstart' in window || navigator.msMaxTouchPoints);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
+        // Track pageview with Google Analytics
         let pageOld = this.page;
         let pageNew = this.page = event.urlAfterRedirects.split('?')[0];
 

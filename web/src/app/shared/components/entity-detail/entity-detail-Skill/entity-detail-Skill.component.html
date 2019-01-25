@@ -3,15 +3,19 @@
 
   <tos-input-number class="h5 text-center mt-3 mb-3" *ngIf="input"
                     [label]="'Level'"
-                    [min]="0" [max]="build.skillLevelMax$(skill) | async"
+                    [labelMax]="build.skillLevelMax$(skill) | async"
+                    [min]="0" [max]="(build.skillLevelMax$(skill) | async) + 5"
                     [model]="skillLevel"
                     (modelChange)="onSkillLevelIncrement($event)"></tos-input-number>
 
   <!-- Description -->
   <tos-entity-detail-Description [entity]="entity"></tos-entity-detail-Description>
 
-  <p *ngIf="build" class="text-multiline mb-0"
-     [innerHTML]="effectHTML | sanitizeHTML"></p>
+  <!-- Skill Effects -->
+  <div *ngIf="build">
+    <hr />
+    <p class="text-multiline mb-0" [innerHTML]="effectHTML | sanitizeHTML"></p>
+  </div>
 
   <!-- Information -->
   <tos-entity-detail-Information [build]="build"

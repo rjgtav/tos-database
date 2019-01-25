@@ -575,7 +575,7 @@ export interface ITOSBuild {
   skillEffect$(skill: ITOSSkill, showFactors: boolean): Observable<string>;
   skillEffectFormula$(skill: ITOSSkill, prop: string): Observable<string>;
   skillLevel(skill: ITOSSkill): number;
-  skillLevelIncrement$(skill: ITOSSkill, delta: number, rollOver?: boolean): Promise<void>;
+  skillLevelIncrement$(skill: ITOSSkill, delta: number, force?: boolean, rollOver?: boolean): Promise<void>;
   skillLevelIncrementAvailable$(skill: ITOSSkill, delta: number): Observable<boolean>;
   skillLevelMax$(skill: ITOSSkill): Observable<number>;
   skillPoints(job: ITOSJob): number;
@@ -639,7 +639,7 @@ export interface ITOSAttribute extends ITOSEntity {
   UnlockArgs: { [key: number]: ITOSAttributeUnlockArg };
 
   Link_Jobs: Observable<ITOSJob[]>;
-  Link_Skill: Observable<ITOSSkill>;
+  Link_Skills: Observable<ITOSSkill[]>;
 
   Price(level: number): number;
   PriceTotal(level: number): number;
@@ -831,7 +831,7 @@ export interface ITOSRecipeMaterial {
 }
 
 export interface ITOSSkill extends ITOSEntity {
-  CoolDown: number;
+  CoolDown: string[];
   Element: TOSElement;
   IsEnchanter: boolean;
   IsPardoner: boolean;
@@ -842,6 +842,7 @@ export interface ITOSSkill extends ITOSEntity {
   RequiredStance: ITOSSkillRequiredStance[];
   RequiredStanceCompanion: TOSSkillRequiredStanceCompanion;
   RequiredSubWeapon: boolean;
+  SP: string[];
   TypeAttack: TOSAttackType;
 
   Link_Attributes: Observable<ITOSAttribute[]>;
@@ -849,10 +850,11 @@ export interface ITOSSkill extends ITOSEntity {
   Link_Job: Observable<ITOSJob>;
   Link_Job$ID: number;
 
+  BuildCoolDown(build: ITOSBuild): Observable<number>;
+  BuildSP(build: ITOSBuild): Observable<number>;
   EffectDescription(build: ITOSBuild, showFactors: boolean): Observable<string>;
   EffectFormula(prop: string, build: ITOSBuild): Observable<string>;
   LevelMax(circle?: number): number;
-  SPCost(build: ITOSBuild): Observable<number>;
 }
 export interface ITOSSkillRequiredStance {
   Icon: string;

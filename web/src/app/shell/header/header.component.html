@@ -14,7 +14,7 @@
       -->
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle tos-link" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle tos-link" href="javascript:void(0);" routerLinkActive="active">
           Database
           <div class="dropdown-menu">
             <div *ngFor="let group of TOSDataSetService.VALUES; index as i">
@@ -53,7 +53,7 @@
     <ul class="navbar-nav align-items-center">
       <!-- Region selector -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle tos-link" style="text-transform: initial;">
+        <a class="nav-link dropdown-toggle tos-link" href="javascript:void(0);" style="text-transform: initial;">
           {{ TOSRegionService.get() }}
           <div class="dropdown-menu dropdown-menu-right">
             <a *ngFor="let region of REGION" class="dropdown-item" style="text-transform: initial;"
