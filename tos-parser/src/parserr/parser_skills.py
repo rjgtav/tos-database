@@ -68,10 +68,14 @@ def parse_skills(is_rebuild):
             obj['Icon'] = parser_assets.parse_entity_icon(row['Icon'])
             obj['Name'] = parser_translations.translate(row['Name'])
 
-            obj['CoolDown'] = int(row['BasicCoolDown']) / 1000
             obj['Effect'] = parser_translations.translate(row['Caption2'])
             obj['Element'] = TOSElement.value_of(row['Attribute'])
             obj['IsShinobi'] = row['CoolDown'] == 'SCR_GET_SKL_COOLDOWN_BUNSIN' or (row['CoolDown'] and 'Bunshin_Debuff' in LUA[row['CoolDown']])
+            obj['OverHeat'] = {
+                'Value': int(row['SklUseOverHeat']),
+                'Group': row['OverHeatGroup']
+            } if not is_rebuild else int(row['SklUseOverHeat'])  # Re:Build overheat is now simpler to calculate
+            obj['Prop_BasicCoolDown'] = int(row['BasicCoolDown'])
             obj['Prop_BasicPoison'] = int(row['BasicPoison'])
             obj['Prop_BasicSP'] = int(math.floor(float(row['BasicSP'])))
             obj['Prop_LvUpSpendPoison'] = int(row['LvUpSpendPoison'])
@@ -86,14 +90,11 @@ def parse_skills(is_rebuild):
             obj['RequiredStanceCompanion'] = TOSRequiredStanceCompanion.value_of(row['EnableCompanion'])
             obj['RequiredSubWeapon'] = row['UseSubweaponDamage'] == 'YES'
 
+            obj['CoolDown'] = None
             obj['IsEnchanter'] = False
             obj['IsPardoner'] = False
             obj['LevelMax'] = -1
             obj['LevelPerCircle'] = -1
-            obj['OverHeat'] = {
-                'Value': int(row['SklUseOverHeat']),
-                'Group': row['OverHeatGroup']
-            } if not is_rebuild else int(row['SklUseOverHeat'])  # Re:Build overheat is now simpler to calculate
             obj['RequiredCircle'] = -1
             obj['TypeAttack'] = []
             obj['SP'] = None
@@ -154,7 +155,10 @@ def parse_skills(is_rebuild):
                 else:
                     continue
 
-            # Parse SP formula
+            # Parse formulas
+            if row['CoolDown']:
+                obj['CoolDown'] = parse_skills_lua_source(LUA, LUA_EMBEDDED, row['CoolDown'])
+                obj['CoolDown'] = parse_skills_lua_source_to_javascript(row, obj['CoolDown'])
             if row['SpendSP']:
                 obj['SP'] = parse_skills_lua_source(LUA, LUA_EMBEDDED, row['SpendSP'])
                 obj['SP'] = parse_skills_lua_source_to_javascript(row, obj['SP'])
@@ -217,7 +221,7 @@ def parse_skills_lua_source_to_javascript(skill, source):
         line = line.replace('SCR_CALC_BASIC_DEF(pc)', 'pc.DEF')
         line = line.replace('SCR_CALC_BASIC_MDEF(pc)', 'pc.MDEF')
         line = re.sub(r'TryGetProp\(pc, \"(.+)\"\)', r'pc.\1', line)
-        line = re.sub(r'GetAbilityAddSpendValue\(pc, skill\.ClassName, \"(.+)\"\)', '0', line)  # TODO: support calculating the extra SP cost caused by attributes
+        line = re.sub(r'GetAbilityAddSpendValue\(pc, skill\.ClassName, \"(.+)\"\)', '0 // @rjgtav: Attributes aren\'t supported yet', line)  # TODO: support calculating the extra CoolDown/SP caused by attributes
 
         result.append(line)
 
@@ -344,11 +348,10 @@ def parse_links_attributes():
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            if row['SkillCategory'] not in globals.skills_by_name:
-                continue
-
-            skill = globals.skills_by_name[row['SkillCategory']]
-            skill['Link_Attributes'].append(globals.get_attribute_link(row['ClassName']))
+            for skill in row['SkillCategory'].split(';'):
+                if skill and skill in globals.skills_by_name:
+                    skill = globals.skills_by_name[skill]
+                    skill['Link_Attributes'].append(globals.get_attribute_link(row['ClassName']))
 
 
 def parse_links_gems():
@@ -405,7 +408,6 @@ def parse_clean():
         skill_id = skill['$ID']
 
         for attribute in globals.attributes.values():
-            if attribute['Link_Skill'] and attribute['Link_Skill']['$ID'] == skill_id:
-                attribute['Link_Skill'] = None
+            attribute['Link_Skills'] = [link for link in attribute['Link_Skills'] if link.entity['$ID'] != skill_id]
         for job in globals.jobs.values():
             job['Link_Skills'] = [link for link in job['Link_Skills'] if link.entity['$ID'] != skill_id]

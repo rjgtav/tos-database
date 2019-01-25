@@ -165,7 +165,7 @@ def parse_links_attributes():
                 for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                     attribute = globals.attributes_by_name[row['ClassName']]
 
-                    if not attribute['Link_Skill'] or isinstance(attribute['Link_Skill'], basestring) and attribute['Link_Skill'] == 'All':
+                    if not attribute['Link_Skills']:
                         job['Link_Attributes'].append(globals.get_attribute_link(row['ClassName']))
 
 

@@ -1,7 +1,7 @@
 ## TOSSkill :: TOSEntity
 
 #### Properties
-- CoolDown `int`
+- CoolDown `string[]`
 - Effect `string`
 - Effect_SkillFactor `string`
 - Effect_CaptionRatio `string`
@@ -13,7 +13,9 @@
 - LevelMax `int`
 - LevelPerCircle `int`
 - OverHeat `int`
+- Prop_BasicCoolDown `int`
 - Prop_BasicPoison `number`
+- Prop_BasicSP `int`
 - Prop_LvUpSpendPoison `number`
 - Prop_SklAtkAdd `number`
 - Prop_SklAtkAddByLevel `number`
@@ -25,7 +27,7 @@
 - RequiredStance `TOSSkillRequiredStance[]`
 - RequiredStanceCompanion `TOSSkillRequiredStanceCompanion`
 - RequiredSubWeapon `boolean`
-- SP `int`
+- SP `string[]`
 - SPPerLevel `int`
 - TypeAttack `TOSAttackType`
 

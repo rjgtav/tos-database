@@ -57,7 +57,7 @@ def parse_entity_icon(icon):
         icon_found = icon + '_m'
 
     if icon_found is not None:
-        globals.assets_icons_used.append(icon_found)
+        #globals.assets_icons_used.append(icon_found)
         return globals.assets_icons[icon_found]
     else:
         # Note: there's nothing we can do about this :'(
@@ -149,32 +149,35 @@ def parse_images_jobs(region, version_update):
                 continue
 
             name = parser_translations.translate(row['Name'])
-            name = 'Cryomancers' if name == 'Cryomancer' else name
             name = ''.join(name.split(' ')).lower()
 
-            conn = httplib.HTTPSConnection('treeofsavior.com')
-            conn.request('HEAD', '/img/class2/class_character/' + name + '_f.gif')
+            treeofsavior_domain = 'treeofsavior.com'
+            treeofsavior_path = '/img/class2/class_character/'
+
+            conn = httplib.HTTPSConnection(treeofsavior_domain)
+            conn.request('HEAD', treeofsavior_path + name + '_f.gif')
 
             response = conn.getresponse()
             conn.close()
 
             if response.status != 200:
+                logging.warn('Failed to retrieve job image: %s, status %s', treeofsavior_path + name + '_f.gif', response.status)
                 continue
 
-            urllib.urlretrieve('https://treeofsavior.com/img/class/class_character/' + name + '_f.gif', image_path_f)
-            urllib.urlretrieve('https://treeofsavior.com/img/class/class_character/' + name + '_m.gif', image_path_m)
+            urllib.urlretrieve('https://' + treeofsavior_domain + treeofsavior_path + name + '_f.gif', image_path_f)
+            urllib.urlretrieve('https://' + treeofsavior_domain + treeofsavior_path + name + '_m.gif', image_path_m)
 
 
-def parse_clean(version_update):
-    if not version_update:
-        return
-
-    logging.debug('Cleaning unused icons...')
-    for key in globals.assets_icons.keys():
-        if key not in globals.assets_icons_used:
-            path = os.path.join(constants.PATH_WEB_ASSETS_ICONS, key)
-
-            if os.path.isfile(path + '.jpg'):
-                os.remove(path + '.jpg')
-            elif os.path.isfile(path + '.png'):
-                os.remove(path + '.png')
+#def parse_clean(version_update):
+#    if not version_update:
+#        return
+#
+#    logging.debug('Cleaning unused icons...')
+#    for key in globals.assets_icons.keys():
+#        if key not in globals.assets_icons_used:
+#            path = os.path.join(constants.PATH_WEB_ASSETS_ICONS, key)
+#
+#            if os.path.isfile(path + '.jpg'):
+#                os.remove(path + '.jpg')
+#            elif os.path.isfile(path + '.png'):
+#                os.remove(path + '.png')

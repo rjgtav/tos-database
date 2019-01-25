@@ -11,7 +11,7 @@
 
 #### Links
 - Link_Jobs `TOSJob[]`
-- Link_Skill `TOSSkill`
+- Link_Skills `TOSSkill[]`
 
 
 ### TOSAttributeUnlockArg

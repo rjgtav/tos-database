@@ -3,7 +3,7 @@ from multiprocessing import Manager
 import constants
 
 assets_icons = Manager().dict()
-assets_icons_used = []
+#assets_icons_used = []
 
 attributes = {}
 attributes_by_name = {}
@@ -146,7 +146,7 @@ def _get_entity_link(name, collection):
 class Link:
 
     def __eq__(self, other):
-        return self.entity['$ID'] == other.entity['$ID']
+        return isinstance(other, Link) and self.entity['$ID'] == other.entity['$ID']
 
     def __init__(self, entity, collection):
         self.entity = entity

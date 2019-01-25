@@ -35,7 +35,7 @@ def parse_attributes():
             obj['UnlockArgs'] = {}
             obj['UpgradePrice'] = []
             obj['Link_Jobs'] = []
-            obj['Link_Skill'] = row['SkillCategory']
+            obj['Link_Skills'] = [skill for skill in row['SkillCategory'].split(';') if len(skill)]
 
             globals.attributes[obj['$ID']] = obj
             globals.attributes_by_name[obj['$ID_NAME']] = obj
@@ -78,7 +78,7 @@ def parse_links_jobs():
                         attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
 
                     # Parse attribute job
-                    if not attribute['Link_Skill'] or attribute['Link_Skill'] == 'All':
+                    if not attribute['Link_Skills'] or 'All' in attribute['Link_Skills']:
                         attribute['Link_Jobs'].append(globals.get_job_link(job['$ID_NAME']))
 
                     # Parse attribute unlock
@@ -96,7 +96,7 @@ def parse_links_skills():
     logging.debug("Parsing skills for attributes...")
 
     for attribute in globals.attributes.values():
-        attribute['Link_Skill'] = globals.get_skill_link(attribute['Link_Skill']) if attribute['Link_Skill'] != 'All' else None
+        attribute['Link_Skills'] = [globals.get_skill_link(skill) for skill in attribute['Link_Skills'] if skill != 'All']
 
 
 def parse_clean():
@@ -104,9 +104,9 @@ def parse_clean():
 
     # Find which attributes are no longer active
     for attribute in globals.attributes.values():
-        if not attribute['Link_Jobs'] and not attribute['Link_Skill']:
+        if not attribute['Link_Jobs'] and not attribute['Link_Skills']:
             attributes_to_remove.append(attribute)
-        if attribute['Link_Skill'] is not None and attribute['LevelMax'] == -1:
+        elif attribute['LevelMax'] == -1 and attribute['Link_Skills'] is not None:
             attributes_to_remove.append(attribute)
 
     # Remove all inactive attributes

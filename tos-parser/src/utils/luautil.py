@@ -277,35 +277,30 @@ def lua_function_source(function):
 
 def lua_function_source_format(function_source):
     level = 0
-    level_length = [0, 0]
     result = []
+
+    TOKEN_LEVEL_INCREASE = ['else', 'for', 'function', 'if']
+    TOKEN_LEVEL_DECREASE = ['end', 'else']
 
     for line in function_source:
 
-        # Apply extra spaces (1/2)
-        if line.find('if ') == 0:
-            level_length[-1] = level_length[-1] + 1
+        # insert extra empty lines (to increase readability)
+        if line.find('if') == 0:
             result.append('')
 
-        # Apply indentation (1/2)
-        if 'end' == line:
+        # << indentation
+        if any(line.find(s) == 0 for s in TOKEN_LEVEL_DECREASE):
             level = level - 1
 
         result.append((level * 4) * ' ' + line)
 
-        # Apply indentation (2/2)
-        if line.find('if ') == 0 or line.find('function ') == 0:
+        # >> indentation
+        if any(line.find(s) == 0 for s in TOKEN_LEVEL_INCREASE):
             level = level + 1
-            level_length.append(0)
-        else:
-            level_length[-1] = level_length[-1] + 1
 
-        # Apply extra spaces (2/2)
-        if 'end' == line:
-            if level_length[-1] > 2:
-                result.append('')
-
-            level_length.pop()
+        # insert extra empty lines (to increase readability)
+        if line.find('end') == 0:
+            result.append('')
 
     return result
 
