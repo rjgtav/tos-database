@@ -49,8 +49,10 @@ export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
   }
 
   async onJobChange(value: ITOSJob) {
-    if (value == null || value.$ID == this.skill.Link_Job$ID)
+    if (value == null || value.$ID == this.skill.Link_Job$ID) {
       this.skillLevelMax = await this.build.skillLevelMax$(this.skill).toPromise();
+      this.changeDetector.markForCheck();
+    }
 
     if (value) {
       // We need to check whether the attribute has unlocked for every skill change
