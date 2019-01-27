@@ -52,6 +52,9 @@ def unpack(ipf):
         if any(file_name == s for s in IPF_BLACKLIST):
             shutil.rmtree(os.path.join(ipf_extract, file_name))
 
+    # Make all files lower case
+    fileutil.to_lower(ipf_extract)
+
     # Move extracted IPF files to data directory
     fileutil.move_tree(ipf_extract, constants.PATH_INPUT_DATA)
 

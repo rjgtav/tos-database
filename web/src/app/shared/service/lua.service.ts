@@ -13,12 +13,20 @@ export class LUAService {
   // Some global functions used by IMC
   private static readonly LUA_CONTEXT: string[] = [
     '// LUA CONTEXT BEGIN ---------------------------',
+    'var PARTY_NORMAL = 0;',
     'var GetAbility = (a, b) => null;',
     'var GetExProp = (a, b) => null;',
     'var GetSumOfEquipItem = (a, b) => 0;',
     'var TryGetProp = (a, b) => a && a[b];',
     'var IsBuffApplied = (a, b) => null;',
     'var IsPVPServer = (a) => 0;',
+    'var IsServerSection = (a) => 0;',
+    'var i = 0;',
+    'var owner = pc;',
+    'var session = { party: {' +
+    '   GetMyPartyObj: (a) => null,' +
+    '   GetPartyMemberList: (a) => null,' +
+    '} };',
     'var skillOwner = pc;',
     'var value = 0;',
     'var zone = null;',

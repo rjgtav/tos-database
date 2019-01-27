@@ -103,10 +103,12 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
     }
   }
 
-  onSkillsChange(value: ITOSSkill[]) {
-    this.skills = value
-      .filter(skill => skill.RequiredCircle <= this.circles.length)
-      .sort((a, b) => a.RequiredCircle - b.RequiredCircle);
+  async onSkillsChange(skills: ITOSSkill[]) {
+    let skillsLevelMax = await Promise.all(skills.map(value => this.build.skillLevelMax$(value).toPromise()));
+
+    this.skills = skills
+      .filter((value, i) => skillsLevelMax[i] > 0)
+      .sort((a, b) => (a.Prop_UnlockClassLevel || a.Prop_UnlockGrade) - (b.Prop_UnlockClassLevel || b.Prop_UnlockGrade))
 
     this.changeDetector.markForCheck();
     this.unlockAttributes(this.skills.map(value => value.$ID_NAME));

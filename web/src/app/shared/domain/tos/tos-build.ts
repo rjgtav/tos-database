@@ -273,7 +273,13 @@ class TOSBuild_10 extends TOSBuild {
   }
 
   skillLevelMax$(skill: ITOSSkill): Observable<number> {
-    return skill.Link_Job.pipe(map(value => skill.LevelMax(this.jobCircle(value))));
+    // Taken from shared.ipf/script/skilltree_condition.lua :: GET_SKILLTREE_MAXLV
+    return skill.Link_Job.pipe(map(value => {
+      let classLv = this.jobCircle(value);
+      let ret = (classLv - skill.Prop_UnlockGrade + 1) * skill.Prop_LevelPerGrade;
+
+      return Math.min(ret, skill.Prop_MaxLevel);
+    }));
   }
 
   statsPointsMax(): number {
@@ -331,7 +337,18 @@ class TOSBuild_20 extends TOSBuild {
     );
   }
 
-  skillLevelMax$(skill: ITOSSkill): Observable<number> { return of(skill.LevelMax()) }
+  skillLevelMax$(skill: ITOSSkill): Observable<number> {
+    // Taken from shared.ipf/script/skill/skill_enable_get_shared.lua :: GET_LIMIT_SKILL_LEVEL
+    return skill.Link_Job.pipe(map(value => {
+      let defMaxLevel = skill.Prop_MaxLevel;
+      let pcJobLv = this.jobCircleMax(value) * 15;
+      let pcCircle = Math.floor((pcJobLv - 1) / 15) + 1;
+      let sklCircle = Math.floor((skill.Prop_UnlockClassLevel - 1) / 15) + 1;
+      let applyCircle = pcCircle - sklCircle + 1;
+
+      return Math.min(applyCircle * 5, defMaxLevel);
+    }));
+  }
 
   statsPointsMax(): number {
     // Bonus stat points:

@@ -7,6 +7,9 @@ import {TOSDataSetService} from "../../shared/domain/tos/tos-domain";
 import {TOSRegion, TOSRegionService} from "../../shared/domain/tos-region";
 import {SwUpdate} from "@angular/service-worker";
 
+const UPDATE_KEY = 'update';
+const UPDATE_INTERVAL = 30 * 60 * 1000;
+
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-header',
@@ -41,7 +44,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (this.swUpdate.isEnabled) {
       this.swUpdate.available.subscribe(value => this.updateAvailable());
 
-      this.isUpdateCheckInterval = this.zone.runOutsideAngular(() => setInterval(() => this.updateCheck(), 30 * 60 * 1000));
+      this.isUpdateCheckInterval = this.zone.runOutsideAngular(() => setInterval(() => this.updateCheck(), UPDATE_INTERVAL));
       this.updateCheck();
     }
   }
@@ -69,12 +72,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.changeDetector.markForCheck();
   }
   async updateCheck() {
+    let now = new Date();
+    let update = localStorage.getItem(UPDATE_KEY) && new Date(localStorage.getItem(UPDATE_KEY));
+
+    // If the last time we checked for updates was less than UPDATE_INTERVAL ago, ignore
+    if (update != null && (now.getTime() - update.getTime()) < UPDATE_INTERVAL - 60 * 1000)
+      return;
+
     this.isUpdateCheck = true;
     this.changeDetector.detectChanges();
 
     this.swUpdate.checkForUpdate().then(value => {
       this.isUpdateCheck = false;
       this.changeDetector.detectChanges();
+
+      localStorage.setItem(UPDATE_KEY, now.toISOString());
     });
   }
 

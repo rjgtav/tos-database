@@ -93,11 +93,13 @@ def parse_skills(is_rebuild):
             obj['CoolDown'] = None
             obj['IsEnchanter'] = False
             obj['IsPardoner'] = False
-            obj['LevelMax'] = -1
-            obj['LevelPerCircle'] = -1
-            obj['RequiredCircle'] = -1
-            obj['TypeAttack'] = []
+            obj['IsRunecaster'] = False
+            obj['Prop_LevelPerGrade'] = -1  # Remove when Re:Build goes global
+            obj['Prop_MaxLevel'] = -1
+            obj['Prop_UnlockGrade'] = -1  # Remove when Re:Build goes global
+            obj['Prop_UnlockClassLevel'] = -1
             obj['SP'] = None
+            obj['TypeAttack'] = []
             obj['Link_Attributes'] = []
             obj['Link_Gem'] = None
             obj['Link_Job'] = None
@@ -120,6 +122,7 @@ def parse_skills(is_rebuild):
                 header_color = ''
                 header_color = '993399' if TOSAttackType.MAGIC in obj['TypeAttack'] else header_color
                 header_color = 'DD5500' if TOSAttackType.MELEE in obj['TypeAttack'] else header_color
+                header_color = 'DD5500' if TOSAttackType.MISSILE in obj['TypeAttack'] else header_color
 
                 if obj['Element'] != TOSElement.MELEE:
                     header.append('[' + TOSElement.to_string(obj['Element']) + ']')
@@ -270,6 +273,7 @@ def parse_skills_simony():
             skill = globals.skills[int(row['ClassID'])]
             skill['IsEnchanter'] = True
             skill['IsPardoner'] = True
+            skill['IsRunecaster'] = True
 
 
 def parse_skills_stances():
@@ -335,23 +339,9 @@ def parse_skills_stances():
         ]
 
 
-def parse_links():
-    parse_links_attributes()
+def parse_links(is_rebuild):
     parse_links_gems()
-    parse_links_jobs()
-
-
-def parse_links_attributes():
-    logging.debug('Parsing attributes for skills...')
-
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability.ies')
-
-    with open(ies_path, 'rb') as ies_file:
-        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            for skill in row['SkillCategory'].split(';'):
-                if skill and skill in globals.skills_by_name:
-                    skill = globals.skills_by_name[skill]
-                    skill['Link_Attributes'].append(globals.get_attribute_link(row['ClassName']))
+    parse_links_jobs(is_rebuild)
 
 
 def parse_links_gems():
@@ -370,10 +360,15 @@ def parse_links_gems():
             skill['Link_Gem'] = globals.get_gem_link(row['ClassName'])
 
 
-def parse_links_jobs():
+def parse_links_jobs(is_rebuild):
     logging.debug('Parsing jobs for skills...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skilltree.ies')
+
+    tree_enchanter = TOSJobTree.SCOUT if is_rebuild else TOSJobTree.WIZARD
+    tree_pardoner = TOSJobTree.CLERIC
+    tree_runecaster = TOSJobTree.WIZARD
+    tree_shinobi = TOSJobTree.SCOUT if is_rebuild else TOSJobTree.WARRIOR
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
@@ -382,13 +377,19 @@ def parse_links_jobs():
                 continue
 
             skill = globals.skills_by_name[row['SkillName']]
-            skill['LevelMax'] = int(row['MaxLevel'])
-            skill['LevelPerCircle'] = int(row['LevelPerGrade']) if 'LevelPerGrade' in row else 0
-            skill['RequiredCircle'] = int(row['UnlockGrade']) if 'UnlockGrade' in row else 0
+            skill['Prop_MaxLevel'] = int(row['MaxLevel'])
+            skill['Prop_LevelPerGrade'] = int(row['LevelPerGrade']) if 'LevelPerGrade' in row else 0
+            skill['Prop_UnlockClassLevel'] = int(row['UnlockClassLevel']) if 'UnlockClassLevel' in row else 0
+            skill['Prop_UnlockGrade'] = int(row['UnlockGrade']) if 'UnlockGrade' in row else 0
 
             job = '_'.join(row['ClassName'].split('_')[:2])
-            skill['IsEnchanter'] = globals.jobs_by_name[job]['JobTree'] == TOSJobTree.WIZARD if skill['IsEnchanter'] else False
-            skill['IsPardoner'] = globals.jobs_by_name[job]['JobTree'] == TOSJobTree.CLERIC if skill['IsPardoner'] else False
+            job_tree = globals.jobs_by_name[job]['JobTree']
+
+            # Fix enchanter, pardoner and shinobi
+            skill['IsEnchanter'] = job_tree == tree_enchanter if skill['IsEnchanter'] else False
+            skill['IsPardoner'] = job_tree == tree_pardoner if skill['IsPardoner'] else False
+            skill['IsRunecaster'] = job_tree == tree_runecaster if skill['IsRunecaster'] else False
+            skill['IsShinobi'] = job_tree == tree_shinobi if skill['IsShinobi'] else False
             skill['Link_Job'] = globals.get_job_link(job)
 
 

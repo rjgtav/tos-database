@@ -48,12 +48,14 @@
 
     <div class="col text-right" *ngIf="item || skill">
       <h6 *ngIf="item" class="tos-icon tos-icon-price">{{ item.Price }}</h6>
-      <h6 *ngIf="skill && (skill.IsEnchanter || skill.IsPardoner || skill.IsShinobi)">
+      <h6 *ngIf="skill && (skill.IsEnchanter || skill.IsPardoner || skill.IsRunecaster || skill.IsShinobi)">
         {{ skill.IsEnchanter
             ? 'Craftable by Enchanter'
             : skill.IsPardoner
                 ? 'Craftable by Pardoner'
-                : skill.IsShinobi
+                : skill.IsRunecaster
+                  ? 'Craftable by Runecaster'
+                  : skill.IsShinobi
                     ? 'Cloneable by Shinobi'
                     : '' }}
       </h6>

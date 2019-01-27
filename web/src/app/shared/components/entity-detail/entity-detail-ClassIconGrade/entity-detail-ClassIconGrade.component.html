@@ -29,12 +29,12 @@
         </span>
       </div>
     </div>
-
-    <div class="row ml-auto mr-auto justify-content-center" *ngIf="skill">
-      <div *ngFor="let stance of skill.RequiredStance">
-        <img [src]="stance.Icon" />
-      </div>
-    </div>
-
   </div>
+
+  <div class="row ml-auto mr-auto justify-content-center" *ngIf="skill">
+    <div *ngFor="let stance of skill.RequiredStance">
+      <img [alt]="stance.Name" [title]="stance.Name" [src]="stance.Icon" />
+    </div>
+  </div>
+
 </div>

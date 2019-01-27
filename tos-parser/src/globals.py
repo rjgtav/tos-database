@@ -119,6 +119,8 @@ def get_skill_link(name):
 
 
 def _get_entity_link(name, collection):
+    if not isinstance(name, (basestring,)):
+        name = name['$ID_NAME']
     if name not in collection:
         return None
 
@@ -139,6 +141,18 @@ def _get_entity_link(name, collection):
     collection_path = constants.OUTPUT_SKILLS if collection == skills_by_name else collection_path
 
     return Link(collection[name], collection_path[:-4])
+
+
+def link(a, a_key, a_link, b, b_key, b_link):
+    if isinstance(a[a_key], (list,)):
+        a[a_key].append(b_link)
+    else:
+        a[a_key] = b_link
+
+    if isinstance(b[b_key], (list,)):
+        b[b_key].append(a_link)
+    else:
+        b[b_key] = a_link
 
 
 # Helper class to delay the toString operation

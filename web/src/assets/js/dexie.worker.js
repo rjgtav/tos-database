@@ -26,9 +26,9 @@ self.onmessage = async function(event) {
       let filter = page.filter && pageFilter(page.filter);
       let sort = page.sort && pageSort(page.sort);
 
-      let size = await table.count();
       let collection = table.toCollection();
           collection = filter ? collection.filter((item) => !filter.find(f => item[f.column] !== f.value)) : collection;
+      let size = await collection.count();
       let result = null;
 
       if (sort) {

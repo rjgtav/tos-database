@@ -41,8 +41,8 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   get Element() { return this.$lazyPropertyEnum('Element', TOSElement) }
   get IsEnchanter() { return this.$lazyPropertyBoolean('IsEnchanter') }
   get IsPardoner() { return this.$lazyPropertyBoolean('IsPardoner') }
+  get IsRunecaster() { return this.$lazyPropertyBoolean('IsRunecaster') }
   get IsShinobi() { return this.$lazyPropertyBoolean('IsShinobi') }
-  get LevelPerCircle() { return this.$lazyPropertyNumber('LevelPerCircle') }
 
   get Link_Attributes() { return this.$lazyPropertyLink('Link_Attributes', value => TOSDomainService.attributesById(value)) as Observable<ITOSAttribute[]> }
   get Link_Gem() { return this.$lazyPropertyLink('Link_Gem', value => TOSDomainService.gemsById(value)) as Observable<ITOSGem> }
@@ -54,16 +54,19 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
   get Prop_BasicCoolDown() { return this.$lazyPropertyNumber('Prop_BasicCoolDown') }
   get Prop_BasicPoison() { return this.$lazyPropertyNumber('Prop_BasicPoison') }
   get Prop_BasicSP() { return this.$lazyPropertyNumber('Prop_BasicSP') }
+  get Prop_LevelPerGrade() { return this.$lazyPropertyNumber('Prop_LevelPerGrade') }
   get Prop_LvUpSpendPoison() { return this.$lazyPropertyNumber('Prop_LvUpSpendPoison') }
   get Prop_LvUpSpendSp() { return this.$lazyPropertyNumber('Prop_LvUpSpendSp') }
+  get Prop_MaxLevel() { return this.$lazyPropertyNumber('Prop_MaxLevel') }
   get Prop_SklAtkAdd() { return this.$lazyPropertyNumber('Prop_SklAtkAdd') }
   get Prop_SklAtkAddByLevel() { return this.$lazyPropertyNumber('Prop_SklAtkAddByLevel') }
   get Prop_SklFactor() { return this.$lazyPropertyNumber('Prop_SklFactor') }
   get Prop_SklFactorByLevel() { return this.$lazyPropertyNumber('Prop_SklFactorByLevel') }
   get Prop_SklSR() { return this.$lazyPropertyNumber('Prop_SklSR') }
   get Prop_SpendItemBaseCount() { return this.$lazyPropertyNumber('Prop_SpendItemBaseCount') }
+  get Prop_UnlockGrade() { return this.$lazyPropertyNumber('Prop_UnlockGrade') }
+  get Prop_UnlockClassLevel() { return this.$lazyPropertyNumber('Prop_UnlockClassLevel') }
 
-  get RequiredCircle() { return this.$lazyPropertyNumber('RequiredCircle') }
   get RequiredStance() { return this.$lazyPropertyJSONArray('RequiredStance', value => new TOSSkillRequiredStance(value)) }
   get RequiredStanceCompanion() { return this.$lazyPropertyEnum('RequiredStanceCompanion', TOSSkillRequiredStanceCompanion) }
   get RequiredSubWeapon() { return this.$lazyPropertyBoolean('RequiredSubWeapon') }
@@ -128,15 +131,6 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
 
     return result;
   }
-
-  LevelMax(circle?: number): number {
-    let levelMax = +this.$json['LevelMax'];
-
-    return circle != undefined
-      ? Math.min(levelMax, (circle - this.RequiredCircle + 1) * this.LevelPerCircle)
-      : levelMax;
-  }
-
 
   private effectContext(prop: string, build: ITOSBuild, human?: boolean): Observable<object> {
     return fromPromise((async () => {

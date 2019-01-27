@@ -142,31 +142,7 @@ def parse_jobs_stats():
 
 
 def parse_links():
-    parse_links_attributes()
     parse_links_skills()
-
-
-def parse_links_attributes():
-    logging.debug('Parsing attributes for jobs...')
-
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
-
-    with open(ies_path, 'rb') as ies_file:
-        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            job = globals.jobs_by_name[row['ClassName']]
-
-            ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
-
-            # If this job is still under development, skip
-            if not os.path.isfile(ies_path):
-                continue
-
-            with open(ies_path, 'rb') as ies_file:
-                for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-                    attribute = globals.attributes_by_name[row['ClassName']]
-
-                    if not attribute['Link_Skills']:
-                        job['Link_Attributes'].append(globals.get_attribute_link(row['ClassName']))
 
 
 def parse_links_skills():

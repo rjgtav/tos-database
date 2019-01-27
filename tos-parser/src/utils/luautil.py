@@ -329,6 +329,7 @@ def lua_function_source_to_javascript(function_source):
         line = line.replace('~=', '!=')
         line = line.replace('local ', 'var ')
         line = line.replace('math.', 'Math.')
+        line = line.replace(':', '.')
         line = re.sub(r'\s+--(.+)', '', line)
         line = re.sub(r'\band\b', ' && ', line)
         line = re.sub(r'\bor\b', ' || ', line)
@@ -336,6 +337,7 @@ def lua_function_source_to_javascript(function_source):
         line = re.sub(r'\belse\b', '} else {', line)
         line = re.sub(r'\belseif\b', '} else if', line)
         line = re.sub(r'\bnil\b', 'null', line)
+        line = re.sub(r'for (.+),(.+)do', r'for (var \1; \2;) {', line)
         line = re.sub(r'if (.+) then', r'if (\1) {', line)
 
         result.append(line)

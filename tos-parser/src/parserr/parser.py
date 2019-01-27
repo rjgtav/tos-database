@@ -79,7 +79,7 @@ def parse(region, is_rebuild, is_version_new):
     parser_items_recipes.parse_links()
     parser_jobs.parse_links()
     parser_monsters.parse_links()
-    parser_skills.parse_links()
+    parser_skills.parse_links(is_rebuild)
 
     # Clean unused data
     # parser_assets.parse_clean(version_update) # Note: we can't clean unused icons as they can be used by another region

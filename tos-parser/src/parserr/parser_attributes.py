@@ -47,7 +47,7 @@ def parse_links():
 
 
 def parse_links_jobs():
-    logging.debug("Parsing jobs for attributes...")
+    logging.debug("Parsing attributes <> jobs...")
 
     LUA = luautil.load_script('ability_price.lua', '*')
     LUA_UNLOCK = luautil.load_script('ability_unlock.lua', '*', False)
@@ -77,9 +77,22 @@ def parse_links_jobs():
                             attribute['UpgradePrice'].append(LUA[row['ScrCalcPrice']](None, row['ClassName'], lv + 1, attribute['LevelMax'])[0])
                         attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
 
+                    # Parse attribute skill (in case it is missing in the ability.ies)
+                    if not attribute['Link_Skills'] and row['UnlockArgStr'] in globals.skills_by_name:
+                        logging.debug('adding missing skill %s', row['UnlockArgStr'])
+                        skill = globals.skills_by_name[row['UnlockArgStr']]
+
+                        globals.link(
+                            attribute, 'Link_Skills', globals.get_attribute_link(attribute),
+                            skill, 'Link_Attributes', globals.get_skill_link(skill)
+                        )
+
                     # Parse attribute job
                     if not attribute['Link_Skills'] or 'All' in attribute['Link_Skills']:
-                        attribute['Link_Jobs'].append(globals.get_job_link(job['$ID_NAME']))
+                        globals.link(
+                            attribute, 'Link_Jobs', globals.get_attribute_link(attribute),
+                            job, 'Link_Attributes', globals.get_job_link(job)
+                        )
 
                     # Parse attribute unlock
                     attribute['Unlock'] = luautil.lua_function_source_to_javascript(
@@ -93,10 +106,19 @@ def parse_links_jobs():
 
 
 def parse_links_skills():
-    logging.debug("Parsing skills for attributes...")
+    logging.debug("Parsing attributes <> skills...")
 
     for attribute in globals.attributes.values():
-        attribute['Link_Skills'] = [globals.get_skill_link(skill) for skill in attribute['Link_Skills'] if skill != 'All']
+        for skill in attribute['Link_Skills']:
+            if isinstance(skill, (basestring,)) and skill != 'All' and skill in globals.skills_by_name:
+                skill = globals.skills_by_name[skill]
+
+                globals.link(
+                    attribute, 'Link_Skills', globals.get_attribute_link(attribute),
+                    skill, 'Link_Attributes', globals.get_skill_link(skill)
+                )
+
+        attribute['Link_Skills'] = [skill for skill in attribute['Link_Skills'] if not isinstance(skill, (basestring,))]
 
 
 def parse_clean():

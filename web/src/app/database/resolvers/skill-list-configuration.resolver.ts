@@ -49,6 +49,13 @@ export class SkillListConfigurationResolver implements Resolve<TOSListConfigurat
           toString: value => value ? 'Yes' : null,
         },
         {
+          column: 'IsRunecaster',
+          label: 'Runecaster',
+          groupBy: () => [{ options: ['Yes'] }],
+          indexOf: value => value == 'Yes' ? -1 : -2,
+          toString: value => value ? 'Yes' : null,
+        },
+        {
           column: 'IsShinobi',
           label: 'Shinobi',
           groupBy: () => [{ options: ['Yes'] }],

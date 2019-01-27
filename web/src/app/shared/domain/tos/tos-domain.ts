@@ -835,10 +835,13 @@ export interface ITOSSkill extends ITOSEntity {
   Element: TOSElement;
   IsEnchanter: boolean;
   IsPardoner: boolean;
+  IsRunecaster: boolean;
   IsShinobi: boolean;
-  LevelPerCircle: number;
   OverHeat: number;
-  RequiredCircle: number;
+  Prop_LevelPerGrade: number;
+  Prop_MaxLevel: number;
+  Prop_UnlockGrade: number;
+  Prop_UnlockClassLevel: number;
   RequiredStance: ITOSSkillRequiredStance[];
   RequiredStanceCompanion: TOSSkillRequiredStanceCompanion;
   RequiredSubWeapon: boolean;
@@ -854,7 +857,6 @@ export interface ITOSSkill extends ITOSEntity {
   BuildSP(build: ITOSBuild): Observable<number>;
   EffectDescription(build: ITOSBuild, showFactors: boolean): Observable<string>;
   EffectFormula(prop: string, build: ITOSBuild): Observable<string>;
-  LevelMax(circle?: number): number;
 }
 export interface ITOSSkillRequiredStance {
   Icon: string;
