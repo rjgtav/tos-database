@@ -2717,7 +2717,7 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
   };
 
   const HotFix_newRequest = (adapter, req, url) => {
-    return adapter.newRequest(url, {
+    let init = req.mode !== 'navigate' && {
       method: req.method,
       headers: req.headers,
       body: req.body,
@@ -2727,7 +2727,9 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
       redirect: req.redirect,
       referrer: req.referrer,
       integrity: req.integrity,
-    });
+    };
+
+    return adapter.newRequest(url, init);
   };
 
   const HotFix_safeFetch_Driver = (adapter, req) => {
