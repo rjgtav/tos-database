@@ -1,0 +1,7 @@
+/home/ubuntu/tos-database/tos-deploy/logs/deploy.log {
+    daily
+    missingok
+    rotate 7
+    compress
+    notifempty
+}
