@@ -26,7 +26,7 @@ logging.basicConfig(
 # Patch the game with the latest version
 version_old, version_new = patcher.patch()
 
-is_rebuild = os.path.isfile(os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_Assassin.ies'))
+is_rebuild = os.path.isfile(os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_assassin.ies'))
 is_patch_new = version_old != version_new
 is_revision_new = sys.argv[2].lower() == 'true' if len(sys.argv) > 2 else False
 

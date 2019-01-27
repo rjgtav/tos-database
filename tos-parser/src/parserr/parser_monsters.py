@@ -80,7 +80,7 @@ def parse():
 
     parse_monsters('monster.ies')
     parse_monsters('monster_event.ies')
-    parse_monsters('Monster_solo_dungeon.ies')
+    parse_monsters('monster_solo_dungeon.ies')
 
 
 def parse_monsters(file_name):

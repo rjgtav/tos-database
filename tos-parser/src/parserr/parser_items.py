@@ -101,9 +101,9 @@ def parse():
     parse_items('item.ies')
     parse_items('item_colorspray.ies')
     parse_items('item_gem.ies')
-    parse_items('item_Equip.ies')
+    parse_items('item_equip.ies')
     parse_items('item_premium.ies')
-    parse_items('item_Quest.ies')
+    parse_items('item_quest.ies')
     parse_items('recipe.ies')
 
 
@@ -237,7 +237,7 @@ def parse_links_monster_drops(items_by_name):
         monster_name = monster['$ID_NAME']
 
         try:
-            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_drop.ipf", monster_name + '.ies')
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_drop.ipf", monster_name.lower() + '.ies')
             ies_file = open(ies_path, 'rb')
             ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 

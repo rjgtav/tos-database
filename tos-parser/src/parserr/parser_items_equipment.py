@@ -446,7 +446,7 @@ def parse_equipment():
     LUA_REINFORCE = luautil.load_script('lib_reinforce_131014.lua', ['GET_REINFORCE_PRICE'])
     LUA_TRANSCEND = luautil.load_script('item_transcend_shared.lua', ['GET_TRANSCEND_MATERIAL_COUNT'])
 
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_Equip.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_equip.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 

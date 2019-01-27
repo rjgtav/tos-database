@@ -263,7 +263,7 @@ def parse_skills_overheats():
 def parse_skills_simony():
     logging.debug('Parsing skills simony...')
 
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skill_Simony.ies')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skill_simony.ies')
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             if int(row['ClassID']) not in globals.skills:

@@ -58,7 +58,7 @@ def parse_links_jobs():
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             job = globals.jobs_by_name[row['ClassName']]
-            ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_' + row['EngName'] + '.ies')
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_' + row['EngName'].lower() + '.ies')
 
             # If this job is still under development, skip
             if not os.path.isfile(ies_path):

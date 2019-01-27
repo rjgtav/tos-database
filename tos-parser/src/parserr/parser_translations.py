@@ -24,7 +24,7 @@ def parse(region):
 
 def parse_dictionary(translations):
     logging.debug('Parsing translations dictionary...')
-    dictionary_path = os.path.join(constants.PATH_INPUT_DATA, 'language.ipf', 'wholeDicID.xml')
+    dictionary_path = os.path.join(constants.PATH_INPUT_DATA, 'language.ipf', 'wholedicid.xml')
     dictionary = ET.parse(dictionary_path).getroot()
 
     # example: <file name="xml\item_Equip.xml">
