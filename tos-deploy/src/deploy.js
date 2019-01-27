@@ -16,12 +16,11 @@ if (shared.IS_PROD) {
 
     // Update node projects
     console.log('Updating node projects...');
-    childProcess.execSync('npm install', { cwd: path.join('..', 'tos-deploy')});
     childProcess.execSync('npm install', { cwd: path.join('..', 'tos-html')});
     childProcess.execSync('npm install', { cwd: path.join('..', 'tos-ngsw')});
     childProcess.execSync('npm install', { cwd: path.join('..', 'tos-search')});
     childProcess.execSync('npm install', { cwd: path.join('..', 'tos-sitemap')});
-    childProcess.execSync('npm install', { cwd: path.join('..', 'tos-web')});
+    childProcess.execSync('npm install', { cwd: path.join('..', 'web')});
 }
 
 // Get current revision
