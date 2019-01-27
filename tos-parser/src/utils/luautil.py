@@ -179,11 +179,11 @@ def init():
         return ies_ADD
     ''')
 
-    ies_ADD('item', load_ies('item_Equip.ies'))
+    ies_ADD('item', load_ies('item_equip.ies'))
     ies_ADD('item_grade', load_ies('item_grade.ies'))
     ies_ADD('monster', load_ies('monster.ies'))
     ies_ADD('monster', load_ies('monster_event.ies'))
-    ies_ADD('monster', load_ies('Monster_solo_dungeon.ies'))
+    ies_ADD('monster', load_ies('monster_solo_dungeon.ies'))
     ies_ADD('stat_monster', load_ies('statbase_monster.ies'))
     ies_ADD('stat_monster_race', load_ies('statbase_monster_race.ies'))
     ies_ADD('stat_monster_type', load_ies('statbase_monster_type.ies'))
@@ -191,7 +191,7 @@ def init():
 
 def load_ies(ies_name):
     ies_data = []
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", ies_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", ies_name.lower())
 
     if not os.path.exists(ies_path):
         logging.warn('Missing ies file: %s', ies_path)
