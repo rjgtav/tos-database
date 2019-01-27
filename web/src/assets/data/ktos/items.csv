@@ -1,4 +1,11 @@
 $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
+19004,helmet_velcoffer,드래곤의 생물학적 분류를 정확하게 파악한 수단은 마법입니다. 야수형 몬스터에게 적용되는 마법이 드래곤에게 동일하게 적용된다는 사실이 밝혀짐으로써 드래곤은 동물계에 속하는 생물로 일단 분류되었습니다. ,icon_item_velcofer01_helmet,,[642916],,,,벨코퍼 헬멧 코스튬,0,0.0,0.0,TTFT,19,0.0
+19005,helmet_MoonRabbit,"복슬복슬한 털, 상대방의 방심을 유도하는 귀여운 얼굴, 쫑긋 솟은 두 개의 귀를 가진 달 토끼 헬멧 코스튬입니다.{nl}리사이클 샵에서 메달로 교환할 수 있습니다.{nl}염색약의 색상이 적용되지 않습니다.",icon_item_helmet_moonrabbit,,,,,,달 토끼 헬멧 코스튬,0,0.0,0.0,TTFT,19,0.0
+19008,helmet_GuiltyF,길티네의 추종자들이 비밀 집회에 참여할 때 신분을 숨기기 위해 착용하는 헬멧 코스튬입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.{nl}염색약의 색상이 적용되지 않습니다.,icon_item_helmet_guilty_f,,,,,,길티네 추종자의 두건(여),0,0.0,0.0,TTFT,19,0.0
+19009,helmet_GuiltyM,길티네의 추종자들이 비밀 집회에 참여할 때 신분을 숨기기 위해 착용하는 헬멧 코스튬입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.{nl}염색약의 색상이 적용되지 않습니다.,icon_item_helmet_guilty_m,,,,,,길티네 추종자의 두건(남),0,0.0,0.0,TTFT,19,0.0
+19010,helmet_FairyGuilty,길티네의 추종자들이 새로운 추종자를 모집하기 위한 포교 활동을 할 때 착용하는 헬멧 코스튬입니다.{nl}귀여운 모습으로 위화감을 최소화하기 위해서라고 합니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.{nl}염색약의 색상이 적용되지 않습니다.,icon_item_helmet_fairyguilty,,,,,,길티네의 두건,0,0.0,0.0,TTFT,19,0.0
+19011,Helmet_penguin,"복슬복슬한 털, 무슨 생각을 하는지 알 수 없는 얼굴, 따듯해 보이는 털 모자를 쓴 펭귄 헬멧 코스튬입니다.{nl}리사이클 샵에서 메달로 교환할 수 있습니다.{nl}염색약의 색상이 적용되지 않습니다.",icon_item_helmet_winter_penguin,,,,,,복슬복슬 북극펭귄 헬멧 코스튬,0,0.0,0.0,TTFT,19,0.0
+19012,Helmet_goldpig,복이 마구마구 들어올 것 같은 황금 복돼지 헬멧 코스튬입니다.{nl}리사이클 샵에서 메달로 교환할 수 있습니다.{nl}염색약의 색상이 적용되지 않습니다.,icon_item_helmet_gold_pig,,,,,,황금 복돼지 헬멧 코스튬,0,0.0,0.0,TTFT,19,0.0
 201001,ColorSpray_1,아이템을 조합하여 다른 아이템 제작,icon_item_small_bag,,,,,,스프레이 - 검정,11,1.0,0.0,TTTT,6,1.0
 201002,ColorSpray_2,아이템을 조합하여 다른 아이템 제작,icon_item_small_bag,,,,,,스프레이 - 빨강,11,1.0,0.0,TTTT,6,1.0
 201003,ColorSpray_3,아이템을 조합하여 다른 아이템 제작,icon_item_small_bag,,,,,,스프레이 - 하얀,11,1.0,0.0,TTTT,6,1.0
@@ -582,6 +589,400 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 495123,Premium_awakeningStone14_Team,장비의 포텐셜을 감소시키지 않고 아이템 각성을 할 수 있게 도와줍니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_awakeningstone,,,,,,프리미엄 각성석(14일),0,0.0,1209600.0,FFFT,8,0.0
 495124,Beauty_HairCoupon_100_Event,"뷰티샵: 바버샵에서 헤어를 무료로 이용할 수 있는 쿠폰입니다.{nl}다른 헤어 할인 쿠폰과 중복으로 사용할 수 없습니다.{nl}1월 24일 점검 시, 일괄 삭제됩니다.",icon_item_haircoupon_100,,,,,,헤어 1회 무료 이용권,0,0.0,0.0,FFFT,19,1.0
 500000,Premium_Vakarine,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다. 사용시 28일간 1일 1회 접속시 해당 날의 아이템을 지급합니다.,icon_item_vakarine_box,,,,,,바카리네 패키지,0,0.0,0.0,FFFT,19,0.0
+620130,costume_Char1_19_4,마수의 행태와 생물학적 특징과 장단점은 물론이고 현재와 과거를 모두 포함하여 마계에서의 역사와 이력까지 해박한 마타도르임을 나타내는 의상입니다.,icon_item_warrior_matador04_m,,,,,,마타도르 벨베스티어리 코스튬(남),0,0.0,0.0,TTFT,19,1.0
+620134,costume_Char1_18_5,루디아리우스는 자유검투사를 의미하는 단어로 검투사로서의 모든 의무를 마치고 은퇴할 수 있는 자격을 지닌 자에게 주어진 호칭입니다.,icon_item_warrior_retiarii04_m,,,,,,레티아리이 루디아리우스 코스튬(남),0,0.0,0.0,TTFT,19,1.0
+620135,costume_Char1_18_6,루디아리우스는 자유검투사를 의미하는 단어로 검투사로서의 모든 의무를 마치고 은퇴할 수 있는 자격을 지닌 자에게 주어진 호칭입니다.,icon_item_warrior_retiarii04_f,,,,,,레티아리이 루디아리우스 코스튬(여),0,0.0,0.0,TTFT,19,1.0
+620136,costume_Char1_19_5,마수의 행태와 생물학적 특징과 장단점은 물론이고 현재와 과거를 모두 포함하여 마계에서의 역사와 이력까지 해박한 마타도르임을 나타내는 의상입니다.,icon_item_warrior_matador04_f,,,,,,마타도르 벨베스티어리 코스튬(여),0,0.0,0.0,TTFT,19,1.0
+621132,costume_Char2_20_05,천년제를 즈음하여 왕실이 재단하여 내려준 방식의 음양사만을 위한 특별한 의상입니다.,icon_item_wizard_onmyoji04_m,,,,,,음양사의 왕실예복 코스튬(남),0,0.0,0.0,TTFT,19,1.0
+621133,costume_Char2_20_06,천년제를 즈음하여 왕실이 재단하여 내려준 방식의 음양사만을 위한 특별한 의상입니다.,icon_item_wizard_onmyoji04_f,,,,,,음양사의 왕실예복 코스튬(여),0,0.0,0.0,TTFT,19,1.0
+621134,costume_Char2_19_04,섀도우맨서 계열 마법학에 놀라운 성과를 보여준 섀도우맨서들에게 지급되는 의상입니다. 다만 요새는 굳이 마법 연구가 아니라도 다른 업적이 큰 섀도우맨서에게도 착용이 허용됩니다.,icon_item_mage_shadowmancer03_m,,,,,,섀도우맨서 수퍼인스컨서 코스튬(남),0,0.0,0.0,TTFT,19,1.0
+621135,costume_Char2_19_05,섀도우맨서 계열 마법학에 놀라운 성과를 보여준 섀도우맨서들에게 지급되는 의상입니다. 다만 요새는 굳이 마법 연구가 아니라도 다른 업적이 큰 섀도우맨서에게도 착용이 허용됩니다.,icon_item_mage_shadowmancer03_f,,,,,,섀도우맨서 수퍼인스컨서 코스튬(여),0,0.0,0.0,TTFT,19,1.0
+622123,costume_Char3_18_04,어떤 상황에서도 변함없는 성실함을 상징한다고 합니다. 플린트의 말을 빌리자면 신뢰할 수 있는 격발만큼 멋진 의상이라고 합니다.,icon_item_bulletmarker04_m,,,,,,불릿 마커 플린터 코스튬(남),0,0.0,0.0,TTFT,19,1.0
+622124,costume_Char3_18_05,어떤 상황에서도 변함없는 성실함을 상징한다고 합니다. 플린트의 말을 빌리자면 신뢰할 수 있는 격발만큼 멋진 의상이라고 합니다.,icon_item_bulletmarker04_f,,,,,,불릿 마커 플린터 코스튬(여),0,0.0,0.0,TTFT,19,1.0
+622134,costume_Char3_12_05,"산을 일어나 춤추게 하며 뒤를 따르게 만드는 일은 파이드 파이퍼들에게는 전설적인 경지로 여겨집니다. 실제로 이것을 달성한 사람은 아직 아무도 없지만, 그럼에도 뛰어난 파이드 파이퍼에게는 그것에서 유래한 이 의상이 주어집니다.",icon_item_piedpiper04_m,,,,,,파이드 파이퍼 베르게퓌어렌더 코스튬(남),0,0.0,0.0,TTFT,19,1.0
+622135,costume_Char3_12_06,"산을 일어나 춤추게 하며 뒤를 따르게 만드는 일은 파이드 파이퍼들에게는 전설적인 경지로 여겨집니다. 실제로 이것을 달성한 사람은 아직 아무도 없지만, 그럼에도 뛰어난 파이드 파이퍼에게는 그것에서 유래한 이 의상이 주어집니다.",icon_item_piedpiper04_f,,,,,,파이드 파이퍼 베르게퓌어렌더 코스튬(여),0,0.0,0.0,TTFT,19,1.0
+623125,costume_Char4_20_04,원칙적으로는 여신을 찾아낸 질럿 교단원만 착용하는 의상이나 공적이 많은 질럿이나 최연장자 질럿이 입는 일은 허용되고 있습니다.,icon_item_zealot3_m,,,,,,질럿 디바인베스쳐 코스튬(남),0,0.0,0.0,TTFT,19,1.0
+623126,costume_Char4_20_05,원칙적으로는 여신을 찾아낸 질럿 교단원만 착용하는 의상이나 공적이 많은 질럿이나 최연장자 질럿이 입는 일은 허용되고 있습니다.,icon_item_zealot3_f,,,,,,질럿 디바인베스쳐 코스튬(여),0,0.0,0.0,TTFT,19,1.0
+623136,costume_exorcist04,오래전 왕실은 확실한 구마 현상으로 판정난 사건에 한하여 엑소시스트에게 사법권을 부여하여 구마에 차질이 없도록 인가하는 칙령을 내렸습니다. 이 의상은 그 사실을 기념하는 의상이며 당시 그런 협상을 이끌어낸 엑소시스트 마스터를 기념하기도 합니다. 법리상 이 의상의 착용자만이 해당 사법권을 인정받습니다.,icon_item_exorcist03_m,,,,,,엑소시스트 콘코르다트 코스튬(남),0,0.0,0.0,TTFT,19,1.0
+623137,costume_exorcist05,오래전 왕실은 확실한 구마 현상으로 판정난 사건에 한하여 엑소시스트에게 사법권을 부여하여 구마에 차질이 없도록 인가하는 칙령을 내렸습니다. 이 의상은 그 사실을 기념하는 의상이며 당시 그런 협상을 이끌어낸 엑소시스트 마스터를 기념하기도 합니다. 법리상 이 의상의 착용자만이 해당 사법권을 인정받습니다.,icon_item_exorcist03_f,,,,,,엑소시스트 콘코르다트 코스튬(여),0,0.0,0.0,TTFT,19,1.0
+624101,costume_war_m_001,착용하면 외형이 변경됩니다.,icon_item_warrior_swordmanmaster_m,,,,,,소드맨 마스터 코스튬,0,0.0,0.0,TTFT,19,0.0
+624102,costume_war_f_001,착용하면 외형이 변경됩니다.,icon_item_warrior_peltastamaster_f,,,,,,펠타스타 마스터 코스튬,0,0.0,0.0,TTFT,19,0.0
+624103,costume_war_m_002,착용 시 외형과 이펙트가 변경됩니다.{nl}- 스카이라이너 이펙트가 변경됩니다.,icon_item_warrior_highrander_m,,,,,,하이랜더 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624105,costume_war_m_003,착용하면 외형이 변경됩니다.,icon_item_warrior_orsha_soldier_m,,,,,,오르샤 병사 코스튬:7일,0,0.0,604800.0,TTFT,19,0.0
+624106,costume_war_f_003,착용하면 외형이 변경됩니다.,icon_item_warrior_orsha_soldier_f,,,,,,오르샤 병사 코스튬:7일,0,0.0,604800.0,TTFT,19,0.0
+624107,costume_war_f_002,착용 시 외형과 이펙트가 변경됩니다.{nl}- 스카이라이너 이펙트가 변경됩니다.,icon_item_warrior_highrander_f,,,,,,하이랜더 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624108,costume_war_m_004,착용하면 외형이 변경됩니다.,icon_item_warrior_springflower_m,,,,,,전사용 봄맞이 꽃 컨셉 드레스(남),0,0.0,0.0,TTFT,19,0.0
+624109,costume_war_f_004,착용하면 외형이 변경됩니다.,icon_item_warrior_springflower_f,,,,,,전사용 봄맞이 꽃 컨셉 드레스(여),0,0.0,0.0,TTFT,19,0.0
+624110,costume_war_m_005,착용하면 외형이 변경됩니다.,icon_item_warrior_knight_m,,,,,,우스카 코스튬,0,0.0,0.0,TTFT,19,0.0
+624111,costume_war_f_005,착용하면 외형이 변경됩니다.,icon_item_warrior_intermediate_officer_f,,,,,,빌헬미나 코스튬,0,0.0,0.0,TTFT,19,0.0
+624112,costume_war_m_006,착용하면 외형이 변경됩니다.,icon_item_warrior_orsha_soldier_m,,,,,,오르샤 병사 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624113,costume_war_f_006,착용하면 외형이 변경됩니다.,icon_item_warrior_orsha_soldier_f,,,,,,오르샤 병사 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624114,costume_war_m_007,착용하면 외형이 변경됩니다.,icon_item_warrior_trump_m,,,,,,전사용 트럼프 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624115,costume_war_f_007,착용하면 외형이 변경됩니다.,icon_item_warrior_trump_f,,,,,,전사용 트럼프 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624116,costume_war_m_008,착용하면 외형이 변경됩니다.,icon_item_warrior_school_m,,,,,,전사용 스쿨룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624117,costume_war_f_008,착용하면 외형이 변경됩니다.,icon_item_warrior_school_f,,,,,,전사용 스쿨룩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624118,costume_war_m_009,착용 시 외형과 이펙트가 변경됩니다.{nl}- 베어 이펙트가 변경됩니다.,icon_item_warrior_swordman01_3_m,,,,,,소드맨 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624119,costume_war_f_009,착용 시 외형과 이펙트가 변경됩니다.{nl}- 베어 이펙트가 변경됩니다.,icon_item_warrior_swordman01_3_f,,,,,,소드맨 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624120,costume_war_m_010,착용하면 외형이 변경됩니다.,icon_item_warrior_mizuki_m,,,,,,전사용 수영복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624121,costume_war_f_010,착용하면 외형이 변경됩니다.,icon_item_warrior_mizuki_f,,,,,,전사용 수영복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624122,costume_war_m_011,착용하면 외형이 변경됩니다.,icon_item_warrior_alice_m,,,,,,전사용 앨리스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624123,costume_war_f_011,착용하면 외형이 변경됩니다.,icon_item_warrior_alice_f,,,,,,전사용 앨리스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624124,costume_war_m_012,착용하면 외형이 변경됩니다.,icon_item_warrior_armor_m,,,,,,전사용 근위기사 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624125,costume_war_f_012,착용하면 외형이 변경됩니다.,icon_item_warrior_schoolsalor_f,,,,,,전사용 세일러복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624126,costume_war_m_013,착용하면 외형이 변경됩니다.,icon_item_warrior_uniform_m,,,,,,전사용 제복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624127,costume_war_f_013,착용하면 외형이 변경됩니다.,icon_item_warrior_uniform_f,,,,,,전사용 제복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624128,costume_war_m_014,착용하면 외형이 변경됩니다.,icon_item_warrior_whiteknight_m,,,,,,전사용 순백의 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624129,costume_war_f_014,착용하면 외형이 변경됩니다.,icon_item_warrior_whiteknight_f,,,,,,전사용 순백의 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624130,costume_war_m_015,착용하면 외형이 변경됩니다.,icon_item_warrior_manish_m,,,,,,전사용 매니시룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624131,costume_war_f_015,착용하면 외형이 변경됩니다.,icon_item_warrior_manish_f,,,,,,전사용 매니시룩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624132,costume_war_m_016,착용하면 외형이 변경됩니다.,icon_item_warrior_christmas_m,,,,,,전사용 크리스마스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624133,costume_war_f_016,착용하면 외형이 변경됩니다.,icon_item_warrior_christmas_f,,,,,,전사용 크리스마스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624134,costume_war_m_017,착용하면 외형이 변경됩니다.,icon_item_warrior_bluepeacock_m,,,,,,전사용 파티 드레스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624135,costume_war_f_017,착용하면 외형이 변경됩니다.,icon_item_warrior_bluepeacock_f,,,,,,전사용 파티 드레스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624136,costume_war_m_018,착용하면 외형이 변경됩니다.,warrior_simplecolor_m,,,,,,전사용 심플 컬러 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624137,costume_war_f_018,착용하면 외형이 변경됩니다.,warrior_simplecolor_f,,,,,,전사용 심플 컬러 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624198,costume_war_m_098,착용하면 외형이 변경됩니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_warrior_orsha_soldier_m,,,,,,오르샤 병사 코스튬:1분,0,0.0,60.0,TTFT,19,0.0
+624199,costume_war_f_099,착용하면 외형이 변경됩니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_warrior_orsha_soldier_f,,,,,,오르샤 병사 코스튬:1분,0,0.0,60.0,TTFT,19,0.0
+624301,costume_wiz_m_001,착용하면 외형이 변경됩니다.,icon_item_mage_blackman_m,,,,,,주시자 코스튬,0,0.0,0.0,TTFT,19,0.0
+624302,costume_wiz_f_001,착용하면 외형이 변경됩니다.,icon_item_mage_mercenary_f,,,,,,용병의뢰소 소장 코스튬,0,0.0,0.0,TTFT,19,0.0
+624303,costume_wiz_m_002,착용하면 외형이 변경됩니다.,icon_item_mage_yuurs_m,,,,,,유르스 코스튬:7일,0,0.0,604800.0,TTFT,19,0.0
+624304,costume_wiz_f_002,착용하면 외형이 변경됩니다.,icon_item_mage_grita_f,,,,,,그리타 코스튬:7일,0,0.0,604800.0,TTFT,19,0.0
+624305,costume_wiz_m_003,착용 시 외형과 이펙트가 변경됩니다.{nl}- 매직 미사일 이펙트가 변경 됩니다.,icon_item_mage_costume01_3_m,,,,,,위저드 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624306,costume_wiz_f_003,착용 시 외형과 이펙트가 변경됩니다.{nl}- 매직 미사일 이펙트가 변경 됩니다.,icon_item_mage_costume01_3_f,,,,,,위저드 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624307,costume_wiz_m_004,착용하면 외형이 변경됩니다.,icon_item_mage_springflower_m,,,,,,마법사용 봄맞이 꽃 컨셉 드레스(남),0,0.0,0.0,TTFT,19,0.0
+624308,costume_wiz_f_004,착용하면 외형이 변경됩니다.,icon_item_mage_springflower_f,,,,,,마법사용 봄맞이 꽃 컨셉 드레스(여),0,0.0,0.0,TTFT,19,0.0
+624309,costume_wiz_m_005,착용하면 외형이 변경됩니다.,icon_item_mage_castle_lord_m,,,,,,델무어 성주 코스튬,0,0.0,0.0,TTFT,19,0.0
+624310,costume_wiz_f_005,착용하면 외형이 변경됩니다.,icon_item_mage_wizard_master_f,,,,,,위저드 마스터 코스튬,0,0.0,0.0,TTFT,19,0.0
+624311,costume_wiz_m_006,착용하면 외형이 변경됩니다.,icon_item_mage_yuurs_m,,,,,,유르스 코스튬,0,0.0,0.0,TTFT,19,0.0
+624312,costume_wiz_f_006,착용하면 외형이 변경됩니다.,icon_item_mage_grita_f,,,,,,그리타 코스튬,0,0.0,0.0,TTFT,19,0.0
+624313,costume_wiz_m_007,착용하면 외형이 변경됩니다.,icon_item_mage_trump_m,,,,,,마법사용 트럼프 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624314,costume_wiz_f_007,착용하면 외형이 변경됩니다.,icon_item_mage_trump_f,,,,,,마법사용 트럼프 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624315,costume_wiz_m_008,착용하면 외형이 변경됩니다.,icon_item_mage_school_m,,,,,,마법사용 스쿨룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624316,costume_wiz_f_008,착용하면 외형이 변경됩니다.,icon_item_mage_school_f,,,,,,마법사용 스쿨룩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624317,costume_wiz_m_009,착용하면 외형이 변경됩니다.,icon_item_mage_bunny_m,,,,,,마법사용 바니보이 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624318,costume_wiz_f_009,착용하면 외형이 변경됩니다.,icon_item_mage_bunny_f,,,,,,마법사용 바니걸 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624319,costume_wiz_m_010,착용하면 외형이 변경됩니다.,icon_item_mage_mizuki_m,,,,,,마법사용 수영복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624320,costume_wiz_f_010,착용하면 외형이 변경됩니다.,icon_item_mage_mizuki_f,,,,,,마법사용 수영복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624321,costume_wiz_m_011,착용하면 외형이 변경됩니다.,icon_item_mage_alice_m,,,,,,마법사용 앨리스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624322,costume_wiz_f_011,착용하면 외형이 변경됩니다.,icon_item_mage_alice_f,,,,,,마법사용 앨리스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624323,costume_wiz_m_012,착용하면 외형이 변경됩니다.,icon_item_mage_uniform_m,,,,,,마법사용 제복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624324,costume_wiz_f_012,착용하면 외형이 변경됩니다.,icon_item_mage_uniform_f,,,,,,마법사용 제복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624325,costume_wiz_m_013,착용하면 외형이 변경됩니다.,icon_item_mage_gothloli_m,,,,,,마법사용 고스로리 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624326,costume_wiz_f_013,착용하면 외형이 변경됩니다.,icon_item_mage_gothloli_f,,,,,,마법사용 고스로리 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624327,costume_wiz_m_014,착용하면 외형이 변경됩니다.,icon_item_mage_manish_m,,,,,,마법사용 매니시룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624328,costume_wiz_f_014,착용하면 외형이 변경됩니다.,icon_item_mage_manish_f,,,,,,마법사용 매니시룩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624329,costume_wiz_m_016,착용하면 외형이 변경됩니다.,icon_item_mage_christmas_m,,,,,,마법사용 크리스마스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624332,costume_wiz_f_016,착용하면 외형이 변경됩니다.,icon_item_mage_christmas_f,,,,,,마법사용 크리스마스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624333,costume_wiz_m_017,착용 시 외형과 이펙트가 변경됩니다.{nl}- 파이어 필라 스킬 이펙트가 변경됩니다.,icon_item_mage_pyromance_m,,,,,,파이로맨서 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624334,costume_wiz_f_017,착용 시 외형과 이펙트가 변경됩니다.{nl}- 파이어 필라 스킬 이펙트가 변경됩니다.,icon_item_mage_pyromance_f,,,,,,파이로맨서 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624335,costume_wiz_m_018,착용하면 외형이 변경됩니다.,icon_item_mage_pinkwizard_m,,,,,,마법사용 파티 드레스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624336,costume_wiz_f_018,착용하면 외형이 변경됩니다.,icon_item_mage_pinkwizard_f,,,,,,마법사용 파티 드레스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624337,costume_wiz_m_019,착용 시 외형과 이펙트가 변경됩니다.{nl}- 사이킥 프레셔 스킬 이펙트가 변경됩니다.,icon_item_mage_psychokinesist02_4_m,,,,,,사이코키노 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624338,costume_wiz_f_019,착용 시 외형과 이펙트가 변경됩니다.{nl}- 사이킥 프레셔 스킬 이펙트가 변경됩니다.,icon_item_mage_psychokinesist02_4_f,,,,,,사이코키노 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624339,costume_wiz_m_020,착용하면 외형이 변경됩니다.,mage_simplecolor_m,,,,,,마법사용 심플 컬러 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624340,costume_wiz_f_020,착용하면 외형이 변경됩니다.,mage_simplecolor_f,,,,,,마법사용 심플 컬러 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624398,costume_wiz_m_098,착용하면 외형이 변경됩니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_mage_yuurs_m,,,,,,유르스 코스튬:1분,0,0.0,60.0,TTFT,19,0.0
+624399,costume_wiz_f_099,착용하면 외형이 변경됩니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_mage_grita_f,,,,,,그리타 코스튬:1분,0,0.0,60.0,TTFT,19,0.0
+624501,costume_arc_m_001,착용하면 외형이 변경됩니다.,icon_item_archer_paladin_follower_m,,,,,,팔라딘 추종자 코스튬,0,0.0,0.0,TTFT,19,0.0
+624502,costume_arc_f_001,착용하면 외형이 변경됩니다.,icon_item_archer_kristina_f,,,,,,크리스티나 코스튬,0,0.0,0.0,TTFT,19,0.0
+624503,costume_arc_m_002,착용 시 외형과 이펙트가 변경됩니다.{nl}- 멀티 샷 이펙트가 변경됩니다.,icon_item_archer_costume01_3_m,,,,,,아처 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624504,costume_arc_f_002,착용 시 외형과 이펙트가 변경됩니다.{nl}- 멀티 샷 이펙트가 변경됩니다.,icon_item_archer_costume01_3_f,,,,,,아처 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624505,costume_arc_m_003,착용하면 외형이 변경됩니다.,icon_item_archer_pilgrim_m,,,,,,순례자의 코스튬(남):7일,0,0.0,604800.0,TTFT,19,0.0
+624506,costume_arc_f_003,착용하면 외형이 변경됩니다.,icon_item_archer_pilgrim_f,,,,,,순례자의 코스튬(여):7일,0,0.0,604800.0,TTFT,19,0.0
+624507,costume_arc_m_004,착용하면 외형이 변경됩니다.,icon_item_archer_springflower_m,,,,,,궁수의 봄맞이 꽃 컨셉 드레스(남),0,0.0,0.0,TTFT,19,0.0
+624508,costume_arc_f_004,착용하면 외형이 변경됩니다.,icon_item_archer_springflower_f,,,,,,궁수의 봄맞이 꽃 컨셉 드레스(여),0,0.0,0.0,TTFT,19,0.0
+624509,costume_arc_m_005,착용하면 외형이 변경됩니다.,icon_item_archer_fedimian_mercenary2_2_m,,,,,,관리직원 코스튬,0,0.0,0.0,TTFT,19,0.0
+624510,costume_arc_f_005,착용하면 외형이 변경됩니다.,icon_item_archer_warehouse_keeper_f,,,,,,창고지기 코스튬,0,0.0,0.0,TTFT,19,0.0
+624511,costume_arc_m_006,착용 시 외형과 이펙트가 변경됩니다.{nl}- 파비스 설치 오브젝트가 변경됩니다.,icon_item_archer_quarreelshooter01_3_m,,,,,,쿼렐슈터 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624512,costume_arc_f_006,착용 시 외형과 이펙트가 변경됩니다.{nl}- 파비스 설치 오브젝트가 변경됩니다.,icon_item_archer_quarreelshooter01_3_f,,,,,,쿼렐슈터 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624513,costume_arc_m_007,착용하면 외형이 변경됩니다.,icon_item_archer_pilgrim_m,,,,,,순례자의 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624514,costume_arc_f_007,착용하면 외형이 변경됩니다.,icon_item_archer_pilgrim_f,,,,,,순례자의 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624515,costume_arc_m_008,착용하면 외형이 변경됩니다.,icon_item_archer_trump_m,,,,,,궁수의 트럼프 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624516,costume_arc_f_008,착용하면 외형이 변경됩니다.,icon_item_archer_trump_f,,,,,,궁수의 트럼프 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624517,costume_arc_m_009,착용하면 외형이 변경됩니다.,icon_item_archer_school_m,,,,,,궁수의 스쿨룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624518,costume_arc_f_009,착용하면 외형이 변경됩니다.,icon_item_archer_school_f,,,,,,궁수의 스쿨룩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624520,costume_arc_f_010,착용하면 외형이 변경됩니다.,icon_item_archer_racoon_f,,,,,,궁수의 너구리 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624521,costume_arc_m_011,착용하면 외형이 변경됩니다.,icon_item_archer_mizuki_m,,,,,,궁수의 수영복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624522,costume_arc_f_011,착용하면 외형이 변경됩니다.,icon_item_archer_mizuki_f,,,,,,궁수의 수영복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624523,costume_arc_m_012,착용하면 외형이 변경됩니다.,icon_item_archer_alice_m,,,,,,궁수의 앨리스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624524,costume_arc_f_012,착용하면 외형이 변경됩니다.,icon_item_archer_alice_f,,,,,,궁수의 앨리스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624525,costume_arc_m_013,착용 시 외형과 이펙트가 변경됩니다.{nl}- 배라지 이펙트가 변경됩니다.,icon_item_ranger_costume01_3_m,,,,,,레인저 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624526,costume_arc_f_013,착용 시 외형과 이펙트가 변경됩니다.{nl}- 배라지 이펙트가 변경됩니다.,icon_item_ranger_costume01_3_f,,,,,,레인저 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624528,costume_arc_f_014,착용하면 외형이 변경됩니다.,icon_item_archer_schoolsalor_f,,,,,,궁수의 세일러복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624529,costume_arc_m_015,착용하면 외형이 변경됩니다.,icon_item_archer_uniform_m,,,,,,궁수의 제복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624530,costume_arc_f_015,착용하면 외형이 변경됩니다.,icon_item_archer_uniform_f,,,,,,궁수의 제복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624531,costume_arc_m_016,착용하면 외형이 변경됩니다.,icon_item_archer_armor_m,,,,,,궁수의 중장 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624533,costume_arc_m_017,착용하면 외형이 변경됩니다.,icon_item_archer_manish_m,,,,,,궁수의 매니시룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624534,costume_arc_f_017,착용하면 외형이 변경됩니다.,icon_item_archer_manish_f,,,,,,궁수의 매니시룩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624535,costume_arc_m_019,착용하면 외형이 변경됩니다.,icon_item_archer_christmas_m,,,,,,궁수의 크리스마스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624538,costume_arc_f_019,착용하면 외형이 변경됩니다.,icon_item_archer_christmas_f,,,,,,궁수의 크리스마스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624539,costume_arc_m_020,착용하면 외형이 변경됩니다.,icon_item_archer_bluepeacock_m,,,,,,궁수용 파티 드레스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624540,costume_arc_f_020,착용하면 외형이 변경됩니다.,icon_item_archer_bluepeacock_f,,,,,,궁수용 파티 드레스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624541,costume_arc_m_021,착용하면 외형이 변경됩니다.,archer_simplecolor_m,,,,,,궁수용 심플 컬러 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624542,costume_arc_f_021,착용하면 외형이 변경됩니다.,archer_simplecolor_f,,,,,,궁수용 심플 컬러 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624598,costume_arc_m_099,착용하면 외형이 변경됩니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_archer_pilgrim_m,,,,,,순례자의 코스튬(남):1분,0,0.0,60.0,TTFT,19,1.0
+624599,costume_arc_f_099,착용하면 외형이 변경됩니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_archer_pilgrim_f,,,,,,순례자의 코스튬(여):1분,0,0.0,60.0,TTFT,19,1.0
+624701,costume_clr_m_001,착용하면 외형이 변경됩니다.,icon_item_cleric_paladinmaster_m,,,,,,팔라딘 마스터 코스튬,0,0.0,0.0,TTFT,19,0.0
+624702,costume_clr_f_001,착용하면 외형이 변경됩니다.,icon_item_cleric_rena_f,,,,,,바이보라의 날개 교단 코스튬,0,0.0,0.0,TTFT,19,0.0
+624703,costume_clr_m_002,착용 시 외형과 이펙트가 변경됩니다.{nl}- 매스 힐 이펙트가 변경됩니다.,icon_item_cleric_costume01_3_m,,,,,,프리스트 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624704,costume_clr_f_002,착용 시 외형과 이펙트가 변경됩니다.{nl}- 매스 힐 이펙트가 변경됩니다.,icon_item_cleric_costume01_3_f,,,,,,프리스트 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624705,costume_clr_m_003,착용하면 외형이 변경됩니다.,icon_item_cleric_fedimianmerchant_m,,,,,,페디미안 상인 코스튬(남):7일,0,0.0,604800.0,TTFT,19,0.0
+624706,costume_clr_f_003,착용하면 외형이 변경됩니다.,icon_item_cleric_fedimianmerchant_f,,,,,,페디미안 상인 코스튬(여):7일,0,0.0,604800.0,TTFT,19,0.0
+624707,costume_clr_m_004,착용하면 외형이 변경됩니다.,icon_item_cleric_springflower_m,,,,,,성직자의 봄맞이 꽃 컨셉 드레스(남),0,0.0,0.0,TTFT,19,0.0
+624708,costume_clr_f_004,착용하면 외형이 변경됩니다.,icon_item_cleric_springflower_f,,,,,,성직자의 봄맞이 꽃 컨셉 드레스(여),0,0.0,0.0,TTFT,19,0.0
+624709,costume_clr_m_005,착용하면 외형이 변경됩니다.,icon_item_cleric_alf_m,,,,,,잡화상인 알프 코스튬,0,0.0,0.0,TTFT,19,0.0
+624710,costume_clr_f_005,착용하면 외형이 변경됩니다.,icon_item_cleric_julla_f,,,,,,장비상인 율라 코스튬,0,0.0,0.0,TTFT,19,0.0
+624711,costume_clr_m_006,착용하면 외형이 변경됩니다.,icon_item_cleric_fedimianmerchant_m,,,,,,페디미안 상인 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624712,costume_clr_f_006,착용하면 외형이 변경됩니다.,icon_item_cleric_fedimianmerchant_f,,,,,,페디미안 상인 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624713,costume_clr_m_007,착용하면 외형이 변경됩니다.,icon_item_cleric_trump_m,,,,,,성직자의 트럼프 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624714,costume_clr_f_007,착용하면 외형이 변경됩니다.,icon_item_cleric_trump_f,,,,,,성직자의 트럼프 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624715,costume_clr_m_008,착용 시 외형과 이펙트가 변경됩니다.{nl}- 모든 여신상을 제작할 때 애니메이션이 변경됩니다.,icon_item_cleric_dievdirbys01_3_m,,,,,,딥디르비 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624716,costume_clr_f_008,착용 시 외형과 이펙트가 변경됩니다.{nl}- 모든 여신상을 제작할 때 애니메이션이 변경됩니다.,icon_item_cleric_dievdirbys01_3_f,,,,,,딥디르비 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624717,costume_clr_m_009,착용하면 외형이 변경됩니다.,icon_item_cleric_school_m,,,,,,성직자의 스쿨룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624718,costume_clr_f_009,착용하면 외형이 변경됩니다.,icon_item_cleric_school_f,,,,,,성직자의 스쿨룩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624719,costume_clr_m_010,착용하면 외형이 변경됩니다.,icon_item_cleric_maid_m,,,,,,성직자의 서번트 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624720,costume_clr_f_010,착용하면 외형이 변경됩니다.,icon_item_cleric_maid_f,,,,,,성직자의 서번트 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624721,costume_clr_m_011,착용하면 외형이 변경됩니다.,icon_item_cleric_mizuki_m,,,,,,성직자의 수영복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624722,costume_clr_f_011,착용하면 외형이 변경됩니다.,icon_item_cleric_mizuki_f,,,,,,성직자의 수영복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624723,costume_clr_m_012,착용하면 외형이 변경됩니다.,icon_item_cleric_alice_m,,,,,,성직자의 앨리스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624724,costume_clr_f_012,착용하면 외형이 변경됩니다.,icon_item_cleric_alice_f,,,,,,성직자의 앨리스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624725,costume_clr_m_013,착용하면 외형이 변경됩니다.,icon_item_cleric_uniform_m,,,,,,성직자의 제복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624726,costume_clr_f_013,착용하면 외형이 변경됩니다.,icon_item_cleric_uniform_f,,,,,,성직자의 제복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624727,costume_clr_m_014,착용 시 외형과 이펙트가 변경됩니다.{nl}- 쌍쇄공 이펙트가 변경됩니다.,icon_item_cleric_monk_m,,,,,,몽크 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624728,costume_clr_f_014,착용 시 외형과 이펙트가 변경됩니다.{nl}- 쌍쇄공 이펙트가 변경됩니다.,icon_item_cleric_monk_f,,,,,,몽크 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624729,costume_clr_m_015,착용 시 외형과 이펙트가 변경됩니다.{nl}- 힐 이펙트가 변경됩니다.,icon_item_cleric_cleric01_3_m,,,,,,클레릭 스페셜 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624730,costume_clr_f_015,착용 시 외형과 이펙트가 변경됩니다.{nl}- 힐 이펙트가 변경됩니다.,icon_item_cleric_cleric01_3_f,,,,,,클레릭 스페셜 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624731,costume_clr_m_016,착용하면 외형이 변경됩니다.,icon_item_cleric_manish_m,,,,,,성직자의 매니시룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624732,costume_clr_f_016,착용하면 외형이 변경됩니다.,icon_item_cleric_manish_f,,,,,,성직자의 매니시룩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624733,costume_clr_m_017,착용하면 외형이 변경됩니다.,icon_item_cleric_christmas_m,,,,,,성직자의 크리스마스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624734,costume_clr_f_017,착용하면 외형이 변경됩니다.,icon_item_cleric_christmas_f,,,,,,성직자의 크리스마스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624735,costume_clr_m_018,착용하면 외형이 변경됩니다.,icon_item_cleric_yellowpeacock_m,,,,,,성직자용 파티 드레스 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624736,costume_clr_f_018,착용하면 외형이 변경됩니다.,icon_item_cleric_yellowpeacock_f,,,,,,성직자용 파티 드레스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624737,costume_clr_m_019,착용하면 외형이 변경됩니다.,cleric_simplecolor_m,,,,,,성직자용 심플 컬러 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+624738,costume_clr_f_019,착용하면 외형이 변경됩니다.,cleric_simplecolor_f,,,,,,성직자용 심플 컬러 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+624798,costume_clr_m_099,착용하면 외형이 변경됩니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_cleric_fedimianmerchant_m,,,,,,페디미안 상인 코스튬(남):1분,0,0.0,60.0,TTFT,19,0.0
+624799,costume_clr_f_099,착용하면 외형이 변경됩니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_cleric_fedimianmerchant_f,,,,,,페디미안 상인 코스튬(여):1분,0,0.0,60.0,TTFT,19,0.0
+633001,costume_Com_1,가비야 여신의 코스튬입니다. 획득방법은 '히든'입니다.,icon_item_gabiya,,,,,,가비야 코스튬,0,0.0,0.0,FFFF,19,1.0
+633002,costume_Com_2,아우슈리네 여신의 코스튬입니다. 남성이 착용해도 여성의 외형이 나옵니다.,icon_item_aushu,,,,,,아우슈리네 코스튬,0,0.0,0.0,FFFF,19,1.0
+633003,costume_Com_3,바카리네 여신의 코스튬입니다. 획득방법은 베일에 싸여 있습니다.,icon_item_baca,,,,,,바카리네 코스튬,0,0.0,0.0,FFFF,19,1.0
+633004,costume_Com_4,코카트리스를 본따 만든 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_cokatrice_body_f,,,,,,코카트리스 코스튬,0,0.0,0.0,TTFT,19,0.0
+633005,costume_Com_5,남성이 혼례를 할때 입던 전통 혼례복입니다. 착용하면 외형이 변경됩니다.,icon_item_hanbok_m,,,,,,전통 혼례복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633006,costume_Com_6,여성이 혼례를 할때 입던 전통 혼례복입니다. 착용하면 외형이 변경됩니다.,icon_item_hanbok_f,,,,,,전통 혼례복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633007,costume_Com_7,써클의 심볼이 표시된 맞춤복입니다. 착용하면 외형이 변경 됩니다.,icon_item_badschooluniform_black_m,,,,,,검정 불량 서클 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633008,costume_Com_8,써클의 심볼이 표시된 맞춤복입니다. 착용하면 외형이 변경 됩니다.,icon_item_badschooluniform_black_f,,,,,,검정 불량 서클 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633009,costume_Com_9,써클의 심볼이 표시된 맞춤복입니다. 착용하면 외형이 변경 됩니다.,icon_item_badschooluniform_red_m,,,,,,붉은 불량 서클 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633010,costume_Com_10,써클의 심볼이 표시된 맞춤복입니다. 착용하면 외형이 변경 됩니다.,icon_item_badschooluniform_red_f,,,,,,붉은 불량 서클 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633011,costume_Com_11,써클의 심볼이 표시된 맞춤복입니다. 착용하면 외형이 변경 됩니다.,icon_item_badschooluniform_white_m,,,,,,백골 불량 서클 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633012,costume_Com_12,써클의 심볼이 표시된 맞춤복입니다. 착용하면 외형이 변경 됩니다.,icon_item_badschooluniform_white_f,,,,,,백골 불량 서클 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633013,costume_Com_13,써클의 심볼이 표시된 맞춤복입니다. 착용하면 외형이 변경 됩니다.,icon_item_badschooluniform_mint_m,,,,,,번개 불량 서클 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633014,costume_Com_14,써클의 심볼이 표시된 맞춤복입니다. 착용하면 외형이 변경 됩니다.,icon_item_badschooluniform_mint_f,,,,,,번개 불량 서클 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633015,costume_Com_15,벚꽃 만발한 봄날에 입기 좋은 세라복입니다. 착용하면 외형이 변경 됩니다.,icon_item_pink_sailor01_m,,,,,,벚꽃 로맨스 세일러복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633016,costume_Com_16,벚꽃 만발한 봄날에 입기 좋은 세라복입니다. 착용하면 외형이 변경 됩니다.,icon_item_pink_sailor01_f,,,,,,벚꽃 로맨스 세일러복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633017,costume_Com_17,결혼식에 입고가기 무난한 정장입니다. 착용하면 외형이 변경 됩니다.,icon_item_bestman01_m,,,,,,베스트 맨 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633018,costume_Com_18,신부의 친구들이 입기 무난한 드레스입니다. 착용하면 외형이 변경 됩니다.,icon_item_bridesmaid_f,,,,,,브라이드메이드 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633019,costume_Com_19,숲 속의 요정을 흉내낸 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_leafcostume01_m,,,,,,숲의 요정 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633020,costume_Com_20,숲 속의 요정을 흉내낸 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_leafcostume01_f,,,,,,숲의 요정 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633021,costume_Com_21,상어 해적단 선원 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_cosair03_m,,,,,,상어 해적단 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633022,costume_Com_22,상어 해적단 선원 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_cosair03_f,,,,,,상어 해적단 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633023,costume_Com_23,두근두근 웨딩 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_wedding01_m,,,,,,두근두근 웨딩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633024,costume_Com_24,메이 웨딩 드레스 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_wedding02_f,,,,,,메이 웨딩 드레스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633025,costume_Com_25,메이 웨딩 턱시도 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_wedding02_m,,,,,,메이 웨딩 턱시도 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633026,costume_Com_26,두근두근 웨딩 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_wedding01_f,,,,,,두근두근 웨딩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633027,costume_Com_27,뒤뚱뒤뚱 걷는 모습이 이상적인 동물 인형 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_poporion_body_f,,,,,,동물 인형 코스튬,0,0.0,0.0,TTFT,19,0.0
+633028,costume_Com_28,녹색 눈이 반짝반짝한 턱시도 냥이 코스튬입니다. 분홍 젤리가 아주 일품! 착용하면 외형이 변경 됩니다.,icon_item_tiecat_body_f,,,,,,턱시도 냥이 코스튬,0,0.0,0.0,TTFT,19,0.0
+633029,costume_Com_29,복슬복슬한 털이 귀여운 치킨 푸들 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_poodle_body_f,,,,,,치킨 푸들 코스튬,0,0.0,0.0,TTFT,19,0.0
+633030,costume_Com_30,대저택에서 입으면 잘 어울리는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_maiduniform_black_m,,,,,,블랙 버틀러 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633031,costume_Com_31,대저택에서 입으면 잘 어울리는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_maiduniform_black_f,,,,,,블랙 메이드 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633032,costume_Com_32,대저택에서 입으면 잘 어울리는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_maiduniform_red_m,,,,,,레드 버틀러 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633033,costume_Com_33,대저택에서 입으면 잘 어울리는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_maiduniform_red_f,,,,,,레드 메이드 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633034,costume_Com_34,대저택에서 입으면 잘 어울리는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_maiduniform_blue_m,,,,,,블루 버틀러 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633035,costume_Com_35,대저택에서 입으면 잘 어울리는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_maiduniform_blue_f,,,,,,블루 메이드 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633036,costume_Com_36,하급 용병에게 기본적으로 지급되는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_lowtactic01_m,,,,,,하급 용병 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633037,costume_Com_37,하급 용병에게 기본적으로 지급되는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_lowtactic01_f,,,,,,하급 용병 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633038,costume_Com_38,팀 배틀 리그 시즌 상위권 지급되는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}다음 시즌이 종료되면 삭제됩니다.,icon_item_vincentaas01_m,,,,,,골든 챔피언 코스튬(남),0,0.0,0.0,FFFF,19,0.0
+633039,costume_Com_39,팀 배틀 리그 시즌 상위권 지급되는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}다음 시즌이 종료되면 삭제됩니다.,icon_item_vincentaas01_f,,,,,,골든 챔피언 코스튬(여),0,0.0,0.0,FFFF,19,0.0
+633040,costume_Com_40,팀 배틀 리그 시즌 1위에게 지급되는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}다음 시즌이 종료되면 삭제됩니다.,icon_item_vincentaas02_m,,,,,,블랙 챔피언 코스튬(남),0,0.0,0.0,FFFF,19,0.0
+633041,costume_Com_41,팀 배틀 리그 시즌 1위에게 지급되는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}다음 시즌이 종료되면 삭제됩니다.,icon_item_vincentaas02_f,,,,,,블랙 챔피언 코스튬(여),0,0.0,0.0,FFFF,19,0.0
+633042,costume_Com_42,블루진 코스튬입니다. 착용하면 외형이 변경됩니다. ,icon_item_swimsuit02_m,,,,,,블루진 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633043,costume_Com_43,슬링 비키니 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit02_f,,,,,,슬링 비키니 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633044,costume_Com_44,래쉬가드 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit03_m,,,,,,래쉬가드 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633045,costume_Com_45,래쉬가드 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit03_f,,,,,,래쉬가드 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633046,costume_Com_46,트렁크 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit04_m,,,,,,트렁크 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633047,costume_Com_47,원피스 수영복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit04_f,,,,,,원피스 수영복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633048,costume_Com_48,플라밍고 튜브 블루진 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit02flamingo_m,,,,,,플라밍고 튜브 블루진 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633049,costume_Com_49,플라밍고 튜브 슬링 비키니 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit02flamingo_f,,,,,,플라밍고 튜브 슬링 비키니 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633050,costume_Com_50,오리 튜브 래쉬가드 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit03duck_m,,,,,,오리 튜브 래쉬가드 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633051,costume_Com_51,오리 튜브 래쉬가드 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit03duck_f,,,,,,오리 튜브 래쉬가드 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633052,costume_Com_52,오리발 트렁크 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit04flipper_m,,,,,,오리발 트렁크 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633053,costume_Com_53,오리발 원피스 수영복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_swimsuit04flipper_f,,,,,,오리발 원피스 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633054,costume_Com_54,용병에게 수련복으로 지급되는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_lowtactic02_m,,,,,,용병 수련복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633055,costume_Com_55,용병에게 수련복으로 지급되는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_lowtactic02_f,,,,,,용병 수련복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633056,costume_Com_56,모던 블랙 바니걸 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bunny02_f,,,,,,모던 블랙 바니걸 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633057,costume_Com_57,모던 블랙 바니보이 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bunny02_m,,,,,,모던 블랙 바니보이 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633058,costume_Com_58,핫 레드 바니걸 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bunny03_f,,,,,,핫 레드 바니걸 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633059,costume_Com_59,핫 레드 바니보이 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bunny03_m,,,,,,핫 레드 바니보이 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633060,costume_Com_60,러블리 핑크 바니걸 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bunny04_f,,,,,,러블리 핑크 바니걸 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633061,costume_Com_61,러블리 핑크 바니보이 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bunny04_m,,,,,,러블리 핑크 바니보이 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633062,costume_Com_62,로맨틱 핑크 간호사 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_nurse01_f,,,,,,로맨틱 핑크 간호사 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633063,costume_Com_63,로맨틱 핑크 간호사 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_nurse01_m,,,,,,로맨틱 핑크 간호사 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633064,costume_Com_64,스카이 블루 간호사 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_nurse02_f,,,,,,스카이 블루 간호사 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633065,costume_Com_65,스카이 블루 간호사 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_nurse02_m,,,,,,스카이 블루 간호사 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633066,costume_Com_66,퓨어 화이트 간호사 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_nurse03_f,,,,,,퓨어 화이트 간호사 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633067,costume_Com_67,퓨어 화이트 간호사 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_nurse03_m,,,,,,퓨어 화이트 간호사 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633068,costume_Com_68,한가위 한복 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_hanbok02_m,,,,,,한가위 한복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633069,costume_Com_69,한가위 한복 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_hanbok02_f,,,,,,한가위 한복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633070,costume_Com_70,뱀파이어 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_vampire01_m,,,,,,뱀파이어 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633071,costume_Com_71,뱀파이어 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_vampire02_f,,,,,,뱀파이어 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633072,costume_Com_72,야광 해골 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_pumkin01_body_m,,,,,,야광 해골 코스튬,0,0.0,0.0,TTFT,19,0.0
+633073,costume_Com_73,겨울 밤하늘에 별을 보고 제작한 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bluenightcostume_m,,,,,,푸른 겨울밤 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633074,costume_Com_74,겨울 밤하늘에 별을 보고 제작한 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bluenightcostume_f,,,,,,푸른 겨울밤 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633075,costume_Com_75,크리스마스 산타 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_2017christmas_m,,,,,,산타 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633076,costume_Com_76,크리스마스 산타 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_2017christmas_f,,,,,,산타 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633077,costume_Com_77,산타의 썰매를 끄는 리더 순록 '루돌프' 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_rudolph_body_f,,,,,,루돌프 코스튬,0,0.0,0.0,TTFT,19,0.0
+633078,costume_Com_78,추운 겨울에도 문제없는 두터운 하얀 눈꽃 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_snowflower_m,,,,,,프리미엄 하얀 눈꽃 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633079,costume_Com_79,추운 겨울에도 문제없는 두터운 하얀 눈꽃 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_snowflower_f,,,,,,프리미엄 하얀 눈꽃 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633080,costume_Com_80,복슬복슬 황금개 코스튬입니다. 착용하면 외형이 변경 됩니다.,item_icon_gold_dog01_f,,,,,,복실복실 황금개 코스튬,0,0.0,0.0,TTFT,19,0.0
+633081,costume_Com_81,황금개 장식이 돋보이는 무사 코스튬입니다. 착용하면 외형이 변경됩니다.,item_icon_gold_amor01_m,,,,,,금강불개 무사 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633082,costume_Com_82,황금개 장식이 돋보이는 무사 코스튬입니다. 착용하면 외형이 변경됩니다.,item_icon_gold_amor01_f,,,,,,금강불개 무사 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633083,costume_Com_83,새내기 사립 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform01_m,,,,,,새내기 사립 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633084,costume_Com_84,새내기 사립 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform01_f,,,,,,새내기 사립 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633085,costume_Com_85,새내기 민트 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform03_m,,,,,,새내기 민트 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633086,costume_Com_86,새내기 벚꽃 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform02_f,,,,,,새내기 벚꽃 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633087,costume_Com_87,반듯한 학생 회장 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform04_m,,,,,,반듯한 학생 회장 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633088,costume_Com_88,새내기 민트 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform03_f,,,,,,새내기 민트 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633089,costume_Com_89,새내기 벚꽃 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform02_m,,,,,,새내기 벚꽃 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633090,costume_Com_90,반듯한 학생 회장 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform04_f,,,,,,반듯한 학생 회장 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633091,costume_Com_91,흑골 불량 서클 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform05_m,,,,,,흑골 불량 서클 교복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633092,costume_Com_92,흑골 불량 서클 교복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_schooluniform05_f,,,,,,흑골 불량 서클 교복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633093,costume_Com_93,드래곤의 생물학적 분류를 정확하게 파악한 수단은 마법입니다. 야수형 몬스터에게 적용되는 마법이 드래곤에게 동일하게 적용된다는 사실이 밝혀짐으로써 드래곤은 동물계에 속하는 생물로 일단 분류되었습니다.  착용시 외형이 변경됩니다.,icon_item_velcofer01_f,,[642916],,,,벨코퍼 코스튬,0,0.0,0.0,TTFT,19,0.0
+633094,costume_Com_94,그 봄날의 시골 소년 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_farmercostume_m,,,,,,그 봄날의 시골 소년 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633095,costume_Com_95,그 봄날의 시골 소녀 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_farmercostume_f,,,,,,그 봄날의 시골 소녀 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633096,costume_Com_96,황금빛 페어리 웨딩 코스튬입니다. 과거 페어리의 모습을 흉내내어 만들었습니다. 착용하면 외형이 변경됩니다.,icon_item_flowercostume01_m,,,,,,황금빛 페어리 웨딩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633097,costume_Com_97,황금빛 페어리 웨딩 코스튬입니다. 과거 페어리의 모습을 흉내내어 만들었습니다. 착용하면 외형이 변경됩니다.,icon_item_flowercostume01_f,,,,,,황금빛 페어리 웨딩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633098,costume_Com_98,새벽빛 페어리 웨딩 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_flowercostume02_m,,,,,,새벽빛 페어리 웨딩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633099,costume_Com_99,새벽빛 페어리 웨딩 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_flowercostume02_f,,,,,,새벽빛 페어리 웨딩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633100,costume_Com_100,꼬꼬마 페어리 웨딩 코스튬입니다. 아직 어린 페어리의 모습을 흉내내어 만든 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_flowercostume03_m,,,,,,꼬꼬마 페어리 웨딩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633101,costume_Com_101,꼬꼬마 페어리 웨딩 코스튬입니다. 아직 어린 페어리의 모습을 흉내내어 만든 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_flowercostume03_f,,,,,,꼬꼬마 페어리 웨딩 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633102,costume_Com_102,프릴 장식 페어리 코스튬입니다. 꽃 밭에서 놀던 페어리를 흉내낸 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_flowercostume04_m,,,,,,프릴 장식 페어리 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633103,costume_Com_103,프릴 장식 페어리 코스튬입니다. 꽃 밭에서 놀던 페어리를 흉내낸 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_flowercostume04_f,,,,,,프릴 장식 페어리 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633104,costume_Com_104,클라페다 카프리콘즈팀 소속 선수의 유니폼 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_footballuniform01_m,,,,,,클라페다 카프리콘즈 유니폼(남),0,0.0,0.0,TTFT,19,0.0
+633105,costume_Com_105,클라페다 카프리콘즈팀 소속 선수의 유니폼 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_footballuniform01_f,,,,,,클라페다 카프리콘즈 유니폼(여),0,0.0,0.0,TTFT,19,0.0
+633106,costume_Com_106,오르샤 라이온스팀 소속 선수의 유니폼 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_footballuniform02_m,,,,,,오르샤 라이온스 유니폼(남),0,0.0,0.0,TTFT,19,0.0
+633107,costume_Com_107,오르샤 라이온스팀 소속 선수의 유니폼 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_footballuniform02_f,,,,,,오르샤 라이온스 유니폼(여),0,0.0,0.0,TTFT,19,0.0
+633108,costume_Com_108,축구장에서 가장 고독한 사람인 심판이 착용하는 코스튬입니다. 착용하면 외형이 변경됩니다. ,icon_item_footballuniform03_m,,,,,,휘슬 레프리 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633109,costume_Com_109,축구장에서 가장 고독한 사람인 심판이 착용하는 코스튬입니다. 착용하면 외형이 변경됩니다. ,icon_item_footballuniform03_f,,,,,,휘슬 레프리 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633110,costume_Com_110,오르샤 라이온스팀을 응원할 때 필요한 응원복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_footballuniform04_m,,,,,,오르샤 서포터즈 유니폼(남),0,0.0,0.0,TTFT,19,0.0
+633111,costume_Com_111,오르샤 라이온스팀을 응원할 때 필요한 응원복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_footballuniform04_f,,,,,,오르샤 서포터즈 유니폼(여),0,0.0,0.0,TTFT,19,0.0
+633112,costume_Com_112,클라페다 카프리콘즈팀을 응원할 때 필요한 응원복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_footballuniform05_m,,,,,,클라페다 서포터즈 유니폼(남),0,0.0,0.0,TTFT,19,0.0
+633113,costume_Com_113,클라페다 카프리콘즈팀을 응원할 때 필요한 응원복 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_footballuniform05_f,,,,,,클라페다 서포터즈 유니폼(여),0,0.0,0.0,TTFT,19,0.0
+633114,costume_Com_114,"무더운 여름을 대비해, 기본 해군 복장에 시원함과 패션을 강조하기 위해 개량된 코스튬입니다. 착용하면 외형이 변경됩니다.",icon_item_marin01_m,,,,,,로맨틱 세일러 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633115,costume_Com_115,"무더운 여름을 대비해, 기본 해군 복장에 시원함과 패션을 강조하기 위해 개량된 코스튬입니다. 착용하면 외형이 변경됩니다.",icon_item_marin01_f,,,,,,로맨틱 세일러 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633116,costume_Com_116,기본 해군 복장의 느낌과 시원함을 동시에 챙길 수 있는 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_marin02_m,,,,,,마린 비치웨어 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633117,costume_Com_117,기본 해군 복장의 느낌과 시원함을 동시에 챙길 수 있는 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_marin02_f,,,,,,마린 비치웨어 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633118,costume_Com_118,무더운 여름을 견디기 위해 기본 해군 복장을 시원하게 개량한 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_marin03_m,,,,,,서머 비치웨어 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633119,costume_Com_119,무더운 여름을 견디기 위해 기본 해군 복장을 시원하게 개량한 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_marin03_f,,,,,,서머 비치웨어 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633120,costume_Com_120,"무더운 여름 바다를 가기 위해 기본 해군 복장에 시원함과 패션을 개량하고, 돌고래 튜브를 착용한 코스튬입니다. 착용하면 외형이 변경됩니다.",icon_item_marin01_sp_m,,,,,,로맨틱 세일러 돌핀 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633121,costume_Com_121,"무더운 여름 바다를 가기 위해 기본 해군 복장에 시원함과 패션을 개량하고, 돌고래 튜브를 착용한 코스튬입니다. 착용하면 외형이 변경됩니다.",icon_item_marin01_sp_f,,,,,,로맨틱 세일러 돌핀 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633122,costume_Com_122,"기본 해군 복장의 느낌과 시원함, 원활한 수영을 동시에 챙길 수 있는 코스튬입니다. 착용하면 외형이 변경됩니다.",icon_item_marin02_sp_m,,,,,,마린 비치웨어 돌핀 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633123,costume_Com_123,"기본 해군 복장의 느낌과 시원함, 원활한 수영을 동시에 챙길 수 있는 코스튬입니다. 착용하면 외형이 변경됩니다.",icon_item_marin02_sp_f,,,,,,마린 비치웨어 돌핀 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633124,costume_Com_124,"무더운 여름 바다를 가기 위해 기본 해군 복장을 시원하게 개량하고, 튜브를 착용한 코스튬입니다. 착용하면 외형이 변경됩니다.",icon_item_marin03_sp_m,,,,,,서머 비치웨어 돌핀 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633125,costume_Com_125,"무더운 여름 바다를 가기 위해 기본 해군 복장을 시원하게 개량하고, 튜브를 착용한 코스튬입니다. 착용하면 외형이 변경됩니다.",icon_item_marin03_sp_f,,,,,,서머 비치웨어 돌핀 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633126,costume_Com_126,대저택에서 입으면 잘 어울리는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_maiduniform_black_m,,,,,,[PC방] 블랙 버틀러 코스튬(남),0,0.0,0.0,FFFT,19,0.0
+633127,costume_Com_127,대저택에서 입으면 잘 어울리는 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_maiduniform_black_f,,,,,,[PC방] 블랙 메이드 코스튬(여),0,0.0,0.0,FFFT,19,0.0
+633128,costume_Com_128,"체스 말 중 룩을 키 포인트로 활용한, 체스 콘셉트 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_chessuniform03_m,,,,,,에보니 룩 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633129,costume_Com_129,"체스 말 중 폰을 키 포인트로 활용한, 체스 콘셉트 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_chessuniform03_f,,,,,,아이보리 폰 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633130,costume_Com_130,"체스 말 중 비숍을 키 포인트로 활용한, 체스 콘셉트 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_chessuniform02_m,,,,,,아이보리 비숍 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633131,costume_Com_131,"체스 말 중 나이트를 키 포인트로 활용한, 체스 콘셉트 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_chessuniform02_f,,,,,,에보니 나이트 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633132,costume_Com_132,"체스 말 중 킹을 키 포인트로 활용한, 체스 콘셉트 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_chessuniform01_m,,,,,,에보니 킹 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633133,costume_Com_133,"체스 말 중 퀸을 키 포인트로 활용한, 체스 콘셉트 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_chessuniform01_f,,,,,,아이보리 퀸 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633134,costume_Com_134,"복슬복슬한 털, 적당히 튀어나온 배, 너무나 귀여운 달 토끼로 변신할 수 있는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_moonrabbit_uniform_f,,,,,,달 토끼 코스튬,0,0.0,0.0,TTFT,19,0.0
+633135,costume_Com_135,암행어사가 특별한 행사가 있을 때 착용하는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_inspector_uniform01_m,,,,,,암행어사 예복(남),0,0.0,0.0,TTFT,19,0.0
+633136,costume_Com_136,암행어사가 특별한 행사가 있을 때 착용하는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_inspector_uniform01_f,,,,,,암행어사 예복(여),0,0.0,0.0,TTFT,19,0.0
+633137,costume_Com_137,장권급제 후 입궁할 때 착용하는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_inspector_uniform02_m,,,,,,장원급제 별감복(남),0,0.0,0.0,TTFT,19,0.0
+633138,costume_Com_138,장권급제 후 입궁할 때 착용하는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_inspector_uniform02_f,,,,,,장원급제 별감복(여),0,0.0,0.0,TTFT,19,0.0
+633139,costume_Com_139,암행어사가 비밀 임무를 맡을 때 착용하는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_inspector_uniform03_m,,,,,,어사 흑단령(남),0,0.0,0.0,TTFT,19,0.0
+633140,costume_Com_140,암행어사가 비밀 임무를 맡을 때 착용하는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_inspector_uniform03_f,,,,,,어사 흑단령(여),0,0.0,0.0,TTFT,19,0.0
+633141,costume_Com_141,"보름달이 뜨는 밤에 이 코스튬을 착용하면, 공포스러운 분위기를 만들 수 있습니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_halloweenwolf_unifom_m,,,,,,화이트 울프 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633142,costume_Com_142,"보름달이 뜨는 밤에 이 코스튬을 착용하면, 공포스러운 분위기를 만들 수 있습니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_halloweenwolf_unifom_f,,,,,,화이트 울프 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633143,costume_Com_143,"할로윈 때 이 코스튬을 착용한다면, 멋과 공포스러운 분위기를 만족시킬 수 있는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_halloweencat_unifom_m,,,,,,블랙 캣 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633144,costume_Com_144,"할로윈 때 이 코스튬을 착용한다면, 아름다움과 공포스러운 분위기를 만족시킬 수 있는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_halloweencat_unifom_f,,,,,,블랙 캣 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633145,costume_Com_145,거미줄을 특수한 가공법으로 가공하여 만든 코스튬입니다. 귀여움과 약간의 공포스러운 분위기를 만족시킬 수 있는 코스튬입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_halloweenbat_unifom_m,,,,,,스파이더 웹 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633146,costume_Com_146,거미줄을 특수한 가공법으로 가공하여 만든 코스튬입니다. 귀여움과 약간의 공포스러운 분위기를 만족시킬 수 있는 코스튬입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_halloweenbat_unifom_f,,,,,,스파이더 웹 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633149,costume_Com_149,붉은 뱀파이어 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_vampire01_red_m,,,,,,[PC방] 붉은 뱀파이어 코스튬(남),0,0.0,0.0,FFFT,19,0.0
+633150,costume_Com_150,붉은 뱀파이어 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_vampire01_red_f,,,,,,[PC방] 붉은 뱀파이어 코스튬(여),0,0.0,0.0,FFFT,19,0.0
+633154,costume_Com_154,니코폴리스의 경비병 정규 복장입니다.{nl}경비병은 경비병이 지키는 곳의 최초 관문이자 얼굴과 같은 존재입니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_nicoguard_unifom_m,,,,,,니코폴리스 경비병 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633155,costume_Com_155,니코폴리스의 경비병 정규 복장입니다.{nl}경비병은 경비병이 지키는 곳의 최초 관문이자 얼굴과 같은 존재입니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_nicoguard_unifom_f,,,,,,니코폴리스 경비병 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633156,costume_Com_156,남은 인생을 함께하기로 약속할 때 입는 코스튬입니다.{nl}이 옷을 입는 순간은 가슴이 너무나 콩닥콩닥 거릴 것 같습니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wedding03_m,,,,,,콩닥콩닥 턱시도(남),0,0.0,0.0,TTFT,19,0.0
+633157,costume_Com_157,남은 인생을 함께하기로 약속할 때 입는 코스튬입니다.{nl}이 옷을 입는 순간은 가슴이 너무나 콩닥콩닥 거릴 것 같습니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wedding03_f,,,,,,콩닥콩닥 드레스(여),0,0.0,0.0,TTFT,19,0.0
+633158,costume_Com_158,심플 이즈 베스트!{nl}언제나 어떤 상황에서나 입기 좋은 세라복입니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_pink_sailor02_m,,,,,,블랙 세일러복 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633159,costume_Com_159,심플 이즈 베스트!{nl}언제나 어떤 상황에서나 입기 좋은 세라복입니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_pink_sailor02_f,,,,,,블랙 세일러복 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633160,costume_Com_160,깡총깡총! 귀여우면서 섹시한 느낌을 원할 때 입으면 좋은 바니 코스튬입니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_bunny05_m,,,,,,코랄 블루 바니보이 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633161,costume_Com_161,깡총깡총! 귀여우면서 섹시한 느낌을 원할 때 입으면 좋은 바니 코스튬입니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_bunny05_f,,,,,,코랄 블루 바니걸 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633162,costume_Com_162,길티네의 추종자들이 비밀 집회에 참여할 때 착용하는 의복입니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_guilty_uniform1_m,,,,,,길티네 추종자 의복(남),0,0.0,0.0,TTFT,19,0.0
+633163,costume_Com_163,길티네의 추종자들이 비밀 집회에 참여할 때 착용하는 의복입니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_guilty_uniform1_f,,,,,,길티네 추종자 의복(여),0,0.0,0.0,TTFT,19,0.0
+633164,costume_Com_164,"이 산타복을 입고 사랑하는 사람에게 다가가 말하세요! 나는 너의 선물이야라고!{nl}단, 이후에 발생하는 일은 책임지지 않습니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_winter_santa_m,,,,,,나는네선물 산타 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+633165,costume_Com_165,"이 산타복을 입고 사랑하는 사람에게 다가가 말하세요! 나는 너의 선물이야라고!{nl}단, 이후에 발생하는 일은 책임지지 않습니다.{nl}착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_winter_santa_f,,,,,,나는네선물 산타 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+633166,costume_Com_166,포근하고 따듯한 북극곰을 닮은 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_winter_bear_f,,,,,,포근따듯 북극곰 코스튬,0,0.0,0.0,TTFT,19,0.0
+633167,costume_Com_167,아늑하고 다정한 북극 여우를 닮은 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_winter_fox_f,,,,,,아늑다정 북극여우 코스튬,0,0.0,0.0,TTFT,19,0.0
+633168,costume_Com_168,"복슬복슬한 털, 볼록하게 튀어나온 배, 너무나 귀여운 펭귄으로 변신할 수 있는 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_winter_penguin_f,,,,,,복슬복슬 북극펭귄 코스튬,0,0.0,0.0,TTFT,19,0.0
+633169,costume_Com_169,검은 츄리닝 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_sweat_suit_black_f,,,,,,검은 츄리닝,0,0.0,0.0,TTFT,19,0.0
+633170,costume_Com_170,빨간 츄리닝 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_sweat_suit_red_f,,,,,,빨간 츄리닝,0,0.0,0.0,TTFT,19,0.0
+633171,costume_Com_171,초록 학생 츄리닝 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_sweat_suit_green_f,,,,,,초록 학생 츄리닝,0,0.0,0.0,TTFT,19,0.0
+633172,costume_Com_172,회색 츄리닝 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_sweat_suit_gray_f,,,,,,회색 츄리닝,0,0.0,0.0,TTFT,19,0.0
+633173,costume_Com_173,파란 백수 츄리닝 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_sweat_suit_blue_f,,,,,,파란 백수 츄리닝,0,0.0,0.0,TTFT,19,0.0
+633174,costume_Com_174,퍼플 스웩 츄리닝 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_sweat_suit_purple_f,,,,,,퍼플 스웩 츄리닝,0,0.0,0.0,TTFT,19,0.0
+633175,costume_Com_175,노란 아뵤 츄리닝 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_sweat_suit_yellow_f,,,,,,노란 아뵤 츄리닝,0,0.0,0.0,TTFT,19,0.0
+633176,costume_Com_176,착용하면 복이 마구마구 들어올 것 같은 황금 복돼지 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_goldpig_uniform_f,,,,,,황금 복돼지 코스튬,0,0.0,0.0,TTFT,19,0.0
+633177,costume_Com_177,붉은 겨울밤 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bluenight_red_m,,,,,,[PC방] 붉은 겨울밤 코스튬(남),0,0.0,0.0,FFFT,19,0.0
+633178,costume_Com_178,붉은 겨울밤 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bluenight_red_f,,,,,,[PC방] 붉은 겨울밤 코스튬(여),0,0.0,0.0,FFFT,19,0.0
+635053,E_costume_Com_4,코카트리스를 본따 만든 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_cokatrice_body_f,,,,,,[이벤트] 코카트리스 코스튬,0,0.0,2592000.0,FFFF,19,0.0
+635123,costume_simple_festival_m,축제용 심플 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_simple_festival_m,,,,,,축제용 심플 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+635124,costume_simple_festival_f,축제용 심플 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_simple_festival_f,,,,,,축제용 심플 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+635156,costume_1709_NewField_m,초대 이벤트 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_blacksuit01_m,,,,,,초대에 응한 자 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+635157,costume_1709_NewField_f,초대 이벤트 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_blacksuit01_f,,,,,,초대에 응한 자 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+635339,EVENT_1804_ARBOR_COSTUME_M,2018년 나무나무 이벤트 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_event_2018_arbor_m,,,,,,2018 나무나무 코스튬(남),0,0.0,0.0,TTFT,19,0.0
+635340,EVENT_1804_ARBOR_COSTUME_F,2018년 나무나무 이벤트 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_event_2018_arbor_f,,,,,,2018 나무나무 코스튬(여),0,0.0,0.0,TTFT,19,0.0
+635358,costume_schaffenstar01_m,별의 탑 영웅 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_schaffenstar01_m,,,,,,별의 탑 영웅 코스튬(남),0,0.0,0.0,FFFT,19,0.0
+635359,costume_schaffenstar01_f,별의 탑 영웅 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_schaffenstar01_f,,,,,,별의 탑 영웅 코스튬(여),0,0.0,0.0,FFFT,19,0.0
+635410,costume_simple_festival_m_1809_ucc,다이누 슈벤테 이벤트 아이템 입니다. 착용하면 외형이 변경됩니다.,icon_item_simple_festival_m,,,,,,[이벤트]축제용 심플 코스튬(남),0,0.0,0.0,FFFT,19,0.0
+635411,costume_simple_festival_f_1809_ucc,다이누 슈벤테 이벤트 아이템 입니다. 착용하면 외형이 변경됩니다.,icon_item_simple_festival_f,,,,,,[이벤트]축제용 심플 코스튬(여),0,0.0,0.0,FFFT,19,0.0
+637000,Wing_Balloon,"풍선 모양의 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_balloon,,,,,,풍선 날개,0,0.0,0.0,TTFT,19,1.0
+637001,Wing_Heart,"하트 모양의 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_heart,,,,,,깨진 핑크 하트 날개,0,0.0,0.0,TTFT,19,1.0
+637002,Wing_Falcon,"독수리 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_falcon,,,,,,작은 스팀 펑크 날개,0,0.0,0.0,TTFT,19,1.0
+637003,Wing_Angel,"천사의 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_angel,,,,,,작은 민트 천사 날개,0,0.0,0.0,TTFT,19,1.0
+637004,Wing_Bat,"박쥐 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_bat,,,,,,박쥐 날개,0,0.0,0.0,TTFT,19,1.0
+637005,Wing_Net,"거미줄 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_net,,,,,,거미줄 날개,0,0.0,0.0,TTFT,19,1.0
+637006,Wing_Guilty,"누구인지 알 수 없지만 길티네 날개를 보았다고 주장하는 자가 만든 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_guilty,,,,,,길티네 날개,0,0.0,0.0,TTFT,19,1.0
+637007,Wing_Ice,"얼음 결정을 본따 만든 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_ice,,,,,,얼음 결정 날개,0,0.0,0.0,TTFT,19,1.0
+637008,Wing_bagpack,수제 명품 책가방 지금이 마지막 기회입니다.{nl} 리사이클 메달로 교환 가능합니다.,icon_item_wing_bagpack,,,,,,명품 책가방,0,0.0,0.0,TTFT,19,1.0
+637009,Wing_Farmerhat,봄 기운이 물씬나는 햇빛을 피할 수 있는 모자입니다.{nl} 리사이클 메달로 교환 가능합니다.,icon_item_wing_farmerhat,,,,,,그 봄날의 밀짚 모자,0,0.0,0.0,TTFT,19,1.0
+637010,Wing_Flower01,"황금빛 페어리 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_flower01,,,,,,황금빛 페어리 날개,0,0.0,0.0,TTFT,19,1.0
+637011,Wing_Flower02,"새벽빛 페어리 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_flower02,,,,,,새벽빛 페어리 날개,0,0.0,0.0,TTFT,19,1.0
+637012,Wing_Flower03,"꼬꼬마 페어리 날개입니다. 단, 실제 비행은 불가능합니다.{nl} 리사이클 메달로 교환 가능합니다.",icon_item_wing_flower03,,,,,,꼬꼬마 페어리 날개,0,0.0,0.0,TTFT,19,1.0
+637013,Wing_Rescue_Tube,믿음직한 선원은 언제나 구명 튜브를 소지하고 다닙니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_rescue_tube,,,,,,마린 튜브,0,0.0,0.0,TTFT,19,1.0
+637014,Wing_Surfing_Marin,"진정한 바다 사람이라면, 서핑보드 하나씩은 소지하고 있습니다.",icon_item_wing_surfing_marin,,,,,,마린 서핑보드,0,0.0,0.0,TTFT,19,1.0
+637015,Wing_Kite_Rabbit,귀여운 달 토끼가 그려진 방패연입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_kite_rabbit,,,,,,달 토끼 방패연,0,0.0,0.0,TTFT,19,1.0
+637016,Wing_Balloon_Rabbit,둥실둥실 귀여운 달 토끼 얼굴 풍선입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_balloon_rabbit,,,,,,둥실둥실 달 토끼,0,0.0,0.0,TTFT,19,1.0
+637018,wing_inspector_scroll1,나라를 생각하는 신하들이 왕에게 진심을 담은 글 뭉치입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_scroll1,,,,,,진심이 담긴 상소문,0,0.0,0.0,TTFT,19,1.0
+637020,wing_halloween_pumpkin,트릭 오어 트릿! 할로윈의 대명사인 잭오랜턴 풍선입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_pumpkin,,,,,,잭오랜턴 풍선,0,0.0,0.0,TTFT,19,1.0
+637021,wing_halloween_ghost,"으스스한 유령 풍선입니다. 단, 희박한 확률로 진짜 유령이 쫒아 온다는 소문이 있습니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_wing_ghost,,,,,,무서운 유령 풍선,0,0.0,0.0,TTFT,19,1.0
+637022,wing_halloween_cat,냐아옹~귀엽지만 조금 무서운 고양이 풍선입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_cat,,,,,,냐옹냐옹 고양이 풍선,0,0.0,0.0,TTFT,19,1.0
+637024,wing_Incense_Burner,길티네의 추종자들이 길티네에게 소원을 빌기 위해 사용하던 향로를 최신 유행에 맞추어 제작된 향로 풍선입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_incense_burner,,,,,,길티네 향로,0,0.0,0.0,TTFT,19,1.0
+637025,wing_Guilty_Little,길티네의 유년기 모습을 상상하며 만든 날개입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_guilty_little,,,,,,작은 길티네 날개,0,0.0,0.0,TTFT,19,1.0
+637026,wing_winter_penguin,둥실둥실 귀여운 펭귄 풍선입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_winter_penguin,,,,,,복슬복슬 북극펭귄 풍선,0,0.0,0.0,TTFT,19,1.0
+637027,wing_winter_star,크리스마스 장식의 핵심인 별 장식을 이용한 날개입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_winter_star,,,,,,빛나는 별 날개,0,0.0,0.0,TTFT,19,1.0
+637028,wing_winter_bell,크리스마스의 상징인 징글벨을 장식으로 이용한 날개입니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_wing_winter_bell,,,,,,징글벨 날개,0,0.0,0.0,TTFT,19,1.0
+639101,Effect_Stamp_Good,착용자가 점프시 참 잘했어요 이펙트를 만들어냅니다. {nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_greatstamp,,,,,,참 잘했어요 스탬프,0,0.0,0.0,TTFT,19,1.0
+639102,Effect_Special_Marin,착용자에게 바다의 가호를 부여해 주변에 물고리 이펙트와 걸음마다 물결치는 이펙트를 만들어냅니다. {nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_special_marin_effect,,,,,,찰랑이는 파도,0,0.0,0.0,TTFT,19,1.0
+639103,Effect_Stamp_Rabbit,착용자가 점프 시 달 토끼가 방아 찧는 모습을 볼 수 있는 이펙트를 만들어냅니다. {nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_rabbitstamp,,,,,,방아 찧는 달 토끼,0,0.0,0.0,TTFT,19,1.0
+639104,Effect_Stamp_Horse,최신 문물을 활용할 줄 아는 암행어사라면 점프 시 암행어사 마패 이펙트로 자신을 증명합니다. {nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_horsestamp,,,,,,암행어사 출도야,0,0.0,0.0,TTFT,19,1.0
+639105,Effect_Cherry_Blossom,착용 시 로맨틱한 분위기를 만들 수 있도록 착용자의 주변에 벚꽃이 흩날리는 이펙트를 만들어냅니다. {nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_cherryblossom,,,,,,흩날리는 벚꽃,0,0.0,0.0,TTFT,19,1.0
+639106,Effect_Stamp_Pumpkin,착용자가 점프 시 무서운 잭오랜턴의 이펙트를 만들어냅니다.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_pumpkinstamp,,,,,,무서운 잭오랜턴,0,0.0,0.0,TTFT,19,1.0
+639107,Effect_Ghost,착용 시 으스스한 유령들이 착용자의 발 밑에서 등장하는 이펙트를 만들어냅니다.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_ghost,,,,,,으스스한 유령 파티,0,0.0,0.0,TTFT,19,1.0
+639108,Effect_Stamp_Thorn,착용자가 점프 시 바닥에서 길티네의 가시가 등장합니다.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_thorn,,,,,,길티네의 가시,0,0.0,0.0,TTFT,19,1.0
+639109,Effect_AURORA,착용자의 뒤로 신비한 오로라 이펙트를 만들어냅니다.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_aurora,,,,,,신비한 오로라,0,0.0,0.0,TTFT,19,1.0
+639110,Effect_SNOW,착용자의 머리 위에 눈 결정이 내리는 이펙트를 만들어냅니다.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_snow,,,,,,펑펑 함박눈,0,0.0,0.0,TTFT,19,1.0
+640000,Effect_SnowFlower,착용자의 발걸음 마다 차가운 얼음 이펙트를 만들어냅니다. {nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_snow_flower_effect,,,,,,하얀 눈꽃 결정,0,0.0,0.0,TTFT,19,1.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,스태미나 +5 증가 물약,200,0.0,0.0,FFFF,6,1.0
 640002,Drug_HP1,HP를 273 즉시 회복시키고 2초 간격으로 15초 동안 HP를 273 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다.,item_hp_oil_1,,,,,,작은 HP포션,16,25.0,0.0,FFTF,6,7.0
 640003,Drug_HP2,HP를 462 즉시 회복시키고 2초 간격으로 15초 동안 HP를 462 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다.,item_hp_oil_2,,,,"[3001, 3003, 3004, 3006, 3007, 3009, 3010, 3012, 3013, 3015, 3016, 3018, 3019, 3021, 3022]",,HP포션,32,25.0,0.0,FFTF,6,7.0
@@ -5739,6 +6140,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 820002,Adventure_Enchantchip,헤어 코스튬에 사용 시 랜덤한 옵션이 추가됩니다. 옵션은 최대 3개까지 생성될 수 있습니다. 착용하고 있는 장비에는 사용할 수 없습니다. 마우스 우클릭으로 사용합니다.,icon_item_enchantscroll,,,,,,마법 부여 스크롤,0,0.0,0.0,FFFT,19,0.0
 820003,Adventure_Point_Stone2,사용시 특성 포인트가 100 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_abilitypoint3,,,,,,특성 포인트 100(모험일지 보상),0,0.0,0.0,FFFT,19,1.0
 820004,Adventure_Point_Stone3,사용시 특성 포인트가 500 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_abilitypoint2,,,,,,특성 포인트 500(모험일지 보상),0,0.0,0.0,FFFT,19,1.0
+900001,Doll_fairy_guilty,"길티네의 어린 시절을 함께했던 인형입니다.{nl}길티네가 이 인형을 잃어버려 마신이 되었다는 말도 안 되는 소문이 있습니다.{nl}주인의 힘에 영향을 받아, 착용자의 일부 행동을 따라합니다.{nl}인형은 기본 공격과 보조 공격, 유료 포즈를 따라하며, 휴식모드 및 개인 상점 개설 시 특수한 동작을 합니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.",icon_item_wing_fairy_guilty,,,,,,작은 길티네 인형,0,0.0,0.0,TTFT,19,1.0
 900101,Event_160421,발행인 : T 라는 이니셜이 적혀있는 티켓입니다. 마을내 마법협회 NPC에게서 아이템으로 교환가능합니다.,icon_item_indulgence,,,,,,T의 티켓,1,0.0,0.0,FFFF,8,0.0
 900102,Event_160609,"케도라상단에서 구하고 있는 황금 열쇠입니다.  마을내 마법협회 NPC에게서 아이템으로 교환가능합니다. 7월 7일 점검 시, 일괄 삭제됩니다.",icon_item_event_goldenkey,,,,,,황금 열쇠,1,0.0,0.0,FFFF,8,0.0
 900103,Event_160609_1,"사용 시 임의의 아이템을 획득할 수 있습니다. 7월 7일 점검 시, 일괄 삭제됩니다.",icon_item_eventbox_magic,,,,,,매지션 아이템 상자,0,2.0,0.0,FFFF,6,0.0
