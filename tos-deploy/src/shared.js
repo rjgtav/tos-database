@@ -1,7 +1,7 @@
-const
-    fs = require('fs'),
-    path = require('path')
-;
+const fs = require('fs');
+const path = require('path');
+const request = require('sync-request');
+const sharedVariables = require("./shared-variables");
 
 exports.IS_FORCE_DEPLOY = process.argv.length > 2 && !!process.argv.find(value => value === 'deploy');
 exports.IS_PROD = process.argv.length > 2 && !!process.argv.find(value => value === 'prod');
@@ -52,6 +52,26 @@ exports.singletonUnlock = function() {
 };
 
 exports.slackError = function(message) {
-    console.trace(...(Array.isArray(message) ? message : [message]));
-    process.exit(1); // TODO: explode and tell slack
+    message = (Array.isArray(message) ? message : [message]);
+
+    let getStackTrace = function() {
+        let obj = {};
+        Error.captureStackTrace(obj, getStackTrace);
+        return obj.stack;
+    };
+
+    request('POST', sharedVariables.SLACK_WEBHOOK, { json: {
+        attachments: [{
+            color: '#D00000',
+            fallback: message.join('\n'),
+            fields: [{
+                title: message.join('\n'),
+                value: getStackTrace(),
+                short: false
+            }]
+        }]
+    }});
+
+    console.trace(...message);
+    process.exit(1);
 };

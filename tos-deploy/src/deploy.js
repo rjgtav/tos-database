@@ -13,6 +13,15 @@ if (shared.IS_PROD) {
     console.log('Updating git repository...');
     childProcess.execSync('git reset --hard HEAD');
     childProcess.execSync('git pull');
+
+    // Update node projects
+    console.log('Updating node projects...');
+    childProcess.execSync('npm install', { cwd: path.join('..', 'tos-deploy')});
+    childProcess.execSync('npm install', { cwd: path.join('..', 'tos-html')});
+    childProcess.execSync('npm install', { cwd: path.join('..', 'tos-ngsw')});
+    childProcess.execSync('npm install', { cwd: path.join('..', 'tos-search')});
+    childProcess.execSync('npm install', { cwd: path.join('..', 'tos-sitemap')});
+    childProcess.execSync('npm install', { cwd: path.join('..', 'tos-web')});
 }
 
 // Get current revision
@@ -36,7 +45,7 @@ for (let region of shared.REGIONS) {
     py = path.join(cwd, 'src', 'main.py');
 
     result = childProcess.spawnSync(`python ${ py } ${ region } ${ is_new_revision }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError('Failed to patch //TODO: explode and tell slack', result);
+    result.status !== 0 && shared.slackError('Failed to patch', result);
 
     // 2. Search index
     console.log(`[${ region }] 2. Search index`);
@@ -44,7 +53,7 @@ for (let region of shared.REGIONS) {
     js = path.join(cwd, 'src', 'index.js');
 
     result = childProcess.spawnSync(`node ${ js } ${ region }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError('Failed to search //TODO: explode and tell slack', result);
+    result.status !== 0 && shared.slackError('Failed to search', result);
 
     // 3. Sitemap
     console.log(`[${ region }] 3. Sitemap`);
@@ -52,7 +61,7 @@ for (let region of shared.REGIONS) {
     js = path.join(cwd, 'src', 'index.js');
 
     result = childProcess.spawnSync(`node ${ js } ${ region }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError('Failed to sitemap //TODO: explode and tell slack', result);
+    result.status !== 0 && shared.slackError('Failed to sitemap', result);
 
     // 4. Commit changes
     let changes = childProcess.execSync('git status --porcelain', { encoding: 'utf8', shell: true }).toString();
@@ -61,13 +70,13 @@ for (let region of shared.REGIONS) {
         cwd = path.join('..');
 
         result = childProcess.spawnSync(`git add .`, { cwd, shell: true, stdio: 'inherit' });
-        result.status !== 0 && shared.slackError('Failed to add //TODO: explode and tell slack', result);
+        result.status !== 0 && shared.slackError('Failed to add', result);
 
         result = childProcess.spawnSync(`git commit -m "Updated ${ region } as of ${ new Date().toISOString().slice(0, 10) }"`, { cwd, shell: true, stdio: 'inherit' });
-        result.status !== 0 && shared.slackError('Failed to commit //TODO: explode and tell slack', result);
+        result.status !== 0 && shared.slackError('Failed to commit', result);
 
         result = childProcess.spawnSync(`git push`, { cwd, shell: true, stdio: 'inherit' });
-        result.status !== 0 && shared.slackError('Failed to push //TODO: explode and tell slack', result);
+        result.status !== 0 && shared.slackError('Failed to push', result);
 
         is_new_patch = true;
     }
@@ -86,7 +95,7 @@ if (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY) {
     js = path.join(cwd, 'src', 'deploy-web.js');
 
     result = childProcess.spawnSync(`node ${ js } ${ argv }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError('Failed to build & deploy //TODO: explode and tell slack', result);
+    result.status !== 0 && shared.slackError('Failed to build & deploy', result);
 
     // Update revision
     fs.writeFileSync(revision_path, childProcess.execSync('git rev-parse HEAD').toString());

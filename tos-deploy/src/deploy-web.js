@@ -16,7 +16,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     cwd = path.join('..', 'web');
 
     result = childProcess.spawnSync(`npm run build-prod`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError('Failed to build angular application //TODO: explode and tell slack', result);
+    result.status !== 0 && shared.slackError('Failed to build angular application', result);
 
     fs.copyFileSync(path.join(cwd, 'dist', 'web', 'index.html'), path.join(cwd, 'dist', 'web', '404.html'));
     fs.copyFileSync(path.join(cwd, 'dist', '.htaccess'), path.join(cwd, 'dist', 'web', '.htaccess'));
@@ -30,7 +30,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             js = path.join(cwd, 'src', 'index.js');
 
             result = childProcess.spawnSync(`node ${js} ${region}`, {cwd, shell: true, stdio: 'inherit'});
-            result.status !== 0 && shared.slackError('Failed to tos-html //TODO: explode and tell slack', result);
+            result.status !== 0 && shared.slackError('Failed to tos-html', result);
         }
     }
 
@@ -40,7 +40,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     js = path.join(cwd, 'src', 'ngsw-hotfix.js');
 
     result = childProcess.spawnSync(`node ${ js }`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.slackError('Failed to patch service worker //TODO: explode and tell slack', result);
+    result.status !== 0 && shared.slackError('Failed to patch service worker', result);
 
     // 'Rename' ngsw.json to ngsw.js otherwise CloudFlare doesn't consider it as 'static'. We need to keep the .json one as well for backwards compatibility
     // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
@@ -60,7 +60,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             zip = path.join(cwd, region.toLowerCase() + '.zip');
 
             result = childProcess.spawnSync(`unzip -o -q ${ zip }`, {cwd, shell: true, stdio: 'inherit'});
-            result.status !== 0 && shared.slackError('Failed to unzip tos-html //TODO: explode and tell slack', result);
+            result.status !== 0 && shared.slackError('Failed to unzip tos-html', result);
 
             fs.unlinkSync(zip);
         }
@@ -85,14 +85,12 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             // Note: manifest.json and PWA related assets will then be manually cleared
         ]);
 
-        // TODO: consider caching the HTML again (i.e. all URLs ending in a /) (although we'll suffer when clearing it from the cache...)
-
         urls = urls.map(value => 'https://tos.guru' + value);
 
         try {
             await cf.zones.purgeCache(sharedVariables.CF_ZONE, { files: urls });
         } catch (error) {
-            shared.slackError('Failed to purge cache //TODO: explode and tell slack', error)
+            shared.slackError('Failed to purge cache', error)
         }
     }
 })();
