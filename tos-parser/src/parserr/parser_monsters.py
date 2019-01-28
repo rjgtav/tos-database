@@ -122,7 +122,7 @@ def parse_monsters(file_name):
         'SCR_SIZE_TYPE_RATE',
     ])
 
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", file_name)
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", file_name.lower())
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -212,7 +212,7 @@ def parse_links_drops():
         file_name = monster['$ID_NAME'] + '.ies'
 
         try:
-            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_drop.ipf", file_name)
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_drop.ipf", file_name.lower())
             ies_file = open(ies_path, 'rb')
             ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
@@ -236,10 +236,10 @@ def parse_links_spawns():
 
     for id_map in globals.maps:
         map = globals.maps[id_map]
-        file_name = ('GenType_' + map['$ID_NAME'] + '.ies').lower()
+        file_name = 'GenType_' + map['$ID_NAME'] + '.ies'
 
         try:
-            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_mongen.ipf", file_name)
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_mongen.ipf", file_name.lower())
             ies_file = open(ies_path, 'rb')
             ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
