@@ -51,7 +51,25 @@ exports.singletonUnlock = function() {
     fs.unlinkSync(singletonPID());
 };
 
-exports.slackError = function(message) {
+exports.log = function(message) {
+    message = (Array.isArray(message) ? message : [message]);
+
+    if (exports.IS_PROD)
+        request('POST', sharedVariables.SLACK_WEBHOOK, { json: {
+                attachments: [{
+                    color: 'good',
+                    fallback: message.join(' '),
+                    fields: [{
+                        title: message[0],
+                        value: message.join(' '),
+                        short: false
+                    }]
+                }]
+            }});
+
+    console.log(...message);
+};
+exports.logError = function(message) {
     message = (Array.isArray(message) ? message : [message]);
 
     let getStackTrace = function() {
@@ -60,17 +78,18 @@ exports.slackError = function(message) {
         return obj.stack;
     };
 
-    request('POST', sharedVariables.SLACK_WEBHOOK, { json: {
-        attachments: [{
-            color: '#D00000',
-            fallback: message.join('\n'),
-            fields: [{
-                title: message.join('\n'),
-                value: getStackTrace(),
-                short: false
+    if (exports.IS_PROD)
+        request('POST', sharedVariables.SLACK_WEBHOOK_ERROR, { json: {
+            attachments: [{
+                color: 'danger',
+                fallback: message.join(' '),
+                fields: [{
+                    title: message[0],
+                    value: getStackTrace(),
+                    short: false
+                }]
             }]
-        }]
-    }});
+        }});
 
     console.trace(...message);
     process.exit(1);
