@@ -47,13 +47,6 @@
     </div>
   </div>
 
-  <!-- Mobile: open/close -->
-  <div class="d-sm-none position-absolute text-white" style="left: -2px; padding: 10px; pointer-events: none">
-    <div class="d-flex align-items-center" style="height: 3rem;">
-      <fa-icon class="position-absolute d-block d-sm-none mr-1 text-white" [icon]="isOpen ? faMinus : faPlus"></fa-icon>
-    </div>
-  </div>
-
   <!-- Job Skills -->
   <app-skill-builder-skill *ngFor="let skill of skills; trackBy: TOSEntity.trackBy" class="tos-skill"
                            [build]="build"

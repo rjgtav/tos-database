@@ -98,9 +98,9 @@ export class LoadingService {
                   let manifestHash = (await latest.json())['latest'] as string;
                   let manifest = (await manifests.json())[manifestHash] as ngswManifest;
 
-                  this.installTotal_ = manifest.assetGroups
-                    .find(value => value.name == CACHE_KEY)
-                    .urls.length;
+                  this.installTotal_ = manifest ?
+                    manifest.assetGroups.find(value => value.name == CACHE_KEY).urls.length
+                    : 0;
 
                   return window.caches
                     .open(`ngsw:${manifestHash}:assets:${CACHE_KEY}:cache`)

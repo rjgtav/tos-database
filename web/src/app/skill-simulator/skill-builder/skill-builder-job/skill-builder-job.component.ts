@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import {Subscription} from "rxjs";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
-import {faMinus, faPlus, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
+import {faTrashAlt} from "@fortawesome/free-solid-svg-icons";
 import {ITOSAttribute, ITOSJob, ITOSSkill} from "../../../shared/domain/tos/tos-domain";
 import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
 
@@ -22,8 +22,6 @@ import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
 export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
 
   faTrashAlt = faTrashAlt;
-  faMinus = faMinus;
-  faPlus = faPlus;
   TOSEntity = TOSEntity;
 
   @Input() build: TOSSimulatorBuild;
@@ -32,7 +30,6 @@ export class SkillBuilderJobComponent implements OnChanges, OnDestroy {
   attributes: ITOSAttribute[];
   attributesUnlock: boolean[];
   circles: number[];
-  isOpen: boolean;
   skills: ITOSSkill[];
   skillPoints: number;
 
