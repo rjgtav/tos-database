@@ -2717,19 +2717,19 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
   };
 
   const HotFix_newRequest = (adapter, req, url) => {
-    let init = req.mode !== 'navigate' && {
-      method: req.method,
-      headers: req.headers,
-      body: req.body,
-      mode: req.mode,
-      credentials: req.credentials,
-      cache: req.cache,
-      redirect: req.redirect,
-      referrer: req.referrer,
-      integrity: req.integrity,
-    };
-
-    return adapter.newRequest(url, init);
+    return req.mode === 'navigate'
+        ? adapter.newRequest(url)
+        : adapter.newRequest(url, {
+            method: req.method,
+            headers: req.headers,
+            body: req.body,
+            mode: req.mode,
+            credentials: req.credentials,
+            cache: req.cache,
+            redirect: req.redirect,
+            referrer: req.referrer,
+            integrity: req.integrity,
+          });
   };
 
   const HotFix_safeFetch_Driver = (adapter, req) => {
