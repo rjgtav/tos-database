@@ -346,7 +346,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490333,Premium_RankReset_Point_Lv2,"클래스 변경 포인트가 500 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_2,,,,,,클래스 변경권 Lv.2,0,0.0,0.0,FFFT,19,0.0
 490334,Premium_RankReset_Point_Lv3,"클래스 변경 포인트가 1,000 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_3,,,,,,클래스 변경권 Lv.3,0,0.0,0.0,FFFT,19,0.0
 490335,Premium_Reset_Package,사용 시 아래의 구성물을 모두 획득할 수 있습니다.{nl} - 특성 초기화 포션 1개{nl} - 스킬 초기화 포션 1개,icon_item_reset_package,,,,,,스킬 + 특성 초기화 포션 패키지,0,0.0,0.0,FFFT,19,0.0
-490336,Rebuild_Master_Glass,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.{nl} [Rebuild] 패치 후 옵션 변경 케어 용도입니다. 1월 24일 일괄 삭제됩니다.",icon_item_magnifier_red,,,,,,[Rebuild] 장인의 돋보기,0,0.0,0.0,FFFT,19,0.0
+490336,Rebuild_Master_Glass,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.{nl} [Rebuild] 패치 후 옵션 변경 케어 용도입니다. 1월 31일 일괄 삭제됩니다.",icon_item_magnifier_red,,,,,,[Rebuild] 장인의 돋보기,0,0.0,0.0,FFFT,19,0.0
 490337,Nico_Box,사용 시 아래의 구성물 중 하나를 선택해 획득할 수 있습니다.{nl} - 니코폴리스 경비병 코스튬(남) 1개{nl} - 니코폴리스 경비병 코스튬(여) 1개,icon_item_nico_box,,,,,,니코폴리스 경비병 코스튬 선택 상자,0,0.0,0.0,FFFT,19,1.0
 490338,Wedding_Costume_Box03,사용 시 아래의 구성물 모두를 획득할 수 있습니다.{nl} - 콩닥콩닥 드레스(여) 1개{nl} - 콩닥콩닥 면사포 1개,icon_item_wedding_costume_box03,,,,,,콩닥콩닥 드레스와 면사포 상자,0,0.0,0.0,FFFT,19,1.0
 490339,Black_Sailor_Box,사용 시 아래의 구성물 중 하나를 선택해 획득할 수 있습니다.{nl} - 블랙 세일러복 코스튬(남) 1개{nl} - 블랙 세일러복 코스튬(여) 1개,icon_item_black_sailor_box,,,,,,블랙 세일러복 코스튬 선택 상자,0,0.0,0.0,FFFT,19,1.0
@@ -387,6 +387,18 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490382,Premium_repairPotion_Box2,최고급 긴급 수리 키트가 3개 들어있는 상자입니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.,icon_item_premium_repair_a,,,,,,최고급 긴급 수리 세트,0,0.0,0.0,FFFT,19,0.0
 490383,Special_Gift_Box_Leticia_1901,레티샤가 귀중한 물품들을 모아놓은 상자입니다. 아래의 구성물을 모두 획득할 수 있습니다.{nl} - Lv10 강화용 카드북 9개{nl} - 찢어진 레전드 강화용 카드 7개{nl} - 오래된 레전드 강화용 카드 5개{nl} - 레전드 강화용 카드 3개{nl} - 빛나는 레전드 강화용 카드 1개,icon_item_god_box,,,,,,2019 레티샤의 보물 상자(1월),0,0.0,0.0,FFFT,19,1.0
 490384,2019_goldPig_box,사용 시 아래의 구성물을 모두 획득할 수 있습니다.{nl} - 황금 복돼지 코스튬 1개{nl} - 황금 복돼지 헬멧 코스튬 1개,icon_item_goldpig_box,,,,,,황금 복돼지 코스튬 세트,0,0.0,0.0,FFFT,19,1.0
+490385,1902_hanbok_box01,사용 시 아래의 구성물 중 하나를 선택해 획득할 수 있습니다.{nl} - 상감 코스튬 1개{nl} - 색동 코스튬 1개,icon_item_hanbok_box_king_and_queen,,,,,,상감과 색동 코스튬 선택상자,0,0.0,0.0,FFFT,19,1.0
+490386,1902_hanbok_box02,사용 시 아래의 구성물 중 하나를 선택해 획득할 수 있습니다.{nl} - 상감 코스튬 1개{nl} - 색동 코스튬 1개,icon_item_hanbok_box_green,,,,,,봄빛 한복 코스튬 선택상자,0,0.0,0.0,FFFT,19,1.0
+490387,1902_hanbok_box03,사용 시 아래의 구성물 중 하나를 선택해 획득할 수 있습니다.{nl} - 상감 코스튬 1개{nl} - 색동 코스튬 1개,icon_item_hanbok_box_yellow,,,,,,가을빛 한복 코스튬 선택상자,0,0.0,0.0,FFFT,19,1.0
+490388,Extract_kit_Gold_Box,빛나는 황금 아이커 추출 키트 10개가 들어있는 상자입니다.{nl}사용시 아이템이 지급됩니다.,icon_item_premium_kit_gold_box_s,,,,,,빛나는 황금 아이커 상자 (10개),0,0.0,0.0,FFFT,19,1.0
+490389,Special_Gift_Box_Leticia_1902,레티샤가 귀중한 물품들을 모아놓은 상자입니다. 아래의 구성물을 모두 획득할 수 있습니다.{nl} - 토큰 3개{nl} - 빛나는 황금 소켓 상자 1개{nl} - 여신의 축복석 100개{nl} - 빛나는 8성 젬 연마제 3개,icon_item_god_box,,,,,,2019 레티샤의 보물 상자(2월),0,0.0,0.0,FFFT,19,1.0
+490390,Premium_Mystic_Glass_Event,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 즉시 적용되며 이전으로 돌아갈 수 없습니다. ",icon_item_magnifier_blue,,,,,,[이벤트]신비한 돋보기,0,0.0,0.0,FFFT,19,0.0
+490391,Premium_Master_Glass_Event,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.",icon_item_magnifier_red,,,,,,[이벤트]장인의 돋보기,0,0.0,0.0,FFFT,19,0.0
+490392,Drung_Box_Elixer_Event,전투에 도움되는 아이템이 있는 상자입니다. 마우스 오른쪽 버튼 클릭으로 사용하면 아이템이 지급됩니다.{nl} - [이벤트]HP 회복 소형 엘릭서 30개{nl} - [이벤트]SP 회복 소형 엘릭서 30개{nl},icon_item_premium_elixer_box_c,,,,,,[이벤트]전투 지원 상자,0,0.0,0.0,FFFF,19,1.0
+490393,1902_NewYear_Package_01,"설날 기념으로 판매되는 패키지입니다. 마우스 오른쪽 버튼 클릭으로 사용하면 아이템이 지급됩니다.{nl} - 유니크 성장 무기상자 x1{nl} - 유니크 성장 무기 +11 강화권 x1{nl} - 유니크 성장 무기 +5 초월권 x1{nl} - 정착 지원 포션 Lv2 x30{nl} - 보급용 농축 HP포션 LV15 x200{nl} - 보급용 농축 SP포션 LV15 x200{nl}- 특성 포인트 10,000 x5{nl}- 토큰 x1",icon_item_1902_newyear_package_01,,,,,,까치까치 설날 성장 패키지,0,0.0,0.0,FFFF,19,0.0
+490394,1902_NewYear_Package_02,설날 기념으로 판매되는 패키지입니다. 마우스 오른쪽 버튼 클릭으로 사용하면 아이템이 지급됩니다.{nl} - 몬스터 카드첩: 블랙 x9 {nl} - Lv10 강화용 카드 x3{nl} - 빛나는 8성 젬 연마제 x3{nl} - 오래된 황금 주화 x50{nl} - 오래된 황금 소켓 x3,icon_item_1902_newyear_package_02,,,,,,까치까치 설날 카드와 젬 패키지,0,0.0,0.0,FFFF,19,0.0
+490395,1902_NewYear_Package_03,설날 기념으로 판매되는 패키지입니다. 마우스 오른쪽 버튼 클릭으로 사용하면 아이템이 지급됩니다.{nl} - 은빛 모루 x10{nl} - 황금 모루 x5{nl} - [Lv. 390] 유니크 인챈트 쥬얼 x5{nl} - [Lv. 380] +8 초월권 x1,icon_item_1902_newyear_package_03,,,,,,까치까치 설날 강화 패키지,0,0.0,0.0,FFFF,19,0.0
+490396,1902_NewYear_Package_ALL,"설날 기념으로 판매되는 패키지입니다. 마우스 오른쪽 버튼 클릭으로 사용하면 아이템이 지급됩니다.{nl} - 까치까치 설날 성장 패키지 x1{nl} - 까치까치 설날 카드와 젬 패키지 x1{nl} - 까치까치 설날 강화 패키지 x1{nl} - 위드니움 조각 x3{nl}위드니움 조각은 2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_1902_newyear_package_all,,,,,,까치까치 설날 올인원 패키지,0,0.0,0.0,FFFF,19,0.0
 491001,Premium_tpBox_16,사용 시 16 TP를 획득합니다. ,icon_item_tpbox_220,,,,,,16 TP,0,0.0,0.0,FFFF,19,0.0
 491002,Premium_tpBox_33,사용 시 33 TP를 획득합니다. ,icon_item_tpbox_220,,,,,,33 TP,0,0.0,0.0,FFFF,19,0.0
 491003,Premium_tpBox_49,사용 시 49 TP를 획득합니다. ,icon_item_tpbox_220,,,,,,49 TP,0,0.0,0.0,FFFF,19,0.0
@@ -480,6 +492,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 492070,Premium_eventTpBox_10_3,사용 시 10 TP를 획득합니다.,icon_item_tpbox_30,,,,,,10 TP[증정용 - 14일],0,0.0,1209600.0,FFFF,19,0.0
 492071,Premium_eventTpBox_500,사용 시 500 TP를 획득합니다.,icon_item_tpbox_360,,,,,,500 TP[증정용],0,0.0,0.0,FFFF,19,0.0
 493024,Premium_eventTpBox_50_3,사용 시 이벤트 50 TP를 획득할 수 있습니다.,icon_item_tpbox_30,,,,,,50 TP[이벤트],0,0.0,0.0,FFFF,19,0.0
+494068,HiddenJobUnlock_Char4_18_Event2,사용 시 무녀 클래스를 선택할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_unlock_miko,,,,,,[이벤트] 무녀 클래스 해금권,0,0.0,0.0,FFFT,19,1.0
+494069,HiddenJobUnlock_Char3_13_Event2,사용 시 감정사 클래스를 선택할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_unlock_appraiser,,,,,,[이벤트] 감정사 클래스 해금권,0,0.0,0.0,FFFT,19,1.0
+494070,HiddenJobUnlock_Char2_17_Event2,사용 시 룬캐스터 클래스를 선택할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_unlock_runecaster,,,,,,[이벤트] 룬캐스터 클래스 해금권,0,0.0,0.0,FFFT,19,1.0
+494071,HiddenJobUnlock_Char1_13_Event2,사용 시 시노비 클래스를 선택할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_unlock_shinobi,,,,,,[이벤트] 시노비 클래스 해금권,0,0.0,0.0,FFFT,19,1.0
+494072,HiddenJobUnlock_Char1_20_Event2,사용 시 낙무아이 클래스를 선택할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_unlock_nakmuay,,,,,,[이벤트] 낙무아이 클래스 해금권,0,0.0,0.0,FFFT,19,1.0
 495001,160714Event_box1,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,강자의 길 1일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
 495002,160714Event_box2,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,강자의 길 2일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
 495003,160714Event_box3,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,강자의 길 3일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
@@ -935,6 +952,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 633176,costume_Com_176,착용하면 복이 마구마구 들어올 것 같은 황금 복돼지 코스튬입니다. 착용하면 외형이 변경됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_goldpig_uniform_f,,,,,,황금 복돼지 코스튬,0,0.0,0.0,TTFT,19,0.0
 633177,costume_Com_177,붉은 겨울밤 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bluenight_red_m,,,,,,[PC방] 붉은 겨울밤 코스튬(남),0,0.0,0.0,FFFT,19,0.0
 633178,costume_Com_178,붉은 겨울밤 코스튬입니다. 착용하면 외형이 변경 됩니다.,icon_item_bluenight_red_f,,,,,,[PC방] 붉은 겨울밤 코스튬(여),0,0.0,0.0,FFFT,19,0.0
+633179,costume_Com_179,가을빛 한복 코스튬입니다. 착용하면 외형이 변경 됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_hanbok_yellow_m,,,,,,가을빛 한복 코스튬 (남),0,0.0,0.0,FFFT,19,0.0
+633180,costume_Com_180,가을빛 한복 코스튬입니다. 착용하면 외형이 변경 됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_hanbok_yellow_f,,,,,,가을빛 한복 코스튬 (여),0,0.0,0.0,FFFT,19,0.0
+633181,costume_Com_181,봄빛 한복 코스튬입니다. 착용하면 외형이 변경 됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_hanbok_green_m,,,,,,봄빛 한복 코스튬 (남),0,0.0,0.0,FFFT,19,0.0
+633182,costume_Com_182,봄빛 한복 코스튬입니다. 착용하면 외형이 변경 됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_hanbok_green_f,,,,,,봄빛 한복 코스튬 (여),0,0.0,0.0,FFFT,19,0.0
+633183,costume_Com_183,낯선이를 환영하는 깨우친 상감이 입었다던 코스튬입니다. 착용하면 외형이 변경 됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_hanbok_king_m,,,,,,상감 코스튬,0,0.0,0.0,FFFT,19,0.0
+633184,costume_Com_184,동방의 해가 떠오르는 곳에서는 햇빛의 결을 담은 옷을 입었다고 합니다. 착용하면 외형이 변경 됩니다.{nl}리사이클샵에서 메달로 교환할 수 있습니다.,icon_item_hanbok_queen_f,,,,,,색동 코스튬,0,0.0,0.0,FFFT,19,0.0
 635053,E_costume_Com_4,코카트리스를 본따 만든 코스튬입니다. 착용하면 외형이 변경됩니다.,icon_item_cokatrice_body_f,,,,,,[이벤트] 코카트리스 코스튬,0,0.0,2592000.0,FFFF,19,0.0
 635123,costume_simple_festival_m,축제용 심플 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_simple_festival_m,,,,,,축제용 심플 코스튬(남),0,0.0,0.0,TTFT,19,0.0
 635124,costume_simple_festival_f,축제용 심플 코스튬 입니다. 착용하면 외형이 변경됩니다.,icon_item_simple_festival_f,,,,,,축제용 심플 코스튬(여),0,0.0,0.0,TTFT,19,0.0
@@ -982,6 +1005,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 639108,Effect_Stamp_Thorn,착용자가 점프 시 바닥에서 길티네의 가시가 등장합니다.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_thorn,,,,,,길티네의 가시,0,0.0,0.0,TTFT,19,1.0
 639109,Effect_AURORA,착용자의 뒤로 신비한 오로라 이펙트를 만들어냅니다.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_aurora,,,,,,신비한 오로라,0,0.0,0.0,TTFT,19,1.0
 639110,Effect_SNOW,착용자의 머리 위에 눈 결정이 내리는 이펙트를 만들어냅니다.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_snow,,,,,,펑펑 함박눈,0,0.0,0.0,TTFT,19,1.0
+639111,Effect_Korean_Pattern,착용자의 발 밑에서 전통의 멋을 느낄 수 있는 단청 문양이 나타납니다.{nl}리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_korean_pattern,,,,,,꽃 무늬 단청,0,0.0,0.0,TTFT,19,1.0
+639112,Effect_Valentine_01,뛸 때마다 달콤한 초콜릿과 사탕이 팡팡 튀어나오는 이펙트를 만들어냅니다.{nl}리사이클샵에서 메달로 교환 가능합니다.,icon_item_effect_valentine_01,,,,,,달콤함이 팡팡,0,0.0,0.0,TTFT,19,1.0
 640000,Effect_SnowFlower,착용자의 발걸음 마다 차가운 얼음 이펙트를 만들어냅니다. {nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_snow_flower_effect,,,,,,하얀 눈꽃 결정,0,0.0,0.0,TTFT,19,1.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,스태미나 +5 증가 물약,200,0.0,0.0,FFFF,6,1.0
 640002,Drug_HP1,HP를 273 즉시 회복시키고 2초 간격으로 15초 동안 HP를 273 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다.,item_hp_oil_1,,,,,,작은 HP포션,16,25.0,0.0,FFTF,6,7.0
@@ -1364,6 +1389,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640439,Boruta_Warp_table_10_1,"이벤트용 워프 주문서입니다.{nl}사용 시 베다 고원의 큐폴 카제에게 이동합니다.{nl}19년 1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_scroll,,,,,,[이벤트] 워프 주문서-큐폴 카제,0,10.0,0.0,FFFT,6,1.0
 640440,Boruta_Event_ACHIEVE_BOX_day5,"슬리비나스 레어의 드래곤 보루타 공략에 5회 이상 참여한 구원자님에게 지급되는 칭호 상자입니다.{nl}사용 시, [보루타를 건드려 본] 칭호를 획득합니다.{nl}360Lv 이상 사용 가능",icon_item_holyark,,,,,,[이벤트] 칭호 - 보루타를 건드려 본,0,0.0,0.0,FFFT,6,0.0
 640441,Boruta_Event_ACHIEVE_BOX_day10,"슬리비나스 레어의 드래곤 보루타 공략에 10회 이상 참여한 구원자님에게 지급되는 칭호 상자입니다.{nl}사용 시, [보루타가 두렵지 않은] 칭호를 획득합니다.{nl}360Lv 이상 사용 가능",icon_item_holyark,,,,,,[이벤트] 칭호 - 보루타가 두렵지 않은,0,0.0,0.0,FFFT,6,0.0
+640447,Event_Drug_RedApple20,HP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 HP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.,icon_item_hpelixir_small,,,,,,[이벤트] HP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,6,30.0
+640448,Event_Drug_BlueApple20,SP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 SP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.,icon_item_spelixir_small,,,,,,[이벤트] SP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,6,30.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,LV1 공격 부스터,1,8.0,0.0,TTTT,6,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,공격 부스터 +15,1,8.0,0.0,TTTT,6,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,공격 부스터 +20,2,8.0,0.0,TTTT,6,1.0
@@ -1551,6 +1578,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641819,Gem_Gacha_gold_coin,"시대를 알 수 없는 오래된 황금 주화입니다.{nl}유랑 상인에게 가져다 주면 젬 뽑기 비용이 소모되지 않으며, LV4 이상의 젬을 획득할 수 있습니다.",icon_item_antque_gold_coin,,,,,,오래된 황금 주화,0,0.0,0.0,TTFT,15,1.0
 641821,card_Xpupkit10,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 5400 만큼 상승시킵니다.,icon_item_reinforce_card_10,,,,,,Lv10 강화용 카드,1000,0.0,0.0,TTFT,15,1.0
 641822,card_Xpupkit10_Team,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 5400 만큼 상승시킵니다.,icon_item_reinforce_card_10,,,,,,Lv10 강화용 카드,0,0.0,0.0,FFFT,15,1.0
+641823,Gem_Gacha_gold_coin_Team,"시대를 알 수 없는 오래된 황금 주화입니다.{nl}유랑 상인에게 가져다 주면 젬 뽑기 비용이 소모되지 않으며, LV4 이상의 젬을 획득할 수 있습니다.",icon_item_antque_gold_coin,,,,,,오래된 황금 주화,0,0.0,0.0,FFFT,15,1.0
+641824,Select_Weapon_NewYear_Box,사용 시 [까치까치 설날] 무기 리스트 중 원하시는 장비가 지급됩니다.,icon_item_event_weaponbox1,,,,,,유니크 성장 무기 상자,0,0.0,0.0,FFFT,19,1.0
+641825,NewYear_Weapon_Reinforce_11,[까치까치 설날] 무기의 강화 단계를 11단계로 올려줍니다.{nl}사용하기 위해서는 인벤토리에 [까치까치 설날] 무기가 하나만 있어야 합니다.{nl}강화 단계가 11단계를 넘긴 [까치까치 설날] 무기에는 사용할 수 없습니다.,icon_item_unique_growth_reinforce_11,,,,,,유니크 성장 무기 +11 강화권,0,0.0,0.0,FFFT,19,1.0
+641826,NewYear_Weapon_Transcend_5,[까치까치 설날] 무기의 초월 단계를 5단계로 올려줍니다.{nl}사용하기 위해서는 인벤토리에 [까치까치 설날] 무기가 하나만 있어야 합니다.{nl}초월 단계가 5단계를 넘긴 [까치까치 설날] 무기에는 사용할 수 없습니다.,icon_item_unique_growth_transcend_5,,,,,,유니크 성장 무기 +5 초월권,0,0.0,0.0,FFFT,19,1.0
 641901,Event_moneyBox1,"사용 시 실버를 획득할 수 있습니다. 7월 7일 점검 시, 일괄 삭제됩니다.",icon_item_nxpbox,,,,,,하급 실버 상자,0,0.0,0.0,FFFF,6,0.0
 641902,Event_moneyBox2,"사용 시 실버를 획득할 수 있습니다. 7월 7일 점검 시, 일괄 삭제됩니다.",icon_item_nxpbox,,,,,,중급 실버 상자,0,0.0,0.0,FFFF,6,0.0
 641903,Event_moneyBox3,"사용 시 실버를 획득할 수 있습니다. 7월 7일 점검 시, 일괄 삭제됩니다.",icon_item_nxpbox,,,,,,고급 실버 상자,0,0.0,0.0,FFFF,6,0.0
@@ -1603,6 +1634,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641963,Premium_ChallengeModeReset,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,챌린지 모드 1회 입장권,0,5.0,0.0,TTFT,6,1.0
 641964,Uphill_Store_Point_10,사용하면 업힐 포인트 상점 포인트 10을 획득할 수 있습니다.{nl}해당 포인트는 업힐 포인트 상점에서 사용할 수 있습니다.,icon_item_annycoin_2,,,,,,업힐 디펜스 상점 포인트 : 10,0,0.0,0.0,FFFF,6,0.0
 641969,Event_190110_ChallengeModeReset_14d,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,챌린지 모드 1회 입장권 (14일),0,5.0,1209600.0,FFFT,6,1.0
+641970,Event_190131_SWEET_POTATO_ITEM,"달콤한 군고구마입니다. 이것을 획득하면 놀라운 일이 생길수도 있습니다.{nl}HP를 2205, SP를 735 즉시 회복시키고 2초 간격으로 15초 동안 HP를 2205, SP를 735 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 45초.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_sweet_potato,,,,,,[이벤트] 달콤한 군고구마,0,45.0,0.0,FFFT,6,1.0
+641971,Event_Drug_Alche_HP15_Premium,HP를 5614 즉시 회복시키고 2초 간격으로 15초 동안 HP를 5614회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 45초.,item_hp_oil_3,,,,,,보급용 농축 HP포션 LV15,0,45.0,0.0,FFFT,6,1.0
+641972,Event_Drug_Alche_SP15_Premium,SP를 1288 즉시 회복시키고 2초 간격으로 15초 동안 SP를 1288 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 45초.,item_sp_requid_3,,,,,,보급용 농축 SP포션 LV15,0,45.0,0.0,FFFT,6,1.0
+641973,Event_drug_steam_1h_Premium,"1시간 동안 이동속도 +2, 물리 공격력 +50, 마법 공격력 +50 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",item_speed_requid_3,,,,,,정착 지원 포션 Lv2,0,30.0,0.0,FFFT,6,0.0
 642501,Gacha_TP_001,사용하면 무언가 알 수 없는 것을 획득할 수 있을 것 같습니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.,icon_item_randombox,,,,,,레티샤의 비밀 큐브,0,0.0,0.0,FFFT,19,0.0
 642502,Gacha_EXP_001,사용 시 LV2 ~ 10 경험치 카드 중에 무작위로 3장을 획득할 수 있습니다.,icon_item_quest_00017,,,,,,경험치 카드 상자,0,0.0,0.0,FFFF,6,0.0
 642503,Gacha_Recipe_Wep,사용 시 LV220 무기 레시피 중에 무작위로 1장을 획득할 수 있습니다.,icon_item_luckybox_red,,,,,,Lv220 제작서 상자 - 무기,0,0.0,0.0,FFFF,6,0.0
@@ -1684,6 +1719,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 643019,Premium_Socket_Gold,"포텐셜이 0인 장비에만 사용가능 하며, 사용시 소켓이 추가됩니다. 단, 최대 소켓 개수 이상으로 추가 할 수 없습니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_gold_socket,,,,,,빛나는 황금 소켓,0,0.0,0.0,TTFT,19,1.0
 643020,Extract_kit,아이커 추출에 사용되는 도구입니다. 일반 도구로 테리아베리스에게서 구매할 수 있습니다.,icon_item_extractkit,,,,,,아이커 추출 키트,600,0.0,0.0,FFTF,15,4.0
 643021,Extract_kit_Sliver,아이커 추출에 사용되는 도구입니다. 소모하는 재화가 필요 없습니다.,icon_item_extractkit_sliver,,,,,,은빛 아이커 추출 키트,0,0.0,0.0,FFTF,15,4.0
+643022,Extract_kit_Gold,"아이커 추출에 사용되는 도구입니다. 장비 포텐셜 0일 경우 사용 가능하며, 아이템 파괴를 방지합니다.",icon_item_extractkit_gold,,,,,,빛나는 황금 아이커 추출 키트,0,0.0,0.0,TTFT,15,4.0
 643023,Transcend_Scroll_Event_90d,장비의 초월 수치를 5단계로 만들어줍니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_transcendence_coupon,,,,,,[이벤트] 5초월 스크롤 (90일),0,0.0,7776000.0,FFFF,19,1.0
 643024,Premium_Extract_kit_Sliver,아이커 추출에 사용되는 도구입니다. 소모하는 재화가 필요 없습니다.,icon_item_extractkit_sliver,,,,,,빛나는 은빛 아이커 추출 키트,0,0.0,0.0,TTFT,19,4.0
 643025,Moru_Gold_14d_Team,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil_gold,,,,,,황금 모루(14일),0,0.0,1209600.0,FFFT,15,1.0
@@ -1692,6 +1728,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다.{nl}랜덤 옵션 장비에만 사용할 수 있습니다. {nl} - 1월 31일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,[Rebuild] 100% 아이커 추출 키트: 랜덤 옵션,0,0.0,0.0,FFTF,15,4.0
 643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다.{nl}제작 유니크 장비에만 사용할 수 있습니다. {nl} - 1월 31일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,[Rebuild] 100% 아이커 추출 키트: 제작,0,0.0,0.0,FFTF,15,4.0
 643030,Transcend_Scroll_5_Event_2,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,19,1.0
+643032,Old_Socket_Gold_Team,"포텐셜이 0인 장비에만 사용가능 하며, 사용시 소켓이 추가됩니다. 단, 최대 소켓 개수 이상으로 추가 할 수 없습니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_gold_socket,,,,,,오래된 황금 소켓,0,0.0,0.0,FFFT,19,1.0
+643033,Transcend_Scroll_8,"레벨 380 이하의 장비의 초월 수치를 8단계로 만들어줍니다.{nl}0~7단계 초월 아이템만 사용할 수 있으며, 8초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 8초월 상태로 변경됩니다.",icon_item_transcendence_coupon,,,,,,[Lv. 380] 8초월 스크롤,0,0.0,0.0,FFFT,19,1.0
+643034,Moru_Diamond_14d_Team,"강화에 실패해도 강화 수치는 하락하지 않습니다. 단, 포텐셜은 하락합니다. 포텐셜이 0미만이 될 경우 아이템이 파괴됩니다. 획득 후부터 14일 동안 사용 가능합니다.",icon_item_anvil_diamond,,,,,,다이아몬드 모루(14일),0,0.0,1209600.0,FFFT,19,1.0
 645001,Mic,목소리를 크게 키워줍니다.{nl}[/y 채팅내용] 으로 모든 지역에 채팅 내용을 보여줄 수 있습니다.,icon_item_mike,,,,,,확성기,0,0.0,0.0,FFFT,19,0.0
 645002,D_Bube_Mane,수정에 오래 노출된 부베들에게서만 얻을 수 있는 어두운 마석,icon_item_evilenergy_piece,,,,,,부베 마석,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,달콤한 향이 나는 꽃잎입니다. 하나밍에게서 획득합니다.,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,"[2001, 30102]",,하나밍 꽃잎,1,0.0,0.0,TTTT,15,1.0
@@ -2605,9 +2644,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 647010,misc_0529,하시사스 포션입니다. 마시면 일시적으로 신체 능력을 향상시켜 줍니다.,icon_item_misc04_112,,,,,,하시사스 포션,25,0.0,0.0,FFFF,15,1.0
 647011,misc_0530,고급 장비 제작 및 인장 강화에 사용되는 매우 희귀한 재료입니다.,icon_item_misc_misc_0530,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089, 34090, 34091, 34092, 34093]",,마정석,25,0.0,0.0,TTTT,15,1.0
 647012,misc_gemExpStone_randomQuest4_14d_Team,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFT,15,1.0
-647013,PVP_Misc_1_KOR_Reward,"콜로니전 승리를 기념하는 주화입니다.{nl}콜로니전 마켓 세금 보상을 대체해 지급되는 아이템입니다.{nl}2월 14일 점검 시, 일괄 삭제됩니다.",icon_item_coin_colony_01,,,,,,콜로니전 기념 주화 [보상용],100000,0.0,0.0,FFTT,15,1.0
+647013,PVP_Misc_1_KOR_Reward,"콜로니전 승리를 기념하는 주화입니다.{nl}콜로니전 마켓 적립금 보상을 대체해 지급되는 아이템입니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_coin_colony_01,,,,,,콜로니전 기념 주화 [보상용],100000,0.0,0.0,FFTT,15,1.0
 647014,misc_0531,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_iredian_misc01,,,,"[34090, 34091, 34092, 34093]",,이레디안 브로치,0,0.0,0.0,TTTT,15,1.0
 647015,misc_0532,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_iredian_misc02,,,,"[34090, 34091, 34092, 34093]",,이레디안 수정 조각,0,0.0,0.0,TTTT,15,1.0
+647016,misc_0533,클라페다 [바이보라 날개] 레나를 찾아가면 유용한 아이템으로 교환 가능합니다.,icon_item_wingcoin,,,,,,바이보라의 날개 주화,0,0.0,0.0,FFFT,15,1.0
+647017,misc_gemExpStone10_Premium,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1094700,icon_item_powderp,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTFT,15,1.0
+647018,widnium_piece_Premium,"최근 머나먼 어딘가에서 케도라 상단을 통해 들어왔다고 전해지는 희귀한 광물입니다.{nl}이 광물은 누군가가 소지하고 있어도 자신이 본래에 있던 곳으로 돌아가려고 한다는 소문이 있습니다.{nl}페디미안의 테리아베리스 또한 소문을 듣고 연구를 위해 이 광석을 애타게 찾고 있다고 합니다.{nl}이 광석을 테리아베리스에게 전해주면 '다이아몬드 모루 (14일)' 1개로 교환해줍니다.{nl}이 아이템은 2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_widnium_piece,,,,,,위드니움 조각,0,0.0,0.0,FFFF,15,1.0
 648501,emoticonItem_1,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 케파(기쁨),0,0.0,0.0,FFFF,6,1.0
 648502,emoticonItem_2,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 케파(슬픔),0,0.0,0.0,FFFF,6,1.0
 648503,kupole_emotion01,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,이모티콘: 큐폴(데헷),0,0.0,0.0,FFFT,6,1.0
@@ -4752,10 +4794,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 670004,Purple_Card_Book,누군가가 모아놓은 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}100레벨 이상 사용가능{nl}사용시 330LV의 보스 몬스터가 소환됩니다. 소환된 보스는 10분 후 사라집니다.{nl}필드에서만 사용할 수 있습니다.,icon_item_purple_cardbook,,,,[40041],,몬스터 카드첩 : 퍼플,0,60.0,0.0,TTFT,6,10.0
 670005,Get_Wet_Card_Book,물에 젖은 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}100레벨 이상 사용가능{nl}사용시 330LV의 보스 몬스터가 소환됩니다. 소환된 보스는 10분 후 사라집니다.{nl}필드에서만 사용할 수 있습니다.,icon_item_get_wet_cardbook,,,,,,물에 젖은 몬스터 카드첩,0,60.0,0.0,FFFT,6,10.0
 670006,Ominous_Card_Book,"불길한 기운이 느껴지는 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}300레벨 이상 사용가능{nl}사용시 330LV의 카드 보스 몬스터와 필드 보스 몬스터 중 1종이 소환됩니다.(상위 필드 보스 소환 시 해당 보스의 큐브를 획득할 수 있습니다.){nl}소환된 보스는 10분 후 사라집니다. 단, 상위 필드 보스의 경우 120분 후에 사라집니다.{nl}필드에서만 사용할 수 있습니다.",icon_item_curse_cardbook,,,,,[40041],몬스터 카드첩 : 블랙,0,60.0,0.0,FFFT,6,10.0
+670007,Premium_Ominous_Card_Book,기분나쁘고 사악한 기운이 손을 대지 않아도 느껴지는 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}300레벨 이상 사용가능{nl}사용시 LV330 상급 필드 보스 몬스터 중 1종이 소환됩니다. {nl}필드에서만 사용할 수 있습니다.,icon_item_premium_ominous_card_book,,,,,,빛나는 몬스터 카드첩: 칠흑,0,60.0,0.0,TTTT,6,10.0
 670009,Get_Wet_Card_Book_14d,물에 젖은 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}100레벨 이상 사용가능{nl}사용시 330LV의 보스 몬스터가 소환됩니다. 소환된 보스는 10분 후 사라집니다.{nl}필드에서만 사용할 수 있습니다.,icon_item_get_wet_cardbook,,,,,,물에 젖은 몬스터 카드첩 (14일),0,60.0,1209600.0,FFFF,6,10.0
 670010,Get_Wet_Card_Book_14d_Team,물에 젖은 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}100레벨 이상 사용가능{nl}사용시 330LV의 보스 몬스터가 소환됩니다. 소환된 보스는 10분 후 사라집니다.{nl}필드에서만 사용할 수 있습니다.,icon_item_get_wet_cardbook,,,,,,물에 젖은 몬스터 카드첩 (14일),0,60.0,1209600.0,FFFT,6,10.0
 670011,All_Color_Card_Book,누군가가 모아놓은 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}100레벨 이상 사용가능{nl}사용시 330LV의 보스 몬스터가 소환됩니다. 소환된 보스는 10분 후 사라집니다.{nl}필드에서만 사용할 수 있습니다.,icon_item_4color_cardbook,,,,,,몬스터 카드첩 : 올컬러,0,60.0,0.0,FFFT,6,10.0
 670012,Premium_Black_Card_Book,"불길한 기운이 느껴지는 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}300레벨 이상 사용가능{nl}사용시 330LV의 카드 보스 몬스터와 필드 보스 몬스터 중 1종이 소환됩니다.(상위 필드 보스 소환 시 해당 보스의 큐브를 획득할 수 있습니다.){nl}소환된 보스는 10분 후 사라집니다. 단, 상위 필드 보스의 경우 120분 후에 사라집니다.{nl}필드에서만 사용할 수 있습니다.",icon_item_curse_cardbook,,,,,,빛나는 몬스터 카드첩 : 블랙,0,60.0,0.0,TTFT,6,10.0
+670013,Ominous_Card_Book_Team,"불길한 기운이 느껴지는 카드첩입니다. 조용하고 한적한 곳에서 읽어보시길 추천합니다.{nl}300레벨 이상 사용가능{nl}사용시 330LV의 카드 보스 몬스터와 필드 보스 몬스터 중 1종이 소환됩니다.(상위 필드 보스 소환 시 해당 보스의 큐브를 획득할 수 있습니다.){nl}소환된 보스는 10분 후 사라집니다. 단, 상위 필드 보스의 경우 120분 후에 사라집니다.{nl}필드에서만 사용할 수 있습니다.",icon_item_curse_cardbook,,,,,,몬스터 카드첩 : 블랙,0,60.0,0.0,FFFT,6,10.0
 680000,Dungeon_Key01,유니크 레이드에 입장할 때 필요한 아이템입니다. ,icon_item_dungeon_portalstone,,"[642916, 642916]",,,[9024],레이드 포탈 스톤,10,0.0,0.0,TTTT,15,1.0
 680001,BlueOrb_Onion,몬스터를 소환합니다. 소환된 몬스터는 아군이 되어 같이 전투를 합니다. 180초동안 유지됩니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_dreamshade,,,,,,블루 오브:케파,10,180.0,0.0,TTTT,6,1.0
 680002,BlueOrb_Leaf_diving,몬스터를 소환합니다. 소환된 몬스터는 아군이 되어 같이 전투를 합니다. 180초동안 유지됩니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_dreamshade,,,,,,블루 오브:잎방개,10,180.0,0.0,TTTT,6,1.0
@@ -6023,6 +6067,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 699004,Rare_Enchant_Jewel,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,레어 인챈트 쥬얼,10,0.0,0.0,TFTT,6,1.0
 699005,Unique_Enchant_Jewel,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,유니크 인챈트 쥬얼,10,0.0,0.0,TFTT,6,1.0
 699006,Legend_Enchant_Jewel,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,레전드 인챈트 쥬얼,10,0.0,0.0,TFTT,6,1.0
+699007,Event_Rare_Enchant_Jewel,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,[이벤트] 레어 인챈트 쥬얼,10,0.0,0.0,FFFF,6,1.0
+699008,Event_Unique_Enchant_Jewel,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,[이벤트] 유니크 인챈트 쥬얼,10,0.0,0.0,FFFF,6,1.0
+699009,Event_Legend_Enchant_Jewel,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,[이벤트] 레전드 인챈트 쥬얼,10,0.0,0.0,FFFF,6,1.0
+699010,Unique_Enchant_Jewel_Team,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
 700000,KQ_token_hethran_1,"Lv 260 부터 사용가능{nl}헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_1,,,,,,헤스란 증표 Lv1,2000,5.0,0.0,TTTT,15,1.0
 700001,KQ_token_hethran_2,"Lv 300 부터 사용가능{nl}헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_2,,,,,,헤스란 증표 Lv2,2000,5.0,0.0,TTTT,15,1.0
 700002,KQ_token_hethran_3,"헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_2,,,,,,헤스란 증표 Lv3,2000,0.0,0.0,TTTT,15,1.0
@@ -6359,7 +6407,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902071,EVENT_1802_NEWYEAR_GOLDCOIN,"황금개의 이벤트 상점을 이용 시 사용합니다.3월 8일 점검 시, 일괄 삭제됩니다.",icon_item_goldcoin_event,,,,,,무술년 황금 코인,0,0.0,0.0,TFFT,15,1.0
 902072,EVENT_1802_NEWYEAR_FORTUNEPOUCH,"황금개가 선물하는 복주머니 입니다.사용 시 '무술년 황금 코인'을 획득합니다.3월 8일 점검 시, 일괄 삭제됩니다.",icon_item_fortunepouch,,,,,,무술년 복주머니,0,3.0,0.0,FFFT,6,1.0
 902073,EVENT_1802_NEWYEAR_ACHIEVE,"황금개가 선물하는 칭호 상자 입니다.3월 8일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,칭호 - 2018 대박맞은,0,0.0,0.0,FFFT,6,0.0
-902078,EVENT_1802_CHOCO,"30분간 1중첩 마다 경험치 획득량 10%, 최대 체력 500, 10초마다 HP 100/ SP 50씩 회복 합니다. 최대 5중첩까지 가능합니다. 3월 8일 점검 시, 일괄 삭제됩니다.",icon_item_chocolatebox,,,,,,달콤한 발렌타인 초콜릿,0,10.0,0.0,FFFT,6,0.0
+902078,EVENT_1802_CHOCO,"30분간 1중첩 마다 경험치 획득량 10%, 최대 체력 500, 10초마다 HP 100/ SP 50씩 회복 합니다. 최대 5중첩까지 가능합니다. 2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_chocolatebox,,,,,,달콤한 발렌타인 초콜릿,0,10.0,0.0,FFFT,6,0.0
 902079,RequestEnterCount_1add,사용 시 의뢰소 미션에 1회 더 입장 가능합니다.,icon_item_indunonemoreenter,,,,,,의뢰소 미션 1회 입장권,0,0.0,0.0,FFFF,8,0.0
 902080,GuildQuestEnterCount_1add,사용 시 길드 퀘스트(미션/레이드) 입장 횟수가 1회 증가합니다.,icon_item_indunonemoreenter,,,,,,길드 퀘스트 1회 입장권,0,0.0,0.0,FFFF,8,0.0
 902095,PREMIUM_CHALLENG_PORTAL,사용 시 챌린지 포탈이 생성 됩니다.,icon_item_challengemode_scroll,,,,,,챌린지 포탈 생성 스크롤,10,3.0,0.0,TTFT,19,1.0
@@ -6489,6 +6537,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904135,EVENT_190110_RankReset_Point_Lv1,"클래스 변경 포인트가 100 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_3,,,,,,클래스 변경권 Lv.1 (14일),0,0.0,1209600.0,FFFT,8,0.0
 904136,EVENT_LAB_1901_ACHIEVE_BOX,TOS 4기 연구원에게 주어지는 칭호,icon_item_holyark,,,,,,칭호 - TOS 4기 연구원,0,0.0,0.0,FFFT,6,1.0
 904137,EVENT_190124_RankReset_Point_Lv2,"클래스 변경 포인트가 500 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_2,,,,,,[이벤트]클래스 변경권 Lv.2(14일),0,0.0,1209600.0,FFFT,8,0.0
+904139,EVENT_PENGUIN_BOX,사용 시 다양한 펭귄 컴패니언 중 원하시는 펭귄 알이 지급됩니다.,icon_item_event_penguinbox,,,,,,[이벤트] 펭귄 선택 상자,0,0.0,0.0,FFFT,19,1.0
+904140,Class_Solution_Select_Box_Event,히든 직업 해금권 선택 상자 {nl} 선택 가능 목록 {nl} - 시노비 해금권 {nl} - 무녀 해금권 {nl} - 룬 캐스터 해금권 {nl} - 감정사 해금권 {nl} - 낙무아이 해금권,icon_item_classsolution_box,,,,,,[이벤트] 해금권 선택 상자,0,0.0,0.0,FFFT,8,0.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,스킬 주문서,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,새싹,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,시든 식물,1,0.0,0.0,TTTT,15,1.0
