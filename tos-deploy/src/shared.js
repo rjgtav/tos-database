@@ -60,8 +60,7 @@ exports.log = function(message) {
                     color: 'good',
                     fallback: message.join(' '),
                     fields: [{
-                        title: message[0],
-                        value: message.join(' '),
+                        title: message.join(' '),
                         short: false
                     }]
                 }]
