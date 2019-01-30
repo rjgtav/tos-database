@@ -15,7 +15,12 @@ def to_lower(path):
     for root, dirs, files in os.walk(path):
         for file in files:
             if file != file.lower():
-                shutil.move(os.path.join(root, file), os.path.join(root, file.lower()))
+                source = os.path.join(root, file)
+                destination = os.path.join(root, file.lower())
+
+                # workaround due to Windows case insensitive file system
+                shutil.move(source, destination + '.tmp')
+                shutil.move(destination + '.tmp', destination)
 
 
 # Thanks to https://stackoverflow.com/a/7420617
