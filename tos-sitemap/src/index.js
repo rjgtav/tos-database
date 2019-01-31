@@ -11,13 +11,14 @@ function log(...msg) {
     console.log('[' + REGION + ']', '[tos-sitemap]', ...msg);
 }
 
-const REGION_ITOS = 'iTOS';
-const REGION_JTOS = 'jTOS';
-const REGION_KTEST = 'kTEST';
-const REGION_KTOS = 'kTOS';
-const REGION = process.argv[2] || 'iTOS';
+const REGION_iTOS = 'iTOS';
+const REGION_jTOS = 'jTOS';
+const REGION_kTEST = 'kTEST';
+const REGION_kTOS = 'kTOS';
+const REGION_twTOS = 'twTOS';
+const REGION = process.argv[2] || REGION_iTOS;
 
-if ([REGION_ITOS, REGION_JTOS, REGION_KTEST, REGION_KTOS].indexOf(REGION) === -1)
+if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(REGION) === -1)
     throw Error('Invalid region: ' + REGION);
 
 let folder_assets = path.join(__dirname, '..', '..', 'web', 'src', 'assets');
