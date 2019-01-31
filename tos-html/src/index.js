@@ -15,10 +15,14 @@ function log(...msg) {
 const PATTERN_TEMPLATE_LIST_ROW = '<tr class="d-table-row">';
 const PATTERN_TEMPLATE_LIST_ROW_CLOSE = '</tr>';
 
-const REGIONS = ['iTOS', 'jTOS', 'kTOS', 'kTEST', 'twTOS'];
-const REGION = process.argv[2] || 'iTOS';
+const REGION_iTOS = 'iTOS';
+const REGION_jTOS = 'jTOS';
+const REGION_kTEST = 'kTEST';
+const REGION_kTOS = 'kTOS';
+const REGION_twTOS = 'twTOS';
+const REGION = process.argv[2] || REGION_iTOS;
 
-if (REGIONS.indexOf(REGION) === -1)
+if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(REGION) === -1)
     throw Error('Invalid region: ' + REGION);
 
 let folder_archive_database = path.join(REGION.toLowerCase(), 'database');
