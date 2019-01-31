@@ -34,11 +34,18 @@ def csv_write(data, dataset):
     if not os.path.exists(constants.PATH_WEB_ASSETS_DATA):
         os.makedirs(constants.PATH_WEB_ASSETS_DATA)
 
+    # Get keys from a complete entity
+    keys = None
+
+    for row in data:
+        if keys is None or len(keys) < len(row.keys()):
+            keys = row.keys()
+
     # Write to CSV
     file = open(os.path.join(constants.PATH_WEB_ASSETS_DATA, dataset + '.csv'), 'w')
     writer = csv.DictWriter(
         file,
-        delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(data[0].keys())
+        delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(keys)
     )
     writer.writeheader()
     writer.writerows(sorted(data, key=lambda k: k['$ID']))
