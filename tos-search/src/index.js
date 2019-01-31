@@ -18,10 +18,14 @@ function log(...msg) {
     console.log('[' + REGION + ']', '[tos-search]', ...msg);
 }
 
-const REGIONS = ['iTOS', 'jTOS', 'kTOS', 'kTEST', 'twTOS'];
-const REGION = process.argv[2] || 'iTOS';
+const REGION_iTOS = 'iTOS';
+const REGION_jTOS = 'jTOS';
+const REGION_kTEST = 'kTEST';
+const REGION_kTOS = 'kTOS';
+const REGION_twTOS = 'twTOS';
+const REGION = process.argv[2] || REGION_iTOS;
 
-if (REGIONS.indexOf(REGION) === -1)
+if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(REGION) === -1)
     throw Error('Invalid region: ' + REGION);
 
 let documents = {};
@@ -48,9 +52,9 @@ let files = fs.readdirSync(folder);
 // Build index
 log('Building index...');
 var idx = lunr(function () {
-    if (REGION === REGION_JTOS)
+    if (REGION === REGION_jTOS)
         this.use(lunr.multiLanguage('en', 'jp'));
-    if (REGION === REGION_KTOS || REGION === REGION_KTEST)
+    if (REGION === REGION_kTOS || REGION === REGION_kTEST)
         this.use(lunr.multiLanguage('en', 'kr'));
 
     // Disable stemmer
