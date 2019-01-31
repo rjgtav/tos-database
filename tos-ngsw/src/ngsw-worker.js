@@ -2735,7 +2735,7 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
   const HotFix_safeFetch_Driver = (adapter, req) => {
     // CloudFlare's 'Ignore Query String' cache level only supports 'static' assets:
     // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
-    let url = req.url.replace('ngsw.json', 'ngsw.js');
+    let url = req.url.replace('ngsw.json?ngsw-cache-bust=', 'ngsw.js?');
 
     // Intercept only tos.guru related requests
     return url.indexOf(location.origin) === 0

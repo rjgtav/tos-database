@@ -6,6 +6,7 @@ import urllib2
 import constants
 from libs import blowfish
 from patcherr import patcher_ipf, patcher_pak
+from patcherr.patcher_ipf import IPF_BLACKLIST
 
 CHUNK_SIZE = 128 * 1024 * 1024  # 128MB of Chunk Size
 
@@ -13,11 +14,18 @@ CHUNK_SIZE = 128 * 1024 * 1024  # 128MB of Chunk Size
 def patch():
     logging.debug('Patching...')
 
-    version_data, version_data_new = patch_download(
+    # Full patch
+    patch_full(
+        constants.PATH_INPUT_DATA, constants.PATH_INPUT_DATA_PATCH, constants.PATH_INPUT_DATA_PATCH_URL_FULL, '.ipf', patcher_ipf.unpack,
+        constants.PATH_INPUT_DATA_REVISION_URL_FULL
+    )
+
+    # Partial patches
+    version_data, version_data_new = patch_partial(
         constants.PATH_INPUT_DATA_PATCH, constants.PATH_INPUT_DATA_PATCH_URL, '.ipf', patcher_ipf.unpack,
         constants.PATH_INPUT_DATA_REVISION, constants.PATH_INPUT_DATA_REVISION_URL,
     )
-    version_release, version_release_new = patch_download(
+    version_release, version_release_new = patch_partial(
         constants.PATH_INPUT_RELEASE_PATCH, constants.PATH_INPUT_RELEASE_PATCH_URL, '.pak', patcher_pak.unpack,
         constants.PATH_INPUT_RELEASE_REVISION, constants.PATH_INPUT_RELEASE_REVISION_URL,
     )
@@ -28,41 +36,62 @@ def patch():
     return version_old, version_new
 
 
-def patch_download(patch_path, patch_url, patch_ext, patch_unpack, revision_path, revision_url):
-    logging.debug('Downloading %s...', revision_url)
+def patch_full(patch_destination, patch_path, patch_url, patch_ext, patch_unpack, revision_url):
+    logging.debug('Patching %s...', revision_url)
+    revision_list = urllib2.urlopen(revision_url).read()
+    revision_list = revision_decrypt(revision_list)
+
+    for revision in revision_list:
+        # Download patch
+        patch_name = revision + patch_ext
+        patch_file = os.path.join(patch_path, patch_name)
+
+        if not os.path.exists(os.path.join(patch_destination, patch_name)) and patch_name not in IPF_BLACKLIST:
+            logging.debug('Downloading %s...', patch_url + patch_name)
+            patch_process(patch_file, patch_name, patch_unpack, patch_url)
+
+
+def patch_partial(patch_path, patch_url, patch_ext, patch_unpack, revision_path, revision_url):
+    logging.debug('Patching %s...', revision_url)
     revision_list = urllib2.urlopen(revision_url).read()
     revision_list = revision_decrypt(revision_list)
     revision_old = revision_txt_read(revision_path)
     revision_new = revision_old
 
-    # ensure patch_path exists
-    if not os.path.exists(patch_path):
-        os.makedirs(patch_path)
-
     for revision in revision_list:
-        if int(revision) > int(revision_old):
-            # Download patch
+        revision = revision.split(' ')[0]
+
+        if int(revision) > int(revision_old) and revision not in ['147674']:
+            # Process patch
             patch_name = revision + '_001001' + patch_ext
-            logging.debug('Downloading %s...', patch_url + patch_name)
-
             patch_file = os.path.join(patch_path, patch_name)
-            patch_response = urllib2.urlopen(patch_url + patch_name)
+            patch_process(patch_file, patch_name, patch_unpack, patch_url)
 
-            with open(patch_file, 'wb') as file:
-                for chunk in iter(lambda: patch_response.read(CHUNK_SIZE), ''):
-                    file.write(chunk)
-
-            # Extract patch
-            patch_unpack(patch_name)
-
-            # Delete patch
-            os.remove(patch_file)
-
-            # Update version
+            # Update revision
             revision_txt_write(revision_path, revision)
             revision_new = revision
 
     return revision_old, revision_new
+
+
+def patch_process(patch_file, patch_name, patch_unpack, patch_url):
+    # Ensure patch_file destination exists
+    if not os.path.exists(os.path.dirname(patch_file)):
+        os.makedirs(os.path.dirname(patch_file))
+
+    # Download patch
+    logging.debug('Downloading %s...', patch_url + patch_name)
+    patch_response = urllib2.urlopen(patch_url + patch_name)
+
+    with open(patch_file, 'wb') as file:
+        for chunk in iter(lambda: patch_response.read(CHUNK_SIZE), ''):
+            file.write(chunk)
+
+    # Extract patch
+    patch_unpack(patch_name)
+
+    # Delete patch
+    os.remove(patch_file)
 
 
 def revision_decrypt(revision):
@@ -78,7 +107,7 @@ def revision_decrypt(revision):
     revision = ''\
         .join(revision[8:])\
         .encode('ascii', 'ignore')\
-        .split(' 1\r\n')
+        .split('\r\n')
 
     return revision[:-1]
 

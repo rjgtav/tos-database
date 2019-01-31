@@ -3,6 +3,7 @@ const REBUILD: { [key in TOSRegion]: boolean } = {
   'jTOS': false, /* jTOS-needle */
   'kTEST': true, /* kTEST-needle */
   'kTOS': true, /* kTOS-needle */
+  'twTOS': false, /* twTOS-needle */
 };
 
 export enum TOSRegion {
@@ -10,6 +11,7 @@ export enum TOSRegion {
   jTOS = 'jTOS',
   kTEST = 'kTEST',
   kTOS = 'kTOS',
+  twTOS = 'twTOS',
 }
 
 export namespace TOSRegionService {

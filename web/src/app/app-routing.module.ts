@@ -58,6 +58,12 @@ const ROUTES_REGION: Routes = [
     canDeactivate: [RouteService],
   },
   {
+    path: 'twtos',
+    children: ROUTES_APP,
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+  },
+  {
     matcher: RouteService.UrlMatcher,
     redirectTo: '/itos/:redirect',
     pathMatch: 'full'

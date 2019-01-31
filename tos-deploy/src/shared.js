@@ -5,7 +5,7 @@ const sharedVariables = require("./shared-variables");
 
 exports.IS_FORCE_DEPLOY = process.argv.length > 2 && !!process.argv.find(value => value === 'deploy');
 exports.IS_PROD = process.argv.length > 2 && !!process.argv.find(value => value === 'prod');
-exports.REGIONS = ['iTOS', 'jTOS', 'kTOS', 'kTEST'];
+exports.REGIONS = ['iTOS', 'jTOS', 'kTOS', 'kTEST', 'twTOS'];
 
 //======================================================================================================================
 // Methods

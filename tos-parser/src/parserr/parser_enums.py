@@ -6,6 +6,7 @@ class TOSRegion(TOSEnum):
     jTOS = 1
     kTEST = 2
     kTOS = 3
+    twTOS = 4
 
     @staticmethod
     def to_string(value):
@@ -14,6 +15,7 @@ class TOSRegion(TOSEnum):
             TOSRegion.jTOS: 'jTOS',
             TOSRegion.kTEST: 'kTEST',
             TOSRegion.kTOS: 'kTOS',
+            TOSRegion.twTOS: 'twTOS',
         }[value]
 
     @staticmethod
@@ -23,6 +25,7 @@ class TOSRegion(TOSEnum):
             'jTOS': TOSRegion.jTOS,
             'kTEST': TOSRegion.kTEST,
             'kTOS': TOSRegion.kTOS,
+            'twTOS': TOSRegion.twTOS,
             '': None
         }[string]
 

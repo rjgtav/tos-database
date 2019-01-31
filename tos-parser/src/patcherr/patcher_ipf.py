@@ -35,13 +35,15 @@ IPF_BLACKLIST = [
 def unpack(ipf):
     ipf = os.path.join(constants.PATH_INPUT_DATA_PATCH, ipf)
     ipf_extract = os.path.join(os.path.dirname(ipf), 'extract')
+    ipf_revision = os.path.basename(ipf)[:-4]
     logging.debug('Unpacking %s...', ipf)
 
     # Decrypt and extract ipf file
-    subprocess.check_call(
-        [constants.PATH_UNPACKER_EXE, ipf, "decrypt"],
-        stdin=None, stdout=None, stderr=None, shell=False
-    )
+    if ipf_revision not in ['29_001001']:  # HotFix: these specific patches aren't encrypted for some reason
+        subprocess.check_call(
+            [constants.PATH_UNPACKER_EXE, ipf, "decrypt"],
+            stdin=None, stdout=None, stderr=None, shell=False
+        )
     subprocess.check_call(
         [constants.PATH_UNPACKER_EXE, ipf, "extract"],
         stdin=None, stdout=None, stderr=None, shell=False
