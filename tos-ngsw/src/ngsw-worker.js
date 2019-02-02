@@ -2721,7 +2721,8 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
       return await networkResult.clone().arrayBuffer();
 
     let result = await networkResult.clone().text();
-        result = result.replace(/<script.*src=".*kaspersky.*labs.*><\/script>/g, '');
+        result = result.replace(/<script.*src=.*kaspersky.*><\/script>/g, '');
+        result = result.replace(/<link.*href=.*kaspersky.*\/>/g, '');
         result = Polyfill_TextEncoder().encode(result).buffer;
 
     return result;
