@@ -48,32 +48,43 @@ export class LoadingService {
   get updateTotal() { return Object.values(TOSDataSet).length }
 
   async clear() {
-    if (window.caches) {
-      // Clear cache
-      console.log('Clearing cache...');
+    let confirm = `
+      =====================================
+       Please close all other tos.guru tabs before proceeding
+      =====================================
+      
+      Are you sure you want to clear the cache?
+      This process will take a couple of minutes
+    `;
+
+    if (window.confirm(confirm)) {
+      if (window.caches) {
+        // Clear cache
+        console.log('Clearing cache...');
+        await Promise
+          .all((await window.caches.keys())
+            .map(value => window.caches.delete(value)));
+      }
+
+      // Clear IndexedDB for the current region
+      console.log('Clearing IndexedDB...');
       await Promise
-        .all((await window.caches.keys())
-          .map(value => window.caches.delete(value)));
+        .all(Object.values(TOSDataSet)
+          .map(value => new Promise((resolve) => {
+            let request = window.indexedDB.deleteDatabase(TOSRegionService.getUrl() + '/' + TOSDataSetService.toUrl(value));
+            request.onsuccess = () => resolve();
+          })));
+
+      // Clear version
+      console.log('Clearing version...');
+      this.update.updateVersion(true);
+
+      // Unregister service worker
+      console.log('Unregistering service worker...');
+      await Promise.all((await navigator.serviceWorker.getRegistrations()).map(value => value.unregister()));
+
+      location.reload(true);
     }
-
-    // Clear IndexedDB for the current region
-    console.log('Clearing IndexedDB...');
-    await Promise
-      .all(Object.values(TOSDataSet)
-        .map(value => new Promise((resolve) => {
-          let request = window.indexedDB.deleteDatabase(TOSRegionService.getUrl() + '/' + TOSDataSetService.toUrl(value));
-          request.onsuccess = () => resolve();
-        })));
-
-    // Clear version
-    console.log('Clearing version...');
-    this.update.updateVersion(true);
-
-    // Unregister service worker
-    console.log('Unregistering service worker...');
-    await Promise.all((await navigator.serviceWorker.getRegistrations()).map(value => value.unregister()));
-
-    location.reload(true);
   }
 
   private installCheck() {

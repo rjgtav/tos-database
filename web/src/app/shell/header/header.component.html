@@ -62,7 +62,6 @@
                (click)="regionSelect(region)">
               {{ region }}&nbsp;
               <span class="badge badge-success" *ngIf="TOSRegionService.isRebuild(region)">Re:Build</span>
-              <span class="badge badge-danger" *ngIf="region == TOSRegion.twTOS">New</span>
             </a>
           </div>
         </a>

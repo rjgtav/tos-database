@@ -84,11 +84,7 @@
 
     <div class="position-absolute mt-4 mt-sm-5 text-center w-100" *ngIf="isClearCacheAvailable">
       <div>Installation stuck?</div>
-      <button type="button" class="btn btn-danger mt-2"
-              [ngClass]="{ 'disabled': isClearCache }"
-              (click)="onClearCacheClick()">
-        {{ isClearCache ? 'Clearing cache...' : 'Clear cache' }}
-      </button>
+      <button type="button" class="btn btn-danger mt-2" (click)="onClearCacheClick()">Clear cache</button>
     </div>
   </div>
 </div>

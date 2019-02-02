@@ -10,7 +10,6 @@ import {LoadingService} from "./loading.service";
 })
 export class LoadingComponent implements OnInit, OnDestroy {
 
-  isClearCache: boolean;
   isClearCacheAvailable: boolean;
   isClearCacheAvailableTimeout: number;
 
@@ -53,7 +52,6 @@ export class LoadingComponent implements OnInit, OnDestroy {
   }
 
   onClearCacheClick() {
-    this.isClearCache = true;
     this.loading.clear();
   }
 

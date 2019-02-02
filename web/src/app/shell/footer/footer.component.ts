@@ -29,18 +29,7 @@ export class FooterComponent implements OnDestroy {
 
   onClearCacheClick(event: MouseEvent) {
     event.preventDefault();
-
-    let confirm = `
-      =====================================
-       Please close all other tos.guru tabs before proceeding
-      =====================================
-      
-      Are you sure you want to clear the cache?
-      Everything will have to be downloaded again
-    `;
-
-    if (window.confirm(confirm))
-      this.loading.clear();
+    this.loading.clear();
   }
 
   onThemeChange(theme: Theme) {
