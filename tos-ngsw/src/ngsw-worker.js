@@ -685,11 +685,12 @@
               throw new SwCriticalError(`Response not Ok (cacheBustedFetchFromNetwork): cache busted request for ${req.url} returned response ${cacheBustedResult.status} ${cacheBustedResult.statusText}`);
             }
             // Hash the contents.
+            const cacheBustedBase64 = Debug_arrayBufferToBase64(yield cacheBustedResult.clone().arrayBuffer());
             const cacheBustedHash = sha1Binary(yield cacheBustedResult.clone().arrayBuffer());
             // If the cache-busted version doesn't match, then the manifest is not an accurate
             // representation of the server's current set of files, and the SW should give up.
             if (canonicalHash !== cacheBustedHash) {
-              throw new SwCriticalError(`Hash mismatch (cacheBustedFetchFromNetwork): ${req.url}: expected ${canonicalHash}, got ${cacheBustedHash} (after cache busting)`);
+              throw new SwCriticalError(`Hash mismatch (cacheBustedFetchFromNetwork): ${req.url}: expected ${canonicalHash}, got ${cacheBustedHash} (after cache busting). Send this to @rjgtav: ${cacheBustedBase64}`);
             }
             // If it does match, then use the cache-busted result.
             return cacheBustedResult;
@@ -2702,6 +2703,16 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
   const adapter = new Adapter();
   const driver = new Driver(scope, adapter, new CacheDatabase(scope, adapter));
 
+  const Debug_arrayBufferToBase64 = (buffer) => {
+    var binary = '';
+    var bytes = new Uint8Array( buffer );
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+      binary += String.fromCharCode( bytes[ i ] );
+    }
+    return btoa( binary );
+  };
+
   // HotFix: maybe due to CloudFlare changing some headers, we need to specify ignoreVary otherwise the cache always fails
   const HotFix_cache_match = (cache, req) => cache.match(req, { ignoreVary: true});
 
@@ -2735,7 +2746,7 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
   const HotFix_safeFetch_Driver = (adapter, req) => {
     // CloudFlare's 'Ignore Query String' cache level only supports 'static' assets:
     // https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
-    let url = req.url.replace('ngsw.json?ngsw-cache-bust=', 'ngsw.js?');
+    let url = req.url.replace('ngsw.json', 'ngsw.js');
 
     // Intercept only tos.guru related requests
     return url.indexOf(location.origin) === 0
