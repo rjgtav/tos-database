@@ -631,7 +631,8 @@
           // Unwrap the redirect directly.
           return this.fetchFromNetwork(this.adapter.newRequest(res.url), redirectLimit - 1);
         }
-        return res;
+
+        return HotFix_redirected(res);
       });
     }
     /**
@@ -2742,6 +2743,26 @@ ${msgIdle}`, { headers: this.adapter.newHeaders({ 'Content-Type': 'text/plain' }
             referrer: req.referrer,
             integrity: req.integrity,
           });
+  };
+
+  const HotFix_redirected = (response) => {
+    // Taken from: https://stackoverflow.com/a/45440505
+    const clonedResponse = response.clone();
+
+    // Not all browsers support the Response.body stream, so fall back to reading
+    // the entire body into memory as a blob.
+    const bodyPromise = 'body' in clonedResponse ?
+        Promise.resolve(clonedResponse.body) :
+        clonedResponse.blob();
+
+    return bodyPromise.then((body) => {
+      // new Response() is happy when passed either a stream or a Blob.
+      return new Response(body, {
+        headers: clonedResponse.headers,
+        status: clonedResponse.status,
+        statusText: clonedResponse.statusText,
+      });
+    });
   };
 
   const HotFix_safeFetch_Driver = (adapter, req) => {
