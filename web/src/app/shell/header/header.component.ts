@@ -1,11 +1,12 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {Theme, ThemeService} from "../../shared/service/theme.service";
-import {faMoon, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faMoon, faSearch, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
 import {TOSUrlService} from "../../shared/service/tos-url.service";
 import {TOSDataSetService} from "../../shared/domain/tos/tos-domain";
 import {TOSRegion, TOSRegionService} from "../../shared/domain/tos-region";
 import {SwUpdate} from "@angular/service-worker";
+import {PatreonService} from "../../home/patreon/patreon.service";
 
 const UPDATE_KEY = 'update';
 const UPDATE_INTERVAL = 30 * 60 * 1000;
@@ -27,6 +28,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   faMoon = faMoon;
   faSearch = faSearch;
   faSun = faSun;
+  faTimes = faTimes;
+
+  patrons: string[];
+  patronsCount: number;
 
   isUpdateAvailable: boolean;
   isUpdateCheck: boolean;
@@ -38,7 +43,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private swUpdate: SwUpdate,
     public theme: ThemeService,
     private zone: NgZone,
-  ) {}
+  ) {
+    if (PatreonService.show) {
+      this.patrons = PatreonService.random(3);
+      this.patronsCount = PatreonService.count - 3;
+    }
+  }
 
   ngOnInit(): void {
     if (this.swUpdate.isEnabled) {
@@ -51,6 +61,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     clearInterval(this.isUpdateCheckInterval);
+  }
+
+  patreonDismiss() {
+    PatreonService.dismiss();
+
+    this.patrons = null;
+    this.patronsCount = -1;
   }
 
   routerLink(url: string): string {

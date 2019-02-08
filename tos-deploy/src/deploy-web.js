@@ -3,7 +3,7 @@ const fs = require('fs');
 const fsExtra = require('fs-extra');
 const path = require('path');
 const shared = require("./shared");
-const sharedVariables = require("./shared-variables");
+const sharedVariables = require("../../variables");
 
 // Add timestamp to logs
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
@@ -11,8 +11,8 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 (async function() {
     let cwd, js, result, zip;
 
-    // 5.1. Build angular application
-    shared.log('5.1. Build Angular application');
+    // 6.1. Build angular application
+    shared.log('6.1. Build Angular application');
     cwd = path.join('..', 'web');
 
     result = childProcess.spawnSync(`npm run build-prod`, { cwd, shell: true, stdio: 'inherit' });
@@ -24,8 +24,8 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
     if (shared.IS_PROD) {
         for (let region of shared.REGIONS) {
-            // 5.2. Pre-render HTML for web crawlers
-            shared.log(`[${region}] 5.2. Pre-render HTML for web crawlers`);
+            // 6.2. Pre-render HTML for web crawlers
+            shared.log(`[${region}] 6.2. Pre-render HTML for web crawlers`);
             cwd = path.join('..', 'tos-html');
             js = path.join(cwd, 'src', 'index.js');
 
@@ -34,10 +34,10 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         }
     }
 
-    // 5.3. Patch service worker
-    shared.log('5.3. Patch service worker');
+    // 6.3. Patch service worker
+    shared.log('6.3. Patch service worker');
     cwd = path.join('..', 'tos-ngsw');
-    js = path.join(cwd, 'src', 'ngsw-hotfix.js');
+    js = path.join(cwd, 'src', 'index.js');
 
     result = childProcess.spawnSync(`node ${ js }`, { cwd, shell: true, stdio: 'inherit' });
     result.status !== 0 && shared.logError('Failed to patch service worker', result);
@@ -48,14 +48,14 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
 
     if (shared.IS_PROD) {
-        // 5.4. Deploy on Apache
-        shared.log('5.4. Deploy on Apache');
+        // 6.4. Deploy on Apache
+        shared.log('6.4. Deploy on Apache');
         cwd = path.join('..', 'web', 'dist', 'web');
         fsExtra.copySync(cwd, sharedVariables.APACHE_WWW);
 
         for (let region of shared.REGIONS) {
-            // 5.5. Unzip tos-html ( ͡° ͜ʖ ͡°)
-            shared.log(`[${ region }] 5.5. Unzip tos-html`);
+            // 6.5. Unzip tos-html ( ͡° ͜ʖ ͡°)
+            shared.log(`[${ region }] 6.5. Unzip tos-html`);
             cwd = sharedVariables.APACHE_WWW;
             zip = path.join(cwd, region.toLowerCase() + '.zip');
 
@@ -65,8 +65,8 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             fs.unlinkSync(zip);
         }
 
-        // 5.6. Clear CloudFlare cache
-        shared.log('5.6. Clear CloudFlare cache');
+        // 6.6. Clear CloudFlare cache
+        shared.log('6.6. Clear CloudFlare cache');
         let cf = require('cloudflare')({ email: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
         let ngsw = JSON.parse(fs.readFileSync(path.join('..', 'web', 'dist', 'web', 'ngsw.js'), { encoding: 'utf8' }));
         let ngswAssetGroup = ngsw.assetGroups.find(value => value.name === 'app');

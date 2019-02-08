@@ -81,4 +81,14 @@
    href="#update" (click)="update($event)">
   A new version is available. Refresh to update
 </a>
-
+<div class="d-flex text-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100" style="background: #f96854" *ngIf="patrons">
+  <a class="flex-grow-1 text-white" [routerLink]="routerLink('patreon')">
+    <span>Thanks &nbsp;</span>
+    <span *ngFor="let patron of patrons; index as i"><b>{{ patron }}</b><span *ngIf="i < patrons.length - 1">,</span>&nbsp;</span>
+    <span><span *ngIf="patronsCount > 0">and <b>{{ patronsCount }}&nbsp;</b></span>other patrons for supporting tos.guru!</span>
+  </a>
+  <div class="d-flex align-items-center text-white" style="cursor: pointer" (click)="patreonDismiss()">
+    <span class="d-none d-sm-inline pl-1">Dismiss</span>&nbsp;
+    <fa-icon class="pl-3" [icon]="faTimes"></fa-icon>
+  </div>
+</div>

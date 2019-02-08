@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const request = require('sync-request');
-const sharedVariables = require("./shared-variables");
+const sharedVariables = require("../../variables");
 
 exports.IS_FORCE_DEPLOY = process.argv.length > 2 && !!process.argv.find(value => value === 'deploy');
 exports.IS_PROD = process.argv.length > 2 && !!process.argv.find(value => value === 'prod');

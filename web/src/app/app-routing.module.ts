@@ -2,11 +2,12 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {RouteService} from "./shared/service/route.service";
 import {ROUTES_DATABASE} from "./database/database.route";
-import {ROUTES_HOME} from "./home/home.route";
 import {ROUTES_SKILL_SIMULATOR} from "./skill-simulator/skill-simulator.route";
 import {HomeModule} from "./home/home.module";
 import {DatabaseModule} from "./database/database.module";
 import {SkillSimulatorModule} from "./skill-simulator/skill-simulator.module";
+import {WelcomeComponent} from "./home/welcome/welcome.component";
+import {PatreonComponent} from "./home/patreon/patreon.component";
 
 const ROUTES_APP: Routes = [
   {
@@ -15,7 +16,15 @@ const ROUTES_APP: Routes = [
   },
   {
     path: 'home',
-    children: ROUTES_HOME,
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: WelcomeComponent,
+  },
+  {
+    path: 'patreon',
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: PatreonComponent,
   },
   {
     path: 'simulator',

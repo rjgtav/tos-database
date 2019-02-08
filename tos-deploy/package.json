@@ -4,8 +4,7 @@
   "description": "",
   "main": "src/deploy.js",
   "scripts": {
-    "deploy": "node src/deploy.js",
-    "cloudflare": "node src/deploy-cloudflare.js"
+    "deploy": "node src/deploy.js"
   },
   "author": "",
   "license": "ISC",

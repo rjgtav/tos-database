@@ -62,10 +62,18 @@ for (let region of shared.REGIONS) {
     result = childProcess.spawnSync(`node ${ js } ${ region }`, { cwd, shell: true, stdio: 'inherit' });
     result.status !== 0 && shared.logError('Failed to sitemap', result);
 
-    // 4. Commit changes
+    // 4. Patreon
+    shared.log(`[${ region }] 4. Patreon`);
+    cwd = path.join('..', 'tos-patreon');
+    js = path.join(cwd, 'src', 'index.js');
+
+    result = childProcess.spawnSync(`node ${ js } ${ region }`, { cwd, shell: true, stdio: 'inherit' });
+    result.status !== 0 && shared.logError('Failed to patreon', result);
+
+    // 5. Commit changes
     let changes = childProcess.execSync('git status --porcelain', { encoding: 'utf8', shell: true }).toString();
     if (changes.split('\n').length > 1 && shared.IS_PROD) {
-        shared.log(`[${ region }] 4. Commit changes`);
+        shared.log(`[${ region }] 5. Commit changes`);
         cwd = path.join('..');
 
         result = childProcess.spawnSync(`git add .`, { cwd, shell: true, stdio: 'inherit' });
@@ -87,8 +95,8 @@ if (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY) {
     console.log('| Deploying...                                                           |');
     console.log('+========================================================================+');
 
-    // 5. Build & Deploy
-    shared.log('5. Build & Deploy');
+    // 6. Build & Deploy
+    shared.log('6. Build & Deploy');
     argv = process.argv.slice(2).join(' ');
     cwd = path.join('.');
     js = path.join(cwd, 'src', 'deploy-web.js');
