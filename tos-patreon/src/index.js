@@ -8,27 +8,37 @@ const url = require('url');
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
 (async () => {
-    // Get access token
-    let token = await patreonAccessToken();
+    try {
+        // Get access token
+        console.log('Get access token');
+        let token = await patreonAccessToken();
 
-    // Get members per tier
-    let campaigns = await patreonCampaigns(token);
-    let members = await patreonCampaignMembers(campaigns[0], token)
-    let membersPerTier = members.reduce((accumulator, member) => {
-        let tier = accumulator[member.tier] = accumulator[member.tier] || [];
-            tier.push("'" + member.name + "'");
+        // Get members per tier
+        console.log('Get members tier');
+        let campaigns = await patreonCampaigns(token);
+        let members = await patreonCampaignMembers(campaigns[0], token)
+        let membersPerTier = members.reduce((accumulator, member) => {
+            let tier = accumulator[member.tier] = accumulator[member.tier] || [];
+                tier.push("'" + member.name + "'");
 
-        return accumulator;
-    }, {});
+            return accumulator;
+        }, {});
 
-    // Update patreon component
-    let patreonPath = path.join('..', 'web', 'src', 'app', 'home', 'patreon', 'patreon.component.ts');
-    let patreon = fs.readFileSync(patreonPath, 'utf8') + '';
+        // Update patreon component
+        console.log('Update patreon component');
+        let patreonPath = path.join('..', 'web', 'src', 'app', 'home', 'patreon', 'patreon.service.ts');
+        let patreon = fs.readFileSync(patreonPath, 'utf8') + '';
 
-    for (let tier in membersPerTier)
-        patreon = patreon.replace(new RegExp(`(\\[.*\\]); \\/\\* ${ tier }-needle \\*\\/`), (match, p1) => match.replace(p1, '[' + membersPerTier[tier].sort().join(',') + ']'));
+        for (let tier in membersPerTier) {
+            console.log(`[${ tier }] ${ membersPerTier[tier] }`);
+            patreon = patreon.replace(new RegExp(`(\\[.*\\]); \\/\\* ${ tier }-needle \\*\\/`), (match, p1) => match.replace(p1, '[' + membersPerTier[tier].sort().join(',') + ']'));
+        }
 
-    fs.writeFileSync(patreonPath, patreon);
+        fs.writeFileSync(patreonPath, patreon);
+    } catch (e) {
+        console.error(e);
+        process.exit(1);
+    }
 })();
 
 //----------------------------------------------------------------------------------------------------------------------
