@@ -58,8 +58,8 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Materials,Link_MonsterDrops,L
 9010,R_BlessedStone_1,icon_item_recipe_misc1,,,,,,,645778,Recipe - Goddesses' Blessed Gem: Weapon,10000,FFTF,21
 9011,R_BlessedStone_2,icon_item_recipe_misc1,,,,,,,645779,Recipe - Goddesses' Blessed Gem: Armor,10000,FFTF,21
 9012,R_BlessedStone_3,icon_item_recipe_misc1,,,,,,,645780,Recipe - Goddesses' Blessed Gem: Accessory,10000,FFTF,21
-9013,R_Premium_boostToken02,icon_item_recipe_misc1,,,"[{""Item"": 9013, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}]",,[9013],,490094,Recipe - x4 EXP Tome,100,FFTF,21
-9014,R_Premium_boostToken03,icon_item_recipe_misc1,,,"[{""Item"": 9014, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}]",,[9014],,490095,Recipe - x8 EXP Tome,100,FFTF,21
+9013,R_Premium_boostToken02,icon_item_recipe_misc1,,,"[{""Item"": 9013, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}]",,[9013],,490094,Recipe - x4 EXP Tome,50,FFTF,21
+9014,R_Premium_boostToken03,icon_item_recipe_misc1,,,"[{""Item"": 9014, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}]",,[9014],,490095,Recipe - x8 EXP Tome,50,FFTF,21
 9015,R_misc_TruthMirror,icon_item_recipe_misc1,,,"[{""Item"": 9015, ""Quantity"": 1}, {""Item"": 645820, ""Quantity"": 8}]",,[9015],,645819,Recipe - Mirror of Truth,199,FFFF,21
 9018,R_BlessedStone_Multi,icon_item_recipe_misc1,,,"[{""Item"": 9018, ""Quantity"": 1}, {""Item"": 645783, ""Quantity"": 10}]",,[9018],,646045,Recipe - Goddesses' Blessed Gem,5000,FFFF,21
 9019,R_3CMLAKE262_SQ04,icon_item_recipe_misc1,,,"[{""Item"": 9019, ""Quantity"": 1}, {""Item"": 666180, ""Quantity"": 1}, {""Item"": 666182, ""Quantity"": 16}]",,[9019],,666181,Recipe - Magic Nullification Bomb,0,FFFF,21
