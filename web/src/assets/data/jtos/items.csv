@@ -5438,8 +5438,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902136,Achieve_Event_Wonderful_ToS_life,この素晴らしき世界,icon_item_holyark,,,,,,Title - Wonderful ToS life,0,0.0,0.0,FFFT,6,0.0
 902142,Achieve_Event_Gold_Pig_JP,ファインディングピッグイベントでたくさんの豚を捕まえた猛者に送られる称号です。,icon_item_holyark,,,,,,称号 - 豚を追い求める者,0,0.0,0.0,FFFT,6,0.0
 902143,Achieve_Event_KePa_JP,「ばいばいケッピー！また会う日まで！」GMイベントの称号です。,icon_item_holyark,,,,,,称号 - エターナルケッピー,0,0.0,0.0,FFFT,6,0.0
-902144,Event_Returner_Box_JP,복귀자 지급 아이템이 담겨있는 상자입니다.{nl} - 클래스 변경권 Lv.4 (14일){nl} - 복귀 유저의 포션(30일){nl} - 복귀 유저의 서(14일){nl} - 루팅 찬스 증가 포션 (14일),icon_item_jewelrybox_close,,,,,,돌아와 ToS 박스,0,0.0,0.0,FFFF,8,0.0
-902145,Event_2019_Web_Box_JP,사용시 보상 아이템 중 한가지 아이템이 랜덤으로 지급됩니다.{nl} - 여신의 조각상(14일){nl} - 축복이 깃든 씨앗(14일){nl} - 마법 부여 스크롤(거래불가){nl} - 최고급 긴급 수리 키트{nl} - 루팅 찬스: 500{nl} - 황금 모루(14일){nl} - 축복받은 조각,icon_item_solmiki_box,,,,,,[Re:Build] 박스,0,0.0,0.0,FFFF,8,0.0
+902144,Event_Returner_Box_JP,復帰者への支給アイテムが入れられている箱です。{nl} - クラス変更券Lv.4 (14日){nl} - 復帰ユーザーのポーション(30日){nl} - 復帰ユーザーの書(14日){nl} - ルーチングチャンスアップポーション(14日),icon_item_jewelrybox_close,,,,,,ToSへおかえりボックス,0,0.0,0.0,FFFF,8,0.0
+902145,Event_2019_Web_Box_JP,使用するとランダムに1つアイテムを取得できます。{nl} - 女神の彫像(14日){nl} - 祝福が宿った種(14日){nl} - 古びた魔法付与スクロール{nl} - 最高級緊急修理キット{nl} - ルーチングチャンス:500{nl} - 黄金の金床(14日){nl} - 祝福された欠片,icon_item_solmiki_box,,,,,,[Re:Build] ボックス,0,0.0,0.0,FFFF,8,0.0
 904000,EVENT_1802_MASTER_KEY1,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_1,,,,,,マスターの試験券(初級),0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,マスターの訓練報酬としてもらったアイテムです。{nl}5個以上集めるとマスターの試験イベントガイドが無限の可能性のキューブと交換してくれます,icon_item_gimmick_spcrystal,,,,,,小さな可能性の欠片,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_2,,,,,,マスターの試験券(中級),0,0.0,0.0,FFFT,15,1.0
