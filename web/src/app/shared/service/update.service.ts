@@ -7,7 +7,7 @@ const VERSION: { [key in TOSRegion]: string } = {
   'iTOS': 'patch_237989_release_237989', /* iTOS-needle */
   'jTOS': 'patch_237208_release_237208', /* jTOS-needle */
   'kTEST': 'patch_237031_release_237031', /* kTEST-needle */
-  'kTOS': 'patch_238011_release_238157', /* kTOS-needle */
+  'kTOS': 'patch_238257_release_238257', /* kTOS-needle */
   'twTOS': 'patch_237828_release_237828', /* twTOS-needle */
 };
 
