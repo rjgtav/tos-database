@@ -12,9 +12,9 @@ export class PatreonService {
   static readonly EMOTICONS_POPOLION = ['emoticon_0006.png', 'emoticon_0008.png', 'emoticon_0009.png', 'emoticon_0010.png', 'emoticon_0011.png', 'emoticon_0012.png', 'emoticon_0013.png', 'emoticon_0014.png', 'emoticon_0015.png', 'emoticon_0016.png', 'emoticon_0017.png', 'emoticon_0018.png', 'emoticon_0019.png', 'emoticon_0020.png', 'emoticon_0021.png', 'emoticon_0022.png', 'emoticon_0023.png', 'emoticon_0037.png', 'emoticon_0038.png', 'emoticon_0039.png', 'emoticon_0040.png', 'emoticon_0041.png', 'emoticon_0042.png', 'emoticon_0043.png', 'emoticon_0044.png', 'emoticon_0045.png', 'emoticon_0046.png'];
   static readonly EMOTICONS_KUPOLE = ['kupole_emotion01.png', 'kupole_emotion02.png', 'kupole_emotion03.png', 'kupole_emotion04.png', 'kupole_emotion05.png', 'kupole_emotion06.png'];
 
-  static readonly PATRONS_KEPA = ['Ersakoz','IlIlIlIlIlIlIlI','Isa Lim','Julio Fernández','MOoNoiiz','Nhr','Onesan','Orleen Sedoj','Palemoon','Team-Z','Yuuki']; /* 100-needle */
+  static readonly PATRONS_KEPA = ['Ersakoz','IlIlIlIlIlIlIlI','Isa Lim','Julio Fernández','Kirarin','MOoNoiiz','Nhr','Onesan','Orleen Sedoj','Palemoon','Team-Z','Yuuki']; /* 100-needle */
   static readonly PATRONS_POPOLION = []; /* 1000-needle */
-  static readonly PATRONS_TINI = ['Edmund Tang','Kenneth Cheong','Kevin Robillard','Lymsleia','Tunico Schmidt','xZeroGodx']; /* 500-needle */
+  static readonly PATRONS_TINI = ['Edmund Tang','Kenneth Cheong','Lymsleia','Tunico Schmidt','xZeroGodx']; /* 500-needle */
   static readonly PATRONS_KUPOLE = ['Privaron','Shinobi Runez','士允 林']; /* 2000-needle */
 
   constructor() { }
