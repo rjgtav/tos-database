@@ -15,7 +15,7 @@ export class PatreonService {
   static readonly PATRONS_KEPA = ['Ersakoz','IlIlIlIlIlIlIlI','Isa Lim','Julio Fernández','Kirarin','MOoNoiiz','Nhr','Onesan','Orleen Sedoj','Palemoon','Team-Z','Yuuki']; /* 100-needle */
   static readonly PATRONS_POPOLION = []; /* 1000-needle */
   static readonly PATRONS_TINI = ['Edmund Tang','Kenneth Cheong','Lymsleia','Tunico Schmidt','xZeroGodx']; /* 500-needle */
-  static readonly PATRONS_KUPOLE = ['Privaron','Shinobi Runez','士允 林']; /* 2000-needle */
+  static readonly PATRONS_KUPOLE = ['Privaron','Shinobi Runez','真庭赤狐']; /* 2000-needle */
 
   constructor() { }
 
