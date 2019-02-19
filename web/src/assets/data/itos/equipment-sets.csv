@@ -37,7 +37,7 @@ $ID,$ID_NAME,Bonus2,Bonus3,Bonus4,Bonus5,Bonus6,Bonus7,Link_Items,Name
 37,set_037,,All Stats {img green_up_arrow 16 16}25,Physical Critical Attack {img green_up_arrow 16 16}225{nl}Accuracy {img green_up_arrow 16 16}100,,Evasion {img green_up_arrow 16 16}48{nl}Critical Rate {img green_up_arrow 16 16}72,Physical Attack {img green_up_arrow 16 16}818,"[534110, 524110, 514110, 504110, 584107, 604105, 604105]",Solmiki Leather Set
 38,set_038,,All Stats {img green_up_arrow 16 16}25,HP {img green_up_arrow 16 16}3942,,Physical Defense {img green_up_arrow 16 16}201{nl}5% chance of recovering 2% of your max HP every second for 5 sec when being attacked by Demon type enemies{nl}(Cooldown 10 sec),Magic Defense {img green_up_arrow 16 16}247{nl}Physical Attack {img green_up_arrow 16 16}571,"[534111, 524111, 514111, 504111, 584108, 604106, 604106]",Solmiki Plate Set
 39,set_039,Critical Rate {img green_up_arrow 16 16}30,Physical Attack {img green_up_arrow 16 16}120{nl}AoE Attack Ratio {img green_up_arrow 16 16}1{nl}Additional 1000-3000 damage on every 5th attack,,,,,"[584109, 604107, 604107]",Varpas Set
-40,set_040,Magic critical attack {img green_up_arrow 16 16}60,Magic Attack {img green_up_arrow 16 16}120{nl}AoE Attack Ratio {img green_up_arrow 16 16}1{nl}Additional 1000-3000 damage on every 5th attack,,,,,"[584110, 604108, 604108]",Verijo Set
+40,set_040,Magic Critical Attack {img green_up_arrow 16 16}60,Magic Attack {img green_up_arrow 16 16}120{nl}AoE Attack Ratio {img green_up_arrow 16 16}1{nl}Additional 1000-3000 damage on every 5th attack,,,,,"[584110, 604108, 604108]",Verijo Set
 41,set_041,,,,,,,[11119],Guild Battle 1st Place Set
 42,set_042,,,,,,,[11120],Guild Battle 2nd Place Set
 43,set_043,,,,,,,[11121],Guild Battle 3rd Place Set
