@@ -5682,6 +5682,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904114,EVENT_1812_GILTINE_REWARD_BOX,Contains a gift from Demon Goddess Giltine{nl}Will be automatically deleted at the end of the event period.,icon_item_event_giltinebox,,,,,,Giltine's Gift Box,0,0.0,0.0,FFFT,8,1.0
 904126,EVENT_1712_SECOND_CHALLENG_14d_Team,Use to create a Challenge Portal.,icon_item_challengemode_scroll,,,,,,Challenge Portal Scroll (14 Days),10,3.0,1209600.0,FFFT,8,1.0
 904128,EVENT_1812_DAYCHECK_BALLOONBOX,A bundle of balloons to celebrate TOS' 3rd anniversary.{nl}Will be automatically deleted at the end of the event period.,icon_item_event_balloonbox,,,,,,3rd Anniversary Balloon Bundle,0,0.0,0.0,FFFT,8,1.0
+904135,EVENT_190110_RankReset_Point_Lv1,"Increases class change points by +100.{nl}Class points can be accumulated to a maximum of 3,000 and excess points earned will not be saved.",icon_item_rankreset_paper_3,,,,,,Class Change Voucher Lv 1 (14 Days),0,0.0,1209600.0,FFFT,8,0.0
 910001,Scroll_SkillItem,A scroll used to record a particular skill.,golemmagicitem1,,,,,,Skill Scroll,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,A long stem that tastes slightly spicy. {nl}Obtained from Kepas.,item_icon_sprout,,,,,,Sprout,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,A long stem that tastes slightly spicy. {nl}Obtained from Kepas.,item_icon_witheredplants,,,,,,Withered Plant,1,0.0,0.0,TTTT,15,1.0
