@@ -43,11 +43,15 @@ $ID,$ID_NAME,Icon,Name
 523,c_firemage_event,,研究室
 524,E_c_fedimian,,フェディミアン急襲！
 526,E_f_tableland_11_1,,ベダ高原
+527,VIVID_c_Klaipe,,レインボーシティ - クラペダ
+528,VIVID_c_orsha,,レインボーシティ - オルシャ
+529,VIVID_c_fedimian,,レインボーシティ - フェディミアン
 700,f_pilgrimroad_41_1_event,,怪盗ルビイイベント
 701,c_highlander_event,,ハイランダーマスターの道場[イベント]
 702,f_playground,,天下一サッカー場
 703,f_huevillage_58_1_event,,[イベント]ベヤ谷
 704,f_coral_44_2_event,,[イベント]アイテオの岸
+710,c_Klaipe_event_1812,,クラペダ
 981,c_fedimian,,フェディミアン
 1001,c_Klaipe,,クラペダ
 1002,c_highlander,,ハイランダーマスターの道場
@@ -311,7 +315,7 @@ $ID,$ID_NAME,Icon,Name
 3840,d_startower_60_1,,衰退したルグィン家の邸宅
 3850,d_firetower_61_1,,ルクソナ再建団西館
 3860,d_firetower_61_2,,ルクソナ再建団東館
-3870,ID_startower,,{s18}衰退したルグィン家のダンジョン
+3870,ID_startower,,衰退したルグィン家のダンジョン
 3880,ID_firetower,,大魔術師の塔
 3890,id_chaple,,聖堂地下ダンジョン
 3900,id_catacomb,,カタコム地下ダンジョン
@@ -379,7 +383,9 @@ $ID,$ID_NAME,Icon,Name
 4930,d_limestonecave_71_2,,鍾乳洞 71_2
 4931,d_limestonecave_71_1,,バウバス洞窟
 4940,id_whitetrees1,,1番目の避難所
+4941,id_Nicopolis_01,,魔法実験区域
 4950,d_limestonecave_70_1,,スリビナスレア
+4951,d_limestonecave_70_1_rest,,スリビナスレア
 4960,c_Klaipe_event,,ハロウィーンダンジョン
 4961,d_castle_agario,,ハロウィーンダンジョン
 4970,id_d_cmine_66_2,,ネバレット鉱山ダンジョン
@@ -393,6 +399,8 @@ $ID,$ID_NAME,Icon,Name
 9996,GuildColony_f_pilgrimroad_49,,ゲナル平原
 9997,GuildColony_f_siauliai_47_4,,アレルノー男爵領
 9998,GuildColony_f_farm_47_2,,水路橋地域
+10000,id_abbey_raid,,アシオメイジの実験室
 10001,mission_instance,,MissionInstance
+10002,uniq_startower_raid,,星の塔閉鎖区域
 20000,infinite_map,,無限マップ
 20010,pvp_tournament,,チームバトルリーグトーナメント

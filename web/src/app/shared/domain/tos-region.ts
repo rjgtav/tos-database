@@ -1,6 +1,6 @@
 const REBUILD: { [key in TOSRegion]: boolean } = {
   'iTOS': true, /* iTOS-needle */
-  'jTOS': false, /* jTOS-needle */
+  'jTOS': true, /* jTOS-needle */
   'kTEST': true, /* kTEST-needle */
   'kTOS': true, /* kTOS-needle */
   'twTOS': false, /* twTOS-needle */
