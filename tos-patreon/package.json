@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "main": "node %NODE_DEBUG_OPTION% src/index.js"
+    "main": "node src/index.js",
+    "main-debug": "node %NODE_DEBUG_OPTION% src/index.js"
   },
   "author": "",
   "license": "ISC",

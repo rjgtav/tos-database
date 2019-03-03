@@ -4,8 +4,10 @@
   "description": "",
   "main": "src/deploy.js",
   "scripts": {
-    "build": "node %NODE_DEBUG_OPTION% src/build.js",
-    "deploy": "node %NODE_DEBUG_OPTION% src/deploy.js"
+    "build": "node src/build.js",
+    "build-debug": "node %NODE_DEBUG_OPTION% src/build.js",
+    "deploy": "node src/deploy.js",
+    "deploy-debug": "node %NODE_DEBUG_OPTION% src/deploy.js"
   },
   "author": "",
   "license": "ISC",
