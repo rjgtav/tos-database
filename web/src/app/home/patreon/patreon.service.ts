@@ -13,10 +13,10 @@ export class PatreonService {
   static readonly EMOTICONS_POPOLION = ['emoticon_0006.png', 'emoticon_0008.png', 'emoticon_0009.png', 'emoticon_0010.png', 'emoticon_0011.png', 'emoticon_0012.png', 'emoticon_0013.png', 'emoticon_0014.png', 'emoticon_0015.png', 'emoticon_0016.png', 'emoticon_0017.png', 'emoticon_0018.png', 'emoticon_0019.png', 'emoticon_0020.png', 'emoticon_0021.png', 'emoticon_0022.png', 'emoticon_0023.png', 'emoticon_0037.png', 'emoticon_0038.png', 'emoticon_0039.png', 'emoticon_0040.png', 'emoticon_0041.png', 'emoticon_0042.png', 'emoticon_0043.png', 'emoticon_0044.png', 'emoticon_0045.png', 'emoticon_0046.png'];
   static readonly EMOTICONS_KUPOLE = ['kupole_emotion01.png', 'kupole_emotion02.png', 'kupole_emotion03.png', 'kupole_emotion04.png', 'kupole_emotion05.png', 'kupole_emotion06.png'];
 
-  static get PATRONS_KEPA() { return PATRONS[PatreonTier.KEPA] };
-  static get PATRONS_KUPOLE() { return PATRONS[PatreonTier.KUPOLE] };
-  static get PATRONS_POPOLION() { return PATRONS[PatreonTier.POPOLION] };
-  static get PATRONS_TINI() { return PATRONS[PatreonTier.TINI] };
+  static get PATRONS_KEPA() { return PATRONS[PatreonTier.KEPA] || [] };
+  static get PATRONS_KUPOLE() { return PATRONS[PatreonTier.KUPOLE] || [] };
+  static get PATRONS_POPOLION() { return PATRONS[PatreonTier.POPOLION] || [] };
+  static get PATRONS_TINI() { return PATRONS[PatreonTier.TINI] || [] };
 
   constructor() { }
 
