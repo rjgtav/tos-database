@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tos-html/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-deploy/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-ngsw/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-build/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/IPFParser/output" />
       <excludeFolder url="file://$MODULE_DIR$/tos-parser/input" />
       <excludeFolder url="file://$MODULE_DIR$/web/dist/web" />
