@@ -19,7 +19,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
         // Update node projects
         shared.log('Updating node projects...');
-        childProcess.execSync('npm install', { cwd: path.join('..', 'tos-build')});
+        // childProcess.execSync('npm install', { cwd: path.join('..', 'tos-build')}); // We need to run this one before we even start the script
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-html')});
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-patreon')});
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-search')});

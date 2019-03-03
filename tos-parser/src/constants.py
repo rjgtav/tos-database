@@ -43,8 +43,8 @@ PATH_PARSER = os.path.join('..', 'tos-parser')
 PATH_UNPACKER = os.path.join('..', 'IPFUnpacker')
 PATH_UNPACKER_EXE = os.path.join(PATH_UNPACKER, 'ipf_unpack')
 
-PATH_BUILD = os.path.join('..', 'tos-build')
-PATH_BUILD_ASSETS = os.path.join(PATH_BUILD, 'dist', 'assets')
+PATH_BUILD = os.path.join('..', 'tos-build', 'dist')
+PATH_BUILD_ASSETS = os.path.join(PATH_BUILD, 'assets')
 PATH_BUILD_ASSETS_DATA = None
 PATH_BUILD_ASSETS_ICONS = os.path.join(PATH_BUILD_ASSETS, 'icons')
 PATH_BUILD_ASSETS_IMAGES = os.path.join(PATH_BUILD_ASSETS, 'images')
