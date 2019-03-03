@@ -14,12 +14,8 @@ cwd = path.join('..', 'web');
 result = childProcess.spawnSync(`npm run ${ shared.IS_PROD ? 'build-prod' : 'build' }`, { cwd, shell: true, stdio: 'inherit' });
 result.status !== 0 && shared.logError('Failed to build angular application', result);
 
-// 2. Generate 404.html
-shared.log('2. Generate 404.html');
-fs.copyFileSync(path.join(cwd, 'dist', 'index.html'), path.join(cwd, 'dist', '404.html'));
-
-// 3. Bundle workers with their corresponding libraries to make them easier to cache
-shared.log('3. Bundle workers');
+// 2. Bundle workers with their corresponding libraries to make them easier to cache
+shared.log('2. Bundle workers');
 bundleAssetsWorker(['dexie.min.js', 'dexie.worker.js'], 'dexie.worker.js');
 bundleAssetsWorker(['lunr.min.js', 'lunr.worker.js'], 'lunr.worker.js');
 bundleAssetsWorker(['papaparse.min.js', 'papaparse.worker.js'], 'papaparse.worker.js');

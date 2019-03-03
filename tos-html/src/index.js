@@ -49,11 +49,14 @@ let patreonPath = path.join(folder_dist_build, 'patreon.json');
 let regionPath = path.join(folder_dist_build, 'region.json');
 
 templateBase = templateBase
-    .replace(/<script type="application\/json" id="tos-patreon">(.*?)<\/script>/gs,
-        (match, p1) => match.replace(p1, fs.readFileSync(patreonPath, 'utf-8')));
-templateBase = templateBase
-    .replace(/<script type="application\/json" id="tos-region">(.*?)<\/script>/gs,
-        (match, p1) => match.replace(p1, fs.readFileSync(regionPath, 'utf-8')));
+    .replace(
+        /<script type="application\/json" id="tos-patreon">(.*?)<\/script>/gs,
+        (match, p1) => match.replace(p1, fs.readFileSync(patreonPath, 'utf-8'))
+    )
+    .replace(
+        /<script type="application\/json" id="tos-region">(.*?)<\/script>/gs,
+        (match, p1) => match.replace(p1, fs.readFileSync(regionPath, 'utf-8'))
+    );
 
 // Generate database pages
 let files = fs.readdirSync(folder_database);

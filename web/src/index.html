@@ -40,10 +40,10 @@
   <!-- Patreon & Regions -->
   <script type="application/json" id="tos-patreon">
     {
-      "100": ["Aaaaaa","Aaaaaa","Aaaaaa","Aaaaaa"],
-      "500": ["Aaaaaa","Aaaaaa","Aaaaaa"],
-      "1000": ["Aaaaaa","Aaaaaa"],
-      "2000": ["Aaaaaa"]
+      "100": ["Aaaaaa 11111","Aaaaaa 222222","Aaaaaa 333333","Aaaaaa 444444"],
+      "500": ["Aaaaaa 555555","Aaaaaa 666666","Aaaaaa 777777"],
+      "1000": ["Aaaaaa 888888","Aaaaaa 999999"],
+      "2000": ["Aaaaaa 000000"]
     }
   </script>
   <script type="application/json" id="tos-region">
@@ -67,8 +67,6 @@
 <body>
   <!-- Show the selected Theme right from the start (2/2) -->
   <script type="application/javascript">
-    let theme = +localStorage.getItem('theme') || 2;
-
     document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
     document.body.style.color = theme === 1 ? '#fff' : '#212529';
     document.body.style.margin = '0';
@@ -79,7 +77,6 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
                     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
 
   <app-root>
     <!-- Specific CSS for the Server-Side Rendering -->
