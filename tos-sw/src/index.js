@@ -35,13 +35,13 @@ let manifest = JSON.parse(fs.readFileSync(path.join('..', 'web', 'ngsw-config.js
                     // Get files matching each pattern
                     .sync(base + pattern)
                     .filter(value => path.basename(value).indexOf('.') > 0))
-                .forEach(value => {
+                .forEach(value => value.forEach(value => {
                     // Retrieve their modified date and store it on the versions file
                     let modifiedTime = fs.statSync(value).mtime.getTime();
                     let file = value.slice(base.length);
 
                     assetGroup.versions[file] = modifiedTime;
-                });
+                }));
         });
 
         // Clear unused properties
