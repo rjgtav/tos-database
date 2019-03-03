@@ -129,15 +129,17 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         let cf = require('cloudflare')({ email: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
         let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-build', 'dist', 'tos-sw.manifest.js'), { encoding: 'utf8' }));
         let assetGroup = manifest.assetGroups.find(value => value.name === 'app');
-        let urls = assetGroup.urls.concat([
-            '/manifest.json',
-            '/ngsw.js',
-            '/ngsw-worker.js',
-            '/robots.txt',
-            '/tos-sw.manifest.js',
-            '/tos-sw.worker.js',
-            // Note: PWA icons will be manually cleared when necessary
-        ]);
+        let urls = Object
+            .keys(assetGroup.versions)
+            .concat([
+                '/manifest.json',
+                '/ngsw.js',
+                '/ngsw-worker.js',
+                '/robots.txt',
+                '/tos-sw.manifest.js',
+                '/tos-sw.worker.js',
+                // Note: PWA icons will be manually cleared when necessary
+            ]);
 
         urls = urls.map(value => 'https://tos.guru' + value);
 
