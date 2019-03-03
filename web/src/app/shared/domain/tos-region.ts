@@ -1,11 +1,3 @@
-const REBUILD: { [key in TOSRegion]: boolean } = {
-  'iTOS': true, /* iTOS-needle */
-  'jTOS': false, /* jTOS-needle */
-  'kTEST': true, /* kTEST-needle */
-  'kTOS': true, /* kTOS-needle */
-  'twTOS': false, /* twTOS-needle */
-};
-
 export enum TOSRegion {
   iTOS = 'iTOS',
   jTOS = 'jTOS',
@@ -13,6 +5,9 @@ export enum TOSRegion {
   kTOS = 'kTOS',
   twTOS = 'twTOS',
 }
+
+export type TOSRegionVersion = { [key in TOSRegion]: { version: string, rebuild: boolean } };
+export const VERSIONS: TOSRegionVersion = JSON.parse(document.getElementById('tos-region').innerText);
 
 export namespace TOSRegionService {
 
@@ -33,7 +28,7 @@ export namespace TOSRegionService {
   }
 
   export function isRebuild(value: TOSRegion) {
-    return REBUILD[value];
+    return VERSIONS[value].rebuild;
   }
 
   export function select(region: TOSRegion) {

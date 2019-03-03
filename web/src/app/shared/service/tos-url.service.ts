@@ -5,6 +5,7 @@ export abstract class TOSUrlService {
   static readonly WORKER_DEXIE = () => TOSUrlService.Asset('assets/js/dexie.worker.js');
   static readonly WORKER_LUNR = () => TOSUrlService.Asset('assets/js/lunr.worker.js');
   static readonly WORKER_PAPAPARSE = () => TOSUrlService.Asset('assets/js/papaparse.worker.js');
+  static readonly WORKER_SW = () => TOSUrlService.Asset('tos-sw.worker.js');
 
   static Asset(url: string): string {
     if (url.indexOf('data/') > -1)

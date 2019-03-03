@@ -66,6 +66,11 @@
           </div>
         </a>
       </li>
+      <!-- Check for updates (manually) -->
+      <a class="nav-item nav-link ml-1 mr-1" (click)="updateCheck(true)" ngbTooltip="Check for updates" placement="bottom">
+        <fa-icon [icon]="faSync"></fa-icon>
+      </a>
+      <!-- Theme selector -->
       <a class="nav-item nav-link ml-1 mr-1" (click)="theme.toggle()" [ngbTooltip]="(theme.is(Theme.LIGHT) ? 'Dark' : 'Light') + ' Theme'" placement="bottom">
         <fa-icon [icon]="theme.is(Theme.LIGHT) ? faMoon : faSun"></fa-icon>
       </a>
@@ -74,13 +79,7 @@
 
 </nav>
 
-<div class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-secondary" *ngIf="isUpdateCheck && !isUpdateAvailable">
-  Checking for updates...
-</div>
-<a class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-info d-block" *ngIf="isUpdateAvailable"
-   href="#update" (click)="update($event)">
-  A new version is available. Refresh to update
-</a>
+<!-- Patreon -->
 <div class="d-flex text-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100" style="background: #f96854" *ngIf="patrons">
   <a class="flex-grow-1 text-white" [routerLink]="routerLink('patreon')">
     <span>Thanks &nbsp;</span>
@@ -92,3 +91,16 @@
     <fa-icon class="pl-3" [icon]="faTimes"></fa-icon>
   </div>
 </div>
+
+<!-- Update status -->
+<div class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-secondary" *ngIf="isUpdateCheck && isUpdateCheckManual && !isUpdateAvailable">
+  Checking for updates...
+</div>
+<div class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-info" *ngIf="isUpdateInstall">
+  Updating... The page will automatically refresh when it finishes
+</div>
+<a class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-info d-block" *ngIf="isUpdateAvailable && !isUpdateInstall"
+   href="#update" (click)="updateInstall($event)">
+  A new update is available. Click to install
+</a>
+

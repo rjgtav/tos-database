@@ -10,6 +10,8 @@ import {
 import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {Subscription} from "rxjs";
 import {ITOSBuild, ITOSSkill} from "../../../domain/tos/tos-domain";
+import {faBolt, faTint, faWeightHanging} from "@fortawesome/free-solid-svg-icons";
+import {faClock} from "@fortawesome/free-regular-svg-icons";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,6 +20,10 @@ import {ITOSBuild, ITOSSkill} from "../../../domain/tos/tos-domain";
   styleUrls: ['./entity-detail-Information.component.scss']
 })
 export class EntityDetailInformationComponent extends EntityDetailChildComponent implements OnChanges, OnDestroy {
+  readonly faBolt = faBolt;
+  readonly faClock = faClock;
+  readonly faTint = faTint;
+  readonly faWeightHanging = faWeightHanging;
 
   @Input() build: ITOSBuild;
   @Input() divider: boolean;

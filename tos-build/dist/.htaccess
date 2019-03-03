@@ -1,0 +1,43 @@
+RewriteEngine On
+
+# add 404 page
+ErrorDocument 404 /404.html
+
+# force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# remove www
+RewriteCond %{HTTP_HOST} ^www.tos.guru$ [NC]
+RewriteRule ^(.*)$ https://tos.guru/$1 [R=301,L]
+
+########################################################################################################################
+# Angular routes
+# Thanks to https://stackoverflow.com/a/34705199
+########################################################################################################################
+# If an existing asset or directory is requested go to it as it is
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+# If the requested pattern is file and file doesn't exist, send 404
+RewriteCond %{REQUEST_URI} ^(\/[a-z_\-\s0-9\.]+)+\.[a-zA-Z]{2,4}$
+RewriteRule ^ - [L,R=404]
+
+# otherwise use history router
+RewriteRule ^ /index.html
+
+########################################################################################################################
+# Cache configuration
+# More info: https://www.fastly.com/blog/stale-while-revalidate-stale-if-error-available-today
+########################################################################################################################
+# Note: with Service Workers we no longer need to configure the Cache at this layer
+# Instead, we configure it via a CloudFlare's Page Rule
+
+########################################################################################################################
+# Compression
+########################################################################################################################
+# CloudFlare applies compression to the following MIME types:
+# https://support.cloudflare.com/hc/en-us/articles/200168396-What-will-Cloudflare-compress-
+
+AddType text/plain .csv # Unfortunately CloudFlare doesn't compress text/csv

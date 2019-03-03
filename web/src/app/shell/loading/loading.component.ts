@@ -14,9 +14,7 @@ export class LoadingComponent implements OnInit, OnDestroy {
   isClearCacheAvailableTimeout: number;
 
   installComplete: boolean;
-  installProgress: number = 0;
   installSupported: boolean;
-  installTotal: number = 0;
 
   updateAvailable: boolean;
   updateComplete: boolean;
@@ -31,9 +29,8 @@ export class LoadingComponent implements OnInit, OnDestroy {
     private zone: NgZone,
   ) {
     this.loading.updateProgress$.subscribe(value => this.onUpdateProgress(value));
-    this.loading.updateComplete$.subscribe(value => this.updateComplete = value);
-    this.loading.installComplete$.subscribe(value => this.installComplete = value);
-    this.loading.installProgress$.subscribe(value => this.onInstallProgress(value));
+    this.loading.updateComplete$.subscribe(value => this.onUpdateComplete());
+    this.loading.installComplete$.subscribe(value => this.onInstallComplete());
 
     this.installSupported = this.loading.installSupported;
     this.onUpdateAvailable();
@@ -55,10 +52,8 @@ export class LoadingComponent implements OnInit, OnDestroy {
     this.loading.clear();
   }
 
-  onInstallProgress(value: number) {
-    this.installProgress = Math.max(value, 0);
-    this.installTotal = Math.max(this.loading.installTotal, 0);
-    this.installTotal = isNaN(this.installTotal) ? 0 : this.installTotal;
+  onInstallComplete() {
+    this.installComplete = true;
     this.changeDetector.markForCheck();
   }
 
@@ -66,6 +61,10 @@ export class LoadingComponent implements OnInit, OnDestroy {
     this.updateAvailable = this.update.updateAvailable();
     this.updateAvailable && this.changeDetector.markForCheck();
     this.updateVersion = this.update.versionHuman;
+  }
+  onUpdateComplete() {
+    this.updateComplete = true;
+    this.changeDetector.markForCheck();
   }
   onUpdateProgress(value: number) {
     if (!this.updateAvailable) return;

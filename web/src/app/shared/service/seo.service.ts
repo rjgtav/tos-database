@@ -42,7 +42,6 @@ export class SEOService {
 
         }
 
-        this.application.tick(); // Note: with NgZone disabled, we need to manually tick() on every route navigation
         this.meta.updateTag({ name: 'description', content: urlDescription });
         this.title.setTitle(urlTitle);
       }

@@ -31,8 +31,8 @@ def csv_write(data, dataset):
                 data[row][col] = json.dumps(cell)
 
     # Ensure destination directory exists
-    if not os.path.exists(constants.PATH_WEB_ASSETS_DATA):
-        os.makedirs(constants.PATH_WEB_ASSETS_DATA)
+    if not os.path.exists(constants.PATH_BUILD_ASSETS_DATA):
+        os.makedirs(constants.PATH_BUILD_ASSETS_DATA)
 
     # Get keys from a complete entity
     keys = None
@@ -42,7 +42,7 @@ def csv_write(data, dataset):
             keys = row.keys()
 
     # Write to CSV
-    file = open(os.path.join(constants.PATH_WEB_ASSETS_DATA, dataset + '.csv'), 'w')
+    file = open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'w')
     writer = csv.DictWriter(
         file,
         delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(keys)

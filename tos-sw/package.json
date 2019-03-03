@@ -1,0 +1,15 @@
+{
+  "name": "tos-sw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/old/index.js",
+  "scripts": {
+    "main": "node %NODE_DEBUG_OPTION% src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "console-stamp": "^0.2.7",
+    "glob": "^7.1.3"
+  }
+}

@@ -51,6 +51,9 @@ import {TableCellIconPipe} from "./components/entity-table/pipes/table-cell-icon
 import {TableCellLinkPipe} from "./components/entity-table/pipes/table-cell-link.pipe";
 import {TableCellBadgePipe} from "./components/entity-table/pipes/table-cell-badge.pipe";
 import {TOSDomainRepository} from "./domain/tos/tos-domain.repository";
+import {SEOService} from "./service/seo.service";
+import {SWService} from "./service/sw.service";
+import {AnalyticsService} from "./service/analytics.service";
 
 @NgModule({
   imports: [
@@ -60,6 +63,47 @@ import {TOSDomainRepository} from "./domain/tos/tos-domain.repository";
     NgbModule,
     FormsModule,
     RouterModule,
+  ],
+  declarations: [
+    // Components
+    EntityDetailAttackDefenseComponent,
+    EntityDetailBonusStatsUnidentifiedComponent,
+    EntityDetailBookComponent,
+    EntityDetailCardComponent,
+    EntityDetailChildComponent,
+    EntityDetailClassIconGradeComponent,
+    EntityDetailDescriptionComponent,
+    EntityDetailDurabilityPotentialSocketsComponent,
+    EntityDetailEnhancementComponent,
+    EntityDetailGemComponent,
+    EntityDetailInformationComponent,
+    EntityDetailJobAnimationComponent,
+    EntityDetailJobIconComponent,
+    EntityDetailMaterialNameTypeComponent,
+    EntityDetailSkillComponent,
+    EntityDetailSkillFormulaComponent,
+    EntityDetailStatsComponent,
+    EntityDetailTableComponent,
+    EntityTableComponent,
+    EntityTooltipComponent,
+    InputNumberComponent,
+
+    // Directives
+    FilterDirective,
+    FilterGroupDirective,
+    SortDirective,
+    SortGroupDirective,
+
+    // Pipes
+    SanitizeCSSPipe,
+    SanitizeHTMLPipe,
+    TableCellPipe,
+    TableCellBadgePipe,
+    TableCellIconPipe,
+    TableCellLinkPipe,
+    TableCellNumberPipe,
+    TableCellTextPipe,
+    TimePipe,
   ],
   exports: [
     // Components
@@ -109,47 +153,6 @@ import {TOSDomainRepository} from "./domain/tos/tos-domain.repository";
     TableCellTextPipe,
     TimePipe,
   ],
-  declarations: [
-    // Components
-    EntityDetailAttackDefenseComponent,
-    EntityDetailBonusStatsUnidentifiedComponent,
-    EntityDetailBookComponent,
-    EntityDetailCardComponent,
-    EntityDetailChildComponent,
-    EntityDetailClassIconGradeComponent,
-    EntityDetailDescriptionComponent,
-    EntityDetailDurabilityPotentialSocketsComponent,
-    EntityDetailEnhancementComponent,
-    EntityDetailGemComponent,
-    EntityDetailInformationComponent,
-    EntityDetailJobAnimationComponent,
-    EntityDetailJobIconComponent,
-    EntityDetailMaterialNameTypeComponent,
-    EntityDetailSkillComponent,
-    EntityDetailSkillFormulaComponent,
-    EntityDetailStatsComponent,
-    EntityDetailTableComponent,
-    EntityTableComponent,
-    EntityTooltipComponent,
-    InputNumberComponent,
-
-    // Directives
-    FilterDirective,
-    FilterGroupDirective,
-    SortDirective,
-    SortGroupDirective,
-
-    // Pipes
-    SanitizeCSSPipe,
-    SanitizeHTMLPipe,
-    TableCellPipe,
-    TableCellBadgePipe,
-    TableCellIconPipe,
-    TableCellLinkPipe,
-    TableCellNumberPipe,
-    TableCellTextPipe,
-    TimePipe,
-  ],
 })
 export class SharedModule {
   // Read more: https://medium.com/@chrishouse/when-to-use-angulars-forroot-method-400094a0ebb7
@@ -181,4 +184,10 @@ export class SharedModule {
       ]
     }
   }
+
+  constructor(
+    private analytics: AnalyticsService,
+    private seo: SEOService,
+    private sw: SWService,
+  ) {}
 }

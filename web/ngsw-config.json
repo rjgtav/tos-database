@@ -10,11 +10,13 @@
           "/*.css",
           "/*.js",
           "/assets/js/*.js",
+          "/assets/images/logo_*.png",
           "/assets/themes/*.css",
           "/assets/favicon.png"
         ]
       }
-    }, {
+    },
+    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "lazy",

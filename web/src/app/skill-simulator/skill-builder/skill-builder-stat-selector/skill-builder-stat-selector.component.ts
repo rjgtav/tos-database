@@ -10,6 +10,7 @@ import {
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {Subscription} from "rxjs";
 import {TOSStat, TOSStatService} from "../../../shared/domain/tos/tos-domain";
+import {faMinusCircle, faPlusCircle} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,8 +19,9 @@ import {TOSStat, TOSStatService} from "../../../shared/domain/tos/tos-domain";
   styleUrls: ['./skill-builder-stat-selector.component.scss']
 })
 export class SkillBuilderStatSelectorComponent implements OnChanges, OnDestroy {
-
-  TOSStatService = TOSStatService;
+  readonly faMinusCircle = faMinusCircle;
+  readonly faPlusCircle = faPlusCircle;
+  readonly TOSStatService = TOSStatService;
 
   rank: number;
   stats: string[] = [TOSStat.STR, TOSStat.CON, TOSStat.INT, TOSStat.SPR, TOSStat.DEX];

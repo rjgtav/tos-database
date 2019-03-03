@@ -21,7 +21,7 @@ const REGION = process.argv[2] || REGION_iTOS;
 if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(REGION) === -1)
     throw Error('Invalid region: ' + REGION);
 
-let folder_assets = path.join(__dirname, '..', '..', 'web', 'src', 'assets');
+let folder_assets = path.join('..', 'tos-build', 'dist', 'assets');
 let folder_data = path.join(folder_assets, 'data', REGION.toLowerCase());
 let folder_sitemap = path.join(folder_assets, 'sitemap');
 

@@ -7,13 +7,8 @@
       <img class="mb-4 mb-sm-5" src="assets/images/logo_tos.png" />
 
       <div *ngIf="!installComplete">
-        <div class="progress">
-          <div class="progress-bar progress-bar-animated progress-bar-striped"
-               [style.width]="(installProgress * 100 / installTotal) + '%'"></div>
-        </div>
-        <div class="mt-2">
-          Loading tos.guru... <span *ngIf="installProgress">{{ installProgress }}/{{ installTotal }}</span>
-        </div>
+        <div class="progress"><div class="progress-bar progress-bar-animated progress-bar-striped w-100"></div></div>
+        <div class="mt-2">Loading tos.guru...</div>
       </div>
       <div *ngIf="installComplete">
         <div class="progress">

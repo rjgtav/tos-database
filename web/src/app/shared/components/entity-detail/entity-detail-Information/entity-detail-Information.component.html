@@ -13,7 +13,7 @@
       <h6 *ngIf="equipment || monster">Level {{ equipment?.RequiredLevel || monster?.Level }}</h6>
     </div>
     <div class="col" *ngIf="skill || item && !equipment"><h6>
-      <fa-icon class="mr-1" [icon]="['far', 'clock']"></fa-icon>
+      <fa-icon class="mr-1" [icon]="[faClock]"></fa-icon>
       {{ ((item ? item.TimeCoolDown : skillCoolDown) | tosTime) || 'No cooldown' }}</h6>
     </div>
 
@@ -25,14 +25,14 @@
         <span class="col pt-1 pb-1 text-right">{{ job.Rank }}</span>
       </h6>
       <h6 *ngIf="monster">{{ monster.Size }}</h6>
-      <h6 *ngIf="skill">{{ skillSP }}&nbsp;<fa-icon style="color: #319AFF" [icon]="['fas', 'tint']"></fa-icon></h6>
+      <h6 *ngIf="skill">{{ skillSP }}&nbsp;<fa-icon style="color: #319AFF" [icon]="faTint"></fa-icon></h6>
     </div>
   </div>
 
   <!-- Weight/Type/OverHeat and Price/Shinobi+Simony -->
   <div class="row text-nowrap" *ngIf="item || job || skill">
     <div class="col" *ngIf="item"><h6>
-      <fa-icon class="mr-1" [icon]="['fas', 'weight-hanging']"></fa-icon>
+      <fa-icon class="mr-1" [icon]="faWeightHanging"></fa-icon>
       {{ (item.Weight | number) || 0 }}</h6>
     </div>
     <div class="col" *ngIf="job">
@@ -42,7 +42,7 @@
       </h6>
     </div>
     <div class="col" *ngIf="skill && skill.OverHeat"><h6>
-      <fa-icon class="ml-1 mr-1" [icon]="['fas', 'bolt']"></fa-icon>
+      <fa-icon class="ml-1 mr-1" [icon]="faBolt"></fa-icon>
       {{ skill.OverHeat }} overheat</h6>
     </div>
 

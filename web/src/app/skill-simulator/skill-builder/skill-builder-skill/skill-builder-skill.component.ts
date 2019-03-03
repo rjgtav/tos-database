@@ -11,6 +11,7 @@ import {Subscription} from "rxjs";
 import {TOSSimulatorBuild} from "../../../shared/domain/tos/tos-build";
 import {ITOSAttribute, ITOSJob, ITOSSkill} from "../../../shared/domain/tos/tos-domain";
 import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
+import {faMinusCircle, faPlusCircle} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -19,8 +20,9 @@ import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
   styleUrls: ['./skill-builder-skill.component.scss']
 })
 export class SkillBuilderSkillComponent implements OnChanges, OnDestroy {
-
-  TOSEntity = TOSEntity;
+  readonly faPlusCircle = faPlusCircle;
+  readonly faMinusCircle = faMinusCircle;
+  readonly TOSEntity = TOSEntity;
 
   @Input() build: TOSSimulatorBuild;
   @Input() job: ITOSJob;

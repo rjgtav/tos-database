@@ -83,8 +83,8 @@ export class TOSDomainRepository implements ITOSDomainRepository {
     }
   };
 
-  private MESSAGE_DEXIE_ID: number = 0;
-  private MESSAGE_PAPAPARSE_ID: number = 0;
+  private WORKER_DEXIE_NONCE: number = 0;
+  private WORKER_PAPAPARSE_NONCE: number = 0;
 
   // Note: we initialize workers later so the Service Worker can intercept the call
   private workerDexie: Worker;
@@ -125,27 +125,27 @@ export class TOSDomainRepository implements ITOSDomainRepository {
   private onDexieMessage(event: MessageEvent) {
     let message = event.data as WorkerDexieMessage;
 
-    let handler = this.workerDexieHandler[message.id] as Subject<object>;
+    let handler = this.workerDexieHandler[message.nonce] as Subject<object>;
         handler.next(message.payload);
         handler.complete();
 
-    delete this.workerDexieHandler[message.id];
+    delete this.workerDexieHandler[message.nonce];
   }
   private onPapaparseMessage(event: MessageEvent) {
     let message = event.data as WorkerPapaparseMessage;
 
-    let handler = this.workerPapaparseHandler[message.id] as Subject<object>;
+    let handler = this.workerPapaparseHandler[message.nonce] as Subject<object>;
         handler.next(message.payload);
         handler.complete();
 
-    delete this.workerPapaparseHandler[message.id];
+    delete this.workerPapaparseHandler[message.nonce];
   }
 
   private postDexieMessage(cmd: WorkerDexieCommand, payload?: object) {
-    let id = this.MESSAGE_DEXIE_ID ++;
-    let message: WorkerDexieMessage = { cmd, id, payload };
+    let nonce = this.WORKER_DEXIE_NONCE ++;
+    let message: WorkerDexieMessage = { cmd, nonce, payload };
 
-    let subject = this.workerDexieHandler[id] = new Subject();
+    let subject = this.workerDexieHandler[nonce] = new Subject();
     let worker = this.workerDexie = this.workerDexie || new Worker(TOSUrlService.WORKER_DEXIE());
         worker.onmessage = this.onDexieMessage;
         worker.postMessage(message);
@@ -153,10 +153,10 @@ export class TOSDomainRepository implements ITOSDomainRepository {
     return subject.asObservable();
   }
   private postPapaparseMessage(cmd: WorkerPapaparseCommand, dataset: TOSDataSet, payload?: object): Observable<object> {
-    let id = this.MESSAGE_PAPAPARSE_ID ++;
-    let message: WorkerPapaparseMessage = { cmd, dataset, id, payload };
+    let nonce = this.WORKER_PAPAPARSE_NONCE ++;
+    let message: WorkerPapaparseMessage = { cmd, dataset, nonce, payload };
 
-    let subject = this.workerPapaparseHandler[id] = new Subject();
+    let subject = this.workerPapaparseHandler[nonce] = new Subject();
     let worker = this.workerPapaparse = this.workerPapaparse || new Worker(TOSUrlService.WORKER_PAPAPARSE());
         worker.onmessage = this.onPapaparseMessage;
         worker.postMessage(message);
@@ -169,7 +169,7 @@ export class TOSDomainRepository implements ITOSDomainRepository {
 enum WorkerDexieCommand { FIND = 'find', FIND_BY_INDEX = 'findByIndex' }
 interface WorkerDexieMessage {
   cmd: WorkerDexieCommand;
-  id: number;
+  nonce: number;
   payload?: object;
 }
 
@@ -177,6 +177,6 @@ enum WorkerPapaparseCommand { LOAD = 'load' }
 interface WorkerPapaparseMessage {
   cmd: WorkerPapaparseCommand;
   dataset: string;
-  id: number;
+  nonce: number;
   payload?: object;
 }

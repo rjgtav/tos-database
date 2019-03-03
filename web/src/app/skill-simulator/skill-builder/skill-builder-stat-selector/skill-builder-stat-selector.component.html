@@ -32,11 +32,11 @@
     <div class="d-flex flex-row w-100 justify-content-around mt-1 tos-skill-controls">
       <a [ngClass]="{ 'invisible': !rank || !build.statsIncrementLevelAvailable(stat, 1) }" href="#plus"
          (click)="onIncrementClick($event, stat, 1)">
-        <fa-icon class="align-top" [icon]="['fas', 'plus-circle']"></fa-icon>
+        <fa-icon class="align-top" [icon]="faPlusCircle"></fa-icon>
       </a>
       <a [ngClass]="{ 'invisible': !rank || !build.statsIncrementLevelAvailable(stat, -1) }" href="#minus"
          (click)="onIncrementClick($event, stat, -1)">
-        <fa-icon class="align-bottom" [icon]="['fas', 'minus-circle']"></fa-icon>
+        <fa-icon class="align-bottom" [icon]="faMinusCircle"></fa-icon>
       </a>
     </div>
 

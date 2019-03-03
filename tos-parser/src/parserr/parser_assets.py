@@ -68,17 +68,17 @@ def parse_entity_icon(icon):
 def parse(region, version_update):
     logging.debug('Parsing assets...')
 
-    parse_icons('baseskinset.xml', version_update)
-    parse_icons('classicon.xml', version_update)
-    parse_icons('itemicon.xml', version_update)
-    parse_icons('mongem.xml', version_update)
-    parse_icons('monillust.xml', version_update)
-    parse_icons('skillicon.xml', version_update)
+    parse_icons('baseskinset.xml', region, version_update)
+    parse_icons('classicon.xml', region, version_update)
+    parse_icons('itemicon.xml', region, version_update)
+    parse_icons('mongem.xml', region, version_update)
+    parse_icons('monillust.xml', region, version_update)
+    parse_icons('skillicon.xml', region, version_update)
 
     parse_images_jobs(region, version_update)
 
 
-def parse_icons(file_name, version_update):
+def parse_icons(file_name, region, version_update):
     logging.debug('Parsing icons from %s...', file_name)
 
     data_path = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf', 'baseskinset', file_name)
@@ -89,11 +89,11 @@ def parse_icons(file_name, version_update):
     data = [(image, imagelist) for imagelist in data for image in imagelist]
 
     pool = Pool(processes=multiprocessing.cpu_count())
-    pool.map(partial(parse_icons_step, file_name, version_update), data)
+    pool.map(partial(parse_icons_unit, file_name, region, version_update), data)
     pool.terminate()
 
 
-def parse_icons_step(file_name, version_update, work):
+def parse_icons_unit(file_name, region, version_update, work):
     image = work[0]
     image_category = work[1].get('category')
 
@@ -109,7 +109,7 @@ def parse_icons_step(file_name, version_update, work):
     # Copy icon to web assets folder
     copy_from = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf', *image.get('file').lower().split('\\')[:-1])
     copy_from = os.path.join(copy_from, image_file)
-    copy_to = os.path.join(constants.PATH_WEB_ASSETS_ICONS, image_name)
+    copy_to = os.path.join(constants.PATH_BUILD_ASSETS_ICONS, image_name)
 
     if not os.path.isfile(copy_from):
         # Note for future self:
@@ -117,7 +117,7 @@ def parse_icons_step(file_name, version_update, work):
         #logging.warning('Non-existing icon: %s', copy_from)
         return
 
-    if version_update:
+    if region == TOSRegion.kTEST and version_update or not os.path.isfile(copy_to):
         shutil.copy(copy_from, copy_to)
 
         # Crop, Resize, Optimize and convert to JPG/PNG
@@ -141,7 +141,7 @@ def parse_images_jobs(region, version_update):
 
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            image_path = os.path.join(constants.PATH_WEB_ASSETS_IMAGES, 'classes', row['ClassName'])
+            image_path = os.path.join(constants.PATH_BUILD_ASSETS_IMAGES, 'classes', row['ClassName'])
             image_path_f = image_path + '_f.gif'
             image_path_m = image_path + '_m.gif'
 

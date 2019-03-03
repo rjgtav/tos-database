@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --progress=true --disableHostCheck true --host 0.0.0.0 --verbose",
-    "start-prod": "http-server -c-1 -p4200 dist/web/",
+    "start-prod": "http-server -c-1 -p4200 dist/",
     "build": "ng build",
     "build-prod": "ng build --prod",
     "test": "ng test",
@@ -22,9 +22,7 @@
     "@angular/http": "^7.1.4",
     "@angular/platform-browser": "^7.1.4",
     "@angular/platform-browser-dynamic": "^7.1.4",
-    "@angular/pwa": "^0.11.4",
     "@angular/router": "^7.1.4",
-    "@angular/service-worker": "^7.1.4",
     "@fortawesome/angular-fontawesome": "^0.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.1",
     "@fortawesome/free-brands-svg-icons": "^5.1.1",

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <base href="/">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
   <title>#{seo-title}#</title>
 
@@ -14,35 +14,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
-
-  <!-- HotFix: trigger browser 'Translate' button -->
-  <script type="text/javascript">
-    var lang = 'en';
-    if (location.href.indexOf('/jtos/') > 0)    lang = 'ja';
-    if (location.href.indexOf('/ktos/') > 0)    lang = 'ko';
-    if (location.href.indexOf('/ktest/') > 0)   lang = 'ko';
-
-    document.getElementsByTagName('html')[0].setAttribute('lang', lang);
-  </script>
-
   <!-- Theme -->
   <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
 
-</head>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
-                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- HotFix: show user selected theme right from the get go -->
-  <script type="text/javascript">
+  <!-- Show the selected Theme right from the start -->
+  <script type="application/javascript">
     let theme = +localStorage.getItem('theme') || 2;
     let themeFile = theme === 1 ? 'darkly' : 'flatly';
     let element = document.getElementById('bootstrap-theme');
@@ -53,6 +29,52 @@
     document.body.style.margin = '0';
     document.body.onload = () => document.body.setAttribute('style', '');
   </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">
+    {
+      "100": ["Aaaaaa","Bbbbb","Ccccc","Ddddd"],
+      "500": ["Eeeee","Fffff","Ggggg"],
+      "1000": ["Iiiii","Jjjjj"],
+      "2000": ["Kkkkk"]
+    }
+  </script>
+  <script type="application/json" id="tos-region">
+    {
+      "iTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
+      "jTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
+      "kTEST": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
+      "kTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
+      "twTOS": {"rebuild": false, "version": "patch_XXXXXX_release_YYYYYY"}
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
 
   <app-root>
     <!-- Specific CSS for the Server-Side Rendering -->

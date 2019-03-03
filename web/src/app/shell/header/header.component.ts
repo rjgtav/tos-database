@@ -1,15 +1,15 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {Theme, ThemeService} from "../../shared/service/theme.service";
-import {faMoon, faSearch, faTimes} from "@fortawesome/free-solid-svg-icons";
+import {faMoon, faSearch, faSync, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
 import {TOSUrlService} from "../../shared/service/tos-url.service";
 import {TOSDataSetService} from "../../shared/domain/tos/tos-domain";
 import {TOSRegion, TOSRegionService} from "../../shared/domain/tos-region";
-import {SwUpdate} from "@angular/service-worker";
 import {PatreonService} from "../../home/patreon/patreon.service";
+import {SWService} from "../../shared/service/sw.service";
 
 const UPDATE_KEY = 'update';
-const UPDATE_INTERVAL = 30 * 60 * 1000;
+const UPDATE_INTERVAL = 60 * 60 * 1000;
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -20,27 +20,30 @@ const UPDATE_INTERVAL = 30 * 60 * 1000;
 export class HeaderComponent implements OnInit, OnDestroy {
   readonly REGION = Object.values(TOSRegion);
 
-  TOSRegionService = TOSRegionService;
-  Theme = Theme;
-  TOSDataSetService = TOSDataSetService;
-  TOSRegion = TOSRegion;
+  readonly TOSRegionService = TOSRegionService;
+  readonly Theme = Theme;
+  readonly TOSDataSetService = TOSDataSetService;
+  readonly TOSRegion = TOSRegion;
 
-  faMoon = faMoon;
-  faSearch = faSearch;
-  faSun = faSun;
-  faTimes = faTimes;
+  readonly faMoon = faMoon;
+  readonly faSearch = faSearch;
+  readonly faSun = faSun;
+  readonly faTimes = faTimes;
+  readonly faSync = faSync;
 
   patrons: string[];
   patronsCount: number;
 
   isUpdateAvailable: boolean;
   isUpdateCheck: boolean;
-  isUpdateCheckInterval: number;
+  isUpdateCheckManual: boolean;
+  isUpdateCheckTimeout: number;
+  isUpdateInstall: boolean;
   isOpenSearch: boolean;
 
   constructor(
     private changeDetector: ChangeDetectorRef,
-    private swUpdate: SwUpdate,
+    private sw: SWService,
     public theme: ThemeService,
     private zone: NgZone,
   ) {
@@ -51,16 +54,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    if (this.swUpdate.isEnabled) {
-      this.swUpdate.available.subscribe(value => this.updateAvailable());
-
-      this.isUpdateCheckInterval = this.zone.runOutsideAngular(() => setInterval(() => this.updateCheck(), UPDATE_INTERVAL));
-      this.updateCheck();
-    }
+    this.updateCheck();
   }
 
   ngOnDestroy(): void {
-    clearInterval(this.isUpdateCheckInterval);
+    clearTimeout(this.isUpdateCheckTimeout);
   }
 
   patreonDismiss() {
@@ -79,32 +77,44 @@ export class HeaderComponent implements OnInit, OnDestroy {
     return false;
   }
 
-  update(event: MouseEvent) {
+  updateInstall(event: MouseEvent) {
     event.preventDefault();
 
-    this.swUpdate.activateUpdate().then(value => window.location.reload(true));
-  }
-  updateAvailable() {
-    this.isUpdateAvailable = true;
+    this.isUpdateInstall = true;
     this.changeDetector.markForCheck();
+
+    this.sw.updateInstall();
   }
-  async updateCheck() {
+  updateCheck(updateManual: boolean = false) {
+    this.isUpdateCheckManual = updateManual;
+    this.changeDetector.markForCheck();
+
     let now = new Date();
-    let update = localStorage.getItem(UPDATE_KEY) && new Date(localStorage.getItem(UPDATE_KEY));
+    let updateNext = localStorage.getItem(UPDATE_KEY) && new Date(localStorage.getItem(UPDATE_KEY));
+        updateNext && updateNext.setTime(updateNext.getTime() + UPDATE_INTERVAL);
+        updateNext = updateNext || now;
 
-    // If the last time we checked for updates was less than UPDATE_INTERVAL ago, ignore
-    if (update != null && (now.getTime() - update.getTime()) < UPDATE_INTERVAL - 60 * 1000)
-      return;
-
-    this.isUpdateCheck = true;
-    this.changeDetector.detectChanges();
-
-    this.swUpdate.checkForUpdate().then(value => {
-      this.isUpdateCheck = false;
-      this.changeDetector.detectChanges();
-
+    // If the time has come, check for updates
+    if (updateNext.getTime() <= new Date().getTime() || (this.isUpdateCheckManual && !this.isUpdateAvailable && !this.isUpdateCheck)) {
       localStorage.setItem(UPDATE_KEY, now.toISOString());
-    });
+
+      this.isUpdateCheck = true;
+      this.changeDetector.markForCheck();
+
+      this.sw.updateCheck$().subscribe(value => {
+        this.isUpdateCheck = false;
+        this.isUpdateCheckManual = false;
+        this.isUpdateAvailable = value;
+
+        this.changeDetector.detectChanges();
+        this.updateCheck();
+      });
+    }
+
+    // In case there is no update available, schedule to check again in the future
+    if (!this.isUpdateAvailable)
+      this.zone.runOutsideAngular(() =>
+        this.isUpdateCheckTimeout = setTimeout(() => this.updateCheck(), UPDATE_INTERVAL));
   }
 
 }

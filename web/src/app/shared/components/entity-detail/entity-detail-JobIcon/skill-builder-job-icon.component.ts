@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {SizeProp} from "@fortawesome/fontawesome-svg-core";
 import {TOSJob} from "../../../domain/tos/job/tos-job.model";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,6 +10,7 @@ import {TOSJob} from "../../../domain/tos/job/tos-job.model";
   styleUrls: ['./skill-builder-job-icon.component.scss']
 })
 export class EntityDetailJobIconComponent {
+  readonly faStar = faStar;
 
   @Input() circle: number;
   @Input() job: TOSJob;
