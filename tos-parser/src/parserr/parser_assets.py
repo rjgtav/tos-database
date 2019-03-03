@@ -102,6 +102,7 @@ def parse_icons_unit(file_name, region, version_update, work):
     if file_name == 'baseskinset.xml' and image_category not in WHITELIST_BASESKINSET:
         return
 
+    image_extension = '.jpg' if image_category in WHITELIST_RGB else '.png'
     image_file = image.get('file').split('\\')[-1].lower()
     image_name = image.get('name').lower()
     image_rect = tuple(int(x) for x in image.get('imgrect').split()) if len(image.get('imgrect')) else None  # top, left, width, height
@@ -109,7 +110,7 @@ def parse_icons_unit(file_name, region, version_update, work):
     # Copy icon to web assets folder
     copy_from = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf', *image.get('file').lower().split('\\')[:-1])
     copy_from = os.path.join(copy_from, image_file)
-    copy_to = os.path.join(constants.PATH_BUILD_ASSETS_ICONS, image_name)
+    copy_to = os.path.join(constants.PATH_BUILD_ASSETS_ICONS, image_name + image_extension)
 
     if not os.path.isfile(copy_from):
         # Note for future self:
@@ -121,7 +122,7 @@ def parse_icons_unit(file_name, region, version_update, work):
         shutil.copy(copy_from, copy_to)
 
         # Crop, Resize, Optimize and convert to JPG/PNG
-        image_mode = 'RGB' if image_category in WHITELIST_RGB else 'RGBA'
+        image_mode = 'RGB' if image_extension == '.jpg' else 'RGBA'
         image_size = IMAGE_SIZE[image_category] if image_category in IMAGE_SIZE else (image_rect[2], image_rect[3])
         image_size = (80, 80) if file_name == 'classicon.xml' else image_size
         image_size = (80, 80) if file_name == 'skillicon.xml' else image_size
