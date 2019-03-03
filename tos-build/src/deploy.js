@@ -35,9 +35,9 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     let revision_new = childProcess.execSync('git rev-parse HEAD').toString();
 
     shared.log(`
-        +========================================================================+
-        | Patching...                                                            |
-        +========================================================================+
+        +============================================================+
+        | Patching...                                                |
+        +============================================================+
     `);
 
     let is_new_patch = false;
@@ -91,9 +91,9 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
     if (shared.IS_PROD && (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY)) {
         shared.log(`
-            +========================================================================+
-            | Deploying...                                                           |
-            +========================================================================+
+            +============================================================+
+            | Deploying...                                               |
+            +============================================================+
         `);
 
         // 8. Deploy on Apache
@@ -106,7 +106,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             shared.log(`[${ region }] 9.1. Pre-render HTML for web crawlers`);
             cwd = path.join('..', 'tos-html');
 
-            result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
+            result = childProcess.spawnSync(`npm run main ${ region }`, { cwd, shell: true, stdio: 'inherit' });
             result.status !== 0 && shared.logError('Failed to tos-html', result);
 
             // 9.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)
