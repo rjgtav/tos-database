@@ -262,7 +262,9 @@
     // XTODO: load region versions from an external file so we no longer need to recompile the website? Same for patreons.. What else?
     // XTODO: update .gitignore so we can include the deployed website. Maybe remove the traditional src/assets/icons folder?
     // XTODO: deploy master on beta.tos.guru the old version, tell discord?
-    // TODO: commit & push to a separate branch
+    // XTODO: commit & push to a separate branch
+    // XTODO: updating the region.json is always generating a new commit cuz the keys aren't stored in an ordered way...
+    // XTODO: remove /web/dist/ from urls in tos-sw-manifest.js
     // TODO: rename web to tos-web
     // TODO: deploy new branch on beta.tos.guru and tell discord t test
     // TODO: test how the upgrade will work. In theory, when the client loads the new ngsw-worker, it will uninstall the existing installation and start the new process

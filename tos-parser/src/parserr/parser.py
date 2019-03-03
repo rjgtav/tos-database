@@ -26,9 +26,9 @@ def csv_write(data, dataset):
                 if len(cell) > 0 and isinstance(cell[0], globals.Link):
                     cell.sort()
 
-                data[row][col] = json.dumps(cell) if len(cell) > 0 else None
+                data[row][col] = json.dumps(cell, sort_keys=True) if len(cell) > 0 else None
             elif isinstance(cell, (dict,)):
-                data[row][col] = json.dumps(cell)
+                data[row][col] = json.dumps(cell, sort_keys=True)
 
     # Ensure destination directory exists
     if not os.path.exists(constants.PATH_BUILD_ASSETS_DATA):

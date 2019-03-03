@@ -17,17 +17,12 @@
   <!-- Theme -->
   <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
 
-  <!-- Show the selected Theme right from the start -->
+  <!-- Show the selected Theme right from the start (1/2) -->
   <script type="application/javascript">
     let theme = +localStorage.getItem('theme') || 2;
     let themeFile = theme === 1 ? 'darkly' : 'flatly';
     let element = document.getElementById('bootstrap-theme');
         element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
-
-    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
-    document.body.style.color = theme === 1 ? '#fff' : '#212529';
-    document.body.style.margin = '0';
-    document.body.onload = () => document.body.setAttribute('style', '');
   </script>
 
   <!-- Trigger browser 'Translate' button -->
@@ -45,10 +40,10 @@
   <!-- Patreon & Regions -->
   <script type="application/json" id="tos-patreon">
     {
-      "100": ["Aaaaaa","Bbbbb","Ccccc","Ddddd"],
-      "500": ["Eeeee","Fffff","Ggggg"],
-      "1000": ["Iiiii","Jjjjj"],
-      "2000": ["Kkkkk"]
+      "100": ["Aaaaaa","Aaaaaa","Aaaaaa","Aaaaaa"],
+      "500": ["Aaaaaa","Aaaaaa","Aaaaaa"],
+      "1000": ["Aaaaaa","Aaaaaa"],
+      "2000": ["Aaaaaa"]
     }
   </script>
   <script type="application/json" id="tos-region">
@@ -70,6 +65,16 @@
 
 </head>
 <body>
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
                     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

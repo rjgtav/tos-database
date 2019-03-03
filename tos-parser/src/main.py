@@ -43,7 +43,7 @@ if is_patch_new or is_revision_new:
         version_json[TOSRegion.to_string(region)] = { 'version': version_new, 'rebuild': is_rebuild }
 
         version_file.seek(0)
-        version_file.write(json.dumps(version_json))
+        version_file.write(json.dumps(version_json, sort_keys=True))
         version_file.truncate()
 
 else:
