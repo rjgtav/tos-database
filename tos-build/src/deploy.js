@@ -128,6 +128,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         shared.log('10. Generate index and 404');
         fsExtra.copySync(path.join('..', 'web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, 'index.html'));
         fsExtra.copySync(path.join('..', 'web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, '404.html'));
+        fs.unlinkSync(path.join('..', 'web', 'dist', 'index.backup.html'));
 
         // 11. Clear CloudFlare cache
         shared.log('11. Clear CloudFlare cache');
