@@ -35,9 +35,9 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     let revision_new = childProcess.execSync('git rev-parse HEAD').toString();
 
     shared.log(`
-    +========================================================================+
-    | Patching...                                                            |
-    +========================================================================+
+        +========================================================================+
+        | Patching...                                                            |
+        +========================================================================+
     `);
 
     let is_new_patch = false;
@@ -69,7 +69,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         result.status !== 0 && shared.logError('Failed to sitemap', result);
 
         // 4. Commit changes
-        is_new_patch = is_new_patch || commitChanges(region, 4);
+        is_new_patch = commitChanges(region, 4) || is_new_patch;
     }
 
     // 5. Patreon
@@ -87,15 +87,13 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     result.status !== 0 && shared.logError('Failed to service worker', result);
 
     // 7. Commit changes
-    is_new_patch = is_new_patch || commitChanges('Website', 7);
-
-    // TODO: tos-patreon needs to output patreons to json/js as well
+    is_new_patch = commitChanges('Website', 7) || is_new_patch;
 
     if (shared.IS_PROD && (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY)) {
         shared.log(`
-    +========================================================================+
-    | Deploying...                                                           |
-    +========================================================================+
+            +========================================================================+
+            | Deploying...                                                           |
+            +========================================================================+
         `);
 
         // 8. Deploy on Apache
