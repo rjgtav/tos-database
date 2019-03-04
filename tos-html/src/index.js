@@ -27,10 +27,10 @@ let folder_archive_database = path.join(REGION.toLowerCase(), 'database');
 let folder_archive_home = path.join(REGION.toLowerCase(), 'home');
 let folder_archive_simulator = path.join(REGION.toLowerCase(), 'home');
 let folder_archive_region = path.join(REGION.toLowerCase());
-let folder_app = path.join('..', 'web', 'src', 'app');
+let folder_app = path.join('..', 'tos-web', 'src', 'app');
 let folder_database = path.join('..', 'tos-build', 'dist', 'assets', 'data', REGION.toLowerCase());
 let folder_dist_build = path.join('..', 'tos-build', 'dist');
-let folder_dist_web = path.join('..', 'web', 'dist');
+let folder_dist_web = path.join('..', 'tos-web', 'dist');
 let folder_template = path.join('..', 'tos-html', 'src', 'templates');
 let folder_template_database = path.join(folder_template, 'database');
 

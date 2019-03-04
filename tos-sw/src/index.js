@@ -12,7 +12,7 @@ const FILE_WORKER_MANIFEST = 'tos-sw.manifest.js';
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
 console.log('Generating manifest...');
-let manifest = JSON.parse(fs.readFileSync(path.join('..', 'web', 'ngsw-config.json'), 'utf-8'));
+let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-web', 'ngsw-config.json'), 'utf-8'));
     manifest.assetGroups.forEach(assetGroup => {
         assetGroup.updateMode = assetGroup.updateMode || assetGroup.installMode;
 
@@ -26,7 +26,7 @@ let manifest = JSON.parse(fs.readFileSync(path.join('..', 'web', 'ngsw-config.js
             ) return;
 
             let base = [
-                path.join('..', 'web', 'dist'),
+                path.join('..', 'tos-web', 'dist'),
                 path.join('..', 'tos-build', 'dist'),
             ];
 

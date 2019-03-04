@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 const TIME_MINUTE: number = 60;
 const TIME_HOUR: number = TIME_MINUTE * 60;

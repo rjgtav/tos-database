@@ -1,8 +1,4 @@
-import {
-  ElementRef,
-  Input,
-  OnDestroy,
-} from '@angular/core';
+import {ElementRef, Input, OnDestroy,} from '@angular/core';
 import {ControlValueAccessor} from "@angular/forms";
 
 export abstract class TOSGroupDirective<C extends TOSGroupChildDirective<C, V>, V> implements ControlValueAccessor {

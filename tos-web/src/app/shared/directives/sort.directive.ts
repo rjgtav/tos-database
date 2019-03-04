@@ -1,9 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  forwardRef,
-  HostListener,
-  Input} from '@angular/core';
+import {Directive, ElementRef, forwardRef, HostListener, Input} from '@angular/core';
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {TOSGroupChildDirective, TOSGroupDirective} from "./group-child.directive";
 import {TOSListConfiguration} from "../../database/entity-list/entity-list.component";

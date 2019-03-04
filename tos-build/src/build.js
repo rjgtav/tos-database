@@ -9,7 +9,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
 // 1. Build angular application
 shared.log('1. Build Angular application');
-cwd = path.join('..', 'web');
+cwd = path.join('..', 'tos-web');
 
 result = childProcess.spawnSync(`npm run ${ shared.IS_PROD ? 'build-prod' : 'build' }`, { cwd, shell: true, stdio: 'inherit' });
 result.status !== 0 && shared.logError('Failed to build angular application', result);
@@ -24,7 +24,7 @@ bundleAssetsWorker(['papaparse.min.js', 'papaparse.worker.js'], 'papaparse.worke
 
 function bundleAssetsWorker(sources, destination) {
     destination = path.join('..', 'tos-build', 'dist', 'assets', 'js', destination);
-    sources = sources.map(value => path.join('..', 'web', 'src', 'assets', 'js', value));
+    sources = sources.map(value => path.join('..', 'tos-web', 'src', 'assets', 'js', value));
     console.log(`Bundling ${ destination }...`);
 
     let data = uglifyES.minify(sources.reduce((accumulator, source) => {

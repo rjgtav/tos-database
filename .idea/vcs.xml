@@ -2,7 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/web/node_modules_patched/html2canvas" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tos-web/node_modules_patched/html2canvas" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../tos-database\IPFUnpacker" vcs="Git" />
   </component>
 </project>

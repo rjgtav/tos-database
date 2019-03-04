@@ -25,7 +25,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-search')});
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-sitemap')});
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-sw')});
-        childProcess.execSync('npm install', { cwd: path.join('..', 'web')});
+        childProcess.execSync('npm install', { cwd: path.join('..', 'tos-web')});
     }
 
     // Get current revision
@@ -99,7 +99,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         // 8. Deploy on Apache
         shared.log('8. Deploy on Apache');
         fsExtra.copySync(path.join('..', 'tos-build', 'dist'), sharedVariables.APACHE_WWW);
-        fsExtra.copySync(path.join('..', 'web', 'dist'), sharedVariables.APACHE_WWW);
+        fsExtra.copySync(path.join('..', 'tos-web', 'dist'), sharedVariables.APACHE_WWW);
 
         for (let region of shared.REGIONS) {
             // 9.1. Pre-render HTML for web crawlers
@@ -126,9 +126,9 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
         // 10. Generate index and 404 (Note: has to happen after tos-html so Patreon and Region data are populated)
         shared.log('10. Generate index and 404');
-        fsExtra.copySync(path.join('..', 'web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, 'index.html'));
-        fsExtra.copySync(path.join('..', 'web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, '404.html'));
-        fs.unlinkSync(path.join('..', 'web', 'dist', 'index.backup.html'));
+        fsExtra.copySync(path.join('..', 'tos-web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, 'index.html'));
+        fsExtra.copySync(path.join('..', 'tos-web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, '404.html'));
+        fs.unlinkSync(path.join('..', 'tos-web', 'dist', 'index.backup.html'));
 
         // 11. Clear CloudFlare cache
         shared.log('11. Clear CloudFlare cache');
