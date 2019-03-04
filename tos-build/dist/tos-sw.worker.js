@@ -269,6 +269,7 @@
     // TODO: deploy new branch on beta.tos.guru and tell discord t test
     // TODO: test how the upgrade will work. In theory, when the client loads the new ngsw-worker, it will uninstall the existing installation and start the new process
     // TODO: review cloudflare configuration so we don't cache the worker and the versions file
+    // TODO: update deploy.js so it clears cloudflare's cache for tos.guru instead of beta.tos.guru
 
     // Deployment
     // Replace existing ngsw-worker with safety-worker (rename it to ngsw-worker.js), so the old SW unregisters itself
