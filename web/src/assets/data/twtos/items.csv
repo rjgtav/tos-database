@@ -37,10 +37,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 350007,misc_collect_qst_008,向在湖水生長的怪物取得的葉子，剛才還有充滿水般濕漉漉的感覺。圖鑑專用道具。,icon_item_leaves_blue,[642212],,,,,蘊含湖水氣息的葉子,1,0.0,0.0,FFFT,15,1.0
 350008,misc_collect_qst_009,雖然被砍掉下來了，但是因為吸收了湖水的水份，濕漉漉地散發著神秘的氣息。圖鑑專用道具。,icon_item_varnalesa,[642212],,,,,濕潤的根,1,0.0,0.0,FFFT,15,1.0
 350009,misc_collect_qst_010,分給抵抗軍部隊員的補給水桶，因為長時間放在濕氣重的地方，所以有生銹的痕跡，看來應該不是雷歐納勒達斯的物品。圖鑑專用道具。,icon_item_waterbottle,[642212],,,,,抵抗軍補給水桶,1,0.0,0.0,FFFT,15,1.0
-490048,Premium_indunReset_14d,使用時，副本地下城和委託所任務的入場次數會重置。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_indunfreeenter,,,,,,副本進場次數重置卷:14日,0,0.0,0.0,FFFF,8,0.0
-490049,Premium_boostToken_14d,點擊右鍵時可以直接使用，可套用角色時間為一小時。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_boostertoken,,,,,,[活動]經驗之書(限時),0,0.0,0.0,FFFF,8,0.0
-490052,Premium_boostToken_14d_test,點擊右鍵時可以直接使用，可套用角色時間為一小時。道具使用期限為1分鐘，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_boostertoken,,,,,,經驗之書(限1分鐘),0,0.0,0.0,FFFF,8,0.0
-490061,Premium_awakeningStone14,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,[活動]覺醒石(限時),0,0.0,0.0,FFFF,8,0.0
+490048,Premium_indunReset_14d,使用時，副本地下城和委託所任務的入場次數會重置。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_indunfreeenter,,,,,,副本進場次數重置卷:14日,0,0.0,1209600.0,FFFF,8,0.0
+490049,Premium_boostToken_14d,點擊右鍵時可以直接使用，可套用角色時間為一小時。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_boostertoken,,,,,,[活動]經驗之書(限時),0,0.0,1209600.0,FFFF,8,0.0
+490052,Premium_boostToken_14d_test,點擊右鍵時可以直接使用，可套用角色時間為一小時。道具使用期限為1分鐘，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_boostertoken,,,,,,經驗之書(限1分鐘),0,0.0,60.0,FFFF,8,0.0
+490061,Premium_awakeningStone14,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,[活動]覺醒石(限時),0,0.0,1209600.0,FFFF,8,0.0
 490074,Jemina_Present,裝有澤米娜項鍊的箱子。點擊滑鼠右鍵時就能夠使用，可以獲得組合物品。 {nl} 該道具使用期限到 6月 30日為只之後一律刪除。,icon_item_jemina,,,,,,澤米娜項鍊箱子,0,0.0,0.0,TTFT,8,0.0
 490075,Event_gem1,裝有4種寶石及研磨劑的箱子，點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_luckybox_red,,,,,,紅色寶石箱,0,0.0,0.0,FFFF,8,0.0
 490076,Event_gem2,裝有4種寶石及研磨劑的箱子，點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_luckybox_blue,,,,,,藍色寶石箱,0,0.0,0.0,FFFF,8,0.0
@@ -52,9 +52,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490082,160609Event_Potion3,裝有凱伊托藥水的箱子，點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_4,,,,,,凱伊托藥水箱,0,0.0,0.0,FFFF,8,0.0
 490083,160609Event_box1,裝有領主費蒙德爾手鐲的箱子，點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_eventbox_lord,,,,,,領主費蒙德爾的箱子,0,0.0,0.0,TTFT,8,0.0
 490084,160609Event_box2,裝有騎士團長烏斯卡手鐲的箱子，點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_eventbox_knight,,,,,,騎士團長烏斯卡的箱子,0,0.0,0.0,TTFT,8,0.0
-490112,Premium_boostToken_10m,點擊右鍵時可以直接使用，可套用角色時間為1小時。若10分鐘內沒有用系統回收。,icon_item_boostertoken,,,,,,[活動]經驗之書(限10分鐘),0,0.0,0.0,FFFF,8,0.0
+490112,Premium_boostToken_10m,點擊右鍵時可以直接使用，可套用角色時間為1小時。若10分鐘內沒有用系統回收。,icon_item_boostertoken,,,,,,[活動]經驗之書(限10分鐘),0,0.0,600.0,FFFF,8,0.0
 490124,Premium_boostToken_test1min,點擊滑鼠右鍵即可使用，會對角色套裝1分鐘效果。{nl} - 只有在角色連線時會消耗時間。{nl}[經驗之書效果]{nl} - 消滅怪物時獲得經驗值增加+30%{nl}(可和VIP效果疊加){nl}(不能套用經驗值卡片){nl} - 耐力恢復量增加2倍。,icon_item_boostertoken,,,,,,經驗之書(效果1分),0,0.0,0.0,FFFF,8,0.0
-490129,Premium_indunReset_1h,使用時，副本地下城和委託所任務的入場次數會重置。獲得後，若1小時內沒有使用系統回收。,icon_item_indunfreeenter,,,,,,[活動]副本地下城入場次數重置卷[限時],0,0.0,0.0,FFFF,8,0.0
+490129,Premium_indunReset_1h,使用時，副本地下城和委託所任務的入場次數會重置。獲得後，若1小時內沒有使用系統回收。,icon_item_indunfreeenter,,,,,,[活動]副本地下城入場次數重置卷[限時],0,0.0,6000.0,FFFF,8,0.0
 490165,Ability_Point_Stone,"使用時特性點數增加1,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint,,,,,,"特性點數 1,000",0,0.0,0.0,FFFT,8,1.0
 490174,Ability_Point_Stone_500,使用時特性點數增加 500，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint2,,,,,,特性點數 500,0,0.0,0.0,FFFT,8,1.0
 490251,Point_Stone_100,使用時特性點數增加100，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint3,,,,,,特性點數 100,0,0.0,0.0,FFFT,8,1.0
@@ -63,38 +63,39 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490311,Ability_Point_Stone_10000,"使用時特性點數增加10,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint4,,,,,,"特性點數 10,000",0,0.0,0.0,FFFT,8,1.0
 490312,Ability_Point_Stone_30000,"使用時特性點數增加30,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint5,,,,,,"特性點數 30,000",0,0.0,0.0,FFFT,8,1.0
 490313,Ability_Point_Stone_100000,"使用時特性點數增加100,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint6,,,,,,"特性點數 100,000",0,0.0,0.0,FFFT,8,1.0
-495001,160714Event_box1,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第1天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495002,160714Event_box2,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第2天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495003,160714Event_box3,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第3天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495004,160714Event_box4,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第4天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495005,160714Event_box5,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第5天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495006,160714Event_box6,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第6天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495007,160714Event_box7,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第7天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495008,160714Event_box8,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第8天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495009,160714Event_box9,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第9天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495010,160714Event_box10,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第10天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495011,160714Event_box11,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第1天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495012,160714Event_box12,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第2天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495013,160714Event_box13,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第3天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495014,160714Event_box14,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第4天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495015,160714Event_box15,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第5天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495016,160714Event_box16,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第6天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495017,160714Event_box17,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第7天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495018,160714Event_box18,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第8天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495019,160714Event_box19,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第9天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495020,160714Event_box20,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第10天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495021,160714Event_box21,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第1天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495022,160714Event_box22,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第2天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495023,160714Event_box23,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第3天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495024,160714Event_box24,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第4天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495025,160714Event_box25,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第5天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495026,160714Event_box26,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第6天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495027,160714Event_box27,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第7天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495028,160714Event_box28,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第8天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495029,160714Event_box29,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第9天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495030,160714Event_box30,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第10天寶箱 (7天),0,0.0,0.0,FFFF,8,0.0
-495031,Event_DefenceMission01,點擊滑鼠右鍵即可使用，使用時可獲得任意道具。,icon_item_giftbox_1,,,,,,防守任務獎勵箱,0,2.0,0.0,FFFF,8,0.0
-495032,Event_DefenceMission02,點擊滑鼠右鍵即可使用，使用時可獲得任意道具。,icon_item_giftbox_1,,,,,,防守任務獎勵箱,0,2.0,0.0,FFFF,8,0.0
+490324,Ability_Point_Scroll_1000,"使用時特性點數增加1,000，點擊滑鼠右鍵即可使用。",icon_item_ability_point_scroll_1000,,,,,,特性點數卷軸,0,0.0,0.0,FFFT,8,1.0
+495001,160714Event_box1,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第1天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495002,160714Event_box2,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第2天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495003,160714Event_box3,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第3天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495004,160714Event_box4,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第4天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495005,160714Event_box5,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第5天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495006,160714Event_box6,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第6天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495007,160714Event_box7,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第7天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495008,160714Event_box8,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第8天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495009,160714Event_box9,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第9天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495010,160714Event_box10,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,強者之路第10天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495011,160714Event_box11,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第1天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495012,160714Event_box12,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第2天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495013,160714Event_box13,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第3天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495014,160714Event_box14,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第4天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495015,160714Event_box15,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第5天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495016,160714Event_box16,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第6天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495017,160714Event_box17,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第7天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495018,160714Event_box18,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第8天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495019,160714Event_box19,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第9天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495020,160714Event_box20,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,雷堤夏的禮物第10天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495021,160714Event_box21,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第1天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495022,160714Event_box22,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第2天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495023,160714Event_box23,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第3天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495024,160714Event_box24,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第4天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495025,160714Event_box25,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第5天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495026,160714Event_box26,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第6天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495027,160714Event_box27,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第7天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495028,160714Event_box28,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第8天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495029,160714Event_box29,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第9天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495030,160714Event_box30,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,再來一次第10天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
+495031,Event_DefenceMission01,點擊滑鼠右鍵即可使用，使用時可獲得任意道具。,icon_item_giftbox_1,,,,,,防守任務獎勵箱,0,2.0,604800.0,FFFF,8,0.0
+495032,Event_DefenceMission02,點擊滑鼠右鍵即可使用，使用時可獲得任意道具。,icon_item_giftbox_1,,,,,,防守任務獎勵箱,0,2.0,604800.0,FFFF,8,0.0
 495033,Event_Weaponbox01,點擊滑鼠右鍵即可開啟並獲得箱子內容物。,icon_item_giftbox_1,,,,,,武器支援箱,0,0.0,0.0,FFFF,8,0.0
 495034,Promotion_Set01_160728,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_package_parrotbill,,,,,,戰鬥鴉雀寵物禮包,0,0.0,0.0,FFFT,8,0.0
 495035,Promotion_Set02_160728,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_premiumpackage_2,,,,,,尤拉泰啟動禮包,0,0.0,0.0,FFFT,8,0.0
@@ -135,19 +136,20 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 495084,Premium_indunPack,點擊滑鼠右鍵時可獲得組合物品{nl} - 副本掃盪卷 [★] 3張{nl} - 副本入場次數重置卷 1張{nl} - 經驗之書 3本,icon_item_pumpkin_box04,,,,,,副本優惠包,0,0.0,0.0,FFFT,8,0.0
 495085,Kupole_TestServer_Pack,點擊滑鼠右鍵時就能夠使用，可以獲得組合物品。,icon_item_premiumpackage_1,,,,,,奎波爾伺服器救援者禮包,0,0.0,0.0,FFFF,8,0.0
 495086,Premium_VIPPack,點擊滑鼠右鍵時可獲得組合物品。{nl}-即時副本倍數VIP x 2{nl}-大王蜜松糕 x 10,icon_item_giftbox_3,,,,,,VIP優惠禮包,0,0.0,0.0,FFFT,8,0.0
+495123,Premium_awakeningStone14_Team,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,[活動]覺醒石(限時),0,0.0,1209600.0,FFFT,8,0.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,耐力 +5 增加藥水,200,0.0,0.0,FFFF,6,1.0
-640002,Drug_HP1,HP立刻恢復273，15秒內每隔2秒HP恢復273，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_1,,,,,,HP藥水(小),16,45.0,0.0,FFTF,6,10.0
-640003,Drug_HP2,HP立刻恢復461，15秒內每隔2秒HP恢復461，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_2,,,,"[3001, 3003, 3004, 3006, 3007, 3009, 3010, 3012, 3013, 3015, 3016, 3018, 3019, 3021, 3022]",,HP藥水,32,45.0,0.0,FFTF,6,10.0
-640004,Drug_HP3,HP立刻恢復921，15秒內每隔2秒HP恢復921，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,HP藥水(大),72,45.0,0.0,FFTF,6,10.0
-640005,Drug_SP1,SP立刻恢復84，15秒內每隔2秒SP恢復84，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_1,,,,,,SP藥水(小),24,45.0,0.0,FFTF,6,10.0
-640006,Drug_SP2,SP立刻恢復144，15秒內每隔2秒SP恢復144，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_2,,,,"[3002, 3005, 3008, 3011, 3014, 3017, 3020]",,SP藥水,96,45.0,0.0,FFTF,6,10.0
-640007,Drug_SP3,SP立刻恢復288，15秒內每隔2秒SP恢復288，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,SP藥水(大),216,45.0,0.0,FFTF,6,10.0
-640008,Drug_STA1,令耐力恢復30，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_1,,,,,,耐力藥丸(小),16,30.0,0.0,FFFF,6,10.0
-640009,Drug_STA2,恢復耐力40，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sta_pill_2,,,,,,耐力藥丸,64,45.0,0.0,FFFF,6,15.0
-640010,Drug_STA3,恢復耐力50，點擊滑鼠右鍵使用，冷卻時間60秒。,item_sta_pill_3,,,,,,耐力藥丸(大),144,60.0,0.0,FFFF,6,20.0
-640011,Drug_HPSP1,15秒內每隔2秒HP和SP恢復28，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_1,,,,,,回復藥水(小),15,100.0,0.0,FFFF,6,15.0
-640012,Drug_HPSP2,15秒內每隔2秒HP和SP恢復46，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_2,,,,,,回復藥水,50,100.0,0.0,FFFF,6,20.0
-640013,Drug_HPSP3,15秒內每隔2秒HP和SP恢復93，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_3,,,,,,回復藥水(大),150,100.0,0.0,FFFF,6,25.0
+640002,Drug_HP1,HP立刻恢復273，15秒內每隔2秒HP恢復273，點擊滑鼠右鍵使用。,item_hp_oil_1,,,,,,HP藥水(小),16,25.0,0.0,FFTF,6,7.0
+640003,Drug_HP2,HP立刻恢復462，15秒內每隔2秒HP恢復462，點擊滑鼠右鍵使用。,item_hp_oil_2,,,,"[3001, 3003, 3004, 3006, 3007, 3009, 3010, 3012, 3013, 3015, 3016, 3018, 3019, 3021, 3022]",,HP藥水,32,25.0,0.0,FFTF,6,7.0
+640004,Drug_HP3,HP立刻恢復924，15秒內每隔2秒HP恢復924，點擊滑鼠右鍵使用。,item_hp_oil_3,,,,,,HP藥水(大),72,25.0,0.0,FFTF,6,7.0
+640005,Drug_SP1,SP立刻恢復84，15秒內每隔2秒SP恢復84，點擊滑鼠右鍵使用。,item_sp_requid_1,,,,,,SP藥水(小),24,25.0,0.0,FFTF,6,7.0
+640006,Drug_SP2,SP立刻恢復144，15秒內每隔2秒SP恢復144，點擊滑鼠右鍵使用。,item_sp_requid_2,,,,"[3002, 3005, 3008, 3011, 3014, 3017, 3020]",,SP藥水,96,25.0,0.0,FFTF,6,7.0
+640007,Drug_SP3,SP立刻恢復288，15秒內每隔2秒SP恢復288，點擊滑鼠右鍵使用。,item_sp_requid_3,,,,,,SP藥水(大),216,25.0,0.0,FFTF,6,7.0
+640008,Drug_STA1,令耐力恢復30，點擊滑鼠右鍵使用。,item_sta_pill_1,,,,,,耐力藥丸(小),16,25.0,0.0,FFFF,6,7.0
+640009,Drug_STA2,令恢復耐力40，點擊滑鼠右鍵使用。,item_sta_pill_2,,,,,,耐力藥丸,64,25.0,0.0,FFFF,6,7.0
+640010,Drug_STA3,恢復耐力50，點擊滑鼠右鍵使用，冷卻時間60秒。,item_sta_pill_3,,,,,,耐力藥丸(大),144,60.0,0.0,FFFF,6,7.0
+640011,Drug_HPSP1,15秒內每隔2秒HP和SP恢復28，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_1,,,,,,恢復藥水(小),15,100.0,0.0,FFFF,6,15.0
+640012,Drug_HPSP2,15秒內每隔2秒HP和SP恢復46，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_2,,,,,,恢復藥水,50,100.0,0.0,FFFF,6,20.0
+640013,Drug_HPSP3,15秒內每隔2秒HP和SP恢復93，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_3,,,,,,恢復藥水(大),150,100.0,0.0,FFFF,6,25.0
 640014,Drug_MaxSTAUP1,耐力 +5 增加藥水,drug_maxstaup1,,,,,,STA +5 增加藥水,200,0.0,0.0,FFFF,6,1.0
 640015,OnionPiece_Red,赤紅凱帕碎片,onionpiece_red,,,,,,赤紅凱帕碎片,0,4.0,0.0,FFFF,6,1.0
 640017,Heal_HP1,,icon_item_drug_51011,,,,,,HP 恢復藥(小),10,20.0,0.0,TTTT,6,1.0
@@ -221,9 +223,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640097,Drug_STA1_Q,耐力恢復15，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_1,,,,,,補給用耐力藥丸(小),0,30.0,0.0,FFFF,6,1.0
 640098,Drug_STA2_Q,耐力恢復30，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sta_pill_2,,,,,,補給用耐力藥丸,0,45.0,0.0,FFFF,6,3.0
 640099,Drug_STA3_Q,耐力恢復40，點擊滑鼠右鍵使用，冷卻時間60秒。,item_sta_pill_3,,,,,,補給用耐力藥丸(大),0,60.0,0.0,FFFF,6,5.0
-640100,Drug_HPSP1_Q,15秒內每隔2秒HP和SP恢復224，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_1,,,,,,補給用回復藥水(小),0,100.0,0.0,FFFF,6,3.0
-640101,Drug_HPSP2_Q,15秒內每隔2秒HP和SP恢復373，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_2,,,,,,補給用回復藥水,0,100.0,0.0,FFFF,6,5.0
-640102,Drug_HPSP3_Q,15秒內每隔2秒HP和SP恢復744，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_3,,,,,,補給用回復藥水(大),0,100.0,0.0,FFFF,6,7.0
+640100,Drug_HPSP1_Q,15秒內每隔2秒HP和SP恢復224，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_1,,,,,,補給用恢復藥水(小),0,100.0,0.0,FFFF,6,3.0
+640101,Drug_HPSP2_Q,15秒內每隔2秒HP和SP恢復373，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_2,,,,,,補給用恢復藥水,0,100.0,0.0,FFFF,6,5.0
+640102,Drug_HPSP3_Q,15秒內每隔2秒HP和SP恢復744，點擊滑鼠右鍵使用，冷卻時間100秒。,item_hpsp_potion_3,,,,,,補給用恢復藥水(大),0,100.0,0.0,FFFF,6,7.0
 640103,Drug_Haste1_Q,180秒內使移動速度提升+2，點擊滑鼠右鍵使用，冷卻時間30秒。,item_speed_requid_1,,,,,,補給用移動速度增加藥水,0,30.0,0.0,FFFF,6,5.0
 640104,Drug_AddSTR1,力量屬性永久提升+1，點擊滑鼠右鍵使用。,icon_item_strplus,,,,,,力量屬性增加藥水,0,0.0,0.0,FFFF,6,10.0
 640105,Drug_AddDEX1,敏捷屬性永久提升+1，點擊滑鼠右鍵使用。,icon_item_dexplus,,,,,,敏捷屬性增加藥水,0,0.0,0.0,FFFF,6,10.0
@@ -257,13 +259,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640134,Achieve_CBT3_RANK6_10,給予第2個~第10個到6階級的玩家的稱號，點擊滑鼠右鍵使用,icon_item_holyark,,,,,,稱號-奧施莉奈的英雄,0,0.0,0.0,FFFF,6,0.0
 640135,Scroll_SkillReset_CBT,重置使用的技能點數。(測試用),golemmagicitem2,,,,,,技能重置卷軸,0,0.0,0.0,FFTF,6,10.0
 640139,Achieve_IamDeveloper,我是開發者。,icon_item_holyark,,,,,,稱號-開發者,0,0.0,0.0,FFFF,6,0.0
-640140,Drug_deadparts,屍體碎片增加+30，可以從死靈法師大師哪裡取得，點擊滑鼠右鍵使用。,icon_item_potb,,,,,,碎片壇子,100,1.0,0.0,FFTF,6,5.0
+640140,Drug_deadparts,屍體碎片增加+30，可以從死靈法師大師哪裡取得，點擊滑鼠右鍵使用。,icon_item_potb,,,,,,碎片壇子,100,0.0,0.0,FFTF,6,5.0
 640141,expCard_Max,"角色經驗值提升106,850,628 ，點擊滑鼠右鍵使用。",icon_item_expcard,,,,,,經驗值加速器,0,0.0,0.0,FFFF,6,0.0
-640142,jexpCard_UpRank2,將角色1階的職業等級提升至15，只有1階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard2,,,,,,2階卡片,0,0.0,0.0,FFFF,6,0.0
-640143,jexpCard_UpRank3,將角色2階的職業等級提升至15，只有2階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard3,,,,,,3階卡片,0,0.0,0.0,FFFF,6,0.0
-640144,jexpCard_UpRank4,將角色3階的職業等級提升至15，只有3階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard4,,,,,,4階卡片,0,0.0,0.0,FFFF,6,0.0
-640145,jexpCard_UpRank5,將角色4階的職業等級提升至15，只有4階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard5,,,,,,5階卡片,0,0.0,0.0,FFFF,6,0.0
-640146,jexpCard_UpRank6,將角色5階的職業等級提升至15，只有5階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard6,,,,,,6階卡片,0,0.0,0.0,FFFF,6,0.0
+640142,jexpCard_UpRank2,將角色的職業等級提升至15，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,職業經驗值復原卡片 (1st),0,0.0,0.0,FFFF,6,0.0
+640143,jexpCard_UpRank3,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,職業經驗值復原卡片 (2nd),0,0.0,0.0,FFFF,6,0.0
+640144,jexpCard_UpRank4,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,職業經驗值復原卡片 (3rd),0,0.0,0.0,FFFF,6,0.0
+640145,jexpCard_UpRank5,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,職業經驗值復原卡片 (4th),0,0.0,0.0,FFFF,6,0.0
+640146,jexpCard_UpRank6,,,,,,,,無功能,0,0.0,0.0,FFFF,6,0.0
 640147,potion_hairColor_01,獲得黑色頭髮，點擊滑鼠右鍵使用。,icon_item_drug_str2,,,,,,染色藥：黑色,0,0.0,0.0,FFFF,6,0.0
 640148,potion_hairColor_02,獲得藍色頭髮，點擊滑鼠右鍵使用。,icon_item_drug_str2,,,,,,染色藥：藍色,0,0.0,0.0,FFFF,6,0.0
 640149,potion_hairColor_03,獲得白色頭髮，點擊滑鼠右鍵使用。,icon_item_drug_str2,,,,,,染色藥：白色,0,0.0,0.0,FFFF,6,0.0
@@ -276,11 +278,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640156,Scroll_Warp_Orsha,傳送至歐勒夏，點擊滑鼠右鍵使用。,golemmagicitem1,,,,,,歐勒夏傳送卷軸,100,0.0,0.0,FFTF,6,1.0
 640157,Drug_d_underfortress_30_1_1,1分內使範圍攻擊比率提升+1，點擊滑鼠右鍵使用，冷卻時間120秒。,icon_item_holywater_empty,,,,,,不完整的露克立斯秘藥,0,120.0,0.0,FFFF,6,10.0
 640158,Drug_d_underfortress_30_1_2,3分鐘內使範圍攻擊比率提升+3，點擊滑鼠右鍵使用，冷卻時間5分鐘。,icon_item_holywater,,,,,,完整的露克立斯秘藥,0,300.0,0.0,FFFF,6,30.0
-640159,Drug_CRTHR_GIMMICK1,1分鐘內暴擊攻擊力提升+24，點擊滑鼠右鍵使用，冷卻時間120秒。,item_speed_requid_1,,,,,,力量藥水,0,120.0,0.0,FFFF,6,10.0
+640159,Drug_CRTHR_GIMMICK1,1分內令物理暴擊攻擊力提升+24，點擊滑鼠右鍵使用，冷卻時間120秒。,item_speed_requid_1,,,,,,力量藥水,0,120.0,0.0,FFFF,6,10.0
 640160,Drug_CRTHR_GIMMICK2,30秒內使暴擊率提升+36，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,濃縮力量藥水,0,60.0,0.0,FFFF,6,30.0
 640161,Drug_PATK_GIMMICK1,1分內使物理攻擊力提升+35，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,力量藥水,0,120.0,0.0,FFFF,6,10.0
 640162,Drug_PATK_GIMMICK2,30秒內使物理攻擊力提升+65，點擊滑鼠右鍵使用，冷卻時間60秒。,icon_item_drug_str2,,,,,,濃縮力量藥水,0,60.0,0.0,FFFF,6,30.0
-640163,Drug_CRTATK_GIMMICK1,120秒內暴擊攻擊力提升+80，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊增加藥水,0,60.0,0.0,FFFF,6,5.0
+640163,Drug_CRTATK_GIMMICK1,120秒內令物理暴擊攻擊力提升+80，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水,0,60.0,0.0,FFFF,6,5.0
 640164,Drug_ResFire_GIMMICK1,1分內使火屬性抵抗力提升+30，點擊滑鼠右鍵使用，冷卻時間90秒。,icon_item_seed_matk1,,,,,,火屬性抵抗力藥水,0,90.0,0.0,FFFF,6,10.0
 640165,Drug_ResIce_GIMMICK1,1分內使冰屬性抵抗力提升+30，點擊滑鼠右鍵使用，冷卻時間90秒。,icon_item_seed_sp1,,,,,,冰屬性抵抗力藥水,0,90.0,0.0,FFFF,6,10.0
 640166,Drug_ResPoison_GIMMICK1,1分內使毒屬性抵抗力提升+30，點擊滑鼠右鍵使用，冷卻時間90秒。,icon_item_seed_hp1,,,,,,毒屬性抵抗力藥水,0,90.0,0.0,FFFF,6,10.0
@@ -390,8 +392,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640277,Drug_MSPD2_1h_TA,1小時內使移動速度提升+2，點擊滑鼠右鍵使用，冷卻時間300秒。{nl}可以到回收商店用代幣交換。,item_speed_requid_1,,,,,,移動速度UP藥水：1小時,25,300.0,0.0,TTTT,6,5.0
 640278,Drug_RedApple100_TA,令HP立即恢復50%，11秒內每隔2秒使恢復50%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}可以到回收商店用代幣交換。,icon_item_hpelixir,,,,,,HP恢復的靈藥,20,20.0,0.0,TTTT,6,30.0
 640279,Drug_BlueApple100_TA,令SP立即恢復50%，11秒內每隔2秒使恢復50%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}可以到回收商店用代幣交換。,icon_item_spelixir,,,,,,SP恢復的靈藥,20,20.0,0.0,TTTT,6,30.0
-640280,jexpCard_UpRank7,使角色的職業等級從6階的職業等級上升至15，只有6階時可以使用，點擊滑鼠右鍵即可使用。,icon_item_expcard7,,,,,,7階卡片,0,0.0,0.0,FFFF,6,0.0
-640281,jexpCard_UpRank8,將角色7階的職業等級提升至15，只有7階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard8,,,,,,8階卡片,0,0.0,0.0,FFFF,6,0.0
+640280,jexpCard_UpRank7,,,,,,,,無功能,0,0.0,0.0,FFFF,6,0.0
+640281,jexpCard_UpRank8,,,,,,,,無功能,0,0.0,0.0,FFFF,6,0.0
 640282,Achieve_HauntedArtist,可以獲得受詛咒的藝術家稱號的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,稱號 - 受詛咒的藝術家,0,0.0,0.0,FFFF,6,0.0
 640284,Drug_AriesAtk_PC_02,角色相關刺擊屬性技能攻擊力5分內每個疊加變強+7%。最多疊加到10為止。,icon_item_seed_atk1,,,,,,攻擊強化藥水：刺擊 Lv2,32,0.0,0.0,FFTF,6,3.0
 640285,Drug_SlashAtk_PC_02,角色相關劈擊屬性技能攻擊力5分內每個疊加變強+7%。最多疊加到10為止。,icon_item_seed_atk1,,,,,,攻擊強化藥水：劈擊 Lv2,32,0.0,0.0,FFTF,6,3.0
@@ -404,7 +406,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640292,Drug_EarthAtk_PC_02,角色相關大地屬性技能攻擊力5分內每個疊加變強+7%。最多疊加到10為止。,icon_item_seed_rr1,,,,,,攻擊強化藥水：大地 Lv2,32,0.0,0.0,FFTF,6,3.0
 640293,Drug_HolyAtk_PC_02,角色相關神聖屬性技能攻擊力5分內每個疊加變強+7%。最多疊加到10為止。,icon_item_seed_rr1,,,,,,攻擊強化藥水：神聖 Lv2,32,0.0,0.0,FFTF,6,3.0
 640294,Drug_DarkAtk_PC_02,角色相關黑暗屬性技能攻擊力5分內每個疊加變強+7%。最多疊加到10為止。,icon_item_seed_rr1,,,,,,攻擊強化藥水：黑暗 Lv2,32,0.0,0.0,FFTF,6,3.0
-640296,jexpCard_UpRank9,將角色8階的職業等級提升至15，只有8階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard9,,,,,,9階卡片,0,0.0,0.0,FFFF,6,0.0
+640296,jexpCard_UpRank9,,,,,,,,無功能,0,0.0,0.0,FFFF,6,0.0
 640297,Achieve_TheGiftedArtist,可以獲得聖誕藝術家稱號的道具，對道具點擊滑鼠右鍵即可獲得稱號。,icon_item_holyark,,,,,,稱號 - 聖誕藝術家,0,0.0,0.0,FFFF,6,0.0
 640298,Achieve_EV_Luck1,可獲得小吉稱號的稱號道具。對道具點擊右鍵可立即獲得稱號。,icon_item_holyark,,,,,,稱號 - 小吉,0,0.0,0.0,FFFF,6,0.0
 640299,Achieve_EV_Luck2,可獲得中吉稱號的稱號道具。對道具點擊右鍵可立即獲得稱號。,icon_item_holyark,,,,,,稱號 - 中吉,0,0.0,0.0,FFFF,6,0.0
@@ -421,21 +423,21 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640310,Event_GuildBattle_Potion,60分內攻擊力 +100、攻擊速度 +80、移動速度 +5，對道具點擊右鍵即可使用。{nl}冷卻時間360分。{nl}(地區移動時Buff會解除。),icon_item_misc04_60,,,,,,公會戰藥水,0,21600.0,0.0,FFFF,6,1.0
 640319,RedOrb_Custom_Mon,召喚怪物，被召喚的怪物會維持600秒，點擊滑鼠右鍵即可使用。,icon_item_dreamshade_red,,,,,,[GM] 紅色寶珠,10,5.0,0.0,FFFF,6,1.0
 640320,LevelUp_Reward_EV,達成指定的等級即可使用。獎勵會隨著達成次數改變。,icon_item_event_weaponbox1,,,,,,升級獎勵箱,10,10.0,0.0,FFFF,6,1.0
-640321,jexpCard_RestoreLastRank,利用職業重置卷可將經驗值重置回復到最後的職業經驗值。 職業重置卷使用當下需確認角色職業符合職業重置卷的職業。,icon_item_expcard_remain,,,,,,職業經驗值復原卡片,0,0.0,0.0,FFFF,6,0.0
+640321,jexpCard_RestoreLastRank,提升角色剩餘的職業經驗值。{nl}點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,職業經驗值復原卡片 (Last),0,0.0,0.0,FFFF,6,0.0
 640322,Drug_DayQuest_Rand,使用時可確認任務內容。,siaulmapincomplete,,,,,,活動任務文件,10,10.0,0.0,FFFF,6,1.0
-640323,Drug_HP4,HP立刻恢復1474，15秒內每隔2秒HP恢復1474，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,大瓶HP藥水,140,45.0,0.0,FFTF,6,10.0
-640324,Drug_HP5,HP立刻恢復2212，15秒內每隔2秒HP恢復2212，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,特大瓶 HP藥水,280,45.0,0.0,FFTF,6,10.0
-640325,Drug_SP4,SP立刻恢復489，15秒內每隔2秒SP恢復489，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,大瓶SP藥水,432,45.0,0.0,FFTF,6,10.0
-640326,Drug_SP5,SP立刻恢復734，15秒內每隔2秒SP恢復734，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,特大瓶 SP藥水,864,45.0,0.0,FFTF,6,10.0
+640323,Drug_HP4,HP立刻恢復1470，15秒內每隔2秒HP恢復1470，點擊滑鼠右鍵使用。,item_hp_oil_3,,,,,,大瓶HP藥水,140,25.0,0.0,FFTF,6,7.0
+640324,Drug_HP5,HP立刻恢復2205，15秒內每隔2秒HP恢復2205，點擊滑鼠右鍵使用。,item_hp_oil_3,,,,,,特大瓶 HP藥水,280,25.0,0.0,FFTF,6,7.0
+640325,Drug_SP4,令SP立刻恢復490，15秒內每隔2秒令SP恢復490，點擊滑鼠右鍵使用。,item_sp_requid_3,,,,,,大瓶SP藥水,432,25.0,0.0,FFTF,6,7.0
+640326,Drug_SP5,令SP立刻恢復735，15秒內每隔2秒令SP恢復735，點擊滑鼠右鍵使用。,item_sp_requid_3,,,,,,特大瓶 SP藥水,864,25.0,0.0,FFTF,6,7.0
 640327,expCard_Max2,"角色經驗值提升 1,188,337,767。點擊滑鼠右鍵可以使用。",icon_item_expcard,,,,,,Lv 280 經驗值加速器,0,0.0,0.0,FFFF,6,0.0
-640329,Drug_RedApple100_TA_Recycle,令HP立即恢復50%，11秒內每隔2秒使恢復50%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl} 可以在回收商店以2個代幣交換。,icon_item_hpelixir,,,,,,HP恢復的靈藥 (代幣2個),20,20.0,0.0,TTFT,6,30.0
-640330,Drug_BlueApple100_TA_Recycle,令SP立即恢復50%，11秒內每隔2秒使恢復50%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl} 可以在回收商店以2個代幣交換。,icon_item_spelixir,,,,,,SP恢復的靈藥 (代幣2個),20,20.0,0.0,TTFT,6,30.0
-640331,Leticia_expCard2,經驗值提升+2686，職業經驗值提升+2068。從5級開始可使用。,icon_item_expcard,,,,,,LV2 經驗值卡片,0,0.0,0.0,FFFT,6,0.0
-640332,Leticia_expCard8,經驗值提升+142150，職業經驗值提升+109455。從100級開始可使用。,icon_item_expcard,,,,,,LV7 經驗值卡片,0,0.0,0.0,FFFT,6,0.0
-640333,Leticia_expCard10,經驗值提升+237943，職業經驗值提升+183216。從150級開始可使用。,icon_item_expcard,,,,,,LV9 經驗值卡片,0,0.0,0.0,FFFT,6,0.0
-640334,Leticia_expCard12,經驗值提升+985061，職業經驗值提升+758496。從210級開始可使用。,icon_item_expcard,,,,,,LV11 經驗值卡片,0,0.0,0.0,FFFT,6,0.0
-640335,Leticia_expCard13,經驗值提升 +2420348 職業經驗值提升 +1863583。250等級以後可以使用。,icon_item_expcard,,,,,,LV12 經驗值卡片,0,0.0,0.0,FFFT,6,0.0
-640336,Leticia_expCard15,經驗值提升+13189741，職業經驗值提升+10156100。從300級開始可使用。,icon_item_expcard,,,,,,LV14 經驗值卡片,0,0.0,0.0,FFFT,6,0.0
+640329,Drug_RedApple100_TA_Recycle,令HP立即恢復50%，11秒內每隔2秒使恢復50%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_hpelixir,,,,,,HP恢復的靈藥,20,20.0,0.0,TTFT,6,30.0
+640330,Drug_BlueApple100_TA_Recycle,令SP立即恢復50%，11秒內每隔2秒使恢復50%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_spelixir,,,,,,SP恢復的靈藥,20,20.0,0.0,TTFT,6,30.0
+640331,Leticia_expCard2,經驗值提升+2686，職業經驗值提升+2068。從5級開始可使用。,icon_item_expcard,,,,,,LV2 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
+640332,Leticia_expCard8,經驗值提升+142150，職業經驗值提升+109455。從100級開始可使用。,icon_item_expcard,,,,,,LV7 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
+640333,Leticia_expCard10,經驗值提升+237943，職業經驗值提升+183216。從150級開始可使用。,icon_item_expcard,,,,,,LV9 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
+640334,Leticia_expCard12,經驗值提升+985061，職業經驗值提升+758496。從210級開始可使用。,icon_item_expcard,,,,,,LV11 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
+640335,Leticia_expCard13,經驗值提升 +2420348 職業經驗值提升 +1863583。250等級以後可以使用。,icon_item_expcard,,,,,,LV12 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
+640336,Leticia_expCard15,經驗值提升+13189741，職業經驗值提升+10156100。從300級開始可使用。,icon_item_expcard,,,,,,LV14 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
 640337,Drug_RedApple20,令HP立即恢復20%，11秒內每隔2秒使恢復20%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_hpelixir_small,,,,,,HP 恢復小型靈藥,20,20.0,0.0,TTFT,6,3.0
 640338,Drug_BlueApple20,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_spelixir_small,,,,,,SP 恢復小型靈藥,20,20.0,0.0,TTFT,6,3.0
 640340,Leticia_LevelUpCard85,幫助提升經驗及和職業經驗值，只有85級以下角色可以使用。,icon_item_old_card,,,,,,初級升級卡片,0,0.0,0.0,FFFT,6,0.0
@@ -443,7 +445,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640342,Leticia_LevelUpCard280,幫助提升經驗及和職業經驗值，只有280級以下角色可以使用。,icon_item_old_card,,,,,,高級升級卡片,0,0.0,0.0,FFFT,6,0.0
 640343,Team_Battle_Potion1,10分內攻擊力+100、攻擊速度+80、移動速度+3。{nl}受到的傷害減少5%，點擊滑鼠右鍵使用，冷卻時間60分。,icon_item_battle_potion_1,,,,,,戰鬥藥水,0,3600.0,0.0,FFFF,6,10.0
 640344,Team_Battle_Potion2,30分內攻擊力+100、攻擊速度+80、移動速度+3。{nl}受到的傷害減少5%，點擊滑鼠右鍵使用，冷卻時間60分。,icon_item_battle_potion_2,,,,,,濃縮戰鬥藥水,0,3600.0,0.0,FFFF,6,10.0
-640345,Team_Battle_CRTATK_Potion1,1分內暴擊攻擊力+150，點擊滑鼠右鍵使用，冷卻時間60秒。,icon_item_potion_crtatk_1,,,,,,暴擊攻擊增加藥水,0,60.0,0.0,FFFF,6,15.0
+640345,Team_Battle_CRTATK_Potion1,1分內令物理暴擊攻擊力+150，點擊滑鼠右鍵使用，冷卻時間60秒。,icon_item_potion_crtatk_1,,,,,,物理暴擊攻擊力增加藥水,0,60.0,0.0,FFFF,6,15.0
 640346,Team_Battle_CRTHR_Potion1,30秒內暴擊觸發+50，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_potion_crt_1,,,,,,暴擊觸發增加藥水,0,30.0,0.0,FFFF,6,15.0
 640347,Team_Battle_SR_Potion1,1分內廣域攻擊比率+1，點擊滑鼠右鍵使用，冷卻時間60秒。,icon_item_holywater_empty,,,,,,廣域攻擊比率增加藥水,0,60.0,0.0,FFFF,6,15.0
 640349,Leticia_LevelUpCard330,幫助提升經驗及和職業經驗值，只有330級以下角色可以使用。,icon_item_old_card,,,,,,最高級升級卡片。,0,0.0,0.0,FFFT,6,0.0
@@ -458,7 +460,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640359,Achieve_2017_Halloween2,可以獲得夢魔救世者稱號的道具，點擊滑鼠右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,稱號-夢魔救世者,0,0.0,0.0,FFFT,6,0.0
 640360,test_expCard_Max,"角色經驗值上升974,470,022。右擊滑鼠使用。",icon_item_expcard,,,,,,[奎波爾專用] 經驗值加速器,0,0.0,0.0,FFFT,6,0.0
 640361,test_jexpCard_UpRank8,將角色7階的職業等級提升至15，只有7階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard8,,,,,,[奎波爾專用] 8階卡片,0,0.0,0.0,FFFT,6,0.0
-640362,jexpCard_UpRank10,將角色9階的職業等級提升至15。只有9階時可使用。右擊滑鼠使用。,icon_item_expcard10,,,,,,10階卡片,0,0.0,0.0,FFFF,6,0.0
+640362,jexpCard_UpRank10,,,,,,,,無功能,0,0.0,0.0,FFFF,6,0.0
 640363,Drug_Event_Looting_Potion,30分內令Rooting機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間30分。{nl} - Rooting機會藥水無法疊加使用。,icon_item_looting_potion_01,,,,,,Rooting機會增加藥水,25,1800.0,0.0,FFFT,6,5.0
 640364,Drug_Fortunecookie_14d,30分鐘內根據疊加經驗值、移動速度、最大HP會增加，最多可以疊加至5為止。,icon_item_fortunecookie,,,,,,幸運餅乾(14天),0,10.0,0.0,FFFF,6,0.0
 640365,Drug_Looting_Potion_100,60內令Rooting機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - Rooting機會藥水無法疊加使用。,item_icon_luckypotion_100,,,,,,Rooting機會：100,25,3600.0,0.0,TTFT,6,1.0
@@ -494,14 +496,34 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640398,Potion_Bug_Low_DMG_DOWN_Mine,30秒內從昆蟲型BOSS怪物那裡獲得傷害減少25%。{nl}冷卻時間60秒。{nl}不可與其它加護藥水重複使用。,icon_item_low_ability_up_potion4,,,,,,英雄的加護藥水：昆蟲(資源爭奪戰),0,60.0,0.0,FFTT,6,5.0
 640399,Potion_Plant_Low_DMG_DOWN_Mine,30秒內從植物型BOSS怪物那裡獲得傷害減少25%。{nl}冷卻時間60秒。{nl}不可與其它加護藥水重複使用。,icon_item_low_ability_up_potion1,,,,,,英雄的加護藥水：植物(資源爭奪戰),0,60.0,0.0,FFTT,6,5.0
 640400,Potion_Wild_Low_DMG_DOWN_Mine,30秒內從野獸型BOSS怪物那裡獲得傷害減少25%。{nl}冷卻時間60秒。{nl}不可與其它加護藥水重複使用。,icon_item_low_ability_up_potion2,,,,,,英雄的加護藥水：野獸(資源爭奪戰),0,60.0,0.0,FFTT,6,5.0
-640401,First_Grade_Buff_Stone,神諭師大師為了消除在異空間死掉怪物所蓄積的生命力，製造了各種裝備，此香爐也是因此而製造的。{nl} {nl}使用次元香爐時，會對自己及周遭的角色賦予有益的效果。,icon_item_dimensional_censer,,,,,,次元香爐,0,86400.0,0.0,FFFF,6,5.0
+640401,First_Grade_Buff_Stone,神諭師大師為了消除在異空間死掉怪物所蓄積的生命力，製造了各種裝備，此香爐也是因此而製造的。{nl} {nl}使用次元香爐時，會對自己及周遭的角色賦予有益的效果。,icon_item_dimensional_censer,,,,,,次元香爐,0,86400.0,604800.0,FFFF,6,5.0
 640402,Vernike_Drug_HPSP,"2秒間隔15秒內恢復 HP 1234, SP 617。點擊滑鼠即可使用，冷卻時間100秒。",icon_item_vernike_potion,,,,,,次元藥水,0,100.0,0.0,FFFT,6,30.0
 640405,Drug_RedApple20_PC,令HP立即恢復20%，11秒內每隔2秒使恢復20%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_random_hpellixerbox_pp,,,,,,[Popo Shop] HP 恢復小型靈藥,20,20.0,0.0,FFFT,6,3.0
 640406,Drug_BlueApple_PC,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_random_spellixerbox_pp,,,,,,[Popo Shop] SP 恢復小型靈藥,20,20.0,0.0,FFFT,6,3.0
 640410,Drug_Looting_Potion_100_pc,60內令Rooting機會提升+300，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - Rooting機會藥水無法疊加使用。,icon_item_pp_looting300,,,,,,[Popo Shop] Rooting機會：300,25,3600.0,0.0,FFFT,6,1.0
-640411,jexpCard_UpRank11,令角色10階的職業等級提升至15，只有10階時可以使用，點擊滑鼠右鍵即可使用。,icon_item_expcard11,,,,,,11Rank卡片,0,0.0,0.0,FFFF,6,0.0
+640411,jexpCard_UpRank11,,,,,,,,無功能,0,0.0,0.0,FFFF,6,0.0
 640412,Drug_RedApple100_TA_Event_Team_Trade,令HP立即恢復50%，11秒內每隔2秒令HP恢復50%，點擊滑鼠右鍵即可使用，冷時間20秒。,icon_item_hpelixir,,,,,,[活動]HP恢復的靈藥,20,20.0,0.0,FFFT,6,30.0
 640413,Drug_BlueApple100_TA_Event_Team_Trade,令SP立即恢復50%，11秒內每隔2秒令SP恢復50%，點擊滑鼠右鍵即可使用，冷時間20秒。,icon_item_spelixir,,,,,,[活動]SP恢復的靈藥,20,20.0,0.0,FFFT,6,30.0
+640417,Drug_RedApple20_Colony_Support_Team_Trade,HP立刻恢復20%，11秒內每隔2秒恢復20%HP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時統一刪除。,icon_item_hpelixir_small,,,,,,[領地戰支援] HP恢復小型靈藥,20,20.0,0.0,FFFT,6,30.0
+640418,Drug_BlueApple20_Colony_Support_Team_Trade,SP立即恢復20%，11秒內每隔2秒令SP恢復20%，點擊滑鼠右鍵使用，冷時間20秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_spelixir_small,,,,,,[領地戰支援] SP恢復小型靈藥,20,20.0,0.0,FFFT,6,30.0
+640419,Drug_Alche_HP15_Colony_Support_Team_Trade,HP立刻恢復，15秒內每隔2秒HP恢復，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時統一刪除。,icon_item_hp_alche,,,,,,[領地戰支援] 濃縮HP藥水LV15,32,30.0,0.0,FFFT,6,15.0
+640420,Drug_Alche_SP15_Colony_Support_Team_Trade,SP立刻恢復918，15秒內每隔2秒SP恢復918，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_sp_alche,,,,,,[領地戰支援] 濃縮SP藥水LV15,24,30.0,0.0,FFFT,6,10.0
+640421,RepairPotion_Colony_Support_Team_Trade,使用時，會讓配戴裝備的耐久度恢復+5。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_repairkit,,,,,,[領地戰支援] 緊急修理工具,0,0.0,0.0,FFFT,6,0.0
+640422,Drug_Alche_MSPD15_Colony_Support_Team_Trade,250秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,item_speed_requid_1,,,,,,[領地戰支援] 濃縮移動速度增加藥水LV15,25,30.0,0.0,FFFT,6,5.0
+640423,Drug_RedApple20_Colony_Support2_Team_Trade,HP立刻恢復20%，11秒內每隔2秒恢復20%HP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時統一刪除。,icon_item_hpelixir_small,,,,,,[領地戰支援] HP恢復小型靈藥,20,20.0,0.0,FFFT,6,30.0
+640424,Drug_BlueApple20_Colony_Support2_Team_Trade,SP立即恢復20%，11秒內每隔2秒令SP恢復20%，點擊滑鼠右鍵使用，冷時間20秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_spelixir_small,,,,,,[領地戰支援] SP恢復小型靈藥,20,20.0,0.0,FFFT,6,30.0
+640425,Drug_Alche_HP15_Colony_Support2_Team_Trade,HP立刻恢復2765，15秒內每隔2秒HP恢復2765，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時統一刪除。,icon_item_hp_alche,,,,,,[領地戰支援] 濃縮HP藥水LV15,32,30.0,0.0,FFFT,6,15.0
+640426,Drug_Alche_SP15_Colony_Support2_Team_Trade,SP立刻恢復918，15秒內每隔2秒SP恢復918，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_sp_alche,,,,,,[領地戰支援] 濃縮SP藥水LV15,24,30.0,0.0,FFFT,6,10.0
+640427,RepairPotion_Colony_Support2_Team_Trade,使用時，會讓配戴裝備的耐久度恢復+5。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_repairkit,,,,,,[領地戰支援] 緊急修理工具,0,0.0,0.0,FFFT,6,0.0
+640428,Drug_Alche_MSPD15_Colony_Support2_Team_Trade,250秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,item_speed_requid_1,,,,,,[領地戰支援] 濃縮移動速度增加藥水LV15,25,30.0,0.0,FFFT,6,5.0
+640430,test_expCard_Max_380,"角色經驗值提升2,047,516,611，點擊滑鼠右鍵使用。",icon_item_expcard,,,,,,[奎波爾專用]經驗值加速卡片,0,0.0,0.0,FFFT,6,0.0
+640435,Boruta_Drug_RedApple20,HP立刻恢復20%，11秒內每隔2秒恢復20%HP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}活動結束時統一刪除。,icon_item_hpelixir_small,,,,,,[活動]  HP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
+640436,Boruta_Drug_BlueApple20,SP立即恢復20%，11秒內每隔2秒令SP恢復20%，點擊滑鼠右鍵使用，冷時間20秒。{nl}活動結束時道具統一刪除。,icon_item_spelixir_small,,,,,,[活動] SP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
+640437,Boruta_Drug_Alche_STA15,耐力恢復78，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}活動結束時道具統一刪除。,item_sta_pill_3,,,,,,[活動] 濃縮耐力藥丸 LV15,0,15.0,0.0,FFFT,6,7.0
+640438,Boruta_repairPotion_event,使用時會讓配戴裝備的耐久度恢復+5。{nl}活動結束時道具統一刪除。,icon_item_repairkit,,,,,,[活動] 緊急修理工具,0,0.0,0.0,FFFT,6,0.0
+640439,Boruta_Warp_table_10_1,活動用傳送卷軸。{nl}使用時移動至貝達高原奎波爾卡潔身邊。{nl}活動結束時道具統一刪除。,icon_item_scroll,,,,,,[活動] 傳送卷軸-奎波爾卡潔,0,10.0,0.0,FFFT,6,1.0
+640440,Boruta_Event_ACHIEVE_BOX_day5,參與攻略斯爾利那斯雷歐的龍王普魯達5次以上時獲得的救援者稱號。{nl}使用時獲得[招惹普魯達]稱號。{nl}360Lv以上可使用,icon_item_holyark,,,,,,[活動] 稱號 - 招惹普魯達,0,0.0,0.0,FFFT,6,0.0
+640441,Boruta_Event_ACHIEVE_BOX_day10,參與攻略斯爾利那斯雷歐的龍王普魯達10次以上時獲得的救援者稱號。{nl}使用時獲得[不怕普魯達]稱號。{nl}360Lv以上可使用,icon_item_holyark,,,,,,[活動] 稱號 - 不怕普魯達,0,0.0,0.0,FFFT,6,0.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,LV1 攻擊推進器,1,8.0,0.0,TTTT,6,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,攻擊推進器 +15,1,8.0,0.0,TTTT,6,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,攻擊推進器 +20,2,8.0,0.0,TTTT,6,1.0
@@ -517,48 +539,48 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641203,Drug_Alche_STA,耐力恢復50，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV1,16,30.0,0.0,TTTT,6,10.0
 641204,Drug_Alche_MSPD,180秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。,item_speed_requid_1,,,,,,濃縮移動速度增加藥水 LV1,25,30.0,0.0,TTTT,6,5.0
 641205,Drug_Alche_Cooltime,令所有冷卻等待時間重置的藥水，點擊滑鼠右鍵即可使用。,item_aggro_perfume,,,,,,冷卻時間藥水,0,600.0,0.0,FFFF,6,10.0
-641206,Drug_Alche_HP2,HP立刻恢復1267，15秒內每隔2秒HP恢復1267，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV2,32,30.0,0.0,TTTT,6,15.0
-641207,Drug_Alche_HP3,HP立刻恢復1382，15秒內每隔2秒HP恢復1382，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV3,32,30.0,0.0,TTTT,6,15.0
-641208,Drug_Alche_HP4,HP立刻恢復1497，15秒內每隔2秒HP恢復1497，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV4,32,30.0,0.0,TTTT,6,15.0
-641209,Drug_Alche_HP5,HP立刻恢復1613，15秒內每隔2秒HP恢復1613，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV5,32,30.0,0.0,TTTT,6,15.0
-641210,Drug_Alche_HP6,HP立刻恢復1728，15秒內每隔2秒HP恢復1728，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV6,32,30.0,0.0,TTTT,6,15.0
-641211,Drug_Alche_HP7,HP立刻恢復1843，15秒內每隔2秒HP恢復1843，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV7,32,30.0,0.0,TTTT,6,15.0
-641212,Drug_Alche_HP8,HP立刻恢復1958，15秒內每隔2秒HP恢復1958，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV8,32,30.0,0.0,TTTT,6,15.0
-641213,Drug_Alche_HP9,HP立刻恢復2073，15秒內每隔2秒HP恢復2073，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV9,32,30.0,0.0,TTTT,6,15.0
-641214,Drug_Alche_HP10,HP立刻恢復2189，15秒內每隔2秒HP恢復2189，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV10,32,30.0,0.0,TTTT,6,15.0
-641215,Drug_Alche_HP11,HP立刻恢復2304，15秒內每隔2秒HP恢復2304，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV11,32,30.0,0.0,TTTT,6,15.0
-641216,Drug_Alche_HP12,HP立刻恢復2419，15秒內每隔2秒HP恢復2419，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV12,32,30.0,0.0,TTTT,6,15.0
-641217,Drug_Alche_HP13,HP立刻恢復2534，15秒內每隔2秒HP恢復2534，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV13,32,30.0,0.0,TTTT,6,15.0
-641218,Drug_Alche_HP14,HP立刻恢復2649，15秒內每隔2秒HP恢復2649，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV14,32,30.0,0.0,TTTT,6,15.0
-641219,Drug_Alche_HP15,HP立刻恢復2765，15秒內每隔2秒HP恢復2765，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV15,32,30.0,0.0,TTTT,6,15.0
-641220,Drug_Alche_SP2,SP立刻恢復420，15秒內每隔2秒SP恢復420，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV2,24,30.0,0.0,TTTT,6,10.0
-641221,Drug_Alche_SP3,SP立刻恢復380，15秒內每隔2秒SP恢復532，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV3,24,30.0,0.0,TTTT,6,10.0
-641222,Drug_Alche_SP4,SP立刻恢復498，15秒內每隔2秒SP恢復498，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV4,24,30.0,0.0,TTTT,6,10.0
-641223,Drug_Alche_SP5,SP立刻恢復534，15秒內每隔2秒SP恢復534，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV5,24,30.0,0.0,TTTT,6,10.0
-641224,Drug_Alche_SP6,SP立刻恢復576，15秒內每隔2秒SP恢復576，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV6,24,30.0,0.0,TTTT,6,10.0
-641225,Drug_Alche_SP7,SP立刻恢復612，15秒內每隔2秒SP恢復612，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV7,24,30.0,0.0,TTTT,6,10.0
-641226,Drug_Alche_SP8,SP立刻恢復648，15秒內每隔2秒SP恢復648，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV8,24,30.0,0.0,TTTT,6,10.0
-641227,Drug_Alche_SP9,SP立刻恢復690，15秒內每隔2秒SP恢復690，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV9,24,30.0,0.0,TTTT,6,10.0
-641228,Drug_Alche_SP10,SP立刻恢復726，15秒內每隔2秒SP恢復726，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV10,24,30.0,0.0,TTTT,6,10.0
-641229,Drug_Alche_SP11,SP立刻恢復768，15秒內每隔2秒SP恢復768，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV11,24,30.0,0.0,TTTT,6,10.0
-641230,Drug_Alche_SP12,SP立刻恢復804，15秒內每隔2秒SP恢復804，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV12,24,30.0,0.0,TTTT,6,10.0
-641231,Drug_Alche_SP13,SP立刻恢復840，15秒內每隔2秒SP恢復840，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV13,24,30.0,0.0,TTTT,6,10.0
-641232,Drug_Alche_SP14,SP立刻恢復882，15秒內每隔2秒SP恢復882，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV14,24,30.0,0.0,TTTT,6,10.0
-641233,Drug_Alche_SP15,SP立刻恢復918，15秒內每隔2秒SP恢復918，點擊滑鼠右鍵使用，冷卻時間30秒。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV15,24,30.0,0.0,TTTT,6,10.0
-641234,Drug_Alche_STA2,耐力恢復52，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV2,16,30.0,0.0,TTTT,6,10.0
-641235,Drug_Alche_STA3,耐力恢復54，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV3,16,30.0,0.0,TTTT,6,10.0
-641236,Drug_Alche_STA4,耐力恢復56，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV4,16,30.0,0.0,TTTT,6,10.0
-641237,Drug_Alche_STA5,耐力恢復58，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV5,16,30.0,0.0,TTTT,6,10.0
-641238,Drug_Alche_STA6,耐力恢復60，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV6,16,30.0,0.0,TTTT,6,10.0
-641239,Drug_Alche_STA7,耐力恢復62，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV7,16,30.0,0.0,TTTT,6,10.0
-641240,Drug_Alche_STA8,耐力恢復64，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV8,16,30.0,0.0,TTTT,6,10.0
-641241,Drug_Alche_STA9,耐力恢復66，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV9,16,30.0,0.0,TTTT,6,10.0
-641242,Drug_Alche_STA10,耐力恢復68，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV10,16,30.0,0.0,TTTT,6,10.0
-641243,Drug_Alche_STA11,耐力恢復70，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV11,16,30.0,0.0,TTTT,6,10.0
-641244,Drug_Alche_STA12,耐力恢復72，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV12,16,30.0,0.0,TTTT,6,10.0
-641245,Drug_Alche_STA13,耐力恢復74，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV13,16,30.0,0.0,TTTT,6,10.0
-641246,Drug_Alche_STA14,耐力恢復76，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV14,16,30.0,0.0,TTTT,6,10.0
-641247,Drug_Alche_STA15,耐力恢復78，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV15,16,30.0,0.0,TTTT,6,10.0
+641206,Drug_Alche_HP2,HP立刻恢復1267，15秒內每隔2秒HP恢復1267，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV2,32,15.0,0.0,TTTT,6,10.0
+641207,Drug_Alche_HP3,HP立刻恢復1382，15秒內每隔2秒HP恢復1382，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV3,32,15.0,0.0,TTTT,6,10.0
+641208,Drug_Alche_HP4,HP立刻恢復1497，15秒內每隔2秒HP恢復1497，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV4,32,15.0,0.0,TTTT,6,10.0
+641209,Drug_Alche_HP5,HP立刻恢復1613，15秒內每隔2秒HP恢復1613，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV5,32,15.0,0.0,TTTT,6,10.0
+641210,Drug_Alche_HP6,HP立刻恢復1728，15秒內每隔2秒HP恢復1728，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV6,32,15.0,0.0,TTTT,6,10.0
+641211,Drug_Alche_HP7,HP立刻恢復1883，15秒內每隔2秒HP恢復1883，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV7,32,15.0,0.0,TTTT,6,10.0
+641212,Drug_Alche_HP8,HP立刻恢復2415，15秒內每隔2秒HP恢復2415，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV8,32,15.0,0.0,TTTT,6,10.0
+641213,Drug_Alche_HP9,HP立刻恢復2947，15秒內每隔2秒HP恢復2947，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV9,32,15.0,0.0,TTTT,6,10.0
+641214,Drug_Alche_HP10,HP立刻恢復3353，15秒內每隔2秒HP恢復3353，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV10,32,15.0,0.0,TTTT,6,10.0
+641215,Drug_Alche_HP11,HP立刻恢復4018，15秒內每隔2秒HP恢復4018，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV11,32,15.0,0.0,TTTT,6,10.0
+641216,Drug_Alche_HP12,HP立刻恢復4284，15秒內每隔2秒HP恢復4284，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV12,32,15.0,0.0,TTTT,6,10.0
+641217,Drug_Alche_HP13,HP立刻恢復4949，15秒內每隔2秒HP恢復4949，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV13,32,15.0,0.0,TTTT,6,10.0
+641218,Drug_Alche_HP14,HP立刻恢復5215，15秒內每隔2秒HP恢復5215，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV14,32,15.0,0.0,TTTT,6,10.0
+641219,Drug_Alche_HP15,HP立刻恢復5614，15秒內每隔2秒HP恢復5614，點擊滑鼠右鍵使用。,icon_item_hp_alche,,,,,,濃縮HP藥水 LV15,32,15.0,0.0,TTTT,6,10.0
+641220,Drug_Alche_SP2,SP立刻恢復420，15秒內每隔2秒SP恢復420，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV2,24,15.0,0.0,TTTT,6,7.0
+641221,Drug_Alche_SP3,SP立刻恢復456，15秒內每隔2秒SP恢復456，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV3,24,15.0,0.0,TTTT,6,7.0
+641222,Drug_Alche_SP4,SP立刻恢復498，15秒內每隔2秒SP恢復498，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV4,24,15.0,0.0,TTTT,6,7.0
+641223,Drug_Alche_SP5,SP立刻恢復534，15秒內每隔2秒SP恢復534，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV5,24,15.0,0.0,TTTT,6,7.0
+641224,Drug_Alche_SP6,SP立刻恢復576，15秒內每隔2秒SP恢復576，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV6,24,15.0,0.0,TTTT,6,7.0
+641225,Drug_Alche_SP7,SP立刻恢復612，15秒內每隔2秒SP恢復612，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV7,24,15.0,0.0,TTTT,6,7.0
+641226,Drug_Alche_SP8,SP立刻恢復648，15秒內每隔2秒SP恢復648，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV8,24,15.0,0.0,TTTT,6,7.0
+641227,Drug_Alche_SP9,SP立刻恢復690，15秒內每隔2秒SP恢復690，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV9,24,15.0,0.0,TTTT,6,7.0
+641228,Drug_Alche_SP10,SP立刻恢復784，15秒內每隔2秒SP恢復784，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV10,24,15.0,0.0,TTTT,6,7.0
+641229,Drug_Alche_SP11,SP立刻恢復924，15秒內每隔2秒SP恢復924，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV11,24,15.0,0.0,TTTT,6,7.0
+641230,Drug_Alche_SP12,SP立刻恢復987，15秒內每隔2秒SP恢復987，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV12,24,15.0,0.0,TTTT,6,7.0
+641231,Drug_Alche_SP13,SP立刻恢復1134，15秒內每隔2秒SP恢復1134，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV13,24,15.0,0.0,TTTT,6,7.0
+641232,Drug_Alche_SP14,SP立刻恢復1197，15秒內每隔2秒SP恢復1197，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV14,24,15.0,0.0,TTTT,6,7.0
+641233,Drug_Alche_SP15,SP立刻恢復1288，15秒內每隔2秒SP恢復1288，點擊滑鼠右鍵使用。,icon_item_sp_alche,,,,,,濃縮SP藥水 LV15,24,15.0,0.0,TTTT,6,7.0
+641234,Drug_Alche_STA2,耐力恢復52，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV2,16,15.0,0.0,TTTT,6,7.0
+641235,Drug_Alche_STA3,耐力恢復54，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV3,16,15.0,0.0,TTTT,6,7.0
+641236,Drug_Alche_STA4,耐力恢復56，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV4,16,15.0,0.0,TTTT,6,7.0
+641237,Drug_Alche_STA5,耐力恢復58，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV5,16,15.0,0.0,TTTT,6,7.0
+641238,Drug_Alche_STA6,耐力恢復60，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV6,16,15.0,0.0,TTTT,6,7.0
+641239,Drug_Alche_STA7,耐力恢復62，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV7,16,15.0,0.0,TTTT,6,7.0
+641240,Drug_Alche_STA8,耐力恢復64，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV8,16,15.0,0.0,TTTT,6,7.0
+641241,Drug_Alche_STA9,耐力恢復66，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV9,16,15.0,0.0,TTTT,6,7.0
+641242,Drug_Alche_STA10,耐力恢復68，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV10,16,15.0,0.0,TTTT,6,7.0
+641243,Drug_Alche_STA11,耐力恢復70，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV11,16,15.0,0.0,TTTT,6,7.0
+641244,Drug_Alche_STA12,耐力恢復72，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV12,16,15.0,0.0,TTTT,6,7.0
+641245,Drug_Alche_STA13,耐力恢復74，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV13,16,15.0,0.0,TTTT,6,7.0
+641246,Drug_Alche_STA14,耐力恢復76，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV14,16,15.0,0.0,TTTT,6,7.0
+641247,Drug_Alche_STA15,耐力恢復78，點擊滑鼠右鍵使用。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV15,16,15.0,0.0,TTTT,6,7.0
 641248,Drug_Alche_MSPD2,185秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。,item_speed_requid_1,,,,,,濃縮移動速度增加藥水 LV2,25,30.0,0.0,TTTT,6,5.0
 641249,Drug_Alche_MSPD3,190秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。,item_speed_requid_1,,,,,,濃縮移動速度增加藥水 LV3,25,30.0,0.0,TTTT,6,5.0
 641250,Drug_Alche_MSPD4,195秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。,item_speed_requid_1,,,,,,濃縮移動速度增加藥水 LV4,25,30.0,0.0,TTTT,6,5.0
@@ -588,36 +610,36 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641274,Drug_Alche_BLK13,180秒內使格擋提升+230，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,格擋增加藥水 LV13,25,60.0,0.0,TTTT,6,5.0
 641275,Drug_Alche_BLK14,180秒內使格擋提升+245，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,格擋增加藥水 LV14,25,60.0,0.0,TTTT,6,5.0
 641276,Drug_Alche_BLK15,180秒內使格擋提升+260，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,格擋增加藥水 LV15,25,60.0,0.0,TTTT,6,5.0
-641277,Drug_Alche_CRTATK,180秒內使暴擊攻擊力提升+32，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV1,25,60.0,0.0,TTTT,6,5.0
-641278,Drug_Alche_CRTATK2,180秒內使暴擊攻擊力提升+44，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV2,25,60.0,0.0,TTTT,6,5.0
-641279,Drug_Alche_CRTATK3,180秒內使暴擊攻擊力提升+56，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV3,25,60.0,0.0,TTTT,6,5.0
-641280,Drug_Alche_CRTATK4,180秒內使暴擊攻擊力提升+68，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV4,25,60.0,0.0,TTTT,6,5.0
-641281,Drug_Alche_CRTATK5,180秒內使暴擊攻擊力提升+80，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV5,25,60.0,0.0,TTTT,6,5.0
-641282,Drug_Alche_CRTATK6,180秒內使暴擊攻擊力提升+92，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV6,25,60.0,0.0,TTTT,6,5.0
-641283,Drug_Alche_CRTATK7,180秒內使暴擊攻擊力提升+104，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV7,25,60.0,0.0,TTTT,6,5.0
-641284,Drug_Alche_CRTATK8,180秒內使暴擊攻擊力提升+116，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV8,25,60.0,0.0,TTTT,6,5.0
-641285,Drug_Alche_CRTATK9,180秒內使暴擊攻擊力提升+128，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV9,25,60.0,0.0,TTTT,6,5.0
-641286,Drug_Alche_CRTATK10,180秒內使暴擊攻擊力提升+140，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV10,25,60.0,0.0,TTTT,6,5.0
-641287,Drug_Alche_CRTATK11,180秒內使暴擊攻擊力提升+152，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV11,25,60.0,0.0,TTTT,6,5.0
-641288,Drug_Alche_CRTATK12,180秒內使暴擊攻擊力提升+164，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV12,25,60.0,0.0,TTTT,6,5.0
-641289,Drug_Alche_CRTATK13,180秒內使暴擊攻擊力提升+176，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV13,25,60.0,0.0,TTTT,6,5.0
-641290,Drug_Alche_CRTATK14,180秒內使暴擊攻擊力提升+188，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV14,25,60.0,0.0,TTTT,6,5.0
-641291,Drug_Alche_CRTATK15,180秒內使暴擊攻擊力提升+200，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV15,25,60.0,0.0,TTTT,6,5.0
-641292,Drug_Alche_MHR,180秒內使魔法增幅提升+10，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV1,25,60.0,0.0,TTTT,6,5.0
-641293,Drug_Alche_MHR2,180秒內使魔法增幅提升+14，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV2,25,60.0,0.0,TTTT,6,5.0
-641294,Drug_Alche_MHR3,180秒內使魔法增幅提升+18，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV3,25,60.0,0.0,TTTT,6,5.0
-641295,Drug_Alche_MHR4,180秒內使魔法增幅提升+22，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV4,25,60.0,0.0,TTTT,6,5.0
-641296,Drug_Alche_MHR5,180秒內使魔法增幅提升+26，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV5,25,60.0,0.0,TTTT,6,5.0
-641297,Drug_Alche_MHR6,180秒內使魔法增幅提升+30，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV6,25,60.0,0.0,TTTT,6,5.0
-641298,Drug_Alche_MHR7,180秒內使魔法增幅提升+34，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV7,25,60.0,0.0,TTTT,6,5.0
-641299,Drug_Alche_MHR8,180秒內使魔法增幅提升+38，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV8,25,60.0,0.0,TTTT,6,5.0
-641300,Drug_Alche_MHR9,180秒內使魔法增幅提升+42，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV9,25,60.0,0.0,TTTT,6,5.0
-641301,Drug_Alche_MHR10,180秒內使魔法增幅提升+46，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV10,25,60.0,0.0,TTTT,6,5.0
-641302,Drug_Alche_MHR11,180秒內使魔法增幅提升+50，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV11,25,60.0,0.0,TTTT,6,5.0
-641303,Drug_Alche_MHR12,180秒內使魔法增幅提升+54，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV12,25,60.0,0.0,TTTT,6,5.0
-641304,Drug_Alche_MHR13,180秒內使魔法增幅提升+58，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV13,25,60.0,0.0,TTTT,6,5.0
-641305,Drug_Alche_MHR14,180秒內使魔法增幅提升+62，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV14,25,60.0,0.0,TTTT,6,5.0
-641306,Drug_Alche_MHR15,180秒內使魔法增幅提升+66，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法增幅增加藥水 LV15,25,60.0,0.0,TTTT,6,5.0
+641277,Drug_Alche_CRTATK,180秒內使物理暴擊攻擊力提升+32，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV1,25,60.0,0.0,TTTT,6,5.0
+641278,Drug_Alche_CRTATK2,180秒內使物理暴擊攻擊力提升+44，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV2,25,60.0,0.0,TTTT,6,5.0
+641279,Drug_Alche_CRTATK3,180秒內使物理暴擊攻擊力提升+56，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV3,25,60.0,0.0,TTTT,6,5.0
+641280,Drug_Alche_CRTATK4,180秒內使物理暴擊攻擊力提升+68，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV4,25,60.0,0.0,TTTT,6,5.0
+641281,Drug_Alche_CRTATK5,180秒內使物理暴擊攻擊力提升+80，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV5,25,60.0,0.0,TTTT,6,5.0
+641282,Drug_Alche_CRTATK6,180秒內使物理暴擊攻擊力提升+92，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV6,25,60.0,0.0,TTTT,6,5.0
+641283,Drug_Alche_CRTATK7,180秒內使物理暴擊攻擊力提升+104，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV7,25,60.0,0.0,TTTT,6,5.0
+641284,Drug_Alche_CRTATK8,180秒內使物理暴擊攻擊力提升+116，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV8,25,60.0,0.0,TTTT,6,5.0
+641285,Drug_Alche_CRTATK9,180秒內使物理暴擊攻擊力提升+128，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV9,25,60.0,0.0,TTTT,6,5.0
+641286,Drug_Alche_CRTATK10,180秒內使物理暴擊攻擊力提升+140，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV10,25,60.0,0.0,TTTT,6,5.0
+641287,Drug_Alche_CRTATK11,180秒內使物理暴擊攻擊力提升+152，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV11,25,60.0,0.0,TTTT,6,5.0
+641288,Drug_Alche_CRTATK12,180秒內使物理暴擊攻擊力提升+164，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV12,25,60.0,0.0,TTTT,6,5.0
+641289,Drug_Alche_CRTATK13,180秒內使物理暴擊攻擊力提升+176，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV13,25,60.0,0.0,TTTT,6,5.0
+641290,Drug_Alche_CRTATK14,180秒內使物理暴擊攻擊力提升+188，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV14,25,60.0,0.0,TTTT,6,5.0
+641291,Drug_Alche_CRTATK15,180秒內使物理暴擊攻擊力提升+200，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV15,25,60.0,0.0,TTTT,6,5.0
+641292,Drug_Alche_MHR,180秒內使魔法暴擊攻擊力提升+10，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV1,25,60.0,0.0,TTTT,6,5.0
+641293,Drug_Alche_MHR2,180秒內使魔法暴擊攻擊力提升+14，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV2,25,60.0,0.0,TTTT,6,5.0
+641294,Drug_Alche_MHR3,180秒內使魔法暴擊攻擊力提升+18，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV3,25,60.0,0.0,TTTT,6,5.0
+641295,Drug_Alche_MHR4,180秒內使魔法暴擊攻擊力提升+22，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV4,25,60.0,0.0,TTTT,6,5.0
+641296,Drug_Alche_MHR5,180秒內使魔法暴擊攻擊力提升+26，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV5,25,60.0,0.0,TTTT,6,5.0
+641297,Drug_Alche_MHR6,180秒內使魔法暴擊攻擊力提升+30，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV6,25,60.0,0.0,TTTT,6,5.0
+641298,Drug_Alche_MHR7,180秒內使魔法暴擊攻擊力提升+34，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV7,25,60.0,0.0,TTTT,6,5.0
+641299,Drug_Alche_MHR8,180秒內使魔法暴擊攻擊力提升+38，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV8,25,60.0,0.0,TTTT,6,5.0
+641300,Drug_Alche_MHR9,180秒內使魔法暴擊攻擊力提升+42，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV9,25,60.0,0.0,TTTT,6,5.0
+641301,Drug_Alche_MHR10,180秒內使魔法暴擊攻擊力提升+46，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV10,25,60.0,0.0,TTTT,6,5.0
+641302,Drug_Alche_MHR11,180秒內使魔法暴擊攻擊力提升+50，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV11,25,60.0,0.0,TTTT,6,5.0
+641303,Drug_Alche_MHR12,180秒內使魔法暴擊攻擊力提升+54，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV12,25,60.0,0.0,TTTT,6,5.0
+641304,Drug_Alche_MHR13,180秒內使魔法暴擊攻擊力提升+58，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV13,25,60.0,0.0,TTTT,6,5.0
+641305,Drug_Alche_MHR14,180秒內使魔法暴擊攻擊力提升+62，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV14,25,60.0,0.0,TTTT,6,5.0
+641306,Drug_Alche_MHR15,180秒內使魔法暴擊攻擊力提升+66，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,魔法暴擊攻擊力增加藥水 LV15,25,60.0,0.0,TTTT,6,5.0
 641307,Drug_Alche_SR,20秒內使範圍攻擊比率提升+3，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,範圍攻擊比率增加藥水 LV1,25,60.0,0.0,TTTT,6,5.0
 641308,Drug_Alche_SR2,25秒內使範圍攻擊比率提升+3，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,範圍攻擊比率增加藥水 LV2,25,60.0,0.0,TTTT,6,5.0
 641309,Drug_Alche_SR3,30秒內使範圍攻擊比率提升+3，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,範圍攻擊比率增加藥水 LV3,25,60.0,0.0,TTTT,6,5.0
@@ -648,7 +670,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641334,Drug_Alche_ATKBooster13,在武器上追加+51傷害。登錄至快捷鍵後，可以使用。,icon_item_booster_1,,,,,,攻擊推進器 LV13,1,8.0,0.0,TTTT,6,1.0
 641335,Drug_Alche_ATKBooster14,在武器上追加+54傷害。登錄至快捷鍵後，可以使用。,icon_item_booster_1,,,,,,攻擊推進器 LV14,1,8.0,0.0,TTTT,6,1.0
 641336,Drug_Alche_ATKBooster15,在武器上追加+57傷害。登錄至快捷鍵後，可以使用。,icon_item_booster_1,,,,,,攻擊推進器 LV15,1,8.0,0.0,TTTT,6,1.0
-641337,Drug_Alche_CRTATK3_NT,180秒內使暴擊攻擊力提升+56，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,暴擊攻擊力增加藥水 LV3,25,60.0,0.0,FFFF,6,5.0
+641337,Drug_Alche_CRTATK3_NT,180秒內使物理暴擊攻擊力提升+56，點擊滑鼠右鍵使用，冷卻時間60秒。,item_speed_requid_1,,,,,,物理暴擊攻擊力增加藥水 LV3,25,60.0,0.0,FFFF,6,5.0
 641338,Drug_Alche_MSPD3_NT,190秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。,item_speed_requid_1,,,,,,濃縮移動速度增加藥水 LV3,25,30.0,0.0,FFFF,6,5.0
 641339,Drug_Alche_STA3_NT,耐力恢復54，點擊滑鼠右鍵使用，冷卻時間30秒。,item_sta_pill_3,,,,,,濃縮耐力藥丸 LV3,16,30.0,0.0,FFFF,6,10.0
 641340,Drug_Alche_Restore,1分鐘內最大SP提升250，SP恢復力增為62。點擊滑鼠右鍵即可使用，冷卻時間180秒。,icon_item_drug_atk2,,,,,,濃縮SP促進藥水 LV1,0,180.0,0.0,TTFT,6,10.0
@@ -688,9 +710,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641805,Leticia_MonsterGem_Box03,可以隨機獲得1個材料道具。{nl}裡面裝有重裝步兵、野蠻人、邪靈祭司、雕刻師相關怪物寶石。,icon_item_diabox,,,,,,怪物寶石箱：3階(劍士、聖職者) ,0,0.0,0.0,FFFT,6,0.0
 641806,Leticia_MonsterGem_Box04,可以隨機獲得1個材料道具。{nl}裡面裝有念力法師、鎖鏈法師、工兵、獵人相關怪物寶石。,icon_item_diabox,,,,,,怪物寶石箱：3階(魔法師、弓箭手) ,0,0.0,0.0,FFFT,6,0.0
 641807,Leticia_BaseItem_Box04,可以隨機獲得1個材料道具。,icon_item_eventcube2,,,,,,隨機材料箱IV,0,0.0,0.0,FFFT,6,0.0
-641808,Leticia_Recipe_Wep315_01,開啟時可以隨機獲得LV315武器製作書中的1種。,icon_item_luckybox_red,,,,,,LV315武器製作書幸運箱 ,0,0.0,0.0,TTFT,6,0.0
+641808,Leticia_Recipe_Wep315_01,開啟時可以隨機獲得LV315武器製作書中的1種。,icon_item_luckybox_red,,,,,,LV315武器製作書幸運箱 ,0,0.0,0.0,FFFT,6,0.0
 641809,Leticia_MonsterCard_Box_02,可以在怪物卡片中隨機獲得1張。,icon_item_luckybox_orange,,,,,,怪物卡片幸運箱II,0,0.0,0.0,FFFT,6,0.0
-641810,Leticia_Steam_Wep_Box315,可以在怪物卡片中隨機獲得1張。,icon_item_event_weaponbox1,,,,,,LV315 主武器材料箱,0,10.0,0.0,FFFT,6,0.0
+641810,Leticia_Steam_Wep_Box315,可以在怪物卡片中隨機獲得1張。,icon_item_event_weaponbox1,,,,,,LV315 主武器材料箱,0,0.0,0.0,FFFT,6,0.0
 641811,Leticia_earthTower_boss_Box,開啟後可隨機獲得1個道具。,icon_item_eventbox_gem,,,,,,大地之塔標誌箱,0,0.0,0.0,FFFT,6,0.0
 641812,Leticia_Recipe_Wep315_Steam,開啟時可以隨機獲得LV315武器製作書中的1種。,icon_item_luckybox_red,,,,,,LV315武器製作書幸運箱 ,0,0.0,0.0,FFFT,6,0.0
 641813,Leticia_MonsterGem_1Rank_Steam,可以隨機獲得1個怪物寶石。{nl裡面裝有劍士、 法師、弓箭手、牧師等各種怪物寶石。,icon_item_diabox,,,,,,怪物寶石箱：1階,0,0.0,0.0,FFFT,6,0.0
@@ -702,6 +724,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641819,Gem_Gacha_gold_coin,是無法得知年代的老舊黃金鑄幣。{nl}如拿去給流浪商人，將可以不花費抽寶石的費用獲得LV4 以上的寶石。,icon_item_antque_gold_coin,,,,,,老舊的黃金鑄幣,0,0.0,0.0,TTFT,15,1.0
 641820,Leticia_BossCard_Box,可以在怪物卡片中隨機獲得1張。,icon_item_happybox_black,,,,,,BOSS卡片收集箱,0,0.0,0.0,FFFT,6,0.0
 641821,card_Xpupkit10,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升5400。,icon_item_reinforce_card_10,,,,,,Lv10 強化用卡片,1000,0.0,0.0,TTFT,15,1.0
+641822,card_Xpupkit10_Team,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升5400。,icon_item_reinforce_card_10,,,,,,Lv10 強化用卡片,0,0.0,0.0,FFFT,15,1.0
 641901,Event_moneyBox1,使用時可以獲得銀幣。活動結束後統一刪除。,icon_item_nxpbox,,,,,,普通銀幣箱,0,0.0,0.0,FFFF,6,0.0
 641902,Event_moneyBox2,使用時可以獲得銀幣。活動結束後統一刪除。,icon_item_nxpbox,,,,,,中級銀幣箱,0,0.0,0.0,FFFF,6,0.0
 641903,Event_moneyBox3,使用時可以獲得銀幣。活動結束後統一刪除。,icon_item_nxpbox,,,,,,高級銀幣箱,0,0.0,0.0,FFFF,6,0.0
@@ -716,8 +739,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641912,Event_supportBox4,使用時可獲得道具，達到75級才可以使用。{nl}- LV6 經驗值卡片 40個{nl}- 魔法賦予卷軸 5個{nl}- 技能重置藥水 1個{nl},icon_item_premiumpackage_1,,,,,,定居支援箱：LV75,0,0.0,0.0,FFFF,6,0.0
 641913,Event_supportBox5,使用時可獲得道具。等級 100以上可以使用。{nl}- LV6 經驗值卡片 40個{nl}- 50 TP[贈品]{nl}- 擴音器 40個{nl}- VIP:15天[贈品]{nl}- 支援用闊刃彎刀{nl}- 支援用德式鬥劍{nl}- 支援用德式錐槍{nl}- 支援用皇家闊頭槍{nl}- 支援用奧爾特權杖{nl}- 支援用德雷克法杖{nl}- 支援用掠奪弓{nl}- 支援用佩迪米安砲塔{nl}- 支援用佩迪米安棒槌,icon_item_premiumpackage_1,,,,,,定居支援箱：LV100,0,0.0,0.0,FFFF,6,0.0
 641914,Event_drug_100d,1小時移動速度增加2、物理攻擊力增加50、魔法攻擊力增加50。點擊滑鼠右鍵使用。,item_speed_requid_3,,,,,,紀念藥水,0,30.0,0.0,FFFF,6,0.0
-641915,160714Event_box0,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,[活動]大發銀幣箱(限時),0,0.0,0.0,FFFF,6,0.0
-641916,160714Event_box00,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,[活動]大發銀幣箱(限時),0,0.0,0.0,FFFF,6,0.0
+641915,160714Event_box0,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,[活動]大發銀幣箱(限時),0,0.0,1209600.0,FFFF,6,0.0
+641916,160714Event_box00,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,[活動]大發銀幣箱(限時),0,0.0,1209600.0,FFFF,6,0.0
 641917,Event_drug_steam,30分內移動速度增加 +2、物理攻擊力增加 +50、魔法攻擊力增加 +50，點擊滑鼠右鍵使用。,item_speed_requid_3,,,,,,定居支援藥水,0,30.0,0.0,FFFF,6,0.0
 641918,Event_DailyBox_Steam,將箱子交給正在尋找的市民吧！{nl}可以在夏奧雷伊西邊森林或是蓮帕拉沙池塘找到市民。{nl}注意！請不要使用。,icon_item_premiumpackage_1,,,,,,高級箱子,0,0.0,0.0,FFFF,6,0.0
 641919,Event_BuyPointBox_300,使用時可獲得300購買點數。{nl}該點數可以在戰鬥聯賽商店使用。,icon_item_annycoin_2,,,,,,戰鬥聯盟點數300點,0,0.0,0.0,FFFF,6,0.0
@@ -725,39 +748,37 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641921,Drug_Haste2_DLC,180秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。,item_speed_requid_1,,,,,,移動速度增加藥水 Lv2,0,30.0,0.0,FFFF,6,0.0
 641922,160714Event_box0_R,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,大發銀幣箱,0,0.0,0.0,FFFF,6,0.0
 641923,DeathEquipBox_14day,點擊滑鼠右鍵即可開啟，死亡魔女禮物獲得後，將可以使用14天，超過時間將會無法使用。道具使用期限為14天{nl}-死亡魔女武器系列{nl}-卡普利防具系列,icon_item_royalbox,,,,,,[活動]死亡魔女禮包,0,0.0,0.0,FFFF,6,0.0
-641924,Event_Seed_ThanksgivingDay,1小時內使移動速度提升 +2、經驗值提升+25%。{nl}{nl} - 於特定場所使用時，可種植作物。,icon_item_seed_red,,,,,,紅色種子(1天),0,0.0,0.0,FFFF,6,0.0
-641925,Event_CostumeBox_7d,使用時可以獲得7天期間制套裝。,icon_item_giftbox_2,,,,,,職業套裝箱(7天),0,0.0,0.0,FFFT,6,0.0
+641924,Event_Seed_ThanksgivingDay,"1小時內移動速度增加+2、經驗值增加+25%。{nl}'克林卡的莊園', '夏頓農場', '特南茲農場', '密魯奇堤農場' 在地區使用時種植作物，20分後獲得特別獎勵。{nl}種植作物經過1個小時，作物會自動消失。{nl}種植作物無法獲得Buff。",icon_item_seed_red,,,,,,紅色種子(1天),0,0.0,86400.0,FFFT,6,0.0
+641925,Event_CostumeBox_7d,使用時可以獲得7天期間制套裝。,icon_item_giftbox_2,,,,,,職業套裝箱(7天),0,0.0,604800.0,FFFT,6,0.0
 641926,161215Event_Seed,使用時受女神祝福的嫩芽會悄悄開花。{nl}活動結束時活動道具統一刪除。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽,0,5.0,0.0,FFFF,6,0.0
-641927,161215Event_NexonCashBox_1,15級以上才可使用{nl}可以獲得Nexon現金的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_nexoncash01,,,,,,Nexon現金箱[星期五] (1小時),0,5.0,0.0,FFFF,6,0.0
-641928,161215Event_NexonCashBox_2,15級以上才可使用{nl}可以獲得Nexon現金的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_nexoncash01,,,,,,Nexon現金箱[星期六] (1小時),0,5.0,0.0,FFFF,6,0.0
-641929,161215Event_NexonCashBox_3,15級以上才可使用{nl}可以獲得Nexon現金的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_nexoncash01,,,,,,Nexon現金箱[星期日] (1小時),0,5.0,0.0,FFFF,6,0.0
-641930,Event_Drug_Alche_HP15,HP立刻恢復2765，15秒內每隔2秒HP恢復2765，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,補給用濃縮HP藥水LV15,0,45.0,0.0,FFFF,6,1.0
-641931,Event_Drug_Alche_SP15,SP立刻恢復918，15秒內每隔2秒SP恢復918，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,補給用濃縮SP藥水LV15,0,45.0,0.0,FFFF,6,1.0
+641927,161215Event_NexonCashBox_1,15級以上才可使用{nl}可以獲得Nexon現金的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_nexoncash01,,,,,,Nexon現金箱[星期五] (1小時),0,5.0,3600.0,FFFF,6,0.0
+641928,161215Event_NexonCashBox_2,15級以上才可使用{nl}可以獲得Nexon現金的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_nexoncash01,,,,,,Nexon現金箱[星期六] (1小時),0,5.0,3600.0,FFFF,6,0.0
+641929,161215Event_NexonCashBox_3,15級以上才可使用{nl}可以獲得Nexon現金的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_nexoncash01,,,,,,Nexon現金箱[星期日] (1小時),0,5.0,3600.0,FFFF,6,0.0
+641930,Event_Drug_Alche_HP15,HP立刻恢復5614，15秒內每隔2秒HP恢復5614，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,補給用濃縮HP藥水LV15,0,45.0,0.0,FFFF,6,1.0
+641931,Event_Drug_Alche_SP15,SP立刻恢復1288，15秒內每隔2秒SP恢復1288，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,補給用濃縮SP藥水LV15,0,45.0,0.0,FFFF,6,1.0
 641932,161215Event_WBox_1,裝有受拉伊瑪祝福的武器箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_weaponbox1,,,,,,救援者的武器箱子,0,0.0,0.0,FFFF,6,0.0
 641933,161215Event_ABox_1,裝有受拉伊瑪祝福的防具箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_armorbox1,,,,,,救援者的防具箱子,0,0.0,0.0,FFFF,6,0.0
 641934,161215Event_ABox_2,裝有受拉伊瑪祝福的防具箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_armorbox2,,,,,,救援者的初級防具箱子,0,0.0,0.0,FFFF,6,0.0
 641935,161215Event_NewChar,裝有拉伊瑪禮物的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_giftbox1,,,,,,拉伊瑪的禮物箱子,0,0.0,0.0,FFFF,6,0.0
 641936,161215Event_OldChar,裝有拉伊瑪寶物的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_giftbox2,,,,,,拉伊瑪的寶箱,0,0.0,0.0,FFFF,6,0.0
-641937,CS_IndunReset_GTower_1,今天進入的大地之塔進場次數增加1次。,icon_item_indunfreeenter,,,,,,大地之塔入場劵(5天),0,5.0,0.0,FFFF,6,0.0
-641938,CS_IndunReset_Nunnery_1,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,莎勒斯修女院入場劵(5天),0,5.0,0.0,FFFF,6,0.0
-641939,Event_Goddess_Statue,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,女神的雕像(14天),0,0.0,0.0,FFFF,6,0.0
-641940,CS_IndunReset_GTower_14d,可以進入大地之塔1次。,icon_item_key_earthtower,,,,,,大地之塔入場劵(14天),0,0.0,0.0,FFFF,6,0.0
-641941,CS_IndunReset_Nunnery_14d,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,莎勒斯修女院入場劵(14天),0,5.0,0.0,FFFF,6,0.0
-641942,Event_1704_SilverBox,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,[活動]大發銀幣箱(限時),0,0.0,0.0,FFFF,8,0.0
+641937,CS_IndunReset_GTower_1,今天進入的大地之塔進場次數增加1次。,icon_item_indunfreeenter,,,,,,大地之塔入場劵(5天),0,5.0,432000.0,FFFF,6,0.0
+641938,CS_IndunReset_Nunnery_1,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,莎勒斯修女院入場劵(5天),0,5.0,432000.0,FFFF,6,0.0
+641939,Event_Goddess_Statue,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,女神的雕像(14天),0,0.0,1209600.0,FFFF,6,0.0
+641940,CS_IndunReset_GTower_14d,可以進入大地之塔1次。,icon_item_key_earthtower,,,,,,大地之塔入場劵(14天),0,0.0,1209600.0,FFFF,6,0.0
+641941,CS_IndunReset_Nunnery_14d,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,莎勒斯修女院入場劵(14天),0,5.0,1209600.0,FFFF,6,0.0
+641942,Event_1704_SilverBox,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,[活動]大發銀幣箱(限時),0,0.0,1209600.0,FFFF,8,0.0
 641943,Leticia_IndunReset_GTower,可以進入大地之塔1次。,icon_item_key_earthtower,,,,,,大地之塔1次入場劵,0,0.0,0.0,TTTT,6,0.0
-641944,Event_Indun_Package,"點擊滑鼠右鍵時可獲得組合物品。{nl} -即時副本倍數VIP x2{nl} -副本掃盪卷 x2""",icon_item_luckybox_red,,,,,,副本回饋禮包,0,0.0,0.0,FTFT,6,0.0
+641944,Event_Indun_Package,"點擊滑鼠右鍵時可獲得組合物品。{nl} -即時副本倍數VIP x2{nl} -副本掃盪卷 x2""",icon_item_luckybox_red,,,,,,던전 헤택 패키지,0,0.0,0.0,FTFT,6,0.0
 641945,Event_Goddess_Statue_DLC,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,女神的雕像,0,0.0,0.0,FFFT,6,0.0
 641946,Event_drug_steam_1h_DLC,1小時移動速度增加2、物理攻擊力增加50、魔法攻擊力增加50。點擊滑鼠右鍵使用。,item_speed_requid_3,,,,,,定居支援藥水 LV2,0,30.0,0.0,FFFT,6,0.0
-641952,Event_1710_NexonCashBox,15級以上可使用{nl}可從箱中獲得Nexon Cash。{nl}活動結束後統一刪除。,icon_item_event_nexoncash01,,,,,,黃金週幸運箱 (1小時),0,5.0,0.0,FFFF,6,0.0
+641952,Event_1710_NexonCashBox,15級以上可使用{nl}可從箱中獲得Nexon Cash。{nl}活動結束後統一刪除。,icon_item_event_nexoncash01,,,,,,黃金週幸運箱 (1小時),0,5.0,3600.0,FFFF,6,0.0
 641953,ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式1次入場券,0,5.0,0.0,FFFF,6,1.0
-641954,ChallengeModeReset_1d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式 1次入場券 (1天),0,5.0,0.0,FFFF,6,1.0
-641955,ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式 1次入場券 (14天),0,5.0,0.0,FFFF,6,1.0
-641956,Reward_Error_compensation_1d,"點擊滑鼠右鍵即可開啟並獲得箱子內容物。{nl} - 寵物交換劵 12張{nl} - x4 經驗之書 3個{nl} - 特性點數1,000(冒險日誌獎勵) 2個 {nl} - 副本倍數VIP3個 {nl} - 銀幣 500,000 ",icon_item_giftbox_4,,,,,,補償用冒險日誌排名獎勵箱子(1天),0,0.0,0.0,FFFF,6,0.0
+641954,ChallengeModeReset_1d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式 1次入場券 (1天),0,5.0,86400.0,FFFF,6,1.0
+641955,ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式 1次入場券 (14天),0,5.0,1209600.0,FFFF,6,1.0
+641956,Reward_Error_compensation_1d,"點擊滑鼠右鍵即可開啟並獲得箱子內容物。{nl} - 寵物交換劵 12張{nl} - x4 經驗之書 3個{nl} - 特性點數1,000(冒險日誌獎勵) 2個 {nl} - 副本倍數VIP3個 {nl} - 銀幣 500,000 ",icon_item_giftbox_4,,,,,,補償用冒險日誌排名獎勵箱子(1天),0,0.0,86400.0,FFFF,6,0.0
 641962,Event_drug_steam_team,30分鐘內移動速度 +2、物理攻擊力 +50、魔法攻擊力 +50，透過點按滑鼠右鍵使用，活動結束後統一刪除。,item_speed_requid_3,,,,,,定居支援藥水,0,30.0,0.0,FFFT,6,0.0
 641963,Premium_ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式1次入場券,0,5.0,0.0,TTFT,6,1.0
 641964,Uphill_Store_Point_10,使用時可以獲得10點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。,icon_item_annycoin_2,,,,,,高地防守商店點數：10,0,0.0,0.0,FFFF,6,0.0
-641969,GM_SilverBox_1000,"使用時可獲得1,000銀幣。",icon_item_silverbox1,,,,,,"補償用銀幣箱：1,000",0,0.0,0.0,FFFF,6,0.0
-641970,GM_SilverBox_10000,"使用時可獲得10,000銀幣。",icon_item_silverbox1,,,,,,"補償用銀幣箱：10,000",0,0.0,0.0,FFFF,6,0.0
 642502,Gacha_EXP_001,使用時 LV2 ~ 10 經驗值卡片中可隨機獲得3張。,icon_item_quest_00017,,,,,,經驗值卡片箱子,0,0.0,0.0,FFFF,6,0.0
 642503,Gacha_Recipe_Wep,使用時可以在LV220武器製作圖中隨獲獲得1張。,icon_item_luckybox_red,,,,,,Lv220 製作書箱子 - 武器,0,0.0,0.0,FFFF,6,0.0
 642504,Gacha_Recipe_Arm,使用時可以獲得防具製作書(LV120 ~ 220)。,icon_item_cube2,,,,,,製作書箱子 - 防具,0,0.0,0.0,FFFF,6,0.0
@@ -779,17 +800,20 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 643001,Moru_W_01Q,將裝備放到鐵砧上敲敲打打，就可以提升性能，鐵砧可以跟雜貨商人購買，點擊滑鼠右鍵使用。,icon_item_anvil,,,,,,練習用鐵砧,0,0.0,0.0,FFFF,15,1.0
 643002,Moru_W_01,將裝備放到鐵砧上敲敲打打，就可以提升性能，鐵砧可以跟雜貨商人購買，點擊滑鼠右鍵使用。,icon_item_anvil,,,,,,鐵砧,45,0.0,0.0,FFTF,15,1.0
 643003,Moru_Gold,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,黃金鐵砧,0,0.0,0.0,FFTF,15,1.0
-643004,Moru_Silver,將裝備放置到鐵砧上，輕敲後可以提升裝備性能。不需花費銀幣就可以強化裝備。點擊滑鼠右鍵可以直接使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_anvil_silver,,,,,,銀光鐵砧(14天),0,0.0,0.0,FFFF,15,1.0
+643004,Moru_Silver,將裝備放置到鐵砧上，輕敲後可以提升裝備性能。不需花費銀幣就可以強化裝備。點擊滑鼠右鍵可以直接使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_anvil_silver,,,,,,銀光鐵砧(14天),0,0.0,1209600.0,FFFF,15,1.0
 643007,Moru_Event160609,只有強化階段為0時可以使用，不會消耗強化費用，點擊滑鼠右鍵即可使用。,icon_item_anvil,,,,,,輕便鐵砧,0,0.0,0.0,FFFF,15,1.0
 643008,Moru_Silver_NoDay,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,銀光鐵砧,0,0.0,0.0,FFFF,15,1.0
-643009,Moru_Event160929_14d,只有強化階段為0時可以使用，不會消耗強化費用，點擊滑鼠右鍵即可使用。,icon_item_anvil,,,,,,輕便鐵砧(14天),0,0.0,0.0,FFFF,15,1.0
-643010,Moru_Gold_14d,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,黃金鐵砧(14天),0,0.0,0.0,FFFF,15,1.0
+643009,Moru_Event160929_14d,只有強化階段為0時可以使用，不會消耗強化費用，點擊滑鼠右鍵即可使用。,icon_item_anvil,,,,,,輕便鐵砧(14天),0,0.0,1209600.0,FFFF,15,1.0
+643010,Moru_Gold_14d,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,黃金鐵砧(14天),0,0.0,1209600.0,FFFF,15,1.0
 643014,Moru_Gold_TA_NR,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。強化時不需要銀幣。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。右擊滑鼠使用。,icon_item_anvil_gold,,,,,,發光的黃金鐵砧,0,0.0,0.0,TTTT,15,1.0
 643015,Moru_Gold_Team_Trade,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,黃金鐵砧,0,0.0,0.0,FFFT,15,1.0
 643017,Moru_Silver_DLC,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,銀光鐵砧,0,0.0,0.0,FFFT,15,1.0
 643020,Extract_kit,血晶萃取時使用的工具，可以跟戴利亞貝利斯購買。,icon_item_extractkit,,,,,,血晶萃取工具,600,0.0,0.0,FFTF,15,4.0
 643021,Extract_kit_Sliver,血晶萃取時使用的工具，不需要消耗財貨。,icon_item_extractkit_sliver,,,,,,銀色血晶萃取工具,0,0.0,0.0,FFTF,15,4.0
-643025,Moru_Gold_14d_Team,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,黃金鐵砧(14天),0,0.0,0.0,FFFT,15,1.0
+643025,Moru_Gold_14d_Team,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,黃金鐵砧(14天),0,0.0,1209600.0,FFFT,15,1.0
+643026,Extract_kit_Gold_NotFail,[Rebuild]改版後支援期間可使用的血晶萃取劵。{nl} - 活動結束時統一刪除。,icon_item_extractkit_gold,,,,,,[Rebuild] 100%血晶萃取工具,0,0.0,0.0,FFTF,15,4.0
+643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於隨機屬性裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,[Rebuild] 100%血晶萃取工具：隨機屬性,0,0.0,0.0,FFTF,15,4.0
+643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於製作獨特裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,[Rebuild] 100%血晶萃取工具：製作,0,0.0,0.0,FFTF,15,4.0
 645002,D_Bube_Mane,可以從長時間暴露於水晶的布貝身上獲得的黑暗魔石。,icon_item_evilenergy_piece,,,,,,布貝魔石,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,散發出甜蜜香味的花瓣，可以從粉紅小花怪身上獲得。,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,"[2001, 30102]",,粉紅小花怪花瓣,1,0.0,0.0,TTTT,15,1.0
 645025,TreasureboxKey2,開啟寶箱 LV 2所使用的鑰匙,icon_item_key1,,,,,,LV2 寶箱鑰匙,0,0.0,0.0,FFTF,15,1.0
@@ -1004,7 +1028,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 645346,misc_zigri,不利的菜刀，可以從棕色吉嘎利身上獲得。,icon_item_knife01,"[642026, 642097, 642133]",,,"[17063, 34047]",,菜刀,3,0.0,0.0,TTTT,15,1.0
 645347,misc_puragi,如果不需要鉤子，可以熔解後製作其它物品，可以從草綠普朗基身上獲得。,icon_item_claw_01,"[642026, 642133]",,,"[30148, 31035]",,巨大鉤子,6,0.0,0.0,TTTT,15,1.0
 645348,misc_banshee,靈魂的強大邪念變成物質化的型態，沒有安全裝置，直接用手碰的話，有可能被邪念抓走，可以從報喪女妖身上獲得。,icon_item_spirit_orange,"[642010, 642026]",,,,,報喪女妖的邪念體,3,0.0,0.0,TTTT,15,1.0
-645349,arrow_04,有荊棘的箭矢，具有追加打擊效果。,item_icon_arrow_barbedhead,,,,,,荊棘箭矢,1,0.0,0.0,TTTT,15,0.1
+645349,arrow_04,有荊棘的箭矢，具有追加打擊效果。,item_icon_arrow_barbedhead,,,,,,荊棘箭,1,0.0,0.0,TTTT,15,0.1
 645350,misc_shtayim3,怪物材料，使用於製作道具。,icon_item_gem_elemental3,,,,,,休塔因的紅眼,2,0.0,0.0,TTTT,15,1.0
 645351,misc_Echad3,怪物材料，使用於製作道具。,icon_item_gem_elemental2,,,,,,阿哈得的青眼,2,0.0,0.0,TTTT,15,1.0
 645352,misc_Grummer,鱗片模樣的葉子，長得很密的葉子，可以從克魯莫身上獲得。,icon_item_leaves_green,"[642024, 642126]",,,[2001],,克魯莫葉,4,0.0,0.0,TTTT,15,1.0
@@ -1355,7 +1379,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 645729,misc_0263,隨著所見之人的不同，模樣也會感到很奇特。可以從縫蟹身上獲得。,icon_item_shell_yellow,,,,"[17049, 30502, 30537, 30538, 31034, 37003]",,堅硬的外殼,9,0.0,0.0,TTTT,15,1.0
 645730,misc_0264,能夠切斷鐵板的堅硬螯足。可以從縫蟹身上獲得。,icon_item_quest_00017,[642172],,,"[30523, 30524, 30525, 30526, 32012, 38008]",,螯足,9,0.0,0.0,TTTT,15,1.0
 645731,misc_0265,獵人們為了證明自己的實力也會將爪子串在項鍊上戴著出門。可以從黃色杜瑪洛身上獲得。,icon_item_tooth_00basic,,,,,,黃色杜瑪洛的爪子,9,0.0,0.0,TTTT,15,1.0
-645732,misc_awakeningStone1,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,[活動]覺醒石(限時),6,0.0,0.0,FFFF,15,1.0
+645732,misc_awakeningStone1,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,[活動]覺醒石(限時),6,0.0,1209600.0,FFFF,15,1.0
 645733,misc_0266,聽說比特路希亞可以使用臉上冒出來的葉子感應周圍環境。可以從比特路希亞身上獲得。,icon_item_leaves_blue,,,,"[30513, 30514]",,比特路希亞葉,2,0.0,0.0,TTTT,15,1.0
 645734,misc_0267,雪貂掠奪者的外殼可做為各種奢侈品的材料使用，可以從雪貂掠奪者身上獲得。,icon_item_shell_blackbrown,,,,,,雪貂掠奪者的外殼,2,0.0,0.0,TTTT,15,1.0
 645735,misc_0268,這巨大的角，瑕疵越少價值越高。可以從雪貂掠奪者身上獲得。,icon_item_small_bag,,,,,,雪貂掠奪者的角,2,0.0,0.0,TTTT,15,1.0
@@ -1390,7 +1414,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 645764,misc_earthTower20_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,級別的精髓,0,0.0,0.0,FFTF,15,0.0
 645765,misc_gemExpStone09,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,7星寶石研磨劑,0,0.0,0.0,FFFF,15,1.0
 645766,misc_gemExpStone10,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,8星寶石研磨劑,0,0.0,0.0,FFFF,15,1.0
-645768,misc_awakeningStone1_test,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為1分鐘，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,[活動]覺醒石(限1分鐘),6,0.0,0.0,FFFF,15,1.0
+645768,misc_awakeningStone1_test,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為1分鐘，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,[活動]覺醒石(限1分鐘),6,0.0,60.0,FFFF,15,1.0
 645769,misc_earthTower_2,在大地之塔的索爾米奇區間可以獲得。,icon_item_gem_stone_int,,,,,,LV2 大地的碎片,0,0.0,0.0,FFTF,15,0.0
 645770,misc_earthTower25_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,諾溫的精髓,0,0.0,0.0,FFTF,15,0.0
 645771,misc_earthTower30_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,奧勒坎的精髓,0,0.0,0.0,FFTF,15,0.0
@@ -1405,7 +1429,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 645780,Premium_itemUpgradeStone_Acc,蘊藏女神祝福的石頭，使用時會讓飾品的效能更好。,icon_item_transcendence_blue,,,,,,女神祝福石：飾品,0,0.0,0.0,TTTT,15,0.0
 645781,Premium_itemDissassembleStone,據說具有觸碰就分解物品力量的神秘槌子，不知道神秘力量是否已耗盡，無法運作。,icon_item_farm47_wood_hammer,,,,,,分解之槌,0,0.0,0.0,TTTT,15,0.0
 645782,Premium_deleteTranscendStone,據說到處冒出的針吸收了周圍的魔力，現在對魔力沒有反應。,icon_item_spellneedle,,,,,,魔力吸收針,0,0.0,0.0,TTTT,15,0.0
-645783,misc_BlessedStone,可成為特殊道具材料的石頭。,icon_item_gem_elemental1,,,,"[9018, 9024, 40068, 40069, 40070, 40071, 40072, 40073, 40074, 40075, 40076, 40077]",,受祝福的碎片,0,0.0,0.0,TTTT,15,0.0
+645783,misc_BlessedStone,可成為特殊道具材料的石頭。,icon_item_gem_elemental1,,,,"[9018, 40068, 40069, 40070, 40071, 40072, 40073, 40074, 40075, 40076, 40077]",,受祝福的碎片,0,0.0,0.0,TTTT,15,0.0
 645801,misc_0280,發出黑色光芒的塊狀物。無法判斷這東西的是由甚麼組成的。,icon_item_ironbar03_s,,,,"[10094, 11083, 16088]",,黑色塊狀物,2,0.0,0.0,TTTT,15,1.0
 645802,misc_0281,發出黃色光芒的塊狀物。乍看之下還以為是金塊。,icon_item_ironbar01_s,,,,"[12086, 17068, 18054]",,黃色塊狀物,2,0.0,0.0,TTTT,15,1.0
 645803,misc_0282,不確定是甚麼禽獸的皮革，搞不好根本不是皮革。,icon_item_misc_00007,,,,"[13087, 15083, 19020, 21005]",,未知的皮革,2,0.0,0.0,TTTT,15,1.0
@@ -1530,8 +1554,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 645922,misc_talt_event,從怪物身上發現的來歷不明寶石，因為神秘色澤，讓收藏者趨之若鶩。使用於讓公會成長。,30_item_ore_talt,,,,,,[活動]塔特,9,0.0,0.0,FFFF,15,10.0
 645923,misc_emptySpellBook,空白的魔法書，用特定技能寫上咒文的話，就能使用該技能。,icon_item_emptyspellbook,,,,,,空白魔法書,40,0.0,0.0,FFTF,15,1.0
 645924,misc_brokenwheel,材質的重量比想像中重，傳說是能暫時叫來在其他地方的輪的石頭。,icon_item_brokenwheel,,,,,,審判之輪,40,0.0,0.0,FFTF,15,1.0
-645925,misc_gemExpStone_randomQuest3_14d,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：3900,icon_item_powderp,,,,,,4星寶石研磨劑：14天,20,0.0,0.0,FFFF,15,1.0
-645926,misc_gemExpStone_randomQuest4_14d,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,5星寶石研磨劑：14天,20,0.0,0.0,FFFF,15,1.0
+645925,misc_gemExpStone_randomQuest3_14d,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：3900,icon_item_powderp,,,,,,4星寶石研磨劑：14天,20,0.0,1209600.0,FFFF,15,1.0
+645926,misc_gemExpStone_randomQuest4_14d,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFF,15,1.0
 645927,misc_gemExpStone_randomQuest5,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：57900,icon_item_powderp,,,,,,6星寶石研磨劑,20,0.0,0.0,FFTF,15,1.0
 645928,misc_0395,怪物材料，使用於製作道具。,icon_item_misc04_20,[642182],,,,,羅德那康的果實,9,0.0,0.0,TTTT,15,1.0
 645929,misc_0396,怪物材料，使用於製作道具。,icon_item_misc04_21,[642182],,,,,羅德內克的刺莖,9,0.0,0.0,TTTT,15,1.0
@@ -1670,7 +1694,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 646062,misc_0517,怪物材料，使用於製作道具。,icon_item_misc_0517,[642211],,,"[30553, 30556, 30559, 30562]",,亞克亞克的角,25,0.0,0.0,TTTT,15,1.0
 646063,misc_0518,怪物材料，使用於製作道具。,icon_item_misc_0518,[642210],,,"[30551, 30554, 30557, 30560]",,可萊托的羽毛,25,0.0,0.0,TTTT,15,1.0
 646064,misc_portalstone,可在傳送商店使用的道具。,icon_item_portalstone,,,,,,傳送石,25,0.0,0.0,FFTF,15,1.0
-646065,misc_shredded_paper,被斯毀的書的書頁，收集後未來會派上用場。,icon_item_paperpiece,,,,,,被斯毀的書頁,25,0.0,0.0,TTTT,15,1.0
+646065,misc_shredded_paper,只有部份被斯毀的書頁，收集後未來會派上用場。,icon_item_paperpiece,,,,,,被斯毀的書頁,25,0.0,0.0,TTTT,15,1.0
 646066,guild_exp_up_lv1,可以令公會經驗值提升+100的道具。,icon_item_guild_exp_up1,,,,,,公會任務獎勵鑄幣：銅,0,0.0,0.0,TTFT,15,1.0
 646067,guild_exp_up_lv2,可以令公會經驗值提升+200的道具。,icon_item_guild_exp_up2,,,,,,公會任務獎勵鑄幣：銀,0,0.0,0.0,TTFT,15,1.0
 646068,guild_exp_up_lv3,可以令公會經驗值提升+400的道具。,icon_item_guild_exp_up3,,,,,,公會任務獎勵鑄幣：金,0,0.0,0.0,TTFT,15,1.0
@@ -1687,16 +1711,20 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 646080,wood_06,雕刻用木頭捆。,icon_item_wood_5,,,,,,雕刻用木頭,2,0.0,0.0,FFTF,15,0.1
 646081,misc_wakepowder,使用在道具覺醒的道具。,icon_item_wakepowder,,,,,,覺醒粉末,30,0.0,0.0,FFTF,15,1.0
 646082,PVP_Misc_1_Beta,紀念領地戰勝利的鑄幣。,icon_item_coin_colony_01,,,,,,領地戰紀念鑄幣,0,0.0,0.0,FFFF,15,0.0
-647000,misc_0519,怪物材料，使用於製作道具。,icon_item_misc_0519,,,,"[50001, 50003, 50013, 50017]",,利迪亞的紅花,25,0.0,0.0,TTTT,15,1.0
-647001,misc_0520,怪物材料，使用於製作道具。,icon_item_misc_0520,,,,"[50007, 50023, 50029]",,充滿星光的露水,25,0.0,0.0,TTTT,15,1.0
-647002,misc_0521,怪物材料，使用於製作道具。,icon_item_misc_0521,,,,"[50005, 50019, 50021]",,夏班的黑花,25,0.0,0.0,TTTT,15,1.0
-647003,misc_0522,怪物材料，使用於製作道具。,icon_item_misc_0522,,,,"[50008, 50015, 50024]",,星之引導者燈,25,0.0,0.0,TTTT,15,1.0
-647004,misc_0523,怪物材料，使用於製作道具。,icon_item_misc_0523,,,,"[50010, 50026, 50030]",,利迪亞夏班擴張的鏡頭,25,0.0,0.0,TTTT,15,1.0
-647005,misc_0524,怪物材料，使用於製作道具。,icon_item_misc_0524,,,,"[50002, 50016]",,粟子內皮教訓的箭矢,25,0.0,0.0,TTTT,15,1.0
-647006,misc_0525,怪物材料，使用於製作道具。,icon_item_misc_0525,,,,"[50000, 50006, 50012, 50028]",,光榮的燭台,25,0.0,0.0,TTTT,15,1.0
-647007,misc_0526,怪物材料，使用於製作道具。,icon_item_misc_0526,,,,"[50009, 50014]",,尼柯波爾利斯銀河鈴鐺,25,0.0,0.0,TTTT,15,1.0
-647008,misc_0527,怪物材料，使用於製作道具。,icon_item_misc_0527,,,,"[50011, 50025, 50027, 50031]",,尼柯波爾利斯貝拉因,25,0.0,0.0,TTTT,15,1.0
-647009,misc_0528,怪物材料，使用於製作道具。,icon_item_misc_0529,,,,"[50004, 50018, 50020, 50022]",,皇家之劍破片,25,0.0,0.0,TTTT,15,1.0
+646083,PVP_Misc_1_KOR_Beta,紀念領地戰勝利的鑄幣。{nl}是第二次領地戰Beta活動發送的獎勵道具。{nl}活動結束時道具統一刪除。,icon_item_coin_colony_01,,,,,,領地戰紀念鑄幣[活動],100000,0.0,0.0,FFTT,15,1.0
+647000,misc_0519,怪物材料，使用於製作道具。,icon_item_misc_0519,,,,"[30564, 30568, 50001, 50003, 50013, 50017, 400048, 400049, 400051, 400052]",,利迪亞的紅花,25,0.0,0.0,TTTT,15,1.0
+647001,misc_0520,怪物材料，使用於製作道具。,icon_item_misc_0520,,,,"[30574, 50007, 50023, 50029, 400056, 400057, 400061]",,充滿星光的露水,25,0.0,0.0,TTTT,15,1.0
+647002,misc_0521,怪物材料，使用於製作道具。,icon_item_misc_0521,,,,"[30565, 30570, 30572, 50005, 50019, 50021, 400053, 400054, 400055]",,夏班的黑花,25,0.0,0.0,TTTT,15,1.0
+647003,misc_0522,怪物材料，使用於製作道具。,icon_item_misc_0522,,,,"[30566, 50008, 50015, 50024, 400034, 400042, 400043]",,星之引導者燈,25,0.0,0.0,TTTT,15,1.0
+647004,misc_0523,怪物材料，使用於製作道具。,icon_item_misc_0523,,,,"[50010, 50026, 50030, 400044, 400046, 400047]",,利迪亞夏班擴張的鏡頭,25,0.0,0.0,TTTT,15,1.0
+647005,misc_0524,怪物材料，使用於製作道具。,icon_item_misc_0524,,,,"[30567, 50002, 50016, 400035, 400036]",,粟子內皮教訓的箭矢,25,0.0,0.0,TTTT,15,1.0
+647006,misc_0525,怪物材料，使用於製作道具。,icon_item_misc_0525,,,,"[30563, 50000, 50006, 50012, 50028, 400032, 400033, 400041, 400045]",,光榮的燭台,25,0.0,0.0,TTTT,15,1.0
+647007,misc_0526,怪物材料，使用於製作道具。,icon_item_misc_0526,,,,"[50009, 50014, 400050, 400059]",,尼柯波爾利斯銀河鈴鐺,25,0.0,0.0,TTTT,15,1.0
+647008,misc_0527,怪物材料，使用於製作道具。,icon_item_misc_0527,,,,"[50011, 50025, 50027, 50031, 400058, 400060, 400062, 400063]",,尼柯波爾利斯貝拉因,25,0.0,0.0,TTTT,15,1.0
+647009,misc_0528,怪物材料，使用於製作道具。,icon_item_misc_0529,,,,"[30569, 30571, 30573, 50004, 50018, 50020, 50022, 400037, 400038, 400039, 400040]",,皇家之劍破片,25,0.0,0.0,TTTT,15,1.0
+647010,misc_0529,哈希什藥水，服用後可以短暫提升身體能力。,icon_item_misc04_112,,,,,,哈希什藥水,25,0.0,0.0,FFFF,15,1.0
+647011,misc_0530,使用於高級裝備製作及印章強化上的稀有材料。.,icon_item_misc_misc_0530,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089]",,魔晶石,25,0.0,0.0,TTTT,15,1.0
+647012,misc_gemExpStone_randomQuest4_14d_Team,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFT,15,1.0
 648501,emoticonItem_1,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：凱帕(高興),0,0.0,0.0,FFFF,6,1.0
 648502,emoticonItem_2,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：凱帕(悲傷),0,0.0,0.0,FFFF,6,1.0
 648503,kupole_emotion01,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：奎波爾(賣萌),0,0.0,0.0,FFFT,6,1.0
@@ -1704,12 +1732,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 648505,kupole_emotion03,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：奎波爾(衝擊),0,0.0,0.0,FFFT,6,1.0
 648506,kupole_emotion04,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：奎波爾(微笑),0,0.0,0.0,FFFT,6,1.0
 648507,kupole_emotion05,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：奎波爾(嘆氣),0,0.0,0.0,FFFT,6,1.0
-648508,kupole_emotion06,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：奎波爾(雙手比V),0,0.0,0.0,FFFT,6,1.0
+648508,kupole_emotion06,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：奎波爾(雙手比V),0,0.0,0.0,FFFF,6,1.0
 649000,misc_ore01,礦石,1_item_ore_copper,,,,,,銅礦石,10,0.0,0.0,TTTT,15,1.0
 649001,misc_ore02,常見的礦石。,2_item_ore_iron,[642002],,,"[9003, 11036, 11037, 12024, 12036, 12037, 13038, 13039, 14026, 14032, 14039, 14040, 15035, 15036, 16025, 16038, 16039, 34007]",,鐵礦石,10,0.0,0.0,TTTT,15,1.0
 649002,misc_ore03,比鐵更堅硬的礦石。,3_item_ore_steel,[642002],,,"[31013, 35035]",,鋼鐵礦石,10,0.0,0.0,TTTT,15,1.0
 649003,misc_ore04,堅硬又輕巧的礦石。,4_item_ore_titanum,[642002],,,"[17016, 17021]",,鈦礦石,10,0.0,0.0,TTTT,15,1.0
-649004,misc_ore05,發光的銀色礦物，充滿魔力，被使用於製造強力裝備。,13_item_mythril,,"[642902, 642903, 642911, 642920, 642921, 642922]",,"[9024, 9027, 9028, 11024, 12069, 14023, 15022, 15062, 15066, 16021, 16071, 17023, 17066, 18034, 19007, 19011, 19018, 31021, 32009, 32010, 33025, 33028, 33063, 33067, 34027, 40034, 50000, 50002, 50004, 50006, 50008, 50010, 50012, 50015, 50016, 50018, 50020, 50022, 50024, 50026, 50028, 50030]",,祕銀礦石,10,0.0,0.0,TTTT,15,1.0
+649004,misc_ore05,發光的銀色礦物，充滿魔力，被使用於製造強力裝備。,13_item_mythril,,"[642902, 642903, 642911, 642920, 642921, 642922]",,"[9027, 9028, 11024, 12069, 14023, 15022, 15062, 15066, 16021, 16071, 17023, 17066, 18034, 19007, 19011, 19018, 31021, 30563, 30566, 30567, 30569, 30571, 30573, 32009, 32010, 33025, 33028, 33063, 33067, 34027, 40034, 50000, 50002, 50004, 50006, 50008, 50010, 50012, 50015, 50016, 50018, 50020, 50022, 50024, 50026, 50028, 50030, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047]",,祕銀礦石,10,0.0,0.0,TTTT,15,1.0
 649005,misc_ore06,礦石,9_item_ore_orichalcon,,,,,,黃銅礦石,10,0.0,0.0,TTTT,15,1.0
 649006,misc_ore07,建國初期如果沒有獲得女神的恩賜就無法挖到的珍貴寶石，但現在採掘已沒有那麼困難了。,9_item_ore_orichalcon,[642002],,,"[14021, 31018, 33076, 33077, 33078, 33079, 34058]",,伊西汀礦石,2000,0.0,0.0,TTTT,15,1.0
 649007,misc_ore08,可以從寇利羅斯身上獲得。,1_item_ore_copper,"[642033, 642127]",,,,,柱石,155,0.0,0.0,TTTT,15,1.0
@@ -1719,22 +1747,22 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 649011,misc_ore12,此礦石的特徵是會發出淡淡的金色光芒，可以從怪物身上取得，被當作道具的材料使用。,20_item_ore_tachyum,,,,"[10096, 11085, 12087, 12088, 13088, 13089, 14090, 15085, 16090, 17070, 18060, 19021, 19022, 20009, 20010, 20011, 21006, 21007, 31057, 32014, 32016, 33066, 34059, 34060, 37010, 37011, 40035]",,帕勒礦石,2,0.0,0.0,TTTT,15,1.0
 649012,misc_ore13,發出紅光的結晶。,icon_item_crystal_red,,[642928],,"[30547, 30549]",,朱紅結晶,2,0.0,0.0,TTTT,15,1.0
 649013,misc_ore14,發出黃光的結晶。,icon_item_crystal_yellow,,[642928],,"[30548, 30550]",,金黃結晶,2,0.0,0.0,TTTT,15,1.0
-649014,misc_ore15,發出紫色光芒的結晶。,icon_item_crystal_high,,"[642926, 642927, 642931, 642929]",,"[10096, 10097, 10098, 11085, 11086, 11087, 12088, 12089, 12090, 13089, 13090, 13091, 14090, 14091, 14092, 15085, 15086, 15087, 16090, 16091, 16092, 17070, 17071, 17072, 18060, 18061, 18062, 19022, 19023, 19024, 20011, 20012, 20013, 21007, 21008, 21009, 31057, 31058, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 32014, 32015, 32016, 32017, 37011, 37012, 37013, 40019, 40020, 40021, 40022, 40023, 40024, 40025, 40026, 40027, 40028, 40029, 40030, 40031, 40032, 40033, 40035, 40036, 40038, 40040, 40052, 40053, 40054, 40055, 40056, 40057, 40058, 40059, 40060, 40061, 40062, 40063, 40064, 40065, 40066, 40067, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031]",,艷紫結晶,2,0.0,0.0,TTTT,15,1.0
+649014,misc_ore15,發出紫色光芒的結晶。,icon_item_crystal_high,,"[642926, 642927, 642931, 642929, 642934]",,"[10096, 10097, 10098, 11085, 11086, 11087, 12088, 12089, 12090, 13089, 13090, 13091, 14090, 14091, 14092, 15085, 15086, 15087, 16090, 16091, 16092, 17070, 17071, 17072, 18060, 18061, 18062, 19022, 19023, 19024, 20011, 20012, 20013, 21007, 21008, 21009, 31057, 31058, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 32014, 32015, 32016, 32017, 37011, 37012, 37013, 40019, 40020, 40021, 40022, 40023, 40024, 40025, 40026, 40027, 40028, 40029, 40030, 40031, 40032, 40033, 40035, 40036, 40038, 40040, 40052, 40053, 40054, 40055, 40056, 40057, 40058, 40059, 40060, 40061, 40062, 40063, 40064, 40065, 40066, 40067, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,艷紫結晶,2,0.0,0.0,TTTT,15,1.0
 649015,misc_ore16,紫色魔方形狀的結晶。,18_item_plantite,,"[642924, 642923, 642925]",,"[10097, 11086, 12089, 13090, 14091, 15086, 16091, 17071, 18061, 19023, 20012, 21008, 31058, 32015, 37012, 40001, 40002, 40003, 40004, 40005, 40006, 40007, 40008, 40009, 40010, 40011, 40012, 40013, 40014, 40017, 40036, 40037, 400000, 400001, 400002, 400003, 400004, 400005, 400006, 400007, 400008, 400009, 400010, 400011, 400012, 400013, 400014, 400015, 400016, 400017, 400018, 400019, 400020, 400021, 400022, 400023, 400024, 400025, 400026, 400027, 400028, 400029, 400030, 400031]",,紫色魔方結晶,2,0.0,0.0,TTTT,15,1.0
 649016,misc_ore17,一開始很多人誤認為這是如鐵一樣型態的礦物，後來發現這個礦石具有不同的性質，被用在特殊的地方。,8_item_ore_platinum,,,,[3030],,亞西圖姆礦石,2,0.0,0.0,FFFF,15,0.0
 649017,misc_ore18,不祥的氣息盤旋的靈魂破片。據說有種裝備是以這種破片當作材料。,icon_item_misc_dust,,,,"[33072, 33073, 33074, 33075, 34065, 34066, 34067, 34068]",,不祥的靈魂破片,2,0.0,0.0,TTTT,15,0.0
 649018,misc_ore19,不祥的氣息盤旋的靈魂碎石。據說有種裝備是以這種碎石當作材料。,icon_item_misc_rubble,,,,"[33072, 33073, 33074, 33075, 34065, 34066, 34067, 34068]",,不祥的靈魂碎石,2,0.0,0.0,TTTT,15,0.0
 649019,misc_ore20,不祥的氣息盤旋的靈魂結晶。據說有種裝備是以這種結晶當作材料。,icon_item_misc_bosspiece,,,,"[33076, 33077, 33078, 33079, 40034]",,不祥的靈魂結晶,2,0.0,0.0,TTTT,15,0.0
 649020,misc_ore21,不祥的氣息盤旋的靈魂水晶。據說有種裝備是以這種水晶當作材料。,icon_item_misc_bosscrystal,,,,"[33076, 33077, 33078, 33079, 34069, 34070, 34071, 34072]",[40034],不祥的靈魂水晶,2,0.0,0.0,TTTT,15,0.0
-649025,misc_ore22,此不明的結晶核可對動植物甚至是無生物發揮作用，進而使其突變，提煉後已可對裝備使用。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_1,,,,"[10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19024, 20013, 21009, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 32017, 34075, 34076, 34077, 34078, 37013, 40040]",,核粉末,0,0.0,0.0,TTTT,15,1.0
-649026,misc_ore23,植物爆走後便出現於世界各地，可在自然中吸收能量。為了利用其吸收的能量，已將之提煉成粉末。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_2,,"[642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642927, 642927, 642927, 642927, 642927, 642927]",,"[10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19024, 20013, 21009, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 32017, 34073, 34074, 37013, 40040, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031]",,希埃拉粉末,0,0.0,0.0,TTTT,15,1.0
+649025,misc_ore22,此不明的結晶核可對動植物甚至是無生物發揮作用，進而使其突變，提煉後已可對裝備使用。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_1,,,,"[9024, 10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19024, 20013, 21009, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 32017, 34075, 34076, 34077, 34078, 37013, 40040]",,核粉末,0,0.0,0.0,TTTT,15,1.0
+649026,misc_ore23,植物爆走後便出現於世界各地，可在自然中吸收能量。為了利用其吸收的能量，已將之提煉成粉末。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_2,,"[642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642927, 642927, 642927, 642927, 642927, 642927]",,"[9024, 10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19024, 20013, 21009, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 32017, 34073, 34074, 37013, 40040, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,希埃拉粉末,0,0.0,0.0,TTTT,15,1.0
 649027,misc_ore24,混合一定比例的鈹德礦石和祕銀礦石所製造出來的彈性高的礦物，被當作道具的材料使用。,item_icon_pideingot,,[642928],,"[34075, 34076, 34077, 34078, 34079, 34080, 34081]",[9027],貝特雷敏礦石,0,0.0,0.0,TTTT,15,1.0
 649028,misc_ore25,混合一定比例的紅色泰拉金屬和祕銀礦石所製造出來的具有強大火屬性氣息的金屬，被當作道具的材料使用。,item_icon_teraingot,,[642928],,"[34073, 34074]",[9028],烏斯托馬伊特金屬,0,0.0,0.0,TTTT,15,1.0
 649029,misc_ore26,消滅貝爾庫波後可以獲得靈魂碎片，上面含有未知的氣息，如果使用在裝備材料上，可以發揮優秀的功能。,icon_item_velcoffer_misc01,,"[642916, 642916]",,,,貝爾庫波靈魂碎片,0,0.0,0.0,FFFF,15,1.0
 649200,misc_jore01,樹液經過長時間放置凝固成寶石。,22_item_ore_amber,[642061],,,,,琥珀,6,0.0,0.0,TTTT,15,1.0
 649201,misc_jore02,琥珀裡有一隻蜥蜴標本，是非常珍貴的寶石。,23_item_ore_amber_lizard,[642030],,,[19007],,蜥蜴琥珀,1000,0.0,0.0,TTTT,15,1.0
 649202,misc_jore03,黃色的寶石，傳說它具有驅逐惡魔的力量。,24_item_ore_topaz,,,,[15023],,黃玉,1914,0.0,0.0,TTTT,15,1.0
-649203,misc_jore04,石頭裡有各種顏色的寶石。,25_item_ore_opal,[642063],"[642901, 642904, 642905, 642907, 642918, 642919, 642921, 642922]",,"[9024, 11065, 15022, 16024, 31017, 34027, 34065, 34066, 34067, 34068, 40071, 40076]",,貓眼石,2520,0.0,0.0,TTTT,15,1.0
+649203,misc_jore04,石頭裡有各種顏色的寶石。,25_item_ore_opal,[642063],"[642901, 642904, 642905, 642907, 642918, 642919, 642921, 642922]",,"[11065, 15022, 16024, 31017, 34027, 34065, 34066, 34067, 34068, 40071, 40076]",,貓眼石,2520,0.0,0.0,TTTT,15,1.0
 649204,misc_jore05,和紅寶石一樣是紅色系的寶石，但並不稀有。,26_item_ore_garnet,[642034],,,"[15065, 18017]",,石榴石,475,0.0,0.0,TTTT,15,1.0
 649205,misc_jore06,不透明的黑色寶石。,27_item_ore_obsidian,[642055],,,"[14023, 33025, 40068, 40073]",,黑曜石,2120,0.0,0.0,TTTT,15,1.0
 649206,misc_jore07,綠色的寶石，傳說可以從惡靈手中守護主人。,28_item_ore_peridot,,,,,,橄欖石,2120,0.0,0.0,TTTT,15,1.0
@@ -1747,7 +1775,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 649213,misc_jore14,在派伊羅石上加了金屬性質的礦物。,32_item_ore_pyrite,,,,,,派伊拉礦,2,0.0,0.0,TTTT,15,1.0
 649214,misc_jore15,在克里歐石上加了金屬性質的礦物。,39_icon_item_cry8rite,,,,,,克里歐礦,2,0.0,0.0,TTTT,15,1.0
 649215,misc_jore16,無色透明的寶石，比金屬還要硬，在寶石中算是稀有珍貴的。,icon_item_dia2,,,,[16019],,鑽石,19040,0.0,0.0,TTTT,15,1.0
-649216,misc_jore17,美麗的藍色寶石，色澤愈深價值就愈高。,39_icon_item_cry8rite,[642047],"[642901, 642918]",,"[18034, 31020, 32010, 34069, 34070, 34071, 34072, 40069, 40074, 50001, 50003, 50005, 50007, 50009, 50011, 50013, 50014, 50017, 50019, 50021, 50023, 50025, 50027, 50029, 50031]",,藍寶石,7968,0.0,0.0,TTTT,15,1.0
+649216,misc_jore17,美麗的藍色寶石，色澤愈深價值就愈高。,39_icon_item_cry8rite,[642047],"[642901, 642918]",,"[18034, 31020, 30564, 30565, 30568, 30570, 30572, 30574, 32010, 34069, 34070, 34071, 34072, 40069, 40074, 50001, 50003, 50005, 50007, 50009, 50011, 50013, 50014, 50017, 50019, 50021, 50023, 50025, 50027, 50029, 50031, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,藍寶石,7968,0.0,0.0,TTTT,15,1.0
 649217,misc_jore18,紅色的珍貴寶石。,26_item_ore_garnet,,"[642902, 642903, 642904, 642905, 642921, 642922]",,"[13026, 13028, 18034, 33028, 34069, 34070, 34071, 34072]",,紅寶石,475,0.0,0.0,TTTT,15,1.0
 649401,seed_01,可以種植作物的種子，可以在公會基地內使用。,icon_item_seed_green,,,,,,迪凱雷草種子,90,3.0,0.0,FFTF,6,10.0
 649402,seed_02,可以種植作物的種子，可以在公會基地內使用。,icon_item_seed_green,,,,,,奇斯羅堤斯草種子,16,3.0,0.0,TTTT,6,10.0
@@ -1762,9 +1790,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 649605,egg_005,可以養寵物的蛋。 寵物蛋可於公會基地中使用。,icon_item_egg_barnowl,,,,,,貓頭鷹蛋,2000,30.0,0.0,FFTT,6,10.0
 649607,egg_007,點擊右鍵可以直接使用，點擊之後寵物就會自動登錄。 {nl} 寵物就算沒有騎乘功能玩家也可以騎乘寵物。{nl} 玩家與寵物一起行動時，寵物可為玩家帶來暴擊發生率及暴及攻擊力增幅提升。,icon_item_egg_lessrpanda2,,,,,,紅熊貓箱子,2000,0.0,0.0,FFFT,6,10.0
 649608,egg_008,能召喚侏儒的賢者之石。點擊滑鼠右鍵即可召喚。,icon_item_philosopher_stone,,,,,,賢者之石,0,30.0,0.0,TTTT,6,10.0
-649615,egg_015,點擊右鍵可以直接使用，點擊之後寵物就會自動登錄。 {nl} 寵物就算沒有騎乘功能玩家也可以騎乘寵物。{nl} 玩家與寵物一起行動時，玩家可獲得物理攻擊力與魔法攻擊力增加Buff。,icon_item_egg_lessrpanda_gray,,,,,,救世熊箱,2000,0.0,0.0,TTFT,6,10.0
+649615,egg_015,點擊右鍵可以直接使用，點擊之後寵物就會自動登錄。 {nl} 寵物就算沒有騎乘功能玩家也可以騎乘寵物。{nl} 玩家與寵物一起行動時，寵物可為玩家帶來暴擊發生率及暴及攻擊力增幅提升。,icon_item_egg_lessrpanda_gray,,,,,,救世熊箱,2000,0.0,0.0,TTFT,6,10.0
 649698,egg_098,可以養寵物的蛋。 寵物蛋可於公會基地中使用。,icon_item_egg_guineapig,,,,,,天竺鼠蛋(測試用、1分鐘),2000,30.0,0.0,FFTF,6,10.0
-649699,egg_099,過去相伴的寵物的轉生蛋。繼承死去寵物的能力值，留下對主人的記憶。,icon_item_egg,,,,,,轉生蛋,0,30.0,0.0,TTTT,6,10.0
+649699,egg_099,過去相伴的寵物的重生蛋。繼承死去寵物的能力值，留下對主人的記憶。,icon_item_egg,,,,,,重生蛋,0,30.0,0.0,TTTT,6,10.0
 649700,egg_017,使用冒險日誌獎勵寵物交換劵獲得的犰狳蛋，點擊滑鼠右鍵即可使用，使用時可立即登錄為寵物。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_armadilo,,,,,,犰狳蛋,2000,30.0,0.0,FFTF,6,10.0
 649702,egg_022,使用冒險日誌獎勵寵物交換劵獲得的渡渡鳥蛋，點擊滑鼠右鍵即可使用，使用時可立即登錄寵物。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_mrdodo,,,,,,渡渡鳥蛋,2000,30.0,0.0,FFTF,6,10.0
 649704,egg_024,利用冒險日誌獎勵寵物交換劵可以獲得的斑點小豬蛋，點擊滑鼠右鍵即可使用，使用時寵物會自動登錄。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_piggy_spotted,,,,,,斑點小豬蛋,2000,30.0,0.0,FFTF,6,10.0
@@ -2324,6 +2352,16 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 650856,stonetablet06,在大教堂發現的第六個啟示，可以閱讀。,icon_item_stonetablet,[642017],,,,,大教堂的啟示,0,0.0,0.0,FFFF,20,0.0
 650857,Event_1710_Thanksgiving_Coin_Sub,- 使用方法{nl}在進行硬幣投壺途中 '投壺遊戲用銅錢' 使用道具時計量條增加，若使用普通攻擊讓計量條停止增加，將依計量條的量決定投擲銅錢的力道。{nl}把銅錢投入投壺內，即可根據準確度和地下城距離獲得點數。{nl}進行地區移動時，進行中的投壺點數和 '投壺遊戲用的銅錢'將會被刪除。,icon_1710_thanksgiving_coin,,,,,,投壺遊戲用銅錢,0,3.0,0.0,FFFF,8,0.0
 650858,Event_1806_Soccer_Ball,足球,icon_1710_thanksgiving_coin,,,,,,足球,0,3.0,0.0,FFFF,8,0.0
+651001,GuildColony_Item_Woodenwall_Trap,設置在600秒內可以抵擋對方公會成員入侵的建築物。{nl}只有佔領該據點地區的公會成員才可以使用。{nl}使用者為侍從、鍊金術士、寬恕者職業時，可獲得以下效果。{nl}    - 設置建築物時提升耐久度20%。,icon_item_woodenwall_trap3,,,,,,[領地戰] 木製柵欄,100,30.0,0.0,FFTT,6,1.0
+651002,GuildColony_Item_Ballista,設置兵器600秒內對進入範圍內的對方公會員單發或是連發箭矢給予傷害。{nl}單發的箭矢擁有擊退和昏厥的效果{nl}只有佔領據點地區的公會員可以使用。{nl}使用者具有侍從、鍊金術士、寬恕者職業時可獲得以下優惠。{nl}    - 設置建築物時，建築物的耐久度、攻擊力提升20%。,icon_item_large_crossbow,,,,,,[領地戰] 弩炮,100,30.0,0.0,FFTT,6,1.0
+651003,GuildColony_Item_Siege_Tower,設置在600秒內可以攻擊前方的對方公會人員和建築物的移動式兵器。{nl}騎乘時可進行駕駛和攻擊，最多可騎乘至5人。{nl}只有非佔領該據點地區的公會成員才可以使用。{nl}使用者為侍從、鍊金術士、寬恕者職業時，可獲得以下效果。{nl}    - 設置建築物時提升耐久度和攻擊力20%。,icon_item_siege_tower,,,,,,[領地戰] 攻城塔,100,30.0,0.0,FFTT,6,1.0
+651004,GuildColony_Item_Divine_Flag,設置在180秒內可以移動到該位置的旗幟。{nl}使用[領地戰] 傳送卷軸-領地戰道具的公會成員才可以移動到旗幟的位置。 {nl}只有非佔領該據點地區的公會成員才可以使用。{nl}與公會成員共享冷卻時間。,icon_item_divine_flag,,,,,,[領地戰] 神聖旗幟,100,300.0,0.0,FFTT,6,1.0
+651005,GuildColony_Item_mysticCristal,無法戰鬥時，使用神秘水晶可以在原地復活。{nl}只有在據點地區才可以使用。,icon_item_soulcrystal_colony,,,,,[9029],[領地戰] 神秘水晶,0,300.0,0.0,FFFT,6,0.0
+651006,GuildColony_Item_AoE_Revive_Scroll,使用時，可以將畫面內無法戰鬥的公會成員們以HP、SP恢復50%的狀態復活。{nl}只有在據點地區才可以使用。{nl}與公會成員共享冷卻時間。,icon_item_aoe_revive_scroll,,,,,[9030],[領地戰] 廣域復活卷軸,0,1200.0,0.0,FFFT,6,0.0
+651007,GuildColony_Item_Scroll_Warp_Colony,使用時，可以移動至據點地區。{nl}    - 佔領公會 : 該佔領地區的領地塔{nl}    - 非佔領公會 : 設置神聖旗幟的位置{nl} 無法在據點地區使用。,icon_item_warp_scroll_colony,,,,,,[領地戰] 傳送卷軸-領地戰,100,300.0,0.0,FFTT,6,1.0
+651008,GuildColony_Item_mysticCristal_Colony_Support2,無法戰鬥時，使用神秘水晶可以在原地復活。{nl}只有在據點地區才可以使用。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_soulcrystal_colony,,,,,,[領地戰支援] 神秘水晶,0,300.0,0.0,FFFT,6,0.0
+651009,GuildColony_Item_Scroll_Warp_Colony_Support2,使用時，可以移動至據點地區。{nl}    - 佔領公會 : 該佔領地區的領地塔{nl}    - 非佔領公會 : 設置神聖旗幟的位置{nl} 無法在據點地區使用。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_warp_scroll_colony,,,,,,[領地戰支援] 傳送卷軸-領地戰,0,300.0,0.0,FFFT,6,1.0
+651010,GuildColony_Item_Observation_Scroll,使用時5秒內可以確認位在據點地區的佔領公會員的位置。{nl}只有非佔領據點地區的公會員可以使用。,icon_item_observation_scroll,,,,,,[領地戰] 偵察用地圖,100,180.0,0.0,FFTT,6,1.0
 653041,stonetablet05,在魔法師之塔發現的第五個啟示，可以閱讀。,icon_item_stonetablet,[642017],,,,,魔法師之塔的啟示,0,0.0,0.0,FFFF,20,0.0
 660000,CHATHEDRAL54_SQ01_PART1_ITEM,和詛咒有關的魔君主相關文獻，對那柯堤斯相關內容有相當深入的描寫。,icon_item_magicpaper,,,,,,詛咒的魔君主那柯堤斯,0,0.0,0.0,FFFF,20,0.0
 660001,PILGRIMROAD55_SQ09_ITEM,朝聖者達洛斯的屍體。,icon_item_small_bag,,,,,,朝聖者達洛斯的屍身,0,0.0,0.0,FFFF,20,0.0
@@ -2542,16 +2580,16 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 661205,Collection_Base_PRISON62_2_HQ1,可以用亞夏克地牢裡囚犯們偷偷藏起來的銀塊、圖鑑去收集。,icon_item_silverbar_s,[642208],,,,,被隱藏的銀塊,0,0.0,0.0,FFFF,15,0.0
 661206,QuestReward_repairPotion,使用時，會讓配戴裝備的耐久度恢復+5。,icon_item_repairkit,,,,,,緊急修理工具,0,0.0,0.0,FFFF,6,0.0
 661207,RAID_Velcofer_Potion,中和貝爾庫波詛咒的聖水，可以將詛咒侵蝕進行初始化。,icon_item_ability_up_potion5,,,,,,解除詛咒藥水,0,0.0,0.0,FFFF,6,0.0
-661210,E_Balloon_1,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_kor3,,,,,,氣球 : 트,0,0.0,0.0,FFFF,20,0.0
-661211,E_Balloon_2,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_kor4,,,,,,氣球 : 오,0,0.0,0.0,FFFF,20,0.0
-661212,E_Balloon_3,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_kor5,,,,,,氣球 : 세,0,0.0,0.0,FFFF,20,0.0
-661213,E_Balloon_4,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_kor1,,,,,,氣球 : 고,0,0.0,0.0,FFFF,20,0.0
-661214,E_Balloon_5,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_kor2,,,,,,氣球 : 혓,0,0.0,0.0,FFFF,20,0.0
-661215,E_Balloon_6,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_kor6,,,,,,氣球 : 뇌,0,0.0,0.0,FFFF,20,0.0
-661216,E_Balloon_7,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_t,,,,,,氣球 : T,0,0.0,0.0,FFFF,20,0.0
-661217,E_Balloon_8,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_o,,,,,,氣球 : O,0,0.0,0.0,FFFF,20,0.0
-661218,E_Balloon_9,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_s,,,,,,氣球 : S,0,0.0,0.0,FFFF,20,0.0
-661219,E_Balloon_10,使用時和慶典用氣球一起，活動結束後統一刪除。,icon_item_balloon_star,,,,,,氣球 : ★,0,0.0,0.0,FFFF,20,0.0
+661210,E_Balloon_1,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_kor3,,,,,,氣球 : 트,0,0.0,0.0,FFFF,20,0.0
+661211,E_Balloon_2,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_kor4,,,,,,氣球 : 오,0,0.0,0.0,FFFF,20,0.0
+661212,E_Balloon_3,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_kor5,,,,,,氣球 : 세,0,0.0,0.0,FFFF,20,0.0
+661213,E_Balloon_4,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_kor1,,,,,,氣球 : 고,0,0.0,0.0,FFFF,20,0.0
+661214,E_Balloon_5,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_kor2,,,,,,氣球 : 혓,0,0.0,0.0,FFFF,20,0.0
+661215,E_Balloon_6,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_kor6,,,,,,氣球 : 뇌,0,0.0,0.0,FFFF,20,0.0
+661216,E_Balloon_7,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_t,,,,,,氣球 : T,0,0.0,0.0,FFFF,20,0.0
+661217,E_Balloon_8,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_o,,,,,,氣球 : O,0,0.0,0.0,FFFF,20,0.0
+661218,E_Balloon_9,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_s,,,,,,氣球 : S,0,0.0,0.0,FFFF,20,0.0
+661219,E_Balloon_10,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_balloon_star,,,,,,氣球 : ★,0,0.0,0.0,FFFF,20,0.0
 662000,FORMINE_ARMOR_BAG01,布雷盔甲的材料，防禦胸前的部位。,icon_item_formine_armor_bag01,,,,[30258],,皮革前板,0,0.0,0.0,FFFF,20,0.0
 662001,FORMINE_ARMOR_SCAPULAR,布雷盔甲的材料，保護肩膀部位。,icon_item_formine_armor_scapular,,,,[30258],,葉軸肩甲,0,0.0,0.0,FFFF,20,0.0
 662002,FORMINE_ARMOR_BAG02,布雷盔甲的材料，在背上加了一層。,icon_item_formine_armor_bag02,,,,[30258],,皮革後板,0,0.0,0.0,FFFF,20,0.0
@@ -2602,7 +2640,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 662048,FARM47_2_SQ_090_ITEM_2,帶勁的苦啤酒，味道很苦。,icon_item_farm47_bitter,,,,,,苦啤酒,0,0.0,0.0,FFFF,20,0.0
 662049,FARM47_1_SQ_010_ITEM_1,從周邊的篱笆藤砍下來的木棍，打算用來製作武器。,icon_item_farm47_stick,,,,,,木棍,0,0.0,0.0,FFFF,20,0.0
 662050,FARM47_1_SQ_020_ITEM_1,從怪物身上取得的皮革，可以用於製造各種武器。,icon_item_misc_00011,,,,,,柔軟皮革,0,0.0,0.0,FFFF,20,0.0
-662051,FARM47_1_SQ_030_ITEM_1,可以收集怪物毒的甕，年代看起來很久遠。,icon_item_pots,,,,,,毒罐,0,5.0,0.0,FFFF,20,0.0
+662051,FARM47_1_SQ_030_ITEM_1,可以收集怪物毒的甕，年代看起來很久遠。,icon_item_pots,,,,,,毒甕,0,5.0,0.0,FFFF,20,0.0
 662052,FARM47_1_SQ_030_ITEM_2,充滿怪物毒的甕。,icon_item_potb,,,,,,充滿毒的毒甕,0,0.0,0.0,FFFF,20,0.0
 662053,FARM47_1_SQ_040_ITEM_1,開墾土地時使用的犁耙，刃很鋒利。,icon_item_farm47_spade,,,,,,鏟子,0,0.0,0.0,FFFF,20,0.0
 662054,FARM47_1_SQ_040_ITEM_2,挖掘雜草時使用的鋤頭，尾端很尖銳。,icon_item_farm47_pickaxe,,,,,,鎬頭,0,0.0,0.0,FFFF,20,0.0
@@ -3269,6 +3307,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 664141,DCAPITAL107_SQ_6_ITEM,魔族們為了狩獵奎波爾們所使用的工具。,icon_item_panto_core,,,,,,無力化寶珠,0,0.0,0.0,FFFF,20,0.0
 664142,DCAPITAL107_SQ_7_ITEM,奎波爾克利西亞為了欺騙奎波爾佛拉德所製作項鍊模樣的魔法道具。,icon_item_bluenecklace,,,,,,騙術證據,0,0.0,0.0,FFFF,20,0.0
 664143,DCAPITAL107_SQ_9_ITEM,克利西亞委託轉交給佛拉德的物品,icon_item_kupole_porket,,,,,,克利西亞的一切,0,0.0,0.0,FFFF,20,0.0
+664800,RVR_BK_KEYITEM_URVAS_1,以奧斯特雅之名監視龍王普魯達的奎波爾烏勒巴斯所隨身攜帶的信物。{nl}進入龍王普魯達領域時的必要道具。{nl}進入時會破壞信物。,icon_item_borutakey,,,,,,烏勒巴斯信物,0,0.0,0.0,TFFT,15,0.0
+664801,RVR_BK_KEYITEM_EVENT_OPEN,以奧斯特雅之名監視龍王普魯達的奎波爾烏勒巴斯所隨身攜帶的信物。{nl}進入龍王普魯達領域時的必要道具。{nl}進入時會破壞信物。{nl}活動結束時道具統一刪除。,icon_item_borutakey,,,,,,[活動] 烏勒巴斯信物,0,0.0,0.0,FFFT,15,0.0
+664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,從王國補給將校手中得到的徽章，證明再打倒普魯達上有做出了充分的貢獻。{nl}可透過公會基地的 '王國補給將校萬普雷達斯'交換道具。,icon_item_boruta_coin,,,,,,榮譽徽章 : 普魯達,0,0.0,0.0,FFFT,15,0.0
 666000,FARM49_1_MQ01_ITEM,橘色蜥蜴人的皮革，聽說使用這個可以見識神秘樹苗的反應。,icon_item_misc_00011,,,,,,蜥蜴人的皮革,0,0.0,0.0,FFFF,20,0.0
 666001,FARM49_1_MQ02_ITEM1,在農場看守人的小木屋附近採集的土壤標本，受到嚴重的汙染。,icon_item_powderb,,,,,,第二個被汙染的土壤標本,0,0.0,0.0,FFFF,20,0.0
 666002,FARM49_1_MQ02_ITEM2,在沒有人跡的作業場附近採集的土壤標本，受到嚴重的汙染。,icon_item_powderb,,,,,,第一個被汙染的土壤標本,0,0.0,0.0,FFFF,20,0.0
@@ -3502,6 +3543,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 666236,MASTER_SAGE1_ITEM02,賢者大師在找的書，無法閱讀內容。,icon_item_collection_03blue,,,,,,蒙代羅爾山的女神處所 1卷,0,10.0,0.0,FFFF,20,0.0
 666237,MASTER_SAGE1_ITEM03,賢者大師在找的書，無法閱讀內容。,icon_item_collection_00basic,,,,,,空間之書,0,10.0,0.0,FFFF,20,0.0
 666238,NICOPOLIS_RAID_ITEM,燈可以收集大氣中的魔力。,icon_item_energylamp,,,,,,魔力燈,0,0.0,0.0,FFFF,20,0.0
+666239,E_Balloon_11,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon01,,,,,,氣球 : 終,0,0.0,0.0,FFFF,20,0.0
+666240,E_Balloon_12,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon02,,,,,,氣球 : 生,0,0.0,0.0,FFFF,20,0.0
+666241,E_Balloon_13,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon03,,,,,,氣球 : Game,0,0.0,0.0,FFFF,20,0.0
+666242,E_Balloon_14,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon04,,,,,,氣球 : ♥,0,0.0,0.0,FFFF,20,0.0
 667000,CATACOMB_33_1_SQ_04_FIRE,從希奇斯那裡獲得的火柴，使用於讓亡者火葬。,icon_item_rod,,,,,,守墓人的火柴,0,5.0,0.0,FFFF,20,0.0
 667001,CATACOMB_33_1_SQ_05_DOLL,帶有守護人咒術的人偶。,icon_item_strawdoll1,,,,,,守墓人的咒術人偶,0,5.0,0.0,FFFF,20,0.0
 667002,CATACOMB_33_2_SQ_02_ORB,從復活過來的亡者身上吸收生存信念的靈石。,icon_item_spirit_green,,,,,,邪念石,0,20.0,0.0,FFFF,20,0.0
@@ -3656,6 +3701,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 667225,CHAR312_MSTEP2_ITEM3,時空法師大師所製作裝在特殊玻璃瓶的精神疾病治療劑，玻璃瓶發出隱約的光芒。,icon_item_blue_glass_bottle,,,,,,裝在特殊玻璃瓶的精神疾病治療劑,0,0.0,0.0,FFFF,20,0.0
 667226,CHAR312_MSTEP3_ITEM,獲得聖水祭司大師祝福的精神疾病治療劑，發出淡淡的氣息。,icon_item_blue_glass_bottle,,,,,,受祝福的精神疾病治療劑,0,0.0,0.0,FFFF,20,0.0
 667227,JOB_PIED_PIPER_Q1_ITEM,吹笛手大師所給的用於吹笛訓練的笛子。{nl}到祭壇路的布朗金堤丘陵使用笛子看看。{nl}冷卻時間3秒,icon_item_flute,,,,,,舊笛子,0,3.0,0.0,FFFF,20,0.0
+667228,JOB_ASSASSIN_Q1_ITEM,暗殺者大師所交付的藥水。{nl}在拉姆斯堤斯峽谷的帕沙卡懸崖下使用看看吧。{nl}冷卻時間3秒,icon_item_quest_00020,,,,,,用連魂草製作的藥水,0,3.0,0.0,FFFF,20,0.0
 668001,F_3CMLAKE_83_MQ_ITEM1,在漂浮聖地上所發現的圓盤。聽說偶而會浮現紅光。,icon_item_3cmdisk,,,,,,老舊的圓盤,0,5.0,0.0,FFFF,20,0.0
 668002,F_3CMLAKE_83_MQ_ITEM2,來歷不明的碎片，散發引人注目的不祥紅光。,icon_item_gem_stone_str,,,,,,紅色碎片,0,0.0,0.0,FFFF,20,0.0
 668003,F_3CMLAKE_83_SQ_ITEM1,薩斯納斯要奉獻給女神，所請求的貢品。可以貢獻這樣的東西嗎？ ,icon_item_meat_01,,,,,,拉札泰特波的肉,0,0.0,0.0,FFFF,20,0.0
@@ -3792,8 +3838,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 668136,QUEST_HAIRCOLOR_01,點擊滑鼠右鍵可以使用，可於角色設定中確認登錄的顏色。,haircolor_pink,,,,,,粉紅染色藥,0,0.0,0.0,FFFF,20,0.0
 668137,CATACOMB_80_CRYSTAL,不知名的碎片，不知道該用在哪但能感到些微的魔力。,icon_item_gimmick_scaredcrystal,,,,,,魔石碎片,10,0.0,0.0,TTTT,15,0.0
 668138,CATACOMB_80_HASTECRYSTAL,300秒內移動速度提升+3，該效果只適用於雷恩希特迷路、貝爾倫安姆屯駐地、迷克瑪希寺院。 點擊滑鼠右鍵可以使用。冷卻時間60秒。,icon_item_gimmick_movecrystal,,,,,,迅速的魔石,30,60.0,0.0,FFTF,6,0.0
-668139,CATACOMB_80_ATKCRYSTAL,300秒內暴擊攻擊力提升+140，該效果只適用於雷恩希特迷路、貝爾倫安姆屯駐地、迷克瑪希寺院。 點擊滑鼠右鍵可以使用。冷卻時間60秒。,icon_item_gimmick_hpcrystal,,,,,,憤怒的魔石,30,60.0,0.0,FFTF,6,0.0
-668140,CATACOMB_80_MATKCRYSTAL,300秒內魔法增幅提升+130，該效果只適用於雷恩希特迷路、貝爾倫安姆屯駐地、迷克瑪希寺院。 點擊滑鼠右鍵可以使用。冷卻時間60秒。,icon_item_gimmick_spcrystal,,,,,,策略的魔石,30,60.0,0.0,FFTF,6,0.0
+668139,CATACOMB_80_ATKCRYSTAL,300秒內令物理暴擊攻擊力提升+140，該效果只適用於雷恩希特迷路、貝爾倫安姆屯駐地、迷克瑪希寺院，點擊滑鼠右鍵即可使用，冷卻時間60秒。,icon_item_gimmick_hpcrystal,,,,,,憤怒的魔石,30,60.0,0.0,FFTF,6,0.0
+668140,CATACOMB_80_MATKCRYSTAL,300秒內令魔法暴擊攻擊力提升+130，該效果只適用於雷恩希特迷路、貝爾倫安姆屯駐地、迷克瑪希寺院，點擊滑鼠右鍵即可使用，冷卻時間60秒。,icon_item_gimmick_spcrystal,,,,,,策略的魔石,30,60.0,0.0,FFTF,6,0.0
 668141,CORAL_44_3_SQ_80_ITEM,出自毀壞的魔族裝置的紅色碎片。感受得到不祥的氣息和魔力。,icon_item_misc_dust,,,,,,魔族的裝置碎片,10,0.0,0.0,FFTF,15,0.0
 668142,CORAL_44_3_SQ_90_ITEM,此水瓶已經變成高級裝飾。據說繼承者埃莫艾利斯將之用來盛裝淨化時使用的聖水。,icon_item_pilgrim_ink,,,,,,繼承者的水瓶,0,5.0,0.0,FFFF,20,0.0
 668143,JOB_ZEALOT_QUEST_COSTUME_ITEM,感覺得到項鍊上有神聖氣息，同時也感覺得到一股寒意。狂熱者大師說這是教團的工具，可用來教育新進狂熱者。,icon_item_blacknecklace,,,,,,狂信徒的水晶項鍊,0,0.0,0.0,FFFF,20,0.0
@@ -3807,7 +3853,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 670004,Purple_Card_Book,某人收集的卡片冊。建議你在安靜閒寂的地方翻閱。{nl}100等以上可使用{nl}使用時將召喚 330LV的BOSS怪。召喚的怪物會在10分鐘後消失。{nl}只能在野外使用。,icon_item_purple_cardbook,,,,[40041],,怪物卡片冊 : 紫色,0,60.0,0.0,TTFT,6,10.0
 670005,Get_Wet_Card_Book,泡在水中濕掉的卡片冊。建議在安靜閒寂的地方閱讀。{nl}100等以上可使用{nl}使用時召喚 330LV的Boss怪。召喚的Boss會在10分鐘後消失。{nl}只能在野外使用。,icon_item_get_wet_cardbook,,,,,,泡在水中的怪物卡片冊,0,60.0,0.0,FFFT,6,10.0
 670006,Ominous_Card_Book,可以感受到不祥氣息的卡片集，建議你找一個安靜閒寂的地方再翻閱。{nl}300級以上可使用{nl}使用時可以召喚330LV的卡片BOSS怪物或是野外BOSS怪物當中的1種。(召喚高階野外BOSS時，可以獲得該BOSS的魔方。){nl}召喚的BOSS會在10分鐘後消失，但是高階野外BOSS會在120分鐘後消失。{nl}只能在野外使用。,icon_item_curse_cardbook,,,,,[40041],怪物卡片冊：黑色,0,60.0,0.0,FFFT,6,10.0
-670009,Get_Wet_Card_Book_14d,泡在水中濕掉的卡片冊。建議在安靜閒寂的地方閱讀。{nl}100等以上可使用{nl}使用時召喚 330LV的Boss怪。召喚的Boss會在10分鐘後消失。{nl}只能在野外使用。,icon_item_get_wet_cardbook,,,,,,泡在水中的怪物卡片冊(14天),0,60.0,0.0,FFFF,6,10.0
+670009,Get_Wet_Card_Book_14d,泡在水中濕掉的卡片冊。建議在安靜閒寂的地方閱讀。{nl}100等以上可使用{nl}使用時召喚 330LV的Boss怪。召喚的Boss會在10分鐘後消失。{nl}只能在野外使用。,icon_item_get_wet_cardbook,,,,,,泡在水中的怪物卡片冊(14天),0,60.0,1209600.0,FFFF,6,10.0
+670010,Get_Wet_Card_Book_14d_Team,泡在水中濕掉的卡片冊。建議在安靜閒寂的地方閱讀。{nl}100等以上可使用{nl}使用時召喚 330LV的Boss怪。召喚的Boss會在10分鐘後消失。{nl}只能在野外使用。,icon_item_get_wet_cardbook,,,,,,泡在水中的怪物卡片冊(14天),0,60.0,1209600.0,FFFT,6,10.0
+670011,All_Color_Card_Book,某人收集的卡片冊。建議你在安靜閒寂的地方翻閱。{nl}100等以上可使用{nl}使用時將召喚 330LV的BOSS怪。召喚的怪物會在10分鐘後消失。{nl}只能在野外使用。,icon_item_4color_cardbook,,,,,,怪物卡片冊：All Color,0,60.0,0.0,FFFT,6,10.0
 670012,Premium_Black_Card_Book,可以感受到不祥氣息的卡片集，建議你找一個安靜閒寂的地方再翻閱。{nl}300級以上可使用{nl}使用時可以召喚330LV的卡片BOSS怪物或是野外BOSS怪物當中的1種。(召喚高階野外BOSS時，可以獲得該BOSS的魔方。){nl}召喚的BOSS會在10分鐘後消失，但是高階野外BOSS會在120分鐘後消失。{nl}只能在野外使用。,icon_item_curse_cardbook,,,,,,發光的怪物卡片集：黑色,0,60.0,0.0,TTFT,6,10.0
 680000,Dungeon_Key01,進入獨特遠征隊時所需的道具。,icon_item_dungeon_portalstone,,"[642916, 642916]",,,[9024],遠征隊傳送石,10,0.0,0.0,TTTT,15,1.0
 680001,BlueOrb_Onion,召喚怪物。召喚出來的怪物會和我軍一起戰鬥。維持180秒。點擊滑鼠右鍵使用。,icon_item_dreamshade,,,,,,藍色寶珠：凱帕,10,180.0,0.0,TTTT,6,1.0
@@ -5153,6 +5201,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 730202,Paste_Bait_shrimp,釣魚用的中級魚餌。有很高機率釣到魚以外的東西。,icon_item_paste_bait_mineral_1,,,,,,蝦子,100,0.0,0.0,FFTT,16,1.0
 730203,Paste_Bait_basic_2,釣魚用的下級魚餌。魚兒們很喜歡。,icon_item_paste_bait_basic,,,,,,補給用魚餌,10,0.0,0.0,FFFT,16,1.0
 730204,Paste_Bait_basic_pcbang1,釣魚用的高級誘餌，魚咬了會有反應。,icon_item_paste_bait2_pp,,,,,,[網咖] 華麗的蚯蚓,100,0.0,0.0,FFTT,16,1.0
+730205,Paste_Bait_octopus,釣魚用的高級誘餌，吞了圖鑑材料的魚會有反應。{nl} {nl}圖鑑清單{nl} - 蓮帕拉沙池塘{nl} - 加橋森林{nl} - 帕歐皮斯渡口{nl} - 亞夏克地牢{nl} - 庫魯森林{nl} - 克尼多斯森林{nl} - 達旦森林{nl} - 內貝爾雷礦山{nl} - 諾巴哈地區{nl} - 怪物標本組合{nl} - 夏爾雷依西邊森林{nl} - 夏爾雷依東邊森林{nl} - 夏爾雷依礦山村莊{nl} - 水晶礦山{nl} - 斯拉屋塔斯峽谷{nl} - 凱利高原{nl} - 奈普里塔斯懸崖{nl} - 泰內花園{nl} - 貝雅山谷{nl} - 比爾塔溪谷{nl} - 科博爾特森林{nl} - 賽堤尼山溝{nl} - 泰內聖堂,icon_item_octopus,,,,,,章魚,10,0.0,0.0,FFTT,16,1.0
 730300,Paste_Bait_lure,釣魚用的高級魚餌。會有很棒的獎勵喔。,icon_item_paste_bait_mineral_1,,,,,,鱸魚,0,0.0,0.0,FFFT,16,1.0
 730400,Spread_Bait_basic,釣魚機率增加 3.3% {nl}持續時間10分鐘{nl}在釣魚場使用能增加所在釣魚場的釣魚機率。冷卻時間10分鐘。,icon_item_spread_bait_basic,,,,,,普通米飯餌,1000,600.0,0.0,FFTT,6,5.0
 730500,Spread_Bait_Premium_1,釣魚機率增加 5.5% {nl}持續時間10分鐘{nl}在釣魚場使用能增加所在釣魚場的釣魚機率。冷卻時間10分鐘。,icon_item_spread_bait_premium_1,,,,,,高級米飯餌,0,600.0,0.0,FFFT,6,1.0
@@ -5179,8 +5228,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 800031,Cube_FD_Weapon_315_Rare_Piece,獲得8個碎片之後右點擊時，可以獲得相同等級的未鑑定武器魔方(Lv.315)。{nl} - 沒有8個未鑑定魔方時，可用1個核交換。{nl} - 有8個以上的未鑑定魔方時，可變換成武器箱。,icon_item_cube_piece_rare,,,,,,未鑑定武器魔方碎片(Lv. 315),0,0.0,0.0,FFFT,6,1.0
 800032,Cube_FD_Armor_315_Rare_Piece,獲得8個碎片之後右點擊時，可以獲得相同等級的未鑑定防具魔方(Lv.315)。{nl} - 沒有8個未鑑定魔方時，可用1個核交換。{nl} - 有8個以上的未鑑定魔方時，可變換成武器箱。,icon_item_cube_piece_rare,,,,,,未鑑定防具魔方碎片(Lv. 315),0,0.0,0.0,FFFT,6,1.0
 810000,Companion_Exchange_Ticket,冒險日誌獎勵中獲得的小豬寵物交換券，可以用20張交換券向巴伊寶拉之翼交換小豬寵物。,icon_item_indulgence,,,,,,小豬寵物交換券,0,0.0,0.0,TTFT,15,1.0
-810001,Team_Warehouse_Extend,點擊滑鼠右鍵使用，使用時隊伍倉庫擴張2格。,icon_item_indulgence,,,,,,冒險日誌獎勵中獲得的犰狳寵物交換券，可以用20張交換券向巴伊寶拉之翼交換犰狳。,0,60.0,0.0,FFFF,6,1.0
-810002,Team_Warehouse_Extend_1add,點擊滑鼠右鍵使用，使用時隊伍倉庫擴張1格。,icon_item_indulgence,,,,,,隊伍倉庫擴張劵 +1,0,60.0,0.0,FFFF,6,1.0
+810001,Team_Warehouse_Extend,點擊滑鼠右鍵使用，使用時可擴充隊伍倉庫2格。,icon_item_indulgence,,,,,,隊伍倉庫擴張券 +2,0,60.0,0.0,FFFF,6,1.0
+810002,Team_Warehouse_Extend_1add,點擊滑鼠右鍵使用，使用時可擴充隊伍倉庫1格。,icon_item_indulgence,,,,,,隊伍倉庫擴張劵 +1,0,60.0,0.0,FFFF,6,1.0
 810003,misc_gemExpStone_randomQuest4_Adv,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,5星寶石研磨劑,20,0.0,0.0,FFFT,15,1.0
 810004,Adventure_Reward_Seed,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽,0,5.0,0.0,FFFT,6,0.0
 810005,Adventure_Goddess_Statue,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,女神的雕像,0,0.0,0.0,FFFT,6,0.0
@@ -5197,8 +5246,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900108,Event_160609_6,使用時可以獲得任意的道具。,icon_item_eventbox_qm,,,,,,問號道具箱,0,2.0,0.0,FFFF,6,0.0
 900109,misc_campfireKit2,點營火時使用的木柴，營火放置的狀態下可以點火。,icon_item_woodpiece,,,,,,五星級木柴,6,0.0,0.0,FFTF,6,1.0
 900110,Event_160714_poporion,波波小獅王玩偶抽獎券，詳細活動內容請參閱公告。,icon_item_indulgence,,,,,,波波小獅王抽獎券,1,0.0,0.0,FFFF,8,0.0
-900111,Event_160714_1,使用時可以獲得任意道具。,icon_item_eventbox_knight,,,,,,手鐲箱(7天),0,2.0,0.0,FFFF,6,0.0
-900112,Event_160714_2,使用時可以獲得任意的染色藥。,icon_item_jewelrybox,,,,,,染色藥箱(7天),0,2.0,0.0,FFFF,6,0.0
+900111,Event_160714_1,使用時可以獲得任意道具。,icon_item_eventbox_knight,,,,,,手鐲箱(7天),0,2.0,604800.0,FFFF,6,0.0
+900112,Event_160714_2,使用時可以獲得任意的染色藥。,icon_item_jewelrybox,,,,,,染色藥箱(7天),0,2.0,604800.0,FFFF,6,0.0
 900113,Event_160818_1,將收集到的字母組合帶去給村莊內的魔法協會 NPC，就能獲得各種商品。,icon_item_event160818_1,,,,,,'트',0,0.0,0.0,FFFF,15,0.0
 900114,Event_160818_2,將收集到的字母組合帶去給村莊內的魔法協會 NPC，就能獲得各種商品。,icon_item_event160818_2,,,,,,'리',0,0.0,0.0,FFFF,15,0.0
 900115,Event_160818_3,將收集到的字母組合帶去給村莊內的魔法協會 NPC，就能獲得各種商品。,icon_item_event160818_3,,,,,,'오',0,0.0,0.0,FFFF,15,0.0
@@ -5219,8 +5268,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900130,Event_160908_5,放入豐富材料用心製作的松糕。製作過程雖然看起來有點特別，但美味可以保證。{nl}移動速度 +2、最大 HP +5000、最大 SP +5000，持續15分鐘。(活動結束時道具統一刪除。),icon_item_songpyeon,,,,,[3026],松糕,0,900.0,0.0,TTTT,6,1.0
 900131,Event_160908_6,放入豐富材料製作的大王松糕。散發香甜味道看起來非常好吃。 {nl} 30分鐘內組隊全體隊員移動速度 +4、廣域攻擊比率 +1、經驗值增加 25%,icon_item_large_songpyeon,,,,,[3027],大王松糕,0,1800.0,0.0,TTTT,6,1.0
 900132,Event_160908_7,放入全部材料製成的大王松糕，散發出濃郁的香甜味，看起來超好吃的啦！ {nl} 30分鐘內套用隊伍成員全體移動速度 +4、範圍攻擊比率 +1 經驗值 25%等增幅效果。{nl} - 效果不可與特大年糕湯疊加。,icon_item_largehoney_songpyeon,,,,,,大王蜜松糕,0,1800.0,0.0,TTTT,6,1.0
-900136,Event_160929_4,15秒內每2秒HP及SP恢復512。點擊滑鼠右鍵即可使用，冷卻時間30秒。,item_hpsp_potion_1,,,,,,愛伊西克恢復藥水 Lv1 [活動],0,100.0,0.0,FFFF,6,20.0
-900137,Event_161027_2,只有在萬聖節期間會見到的萬聖節糖果，使時所有屬性增加5，點擊滑鼠右鍵即可使。,icon_item_pumpkin,,,,,,南瓜糖,0,1800.0,0.0,FFFT,6,1.0
+900136,Event_160929_4,15秒內每2秒HP及SP恢復512。點擊滑鼠右鍵即可使用，冷卻時間30秒。,item_hpsp_potion_1,,,,,,愛伊西克恢復藥水 Lv1 [活動],0,100.0,1209600.0,FFFF,6,20.0
+900137,Event_161027_2,只有在萬聖節期間會見到的萬聖節糖果，使時所有屬性增加5，點擊滑鼠右鍵即可使。(活動結束時統一刪除。),icon_item_pumpkin,,,,,,南瓜糖,0,1800.0,0.0,FFFT,6,1.0
 900138,Event_161027_1,這是模仿傑克南瓜燈外型設計的萬聖節魔方。 請用滑鼠右鍵使用看看並確認裡面的內容物喔！,icon_item_event_halloweencube,,,,,,萬聖節魔方,0,2.0,0.0,FFFF,8,0.0
 900139,Event_161025_poporion,波波小獅王玩偶抽獎券，詳細活動內容請參閱公告。,icon_item_indulgence,,,,,,波波小獅王玩偶抽獎券,1,0.0,0.0,FFFF,8,0.0
 900140,Event_161110_1,誠心誠意祈禱考試絕對要一百分而製作的合格麥芽糖。從前麥芽糖就有必勝合格的意思，具有30分鐘內讓獲得的經驗值增加30%的效果，透過點按滑鼠右鍵使用。(活動結束後統一刪除。),icon_item_event_candy,,,,,,合格的麥牙糖,0,1800.0,0.0,FFTF,6,1.0
@@ -5228,14 +5277,15 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900142,Event_161110_3,甜甜的滋味，能幫助活絡腦部的巧克力。 使用時在30分鐘內，能獲得移動速度+2的效果，透過點按滑鼠右鍵使用。(活動結束後統一刪除。),icon_item_event_choco,,,,,,合格的巧克力,0,1800.0,0.0,FFTF,6,1.0
 900143,Event_161109_Cube,凱帕軍團活動副本內可獲得的魔方。請用滑鼠右鍵確認看看內容物吧！,icon_item_cube1,,,,,,凱帕魔方,0,2.0,0.0,FFFF,8,0.0
 900144,card_Xpupkit01_event,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升1000。,monster_card,,,,,,老舊的強化用卡片,1000,0.0,0.0,FFFF,15,1.0
-900159,Exp_Card_300_14d,使用於卡片強化時可獲得 +300的經驗值。,monster_card,,,,,,強化用卡片：300 (14天),0,0.0,0.0,FFFF,15,1.0
-900160,card_Xpupkit01_500_14d,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升500。,monster_card,,,,,,強化用卡片 : 500 (14天),2000,0.0,0.0,FFFF,15,1.0
+900159,Exp_Card_300_14d,使用於卡片強化時可獲得 +300的經驗值。,monster_card,,,,,,強化用卡片：300 (14天),0,0.0,1209600.0,FFFF,15,1.0
+900160,card_Xpupkit01_500_14d,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升500。,monster_card,,,,,,強化用卡片 : 500 (14天),2000,0.0,1209600.0,FFFF,15,1.0
+900161,card_Xpupkit01_500_14d_Team,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升500。,monster_card,,,,,,強化用卡片 : 500 (14天),2000,0.0,1209600.0,FFFT,15,1.0
 900200,Event_160913_1,破壞樹根水晶時，以一定機率獲得。{nl}收集5個以上，到活動佈告欄參加活動吧！,icon_item_orb_1,,,,,,根之水晶,1,0.0,0.0,FFTF,15,0.0
 900201,Artefact_900201,發生值得恭喜的事情或是值得祝福的事所使用的鞭炮。點擊滑鼠右鍵可以進行使用。,icon_item_firework,,,,,,爆竹,0,3.0,0.0,FFFT,6,1.0
 900202,161215Event_NexonCash_1,恭禧你抽中Nexon5萬現金！{nl}活動結束時活動道具統一刪除。{nl}點擊滑鼠右鍵即可確認。,icon_item_event_50000cash,,,,,,Nexon5萬現金抽獎劵,1,0.0,0.0,FFFF,8,0.0
 900203,161215Event_NexonCash_2,已參加Nexon現金抽獎。{nl}活動結束時活動道具統一刪除。,icon_item_event_luckychance,,,,,,Nexon現金抽獎劵,1,0.0,0.0,FFFF,8,0.0
-900204,misc_paperBox_party_30d,需要關心的時候，請使用。,icon_item_paperbox,,,,,,紙箱 (30天),20,1.0,0.0,FFTF,6,1.0
-900205,Event_160908_6_14d,放入豐富材料製作的大王松糕，散發香甜味道看起來非常好吃。{nl}30分內給予組隊全體隊員移動速度 +4、廣域攻擊比率 +1、經驗值增加 25%的效果。,icon_item_large_songpyeon,,,,,,[活動]大王松糕(限時),0,1800.0,0.0,FFFF,6,1.0
+900204,misc_paperBox_party_30d,需要關心的時候，請使用。,icon_item_paperbox,,,,,,紙箱 (30天),20,1.0,2592000.0,FFTF,6,1.0
+900205,Event_160908_6_14d,放入豐富材料製作的大王松糕，散發香甜味道看起來非常好吃。{nl}30分內給予組隊全體隊員移動速度 +4、廣域攻擊比率 +1、經驗值增加 25%的效果。,icon_item_large_songpyeon,,,,,,[活動]大王松糕(限時),0,1800.0,1209600.0,FFFF,6,1.0
 900206,Event_Ability_Coupon_1,特性券,,,,,,,特性折扣券 1(預計可變更名稱及設定),1,0.0,0.0,FFFF,8,0.0
 900207,Event_Ability_Coupon_2,特性券,,,,,,,特性折扣券 2(預計可變更名稱及設定),1,0.0,0.0,FFFF,8,0.0
 900208,Event_Ability_Coupon_3,特性券,,,,,,,特性折扣券 3(預計可變更名稱及設定),1,0.0,0.0,FFFF,8,0.0
@@ -5281,11 +5331,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900262,Event_BaseItem_WepBox_315,裝有315等級主武器材料的寶箱。不過沒有艷紫結晶。,icon_item_giftbox1,,,,,,LV315 主武器材料箱,0,0.0,0.0,FFFF,6,1.0
 900263,Event_MonCard_Box_170404,可以在怪物卡片中隨機獲得1張。,icon_item_giftbox1,,,,,,引導員升級箱,0,0.0,0.0,FFFF,6,1.0
 900264,Event_1704_Invitation,女神拉達的邀請函{nl}，活動後統一刪除。{nl}點擊滑鼠右鍵可以確認套裝。,icon_item_event_invitation2,,,,,,拉達的邀請函,1,0.0,0.0,FFFT,8,0.0
-900265,Event_1704_Cash_1000,"恭喜您獲得NEXON1,000現金券！{nl}活動後統一刪除。{nl}點擊滑鼠右鍵可以確認。",icon_item_event_1000cash,,,,,,"NEXON1,000現金券",1,0.0,0.0,FFFF,8,0.0
-900266,Event_1704_Cash_5000,"恭喜您獲得NEXON5,000現金券！{nl}活動後統一刪除。{nl}點擊滑鼠右鍵可以確認。",icon_item_event_5000cash,,,,,,"NEXON5,000現金券",1,0.0,0.0,FFFF,8,0.0
-900267,Event_1704_Cash_10000,"恭喜您獲得NEXON10,000現金券！{nl}活動後統一刪除。{nl}點擊滑鼠右鍵可以確認。",icon_item_event_10000cash,,,,,,"NEXON10,000現金券",1,0.0,0.0,FFFF,8,0.0
-900268,Event_1704_Cash_50000,"恭喜您獲得NEXON50,000現金券！{nl}活動後統一刪除。{nl}點擊滑鼠右鍵可以確認。",icon_item_event_50000cash,,,,,,"NEXON50,000現金券",1,0.0,0.0,FFFF,8,0.0
-900269,Event_1704_Cash_100000,"恭喜您獲得NEXON100,000現金券！{nl}活動後統一刪除。{nl}點擊滑鼠右鍵可以確認。",icon_item_event_100000cash,,,,,,"NEXON100,000現金券",1,0.0,0.0,FFFF,8,0.0
+900265,Event_1704_Cash_1000,"恭禧您中獎獲得Nexon 1,000現金！{nl}活動結束時道具統一刪除。{nl}點擊滑鼠右鍵即可確認圖片。",icon_item_event_1000cash,,,,,,"NEXON1,000現金券",1,0.0,0.0,FFFF,8,0.0
+900266,Event_1704_Cash_5000,"恭禧您中獎獲得Nexon 5,000現金！{nl}活動結束時道具統一刪除。{nl}點擊滑鼠右鍵即可確認圖片。",icon_item_event_5000cash,,,,,,"NEXON5,000現金券",1,0.0,0.0,FFFF,8,0.0
+900267,Event_1704_Cash_10000,"恭禧您中獎獲得Nexon 10,000現金！{nl}活動結束時道具統一刪除。{nl}點擊滑鼠右鍵即可確認圖片。",icon_item_event_10000cash,,,,,,"NEXON10,000現金券",1,0.0,0.0,FFFF,8,0.0
+900268,Event_1704_Cash_50000,"恭禧您中獎獲得Nexon 50,000現金！{nl}活動結束時道具統一刪除。{nl}點擊滑鼠右鍵即可確認圖片。",icon_item_event_50000cash,,,,,,"NEXON50,000現金券",1,0.0,0.0,FFFF,8,0.0
+900269,Event_1704_Cash_100000,"恭禧您中獎獲得Nexon 100,000現金！{nl}活動結束時道具統一刪除。{nl}點擊滑鼠右鍵即可確認圖片。",icon_item_event_100000cash,,,,,,"NEXON100,000現金券",1,0.0,0.0,FFFF,8,0.0
 900271,Event_1704_WeddingBox,符合角色用的活動用婚禮套裝箱子。點擊滑鼠右鍵可以使用。,icon_item_giftbox_4,,,,,,活動用婚禮套裝寶箱,0,0.0,0.0,FFFT,8,1.0
 900272,Event_1704_LvUpBox,點擊滑鼠右鍵可以使用。須達成15等級以上才可使用。 {nl}活動後統一刪除。,icon_item_giftbox_2,,,,,,女神衝等寶箱,0,0.0,0.0,FFFF,8,1.0
 900274,Event_1704_LvUp_Lv40,點擊滑鼠右鍵可以使用。{nl}活動後統一刪除。,icon_item_eventbox_magic,,,,,,40等衝等寶箱,0,0.0,0.0,FFFF,8,1.0
@@ -5314,8 +5364,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900297,Event_1704_LvUp_Old_Lv225,點擊滑鼠右鍵可以使用。{nl}活動後統一刪除。,icon_item_eventbox_magic,,,,,,225等榮譽衝等寶箱,0,0.0,0.0,FFFF,8,1.0
 900298,Event_1704_LvUp_Old_Lv300,點擊滑鼠右鍵可以使用。{nl}活動後統一刪除。,icon_item_eventbox_magic,,,,,,300等榮譽衝等寶箱,0,0.0,0.0,FFFF,8,1.0
 900299,Event_1704_Drug_Fortunecookie,使用時30分鐘內經驗值、移動速度、最大HP增加，最多可以疊加5次。活動結束後統一刪除。{nl}活動後統一刪除。,icon_item_fortunecookie,,,,,,[衝等活動] 幸運餅乾,0,10.0,0.0,FFFF,6,0.0
-900300,Event_1704_Goddess_Statue,設置女神雕刻像，可在5分鐘內獲得女神祝福。{nl}活動結束時道具統一刪除。,icon_item_farm47_broken_zemina,,,,,,[For 10]  女神的雕像,0,0.0,0.0,FFFF,6,0.0
-900301,Event_1704_misc_gemExpStone_randomQuest4,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14700{nl}活動結束時道具統一刪除。,icon_item_powderp,,,,,,[For 10]  5星寶石研磨劑,20,0.0,0.0,FFFF,15,1.0
+900300,Event_1704_Goddess_Statue,設置女神雕刻像，可在5分鐘內獲得女神祝福。{nl}活動結束時道具統一刪除。,icon_item_farm47_broken_zemina,,,,,,[Re:Build] 女神的雕像,0,0.0,0.0,FFFF,6,0.0
+900301,Event_1704_misc_gemExpStone_randomQuest4,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14700{nl}活動結束時道具統一刪除。,icon_item_powderp,,,,,,[Re:Build] 5星寶石研磨劑,20,0.0,0.0,FFFF,15,1.0
 900302,Moru_Silver_Event_1704,將裝備放在鐵砧輕敲可以提升裝備效能，無須花費銀幣即可進行強化。點擊滑鼠右鍵可以使用。{nl}活動後統一刪除。,icon_item_anvil_silver,,,,,,[衝等活動] 銀光鐵砧,0,0.0,0.0,FFFF,15,1.0
 900310,Event_1705_Corsair_Wood,受到海賊團員的請求而製作的木板。{nl}活動結束後統一刪除。,icon_item_timber_1,,,,,,木板,1,0.0,0.0,FFFT,8,1.0
 900311,Event_1705_Corsair_Potion,滑鼠右擊即可使用，使用時1個小時內移動速度+5。{nl}活動結束後統一刪除。,icon_item_cprsair_potion,,,,,,海賊團藥水,0,0.0,0.0,FFFT,8,1.0
@@ -5323,7 +5373,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900313,Event_1705_Schwarzereiter_Paper,證明黃金之歌傭兵團以完成被要求的委託。{nl}活動結束後統一刪除。,icon_item_indulgence,,,,,,委託完成確認證,1,0.0,0.0,FFFT,8,1.0
 900314,Event_1705_Schwarzereiter_Potion,點擊滑鼠右鍵使用。{nl}1小時內最大HP增加 +3000{nl}活動結束後統一刪除。,icon_item_goldenmusic_potion,,,,,,黃金之歌傭兵團員藥水,0,0.0,0.0,FFFT,8,1.0
 900315,Event_1706_Monk_Potion,點擊滑鼠右鍵使用。{nl}1小時內物理、魔法攻擊力增加 +100{nl}活動結束後統一刪除。,icon_item_offensive_potion,,,,,,修行者的藥水,0,5.0,0.0,FFFT,8,1.0
-900316,Event_1705_ReturnUserScroll,使用時將可進行復歸者專屬任務。{nl}完成任務可獲得獎勵。,icon_item_giftbox_2,,,,,,回歸者禮物箱 (15天),0,10.0,0.0,FFFF,8,1.0
+900316,Event_1705_ReturnUserScroll,使用時將可進行復歸者專屬任務。{nl}完成任務可獲得獎勵。,icon_item_giftbox_2,,,,,,복귀자의 선물상자,0,10.0,1296000.0,FFFT,8,1.0
 900317,Event_Nru_Always_Box_1,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級5以上可使用),icon_item_giftbox1,,,,,,引導員升級箱,0,0.0,0.0,FFFF,6,1.0
 900318,Event_Nru_Always_Box_2,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級10以上可使用),icon_item_giftbox1,,,,,,引導員升級箱,0,0.0,0.0,FFFF,6,1.0
 900319,Event_Nru_Always_Box_3,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級15以上可使用),icon_item_giftbox1,,,,,,引導員升級箱,0,0.0,0.0,FFFF,6,1.0
@@ -5337,40 +5387,40 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900327,Event_Danoh_Item_4,5分內移動速度增加+3。{nl}只要有竹葉、豬肉、糯米、香菇、粽子製作書就可以製作出美味的粽子。,icon_item_seed_brown,,,,[40018],,香菇,0,300.0,0.0,FFFT,6,1.0
 900328,Event_Danoh_Item_5,美味的粽子。{nl}30分內給予組隊全員移動速度+4、廣域攻擊比率+1、經驗值增加25%的增加效果。,icon_item_lettuce,,,,,[40018],粽子,0,1800.0,0.0,FFFT,6,1.0
 900329,Achieve_FinestMoment,賦予給在迎春繪畫比賽得獎的玩家的稱號。點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,稱號 - Finest Moment,0,0.0,0.0,FFFT,6,0.0
-900330,Event_WeddingCake, 婚禮使用的結婚蛋糕。{nl}賦予60分鐘內移動速度+3、體力+10，經驗值增加10%的效果。,icon_item_weddingcake,,,,,,結婚蛋糕,0,3600.0,0.0,TTFT,6,1.0
-900331,Scroll_Transform_Monster_Steam,用於變身的卷軸。,golemmagicitem2,,,,,,特別變身卷軸,0,10.0,0.0,FFFF,6,0.0
-900332,E_misc_paperBox_party,想用的時候再用吧！活動後統一刪除。,icon_item_paperbox,,,,,,慶典用紙箱,20,1.0,0.0,FFFF,6,1.0
+900330,Event_WeddingCake,婚禮上使用的結婚蛋糕。 {nl}60分鐘內產生移動速度 +3、體力 +10、經驗值增加 10% 的效果。,icon_item_weddingcake,,,,,,結婚蛋糕,0,3600.0,0.0,TTFT,6,1.0
+900331,Scroll_Transform_Monster_Steam,用於變身的卷軸。,golemmagicitem2,,,,,,[GM] 특별한 변신 스크롤,0,10.0,0.0,FFFF,6,0.0
+900332,E_misc_paperBox_party,需要關心的時候，請使用。活動結束時道具統一刪除。,icon_item_paperbox,,,,,,慶典用紙箱,20,1.0,0.0,FFFT,6,1.0
 900338,Event_1706_Doppelsoeldner1,向雙酬傭兵大師正名能力的證明。 {nl}活動結束後統一刪除。,icon_item_gem_pendent1,,,,,,傭兵的證明,1,0.0,0.0,FFFT,8,1.0
 900339,Event_1706_Doppelsoeldner_Potion,點擊滑鼠右鍵使用。{nl}1小時內物理、魔法防禦力增加 +100{nl}活動結束後統一刪除。,icon_item_defensive_potion,,,,,,刀刃誓約傭兵團員藥水,0,5.0,0.0,FFFT,8,1.0
-900340,Event_Steam_Wedding_Card,結婚活動道具。{nl}請轉交給還沒有拿到喜帖的人。,icon_item_event_invitation2,,,,,,喜帖,0,0.0,0.0,FFFF,15,0.0
-900341,Event_Steam_Wedding_Fire,放一下爆竹感受一下派對的氣氛！{nl}使用時60分內給予全體組隊成員移動速度+2、經驗值增加50%的效果。,icon_item_firework,,,,,,派對爆竹 (14天),0,3600.0,0.0,FFFF,15,0.0
+900340,Event_Steam_Wedding_Card,結婚活動道具。{nl}請轉交給還沒有拿到喜帖的人。,icon_item_event_invitation2,,,,,,喜帖,0,0.0,180.0,FFFF,15,0.0
+900341,Event_Steam_Wedding_Fire,點燃爆竹感受愉快心情吧。{nl}使用時60分內對組隊全員給予移動速度+2、經驗值增加50%的效果。,icon_item_firework,,,,,,派對爆竹 (14天),0,3600.0,1209600.0,FFFF,6,0.0
 900348,Event_Golden_Whale_Box,鯨魚的寶物。{nl}裡面會有什麼寶物呢？{nl}活動結束時活動道具統一刪除。,icon_item_event_nexoncash01,,,,,,鯨魚的寶物,0,0.0,0.0,FFFT,8,0.0
 900349,Event_Number_Ticket,猜今天的數字時所使用的今日票劵。{nl}根據票劵的數量提供猜數字的次數。{nl}(使用時可以前往想要的去的村莊，20秒內移動速度增加。),icon_item_event_luckychance,,,,,,今日票券,0,0.0,0.0,FFFF,8,0.0
-900352,Event_Nru2_Box_1,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級5以上可使用),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900353,Event_Nru2_Box_2,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級10以上可使用),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900354,Event_Nru2_Box_3,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級15以上可使用),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900355,Event_Nru2_Box_4,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級30以上可使用),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900356,Event_Nru2_Box_5,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級50以上可使用),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900357,Event_Nru2_Box_6,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級80以上可使用),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900358,Event_Nru2_Box_7,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級100以上可使用),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900359,Event_Nru2_Box_8,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(110級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900360,Event_Nru2_Box_9,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(120級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900361,Event_Nru2_Box_10,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(140級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900362,Event_Nru2_Box_11,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(150級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900363,Event_Nru2_Box_12,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(170級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900364,Event_Nru2_Box_13,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(190級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900365,Event_Nru2_Box_14,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(200級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900366,Event_Nru2_Box_15,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(210級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900367,Event_Nru2_Box_16,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(230級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900368,Event_Nru2_Box_17,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(240級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900369,Event_Nru2_Box_18,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(260級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900370,Event_Nru2_Box_19,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(290級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-900371,Event_Sol_BOX_1,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的武器魔方(14天),0,0.0,0.0,FFFF,8,0.0
-900372,Event_Sol_BOX_2,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的上衣魔方(14天),0,0.0,0.0,FFFF,8,0.0
-900373,Event_Sol_BOX_3,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的下衣魔方(14天),0,0.0,0.0,FFFF,8,0.0
-900374,Event_Sol_BOX_4,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的鞋子魔方(14天),0,0.0,0.0,FFFF,8,0.0
-900375,Event_Sol_BOX_5,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的手套魔方(14天),0,0.0,0.0,FFFF,8,0.0
-900376,Event_Sol_BOX_6,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的飾品魔方(14天),0,0.0,0.0,FFFF,8,0.0
+900352,Event_Nru2_Box_1,引導員魔方。{nl}使用時可以獲得道具。{nl}(1級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900353,Event_Nru2_Box_2,引導員魔方。{nl}使用時可以獲得道具。{nl}(1級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv1 引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+900354,Event_Nru2_Box_3,引導員魔方。{nl}使用時可以獲得道具。{nl}(50級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv50  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+900355,Event_Nru2_Box_4,引導員魔方。{nl}使用時可以獲得道具。{nl}(170級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv170  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+900356,Event_Nru2_Box_5,引導員魔方。{nl}使用時可以獲得道具。{nl}(220級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv220  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+900357,Event_Nru2_Box_6,引導員魔方。{nl}使用時可以獲得道具。{nl}(隊伍等級2以上才可以使用。),icon_item_giftbox1,,,,,,Team Lv2  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+900358,Event_Nru2_Box_7,引導員魔方。{nl}使用時可以獲得道具。{nl}(隊伍等級3以上材可以使用。),icon_item_giftbox1,,,,,,Team Lv3  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+900359,Event_Nru2_Box_8,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(110級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900360,Event_Nru2_Box_9,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(120級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900361,Event_Nru2_Box_10,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(140級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900362,Event_Nru2_Box_11,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(150級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900363,Event_Nru2_Box_12,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(170級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900364,Event_Nru2_Box_13,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(190級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900365,Event_Nru2_Box_14,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(200級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900366,Event_Nru2_Box_15,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(210級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900367,Event_Nru2_Box_16,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(230級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900368,Event_Nru2_Box_17,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(240級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900369,Event_Nru2_Box_18,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(260級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900370,Event_Nru2_Box_19,新玩家引導員魔方。{nl}使用時可以獲得道具。{nl}(290級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+900371,Event_Sol_BOX_1,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的武器魔方(14天),0,0.0,1209600.0,FFFF,8,0.0
+900372,Event_Sol_BOX_2,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的上衣魔方(14天),0,0.0,1209600.0,FFFF,8,0.0
+900373,Event_Sol_BOX_3,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的下衣魔方(14天),0,0.0,1209600.0,FFFF,8,0.0
+900374,Event_Sol_BOX_4,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的鞋子魔方(14天),0,0.0,1209600.0,FFFF,8,0.0
+900375,Event_Sol_BOX_5,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的手套魔方(14天),0,0.0,1209600.0,FFFF,8,0.0
+900376,Event_Sol_BOX_6,可以選擇活動期間可以使用的救援者裝備。,icon_item_eventbox_qm,,,,,,救援者的飾品魔方(14天),0,0.0,1209600.0,FFFF,8,0.0
 900377,Event_CB_Ticket,可以得到回歸者的禮物的回歸者的信物。,icon_item_gem_pendent6,,,,,,回歸者的信物,0,0.0,0.0,FFFT,8,0.0
 900379,Event_Reinforce_100000coupon,強化銀幣優惠券,icon_item_reinforce_100000coupon,,,,,,強化銀幣優惠券 : 10萬銀幣,1,0.0,0.0,FFFT,8,0.0
 900381,Event_Steam_YC_1,此為活動材料道具。{nl}可用其他的女神碎片一起製作出 [活動] 已復原的女神像。,icon_item_farm47_head,,,,[40039],,[柯拉佩達] 女神的臉部碎片,0,0.0,0.0,TFFF,8,0.0
@@ -5383,104 +5433,110 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900388,Event_Steam_Master_Cube,完成萊塔斯小溪邊任務時獲得的獎勵。{nl}(和大師同在活動),icon_item_eventcube3,,,,,,大師的魔方,0,0.0,0.0,FFFF,8,0.0
 900389,Event_Steam_Master_Item,完成萊塔斯小溪邊任務時獲得的獎勵。{nl}(和大師同在活動),item_icon_medal,,,,,,大師的信物,0,0.0,0.0,FFFT,8,0.0
 900390,Event_G9_BOX,救援者為了地球的幸福而努力，箱中充滿對救援者的感謝心意。,icon_item_giftbox_4,,,,,,地球的幸福箱,0,0.0,0.0,FFFT,8,0.0
-900391,EVENT_1710_NEWCHARACTER_BOX_1,點擊滑鼠右鍵即可使用，15級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (15級),0,0.0,0.0,FFFF,8,1.0
-900392,EVENT_1710_NEWCHARACTER_BOX_2,點擊滑鼠右鍵即可使用，40級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (40級),0,0.0,0.0,FFFF,8,1.0
-900393,EVENT_1710_NEWCHARACTER_BOX_3,點擊滑鼠右鍵即可使用，50級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (50級),0,0.0,0.0,FFFF,8,1.0
-900394,EVENT_1710_NEWCHARACTER_BOX_4,點擊滑鼠右鍵即可使用，75級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (75級),0,0.0,0.0,FFFF,8,1.0
-900395,EVENT_1710_NEWCHARACTER_BOX_5,點擊滑鼠右鍵即可使用，85級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (85級),0,0.0,0.0,FFFF,8,1.0
-900396,EVENT_1710_NEWCHARACTER_BOX_6,點擊滑鼠右鍵即可使用，100級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (100級),0,0.0,0.0,FFFF,8,1.0
-900397,EVENT_1710_NEWCHARACTER_BOX_7,點擊滑鼠右鍵即可使用，120級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (120級),0,0.0,0.0,FFFF,8,1.0
-900398,EVENT_1710_NEWCHARACTER_BOX_8,點擊滑鼠右鍵即可使用，140級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (140級),0,0.0,0.0,FFFF,8,1.0
-900399,EVENT_1710_NEWCHARACTER_BOX_9,點擊滑鼠右鍵即可使用，170級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (170級),0,0.0,0.0,FFFF,8,1.0
-900400,EVENT_1710_NEWCHARACTER_BOX_10,點擊滑鼠右鍵即可使用，180級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (180級),0,0.0,0.0,FFFF,8,1.0
-900401,EVENT_1710_NEWCHARACTER_BOX_11,點擊滑鼠右鍵即可使用，200級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (200級),0,0.0,0.0,FFFF,8,1.0
-900402,EVENT_1710_NEWCHARACTER_BOX_12,點擊滑鼠右鍵即可使用，220級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (220級),0,0.0,0.0,FFFF,8,1.0
-900403,EVENT_1710_NEWCHARACTER_BOX_13,點擊滑鼠右鍵即可使用，230級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (230級),0,0.0,0.0,FFFF,8,1.0
-900404,EVENT_1710_NEWCHARACTER_BOX_14,點擊滑鼠右鍵即可使用，270級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (270級),0,0.0,0.0,FFFF,8,1.0
-900405,EVENT_1710_NEWCHARACTER_BOX_15,點擊滑鼠右鍵即可使用，300級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (300級),0,0.0,0.0,FFFF,8,1.0
-900406,EVENT_1710_NEWCHARACTER_BOX_16,點擊滑鼠右鍵即可使用，330級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (330級),0,0.0,0.0,FFFF,8,1.0
+900391,EVENT_1710_NEWCHARACTER_BOX_1,點擊滑鼠右鍵即可使用，15級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (15級),0,0.0,0.0,FFFF,8,1.0
+900392,EVENT_1710_NEWCHARACTER_BOX_2,點擊滑鼠右鍵即可使用，40級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (40級),0,0.0,0.0,FFFF,8,1.0
+900393,EVENT_1710_NEWCHARACTER_BOX_3,點擊滑鼠右鍵即可使用，50級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (50級),0,0.0,0.0,FFFF,8,1.0
+900394,EVENT_1710_NEWCHARACTER_BOX_4,點擊滑鼠右鍵即可使用，75級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (75級),0,0.0,0.0,FFFF,8,1.0
+900395,EVENT_1710_NEWCHARACTER_BOX_5,點擊滑鼠右鍵即可使用，85級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (85級),0,0.0,0.0,FFFF,8,1.0
+900396,EVENT_1710_NEWCHARACTER_BOX_6,點擊滑鼠右鍵即可使用，100級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (100級),0,0.0,0.0,FFFF,8,1.0
+900397,EVENT_1710_NEWCHARACTER_BOX_7,點擊滑鼠右鍵即可使用，120級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (120級),0,0.0,0.0,FFFF,8,1.0
+900398,EVENT_1710_NEWCHARACTER_BOX_8,點擊滑鼠右鍵即可使用，140級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (140級),0,0.0,0.0,FFFF,8,1.0
+900399,EVENT_1710_NEWCHARACTER_BOX_9,點擊滑鼠右鍵即可使用，170級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (170級),0,0.0,0.0,FFFF,8,1.0
+900400,EVENT_1710_NEWCHARACTER_BOX_10,點擊滑鼠右鍵即可使用，180級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (180級),0,0.0,0.0,FFFF,8,1.0
+900401,EVENT_1710_NEWCHARACTER_BOX_11,點擊滑鼠右鍵即可使用，200級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (200級),0,0.0,0.0,FFFF,8,1.0
+900402,EVENT_1710_NEWCHARACTER_BOX_12,點擊滑鼠右鍵即可使用，220級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (220級),0,0.0,0.0,FFFF,8,1.0
+900403,EVENT_1710_NEWCHARACTER_BOX_13,點擊滑鼠右鍵即可使用，230級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (230級),0,0.0,0.0,FFFF,8,1.0
+900404,EVENT_1710_NEWCHARACTER_BOX_14,點擊滑鼠右鍵即可使用，270級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (270級),0,0.0,0.0,FFFF,8,1.0
+900405,EVENT_1710_NEWCHARACTER_BOX_15,點擊滑鼠右鍵即可使用，300級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (300級),0,0.0,0.0,FFFF,8,1.0
+900406,EVENT_1710_NEWCHARACTER_BOX_16,點擊滑鼠右鍵即可使用，330級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (330級),0,0.0,0.0,FFFF,8,1.0
 900407,EVENT_1710_NEWCHARACTER_TPBOX,可點擊滑鼠右鍵使用。首次獲得時可於7日後使用。{nl}活動結束後統一刪除。,icon_item_eventbox_tp,,,,,,7日TP箱,0,0.0,0.0,FFFF,8,1.0
-900408,Moru_Gold_EVENT_1710_NEWCHARACTER,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。右擊滑鼠使用。{nl}活動結束時道具統一刪除。,icon_item_anvil_gold,,,,,,[For 10]  發光的黃金鐵砧,0,0.0,0.0,FFFF,15,1.0
-900409,161215Event_Seed_EVENT_1710_NEWCHARACTER,使用時受女神祝福的嫩芽會悄悄開花。{nl}活動結束時道具統一刪除。,icon_item_event161215_01,,,,,,[For 10]  充滿祝福的嫩芽,0,5.0,0.0,FFFF,6,0.0
-900410,EVENT_1710_NEWCHARACTER_BOX_17,點擊滑鼠右鍵即可使用，350級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (350級),0,0.0,0.0,FFFF,8,1.0
-900411,Drug_Event_Looting_Potion_14d,30分內令Rooting機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間30分。{nl} - Rooting機會藥水無法疊加使用。,icon_item_looting_potion_01,,,,,,Rooting機會增加藥水(14天),25,1800.0,0.0,FFFF,6,5.0
+900408,Moru_Gold_EVENT_1710_NEWCHARACTER,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。右擊滑鼠使用。{nl}活動結束時道具統一刪除。,icon_item_anvil_gold,,,,,,[Re:Build] 發光的黃金鐵砧,0,0.0,0.0,FFFF,15,1.0
+900409,161215Event_Seed_EVENT_1710_NEWCHARACTER,使用時受女神祝福的嫩芽會悄悄開花。{nl}活動結束時道具統一刪除。,icon_item_event161215_01,,,,,,[Re:Build] 充滿祝福的嫩芽,0,5.0,0.0,FFFF,6,0.0
+900410,EVENT_1710_NEWCHARACTER_BOX_17,點擊滑鼠右鍵即可使用，350級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (350級),0,0.0,0.0,FFFF,8,1.0
+900411,Drug_Event_Looting_Potion_14d,30分內令Rooting機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間30分。{nl} - Rooting機會藥水無法疊加使用。,icon_item_looting_potion_01,,,,,,Rooting機會增加藥水(14天),25,1800.0,1209600.0,FFFF,6,5.0
 900412,EVENT_1803_NEWCHARACTER_JUMPING,獲得跳躍角色禮包所出現的信物。{nl}活動結束時道具統一刪除。,icon_item_event_luckychance,,,,,,跳躍角色禮包交換卷,1,0.0,0.0,FFFF,8,1.0
 900413,EVENT_1803_NEWCHARACTER_JUMPING_BOX,點擊滑鼠右鍵使用，15級以下才可使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_4,,,,,,[團結] 跳躍禮包箱子,0,0.0,0.0,FFFT,8,1.0
 900414,Event_expCard_300Lv,可提升300級角色的經驗值。50級以下才可使用。,icon_item_expcard,,,,,,經驗值卡片 (300級),0,0.0,0.0,FFFF,8,0.0
 900415,Event_Ability_Point_Stone_1000,活動所發送的道具。{nl}使用時特性點數增加1000，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint,,,,,,特性點數 1000,0,0.0,0.0,FFFF,8,1.0
-900416,EVENT_1803_NEWCHARACTER_ABILITY_BOX,點擊滑鼠右鍵使用，到活動結束為止，每日可獲得特性點數500。{nl}活動結束時道具統一刪除。,icon_item_giftbox_1,,,,,,[團結] 每日特性點數箱子,0,0.0,0.0,FFFF,8,1.0
-900417,EVENT_1803_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動中送出的禮物稱號箱，活動結束時道具統一刪除。,icon_item_holyark,,,,,,[For 10]  稱號-終極的救援者,0,0.0,0.0,FFFT,6,0.0
+900416,EVENT_1803_NEWCHARACTER_ABILITY_BOX,點擊滑鼠右鍵使用，到活動結束為止，每日可獲得特性點數500。{nl}活動結束時道具統一刪除。,icon_item_giftbox_1,,,,,,[Re:Build] 每日特性點數箱子,0,0.0,0.0,FFFF,8,1.0
+900417,EVENT_1803_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動送的稱號箱，活動結束時統一刪除。,icon_item_holyark,,,,,,[Re:Build] 稱號-終極的救援者,0,0.0,0.0,FFFT,6,0.0
 900418,EVENT_1805_NEWCHARACTER_WEAPON,可以跟烏斯卡領取350級稀有11強5超越的武器。{nl}活動結束時統一刪除。,icon_item_event_luckychance,,,,,,[團結] 11強5超越交換劵,1,0.0,0.0,FFFF,8,1.0
-900419,EVENT_1805_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動中送出的禮物稱號箱，活動結束時道具統一刪除。,icon_item_holyark,,,,,,[For 10]  稱號 - 啟示獲得者,0,0.0,0.0,FFFT,6,0.0
-900420,EVENT_1710_NEWCHARACTER_BOX_18,點擊滑鼠右鍵即可使用，380級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[For 10]  衝等寶箱 (380級),0,0.0,0.0,FFFF,8,1.0
+900419,EVENT_1805_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動送的稱號箱，活動結束時統一刪除。,icon_item_holyark,,,,,,[Re:Build] 稱號 - 啟示獲得者,0,0.0,0.0,FFFT,6,0.0
+900420,EVENT_1710_NEWCHARACTER_BOX_18,點擊滑鼠右鍵即可使用，380級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,[Re:Build] 衝等寶箱 (380級),0,0.0,0.0,FFFF,8,1.0
+900421,EVENT_1803_NEWCHARACTER_Ability_Point_Stone_1000,活動發送的道具。{nl}使用時特性點數增加1000，點擊滑鼠右鍵即可使用。{nl活動結束時道具統一刪除。,icon_item_abilitypoint,,,,,,"[Re:Build] 特性點數 1,000",0,0.0,0.0,FFFT,8,1.0
+900422,Event_Ability_Point_Stone_10000_14d,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,"特性點數10,000(14天)",0,0.0,1209600.0,FFFF,8,1.0
+900423,EVENT_1811_NEWCHARACTER_BARRACK_SLOT,活動發送的道具。{nl}會增加角色欄位，點擊滑鼠右鍵使用。,icon_item_barrack_slot1,,,,,,角色欄位增加使用劵,0,0.0,0.0,FFFF,8,1.0
+900424,EVENT_1811_NEWCHARACTER_REINFORCE11,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+11強化。{nl}活動結束時統一刪除。,icon_item_reinforce11,,,,,,[Re:Build] 摩西尼奧斯武器+11強化劵,0,0.0,0.0,FFFF,15,1.0
+900425,EVENT_1811_NEWCHARACTER_TRANSCEND5,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+5超越。{nl}活動結束時統一刪除。,icon_item_transcend5,,,,,,[Re:Build] 摩西尼奧斯武器+5超越劵,0,0.0,0.0,FFFF,15,1.0
+900426,Event_1704_Cash_500000,"恭禧您中獎獲得Nexon 500,000現金！{nl}活動結束時道具統一刪除。{nl}點擊滑鼠右鍵即可確認圖片。",icon_item_event_500000cash,,,,,,"Nexon 500,000現金中獎券",1,0.0,0.0,FFFF,8,0.0
 902000,Event_1710_Thanksgiving_Coin,'硬幣投壺'是可和多人一起使用的道具。{nl}- 使用方法{nl}使用道具時會出現可放入銅錢的 '投壺。'{nl}新增至背包的 '投壺遊戲用銅錢' 使用道具時計量條增加，若使用普通攻擊讓計量條停止增加，將依計量條的量決定投擲銅錢的力道。{nl}把銅錢投入投壺內，即可根據準確度和地下城距離獲得點數。{nl}進行地區移動時，進行中的投壺點數和 '投壺遊戲用的銅錢'將會被刪除。,icon_1710_thanksgiving_target,,,,,,硬幣投壺,0,180.0,0.0,TTTT,6,1.0
 902001,Event_1709_NewField_Coupon,10分鐘內移動速度+2、物理攻擊力+50、魔法攻擊力+50。右擊滑鼠使用。{nl}可用邀請魔方向邀請活動小幫手換取。{nl}活動結束後統一刪除。,icon_item_gem_elemental17,,,,,,邀請信物,0,30.0,0.0,FFFT,6,0.0
 902002,Event_1709_NewField_Cube,活動結束後統一刪除。,icon_item_eventcube3,,,,,,邀請魔方,0,0.0,0.0,FFFT,8,0.0
 902003,Event_1709_NewField_Potion,可點擊滑鼠右鍵使用。{nl}活動結束後統一刪除。{nl}使用時30分鐘內移動速度 +3,item_speed_requid_3,,,,,,邀請藥水,0,0.0,0.0,FFFT,8,1.0
-902006,Event_Special_Blueorb,使用時召喚我軍怪物。{nl}'活動任務'，只能在此使用。{nl}活動結束後統一刪除。,icon_item_core_blue,,,,,,特別的藍色晶球,0,300.0,0.0,FFFF,8,1.0
-902007,Event_Special_Trap,使用時設捕獲用陷阱。{nl}活動結束後統一刪除。,icon_item_pilgrim_trap,,,,,,特別的捕獲用陷阱,0,30.0,0.0,FFFT,8,1.0
+902006,Event_Special_Blueorb,"사용시 아군 몬스터를 소환합니다.{nl}'이벤트 미션'에서만 사용 가능합니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_core_blue,,,,,,特別的藍色晶球,0,360.0,0.0,FFFT,8,1.0
+902007,Event_Special_Trap,"사용시 포획용 덫이 설치됩니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_pilgrim_trap,,,,,,特別的捕獲用陷阱,0,30.0,0.0,FFFT,8,1.0
 902008,Event_1709_NewField_Box,裝有應邀者套裝的箱子。可點擊滑鼠右鍵使用。,icon_item_giftbox_4,,,,,,應邀者套裝箱,0,0.0,0.0,FFFT,8,1.0
-902009,Event_Special_Etcitem,活動材料道具。{nl}可以令捕獲的怪物等級增加。{nl}活動結束時統一刪除。,icon_item_panto_core,,,,,,怪物的氣息,0,0.0,0.0,TTTT,8,1.0
+902009,Event_Special_Etcitem,"이벤트 재료 아이템입니다.{nl}포획한 몬스터 레벨을 증가시킬 수 있습니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_panto_core,,,,,,怪物的氣息,0,0.0,0.0,FFFT,15,1.0
 902016,Armor_270_EventBox,可以選擇270制防具裝備。,icon_item_event_armorbox2,,,,,,活動用防具箱 (Lv. 270),0,0.0,0.0,FFFT,8,0.0
-902017,Weapon_315_EventBox,可以選擇315制武器裝備。,icon_item_event_weaponbox1,,,,,,活動用武器箱 (Lv. 315),0,0.0,0.0,FFFT,8,0.0
+902017,Weapon_315_EventBox,315제 방어구 장비를 선택할 수 있습니다.,icon_item_event_weaponbox1,,,,,,活動用武器箱 (Lv. 315),0,0.0,0.0,FFFT,8,0.0
 902018,Event_Fedimian_Cube,送給守護佩迪米安的救援者的獎勵。,icon_item_eventcube2,,,,,,佩迪米安守護魔方,0,0.0,0.0,FFFF,8,1.0
 902019,Achieve_MonsterInker,贈送給2017年萬聖誕繪畫徵選活動得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,稱號 - Monster Inker,0,0.0,0.0,FFFT,6,0.0
-902021,Event_Special_Etcitem2,活動材料道具。{nl}可以用來交換有用的道具。{nl}活動結束時統一刪除。,rootcrystal_piece,,,,,,藍色晶球碎片,0,0.0,0.0,FFFT,8,1.0
+902021,Event_Special_Etcitem2,"이벤트 재료 아이템입니다.{nl}쓸모있는 아이템으로 교환이 가능합니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",rootcrystal_piece,,,,,,藍色碎片,0,0.0,0.0,FFFT,8,1.0
 902022,Event_Halloween_Squib,為了萬聖節而製作的爆竹，點擊滑鼠右鍵即可使用。,icon_item_firework,,,,,,萬聖節爆竹,0,3.0,0.0,FFFT,6,1.0
 902023,AGARIO_CANDY_REWARD,奇妙的南瓜造型糖。可從活動地下城獲得。{nl}活動結束後統一刪除。,icon_item_halloweencandy_set,,,,,,奇妙糖果,10,0.0,0.0,FFFT,8,0.0
 902024,EVENT_1706_FREE_RANKRESET_REWARD_6RANKBOX,可點擊滑鼠右鍵使用。須達成1級才能使用。{nl}活動結束後統一刪除。,icon_item_classsolution_box,,,,,,6階衝等寶箱,0,0.0,0.0,FFFT,8,1.0
 902025,Event_expCard_180Lv,可提升180級角色的經驗值。50級以下才可使用。,icon_item_expcard,,,,,,經驗值卡片 (180級),0,0.0,0.0,FFFF,8,0.0
-902026,Event_Nru_Buff_Item,60分內給予全體隊員經驗值+50%的效果。,icon_item_collection_02green,,,,,,新手玩家之書(14天),0,3600.0,0.0,FFFF,8,0.0
-902027,Event_Cb_Buff_Item,60分內給予全體隊員最大HP +2000、最大SP +1000、移動速度 +1的效果。,icon_item_collection_01red,,,,,,回歸玩家之書(14天),0,3600.0,0.0,FFFF,8,0.0
-902028,Event_Cb_Buff_Potion,60分內物理攻擊力+500、魔法攻擊力+500。{nl}(不會消耗。),icon_item_drug_hpsp3,,,,,,回歸玩家的藥水(30天),0,3600.0,0.0,FFFF,8,0.0
+902026,Event_Nru_Buff_Item,60分內給予全體隊員經驗值+50%的效果。,icon_item_collection_02green,,,,,,초보 유저의 서(14일),0,3600.0,1209600.0,FFFF,8,0.0
+902027,Event_Cb_Buff_Item,60分內給予全體隊員最大HP +2000、最大SP +1000、移動速度 +1的效果。,icon_item_collection_01red,,,,,,回歸玩家之書(14天),0,3600.0,1209600.0,FFFF,8,0.0
+902028,Event_Cb_Buff_Potion,60分內物理攻擊力+500、魔法攻擊力+500。{nl}(不會消耗。),icon_item_drug_hpsp3,,,,,,回歸玩家的藥水(30天),0,3600.0,2592000.0,FFFF,8,0.0
 902029,Event_Goddess_Medal,好像會有好事發生。{nl}(收集獎牌可以跟活動佈告欄交換道具。),item_icon_medal,,,,,,女神的獎牌,0,0.0,0.0,FFFT,8,0.0
-902030,Event_Lv315_Ore_Box,使用時可隨時獲得1個道具。{nl} - 帕勒礦石{nl} - 鈹德礦石{nl} - 佩利尼礦石{nl} - 紫色魔方結晶,icon_item_royalbox,,,,,,LV315 主武器寶石箱(14天),0,0.0,0.0,FFFF,8,0.0
+902030,Event_Lv315_Ore_Box,使用時可隨時獲得1個道具。{nl} - 帕勒礦石{nl} - 鈹德礦石{nl} - 佩利尼礦石{nl} - 紫色魔方結晶,icon_item_royalbox,,,,,,LV315 主武器寶石箱(14天),0,0.0,1209600.0,FFFF,8,0.0
 902032,Achieve_Companions_forLife,贈送給Companion Maker 得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,稱號 - Companions for Life,0,0.0,0.0,FFFT,6,0.0
 902034,Achieve_Journal_1,贈送給達成冒險日誌排名第1的玩家的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,稱號 - 超一流冒險家,0,0.0,0.0,FFFT,6,0.0
 902035,Event_Fire_SecondTime,2週年活動的道具。,icon_item_firework_secondtime,,,,,,2週年爆竹,0,0.0,0.0,FFFT,6,1.0
 902036,EVENT_1712_SECOND_MIN_ITEM,2週年紀念活動分發的道具。{nl}在活動商店可交換活動道具，活動結束時道具統一刪除。,icon_item_seed_secondtime,,,,,,2週年種子,10,0.0,0.0,FFFT,8,1.0
 902037,EVENT_1712_XMAS_FIRE,聖誕節活動用道具，活動結束時道具統一刪除。,icon_item_firework_secondtime,,,,,,聖誕節活動用爆竹,0,3.0,0.0,FFFT,6,1.0
 902038,Event_Steam_Christmas_Reward_Box,聖誕活動道具。{nl}可以選項獎勵中的1個。,icon_item_royalbox,,,,,,善意的謊言箱子,0,0.0,0.0,FFFT,8,0.0
-902039,EVENT_1712_SECOND_CHALLENG_14d,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,0.0,FFFF,8,1.0
+902039,EVENT_1712_SECOND_CHALLENG_14d,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,1209600.0,FFFF,8,1.0
 902040,Event_Steam_Christmas_Box,聖誕活動道具。{nl}請將禮物箱子轉交給小孩。,icon_item_giftbox_4,,,,,,小孩用禮物箱子,0,0.0,0.0,FFFF,8,0.0
-902042,Event_Goddess_Statue_3d,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,女神的雕像(3天),0,0.0,0.0,FFFF,6,0.0
-902043,Adventure_Reward_Seed_3d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽(3天),0,5.0,0.0,FFFF,6,0.0
+902042,Event_Goddess_Statue_3d,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,女神的雕像(3天),0,0.0,259200.0,FFFF,6,0.0
+902043,Adventure_Reward_Seed_3d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽(3天),0,5.0,259200.0,FFFT,6,0.0
 902045,EVENT_1712_XMAS_CUBE,聖誕節活動用道具。{nl}如在12月24日、25日拿去給出現在雷堤夏旁邊的'雷堤夏的聖誕禮物' NPC，將可以獲得獎勵道具。{nl}活動結束時道具統一刪除。,icon_item_key5,,,,,,聖誕禮物鑰匙,0,0.0,0.0,FFFT,8,1.0
 902046,Snow_Card_Book,被雪覆蓋的卡片冊，建議在安靜的地方閱讀。{nl}100級以上可使用。{nl}使用時會召喚330LV的BOSS怪物，被召喚的BOSS在10分鐘後會消失。{nl}只能在野外使用。,icon_item_chrismas_card,,,,,,被雪覆蓋的怪物卡片冊,0,60.0,0.0,FFFT,6,10.0
 902047,EVENT_1712_NEWYEAR_CARD,送給救援者的2018年賀年卡。,icon_item_event_invitation2,,,,,,賀年卡,1,0.0,0.0,FFFT,8,1.0
-902049,EVENT_STEAM_RETURN_BOX,歡迎歸隊。{nl}使用時證明為回歸玩家可以獲得回歸玩家的禮物。{nl}如果不使用回歸玩家的禮物，就無法參與回歸玩家的活動。,icon_item_jewelrybox_close,,,,,,回歸玩家的禮物箱(14天),0,0.0,0.0,FFFF,8,1.0
-902052,Ability_Point_Stone_500_14d,使用時特性點數增加 500，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint2,,,,,,特性點數500(14天),0,0.0,0.0,FFFF,8,1.0
-902053,Event_Steam_Happy_New_Year,為了迎接新年而精心熬煮的年糕湯，吃完年糕湯就長一歲囉！{nl}和其他玩家組隊時使用會對全體組隊成員提供30分鐘經驗值增加15%的效果。,icon_item_rice_soup,,,,,,年糕湯(3天),0,1800.0,0.0,FFFF,6,1.0
+902049,EVENT_STEAM_RETURN_BOX,歡迎歸隊。{nl}使用時證明為回歸玩家可以獲得回歸玩家的禮物。{nl}如果不使用回歸玩家的禮物，就無法參與回歸玩家的活動。,icon_item_jewelrybox_close,,,,,,回歸玩家的禮物箱(14天),0,0.0,1209600.0,FFFF,8,1.0
+902052,Ability_Point_Stone_500_14d,使用時特性點數增加 500，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint2,,,,,,特性點數500(14天),0,0.0,1209600.0,FFFF,8,1.0
+902053,Event_Steam_Happy_New_Year,為了迎接新年而精心熬煮的年糕湯，吃完年糕湯就長一歲囉！{nl}和其他玩家組隊時使用會對全體組隊成員提供30分鐘經驗值增加15%的效果。,icon_item_rice_soup,,,,,,年糕湯(3天),0,1800.0,259200.0,FFFF,6,1.0
 902054,Event_LvupBuffPowder,在活動佈告欄可以令家門BUFF成長的粉末。{nl}本道具在活動結束後會統一刪除。,icon_item_magicpowder,,,,,,BUFF強化用粉末,0,0.0,0.0,FFFT,8,0.0
 902055,Event_LvupBuff_Quest,必須移動至文件上顯示的地區消滅怪物。{nl}本道具在活動結束後會統一刪除。,icon_item_stonepaper_02,,,,,,討伐命令書,0,0.0,0.0,FFFT,8,0.0
 902056,Event_LvupBuffPowder2,在活動佈告欄可以令家門BUFF成長的粉末。{nl}本道具在活動結束後會統一刪除。,icon_item_3cmdisk,,,,,,討伐證明,0,0.0,0.0,FFFT,8,0.0
-902057,Scroll_Transform_Random_1day,變身卷軸。{nl}注意！變身後只要移動到其它場所就會解除。,golemmagicitem2,,,,,,活動用變身卷軸(1天),0,10.0,0.0,FFFF,6,0.0
+902057,Scroll_Transform_Random_1day,變身卷軸。{nl}注意！變身後只要移動到其它場所就會解除。,golemmagicitem2,,,,,,活動用變身卷軸(1天),0,10.0,86400.0,FFFF,6,0.0
 902060,EVENT_1801_ORB_MISSION_KEY,特別的實驗任務需要的道具。{nl}活動佈告欄一天發送1次。{nl}活動結束時道具統一刪除。,icon_item_annycoin_1,,,,,,藍色晶球地下城鑄幣,0,0.0,0.0,FFFT,15,1.0
 902064,Event_Steam_Night_Market_Gold,在夜市使用的金幣。{nl}(活動結束時統一刪除。),icon_item_gold,,,,,,活動金幣,0,0.0,0.0,FFFT,8,0.0
 902065,Event_Steam_Night_Market_Drug_redox,讓你擁有紅牛般的體力，10分內最大 SP +1000、廣域攻擊比率+1、不會消耗耐力。{nl}(活動結束時統一刪除。),icon_item_red_ox,,,,,,祕密紅牛飲料,0,600.0,0.0,FFFT,6,1.0
-902066,Event_Steam_Night_Market_EquipBox1,這是可以選擇Lv 315獨特裝備的箱子。,icon_item_eventbox_powup,,,,,,上衣-祕密裝備選擇箱(14天),0,0.0,0.0,FFFF,8,1.0
-902067,Event_Steam_Night_Market_EquipBox2,這是可以選擇Lv 315獨特裝備的箱子。,icon_item_eventbox_powup,,,,,,褲子-祕密裝備選擇箱(14天),0,0.0,0.0,FFFF,8,1.0
-902068,Event_Steam_Night_Market_EquipBox3,這是可以選擇Lv 315獨特裝備的箱子。,icon_item_eventbox_powup,,,,,,手套-祕密裝備選擇箱(14天),0,0.0,0.0,FFFF,8,1.0
-902069,Event_Steam_Night_Market_EquipBox4,這是可以選擇Lv 315獨特裝備的箱子。,icon_item_eventbox_powup,,,,,,鞋子-祕密裝備選擇箱(14天),0,0.0,0.0,FFFF,8,1.0
-902070,Event_Steam_Night_Market_RecipeBox1,這是可以選擇Lv 315獨特製作書的箱子。,icon_item_eventbox_magic,,,,,,祕密製作書選箱(14天),0,0.0,0.0,FFFF,8,1.0
+902066,Event_Steam_Night_Market_EquipBox1,這是可以選擇Lv 315獨特裝備的箱子。,icon_item_eventbox_powup,,,,,,上衣-祕密裝備選擇箱(14天),0,0.0,1209600.0,FFFF,8,1.0
+902067,Event_Steam_Night_Market_EquipBox2,這是可以選擇Lv 315獨特裝備的箱子。,icon_item_eventbox_powup,,,,,,褲子-祕密裝備選擇箱(14天),0,0.0,1209600.0,FFFF,8,1.0
+902068,Event_Steam_Night_Market_EquipBox3,這是可以選擇Lv 315獨特裝備的箱子。,icon_item_eventbox_powup,,,,,,手套-祕密裝備選擇箱(14天),0,0.0,1209600.0,FFFF,8,1.0
+902069,Event_Steam_Night_Market_EquipBox4,這是可以選擇Lv 315獨特裝備的箱子。,icon_item_eventbox_powup,,,,,,鞋子-祕密裝備選擇箱(14天),0,0.0,1209600.0,FFFF,8,1.0
+902070,Event_Steam_Night_Market_RecipeBox1,這是可以選擇Lv 315獨特製作書的箱子。,icon_item_eventbox_magic,,,,,,祕密製作書選箱(14天),0,0.0,1209600.0,FFFF,8,1.0
 902071,EVENT_1802_NEWYEAR_GOLDCOIN,使用於黃金財犬的活動商店，活動結束時道具統一刪除。,icon_item_goldcoin_event,,,,,,戊戌年黃金硬幣,0,0.0,0.0,TFFT,15,1.0
 902072,EVENT_1802_NEWYEAR_FORTUNEPOUCH,黃金財犬所贈送的福袋，使用時'戊戌年黃金硬幣'可以獲得戊戌年黃金硬幣，活動結束時道具統一刪除。,icon_item_fortunepouch,,,,,,戊戌年福袋,0,3.0,0.0,FFFT,6,1.0
 902073,EVENT_1802_NEWYEAR_ACHIEVE,黃金財犬所贈送的稱號箱子，活動結束時道具統一刪除。,icon_item_holyark,,,,,,稱號-2018財運大發,0,0.0,0.0,FFFT,6,0.0
-902077,Event_2018VALENTINE_Choco,有著甜甜的味道，可以讓腦袋清晰的巧克力。使用時在60分鐘經驗值增加50%。,icon_item_chocolatebox,,,,,,包裝的巧克力,0,0.0,0.0,FFFT,6,0.0
+902077,Event_2018VALENTINE_Choco,有著甜甜的味道，可以讓腦袋清晰的巧克力。使用時在60分鐘經驗值增加50%。,icon_item_chocolatebox,,,,,,包裝的巧克力,0,1800.0,0.0,FFTF,6,0.0
 902078,EVENT_1802_CHOCO,30分鐘內每疊加1可增加經驗值獲得量10%、最大體力500、每10秒恢復HP100/SP50，最多可以疊加5次，活動結束時道具統一刪除。,icon_item_chocolatebox,,,,,,香甜的情人節巧克力,0,10.0,0.0,FFFT,6,0.0
 902079,RequestEnterCount_1add,使用時可以在入場1次委託所任務。,icon_item_indunonemoreenter,,,,,,委託所任務1次入場卷,0,0.0,0.0,FFFF,8,0.0
 902080,GuildQuestEnterCount_1add,使用時增加1次公會任務(任務/遠征隊)的入場次數。,icon_item_indunonemoreenter,,,,,,公會任務1次入場卷,0,0.0,0.0,FFFF,8,0.0
-902088,Event_Nru2_Box_1_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(1級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,0.0,FFFF,8,0.0
-902089,Event_Nru2_Box_2_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(1級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv1 引導員箱子(14天),0,0.0,0.0,FFFF,8,0.0
-902090,Event_Nru2_Box_3_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(50級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv50  引導員箱子(14天),0,0.0,0.0,FFFF,8,0.0
-902091,Event_Nru2_Box_4_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(170級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv170  引導員箱子(14天),0,0.0,0.0,FFFF,8,0.0
-902092,Event_Nru2_Box_5_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(220級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv220  引導員箱子(14天),0,0.0,0.0,FFFF,8,0.0
-902093,Event_Nru2_Box_6_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(隊伍等級2以上才可以使用。),icon_item_giftbox1,,,,,,Team Lv2  引導員箱子(14天),0,0.0,0.0,FFFF,8,0.0
-902094,Event_Nru2_Box_7_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(隊伍等級3以上材可以使用。),icon_item_giftbox1,,,,,,Team Lv3  引導員箱子(14天),0,0.0,0.0,FFFF,8,0.0
+902088,Event_Nru2_Box_1_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(1級以上才可以使用。),icon_item_giftbox1,,,,,,引導員升級箱 (14天),0,0.0,1209600.0,FFFF,8,0.0
+902089,Event_Nru2_Box_2_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(1級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv1 引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+902090,Event_Nru2_Box_3_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(50級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv50  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+902091,Event_Nru2_Box_4_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(170級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv170  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+902092,Event_Nru2_Box_5_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(220級以上才可以使用。),icon_item_giftbox1,,,,,,Chr Lv220  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+902093,Event_Nru2_Box_6_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(隊伍等級2以上才可以使用。),icon_item_giftbox1,,,,,,Team Lv2  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
+902094,Event_Nru2_Box_7_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(隊伍等級3以上材可以使用。),icon_item_giftbox1,,,,,,Team Lv3  引導員箱子(14天),0,0.0,1209600.0,FFFF,8,0.0
 902096,Event_Steam_Last_Winter_Key,可以在冬季企鵝活動中使用的鑰匙。{nl}(活動結束時統一刪除。),cathedral_key_2,,,,,,冬季鑰匙,0,0.0,0.0,FFFT,8,0.0
-902097,Event_Steam_Last_Winter_Icicle,冰錐的冰融化之後，裡面會有什麼呢?{nl}(冰錐只能在木柴周圍使用。),icon_item_gimmick_spcrystal,,,,,,冰錐(14天),0,3.0,0.0,FFFF,8,0.0
+902097,Event_Steam_Last_Winter_Icicle,冰錐的冰融化之後，裡面會有什麼呢?{nl}(冰錐只能在木柴周圍使用。),icon_item_gimmick_spcrystal,,,,,,冰錐(14天),0,3.0,1209600.0,FFFF,8,0.0
 902102,Event_Steam_2Years_Master_List,記錄著持有邀請函的大師名單。{nl}(使時可以確認活動進行狀況。),icon_item_diary,,,,,,大師名冊,0,0.0,0.0,FFFT,8,0.0
-902103,Event_Steam_2Years_Master_DLC,開啟時可獲得套裝。{nl} - 應邀者套裝(男){nl} - 應邀者套裝(女),siaul_act3_confirmation,,,,,,活動傳送卷軸 - 2週年活動開始,0,0.0,0.0,FFFT,8,0.0
+902103,Event_Steam_2Years_Master_DLC,이벤트용 워프 주문서입니다.{nl}사용 시 2주년 이벤트 도우미 npc 앞으로 이동합니다.,siaul_act3_confirmation,,,,,,活動傳送卷軸 - 2週年活動開始,0,0.0,0.0,FFFT,8,0.0
 902106,Event_Steam_Magazine_Num1,啟示活動道具。{nl}可以在活動佈告欄用活動道具交換稱號。,icon_item_stonetablet,,,,,,[活動]第一個啟示,0,0.0,0.0,FFFT,8,0.0
 902107,Achieve_Event_Steam_Magazine_Num1,賦予找到[活動]啟示的救世者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,稱號 - [EVENT]Crystal Mine Revelation,0,0.0,0.0,FFFT,6,0.0
 902108,Achieve_Event_Steam_Colony_Tester,賦予給領地戰優勝反饋玩家的稱號。,icon_item_holyark,,,,,,稱號 - No. 1 Territory Wars Tester,0,0.0,0.0,FFFT,6,0.0
@@ -5501,17 +5557,17 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904006,EVENT_KOR_Fortunecookie,30分內根據疊加，經驗值、移動速度、最大HP會增加，最多可5疊加。活動結束時道具會統一刪除。,icon_item_fortunecookie,,,,,,幸運餅乾,0,10.0,0.0,FFFF,6,0.0
 904008,EVENT_1803_NEWCLASS_BOX_RTA,含有網鬥士魯迪阿里烏斯套裝的箱子。{nl}要轉職為網鬥士才可以使用。{nl}從箱子中獲得的套裝不能使用於隊伍倉庫。,icon_item_jewelrybox,,,,,,網鬥士魯迪阿里烏斯套裝箱,0,0.0,0.0,FFFT,6,0.0
 904009,EVENT_1803_NEWCLASS_BOX_OMJ,含有陰陽師王室禮服套裝的箱子。{nl}要轉職為陰陽師才可以使用。{nl}從箱子中獲得的套裝不能使用於隊伍倉庫。,icon_item_jewelrybox,,,,,,陰陽師王室禮服套裝箱子,0,0.0,0.0,FFFT,6,0.0
-904010,161215Event_Seed_1d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽(1天),0,5.0,0.0,FFFF,6,0.0
+904010,161215Event_Seed_1d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽(1天),0,5.0,86400.0,FFFF,6,0.0
 904011,EVENT_1804_ARBOR_GROW_CRYSTAL_1_2,栽培樹木活動用的道具，幫助促進樹木的生長，活動結束時活動道具統一刪除。,icon_item_1804_arbor_1,,,,,,樹苗成長水晶,0,0.0,0.0,FFFT,15,1.0
 904012,EVENT_1804_ARBOR_GROW_CRYSTAL_3_4,栽培樹木活動用的道具，幫助促進樹木的生長，活動結束時活動道具統一刪除。,icon_item_1804_arbor_2,,,,,,成木成長水晶,0,0.0,0.0,FFFT,15,1.0
 904013,EVENT_1804_ARBOR_GROW_CRYSTAL_5_6,栽培樹木活動用的道具，幫助促進樹木的生長，活動結束時活動道具統一刪除。,icon_item_1804_arbor_3,,,,,,茂盛的成木成長水晶,0,0.0,0.0,FFFT,15,1.0
 904017,EVENT_1804_ARBOR_ACHIEVE_BOX,栽培樹木活動所贈送的稱號箱子，活動結束時活動道具統一刪除。,icon_item_holyark,,,,,,稱號 - 栽培樹木的人,0,0.0,0.0,FFFT,6,0.0
 904019,EVENT_1804_ROOT_ACHIEVE_BOX,秘密的樹根水晶活動所贈送的稱號箱子，活動結束時活動道具統一刪除。,icon_item_holyark,,,,,,稱號 - 樹根水晶探索者,0,0.0,0.0,FFFT,6,0.0
 904021,Moru_Silver_Team_Trade,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,銀光鐵砧,0,0.0,0.0,FFFT,15,1.0
-904023,EVENT_1804_TRANSCEND_SHOP_SILVER_BOX_14D,使用時可以獲得隨機數量的銀幣。,icon_item_silverbox1,,,,,,受祝福的銀幣箱(14天),0,0.0,0.0,FFFF,6,1.0
-904024,EVENT_1804_TRANSCEND_SHOP_REINFORCE_BOX_14D,使用時可以從獎勵目錄上隨機得到一個道具。,icon_item_eventbox_qm,,,,,,受祝福的強化魔方(14天),0,0.0,0.0,FFFF,6,1.0
-904025,EVENT_1804_TRANSCEND_SHOP_COSTUME_BOX_14D,使用時可以從獎勵目錄上隨機得到一個道具。,icon_item_eventcube3,,,,,,人氣活動套裝魔方(14天),0,0.0,0.0,FFFF,6,1.0
-904026,misc_gemExpStone09_14d,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,7星寶石研磨劑(14天),0,0.0,0.0,FFFF,15,1.0
+904023,EVENT_1804_TRANSCEND_SHOP_SILVER_BOX_14D,使用時可以獲得隨機數量的銀幣。,icon_item_silverbox1,,,,,,受祝福的銀幣箱(14天),0,0.0,1209600.0,FFFF,6,1.0
+904024,EVENT_1804_TRANSCEND_SHOP_REINFORCE_BOX_14D,使用時可以從獎勵目錄上隨機得到一個道具。,icon_item_eventbox_qm,,,,,,受祝福的強化魔方(14天),0,0.0,1209600.0,FFFF,6,1.0
+904025,EVENT_1804_TRANSCEND_SHOP_COSTUME_BOX_14D,使用時可以從獎勵目錄上隨機得到一個道具。,icon_item_eventcube3,,,,,,人氣活動套裝魔方(14天),0,0.0,1209600.0,FFFF,6,1.0
+904026,misc_gemExpStone09_14d,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,7星寶石研磨劑(14天),0,0.0,1209600.0,FFFF,15,1.0
 904027,MISSION_SURVIVAL_EVENT2_ACHIEVE_BOX,怪盜特潘活動所贈送的稱號箱子。{nl}活動結束時活動道具統一刪除。,icon_item_holyark,,,,,,稱號 - 怪盜的資格,0,0.0,0.0,FFFT,6,0.0
 904029,EVENT_1805_WEDDING1_PIECE,請幫助5月的新娘，活動用道具，活動結束時統一刪除。,icon_item_event_invitationpiece1,,,,,,遺失的請帖碎片,0,0.0,0.0,FFFT,15,0.1
 904030,EVENT_BEAUTY_CHAIR,美容院購買活動贈送的道具。{nl}使用時可以召喚出美髮椅來坐。,icon_item_event_beauty_chair,,,,,,美髮椅,0,1.0,0.0,FFFT,6,1.0
@@ -5522,7 +5578,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904035,EVENT_1805_NEWUSER_MEDAL,為組隊狀態時'新朋友' 必須佩戴使用稱號，30分內給予組隊全員移動速度+2、狩獵經驗值增加效果。{nl}活動結束時統一刪除。,icon_item_solidarity_medal,,,,,,團結的信物,0,300.0,0.0,FFFT,6,1.0
 904036,EVENT_1805_NEWUSER_ACHIEVE_BOX,「你，來成為我的同伴吧！」活動所贈送的稱號箱子。{nl}活動結束時統一刪除。,icon_item_holyark,,,,,,稱號 - 新朋友,0,0.0,0.0,FFFT,6,1.0
 904037,EVENT_1805_GUILD_CARD_LV4,只有公會等級為1時可以使用，使用時公會等級提升至4。,icon_item_guild_lv_up4,,,,,,公會Lv4經驗值卡片,0,0.0,0.0,FFFF,6,1.0
-904038,EVENT_1805_GUILD_QUEST_MEDAL,30分內移動速度+1、Rooting機會 +200{nl}活動結束時統一刪除。,icon_item_token_guild_1,,,,,,公會成員的信物,0,300.0,0.0,FFFT,6,1.0
+904038,EVENT_1805_GUILD_QUEST_MEDAL,30分內Rooting機會+200{nl}活動結束時統一刪除。,icon_item_token_guild_1,,,,,,公會成員的信物,0,300.0,0.0,FFFT,6,1.0
 904039,EVENT_1805_GUILD_QUEST_ACHIEVE_BOX,「TOS因公會而存在」活動所贈送的稱號箱子。{nl}活動結束時統一刪除。,icon_item_holyark,,,,,,稱號 - 沒公會活不下去,0,0.0,0.0,FFFT,6,1.0
 904040,EVENT_1806_Penalty_Shoot,點球決勝負,icon_item_holyark,,,,,,點球決勝負,0,0.0,0.0,FFFT,6,1.0
 904042,EVENT_1805_SLATE_ACHIEVE_BOX,「石板裡模糊的秘密訊息」活動所贈送的稱號箱子。{nl}活動結束時統一刪除。,icon_item_holyark,,,,,,石板收藏家的稱號,0,0.0,0.0,FFFT,6,1.0
@@ -5540,15 +5596,15 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904055,EVENT_1807_POOL_GRILLEDFISH,[Summer Festa] 活動紀念道具，使用時特性點數+100。{nl}活動結束時道具統一刪除。,icon_item_food_grilledfish,,,,,,[Summer Festa] 炖魚,20,1.0,0.0,FFFT,6,1.0
 904056,EVENT_1807_POOL_PAELLA,[Summer Festa] 活動紀念道具，使用時特性點數+500。{nl}活動結束時道具統一刪除。,icon_item_food_paella,,,,,,[Summer Festa] 鮮蝦焗烤,20,1.0,0.0,FFFT,6,1.0
 904058,EVENT_1807_BALL_CRACKER,30分內給予移動速度+2、廣域攻擊比率+1、經驗值增加25%的效果。{nl}活動結束時統一刪除。,icon_item_firework,,,,,,[Summer Festa] 爆竹,0,10.0,0.0,FFFT,6,1.0
-904059,Adventure_Reward_Seed_14d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽(14天),0,5.0,0.0,FFFF,6,0.0
+904059,Adventure_Reward_Seed_14d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽(14天),0,5.0,1209600.0,FFFF,6,0.0
 904060,EVENT_PC_ROOM_1_ACHIEVE_BOX,網咖連線100小時獎勵稱號箱,icon_item_holyark,,,,,,[網咖] 稱號 - 100小時,0,0.0,0.0,FFFT,6,1.0
 904061,EVENT_PC_ROOM_2_ACHIEVE_BOX,網咖連線200小時獎勵稱號箱,icon_item_holyark,,,,,,[網咖] 稱號 - 200小時,0,0.0,0.0,FFFT,6,1.0
 904062,EVENT_PC_ROOM_3_ACHIEVE_BOX,網咖連線300小時獎勵稱號箱,icon_item_holyark,,,,,,[網咖] 稱號 - 300小時,0,0.0,0.0,FFFT,6,1.0
 904063,EVENT_PC_ROOM_4_ACHIEVE_BOX,網咖連線400小時獎勵稱號箱,icon_item_holyark,,,,,,[網咖] 稱號 - 400小時,0,0.0,0.0,FFFT,6,1.0
 904064,EVENT_PC_ROOM_5_ACHIEVE_BOX,網咖連線500小時獎勵稱號箱,icon_item_holyark,,,,,,[網咖] 稱號 - 500小時,0,0.0,0.0,FFFT,6,1.0
 904065,EVENT_PC_ROOM_6_ACHIEVE_BOX,網咖連線1000小時獎勵稱號箱,icon_item_holyark,,,,,,[網咖] 稱號 - 1000小時,0,0.0,0.0,FFFT,6,1.0
-904071,EVENT_1807_RANK_STAR,為配合10階更新，會掉落幫助你職業重置的星之碎片。活動結束時道具統一刪除。,icon_item_1807_rank_star,,,,,,[For 10] 星之碎片,0,0.0,0.0,FFFT,15,0.1
-904072,EVENT_1807_NEWCHARACTER_INVITE,幫助升級的烏斯卡邀請函已到達。{nl}到柯拉佩達找烏斯卡，給他看邀請函。{nl}活動結束時道具統一刪除。,icon_item_event_invitation2,,,,,,[For 10] 烏斯卡的邀請函,0,0.0,0.0,FFFT,15,0.1
+904071,EVENT_1807_RANK_STAR,為配合10階更新，會掉落幫助你職業重置的星之碎片。活動結束時道具統一刪除。,icon_item_1807_rank_star,,,,,,[Re:Build] 星之碎片,0,0.0,0.0,FFFT,15,0.1
+904072,EVENT_1807_NEWCHARACTER_INVITE,幫助升級的烏斯卡邀請函已到達。{nl}到柯拉佩達找烏斯卡，給他看邀請函。{nl}活動結束時道具統一刪除。,icon_item_event_invitation2,,,,,,[Re:Build] 烏斯卡的邀請函,0,0.0,0.0,FFFT,15,0.1
 904084,WEB_PROPOSAL_1_ACHIEVE_BOX,給予被選定為月BEST建議者的稱號,icon_item_holyark,,,,,,稱號 - 靈機一動,0,0.0,0.0,FFFT,6,1.0
 904085,WEB_PROPOSAL_2_ACHIEVE_BOX,給予5次被選定為月BEST建議者的稱號,icon_item_holyark,,,,,,稱號 - 點子銀行,0,0.0,0.0,FFFT,6,1.0
 904086,WEB_PROPOSAL_3_ACHIEVE_BOX,給予10次被選定為月BEST建議者的稱號,icon_item_holyark,,,,,,稱號 - 建議王,0,0.0,0.0,FFFT,6,1.0
@@ -5558,12 +5614,38 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904092,EVENT_1809_UCC_ACHIEVE_BOX,歌謠慶典活動中送出的禮物稱號箱。,icon_item_holyark,,,,,,稱號 - 享受慶典,0,0.0,0.0,FFFT,6,1.0
 904093,EVENT_1809_CHUSEOK_MOON_PIECE,滿月活動道具，轉交給NPC就可以參與活動。{nl}活動結束時道具統一刪除。,icon_item_topaz_piece,,,,,,滿月碎片,0,0.0,0.0,FFFT,15,0.1
 904094,EVENT_1809_CHUSEOK_MOON_ACHIEVE_BOX,滿月養成大作戰中送出的禮物稱號箱。,icon_item_holyark,,,,,,稱號 - 月兒月兒皎潔的月兒,0,0.0,0.0,FFFT,6,1.0
+904096,Extract_kit_Sliver_Team_14d,血晶萃取時使用的工具，不需要消耗財貨。,icon_item_extractkit_sliver,,,,,,銀色血晶萃取工具(14天),0,0.0,1209600.0,FFFT,15,4.0
 904097,EVENT_1810_FALL_MAPLE_LEAF,此為楓葉慶典活動道具。轉交給NPC可以獲得參與獎勵。{nl} 活動結束時，活動道具統一刪除。,icon_item_1810_fall1,,,,,,巨大楓葉,0,0.0,0.0,FFFT,15,0.1
 904098,EVENT_1810_FALL_GINKGO_LEAF,此為楓葉慶典活動道具。轉交給NPC可以獲得參與獎勵。{nl} 活動結束時，活動道具統一刪除。,icon_item_1810_fall2,,,,,,巨大黃金楓葉,0,0.0,0.0,FFFT,15,0.1
-904100,Ability_Point_Stone_1000_14d_Team,"使用時特性點數增加1000, 點擊滑鼠右鍵即可使用。",icon_item_abilitypoint,,,,,,特性點數 1000 (14天),0,0.0,1209600.0,FFFT,8,1.0
+904099,COLONYWAR_KOR_BETA_REWARD_ACHIEVE_BOX,發送給領地戰beta參加者的稱號箱子，點擊滑鼠右鍵使用。,icon_item_holyark,,,,,,稱號 - 領地戰先鋒隊,0,0.0,0.0,FFFT,6,1.0
+904100,Ability_Point_Stone_1000_14d_Team,使用時特性點數增加1000，點擊滑鼠右鍵使用。,icon_item_abilitypoint,,,,,,特性數1000(14天),0,0.0,1209600.0,FFFT,8,1.0
+904101,Adventure_Reward_Seed_14d_Team,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,充滿祝福的嫩芽(14天),0,5.0,1209600.0,FFFT,6,0.0
+904102,Event_Goddess_Statue_Team,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,女神的雕像(14天),0,0.0,1209600.0,FFFT,6,0.0
+904103,EVENT_1809_OTP_ACHIEVE1_BOX,保護帳號安全，發送給救援者的稱號箱子。點擊滑鼠右鍵使用。,icon_item_holyark,,,,,,稱號 -0元OTP保障永遠安全,0,0.0,0.0,FFFT,6,1.0
 904104,Ability_Point_Stone_100_14d_Team,使用時特性點數增加100，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint3,,,,,,特性點數 100 (14天),0,0.0,1209600.0,FFFT,8,1.0
 904105,Ability_Point_Stone_500_14d_Team,使用時特性點數增加 500，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint2,,,,,,特性點數500(14天),0,0.0,1209600.0,FFFT,8,1.0
-910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸,5,0.0,0.0,TTTT,6,1.0
+904107,EVENT_1811_NEWCLASS_BOX_ASS,裝有暗殺者利茲達斯不死鳥套裝的箱子。{nl}必須轉職為暗殺者才能使用。{nl}從箱子中獲得的套裝無法使用隊伍倉庫。,icon_item_jewelrybox,,,,,,暗殺者利茲達斯不死鳥套裝箱,0,0.0,0.0,FFFT,6,0.0
+904108,EVENT_1811_NEWCLASS_BOX_OUL,裝有亡命之徒惡棍正裝套裝的箱子。{nl}}必須轉職為亡命之徒才能使用。{nl}從箱子中獲得的套裝無法使用隊伍倉庫。,icon_item_jewelrybox,,,,,,亡命之徒惡棍正裝套裝箱,0,0.0,0.0,FFFT,6,0.0
+904109,EVENT_1811_KUPOLE_COIN,[Re:Build] 達伊娜的特別商店活動道具，轉交給NPC就可以參與活動。{nl}活動結束時統一刪除。,icon_item_rebuild_coin,,,,,,[Re:Build] 紀念鑄幣,0,0.0,0.0,FFFT,15,0.1
+904110,Costume_Exchange_Coupon,於TP商店裡系列套裝的交換分頁使用，是張可以交換想要套裝的交換券。,icon_item_exchange_costumecoupon,,,,,,系列套裝交換劵,0,0.0,0.0,FFFT,15,0.0
+904114,EVENT_1812_GILTINE_REWARD_BOX,吉特涅女神賜的禮物。{nl} 活動結束時道具統一刪除。,icon_item_event_giltinebox,,,,,,吉特涅的禮物箱,0,0.0,0.0,FFFT,8,1.0
+904126,EVENT_1712_SECOND_CHALLENG_14d_Team,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,1209600.0,FFFT,8,1.0
+904128,EVENT_1812_DAYCHECK_BALLOONBOX,3周年紀念出席打卡活動用氣球串。{nl}活動結束時道具統一刪除。,icon_item_event_balloonbox,,,,,,3周年氣球串,0,0.0,0.0,FFFT,8,1.0
+910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,幼苗,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,枯萎的植物,1,0.0,0.0,TTTT,15,1.0
-910004,Zombie_Capsule,使用邪靈祭師膠囊可以照換殭屍。為了使用膠囊，必須學習 [製造殭屍] 技能，最大殭屍製造數量會依照 [製造殭屍] 限制數量而定。,icon_item_zombiecapsule_01,,,,,,殭屍膠囊,5,5.0,0.0,FFTF,6,1.0
+910004,Zombie_Capsule,使用邪靈祭師膠囊可以照換殭屍。為了使用膠囊，必須學習 [製造殭屍] 技能，最大殭屍製造數量會依照 [製造殭屍] 限制數量而定。,icon_item_zombiecapsule_01,,,,,,殭屍膠囊,5,0.0,0.0,FFTF,6,1.0
+910005,Scroll_SkillItem_Cleric_Cure,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 5 淨化],5,0.0,0.0,TTTT,6,1.0
+910006,Scroll_SkillItem_Kriwi_Aukuras,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 15 聖火],5,0.0,0.0,TTTT,6,1.0
+910007,Scroll_SkillItem_Kriwi_Zalciai,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 15 暴擊魔法陣],5,0.0,0.0,TTTT,6,1.0
+910008,Scroll_SkillItem_Kriwi_Daino,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 10 神光],5,0.0,0.0,TTTT,6,1.0
+910009,Scroll_SkillItem_Priest_Monstrance,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 15 聖光體],5,0.0,0.0,TTTT,6,1.0
+910010,Scroll_SkillItem_Paladin_Restoration,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 15 恢復],5,0.0,0.0,TTTT,6,1.0
+910011,Scroll_SkillItem_Priest_TurnUndead,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 15 驅趕惡靈],5,0.0,0.0,TTTT,6,1.0
+910012,Scroll_SkillItem_Paladin_Barrier,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 5 障壁],5,0.0,0.0,TTTT,6,1.0
+910013,Scroll_SkillItem_Oracle_ArcaneEnergy,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 15 秘法能量],5,0.0,0.0,TTTT,6,1.0
+910014,Scroll_SkillItem_Oracle_Clairvoyance,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 1 預知眼],5,0.0,0.0,TTTT,6,1.0
+910015,Scroll_SkillItem_Wizard_MagicMissile,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 5 魔法飛彈],5,0.0,0.0,TTTT,6,1.0
+910016,Scroll_SkillItem_Pyromancer_EnchantFire,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 15 火焰附魔],5,0.0,0.0,TTTT,6,1.0
+910017,Scroll_SkillItem_Pyromancer_FlameGround,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 15 烈焰大地],5,0.0,0.0,TTTT,6,1.0
+910018,Scroll_SkillItem_Warlock_PoleofAgony,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸 [Lv. 10 苦痛之柱],5,0.0,0.0,TTTT,6,1.0

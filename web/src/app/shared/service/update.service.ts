@@ -8,7 +8,7 @@ const VERSION: { [key in TOSRegion]: string } = {
   'jTOS': 'patch_239936_release_239936', /* jTOS-needle */
   'kTEST': 'patch_239410_release_239410', /* kTEST-needle */
   'kTOS': 'patch_240180_release_240042', /* kTOS-needle */
-  'twTOS': 'patch_239774_release_239774', /* twTOS-needle */
+  'twTOS': 'patch_240350_release_240350', /* twTOS-needle */
 };
 
 @Injectable({
