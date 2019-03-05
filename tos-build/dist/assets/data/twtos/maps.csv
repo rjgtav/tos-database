@@ -54,6 +54,7 @@ $ID,$ID_NAME,Icon,Name
 702,f_playground,,天下第一足球場
 703,f_huevillage_58_1_event,,[活動]貝雅山谷
 704,f_coral_44_2_event,,[活動]亞伊泰歐海岸
+710,c_Klaipe_event_1812,,柯拉佩達
 981,c_fedimian,,佩迪米安
 1001,c_Klaipe,,柯拉佩達
 1002,c_highlander,,高地戰士大師的道場
@@ -387,6 +388,7 @@ $ID,$ID_NAME,Icon,Name
 4940,id_whitetrees1,,1號避難處
 4941,id_Nicopolis_01,,魔法實驗區域
 4950,d_limestonecave_70_1,,斯爾利那斯雷歐
+4951,d_limestonecave_70_1_rest,,斯爾利那斯雷歐
 4960,c_Klaipe_event,,萬聖節地下城
 4961,d_castle_agario,,萬聖節地下城
 4970,id_d_cmine_66_2,,內貝爾雷礦山地下城
@@ -402,5 +404,6 @@ $ID,$ID_NAME,Icon,Name
 9998,GuildColony_f_farm_47_2,,水路橋地區
 10000,id_abbey_raid,,亞西歐梅吉的實驗室
 10001,mission_instance,,MissionInstance
+10002,uniq_startower_raid,,星之塔封閉區域
 20000,infinite_map,,無限地圖
 20010,pvp_tournament,,隊伍戰鬥聯賽
