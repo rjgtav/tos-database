@@ -776,6 +776,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641962,Event_drug_steam_team,"Increases your movement speed by 2 and your physical/magic attack by 50, for 30 minutes.{nl}Right-click to use.",item_speed_requid_3,,,,,,Settlement Support Potion,0,30.0,0.0,FFFT,6,0.0
 641963,Premium_ChallengeModeReset,Use this to allow one extra entry in Challenge Mode.,icon_item_indunfreeenter,,,,,,Challenge Mode One Entry Voucher,0,5.0,0.0,TTFT,6,1.0
 641964,Uphill_Store_Point_10,Use to gain 10 Uphill Shop Points.{nl}The points gained can be used in the Uphill Defense Shop.,icon_item_annycoin_2,,,,,,Uphill Defense Shop Points: 10,0,0.0,0.0,FFFF,6,0.0
+641969,Event_190110_ChallengeModeReset_14d,Use this to allow one extra entry in Challenge Mode.,icon_item_indunfreeenter,,,,,,Challenge Mode One Entry Voucher (14 Days),0,5.0,1209600.0,FFFT,6,1.0
+641970,Event_190131_SWEET_POTATO_ITEM,"A delicious and nutritious sweet potato.{nl}Instantly restores 2205 HP and 735 SP, then gradually restores 2205 HP and 735 SP every 2 seconds for 15 seconds. Right-click to use. Cooldown of 45 seconds.{nl}Will be deleted at the end of the event period.",icon_item_sweet_potato,,,,,,[Event] Roasted Sweet Potato,0,45.0,0.0,FFFT,6,1.0
 641971,Event_Drug_Alche_HP15_Premium,Ore Collection,item_hp_oil_3,,,,,,Lv15 Basic Condensed HP Potion,0,45.0,0.0,FFFT,6,1.0
 641972,Event_Drug_Alche_SP15_Premium,,item_sp_requid_3,,,,,,Lv15 Basic Condensed SP Potion,0,45.0,0.0,FFFT,6,1.0
 641973,Event_drug_steam_1h_Premium,"Increases movement speed by 2, physical and magic attack by 50 for 1 hour. Right-click to use.",item_speed_requid_3,,,,,,Lv2 Settlement Support Potion,0,30.0,0.0,FFFT,6,0.0
@@ -5682,6 +5684,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904114,EVENT_1812_GILTINE_REWARD_BOX,Contains a gift from Demon Goddess Giltine{nl}Will be automatically deleted at the end of the event period.,icon_item_event_giltinebox,,,,,,Giltine's Gift Box,0,0.0,0.0,FFFT,8,1.0
 904126,EVENT_1712_SECOND_CHALLENG_14d_Team,Use to create a Challenge Portal.,icon_item_challengemode_scroll,,,,,,Challenge Portal Scroll (14 Days),10,3.0,1209600.0,FFFT,8,1.0
 904128,EVENT_1812_DAYCHECK_BALLOONBOX,A bundle of balloons to celebrate TOS' 3rd anniversary.{nl}Will be automatically deleted at the end of the event period.,icon_item_event_balloonbox,,,,,,3rd Anniversary Balloon Bundle,0,0.0,0.0,FFFT,8,1.0
+904134,EVENT_190110_GOLDPIG_BOX,A special gift from the goddess celebrating an important achievement: the first successful hunt on Boruta the dragon in Sulivinas Lair.{nl}Use to obtain the reward.,icon_item_happybox_red,,,,,,[Event] Golden Pig Box,0,0.0,0.0,FFFT,8,1.0
 904135,EVENT_190110_RankReset_Point_Lv1,"Increases class change points by +100.{nl}Class points can be accumulated to a maximum of 3,000 and excess points earned will not be saved.",icon_item_rankreset_paper_3,,,,,,Class Change Voucher Lv 1 (14 Days),0,0.0,1209600.0,FFFT,8,0.0
 910001,Scroll_SkillItem,A scroll used to record a particular skill.,golemmagicitem1,,,,,,Skill Scroll,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,A long stem that tastes slightly spicy. {nl}Obtained from Kepas.,item_icon_sprout,,,,,,Sprout,1,0.0,0.0,TTTT,15,1.0
