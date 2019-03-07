@@ -63,6 +63,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490312,Ability_Point_Stone_30000,"사용시 특성 포인트가 30,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint5,,,,,,"특성 포인트 30,000",0,0.0,0.0,FFFT,8,1.0
 490313,Ability_Point_Stone_100000,"사용시 특성 포인트가 100,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint6,,,,,,"특성 포인트 100,000",0,0.0,0.0,FFFT,8,1.0
 490324,Ability_Point_Scroll_1000,"사용시 특성 포인트가 1,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_ability_point_scroll_1000,,,,,,특성 포인트 스크롤,0,0.0,0.0,FFFT,8,1.0
+494079,Event_Ability_Point_Stone_10000_team,"사용시 특성 포인트가 10,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint4,,,,,,"특성 포인트 10,000 (14일)",0,0.0,1209600.0,FFFT,8,1.0
 495001,160714Event_box1,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,강자의 길 1일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
 495002,160714Event_box2,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,강자의 길 2일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
 495003,160714Event_box3,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,강자의 길 3일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
@@ -786,6 +787,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 643026,Extract_kit_Gold_NotFail,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다. {nl} - 1월 17일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,[Rebuild] 100% 아이커 추출 키트,0,0.0,0.0,FFTF,15,4.0
 643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다.{nl}랜덤 옵션 장비에만 사용할 수 있습니다. {nl} - 1월 31일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,[Rebuild] 100% 아이커 추출 키트: 랜덤 옵션,0,0.0,0.0,FFTF,15,4.0
 643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다.{nl}제작 유니크 장비에만 사용할 수 있습니다. {nl} - 1월 31일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,[Rebuild] 100% 아이커 추출 키트: 제작,0,0.0,0.0,FFTF,15,4.0
+643035,Moru_Stone_TN,모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 장비 강화 비용이 50% 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_anvil,,,,,,강철 모루,45,0.0,0.0,FFTF,15,1.0
+643036,Moru_Silver_Team,모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 실버 소비 없이 장비를 강화할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_anvil_silver,,,,,,은빛 모루(14일),0,0.0,1209600.0,FFTF,15,1.0
+643037,Moru_Stone_Team,모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 장비 강화 비용이 50% 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.획득 후부터 14일동안 사용 가능합니다.,icon_item_anvil,,,,,,강철 모루(14일),45,0.0,1209600.0,FFFT,15,1.0
 645002,D_Bube_Mane,수정에 오래 노출된 부베들에게서만 얻을 수 있는 어두운 마석,icon_item_evilenergy_piece,,,,,,부베 마석,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,달콤한 향이 나는 꽃잎입니다. 하나밍에게서 획득합니다.,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,"[2001, 30102]",,하나밍 꽃잎,1,0.0,0.0,TTTT,15,1.0
 645025,TreasureboxKey2,보물 상자 LV 2을 여는데 사용되는 열쇠,icon_item_key1,,,,,,LV2 보물상자 열쇠,0,0.0,0.0,FFTF,15,1.0
@@ -3286,6 +3290,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 664141,DCAPITAL107_SQ_6_ITEM,마족들이 큐폴들을 사냥하기 위해 사용하는 도구입니다.,icon_item_panto_core,,,,,,무력화 보주,0,0.0,0.0,FFFF,20,0.0
 664142,DCAPITAL107_SQ_7_ITEM,큐폴 그리시아가 큐폴 블라드를 속이기 위해 만든 목걸이 모양의 마법도구입니다.,icon_item_bluenecklace,,,,,,속임수 증표,0,0.0,0.0,FFFF,20,0.0
 664143,DCAPITAL107_SQ_9_ITEM,그리시아가 블라드에게 전달해달라고 부탁한 물건,icon_item_kupole_porket,,,,,,그리시아의 모든 것,0,0.0,0.0,FFFF,20,0.0
+664144,PAYAUTA_EP11_2_ITEM,바린웰 87수역에서 파야우타의 부탁으로 몬스터들로부터 수집한 물건입니다,icon_item_toolbox,,,,,,도난당한 수리용품,0,0.0,0.0,FFFF,20,0.0
+664145,PAYAUTA_EP11_7_ITEM,외성벽 제 9구역에서 파야우타가 수집을 부탁한 표식용 재료입니다,icon_item_magicpowder,,,,,,자성을 띤 흙,0,0.0,0.0,FFFF,20,0.0
 664800,RVR_BK_KEYITEM_URVAS_1,아우스테야를 명으로 드래곤 보루타를 감시하던 큐폴 우르바스가 지니고 다니던 증표입니다.{nl}드래곤 보루타의 영역으로 진입하기 위하여 반드시 필요합니다.{nl}진입시 파괴됩니다.,icon_item_borutakey,,,,,,우르바스 증표,0,0.0,0.0,TFFT,15,0.0
 664801,RVR_BK_KEYITEM_EVENT_OPEN,"아우스테야를 명으로 드래곤 보루타를 감시하던 큐폴 우르바스가 지니고 다니던 증표입니다.{nl}드래곤 보루타의 영역으로 진입하기 위하여 반드시 필요합니다.{nl}진입시 파괴됩니다.{nl}19년 3월 28일 점검 시, 일괄 삭제됩니다.",icon_item_borutakey,,,,,,[이벤트] 우르바스 증표,0,0.0,0.0,FFFT,15,0.0
 664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,왕국 보급 장교로부터 드래곤 보루타를 저지하는 데 충분히 기여했음을 증명할 수 있는 훈장입니다.{nl}길드 아지트의 '왕국 보급 장교 만프래다스'에게  아이템으로 교환할 수 있습니다.,icon_item_boruta_coin,,,,,,영예의 훈장 : 보루타,0,0.0,0.0,FFFT,15,0.0
@@ -5534,6 +5540,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904137,EVENT_190124_RankReset_Point_Lv2,"클래스 변경 포인트가 500 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_2,,,,,,[이벤트]클래스 변경권 Lv.2(14일),0,0.0,1209600.0,FFFT,8,0.0
 904140,Class_Solution_Select_Box_Event,히든 직업 해금권 선택 상자 {nl} 선택 가능 목록 {nl} - 시노비 해금권 {nl} - 무녀 해금권 {nl} - 룬 캐스터 해금권 {nl} - 감정사 해금권 {nl} - 낙무아이 해금권,icon_item_classsolution_box,,,,,,[이벤트] 해금권 선택 상자,0,0.0,0.0,FFFT,8,0.0
 904141,EVENT_1902_FISHBOX,"마우스 우클릭으로 사용할 수 있습니다. 사용 시 상자의 내용물 중 하나를 획득할 수 있습니다.{nl} - 특성 포인트 100(14일) x2{nl} - 마법 부여 스크롤(14일) x1{nl} - 강화용 카드 : 500 (14일) x1{nl} - 5성 젬 연마제(14일) x1{nl} - 프리미엄 각성석(14일) x1{nl} - 버틀러와 메이드 코스튬 상자(블랙) x1{nl}3/28(목) 점검 시, 일괄 삭제됩니다.",icon_item_happybox_red,,,,,,[이벤트]연못에 숨겨진 보물 상자,0,0.0,0.0,FFFT,8,1.0
+904146,EVENT_1903_TERIAVELIS_STONE,"페디미안의 대장장이 테리아베리스가 요청한 특별한 장비를 만들기 위한 특별한 재료입니다.{nl}벨코퍼의 둥지, 유니크 레이드, 챌린지 5단계, 수녀원 미션, 레벨 던전 클리어 시 획득할 수 있습니다.{nl}4월 11일 점검 시, 일괄 삭제 됩니다",icon_item_orb3,,,,,,[이벤트]반짝이는 별의 조각,0,0.0,0.0,FFFT,15,0.1
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,스킬 주문서,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,새싹,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,시든 식물,1,0.0,0.0,TTTT,15,1.0
