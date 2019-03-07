@@ -79,7 +79,8 @@
         "serve": {
           "builder": "@angular-builders/dev-server:generic",
           "options": {
-            "browserTarget": "web:build"
+            "browserTarget": "web:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

@@ -10,6 +10,10 @@
       <sourceFolder url="file://$MODULE_DIR$/tos-deploy/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-ngsw/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-build/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-web-rest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-sw/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-patreon/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-web/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/IPFParser/output" />
       <excludeFolder url="file://$MODULE_DIR$/tos-parser/input" />
       <excludeFolder url="file://$MODULE_DIR$/web/dist/web" />
