@@ -66,6 +66,10 @@
         if (new URL(request.url).origin !== location.origin)
             return await fetchFromNetwork(request);
 
+        // In case it isn't a GET request, just fetch it
+        if (request.method !== 'GET')
+            return await fetchFromNetwork(request);
+
         // In case it's the debugger URL, just print the logs
         if (requestUrl(request) === URL_STATE)
             return new Response(logger.join('\n'), { headers: new Headers({ 'Content-Type': 'text/plain' }) });
@@ -264,9 +268,12 @@
     // XTODO: deploy master on beta.tos.guru the old version, tell discord?
     // XTODO: commit & push to a separate branch
     // XTODO: updating the region.json is always generating a new commit cuz the keys aren't stored in an ordered way...
-    // XTODO: remove /web/dist/ from urls in tos-sw-manifest.js
-    // TODO: rename web to tos-web
-    // TODO: deploy new branch on beta.tos.guru and tell discord t test
+    // XTODO: remove /tos-web/dist/ from urls in tos-sw-manifest.js
+    // XTODO: deploy new branch on beta.tos.guru and tell discord t test
+    // XTODO: rename web to tos-web
+    // TODO: fix tinyurl which is breaking all the time.. considering implementing my own CORS or maybe do it via SW?
+    // TODO: fix deploy script always creating new commits every hour due to the manifest
+    // TODO: fix html2canvas broken submodule link
     // TODO: test how the upgrade will work. In theory, when the client loads the new ngsw-worker, it will uninstall the existing installation and start the new process
     // TODO: review cloudflare configuration so we don't cache the worker and the versions file
     // TODO: update deploy.js so it clears cloudflare's cache for tos.guru instead of beta.tos.guru
