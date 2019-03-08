@@ -271,8 +271,8 @@
     // XTODO: remove /tos-web/dist/ from urls in tos-sw-manifest.js
     // XTODO: deploy new branch on beta.tos.guru and tell discord t test
     // XTODO: rename web to tos-web
-    // TODO: fix tinyurl which is breaking all the time.. considering implementing my own CORS or maybe do it via SW?
-    // TODO: fix deploy script always creating new commits every hour due to the manifest
+    // XTODO: fix tinyurl which is breaking all the time.. considering implementing my own CORS or maybe do it via SW?
+    // XTODO: fix deploy script always creating new commits every hour due to the manifest
     // TODO: fix html2canvas broken submodule link
     // TODO: test how the upgrade will work. In theory, when the client loads the new ngsw-worker, it will uninstall the existing installation and start the new process
     // TODO: review cloudflare configuration so we don't cache the worker and the versions file

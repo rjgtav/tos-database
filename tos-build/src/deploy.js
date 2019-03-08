@@ -79,38 +79,41 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
     result.status !== 0 && shared.logError('Failed to patreon', result);
 
-    // 6. Service Worker
-    shared.log('6. Service Worker');
-    cwd = path.join('..', 'tos-sw');
-
-    result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.logError('Failed to service worker', result);
-
-    // 7. Commit changes
-    is_new_patch = commitChanges('Website', 7) || is_new_patch;
+    // 6. Commit changes
+    is_new_patch = commitChanges('Patreon', 6) || is_new_patch;
 
     if (shared.IS_PROD && (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY)) {
+        // 7. Service Worker
+        shared.log('7. Service Worker');
+        cwd = path.join('..', 'tos-sw');
+
+        result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
+        result.status !== 0 && shared.logError('Failed to service worker', result);
+
+        // 8. Commit changes
+        is_new_patch = commitChanges('Service Worker', 8) || is_new_patch;
+
         shared.log(`
             +============================================================+
             | Deploying...                                               |
             +============================================================+
         `);
 
-        // 8. Deploy on Apache
-        shared.log('8. Deploy on Apache');
+        // 9. Deploy on Apache
+        shared.log('9. Deploy on Apache');
         fsExtra.copySync(path.join('..', 'tos-build', 'dist'), sharedVariables.APACHE_WWW);
         fsExtra.copySync(path.join('..', 'tos-web', 'dist'), sharedVariables.APACHE_WWW);
 
         for (let region of shared.REGIONS) {
-            // 9.1. Pre-render HTML for web crawlers
-            shared.log(`[${ region }] 9.1. Pre-render HTML for web crawlers`);
+            // 10.1. Pre-render HTML for web crawlers
+            shared.log(`[${ region }] 10.1. Pre-render HTML for web crawlers`);
             cwd = path.join('..', 'tos-html');
 
             result = childProcess.spawnSync(`npm run main ${ region }`, { cwd, shell: true, stdio: 'inherit' });
             result.status !== 0 && shared.logError('Failed to tos-html', result);
 
-            // 9.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)
-            shared.log(`[${ region }] 9.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)`);
+            // 10.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)
+            shared.log(`[${ region }] 10.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)`);
             cwd = sharedVariables.APACHE_WWW;
 
             let zip_from = path.join('..', 'tos-build', 'dist', region.toLowerCase() + '.zip');
@@ -124,14 +127,14 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             fs.unlinkSync(zip_to);
         }
 
-        // 10. Generate index and 404 (Note: has to happen after tos-html so Patreon and Region data are populated)
-        shared.log('10. Generate index and 404');
+        // 11. Generate index and 404 (Note: has to happen after tos-html so Patreon and Region data are populated)
+        shared.log('11. Generate index and 404');
         fsExtra.copySync(path.join('..', 'tos-web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, 'index.html'));
         fsExtra.copySync(path.join('..', 'tos-web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, '404.html'));
         fs.unlinkSync(path.join('..', 'tos-web', 'dist', 'index.backup.html'));
 
-        // 11. Clear CloudFlare cache
-        shared.log('11. Clear CloudFlare cache');
+        // 12. Clear CloudFlare cache
+        shared.log('12. Clear CloudFlare cache');
         let cf = require('cloudflare')({ email: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
         let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-build', 'dist', 'tos-sw.manifest.js'), { encoding: 'utf8' }));
         let assetGroup = manifest.assetGroups.find(value => value.name === 'app');
