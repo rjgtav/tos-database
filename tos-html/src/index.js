@@ -25,7 +25,8 @@ if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(
 
 let folder_archive_database = path.join(REGION.toLowerCase(), 'database');
 let folder_archive_home = path.join(REGION.toLowerCase(), 'home');
-let folder_archive_simulator = path.join(REGION.toLowerCase(), 'home');
+let folder_archive_patreon = path.join(REGION.toLowerCase(), 'patreon');
+let folder_archive_simulator = path.join(REGION.toLowerCase(), 'simulator');
 let folder_archive_region = path.join(REGION.toLowerCase());
 let folder_app = path.join('..', 'tos-web', 'src', 'app');
 let folder_database = path.join('..', 'tos-build', 'dist', 'assets', 'data', REGION.toLowerCase());
@@ -127,6 +128,7 @@ let outputHome = fs.readFileSync(path.join(folder_app, 'home', 'welcome', 'welco
 archive.append(outputHome, { name: path.join(folder_archive_database, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_home, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_region, 'index.html')});
+archive.append(outputHome, { name: path.join(folder_archive_patreon, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_simulator, 'index.html')});
 archive.finalize();
 
