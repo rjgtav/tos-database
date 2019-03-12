@@ -54,8 +54,8 @@ $ID,$ID_NAME,Icon,Name
 702,f_playground,,Royal Soccer Field
 703,f_huevillage_58_1_event,,[Event] Veja Ravine
 704,f_coral_44_2_event,,[Event] Aitheo Coast
-710,c_Klaipe_event_1812,,Klaipeda
-711,c_orsha_event_1901,,Orsha
+710,c_Klaipe_event_1812,,[Event] Klaipeda
+711,c_orsha_event_1901,,[Event] Orsha
 981,c_fedimian,,Fedimian
 1001,c_Klaipe,,Klaipeda
 1002,c_highlander,,Highlander Master's Training Hall
@@ -394,6 +394,7 @@ $ID,$ID_NAME,Icon,Name
 4961,d_castle_agario,,Halloween Dungeon - Creepy Klaipeda
 4970,id_d_cmine_66_2,,Nevellet Quarry Dungeon
 4971,id_3cmlake_26_1,,Lanko Lake Dungeon
+4980,d_irredians_113_1,,Irredian Shelter
 8000,f_nicopolis_81_1,,Starry Town
 8010,f_nicopolis_81_2,,Feline Post Town
 8020,f_nicopolis_81_3,,Spell Tome Town
