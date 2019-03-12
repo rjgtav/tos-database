@@ -2,11 +2,12 @@ const fs = require('fs');
 const glob = require("glob");
 const path = require('path');
 
-const FILE_MANIFEST = 'manifest.json';
-const FILE_WORKER = 'tos-sw.worker.js';
-const FILE_WORKER_MANIFEST = 'tos-sw.manifest.js';
-// Note: worker manifest needs to end in .js despite being a JSON file, because of CloudFlare's static content
-// https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
+const FILE_BLACKLIST = [
+    'manifest.json',
+    'ngsw-worker.js',
+    'tos-sw.manifest.js',
+    'tos-sw.worker.js',
+];
 
 // Add timestamp to logs
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
@@ -19,12 +20,6 @@ let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-web', 'ngsw-confi
         // Populate version table
         assetGroup.versions = {};
         assetGroup.resources.files.forEach((pattern) => {
-            // Skip service worker files
-            if (pattern.endsWith(FILE_MANIFEST) ||
-                pattern.endsWith(FILE_WORKER) ||
-                pattern.endsWith(FILE_WORKER_MANIFEST)
-            ) return;
-
             let base = [
                 path.join('..', 'tos-web', 'dist'),
                 path.join('..', 'tos-build', 'dist'),
@@ -40,6 +35,11 @@ let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-web', 'ngsw-confi
                         let modifiedTime = fs.statSync(value).mtime.getTime();
                         let file = value.slice(base.length);
 
+                        // Skip files in the blacklist (mostly service worker related files)
+                        for (let blacklist of FILE_BLACKLIST)
+                            if (file.endsWith(blacklist))
+                                return;
+
                         assetGroup.versions[file] = modifiedTime;
                     })
             })
@@ -49,7 +49,9 @@ let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-web', 'ngsw-confi
         delete assetGroup.resources;
     });
 
-let manifestPath = path.join('..', 'tos-build', 'dist', FILE_WORKER_MANIFEST);
+// Note: worker manifest needs to end in .js despite being a JSON file, because of CloudFlare's static content
+// https://support.cloudflare.com/hc/en-us/articles/200172516-Which-file-extensions-does-CloudFlare-cache-for-static-content-
+let manifestPath = path.join('..', 'tos-build', 'dist', 'tos-sw.manifest.js');
 let manifestOld = fs.existsSync(manifestPath) && JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
     manifestOld && delete manifestOld.version;
 
