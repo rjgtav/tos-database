@@ -2987,7 +2987,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 663250,UNDER67_HIDDENQ1_ITEM4,居住区域の注意事項が書かれたメッセージ。中身を確認してみよう。,icon_item_sheepskin,,,,,,居住区域のメッセージ,0,0.0,0.0,FFFF,20,0.0
 663251,UNDER67_HIDDENQ1_ITEM5,保存区域の注意事項が書かれたメッセージ。中身を確認してみよう。,icon_item_sheepskin,,,,,,保存区域のメッセージ,0,0.0,0.0,FFFF,20,0.0
 663252,UNDER67_HIDDENQ1_ITEM6,大地の要塞 決戦地の注意事項が書かれたメッセージ。中身を確認してみよう。,icon_item_sheepskin,,,,,,大地の要塞 決戦地のメッセージ,0,0.0,0.0,FFFF,20,0.0
-663253,TABLELAND281_HIDDENQ1_ITEM5,シノビマスターがくれた召喚書。鼻が利く利口な犬を召還します。,golemmagicitem2,,,,,,シノビの召喚書,0,15.0,0.0,FFFF,20,0.0
+663253,TABLELAND281_HIDDENQ1_ITEM5,シノビマスターがくれた召喚書。鼻が利く利口な犬を召喚します。,golemmagicitem2,,,,,,シノビの召喚書,0,15.0,0.0,FFFF,20,0.0
 663254,TABLELAND281_HIDDENQ1_ITEM6,シノビだけが使う特殊な試薬。,icon_item_drug_sta1,,,,,,試薬,0,0.0,0.0,FFFF,20,0.0
 663255,CATACOMB332_HIDDENQ1_ITEM1,マルギリスの帳簿。真理の樹教団がカーライル霊廟での活動を記録した帳簿。,icon_item_collection_04black,,,,,,マルギリスの帳簿,0,0.0,0.0,FFFF,20,0.0
 663256,PILGRIMROAD362_HIDDENQ1_ITEM1,碑石の文字から拓本を取った紙。初めてみる文字だ。これについて近くの知識が豊富そうな人に聞いてみよう。,icon_item_paperpiece,,,,,,拓本,0,0.0,0.0,FFFF,20,0.0
@@ -5437,7 +5437,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902003,Event_1709_NewField_Potion,右クリックで使用できます。{nl}11月9日のメンテナンスで一括削除されます。{nl}使用すると、30分間移動速度 +3,item_speed_requid_3,,,,,,招待のポーション,0,0.0,0.0,FFFT,8,1.0
 902004,Achieve_Fanart_JP_01,第1回イラストコンテストに応募した啓示者に支給される称号です。右クリックで使用します。,icon_item_holyark,,,,,,称号 - 第1回イラコン挑戦者,0,0.0,0.0,FFFT,6,0.0
 902005,Event_JP_Offline_Cube,「ToS感謝祭2017」参加者に与えられるキューブです。これからもよろしくお願いいたします！,icon_item_eventcube1,,,,,,2017オフラインイベントキューブ,0,0.0,0.0,FFFT,8,1.0
-902006,Event_Special_Blueorb,使用すると味方モンスターを召還します。'イベントミッション'でのみ使用可能です。,icon_item_core_blue,,,,,,特別な碧き玉,0,360.0,0.0,FFFT,8,1.0
+902006,Event_Special_Blueorb,使用すると味方モンスターを召喚します。'イベントミッション'でのみ使用可能です。,icon_item_core_blue,,,,,,特別な碧き玉,0,360.0,0.0,FFFT,8,1.0
 902007,Event_Special_Trap,使用するとモンスターを捕獲する特製の罠を仕掛けます。,icon_item_pilgrim_trap,,,,,,特製の罠,0,30.0,0.0,FFFT,8,1.0
 902008,Event_1709_NewField_Box,招待に応じた者コスチュームが入っている箱です。右クリックで使用できます。,icon_item_giftbox_4,,,,,,招待に応じた者コスチュームボックス,0,0.0,0.0,FFFT,8,1.0
 902009,Event_Special_Etcitem,捕獲したモンスターレベルを増加させることができます。,icon_item_panto_core,,,,,,モンスター用プロテイン,0,0.0,0.0,TTFT,15,1.0
@@ -5500,6 +5500,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902143,Achieve_Event_KePa_JP,「ばいばいケッピー！また会う日まで！」GMイベントの称号です。,icon_item_holyark,,,,,,称号 - エターナルケッピー,0,0.0,0.0,FFFT,6,0.0
 902144,Event_Returner_Box_JP,復帰者への支給アイテムが入っているボックスです。{nl} - クラス変更券Lv.4 (14日)1個{nl} - 復帰ユーザーのポーション(30日)1個{nl} - 復帰ユーザーの書(14日)5個{nl} - ルーチングチャンスアップポーション(14日)5個,icon_item_jewelrybox_close,,,,,,ToSへおかえりボックス,0,0.0,0.0,FFFF,8,0.0
 902145,Event_2019_Web_Box_JP,使用するとランダムに1つアイテムを取得できます。{nl} - 女神の彫像(14日){nl} - 祝福が宿った種(14日){nl} - 古びた魔法付与スクロール{nl} - 最高級緊急修理キット{nl} - ルーチングチャンス:500{nl} - 黄金の金床(14日){nl} - 祝福された欠片,icon_item_solmiki_box,,,,,,[Re:Build] ボックス,0,0.0,0.0,FFFF,8,0.0
+902155,Achieve_Event_JP_GILTINE,マウス右側クリックで使います。,icon_item_holyark,,,,,,称号 - ギルティネ様から逃げるな,0,0.0,0.0,FFFT,6,0.0
 904000,EVENT_1802_MASTER_KEY1,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_1,,,,,,マスターの試験券(初級),0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,マスターの訓練報酬としてもらったアイテムです。{nl}5個以上集めるとマスターの試験イベントガイドが無限の可能性のキューブと交換してくれます,icon_item_gimmick_spcrystal,,,,,,小さな可能性の欠片,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_2,,,,,,マスターの試験券(中級),0,0.0,0.0,FFFT,15,1.0
