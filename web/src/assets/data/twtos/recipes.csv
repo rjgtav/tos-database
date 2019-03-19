@@ -1134,4 +1134,8 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Materials,Link_MonsterDrops,L
 400061,R_RAP04_115_EVENT_1812_XMAS,icon_item_weapon_misc5,,,"[{""Item"": 400061, ""Quantity"": 1}, {""Item"": 649014, ""Quantity"": 3}, {""Item"": 647001, ""Quantity"": 87}, {""Item"": 649216, ""Quantity"": 157}, {""Item"": 649026, ""Quantity"": 127}]",,[400061],,635488,Recipe - [活動] 亞西歐細劍,0,FFFT,21
 400062,R_CAN04_111_EVENT_1812_XMAS,icon_item_weapon_misc5,,,"[{""Item"": 400062, ""Quantity"": 1}, {""Item"": 649014, ""Quantity"": 3}, {""Item"": 647008, ""Quantity"": 65}, {""Item"": 649216, ""Quantity"": 157}, {""Item"": 649026, ""Quantity"": 98}]",,[400062],,635489,Recipe - [活動] 亞西歐重砲,0,FFFT,21
 400063,R_MUS04_111_EVENT_1812_XMAS,icon_item_weapon_misc5,,,"[{""Item"": 400063, ""Quantity"": 1}, {""Item"": 649014, ""Quantity"": 3}, {""Item"": 647008, ""Quantity"": 147}, {""Item"": 649216, ""Quantity"": 250}, {""Item"": 649026, ""Quantity"": 235}]",,[400063],,635490,Recipe - [活動] 亞西歐火槍,0,FFFT,21
+400064,R_Steam_HP_Potion_1Day,icon_item_grimoire_red,,,"[{""Item"": 400064, ""Quantity"": 1}, {""Item"": 640337, ""Quantity"": 20}]",,[400064],,902149,Recipe - HP藥水(1天),0,FFFT,21
+400065,R_Steam_HP_Potion_7Day,icon_item_grimoire_red,,,"[{""Item"": 400065, ""Quantity"": 1}, {""Item"": 640337, ""Quantity"": 180}]",,[400065],,902150,Recipe - HP藥水(7天),0,FFFT,21
+400066,R_Steam_SP_Potion_1Day,icon_item_grimoire_blue,,,"[{""Item"": 400066, ""Quantity"": 1}, {""Item"": 640338, ""Quantity"": 20}]",,[400066],,902151,Recipe - SP藥水(1天),0,FFFT,21
+400067,R_Steam_SP_Potion_7Day,icon_item_grimoire_blue,,,"[{""Item"": 400067, ""Quantity"": 1}, {""Item"": 640338, ""Quantity"": 180}]",,[400067],,902152,Recipe - SP藥水(7天),0,FFFT,21
 910000,Default_Recipe,icon_item_weapon_misc1,,,,,,,,製作書,0,TTTT,21

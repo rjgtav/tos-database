@@ -438,8 +438,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 640334,Leticia_expCard12,經驗值提升+985061，職業經驗值提升+758496。從210級開始可使用。,icon_item_expcard,,,,,,LV11 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
 640335,Leticia_expCard13,經驗值提升 +2420348 職業經驗值提升 +1863583。250等級以後可以使用。,icon_item_expcard,,,,,,LV12 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
 640336,Leticia_expCard15,經驗值提升+13189741，職業經驗值提升+10156100。從300級開始可使用。,icon_item_expcard,,,,,,LV14 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
-640337,Drug_RedApple20,令HP立即恢復20%，11秒內每隔2秒使恢復20%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_hpelixir_small,,,,,,HP 恢復小型靈藥,20,20.0,0.0,TTFT,6,3.0
-640338,Drug_BlueApple20,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_spelixir_small,,,,,,SP 恢復小型靈藥,20,20.0,0.0,TTFT,6,3.0
+640337,Drug_RedApple20,令HP立即恢復20%，11秒內每隔2秒使恢復20%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_hpelixir_small,,,,"[400064, 400065]",,HP 恢復小型靈藥,20,20.0,0.0,TTFT,6,3.0
+640338,Drug_BlueApple20,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_spelixir_small,,,,"[400066, 400067]",,SP 恢復小型靈藥,20,20.0,0.0,TTFT,6,3.0
 640340,Leticia_LevelUpCard85,幫助提升經驗及和職業經驗值，只有85級以下角色可以使用。,icon_item_old_card,,,,,,初級升級卡片,0,0.0,0.0,FFFT,6,0.0
 640341,Leticia_LevelUpCard185,幫助提升經驗及和職業經驗值，只有185級以下角色可以使用。,icon_item_old_card,,,,,,中級升級卡片,0,0.0,0.0,FFFT,6,0.0
 640342,Leticia_LevelUpCard280,幫助提升經驗及和職業經驗值，只有280級以下角色可以使用。,icon_item_old_card,,,,,,高級升級卡片,0,0.0,0.0,FFFT,6,0.0
@@ -725,6 +725,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641820,Leticia_BossCard_Box,可以在怪物卡片中隨機獲得1張。,icon_item_happybox_black,,,,,,BOSS卡片收集箱,0,0.0,0.0,FFFT,6,0.0
 641821,card_Xpupkit10,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升5400。,icon_item_reinforce_card_10,,,,,,Lv10 強化用卡片,1000,0.0,0.0,TTFT,15,1.0
 641822,card_Xpupkit10_Team,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升5400。,icon_item_reinforce_card_10,,,,,,Lv10 強化用卡片,0,0.0,0.0,FFFT,15,1.0
+641823,Gem_Gacha_gold_coin_Team,是無法得知年代的老舊黃金鑄幣。{nl}如拿去給流浪商人，將可以不花費抽寶石的費用獲得LV4 以上的寶石。,icon_item_antque_gold_coin,,,,,,老舊的黃金鑄幣,0,0.0,0.0,FFFT,15,1.0
 641901,Event_moneyBox1,使用時可以獲得銀幣。活動結束後統一刪除。,icon_item_nxpbox,,,,,,普通銀幣箱,0,0.0,0.0,FFFF,6,0.0
 641902,Event_moneyBox2,使用時可以獲得銀幣。活動結束後統一刪除。,icon_item_nxpbox,,,,,,中級銀幣箱,0,0.0,0.0,FFFF,6,0.0
 641903,Event_moneyBox3,使用時可以獲得銀幣。活動結束後統一刪除。,icon_item_nxpbox,,,,,,高級銀幣箱,0,0.0,0.0,FFFF,6,0.0
@@ -779,6 +780,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641962,Event_drug_steam_team,30分鐘內移動速度 +2、物理攻擊力 +50、魔法攻擊力 +50，透過點按滑鼠右鍵使用，活動結束後統一刪除。,item_speed_requid_3,,,,,,定居支援藥水,0,30.0,0.0,FFFT,6,0.0
 641963,Premium_ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式1次入場券,0,5.0,0.0,TTFT,6,1.0
 641964,Uphill_Store_Point_10,使用時可以獲得10點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。,icon_item_annycoin_2,,,,,,高地防守商店點數：10,0,0.0,0.0,FFFF,6,0.0
+641971,Event_Drug_Alche_HP15_Premium,HP立刻恢復5614，15秒內每隔2秒HP恢復5614，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,補給用濃縮HP藥水LV15,0,45.0,0.0,FFFT,6,1.0
+641972,Event_Drug_Alche_SP15_Premium,SP立刻恢復1288，15秒內每隔2秒SP恢復1288，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,補給用濃縮SP藥水LV15,0,45.0,0.0,FFFT,6,1.0
+641973,Event_drug_steam_1h_Premium,1小時移動速度增加2、物理攻擊力增加50、魔法攻擊力增加50。點擊滑鼠右鍵使用。,item_speed_requid_3,,,,,,定居支援藥水 LV2,0,30.0,0.0,FFFT,6,0.0
 642502,Gacha_EXP_001,使用時 LV2 ~ 10 經驗值卡片中可隨機獲得3張。,icon_item_quest_00017,,,,,,經驗值卡片箱子,0,0.0,0.0,FFFF,6,0.0
 642503,Gacha_Recipe_Wep,使用時可以在LV220武器製作圖中隨獲獲得1張。,icon_item_luckybox_red,,,,,,Lv220 製作書箱子 - 武器,0,0.0,0.0,FFFF,6,0.0
 642504,Gacha_Recipe_Arm,使用時可以獲得防具製作書(LV120 ~ 220)。,icon_item_cube2,,,,,,製作書箱子 - 防具,0,0.0,0.0,FFFF,6,0.0
@@ -810,6 +814,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 643017,Moru_Silver_DLC,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,銀光鐵砧,0,0.0,0.0,FFFT,15,1.0
 643020,Extract_kit,血晶萃取時使用的工具，可以跟戴利亞貝利斯購買。,icon_item_extractkit,,,,,,血晶萃取工具,600,0.0,0.0,FFTF,15,4.0
 643021,Extract_kit_Sliver,血晶萃取時使用的工具，不需要消耗財貨。,icon_item_extractkit_sliver,,,,,,銀色血晶萃取工具,0,0.0,0.0,FFTF,15,4.0
+643022,Extract_kit_Gold,血晶萃取時使用的工具，只有裝備潛力為0時可以使用，防止道具破壞。,icon_item_extractkit_gold,,,,,,發光的黃金血晶萃取工具,0,0.0,0.0,TTFT,15,4.0
 643025,Moru_Gold_14d_Team,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,黃金鐵砧(14天),0,0.0,1209600.0,FFFT,15,1.0
 643026,Extract_kit_Gold_NotFail,[Rebuild]改版後支援期間可使用的血晶萃取劵。{nl} - 活動結束時統一刪除。,icon_item_extractkit_gold,,,,,,[Rebuild] 100%血晶萃取工具,0,0.0,0.0,FFTF,15,4.0
 643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於隨機屬性裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,[Rebuild] 100%血晶萃取工具：隨機屬性,0,0.0,0.0,FFTF,15,4.0
@@ -1725,6 +1730,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 647010,misc_0529,哈希什藥水，服用後可以短暫提升身體能力。,icon_item_misc04_112,,,,,,哈希什藥水,25,0.0,0.0,FFFF,15,1.0
 647011,misc_0530,使用於高級裝備製作及印章強化上的稀有材料。.,icon_item_misc_misc_0530,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089]",,魔晶石,25,0.0,0.0,TTTT,15,1.0
 647012,misc_gemExpStone_randomQuest4_14d_Team,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFT,15,1.0
+647017,misc_gemExpStone10_Premium,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,發光的8星寶石研磨劑,0,0.0,0.0,TTFT,15,1.0
+647018,widnium_piece_Premium,聽說這是透過凱都拉商拉從很遠很遠的地方帶進來的珍貴礦物。{nl}傳聞說就算手上持有這個礦物，它也自動回到它原來的地方。{nl}佩迪米安的戴利亞貝利斯聽了傳聞想要研究急著找這個礦石。{nl}如果把這個礦石轉交給戴利亞貝利斯'鑽石鐵砧(14天)'可以交換1個。{nl}此道具活動結束時統一刪除。,icon_item_widnium_piece,,,,,,威德礦石碎片,0,0.0,0.0,FFFF,15,1.0
 648501,emoticonItem_1,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：凱帕(高興),0,0.0,0.0,FFFF,6,1.0
 648502,emoticonItem_2,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：凱帕(悲傷),0,0.0,0.0,FFFF,6,1.0
 648503,kupole_emotion01,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：奎波爾(賣萌),0,0.0,0.0,FFFT,6,1.0
@@ -3546,7 +3553,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 666239,E_Balloon_11,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon01,,,,,,氣球 : 終,0,0.0,0.0,FFFF,20,0.0
 666240,E_Balloon_12,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon02,,,,,,氣球 : 生,0,0.0,0.0,FFFF,20,0.0
 666241,E_Balloon_13,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon03,,,,,,氣球 : Game,0,0.0,0.0,FFFF,20,0.0
-666242,E_Balloon_14,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon04,,,,,,氣球 : ♥,0,0.0,0.0,FFFF,20,0.0
+666242,E_Balloon_14,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon04,,,,,,氣球 : 愛心,0,0.0,0.0,FFFF,20,0.0
 667000,CATACOMB_33_1_SQ_04_FIRE,從希奇斯那裡獲得的火柴，使用於讓亡者火葬。,icon_item_rod,,,,,,守墓人的火柴,0,5.0,0.0,FFFF,20,0.0
 667001,CATACOMB_33_1_SQ_05_DOLL,帶有守護人咒術的人偶。,icon_item_strawdoll1,,,,,,守墓人的咒術人偶,0,5.0,0.0,FFFF,20,0.0
 667002,CATACOMB_33_2_SQ_02_ORB,從復活過來的亡者身上吸收生存信念的靈石。,icon_item_spirit_green,,,,,,邪念石,0,20.0,0.0,FFFF,20,0.0
@@ -3853,10 +3860,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 670004,Purple_Card_Book,某人收集的卡片冊。建議你在安靜閒寂的地方翻閱。{nl}100等以上可使用{nl}使用時將召喚 330LV的BOSS怪。召喚的怪物會在10分鐘後消失。{nl}只能在野外使用。,icon_item_purple_cardbook,,,,[40041],,怪物卡片冊 : 紫色,0,60.0,0.0,TTFT,6,10.0
 670005,Get_Wet_Card_Book,泡在水中濕掉的卡片冊。建議在安靜閒寂的地方閱讀。{nl}100等以上可使用{nl}使用時召喚 330LV的Boss怪。召喚的Boss會在10分鐘後消失。{nl}只能在野外使用。,icon_item_get_wet_cardbook,,,,,,泡在水中的怪物卡片冊,0,60.0,0.0,FFFT,6,10.0
 670006,Ominous_Card_Book,可以感受到不祥氣息的卡片集，建議你找一個安靜閒寂的地方再翻閱。{nl}300級以上可使用{nl}使用時可以召喚330LV的卡片BOSS怪物或是野外BOSS怪物當中的1種。(召喚高階野外BOSS時，可以獲得該BOSS的魔方。){nl}召喚的BOSS會在10分鐘後消失，但是高階野外BOSS會在120分鐘後消失。{nl}只能在野外使用。,icon_item_curse_cardbook,,,,,[40041],怪物卡片冊：黑色,0,60.0,0.0,FFFT,6,10.0
+670007,Premium_Ominous_Card_Book,卡片冊就算不用手碰也能感受到一股讓人心情不好的邪惡氣息，建議你找一個安靜閒寂的地方再翻閱。{nl}300級以上可使用{nl}使用時會召喚LV330高階野外Boss怪物中1種。{nl}只能在野外使用。,icon_item_premium_ominous_card_book,,,,,,發光的怪物卡片冊：漆黑,0,60.0,0.0,TTTT,6,10.0
 670009,Get_Wet_Card_Book_14d,泡在水中濕掉的卡片冊。建議在安靜閒寂的地方閱讀。{nl}100等以上可使用{nl}使用時召喚 330LV的Boss怪。召喚的Boss會在10分鐘後消失。{nl}只能在野外使用。,icon_item_get_wet_cardbook,,,,,,泡在水中的怪物卡片冊(14天),0,60.0,1209600.0,FFFF,6,10.0
 670010,Get_Wet_Card_Book_14d_Team,泡在水中濕掉的卡片冊。建議在安靜閒寂的地方閱讀。{nl}100等以上可使用{nl}使用時召喚 330LV的Boss怪。召喚的Boss會在10分鐘後消失。{nl}只能在野外使用。,icon_item_get_wet_cardbook,,,,,,泡在水中的怪物卡片冊(14天),0,60.0,1209600.0,FFFT,6,10.0
 670011,All_Color_Card_Book,某人收集的卡片冊。建議你在安靜閒寂的地方翻閱。{nl}100等以上可使用{nl}使用時將召喚 330LV的BOSS怪。召喚的怪物會在10分鐘後消失。{nl}只能在野外使用。,icon_item_4color_cardbook,,,,,,怪物卡片冊：All Color,0,60.0,0.0,FFFT,6,10.0
 670012,Premium_Black_Card_Book,可以感受到不祥氣息的卡片集，建議你找一個安靜閒寂的地方再翻閱。{nl}300級以上可使用{nl}使用時可以召喚330LV的卡片BOSS怪物或是野外BOSS怪物當中的1種。(召喚高階野外BOSS時，可以獲得該BOSS的魔方。){nl}召喚的BOSS會在10分鐘後消失，但是高階野外BOSS會在120分鐘後消失。{nl}只能在野外使用。,icon_item_curse_cardbook,,,,,,發光的怪物卡片集：黑色,0,60.0,0.0,TTFT,6,10.0
+670013,Ominous_Card_Book_Team,可以感受到不祥氣息的卡片集，建議你找一個安靜閒寂的地方再翻閱。{nl}300級以上可使用{nl}使用時可以召喚330LV的卡片BOSS怪物或是野外BOSS怪物當中的1種。(召喚高階野外BOSS時，可以獲得該BOSS的魔方。){nl}召喚的BOSS會在10分鐘後消失，但是高階野外BOSS會在120分鐘後消失。{nl}只能在野外使用。,icon_item_curse_cardbook,,,,,,怪物卡片冊：黑色,0,60.0,0.0,FFFT,6,10.0
 680000,Dungeon_Key01,進入獨特遠征隊時所需的道具。,icon_item_dungeon_portalstone,,"[642916, 642916]",,,[9024],遠征隊傳送石,10,0.0,0.0,TTTT,15,1.0
 680001,BlueOrb_Onion,召喚怪物。召喚出來的怪物會和我軍一起戰鬥。維持180秒。點擊滑鼠右鍵使用。,icon_item_dreamshade,,,,,,藍色寶珠：凱帕,10,180.0,0.0,TTTT,6,1.0
 680002,BlueOrb_Leaf_diving,召喚怪物。召喚出來的怪物會和我軍一起戰鬥。維持180秒。點擊滑鼠右鍵使用。,icon_item_dreamshade,,,,,,藍色寶珠：竹葉蟲,10,180.0,0.0,TTTT,6,1.0
@@ -5124,6 +5133,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 699004,Rare_Enchant_Jewel,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,稀有附魔珠寶,10,0.0,0.0,TFTT,6,1.0
 699005,Unique_Enchant_Jewel,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,獨特附魔珠寶,10,0.0,0.0,TFTT,6,1.0
 699006,Legend_Enchant_Jewel,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,傳說附魔珠寶,10,0.0,0.0,TFTT,6,1.0
+699010,Unique_Enchant_Jewel_Team,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,獨特附魔珠寶,10,0.0,0.0,FFFT,6,1.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,15,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,15,1.0
 700002,KQ_token_hethran_3,費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,費斯蕾信物 Lv3,2000,0.0,0.0,TTTT,15,1.0
@@ -5549,6 +5559,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902131,Event_Steam_Fishing_BOX5,可以獲得380級獨特未鑑定裝備道具。{nl}獲得的裝備道具無限制，可以進行所有交易。,icon_item_event_armorbox1,,,,,,獨特未鑑定手套選擇箱,0,0.0,0.0,FFFT,8,0.0
 902132,Event_Steam_Fishing_BOX6,可以獲得380級獨特未鑑定裝備道具。{nl}獲得的裝備道具無限制，可以進行所有交易。,icon_item_event_armorbox1,,,,,,獨特未鑑定鞋子選擇箱,0,0.0,0.0,FFFT,8,0.0
 902140,Event_Steam_Fishing_TWN_BOX,使用時可以選擇您喜歡的髮飾。{nl}活動結束時統一刪除。,icon_item_summer_box,,,,,,池塘中的箱子,0,0.0,0.0,FFFT,8,0.0
+902149,Steam_HP_Potion_1Day,HP立刻恢復40%，11秒內每隔2秒HP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion2,,,,,[400064],HP藥水(1天),0,20.0,86400.0,FFFT,6,3.0
+902150,Steam_HP_Potion_7Day,HP立刻恢復40%，11秒內每隔2秒HP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion2,,,,,[400065],HP藥水(7天),0,20.0,604800.0,FFFT,6,3.0
+902151,Steam_SP_Potion_1Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion3,,,,,[400066],SP藥水(1天),0,20.0,86400.0,FFFT,6,3.0
+902152,Steam_SP_Potion_7Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion3,,,,,[400067],SP藥水(7天),0,20.0,604800.0,FFFT,6,3.0
 904000,EVENT_1802_MASTER_KEY1,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_1,,,,,,大師的考驗卷-初級,0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,從大師的訓練所得到的獎勵道具。{nl}收集5個以上可以跟大師的考驗活動小幫手交換成無限可能性的魔方。{nl}活動結束時道具統一刪除。,icon_item_gimmick_spcrystal,,,,,,微小可能性的碎片,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_2,,,,,,大師的考驗卷-中級,0,0.0,0.0,FFFT,15,1.0
