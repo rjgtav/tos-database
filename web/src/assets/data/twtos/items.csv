@@ -769,7 +769,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641941,CS_IndunReset_Nunnery_14d,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,莎勒斯修女院入場劵(14天),0,5.0,1209600.0,FFFF,6,0.0
 641942,Event_1704_SilverBox,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,[活動]大發銀幣箱(限時),0,0.0,1209600.0,FFFF,8,0.0
 641943,Leticia_IndunReset_GTower,可以進入大地之塔1次。,icon_item_key_earthtower,,,,,,大地之塔1次入場劵,0,0.0,0.0,TTTT,6,0.0
-641944,Event_Indun_Package,"點擊滑鼠右鍵時可獲得組合物品。{nl} -即時副本倍數VIP x2{nl} -副本掃盪卷 x2""",icon_item_luckybox_red,,,,,,던전 헤택 패키지,0,0.0,0.0,FTFT,6,0.0
+641944,Event_Indun_Package,"點擊滑鼠右鍵時可獲得組合物品。{nl} -即時副本倍數VIP x2{nl} -副本掃盪卷 x2""",icon_item_luckybox_red,,,,,,地下城優惠禮包,0,0.0,0.0,FTFT,6,0.0
 641945,Event_Goddess_Statue_DLC,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,女神的雕像,0,0.0,0.0,FFFT,6,0.0
 641946,Event_drug_steam_1h_DLC,1小時移動速度增加2、物理攻擊力增加50、魔法攻擊力增加50。點擊滑鼠右鍵使用。,item_speed_requid_3,,,,,,定居支援藥水 LV2,0,30.0,0.0,FFFT,6,0.0
 641952,Event_1710_NexonCashBox,15級以上可使用{nl}可從箱中獲得Nexon Cash。{nl}活動結束後統一刪除。,icon_item_event_nexoncash01,,,,,,黃金週幸運箱 (1小時),0,5.0,3600.0,FFFF,6,0.0
@@ -780,6 +780,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 641962,Event_drug_steam_team,30分鐘內移動速度 +2、物理攻擊力 +50、魔法攻擊力 +50，透過點按滑鼠右鍵使用，活動結束後統一刪除。,item_speed_requid_3,,,,,,定居支援藥水,0,30.0,0.0,FFFT,6,0.0
 641963,Premium_ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式1次入場券,0,5.0,0.0,TTFT,6,1.0
 641964,Uphill_Store_Point_10,使用時可以獲得10點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。,icon_item_annycoin_2,,,,,,高地防守商店點數：10,0,0.0,0.0,FFFF,6,0.0
+641969,Event_190110_ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,挑戰模式 1次入場券 (14天),0,5.0,1209600.0,FFFT,6,1.0
 641971,Event_Drug_Alche_HP15_Premium,HP立刻恢復5614，15秒內每隔2秒HP恢復5614，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,補給用濃縮HP藥水LV15,0,45.0,0.0,FFFT,6,1.0
 641972,Event_Drug_Alche_SP15_Premium,SP立刻恢復1288，15秒內每隔2秒SP恢復1288，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,補給用濃縮SP藥水LV15,0,45.0,0.0,FFFT,6,1.0
 641973,Event_drug_steam_1h_Premium,1小時移動速度增加2、物理攻擊力增加50、魔法攻擊力增加50。點擊滑鼠右鍵使用。,item_speed_requid_3,,,,,,定居支援藥水 LV2,0,30.0,0.0,FFFT,6,0.0
@@ -1730,6 +1731,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 647010,misc_0529,哈希什藥水，服用後可以短暫提升身體能力。,icon_item_misc04_112,,,,,,哈希什藥水,25,0.0,0.0,FFFF,15,1.0
 647011,misc_0530,使用於高級裝備製作及印章強化上的稀有材料。.,icon_item_misc_misc_0530,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089]",,魔晶石,25,0.0,0.0,TTTT,15,1.0
 647012,misc_gemExpStone_randomQuest4_14d_Team,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFT,15,1.0
+647013,PVP_Misc_1_KOR_Reward,紀念領地戰勝利的鑄幣{nl}取代領地戰市場稅金獎勵所發送的道具。{nl}活動結束時統一刪除。,icon_item_coin_colony_01,,,,,,領地戰紀念鑄幣[獎勵用],100000,0.0,0.0,FFTT,15,1.0
 647017,misc_gemExpStone10_Premium,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,發光的8星寶石研磨劑,0,0.0,0.0,TTFT,15,1.0
 647018,widnium_piece_Premium,聽說這是透過凱都拉商拉從很遠很遠的地方帶進來的珍貴礦物。{nl}傳聞說就算手上持有這個礦物，它也自動回到它原來的地方。{nl}佩迪米安的戴利亞貝利斯聽了傳聞想要研究急著找這個礦石。{nl}如果把這個礦石轉交給戴利亞貝利斯'鑽石鐵砧(14天)'可以交換1個。{nl}此道具活動結束時統一刪除。,icon_item_widnium_piece,,,,,,威德礦石碎片,0,0.0,0.0,FFFF,15,1.0
 648501,emoticonItem_1,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,表情符號：凱帕(高興),0,0.0,0.0,FFFF,6,1.0
@@ -5383,7 +5385,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900313,Event_1705_Schwarzereiter_Paper,證明黃金之歌傭兵團以完成被要求的委託。{nl}活動結束後統一刪除。,icon_item_indulgence,,,,,,委託完成確認證,1,0.0,0.0,FFFT,8,1.0
 900314,Event_1705_Schwarzereiter_Potion,點擊滑鼠右鍵使用。{nl}1小時內最大HP增加 +3000{nl}活動結束後統一刪除。,icon_item_goldenmusic_potion,,,,,,黃金之歌傭兵團員藥水,0,0.0,0.0,FFFT,8,1.0
 900315,Event_1706_Monk_Potion,點擊滑鼠右鍵使用。{nl}1小時內物理、魔法攻擊力增加 +100{nl}活動結束後統一刪除。,icon_item_offensive_potion,,,,,,修行者的藥水,0,5.0,0.0,FFFT,8,1.0
-900316,Event_1705_ReturnUserScroll,使用時將可進行復歸者專屬任務。{nl}完成任務可獲得獎勵。,icon_item_giftbox_2,,,,,,복귀자의 선물상자,0,10.0,1296000.0,FFFT,8,1.0
+900316,Event_1705_ReturnUserScroll,使用時將可進行復歸者專屬任務。{nl}完成任務可獲得獎勵。,icon_item_giftbox_2,,,,,,回歸者的禮物箱,0,10.0,1296000.0,FFFT,8,1.0
 900317,Event_Nru_Always_Box_1,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級5以上可使用),icon_item_giftbox1,,,,,,引導員升級箱,0,0.0,0.0,FFFF,6,1.0
 900318,Event_Nru_Always_Box_2,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級10以上可使用),icon_item_giftbox1,,,,,,引導員升級箱,0,0.0,0.0,FFFF,6,1.0
 900319,Event_Nru_Always_Box_3,新玩家引導員升級箱。{nl}使用時可以獲得道具。{nl}(等級15以上可使用),icon_item_giftbox1,,,,,,引導員升級箱,0,0.0,0.0,FFFF,6,1.0
@@ -5398,7 +5400,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 900328,Event_Danoh_Item_5,美味的粽子。{nl}30分內給予組隊全員移動速度+4、廣域攻擊比率+1、經驗值增加25%的增加效果。,icon_item_lettuce,,,,,[40018],粽子,0,1800.0,0.0,FFFT,6,1.0
 900329,Achieve_FinestMoment,賦予給在迎春繪畫比賽得獎的玩家的稱號。點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,稱號 - Finest Moment,0,0.0,0.0,FFFT,6,0.0
 900330,Event_WeddingCake,婚禮上使用的結婚蛋糕。 {nl}60分鐘內產生移動速度 +3、體力 +10、經驗值增加 10% 的效果。,icon_item_weddingcake,,,,,,結婚蛋糕,0,3600.0,0.0,TTFT,6,1.0
-900331,Scroll_Transform_Monster_Steam,用於變身的卷軸。,golemmagicitem2,,,,,,[GM] 특별한 변신 스크롤,0,10.0,0.0,FFFF,6,0.0
+900331,Scroll_Transform_Monster_Steam,用於變身的卷軸。,golemmagicitem2,,,,,,[GM] 特別的變身卷軸,0,10.0,0.0,FFFF,6,0.0
 900332,E_misc_paperBox_party,需要關心的時候，請使用。活動結束時道具統一刪除。,icon_item_paperbox,,,,,,慶典用紙箱,20,1.0,0.0,FFFT,6,1.0
 900338,Event_1706_Doppelsoeldner1,向雙酬傭兵大師正名能力的證明。 {nl}活動結束後統一刪除。,icon_item_gem_pendent1,,,,,,傭兵的證明,1,0.0,0.0,FFFT,8,1.0
 900339,Event_1706_Doppelsoeldner_Potion,點擊滑鼠右鍵使用。{nl}1小時內物理、魔法防禦力增加 +100{nl}活動結束後統一刪除。,icon_item_defensive_potion,,,,,,刀刃誓約傭兵團員藥水,0,5.0,0.0,FFFT,8,1.0
@@ -5483,20 +5485,20 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902001,Event_1709_NewField_Coupon,10分鐘內移動速度+2、物理攻擊力+50、魔法攻擊力+50。右擊滑鼠使用。{nl}可用邀請魔方向邀請活動小幫手換取。{nl}活動結束後統一刪除。,icon_item_gem_elemental17,,,,,,邀請信物,0,30.0,0.0,FFFT,6,0.0
 902002,Event_1709_NewField_Cube,活動結束後統一刪除。,icon_item_eventcube3,,,,,,邀請魔方,0,0.0,0.0,FFFT,8,0.0
 902003,Event_1709_NewField_Potion,可點擊滑鼠右鍵使用。{nl}活動結束後統一刪除。{nl}使用時30分鐘內移動速度 +3,item_speed_requid_3,,,,,,邀請藥水,0,0.0,0.0,FFFT,8,1.0
-902006,Event_Special_Blueorb,"사용시 아군 몬스터를 소환합니다.{nl}'이벤트 미션'에서만 사용 가능합니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_core_blue,,,,,,特別的藍色晶球,0,360.0,0.0,FFFT,8,1.0
-902007,Event_Special_Trap,"사용시 포획용 덫이 설치됩니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_pilgrim_trap,,,,,,特別的捕獲用陷阱,0,30.0,0.0,FFFT,8,1.0
+902006,Event_Special_Blueorb,使用時召喚我軍怪物。{nl}'活動任務'，只有在此可使用。{nl}活動結束後，道具統一刪除。,icon_item_core_blue,,,,,,特別的藍色晶球,0,360.0,0.0,FFFT,8,1.0
+902007,Event_Special_Trap,使用時設置捕獲用陷阱。{nl}活動結束時，道具統一刪除。,icon_item_pilgrim_trap,,,,,,特別的捕獲用陷阱,0,30.0,0.0,FFFT,8,1.0
 902008,Event_1709_NewField_Box,裝有應邀者套裝的箱子。可點擊滑鼠右鍵使用。,icon_item_giftbox_4,,,,,,應邀者套裝箱,0,0.0,0.0,FFFT,8,1.0
-902009,Event_Special_Etcitem,"이벤트 재료 아이템입니다.{nl}포획한 몬스터 레벨을 증가시킬 수 있습니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_panto_core,,,,,,怪物的氣息,0,0.0,0.0,FFFT,15,1.0
+902009,Event_Special_Etcitem,活動材料道具。{nl}可以增加捕獲怪物等級。{nl}活動結束時，道具統一刪除。,icon_item_panto_core,,,,,,怪物的氣息,0,0.0,0.0,FFFT,15,1.0
 902016,Armor_270_EventBox,可以選擇270制防具裝備。,icon_item_event_armorbox2,,,,,,活動用防具箱 (Lv. 270),0,0.0,0.0,FFFT,8,0.0
-902017,Weapon_315_EventBox,315제 방어구 장비를 선택할 수 있습니다.,icon_item_event_weaponbox1,,,,,,活動用武器箱 (Lv. 315),0,0.0,0.0,FFFT,8,0.0
+902017,Weapon_315_EventBox,可以選擇315級防具裝備。,icon_item_event_weaponbox1,,,,,,活動用武器箱 (Lv. 315),0,0.0,0.0,FFFT,8,0.0
 902018,Event_Fedimian_Cube,送給守護佩迪米安的救援者的獎勵。,icon_item_eventcube2,,,,,,佩迪米安守護魔方,0,0.0,0.0,FFFF,8,1.0
 902019,Achieve_MonsterInker,贈送給2017年萬聖誕繪畫徵選活動得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,稱號 - Monster Inker,0,0.0,0.0,FFFT,6,0.0
-902021,Event_Special_Etcitem2,"이벤트 재료 아이템입니다.{nl}쓸모있는 아이템으로 교환이 가능합니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",rootcrystal_piece,,,,,,藍色碎片,0,0.0,0.0,FFFT,8,1.0
+902021,Event_Special_Etcitem2,活動材料道具。{nl}可以拿去交換有用道具。{nl}活動結束時，道具統一刪除。,rootcrystal_piece,,,,,,藍色碎片,0,0.0,0.0,FFFT,8,1.0
 902022,Event_Halloween_Squib,為了萬聖節而製作的爆竹，點擊滑鼠右鍵即可使用。,icon_item_firework,,,,,,萬聖節爆竹,0,3.0,0.0,FFFT,6,1.0
 902023,AGARIO_CANDY_REWARD,奇妙的南瓜造型糖。可從活動地下城獲得。{nl}活動結束後統一刪除。,icon_item_halloweencandy_set,,,,,,奇妙糖果,10,0.0,0.0,FFFT,8,0.0
 902024,EVENT_1706_FREE_RANKRESET_REWARD_6RANKBOX,可點擊滑鼠右鍵使用。須達成1級才能使用。{nl}活動結束後統一刪除。,icon_item_classsolution_box,,,,,,6階衝等寶箱,0,0.0,0.0,FFFT,8,1.0
 902025,Event_expCard_180Lv,可提升180級角色的經驗值。50級以下才可使用。,icon_item_expcard,,,,,,經驗值卡片 (180級),0,0.0,0.0,FFFF,8,0.0
-902026,Event_Nru_Buff_Item,60分內給予全體隊員經驗值+50%的效果。,icon_item_collection_02green,,,,,,초보 유저의 서(14일),0,3600.0,1209600.0,FFFF,8,0.0
+902026,Event_Nru_Buff_Item,60分內給予全體隊員經驗值+50%的效果。,icon_item_collection_02green,,,,,,新手玩家之書(14天),0,3600.0,1209600.0,FFFF,8,0.0
 902027,Event_Cb_Buff_Item,60分內給予全體隊員最大HP +2000、最大SP +1000、移動速度 +1的效果。,icon_item_collection_01red,,,,,,回歸玩家之書(14天),0,3600.0,1209600.0,FFFF,8,0.0
 902028,Event_Cb_Buff_Potion,60分內物理攻擊力+500、魔法攻擊力+500。{nl}(不會消耗。),icon_item_drug_hpsp3,,,,,,回歸玩家的藥水(30天),0,3600.0,2592000.0,FFFF,8,0.0
 902029,Event_Goddess_Medal,好像會有好事發生。{nl}(收集獎牌可以跟活動佈告欄交換道具。),item_icon_medal,,,,,,女神的獎牌,0,0.0,0.0,FFFT,8,0.0
@@ -5546,7 +5548,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902096,Event_Steam_Last_Winter_Key,可以在冬季企鵝活動中使用的鑰匙。{nl}(活動結束時統一刪除。),cathedral_key_2,,,,,,冬季鑰匙,0,0.0,0.0,FFFT,8,0.0
 902097,Event_Steam_Last_Winter_Icicle,冰錐的冰融化之後，裡面會有什麼呢?{nl}(冰錐只能在木柴周圍使用。),icon_item_gimmick_spcrystal,,,,,,冰錐(14天),0,3.0,1209600.0,FFFF,8,0.0
 902102,Event_Steam_2Years_Master_List,記錄著持有邀請函的大師名單。{nl}(使時可以確認活動進行狀況。),icon_item_diary,,,,,,大師名冊,0,0.0,0.0,FFFT,8,0.0
-902103,Event_Steam_2Years_Master_DLC,이벤트용 워프 주문서입니다.{nl}사용 시 2주년 이벤트 도우미 npc 앞으로 이동합니다.,siaul_act3_confirmation,,,,,,活動傳送卷軸 - 2週年活動開始,0,0.0,0.0,FFFT,8,0.0
+902103,Event_Steam_2Years_Master_DLC,活動用傳送卷軸。{nl}使用後會移動到2週年活動小幫手npc旁邊。,siaul_act3_confirmation,,,,,,活動傳送卷軸 - 2週年活動開始,0,0.0,0.0,FFFT,8,0.0
 902106,Event_Steam_Magazine_Num1,啟示活動道具。{nl}可以在活動佈告欄用活動道具交換稱號。,icon_item_stonetablet,,,,,,[活動]第一個啟示,0,0.0,0.0,FFFT,8,0.0
 902107,Achieve_Event_Steam_Magazine_Num1,賦予找到[活動]啟示的救世者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,稱號 - [EVENT]Crystal Mine Revelation,0,0.0,0.0,FFFT,6,0.0
 902108,Achieve_Event_Steam_Colony_Tester,賦予給領地戰優勝反饋玩家的稱號。,icon_item_holyark,,,,,,稱號 - No. 1 Territory Wars Tester,0,0.0,0.0,FFFT,6,0.0
@@ -5562,7 +5564,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902149,Steam_HP_Potion_1Day,HP立刻恢復40%，11秒內每隔2秒HP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion2,,,,,[400064],HP藥水(1天),0,20.0,86400.0,FFFT,6,3.0
 902150,Steam_HP_Potion_7Day,HP立刻恢復40%，11秒內每隔2秒HP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion2,,,,,[400065],HP藥水(7天),0,20.0,604800.0,FFFT,6,3.0
 902151,Steam_SP_Potion_1Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion3,,,,,[400066],SP藥水(1天),0,20.0,86400.0,FFFT,6,3.0
-902152,Steam_SP_Potion_7Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion3,,,,,[400067],SP藥水(7天),0,20.0,604800.0,FFFT,6,3.0
+902152,Steam_SP_Potion_7Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion3,,,,,[400067],SP樂水(7天),0,20.0,604800.0,FFFT,6,3.0
 904000,EVENT_1802_MASTER_KEY1,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_1,,,,,,大師的考驗卷-初級,0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,從大師的訓練所得到的獎勵道具。{nl}收集5個以上可以跟大師的考驗活動小幫手交換成無限可能性的魔方。{nl}活動結束時道具統一刪除。,icon_item_gimmick_spcrystal,,,,,,微小可能性的碎片,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_2,,,,,,大師的考驗卷-中級,0,0.0,0.0,FFFT,15,1.0
@@ -5645,6 +5647,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904114,EVENT_1812_GILTINE_REWARD_BOX,吉特涅女神賜的禮物。{nl} 活動結束時道具統一刪除。,icon_item_event_giltinebox,,,,,,吉特涅的禮物箱,0,0.0,0.0,FFFT,8,1.0
 904126,EVENT_1712_SECOND_CHALLENG_14d_Team,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,1209600.0,FFFT,8,1.0
 904128,EVENT_1812_DAYCHECK_BALLOONBOX,3周年紀念出席打卡活動用氣球串。{nl}活動結束時道具統一刪除。,icon_item_event_balloonbox,,,,,,3周年氣球串,0,0.0,0.0,FFFT,8,1.0
+904134,EVENT_190110_GOLDPIG_BOX,為了紀念世界特別的成就女神所賜的特別禮物箱。{nl}紀念初次壓制斯爾利那斯雷歐的龍王普魯達之日。{nl}使用時可獲得道具。,icon_item_happybox_red,,,,,,[活動]黃金豬寶箱,0,0.0,0.0,FFFT,8,1.0
+904135,EVENT_190110_RankReset_Point_Lv1,"職業變更點數增加100。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_3,,,,,,職業變更劵 Lv.1 (14天),0,0.0,1209600.0,FFFT,8,0.0
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,技能卷軸,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,幼苗,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,枯萎的植物,1,0.0,0.0,TTTT,15,1.0

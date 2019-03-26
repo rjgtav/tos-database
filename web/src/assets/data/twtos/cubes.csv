@@ -228,7 +228,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 902012,Event_BlueCube_Lv3,使用時隨機獲得1個道具{nl} - 塔特{nl} - 幸運餅乾{nl} - 特性點數 500{nl} - [活動]高階寶石研磨劑(限時){nl} - 銀光鐵砧(14天){nl} - 黃金鐵砧(14天),icon_item_eventbox_gem,,,,,,,藍色魔方 LV3,0,0.0,0.0,FFFF,5,0.0
 902013,Event_BlueCube_Lv4,使用時隨機獲得1個道具{nl} - 塔特{nl} - 幸運餅乾{nl} - 特性點數 500{nl} - 特性點數 1000{nl} - [活動]高階寶石研磨劑(限時){nl} - 銀光鐵砧(14天){nl} - 黃金鐵砧(14天),icon_item_eventbox_gem,,,,,,,藍色魔方 LV4,0,0.0,0.0,FFFF,5,0.0
 902014,Event_BlueCube_Lv5,使用時隨機獲得1個道具{nl} - 塔特{nl} - 幸運餅乾{nl} - 特性點數 500{nl} - 特性點數 1000{nl} - [活動]高階寶石研磨劑(限時){nl} - 銀光鐵砧(14天){nl} - 黃金鐵砧(14天){nl} - 270制活動用防具,icon_item_eventbox_gem,,,,,,,藍色魔方 LV5,0,0.0,0.0,FFFF,5,0.0
-902015,Event_BlueCube_Lv6,"사용시 보상 아이템 중 한가지 아이템이 랜덤으로 지급됩니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_eventbox_blue,,,,,,,藍色魔方,0,0.0,0.0,FFFT,5,0.0
+902015,Event_BlueCube_Lv6,使用時可隨機獲得獎勵道具中的一項。{nl}活動結束時，道具統一刪除。,icon_item_eventbox_blue,,,,,,,藍色魔方,0,0.0,0.0,FFFT,5,0.0
 902033,Event_CurseDoor_Cube,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_eventcube1,,,,,,,生存獎勵魔方,0,0.0,0.0,FFFT,5,0.0
 902061,EVENT_1801_ORB_ARMORBOX,開啟時可隨機獲得350級普利摩斯防具道具中的1種。{nl}活動結束時道具統一刪除。,icon_item_event_armorbox1,,,,,,,寶貝的防具魔方,0,0.0,0.0,FFFT,5,0.0
 902062,EVENT_1801_ORB_WEAPONBOX,開啟時可隨機獲得350級普利摩斯武器/輔助武器道具中的1種。{nl}活動結束時道具統一刪除。,icon_item_event_weaponbox1,,,,,,,寶貝的武器魔方,0,0.0,0.0,FFFT,5,0.0

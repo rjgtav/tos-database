@@ -58,8 +58,8 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Materials,Link_MonsterDrops,L
 9010,R_BlessedStone_1,icon_item_recipe_misc1,,,,,,,,Recipe - Unknown,10000,FFTF,21
 9011,R_BlessedStone_2,icon_item_recipe_misc1,,,,,,,,Recipe - Unknown,10000,FFTF,21
 9012,R_BlessedStone_3,icon_item_recipe_misc1,,,,,,,,Recipe - Unknown,10000,FFTF,21
-9013,R_Premium_boostToken02,icon_item_recipe_misc1,,,"[{""Item"": 9013, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}]",,[9013],,490094,Recipe - x4 經驗之書,100,FFTF,21
-9014,R_Premium_boostToken03,icon_item_recipe_misc1,,,"[{""Item"": 9014, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}]",,[9014],,490095,Recipe - x8 經驗之書,100,FFTF,21
+9013,R_Premium_boostToken02,icon_item_recipe_misc1,,,"[{""Item"": 9013, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}, {""Item"": 490015, ""Quantity"": 1}]",,[9013],,490094,Recipe - x4 經驗之書,50,FFTF,21
+9014,R_Premium_boostToken03,icon_item_recipe_misc1,,,"[{""Item"": 9014, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}, {""Item"": 490094, ""Quantity"": 1}]",,[9014],,490095,Recipe - x8 經驗之書,50,FFTF,21
 9015,R_misc_TruthMirror,icon_item_recipe_misc1,,,"[{""Item"": 9015, ""Quantity"": 1}, {""Item"": 645820, ""Quantity"": 8}]",,[9015],,645819,Recipe - 真實的鏡子,199,FFFF,21
 9018,R_BlessedStone_Multi,icon_item_recipe_misc1,,,"[{""Item"": 9018, ""Quantity"": 1}, {""Item"": 645783, ""Quantity"": 10}]",,[9018],,646045,Recipe - 女神的祝福石,5000,FFFF,21
 9019,R_3CMLAKE262_SQ04,icon_item_recipe_misc1,,,"[{""Item"": 9019, ""Quantity"": 1}, {""Item"": 666180, ""Quantity"": 1}, {""Item"": 666182, ""Quantity"": 16}]",,[9019],,666181,Recipe - 魔法消除炸彈,0,FFFF,21
@@ -1137,5 +1137,5 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Materials,Link_MonsterDrops,L
 400064,R_Steam_HP_Potion_1Day,icon_item_grimoire_red,,,"[{""Item"": 400064, ""Quantity"": 1}, {""Item"": 640337, ""Quantity"": 20}]",,[400064],,902149,Recipe - HP藥水(1天),0,FFFT,21
 400065,R_Steam_HP_Potion_7Day,icon_item_grimoire_red,,,"[{""Item"": 400065, ""Quantity"": 1}, {""Item"": 640337, ""Quantity"": 180}]",,[400065],,902150,Recipe - HP藥水(7天),0,FFFT,21
 400066,R_Steam_SP_Potion_1Day,icon_item_grimoire_blue,,,"[{""Item"": 400066, ""Quantity"": 1}, {""Item"": 640338, ""Quantity"": 20}]",,[400066],,902151,Recipe - SP藥水(1天),0,FFFT,21
-400067,R_Steam_SP_Potion_7Day,icon_item_grimoire_blue,,,"[{""Item"": 400067, ""Quantity"": 1}, {""Item"": 640338, ""Quantity"": 180}]",,[400067],,902152,Recipe - SP藥水(7天),0,FFFT,21
+400067,R_Steam_SP_Potion_7Day,icon_item_grimoire_blue,,,"[{""Item"": 400067, ""Quantity"": 1}, {""Item"": 640338, ""Quantity"": 180}]",,[400067],,902152,Recipe - SP樂水(7天),0,FFFT,21
 910000,Default_Recipe,icon_item_weapon_misc1,,,,,,,,製作書,0,TTTT,21
