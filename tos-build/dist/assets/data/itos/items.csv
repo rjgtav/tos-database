@@ -2595,12 +2595,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 661205,Collection_Base_PRISON62_2_HQ1,The silver bar hidden by the prisoners in Ashaq Underground Prison. Can be added to your collection.,icon_item_silverbar_s,[642208],,,,,Hidden Silver Bar,0,0.0,0.0,FFFF,15,0.0
 661206,QuestReward_repairPotion,Recovers the durability of your equipment by +5.,icon_item_repairkit,,,,,,Urgent Repair Kit,0,0.0,0.0,FFFF,6,0.0
 661207,RAID_Velcofer_Potion,Holy water that neutralizes Velcoffer's Curse. Resets the effects of the curse. ,icon_item_ability_up_potion5,,,,,,Lift Curse Potion,0,0.0,0.0,FFFF,6,0.0
-661210,E_Balloon_1,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor3,,,,,,,0,0.0,0.0,FFFF,20,0.0
-661211,E_Balloon_2,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor4,,,,,,,0,0.0,0.0,FFFF,20,0.0
-661212,E_Balloon_3,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor5,,,,,,,0,0.0,0.0,FFFF,20,0.0
-661213,E_Balloon_4,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor1,,,,,,,0,0.0,0.0,FFFF,20,0.0
-661214,E_Balloon_5,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor2,,,,,,,0,0.0,0.0,FFFF,20,0.0
-661215,E_Balloon_6,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor6,,,,,,,0,0.0,0.0,FFFF,20,0.0
+661210,E_Balloon_1,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor3,,,,,,Balloon: 트,0,0.0,0.0,FFFF,20,0.0
+661211,E_Balloon_2,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor4,,,,,,Balloon: 오,0,0.0,0.0,FFFF,20,0.0
+661212,E_Balloon_3,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor5,,,,,,Balloon: 세,0,0.0,0.0,FFFF,20,0.0
+661213,E_Balloon_4,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor1,,,,,,Balloon: 고,0,0.0,0.0,FFFF,20,0.0
+661214,E_Balloon_5,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor2,,,,,,Balloon: 혓,0,0.0,0.0,FFFF,20,0.0
+661215,E_Balloon_6,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_kor6,,,,,,Balloon: 뇌,0,0.0,0.0,FFFF,20,0.0
 661216,E_Balloon_7,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_t,,,,,,Balloon: T,0,0.0,0.0,FFFF,20,0.0
 661217,E_Balloon_8,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_o,,,,,,Balloon: O,0,0.0,0.0,FFFF,20,0.0
 661218,E_Balloon_9,Use to carry a festival balloon.{nl}Will be automatically deleted at the end of the event period.,icon_item_balloon_s,,,,,,Balloon: S,0,0.0,0.0,FFFF,20,0.0
