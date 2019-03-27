@@ -5580,7 +5580,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 904108,EVENT_1811_NEWCLASS_BOX_OUL,アウトローデスペラードアタイアーコスチュームが入っているボックス。{nl}アウトローに転職すると使用可能になります。{nl}ボックスから獲得したコスチュームはチーム倉庫を使用できません。,icon_item_jewelrybox,,,,,,アウトローデスペラードアタイアーコスチュームボックス,0,0.0,0.0,FFFT,6,0.0
 904109,EVENT_1811_KUPOLE_COIN,[Re:Build] ダイナの特別商店イベントアイテムです。 イベントNPCに渡すと素敵なアイテムと交換することができます。{nl} メンテナンス時に一括削除されます。,icon_item_rebuild_coin,,,,,,[Re:Build] 記念コイン,0,0.0,0.0,FFFT,15,0.1
 904110,Costume_Exchange_Coupon,TP商店の系統コスチューム交換タブでコスチュームと交換することができます。,icon_item_exchange_costumecoupon,,,,,,系統コスチューム交換券,0,0.0,0.0,FFFT,15,0.0
-904114,EVENT_1812_GILTINE_REWARD_BOX,ギルティネ女神からの贈り物が入っています。{nl} 4月17日点検時、一括削除されます。,icon_item_event_giltinebox,,,,,,ギルティネの贈り物箱,0,0.0,0.0,FFFT,8,1.0
+904114,EVENT_1812_GILTINE_REWARD_BOX,ギルティネ女神からの贈り物が入っています。{nl} メンテナンスで一括削除されます。,icon_item_event_giltinebox,,,,,,ギルティネの贈り物箱,0,0.0,0.0,FFFT,8,1.0
 904126,EVENT_1712_SECOND_CHALLENG_14d_Team,使用するとチャレンジポータルが生成されます。,icon_item_challengemode_scroll,,,,,,{s16}チャレンジポータル生成スクロール(14日),10,3.0,1209600.0,FFFT,8,1.0
 904128,EVENT_1812_DAYCHECK_BALLOONBOX,3周年記念出席チェックイベント用風船包みです。{nl}1月10日点検時、一括削除されます。,icon_item_event_balloonbox,,,,,,3周年風船包み,0,0.0,0.0,FFFT,8,1.0
 910001,Scroll_SkillItem,特定のスキルを保存できるスクロールです。,golemmagicitem1,,,,,,スキル呪文書,5,0.0,0.0,FFFF,6,0.0
