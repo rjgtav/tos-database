@@ -12,6 +12,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 640444,Attendance_welcome,Right-click to use and obtain the following items:{nl}- Warp Scroll 10x Box{nl}- Goddess Sculpture (14 Days) x3{nl}- Miracle Seeds (14 Days) x3,icon_item_giftbox_4,,,,,,,New/Returning Savior Welcome Box,0,0.0,0.0,FFFT,5,5.0
 640445,Attendance_welcome2,Right-click to use and obtain the following items:{nl}- Raid Portal Stone x5{nl}- Challenge Portal Scroll (14 Days) x5{nl}- Megaphone 50x Box{nl}[Event] Masinios Weapon Selection Box,icon_item_giftbox_4,,,,,,,New/Returning Savior Support Box,0,0.0,0.0,FFFT,5,5.0
 640446,Attendance_Masinios_SelectBox,Use to obtain a +11 Stage 5 Masinios Weapon of your choice.,icon_item_event_weaponbox1,,,,,,,11 ENH 5 TRA Masinios Weapon Selection Box,0,0.0,0.0,FFFF,5,5.0
+640450,Gacha_PC_Event_Costume01,Right-click to obtain the following items.{nl} - Martian Ambition Selection Box x1{nl} - Martian Ambition Helmet x1,icon_item_gacha_pc_event_costume01,,,,,,,[PP] Martian Ambition Package,0,0.0,0.0,FFFF,5,5.0
 642601,Gacha_F_001,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,"[{""Map"": null, ""Chance"": 10.0, ""Monster"": 57500}]",,,Abomination Cube,0,0.0,0.0,FFFF,5,5.0
 642602,Gacha_F_002,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,,,,(Old) Obscene Deathweaver Cube,0,0.0,0.0,FFFF,5,5.0
 642603,Gacha_F_003,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,,,,(Old) Bleak Chapparition Cube,0,0.0,0.0,FFFF,5,5.0
