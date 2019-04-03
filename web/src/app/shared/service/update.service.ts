@@ -4,7 +4,7 @@ import {TOSRegion, TOSRegionService} from "../domain/tos-region";
 const KEY_VERSION = 'version';
 const VERSION_HOTFIX = 2;
 const VERSION: { [key in TOSRegion]: string } = {
-  'iTOS': 'patch_243909_release_243909', /* iTOS-needle */
+  'iTOS': 'patch_243909_release_244038', /* iTOS-needle */
   'jTOS': 'patch_243983_release_243983', /* jTOS-needle */
   'kTEST': 'patch_240560_release_240582', /* kTEST-needle */
   'kTOS': 'patch_241507_release_241507', /* kTOS-needle */
