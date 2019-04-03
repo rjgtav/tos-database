@@ -247,6 +247,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 902137,EVENT_1812_ORB_ARMORBOX,380レベルプリムス防具の中からランダムにアイテムを1つ獲得できます。{nl}右クリックで使用できます。,icon_item_event_armorbox1,,,,,,,財宝の防具キューブ,0,0.0,0.0,FFFT,5,0.0
 902138,EVENT_1812_ORB_WEAPONBOX,380レベルプリムス武器/補助武器の中からランダムにアイテムを1つ獲得できます。{nl}右クリックで使用できます。,icon_item_event_weaponbox1,,,,,,,財宝の武器キューブ,0,0.0,0.0,FFFT,5,0.0
 902139,Event_BlueCube_Lv6_1812,ランダムに報酬を獲得します。マウス右クリックで使用できます。,icon_item_eventbox_blue,,,,,,,ブルーボックス,0,0.0,0.0,FFFT,5,0.0
+902158,Event_JP_FLOWER_CUBE,使用すると何かを獲得できそうです。右クリックで使用できます。,icon_item_sakuracube,,,,,,,お花見キューブ,0,0.0,0.0,FFFT,5,0.0
 904002,EVENT_1802_MASTER_REWARD_CUBE,マスターの訓練報酬としてもらったアイテムです。{nl}使用すると、報酬リストの中のアイテムからランダムで獲得できます。,icon_item_eventcube1,,,,,,,無限の可能性のキューブ,0,0.0,0.0,FFFT,5,0.0
 904014,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_1_2,使用すると報酬リストからランダムなアイテムを獲得します。,icon_item_eventcube1,,,,,,,苗木キューブ,0,0.0,0.0,FFFT,5,0.0
 904015,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_3_4,使用すると報酬リストからランダムなアイテムを獲得します。,icon_item_eventcube2,,,,,,,若木キューブ,0,0.0,0.0,FFFT,5,0.0

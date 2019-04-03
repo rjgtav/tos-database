@@ -5501,6 +5501,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902144,Event_Returner_Box_JP,復帰者への支給アイテムが入っているボックスです。{nl} - クラス変更券Lv.4 (14日)1個{nl} - 復帰ユーザーのポーション(30日)1個{nl} - 復帰ユーザーの書(14日)5個{nl} - ルーチングチャンスアップポーション(14日)5個,icon_item_jewelrybox_close,,,,,,ToSへおかえりボックス,0,0.0,0.0,FFFF,8,0.0
 902145,Event_2019_Web_Box_JP,使用するとランダムに1つアイテムを取得できます。{nl} - 女神の彫像(14日){nl} - 祝福が宿った種(14日){nl} - 古びた魔法付与スクロール{nl} - 最高級緊急修理キット{nl} - ルーチングチャンス:500{nl} - 黄金の金床(14日){nl} - 祝福された欠片,icon_item_solmiki_box,,,,,,[Re:Build] ボックス,0,0.0,0.0,FFFF,8,0.0
 902155,Achieve_Event_JP_GILTINE,マウス右側クリックで使います。,icon_item_holyark,,,,,,称号 - ギルティネ様から逃げるな,0,0.0,0.0,FFFT,6,0.0
+902159,Event_JP_FLOWER_SELECT_BOX,ふりふりフェアリーコスチュームが入っている箱です。 マウス右クリックで使用できます。,icon_item_giftbox_4,,,,,,ふりふりフェアリーコスチューム選択箱,0,0.0,0.0,FFFT,8,0.0
 904000,EVENT_1802_MASTER_KEY1,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_1,,,,,,マスターの試験券(初級),0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,マスターの訓練報酬としてもらったアイテムです。{nl}5個以上集めるとマスターの試験イベントガイドが無限の可能性のキューブと交換してくれます,icon_item_gimmick_spcrystal,,,,,,小さな可能性の欠片,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,マスターの訓練に必要なアイテムです。{nl}マスターの試験イベントガイドから1日1回もらえます。,icon_item_mastertraining_2,,,,,,マスターの試験券(中級),0,0.0,0.0,FFFT,15,1.0
