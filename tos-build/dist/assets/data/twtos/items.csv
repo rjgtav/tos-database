@@ -5561,6 +5561,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 902131,Event_Steam_Fishing_BOX5,可以獲得380級獨特未鑑定裝備道具。{nl}獲得的裝備道具無限制，可以進行所有交易。,icon_item_event_armorbox1,,,,,,獨特未鑑定手套選擇箱,0,0.0,0.0,FFFT,8,0.0
 902132,Event_Steam_Fishing_BOX6,可以獲得380級獨特未鑑定裝備道具。{nl}獲得的裝備道具無限制，可以進行所有交易。,icon_item_event_armorbox1,,,,,,獨特未鑑定鞋子選擇箱,0,0.0,0.0,FFFT,8,0.0
 902140,Event_Steam_Fishing_TWN_BOX,使用時可以選擇您喜歡的髮飾。{nl}活動結束時統一刪除。,icon_item_summer_box,,,,,,池塘中的箱子,0,0.0,0.0,FFFT,8,0.0
+902146,Event_Steam_PoPo_Point_100,使用後可獲得Popo Shop點數100點。{nl} - 使用後點數超過最大值時無法使用。{nl} - 只能在Popo Shop活動期間內使用。,icon_item_tospoint100,,,,,,Popo Shop 100點數購買券,0,0.0,0.0,FFFT,6,0.0
+902147,Event_Steam_PoPo_Point_500,使用後可獲得Popo Shop點數500點。{nl} - 使用後點數超過最大值時無法使用。{nl} - 只能在Popo Shop活動期間內使用。,icon_item_tospoint100,,,,,,Popo Shop 500點數購買券,0,0.0,0.0,FFFT,6,0.0
+902148,Event_Steam_PoPo_Point_1000,使用後可獲得Popo Shop點數1000點。{nl} - 使用後點數超過最大值時無法使用。{nl} - 只能在Popo Shop活動期間內使用。,icon_item_tospoint100,,,,,,Popo Shop 1000點數購買券,0,0.0,0.0,FFFT,6,0.0
 902149,Steam_HP_Potion_1Day,HP立刻恢復40%，11秒內每隔2秒HP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion2,,,,,[400064],HP藥水(1天),0,20.0,86400.0,FFFT,6,3.0
 902150,Steam_HP_Potion_7Day,HP立刻恢復40%，11秒內每隔2秒HP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion2,,,,,[400065],HP藥水(7天),0,20.0,604800.0,FFFT,6,3.0
 902151,Steam_SP_Potion_1Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion3,,,,,[400066],SP藥水(1天),0,20.0,86400.0,FFFT,6,3.0

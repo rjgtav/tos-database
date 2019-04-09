@@ -7,6 +7,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 640414,Gm_Ty_Box,點擊滑鼠右鍵即可使用，使用時可以獲得道具及Buff。{nl}獎勵道具{nl} - 10TP[贈送用] x1{nl}獎勵Buff {nl} - 紅牛飲料(30分) {nl} - 移動速度增加 - 活動(30分) {nl} - 周圍HP恢復 - 活動(30分) {nl} - 周圍SP恢復 - 活動(30分),icon_item_giftbox_4,,,,,,,GM的感謝禮盒,0,0.0,0.0,FFFT,5,0.0
 640415,Gm_Sy_Box,點擊滑鼠右鍵即可使用，使用時可以獲得道具及Buff。{nl}獎勵道具{nl} - 10TP[贈送用] x1{nl}獎勵Buff {nl} - 紅牛飲料(30分) {nl} - 移動速度增加 - 活動(30分) {nl} - 周圍HP恢復 - 活動(30分) {nl} - 周圍SP恢復 - 活動(30分),icon_item_giftbox_4,,,,,,,GM的道歉禮盒,0,0.0,0.0,FFFT,5,0.0
 640416,Ghaca_PC_Event_Csoume02,點擊滑鼠右鍵即可開啟，開啟時可以選擇獲得血染的吸血鬼套裝(男) / 血染的吸血鬼套裝(女)中的1種。,icon_item_box_pc_basic_pp,,,,,,,[Popo Shop] 血染的吸血鬼套裝選擇箱,0,0.0,0.0,FFFF,5,5.0
+640442,Ghaca_PC_Event_Csoume03,點擊滑鼠右鍵即可使用。使用後可獲得赤色冬夜套裝(男) / 赤色冬夜套裝(女)中的1件。,icon_item_box_pc_basic_pp,,,,,,,[POPOshop]赤色冬夜套裝選擇箱,0,0.0,0.0,FFFF,5,5.0
 642601,Gacha_F_001,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,鐵甲殘魔的魔方,0,0.0,0.0,FFFF,5,5.0
 642602,Gacha_F_002,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,(舊) 可憎的死亡魔女的魔方,0,0.0,0.0,FFFF,5,5.0
 642603,Gacha_F_003,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,(舊) 陰森的死靈查普利的魔方,0,0.0,0.0,FFFF,5,5.0
@@ -113,6 +114,21 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 642750,Gacha_Ability_Potion_Box,進行公會任務中成功完成任務所獲得的追加獎勵箱子。{nl}可以獲得具有特別效果的藥水製作書。,icon_item_ability_potion_box,,,,,,,公會任務獎勵：特殊藥水,0,0.0,0.0,FFFT,5,0.0
 642751,Gacha_E_025,使用魔方時可以獲得受祝福的碎片。,icon_item_cube1,,,,,,,祝福魔方,0,0.0,0.0,FFFF,5,5.0
 642752,Gacha_E_026,修女雅伊斯特的感謝禮物，開啓後可以得到2個受祝福的碎片。{nl} - 1天可獲得3次。,icon_item_jewelrybox_close,,,,,,,修女雅伊斯特的感謝禮物,0,0.0,0.0,FFFF,5,5.0
+642762,Seal_box_Care_01,使用[獎勵用]普魯達印章 - 劍士寶箱時，可獲得普魯達印章 - 劍士。,icon_item_jewelrybox_close,,,,,,,[獎勵用]普魯達印章 - 劍士寶箱,0,0.0,0.0,FFFF,5,5.0
+642763,Seal_box_Care_02,使用[獎勵用]普魯達印章 - 魔法師寶箱時，可獲得普魯達印章 - 魔法師。,icon_item_jewelrybox_close,,,,,,,[獎勵用]普魯達印章 - 魔法師寶箱,0,0.0,0.0,FFFF,5,5.0
+642764,Seal_box_Care_03,使用[獎勵用]普魯達印章 - 聖職者寶箱時，可獲得普魯達印章 - 聖職者。,icon_item_jewelrybox_close,,,,,,,[獎勵用]普魯達印章 - 聖職者寶箱,0,0.0,0.0,FFFF,5,5.0
+642765,Seal_box_Care_04,使用[獎勵用]普魯達印章 - 弓箭手寶箱時，可獲得普魯達印章 - 弓箭手。,icon_item_jewelrybox_close,,,,,,,[獎勵用]普魯達印章 - 弓箭手寶箱,0,0.0,0.0,FFFF,5,5.0
+642766,Seal_box_Care_05,使用[獎勵用]普魯達印章 - 斥侯寶箱時，可獲得普魯達印章 - 斥侯。,icon_item_jewelrybox_close,,,,,,,[獎勵用]普魯達印章 - 斥侯寶箱,0,0.0,0.0,FFFF,5,5.0
+642767,Seal_box_Care_06,使用[獎勵用]伊雷迪安印章 - 劍士寶箱時，可獲得伊雷迪安印章 - 劍士。,icon_item_jewelrybox_close,,,,,,,[獎勵用]伊雷迪安印章 - 劍士寶箱,0,0.0,0.0,FFFF,5,5.0
+642768,Seal_box_Care_07,使用[獎勵用]伊雷迪安印章 - 魔法師寶箱時，可獲得伊雷迪安印章 - 魔法師。,icon_item_jewelrybox_close,,,,,,,[獎勵用]伊雷迪安印章 - 魔法師寶箱,0,0.0,0.0,FFFF,5,5.0
+642769,Seal_box_Care_08,使用[獎勵用]伊雷迪安印章 - 聖職者寶箱時，可獲得伊雷迪安印章 - 聖職者。,icon_item_jewelrybox_close,,,,,,,[獎勵用]伊雷迪安印章 - 聖職者寶箱,0,0.0,0.0,FFFF,5,5.0
+642770,Seal_box_Care_09,使用[獎勵用]伊雷迪安印章 - 弓箭手寶箱時，可獲得伊雷迪安印章 - 弓箭手。,icon_item_jewelrybox_close,,,,,,,[獎勵用]伊雷迪安印章 - 弓箭手寶箱,0,0.0,0.0,FFFF,5,5.0
+642771,Seal_box_Care_10,使用[獎勵用]伊雷迪安印章 - 斥侯寶箱時，可獲得伊雷迪安印章 - 斥侯。,icon_item_jewelrybox_close,,,,,,,[獎勵用]伊雷迪安印章 - 斥侯寶箱,0,0.0,0.0,FFFF,5,5.0
+642772,Seal_box_boruta01,使用普魯達印章 - 劍士寶箱時，可獲得普魯達印章 - 劍士。,icon_item_jewelrybox_close,,,,,,,普魯達印章 - 劍士寶箱,0,0.0,0.0,FFFF,5,5.0
+642773,Seal_box_boruta02,使用普魯達印章 - 魔法師寶箱時，可獲得普魯達印章 - 魔法師。,icon_item_jewelrybox_close,,,,,,,普魯達印章 - 魔法師寶箱,0,0.0,0.0,FFFF,5,5.0
+642774,Seal_box_boruta03,使用普魯達印章 - 聖職者寶箱時，可獲得普魯達印章 - 聖職者。,icon_item_jewelrybox_close,,,,,,,普魯達印章 - 聖職者寶箱,0,0.0,0.0,FFFF,5,5.0
+642775,Seal_box_boruta04,使用普魯達印章 - 弓箭手寶箱時，可獲得普魯達印章 - 弓箭手。,icon_item_jewelrybox_close,,,,,,,普魯達印章 - 弓箭手寶箱,0,0.0,0.0,FFFF,5,5.0
+642776,Seal_box_boruta05,使用普魯達印章 - 斥侯寶箱時，可獲得普魯達印章 - 斥侯。,icon_item_jewelrybox_close,,,,,,,普魯達印章 - 斥侯寶箱,0,0.0,0.0,FFFF,5,5.0
 642801,Gacha_G_001,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,卡雷伊瑪斯魔方,0,0.0,0.0,FFFF,5,5.0
 642802,Gacha_G_002,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,西卡里歐斯魔方,0,0.0,0.0,FFFF,5,5.0
 642803,Gacha_G_003,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,森林的魔方,0,0.0,0.0,FFFF,5,5.0
