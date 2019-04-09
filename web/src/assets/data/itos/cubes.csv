@@ -263,6 +263,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Monste
 902138,EVENT_1812_ORB_WEAPONBOX,Use to receive one random Lv 380 Primus weapon/subweapon item.,icon_item_event_weaponbox1,,,,,,,Weapon Cube,0,0.0,0.0,FFFT,5,0.0
 902139,Event_BlueCube_Lv6_1812,Use to obtain a random reward item.{nl}Will be deleted after the event period.,icon_item_eventbox_blue,,,,,,,Blue Cube,0,0.0,0.0,FFFT,5,0.0
 902154,Steam_Event_Carnival_Box,Contains a Festival Costume of your choice (Male/Female).,icon_item_giftbox_4,,,,,,,Festival Costume Selection Box,0,0.0,0.0,FFFT,5,0.0
+902158,Event_JP_FLOWER_CUBE,It seems to contain something unknown. {nl}Right-click to use.,icon_item_sakuracube,,,,,,,Flower Road Cube,0,0.0,0.0,FFFT,5,0.0
 904002,EVENT_1802_MASTER_REWARD_CUBE,A reward obtained from training with the master.{nl}Use to receive a random item from the reward's list.{nl}Will be deleted when the event period ends.,icon_item_eventcube1,,,,,,,Infinite Potential Cube,0,0.0,0.0,FFFT,5,0.0
 904014,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_1_2,Use to receive a random item from the rewards list.{nl}Will be deleted when the event period ends.,icon_item_eventcube1,,,,,,,Sapling Cube,0,0.0,0.0,FFFT,5,0.0
 904015,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_3_4,Use to receive a random item from the rewards list.{nl}Will be deleted when the event period ends.,icon_item_eventcube2,,,,,,,Tree Cube,0,0.0,0.0,FFFT,5,0.0
