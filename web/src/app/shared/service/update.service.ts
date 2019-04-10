@@ -5,7 +5,7 @@ const KEY_VERSION = 'version';
 const VERSION_HOTFIX = 2;
 const VERSION: { [key in TOSRegion]: string } = {
   'iTOS': 'patch_244684_release_244684', /* iTOS-needle */
-  'jTOS': 'patch_243983_release_243983', /* jTOS-needle */
+  'jTOS': 'patch_244710_release_244710', /* jTOS-needle */
   'kTEST': 'patch_240560_release_240582', /* kTEST-needle */
   'kTOS': 'patch_241507_release_241507', /* kTOS-needle */
   'twTOS': 'patch_244546_release_244546', /* twTOS-needle */
