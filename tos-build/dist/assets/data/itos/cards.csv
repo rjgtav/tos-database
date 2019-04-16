@@ -132,6 +132,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Monst
 644146,card_SwordBallista,[Card Equip Effect] Looting Chance +[{img star_mark 20 20}*5],icon_item_card_stat,148_boss_swordballista,,,800081,,,,0,1,Gorkas Card,500,,,,0.0,0.0,TTTT,3,4,1.0
 644147,card_FrosterLord,[Card Equip Effect] [{img star_mark 20 20}/2]% chance per attack dealt of applying Frostbite to an enemy for 4 sec{nl}(Does not apply to boss monsters.),icon_item_card_atk,149_boss_frosterlord,,,800076,,,,0,1,Froster Lord Card,500,,,,0.0,0.0,TTTT,3,0,1.0
 644148,card_varleking,[Card Equip Effect] Healing +[{img star_mark 20 20}*5],icon_item_card_def,144_boss_varleking,,"[642928, 642944]",57866,,,,2,0,Varle King Card,500,,,,0.0,0.0,TTTT,3,1,1.0
+644149,card_payawoota,[Card Equip Effect] All stats +[{img star_mark 20 20} * 0.4],icon_item_card_stat,001_npc_payawoota,,,,,,,,,Pajauta Card,500,,,,0.0,0.0,TTTT,3,4,1.0
 644900,Legend_card_Marnoks,[Card Equip Effect] Minimum Critical Chance +[{img star_mark 20 20}*2]%,icon_item_card_legend,139_boss_marnoks,,,800078,,,,1,1,Demon Lord Marnox Card,0,,,,0.0,0.0,TTTT,3,2,1.0
 644901,Legend_card_Blud,[Card Equip Effect] [{img star_mark 20 20}*3]% reduced damage taken in PVP,icon_item_card_legend,112_blud,,,800060,,,,0,1,Demon Lord Blut Card,0,,,,0.0,0.0,TTTT,3,2,1.0
 644902,Legend_card_Zawra,[Card Equip Effect] Physical Defense +[{img star_mark 20 20}*10]%,icon_item_card_legend,140_boss_zawra,,,800072,,,,0,1,Demon Lord Zaura Card,0,,,,0.0,0.0,TTTT,3,2,1.0
