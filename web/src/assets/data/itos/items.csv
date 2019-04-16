@@ -66,6 +66,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 490313,Ability_Point_Stone_100000,"Will increase attribute points by 10,000. Right-click to use. ",icon_item_abilitypoint6,,,,,,"Attribute Points 100,000 Ticket",0,0.0,0.0,FFFT,8,1.0
 490324,Ability_Point_Scroll_1000,"Will increase attribute points by 1,000. Right-click to use. ",icon_item_ability_point_scroll_1000,,,,,,Attribute Point Scroll,0,0.0,0.0,FFFT,8,1.0
 490354,indunReset_1add_14d_NoStack_Team,Use it to enter an instanced dungeon one more time.,icon_item_indunonemoreenter,,,,,,Instance One Entry Voucher (14 Days),0,0.0,1209600.0,FFFT,6,0.0
+494079,Event_Ability_Point_Stone_10000_team,"Will increase attribute points by 10,000. Right-click to use. ",icon_item_abilitypoint4,,,,,,"Attribute Points: 10,000 (14 Days)",0,0.0,1209600.0,FFFT,8,1.0
 495001,160714Event_box1,Right-click to use and acquire the contents of the box.,icon_item_giftbox_1,,,,,,Path of the Powerful Day 1 Box (7 Days),0,0.0,604800.0,FFFF,8,0.0
 495002,160714Event_box2,Right-click to use and acquire the contents of the box.,icon_item_giftbox_1,,,,,,Path of the Powerful Day 2 Box (7 Days),0,0.0,604800.0,FFFF,8,0.0
 495003,160714Event_box3,Right-click to use and acquire the contents of the box.,icon_item_giftbox_1,,,,,,Path of the Powerful Day 3 Box (7 Days),0,0.0,604800.0,FFFF,8,0.0
@@ -2420,7 +2421,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 661029,CATACOMB_38_1_SQ_03_ITEM,A powder contained the spirit of holy purification gave by Vita. You can purify the evil spirit to use it.,icon_item_powderw,,,,,,Kupole Vita's Purification Powder,0,10.0,0.0,FFFF,20,0.0
 661030,CATACOMB_38_1_SQ_05_ITEM,Remains tied to the contract with the demons. Not free even in death.,icon_item_bone,,,,,,Contract Binded Remains,0,0.0,0.0,FFFF,20,0.0
 661031,CATACOMB_02_SQ_03_ITEM,The skeleton that is tied to the contract of the demons. It can't be free even after the death.,icon_item_brooch,,,,,,Brooch with Valius' magic,0,3.0,0.0,FFFF,20,0.0
-661032,CATACOMB_02_SQ_06_ITEM,A seal that has the power to supress all the magical power that Valius created in his lifetime.,icon_item_gem_pendent1,,,,,,Evil Energy Suppressing Seal,0,15.0,0.0,FFFF,20,0.0
+661032,CATACOMB_02_SQ_06_ITEM,A seal that has the power to suppress all the magical power that Valius created in his lifetime.,icon_item_gem_pendent1,,,,,,Evil Energy Suppressing Seal,0,15.0,0.0,FFFF,20,0.0
 661033,JOB_VELHIDER_COUPON,Can be exchanged for a Velheider at the Companion Shop,siaul_act3_confirmation,,,,,,Velheider Voucher,0,0.0,0.0,FFFF,20,0.0
 661034,JOB_HAWK_COUPON,Can be exchanged for a hawk at the Companion Shop.,siaul_act3_confirmation,,,,,,Hawk Voucher,0,0.0,0.0,FFFF,20,0.0
 661035,JOB_SQUIRE_6_1_ITEM,The seal of Legwyn Family. It broke long time ago so only parts of it are remaining.,icon_item_spacepiece,,,,,,Broken Legwyn Seal Fragment,0,0.0,0.0,FFFF,20,0.0
@@ -3322,6 +3323,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_MonsterDrops,Link
 664141,DCAPITAL107_SQ_6_ITEM,Tool used by the demons to hunt the Kupoles.,icon_item_panto_core,,,,,,Neutralizing Orb,0,0.0,0.0,FFFF,20,0.0
 664142,DCAPITAL107_SQ_7_ITEM,Magic tool in the shape of a necklace created by Kupole Grisia to trick Kupole Velad.,icon_item_bluenecklace,,,,,,Fake Keepsake,0,0.0,0.0,FFFF,20,0.0
 664143,DCAPITAL107_SQ_9_ITEM,Things Kupole Grisia is trying to deliver to Velad.,icon_item_kupole_porket,,,,,,Grisia's Everything,0,0.0,0.0,FFFF,20,0.0
+664144,PAYAUTA_EP11_2_ITEM,Supplies collected from the monsters in Barynwell 87 Waters by Pajauta's request.,icon_item_toolbox,,,,,,Stolen Repair Supplies,0,0.0,0.0,FFFF,20,0.0
+664145,PAYAUTA_EP11_7_ITEM,Material collected at the Outer Wall District 9 by Pajauta's request.,icon_item_magicpowder,,,,,,Magnetic Dirt,0,0.0,0.0,FFFF,20,0.0
 664800,RVR_BK_KEYITEM_URVAS_1,"A seal carried by Kupole Urbas, who observed Boruta by order of Goddess Austeja.{nl}Required for entering Boruta's realm. The seal is consumed after entering his realm.",icon_item_borutakey,,,,,,Urbas Seal,0,0.0,0.0,TFFT,15,0.0
 664801,RVR_BK_KEYITEM_EVENT_OPEN,"A seal carried by Kupole Urbas, who observed Boruta by order of Goddess Austeja.{nl}Required for entering Boruta's realm. The seal is consumed after entering his realm.{nl}Will be automatically deleted at the end of the event period.",icon_item_borutakey,,,,,,[Event] Urbas Seal,0,0.0,0.0,FFFT,15,0.0
 664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,A medal confirming your contribution in the battle against Boruta.{nl}Can be exchanged for items by 'Royal Supply Officer Manfredas' at your Guild Hangout.,icon_item_boruta_coin,,,,,,Medal of Honor: Boruta,0,0.0,0.0,FFFT,15,0.0
