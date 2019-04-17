@@ -37,7 +37,7 @@ $ID,$ID_NAME,Icon,Name
 513,id_catacomb_03_event,,ハロウィーンイベント
 514,f_gele_kepa_event,,ケッピー軍団
 515,d_prison_62_1_event,,アシャーク地下監獄
-516,f_whitetrees_56_1_event,,お花見会場
+516,f_whitetrees_56_1_event,,花道イベントミッション
 517,mission_gele_01_event,,刃の誓い傭兵団の能力証明
 520,mission_groundtower_1,,大地の塔ロロパンサー区間
 521,mission_groundtower_2,,大地の塔ソルミキ区間
@@ -52,7 +52,8 @@ $ID,$ID_NAME,Icon,Name
 702,f_playground,,天下一サッカー場
 703,f_huevillage_58_1_event,,[イベント]ベヤ谷
 704,f_coral_44_2_event,,[イベント]アイテオの岸
-710,c_Klaipe_event_1812,,クラペダ
+710,c_Klaipe_event_1812,,[イベント]クラペダ
+711,c_orsha_event_1901,,[イベント]オルシャ
 981,c_fedimian,,フェディミアン
 1001,c_Klaipe,,クラペダ
 1002,c_highlander,,ハイランダーマスターの道場
@@ -391,6 +392,7 @@ $ID,$ID_NAME,Icon,Name
 4961,d_castle_agario,,ハロウィーンダンジョン
 4970,id_d_cmine_66_2,,ネバレット鉱山ダンジョン
 4971,id_3cmlake_26_1,,ランコ湖ダンジョン
+4980,d_irredians_113_1,,イレディアンの避難所
 8000,f_nicopolis_81_1,,スタリータウン
 8010,f_nicopolis_81_2,,フェラインポストタウン
 8020,f_nicopolis_81_3,,スフェルトウムタウン
