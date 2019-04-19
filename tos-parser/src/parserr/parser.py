@@ -73,7 +73,7 @@ def parse(region, is_rebuild, is_version_new):
     parser_items_equipment_sets.parse()
     parser_items_recipes.parse()
     parser_jobs.parse(is_rebuild)
-    parser_maps.parse()
+    parser_maps.parse(region, is_version_new)
     parser_monsters.parse()
     parser_skills.parse(is_rebuild)
 
@@ -89,6 +89,7 @@ def parse(region, is_rebuild, is_version_new):
     parser_items_equipment_sets.parse_links()
     parser_items_recipes.parse_links()
     parser_jobs.parse_links()
+    parser_maps.parse_links()
     parser_monsters.parse_links()
     parser_skills.parse_links(is_rebuild)
 
@@ -112,5 +113,6 @@ def parse(region, is_rebuild, is_version_new):
     csv_write(globals.jobs.values(), constants.OUTPUT_JOBS)
     csv_write(globals.maps.values(), constants.OUTPUT_MAPS)
     csv_write(globals.monsters.values(), constants.OUTPUT_MONSTERS)
+    csv_write(globals.npcs.values(), constants.OUTPUT_NPCS)
     csv_write(globals.recipes.values(), constants.OUTPUT_RECIPES)
     csv_write(globals.skills.values(), constants.OUTPUT_SKILLS)

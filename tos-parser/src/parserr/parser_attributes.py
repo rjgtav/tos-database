@@ -49,8 +49,8 @@ def parse_links():
 def parse_links_jobs():
     logging.debug("Parsing attributes <> jobs...")
 
-    LUA = luautil.load_script('ability_price.lua', '*')
-    LUA_UNLOCK = luautil.load_script('ability_unlock.lua', '*', False)
+    LUA_RUNTIME = luautil.LUA_RUNTIME
+    LUA_SOURCE = luautil.LUA_SOURCE
 
     # Parse level, unlock and formula
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
@@ -74,7 +74,7 @@ def parse_links_jobs():
                     # Parse attribute cost
                     if row['ScrCalcPrice']:
                         for lv in range(int(row['MaxLevel'])):
-                            attribute['UpgradePrice'].append(LUA[row['ScrCalcPrice']](None, row['ClassName'], lv + 1, attribute['LevelMax'])[0])
+                            attribute['UpgradePrice'].append(LUA_RUNTIME[row['ScrCalcPrice']](None, row['ClassName'], lv + 1, attribute['LevelMax'])[0])
                         attribute['UpgradePrice'] = [value for value in attribute['UpgradePrice'] if value > 0]
 
                     # Parse attribute skill (in case it is missing in the ability.ies)
@@ -96,7 +96,7 @@ def parse_links_jobs():
 
                     # Parse attribute unlock
                     attribute['Unlock'] = luautil.lua_function_source_to_javascript(
-                        luautil.lua_function_source(LUA_UNLOCK[row['UnlockScr']])[1:-1]  # remove 'function' and 'end'
+                        luautil.lua_function_source(LUA_SOURCE[row['UnlockScr']])[1:-1]  # remove 'function' and 'end'
                     ) if not attribute['Unlock'] and row['UnlockScr'] else attribute['Unlock']
 
                     attribute['UnlockArgs'][job['$ID']] = {

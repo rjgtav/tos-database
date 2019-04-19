@@ -141,6 +141,8 @@ def parse_items(file_name):
 
         obj['Link_Collections'] = []
         obj['Link_Cubes'] = []
+        obj['Link_Maps'] = []
+        obj['Link_Maps_Exploration'] = []
         obj['Link_MonsterDrops'] = []
         obj['Link_RecipeTarget'] = []
         obj['Link_RecipeMaterial'] = []

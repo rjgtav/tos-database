@@ -14,6 +14,7 @@ OUTPUT_EQUIPMENT_SETS = 'equipment-sets'
 OUTPUT_ITEMS = 'items'
 OUTPUT_MAPS = 'maps'
 OUTPUT_MONSTERS = 'monsters'
+OUTPUT_NPCS = 'npcs'
 OUTPUT_RECIPES = 'recipes'
 OUTPUT_SKILLS = 'skills'
 
@@ -48,6 +49,7 @@ PATH_BUILD_ASSETS = os.path.join(PATH_BUILD, 'assets')
 PATH_BUILD_ASSETS_DATA = None
 PATH_BUILD_ASSETS_ICONS = os.path.join(PATH_BUILD_ASSETS, 'icons')
 PATH_BUILD_ASSETS_IMAGES = os.path.join(PATH_BUILD_ASSETS, 'images')
+PATH_BUILD_ASSETS_IMAGES_MAPS = os.path.join(PATH_BUILD_ASSETS_IMAGES, 'maps')
 
 
 def region(region):

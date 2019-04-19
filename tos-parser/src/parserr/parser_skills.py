@@ -45,13 +45,8 @@ def parse(is_rebuild):
 def parse_skills(is_rebuild):
     logging.debug('Parsing skills...')
 
-    LUA = luautil.load_script('calc_property_skill.lua', '*', False)
-    LUA_EMBEDDED = [
-        'SCR_ABIL_ADD_SKILLFACTOR',
-        'SCR_ABIL_ADD_SKILLFACTOR_TOOLTIP',
-        'SCR_Get_SpendSP',
-        'SCR_REINFORCEABILITY_TOOLTIP',
-    ]
+    LUA_RUNTIME = luautil.LUA_RUNTIME
+    LUA_SOURCE = luautil.LUA_SOURCE
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skill.ies')
 
@@ -70,7 +65,7 @@ def parse_skills(is_rebuild):
 
             obj['Effect'] = parser_translations.translate(row['Caption2'])
             obj['Element'] = TOSElement.value_of(row['Attribute'])
-            obj['IsShinobi'] = row['CoolDown'] == 'SCR_GET_SKL_COOLDOWN_BUNSIN' or (row['CoolDown'] and 'Bunshin_Debuff' in LUA[row['CoolDown']])
+            obj['IsShinobi'] = row['CoolDown'] == 'SCR_GET_SKL_COOLDOWN_BUNSIN' or (row['CoolDown'] and 'Bunshin_Debuff' in LUA_SOURCE[row['CoolDown']])
             obj['OverHeat'] = {
                 'Value': int(row['SklUseOverHeat']),
                 'Group': row['OverHeatGroup']
@@ -149,7 +144,7 @@ def parse_skills(is_rebuild):
                         EFFECTS.append('Effect_' + effect)
 
                     if row[effect] != 'ZERO':
-                        obj[key] = parse_skills_lua_source(LUA, LUA_EMBEDDED, row[effect])
+                        obj[key] = parse_skills_lua_source(row[effect])
                         obj[key] = parse_skills_lua_source_to_javascript(row, obj[key])
                     else:
                         # Hotfix: similar to the hotfix above
@@ -160,10 +155,10 @@ def parse_skills(is_rebuild):
 
             # Parse formulas
             if row['CoolDown']:
-                obj['CoolDown'] = parse_skills_lua_source(LUA, LUA_EMBEDDED, row['CoolDown'])
+                obj['CoolDown'] = parse_skills_lua_source(row['CoolDown'])
                 obj['CoolDown'] = parse_skills_lua_source_to_javascript(row, obj['CoolDown'])
             if row['SpendSP']:
-                obj['SP'] = parse_skills_lua_source(LUA, LUA_EMBEDDED, row['SpendSP'])
+                obj['SP'] = parse_skills_lua_source(row['SpendSP'])
                 obj['SP'] = parse_skills_lua_source_to_javascript(row, obj['SP'])
 
             globals.skills[obj['$ID']] = obj
@@ -176,18 +171,26 @@ def parse_skills(is_rebuild):
                 skill[effect] = None
 
 
-def parse_skills_lua_source(LUA, LUA_EMBEDDED, function):
+def parse_skills_lua_source(function):
+    LUA_SOURCE = luautil.LUA_SOURCE
+    LUA_EMBEDDED = [
+        'SCR_ABIL_ADD_SKILLFACTOR',
+        'SCR_ABIL_ADD_SKILLFACTOR_TOOLTIP',
+        'SCR_Get_SpendSP',
+        'SCR_REINFORCEABILITY_TOOLTIP',
+    ]
+
     result = []
 
-    if function not in LUA:
+    if function not in LUA_SOURCE:
         logging.warn('Unknown LUA function: %s', function)
         return result
 
     # Replace embedded function calls with their source code
-    for line in luautil.lua_function_source(LUA[function])[1:-1]:  # remove 'function' and 'end'
+    for line in luautil.lua_function_source(LUA_SOURCE[function])[1:-1]:  # remove 'function' and 'end'
         for embed in LUA_EMBEDDED:
             if embed in line:
-                result = luautil.lua_function_source(LUA[embed]) + result
+                result = luautil.lua_function_source(LUA_SOURCE[embed]) + result
                 break
 
         result.append(line)
@@ -201,8 +204,6 @@ def parse_skills_lua_source_to_javascript(skill, source):
 
     for line in source:
         if 'GetSkillOwner(skill)' in line:
-            continue
-        if 'GetZoneName(pc)' in line:
             continue
         if 'local reinfabil = ' in line:
             continue

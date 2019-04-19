@@ -30,6 +30,7 @@ IMAGE_SIZE = {  # top, left, width, height
 
 WHITELIST_BASESKINSET = [
     'bosscard2',
+    'minimap_icons',
     'sub_card3',
     'wearing_weapon',
 ]
@@ -89,11 +90,11 @@ def parse_icons(file_name, region, version_update):
     data = [(image, imagelist) for imagelist in data for image in imagelist]
 
     pool = Pool(processes=multiprocessing.cpu_count())
-    pool.map(partial(parse_icons_unit, file_name, region, version_update), data)
+    pool.map(partial(parse_icons_step, file_name, region, version_update), data)
     pool.terminate()
 
 
-def parse_icons_unit(file_name, region, version_update, work):
+def parse_icons_step(file_name, region, version_update, work):
     image = work[0]
     image_category = work[1].get('category')
 
@@ -134,7 +135,7 @@ def parse_icons_unit(file_name, region, version_update, work):
 
 
 def parse_images_jobs(region, version_update):
-    if not version_update or region != TOSRegion.iTOS:
+    if not (region == TOSRegion.iTOS and version_update):
         return
 
     logging.debug('Parsing images for jobs...')
