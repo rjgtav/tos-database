@@ -95,6 +95,19 @@ export class TOSDomainService {
   public static monsters(page: CRUDPage): Observable<CRUDPageResult<ITOSMonster>>           { return this.repository.find(TOSDataSet.MONSTERS, page) };
   public static monstersById($ID): Observable<ITOSMonster>                                  { return this.repository.findByIndex(TOSDataSet.MONSTERS, '$ID', $ID, true) };
 
+  /*
+  public static npcs(page: CRUDPage): Observable<CRUDPageResult<ITOSMonster>>               { return this.repository.find(TOSDataSet.NPCS, page) };
+  public static npcsById($ID): Observable<ITOSMonster>                                      { return this.repository.findByIndex(TOSDataSet.NPCS, '$ID', $ID, true) };
+   */
+
+  public static npcsByIdLink = ($ID: number) => {
+    return fromPromise((async () => {
+      return null
+        || await TOSDomainService.monstersById($ID).toPromise()
+        //|| await TOSDomainService.npcsById($ID).toPromise()
+    })());
+  };
+
   public static recipes(page: CRUDPage): Observable<CRUDPageResult<ITOSRecipe>>             { return this.repository.find(TOSDataSet.RECIPES, page) };
   public static recipesById($ID): Observable<ITOSRecipe>                                    { return this.repository.findByIndex(TOSDataSet.RECIPES, '$ID', $ID, true) };
 

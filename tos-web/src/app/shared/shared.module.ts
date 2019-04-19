@@ -28,8 +28,8 @@ import {EntityDetailDurabilityPotentialSocketsComponent} from "./components/enti
 import {EntityDetailEnhancementComponent} from "./components/entity-detail/entity-detail-Enhancement/entity-detail-Enhancement.component";
 import {EntityDetailGemComponent} from "./components/entity-detail/entity-detail-Gem/entity-detail-Gem.component";
 import {EntityDetailInformationComponent} from "./components/entity-detail/entity-detail-Information/entity-detail-Information.component";
-import {EntityDetailMaterialNameTypeComponent} from "./components/entity-detail/entity-detail-MaterialNameType/entity-detail-MaterialNameType.component";
 import {EntityDetailBonusStatsUnidentifiedComponent} from "./components/entity-detail/entity-detail-BonusStatsUnidentified/entity-detail-BonusStatsUnidentified.component";
+import {EntityDetailHeaderComponent} from "./components/entity-detail/entity-detail-Header/entity-detail-header.component";
 import {EntityDetailStatsComponent} from "./components/entity-detail/entity-detail-Stats/entity-detail-Stats.component";
 import {EntityDetailTableComponent} from "./components/entity-detail/entity-detail-Table/entity-detail-Table.component";
 import {EntityTooltipComponent} from "./components/entity-tooltip/entity-tooltip.component";
@@ -54,6 +54,8 @@ import {TOSDomainRepository} from "./domain/tos/tos-domain.repository";
 import {SEOService} from "./service/seo.service";
 import {SWService} from "./service/sw.service";
 import {AnalyticsService} from "./service/analytics.service";
+import {TOSMapResolver} from "./domain/tos/map/tos-map.resolver";
+import {CssMaxHeightDirective} from './directives/css-max-height.directive';
 
 @NgModule({
   imports: [
@@ -79,7 +81,7 @@ import {AnalyticsService} from "./service/analytics.service";
     EntityDetailInformationComponent,
     EntityDetailJobAnimationComponent,
     EntityDetailJobIconComponent,
-    EntityDetailMaterialNameTypeComponent,
+    EntityDetailHeaderComponent,
     EntityDetailSkillComponent,
     EntityDetailSkillFormulaComponent,
     EntityDetailStatsComponent,
@@ -89,6 +91,7 @@ import {AnalyticsService} from "./service/analytics.service";
     InputNumberComponent,
 
     // Directives
+    CssMaxHeightDirective,
     FilterDirective,
     FilterGroupDirective,
     SortDirective,
@@ -104,10 +107,12 @@ import {AnalyticsService} from "./service/analytics.service";
     TableCellNumberPipe,
     TableCellTextPipe,
     TimePipe,
+    CssMaxHeightDirective,
   ],
   exports: [
     // Components
     EntityDetailAttackDefenseComponent,
+    EntityDetailBonusStatsUnidentifiedComponent,
     EntityDetailBookComponent,
     EntityDetailCardComponent,
     EntityDetailChildComponent,
@@ -119,10 +124,9 @@ import {AnalyticsService} from "./service/analytics.service";
     EntityDetailInformationComponent,
     EntityDetailJobAnimationComponent,
     EntityDetailJobIconComponent,
-    EntityDetailMaterialNameTypeComponent,
+    EntityDetailHeaderComponent,
     EntityDetailSkillComponent,
     EntityDetailSkillFormulaComponent,
-    EntityDetailBonusStatsUnidentifiedComponent,
     EntityDetailStatsComponent,
     EntityDetailTableComponent,
     EntityTableComponent,
@@ -130,6 +134,7 @@ import {AnalyticsService} from "./service/analytics.service";
     InputNumberComponent,
 
     // Directives
+    CssMaxHeightDirective,
     FilterDirective,
     FilterGroupDirective,
     SortDirective,
@@ -177,6 +182,7 @@ export class SharedModule {
         TOSGemResolver,
         TOSItemResolver,
         TOSJobResolver,
+        TOSMapResolver,
         TOSMonsterResolver,
         TOSRecipeResolver,
         TOSSkillResolver,

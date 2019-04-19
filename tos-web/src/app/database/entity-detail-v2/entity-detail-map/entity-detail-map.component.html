@@ -1,0 +1,47 @@
+<div class="container">
+
+  <!-- Header -->
+  <tos-entity-detail-Header class="h4 mb-3" [entity]="entity" [idName]="true"></tos-entity-detail-Header>
+
+  <div class="card bg-light">
+    <div class="card-body">
+      <div class="position-relative" style="overflow: hidden" cssMaxHeight="calc(100% - 80px - 60px - 9rem)">
+        <!-- Filter -->
+        <div class="d-flex flex-column ml-1 mt-1 position-absolute" style="left: 0; z-index: 1">
+          <button class="btn btn-primary rounded-circle" (click)="onMapScale(1)"><fa-icon [icon]="faFilter"></fa-icon></button>
+        </div>
+
+        <!-- Zoom In/Out -->
+        <div class="d-flex flex-column mr-1 mt-1 position-absolute" style="right: 0; z-index: 1">
+          <button class="btn btn-primary rounded-circle mb-2" (click)="onMapScale(1)"><fa-icon [icon]="faSearchPlus"></fa-icon></button>
+          <button class="btn btn-primary rounded-circle" (click)="onMapScale(-1)"><fa-icon [icon]="faSearchMinus"></fa-icon></button>
+        </div>
+
+        <!-- Map -->
+        <div #map>
+          <div style="max-width: 100%; pointer-events: none; transform: rotate(45deg)">
+            <img [src]="entity.Layout" />
+            <img *ngFor="let icon of minimapIcons" class="position-absolute"
+                 [src]="icon.NPC.Icon"
+                 [style.top]="(icon.Positions[0][1] / 100) + '%'"
+                 [style.left]="(icon.Positions[0][0] / 100) + '%'" />
+          </div>
+        </div>
+
+        <!-- Mouse Listener -->
+        <div class="h-100 w-100 position-absolute bg-transparent" style="cursor: move; top: 0; touch-action: none"
+             (pointerdown)="onMapMouseDown($event)"
+             (pointerup)="onMapMouseUp($event)"
+             (mousewheel)="onMapMouseWheel($event)"></div>
+      </div>
+    </div>
+  </div>
+
+      <!--
+          <div class="col col-md-4">
+            <tos-entity-detail-Table [columns]="COLUMNS_NPCS"
+                                     [data$]="entity.Link_NPCs"></tos-entity-detail-Table>
+          </div>
+          -->
+
+</div>

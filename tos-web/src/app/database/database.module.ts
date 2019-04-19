@@ -17,6 +17,8 @@ import {JobListConfigurationResolver} from "./resolvers/job-list-configuration.r
 import {MonsterListConfigurationResolver} from "./resolvers/monster-list-configuration.resolver";
 import {RecipeListConfigurationResolver} from "./resolvers/recipe-list-configuration.resolver";
 import {SkillListConfigurationResolver} from "./resolvers/skill-list-configuration.resolver";
+import {MapListConfigurationResolver} from "./resolvers/map-list-configuration.resolver";
+import {EntityDetailMapComponent} from './entity-detail-v2/entity-detail-map/entity-detail-map.component';
 
 @NgModule({
   imports: [
@@ -26,6 +28,7 @@ import {SkillListConfigurationResolver} from "./resolvers/skill-list-configurati
     EntityDetailComponent,
     EntityListComponent,
     EntityListFilterComponent,
+    EntityDetailMapComponent,
   ],
   providers: [
     AttributeListConfigurationResolver,
@@ -38,6 +41,7 @@ import {SkillListConfigurationResolver} from "./resolvers/skill-list-configurati
     GemListConfigurationResolver,
     ItemListConfigurationResolver,
     JobListConfigurationResolver,
+    MapListConfigurationResolver,
     MonsterListConfigurationResolver,
     RecipeListConfigurationResolver,
     SkillListConfigurationResolver,

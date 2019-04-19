@@ -3,7 +3,7 @@ import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {faMoon, faSearch, faSync, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
 import {TOSUrlService} from "../../shared/service/tos-url.service";
-import {TOSDataSetService} from "../../shared/domain/tos/tos-domain";
+import {TOSDataSet, TOSDataSetService} from "../../shared/domain/tos/tos-domain";
 import {TOSRegion, TOSRegionService} from "../../shared/domain/tos-region";
 import {PatreonService} from "../../home/patreon/patreon.service";
 import {SWService} from "../../shared/service/sw.service";
@@ -20,10 +20,11 @@ const UPDATE_INTERVAL = 60 * 60 * 1000;
 export class HeaderComponent implements OnInit, OnDestroy {
   readonly REGION = Object.values(TOSRegion);
 
-  readonly TOSRegionService = TOSRegionService;
   readonly Theme = Theme;
+  readonly TOSDataSet = TOSDataSet;
   readonly TOSDataSetService = TOSDataSetService;
   readonly TOSRegion = TOSRegion;
+  readonly TOSRegionService = TOSRegionService;
 
   readonly faMoon = faMoon;
   readonly faSearch = faSearch;

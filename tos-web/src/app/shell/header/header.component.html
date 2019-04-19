@@ -20,7 +20,10 @@
             <div *ngFor="let group of TOSDataSetService.VALUES; index as i">
               <div class="dropdown-header">{{ group.label }}</div>
               <a *ngFor="let option of group.options" class="dropdown-item" routerLinkActive="active"
-                 [routerLink]="routerLink('database/' + TOSDataSetService.toUrl(option))">{{ TOSDataSetService.toLabel(option) }}</a>
+                 [routerLink]="routerLink('database/' + TOSDataSetService.toUrl(option))">
+                {{ TOSDataSetService.toLabel(option) }}
+                <!--span class="badge badge-danger" *ngIf="option == TOSDataSet.MAPS">New</span-->
+              </a>
               <div class="dropdown-divider" *ngIf="i < TOSDataSetService.VALUES.length - 1"></div>
             </div>
           </div>

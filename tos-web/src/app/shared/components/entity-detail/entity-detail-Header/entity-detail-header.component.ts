@@ -3,11 +3,11 @@ import {EntityDetailChildComponent} from "../entity-detail-child.component";
 import {TOSEquipmentTypeService} from "../../../domain/tos/tos-domain";
 
 @Component({
-  selector: 'tos-entity-detail-MaterialNameType',
-  templateUrl: './entity-detail-MaterialNameType.component.html',
-  styleUrls: ['./entity-detail-MaterialNameType.component.scss']
+  selector: 'tos-entity-detail-Header',
+  templateUrl: './entity-detail-header.component.html',
+  styleUrls: ['./entity-detail-header.component.scss']
 })
-export class EntityDetailMaterialNameTypeComponent extends EntityDetailChildComponent {
+export class EntityDetailHeaderComponent extends EntityDetailChildComponent {
 
   @Input() idName: boolean;
 

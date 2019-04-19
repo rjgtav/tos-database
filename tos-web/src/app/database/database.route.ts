@@ -28,6 +28,9 @@ import {TOSSkillResolver} from "../shared/domain/tos/skill/tos-skill.resolver";
 import {JobListConfigurationResolver} from "./resolvers/job-list-configuration.resolver";
 import {TOSJobResolver} from "../shared/domain/tos/job/tos-job.resolver";
 import {RouteService} from "../shared/service/route.service";
+import {MapListConfigurationResolver} from "./resolvers/map-list-configuration.resolver";
+import {TOSMapResolver} from "../shared/domain/tos/map/tos-map.resolver";
+import {EntityDetailMapComponent} from "./entity-detail-v2/entity-detail-map/entity-detail-map.component";
 
 export const ROUTES_DATABASE: Routes = [
   {
@@ -223,6 +226,25 @@ export const ROUTES_DATABASE: Routes = [
     canDeactivate: [RouteService],
     component: EntityDetailComponent,
     resolve: { response: TOSItemResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  {
+    path: 'maps',
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: EntityListComponent,
+    resolve: {
+      configuration: MapListConfigurationResolver,
+      response: TOSMapResolver,
+    },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  {
+    path: 'maps/:id',
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: EntityDetailMapComponent,
+    resolve: { response: TOSMapResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {

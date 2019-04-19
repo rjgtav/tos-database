@@ -1,4 +1,3 @@
-import {TOSEntity} from "../tos-entity.model";
 import {TOSItem} from "../item/tos-item.model";
 import {
   ITOSItem,
@@ -18,10 +17,11 @@ import {
 import {TOSDomainService} from "../tos-domain.service";
 import {Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal-compatibility";
+import {TOSNPC} from "./tos-npc.model";
 
-export class TOSMonster extends TOSEntity implements ITOSMonster {
+export class TOSMonster extends TOSNPC implements ITOSMonster {
 
-  constructor(private json: TOSMonster) {
+  constructor(json: TOSMonster) {
     super(TOSDataSet.MONSTERS, json);
 
     this.$comparators['Rank'] = TOSMonsterRankService.comparator;

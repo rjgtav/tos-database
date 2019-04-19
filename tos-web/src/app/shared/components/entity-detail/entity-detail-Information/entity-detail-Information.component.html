@@ -13,7 +13,7 @@
       <h6 *ngIf="equipment || monster">Level {{ equipment?.RequiredLevel || monster?.Level }}</h6>
     </div>
     <div class="col" *ngIf="skill || item && !equipment"><h6>
-      <fa-icon class="mr-1" [icon]="[faClock]"></fa-icon>
+      <fa-icon class="mr-1" [icon]="faClock"></fa-icon>
       {{ ((item ? item.TimeCoolDown : skillCoolDown) | tosTime) || 'No cooldown' }}</h6>
     </div>
 

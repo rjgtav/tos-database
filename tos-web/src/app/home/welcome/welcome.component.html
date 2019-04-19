@@ -38,12 +38,17 @@
         Changelog
       </div>
       <div class="card-body" style="max-height: calc(100vh - 16rem); overflow-y: auto">
-        <h6>2019-03-XX</h6>
+        <h6>2019-04-19</h6>
         <ul>
+          <li>[Notice] Sorry for taking so long to release a new update, IRL has been extremely busy. Next up it's Maps</li>
           <li>[Improved] Revamped the entire offline mode from scratch. Should no longer fail to install when behind an antivirus or fail to open when the cache becomes corrupted</li>
           <li>[Improved] Simplified the overall deployment process. The server will no longer crash by running out of memory and will update to the new game patches more quickly</li>
-          <li>[Improved] Sharing a build as an URL or opening a linked build is now more reliable. Thanks @Palemoon</li>
+          <li>[Improved] Import process now uses the entire LUA code from the client, which should lead to less crashes due to code refactoring</li>
+          <li>[Improved] Sharing a build as an URL or opening a linked build is now more reliable as it goes through my own webserver. Thanks @Palemoon</li>
           <li>[Fixed] All images/icons will now always be extracted from kTEST (except for the region specific items)</li>
+          <li>[Fixed] All monsters are now correctly calculating their atk/def values, even when using virtual equipment. Thanks @acc97862, @Crevox</li>
+          <li>[Fixed] Added missing monsters (e.g. Velcoffaner). Thanks @Lubu20, @TerminalEssense</li>
+          <li>[Fixed] Cooldown is working correctly again for Cleric classes</li>
         </ul>
 
         <h6>2019-02-08</h6>

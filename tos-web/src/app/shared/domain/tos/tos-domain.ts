@@ -63,6 +63,7 @@ export enum TOSDataSet {
   JOBS = 'jobs',
   MAPS = 'maps',
   MONSTERS = 'monsters',
+  //NPCS = 'npcs',
   RECIPES = 'recipes',
   SKILLS = 'skills',
 }
@@ -93,6 +94,7 @@ export namespace TOSDataSetService {
     {
       label: 'World',
       options: [
+        //TOSDataSet.MAPS,
         TOSDataSet.MONSTERS,
       ],
     }
@@ -171,7 +173,8 @@ export const
     if (value == TOSEquipmentGrade.LEGENDARY) return 4;
   };
 
-export enum  TOSEquipmentMaterial {
+export enum TOSEquipmentMaterial {
+  CHAIN = 'Chain',
   CLOTH = 'Cloth',
   GHOST = 'Ghost',
   LEATHER = 'Leather',
@@ -393,10 +396,21 @@ export enum TOSJobType {
 }
 export const TOSJobTypeService = EnumServiceFactory(TOSJobType);
 
+export enum TOSMapType {
+  BARRACK = 'Barrack',
+  CITY = 'City',
+  DUNGEON = 'Dungeon',
+  FIELD = 'Field',
+  INSTANCE = 'Instance',
+  LOGIN = 'Login',
+}
+export const TOSMapTypeService = EnumServiceFactory(TOSMapType);
+
 export enum TOSMonsterRace {
   BEAST = 'Beast',
   DEMON = 'Demon',
   INSECT = 'Insect',
+  ITEM = 'Item',
   MUTANT = 'Mutant',
   PLANT = 'Plant',
 }
@@ -411,7 +425,11 @@ export const
 export enum TOSMonsterRank {
   BOSS = 'Boss',
   ELITE = 'Elite',
+  MATERIAL = 'Material',
+  MISC = 'Misc',
+  NEUTRAL = 'Neutral',
   NORMAL = 'Normal',
+  NPC = 'NPC',
   SPECIAL = 'Special',
 }
 export const
@@ -435,7 +453,9 @@ export enum TOSMonsterSize {
   S = 'S',
   M = 'M',
   L = 'L',
-  XL = 'XL'
+  XL = 'XL',
+  XXL = 'XXL',
+  HIDDEN = 'Hidden',
 }
 export const
   TOSMonsterSizeService = EnumServiceFactory(TOSMonsterSize) as EnumService<TOSMonsterSize> & {
@@ -454,6 +474,14 @@ export const
     if (value == TOSMonsterSize.L)  return 2;
     if (value == TOSMonsterSize.XL) return 3;
   };
+
+export enum TOSNPCType {
+  MONSTER = 'Monster',
+  NEUTRAL = 'Neutral',
+  NPC = 'NPC',
+  SIGN = 'Sign',
+}
+export const TOSNPCTypeService = EnumServiceFactory(TOSNPCType);
 
 export enum TOSSkillRequiredStanceCompanion {
   BOTH = 'Yes',
@@ -770,10 +798,34 @@ export interface ITOSJob extends ITOSEntity {
 }
 
 export interface ITOSMap extends ITOSEntity {
+  HasChallengeMode: boolean;
+  HasWarp: boolean;
+  Layout: string;
+  Level: number;
+  Prop_EliteMonsterCapacity: number;
+  Prop_MaxHateCount: number;
+  Prop_RewardEXPBM: number;
+  Stars: number;
+  Type: TOSMapType;
+  Warp: number;
+  WorldMap: number[];
+
+  Link_Collections: Observable<ITOSCollection[]>;
+  Link_Items: Observable<ITOSItem[]>;
+  Link_Items_Exploration: Observable<ITOSItem[]>;
+  Link_Maps: Observable<ITOSMap[]>;
+  Link_Maps_Floors: Observable<ITOSMap[]>;
+  Link_NPCs: Observable<ITOSMapSpawn[]>;
 
 }
+export interface ITOSMapSpawn {
+  NPC: ITOSNPC;
+  Population: number;
+  Positions: number[][];
+  TimeRespawn: number;
+}
 
-export interface ITOSMonster extends ITOSEntity {
+export interface ITOSMonster extends ITOSNPC {
   Armor: TOSEquipmentMaterial;
   Element: TOSElement;
   Level: number;
@@ -818,6 +870,10 @@ export interface ITOSMonsterSpawn {
   Population: number;
   TimeRespawn: number;
   Url: string;
+}
+
+export interface ITOSNPC extends ITOSEntity {
+  Type: TOSNPCType;
 }
 
 export interface ITOSRecipe extends ITOSItem {
