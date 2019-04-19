@@ -14,8 +14,10 @@
 
 #### Links
 - Link_Collections `TOSEntityLink[]`
+- Link_Maps `TOSMapDropLink[]`
+- Link_Maps_Exploration `TOSMapDropLink[]`
 - Link_Cubes `TOSEntityLink[]`
-- Link_MonsterDrops `TOSMonsterDropLink[]`
+- Link_Monsters `TOSMonsterDropLink[]`
 - Link_RecipeTarget `TOSEntityLink[]`
 - Link_RecipeMaterial `TOSEntityLink[]`
 
@@ -48,8 +50,18 @@
 - WEAPON
 - $ANY$
 
-## TOSMonsterDropLink :: TOSEntityLink
+## TOSMonsterDropLink
 
 #### Properties
 - Chance `float`
 - Monster `TOSEntityLink`
+- Quantity_MAX `int`
+- Quantity_MIN `int`
+
+## TOSMapDropLink
+
+#### Properties
+- Chance `float`
+- Map `TOSEntityLink`
+- Quantity_MAX `int`
+- Quantity_MIN `int`

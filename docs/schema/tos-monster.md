@@ -29,10 +29,11 @@
 - Stat_CriticalRate `int`
 - Stat_BlockPenetration `int`
 - Stat_BlockRate `int`
+- Type `TOSMonsterType`
 
 #### Links
 - Link_Drops `TOSItemDropLink[]`
-- Link_Spawns `TOSMapSpawnLink[]`
+- Link_Maps `TOSMapSpawnLink[]`
 
 ### TOSMonsterRace
 - BEAST
@@ -52,6 +53,12 @@
 - M
 - L
 - XL
+
+### TOSMonsterType
+- MONSTER
+- NEUTRAL
+- NPC
+- SIGN
 
 ## TOSItemDropLink
 
