@@ -124,7 +124,7 @@ def parse_jobs():
 
 
 def parse_jobs_images(region, version_update):
-    if not (region == TOSRegion.iTOS and version_update):
+    if not ((region == TOSRegion.kTEST or region == TOSRegion.kTOS) and version_update):
         return
 
     logging.debug('Parsing Jobs images...')
@@ -139,24 +139,26 @@ def parse_jobs_images(region, version_update):
             if os.path.exists(image_path_f):
                 continue
 
-            name = parser_translations.translate(row['Name'])
-            name = ''.join(name.split(' ')).lower()
+            treeofsavior_domain = 'http://tosweb.vod.nexoncdn.co.kr'
+            treeofsavior_path_female = '/Job_sd_w/' + row['ClassID'] + '.gif'
+            treeofsavior_path_male = '/Job_sd_m/' + row['ClassID'] + '.gif'
 
-            treeofsavior_domain = 'treeofsavior.com'
-            treeofsavior_path = '/img/class2/class_character/'
-
-            conn = httplib.HTTPSConnection(treeofsavior_domain)
-            conn.request('HEAD', treeofsavior_path + name + '_f.gif')
+            if treeofsavior_domain.startswith('https://'):
+                conn = httplib.HTTPSConnection(treeofsavior_domain.split('://')[1])
+                conn.request('HEAD', treeofsavior_path_female)
+            else:
+                conn = httplib.HTTPConnection(treeofsavior_domain.split('://')[1])
+                conn.request('HEAD', treeofsavior_path_female)
 
             response = conn.getresponse()
             conn.close()
 
             if response.status != 200:
-                logging.warn('Failed to retrieve job image: %s, status %s', treeofsavior_path + name + '_f.gif', response.status)
+                logging.warn('Failed to retrieve job image: %s, status %s', treeofsavior_domain + treeofsavior_path_female, response.status)
                 continue
 
-            urllib.urlretrieve('https://' + treeofsavior_domain + treeofsavior_path + name + '_f.gif', image_path_f)
-            urllib.urlretrieve('https://' + treeofsavior_domain + treeofsavior_path + name + '_m.gif', image_path_m)
+            urllib.urlretrieve(treeofsavior_domain + treeofsavior_path_female, image_path_f)
+            urllib.urlretrieve(treeofsavior_domain + treeofsavior_path_male, image_path_m)
 
 
 def parse_jobs_stats():
