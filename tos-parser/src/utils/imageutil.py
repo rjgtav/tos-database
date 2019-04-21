@@ -18,8 +18,8 @@ def optimize(path, mode, rect, size):
 def replace_color(image, color_from, color_to):
     image_data = numpy.array(image)
 
-    red, green, blue = image_data[:, :, 0], image_data[:, :, 1], image_data[:, :, 2]
+    red, green, blue, alpha = image_data[:,:,0], image_data[:,:,1], image_data[:,:,2], image_data[:,:,3]
     mask = (red == color_from[0]) & (green == color_from[1]) & (blue == color_from[2])
-    image_data[:, :, :3][mask] = [color_to[0], color_to[1], color_to[2]]
+    image_data[:,:,:4][mask] = [color_to[0], color_to[1], color_to[2], color_to[3]]
 
     return Image.fromarray(image_data)

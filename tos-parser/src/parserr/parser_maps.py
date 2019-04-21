@@ -1,6 +1,5 @@
 import csv
 import logging
-import math
 import os
 
 from PIL import Image, ImageDraw, ImageColor, ImageFilter
@@ -11,6 +10,8 @@ from parserr import parser_translations
 from parserr.parser_enums import TOSRegion
 from utils import tokutil, imageutil
 from utils.tosenum import TOSEnum
+
+MAP_SCALE = 0.2
 
 
 class TOSMapType(TOSEnum):
@@ -108,40 +109,25 @@ def parse_maps_layouts(region, version_update):
 
                 polygons.append(points)
 
-            # Calculate map size via its coordinates (keep it's aspect ratio so NPC coordinates still work)
-            x = sorted([point[0] for point in reduce(lambda x, y: x + y, polygons)])
-            y = sorted([point[1] for point in reduce(lambda x, y: x + y, polygons)])
+            # Scale map to save some space
+            image_height = int(round(int(row['Height']) * MAP_SCALE))
+            image_width = int(round(int(row['Width']) * MAP_SCALE))
 
-            image_aspect_ratio = int(row['Height']) * 1.0 / int(row['Width'])
-            image_padding = 16
-            image_scale = 0.4
-
-            image_height = (y[-1] - y[0]) + image_padding * 2
-            image_height = int(math.ceil(image_height / 2.0) * 2)
-            image_width = (x[-1] - x[0]) + image_padding * 2
-            image_width = int(math.ceil(image_width / 2.0) * 2)
-
-            image_height = round(int(image_width * image_aspect_ratio)) if image_height < image_width else image_height
-            image_width = round(int(image_height / image_aspect_ratio)) if image_height > image_width else image_width
-
-            offset_x = image_width - x[-1] - image_padding - (image_width - (x[-1] - x[0])) / 2.0
-            offset_y = image_height - y[-1] - image_padding - (image_height - (y[-1] - y[0])) / 2.0
+            offset_x = image_width / 2.0
+            offset_y = image_height / 2.0
 
             # Render map to image
-            image_height = int(round(image_height * image_scale))
-            image_width = int(round(image_width * image_scale))
-
             image = Image.new("RGBA", (image_width, image_height), (0, 0, 0, 0))
             image_draw = ImageDraw.Draw(image)
 
             for points in polygons:
                 # Make sure coordinates are centered
-                points = [(int((coords[0] + offset_x) * image_scale), int((coords[1] + offset_y) * image_scale)) for coords in points]
+                points = [(int(offset_x + coords[0] * MAP_SCALE), int(offset_y + coords[1] * MAP_SCALE)) for coords in points]
 
                 image_draw.polygon(points, fill=ImageColor.getrgb('#F2BC65'))
 
             # Add a shadow
-            image_shadow = imageutil.replace_color(image, ImageColor.getrgb('#F2BC65'), ImageColor.getrgb('#000000'))
+            image_shadow = imageutil.replace_color(image, ImageColor.getcolor('#F2BC65', 'RGBA'), ImageColor.getcolor('#000000', 'RGBA'))
             image_shadow = image_shadow.filter(ImageFilter.GaussianBlur(2))
             image = Image.composite(image, image_shadow, image_shadow)
 
@@ -277,8 +263,8 @@ def parse_links_npcs():
     with open(ies_path, 'rb') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             map = globals.maps_by_name[row['ClassName']]
-            map_width = int(row['Width'])
-            map_height = int(row['Height'])
+            map_offset_x = int(round(int(row['Width']) / 2.0))
+            map_offset_y = int(round(int(row['Height']) / 2.0))
 
             anchors = {}
 
@@ -291,8 +277,8 @@ def parse_links_npcs():
                     for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                         obj = anchors[row['GenType']] if row['GenType'] in anchors else []
                         obj.append([
-                            int((float(row['PosX']) / map_width + 0.5) * 10000),
-                            int((1 - (float(row['PosZ']) / map_height + 0.5)) * 10000)
+                            int((map_offset_x + float(row['PosX'])) * MAP_SCALE),
+                            int((map_offset_y - float(row['PosZ'])) * MAP_SCALE),
                         ])
 
                         anchors[row['GenType']] = obj
