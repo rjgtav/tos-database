@@ -1,5 +1,3 @@
-import numpy
-
 from PIL import Image
 
 
@@ -14,12 +12,15 @@ def optimize(path, mode, rect, size):
     image = image.save(path, format, optimize=True, quality=quality)
 
 
-# https://stackoverflow.com/a/6501902
+# https://stackoverflow.com/a/6483549
 def replace_color(image, color_from, color_to):
-    image_data = numpy.array(image)
+    image = image.copy()
+    image_width, image_height = image.size
+    image_data = image.load()
 
-    red, green, blue, alpha = image_data[:,:,0], image_data[:,:,1], image_data[:,:,2], image_data[:,:,3]
-    mask = (red == color_from[0]) & (green == color_from[1]) & (blue == color_from[2])
-    image_data[:,:,:4][mask] = [color_to[0], color_to[1], color_to[2], color_to[3]]
+    for x in range(0, image_width):
+        for y in range(0, image_height):
+            if image_data[x,y] == color_from:
+                image_data[x,y] = color_to
 
-    return Image.fromarray(image_data)
+    return image
