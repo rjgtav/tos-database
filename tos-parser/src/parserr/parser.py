@@ -56,9 +56,11 @@ def parse(region, is_rebuild, is_version_new):
     # Initialize LUA environment
     luautil.init()
 
-    # Parse assets
-    parser_translations.parse(region)
+    # Parse assets (Note: we start by processing assets as they use a ton of RAM)
     parser_assets.parse(region, is_version_new)
+    parser_jobs.parse_jobs_images(region, is_version_new)
+    parser_maps.parse_maps_images(region, is_version_new)
+    parser_translations.parse(region)
 
     # Parse data
     logging.debug('Parsing data...')

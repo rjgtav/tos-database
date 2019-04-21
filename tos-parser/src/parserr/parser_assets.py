@@ -1,17 +1,13 @@
-import csv
-import httplib
 import logging
 import multiprocessing
 import os
 import shutil
-import urllib
 import xml.etree.ElementTree as ET
 from functools import partial
 from multiprocessing import Pool
 
 import constants
 import globals
-import parser_translations
 from parserr.parser_enums import TOSRegion
 from utils import imageutil
 
@@ -76,8 +72,6 @@ def parse(region, version_update):
     parse_icons('monillust.xml', region, version_update)
     parse_icons('skillicon.xml', region, version_update)
 
-    parse_images_jobs(region, version_update)
-
 
 def parse_icons(file_name, region, version_update):
     logging.debug('Parsing icons from %s...', file_name)
@@ -132,42 +126,6 @@ def parse_icons_step(file_name, region, version_update, work):
 
     # Store mapping for later use
     globals.assets_icons[image_name] = image_name
-
-
-def parse_images_jobs(region, version_update):
-    if not (region == TOSRegion.iTOS and version_update):
-        return
-
-    logging.debug('Parsing images for jobs...')
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
-
-    with open(ies_path, 'rb') as ies_file:
-        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-            image_path = os.path.join(constants.PATH_BUILD_ASSETS_IMAGES, 'classes', row['ClassName'])
-            image_path_f = image_path + '_f.gif'
-            image_path_m = image_path + '_m.gif'
-
-            if os.path.exists(image_path_f):
-                continue
-
-            name = parser_translations.translate(row['Name'])
-            name = ''.join(name.split(' ')).lower()
-
-            treeofsavior_domain = 'treeofsavior.com'
-            treeofsavior_path = '/img/class2/class_character/'
-
-            conn = httplib.HTTPSConnection(treeofsavior_domain)
-            conn.request('HEAD', treeofsavior_path + name + '_f.gif')
-
-            response = conn.getresponse()
-            conn.close()
-
-            if response.status != 200:
-                logging.warn('Failed to retrieve job image: %s, status %s', treeofsavior_path + name + '_f.gif', response.status)
-                continue
-
-            urllib.urlretrieve('https://' + treeofsavior_domain + treeofsavior_path + name + '_f.gif', image_path_f)
-            urllib.urlretrieve('https://' + treeofsavior_domain + treeofsavior_path + name + '_m.gif', image_path_m)
 
 
 #def parse_clean(version_update):

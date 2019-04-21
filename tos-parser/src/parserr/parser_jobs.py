@@ -1,12 +1,15 @@
 # coding=utf-8
 import csv
+import httplib
 import logging
 import os
+import urllib
 
 import constants
 import globals
 from parserr import parser_assets
 from parserr import parser_translations
+from parserr.parser_enums import TOSRegion
 from utils.tosenum import TOSEnum
 
 
@@ -81,7 +84,7 @@ def parse(is_rebuild):
 
 
 def parse_jobs():
-    logging.debug('Parsing jobs...')
+    logging.debug('Parsing Jobs...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
 
@@ -120,8 +123,44 @@ def parse_jobs():
             globals.jobs_by_name[obj['$ID_NAME']] = obj
 
 
+def parse_jobs_images(region, version_update):
+    if not (region == TOSRegion.iTOS and version_update):
+        return
+
+    logging.debug('Parsing Jobs images...')
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
+
+    with open(ies_path, 'rb') as ies_file:
+        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            image_path = os.path.join(constants.PATH_BUILD_ASSETS_IMAGES, 'classes', row['ClassName'])
+            image_path_f = image_path + '_f.gif'
+            image_path_m = image_path + '_m.gif'
+
+            if os.path.exists(image_path_f):
+                continue
+
+            name = parser_translations.translate(row['Name'])
+            name = ''.join(name.split(' ')).lower()
+
+            treeofsavior_domain = 'treeofsavior.com'
+            treeofsavior_path = '/img/class2/class_character/'
+
+            conn = httplib.HTTPSConnection(treeofsavior_domain)
+            conn.request('HEAD', treeofsavior_path + name + '_f.gif')
+
+            response = conn.getresponse()
+            conn.close()
+
+            if response.status != 200:
+                logging.warn('Failed to retrieve job image: %s, status %s', treeofsavior_path + name + '_f.gif', response.status)
+                continue
+
+            urllib.urlretrieve('https://' + treeofsavior_domain + treeofsavior_path + name + '_f.gif', image_path_f)
+            urllib.urlretrieve('https://' + treeofsavior_domain + treeofsavior_path + name + '_m.gif', image_path_m)
+
+
 def parse_jobs_stats():
-    logging.debug('Parsing base stats for jobs...')
+    logging.debug('Parsing Jobs base stats...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'statbase_pc.ies')
 
@@ -146,7 +185,7 @@ def parse_links():
 
 
 def parse_links_skills():
-    logging.debug('Parsing skills for jobs...')
+    logging.debug('Parsing Jobs <> Skills...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skilltree.ies')
 

@@ -37,11 +37,10 @@ class TOSMapType(TOSEnum):
 
 def parse(region, version_update):
     parse_maps()
-    parse_maps_layouts(region, version_update)
 
 
 def parse_maps():
-    logging.debug('Parsing maps...')
+    logging.debug('Parsing Maps...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'map.ies')
 
@@ -75,8 +74,8 @@ def parse_maps():
             globals.maps_by_position['-'.join(row['WorldMap'].split('/')) if obj['WorldMap'] else ''] = obj
 
 
-def parse_maps_layouts(region, version_update):
-    logging.debug('Parsing maps layouts...')
+def parse_maps_images(region, version_update):
+    logging.debug('Parsing Maps images...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'map.ies')
 
