@@ -109,6 +109,15 @@ def parse_maps_layouts(region, version_update):
 
                 polygons.append(points)
 
+            # Free some memory before continuing
+            tok_file.close()
+            tok_xml.clear()
+
+            del mesh3D
+            del mesh3DVerts
+            del mappingTo2D
+            del tok_xml
+
             # Scale map to save some space
             image_height = int(round(int(row['Height']) * MAP_SCALE))
             image_width = int(round(int(row['Width']) * MAP_SCALE))
@@ -133,7 +142,8 @@ def parse_maps_layouts(region, version_update):
 
             # Save image to disk
             image.save(image_path, optimize=True)
-            tok_file.close()
+            image.close()
+            image_shadow.close()
 
 
 def parse_links():
