@@ -1,4 +1,5 @@
 $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
+-1,Moneybag1,,icon_item_silver,,,,,,,,실버,,,,FFFF,24,
 201001,ColorSpray_1,아이템을 조합하여 다른 아이템 제작,icon_item_small_bag,,,,,,,,스프레이 - 검정,11,1.0,0.0,TTTT,6,1.0
 201002,ColorSpray_2,아이템을 조합하여 다른 아이템 제작,icon_item_small_bag,,,,,,,,스프레이 - 빨강,11,1.0,0.0,TTTT,6,1.0
 201003,ColorSpray_3,아이템을 조합하여 다른 아이템 제작,icon_item_small_bag,,,,,,,,스프레이 - 하얀,11,1.0,0.0,TTTT,6,1.0
