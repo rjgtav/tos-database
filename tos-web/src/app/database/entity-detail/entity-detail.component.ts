@@ -27,6 +27,7 @@ import {MonsterListConfigurationResolver} from "../resolvers/monster-list-config
 import {CubeListConfigurationResolver} from "../resolvers/cube-list-configuration.resolver";
 import {EquipmentSetListConfigurationResolver} from "../resolvers/equipment-set-list-configuration.resolver";
 import {TOSRegionService} from "../../shared/domain/tos-region";
+import {TOSMap} from "../../shared/domain/tos/map/tos-map.model";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -64,6 +65,7 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
   gem: TOSGem;
   item: TOSItem;
   job: TOSJob;
+  map: TOSMap;
   monster: TOSMonster;
   recipe: TOSRecipe;
   skill: TOSSkill;
@@ -98,6 +100,7 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
       this.gem = this.entity instanceof TOSGem ? this.entity as TOSGem : null;
       this.item = this.entity instanceof TOSItem ? this.entity as TOSItem : null;
       this.job = this.entity instanceof TOSJob ? this.entity as TOSJob : null;
+      this.map = this.entity instanceof TOSMap ? this.entity as TOSMap : null;
       this.monster = this.entity instanceof TOSMonster ? this.entity as TOSMonster : null;
       this.recipe = this.entity instanceof TOSRecipe ? this.entity as TOSRecipe : null;
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;

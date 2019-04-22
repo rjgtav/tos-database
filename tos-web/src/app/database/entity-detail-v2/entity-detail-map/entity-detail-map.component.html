@@ -20,7 +20,7 @@
         <!-- Map -->
         <div #map>
           <div style="max-width: 100%; pointer-events: none; transform: rotate(45deg)">
-            <img [src]="entity.Layout" />
+            <img [src]="map.Layout" />
             <img *ngFor="let icon of minimapIcons" class="position-absolute"
                  [src]="icon.NPC.Icon"
                  [style.top]="(icon.Positions[0][1] / 100) + '%'"

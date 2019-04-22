@@ -1,11 +1,11 @@
-import {Component, ElementRef, NgZone, OnInit, ViewChild} from '@angular/core';
-import {EntityDetailV2Component} from "../entity-detail-v2.component";
-import {ActivatedRoute} from "@angular/router";
-import {ITOSMap, TOSNPCType} from "../../../shared/domain/tos/tos-domain";
+import {ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, ViewChild} from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
+import {TOSNPCType} from "../../../shared/domain/tos/tos-domain";
 import {TableCellTextPipeDefinition,} from "../../../shared/components/entity-table/pipes/table-cell-text.pipe";
 import {TOSMapSpawn} from "../../../shared/domain/tos/map/tos-map.model";
 import {TableCellIconPipeDefinition} from "../../../shared/components/entity-table/pipes/table-cell-icon.pipe";
 import {faFilter, faSearchMinus, faSearchPlus} from "@fortawesome/free-solid-svg-icons";
+import {EntityDetailComponent} from "../../entity-detail/entity-detail.component";
 
 const MAP_SCALE_MIN = 0.5;
 const MAP_SCALE_MAX = 2;
@@ -16,7 +16,7 @@ const MAP_SCALE_SPEED = 0.25;
   templateUrl: './entity-detail-map.component.html',
   styleUrls: ['./entity-detail-map.component.scss']
 })
-export class EntityDetailMapComponent extends EntityDetailV2Component<ITOSMap> implements OnInit {
+export class EntityDetailMapComponent extends EntityDetailComponent implements OnInit {
 
   readonly COLUMNS_NPCS = [
     { label: '',              pipe: new TableCellIconPipeDefinition('Icon', (o: TOSMapSpawn) => o.NPC), class: 'p-1 text-center' },
@@ -28,18 +28,18 @@ export class EntityDetailMapComponent extends EntityDetailV2Component<ITOSMap> i
   readonly faSearchPlus = faSearchPlus;
   readonly faSearchMinus = faSearchMinus;
 
-  @ViewChild('map')   map: ElementRef;
-                      mapScale: number = MAP_SCALE_MIN;
-                      mapX: number = 0;
-                      mapY: number = 0;
+  @ViewChild('map')           mapElement: ElementRef;
+                              mapScale: number = MAP_SCALE_MIN;
+                              mapX: number = 0;
+                              mapY: number = 0;
 
   private mouseX: number;
   private mouseY: number;
 
   minimapIcons: TOSMapSpawn[];
 
-  constructor(route: ActivatedRoute, private zone: NgZone) {
-    super(route);
+  constructor(changeDetector: ChangeDetectorRef, route: ActivatedRoute, router: Router, private zone: NgZone) {
+    super(changeDetector, route, router);
 
     this.onMapMouseMove = this.onMapMouseMove.bind(this);
     // TODO: show arrows, warp statues, treasures and NPCs by default (and class masters)
@@ -48,7 +48,7 @@ export class EntityDetailMapComponent extends EntityDetailV2Component<ITOSMap> i
 
   async ngOnInit() {
     this.update();
-    this.entity.Link_NPCs.subscribe(value => this.minimapIcons = value.filter(value => value.NPC.Type != TOSNPCType.MONSTER && !!value.NPC.Icon));
+    this.map.Link_NPCs.subscribe(value => this.minimapIcons = value.filter(value => value.NPC.Type != TOSNPCType.MONSTER && !!value.NPC.Icon));
   }
 
   onMapMouseDown(event: MouseEvent) {
@@ -78,14 +78,14 @@ export class EntityDetailMapComponent extends EntityDetailV2Component<ITOSMap> i
 
     return false;
   }
-  onMapScale(direction: 1 | -1) {
+  onMapScale(direction: number) {
     this.mapScale += direction * MAP_SCALE_SPEED;
     this.mapScale = Math.max(MAP_SCALE_MIN, Math.min(MAP_SCALE_MAX, this.mapScale));
     this.update();
   }
 
   private update() {
-    this.map.nativeElement.style.transform = `translate(${this.mapX}px, ${this.mapY}px) scale(${ this.mapScale})`;
+    this.mapElement.nativeElement.style.transform = `translate(${this.mapX}px, ${this.mapY}px) scale(${ this.mapScale})`;
   }
 
 }
