@@ -1,3 +1,4 @@
+# coding=utf-8
 import csv
 import logging
 import os
@@ -105,6 +106,22 @@ def parse():
     parse_items('item_premium.ies')
     parse_items('item_quest.ies')
     parse_items('recipe.ies')
+
+    # Hotfix: Insert 'Silver' as an Item
+    obj = {}
+    obj['$ID'] = -1
+    obj['$ID_NAME'] = 'Moneybag1'
+    obj['Icon'] = parser_assets.parse_entity_icon('icon_item_silver')
+    obj['Name'] = parser_translations.translate(u'실버')
+    obj['Tradability'] = 'FFFF'
+    obj['Type'] = TOSItemGroup.UNUSED
+
+    for key in globals.items.values()[0]:
+        if key not in obj:
+            obj[key] = None
+
+    globals.items[obj['$ID']] = obj
+    globals.items_by_name[obj['$ID_NAME']] = obj
 
 
 def parse_items(file_name):

@@ -1,4 +1,3 @@
-import {TOSItem} from "../item/tos-item.model";
 import {
   ITOSItem,
   ITOSMap,
@@ -63,9 +62,7 @@ export class TOSMonster extends TOSNPC implements ITOSMonster {
   private TOSMonsterDropFactory(value: TOSMonsterDrop): Observable<TOSMonsterDrop> {
     return fromPromise((async () => {
       let object = new TOSMonsterDrop(value);
-          object.Item = !isNaN(+object.Item)
-            ? await TOSDomainService.itemsByIdLink(+object.Item).toPromise()
-            : new TOSItem(null, object.Item as TOSItem);
+          object.Item = await TOSDomainService.itemsByIdLink(+object.Item).toPromise();
 
       return object;
     })());

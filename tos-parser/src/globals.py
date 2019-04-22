@@ -92,21 +92,13 @@ def get_equipment_set_link(name):
 
 
 def get_item_link(name):
-    if name == 'Moneybag1':
-        return Link({
-            '$ID': -1,
-            '$ID_NAME': None,
-            'Icon': 'icon_item_silver',
-            'Name': 'Silver'
-        }, None)
-    else:
-        for xx_by_name in all_items_by_name:
-            link = _get_entity_link(name, xx_by_name)
+    for xx_by_name in all_items_by_name:
+        link = _get_entity_link(name, xx_by_name)
 
-            if link is not None:
-                return link
+        if link is not None:
+            return link
 
-        return None
+    return None
 
 
 def get_map_link(name):
