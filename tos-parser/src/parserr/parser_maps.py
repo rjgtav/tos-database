@@ -86,7 +86,7 @@ def parse_maps_images(region, version_update):
 
             if not os.path.exists(tok_path):
                 continue
-            if not (region == TOSRegion.kTEST and version_update or not os.path.exists(image_path)):
+            if not (region == TOSRegion.kTEST and version_update) and os.path.exists(image_path):
                 continue
 
             # Parse .tok mesh file
