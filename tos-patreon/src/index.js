@@ -55,6 +55,9 @@ async function patreonAccessTokenRefresh() {
     let response = await fetch('https://www.patreon.com/api/oauth2/token', { method: 'POST', body: params });
         response = await response.json();
 
+    if (response.error !== undefined)
+        throw new Error('Failed to refresh Patreon AccessToken');
+
     let accessToken = response.access_token;
     let refreshToken = response.refresh_token;
 
