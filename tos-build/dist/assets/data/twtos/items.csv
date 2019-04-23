@@ -65,6 +65,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 490312,Ability_Point_Stone_30000,"使用時特性點數增加30,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint5,,,,,,,,"特性點數 30,000",0,0.0,0.0,FFFT,8,1.0
 490313,Ability_Point_Stone_100000,"使用時特性點數增加100,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint6,,,,,,,,"特性點數 100,000",0,0.0,0.0,FFFT,8,1.0
 490324,Ability_Point_Scroll_1000,"使用時特性點數增加1,000，點擊滑鼠右鍵即可使用。",icon_item_ability_point_scroll_1000,,,,,,,,特性點數卷軸,0,0.0,0.0,FFFT,8,1.0
+490354,indunReset_1add_14d_NoStack_Team,使用時即時副本和委託所任務可以追加進場1次。,icon_item_indunonemoreenter,,,,,,,,[活動]副本1次入場卷(限時),0,0.0,1209600.0,FFFT,6,0.0
 495001,160714Event_box1,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第1天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
 495002,160714Event_box2,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第2天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
 495003,160714Event_box3,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第3天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
@@ -137,6 +138,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 495084,Premium_indunPack,點擊滑鼠右鍵時可獲得組合物品{nl} - 副本掃盪卷 [★] 3張{nl} - 副本入場次數重置卷 1張{nl} - 經驗之書 3本,icon_item_pumpkin_box04,,,,,,,,副本優惠包,0,0.0,0.0,FFFT,8,0.0
 495085,Kupole_TestServer_Pack,點擊滑鼠右鍵時就能夠使用，可以獲得組合物品。,icon_item_premiumpackage_1,,,,,,,,奎波爾伺服器救援者禮包,0,0.0,0.0,FFFF,8,0.0
 495086,Premium_VIPPack,點擊滑鼠右鍵時可獲得組合物品。{nl}-即時副本倍數VIP x 2{nl}-大王蜜松糕 x 10,icon_item_giftbox_3,,,,,,,,VIP優惠禮包,0,0.0,0.0,FFFT,8,0.0
+495121,Premium_Enchantchip14_Team,使用於頭部套裝時，賦予效果會隨機追加。賦予效果最多可以產生3個。無法對套用的裝備使用。點擊滑鼠右鍵使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_enchantscroll,,,,,,,,[活動]魔法賦予卷軸(限時),0,0.0,1209600.0,FFFT,8,0.0
 495123,Premium_awakeningStone14_Team,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,,,[活動]覺醒石(限時),0,0.0,1209600.0,FFFT,8,0.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,,,耐力 +5 增加藥水,200,0.0,0.0,FFFF,6,1.0
 640002,Drug_HP1,HP立刻恢復273，15秒內每隔2秒HP恢復273，點擊滑鼠右鍵使用。,item_hp_oil_1,,,,,,,,HP藥水(小),16,25.0,0.0,FFTF,6,7.0
@@ -260,7 +262,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640134,Achieve_CBT3_RANK6_10,給予第2個~第10個到6階級的玩家的稱號，點擊滑鼠右鍵使用,icon_item_holyark,,,,,,,,稱號-奧施莉奈的英雄,0,0.0,0.0,FFFF,6,0.0
 640135,Scroll_SkillReset_CBT,重置使用的技能點數。(測試用),golemmagicitem2,,,,,,,,技能重置卷軸,0,0.0,0.0,FFTF,6,10.0
 640139,Achieve_IamDeveloper,我是開發者。,icon_item_holyark,,,,,,,,稱號-開發者,0,0.0,0.0,FFFF,6,0.0
-640140,Drug_deadparts,屍體碎片增加+30，可以從死靈法師大師哪裡取得，點擊滑鼠右鍵使用。,icon_item_potb,,,,,,,,碎片壇子,100,0.0,0.0,FFTF,6,5.0
+640140,Drug_deadparts,屍體碎片增加+30，可以從死靈法師大師哪裡取得，點擊滑鼠右鍵使用。,icon_item_potb,,,,,,,,屍體碎片壇子,100,0.0,0.0,FFTF,6,5.0
 640141,expCard_Max,"角色經驗值提升106,850,628 ，點擊滑鼠右鍵使用。",icon_item_expcard,,,,,,,,經驗值加速器,0,0.0,0.0,FFFF,6,0.0
 640142,jexpCard_UpRank2,將角色的職業等級提升至15，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值復原卡片 (1st),0,0.0,0.0,FFFF,6,0.0
 640143,jexpCard_UpRank3,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值復原卡片 (2nd),0,0.0,0.0,FFFF,6,0.0
@@ -272,7 +274,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640149,potion_hairColor_03,獲得白色頭髮，點擊滑鼠右鍵使用。,icon_item_drug_str2,,,,,,,,染色藥：白色,0,0.0,0.0,FFFF,6,0.0
 640150,potion_hairColor_04,獲得粉紅色頭髮，點擊滑鼠右鍵使用。,icon_item_drug_str2,,,,,,,,染色藥：粉紅色,0,0.0,0.0,FFFF,6,0.0
 640151,Guild_Tower01,可以建設公會塔。只能在原野使用。,icon_item_guildtower,,,,,,,,公會塔,1,0.0,0.0,FFTF,6,100.0
-640152,food_companion,讓耐力恢復30。{nl}可使用目錄{nl} - 貝哈伊勒 {nl} - 霍克鷹 {nl} - 綠企鵝 {nl}- 小豬 {nl} - 拉克斯頓 {nl} - 犰狳 {nl} - 金剛天狗 {nl} - 特務零零八,icon_item_meat_01,,,,,,,,寵物飼料,97,10.0,0.0,FFTF,6,1.0
+640152,food_companion,讓耐力恢復30。{nl}可使用目錄{nl} - 貝哈伊勒 {nl} - 霍克鷹 {nl} - 綠企鵝 {nl}- 小豬 {nl} - 拉克斯頓 {nl} - 犰狳 {nl} - 金剛天狗 {nl} - 特務零零八 {nl} - 丹迪汪汪{nl} - 黃金福氣豬,icon_item_meat_01,,,,,,,,寵物飼料,97,10.0,0.0,FFTF,6,1.0
 640153,Guild_Academy01,設置在24小時內會增加公會成員們的魔法攻擊力的構造物，只能在公會基地上設置。,icon_item_academy,,,,,,,[3023],學院,0,0.0,0.0,FFTF,6,100.0
 640154,Guild_Forge01,使用鐵匠工廠設置技能時消耗。,icon_item_forge,,,,,,,[3024],鐵匠工場,0,0.0,0.0,FFFF,15,1.0
 640155,Guild_ShieldCharger01,使用盾牌集氣設置技能時消耗。,icon_item_shieldcharge,,,,,,,[3025],盾牌集氣,0,0.0,0.0,FFFF,15,1.0
@@ -353,7 +355,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640231,food_penguin2,恢復企鵝健康的飼料。可以恢復企鵝的所有HP，耐力也會恢復 +15 。{nl}可使用目錄{nl} - 企鵝{nl} - 藍色企鵝 {nl} - 冬季企鵝{nl} - 綠企鵝,icon_item_anchovy,,,,,,,,吻仔魚,0,10.0,0.0,FFTF,6,1.0
 640232,GIMMICK_Drug_PMATK1,3分內使物理、魔法攻擊力提升+55，點擊滑鼠右鍵使用，冷卻時間120秒。,icon_item_drug_exatk1,,,,,,,,凱伊托 勇猛藥水,0,120.0,0.0,FFFF,6,10.0
 640233,expCard14,經驗值提升+3630357，職業經驗值提升+2795374。從275級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 1, ""Map"": 1191, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1991, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3070, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3080, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3090, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3270, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3280, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3290, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3560, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3570, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3580, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3590, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3600, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3690, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3700, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4270, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4900, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV13 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
-640234,expCard15,經驗值提升+13189741，職業經驗值提升+10156100。從300級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 1, ""Map"": 1901, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1911, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1921, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1941, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1951, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1961, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1971, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1993, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1994, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1995, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 2101, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 2111, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 2121, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3100, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3110, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3120, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3130, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3140, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3150, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3160, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3170, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3180, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3190, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3200, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3210, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3300, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3530, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3540, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3550, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3660, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3710, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3720, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3770, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3780, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4280, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4810, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4910, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 8000, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 8010, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 8020, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV14 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
+640234,expCard15,經驗值提升+13189741，職業經驗值提升+10156100。從300級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 1, ""Map"": 1901, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1911, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1921, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1941, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1951, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1961, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1971, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1993, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1994, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 1995, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 2101, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 2111, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 2121, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3100, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3110, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3120, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3130, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3140, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3150, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3160, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3170, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3180, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3190, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3200, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3210, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3300, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3530, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3540, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3550, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3660, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3710, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3720, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3770, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 3780, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4280, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4810, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4910, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 4980, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 8000, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 8010, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 1, ""Map"": 8020, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV14 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
 640235,expCard16,經驗值提升+31212626，職業經驗值提升+24033722。從320級開始可使用。,icon_item_expcard,,,,,,,,LV15 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
 640236,food_tomato,紅熊貓和渡渡鳥喜歡的飼料，寵物的HP會全部恢復，耐力會恢復+60。,icon_item_tomato,,,,,,,,番茄,0,10.0,0.0,FFTF,6,1.0
 640237,Drug_PvP_MSPD3,250秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間300秒。,item_speed_requid_1,,,,,,,,移動速度UP藥水,25,300.0,0.0,FFFF,6,5.0
@@ -525,6 +527,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640439,Boruta_Warp_table_10_1,活動用傳送卷軸。{nl}使用時移動至貝達高原奎波爾卡潔身邊。{nl}活動結束時道具統一刪除。,icon_item_scroll,,,,,,,,[活動] 傳送卷軸-奎波爾卡潔,0,10.0,0.0,FFFT,6,1.0
 640440,Boruta_Event_ACHIEVE_BOX_day5,參與攻略斯爾利那斯雷歐的龍王普魯達5次以上時獲得的救援者稱號。{nl}使用時獲得[招惹普魯達]稱號。{nl}360Lv以上可使用,icon_item_holyark,,,,,,,,[活動] 稱號 - 招惹普魯達,0,0.0,0.0,FFFT,6,0.0
 640441,Boruta_Event_ACHIEVE_BOX_day10,參與攻略斯爾利那斯雷歐的龍王普魯達10次以上時獲得的救援者稱號。{nl}使用時獲得[不怕普魯達]稱號。{nl}360Lv以上可使用,icon_item_holyark,,,,,,,,[活動] 稱號 - 不怕普魯達,0,0.0,0.0,FFFT,6,0.0
+640447,Event_Drug_RedApple20,令HP立即恢復20%，11秒內每隔2秒使恢復20%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_hpelixir_small,,,,,,,,[活動]  HP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
+640448,Event_Drug_BlueApple20,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_spelixir_small,,,,,,,,[活動] SP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,,,LV1 攻擊推進器,1,8.0,0.0,TTTT,6,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,,,攻擊推進器 +15,1,8.0,0.0,TTTT,6,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,攻擊推進器 +20,2,8.0,0.0,TTTT,6,1.0
@@ -782,6 +786,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641963,Premium_ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式1次入場券,0,5.0,0.0,TTFT,6,1.0
 641964,Uphill_Store_Point_10,使用時可以獲得10點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：10,0,0.0,0.0,FFFF,6,0.0
 641969,Event_190110_ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式 1次入場券 (14天),0,5.0,1209600.0,FFFT,6,1.0
+641970,Event_190131_SWEET_POTATO_ITEM,這是香甜的烤地瓜。獲得它的話可能會發生令人驚喜的事。{nl}立即恢復HP 2205、SP 735，並於15秒內每2秒恢復HP 2205、SP 735。點擊滑鼠右鍵即可使用。冷卻時間 45秒。{nl}活動結束時道具會統一刪除。,icon_item_sweet_potato,,,,,,,,[活動]香甜烤地瓜,0,45.0,0.0,FFFT,6,1.0
 641971,Event_Drug_Alche_HP15_Premium,HP立刻恢復5614，15秒內每隔2秒HP恢復5614，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,,,補給用濃縮HP藥水LV15,0,45.0,0.0,FFFT,6,1.0
 641972,Event_Drug_Alche_SP15_Premium,SP立刻恢復1288，15秒內每隔2秒SP恢復1288，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,,,補給用濃縮SP藥水LV15,0,45.0,0.0,FFFT,6,1.0
 641973,Event_drug_steam_1h_Premium,1小時移動速度增加2、物理攻擊力增加50、魔法攻擊力增加50。點擊滑鼠右鍵使用。,item_speed_requid_3,,,,,,,,定居支援藥水 LV2,0,30.0,0.0,FFFT,6,0.0
@@ -819,6 +824,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643022,Extract_kit_Gold,血晶萃取時使用的工具，只有裝備潛力為0時可以使用，防止道具破壞。,icon_item_extractkit_gold,,,,,,,,發光的黃金血晶萃取工具,0,0.0,0.0,TTFT,15,4.0
 643025,Moru_Gold_14d_Team,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,,,黃金鐵砧(14天),0,0.0,1209600.0,FFFT,15,1.0
 643026,Extract_kit_Gold_NotFail,[Rebuild]改版後支援期間可使用的血晶萃取劵。{nl} - 活動結束時統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具,0,0.0,0.0,FFTF,15,4.0
+643027,Transcend_Scroll_5_Event,提升裝備的超越數值至5階段。{nl}只有0~4階段超越道具可以使用，右點擊5超越卷軸後選擇要進行超越的道具就可以讓裝備提升至5超越。{nl}活動結束時道具統一刪除。,icon_item_transcendence_coupon,,,,,,,,[活動] 5超越卷軸,0,0.0,0.0,FFFT,6,1.0
 643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於隨機屬性裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具：隨機屬性,0,0.0,0.0,FFTF,15,4.0
 643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於製作獨特裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具：製作,0,0.0,0.0,FFTF,15,4.0
 645002,D_Bube_Mane,可以從長時間暴露於水晶的布貝身上獲得的黑暗魔石。,icon_item_evilenergy_piece,,,,,,,,布貝魔石,4,0.0,0.0,TTTT,20,0.0
@@ -958,7 +964,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645265,misc_hanaming3,怪物材料，使用於製作道具。,icon_item_crystal_red,,,,,,,,粉紅小花怪的結晶,2,0.0,0.0,TTTT,15,1.0
 645266,misc_bokchoy2,怪物材料，使用於製作道具。,icon_item_onionroot,,,,,,,,奇奈希根,2,0.0,0.0,TTTT,15,1.0
 645267,misc_infroRocktor2,不是只有外殼硬，裡面也很堅硬，從礦石龜身上獲得。,icon_item_bone,"[642004, 642018]",,,,,"[15021, 16020]",,礦石龜的骨頭,158,0.0,0.0,TTTT,15,1.0
-645268,misc_talt,從怪物身上發現的來歷不明寶石，因為神秘色澤，讓收藏者趨之若鶩。使用於讓公會成長。,30_item_ore_talt,[642002],"[642906, 642901, 642902, 642903, 642904, 642905, 642907, 642908, 642909, 642910, 642913, 642911, 642914, 642914, 642915, 642915, 642918, 642919, 642920, 642921, 642922, 642924, 642924, 642923, 642923, 642925, 642925, 642928, 642928]",,,,"[3023, 3024, 3025]",,塔特,5000,0.0,0.0,TTTT,15,10.0
+645268,misc_talt,從怪物身上發現的來歷不明寶石，因為神秘色澤，讓收藏者趨之若鶩。使用於讓公會成長。,30_item_ore_talt,[642002],"[642906, 642901, 642902, 642903, 642904, 642905, 642907, 642908, 642909, 642910, 642913, 642911, 642914, 642914, 642915, 642915, 642918, 642919, 642920, 642921, 642922, 642924, 642924, 642923, 642923, 642925, 642925, 642928, 642928, 642940, 642942, 642943, 642944, 642941]",,,,"[3023, 3024, 3025]",,塔特,5000,0.0,0.0,TTTT,15,10.0
 645269,misc_chupacabra2,怪物材料，使用於製作道具。,icon_item_misc_00007,"[642019, 642118]",,,,,"[30067, 35056, 35075, 35097]",,卓柏卡布拉皮革,8,0.0,0.0,TTTT,15,1.0
 645270,misc_chupacabra3,怪物材料，使用於製作道具。,icon_item_quest_00017,,,,,,,,卓柏卡布拉眼珠,2,0.0,0.0,TTTT,15,1.0
 645271,misc_popolion2,怪物材料，使用於製作道具。,icon_item_bone,,,,,,,,波波小獅王的骨頭,2,0.0,0.0,TTTT,15,1.0
@@ -1730,9 +1736,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647008,misc_0527,怪物材料，使用於製作道具。,icon_item_misc_0527,,,,,,"[50011, 50025, 50027, 50031, 400058, 400060, 400062, 400063]",,尼柯波爾利斯貝拉因,25,0.0,0.0,TTTT,15,1.0
 647009,misc_0528,怪物材料，使用於製作道具。,icon_item_misc_0529,,,,,,"[30569, 30571, 30573, 50004, 50018, 50020, 50022, 400037, 400038, 400039, 400040]",,皇家之劍破片,25,0.0,0.0,TTTT,15,1.0
 647010,misc_0529,哈希什藥水，服用後可以短暫提升身體能力。,icon_item_misc04_112,,,,,,,,哈希什藥水,25,0.0,0.0,FFFF,15,1.0
-647011,misc_0530,使用於高級裝備製作及印章強化上的稀有材料。.,icon_item_misc_misc_0530,,,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089]",,魔晶石,25,0.0,0.0,TTTT,15,1.0
+647011,misc_0530,使用於高級裝備製作及印章強化上的稀有材料。.,icon_item_misc_misc_0530,,,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089, 34090, 34091, 34092, 34093]",,魔晶石,25,0.0,0.0,TTTT,15,1.0
 647012,misc_gemExpStone_randomQuest4_14d_Team,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFT,15,1.0
 647013,PVP_Misc_1_KOR_Reward,紀念領地戰勝利的鑄幣{nl}取代領地戰市場稅金獎勵所發送的道具。{nl}活動結束時統一刪除。,icon_item_coin_colony_01,,,,,,,,領地戰紀念鑄幣[獎勵用],100000,0.0,0.0,FFTT,15,1.0
+647014,misc_0531,怪物材料，使用於製作道具。,icon_item_iredian_misc01,,,,,,"[34090, 34091, 34092, 34093]",,伊雷迪安胸針,0,0.0,0.0,TTTT,15,1.0
+647015,misc_0532,怪物材料，使用於製作道具。,icon_item_iredian_misc02,,,,,,"[34090, 34091, 34092, 34093]",,伊雷迪安水晶碎片,0,0.0,0.0,TTTT,15,1.0
+647016,misc_0533,可以和柯拉佩達[巴伊寶拉之翼]雷那兌換有用的道具。,icon_item_wingcoin,,,,,,,,巴伊寶拉之翼鑄幣,0,0.0,0.0,FFFT,15,1.0
 647017,misc_gemExpStone10_Premium,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,,,發光的8星寶石研磨劑,0,0.0,0.0,TTFT,15,1.0
 647018,widnium_piece_Premium,聽說這是透過凱都拉商拉從很遠很遠的地方帶進來的珍貴礦物。{nl}傳聞說就算手上持有這個礦物，它也自動回到它原來的地方。{nl}佩迪米安的戴利亞貝利斯聽了傳聞想要研究急著找這個礦石。{nl}如果把這個礦石轉交給戴利亞貝利斯'鑽石鐵砧(14天)'可以交換1個。{nl}此道具活動結束時統一刪除。,icon_item_widnium_piece,,,,,,,,威德礦石碎片,0,0.0,0.0,FFFF,15,1.0
 648501,emoticonItem_1,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：凱帕(高興),0,0.0,0.0,FFFF,6,1.0
@@ -2368,9 +2377,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 651004,GuildColony_Item_Divine_Flag,設置在180秒內可以移動到該位置的旗幟。{nl}使用[領地戰] 傳送卷軸-領地戰道具的公會成員才可以移動到旗幟的位置。 {nl}只有非佔領該據點地區的公會成員才可以使用。{nl}與公會成員共享冷卻時間。,icon_item_divine_flag,,,,,,,,[領地戰] 神聖旗幟,100,300.0,0.0,FFTT,6,1.0
 651005,GuildColony_Item_mysticCristal,無法戰鬥時，使用神秘水晶可以在原地復活。{nl}只有在據點地區才可以使用。,icon_item_soulcrystal_colony,,,,,,,[9029],[領地戰] 神秘水晶,0,300.0,0.0,FFFT,6,0.0
 651006,GuildColony_Item_AoE_Revive_Scroll,使用時，可以將畫面內無法戰鬥的公會成員們以HP、SP恢復50%的狀態復活。{nl}只有在據點地區才可以使用。{nl}與公會成員共享冷卻時間。,icon_item_aoe_revive_scroll,,,,,,,[9030],[領地戰] 廣域復活卷軸,0,1200.0,0.0,FFFT,6,0.0
-651007,GuildColony_Item_Scroll_Warp_Colony,使用時，可以移動至據點地區。{nl}    - 佔領公會 : 該佔領地區的領地塔{nl}    - 非佔領公會 : 設置神聖旗幟的位置{nl} 無法在據點地區使用。,icon_item_warp_scroll_colony,,,,,,,,[領地戰] 傳送卷軸-領地戰,100,300.0,0.0,FFTT,6,1.0
+651007,GuildColony_Item_Scroll_Warp_Colony,使用時可以前往據點地區。{nl}將前往據點地區內神聖的旗幟的設置地點。{nl}無法在據點地區內使用。{nl}此物品只能由非占領公會成員使用。,icon_item_warp_scroll_colony,,,,,,,,[領地戰] 傳送卷軸-領地戰,100,300.0,0.0,FFTT,6,1.0
 651008,GuildColony_Item_mysticCristal_Colony_Support2,無法戰鬥時，使用神秘水晶可以在原地復活。{nl}只有在據點地區才可以使用。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_soulcrystal_colony,,,,,,,,[領地戰支援] 神秘水晶,0,300.0,0.0,FFFT,6,0.0
-651009,GuildColony_Item_Scroll_Warp_Colony_Support2,使用時，可以移動至據點地區。{nl}    - 佔領公會 : 該佔領地區的領地塔{nl}    - 非佔領公會 : 設置神聖旗幟的位置{nl} 無法在據點地區使用。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_warp_scroll_colony,,,,,,,,[領地戰支援] 傳送卷軸-領地戰,0,300.0,0.0,FFFT,6,1.0
+651009,GuildColony_Item_Scroll_Warp_Colony_Support2,使用時可以前往據點地區。{nl}將前往據點地區內神聖的旗幟的設置地點。{nl}無法在據點地區內使用。{nl}這是支援領地戰而發放的道具。{nl}此物品只能由非占領公會成員使用。{nl}活動結束後將統一刪除。,icon_item_warp_scroll_colony,,,,,,,,[領地戰支援] 傳送卷軸-領地戰,0,300.0,0.0,FFFT,6,1.0
 651010,GuildColony_Item_Observation_Scroll,使用時5秒內可以確認位在據點地區的佔領公會員的位置。{nl}只有非佔領據點地區的公會員可以使用。,icon_item_observation_scroll,,,,,,,,[領地戰] 偵察用地圖,100,180.0,0.0,FFTT,6,1.0
 653041,stonetablet05,在魔法師之塔發現的第五個啟示，可以閱讀。,icon_item_stonetablet,[642017],,,,,,,魔法師之塔的啟示,0,0.0,0.0,FFFF,20,0.0
 660000,CHATHEDRAL54_SQ01_PART1_ITEM,和詛咒有關的魔君主相關文獻，對那柯堤斯相關內容有相當深入的描寫。,icon_item_magicpaper,,,,,,,,詛咒的魔君主那柯堤斯,0,0.0,0.0,FFFF,20,0.0
@@ -5136,6 +5145,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699004,Rare_Enchant_Jewel,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,稀有附魔珠寶,10,0.0,0.0,TFTT,6,1.0
 699005,Unique_Enchant_Jewel,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,獨特附魔珠寶,10,0.0,0.0,TFTT,6,1.0
 699006,Legend_Enchant_Jewel,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,傳說附魔珠寶,10,0.0,0.0,TFTT,6,1.0
+699007,Event_Rare_Enchant_Jewel,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,[活動] 稀有附魔珠寶,10,0.0,0.0,FFFT,6,1.0
+699008,Event_Unique_Enchant_Jewel,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[活動] 獨特附魔珠寶,10,0.0,0.0,FFFT,6,1.0
+699009,Event_Legend_Enchant_Jewel,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[活動] 傳說附魔珠寶,10,0.0,0.0,FFFT,6,1.0
 699010,Unique_Enchant_Jewel_Team,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,獨特附魔珠寶,10,0.0,0.0,FFFT,6,1.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,15,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,15,1.0
@@ -5293,6 +5305,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900159,Exp_Card_300_14d,使用於卡片強化時可獲得 +300的經驗值。,monster_card,,,,,,,,強化用卡片：300 (14天),0,0.0,1209600.0,FFFF,15,1.0
 900160,card_Xpupkit01_500_14d,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升500。,monster_card,,,,,,,,強化用卡片 : 500 (14天),2000,0.0,1209600.0,FFFF,15,1.0
 900161,card_Xpupkit01_500_14d_Team,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升500。,monster_card,,,,,,,,強化用卡片 : 500 (14天),2000,0.0,1209600.0,FFFT,15,1.0
+900162,Gacha_HairAcc_001_event14d_Team,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_hairgacha,,,,,,,,[活動]神秘轉蛋(限時),0,0.0,1209600.0,FFFT,6,0.0
 900200,Event_160913_1,破壞樹根水晶時，以一定機率獲得。{nl}收集5個以上，到活動佈告欄參加活動吧！,icon_item_orb_1,,,,,,,,根之水晶,1,0.0,0.0,FFTF,15,0.0
 900201,Artefact_900201,發生值得恭喜的事情或是值得祝福的事所使用的鞭炮。點擊滑鼠右鍵可以進行使用。,icon_item_firework,,,,,,,,爆竹,0,3.0,0.0,FFFT,6,1.0
 900202,161215Event_NexonCash_1,恭禧你抽中Nexon5萬現金！{nl}活動結束時活動道具統一刪除。{nl}點擊滑鼠右鍵即可確認。,icon_item_event_50000cash,,,,,,,,Nexon5萬現金抽獎劵,1,0.0,0.0,FFFF,8,0.0
@@ -5569,6 +5582,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 902150,Steam_HP_Potion_7Day,HP立刻恢復40%，11秒內每隔2秒HP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion2,,,,,,,[400065],HP藥水(7天),0,20.0,604800.0,FFFT,6,3.0
 902151,Steam_SP_Potion_1Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion3,,,,,,,[400066],SP藥水(1天),0,20.0,86400.0,FFFT,6,3.0
 902152,Steam_SP_Potion_7Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion3,,,,,,,[400067],SP樂水(7天),0,20.0,604800.0,FFFT,6,3.0
+902153,Steam_Event_Carnival_Fire,收集慶典爆竹可以跟活動佈告欄交換各種道具。{nl}(使用時，10分內移動速度+2、物理攻擊力+50、魔法攻擊力+50。),icon_item_firework,,,,,,,,慶典爆竹,0,30.0,0.0,FFFT,6,0.0
 904000,EVENT_1802_MASTER_KEY1,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_1,,,,,,,,大師的考驗卷-初級,0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,從大師的訓練所得到的獎勵道具。{nl}收集5個以上可以跟大師的考驗活動小幫手交換成無限可能性的魔方。{nl}活動結束時道具統一刪除。,icon_item_gimmick_spcrystal,,,,,,,,微小可能性的碎片,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_2,,,,,,,,大師的考驗卷-中級,0,0.0,0.0,FFFT,15,1.0
@@ -5651,8 +5665,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904114,EVENT_1812_GILTINE_REWARD_BOX,吉特涅女神賜的禮物。{nl} 活動結束時道具統一刪除。,icon_item_event_giltinebox,,,,,,,,吉特涅的禮物箱,0,0.0,0.0,FFFT,8,1.0
 904126,EVENT_1712_SECOND_CHALLENG_14d_Team,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,1209600.0,FFFT,8,1.0
 904128,EVENT_1812_DAYCHECK_BALLOONBOX,3周年紀念出席打卡活動用氣球串。{nl}活動結束時道具統一刪除。,icon_item_event_balloonbox,,,,,,,,3周年氣球串,0,0.0,0.0,FFFT,8,1.0
-904134,EVENT_190110_GOLDPIG_BOX,為了紀念世界特別的成就女神所賜的特別禮物箱。{nl}紀念初次壓制斯爾利那斯雷歐的龍王普魯達之日。{nl}使用時可獲得道具。,icon_item_happybox_red,,,,,,,,[活動]黃金豬寶箱,0,0.0,0.0,FFFT,8,1.0
+904133,EVENT_190110_3DAY_BOX,參加三日養成活動獲得的獎勵箱。使用時可獲得道具。{nl}活動結束時道具統一刪除。,icon_item_happybox_blue,,,,,,,,[活動] 三日養成寶箱,0,0.0,0.0,FFFT,8,1.0
+904134,EVENT_190110_GOLDPIG_BOX,參加黃金豬活動獲得的獎勵箱。使用時可獲得道具。{nl}活動結束時道具統一刪除。,icon_item_happybox_red,,,,,,,,[活動]黃金豬寶箱,0,0.0,0.0,FFFT,8,1.0
 904135,EVENT_190110_RankReset_Point_Lv1,"職業變更點數增加100。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_3,,,,,,,,職業變更劵 Lv.1 (14天),0,0.0,1209600.0,FFFT,8,0.0
+904136,EVENT_LAB_1901_ACHIEVE_BOX,賦予TOS第4期研究員的稱號。,icon_item_holyark,,,,,,,,稱號 - TOS第4期研究員,0,0.0,0.0,FFFT,6,1.0
+904137,EVENT_190124_RankReset_Point_Lv2,"職業變更點數增加５00。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_2,,,,,,,,[活動] 職業變更劵 Lv.2(14日),0,0.0,1209600.0,FFFT,8,0.0
+904140,Class_Solution_Select_Box_Event,隱藏職業解除券選擇箱{nl} 可選擇目錄 {nl} - 忍者解除券 {nl} - 巫女解除券 {nl} - 符文師解除券 {nl} - 鑑定師解除券 {nl} - 泰拳解除券,icon_item_classsolution_box,,,,,,,,[活動] 解除券選擇箱,0,0.0,0.0,FFFT,8,0.0
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,15,1.0
