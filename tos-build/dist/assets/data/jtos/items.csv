@@ -367,7 +367,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640246,GIMMICK_Drug_PMATK2,3分間、物理攻撃力を+76、魔法攻撃力を+70アップさせます。右クリックで使用します。クールタイム180秒。,icon_item_drug_agi2,,,,,,,,ケイトリス勇猛のポーション,0,180.0,0.0,FFFF,6,10.0
 640247,GIMMICK_Drug_Restore01,3分間、最大SPが2000アップします。さらに、SP回復力を415アップさせます。右クリックで使用できます。クールタイム180秒。,icon_item_drug_atk2,,,,,,,,ケイトリス回復ポーション,0,180.0,0.0,FFFF,6,10.0
 640248,GIMMICK_Drug_PMDEF2,3分間、最大HPを2000アップ、さらに物理防御力と魔法防御力を40ずつアップさせます。右クリックで使用できます。クールタイム180秒。,icon_item_drug_def2,,,,,,,,ケイトリス守護のポーション,0,180.0,0.0,FFFF,6,10.0
-640249,food_cereal02,シマエナガの餌となる一般穀物。シマエナガのHPを全て回復させ、スタミナが+15回復します。{nl}食べられるコンパニオン{nl} - シマエナガ{nl} - フェアリーカーディナル,icon_item_confrost,,,,,,,,雑穀一握り,0,10.0,0.0,FFTF,6,1.0
+640249,food_cereal02,シマエナガの餌となる一般穀物。シマエナガのHPを全て回復させ、スタミナが+15回復します。{nl}食べられるコンパニオン{nl}-シマエナガ{nl}-フェアリーカーディナル{nl}-ピヨエナガ,icon_item_confrost,,,,,,,,雑穀一握り,0,10.0,0.0,FFTF,6,1.0
 640251,food_038,新鮮なぶどう。とても甘い香りがする。,icon_item_grape,,,,,,,,ぶどう,125,0.0,0.0,FFTF,6,1.0
 640252,food_039,美味しそうに焼き上がったバーベキュー。,icon_item_bbq,,,,,,,,BBQ,31,0.0,0.0,TTTT,6,1.0
 640253,food_040,土の香りが漂う新鮮なネギ。この形…すごく馴染みがある。,icon_item_pa,,,,,,,,ネギ,151,0.0,0.0,FFTF,6,1.0
@@ -5602,7 +5602,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904096,Extract_kit_Sliver_Team_14d,イコル抽出に使われる道具です。消耗する財貨が必要ありません。,icon_item_extractkit_sliver,,,,,,,,銀色のイコル抽出キット(14日),0,0.0,1209600.0,FFFT,15,4.0
 904097,EVENT_1810_FALL_MAPLE_LEAF,紅葉祭りイベントアイテムです。NPCに渡して参加報酬と交換することができます。{nl} 10月25日のメンテナンスで一括削除されます。,icon_item_1810_fall1,,,,,,,,大きな紅葉の葉っぱ,0,0.0,0.0,FFFT,15,0.1
 904098,EVENT_1810_FALL_GINKGO_LEAF,紅葉祭りイベントアイテムです。NPCに渡して参加報酬と交換することができます。{nl} 10月25日のメンテナンスで一括削除されます。,icon_item_1810_fall2,,,,,,,,大きな黄金紅葉の葉っぱ,0,0.0,0.0,FFFT,15,0.1
-904099,COLONYWAR_KOR_BETA_REWARD_ACHIEVE_BOX,ギルドコロニー戦ベータ参加者に支給される称号ボックスです。右クリックで使用できます。,icon_item_holyark,,,,,,,,称号 - コロニー先鋒隊,0,0.0,0.0,FFFT,6,1.0
+904099,COLONYWAR_KOR_BETA_REWARD_ACHIEVE_BOX,ギルドコロニー戦ベータ参加者に支給される称号ボックスです。右クリックで使用できます。,icon_item_holyark,,,,,,,,kisai,0,0.0,0.0,FFFT,6,1.0
 904100,Ability_Point_Stone_1000_14d_Team,使用すると、特性ポイントが1000アップします。右クリックで使用できます。,icon_item_abilitypoint,,,,,,,,特性ポイント1000 (14日),0,0.0,1209600.0,FFFT,8,1.0
 904101,Adventure_Reward_Seed_14d_Team,使用すると、女神の祝福が宿った新芽が芽吹きます。,icon_item_event161215_01,,,,,,,,祝福が宿った種(14日),0,5.0,1209600.0,FFFT,6,0.0
 904102,Event_Goddess_Statue_Team,5分間、女神の祝福を受けられる女神の彫像を設置します。,icon_item_farm47_broken_zemina,,,,,,,,女神の彫像(14日),0,0.0,1209600.0,FFFT,6,0.0
