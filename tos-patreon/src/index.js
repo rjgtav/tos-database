@@ -72,10 +72,6 @@ async function patreonAccessTokenRefresh() {
     return accessToken;
 }
 
-// Small script to collect rjgtav's patrons list and put them on a special thank you page
-// https://tos.guru/assets/favicon.png
-// https://tos.guru:8080/oauth/patreon
-
 async function patreonCampaigns(token) {
     let headers = { 'Authorization': 'Bearer ' + token };
     let response = await fetch('https://www.patreon.com/api/oauth2/v2/campaigns', { method: 'GET', headers });
