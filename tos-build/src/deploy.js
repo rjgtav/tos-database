@@ -127,14 +127,8 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             fs.unlinkSync(zip_to);
         }
 
-        // 11. Generate index and 404 (Note: has to happen after tos-html so Patreon and Region data are populated)
-        shared.log('11. Generate index and 404');
-        fsExtra.copySync(path.join('..', 'tos-web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, 'index.html'));
-        fsExtra.copySync(path.join('..', 'tos-web', 'dist', 'index.html'), path.join(sharedVariables.APACHE_WWW, '404.html'));
-        fs.unlinkSync(path.join('..', 'tos-web', 'dist', 'index.backup.html'));
-
-        // 12. Clear CloudFlare cache
-        shared.log('12. Clear CloudFlare cache');
+        // 11. Clear CloudFlare cache
+        shared.log('11. Clear CloudFlare cache');
         let cf = require('cloudflare')({ email: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
         let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-build', 'dist', 'tos-sw.manifest.js'), { encoding: 'utf8' }));
         let assetGroup = manifest.assetGroups.find(value => value.name === 'app');

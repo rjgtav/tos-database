@@ -273,8 +273,9 @@
     // XTODO: rename web to tos-web
     // XTODO: fix tinyurl which is breaking all the time.. considering implementing my own CORS or maybe do it via SW?
     // XTODO: fix deploy script always creating new commits every hour due to the manifest
-    // TODO: fix html2canvas broken submodule link
-    // TODO: test how the upgrade will work. In theory, when the client loads the new ngsw-worker, it will uninstall the existing installation and start the new process
+    // XTODO: fix html2canvas broken submodule link
+    // XTODO: test how the upgrade will work. In theory, when the client loads the new ngsw-worker, it will uninstall the existing installation and start the new process
+    // XTODO: build script is always commiting at least the index.json? even when there's no new patch
     // TODO: review cloudflare configuration so we don't cache the worker and the versions file
     // TODO: update deploy.js so it clears cloudflare's cache for tos.guru instead of beta.tos.guru
 

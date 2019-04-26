@@ -41,9 +41,7 @@ let archive = archiver('zip', { zlib: { level: 9 }});
     archive.pipe(output);
 
 // Load base template
-let templateBase = fs.existsSync(path.join(folder_dist_web, 'index.backup.html'))
-    ? fs.readFileSync(path.join(folder_dist_web, 'index.backup.html'), 'utf8')
-    : fs.readFileSync(path.join(folder_dist_web, 'index.html'), 'utf8');
+let templateBase = fs.readFileSync(path.join(folder_dist_web, 'index.html'), 'utf8');
 
 // Inject patreon & region data
 let patreonPath = path.join(folder_dist_build, 'patreon.json');
@@ -113,7 +111,7 @@ let files = fs.readdirSync(folder_database);
         archive.append(outputList, { name: path.join(folder_archive_database, dataset, 'index.html')});
     });
 
-// Generate home pages
+// Generate home pages (including main index and 404)
 let row = {};
     row['region'] = REGION.toLowerCase();
     row['seo-description'] = 'Tree of Savior - Open-source Database and Skill Simulator';
@@ -125,15 +123,14 @@ let row = {};
 let outputHome = fs.readFileSync(path.join(folder_app, 'home', 'welcome', 'welcome.component.html'), 'utf8');
     outputHome = templatePopulate(row, templateBase.replace(/#{content}#/g, outputHome));
 
+archive.append(outputHome, { name: path.join('', '404.html')});
+archive.append(outputHome, { name: path.join('', 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_database, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_home, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_region, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_patreon, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_simulator, 'index.html')});
 archive.finalize();
-
-fs.writeFileSync(path.join(folder_dist_web, 'index.html'), outputHome);
-fs.writeFileSync(path.join(folder_dist_web, 'index.backup.html'), templateBase); // Backup base html page for next use
 
 // #####################################################################################################################
 //  Value formatters
