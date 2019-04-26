@@ -36,7 +36,7 @@
     "fs-extra": "^7.0.1",
     "html-webpack-include-assets-plugin": "^1.0.6",
     "html-webpack-plugin": "^3.2.0",
-    "html2canvas": "github:niklasvh/html2canvas#pull/1653/head",
+    "html2canvas": "^1.0.0-rc.1",
     "jquery": "^3.3.1",
     "minify": "^4.1.0",
     "ng-click-outside": "^4.0.0",
