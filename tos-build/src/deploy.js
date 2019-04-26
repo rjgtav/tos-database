@@ -144,7 +144,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
                 // Note: PWA icons will be manually cleared when necessary
             ]);
 
-        urls = urls.map(value => 'https://beta.tos.guru' + value);
+        urls = urls.map(value => 'https://tos.guru' + value);
 
         try {
             await cf.zones.purgeCache(sharedVariables.CF_ZONE, { files: urls });
