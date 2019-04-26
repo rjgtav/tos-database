@@ -15,6 +15,8 @@ export class LUAService {
     '// LUA CONTEXT BEGIN ---------------------------',
     'var PARTY_NORMAL = 0;',
     'var GetAbility = (a, b) => null;',
+    'var GetClassList = (a) => null;',
+    'var GetClassByNameFromList = (a) => null;',
     'var GetExProp = (a, b) => null;',
     'var GetSumOfEquipItem = (a, b) => 0;',
     'var GetZoneName = (a) => null;',

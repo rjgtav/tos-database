@@ -278,6 +278,9 @@
     // XTODO: build script is always commiting at least the index.json? even when there's no new patch
     // XTODO: review cloudflare configuration so we don't cache the worker and the versions file
     // XTODO: update deploy.js so it clears cloudflare's cache for tos.guru instead of beta.tos.guru
+    // XTODO: http://localhost:4200/itos/database/skills/50101 CaptionRatio3 is crashing
+    // XTODO: kTEST have broken cooldown and SP again :/
+    // XTODO: level cap has been updated to 420...
 
     // Deployment
     // Replace existing ngsw-worker with safety-worker (rename it to ngsw-worker.js), so the old SW unregisters itself

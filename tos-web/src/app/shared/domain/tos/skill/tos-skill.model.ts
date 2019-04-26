@@ -95,14 +95,20 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       await Promise.all(this.EffectProps.map(async match => {
         // console.log('prop:', match[1]);
         let prop = match[1];
-        let result = await this.effectToEval(prop, build).toPromise();
+        let result = null;
+
+        try {
+          result = await this.effectToEval(prop, build).toPromise();
+        } catch (e) {
+          console.error('Failed to calculate prop', prop, 'for skill', this, e);
+        }
 
         if (result != null)
           for (let dependency of result.dependencies)
             if (dependencies.indexOf(dependency) == -1)
               dependencies.push(dependency);
 
-        if (showFactors && level == 0) {
+        if (result == null || showFactors && level == 0) {
           effect = effect.replace(match[0], '<b>[' + prop + ']</b>')
         } else {
           effect = effect.replace(match[0], (result != null ? result.value : 0) + (result.dependencies.length ? '*' : ''));
