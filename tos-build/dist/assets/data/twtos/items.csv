@@ -5225,7 +5225,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 730201,Paste_Bait_silverfish_small,釣魚釣到的小魚。有很高機率釣到魚以外的東西。,icon_item_fish4,,,,,,,,小銀光魚,10,0.0,0.0,FFTT,16,1.0
 730202,Paste_Bait_shrimp,釣魚用的中級魚餌。有很高機率釣到魚以外的東西。,icon_item_paste_bait_mineral_1,,,,,,,,蝦子,100,0.0,0.0,FFTT,16,1.0
 730203,Paste_Bait_basic_2,釣魚用的下級魚餌。魚兒們很喜歡。,icon_item_paste_bait_basic,,,,,,,,補給用魚餌,10,0.0,0.0,FFFT,16,1.0
-730204,Paste_Bait_basic_pcbang1,釣魚用的高級誘餌，魚咬了會有反應。,icon_item_paste_bait2_pp,,,,,,,,[網咖] 華麗的蚯蚓,100,0.0,0.0,FFTT,16,1.0
+730204,Paste_Bait_basic_pcbang1,釣魚用的高級誘餌，魚咬了會有反應。,icon_item_paste_bait2_pp,,,,,,,,[POPOshop] 華麗的蚯蚓,100,0.0,0.0,FFTT,16,1.0
 730205,Paste_Bait_octopus,釣魚用的高級誘餌，吞了圖鑑材料的魚會有反應。{nl} {nl}圖鑑清單{nl} - 蓮帕拉沙池塘{nl} - 加橋森林{nl} - 帕歐皮斯渡口{nl} - 亞夏克地牢{nl} - 庫魯森林{nl} - 克尼多斯森林{nl} - 達旦森林{nl} - 內貝爾雷礦山{nl} - 諾巴哈地區{nl} - 怪物標本組合{nl} - 夏爾雷依西邊森林{nl} - 夏爾雷依東邊森林{nl} - 夏爾雷依礦山村莊{nl} - 水晶礦山{nl} - 斯拉屋塔斯峽谷{nl} - 凱利高原{nl} - 奈普里塔斯懸崖{nl} - 泰內花園{nl} - 貝雅山谷{nl} - 比爾塔溪谷{nl} - 科博爾特森林{nl} - 賽堤尼山溝{nl} - 泰內聖堂,icon_item_octopus,,,,,,,,章魚,10,0.0,0.0,FFTT,16,1.0
 730300,Paste_Bait_lure,釣魚用的高級魚餌。會有很棒的獎勵喔。,icon_item_paste_bait_mineral_1,,,,,,,,鱸魚,0,0.0,0.0,FFFT,16,1.0
 730400,Spread_Bait_basic,釣魚機率增加 3.3% {nl}持續時間10分鐘{nl}在釣魚場使用能增加所在釣魚場的釣魚機率。冷卻時間10分鐘。,icon_item_spread_bait_basic,,,,,,,,普通米飯餌,1000,600.0,0.0,FFTT,6,5.0
