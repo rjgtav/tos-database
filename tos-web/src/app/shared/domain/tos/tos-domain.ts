@@ -20,15 +20,17 @@ function EnumServiceFactory<T>(enumeration: T): EnumService<any> {
 }
 
 export enum TOSAttackType {
-  PIERCING = 'Piercing',
-  BOW = 'Missile: Bow',
-  CANNON = 'Missile: Cannon',
-  GUN = 'Missile: Gun',
+  BUFF = 'Buff',
   MAGIC = 'Magic',
+  MISSILE = 'Missile',
+  MISSILE_BOW = 'Missile: Bow',
+  MISSILE_CANNON = 'Missile: Cannon',
+  MISSILE_GUN = 'Missile: Gun',
   MELEE = 'Melee',
-  SLASH = 'Slash',
-  STRIKE = 'Strike',
-  THRUST = 'Thrust',
+  MELEE_PIERCING = 'Piercing',
+  MELEE_SLASH = 'Slash',
+  MELEE_STRIKE = 'Strike',
+  MELEE_THRUST = 'Thrust',
   UNKNOWN = '',
 }
 
