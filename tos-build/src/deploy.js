@@ -90,30 +90,27 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
         result.status !== 0 && shared.logError('Failed to service worker', result);
 
-        // 8. Commit changes
-        is_new_patch = commitChanges('Service Worker', 8) || is_new_patch;
-
         shared.log(`
             +============================================================+
             | Deploying...                                               |
             +============================================================+
         `);
 
-        // 9. Deploy on Apache
-        shared.log('9. Deploy on Apache');
+        // 8. Deploy on Apache
+        shared.log('8. Deploy on Apache');
         fsExtra.copySync(path.join('..', 'tos-build', 'dist'), sharedVariables.APACHE_WWW);
         fsExtra.copySync(path.join('..', 'tos-web', 'dist'), sharedVariables.APACHE_WWW);
 
         for (let region of shared.REGIONS) {
-            // 10.1. Pre-render HTML for web crawlers
-            shared.log(`[${ region }] 10.1. Pre-render HTML for web crawlers`);
+            // 9.1. Pre-render HTML for web crawlers
+            shared.log(`[${ region }] 9.1. Pre-render HTML for web crawlers`);
             cwd = path.join('..', 'tos-html');
 
             result = childProcess.spawnSync(`npm run main ${ region }`, { cwd, shell: true, stdio: 'inherit' });
             result.status !== 0 && shared.logError('Failed to tos-html', result);
 
-            // 10.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)
-            shared.log(`[${ region }] 10.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)`);
+            // 9.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)
+            shared.log(`[${ region }] 9.2. Unzip pre-rendered HTML ( ͡° ͜ʖ ͡°)`);
             cwd = sharedVariables.APACHE_WWW;
 
             let zip_from = path.join('..', 'tos-build', 'dist', region.toLowerCase() + '.zip');
@@ -127,8 +124,8 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             fs.unlinkSync(zip_to);
         }
 
-        // 11. Clear CloudFlare cache
-        shared.log('11. Clear CloudFlare cache');
+        // 10. Clear CloudFlare cache
+        shared.log('10. Clear CloudFlare cache');
         let cf = require('cloudflare')({ email: sharedVariables.CF_EMAIL, key: sharedVariables.CF_KEY});
         let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-build', 'dist', 'tos-sw.manifest.js'), { encoding: 'utf8' }));
         let assetGroup = manifest.assetGroups.find(value => value.name === 'app');

@@ -45,6 +45,10 @@ let manifest = JSON.parse(fs.readFileSync(path.join('..', 'tos-web', 'ngsw-confi
             })
         });
 
+        // HotFix: whenever the deploy script runs this tos-sw, it means there's a new patch
+        // Unfortunately the new region.json is only injected in the tos-html (which runs after this one), so we have to force here the index.html to update
+        assetGroup.versions['/index.html'] = new Date();
+
         // Clear unused properties
         delete assetGroup.resources;
     });
