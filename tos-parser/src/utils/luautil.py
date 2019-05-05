@@ -314,7 +314,7 @@ def lua_function_load(function_source):
 
 
 def lua_function_name(function):
-    return function[function.index('function ') + len('function '):function.index('(')]
+    return function[function.index('function ') + len('function '):function.index('(')].strip()
 
 
 def lua_function_reference(function_name):
