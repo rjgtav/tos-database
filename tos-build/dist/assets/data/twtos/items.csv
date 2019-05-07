@@ -140,6 +140,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 495086,Premium_VIPPack,點擊滑鼠右鍵時可獲得組合物品。{nl}-即時副本倍數VIP x 2{nl}-大王蜜松糕 x 10,icon_item_giftbox_3,,,,,,,,VIP優惠禮包,0,0.0,0.0,FFFT,8,0.0
 495121,Premium_Enchantchip14_Team,使用於頭部套裝時，賦予效果會隨機追加。賦予效果最多可以產生3個。無法對套用的裝備使用。點擊滑鼠右鍵使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_enchantscroll,,,,,,,,[活動]魔法賦予卷軸(限時),0,0.0,1209600.0,FFFT,8,0.0
 495123,Premium_awakeningStone14_Team,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,,,[活動]覺醒石(限時),0,0.0,1209600.0,FFFT,8,0.0
+495125,Ability_Point_Stone_5_Team,使用時特性點數增加5，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint7,,,,,,,,特性點數5(14天),0,0.0,1209600.0,FFFT,8,1.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,,,耐力 +5 增加藥水,200,0.0,0.0,FFFF,6,1.0
 640002,Drug_HP1,HP立刻恢復273，15秒內每隔2秒HP恢復273，點擊滑鼠右鍵使用。,item_hp_oil_1,,,,,,,,HP藥水(小),16,25.0,0.0,FFTF,6,7.0
 640003,Drug_HP2,HP立刻恢復462，15秒內每隔2秒HP恢復462，點擊滑鼠右鍵使用。,item_hp_oil_2,,,,,,"[3001, 3003, 3004, 3006, 3007, 3009, 3010, 3012, 3013, 3015, 3016, 3018, 3019, 3021, 3022]",,HP藥水,32,25.0,0.0,FFTF,6,7.0
@@ -5227,10 +5228,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 730203,Paste_Bait_basic_2,釣魚用的下級魚餌。魚兒們很喜歡。,icon_item_paste_bait_basic,,,,,,,,補給用魚餌,10,0.0,0.0,FFFT,16,1.0
 730204,Paste_Bait_basic_pcbang1,釣魚用的高級誘餌，魚咬了會有反應。,icon_item_paste_bait2_pp,,,,,,,,[POPOshop] 華麗的蚯蚓,100,0.0,0.0,FFTT,16,1.0
 730205,Paste_Bait_octopus,釣魚用的高級誘餌，吞了圖鑑材料的魚會有反應。{nl} {nl}圖鑑清單{nl} - 蓮帕拉沙池塘{nl} - 加橋森林{nl} - 帕歐皮斯渡口{nl} - 亞夏克地牢{nl} - 庫魯森林{nl} - 克尼多斯森林{nl} - 達旦森林{nl} - 內貝爾雷礦山{nl} - 諾巴哈地區{nl} - 怪物標本組合{nl} - 夏爾雷依西邊森林{nl} - 夏爾雷依東邊森林{nl} - 夏爾雷依礦山村莊{nl} - 水晶礦山{nl} - 斯拉屋塔斯峽谷{nl} - 凱利高原{nl} - 奈普里塔斯懸崖{nl} - 泰內花園{nl} - 貝雅山谷{nl} - 比爾塔溪谷{nl} - 科博爾特森林{nl} - 賽堤尼山溝{nl} - 泰內聖堂,icon_item_octopus,,,,,,,,章魚,10,0.0,0.0,FFTT,16,1.0
+730299,Event_1902_mudfish,用於釣魚的特殊魚餌。用作魚餌時，可以各自不同的機率獲得[活動]藏在池塘內的寶箱、銀色魚、小銀色魚。{nl}未使用的[活動]悠夏飼養的泥鰍將於活動結束時道具統一刪除。'特性點數5(14天)' 道具變更。  ,icon_item_event1902_bait,,,,,,,,[活動]悠夏飼養的泥鰍,10,0.0,0.0,FFFT,16,1.0
 730300,Paste_Bait_lure,釣魚用的高級魚餌。會有很棒的獎勵喔。,icon_item_paste_bait_mineral_1,,,,,,,,鱸魚,0,0.0,0.0,FFFT,16,1.0
 730400,Spread_Bait_basic,釣魚機率增加 3.3% {nl}持續時間10分鐘{nl}在釣魚場使用能增加所在釣魚場的釣魚機率。冷卻時間10分鐘。,icon_item_spread_bait_basic,,,,,,,,普通米飯餌,1000,600.0,0.0,FFTT,6,5.0
+730499,Event_1902_Spread_Bait,釣魚機率增加 3.3% {nl}持續時間10分鐘{nl}在釣魚場使用能增加所在釣魚場的釣魚機率。冷卻時間10分鐘。,icon_item_spread_bait_basic,,,,,,,,[活動]普通米飯餌(1天),1000,600.0,86400.0,FFFT,6,5.0
 730500,Spread_Bait_Premium_1,釣魚機率增加 5.5% {nl}持續時間10分鐘{nl}在釣魚場使用能增加所在釣魚場的釣魚機率。冷卻時間10分鐘。,icon_item_spread_bait_premium_1,,,,,,,,高級米飯餌,0,600.0,0.0,FFFT,6,1.0
 730600,Fishing_Fire_basic,釣魚周期減少 5秒 {nl}持續時間10分鐘 {nl}只能在釣魚場使用。冷卻時間10分鐘。,icon_item_fishing_fire_basic,,,,,,,,釣魚營火,500,600.0,0.0,FFTT,6,10.0
+730699,Event_1902_Fishing_Fire,釣魚周期減少 5秒 {nl}持續時間10分鐘 {nl}只能在釣魚場使用。冷卻時間10分鐘。,icon_item_fishing_fire_basic,,,,,,,,[活動]釣魚營火(1天),0,600.0,86400.0,FFFT,6,10.0
 730700,Fishing_Fire_Premium_1,釣魚周期減少 10秒 {nl}持續時間30分鐘 {nl}只能在釣魚場使用。冷卻時間10分鐘。,icon_item_woodpiece,,,,,,,,勞務營火,0,600.0,0.0,FFFT,6,10.0
 730800,Red_Fish,紅色的小魚。,icon_item_fish1,,,,,,,,紅色魚,0,0.0,0.0,FFFT,6,1.0
 730801,Silver_Fish,發出銀光的大尾魚，生火可以烤來吃。,icon_item_fish2,,,,,,,,銀光魚,0,1.0,0.0,FFFT,6,1.0
@@ -5671,6 +5675,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904136,EVENT_LAB_1901_ACHIEVE_BOX,賦予TOS第4期研究員的稱號。,icon_item_holyark,,,,,,,,稱號 - TOS第4期研究員,0,0.0,0.0,FFFT,6,1.0
 904137,EVENT_190124_RankReset_Point_Lv2,"職業變更點數增加５00。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_2,,,,,,,,[活動] 職業變更劵 Lv.2(14日),0,0.0,1209600.0,FFFT,8,0.0
 904140,Class_Solution_Select_Box_Event,隱藏職業解除券選擇箱{nl} 可選擇目錄 {nl} - 忍者解除券 {nl} - 巫女解除券 {nl} - 符文師解除券 {nl} - 鑑定師解除券 {nl} - 泰拳解除券,icon_item_classsolution_box,,,,,,,,[活動] 解除券選擇箱,0,0.0,0.0,FFFT,8,0.0
+904141,EVENT_1902_FISHBOX,點擊滑鼠右鍵即可使用。使用時可獲得寶箱內道具中的一種。{nl} - 特性點數 100(14天) x2{nl} - 魔法賦予卷軸(14天) x1{nl} - 強化用卡片：500(14天) x1{nl} - 5星寶石研磨劑(14天){nl} - 覺醒石(14天) x1{nl} - 執事與女僕套裝寶箱(黑色) x1{nl}活動時道具統一刪除。,icon_item_happybox_red,,,,,,,,[活動]藏在池塘內的寶箱,0,0.0,0.0,FFFT,8,1.0
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,15,1.0
