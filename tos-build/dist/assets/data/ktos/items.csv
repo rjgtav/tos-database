@@ -798,6 +798,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643038,Dirbtumas_kit,아이커 연성에 사용되는 도구입니다. 일반 도구로 테리아베리스에게서 구매할 수 있습니다.,icon_item_dirbtumas_kit,,,,,,,,아이커 연성 키트,0,0.0,0.0,FFTF,15,4.0
 643039,Dirbtumas_kit_Sliver,아이커 연성에 사용되는 도구입니다. 소모하는 재화가 필요 없습니다.,icon_item_dirbtumas_kit_silver,,,,,,,,은빛 아이커 연성 키트,0,0.0,0.0,FFTF,15,4.0
 643041,Moru_Silver_Team_Able,모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 실버 소비 없이 장비를 강화할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_anvil_silver,,,,,,,,은빛 모루(14일),0,0.0,1209600.0,FFFT,15,1.0
+643042,Transcend_Scroll_3_Event_1905,"장비의 초월 수치를 3단계로 만들어줍니다.{nl}0~2단계 초월 아이템만 사용할 수 있으며, 3초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 3초월 상태로 변경됩니다.{nl}7월 11일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 3초월 스크롤,0,0.0,0.0,FFFT,6,1.0
+643043,Transcend_Scroll_5_Event_1905,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.{nl}7월 11일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,6,1.0
+643044,Transcend_Scroll_8_Event_1905,"장비의 초월 수치를 8단계로 만들어줍니다.{nl}0~7단계 초월 아이템만 사용할 수 있으며, 8초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 8초월 상태로 변경됩니다.{nl}7월 11일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 8초월 스크롤,0,0.0,0.0,FFFT,6,1.0
 645002,D_Bube_Mane,수정에 오래 노출된 부베들에게서만 얻을 수 있는 어두운 마석,icon_item_evilenergy_piece,,,,,,,,부베 마석,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,달콤한 향이 나는 꽃잎입니다. 하나밍에게서 획득합니다.,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,하나밍 꽃잎,1,0.0,0.0,TTTT,15,1.0
 645025,TreasureboxKey2,보물 상자 LV 2을 여는데 사용되는 열쇠,icon_item_key1,,,,,,,,LV2 보물상자 열쇠,0,0.0,0.0,FFTF,15,1.0
@@ -1730,6 +1733,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647033,misc_0541,깨어진 문양이 기존의 문양과 다른 힘을 갖고있습니다. 어쩌면 저 금색 광물의 배치에 따라 힘이 다른건 아닐까 싶습니다.,icon_item_misc_0535,,,,,,"[30701, 30702, 30703, 30704, 50032, 50038, 50040, 50041, 50046]",,부서진 문양 파편,5,0.0,0.0,TTTT,15,30.0
 647034,misc_0542,[Episode11] 에피소드 업데이트 기념 주화입니다. 5월 9일 삭제됩니다.,icon_item_crimson2,,,,,,,,[Episode11] 성장의 보석,5,0.0,0.0,FFFF,15,0.1
 647035,misc_0543,[Episode11] 에피소드 업데이트 기념 탐험의 새싹 주화입니다. 5월 9일 삭제됩니다. {nl} {nl}탐험의 새싹 상점에서 사용 가능합니다.,item_icon_sprout,,,,,,,,[Episode11] 탐험의 새싹,5,0.0,0.0,FFFT,15,0.1
+647036,misc_0544,트린이 이벤트를 기념하여 포포리온을 본따 만든 뱃지입니다.{nl}6월 27일 삭제됩니다.{nl}트린이 이벤트 상점에서 사용 가능합니다.,icon_item_1905_popolion_badge,,,,,,,,[이벤트] 포포리온 뱃지,5,0.0,0.0,FFFT,15,0.1
 648501,emoticonItem_1,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 케파(기쁨),0,0.0,0.0,FFFF,6,1.0
 648502,emoticonItem_2,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 케파(슬픔),0,0.0,0.0,FFFF,6,1.0
 648503,kupole_emotion01,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 큐폴(데헷),0,0.0,0.0,FFFT,6,1.0
@@ -2006,7 +2010,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 650484,MROKAS_BOMBFLOWER,부식된 나뭇잎,icon_item_leaf,,,,,,,,부식된 나뭇잎,0,0.0,0.0,FFFF,20,0.0
 650485,MROKAS_BOMBFUSE,기름묻은 도화선,icon_item_tentaclel,,,,,,,,기름묻은 도화선,0,0.0,0.0,FFFF,20,0.0
 650486,FTOWER42_MQ_04_ITEM,불의 힘을 가진 몬스터라면 누구든 가지고 있는 근원. 홍염의 보석을 만드는데 쓰입니다.,icon_item_gem_elemental3,,,,,,,,불꽃의 근원,0,0.0,0.0,FFFF,20,0.0
-650487,FTOWER42_MQ_01_ITEM,불의 단지를 찾는데 용이하다만 어째서 그리타가 가지고 있을까요?,icon_item_lrod,,,,,,,,홍염 탐지 막대,0,10.0,0.0,FFFF,20,0.0
+650487,FTOWER42_MQ_01_ITEM,불의 단지를 찾는데 용이하다만 어째서 그리타가 가지고 있을까요?,icon_item_lrod,,,,,,,,홍염 탐지 막대,0,4.0,0.0,FFFF,20,0.0
 650494,ROKAS24_SQ_01_ITEM,퀘스트 아이템입니다,icon_item_small_bag,,,,,,,,피노를 잡는데 사용할 자루,0,7.0,0.0,FFFF,20,0.0
 650495,ROKAS24_SQ_03_ITEM,몬스터가 훔쳐간 연구자료. 연구자료는 몬스터에 의한 도난이 유독 잦은 것 같습니다.,icon_item_diary,,,,,,,,연구자료,0,0.0,0.0,FFFF,20,0.0
 650497,ROKAS_24_PINO,퀘스트 아이템입니다,icon_item_small_bag,,,,,,,,피노가 든 자루,0,0.0,0.0,FFFF,20,0.0
@@ -2854,7 +2858,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 663072,UNDER_67_SQ020_ITEM01,병사의 유물에서 나온 반지,act4_bishopring,,,,,,,,반지,0,25.0,0.0,FFFF,20,0.0
 663073,UNDER68_MQ1_ITEM01,몬스터의 알. 속박의 징표를 만들 재료입니다.,icon_item_moa_wen,,,,,,,,초록 인프로홀더의 알,0,25.0,0.0,FFFF,20,0.0
 663074,UNDER68_MQ2_ITEM01,마족의 뼈. 이걸로 무얼 만드려고?,icon_item_bone,,,,,,,,마족의 뼈,0,25.0,0.0,FFFF,20,0.0
-663075,UNDER68_MQ3_ITEM01,기분 나쁜 느낌이 드는 보주. 마족의 생기를 흡수한다고 합니다.,icon_item_core_05purple,,,,,,,,흡수의 보주,0,25.0,0.0,FFFF,20,0.0
+663075,UNDER68_MQ3_ITEM01,기분 나쁜 느낌이 드는 보주. 마족의 생기를 흡수한다고 합니다.,icon_item_core_05purple,,,,,,,,흡수의 보주,0,10.0,0.0,FFFF,20,0.0
 663076,UNDER68_MQ4_ITEM01,루클리스 시대의 영혼들을 강제로 속박할 수 있습니다.,icon_item_core_06black,,,,,,,,속박의 증표,0,5.0,0.0,FFFF,20,0.0
 663077,UNDER68_SQ1_ITEM01,딥디르비 마스터가 만들어준 부엉이 조각상을 담은 꾸러미. 조립식입니다.,icon_item_small_bag,,,,,,,,부엉이 조각상 꾸러미,0,25.0,0.0,FFFF,20,0.0
 663078,UNDER69_MQ2_ITEM01,루클리스의 장치를 수리하는데 필요한 부품. 비슷비슷한 부품을 찾으면 될 것 같습니다.,icon_item_part2,,,,,,,,방어 함정의 부품,0,25.0,0.0,FFFF,20,0.0
@@ -3581,7 +3585,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 666243,CASTLE93_MAIN03_ITEM,외성벽 제 11구역에 모여있는 마족들이 들고 있는 지령서. 다른 곳에서 봤던 지령서와 같이 난해한 마족어로 기록되어 읽을 수 없습니다.,icon_item_ring_120010,,,,,,,,마족의 지령서,0,0.0,0.0,FFFF,20,0.0
 666244,CASTLE93_MAIN04_ITEM,드루이드 마스터가 준 변신 시약병입니다. 이걸 이용해 주변에서 본 적이 있는 마족으로 일정 시간동안 변신할 수 있다고 합니다.,icon_item_misc04_60,,,,,,,,변신 시약병,0,60.0,0.0,FFFF,20,0.0
 666245,CASTLE94_MAIN03_ITEM,도사 마스터가 준 정화부입니다. 겉보기에는 일반 괴황지로 보이나 사악한 기운이 닿는 곳에 붙이면 그 효력이 나타난다고 합니다.,icon_item_guehwangji,,,,,,,,정화부,0,0.0,0.0,FFFF,20,0.0
-666246,CASTLE94_MAIN04_ITEM,엑소시스트 마스터가 준 정화의 성수입니다. 약해진 마족에게 뿌리면 영혼의 정화를 일으킬 수 있습니다.,icon_item_holywater,,,,,,,,정화의 성수,0,10.0,0.0,FFFF,20,0.0
+666246,CASTLE94_MAIN04_ITEM,엑소시스트 마스터가 준 정화의 성수입니다. 약해진 마족에게 뿌리면 영혼의 정화를 일으킬 수 있습니다.,icon_item_holywater,,,,,,,,정화의 성수,0,6.0,0.0,FFFF,20,0.0
 666247,CASTLE94_MAIN07_ITEM,엑소시스트 마스터가 준 작은 여신상입니다. 이 여신상을 가지고 다니면 사악한 기운이 여신상에 모여 정화되면서 여신상이 더 큰 힘을 발휘한다고 합니다.,icon_item_farm47_broken_zemina,,,,,,,,정화의 여신상,0,0.0,0.0,FFFF,20,0.0
 666248,CASTLE95_MAIN03_ITEM01,폭약통 속에 들어있던 폭탄입니다. 그 위력은 던져봐야 알 수 있을 것 같습니다.,icon_item_bullet_poison,,,,,,,,투척용 폭탄,0,0.0,0.0,FFFF,20,0.0
 666249,CASTLE95_MAIN03_ITEM02,폭약고에 넘쳐나는 화약 상자입니다. 화약의 양이 많아 무거우므로 하나 밖에 들지 못합니다. 자칫 잘못으로 불이 붙여졌다간 한 방에 여신 곁으로 가게 될지도 모릅니다.,icon_item_stuff_box_c,,,,,,,,화약 상자,0,0.0,0.0,FFFF,20,0.0
@@ -5195,7 +5199,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699008,Event_Unique_Enchant_Jewel,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,[이벤트] 유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
 699009,Event_Legend_Enchant_Jewel,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[이벤트] 레전드 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
 699010,Unique_Enchant_Jewel_Team,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
-699011,Legend_ExpPotion_2,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 전투 시작전 활성화가 필요합니다.,icon_item_empty_partis,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,50.0
+699011,Legend_ExpPotion_2,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 전투 시작전 활성화가 필요합니다.,icon_item_empty_partis,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,5.0
+699012,Legend_ExpPotion_2_complete,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 전투 시작전 활성화가 필요합니다.,icon_item_full_partis2,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,10.0
 700000,KQ_token_hethran_1,"Lv 260 부터 사용가능{nl}헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_1,,,,,,,,헤스란 증표 Lv1,2000,5.0,0.0,TTTT,15,1.0
 700001,KQ_token_hethran_2,"Lv 300 부터 사용가능{nl}헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_2,,,,,,,,헤스란 증표 Lv2,2000,5.0,0.0,TTTT,15,1.0
 700002,KQ_token_hethran_3,"헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_2,,,,,,,,헤스란 증표 Lv3,2000,0.0,0.0,TTTT,15,1.0
@@ -5274,7 +5279,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 730203,Paste_Bait_basic_2,낚시에 사용하는 하급 미끼입니다. 물고기가 좋아합니다.,icon_item_paste_bait_basic,,,,,,,,보급용 미끼,10,0.0,0.0,FFFT,16,1.0
 730204,Paste_Bait_basic_pcbang1,낚시에 사용하는 상급 미끼입니다. 무언가를 삼키고 있는 물고기가 반응합니다.,icon_item_paste_bait2_pc,,,,,,,,[PC방] 화려한 지렁이,100,0.0,0.0,FFTT,16,1.0
 730205,Paste_Bait_octopus,낚시에 사용하는 상급 미끼입니다. 컬렉션 재료를 삼키고 있는 물고기가 반응합니다.{nl} {nl}컬렉션 리스트{nl} - 렘파라사 연못{nl} - 덧댄다리 숲{nl} - 파우피스 나루{nl} - 아샤크 지하감옥{nl} - 코루 숲{nl} - 크니도스 숲{nl} - 다단 숲{nl} - 네밸랫 광산{nl} - 노바하 지역{nl} - 몬스터 표본 세트{nl} - 샤울레이 서쪽 숲{nl} - 샤울레이 동쪽 숲{nl} - 샤울레이 광산 마을{nl} - 수정광산{nl} - 스라우타스 협곡{nl} - 겔리 고원{nl} - 네프리타스 벼랑{nl} - 테넷 화원{nl} - 베야 골짜기{nl} - 비에타 계곡{nl} - 코발트 숲{nl} - 셉티니 골{nl} - 테넷성당,icon_item_octopus,,,,,,,,문어,10,0.0,0.0,FFTT,16,1.0
-730299,Event_1902_mudfish,"낚시에 사용하는 특별한 미끼입니다. 미끼로 사용할 경우 [이벤트]연못에 숨겨진 보물 상자, 은빛 물고기, 작은 은빛 물고기를 각기 다른 확률로 획득 할 수 있습니다.{nl}사용하지 않은 [이벤트]요하가 기른 미꾸라지는 3/28(목) 점검 시, '특성 포인트 5(14일)' 아이템으로 변경됩니다.   ",icon_item_event1902_bait,,,,,,,,[이벤트]요하가 기른 미꾸라지,10,0.0,0.0,FFFT,16,1.0
+730299,Event_1902_mudfish,"낚시에 사용하는 특별한 미끼입니다. 미끼로 사용할 경우 [이벤트]연못에 숨겨진 보물 상자, 은빛 물고기, 작은 은빛 물고기를 각기 다른 확률로 획득 할 수 있습니다.{nl}사용하지 않은 [이벤트]요하가 기른 미꾸라지는 3/28(목) 점검 시, '특성 포인트 5(14일)' 아이템으로 변경됩니다. ??",icon_item_event1902_bait,,,,,,,,[이벤트]요하가 기른 미꾸라지,10,0.0,0.0,FFFT,16,1.0
 730300,Paste_Bait_lure,낚시에 사용하는 고급 미끼입니다. 좋은 보상을 기대해도 좋을 것 같습니다.,icon_item_paste_bait_mineral_1,,,,,,,,루어,0,0.0,0.0,FFFT,16,1.0
 730400,Spread_Bait_basic,낚시 확률 3.3% 추가 {nl}지속시간 10분{nl}낚시터에서 사용하면 해당 낚시터의 낚시 확률이 증가합니다. 재사용 대기시간 10분.,icon_item_spread_bait_basic,,,,,,,,보급형 떡밥,1000,600.0,0.0,FFTT,6,5.0
 730499,Event_1902_Spread_Bait,낚시 확률 3.3% 추가 {nl}지속시간 10분{nl}낚시터에서 사용하면 해당 낚시터의 낚시 확률이 증가합니다. 재사용 대기시간 10분.,icon_item_spread_bait_basic,,,,,,,,[이벤트]보급형 떡밥(1일),1000,600.0,86400.0,FFFT,6,5.0
@@ -5627,6 +5632,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904149,Event_Reinforce_100000coupon_Event,강화 실버 할인 쿠폰 {nl} {nl} - 5월 23일 이벤트 종료시 일괄 삭제,icon_item_reinforce_100000coupon,,,,,,,,[이벤트] 강화 실버 할인 쿠폰 : 10만 실버,1,0.0,0.0,FFFT,8,0.0
 904150,EVENT_NEW_FACE_ACHIEVE_BOX,"새로운 새싹 칭호 상자 입니다.{nl}5월 23일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,칭호 - 새로운 새싹,0,0.0,0.0,FFFT,6,1.0
 904151,EVENT_1710_NEWCHARACTER_BOX_19,"마우스 오른쪽 버튼 클릭으로 사용합니다.400레벨 이상에서 사용 가능합니다.{nl}5월 9일 점검 시, 일괄 삭제됩니다.",icon_item_giftbox_2,,,,,,,,[Episode11] 레벨업 상자 (400레벨),0,0.0,0.0,FFFF,8,1.0
+904153,EVENT_1905_VIVID_POWDER_1,"무지개를 넘어서 시즌2 이벤트에 참여해 각 도시의 쉬운 코스를 완주하면 기념으로 드리는 아이템입니다.{nl} 이벤트 알림판 NPC를 통해서 추가 보상과 교환 하실 수 있습니다.{nl} 6월 27일 점검 시, 일괄 삭제됩니다.",icon_item_1808_rainbow_powder,,,,,,,,[이벤트]하급 무지갯빛 가루,0,0.0,0.0,FFFT,15,0.1
+904154,EVENT_1905_VIVID_POWDER_2,"무지개를 넘어서 시즌2 이벤트에 참여해 각 도시의 보통 코스를 완주하면 기념으로 드리는 아이템입니다.{nl} 이벤트 알림판 NPC를 통해서 추가 보상과 교환 하실 수 있습니다.{nl} 6월 27일 점검 시, 일괄 삭제됩니다.",icon_item_1905_rainbow_powder_middle,,,,,,,,[이벤트]중급 무지갯빛 가루,0,0.0,0.0,FFFT,15,0.1
+904155,EVENT_1905_VIVID_POWDER_3,"무지개를 넘어서 시즌2 이벤트에 참여해 각 도시의 어려운 코스를 완주하면 기념으로 드리는 아이템입니다.{nl} 이벤트 알림판 NPC를 통해서 추가 보상과 교환 하실 수 있습니다.{nl} 6월 27일 점검 시, 일괄 삭제됩니다.",icon_item_1905_rainbow_powder_higher,,,,,,,,[이벤트]상급 무지갯빛 가루,0,0.0,0.0,FFFT,15,0.1
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,,,새싹,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,,,시든 식물,1,0.0,0.0,TTTT,15,1.0
