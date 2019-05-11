@@ -68,7 +68,7 @@ let files = fs.readdirSync(folder_database);
             dataset = dataset === 'jobs' ? 'classes' : dataset;
         let file = fs.readFileSync(path.join(folder_database, fileName), 'utf8');
 
-        if (dataset === 'maps')
+        if (dataset === 'npcs')
             return;
 
         let templateDetail = fs.readFileSync(path.join(folder_template_database, dataset, 'detail.html'), 'utf8');
