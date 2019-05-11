@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,Text,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
+$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,Text,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
 661203,Collection_Base_CASTLE65_3_HQ1,啟示者米歇爾的感想文可以用圖鑑去收集喔！,icon_item_diary,[642208],,,,,,,米歇爾的感想文,0,,0.0,0.0,FFFF,2,0.0
 663196,JOB_1_SAGE_ITEM1,賢者大師正在尋找的書，可以閱讀。,icon_item_collection_01red,,,,,,,,賢者的基準點,0,,0.0,0.0,FFFF,2,0.0
 663197,JOB_1_SAGE_ITEM2,賢者大師正在尋找的書，可以閱讀。,icon_item_collection_03blue,,,,,,,,蒙代羅爾山的女神處所 1卷,0,,0.0,0.0,FFFF,2,0.0

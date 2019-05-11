@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monster,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,MonsterElement,MonsterRace,Name,Price,Stat_Height,Stat_Legs,Stat_Weight,TimeCoolDown,TimeLifeTime,Tradability,Type,TypeCard,Weight
+$ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monster,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,MonsterElement,MonsterRace,Name,Price,Stat_Height,Stat_Legs,Stat_Weight,TimeCoolDown,TimeLifeTime,Tradability,Type,TypeCard,Weight
 644001,card_Gaigalas,[欄位裝備效果] 大地屬性傷害追加 +[★*10],icon_item_card_util,027_boss_gaigalas,,,,,41220,,,,1,0,魔龍凱拉斯卡片,500,205,4,201,0.0,0.0,TTTT,3,5,1.0
 644002,card_GazingGolem,[欄位裝備效果] 被攻擊時以 [★]%的機率使用苦痛屏障 1級。,icon_item_card_util,108_boss_gazinggolem,,,,,47322,,,,0,4,凱吉青苔泥人卡片,500,324,2,4860,0.0,0.0,TTTT,3,5,1.0
 644003,card_Gorgon,[欄位裝備效果] 打擊類防禦力 +[★*10],icon_item_card_def,064_boss_gorgon,,,,,800042,,,,0,1,庫勒坤魔牛卡片,500,190,4,1360,0.0,0.0,TTTT,3,1,1.0

@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,Link_Maps_Exploration,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
+$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
 640403,Ghaca_PC_Rabdom,點擊滑鼠右鍵可以開啟，開啟時可獲得隨機道具。{nl}獎勵目錄{nl}- 經驗之書 x1{nl} - 副本倍數VIP x2{nl}- 擴音器 x1{nl}- 魔法賦予卷軸(不可交易) x1{nl}- 傳送卷軸 x8{nl}- 靈魂水晶 x4{nl}- 緊急修理工具 x3,icon_item_random_cashbox,,,,,,,,,[Popo Shop] TP道具隨機寶箱,0,0.0,0.0,FFFT,5,5.0
 640404,Ghaca_PC_Misc,點擊滑鼠右鍵可以開啟，開啟時可獲得隨機道具。,icon_item_pc_miscbox,,,,,,,,,[Popo Shop] 礦物箱,0,0.0,0.0,FFFT,5,5.0
 640407,Ghaca_PC_Discount_Ticket,點擊滑鼠右鍵可以開啟，開啟時可獲得隨機道具。{nl}獎勵目錄{nl} - [網咖] 染色1次50%折扣劵{nl} - [網咖] 染色1次免費劵{nl} - [網咖] 髮型1次50%折扣劵{nl} - [網咖] 髮型1次免費劵,icon_item_random_cashbox,,,,,,,,,[Popo Shop] 美容院折扣劵箱,0,0.0,0.0,FFFT,5,5.0
