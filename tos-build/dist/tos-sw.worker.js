@@ -245,44 +245,4 @@
     self.addEventListener('install', event => event.waitUntil(onInstall(event)));
     self.addEventListener('message', event => event.waitUntil(onMessage(event.data, event.source)));
 
-    // XTODO: how does the 'check for updates' work on angular's SW? do they also trigger the onActivated logic?
-    // XTODO: Check for updates => update the app files before reloading => reload ALL clients (not just the current one)
-    // XTODO: send event to main page when installed successfully (so users can reload to activate it), when new update is available, ...?
-    // XTODO: review deployment and tos-sw index scripts
-    // XTODO: test if service worker is working (need to build app in prod)
-    // XTODO: implement a way of seeing the logs
-    // XTODO: when updating, download only the files that changed
-    // XTODO: communication between SW <> clients. Add a button to manually check for updates. Show 'Checking for updates' when clicked, don't show otherwise. Show 'Installing updates...' and show a refresh to update.
-    // XTODO: it seems when it updates it stores the new manifest on a different cache entry.... with the tos-sw-hash..
-    // XTODO: app updates aren't going through, it always reloads back to the old index.html it seems? and also doesn't download the new scripts
-    // XTODO: offline mode not working very well. Seems like when the worker gets out of memory, it then tries to fetch the manifest from the network instead of using the one in cache
-    // XTODO: test if SW worker is able to update the manifest
-    // XTODO: use clients.claims() to claim all clients after installation
-    // XTODO: use self.skipWaiting() to skip waiting for the current service worker to stop controlling any client and activate immediately
-    // XTODO: Uninstall current angular service worker
-    // XTODO: store 'versions' file with the modified time for every asset
-    // XTODO: handle file requests and navigation requests
-    // XTODO: use kTEST icons so we always have the latest versions
-    // XTODO: load region versions from an external file so we no longer need to recompile the website? Same for patreons.. What else?
-    // XTODO: update .gitignore so we can include the deployed website. Maybe remove the traditional src/assets/icons folder?
-    // XTODO: deploy master on beta.tos.guru the old version, tell discord?
-    // XTODO: commit & push to a separate branch
-    // XTODO: updating the region.json is always generating a new commit cuz the keys aren't stored in an ordered way...
-    // XTODO: remove /tos-web/dist/ from urls in tos-sw-manifest.js
-    // XTODO: deploy new branch on beta.tos.guru and tell discord t test
-    // XTODO: rename web to tos-web
-    // XTODO: fix tinyurl which is breaking all the time.. considering implementing my own CORS or maybe do it via SW?
-    // XTODO: fix deploy script always creating new commits every hour due to the manifest
-    // XTODO: fix html2canvas broken submodule link
-    // XTODO: test how the upgrade will work. In theory, when the client loads the new ngsw-worker, it will uninstall the existing installation and start the new process
-    // XTODO: build script is always commiting at least the index.json? even when there's no new patch
-    // XTODO: review cloudflare configuration so we don't cache the worker and the versions file
-    // XTODO: update deploy.js so it clears cloudflare's cache for tos.guru instead of beta.tos.guru
-    // XTODO: http://localhost:4200/itos/database/skills/50101 CaptionRatio3 is crashing
-    // XTODO: kTEST have broken cooldown and SP again :/
-    // XTODO: level cap has been updated to 420...
-
-    // Deployment
-    // Replace existing ngsw-worker with safety-worker (rename it to ngsw-worker.js), so the old SW unregisters itself
-    // Remove ngsw.js and clear it from CloudFlare cache
 }());
