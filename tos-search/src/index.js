@@ -36,6 +36,8 @@ let files = fs.readdirSync(folder);
     files.forEach((fileName) => {
         if (fileName.indexOf('.csv') === -1)
             return;
+        if (fileName.startsWith('npcs'))
+            return;
 
         log('Papa parsing ' + fileName + '...');
         let dataset = fileName.slice(0, fileName.indexOf('.'));
