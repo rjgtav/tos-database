@@ -23,7 +23,7 @@ export class TableCellTextPipe extends TableCellPipeBase<TableCellTextPipeDefini
           html = `<span class="text-multiline">${ entity[definition.column] }</span>`;
           break;
         case TableCellTextPipeFormat.PERCENTAGE:
-          html = `<span>${ this.percent.transform(entity[definition.column] / 100, '1.1-2') }</span>`;
+          html = `<span>${ this.percent.transform(entity[definition.column] / 100, '1.1-5') }</span>`;
           break;
         case TableCellTextPipeFormat.QUANTITY:
           html = `<span>&times; ${ entity[definition.column] }</span>`;

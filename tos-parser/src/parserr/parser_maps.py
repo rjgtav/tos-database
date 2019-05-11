@@ -160,6 +160,11 @@ def parse_links_items():
         ies_file = 'zonedropitemlist_' + map['$ID_NAME'] + '.ies'
         ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_drop.ipf', 'zonedrop', ies_file.lower())
 
+        # For some reason IMC uses these 2 types of name formats...
+        if not os.path.isfile(ies_path):
+            ies_file = 'zonedropitemlist_f_' + map['$ID_NAME'] + '.ies'
+            ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_drop.ipf', 'zonedrop', ies_file.lower())
+
         try:
             drops = []
 
@@ -173,18 +178,29 @@ def parse_links_items():
                             'Money_Min': int(zone_drop['Money_Min']),
                         })
 
+                    # Note: drop groups work like a loot table
+                    # Therefore we need to sum the DropRatio of the entire group before calculating the actual one
                     if len(zone_drop['DropGroup']) > 0:
                         ies_file = zone_drop['DropGroup'] + '.ies'
                         ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_drop.ipf', 'dropgroup', ies_file.lower())
 
+                        group_drop_ratio = 0
+                        group_drops = []
+
                         with open(ies_path, 'rb') as ies_file:
                             for group_drop in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-                                drops.append({
+                                group_drop_ratio += int(group_drop['DropRatio'])
+                                group_drops.append({
                                     'ItemClassName': group_drop['ItemClassName'],
-                                    'DropRatio': (int(group_drop['DropRatio']) / 100.0) * (int(zone_drop['DropRatio']) / 100.0),
+                                    'DropRatio': int(group_drop['DropRatio']),
                                     'Money_Max': 0,
                                     'Money_Min': 0,
                                 })
+
+                        for group_drop in group_drops:
+                            group_drop['DropRatio'] = int(zone_drop['DropRatio']) / 100.0 * group_drop['DropRatio'] / group_drop_ratio
+
+                            drops.append(group_drop)
 
                 for drop in drops:
                     item_link = {
