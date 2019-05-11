@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,Text,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
+$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,Text,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
 661203,Collection_Base_CASTLE65_3_HQ1,"A review by Revelator Mihail, can be obtained as a part of a collection.",icon_item_diary,[642208],,,,,,,Mihail's Review,0,,0.0,0.0,FFFF,2,0.0
 663196,JOB_1_SAGE_ITEM1,A book sought after by the Sage Master. You can read it.,icon_item_collection_01red,,,,,,,,Sage Baseline,0,,0.0,0.0,FFFF,2,0.0
 663197,JOB_1_SAGE_ITEM2,A book sought after by the Sage Master. You can read it.,icon_item_collection_03blue,,,,,,,,The Goddess' Abode of Mount Monderor Volume I,0,,0.0,0.0,FFFF,2,0.0
