@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,Text,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
+$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,Text,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
 661203,Collection_Base_CASTLE65_3_HQ1,啓示者ミハイルの感想。コレクションとして収集できます。,icon_item_diary,[642208],,,,,,,ミハイルの感想,0,,0.0,0.0,FFFF,2,0.0
 663196,JOB_1_SAGE_ITEM1,セージマスターが探している本。内容を読むことができます。,icon_item_collection_01red,,,,,,,,セージの基準点,0,,0.0,0.0,FFFF,2,0.0
 663197,JOB_1_SAGE_ITEM2,セージマスターが探している本。内容を読むことができます。,icon_item_collection_03blue,,,,,,,,モンテロル山の女神の居所・第1巻,0,,0.0,0.0,FFFF,2,0.0

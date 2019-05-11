@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,Link_Maps_Exploration,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
+$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
 640403,Ghaca_PC_Rabdom,ランダムに報酬を獲得します。マウス右クリックで使用できます。{nl}報酬リスト{nl}- 経験の書 x1{nl} - インスタンスダンジョン倍数トークン x2{nl}- メガホン x1{nl}- 魔法付与スクロール(取引不可) x1{nl}- ワープスクロール x8{nl}- ソウルクリスタル x4{nl}- 緊急修理キット x3,icon_item_random_cashbox,,,,,,,,,[ネットカフェ] TPアイテムランダムボックス,0,0.0,0.0,FFFT,5,5.0
 640404,Ghaca_PC_Misc,ランダムに報酬を獲得します。マウス右クリックで使用できます。,icon_item_pc_miscbox,,,,,,,,,[ネットカフェ] 鉱物ボックス,0,0.0,0.0,FFFT,5,5.0
 640407,Ghaca_PC_Discount_Ticket,ランダムに報酬を獲得します。マウス右クリックで使用できます。{nl}報酬リスト{nl} - [ネットカフェ] 染色1回50%割引券{nl} - [ネットカフェ] 染色1回無料利用券{nl} - [ネットカフェ] ヘア1回50%割引券{nl} - [ネットカフェ] ヘア1回無料利用券,icon_item_random_cashbox,,,,,,,,,[ネットカフェ] ビューティショップ割引クーポンボックス,0,0.0,0.0,FFFT,5,5.0

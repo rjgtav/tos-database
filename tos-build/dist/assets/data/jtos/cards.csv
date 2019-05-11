@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monster,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,MonsterElement,MonsterRace,Name,Price,Stat_Height,Stat_Legs,Stat_Weight,TimeCoolDown,TimeLifeTime,Tradability,Type,TypeCard,Weight
+$ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monster,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,MonsterElement,MonsterRace,Name,Price,Stat_Height,Stat_Legs,Stat_Weight,TimeCoolDown,TimeLifeTime,Tradability,Type,TypeCard,Weight
 644001,card_Gaigalas,[スロット装着効果] 地属性追加ダメージ+[★*10],icon_item_card_util,027_boss_gaigalas,,,,,41220,,,,1,0,ガイガラスカード,500,205,4,201,0.0,0.0,TTTT,3,5,1.0
 644002,card_GazingGolem,[スロット装着効果] 攻撃を受けたとき[★]%の確率でペインバリア1レベルを使用,icon_item_card_util,108_boss_gazinggolem,,,,,47322,,,,0,4,ゲージングゴーレムカード,500,324,2,4860,0.0,0.0,TTTT,3,5,1.0
 644003,card_Gorgon,[スロット装着効果] 打系防御力+[★*10],icon_item_card_def,064_boss_gorgon,,,,,800042,,,,0,1,ゴルゴンカード,500,190,4,1360,0.0,0.0,TTTT,3,1,1.0
