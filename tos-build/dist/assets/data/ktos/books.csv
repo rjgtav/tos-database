@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,Text,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
+$ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,Text,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
 661203,Collection_Base_CASTLE65_3_HQ1,"계시자 미하일의 감상평, 컬렉션으로 수집 할 수 있습니다.",icon_item_diary,[642208],,,,,,,미하일의 감상평,0,,0.0,0.0,FFFF,2,0.0
 663196,JOB_1_SAGE_ITEM1,세이지 마스터가 찾고 있는 책. 읽어볼 수 있습니다.,icon_item_collection_01red,,,,,,,,세이지의 기준점,0,,0.0,0.0,FFFF,2,0.0
 663197,JOB_1_SAGE_ITEM2,세이지 마스터가 찾고 있는 책. 읽어볼 수 있습니다.,icon_item_collection_03blue,,,,,,,,몬데롤 산의 여신의 처소 1권,0,,0.0,0.0,FFFF,2,0.0

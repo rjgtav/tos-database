@@ -1,4 +1,4 @@
-$ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Materials,Link_MonsterDrops,Link_RecipeMaterial,Link_RecipeTarget,Link_Target,Name,Price,Tradability,Type
+$ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Materials,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Link_Target,Name,Price,Tradability,Type
 1001,R_timber_01,icon_item_recipe_misc1,,,,,"[{""Item"": 645238, ""Quantity"": 3}]",,,,645242,Recipe - 떡갈나무 목재,10,TTTT,21
 1002,R_timber_02,icon_item_recipe_misc1,,,,,"[{""Item"": 645239, ""Quantity"": 3}]",,,,645243,Recipe - 물푸레나무 목재,10,TTTT,21
 1003,R_timber_03,icon_item_recipe_misc1,,,,,"[{""Item"": 645240, ""Quantity"": 3}]",,,,645244,Recipe - 소나무 목재,10,TTTT,21
@@ -120,7 +120,7 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Li
 11016,R_TSW02_108,icon_item_weapon_misc3,,,,,"[{""Item"": 11016, ""Quantity"": 1}, {""Item"": 645479, ""Quantity"": 12}]",,[11016],,122108,Recipe - 킨드잘,0,TTTT,21
 11018,R_TSW02_110,icon_item_weapon_misc3,,,,,"[{""Item"": 11018, ""Quantity"": 1}, {""Item"": 122101, ""Quantity"": 1}, {""Item"": 645556, ""Quantity"": 18}]",,[11018],,122110,Recipe - 프리에블란다,0,TTTT,21
 11019,R_TSW02_111,icon_item_weapon_misc3,,,,,"[{""Item"": 11019, ""Quantity"": 1}, {""Item"": 121123, ""Quantity"": 1}, {""Item"": 121123, ""Quantity"": 1}]",,[11019],,122111,Recipe - 라피스 카츠발게르,0,TTTT,21
-11020,R_TSW03_101,icon_item_weapon_misc4,,,,,"[{""Item"": 11020, ""Quantity"": 1}, {""Item"": 122104, ""Quantity"": 1}, {""Item"": 645547, ""Quantity"": 8}, {""Item"": 645381, ""Quantity"": 1}]",,[11020],,123101,Recipe - 플라미니,0,TTTT,21
+11020,R_TSW03_101,icon_item_weapon_misc4,,,"[{""Chance"": 100, ""Map"": 1511, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,"[{""Item"": 11020, ""Quantity"": 1}, {""Item"": 122104, ""Quantity"": 1}, {""Item"": 645547, ""Quantity"": 8}, {""Item"": 645381, ""Quantity"": 1}]",,[11020],,123101,Recipe - 플라미니,0,TTTT,21
 11021,R_TSW03_102,icon_item_weapon_misc4,,,,,"[{""Item"": 11021, ""Quantity"": 1}, {""Item"": 102108, ""Quantity"": 1}, {""Item"": 645602, ""Quantity"": 20}, {""Item"": 643502, ""Quantity"": 1}]",,[11021],,123102,Recipe - 위저드 슬레이어,0,TTTT,21
 11022,R_TSW03_103,icon_item_weapon_misc4,,,,,"[{""Item"": 11022, ""Quantity"": 1}, {""Item"": 121122, ""Quantity"": 1}, {""Item"": 201129, ""Quantity"": 1}, {""Item"": 645344, ""Quantity"": 8}, {""Item"": 645389, ""Quantity"": 2}]",,[11022],,123103,Recipe - 나크티스,0,TTTT,21
 11023,R_TSW03_104,icon_item_weapon_misc4,,,,,"[{""Item"": 11023, ""Quantity"": 1}, {""Item"": 122107, ""Quantity"": 1}, {""Item"": 122110, ""Quantity"": 1}, {""Item"": 645320, ""Quantity"": 1}]",,[11023],,123104,Recipe - 루시두스,0,TTTT,21
@@ -154,7 +154,7 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Li
 11087,R_TSW04_117,icon_item_weapon_misc5,,,,,"[{""Item"": 11087, ""Quantity"": 1}, {""Item"": 649014, ""Quantity"": 2}, {""Item"": 649026, ""Quantity"": 30}, {""Item"": 649025, ""Quantity"": 150}, {""Item"": 646058, ""Quantity"": 193}]",,[11087],,124117,Recipe - 마시니오스 투 핸드 소드,0,TTTT,21
 12007,R_STF01_109,icon_item_weapon_misc1,"[642137, 642158]",,,,"[{""Item"": 12007, ""Quantity"": 1}, {""Item"": 645175, ""Quantity"": 7}, {""Item"": 645174, ""Quantity"": 5}]",,[12007],,141109,Recipe - 룬 로드,0,TTTT,21
 12009,R_STF01_116,icon_item_weapon_misc1,,,,,"[{""Item"": 12009, ""Quantity"": 1}, {""Item"": 645547, ""Quantity"": 11}]",,[12009],,141116,Recipe - 배틀 로드,0,TTTT,21
-12011,R_STF02_102,icon_item_weapon_misc3,,,,,"[{""Item"": 12011, ""Quantity"": 1}, {""Item"": 645453, ""Quantity"": 8}, {""Item"": 645330, ""Quantity"": 2}]",,[12011],,142102,Recipe - 아이스 로드,0,TTTT,21
+12011,R_STF02_102,icon_item_weapon_misc3,,,"[{""Chance"": 100, ""Map"": 2086, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,"[{""Item"": 12011, ""Quantity"": 1}, {""Item"": 645453, ""Quantity"": 8}, {""Item"": 645330, ""Quantity"": 2}]",,[12011],,142102,Recipe - 아이스 로드,0,TTTT,21
 12012,R_STF02_103,icon_item_weapon_misc3,,,,,"[{""Item"": 12012, ""Quantity"": 1}, {""Item"": 645177, ""Quantity"": 12}]",,[12012],,142103,Recipe - 파이어 로드,0,TTTT,21
 12014,R_STF02_105,icon_item_weapon_misc3,,,,,"[{""Item"": 12014, ""Quantity"": 1}, {""Item"": 645164, ""Quantity"": 2}, {""Item"": 645246, ""Quantity"": 15}]",,[12014],,142105,Recipe - 매직 로드,0,TTTT,21
 12015,R_STF02_106,icon_item_weapon_misc3,,,,,"[{""Item"": 12015, ""Quantity"": 1}, {""Item"": 141130, ""Quantity"": 1}, {""Item"": 645555, ""Quantity"": 21}]",,[12015],,142106,Recipe - 그리나스 로드,0,TTTT,21
@@ -195,7 +195,7 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Li
 13013,R_TSF02_103,icon_item_weapon_misc3,,,,,"[{""Item"": 13013, ""Quantity"": 1}, {""Item"": 645156, ""Quantity"": 11}, {""Item"": 645435, ""Quantity"": 1}]",,[13013],,272103,Recipe - 루다스 스태프,0,TTTT,21
 13014,R_TSF02_104,icon_item_weapon_misc3,,,,,"[{""Item"": 13014, ""Quantity"": 1}, {""Item"": 272101, ""Quantity"": 1}, {""Item"": 272101, ""Quantity"": 1}]",,[13014],,272104,Recipe - 살타스 스태프,0,TTTT,21
 13016,R_TSF02_106,icon_item_weapon_misc3,,,,,"[{""Item"": 13016, ""Quantity"": 1}, {""Item"": 272103, ""Quantity"": 1}, {""Item"": 645482, ""Quantity"": 6}]",,[13016],,272106,Recipe - 카르스토 스태프,0,TTTT,21
-13017,R_TSF02_107,icon_item_weapon_misc3,,,,,"[{""Item"": 13017, ""Quantity"": 1}, {""Item"": 645588, ""Quantity"": 12}, {""Item"": 645584, ""Quantity"": 23}]",,[13017],,272107,Recipe - 엑스펙타 스태프,0,TTTT,21
+13017,R_TSF02_107,icon_item_weapon_misc3,,,"[{""Chance"": 100, ""Map"": 2302, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,"[{""Item"": 13017, ""Quantity"": 1}, {""Item"": 645588, ""Quantity"": 12}, {""Item"": 645584, ""Quantity"": 23}]",,[13017],,272107,Recipe - 엑스펙타 스태프,0,TTTT,21
 13020,R_TSF02_108,icon_item_weapon_misc3,,,,,"[{""Item"": 13020, ""Quantity"": 1}, {""Item"": 645580, ""Quantity"": 22}, {""Item"": 643501, ""Quantity"": 1}]",,[13020],,272108,Recipe - 블랙 스태프,0,TTTT,21
 13021,R_TSF02_109,icon_item_weapon_misc3,,,,,"[{""Item"": 13021, ""Quantity"": 1}, {""Item"": 645462, ""Quantity"": 12}]",,[13021],,272109,Recipe - 웰시 스태프,0,TTTT,21
 13022,R_TSF03_101,icon_item_weapon_misc4,,,,,"[{""Item"": 13022, ""Quantity"": 1}, {""Item"": 272102, ""Quantity"": 1}, {""Item"": 645187, ""Quantity"": 5}]",,[13022],,273101,Recipe - 캔들 스태프,0,TTTT,21
@@ -354,7 +354,7 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Li
 17004,R_SPR01_104,icon_item_weapon_misc1,"[642135, 642158]",,,,"[{""Item"": 17004, ""Quantity"": 1}, {""Item"": 645174, ""Quantity"": 12}]",,[17004],,241104,Recipe - 스폰툰,0,TTTT,21
 17006,R_SPR01_106,icon_item_weapon_misc1,[642143],,,,"[{""Item"": 17006, ""Quantity"": 1}, {""Item"": 241105, ""Quantity"": 1}, {""Item"": 241105, ""Quantity"": 1}, {""Item"": 645477, ""Quantity"": 10}]",,[17006],,241106,Recipe - 롱 아스타,0,TTTT,21
 17008,R_SPR02_102,icon_item_weapon_misc3,,,,,"[{""Item"": 17008, ""Quantity"": 1}, {""Item"": 242101, ""Quantity"": 1}, {""Item"": 645165, ""Quantity"": 18}]",,[17008],,242102,Recipe - 도리,0,TTTT,21
-17011,R_SPR02_105,icon_item_weapon_misc3,,,,,"[{""Item"": 17011, ""Quantity"": 1}, {""Item"": 241104, ""Quantity"": 1}, {""Item"": 241104, ""Quantity"": 1}, {""Item"": 645429, ""Quantity"": 12}]",,[17011],,242105,Recipe - 그랑 스폰툰,0,TTTT,21
+17011,R_SPR02_105,icon_item_weapon_misc3,,,"[{""Chance"": 100, ""Map"": 1091, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,"[{""Item"": 17011, ""Quantity"": 1}, {""Item"": 241104, ""Quantity"": 1}, {""Item"": 241104, ""Quantity"": 1}, {""Item"": 645429, ""Quantity"": 12}]",,[17011],,242105,Recipe - 그랑 스폰툰,0,TTTT,21
 17012,R_SPR02_106,icon_item_weapon_misc3,[642082],,,,"[{""Item"": 17012, ""Quantity"": 1}, {""Item"": 645443, ""Quantity"": 3}, {""Item"": 645615, ""Quantity"": 1}]",,[17012],,242106,Recipe - 제가 스피어,0,TTTT,21
 17016,R_SPR02_110,icon_item_weapon_misc3,,,,,"[{""Item"": 17016, ""Quantity"": 1}, {""Item"": 649003, ""Quantity"": 26}]",,[17016],,242110,Recipe - 페디미안 스피어,0,TTTT,21
 17017,R_SPR03_101,icon_item_weapon_misc4,,,,,"[{""Item"": 17017, ""Quantity"": 1}, {""Item"": 242104, ""Quantity"": 1}, {""Item"": 645485, ""Quantity"": 2}]",,[17017],,243101,Recipe - 실버 스피어,0,TTTT,21
@@ -916,8 +916,8 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Li
 34093,R_BRC04_119,icon_item_bracelet_misc5,,,,,"[{""Item"": 34093, ""Quantity"": 1}, {""Item"": 647011, ""Quantity"": 1}, {""Item"": 647014, ""Quantity"": 20}, {""Item"": 647015, ""Quantity"": 50}]",,[34093],,604119,Recipe - 세비사 이레디안 브레이슬릿,0,TTTT,21
 35002,R_Hat_628024,icon_item_helm_misc1,,,,,"[{""Item"": 35002, ""Quantity"": 1}, {""Item"": 628023, ""Quantity"": 1}, {""Item"": 645153, ""Quantity"": 33}]",,[35002],,628024,Recipe - 둥지튼 병아리,500,TTTT,21
 35035,R_Hat_628052,icon_item_helm_misc1,,,,,"[{""Item"": 35035, ""Quantity"": 1}, {""Item"": 649002, ""Quantity"": 249}]",,[35035],,628052,Recipe - 강철 투구,500,TTTT,21
-35043,R_Hat_628043,icon_item_helm_misc1,,,,,"[{""Item"": 35043, ""Quantity"": 1}, {""Item"": 645134, ""Quantity"": 86}]",,[35043],,628043,Recipe - 산양 뿔,500,TTTT,21
-35044,R_Hat_628060,icon_item_helm_misc1,,,,,"[{""Item"": 35044, ""Quantity"": 1}, {""Item"": 645216, ""Quantity"": 99}]",,[35044],,628060,Recipe - 붉은 뿔,0,TTTT,21
+35043,R_Hat_628043,icon_item_helm_misc1,,,"[{""Chance"": 100, ""Map"": 2084, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,"[{""Item"": 35043, ""Quantity"": 1}, {""Item"": 645134, ""Quantity"": 86}]",,[35043],,628043,Recipe - 산양 뿔,500,TTTT,21
+35044,R_Hat_628060,icon_item_helm_misc1,,,"[{""Chance"": 100, ""Map"": 1091, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,"[{""Item"": 35044, ""Quantity"": 1}, {""Item"": 645216, ""Quantity"": 99}]",,[35044],,628060,Recipe - 붉은 뿔,0,TTTT,21
 35048,R_Hat_628054,icon_item_helm_misc1,,,,,"[{""Item"": 35048, ""Quantity"": 1}, {""Item"": 645117, ""Quantity"": 333}]",,[35048],,628054,Recipe - 케파 인형,500,TTTT,21
 35049,R_Hat_628063,icon_item_helm_misc1,,,,,"[{""Item"": 35049, ""Quantity"": 1}, {""Item"": 645381, ""Quantity"": 3}, {""Item"": 645455, ""Quantity"": 12}]",,[35049],,628063,Recipe - 붉은 악마날개,1,TTTT,21
 35056,R_Hat_628057,icon_item_helm_misc1,,,,,"[{""Item"": 35056, ""Quantity"": 1}, {""Item"": 645269, ""Quantity"": 16}]",,[35056],,628057,Recipe - 백호가면,500,TTTT,21
