@@ -65,7 +65,7 @@ export enum TOSDataSet {
   JOBS = 'jobs',
   MAPS = 'maps',
   MONSTERS = 'monsters',
-  //NPCS = 'npcs',
+  NPCS = 'npcs',
   RECIPES = 'recipes',
   SKILLS = 'skills',
 }
@@ -96,7 +96,7 @@ export namespace TOSDataSetService {
     {
       label: 'World',
       options: [
-        //TOSDataSet.MAPS,
+        TOSDataSet.MAPS,
         TOSDataSet.MONSTERS,
       ],
     }
@@ -633,11 +633,15 @@ export interface ITOSBuildStats {
 export interface ITOSEntity {
   $ID: number;
   $ID_NAME: string;
-  Dataset: string;
+  Dataset: TOSDataSet;
   Description: string;
   Icon: string;
   Name: string;
+  Selected: boolean;
   Url: string;
+}
+export interface ITOSEntityLink<LINK extends ITOSEntity> {
+  Link: LINK;
 }
 
 export interface ITOSItem extends ITOSEntity {
@@ -649,16 +653,23 @@ export interface ITOSItem extends ITOSEntity {
   Weight: number;
   Link_Collections: Observable<ITOSCollection[]>;
   Link_Cubes: Observable<ITOSCube[]>;
-  Link_MonsterDrops: Observable<ITOSItemDrop[]>;
+  Link_Maps: Observable<ITOSItemLinkMap[]>;
+  Link_Maps_Exploration: Observable<ITOSItemLinkMap[]>;
+  Link_Monsters: Observable<ITOSItemLinkMonster[]>;
   Link_RecipeMaterial: Observable<ITOSRecipe>;
   Link_RecipeTarget: Observable<ITOSRecipe>;
 
   isTradable(tradable: TOSItemTradability): boolean;
 }
-export interface ITOSItemDrop {
+export interface ITOSItemLinkMap extends ITOSEntityLink<ITOSMap> {
   Chance: number;
-  Monster: ITOSMonster;
-  Url: string;
+  Quantity_MAX: number;
+  Quantity_MIN: number;
+}
+export interface ITOSItemLinkMonster extends ITOSEntityLink<ITOSMonster> {
+  Chance: number;
+  Quantity_MAX: number;
+  Quantity_MIN: number;
 }
 
 export interface ITOSAttribute extends ITOSEntity {
@@ -813,15 +824,19 @@ export interface ITOSMap extends ITOSEntity {
   WorldMap: number[];
 
   Link_Collections: Observable<ITOSCollection[]>;
-  Link_Items: Observable<ITOSItem[]>;
-  Link_Items_Exploration: Observable<ITOSItem[]>;
+  Link_Items: Observable<ITOSMapLinkItem[]>;
+  Link_Items_Exploration: Observable<ITOSMapLinkItem[]>;
   Link_Maps: Observable<ITOSMap[]>;
   Link_Maps_Floors: Observable<ITOSMap[]>;
-  Link_NPCs: Observable<ITOSMapSpawn[]>;
+  Link_NPCs: Observable<ITOSMapLinkNPC[]>;
 
 }
-export interface ITOSMapSpawn {
-  NPC: ITOSNPC;
+export interface ITOSMapLinkItem extends ITOSEntityLink<ITOSItem> {
+  Chance: number;
+  Quantity_MAX: number;
+  Quantity_MIN: number;
+}
+export interface ITOSMapLinkNPC extends ITOSEntityLink<ITOSItem | ITOSNPC> {
   Population: number;
   Positions: number[][];
   TimeRespawn: number;
@@ -857,18 +872,16 @@ export interface ITOSMonster extends ITOSNPC {
   Stat_BlockPenetration: number;
   Stat_BlockRate: number;
 
-  Link_Drops: Observable<ITOSMonsterDrop[]>;
-  Link_Spawns: Observable<ITOSMonsterSpawn[]>;
+  Link_Items: Observable<ITOSMonsterLinkItem[]>;
+  Link_Maps: Observable<ITOSMonsterLinkMap[]>;
 }
-export interface ITOSMonsterDrop {
+export interface ITOSMonsterLinkItem extends ITOSEntityLink<ITOSEntity> {
   Chance: number;
-  Item: ITOSItem;
   Quantity_MAX: number;
   Quantity_MIN: number;
   Url: string;
 }
-export interface ITOSMonsterSpawn {
-  Map: ITOSMap;
+export interface ITOSMonsterLinkMap extends ITOSEntityLink<ITOSMap> {
   Population: number;
   TimeRespawn: number;
   Url: string;
@@ -879,11 +892,10 @@ export interface ITOSNPC extends ITOSEntity {
 }
 
 export interface ITOSRecipe extends ITOSItem {
-  Link_Materials: Observable<ITOSRecipeMaterial[]>;
+  Link_Materials: Observable<ITOSRecipeLinkItem[]>;
   Link_Target: Observable<ITOSItem>;
 }
-export interface ITOSRecipeMaterial {
-  Item: ITOSItem;
+export interface ITOSRecipeLinkItem extends ITOSEntityLink<ITOSItem> {
   Quantity: number;
   Url: string;
 }

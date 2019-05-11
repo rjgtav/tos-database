@@ -12,8 +12,7 @@ export class TableCellIconPipe extends TableCellPipeBase<TableCellIconPipeDefini
 
   constructor(sanitizer: DomSanitizer) { super(sanitizer) }
 
-  transform(row: ITOSEntity, definition: TableCellIconPipeDefinition): Observable<SafeHtml> {
-    let entity = definition.transformEntity ? definition.transformEntity(row) : row;
+  transform(entity: ITOSEntity, definition: TableCellIconPipeDefinition): Observable<SafeHtml> {
     let src = definition.transformValue ? definition.transformValue(entity[definition.column]) : entity[definition.column];
     let title = entity[definition.column];
         title = title.indexOf('http') == 0 ? '' : title;
@@ -27,7 +26,6 @@ export class TableCellIconPipe extends TableCellPipeBase<TableCellIconPipeDefini
 export class TableCellIconPipeDefinition extends EntityTablePipeDefinition {
   constructor(
     public column: string,
-    public transformEntity?: (value: any) => ITOSEntity,
     public transformValue?: (value: any) => string,
   ) { super(column, TableCellIconPipe); }
 }

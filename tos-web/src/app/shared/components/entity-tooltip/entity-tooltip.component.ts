@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import {NgbTooltipConfig} from "@ng-bootstrap/ng-bootstrap";
 import {TOSItem} from "../../domain/tos/item/tos-item.model";
-import {TOSEntity} from "../../domain/tos/tos-entity.model";
+import {TOSEntity, TOSEntityLink} from "../../domain/tos/tos-entity.model";
 import {TOSCard} from "../../domain/tos/item/card/tos-card.model";
 import {TOSEquipment} from "../../domain/tos/item/equipment/tos-equipment.model";
 import {TOSSkill} from "../../domain/tos/skill/tos-skill.model";
@@ -74,6 +74,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.tooltip) {
       this.tooltip ? this.onMouseEnter() : this.onMouseLeave();
+      this.tooltip = this.tooltip instanceof TOSEntityLink ? this.tooltip.Link : this.tooltip;
 
       this.entity = this.tooltip;
       this.card = this.entity instanceof TOSCard ? this.entity as TOSCard : null;

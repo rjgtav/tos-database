@@ -2,7 +2,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
 import {TOSListConfiguration} from "../entity-list/entity-list.component";
-import {ITOSItemDrop, TOSItemTypeService} from "../../shared/domain/tos/tos-domain";
+import {TOSItemTypeService} from "../../shared/domain/tos/tos-domain";
 import {TableCellIconPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-icon.pipe";
 import {
   TableCellTextPipeDefinition,
@@ -19,10 +19,16 @@ export class ItemListConfigurationResolver implements Resolve<TOSListConfigurati
     { label: 'Type',          pipe: new TableCellTextPipeDefinition('Type') },
   ];
 
-  static readonly COLUMNS_DROPS = [
-    { label: '',              pipe: new TableCellIconPipeDefinition('Icon', (o: ITOSItemDrop) => o.Monster), class: 'p-1 text-center' },
-    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID', null, (o: ITOSItemDrop) => o.Monster), hideMobile: true },
-    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name', null, (o: ITOSItemDrop) => o.Monster), wide: true },
+  static readonly COLUMNS_MONSTERS = [
+    { label: '',              pipe: new TableCellIconPipeDefinition('Icon'), class: 'p-1 text-center' },
+    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
+    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
+    { label: 'Chance',        pipe: new TableCellTextPipeDefinition('Chance', TableCellTextPipeFormat.PERCENTAGE), class: 'text-nowrap' },
+  ];
+
+  static readonly COLUMNS_MAPS = [
+    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
+    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
     { label: 'Chance',        pipe: new TableCellTextPipeDefinition('Chance', TableCellTextPipeFormat.PERCENTAGE), class: 'text-nowrap' },
   ];
 

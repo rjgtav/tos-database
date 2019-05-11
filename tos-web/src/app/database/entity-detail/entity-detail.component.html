@@ -177,19 +177,19 @@
     ></tos-entity-detail-Table>
 
     <!-- Dropped by -->
-    <tos-entity-detail-Table *ngIf="entity['Link_MonsterDrops']" class="col-md-6 mb-4"
-                             [columns]="COLUMNS_ITEMS_DROPS"
-                             [data$]="entity['Link_MonsterDrops']"
+    <tos-entity-detail-Table *ngIf="entity['Link_Monsters']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_ITEMS_MONSTERS"
+                             [data$]="entity['Link_Monsters']"
                              [entity]="entity"
                              [header]="'Dropped by'">
     </tos-entity-detail-Table>
 
-    <!-- Drops -->
-    <tos-entity-detail-Table *ngIf="entity['Link_Drops']" class="col-md-6 mb-4"
-                             [columns]="COLUMNS_MONSTERS_DROPS"
-                             [data$]="entity['Link_Drops']"
+    <!-- Exploration Reward from -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Maps_Exploration']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_ITEMS_MAPS"
+                             [data$]="entity['Link_Maps_Exploration']"
                              [entity]="entity"
-                             [header]="'Drops'">
+                             [header]="'Exploration Reward from'">
     </tos-entity-detail-Table>
 
     <!-- Found in -->
@@ -201,11 +201,19 @@
     </tos-entity-detail-Table>
 
     <!-- Items -->
-    <tos-entity-detail-Table *ngIf="entity['Link_Items']" class="col-md-6 mb-4"
+    <tos-entity-detail-Table *ngIf="entity['Link_Items'] && !monster" class="col-md-6 mb-4"
                              [columns]="COLUMNS_ITEMS"
                              [data$]="entity['Link_Items']"
                              [entity]="entity"
                              [header]="cube ? 'Drops' : 'Items'">
+    </tos-entity-detail-Table>
+
+    <!-- Items (Monster) -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Items'] && monster" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_MONSTERS_DROPS"
+                             [data$]="entity['Link_Items']"
+                             [entity]="entity"
+                             [header]="'Drops'">
     </tos-entity-detail-Table>
 
 
@@ -225,12 +233,20 @@
                              [header]="'Skills'"
     ></tos-entity-detail-Table>
 
-    <!-- Spawn Locations -->
-    <tos-entity-detail-Table *ngIf="entity['Link_Spawns']" class="col-md-6 mb-4"
-                             [columns]="COLUMNS_MONSTERS_SPAWNS"
-                             [data$]="entity['Link_Spawns']"
+    <!-- Spawn Locations (Monster) -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Maps'] && monster" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_MONSTERS_MAPS"
+                             [data$]="entity['Link_Maps']"
                              [entity]="entity"
                              [header]="'Spawn Locations'">
+    </tos-entity-detail-Table>
+
+    <!-- Spawn Locations (Item) -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Maps'] && item" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_ITEMS_MAPS"
+                             [data$]="entity['Link_Maps']"
+                             [entity]="entity"
+                             [header]="'Drop Locations'">
     </tos-entity-detail-Table>
 
   </div>

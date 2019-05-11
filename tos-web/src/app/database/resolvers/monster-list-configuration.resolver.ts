@@ -15,7 +15,6 @@ import {
   TableCellTextPipeFormat
 } from "../../shared/components/entity-table/pipes/table-cell-text.pipe";
 import {TableCellNumberPipeDefinition} from "../../shared/components/entity-table/pipes/table-cell-number.pipe";
-import {TOSMonsterDrop, TOSMonsterSpawn} from "../../shared/domain/tos/monster/tos-monster.model";
 
 @Injectable()
 export class MonsterListConfigurationResolver implements Resolve<TOSListConfiguration> {
@@ -25,25 +24,26 @@ export class MonsterListConfigurationResolver implements Resolve<TOSListConfigur
     { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
     { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
     { label: 'Armor',         pipe: new TableCellTextPipeDefinition('Armor'), hideMobile: true },
-    { label: 'Element',       pipe: new TableCellIconPipeDefinition('Element', null, TOSElementService.icon), class: 'p-1 text-center', hideMobile: true },
+    { label: 'Element',       pipe: new TableCellIconPipeDefinition('Element', TOSElementService.icon), class: 'p-1 text-center', hideMobile: true },
     { label: 'Level',         pipe: new TableCellNumberPipeDefinition('Level'), hideMobile: true },
-    { label: 'Race',          pipe: new TableCellIconPipeDefinition('Race', null, TOSMonsterRaceService.icon), class: 'p-1 text-center', hideMobile: true },
+    { label: 'Race',          pipe: new TableCellIconPipeDefinition('Race', TOSMonsterRaceService.icon), class: 'p-1 text-center', hideMobile: true },
     { label: 'Rank',          pipe: new TableCellTextPipeDefinition('Rank') },
     { label: 'Size',          pipe: new TableCellTextPipeDefinition('Size'), hideMobile: true },
   ];
 
-  static readonly COLUMNS_DROPS = [
-    { label: '',              pipe: new TableCellIconPipeDefinition('Icon', (o: TOSMonsterDrop) => o.Item), class: 'p-1 text-center' },
-    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID', null, (o: TOSMonsterDrop) => o.Item), hideMobile: true },
-    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name', null, (o: TOSMonsterDrop) => o.Item), wide: true },
+  static readonly COLUMNS_ITEMS = [
+    { label: '',              pipe: new TableCellIconPipeDefinition('Icon'), class: 'p-1 text-center' },
+    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
+    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
     { label: 'Quantity',      pipe: new TableCellTextPipeDefinition('Quantity_MIN.Quantity_MAX', TableCellTextPipeFormat.QUANTITY_RANGE), class: 'text-nowrap' },
     { label: 'Chance',        pipe: new TableCellTextPipeDefinition('Chance', TableCellTextPipeFormat.PERCENTAGE), class: 'text-nowrap' },
   ];
 
-  static readonly COLUMNS_SPAWNS = [
-    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID', null, (o: TOSMonsterSpawn) => o.Map), hideMobile: true },
-    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name', null, (o: TOSMonsterSpawn) => o.Map), wide: true },
+  static readonly COLUMNS_MAPS = [
+    { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
+    { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
     { label: 'Population',    pipe: new TableCellTextPipeDefinition('Population', TableCellTextPipeFormat.QUANTITY), class: 'text-nowrap' },
+    { label: 'Respawn',       pipe: new TableCellTextPipeDefinition('TimeRespawn', TableCellTextPipeFormat.TIME), class: 'text-nowrap' },
   ];
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<TOSListConfiguration> | Promise<TOSListConfiguration> | TOSListConfiguration {

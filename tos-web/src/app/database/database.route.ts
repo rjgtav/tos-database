@@ -31,6 +31,7 @@ import {RouteService} from "../shared/service/route.service";
 import {MapListConfigurationResolver} from "./resolvers/map-list-configuration.resolver";
 import {TOSMapResolver} from "../shared/domain/tos/map/tos-map.resolver";
 import {EntityDetailMapComponent} from "./entity-detail-v2/entity-detail-map/entity-detail-map.component";
+import {TOSNPCResolver} from "../shared/domain/tos/monster/tos-npc.resolver";
 
 export const ROUTES_DATABASE: Routes = [
   {
@@ -264,6 +265,27 @@ export const ROUTES_DATABASE: Routes = [
     canDeactivate: [RouteService],
     component: EntityDetailComponent,
     resolve: { response: TOSMonsterResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  /*
+  {
+    path: 'npcs',
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: EntityListComponent,
+    resolve: {
+      configuration: NPCListConfigurationResolver,
+      response: TOSNPCResolver,
+    },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  */
+  {
+    path: 'npcs/:id',
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: EntityDetailComponent,
+    resolve: { response: TOSNPCResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   {

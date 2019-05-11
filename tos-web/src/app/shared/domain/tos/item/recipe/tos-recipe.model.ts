@@ -1,8 +1,9 @@
 import {TOSItem} from "../tos-item.model";
-import {ITOSItem, ITOSRecipe, ITOSRecipeMaterial, TOSDataSet} from "../../tos-domain";
+import {ITOSItem, ITOSRecipe, ITOSRecipeLinkItem, TOSDataSet} from "../../tos-domain";
 import {TOSDomainService} from "../../tos-domain.service";
 import {Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal-compatibility";
+import {TOSEntityLink} from "../../tos-entity.model";
 
 export class TOSRecipe extends TOSItem implements ITOSRecipe {
 
@@ -10,10 +11,10 @@ export class TOSRecipe extends TOSItem implements ITOSRecipe {
     super(TOSDataSet.RECIPES, json);
   }
 
-  get Link_Materials() { return this.$lazyPropertyLink('Link_Materials', value => this.TOSRecipeMaterialFactory(value)) as Observable<TOSRecipeMaterial[]> }
+  get Link_Materials() { return this.$lazyPropertyLink('Link_Materials', value => this.TOSRecipeLinkItem(value)) as Observable<TOSRecipeMaterial[]> }
   get Link_Target() { return this.$lazyPropertyLink('Link_Target', value => TOSDomainService.itemsByIdLink(value)) as Observable<ITOSItem> }
 
-  private TOSRecipeMaterialFactory(value: TOSRecipeMaterial): Observable<TOSRecipeMaterial> {
+  private TOSRecipeLinkItem(value: TOSRecipeMaterial): Observable<TOSRecipeMaterial> {
     return fromPromise((async () => {
       let object = new TOSRecipeMaterial(value);
           object.Item = await TOSDomainService.itemsByIdLink(+object.Item).toPromise();
@@ -24,15 +25,17 @@ export class TOSRecipe extends TOSItem implements ITOSRecipe {
 
 }
 
-export class TOSRecipeMaterial implements ITOSRecipeMaterial {
+export class TOSRecipeMaterial extends TOSEntityLink<ITOSItem> implements ITOSRecipeLinkItem {
   Item: ITOSItem;
   Quantity: number;
 
   constructor(json: TOSRecipeMaterial) {
+    super();
+
     this.Item = json.Item;
     this.Quantity = +json.Quantity;
   }
 
-  get Url() { return this.Item.Url }
+  get Link() { return this.Item }
 
 }

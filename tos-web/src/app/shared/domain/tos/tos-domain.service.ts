@@ -95,16 +95,14 @@ export class TOSDomainService {
   public static monsters(page: CRUDPage): Observable<CRUDPageResult<ITOSMonster>>           { return this.repository.find(TOSDataSet.MONSTERS, page) };
   public static monstersById($ID): Observable<ITOSMonster>                                  { return this.repository.findByIndex(TOSDataSet.MONSTERS, '$ID', $ID, true) };
 
-  /*
   public static npcs(page: CRUDPage): Observable<CRUDPageResult<ITOSMonster>>               { return this.repository.find(TOSDataSet.NPCS, page) };
   public static npcsById($ID): Observable<ITOSMonster>                                      { return this.repository.findByIndex(TOSDataSet.NPCS, '$ID', $ID, true) };
-   */
 
   public static npcsByIdLink = ($ID: number) => {
     return fromPromise((async () => {
       return null
         || await TOSDomainService.monstersById($ID).toPromise()
-        //|| await TOSDomainService.npcsById($ID).toPromise()
+        || await TOSDomainService.npcsById($ID).toPromise()
     })());
   };
 

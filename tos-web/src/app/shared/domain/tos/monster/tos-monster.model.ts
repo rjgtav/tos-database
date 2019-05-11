@@ -2,8 +2,8 @@ import {
   ITOSItem,
   ITOSMap,
   ITOSMonster,
-  ITOSMonsterDrop,
-  ITOSMonsterSpawn,
+  ITOSMonsterLinkItem,
+  ITOSMonsterLinkMap,
   TOSDataSet,
   TOSElement,
   TOSEquipmentMaterial,
@@ -17,6 +17,7 @@ import {TOSDomainService} from "../tos-domain.service";
 import {Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal-compatibility";
 import {TOSNPC} from "./tos-npc.model";
+import {TOSEntityLink} from "../tos-entity.model";
 
 export class TOSMonster extends TOSNPC implements ITOSMonster {
 
@@ -56,20 +57,20 @@ export class TOSMonster extends TOSNPC implements ITOSMonster {
   get Stat_BlockPenetration() { return this.$lazyPropertyNumber('Stat_BlockPenetration') }
   get Stat_BlockRate() { return this.$lazyPropertyNumber('Stat_BlockRate') }
 
-  get Link_Drops() { return this.$lazyPropertyLink('Link_Drops', value => this.TOSMonsterDropFactory(value)) as Observable<TOSMonsterDrop[]> }
-  get Link_Spawns() { return this.$lazyPropertyLink('Link_Spawns', value => this.TOSMonsterSpawn(value)) as Observable<TOSMonsterSpawn[]> }
+  get Link_Items() { return this.$lazyPropertyLink('Link_Items', value => this.TOSMonsterLinkItem(value)) as Observable<TOSMonsterLinkItem[]> }
+  get Link_Maps() { return this.$lazyPropertyLink('Link_Maps', value => this.TOSMonsterLinkMap(value)) as Observable<TOSMonsterLinkMap[]> }
 
-  private TOSMonsterDropFactory(value: TOSMonsterDrop): Observable<TOSMonsterDrop> {
+  private TOSMonsterLinkItem(value: TOSMonsterLinkItem): Observable<TOSMonsterLinkItem> {
     return fromPromise((async () => {
-      let object = new TOSMonsterDrop(value);
+      let object = new TOSMonsterLinkItem(value);
           object.Item = await TOSDomainService.itemsByIdLink(+object.Item).toPromise();
 
       return object;
     })());
   }
-  private TOSMonsterSpawn(value: TOSMonsterSpawn): Observable<TOSMonsterSpawn> {
+  private TOSMonsterLinkMap(value: TOSMonsterLinkMap): Observable<TOSMonsterLinkMap> {
     return fromPromise((async () => {
-      let object = new TOSMonsterSpawn(value);
+      let object = new TOSMonsterLinkMap(value);
           object.Map = await TOSDomainService.mapsById(+object.Map).toPromise();
 
       return object;
@@ -78,34 +79,38 @@ export class TOSMonster extends TOSNPC implements ITOSMonster {
 
 }
 
-export class TOSMonsterDrop implements ITOSMonsterDrop {
+export class TOSMonsterLinkItem extends TOSEntityLink<ITOSItem> implements ITOSMonsterLinkItem {
   Chance: number;
   Item: ITOSItem;
   Quantity_MAX: number;
   Quantity_MIN: number;
 
-  constructor(json: TOSMonsterDrop) {
+  constructor(json: TOSMonsterLinkItem) {
+    super();
+
     this.Chance = +json.Chance;
     this.Item = json.Item;
     this.Quantity_MAX = +json.Quantity_MAX;
     this.Quantity_MIN = +json.Quantity_MIN;
   }
 
-  get Url() { return this.Item.Url };
+  get Link() { return this.Item }
 
 }
 
-export class TOSMonsterSpawn implements ITOSMonsterSpawn {
+export class TOSMonsterLinkMap extends TOSEntityLink<ITOSMap> implements ITOSMonsterLinkMap {
   Map: ITOSMap;
   Population: number;
   TimeRespawn: number;
 
-  constructor(json: TOSMonsterSpawn) {
+  constructor(json: TOSMonsterLinkMap) {
+    super();
+
     this.Map = json.Map;
     this.Population = +json.Population;
     this.TimeRespawn = +json.TimeRespawn;
   }
 
-  get Url() { return this.Map.Url };
+  get Link() { return this.Map }
 
 }

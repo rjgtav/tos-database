@@ -56,6 +56,7 @@ import {SWService} from "./service/sw.service";
 import {AnalyticsService} from "./service/analytics.service";
 import {TOSMapResolver} from "./domain/tos/map/tos-map.resolver";
 import {CssMaxHeightDirective} from './directives/css-max-height.directive';
+import {TOSNPCResolver} from "./domain/tos/monster/tos-npc.resolver";
 
 @NgModule({
   imports: [
@@ -167,6 +168,7 @@ export class SharedModule {
       providers: [
         DecimalPipe,
         PercentPipe,
+        TimePipe,
         TableCellBadgePipe,
         TableCellIconPipe,
         TableCellLinkPipe,
@@ -184,6 +186,7 @@ export class SharedModule {
         TOSJobResolver,
         TOSMapResolver,
         TOSMonsterResolver,
+        TOSNPCResolver,
         TOSRecipeResolver,
         TOSSkillResolver,
         { provide: 'ITOSDomainRepository', useClass: TOSDomainRepository },

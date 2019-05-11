@@ -28,6 +28,8 @@ import {CubeListConfigurationResolver} from "../resolvers/cube-list-configuratio
 import {EquipmentSetListConfigurationResolver} from "../resolvers/equipment-set-list-configuration.resolver";
 import {TOSRegionService} from "../../shared/domain/tos-region";
 import {TOSMap} from "../../shared/domain/tos/map/tos-map.model";
+import {ITOSEntity} from "../../shared/domain/tos/tos-domain";
+import {MapListConfigurationResolver} from "../resolvers/map-list-configuration.resolver";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -41,14 +43,18 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
   readonly COLUMNS_CUBES = CubeListConfigurationResolver.COLUMNS;
   readonly COLUMNS_GEMS = GemListConfigurationResolver.COLUMNS;
   readonly COLUMNS_ITEMS = ItemListConfigurationResolver.COLUMNS;
-  readonly COLUMNS_ITEMS_DROPS = ItemListConfigurationResolver.COLUMNS_DROPS;
+  readonly COLUMNS_ITEMS_MONSTERS = ItemListConfigurationResolver.COLUMNS_MONSTERS;
+  readonly COLUMNS_ITEMS_MAPS = ItemListConfigurationResolver.COLUMNS_MAPS;
   readonly COLUMNS_JOBS = JobListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_MAPS = MapListConfigurationResolver.COLUMNS;
+  readonly COLUMNS_MAPS_ITEMS = MapListConfigurationResolver.COLUMNS_ITEMS;
+  readonly COLUMNS_MAPS_NPCS = MapListConfigurationResolver.COLUMNS_NPCS;
   readonly COLUMNS_RECIPES_MATERIALS = RecipeListConfigurationResolver.COLUMNS_MATERIALS;
   readonly COLUMNS_RECIPES = RecipeListConfigurationResolver.COLUMNS;
   readonly COLUMNS_SET = EquipmentSetListConfigurationResolver.COLUMNS;
   readonly COLUMNS_SKILLS = SkillListConfigurationResolver.COLUMNS;
-  readonly COLUMNS_MONSTERS_DROPS = MonsterListConfigurationResolver.COLUMNS_DROPS;
-  readonly COLUMNS_MONSTERS_SPAWNS = MonsterListConfigurationResolver.COLUMNS_SPAWNS;
+  readonly COLUMNS_MONSTERS_DROPS = MonsterListConfigurationResolver.COLUMNS_ITEMS;
+  readonly COLUMNS_MONSTERS_MAPS = MonsterListConfigurationResolver.COLUMNS_MAPS;
 
   readonly ICON_WIDTH = EntityDetailClassIconGradeComponent.ICON_LARGE_WIDTH;
 
@@ -71,17 +77,21 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
   skill: TOSSkill;
 
   anvilLevel: number = 0;
-  initialized: boolean;
   transcendLevel: number = 0;
 
-  tooltip: TOSEntity;
+  tooltip: ITOSEntity;
 
   private subscriptionRoute: Subscription;
   private subscriptionSkill: Subscription;
 
-  constructor(private changeDetector: ChangeDetectorRef, private route: ActivatedRoute, private router: Router) { }
+  constructor(protected changeDetector: ChangeDetectorRef, private route: ActivatedRoute, private router: Router) { }
+
+  protected onInit() {}
+  protected onDestroy() {}
 
   ngOnDestroy() {
+    this.onDestroy();
+
     this.subscriptionRoute && this.subscriptionRoute.unsubscribe();
     this.subscriptionSkill && this.subscriptionSkill.unsubscribe();
   }
@@ -114,12 +124,12 @@ export class EntityDetailComponent implements OnDestroy, OnInit {
           await build.jobAdd$(value);
 
           this.build = build;
-          this.changeDetector.detectChanges();
+          this.changeDetector.markForCheck();
         });
       }
 
-      this.changeDetector.detectChanges();
-      this.initialized = true;
+      this.onInit();
+      this.changeDetector.markForCheck();
     });
   }
 

@@ -2,6 +2,7 @@
 <table class="table table-hover mb-0">
   <thead *ngIf="header">
     <tr tosSortGroup [ngModel]="sort" (ngModelChange)="sortChange.emit($event)">
+      <th *ngIf="selected" [width]="1"></th>
       <th *ngFor="let column of columnsFiltered" tosSort
           [column]="column.pipe.column"
           [label]="column.label"
@@ -21,6 +22,13 @@
        (click)="onRowMouseClick($event, row)"
        (mouseover)="onRowMouseOver($event, row)"
        (mouseleave)="onRowMouseLeave($event)">
+      <!-- Selected -->
+      <td *ngIf="selected" class="text-center" [width]="1">
+        <input type="checkbox" style="transform: scale(2)"
+               [(ngModel)]="row.Selected"
+               (click)="$event.stopImmediatePropagation()" />
+      </td>
+
       <td *ngFor="let column of columnsFiltered"
           [class]="column.class"
           [innerHTML]="row | tosTableCell:column:changeDetector | async"

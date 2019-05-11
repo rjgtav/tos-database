@@ -8,12 +8,11 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
-import {TOSEntity} from "../../domain/tos/tos-entity.model";
 import {Sort} from "../../directives/sort.directive";
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
 import {TableCellLinkPipeDefinition} from "./pipes/table-cell-link.pipe";
-import {TableCellTextPipeDefinition} from "./pipes/table-cell-text.pipe";
+import {ITOSEntity} from "../../domain/tos/tos-domain";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -28,16 +27,17 @@ export class EntityTableComponent implements OnChanges {
   static readonly ATTRIBUTE_DATA_ROUTER = 'data-router';
 
   @Input() columns: EntityTableColumn[];
-  @Input() data: TOSEntity[];
+  @Input() data: ITOSEntity[];
   @Input() header: boolean = true;
   @Input() hideMobile: boolean = false;
   @Input() hideTablet: boolean = false;
+  @Input() selected: boolean = false;
   @Input() sort: Sort;
   @Output() sortChange: EventEmitter<Sort> = new EventEmitter();
   @Input() themeInvert: boolean = false;
 
   columnsFiltered: EntityTableColumn[];
-  tooltip: TOSEntity;
+  tooltip: ITOSEntity;
 
   constructor(public changeDetector: ChangeDetectorRef, private router: Router) {}
 
@@ -54,7 +54,7 @@ export class EntityTableComponent implements OnChanges {
     }
   }
 
-  onRowMouseClick(event: MouseEvent, row: TOSEntity) {
+  onRowMouseClick(event: MouseEvent, row: ITOSEntity) {
     let target = event.target as Element;
 
     if (target.getAttribute(EntityTableComponent.ATTRIBUTE_DATA_ROUTER)) {
@@ -65,29 +65,22 @@ export class EntityTableComponent implements OnChanges {
       this.router.navigate([url]);
     }
   }
-  onRowMouseOver(event: MouseEvent, row: TOSEntity) {
+  onRowMouseOver(event: MouseEvent, row: ITOSEntity) {
     let target = event.target as Element;
 
     if (target.getAttribute(EntityTableComponent.ATTRIBUTE_DATA_COLUMN)) {
-      // Show tooltips for linked TOSEntity lists
+      // Show tooltips for linked ITOSEntity lists
       let column = this.columns.find(value => value.pipe.column == target.getAttribute(EntityTableComponent.ATTRIBUTE_DATA_COLUMN));
       let definition = column.pipe as TableCellLinkPipeDefinition;
-      let observable = row[definition.column] as Observable<TOSEntity | TOSEntity[]>;
+      let observable = row[definition.column] as Observable<ITOSEntity | ITOSEntity[]>;
           observable.subscribe(value => {
             let array = Array.isArray(value) ? value : [value];
             let entity = array[+target.getAttribute(EntityTableComponent.ATTRIBUTE_DATA_I)];
-                entity = definition.transformEntity ? definition.transformEntity(entity) as TOSEntity : entity;
 
             this.tooltip = entity;
             this.changeDetector.markForCheck();
           })
 
-    } else if (row['$ID'] == undefined) {
-      // Show tooltip for TOSEntity wrappers (e.g. TOSRecipeMaterial)
-      let column = this.columns.find(value => value.pipe.column == '$ID');
-      let definition = column.pipe as TableCellTextPipeDefinition;
-
-      this.tooltip = definition.transformEntity(row) as TOSEntity;
     } else {
       this.tooltip = row;
     }
@@ -97,7 +90,7 @@ export class EntityTableComponent implements OnChanges {
     this.tooltip = null;
   }
 
-  trackByIndex(index: number, value: TOSEntity) {
+  trackByIndex(index: number, value: ITOSEntity) {
     return index;
   }
 

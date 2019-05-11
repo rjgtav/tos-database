@@ -1,5 +1,5 @@
 import {TOSUrlService} from "../../service/tos-url.service";
-import {ITOSEntity, TOSDataSet, TOSDataSetService} from "./tos-domain";
+import {ITOSEntity, ITOSEntityLink, TOSDataSet, TOSDataSetService} from "./tos-domain";
 import {forkJoin, isObservable, Observable, ReplaySubject} from "rxjs";
 
 const COMPARATOR_ID = (a: number, b: number) => {
@@ -16,6 +16,8 @@ export abstract class Comparable {
 }
 
 export abstract class TOSEntity extends Comparable implements ITOSEntity {
+
+  public Selected: boolean;
 
   private url: string;
 
@@ -145,5 +147,25 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
         .trim()
         : null;
   }
+
+}
+
+export abstract class TOSEntityLink<LINK extends ITOSEntity> extends TOSEntity implements ITOSEntityLink<LINK> {
+
+  protected constructor() {
+    super(null, null);
+  }
+
+  abstract get Link(): LINK;
+
+  get $ID() {         return this.Link && this.Link.$ID }
+  get $ID_NAME() {    return this.Link && this.Link.$ID_NAME }
+  get Description() { return this.Link && this.Link.Description }
+  get Icon() {        return this.Link && this.Link.Icon }
+  get Name() {        return this.Link && this.Link.Name }
+  get Url() {         return this.Link && this.Link.Url }
+
+  get Selected() {    return this.Link && this.Link.Selected }
+  set Selected(value: boolean) { if (this.Link) this.Link.Selected = value }
 
 }

@@ -14,6 +14,7 @@ export class EntityDetailTableComponent extends EntityDetailChildComponent imple
   @Input() data$: Observable<any[]>;
   @Input() divider: boolean;
   @Input() header: string;
+  @Input() selected: boolean;
   @Input() themeInvert: boolean;
 
   public data: any[];
@@ -24,11 +25,11 @@ export class EntityDetailTableComponent extends EntityDetailChildComponent imple
   ngOnChanges(changes: SimpleChanges): void {
     super.ngOnChanges(changes);
 
-    if (changes.data$) {
+    if (changes.data$ && this.data$) {
       this.subscriptionData && this.subscriptionData.unsubscribe();
       this.subscriptionData = this.data$.subscribe(value => {
         this.data = Array.isArray(value) ? value : [value];
-        this.changeDetector.detectChanges();
+        this.changeDetector.markForCheck();
       });
     }
   }

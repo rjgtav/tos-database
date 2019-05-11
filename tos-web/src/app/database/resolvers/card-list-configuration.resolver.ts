@@ -26,8 +26,8 @@ export class CardListConfigurationResolver implements Resolve<TOSListConfigurati
         { label: '',              pipe: new TableCellIconPipeDefinition('Icon'), class: 'p-1 text-center' },
         { label: '$ID',           pipe: new TableCellTextPipeDefinition('$ID'), hideMobile: true },
         { label: 'Name',          pipe: new TableCellTextPipeDefinition('Name'), wide: true },
-        { label: 'Element',       pipe: new TableCellIconPipeDefinition('MonsterElement', null, TOSElementService.icon), class: 'p-1 text-center', hideMobile: true },
-        { label: 'Race',          pipe: new TableCellIconPipeDefinition('MonsterRace', null, TOSMonsterRaceService.icon), class: 'p-1 text-center', hideMobile: true },
+        { label: 'Element',       pipe: new TableCellIconPipeDefinition('MonsterElement', TOSElementService.icon), class: 'p-1 text-center', hideMobile: true },
+        { label: 'Race',          pipe: new TableCellIconPipeDefinition('MonsterRace', TOSMonsterRaceService.icon), class: 'p-1 text-center', hideMobile: true },
         { label: 'Type',          pipe: new TableCellTextPipeDefinition('TypeCard') },
       ]
     };

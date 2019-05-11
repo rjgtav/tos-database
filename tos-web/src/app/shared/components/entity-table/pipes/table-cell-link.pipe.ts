@@ -21,7 +21,7 @@ export class TableCellLinkPipe extends TableCellPipeBase<TableCellLinkPipeDefini
         let array = Array.isArray(value) ? value : [value];
 
         for (let i = 0; i < array.length; i ++) {
-          let entity = definition.transformEntity ? definition.transformEntity(array[i]) : array[i];
+          let entity = array[i];
           let value = definition.transformValue ? definition.transformValue(array[i]) : null;
 
           html +=
@@ -49,7 +49,6 @@ export class TableCellLinkPipe extends TableCellPipeBase<TableCellLinkPipeDefini
 export class TableCellLinkPipeDefinition extends EntityTablePipeDefinition {
   constructor(
     public column: string,
-    public transformEntity?: (value: any) => ITOSEntity,
     public transformValue?: (value: any) => number,
   ) { super(column, TableCellLinkPipe); }
 }
