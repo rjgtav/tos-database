@@ -1,6 +1,7 @@
 import csv
 import logging
 import os
+import re
 
 from PIL import Image, ImageDraw, ImageColor, ImageFilter
 
@@ -222,7 +223,7 @@ def parse_links_items_rewards():
             item = globals.get_item_link(row['MapRatingRewardItem1']).entity
             item_link = globals.get_item_link(row['MapRatingRewardItem1'])
             item_link = {
-                'Chance': 1,
+                'Chance': 100,
                 'Item': item_link,
                 'Quantity_MAX': int(row['MapRatingRewardCount1']),
                 'Quantity_MIN': int(row['MapRatingRewardCount1']),
@@ -231,7 +232,7 @@ def parse_links_items_rewards():
             map = globals.maps_by_name[row['ClassName']]
             map_link = globals.get_map_link(map['$ID_NAME'])
             map_link = {
-                'Chance': 1,
+                'Chance': 100,
                 'Map': map_link,
                 'Quantity_MAX': int(row['MapRatingRewardCount1']),
                 'Quantity_MIN': int(row['MapRatingRewardCount1']),
@@ -284,8 +285,8 @@ def parse_links_npcs():
             try:
                 with open(ies_path, 'rb') as ies_file:
                     for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
-                        obj = anchors[row['GenType']] if row['GenType'] in anchors else []
-                        obj.append([
+                        obj = anchors[row['GenType']] if row['GenType'] in anchors else { 'Anchors': [], 'GenType': {} }
+                        obj['Anchors'].append([
                             int((map_offset_x + float(row['PosX'])) * MAP_SCALE),
                             int((map_offset_y - float(row['PosZ'])) * MAP_SCALE),
                         ])
@@ -306,25 +307,72 @@ def parse_links_npcs():
                         if row['GenType'] not in anchors:
                             continue
 
-                        map_link = globals.get_map_link(map['$ID_NAME'])
-                        map_link = {
-                            'Map': map_link,
-                            'Population': int(row['MaxPop']),
-                            'TimeRespawn': int(row['RespawnTime']),
-                        }
-
-                        npc = globals.get_npc_link(row['ClassType']).entity
-                        npc_link = globals.get_npc_link(row['ClassType'])
-                        npc_link = {
-                            'NPC': npc_link,
-                            'Population': int(row['MaxPop']),
-                            'Positions': anchors[row['GenType']],
-                            'TimeRespawn': int(row['RespawnTime']),
-                        }
-
-                        globals.link(
-                            map, 'Link_NPCs', map_link,
-                            npc, 'Link_Maps', npc_link
-                        )
+                        obj = anchors[row['GenType']]
+                        obj['GenType'] = row
             except IOError:
                 continue
+
+            # Group by Item/NPC and join anchors
+            anchors_by_npc = {}
+
+            for anchor in anchors.values():
+                if len(anchor['GenType'].keys()) == 0:
+                    continue
+
+                item_name = re.search('\w+:(\w+):\w+', anchor['GenType']['ArgStr2'])
+                npc_name = item_name.group(1) if item_name else anchor['GenType']['ClassType']
+
+                if npc_name in anchors_by_npc:
+                    anchors_by_npc[npc_name]['Anchors'] += anchor['Anchors']
+                    anchors_by_npc[npc_name]['GenType']['MaxPop'] = int(anchors_by_npc[npc_name]['GenType']['MaxPop']) + int(anchor['GenType']['MaxPop'])
+                else:
+                    anchors_by_npc[npc_name] = anchor
+
+            # Link everyone
+            for anchor_name in anchors_by_npc.keys():
+                anchor = anchors_by_npc[anchor_name]
+
+                if globals.get_item_link(anchor_name):
+                    item = globals.get_item_link(anchor_name).entity
+                    item_link = globals.get_item_link(item['$ID_NAME'])
+                    item_link = {
+                        'Item': item_link,
+                        'Population': int(anchor['GenType']['MaxPop']),
+                        'Positions': anchor['Anchors'],
+                        'TimeRespawn': int(anchor['GenType']['RespawnTime']) / 1000.0,
+                    }
+
+                    map_link = globals.get_map_link(map['$ID_NAME'])
+                    map_link = {
+                        'Chance': 100,
+                        'Map': map_link,
+                        'Quantity_MAX': 1,
+                        'Quantity_MIN': 1,
+                    }
+
+                    globals.link(
+                        map, 'Link_NPCs', map_link,
+                        item, 'Link_Maps', item_link
+                    )
+
+                elif globals.get_npc_link(anchor_name):
+                    map_link = globals.get_map_link(map['$ID_NAME'])
+                    map_link = {
+                        'Map': map_link,
+                        'Population': int(anchor['GenType']['MaxPop']),
+                        'TimeRespawn': int(anchor['GenType']['RespawnTime']) / 1000.0,
+                    }
+
+                    npc = globals.get_npc_link(anchor_name).entity
+                    npc_link = globals.get_npc_link(npc['$ID_NAME'])
+                    npc_link = {
+                        'NPC': npc_link,
+                        'Population': int(anchor['GenType']['MaxPop']),
+                        'Positions': anchor['Anchors'],
+                        'TimeRespawn': int(anchor['GenType']['RespawnTime']) / 1000.0,
+                    }
+
+                    globals.link(
+                        map, 'Link_NPCs', map_link,
+                        npc, 'Link_Maps', npc_link
+                    )

@@ -115,6 +115,6 @@ def parse(region, is_rebuild, is_version_new):
     csv_write(globals.jobs.values(), constants.OUTPUT_JOBS)
     csv_write(globals.maps.values(), constants.OUTPUT_MAPS)
     csv_write(globals.monsters.values(), constants.OUTPUT_MONSTERS)
-    #csv_write(globals.npcs.values(), constants.OUTPUT_NPCS)
+    csv_write(globals.npcs.values(), constants.OUTPUT_NPCS)
     csv_write(globals.recipes.values(), constants.OUTPUT_RECIPES)
     csv_write(globals.skills.values(), constants.OUTPUT_SKILLS)

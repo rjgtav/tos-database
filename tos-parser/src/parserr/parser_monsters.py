@@ -166,8 +166,8 @@ def parse_monsters(file_name):
             obj['Stat_BlockRate'] = int(LUA_RUNTIME['SCR_Get_MON_BLK'](row))
             obj['Stat_BlockPenetration'] = int(LUA_RUNTIME['SCR_Get_MON_BLK_BREAK'](row))
 
-            obj['Link_Drops'] = []
-            obj['Link_Spawns'] = []
+            obj['Link_Items'] = []
+            obj['Link_Maps'] = []
 
             globals.monsters[obj['$ID']] = obj
             globals.monsters_by_name[obj['$ID_NAME']] = obj
@@ -194,31 +194,43 @@ def parse_monsters_statbase(file_name, destination):
 
 
 def parse_links():
-    parse_links_drops()
+    parse_links_items()
 
 
-def parse_links_drops():
-    logging.debug('Parsing drops for monsters...')
+def parse_links_items():
+    logging.debug('Parsing Monsters <> Items...')
 
-    for id_monster in globals.monsters:
-        monster = globals.monsters[id_monster]
-        file_name = monster['$ID_NAME'] + '.ies'
+    for monster in globals.monsters.values():
+        ies_file = monster['$ID_NAME'] + '.ies'
+        ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_drop.ipf', ies_file.lower())
 
         try:
-            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_drop.ipf", file_name.lower())
-            ies_file = open(ies_path, 'rb')
-            ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
+            with open(ies_path, 'rb') as ies_file:
+                for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+                    if not row['ItemClassName'] or globals.get_item_link(row['ItemClassName']) is None:
+                        continue
 
-            # logging.debug('Parsing monster: %s :: %s', monster['$ID'], monster['$ID_NAME'])
-            for row in ies_reader:
-                obj = {}
-                obj['Chance'] = int(row['DropRatio']) / 100.0
-                obj['Item'] = globals.get_item_link(row['ItemClassName'])
-                obj['Quantity_MAX'] = int(row['Money_Max'])
-                obj['Quantity_MIN'] = int(row['Money_Min'])
+                    item = globals.get_item_link(row['ItemClassName']).entity
+                    item_link = globals.get_item_link(item)
+                    item_link = {
+                        'Chance': int(row['DropRatio']) / 100.0,
+                        'Item': item_link,
+                        'Quantity_MAX': int(row['Money_Max']),
+                        'Quantity_MIN': int(row['Money_Min']),
+                    }
 
-                monster['Link_Drops'].append(obj)
+                    monster_link = globals.get_monster_link(monster)
+                    monster_link = {
+                        'Chance': int(row['DropRatio']) / 100.0,
+                        'Monster': monster_link,
+                        'Quantity_MAX': int(row['Money_Max']),
+                        'Quantity_MIN': int(row['Money_Min']),
+                    }
 
-            ies_file.close()
+                    globals.link(
+                        monster, 'Link_Items', monster_link,
+                        item, 'Link_Monsters', item_link
+                    )
+
         except IOError:
             continue
