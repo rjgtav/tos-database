@@ -1,4 +1,4 @@
-<div class="card bg-light shadow ml-4 mt-3" style="width: 480px;" *ngIf="entity && !card && !map">
+<div class="card bg-light shadow ml-4 mt-3" style="width: 480px;" *ngIf="entity && !card && !map && !npc">
   <div class="card-body">
 
     <!-- Base Information -->
@@ -49,7 +49,7 @@
 
 </div>
 
-<div style="width: 363px;" *ngIf="card">
+<div style="width: 363px;" *ngIf="card && !npc">
 
   <!-- Card -->
   <tos-entity-detail-Card [entity]="entity"></tos-entity-detail-Card>

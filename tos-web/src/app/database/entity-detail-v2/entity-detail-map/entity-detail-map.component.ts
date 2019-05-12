@@ -10,7 +10,7 @@ import {
 import {EntityDetailComponent} from "../../entity-detail/entity-detail.component";
 import {faFilter, faSearchMinus, faSearchPlus, faStar, faTimes} from '@fortawesome/free-solid-svg-icons';
 import {TOSMapLinkNPC} from "../../../shared/domain/tos/map/tos-map.model";
-import {TOSNPCType} from "../../../shared/domain/tos/tos-domain";
+import {TOSMonsterType} from "../../../shared/domain/tos/tos-domain";
 import {ActivatedRoute, Router} from "@angular/router";
 
 const MAP_SCALE_MIN = 0.85;
@@ -75,8 +75,8 @@ export class EntityDetailMapComponent extends EntityDetailComponent implements O
 
     this.map.Link_NPCs && this.map.Link_NPCs.subscribe(value => {
       this.spawns = value.filter(value => value.Link && value.Icon);
-      this.spawnsMonsters = this.spawns.filter(value => value.NPC && value.NPC.Type == TOSNPCType.MONSTER);
-      this.spawnsNPCs = this.spawns.filter(value => value.NPC && value.NPC.Type != TOSNPCType.MONSTER);
+      this.spawnsMonsters = this.spawns.filter(value => value.NPC && value.NPC.Type == TOSMonsterType.MONSTER);
+      this.spawnsNPCs = this.spawns.filter(value => value.NPC && value.NPC.Type != TOSMonsterType.MONSTER);
       this.spawnsTreasures = this.spawns.filter(value => value.Item);
 
       this.changeDetector.markForCheck();

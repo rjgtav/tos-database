@@ -476,14 +476,13 @@ export const
     if (value == TOSMonsterSize.L)  return 2;
     if (value == TOSMonsterSize.XL) return 3;
   };
-
-export enum TOSNPCType {
+export enum TOSMonsterType {
   MONSTER = 'Monster',
   NEUTRAL = 'Neutral',
   NPC = 'NPC',
   SIGN = 'Sign',
 }
-export const TOSNPCTypeService = EnumServiceFactory(TOSNPCType);
+export const TOSMonsterTypeService = EnumServiceFactory(TOSMonsterType);
 
 export enum TOSSkillRequiredStanceCompanion {
   BOTH = 'Yes',
@@ -842,7 +841,7 @@ export interface ITOSMapLinkNPC extends ITOSEntityLink<ITOSItem | ITOSNPC> {
   TimeRespawn: number;
 }
 
-export interface ITOSMonster extends ITOSNPC {
+export interface ITOSMonster extends ITOSEntity {
   Armor: TOSEquipmentMaterial;
   Element: TOSElement;
   Level: number;
@@ -871,6 +870,7 @@ export interface ITOSMonster extends ITOSNPC {
   Stat_CriticalRate: number;
   Stat_BlockPenetration: number;
   Stat_BlockRate: number;
+  Type: TOSMonsterType;
 
   Link_Items: Observable<ITOSMonsterLinkItem[]>;
   Link_Maps: Observable<ITOSMonsterLinkMap[]>;
@@ -887,9 +887,7 @@ export interface ITOSMonsterLinkMap extends ITOSEntityLink<ITOSMap> {
   Url: string;
 }
 
-export interface ITOSNPC extends ITOSEntity {
-  Type: TOSNPCType;
-}
+export interface ITOSNPC extends ITOSMonster {}
 
 export interface ITOSRecipe extends ITOSItem {
   Link_Materials: Observable<ITOSRecipeLinkItem[]>;

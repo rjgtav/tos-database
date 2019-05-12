@@ -1,15 +1,12 @@
-import {TOSEntity} from "../tos-entity.model";
-import {ITOSNPC, TOSDataSet, TOSNPCType} from "../tos-domain";
+import {ITOSNPC, TOSDataSet} from "../tos-domain";
+import {TOSMonster} from "./tos-monster.model";
 
-export class TOSNPC extends TOSEntity implements ITOSNPC {
+export class TOSNPC extends TOSMonster implements ITOSNPC {
 
-  constructor(dataset: TOSDataSet, json: TOSNPC) {
-    super(dataset, json);
-
-    this.Selected = this.Type != TOSNPCType.MONSTER;
+  constructor(json: TOSNPC) {
+    super(TOSDataSet.NPCS, json);
   }
 
-  get Type() { return this.$lazyPropertyEnum('Type', TOSNPCType) }
   get Url(): string { return null }
 
 }

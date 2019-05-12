@@ -71,11 +71,11 @@ export class TOSDomainRepository implements ITOSDomainRepository {
       schema:             { primaryKey: '$ID' },
     },
     'monsters': {
-      factory:            json => new TOSMonster(json),
+      factory:            json => new TOSMonster(TOSDataSet.MONSTERS, json),
       schema:             { primaryKey: '$ID' },
     },
     'npcs': {
-      factory:            json => new TOSNPC(TOSDataSet.NPCS, json),
+      factory:            json => new TOSNPC(json),
       schema:             { primaryKey: '$ID' },
     },
     'recipes': {

@@ -29,6 +29,7 @@ import {
 } from "../../domain/tos/tos-domain";
 import {TOSDatabaseBuild} from "../../domain/tos/tos-build";
 import {TOSRegionService} from "../../domain/tos-region";
+import {TOSNPC} from "../../domain/tos/monster/tos-npc.model";
 
 const PADDING = 8;
 
@@ -60,6 +61,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
   item: TOSItem;
   job: TOSJob;
   map: TOSMap;
+  npc: TOSNPC;
   skill: TOSSkill;
 
   constructor(
@@ -83,6 +85,7 @@ export class EntityTooltipComponent implements OnChanges, OnDestroy {
       this.item = this.entity instanceof TOSItem ? this.entity as TOSItem : null;
       this.job = this.entity instanceof TOSJob ? this.entity as TOSJob : null;
       this.map = this.entity instanceof TOSMap ? this.entity as TOSMap : null;
+      this.npc = this.entity instanceof TOSNPC ? this.entity as TOSNPC : null;
       this.skill = this.entity instanceof TOSSkill ? this.entity as TOSSkill : null;
 
       if (this.skill) {

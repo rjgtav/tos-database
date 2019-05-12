@@ -11,21 +11,23 @@ import {
   TOSMonsterRank,
   TOSMonsterRankService,
   TOSMonsterSize,
-  TOSMonsterSizeService
+  TOSMonsterSizeService,
+  TOSMonsterType
 } from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
 import {Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal-compatibility";
-import {TOSNPC} from "./tos-npc.model";
-import {TOSEntityLink} from "../tos-entity.model";
+import {TOSEntity, TOSEntityLink} from "../tos-entity.model";
 
-export class TOSMonster extends TOSNPC implements ITOSMonster {
+export class TOSMonster extends TOSEntity implements ITOSMonster {
 
-  constructor(json: TOSMonster) {
+  constructor(dataset: TOSDataSet, json: TOSMonster) {
     super(TOSDataSet.MONSTERS, json);
 
     this.$comparators['Rank'] = TOSMonsterRankService.comparator;
     this.$comparators['Size'] = TOSMonsterSizeService.comparator;
+
+    this.Selected = this.Type != TOSMonsterType.MONSTER;
   }
 
   get Armor() { return this.$lazyPropertyEnum('Armor', TOSEquipmentMaterial) }
@@ -56,6 +58,7 @@ export class TOSMonster extends TOSNPC implements ITOSMonster {
   get Stat_CriticalRate() { return this.$lazyPropertyNumber('Stat_CriticalRate') }
   get Stat_BlockPenetration() { return this.$lazyPropertyNumber('Stat_BlockPenetration') }
   get Stat_BlockRate() { return this.$lazyPropertyNumber('Stat_BlockRate') }
+  get Type() { return this.$lazyPropertyEnum('Type', TOSMonsterType) }
 
   get Link_Items() { return this.$lazyPropertyLink('Link_Items', value => this.TOSMonsterLinkItem(value)) as Observable<TOSMonsterLinkItem[]> }
   get Link_Maps() { return this.$lazyPropertyLink('Link_Maps', value => this.TOSMonsterLinkMap(value)) as Observable<TOSMonsterLinkMap[]> }
