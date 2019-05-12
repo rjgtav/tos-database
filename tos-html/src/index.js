@@ -1,9 +1,7 @@
-const
-    archiver = require('archiver'),
-    fs = require('fs'),
-    papa = require('papaparse'),
-    path = require('path')
-;
+const archiver = require('archiver');
+const fs = require('fs');
+const papa = require('papaparse');
+const path = require('path');
 
 // Add timestamp to logs
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
@@ -27,23 +25,37 @@ if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(
 
 let folder_archive_database = path.join(REGION.toLowerCase(), 'database');
 let folder_archive_home = path.join(REGION.toLowerCase(), 'home');
-let folder_archive_simulator = path.join(REGION.toLowerCase(), 'home');
+let folder_archive_patreon = path.join(REGION.toLowerCase(), 'patreon');
+let folder_archive_simulator = path.join(REGION.toLowerCase(), 'simulator');
 let folder_archive_region = path.join(REGION.toLowerCase());
-let folder_app = path.join(__dirname, '..', '..', 'web', 'src', 'app');
-let folder_database = path.join(__dirname, '..', '..', 'web', 'src', 'assets', 'data', REGION.toLowerCase());
-let folder_dist = path.join(__dirname, '..', '..', 'web', 'dist', 'web');
-let folder_template = path.join(__dirname, 'templates');
+let folder_app = path.join('..', 'tos-web', 'src', 'app');
+let folder_database = path.join('..', 'tos-build', 'dist', 'assets', 'data', REGION.toLowerCase());
+let folder_dist_build = path.join('..', 'tos-build', 'dist');
+let folder_dist_web = path.join('..', 'tos-web', 'dist');
+let folder_template = path.join('..', 'tos-html', 'src', 'templates');
 let folder_template_database = path.join(folder_template, 'database');
 
 // Initialize archive
-let output = fs.createWriteStream(path.join(folder_dist, REGION.toLowerCase() + '.zip'));
+let output = fs.createWriteStream(path.join(folder_dist_build, REGION.toLowerCase() + '.zip'));
 let archive = archiver('zip', { zlib: { level: 9 }});
     archive.pipe(output);
 
-// Generate template base
-let templateBase = fs.existsSync(path.join(folder_dist, 'index.backup.html'))
-    ? fs.readFileSync(path.join(folder_dist, 'index.backup.html'), 'utf8')
-    : fs.readFileSync(path.join(folder_dist, 'index.html'), 'utf8');
+// Load base template
+let templateBase = fs.readFileSync(path.join(folder_dist_web, 'index.html'), 'utf8');
+
+// Inject patreon & region data
+let patreonPath = path.join(folder_dist_build, 'patreon.json');
+let regionPath = path.join(folder_dist_build, 'region.json');
+
+templateBase = templateBase
+    .replace(
+        /<script type="application\/json" id="tos-patreon">(.*?)<\/script>/gs,
+        (match, p1) => match.replace(p1, fs.readFileSync(patreonPath, 'utf-8'))
+    )
+    .replace(
+        /<script type="application\/json" id="tos-region">(.*?)<\/script>/gs,
+        (match, p1) => match.replace(p1, fs.readFileSync(regionPath, 'utf-8'))
+    );
 
 // Generate database pages
 let files = fs.readdirSync(folder_database);
@@ -56,7 +68,7 @@ let files = fs.readdirSync(folder_database);
             dataset = dataset === 'jobs' ? 'classes' : dataset;
         let file = fs.readFileSync(path.join(folder_database, fileName), 'utf8');
 
-        if (dataset === 'maps')
+        if (dataset === 'npcs')
             return;
 
         let templateDetail = fs.readFileSync(path.join(folder_template_database, dataset, 'detail.html'), 'utf8');
@@ -99,7 +111,7 @@ let files = fs.readdirSync(folder_database);
         archive.append(outputList, { name: path.join(folder_archive_database, dataset, 'index.html')});
     });
 
-// Generate home pages
+// Generate home pages (including main index and 404)
 let row = {};
     row['region'] = REGION.toLowerCase();
     row['seo-description'] = 'Tree of Savior - Open-source Database and Skill Simulator';
@@ -111,14 +123,14 @@ let row = {};
 let outputHome = fs.readFileSync(path.join(folder_app, 'home', 'welcome', 'welcome.component.html'), 'utf8');
     outputHome = templatePopulate(row, templateBase.replace(/#{content}#/g, outputHome));
 
+archive.append(outputHome, { name: path.join('', '404.html')});
+archive.append(outputHome, { name: path.join('', 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_database, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_home, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_region, 'index.html')});
+archive.append(outputHome, { name: path.join(folder_archive_patreon, 'index.html')});
 archive.append(outputHome, { name: path.join(folder_archive_simulator, 'index.html')});
 archive.finalize();
-
-fs.writeFileSync(path.join(folder_dist, 'index.html'), outputHome);
-fs.writeFileSync(path.join(folder_dist, 'index.backup.html'), templateBase); // Backup base html page for next use
 
 // #####################################################################################################################
 //  Value formatters

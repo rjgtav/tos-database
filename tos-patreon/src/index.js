@@ -24,17 +24,10 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
             return accumulator;
         }, {});
 
-        // Update patreon component
-        console.log('Update patreon component');
-        let patreonPath = path.join('..', 'web', 'src', 'app', 'home', 'patreon', 'patreon.service.ts');
-        let patreon = fs.readFileSync(patreonPath, 'utf8') + '';
+        // Update patreon.json
+        console.log('Update patreon.json');
+        fs.writeFileSync(path.join('..', 'tos-build', 'dist', 'patreon.json'), JSON.stringify(membersPerTier));
 
-        for (let tier in membersPerTier) {
-            console.log(`[${ tier }] ${ membersPerTier[tier] }`);
-            patreon = patreon.replace(new RegExp(`(\\[.*\\]); \\/\\* ${ tier }-needle \\*\\/`), (match, p1) => match.replace(p1, '[' + membersPerTier[tier].sort().join(',') + ']'));
-        }
-
-        fs.writeFileSync(patreonPath, patreon);
     } catch (e) {
         console.error(e);
         process.exit(1);
@@ -62,6 +55,9 @@ async function patreonAccessTokenRefresh() {
     let response = await fetch('https://www.patreon.com/api/oauth2/token', { method: 'POST', body: params });
         response = await response.json();
 
+    if (response.error !== undefined)
+        throw new Error('Failed to refresh Patreon AccessToken');
+
     let accessToken = response.access_token;
     let refreshToken = response.refresh_token;
 
@@ -75,10 +71,6 @@ async function patreonAccessTokenRefresh() {
 
     return accessToken;
 }
-
-// Small script to collect rjgtav's patrons list and put them on a special thank you page
-// https://tos.guru/assets/favicon.png
-// https://tos.guru:8080/oauth/patreon
 
 async function patreonCampaigns(token) {
     let headers = { 'Authorization': 'Bearer ' + token };

@@ -1,0 +1,14 @@
+<div>
+  <div class="w-100" *ngIf="divider"><hr></div>
+  <h5>{{ header }}</h5>
+
+  <tos-entity-table class="d-block" style="max-height: calc(49px * 4.5); overflow-y: auto;"
+                    [columns]="columns"
+                    [data]="data"
+                    [header]="false"
+                    [hideMobile]="true"
+                    [hideTablet]="true"
+                    [selected]="selected"
+                    [themeInvert]="themeInvert"
+  ></tos-entity-table>
+</div>

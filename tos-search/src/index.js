@@ -1,9 +1,8 @@
-const fs = require('fs'),
-      lunr = require('lunr'),
-      openKoreanText = require('open-korean-text-node').default,
-      papa = require('papaparse'),
-      path = require('path')
-;
+const fs = require('fs');
+const lunr = require('lunr');
+const openKoreanText = require('open-korean-text-node').default;
+const papa = require('papaparse');
+const path = require('path');
 
 // Add timestamp to logs
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
@@ -29,13 +28,15 @@ if ([REGION_iTOS, REGION_jTOS, REGION_kTOS, REGION_kTEST, REGION_twTOS].indexOf(
     throw Error('Invalid region: ' + REGION);
 
 let documents = {};
-let folder = path.join(__dirname, '..', '..', 'web', 'src', 'assets', 'data', REGION.toLowerCase());
+let folder = path.join('..', 'tos-build', 'dist', 'assets', 'data', REGION.toLowerCase());
 
 // Load Documents
 log('Loading documents...');
 let files = fs.readdirSync(folder);
     files.forEach((fileName) => {
         if (fileName.indexOf('.csv') === -1)
+            return;
+        if (fileName.startsWith('npcs'))
             return;
 
         log('Papa parsing ' + fileName + '...');

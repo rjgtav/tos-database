@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "main": "node src/index.js",
-    "debug": "node %NODE_DEBUG_OPTION% src/index.js"
+    "main-debug": "node %NODE_DEBUG_OPTION% src/index.js"
   },
   "author": "",
   "license": "ISC",

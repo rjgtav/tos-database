@@ -1,0 +1,22 @@
+{
+  "name": "tos-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/deploy.js",
+  "scripts": {
+    "build": "node src/build.js",
+    "build-debug": "node %NODE_DEBUG_OPTION% src/build.js",
+    "deploy": "node src/deploy.js",
+    "deploy-debug": "node %NODE_DEBUG_OPTION% src/deploy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudflare": "^2.4.1",
+    "console-stamp": "^0.2.7",
+    "fs-extra": "^7.0.1",
+    "sync-request": "^6.0.0",
+    "uglify-es": "^3.3.9",
+    "xml2json": "^0.11.2"
+  }
+}

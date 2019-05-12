@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  overflow: auto;
+}
+
+a:first-child td { border: 0 !important; }
+
+td {
+  vertical-align: middle;
+}

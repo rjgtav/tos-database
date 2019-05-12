@@ -28,8 +28,11 @@ items = {}
 items_by_name = {}
 maps = {}
 maps_by_name = {}
+maps_by_position = {}
 monsters = {}
 monsters_by_name = {}
+npcs = {}
+npcs_by_name = {}
 recipes = {}
 recipes_by_name = {}
 skills = {}
@@ -45,6 +48,10 @@ all_items_by_name = [
     equipment_by_name,
     items_by_name,
     recipes_by_name
+]
+all_npcs_by_name = [
+    monsters_by_name,
+    npcs_by_name,
 ]
 
 
@@ -85,21 +92,13 @@ def get_equipment_set_link(name):
 
 
 def get_item_link(name):
-    if name == 'Moneybag1':
-        return {
-            '$ID': -1,
-            '$ID_NAME': None,
-            'Icon': 'icon_item_silver',
-            'Name': 'Silver'
-        }
-    else:
-        for xx_by_name in all_items_by_name:
-            item = _get_entity_link(name, xx_by_name)
+    for xx_by_name in all_items_by_name:
+        link = _get_entity_link(name, xx_by_name)
 
-            if item is not None:
-                return item
+        if link is not None:
+            return link
 
-        return None
+    return None
 
 
 def get_map_link(name):
@@ -108,6 +107,16 @@ def get_map_link(name):
 
 def get_monster_link(name):
     return _get_entity_link(name, monsters_by_name)
+
+
+def get_npc_link(name):
+    for xx_by_name in all_npcs_by_name:
+        link = _get_entity_link(name, xx_by_name)
+
+        if link is not None:
+            return link
+
+    return None
 
 
 def get_recipe_link(name):
@@ -137,6 +146,7 @@ def _get_entity_link(name, collection):
     collection_path = constants.OUTPUT_ITEMS if collection == items_by_name else collection_path
     collection_path = constants.OUTPUT_MAPS if collection == maps_by_name else collection_path
     collection_path = constants.OUTPUT_MONSTERS if collection == monsters_by_name else collection_path
+    collection_path = constants.OUTPUT_NPCS if collection == npcs_by_name else collection_path
     collection_path = constants.OUTPUT_RECIPES if collection == recipes_by_name else collection_path
     collection_path = constants.OUTPUT_SKILLS if collection == skills_by_name else collection_path
 
@@ -144,15 +154,17 @@ def _get_entity_link(name, collection):
 
 
 def link(a, a_key, a_link, b, b_key, b_link):
-    if isinstance(a[a_key], (list,)):
-        a[a_key].append(b_link)
-    else:
-        a[a_key] = b_link
+    if a_key in a and b_link is not None:
+        if isinstance(a[a_key], (list,)):
+            a[a_key].append(b_link)
+        else:
+            a[a_key] = b_link
 
-    if isinstance(b[b_key], (list,)):
-        b[b_key].append(a_link)
-    else:
-        b[b_key] = a_link
+    if b_key in b and a_link is not None:
+        if isinstance(b[b_key], (list,)):
+            b[b_key].append(a_link)
+        else:
+            b[b_key] = a_link
 
 
 # Helper class to delay the toString operation

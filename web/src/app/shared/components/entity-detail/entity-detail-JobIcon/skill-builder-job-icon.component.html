@@ -1,6 +1,0 @@
-<img class="position-absolute w-100 h-100" [src]="job.Icon" />
-<div class="d-flex flex-row position-absolute justify-content-center w-100" style="bottom: 0">
-  <fa-icon *ngFor="let c of job.CircleAvailable" [icon]="['fas', 'star']"
-           [size]="size"
-           [ngClass]="{ 'text-warning': c <= circle }"></fa-icon>
-</div>

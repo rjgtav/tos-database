@@ -1,3 +1,4 @@
+# coding=utf-8
 import csv
 import logging
 import os
@@ -106,6 +107,22 @@ def parse():
     parse_items('item_quest.ies')
     parse_items('recipe.ies')
 
+    # Hotfix: Insert 'Silver' as an Item
+    obj = {}
+    obj['$ID'] = -1
+    obj['$ID_NAME'] = 'Moneybag1'
+    obj['Icon'] = parser_assets.parse_entity_icon('icon_item_silver')
+    obj['Name'] = parser_translations.translate(u'실버')
+    obj['Tradability'] = 'FFFF'
+    obj['Type'] = TOSItemGroup.UNUSED
+
+    for key in globals.items.values()[0]:
+        if key not in obj:
+            obj[key] = None
+
+    globals.items[obj['$ID']] = obj
+    globals.items_by_name[obj['$ID_NAME']] = obj
+
 
 def parse_items(file_name):
     logging.debug('Parsing %s...', file_name)
@@ -141,7 +158,9 @@ def parse_items(file_name):
 
         obj['Link_Collections'] = []
         obj['Link_Cubes'] = []
-        obj['Link_MonsterDrops'] = []
+        obj['Link_Maps'] = []
+        obj['Link_Maps_Exploration'] = []
+        obj['Link_Monsters'] = []
         obj['Link_RecipeTarget'] = []
         obj['Link_RecipeMaterial'] = []
 
@@ -183,7 +202,6 @@ def parse_links():
     for xx_by_name in globals.all_items_by_name:
         parse_links_collections(xx_by_name)
         parse_links_cubes(xx_by_name)
-        parse_links_monster_drops(xx_by_name)
         parse_links_recipes(xx_by_name)
 
 
@@ -228,38 +246,6 @@ def parse_links_cubes(items_by_name):
 
         item = items_by_name[row['ItemName']]
         item['Link_Cubes'].append(cube)
-
-
-def parse_links_monster_drops(items_by_name):
-    logging.debug('Parsing monster drops for items...')
-
-    for id_monster in globals.monsters:
-        monster = globals.monsters[id_monster]
-        monster_name = monster['$ID_NAME']
-
-        try:
-            ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies_drop.ipf", monster_name.lower() + '.ies')
-            ies_file = open(ies_path, 'rb')
-            ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
-
-            # Parse monster drops (i.e. which monsters drop us)
-            for row in ies_reader:
-                item_name = row['ItemClassName']
-
-                if item_name == 'Moneybag1' or item_name not in items_by_name:
-                    continue
-
-                obj = {}
-                obj['Chance'] = int(row['DropRatio']) / 100.0
-                obj['Map'] = None
-                obj['Monster'] = globals.get_monster_link(monster_name)
-
-                item = items_by_name[item_name]
-                item['Link_MonsterDrops'].append(obj)
-
-            ies_file.close()
-        except IOError:
-            continue
 
 
 def parse_links_recipes(items_by_name):

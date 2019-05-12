@@ -33,15 +33,17 @@ class TOSEquipmentGrade(TOSEnum):
 
 
 class TOSEquipmentMaterial(TOSEnum):
-    CLOTH = 0
-    GHOST = 1
-    LEATHER = 2
-    PLATE = 3
-    UNKNOWN = 4
+    CHAIN = 0,
+    CLOTH = 1
+    GHOST = 2
+    LEATHER = 3
+    PLATE = 4
+    UNKNOWN = 5
 
     @staticmethod
     def value_of(string):
         return {
+            'CHAIN': TOSEquipmentMaterial.CHAIN,
             'CLOTH': TOSEquipmentMaterial.CLOTH,
             'GHOST': TOSEquipmentMaterial.GHOST,
             'IRON': TOSEquipmentMaterial.PLATE,
@@ -428,27 +430,12 @@ def parse():
 def parse_equipment():
     logging.debug('Parsing equipment...')
 
-    LUA = luautil.load_script('item_calculate.lua', [
-        'GET_COMMON_PROP_LIST',
-        'GET_BASIC_ATK',
-        'GET_BASIC_MATK',
-        'INIT_ARMOR_PROP',
-        'INIT_WEAPON_PROP',
-        'SCR_GET_ITEM_GRADE_RATIO',
-        'SCR_REFRESH_ACC',
-        'SCR_REFRESH_ARMOR',
-        'SCR_REFRESH_HAIRACC',
-        'SCR_REFRESH_WEAPON',
-        'GET_REINFORCE_ADD_VALUE_ATK',
-        'GET_REINFORCE_ADD_VALUE',
-        'GET_REINFORCE_PRICE',
-    ])
-    LUA_REINFORCE = luautil.load_script('lib_reinforce_131014.lua', ['GET_REINFORCE_PRICE'])
-    LUA_TRANSCEND = luautil.load_script('item_transcend_shared.lua', ['GET_TRANSCEND_MATERIAL_COUNT'])
-
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_equip.ies')
     ies_file = open(ies_path, 'rb')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
+
+    LUA_RUNTIME = luautil.LUA_RUNTIME
+    LUA_SOURCE = luautil.LUA_SOURCE
 
     for row in ies_reader:
         if int(row['ClassID']) not in globals.equipment:
@@ -467,7 +454,7 @@ def parse_equipment():
 
         if tooltip_script:
             try:
-                LUA[tooltip_script](row)
+                LUA_RUNTIME[tooltip_script](row)
             except LuaError as error:
                 if row['ClassID'] not in ['11130', '635061']:
                     logging.error('LUA error when processing item ClassID: %s', row['ClassID'])
@@ -525,11 +512,11 @@ def parse_equipment():
                 row['Reinforce_2'] = lv
 
                 if any(prop in row['BasicTooltipProp'] for prop in ['DEF', 'MDEF']):
-                    obj['AnvilDEF'].append(LUA['GET_REINFORCE_ADD_VALUE'](None, row, 0, 1))
-                    obj['AnvilPrice'].append(LUA_REINFORCE['GET_REINFORCE_PRICE'](row, {}, None))
+                    obj['AnvilDEF'].append(LUA_RUNTIME['GET_REINFORCE_ADD_VALUE'](None, row, 0, 1))
+                    obj['AnvilPrice'].append(LUA_RUNTIME['GET_REINFORCE_PRICE'](row, {}, None))
                 if any(prop in row['BasicTooltipProp'] for prop in ['ATK', 'MATK']):
-                    obj['AnvilATK'].append(LUA['GET_REINFORCE_ADD_VALUE_ATK'](row, 0, 1, None))
-                    obj['AnvilPrice'].append(LUA_REINFORCE['GET_REINFORCE_PRICE'](row, {}, None))
+                    obj['AnvilATK'].append(LUA_RUNTIME['GET_REINFORCE_ADD_VALUE_ATK'](row, 0, 1, None))
+                    obj['AnvilPrice'].append(LUA_RUNTIME['GET_REINFORCE_PRICE'](row, {}, None))
 
         obj['AnvilPrice'] = [value for value in obj['AnvilPrice'] if value > 0]
         obj['AnvilATK'] = [value for value in obj['AnvilATK'] if value > 0] if len(obj['AnvilPrice']) > 0 else None
@@ -560,7 +547,7 @@ def parse_equipment():
         # Transcendence
         for lv in range(10):
             row['Transcend'] = lv
-            obj['TranscendPrice'].append(LUA_TRANSCEND['GET_TRANSCEND_MATERIAL_COUNT'](row, None))
+            obj['TranscendPrice'].append(LUA_RUNTIME['GET_TRANSCEND_MATERIAL_COUNT'](row, None))
 
         obj['TranscendPrice'] = [value for value in obj['TranscendPrice'] if value > 0]
 

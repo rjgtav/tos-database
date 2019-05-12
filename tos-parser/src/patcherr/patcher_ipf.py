@@ -8,7 +8,6 @@ from utils import fileutil
 
 IPF_BLACKLIST = [
     'animation.ipf',
-    'bg.ipf',
     'bg_hi.ipf',
     'bg_hi2.ipf',
     'bg_hi3.ipf',
@@ -49,16 +48,17 @@ def unpack(ipf):
         stdin=None, stdout=None, stderr=None, shell=False
     )
 
-    # Remove blacklisted IPF files from extracted result
-    for file_name in os.listdir(ipf_extract):
-        if any(file_name == s for s in IPF_BLACKLIST):
-            shutil.rmtree(os.path.join(ipf_extract, file_name))
+    if os.path.exists(ipf_extract):
+        # Remove blacklisted IPF files from extracted result
+        for file_name in os.listdir(ipf_extract):
+            if any(file_name == s for s in IPF_BLACKLIST):
+                shutil.rmtree(os.path.join(ipf_extract, file_name))
 
-    # Make all files lower case
-    fileutil.to_lower(ipf_extract)
+        # Make all files lower case
+        fileutil.to_lower(ipf_extract)
 
-    # Move extracted IPF files to data directory
-    fileutil.move_tree(ipf_extract, constants.PATH_INPUT_DATA)
+        # Move extracted IPF files to data directory
+        fileutil.move_tree(ipf_extract, constants.PATH_INPUT_DATA)
 
-    # Remove extract directory
-    shutil.rmtree(ipf_extract)
+        # Remove extract directory
+        shutil.rmtree(ipf_extract)

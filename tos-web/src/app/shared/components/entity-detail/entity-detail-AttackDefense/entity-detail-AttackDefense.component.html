@@ -1,0 +1,40 @@
+<div class="row" *ngIf="AttackPhysical && AttackPhysical[0] || AttackMagical && AttackMagical[0] || DefensePhysical || DefenseMagical">
+  <div class="col">
+    <div class="w-100"><hr></div>
+
+    <div class="bg-primary text-white p-2">
+      <div class="row" *ngIf="AttackPhysical && AttackPhysical[0]">
+        <div class="col text-left tos-icon tos-icon-attack"><b>Physical Attack</b></div>
+        <div class="col text-right">
+          <span>{{ (AttackPhysical[0] + anvilATK) | number }}</span>
+          <span *ngIf="AttackPhysical[1]"> ~ {{ (AttackPhysical[1] + anvilATK) | number }}</span>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="AttackMagical && AttackMagical[0]">
+        <div class="col text-left tos-icon tos-icon-attack"><b>Magic Attack</b></div>
+        <div class="col text-right">
+          <span>{{ (AttackMagical[0] + anvilATK) | number }}</span>
+          <span *ngIf="AttackMagical[1]"> ~ {{ (AttackMagical[1] + anvilATK) | number }}</span>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="DefensePhysical">
+        <div class="col text-left tos-icon tos-icon-defense"><b>Physical Defense</b></div>
+        <div class="col text-right">{{ (DefensePhysical + anvilDEF) | number }}</div>
+      </div>
+
+      <div class="row" *ngIf="DefenseMagical">
+        <div class="col text-left tos-icon tos-icon-defense"><b>Magic Defense</b></div>
+        <div class="col text-right">{{ (DefenseMagical + anvilDEF) | number }}</div>
+      </div>
+
+      <div class="text-right" *ngIf="anvilLevel">
+        Anvil Enhancement <span class="text-success">▲</span> {{ (anvilDEF || anvilATK) | number }}
+      </div>
+      <div class="text-right" *ngIf="transcendLevel">
+        Transcendence <span class="text-success">▲</span> {{ (transcendATKRatio - 1) | percent }}
+      </div>
+    </div>
+  </div>
+</div>

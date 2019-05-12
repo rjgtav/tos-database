@@ -9,11 +9,16 @@
       <sourceFolder url="file://$MODULE_DIR$/tos-html/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-deploy/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-ngsw/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-build/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-web-rest/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-sw/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-patreon/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-web/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/IPFParser/output" />
       <excludeFolder url="file://$MODULE_DIR$/tos-parser/input" />
       <excludeFolder url="file://$MODULE_DIR$/web/dist/web" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="2.7 @ WSLDistribution{myDescriptor=WslDistributionDescriptor{id='UBUNTU', msId='Ubuntu'}}" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

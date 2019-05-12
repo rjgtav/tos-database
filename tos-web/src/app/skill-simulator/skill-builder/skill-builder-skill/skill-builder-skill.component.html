@@ -1,0 +1,37 @@
+<div class="position-relative d-flex flex-row m-auto" style="width: 215px">
+  <!-- Plus and Minus -->
+  <div class="position-absolute d-flex d-sm-none flex-column h-100 justify-content-around tos-skill-controls">
+    <a href="#plus" (click)="onSkillLevelIncrementClick($event, 1)">
+      <fa-icon class="align-top" [icon]="faPlusCircle"></fa-icon>
+    </a>
+    <a href="#minus" (click)="onSkillLevelIncrementClick($event, -1)">
+      <fa-icon class="align-bottom" [icon]="faMinusCircle"></fa-icon>
+    </a>
+  </div>
+
+  <!-- Icon & Level -->
+  <div class="position-relative tos-skill mr-1" style="cursor: pointer"
+       (click)="onSkillLevelIncrementClick($event, 1)"
+       (contextmenu)="onSkillLevelIncrementClick($event, -1)"
+       (mouseenter)="build.tooltip(skill, true)"
+       (mouseleave)="build.tooltip(skill, false)">
+    <img [src]="skill.Icon" />
+    <h6 class="font-weight-bold mb-0 pointer-disable position-absolute text-center text-outline text-white w-100">
+      {{ skillLevel  + '/' + skillLevelMax }}
+    </h6>
+  </div>
+
+  <!-- Name & Attributes -->
+  <div class="d-flex flex-column">
+    <a [routerLink]="skill.Url">{{ skill.Name }}</a>
+    <div>
+      <a *ngFor="let attribute of attributes; index as i; trackBy: TOSEntity.trackBy" [routerLink]="attribute.Url">
+        <img class="tos-attribute"
+             [src]="attribute.Icon"
+             [style.opacity]="attributesUnlock && attributesUnlock[i] ? 1 : 0.5"
+             (mouseenter)="$event.relatedTarget && build.tooltip(attribute, true)"
+             (mouseleave)="$event.relatedTarget && build.tooltip(attribute, false)"/>
+      </a>
+    </div>
+  </div>
+</div>

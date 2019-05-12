@@ -1,0 +1,66 @@
+<div class="card bg-light shadow ml-4 mt-3" style="width: 480px;" *ngIf="entity && !card && !map && !npc">
+  <div class="card-body">
+
+    <!-- Base Information -->
+    <div class="row">
+      <!-- Icon, Grade and Class -->
+      <tos-entity-detail-ClassIconGrade class="ml-3 mr-3" [entity]="entity" [size]="'small'"></tos-entity-detail-ClassIconGrade>
+
+      <div class="col pl-0">
+        <!-- Name and Material/Type -->
+        <tos-entity-detail-Header class="h5" [entity]="entity"></tos-entity-detail-Header>
+
+        <!-- Description -->
+        <tos-entity-detail-Description *ngIf="job"
+                                       [entity]="entity"></tos-entity-detail-Description>
+
+        <!-- Skill -->
+        <tos-entity-detail-Skill [build]="build"
+                                 [entity]="entity"></tos-entity-detail-Skill>
+
+        <!-- CoolDown/Level, LifeTime, Weight, Price, Tradability -->
+        <tos-entity-detail-Information *ngIf="!skill"
+                                       [entity]="entity"
+                                       [divider]="skill"></tos-entity-detail-Information>
+
+      </div>
+    </div>
+
+    <!-- Gem -->
+    <tos-entity-detail-Gem [editable]="false"
+                           [entity]="entity"></tos-entity-detail-Gem>
+
+    <!-- Description -->
+    <tos-entity-detail-Description *ngIf="item && !equipment || attribute"
+                                   [divider]="true"
+                                   [entity]="entity"></tos-entity-detail-Description>
+
+    <!-- Physical and Magical Attack / Defense -->
+    <tos-entity-detail-AttackDefense [entity]="entity"></tos-entity-detail-AttackDefense>
+
+    <!-- Stats & Unidentified -->
+    <tos-entity-detail-BonusStatsUnidentified [divider]="true"
+                                              [entity]="entity"></tos-entity-detail-BonusStatsUnidentified>
+
+    <!-- Potential, Durability and Sockets / Base EXP and Class EXP -->
+    <tos-entity-detail-DurabilityPotentialSockets [entity]="entity"></tos-entity-detail-DurabilityPotentialSockets>
+
+  </div>
+
+</div>
+
+<div style="width: 363px;" *ngIf="card && !npc">
+
+  <!-- Card -->
+  <tos-entity-detail-Card [entity]="entity"></tos-entity-detail-Card>
+
+  <div class="card bg-primary text-white shadow mt-3">
+    <div class="card-body">
+
+      <!-- Description -->
+      <tos-entity-detail-Description [entity]="entity"></tos-entity-detail-Description>
+
+    </div>
+  </div>
+
+</div>

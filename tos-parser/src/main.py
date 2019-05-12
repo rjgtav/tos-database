@@ -1,6 +1,6 @@
+import json
 import logging
 import os
-import re
 import sys
 
 import constants
@@ -34,20 +34,17 @@ if is_patch_new or is_revision_new:
     # Parse the game files
     parser.parse(region, is_rebuild, is_patch_new)
 
-    # Save new version
-    path = os.path.join(constants.PATH_WEB_APP, 'shared', 'service', 'update.service.ts')
-    regex = "'" + TOSRegion.to_string(region) + "': '(.*)', \/\* " + TOSRegion.to_string(region) + "-needle \*\/"
-    regex_replace = "'" + TOSRegion.to_string(region) + "': '" + version_new + "', /* " + TOSRegion.to_string(region) + "-needle */"
+    # Save new version and whether it's Re:Build TODO: Remove after Re:Build is available worldwide
+    version_path = os.path.join(constants.PATH_BUILD, 'region.json')
 
-    file = [re.sub(regex, regex_replace, line) for line in open(path, 'r').readlines()]
-    open(path, 'w').writelines(file)
+    with open(version_path, 'r+') as version_file:
+        version_json = version_file.read()
+        version_json = json.loads(version_json if len(version_json) else '{}')
+        version_json[TOSRegion.to_string(region)] = { 'version': version_new, 'rebuild': is_rebuild }
 
-    # Save whether it's Re:Build TODO: Remove after Re:Build is available worldwide
-    path = os.path.join(constants.PATH_WEB_APP, 'shared', 'domain', 'tos-region.ts')
-    regex = "'" + TOSRegion.to_string(region) + "': (.*), \/\* " + TOSRegion.to_string(region) + "-needle \*\/"
-    regex_replace = "'" + TOSRegion.to_string(region) + "': " + ('true' if is_rebuild else 'false') + ", /* " + TOSRegion.to_string(region) + "-needle */"
+        version_file.seek(0)
+        version_file.write(json.dumps(version_json, sort_keys=True))
+        version_file.truncate()
 
-    file = [re.sub(regex, regex_replace, line) for line in open(path, 'r').readlines()]
-    open(path, 'w').writelines(file)
 else:
     logging.debug('No new patch nor revision available. Aborting...')

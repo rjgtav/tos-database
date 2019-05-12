@@ -26,13 +26,13 @@ def csv_write(data, dataset):
                 if len(cell) > 0 and isinstance(cell[0], globals.Link):
                     cell.sort()
 
-                data[row][col] = json.dumps(cell) if len(cell) > 0 else None
+                data[row][col] = json.dumps(cell, sort_keys=True) if len(cell) > 0 else None
             elif isinstance(cell, (dict,)):
-                data[row][col] = json.dumps(cell)
+                data[row][col] = json.dumps(cell, sort_keys=True)
 
     # Ensure destination directory exists
-    if not os.path.exists(constants.PATH_WEB_ASSETS_DATA):
-        os.makedirs(constants.PATH_WEB_ASSETS_DATA)
+    if not os.path.exists(constants.PATH_BUILD_ASSETS_DATA):
+        os.makedirs(constants.PATH_BUILD_ASSETS_DATA)
 
     # Get keys from a complete entity
     keys = None
@@ -42,7 +42,7 @@ def csv_write(data, dataset):
             keys = row.keys()
 
     # Write to CSV
-    file = open(os.path.join(constants.PATH_WEB_ASSETS_DATA, dataset + '.csv'), 'w')
+    file = open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'w')
     writer = csv.DictWriter(
         file,
         delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(keys)
@@ -56,9 +56,11 @@ def parse(region, is_rebuild, is_version_new):
     # Initialize LUA environment
     luautil.init()
 
-    # Parse assets
-    parser_translations.parse(region)
+    # Parse assets (Note: we start by processing assets as they use a ton of RAM)
     parser_assets.parse(region, is_version_new)
+    parser_jobs.parse_jobs_images(region, is_version_new)
+    parser_maps.parse_maps_images(region, is_version_new)
+    parser_translations.parse(region)
 
     # Parse data
     logging.debug('Parsing data...')
@@ -73,7 +75,7 @@ def parse(region, is_rebuild, is_version_new):
     parser_items_equipment_sets.parse()
     parser_items_recipes.parse()
     parser_jobs.parse(is_rebuild)
-    parser_maps.parse()
+    parser_maps.parse(region, is_version_new)
     parser_monsters.parse()
     parser_skills.parse(is_rebuild)
 
@@ -89,6 +91,7 @@ def parse(region, is_rebuild, is_version_new):
     parser_items_equipment_sets.parse_links()
     parser_items_recipes.parse_links()
     parser_jobs.parse_links()
+    parser_maps.parse_links()
     parser_monsters.parse_links()
     parser_skills.parse_links(is_rebuild)
 
@@ -112,5 +115,6 @@ def parse(region, is_rebuild, is_version_new):
     csv_write(globals.jobs.values(), constants.OUTPUT_JOBS)
     csv_write(globals.maps.values(), constants.OUTPUT_MAPS)
     csv_write(globals.monsters.values(), constants.OUTPUT_MONSTERS)
+    csv_write(globals.npcs.values(), constants.OUTPUT_NPCS)
     csv_write(globals.recipes.values(), constants.OUTPUT_RECIPES)
     csv_write(globals.skills.values(), constants.OUTPUT_SKILLS)

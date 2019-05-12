@@ -1,0 +1,29 @@
+$map-icon-size: 32px;
+
+.card button {
+  height: 40px;
+  width: 40px;
+}
+
+.map {
+  max-width: 100%;
+  overflow: hidden;
+  transform: rotate(45deg);
+}
+.map-container {
+  overflow: hidden;
+  transform-origin: 0 0;
+}
+.map-icon {
+  position: absolute;
+  height: $map-icon-size;
+  width: $map-icon-size;
+  margin-left: -$map-icon-size / 2;
+  margin-top: -$map-icon-size / 2;
+  transform: rotate(-45deg) scale(calc(1 / var(--scale)));
+}
+.map-icon-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

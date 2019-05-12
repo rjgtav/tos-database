@@ -1,11 +1,11 @@
 import csv
-import logging
 import os
 import re
 
-from lupa import LuaRuntime
+from lupa import LuaRuntime, LuaError
 
 import constants
+from utils import iesutil
 
 
 # HotFix: don't throw errors when LUA is getting an unknown key
@@ -22,136 +22,50 @@ def attr_setter(obj, name, value):
     obj[name] = value
 
 
-initialized = True
 lua = LuaRuntime(attribute_handlers=(attr_getter, attr_setter), unpack_returned_tuples=True)
+
+LUA_OVERRIDE = [
+    'function GET_ITEM_LEVEL(item) return 0 end',  # We cant emulate this function as geItemTable is undefined
+    'function IsServerSection(pc) return 0 end',
+    'function GetExProp(entity, name) return 0 end',
+    'function GetIESID(item) end',
+    'function GetItemOwner(item) return {} end',
+    'function GetOwner(monster) end',
+    'function GetServerNation() end',
+    'function GetServerGroupID() end',
+    'function IsPVPServer(itemOwner) end',
+    'function IMCRandom(min, max) return 0 end',
+    'function ScpArgMsg(a, b, c) return "" end',
+    'function SCR_MON_OWNERITEM_ARMOR_CALC(self, defType) return 0 end',
+]
+
+LUA_RUNTIME = None
+LUA_SOURCE = None
 
 
 def init():
-    global initialized
+    init_global_constants('sharedconst.ies')
+    init_global_constants('sharedconst_system.ies')
+    init_global_data()
+    init_global_functions()
+    init_runtime()
 
-    initialized = True
 
-    # Initialize functions
-    lua.execute('''
-        function GetClassByNumProp(ies_key, column, value)
-            local data = ies_by_ClassID[string.lower(ies_key)]
-            for id, row in pairs(data) do
-                if TryGetProp(row, column) == value then
-                    return row
-                end
-            end
-        end
-        
-        function GetClass(ies_key, name)
-            local data = ies_by_ClassName[string.lower(ies_key)]
-            return data[name]
-        end
-        function GetClassByType(ies_key, id)
-            local data = ies_by_ClassID[string.lower(ies_key)]
-            return data[math.floor(id)]
-        end
-        
-        function GetClassList(ies_key)
-            return ies_by_ClassID[string.lower(ies_key)]
-        end
-        function GetClassByNameFromList(data, key)
-            for id, row in pairs(data) do
-                if TryGetProp(row, "ClassName") == key then
-                    return row
-                end
-            end
-        end 
-        
-        function MinMaxCorrection(value, min, max)
-            if value < min then
-                return min
-            elseif value > max then
-                return max
-            else
-                return value
-            end
-        end
-        
-        function SyncFloor(number)
-            return math.floor(number)
-        end
-        
-        -- http://lua-users.org/wiki/SplitJoin @PeterPrade
-        function StringSplit(text, delimiter)
-           local list = {}
-           local pos = 1
-           if string.find("", delimiter, 1) then -- this would result in endless loops
-              error("delimiter matches empty string!")
-           end
-           while 1 do
-              local first, last = string.find(text, delimiter, pos)
-              if first then -- found?
-                 table.insert(list, string.sub(text, pos, first-1))
-                 pos = last+1
-              else
-                 table.insert(list, string.sub(text, pos))
-                 break
-              end
-           end
-           return list
-        end
-        
-        -- https://stackoverflow.com/a/664557 some LUA table helper functions
-        function table.set(t) -- set of list
-          local u = { }
-          for _, v in ipairs(t) do u[v] = true end
-          return u
-        end
-        function table.find(f, l) -- find element v of l satisfying f(v)
-          for _, v in ipairs(l) do
-            if f(v) then
-              return v
-            end
-          end
-          return nil
-        end
-        
-        function TryGetProp(item, prop)
-            local value = item[prop]
-            
-            if tonumber(value) ~= nil then
-                return tonumber(value)
-            end
-            
-            return value
-        end
-        
-        JAEDDURY_MON_MHP_RATE = 1
-        
-        function APPLY_AWAKEN(item) end
-        function APPLY_ENCHANTCHOP(item) end
-        function APPLY_OPTION_SOCKET(item) end
-        function APPLY_RANDOM_OPTION(item) end
-        function APPLY_RARE_RANDOM_OPTION(item) end
-        function CALC_PCBANG_GROWTH_ITEM_LEVEL(item) end
-        function CALC_GROWTH_ITEM_LEVEL(item) end
-        function GET_ITEM_LEVEL(item) return 0 end
-        function GET_UPGRADE_ADD_ATK_RATIO(item, ignoreTranscend) return 0 end
-        function GET_UPGRADE_ADD_DEF_RATIO(item, ignoreTranscend) return 0 end
-        function GET_UPGRADE_ADD_MDEF_RATIO(item, ignoreTranscend) return 0 end
-        function GET_REINFORCE_ADD_VALUE(prop, item, ignoreReinf, reinfBonusValue) return 0 end
-        function GET_REINFORCE_ADD_VALUE_ATK(item, ignoreReinf, reinfBonusValue, basicTooltipProp) return 0 end
-        function IS_MORU_DISCOUNT_50_PERCENT(item) return false end
-        function IS_MORU_FREE_PRICE(item) return false end
-        function MAKE_ITEM_OPTION_BY_OPTION_SOCKET(item) end
-        function OVERRIDE_INHERITANCE_PROPERTY(item) end
-        function GetExProp(entity, name) return 0 end
-        function GetItemOwner(item) return {} end
-        function GetServerNation() end
-        function GetServerGroupID() end
-        function IsPVPServer(itemOwner) end
-        function IMCRandom(min, max) return 0 end
-        function MakeItemOptionByOptionSocket(item) end
-        function SCR_EVENT_1811_WEEKEND_CHECK(key) return 'NO' end
-        function SCR_PVP_ITEM_LV_GRADE_REINFORCE_SET(item, lv, grade, reinforceValue, reinforceRatio) return lv, grade, reinforceValue, reinforceRatio end
-    ''')
+def init_global_constants(ies_file_name):
+    execute = ''
+    ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', ies_file_name)
 
-    # Initialize ies data
+    with open(ies_path, 'rb') as ies_file:
+        for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+            if row['UseInScript'] == 'NO':
+                continue
+
+            execute += row['ClassName'] + ' = ' + row['Value'] + '\n'
+
+    lua.execute(execute)
+
+
+def init_global_data():
     ies_ADD = lua.execute('''
         ies_by_ClassID = {}
         ies_by_ClassName = {}
@@ -179,81 +93,234 @@ def init():
         return ies_ADD
     ''')
 
-    ies_ADD('item', load_ies('item_equip.ies'))
-    ies_ADD('item_grade', load_ies('item_grade.ies'))
-    ies_ADD('monster', load_ies('monster.ies'))
-    ies_ADD('monster', load_ies('monster_event.ies'))
-    ies_ADD('monster', load_ies('monster_solo_dungeon.ies'))
-    ies_ADD('stat_monster', load_ies('statbase_monster.ies'))
-    ies_ADD('stat_monster_race', load_ies('statbase_monster_race.ies'))
-    ies_ADD('stat_monster_type', load_ies('statbase_monster_type.ies'))
+    ies_ADD('item', iesutil.load('item_equip.ies'))
+    ies_ADD('item_grade', iesutil.load('item_grade.ies'))
+    ies_ADD('item_growth', iesutil.load('item_growth.ies'))
+    ies_ADD('monster', iesutil.load('monster.ies'))
+    ies_ADD('monster', iesutil.load('monster_event.ies'))
+    ies_ADD('monster', iesutil.load('monster_solo_dungeon.ies'))
+    ies_ADD('stat_monster', iesutil.load('statbase_monster.ies'))
+    ies_ADD('stat_monster_race', iesutil.load('statbase_monster_race.ies'))
+    ies_ADD('stat_monster_type', iesutil.load('statbase_monster_type.ies'))
 
 
-def load_ies(ies_name):
-    ies_data = []
-    ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", ies_name.lower())
+def init_global_functions():
+    lua.execute('''
+        app = {
+            IsBarrackMode = function() return false end
+        }
+        
+        exchange = {
+            GetExchangeItemInfoByGuid = function(guid) end
+        }
+        
+        geTime = {
+            GetServerSystemTime = function()
+                local date = os.date("*t")
+                
+                return {
+                    wDay = date.day,
+                    wMonth = date.month,
+                    wYear = date.year
+                }
+            end
+        }
+        
+        session = {
+            GetEquipItemByGuid = function(guid) end,
+            GetEtcItemByGuid = function(guid) end,
+            GetInvItemByGuid = function(guid) end,
+            
+            link = {
+                GetGCLinkObject = function(guid) end
+            },
+            
+            market = {
+                GetCabinetItemByItemObjID = function(itemID) end,
+                GetItemByItemID = function(itemID) end
+            },
+            
+            otherPC = {
+                GetItemByGuid = function(guid) end
+            },
+            
+            pet = {
+                GetPetEquipObjByGuid = function(guid) end
+            }
+        }
+    
+        
+        function GetClassByNumProp(ies_key, column, value)
+            local data = ies_by_ClassID[string.lower(ies_key)]
+            for id, row in pairs(data) do
+                if TryGetProp(row, column) == value then
+                    return row
+                end
+            end
+        end
+        
+        function GetClass(ies_key, name)
+            local data = ies_by_ClassName[string.lower(ies_key)]
+            return data[name]
+        end
+        function GetClassByType(ies_key, id)
+            local data = ies_by_ClassID[string.lower(ies_key)]
+            return data[math.floor(id)]
+        end
+        
+        function GetClassList(ies_key)
+            return ies_by_ClassID[string.lower(ies_key)]
+        end
+        function GetClassByNameFromList(data, key)
+            for id, row in pairs(data) do
+                if TryGetProp(row, "ClassName") == key then
+                    return row
+                end
+            end
+        end
+        
+        function MinMaxCorrection(value, min, max)
+            if value < min then
+                return min
+            elseif value > max then
+                return max
+            else
+                return value
+            end
+        end
+        
+        -- http://lua-users.org/wiki/SplitJoin @PeterPrade
+        function StringSplit(text, delimiter)
+           local list = {}
+           local pos = 1
+           if string.find("", delimiter, 1) then -- this would result in endless loops
+              error("delimiter matches empty string!")
+           end
+           while 1 do
+              local first, last = string.find(text, delimiter, pos)
+              if first then -- found?
+                 table.insert(list, string.sub(text, pos, first-1))
+                 pos = last+1
+              else
+                 table.insert(list, string.sub(text, pos))
+                 break
+              end
+           end
+           return list
+        end
+        
+        function SyncFloor(number)
+            return math.floor(number)
+        end
+        
+        -- https://stackoverflow.com/a/664557 some LUA table helper functions
+        function table.set(t) -- set of list
+          local u = { }
+          for _, v in ipairs(t) do u[v] = true end
+          return u
+        end
+        function table.find(t, value)
+          for k, v in pairs(t) do
+            if v == value then
+              return k
+            end
+          end
+          return nil
+        end
+        
+        function TryGetProp(item, prop, default)
+            if item == nil then
+                return default
+            end
+            
+            local value = item[prop]
+            
+            if tonumber(value) ~= nil then
+                return tonumber(value)
+            end
+            
+            if value ~= nil then
+                return value
+            else
+                return default
+            end
+        end
+    ''' + '\n'.join(LUA_OVERRIDE))
 
-    if not os.path.exists(ies_path):
-        logging.warn('Missing ies file: %s', ies_path)
-        return []
 
-    with open(ies_path, 'rb') as ies_file:
-        ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
+def init_runtime():
+    global LUA_RUNTIME, LUA_SOURCE
 
-        for row in ies_reader:
-            # auto cast to int/float if possible
-            for key in row.keys():
-                try:
-                    row[key] = int(row[key])
-                except ValueError:
+    LUA_RUNTIME = {}
+    LUA_SOURCE = {}
+
+    for root, dirs, file_list in os.walk(constants.PATH_INPUT_DATA):
+        for file_name in file_list:
+            if file_name.upper().endswith('.LUA'):
+                file_path = os.path.join(root, file_name)
+                lua_function = []
+
+                with open(file_path, 'r') as file:
                     try:
-                        row[key] = float(row[key])
-                    except ValueError:
-                        row[key] = row[key]
+                        # Remove multiline comments https://stackoverflow.com/a/40454391
+                        file_content = file.readlines()
+                        file_content = ''.join(file_content)
+                        file_content = re.sub(r'--\[(=*)\[(.|\n)*?\]\1\]', '', file_content)
 
-            ies_data.append(row)
+                        # Load LUA functions
+                        for line in file_content.split('\n'):
+                            line = line.strip()
+                            line = line.replace('\xef\xbb\xbf', '')  # Remove UTF8-BOM
+                            line = line.replace('\{', '\\\\{')  # Fix regex escaping
+                            line = line.replace('\}', '\\\\}')  # Fix regex escaping
+                            line = re.sub(r'\[\"(\w*?)\"\]', r"['\1']", line)  # Replace double quote with single quote
+                            line = re.sub(r'local \w+ = require[ (]["\']\w+["\'][ )]*', '', line)  # Remove require statements
+                            line = re.sub(r'function (\w+):(\w+)\((.*)\)', r'function \1.\2(\3)', line)  # Replace function a:b with function a.b
 
-    return ies_data
+                            if len(line) == 0:
+                                continue
+
+                            if bool(re.match(r'(local\s+)?function\s+[\w.:]+\(.*?\)', line)):
+                                lua_function_load(lua_function)
+                                lua_function = []
+
+                            lua_function.append(line)
+
+                        lua_function_load(lua_function)
+
+                    except LuaError as error:
+                        # logging.warn('Failed to load %s, error: %s...', file_path, error)
+                        continue
 
 
-def load_script(file_name, whitelist, compile=True):
-    result = {}
-    function_data = []
+def lua_function_load(function_source):
+    if len(function_source) == 0:
+        return
 
-    file_path = os.path.join(constants.PATH_INPUT_DATA, 'shared.ipf', 'script', file_name)
+    function_execute = [line for line in function_source if not line.startswith('--')]
+    function_execute = '\n'.join(function_execute) + '\n'
 
-    with open(file_path, 'r') as file:
-        for line in file:
-            if line.startswith('function '):
-                load_script_function(function_data, compile, whitelist, result)
-                function_data = []
-
-            function_data.append(line)
-
-        load_script_function(function_data, compile, whitelist, result)
-
-    return result
-
-
-def load_script_function(function_source, compile, whitelist, result):
-    if len(function_source) > 0 and 'function' in function_source[0]:
+    if function_source[0].startswith('function '):
         function_name = lua_function_name(function_source[0])
 
-        if whitelist == '*' or function_name in whitelist:
-            result[function_name] = ''.join(function_source)
+        # Ignore any function that was overridden
+        if not any(function_name in s for s in LUA_OVERRIDE):
+            lua.execute(function_execute)
 
-            if compile:
-                result[function_name] = lua_function_compile(result[function_name])
-
-
-def lua_function_compile(function):
-    # In order to return a named LUA function, we need to add a return statement in the end
-    # read more: https://github.com/scoder/lupa/issues/22
-    return lua.execute(function + '\nreturn ' + lua_function_name(function))
+            LUA_SOURCE[function_name] = '\n'.join(function_source)
+            LUA_RUNTIME[function_name] = lua_function_reference(function_name)
+    else:
+        lua.execute(function_execute)
 
 
 def lua_function_name(function):
-    return function[function.index('function ') + len('function '):function.index('(')]
+    return function[function.index('function ') + len('function '):function.index('(')].strip()
+
+
+def lua_function_reference(function_name):
+    # In order to return a named LUA function, we need to add a return statement in the end
+    # read more: https://github.com/scoder/lupa/issues/22
+    return lua.execute('return ' + function_name)
 
 
 def lua_function_source(function):

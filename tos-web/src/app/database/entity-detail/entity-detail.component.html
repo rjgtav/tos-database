@@ -1,0 +1,254 @@
+<div class="container">
+
+  <div class="row">
+    <!-- Name and Material/Type -->
+    <tos-entity-detail-Header class="col h4 mb-3" [entity]="entity" [idName]="true"></tos-entity-detail-Header>
+  </div>
+
+  <div class="row mb-4">
+
+    <div class="col-lg-6 mb-4 mt-5 pt-5" *ngIf="card">
+      <tos-entity-detail-Card [entity]="card"></tos-entity-detail-Card>
+    </div>
+
+    <div class="col-lg-6 mb-4" *ngIf="!card">
+      <div class="card bg-light m-auto"
+           [style.minWidth]="('calc(' + ICON_WIDTH + 'px + 2.5rem)') | sanitizeCSS"
+           [style.maxWidth]="('calc(' + ICON_WIDTH + 'px + 2.5rem)') | sanitizeCSS">
+        <div class="card-body">
+          <!-- Icon, Grade and Class -->
+          <tos-entity-detail-ClassIconGrade *ngIf="!job"
+                                            [entity]="entity"
+                                            [labels]="true"
+                                            [size]="equipment ? 'large' : 'small'"></tos-entity-detail-ClassIconGrade>
+
+          <tos-entity-detail-JobIcon *ngIf="job" class="m-auto"
+                                     [circle]="job.CircleMax"
+                                     [job]="job"></tos-entity-detail-JobIcon>
+          <tos-entity-detail-JobAnimation [entity]="entity"></tos-entity-detail-JobAnimation>
+
+          <!-- Description -->
+          <tos-entity-detail-Description *ngIf="attribute"
+                                         [divider]="true"
+                                         [entity]="entity"></tos-entity-detail-Description>
+
+          <!-- Physical and Magical Attack / Defense -->
+          <tos-entity-detail-AttackDefense [anvilLevel]="anvilLevel"
+                                           [transcendLevel]="transcendLevel"
+                                           [entity]="entity"></tos-entity-detail-AttackDefense>
+
+          <!-- Bonus Stats and Unidentified -->
+          <tos-entity-detail-BonusStatsUnidentified [divider]="true"
+                                                    [entity]="entity"></tos-entity-detail-BonusStatsUnidentified>
+
+          <!-- Potential, Durability and Sockets -->
+          <tos-entity-detail-DurabilityPotentialSockets [entity]="entity"></tos-entity-detail-DurabilityPotentialSockets>
+
+          <!-- Book Pages -->
+          <tos-entity-detail-Book *ngIf="book?.Pages"
+                                  [entity]="entity"></tos-entity-detail-Book>
+
+          <!-- Gem -->
+          <tos-entity-detail-Gem *ngIf="gem"
+                                 [entity]="gem"
+                                 [header]="true"></tos-entity-detail-Gem>
+
+          <!-- Recipe Materials -->
+          <tos-entity-detail-Table *ngIf="entity['Link_Materials']" class="table-borderless"
+                                   [columns]="COLUMNS_RECIPES_MATERIALS"
+                                   [data$]="entity['Link_Materials']"
+                                   [divider]="true"
+                                   [entity]="entity"
+                                   [header]="'Materials'">
+          </tos-entity-detail-Table>
+
+          <!-- Skill -->
+          <tos-entity-detail-Skill [build]="build"
+                                   [entity]="entity"
+                                   [input]="true"></tos-entity-detail-Skill>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+
+      <!-- Recipe Source (Crafted by) -->
+      <tos-entity-detail-Table *ngIf="entity['Link_RecipeTarget']" class="table-borderless"
+                               [columns]="COLUMNS_RECIPES"
+                               [data$]="entity['Link_RecipeTarget']"
+                               [entity]="entity"
+                               [header]="'Crafted by'">
+      </tos-entity-detail-Table>
+
+      <!-- Description -->
+      <tos-entity-detail-Description *ngIf="!attribute && !skill"
+                                     [divider]="entity['Link_RecipeTarget']"
+                                     [entity]="entity"
+                                     [header]="true"></tos-entity-detail-Description>
+
+      <!-- Information (CoolDown/Level, LifeTime, Weight, Price, Tradability) -->
+      <tos-entity-detail-Information *ngIf="!skill"
+                                     [entity]="entity"
+                                     [divider]="!attribute && !skill && (entity['Description'] || entity['DescriptionHTML'])"
+                                     [header]="true"></tos-entity-detail-Information>
+
+      <!-- Set -->
+      <tos-entity-detail-Table *ngIf="equipment && equipment.Link_Set" class="table-borderless"
+                               [columns]="COLUMNS_SET"
+                               [data$]="equipment.Link_Set"
+                               [divider]="true"
+                               [entity]="entity"
+                               [header]="'Set'"
+                               [themeInvert]="true">
+      </tos-entity-detail-Table>
+      <tos-entity-detail-BonusStatsUnidentified *ngIf="equipment && equipment.Link_Set"
+                                                [entity]="equipment.Link_Set | async"></tos-entity-detail-BonusStatsUnidentified>
+
+      <!-- Stats -->
+      <tos-entity-detail-Stats *ngIf="card || monster"
+                               [entity]="entity"></tos-entity-detail-Stats>
+
+      <!-- Enhancement -->
+      <tos-entity-detail-Enhancement *ngIf="attribute || equipment && (equipment.IsAnvilAvailable || equipment.IsTranscendAvailable)"
+                                     [header]="attribute ? 'Cost' : 'Enhancement'"
+                                     [(anvilLevel)]="anvilLevel"
+                                     [(transcendLevel)]="transcendLevel"
+                                     [entity]="entity"></tos-entity-detail-Enhancement>
+
+      <!-- Recipe Target (Produces) -->
+      <tos-entity-detail-Table *ngIf="entity['Link_Target']" class="table-borderless"
+                               [columns]="COLUMNS_ITEMS"
+                               [data$]="entity['Link_Target']"
+                               [divider]="true"
+                               [entity]="entity"
+                               [header]="'Produces'">
+      </tos-entity-detail-Table>
+
+      <!-- Classes -->
+      <tos-entity-detail-Table *ngIf="entity['Link_Jobs'] || entity['Link_Job']"
+                               [columns]="COLUMNS_JOBS"
+                               [data$]="entity['Link_Jobs'] || entity['Link_Job']"
+                               [entity]="entity"
+                               [header]="entity['Link_Jobs'] ? 'Classes' : 'Class'"
+      ></tos-entity-detail-Table>
+
+      <!-- Skill Formulas -->
+      <tos-entity-detail-SkillFormula [build]="build"
+                                      [divider]="true"
+                                      [entity]="entity"></tos-entity-detail-SkillFormula>
+
+      <!-- Gem -->
+      <tos-entity-detail-Table *ngIf="entity['Link_Gem']"
+                               [columns]="COLUMNS_GEMS"
+                               [data$]="entity['Link_Gem']"
+                               [divider]="true"
+                               [entity]="entity"
+                               [header]="'Gem'"
+      ></tos-entity-detail-Table>
+
+      <!-- Skill -->
+      <tos-entity-detail-Table *ngIf="entity['Link_Skill']"
+                               [columns]="COLUMNS_SKILLS"
+                               [data$]="entity['Link_Skill']"
+                               [divider]="true"
+                               [entity]="entity"
+                               [header]="'Skill'"
+      ></tos-entity-detail-Table>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <!-- Attributes -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Attributes']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_ATTRIBUTES"
+                             [data$]="entity['Link_Attributes']"
+                             [entity]="entity"
+                             [header]="'Attributes'"
+    ></tos-entity-detail-Table>
+
+    <!-- Collections -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Collections']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_COLLECTIONS"
+                             [data$]="entity['Link_Collections']"
+                             [entity]="entity"
+                             [header]="'Collections'"
+    ></tos-entity-detail-Table>
+
+    <!-- Dropped by -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Monsters']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_ITEMS_MONSTERS"
+                             [data$]="entity['Link_Monsters']"
+                             [entity]="entity"
+                             [header]="'Dropped by'">
+    </tos-entity-detail-Table>
+
+    <!-- Exploration Reward from -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Maps_Exploration']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_ITEMS_MAPS"
+                             [data$]="entity['Link_Maps_Exploration']"
+                             [entity]="entity"
+                             [header]="'Exploration Reward from'">
+    </tos-entity-detail-Table>
+
+    <!-- Found in -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Cubes']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_CUBES"
+                             [data$]="entity['Link_Cubes']"
+                             [entity]="entity"
+                             [header]="'Found in'">
+    </tos-entity-detail-Table>
+
+    <!-- Items -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Items'] && !monster" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_ITEMS"
+                             [data$]="entity['Link_Items']"
+                             [entity]="entity"
+                             [header]="cube ? 'Drops' : 'Items'">
+    </tos-entity-detail-Table>
+
+    <!-- Items (Monster) -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Items'] && monster" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_MONSTERS_DROPS"
+                             [data$]="entity['Link_Items']"
+                             [entity]="entity"
+                             [header]="'Drops'">
+    </tos-entity-detail-Table>
+
+
+    <!-- Required for -->
+    <tos-entity-detail-Table *ngIf="entity['Link_RecipeMaterial'] && !recipe" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_RECIPES"
+                             [data$]="entity['Link_RecipeMaterial']"
+                             [entity]="entity"
+                             [header]="'Required for'">
+    </tos-entity-detail-Table>
+
+    <!-- Skills -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Skills']" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_SKILLS"
+                             [data$]="entity['Link_Skills']"
+                             [entity]="entity"
+                             [header]="'Skills'"
+    ></tos-entity-detail-Table>
+
+    <!-- Spawn Locations (Monster) -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Maps'] && monster" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_MONSTERS_MAPS"
+                             [data$]="entity['Link_Maps']"
+                             [entity]="entity"
+                             [header]="'Spawn Locations'">
+    </tos-entity-detail-Table>
+
+    <!-- Spawn Locations (Item) -->
+    <tos-entity-detail-Table *ngIf="entity['Link_Maps'] && item" class="col-md-6 mb-4"
+                             [columns]="COLUMNS_ITEMS_MAPS"
+                             [data$]="entity['Link_Maps']"
+                             [entity]="entity"
+                             [header]="'Drop Locations'">
+    </tos-entity-detail-Table>
+
+  </div>
+
+</div>

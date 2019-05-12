@@ -1,0 +1,109 @@
+<nav class="navbar navbar-dark" style="background: #002A3A;">
+  <a class="navbar-brand mr-4 p-0 order-0" [routerLink]="routerLink('')">
+    <img src="assets/images/logo_tos.png" height="47" style="transform: scale(1.25)" />
+  </a>
+  <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+    <ul class="navbar-nav">
+      <!--
+        <a class="dropdown-item" style="color: grey" routerLink="game/achievements">Achievements</a>
+        <a class="dropdown-item" style="color: grey" routerLink="game/treasures">Treasure Chests</a>
+        <a class="dropdown-item" style="color: grey" routerLink="game/exp">EXP Tables</a>
+        <a class="dropdown-item" style="color: grey" routerLink="game/npcs">NPCs</a>
+        <a class="dropdown-item" style="color: grey" routerLink="game/quests">Quests</a>
+        <a class="dropdown-item" style="color: grey" routerLink="game/world">World Map</a>
+      -->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle tos-link" href="javascript:void(0);" routerLinkActive="active">
+          Database <span class="badge badge-danger">New</span>
+          <div class="dropdown-menu">
+            <div *ngFor="let group of TOSDataSetService.VALUES; index as i">
+              <div class="dropdown-header">{{ group.label }}</div>
+              <a *ngFor="let option of group.options" class="dropdown-item" routerLinkActive="active"
+                 [routerLink]="routerLink('database/' + TOSDataSetService.toUrl(option))">
+                {{ TOSDataSetService.toLabel(option) }}&nbsp;
+                <span class="badge badge-danger" *ngIf="option == TOSDataSet.MAPS">New</span>
+              </a>
+              <div class="dropdown-divider" *ngIf="i < TOSDataSetService.VALUES.length - 1"></div>
+            </div>
+          </div>
+        </a>
+
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link tos-link" [routerLink]="routerLink('simulator')" routerLinkActive="active">Skill Simulator</a>
+      </li>
+
+      <li class="nav-item d-lg-none">
+        <a class="nav-link tos-link" (click)="isOpenSearch = !isOpenSearch">
+          &nbsp;<fa-icon [icon]="faSearch"></fa-icon>&nbsp;
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"
+       [ngClass]="{ 'd-flex': isOpenSearch }">
+      <tos-header-search class="flex-grow-1 ml-lg-3 mr-lg-3"></tos-header-search>
+  </div>
+
+  <div class="order-2 w-100 d-md-none"></div>
+  <div class="order-4 w-100 d-lg-none"></div>
+
+  <div class="navbar-expand order-1 order-md-3">
+    <ul class="navbar-nav align-items-center">
+      <!-- Region selector -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle tos-link" href="javascript:void(0);" style="text-transform: initial;">
+          {{ TOSRegionService.get() }}
+          <div class="dropdown-menu dropdown-menu-right">
+            <a *ngFor="let region of REGION" class="dropdown-item" style="text-transform: initial;"
+               [href]="'#' + region"
+               [ngClass]="{ 'active': TOSRegionService.get() == region }"
+               (click)="regionSelect(region)">
+              {{ region }}&nbsp;
+              <span class="badge badge-success" *ngIf="TOSRegionService.isRebuild(region)">Re:Build</span>
+            </a>
+          </div>
+        </a>
+      </li>
+      <!-- Check for updates (manually) -->
+      <a class="nav-item nav-link ml-1 mr-1" (click)="updateCheck(true)" ngbTooltip="Check for updates" placement="bottom">
+        <fa-icon [icon]="faSync"></fa-icon>
+      </a>
+      <!-- Theme selector -->
+      <a class="nav-item nav-link ml-1 mr-1" (click)="theme.toggle()" [ngbTooltip]="(theme.is(Theme.LIGHT) ? 'Dark' : 'Light') + ' Theme'" placement="bottom">
+        <fa-icon [icon]="theme.is(Theme.LIGHT) ? faMoon : faSun"></fa-icon>
+      </a>
+    </ul>
+  </div>
+
+</nav>
+
+<!-- Patreon -->
+<div class="d-flex text-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100" style="background: #f96854" *ngIf="patrons">
+  <a class="flex-grow-1 text-white" [routerLink]="routerLink('patreon')">
+    <span>Thanks &nbsp;</span>
+    <span *ngFor="let patron of patrons; index as i"><b>{{ patron }}</b><span *ngIf="i < patrons.length - 1">,</span>&nbsp;</span>
+    <span><span *ngIf="patronsCount > 0">and <b>{{ patronsCount }}&nbsp;</b></span>other patrons for supporting tos.guru!</span>
+  </a>
+  <div class="d-flex align-items-center text-white" style="cursor: pointer" (click)="patreonDismiss()">
+    <span class="d-none d-sm-inline pl-1">Dismiss</span>&nbsp;
+    <fa-icon class="pl-3" [icon]="faTimes"></fa-icon>
+  </div>
+</div>
+
+<!-- Update status -->
+<div class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-secondary" *ngIf="isUpdateCheck && isUpdateCheckManual && !isUpdateAvailable">
+  Checking for updates...
+</div>
+<div class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-info" *ngIf="isUpdateInstall">
+  Updating... The page will automatically refresh when it finishes
+</div>
+<a class="text-center text-white text-sm-left pl-4 pr-4 pt-1 pb-1 mb-0 w-100 bg-info d-block" *ngIf="isUpdateAvailable && !isUpdateInstall"
+   href="#update" (click)="updateInstall($event)">
+  A new update is available. Click to install
+</a>
+

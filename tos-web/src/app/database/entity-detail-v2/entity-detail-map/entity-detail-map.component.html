@@ -1,0 +1,117 @@
+<div class="container">
+
+  <!-- Header -->
+  <tos-entity-detail-Header class="h4 mb-3" [entity]="map" [idName]="true"></tos-entity-detail-Header>
+
+  <!-- Map Viewer -->
+  <div class="card bg-light mb-4">
+    <div class="card-body">
+      <div class="position-relative" style="overflow: hidden" cssMaxHeight="calc(100% - 80px - 60px - 9rem)">
+        <!-- Filter -->
+        <div class="d-flex flex-column position-absolute ml-1 mt-1" style="left: 0; z-index: 1">
+          <button class="btn btn-primary rounded-circle" (click)="filter = true"><fa-icon [icon]="faFilter"></fa-icon></button>
+        </div>
+
+        <!-- Filter Overlay -->
+        <div class="d-flex flex-column bg-light h-100 position-absolute pr-sm-3 shadow" style="max-width: 100%; width: 400px; z-index: 2; transition: all ease-in-out 0.2s"
+             [ngStyle]="{ 'left': filter ? '0' : '-420px', 'opacity': filter ? '1' : '0' }">
+          <div class="d-flex align-items-center ml-1 mt-1">
+            <button class="btn btn-primary rounded-circle" (click)="filter = false"><fa-icon [icon]="faTimes"></fa-icon></button>
+            <h5 class="mb-0 ml-3">Filter</h5>
+          </div>
+
+          <div class="d-flex flex-column flex-grow-1">
+            <h5 *ngIf="spawnsMonsters?.length" class="bg-primary mb-2 mt-3 pl-3 pr-3 pt-1 pb-1 rounded text-white w-100">Monsters</h5>
+            <tos-entity-table *ngIf="spawnsMonsters?.length" class="flex-grow-1" style="flex-basis: 0"
+                              [columns]="COLUMNS_MAPS_NPCS"
+                              [data]="spawnsMonsters"
+                              [header]="false"
+                              [hideMobile]="true"
+                              [hideTablet]="true"
+                              [selected]="true"
+            ></tos-entity-table>
+
+            <h5 *ngIf="spawnsNPCs?.length" class="bg-primary mb-2 mt-3 pl-3 pr-3 pt-1 pb-1 rounded text-white w-100">NPCs</h5>
+            <tos-entity-table *ngIf="spawnsNPCs?.length" class="flex-grow-1" style="flex-basis: 0"
+                              [columns]="COLUMNS_MAPS_NPCS"
+                              [data]="spawnsNPCs"
+                              [header]="false"
+                              [hideMobile]="true"
+                              [hideTablet]="true"
+                              [selected]="true"
+            ></tos-entity-table>
+
+            <h5 *ngIf="spawnsTreasures?.length" class="bg-primary mb-2 mt-3 pl-3 pr-3 pt-1 pb-1 rounded text-white w-100">Treasures</h5>
+            <tos-entity-table *ngIf="spawnsTreasures?.length" class="flex-grow-1" style="flex-basis: 0"
+                              [columns]="COLUMNS_MAPS_NPCS"
+                              [data]="spawnsTreasures"
+                              [header]="false"
+                              [hideMobile]="true"
+                              [hideTablet]="true"
+                              [selected]="true"
+            ></tos-entity-table>
+          </div>
+
+        </div>
+
+        <!-- Map Level / Stars -->
+        <div class="position-absolute mt-1 text-center text-outline text-white w-100" style="pointer-events: none; z-index: 1">
+          <h5 class="mb-0">Level {{ map.Level }}</h5>
+          <h5 class="text-warning"><span *ngFor="let x of mapStars">★</span></h5>
+        </div>
+
+        <!-- Zoom In/Out -->
+        <div class="d-flex flex-column position-absolute mr-1 mt-1" style="right: 0; z-index: 1">
+          <button class="btn btn-primary rounded-circle mb-2" (click)="onMapScale(1)"><fa-icon [icon]="faSearchPlus"></fa-icon></button>
+          <button class="btn btn-primary rounded-circle" (click)="onMapScale(-1)"><fa-icon [icon]="faSearchMinus"></fa-icon></button>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container" style="cursor: move; touch-action: none" #mapElement
+             (pointerdown)="onMapMouseDown($event)"
+             (mousewheel)="onMapMouseWheel($event)">
+          <div class="map">
+            <img [src]="map.Layout" (load)="onMapLoad($event)" />
+
+            <div *ngFor="let spawn of spawns" class="map-icon-container"
+                 [ngClass]="{ 'd-none': !spawn.Selected }">
+              <img *ngFor="let position of spawn.Positions" class="map-icon"
+                   [src]="spawn.Icon"
+                   [style.top]="position[1] + 'px'"
+                   [style.left]="position[0] + 'px'"
+                   [title]="spawn.Name" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <!-- Connected Maps -->
+    <tos-entity-detail-Table class="col-md-6 mb-4"
+                             [columns]="COLUMNS_MAPS"
+                             [data$]="map.Link_Maps"
+                             [entity]="map"
+                             [header]="'Connected Maps'"
+    ></tos-entity-detail-Table>
+
+    <!-- Exploration Rewards -->
+    <tos-entity-detail-Table class="col-md-6 mb-4"
+                             [columns]="COLUMNS_MAPS_ITEMS"
+                             [data$]="map.Link_Items_Exploration"
+                             [entity]="map"
+                             [header]="'Exploration Rewards'"
+    ></tos-entity-detail-Table>
+
+    <!-- Global Drops -->
+    <tos-entity-detail-Table class="col-md-6 mb-4" *ngIf="map.Link_Items"
+                             [columns]="COLUMNS_MAPS_ITEMS"
+                             [data$]="map.Link_Items"
+                             [entity]="map"
+                             [header]="'Global Drops'"
+    ></tos-entity-detail-Table>
+
+  </div>
+</div>
