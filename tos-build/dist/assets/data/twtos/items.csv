@@ -66,6 +66,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 490313,Ability_Point_Stone_100000,"使用時特性點數增加100,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint6,,,,,,,,"特性點數 100,000",0,0.0,0.0,FFFT,8,1.0
 490324,Ability_Point_Scroll_1000,"使用時特性點數增加1,000，點擊滑鼠右鍵即可使用。",icon_item_ability_point_scroll_1000,,,,,,,,特性點數卷軸,0,0.0,0.0,FFFT,8,1.0
 490354,indunReset_1add_14d_NoStack_Team,使用時即時副本和委託所任務可以追加進場1次。,icon_item_indunonemoreenter,,,,,,,,[活動]副本1次入場卷(限時),0,0.0,1209600.0,FFFT,6,0.0
+494079,Event_Ability_Point_Stone_10000_team,"使用時特性點數增加10,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint4,,,,,,,,"特性點數10,000(14天)",0,0.0,1209600.0,FFFT,8,1.0
 495001,160714Event_box1,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第1天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
 495002,160714Event_box2,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第2天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
 495003,160714Event_box3,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第3天寶箱 (7天),0,0.0,604800.0,FFFF,8,0.0
@@ -138,7 +139,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 495084,Premium_indunPack,點擊滑鼠右鍵時可獲得組合物品{nl} - 副本掃盪卷 [★] 3張{nl} - 副本入場次數重置卷 1張{nl} - 經驗之書 3本,icon_item_pumpkin_box04,,,,,,,,副本優惠包,0,0.0,0.0,FFFT,8,0.0
 495085,Kupole_TestServer_Pack,點擊滑鼠右鍵時就能夠使用，可以獲得組合物品。,icon_item_premiumpackage_1,,,,,,,,奎波爾伺服器救援者禮包,0,0.0,0.0,FFFF,8,0.0
 495086,Premium_VIPPack,點擊滑鼠右鍵時可獲得組合物品。{nl}-即時副本倍數VIP x 2{nl}-大王蜜松糕 x 10,icon_item_giftbox_3,,,,,,,,VIP優惠禮包,0,0.0,0.0,FFFT,8,0.0
-495121,Premium_Enchantchip14_Team,使用於頭部套裝時，賦予效果會隨機追加。賦予效果最多可以產生3個。無法對套用的裝備使用。點擊滑鼠右鍵使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_enchantscroll,,,,,,,,[活動]魔法賦予卷軸(限時),0,0.0,1209600.0,FFFT,8,0.0
+495121,Premium_Enchantchip14_Team,使用於頭飾時，賦予效果會隨機追加。賦予效果最多可以產生3個。無法對套用的裝備使用。點擊滑鼠右鍵使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_enchantscroll,,,,,,,,[活動]魔法賦予卷軸(限時),0,0.0,1209600.0,FFFT,8,0.0
 495123,Premium_awakeningStone14_Team,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,,,[活動]覺醒石(限時),0,0.0,1209600.0,FFFT,8,0.0
 495125,Ability_Point_Stone_5_Team,使用時特性點數增加5，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint7,,,,,,,,特性點數5(14天),0,0.0,1209600.0,FFFT,8,1.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,,,耐力 +5 增加藥水,200,0.0,0.0,FFFF,6,1.0
@@ -3327,6 +3328,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 664141,DCAPITAL107_SQ_6_ITEM,魔族們為了狩獵奎波爾們所使用的工具。,icon_item_panto_core,,,,,,,,無力化寶珠,0,0.0,0.0,FFFF,20,0.0
 664142,DCAPITAL107_SQ_7_ITEM,奎波爾克利西亞為了欺騙奎波爾佛拉德所製作項鍊模樣的魔法道具。,icon_item_bluenecklace,,,,,,,,騙術證據,0,0.0,0.0,FFFF,20,0.0
 664143,DCAPITAL107_SQ_9_ITEM,克利西亞委託轉交給佛拉德的物品,icon_item_kupole_porket,,,,,,,,克利西亞的一切,0,0.0,0.0,FFFF,20,0.0
+664144,PAYAUTA_EP11_2_ITEM,受帕亞烏塔所託，在巴林威爾87水域的怪物身上收集而來的物品。,icon_item_toolbox,,,,,,,,失竊的修理用品,0,0.0,0.0,FFFF,20,0.0
+664145,PAYAUTA_EP11_7_ITEM,帕亞烏塔拜託你在外城壁第9區域收集的標記用材料,icon_item_magicpowder,,,,,,,,帶有磁性的土,0,0.0,0.0,FFFF,20,0.0
 664800,RVR_BK_KEYITEM_URVAS_1,以奧斯特雅之名監視龍王普魯達的奎波爾烏勒巴斯所隨身攜帶的信物。{nl}進入龍王普魯達領域時的必要道具。{nl}進入時會破壞信物。,icon_item_borutakey,,,,,,,,烏勒巴斯信物,0,0.0,0.0,TFFT,15,0.0
 664801,RVR_BK_KEYITEM_EVENT_OPEN,以奧斯特雅之名監視龍王普魯達的奎波爾烏勒巴斯所隨身攜帶的信物。{nl}進入龍王普魯達領域時的必要道具。{nl}進入時會破壞信物。{nl}活動結束時道具統一刪除。,icon_item_borutakey,,,,,,,,[活動] 烏勒巴斯信物,0,0.0,0.0,FFFT,15,0.0
 664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,從王國補給將校手中得到的徽章，證明再打倒普魯達上有做出了充分的貢獻。{nl}可透過公會基地的 '王國補給將校萬普雷達斯'交換道具。,icon_item_boruta_coin,,,,,,,,榮譽徽章 : 普魯達,0,0.0,0.0,FFFT,15,0.0
@@ -5578,7 +5581,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 902130,Event_Steam_Fishing_BOX4,可以獲得380級獨特未鑑定裝備道具。{nl}獲得的裝備道具無限制，可以進行所有交易。,icon_item_event_armorbox1,,,,,,,,獨特未鑑定褲子選擇箱,0,0.0,0.0,FFFT,8,0.0
 902131,Event_Steam_Fishing_BOX5,可以獲得380級獨特未鑑定裝備道具。{nl}獲得的裝備道具無限制，可以進行所有交易。,icon_item_event_armorbox1,,,,,,,,獨特未鑑定手套選擇箱,0,0.0,0.0,FFFT,8,0.0
 902132,Event_Steam_Fishing_BOX6,可以獲得380級獨特未鑑定裝備道具。{nl}獲得的裝備道具無限制，可以進行所有交易。,icon_item_event_armorbox1,,,,,,,,獨特未鑑定鞋子選擇箱,0,0.0,0.0,FFFT,8,0.0
-902140,Event_Steam_Fishing_TWN_BOX,使用時可以選擇您喜歡的髮飾。{nl}活動結束時統一刪除。,icon_item_summer_box,,,,,,,,池塘中的箱子,0,0.0,0.0,FFFT,8,0.0
+902140,Event_Steam_Fishing_TWN_BOX,使用時可以選擇您喜歡的頭飾。{nl}活動結束時統一刪除。,icon_item_summer_box,,,,,,,,池塘中的箱子,0,0.0,0.0,FFFT,8,0.0
 902146,Event_Steam_PoPo_Point_100,使用後可獲得Popo Shop點數100點。{nl} - 使用後點數超過最大值時無法使用。{nl} - 只能在Popo Shop活動期間內使用。,icon_item_tospoint100,,,,,,,,Popo Shop 100點數購買券,0,0.0,0.0,FFFT,6,0.0
 902147,Event_Steam_PoPo_Point_500,使用後可獲得Popo Shop點數500點。{nl} - 使用後點數超過最大值時無法使用。{nl} - 只能在Popo Shop活動期間內使用。,icon_item_tospoint100,,,,,,,,Popo Shop 500點數購買券,0,0.0,0.0,FFFT,6,0.0
 902148,Event_Steam_PoPo_Point_1000,使用後可獲得Popo Shop點數1000點。{nl} - 使用後點數超過最大值時無法使用。{nl} - 只能在Popo Shop活動期間內使用。,icon_item_tospoint100,,,,,,,,Popo Shop 1000點數購買券,0,0.0,0.0,FFFT,6,0.0

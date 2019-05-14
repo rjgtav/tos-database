@@ -1186,6 +1186,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154117,HiddenWall_40_40_500,,,,2
 154118,HiddenWall_25_25_500,,,,2
 154119,Event_FishingBox,,minimap_event_1,悠夏的泥鰍桶,2
+154120,npc_pajauta_1,,minimap_event_1,帕亞烏塔,2
 155000,npc_crystal_machine,,,水晶加工機械,2
 155001,farm49_sapling,,,神祕的樹苗,2
 155002,dirt_ground,,,土壤標本,2

@@ -132,6 +132,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644146,card_SwordBallista,[欄位裝備效果] Rooting機會 +[★ * 5],icon_item_card_stat,148_boss_swordballista,,,,,800081,,,,0,1,庫勒卡斯卡,500,,,,0.0,0.0,TTTT,3,4,1.0
 644147,card_FrosterLord,[欄位裝備效果] 攻擊時有[★/2]%機率令對方4秒內陷入凍傷效果{nl}(不會對boss套用。),icon_item_card_atk,149_boss_frosterlord,,,,,800076,,,,0,1,弗羅斯特領主卡,500,,,,0.0,0.0,TTTT,3,0,1.0
 644148,card_varleking,[欄位裝備效果] 治癒力 +[★ * 5],icon_item_card_def,144_boss_varleking,,"[642928, 642944]",,,57866,,,,2,0,巴勒王卡片,500,,,,0.0,0.0,TTTT,3,1,1.0
+644149,card_payawoota,[欄位裝備效果] 所有屬性  +[★ * 0.4],icon_item_card_stat,001_npc_payawoota,,,,,,,,,,,帕亞烏塔卡片,500,,,,0.0,0.0,TTTT,3,4,1.0
 644900,Legend_card_Marnoks,[欄位裝備效果] 最小暴擊機率增加 [★ * 2]%,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔君主馬魯若斯卡片,0,,,,0.0,0.0,TTTT,3,2,1.0
 644901,Legend_card_Blud,[欄位裝備效果] PVP時獲得傷害減少 [★ * 3]%,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔君主布爾魯卡片,0,,,,0.0,0.0,TTTT,3,2,1.0
 644902,Legend_card_Zawra,[欄位裝備效果] 物理防禦力增加 [★ * 10]%,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔君主扎烏拉卡片,0,,,,0.0,0.0,TTTT,3,2,1.0
