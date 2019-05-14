@@ -604,6 +604,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150047,uniqraid_startower_InvisbleWall_0_0_0_0,,,,2
 150048,uniqraid_startower_InvisbleWall_150_120_500_0,,,,2
 150049,uniqraid_startower_InvisbleWall_10_160_500_1,,,,2
+150051,fishingbox3,,,Tackle Box Stage 3,2
 150171,stones_startower,,,Hidden Magic Source,2
 150172,magicsquare_1_mini_fantasylib,,,Magic Circle,2
 150173,supplemants_fantasylib,,,Ampule,2
@@ -615,6 +616,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150181,star_stone_01_small_startower_sp,,,Magic Residue (Special),2
 150182,npc_schaffenstar_ignas,,,Head of the Schaffenstar Ignas,2
 150183,npc_sage_female_1,,,Sage Female 1,2
+150200,npc_ghost_soldier_castle,,,Ghost Soldier,2
+150201,castle94_gate,,,Castle Main Gate,2
+150202,castle94_gate_opened,,,Castle Main Gate (open),2
 151000,closing_device,,,Closing Device,2
 151001,spell_crystal_red,,,Crystal with magic,2
 151002,spell_crystal_gem_red,,,Jewel of Prominence,2
@@ -783,7 +787,6 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151176,npc_kupole_6_event,,minimap_event_1,Event Kupole 6,2
 151177,npc_giltine_weapon_event,,minimap_event_1,Event Armed Giltine,2
 151178,npc_goldpig,,minimap_event_1,Golden Pig,2
-151180,gacha_cube1_event,,minimap_event_1,Leticia's Secret Cube,2
 152000,npc_husband_1,,,Ordinary Husband,2
 152001,npc_wife_1,,,Ordinary Wife,2
 152002,npc_oldman_1,,,Old Man,2
@@ -863,6 +866,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 152076,HiddenWall_10_200_200,,,,2
 152077,npc_zachariel_cube_0,,,Mausoleum Cube_0,2
 152078,velniasprison_warp_mini,,minimap_portal,Teleport Magic Circle (Mini),2
+152079,npc_3cmlake_27_riddle_device,,,Water Point,2
+152080,npc_3cmlake_27_bracken_leaves,,,Water Plant,2
 153000,npc_matron_aquamarine,,,Old Lady (Aquamarine),2
 153001,npc_matron_blue,,,Old Lady (Blue),2
 153002,npc_matron_darkbrown,,,Old Lady (Dark Brown),2
@@ -1186,7 +1191,11 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154117,HiddenWall_40_40_500,,,,2
 154118,HiddenWall_25_25_500,,,,2
 154119,Event_FishingBox,,minimap_event_1,Joha's Bucket of Mudfish,2
-154120,npc_pajauta_1,,minimap_event_1,Pajauta,2
+154120,npc_pajauta_1,,,Pajauta,2
+154121,npc_MasterSheriff,,minimap_man_scout,Sheriff Master,2
+154122,npc_MasterMatross,,minimap_man_archer,Matross Master,2
+154123,npc_MasterArditi,,minimap_man_scout,Ardito Master,2
+154124,npc_MasterTigerHunter,,minimap_man_archer,Tiger Hunter Master,2
 155000,npc_crystal_machine,,,Crystal Processing Device,2
 155001,farm49_sapling,,,The Mysterious Tree,2
 155002,dirt_ground,,,Soil Sample,2
@@ -1444,6 +1453,12 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156157,npc_OLW_female_master,,minimap_man_scout,Outlaw Master (Female),2
 156158,npc_goddess_medeina,,,Goddess Medeina,2
 156159,npc_kartas_alone,,,Kartas(without dogs),2
+156160,maple_24_tree,,,Maple Leaf,2
+156161,gacha_cube1_red,,,Secret Cube Red,2
+156162,gacha_cube1_gold,,,Secret Cube Gold,2
+156163,gacha_cube1_blue,,,Secret Cube Blue,2
+156164,npc_Tantaliser,,,Bound Tantalizer,2
+156165,maple_24_tree_young,,,Young Maple Leaf,2
 157000,3cmlake_ruins,,,Lake Ruin,2
 157001,coral_tent_01,,,Cranto Tent,2
 157002,PCStatue,,,,2
