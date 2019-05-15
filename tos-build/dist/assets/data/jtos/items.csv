@@ -5620,7 +5620,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904114,EVENT_1812_GILTINE_REWARD_BOX,ギルティネ女神からの贈り物が入っています。{nl} 4月17日点検時、一括削除されます。,icon_item_event_giltinebox,,,,,,,,ギルティネの贈り物箱,0,0.0,0.0,FFFT,8,1.0
 904126,EVENT_1712_SECOND_CHALLENG_14d_Team,使用するとチャレンジポータルが生成されます。,icon_item_challengemode_scroll,,,,,,,,{s16}チャレンジポータル生成スクロール(14日),10,3.0,1209600.0,FFFT,8,1.0
 904128,EVENT_1812_DAYCHECK_BALLOONBOX,3周年記念出席チェックイベント用風船包みです。{nl}1月10日点検時、一括削除されます。,icon_item_event_balloonbox,,,,,,,,3周年風船包み,0,0.0,0.0,FFFT,8,1.0
-904133,EVENT_190110_3DAY_BOX,三日坊主イベントを遂行して支給された報酬ボックスです。使用すると、アイテムを獲得できます。{nl}メンテナンスで一括削除されます。,icon_item_happybox_blue,,,,,,,,[イベント]三日坊主ボックス,0,0.0,0.0,FFFT,8,1.0
+904133,EVENT_190110_3DAY_BOX,継続は力なりイベントにて目標クリアした際に獲得できる報酬です。使用すると、アイテムを獲得できます。{nl}6月26日（水）のメンテナンスで一括削除されます。,icon_item_happybox_blue,,,,,,,,[イベント]継続は力なりボックス,0,0.0,0.0,FFFT,8,1.0
 904134,EVENT_190110_GOLDPIG_BOX,金ぴかピッグイベントを遂行して支給された報酬ボックスです。使用すると、アイテムを獲得できます。{nl}メンテナンスで一括削除されます。,icon_item_happybox_red,,,,,,,,[イベント]金ぴかピッグボックス,0,0.0,0.0,FFFT,8,1.0
 904135,EVENT_190110_RankReset_Point_Lv1,"使用するとクラス変更ポイントを100ポイント獲得できます。{nl}保有できるクラス変更ポイントは3,000ポイントまでとなり、超過したポイントは失われます。",icon_item_rankreset_paper_3,,,,,,,,クラス変更券 Lv.1 (14日),0,0.0,1209600.0,FFFT,8,0.0
 904136,EVENT_LAB_1901_ACHIEVE_BOX,TOS 4期研究員に与えられる称号,icon_item_holyark,,,,,,,,称号 - TOS 4期研究員,0,0.0,0.0,FFFT,6,1.0
