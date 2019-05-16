@@ -4178,8 +4178,8 @@ $ID,$ID_NAME,AnvilATK,AnvilDEF,AnvilPrice,Bonus,Description,Durability,Grade,Ico
 624726,costume_clr_f_013,,,,,착용하면 외형이 변경됩니다.,-1,2,icon_item_cleric_uniform_f,1,,,,,,,,,5,성직자의 제복 코스튬(여),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
 624727,costume_clr_m_014,,,,,착용 시 외형과 이펙트가 변경됩니다.{nl}- 쌍쇄공 이펙트가 변경됩니다.,-1,2,icon_item_cleric_monk_m,1,,,,,,,,,5,몽크 스페셜 코스튬(남),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
 624728,costume_clr_f_014,,,,,착용 시 외형과 이펙트가 변경됩니다.{nl}- 쌍쇄공 이펙트가 변경됩니다.,-1,2,icon_item_cleric_monk_f,1,,,,,,,,,5,몽크 스페셜 코스튬(여),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
-624729,costume_clr_m_015,,,,,착용 시 외형과 이펙트가 변경됩니다.{nl}- 힐 이펙트가 변경됩니다.,-1,2,icon_item_cleric_cleric01_3_m,1,,,,,,,,,5,클레릭 스페셜 코스튬(남),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
-624730,costume_clr_f_015,,,,,착용 시 외형과 이펙트가 변경됩니다.{nl}- 힐 이펙트가 변경됩니다.,-1,2,icon_item_cleric_cleric01_3_f,1,,,,,,,,,5,클레릭 스페셜 코스튬(여),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
+624729,costume_clr_m_015,,,,,"착용 시 외형이 변경됩니다.{nl}- 힐 사용 시, 모션이 변경됩니다.",-1,2,icon_item_cleric_cleric01_3_m,1,,,,,,,,,5,클레릭 스페셜 코스튬(남),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
+624730,costume_clr_f_015,,,,,"착용 시 외형이 변경됩니다.{nl}- 힐 사용 시, 모션이 변경됩니다.",-1,2,icon_item_cleric_cleric01_3_f,1,,,,,,,,,5,클레릭 스페셜 코스튬(여),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
 624731,costume_clr_m_016,,,,,착용하면 외형이 변경됩니다.,-1,2,icon_item_cleric_manish_m,1,,,,,,,,,5,성직자의 매니시룩 코스튬(남),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
 624732,costume_clr_f_016,,,,,착용하면 외형이 변경됩니다.,-1,2,icon_item_cleric_manish_f,1,,,,,,,,,5,성직자의 매니시룩 코스튬(여),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
 624733,costume_clr_m_017,,,,,착용하면 외형이 변경됩니다.,-1,2,icon_item_cleric_christmas_m,1,,,,,,,,,5,성직자의 크리스마스 코스튬(남),1,0,FTFFF,1,0,0,0,0,0,0,0,0,0.0,0.0,TTFT,,19,11,11,False,False,0.0
