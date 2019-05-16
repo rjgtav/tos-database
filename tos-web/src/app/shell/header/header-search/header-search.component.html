@@ -51,7 +51,7 @@
       <tbody>
         <a *ngFor="let entity of results; index as i" class="d-table-row"
            [ngClass]="{'bg-secondary': keyboardSelected == i }"
-           [routerLink]="entity['Url$'] ? (entity['Url$'] | async) : entity.Url"
+           [routerLink]="entity && (entity['Url$'] ? (entity['Url$'] | async) : entity.Url)"
            (mouseenter)="tooltip = entity"
            (mouseleave)="tooltip = null">
 

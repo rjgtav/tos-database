@@ -23,7 +23,7 @@ self.onmessage = function (event) {
           xhr.responseType = 'json';
           xhr.onload = () => {
             let json = xhr.response;
-                json.pipeline = ['stopWordFilter']; // Hotfix: disable stemmer and enable stop word filtering
+                //json.pipeline = ['stopWordFilter']; // Hotfix: disable stemmer and enable stop word filtering
 
             idx = lunr.Index.load(json);
             postResponse(cmd, message.id, true);

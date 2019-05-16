@@ -1,6 +1,6 @@
 const fs = require('fs');
 const lunr = require('lunr');
-const openKoreanText = require('open-korean-text-node').default;
+const nodejieba = require("nodejieba");
 const papa = require('papaparse');
 const path = require('path');
 
@@ -11,7 +11,8 @@ require('../node_modules/lunr-languages/lunr.multi.js')(lunr);
 require('../node_modules/lunr-languages/lunr.stemmer.support.js')(lunr);
 require('../node_modules/lunr-languages/tinyseg.js')(lunr);
 require('../node_modules/lunr-languages/lunr.jp.js')(lunr);
-require('./lunr.kr.js')(lunr, openKoreanText);
+require('./lunr.ch.js')(lunr, nodejieba);
+require('./lunr.kr.js')(lunr, nodejieba);
 
 function log(...msg) {
     console.log('[' + REGION + ']', '[tos-search]', ...msg);
@@ -57,9 +58,11 @@ var idx = lunr(function () {
         this.use(lunr.multiLanguage('en', 'jp'));
     if (REGION === REGION_kTOS || REGION === REGION_kTEST)
         this.use(lunr.multiLanguage('en', 'kr'));
+    if (REGION === REGION_twTOS)
+        this.use(lunr.multiLanguage('en', 'ch'));
 
     // Disable stemmer
-    this.pipeline.remove(lunr.stemmer);
+    //this.pipeline.remove(lunr.stemmer);
 
     this.ref('$ID_lunr');
     this.field('$ID');
@@ -73,8 +76,12 @@ var idx = lunr(function () {
             let dataset = value[0];
 
             documents.forEach((doc) => {
-                doc['$ID_lunr'] = dataset + '#' + doc['$ID'];
-                this.add(doc)
+                this.add({
+                    $ID: doc['$ID'],
+                    $ID_lunr: dataset + '#' + doc['$ID'],
+                    $ID_NAME: doc['$ID_NAME'],
+                    Name: doc['Name'],
+                })
             });
         })
 });
