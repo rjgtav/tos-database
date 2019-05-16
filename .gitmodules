@@ -2,7 +2,3 @@
 	path = IPFUnpacker
 	url = git@github.com:rjgtav/IPFUnpacker.git
 	ignore = dirty
-[submodule "web/node_modules_patched/html2canvas"]
-	path = tos-web/node_modules_patched/html2canvas
-	url = git@github.com:niklasvh/html2canvas.git
-    ignore = dirty

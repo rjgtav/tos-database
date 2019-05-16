@@ -46,9 +46,6 @@
             "tsConfig": "src/tsconfig.app.json",
             "styles": [
               "src/styles.scss"
-            ],
-            "scripts": [
-              "node_modules_patched/html2canvas/dist/html2canvas.min.js"
             ]
           },
           "configurations": {
