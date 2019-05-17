@@ -62,7 +62,7 @@ var idx = lunr(function () {
         this.use(lunr.multiLanguage('en', 'ch'));
 
     // Disable stemmer
-    //this.pipeline.remove(lunr.stemmer);
+    this.pipeline.remove(lunr.stemmer);
 
     this.ref('$ID_lunr');
     this.field('$ID');
