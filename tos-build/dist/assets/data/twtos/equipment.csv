@@ -2263,6 +2263,9 @@ $ID,$ID_NAME,AnvilATK,AnvilDEF,AnvilPrice,Bonus,Description,Durability,Grade,Ico
 494088,Special_Gift_Box_Leticia_1904,,,,,雷堤夏收集貴重物品的箱子。可獲得下列內容物。{nl} - 女神祝福石 150個,,,icon_item_god_box,,,,,,,,,,,2019 雷堤夏的寶箱(S4),,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 494089,STEAM_MASTER_Premium_Enchantchip,,,,,使用於頭飾時賦予隨機屬性，使用時同時產生3個屬性，但無法用在使用中的裝備上。點擊滑鼠右鍵即可使用。,,,icon_item_enchantscroll_01,,,,,,,,,,,匠人的魔法賦予卷軸,,0,,,,,,,,,,,0.0,0.0,TTFT,,19,,,,,0.0
 494090,STEAM_MASTER_Premium_Enchantchip_Box,,,,,使用時獲得5個匠人的魔法賦予卷軸，點擊滑鼠右鍵即可使用。,,,icon_item_enchantscroll_bundle_01,,,,,,,,,,,匠人的魔法賦予卷軸5個寶箱,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,0.0
+494092,Steam_Darkness_Package,,,,,點擊滑鼠右鍵使用可以獲得以下物品。{nl} - 發光的8星寶石研磨劑{nl} - 老舊的黃金鑄幣 25個{nl} - 老舊的黃金鑲嵌槽{nl} - 黑暗氣息,,,gacha_h_010,,,,,,,,,,,黑暗氣息禮包,,0,,,,,,,,,,,0.0,0.0,FFFF,,19,,,,,0.0
+494093,Steam_Darkness_Package_Card_Gem,,,,,點擊滑鼠右鍵使用可以獲得以下物品。{nl} - 怪物卡片冊：黑色 5個{nl} - Lv10 強化用卡片 3個{nl} - 發光的8星寶石研磨劑 2個{nl} - 老舊的黃金鑄幣 25個{nl} - 老舊的黃金鑲嵌槽 2個{nl} - 黑暗氣息,,,gacha_h_011,,,,,,,,,,,黑暗之卡片和寶石禮包,,0,,,,,,,,,,,0.0,0.0,FFFF,,19,,,,,0.0
+494094,Steam_Darkness_Package_all,,,,,點擊滑鼠右鍵使用可以獲得以下物品。{nl} - 黑暗氣息禮包{nl} - 黑暗之卡片和寶石禮包{nl} - 鐵石鐵砧(14天),,,gacha_h_012,,,,,,,,,,,黑暗氣息All-in-One禮包,,0,,,,,,,,,,,0.0,0.0,FFFF,,19,,,,,0.0
 495076,Alice_Pack_2016,,,,,點擊滑鼠右鍵即可開啟。{nl}開啟後可獲得符合角色職業的愛麗絲套裝。{nl} - 愛麗絲套裝 1個{nl} - 髮飾選擇箱 - 愛麗絲 1個{nl} - 魔法賦予卷軸 10個,,,icon_item_giftbox_4,,,,,,,,,,,愛麗絲禮包,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,0.0
 495087,Vakarine_Box_01,,,,,VIP：裝有15天 [瓦卡麗涅]、x8 經驗之書。可點擊滑鼠右鍵使用。,,,icon_item_vakarine_box_01,,,,,,,,,,,瓦卡麗涅禮包 - 優惠,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 495088,Vakarine_Box_02,,,,,裝有經驗之書、地下城進場次數重置券、10TP[贈送用]。可點擊滑鼠右鍵使用。,,,icon_item_vakarine_box_02,,,,,,,,,,,瓦卡麗涅禮包 - 支援成長,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
@@ -5819,6 +5822,7 @@ $ID,$ID_NAME,AnvilATK,AnvilDEF,AnvilPrice,Bonus,Description,Durability,Grade,Ico
 902050,EVENT_STEAM_DLC_WEAPON_BOX,,,,,開啟時可以選擇想要的350級未鑑定裝備。,,,icon_item_event_weaponbox1,,,,,,,,,,,R9衝等禮包 - 武器選擇箱,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 902051,EVENT_STEAM_DLC_ARMOR_BOX,,,,,開啟時可以選擇想要的350級未鑑定裝備。,,,icon_item_event_armorbox2,,,,,,,,,,,R9衝等禮包 - 防具選擇箱,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 902095,PREMIUM_CHALLENG_PORTAL,,,,,使用時會產生挑戰傳送門。,,,icon_item_challengemode_scroll,,,,,,,,,,,挑戰傳送門生成卷軸,,10,,,,,,,,,,,3.0,0.0,TTFT,,19,,,,,1.0
+902160,Event_STEAM_Secret_Buff_1,,,,,使用時黑暗氣息Buff維持6天。{nl}(效果只在貝爾庫波的巢穴發動。){nl} - 物理攻擊力 + 7000{nl} - 魔法攻擊力 + 7000{nl} - 物理防禦力 + 10000{nl} - 魔法防禦力 + 10000,,,icon_item_vow_demon,,,,,,,,,,,黑暗氣息,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 904018,EVENT_1804_ROOT_BONUS_CUBE,,,,,使用時可以從活動道具中選取一個道具。{nl}活動結束時活動道具統一刪除。,,,icon_item_eventcube1,,,,,,,,,,,秘密的樹根魔方,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,0.0
 904020,EVENT_1804_TRANSCEND_REINFORCE_CUBE,,,,,使用時可以獲得強化禮包的道具。{nl}活動結束時活動道具統一刪除。,,,icon_item_eventcube2,,,,,,,,,,,強化機會禮包,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 904022,Moru_Diamond_Team_Trade,,,,,當有潛力時強化失敗，強化數值不會下降，但會扣潛力。當潛力為0時，強化失敗時，道具會被破壞。,,,icon_item_anvil_diamond,,,,,,,,,,,鑽石鐵砧,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
