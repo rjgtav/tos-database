@@ -132,6 +132,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644146,card_SwordBallista,[スロット装着効果] ルーティングチャンス+[★*5],icon_item_card_stat,148_boss_swordballista,,,,,800081,,,,0,1,コルカスカード,500,,,,0.0,0.0,TTTT,3,4,1.0
 644147,card_FrosterLord,[スロット装着効果]攻撃時、[★/2]%の確率で相手を4秒間凍傷状態{nl}(ボスには適用されません。),icon_item_card_atk,149_boss_frosterlord,,,,,800076,,,,0,1,フロスターロッドカード,500,,,,0.0,0.0,TTTT,3,0,1.0
 644148,card_varleking,[スロット装着効果]治癒力+[★*5],icon_item_card_def,144_boss_varleking,,"[642928, 642944]",,,57866,,,,2,0,バロルキングカード,500,,,,0.0,0.0,TTTT,3,1,1.0
+644149,card_payawoota,[スロット装着効果] 全ステータス+[★* 0.4],icon_item_card_stat,001_npc_payawoota,,,,,,,,,,,パヤウタカード,500,,,,0.0,0.0,TTTT,3,4,1.0
 644900,Legend_card_Marnoks,[スロット装着効果] 最小クリティカル率{nl}[★*2]%アップ,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔将マルノックスカード,0,,,,0.0,0.0,TTTT,3,2,1.0
 644901,Legend_card_Blud,[スロット装着効果] PVP時に受けるダメージ{nl}[★*3]%ダウン,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔将ブルッドカード,0,,,,0.0,0.0,TTTT,3,2,1.0
 644902,Legend_card_Zawra,[スロット装着効果] 物理防御力[★*10]%アップ,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔将ジャウラカード,0,,,,0.0,0.0,TTTT,3,2,1.0
