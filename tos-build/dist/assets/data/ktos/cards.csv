@@ -7,7 +7,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644006,card_Glass_mole,[슬롯 장착 효과] SP 포션 종류 사용 시 6초간 물리 대미지 +[★]%,icon_item_card_atk,012_boss_glass_mole,,,,,41367,,,,4,0,글래스몰 카드,500,192,4,860,0.0,0.0,TTTT,3,0,1.0
 644007,card_ginklas,[슬롯 장착 효과] 판금 갑옷 대상에게 주는 대미지[★/2]% 증가,icon_item_card_atk,091_boss_ginklas,[642013],,,,41208,,[18018],,2,4,긴클라스 카드,500,320,2,1053,0.0,0.0,TTTT,3,0,1.0
 644008,card_NetherBovine,[슬롯 장착 효과] 힘 스탯 +[★],icon_item_card_stat,026_boss_netherbovine,,,,,800001,,,,0,1,네더보바인 카드,500,195,4,966,0.0,0.0,TTTT,3,4,1.0
-644009,card_necrovanter,[슬롯 장착 효과] 어둠 속성 추가 대미지 +[★*10],icon_item_card_util,044_boss_necrovanter,[642011],"[642907, 642919, 642942]",,,800002,,,,0,1,네크로벤터 카드,500,416,1,144,0.0,0.0,TTTT,3,5,1.0
+644009,card_necrovanter,[슬롯 장착 효과] 어둠 속성 추가 대미지 +[★*10],icon_item_card_util,044_boss_necrovanter,[642011],"[642907, 642919, 642941]",,,800002,,,,0,1,네크로벤터 카드,500,416,1,144,0.0,0.0,TTTT,3,5,1.0
 644010,card_deadbone,[슬롯 장착 효과] 물리 치명타 공격력 +[★*20],icon_item_card_atk,014_boss_deadbone,,,,,41203,,,,0,4,데드본 카드,500,333,2,207,0.0,0.0,TTTT,3,0,1.0
 644011,card_Devilglove,[슬롯 장착 효과] 변이형 속성 몬스터에게 주는 대미지[★]% 증가,icon_item_card_atk,072_boss_devilglove,,,,,41385,,,,0,4,데블글로브 카드,500,127,5,98,0.0,0.0,TTTT,3,0,1.0
 644012,card_Denoptic,[슬롯 장착 효과] 마법 방어력 +[★*10],icon_item_card_def,024_boss_denoptic,,,,,41368,,,,7,4,덴옵틱 카드,500,388,6,205,0.0,0.0,TTTT,3,1,1.0
@@ -117,7 +117,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644131,card_Fireload,[슬롯 장착 효과] 불 속성 추가 대미지 +[★*10],icon_item_card_util,129_boss_firelord,,[642902],,,800023,,,,2,1,파이어로드 카드,500,274,2,207,0.0,0.0,TTTT,3,5,1.0
 644132,card_Kubas,"[슬롯 장착 효과] 지능 스텟 +[★/2], 정신 스탯 +[★/2] ",icon_item_card_stat,130_boss_kubas,,,,,41373,,,,5,4,큐바스 카드,500,253,2,1620,0.0,0.0,TTTT,3,4,1.0
 644133,card_Deathweaver,[슬롯 장착 효과] 대형 몬스터에게 피격 시 [★]% 확률로 HP 3% 회복{nl}재사용 대기 시간 15초,icon_item_card_util,081_boss_deathweaver,,,,,800026,,,,0,1,데스위버 카드,500,430,8,364,0.0,0.0,TTTT,3,5,1.0
-644134,card_Flammidus,[슬롯 장착 효과] 불 속성 저항력 +[★*10],icon_item_card_def,132_boss_flammidus,,"[642910, 642920, 642941]",,,800031,,,,0,1,플람미두스 카드,500,211,2,55,0.0,0.0,TTTT,3,1,1.0
+644134,card_Flammidus,[슬롯 장착 효과] 불 속성 저항력 +[★*10],icon_item_card_def,132_boss_flammidus,,"[642910, 642920, 642942]",,,800031,,,,0,1,플람미두스 카드,500,211,2,55,0.0,0.0,TTTT,3,1,1.0
 644135,card_Marnoks,[슬롯 장착 효과] 치명타 발생 +[★ * 1.5],icon_item_card_util,139_boss_marnoks,,,,,800078,,,,1,1,마르녹스 카드,500,,,,0.0,0.0,TTTT,3,5,1.0
 644136,card_Zawra,[슬롯 장착 효과] 물리 방어력 +[★]%,icon_item_card_def,140_boss_zawra,,,,,800072,,,,0,1,자우라 카드,500,,,,0.0,0.0,TTTT,3,1,1.0
 644137,card_Prisoncutter,[슬롯 장착 효과] 출혈 상태 이상에 걸린 대상에게 주는 대미지[★]% 증가,icon_item_card_atk,143_boss_prisoncutter,,,,,800020,,,,0,1,프리즌커터 카드,500,,,,0.0,0.0,TTTT,3,0,1.0
@@ -149,6 +149,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644912,Legend_card_Wastrel,[슬롯 장착 효과] 최대 HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,[642931],,,59172,,,,0,4,웨이스트럴 카드,0,,,,0.0,0.0,TTTT,3,2,1.0
 644913,Legend_card_ignas,[슬롯 장착 효과] 치명타 공격시 [★ * 5]% 확률로 6초 동안 은신합니다.,icon_item_card_legend,154_boss_ignas,,[642934],,,800089,,,,0,1,이그나스 카드,0,,,,0.0,0.0,TTTT,3,2,1.0
 644914,Legend_card_boruta,[슬롯 장착 효과] 보스 몬스터에게 대미지 [★ * 5]% 증가 ,icon_item_card_legend,155_boss_boruta,,,,,59208,,,,0,0,보루타 카드,0,,,,0.0,0.0,TTTT,3,2,1.0
+644923,Legendcard_skiaclips,[슬롯 장착 효과] 곤충형 대상 공격력 750 * [★],icon_item_card_legend,156_boss_skiaclipse,,[642949],,,57866,,,,2,0,해방된 스키아클립스 카드,0,,,,0.0,0.0,TTTT,3,2,1.0
 650001,legend_reinforce_card_lv1,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV4까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,,,찢어진 레전드 강화용 카드,0,,,,0.0,0.0,TTTT,3,3,1.0
 650002,legend_reinforce_card_lv2,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV6까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,오래된 레전드 강화용 카드,0,,,,0.0,0.0,TTTT,3,3,1.0
 650003,legend_reinforce_card_lv3,레전드 카드 강화에 사용할 수 있는 강화용 카드입니다. LV8까지 성장할 수 있습니다.{nl}레전드 강화용 카드는 착용 및 일반 카드 합성 재료로 사용할 수 없습니다.,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,,,레전드 강화용 카드,0,,,,0.0,0.0,TTTT,3,3,1.0
