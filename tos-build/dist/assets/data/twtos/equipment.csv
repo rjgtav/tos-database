@@ -5872,3 +5872,5 @@ $ID,$ID_NAME,AnvilATK,AnvilDEF,AnvilPrice,Bonus,Description,Durability,Grade,Ico
 1000039,TWN_Costume_Select_Box_4,,,,,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,,,icon_item_gold_amor01_box_f,,,,,,,,,,,金剛天狗武士套裝選擇箱,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,0.0
 1000040,TWN_Gacha_TP_Box_1,,,,,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,,,icon_item_sakuracube,,,,,,,,,,,元宵福袋,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,0.0
 1000041,TWN_Gacha_TP_Box_1_11,,,,,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,,,icon_item_sakuracube,,,,,,,,,,,元宵福袋 x10+1,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,0.0
+1000042,STEAM_Gacha_TP_Box_1,,,,,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,,,icon_item_hairgacha,,,,,,,,,,,音樂盒轉蛋,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,0.0
+1000043,STEAM_Gacha_TP_Box_11,,,,,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,,,icon_item_hairgacha,,,,,,,,,,,音樂盒轉蛋 x10+1,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,0.0
