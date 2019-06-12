@@ -604,6 +604,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150047,uniqraid_startower_InvisbleWall_0_0_0_0,,,,2
 150048,uniqraid_startower_InvisbleWall_150_120_500_0,,,,2
 150049,uniqraid_startower_InvisbleWall_10_160_500_1,,,,2
+150051,fishingbox3,,,魚桶 3階段,2
 150171,stones_startower,,,隱藏的魔力源,2
 150172,magicsquare_1_mini_fantasylib,,,魔法陣,2
 150173,supplemants_fantasylib,,,濃縮液,2
@@ -615,6 +616,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150181,star_stone_01_small_startower_sp,,,魔力殘留物(特殊),2
 150182,npc_schaffenstar_ignas,,,夏班史達團長依克拉斯,2
 150183,npc_sage_female_1,,,賢者女1,2
+150200,npc_ghost_soldier_castle,,,幽靈士兵,2
+150201,castle94_gate,,,城堡正門,2
+150202,castle94_gate_opened,,,城堡正門(開啟),2
 151000,closing_device,,,封鎖裝置,2
 151001,spell_crystal_red,,,凝結魔力的結晶,2
 151002,spell_crystal_gem_red,,,紅焰的寶石,2
@@ -783,7 +787,6 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151176,npc_kupole_6_event,,minimap_event_1,活動奎波爾6,2
 151177,npc_giltine_weapon_event,,minimap_event_1,活動 拿著武器的吉特涅,2
 151178,npc_goldpig,,minimap_event_1,黃金豬,2
-151180,gacha_cube1_event,,minimap_event_1,雷堤夏秘密魔方,2
 152000,npc_husband_1,,,平凡的男子,2
 152001,npc_wife_1,,,平凡的妻子,2
 152002,npc_oldman_1,,,平凡的老人,2
@@ -863,6 +866,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 152076,HiddenWall_10_200_200,,,,2
 152077,npc_zachariel_cube_0,,,王陵魔方_0,2
 152078,velniasprison_warp_mini,,minimap_portal,空間移動魔法陣(迷你),2
+152079,npc_3cmlake_27_riddle_device,,,水盤設施,2
+152080,npc_3cmlake_27_bracken_leaves,,,水草,2
 153000,npc_matron_aquamarine,,,中年婦人(海藍),2
 153001,npc_matron_blue,,,中年婦人(藍),2
 153002,npc_matron_darkbrown,,,中年婦人(暗褐),2
@@ -1186,7 +1191,11 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154117,HiddenWall_40_40_500,,,,2
 154118,HiddenWall_25_25_500,,,,2
 154119,Event_FishingBox,,minimap_event_1,悠夏的泥鰍桶,2
-154120,npc_pajauta_1,,minimap_event_1,帕亞烏塔,2
+154120,npc_pajauta_1,,,帕亞烏塔,2
+154121,npc_MasterSheriff,,minimap_man_scout,警長大師,2
+154122,npc_MasterMatross,,minimap_man_archer,砲衛軍大師,2
+154123,npc_MasterArditi,,minimap_man_scout,阿迪蒂大師,2
+154124,npc_MasterTigerHunter,,minimap_man_archer,虎獵師大師,2
 155000,npc_crystal_machine,,,水晶加工機械,2
 155001,farm49_sapling,,,神祕的樹苗,2
 155002,dirt_ground,,,土壤標本,2
@@ -1442,6 +1451,14 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156155,npc_ASS_master,,minimap_man_scout,暗殺者大師,2
 156156,npc_OLW_male_master,,minimap_man_scout,亡命之徒大師男,2
 156157,npc_OLW_female_master,,minimap_man_scout,亡命之徒大師女,2
+156158,npc_goddess_medeina,,,女神梅德依那,2
+156159,npc_kartas_alone,,,卡魯塔斯(沒有狗的版本),2
+156160,maple_24_tree,,,楓樹,2
+156161,gacha_cube1_red,,,秘密紅魔方,2
+156162,gacha_cube1_gold,,,秘密金魔方,2
+156163,gacha_cube1_blue,,,秘密藍魔方,2
+156164,npc_Tantaliser,,,複束縛的坦達伊秋,2
+156165,maple_24_tree_young,,,小楓樹,2
 157000,3cmlake_ruins,,,湖水的殘物,2
 157001,coral_tent_01,,,克蘭托帳篷,2
 157002,PCStatue,,,,2

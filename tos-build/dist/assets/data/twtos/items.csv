@@ -142,6 +142,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 495121,Premium_Enchantchip14_Team,使用於頭飾時，賦予效果會隨機追加。賦予效果最多可以產生3個。無法對套用的裝備使用。點擊滑鼠右鍵使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_enchantscroll,,,,,,,,[活動]魔法賦予卷軸(限時),0,0.0,1209600.0,FFFT,8,0.0
 495123,Premium_awakeningStone14_Team,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,,,[活動]覺醒石(限時),0,0.0,1209600.0,FFFT,8,0.0
 495125,Ability_Point_Stone_5_Team,使用時特性點數增加5，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint7,,,,,,,,特性點數5(14天),0,0.0,1209600.0,FFFT,8,1.0
+495130,Ability_Point_Stone_5_Team_Event,使用時特性點數增加5，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint7,,,,,,,,特性點數 5,0,0.0,0.0,FFFT,8,1.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,,,耐力 +5 增加藥水,200,0.0,0.0,FFFF,6,1.0
 640002,Drug_HP1,HP立刻恢復273，15秒內每隔2秒HP恢復273，點擊滑鼠右鍵使用。,item_hp_oil_1,,,,,,,,HP藥水(小),16,25.0,0.0,FFTF,6,7.0
 640003,Drug_HP2,HP立刻恢復462，15秒內每隔2秒HP恢復462，點擊滑鼠右鍵使用。,item_hp_oil_2,,,,,,"[3001, 3003, 3004, 3006, 3007, 3009, 3010, 3012, 3013, 3015, 3016, 3018, 3019, 3021, 3022]",,HP藥水,32,25.0,0.0,FFTF,6,7.0
@@ -357,8 +358,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640231,food_penguin2,恢復企鵝健康的飼料。可以恢復企鵝的所有HP，耐力也會恢復 +15 。{nl}可使用目錄{nl} - 企鵝{nl} - 藍色企鵝 {nl} - 冬季企鵝{nl} - 綠企鵝,icon_item_anchovy,,,,,,,,吻仔魚,0,10.0,0.0,FFTF,6,1.0
 640232,GIMMICK_Drug_PMATK1,3分內使物理、魔法攻擊力提升+55，點擊滑鼠右鍵使用，冷卻時間120秒。,icon_item_drug_exatk1,,,,,,,,凱伊托 勇猛藥水,0,120.0,0.0,FFFF,6,10.0
 640233,expCard14,經驗值提升+3630357，職業經驗值提升+2795374。從275級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 100, ""Map"": 1191, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1991, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3070, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3080, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3090, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3270, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3280, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3290, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3560, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3570, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3580, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3590, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3600, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3690, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3700, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4270, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4900, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV13 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
-640234,expCard15,經驗值提升+13189741，職業經驗值提升+10156100。從300級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 100, ""Map"": 1901, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1911, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1921, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1941, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1951, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1961, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1971, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1993, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1994, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1995, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2101, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2111, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2121, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3100, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3110, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3120, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3130, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3140, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3150, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3160, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3170, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3180, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3190, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3200, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3210, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3300, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3530, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3540, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3550, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3660, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3710, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3720, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3770, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3780, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4280, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4810, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4910, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4980, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8000, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8010, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8020, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV14 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
-640235,expCard16,經驗值提升+31212626，職業經驗值提升+24033722。從320級開始可使用。,icon_item_expcard,,,,,,,,LV15 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
+640234,expCard15,經驗值提升+13189741，職業經驗值提升+10156100。從300級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 100, ""Map"": 1901, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1911, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1921, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1941, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1951, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1961, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1971, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1981, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1982, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1983, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1984, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1985, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1993, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1994, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1995, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2101, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2111, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2121, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3100, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3110, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3120, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3130, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3140, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3150, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3160, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3170, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3180, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3190, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3200, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3210, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3220, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3221, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3223, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3300, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3530, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3540, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3550, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3660, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3710, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3720, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3770, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3780, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4280, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4810, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4910, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4980, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8000, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8010, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8020, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV14 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
+640235,expCard16,經驗值提升+31212626，職業經驗值提升+24033722。從320級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 100, ""Map"": 3230, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3240, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3250, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV15 經驗值卡片,0,0.0,0.0,FFFF,6,0.0
 640236,food_tomato,紅熊貓和渡渡鳥喜歡的飼料，寵物的HP會全部恢復，耐力會恢復+60。,icon_item_tomato,,,,,,,,番茄,0,10.0,0.0,FFTF,6,1.0
 640237,Drug_PvP_MSPD3,250秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間300秒。,item_speed_requid_1,,,,,,,,移動速度UP藥水,25,300.0,0.0,FFFF,6,5.0
 640238,GIMMICK_Drug_HPSP2,15秒內可恢復SP與HP各 480。點擊滑鼠右鍵可以直接使用。 重置時間為 100秒。,item_hpsp_potion_2,,,,,,,,凱伊托恢復藥水Lv2,0,100.0,0.0,FFFF,6,20.0
@@ -522,15 +523,16 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640427,RepairPotion_Colony_Support2_Team_Trade,使用時，會讓配戴裝備的耐久度恢復+5。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,icon_item_repairkit,,,,,,,,[領地戰支援] 緊急修理工具,0,0.0,0.0,FFFT,6,0.0
 640428,Drug_Alche_MSPD15_Colony_Support2_Team_Trade,250秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}領地戰戰鬥支援所發送的道具。{nl}活動結束時道具統一刪除。,item_speed_requid_1,,,,,,,,[領地戰支援] 濃縮移動速度增加藥水LV15,25,30.0,0.0,FFFT,6,5.0
 640430,test_expCard_Max_380,"角色經驗值提升2,047,516,611，點擊滑鼠右鍵使用。",icon_item_expcard,,,,,,,,[奎波爾專用]經驗值加速卡片,0,0.0,0.0,FFFT,6,0.0
-640435,Boruta_Drug_RedApple20,HP立刻恢復20%，11秒內每隔2秒恢復20%HP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}活動結束時統一刪除。,icon_item_hpelixir_small,,,,,,,,[活動]  HP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
-640436,Boruta_Drug_BlueApple20,SP立即恢復20%，11秒內每隔2秒令SP恢復20%，點擊滑鼠右鍵使用，冷時間20秒。{nl}活動結束時道具統一刪除。,icon_item_spelixir_small,,,,,,,,[活動] SP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
-640437,Boruta_Drug_Alche_STA15,耐力恢復78，點擊滑鼠右鍵使用，冷卻時間30秒。{nl}活動結束時道具統一刪除。,item_sta_pill_3,,,,,,,,[活動] 濃縮耐力藥丸 LV15,0,15.0,0.0,FFFT,6,7.0
-640438,Boruta_repairPotion_event,使用時會讓配戴裝備的耐久度恢復+5。{nl}活動結束時道具統一刪除。,icon_item_repairkit,,,,,,,,[活動] 緊急修理工具,0,0.0,0.0,FFFT,6,0.0
-640439,Boruta_Warp_table_10_1,活動用傳送卷軸。{nl}使用時移動至貝達高原奎波爾卡潔身邊。{nl}活動結束時道具統一刪除。,icon_item_scroll,,,,,,,,[活動] 傳送卷軸-奎波爾卡潔,0,10.0,0.0,FFFT,6,1.0
+640435,Boruta_Drug_RedApple20,令HP立即恢復20%，11秒內每隔2秒使恢復20%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}活動結束時道具統一刪除。,icon_item_hpelixir_small,,,,,,,,[活動]  HP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
+640436,Boruta_Drug_BlueApple20,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}活動結束時道具統一刪除。,icon_item_spelixir_small,,,,,,,,[活動] SP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
+640437,Boruta_Drug_Alche_STA15,耐力恢復78，點擊滑鼠右鍵使用。{nl}活動結束時道具統一刪除。,item_sta_pill_3,,,,,,,,[活動] 濃縮耐力藥丸 LV15,0,15.0,0.0,FFFT,6,7.0
+640438,Boruta_repairPotion_event,使用時，會讓配戴裝備的耐久度恢復+5。{nl}活動結束時道具統一刪除。,icon_item_repairkit,,,,,,,,[活動] 緊急修理工具,0,0.0,0.0,FFFT,6,0.0
+640439,Boruta_Warp_table_10_1,活動用傳送卷軸。使用時移動至貝達高原奎波爾卡潔身邊。{nl}活動結束時道具統一刪除。,icon_item_scroll,,,,,,,,[活動] 傳送卷軸-奎波爾卡潔,0,10.0,0.0,FFFT,6,1.0
 640440,Boruta_Event_ACHIEVE_BOX_day5,參與攻略斯爾利那斯雷歐的龍王普魯達5次以上時獲得的救援者稱號。{nl}使用時獲得[招惹普魯達]稱號。{nl}360Lv以上可使用,icon_item_holyark,,,,,,,,[活動] 稱號 - 招惹普魯達,0,0.0,0.0,FFFT,6,0.0
 640441,Boruta_Event_ACHIEVE_BOX_day10,參與攻略斯爾利那斯雷歐的龍王普魯達10次以上時獲得的救援者稱號。{nl}使用時獲得[不怕普魯達]稱號。{nl}360Lv以上可使用,icon_item_holyark,,,,,,,,[活動] 稱號 - 不怕普魯達,0,0.0,0.0,FFFT,6,0.0
 640447,Event_Drug_RedApple20,令HP立即恢復20%，11秒內每隔2秒使恢復20%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_hpelixir_small,,,,,,,,[活動]  HP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
 640448,Event_Drug_BlueApple20,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_spelixir_small,,,,,,,,[活動] SP恢復小型靈藥,0,20.0,0.0,FFFT,6,30.0
+640449,Uphille_Power_Potion1,只能在高地防守任務中使用的藥水。增加傷害5%、減少承受的傷害5%。最多可以疊加10次。點擊滑鼠右鍵使用。,icon_item_battle_potion_2,,,,,,,,戰鬥藥水: 高地任務,0,1.0,0.0,FFFT,6,10.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,,,LV1 攻擊推進器,1,8.0,0.0,TTTT,6,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,,,攻擊推進器 +15,1,8.0,0.0,TTTT,6,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,攻擊推進器 +20,2,8.0,0.0,TTTT,6,1.0
@@ -829,6 +831,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643027,Transcend_Scroll_5_Event,提升裝備的超越數值至5階段。{nl}只有0~4階段超越道具可以使用，右點擊5超越卷軸後選擇要進行超越的道具就可以讓裝備提升至5超越。{nl}活動結束時道具統一刪除。,icon_item_transcendence_coupon,,,,,,,,[活動] 5超越卷軸,0,0.0,0.0,FFFT,6,1.0
 643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於隨機屬性裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具：隨機屬性,0,0.0,0.0,FFTF,15,4.0
 643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於製作獨特裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具：製作,0,0.0,0.0,FFTF,15,4.0
+643035,Moru_Stone_TN,將裝備放到鐵砧上敲敲打打，就可以提升性能。裝備強化費用減少50%。請點擊滑鼠右鍵開始使用。,icon_item_anvil,,,,,,,,鋼鐵鐵砧,45,0.0,0.0,FFTF,15,1.0
+643036,Moru_Silver_Team,將裝備放置到鐵砧上，輕敲後可以提升裝備性能。不需花費銀幣就可以強化裝備。點擊滑鼠右鍵可以直接使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_anvil_silver,,,,,,,,銀光鐵砧(14天),0,0.0,1209600.0,FFFT,15,1.0
+643037,Moru_Stone_Team,將裝備放到鐵砧上敲敲打打，就可以提升性能。裝備強化費用減少50%。請點擊滑鼠右鍵開始使用。獲得後14日內可以使用。,icon_item_anvil,,,,,,,,鋼鐵鐵砧(14天),45,0.0,1209600.0,FFFT,15,1.0
+643038,Dirbtumas_kit,用於軟性萃取血晶的工具。此為一般道具，可向戴利亞貝里斯購買。,icon_item_dirbtumas_kit,,,,,,,,血晶軟性萃取工具,0,0.0,0.0,FFTF,15,4.0
+643039,Dirbtumas_kit_Sliver,銀色軟性萃取血晶的工具。不需要消耗財貨。,icon_item_dirbtumas_kit_silver,,,,,,,,銀色血晶軟性萃取工具,0,0.0,0.0,FFTF,15,4.0
+643041,Moru_Silver_Team_Able,將裝備放置到鐵砧上，輕敲後可以提升裝備性能。不需花費銀幣就可以強化裝備。點擊滑鼠右鍵可以直接使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_anvil_silver,,,,,,,,銀光鐵砧(14天),0,0.0,1209600.0,FFFT,15,1.0
 645002,D_Bube_Mane,可以從長時間暴露於水晶的布貝身上獲得的黑暗魔石。,icon_item_evilenergy_piece,,,,,,,,布貝魔石,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,散發出甜蜜香味的花瓣，可以從粉紅小花怪身上獲得。,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,粉紅小花怪花瓣,1,0.0,0.0,TTTT,15,1.0
 645025,TreasureboxKey2,開啟寶箱 LV 2所使用的鑰匙,icon_item_key1,,,,,,,,LV2 寶箱鑰匙,0,0.0,0.0,FFTF,15,1.0
@@ -1409,7 +1417,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645744,misc_0277,到處縫補的碎布。,icon_item_clothpiece_brown,"[642138, 642139, 642139, 642140, 642140, 642140]",,,,,,,佩格碎布,2,0.0,0.0,TTTT,15,1.0
 645745,misc_0278,絕不可以看成是單純的石頭。可以從葛里普林那裡獲得。,icon_item_misc_00006,[642149],,,,,,,葛里普林碎片,2,0.0,0.0,TTTT,15,1.0
 645746,misc_0279,雪貂的毛非常的柔軟，人氣非常好，可以從雪貂身上獲得。,icon_item_fur_spion_white,"[642146, 642146, 642146, 642146, 642146, 642146, 642146, 642146, 642146, 642147, 642148]",,,,,,,雪貂的毛,2,0.0,0.0,TTTT,15,1.0
-645747,misc_bombShinobi,被使用於忍術的炸藥，跟忍者大師購買。,icon_item_shinobibomb,,,,,,,,忍術用炸藥,60,0.0,0.0,FFTF,15,0.5
+645747,misc_bombShinobi,被使用於忍術的炸藥，跟忍者大師購買。,icon_item_shinobibomb,,,,,,,,忍術用炸藥,60,0.0,0.0,FFTF,15,0.1
 645748,misc_cape,跟隨軍牧師大師購買。,icon_item_cape,,,,,,,,披風,40,0.0,0.0,FFTF,15,1.0
 645749,misc_oldIron,型態和大小不一的廢鐵。,icon_item_gem_elemental15,,,,,,,,廢鐵,0,0.0,0.0,TTTT,15,1.0
 645750,misc_runeStone,刻有具魔法力量的古代文字的石頭，跟符文師大師購買。,icon_item_rune_stone_board,,,,,,,,符文石,20,0.0,0.0,FFTF,15,0.5
@@ -1422,19 +1430,19 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645757,event_alphabet_A,"如果收集組合到TREE, SAVIOR, TREEOFSAVIOR文字，去找村莊內魔法協會NPC可以交換幸運箱。",icon_item_initial-a,,,,,,,,字母 A,0,0.0,0.0,TTTT,15,0.0
 645758,event_alphabet_V,"如果收集組合到TREE, SAVIOR, TREEOFSAVIOR文字，去找村莊內魔法協會NPC可以交換幸運箱。",icon_item_initial-v,,,,,,,,字母 V,0,0.0,0.0,TTTT,15,0.0
 645759,event_alphabet_I,"如果收集組合到TREE, SAVIOR, TREEOFSAVIOR文字，去找村莊內魔法協會NPC可以交換幸運箱。",icon_item_initial-i,,,,,,,,字母 I,0,0.0,0.0,TTTT,15,0.0
-645760,misc_earthTower,在大地之塔的羅洛班索區間可以獲得。,icon_item_gem_stone_con,,,,,,,,LV1 大地的破片,0,0.0,0.0,FFTF,15,0.0
-645761,misc_earthTower5_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,派伊羅艾庫的精髓,0,0.0,0.0,FFTF,15,0.0
-645762,misc_earthTower10_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,高薩利烏斯的精髓,0,0.0,0.0,FFTF,15,0.0
-645763,misc_earthTower15_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,吐勒塔伊的精髓,0,0.0,0.0,FFTF,15,0.0
-645764,misc_earthTower20_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,級別的精髓,0,0.0,0.0,FFTF,15,0.0
+645760,misc_earthTower,在大地之塔的羅洛班索區間可以獲得。,icon_item_gem_stone_con,,,,,,,,LV1 大地的破片,0,0.0,0.0,FFTT,15,0.0
+645761,misc_earthTower5_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,派伊羅艾庫的精髓,0,0.0,0.0,FFTT,15,0.0
+645762,misc_earthTower10_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,高薩利烏斯的精髓,0,0.0,0.0,FFTT,15,0.0
+645763,misc_earthTower15_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,吐勒塔伊的精髓,0,0.0,0.0,FFTT,15,0.0
+645764,misc_earthTower20_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,級別的精髓,0,0.0,0.0,FFTT,15,0.0
 645765,misc_gemExpStone09,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,,,7星寶石研磨劑,0,0.0,0.0,FFFF,15,1.0
 645766,misc_gemExpStone10,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,,,8星寶石研磨劑,0,0.0,0.0,FFFF,15,1.0
 645768,misc_awakeningStone1_test,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為1分鐘，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,,,[活動]覺醒石(限1分鐘),6,0.0,60.0,FFFF,15,1.0
-645769,misc_earthTower_2,在大地之塔的索爾米奇區間可以獲得。,icon_item_gem_stone_int,,,,,,,,LV2 大地的碎片,0,0.0,0.0,FFTF,15,0.0
-645770,misc_earthTower25_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,諾溫的精髓,0,0.0,0.0,FFTF,15,0.0
-645771,misc_earthTower30_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,奧勒坎的精髓,0,0.0,0.0,FFTF,15,0.0
-645772,misc_earthTower35_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,佛羅斯凱的精髓,0,0.0,0.0,FFTF,15,0.0
-645773,misc_earthTower40_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,格林利波的精髓,0,0.0,0.0,FFTF,15,0.0
+645769,misc_earthTower_2,在大地之塔的索爾米奇區間可以獲得。,icon_item_gem_stone_int,,,,,,,,LV2 大地的碎片,0,0.0,0.0,FFTT,15,0.0
+645770,misc_earthTower25_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,諾溫的精髓,0,0.0,0.0,FFTT,15,0.0
+645771,misc_earthTower30_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,奧勒坎的精髓,0,0.0,0.0,FFTT,15,0.0
+645772,misc_earthTower35_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,佛羅斯凱的精髓,0,0.0,0.0,FFTT,15,0.0
+645773,misc_earthTower40_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,格林利波的精髓,0,0.0,0.0,FFTT,15,0.0
 645774,misc_earthTower5_toll,交給大地之塔內部的奎波爾路塔，就可以從大地之塔羅洛班索區間6層開始挑戰。,icon_item_earthtower5_toll,,,,,,,,派伊羅艾庫的標誌,0,0.0,0.0,FFFF,15,0.0
 645775,misc_earthTower10_toll,交給大地之塔內部的奎波爾路塔，就可以從大地之塔羅洛班索區間11層開始挑戰。,icon_item_earthtower10_toll,,,,,,,,高薩利烏斯的標誌,0,0.0,0.0,FFFF,15,0.0
 645776,misc_earthTower15_toll,交給大地之塔內部的奎波爾路塔，就可以從大地之塔羅洛班索區間16層開始挑戰。,icon_item_earthtower15_toll,,,,,,,,吐勒塔伊的標誌,0,0.0,0.0,FFFF,15,0.0
@@ -1746,6 +1754,21 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647016,misc_0533,可以和柯拉佩達[巴伊寶拉之翼]雷那兌換有用的道具。,icon_item_wingcoin,,,,,,,,巴伊寶拉之翼鑄幣,0,0.0,0.0,FFFT,15,1.0
 647017,misc_gemExpStone10_Premium,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,,,發光的8星寶石研磨劑,0,0.0,0.0,TTFT,15,1.0
 647018,widnium_piece_Premium,聽說這是透過凱都拉商拉從很遠很遠的地方帶進來的珍貴礦物。{nl}傳聞說就算手上持有這個礦物，它也自動回到它原來的地方。{nl}佩迪米安的戴利亞貝利斯聽了傳聞想要研究急著找這個礦石。{nl}如果把這個礦石轉交給戴利亞貝利斯'鑽石鐵砧(14天)'可以交換1個。{nl}此道具活動結束時統一刪除。,icon_item_widnium_piece,,,,,,,,威德礦石碎片,0,0.0,0.0,FFFF,15,1.0
+647019,misc_bernice_coin,貝勒尼凱碎片的副本獎勵道具。可以向神諭師大師兌換道具。,icon_item_bernice_coin,,,,,,,,貝勒尼凱碎片鑄幣,1,0.0,0.0,FFFT,15,0.0
+647020,misc_0534,裝著各種急救藥品的箱子。,icon_item_first_aid_kit,,,,,,,,急救箱,5,0.0,0.0,FFTF,15,0.1
+647023,Abrasive_400,使用覺醒研磨劑覺醒後，可以獲得更高的屬性。,icon_item_awakemisc01,,,,,,,,Lv.400 覺醒研磨劑,5,0.0,0.0,FFFF,15,1.0
+647024,misc_Planium,可以在低階怪物身上以低機率獲得的材料。佩迪米安的戴利亞貝利斯可以將它們做成裝備。,icon_item_legend_misc01,,,,,,,,弗萊礦石,5,0.0,0.0,TFTT,15,1.0
+647025,misc_lensterseum,代表著光輝的礦石，沒有人知道它的來歷。只知道它散發出耀眼的光芒並濃縮成一塊。,icon_item_misc_white,,,,,,,,雷恩斯特礦,5,0.0,0.0,FFTT,15,1.0
+647026,misc_riperium,代表著腐敗的礦石，它的來歷在某天的意外被得知。這種礦物從倒塌的地方噴發出來，那股氣流使周圍的所有事物腐敗、老化。,icon_item_misc_black,,,,,,,,利佩里礦,5,0.0,0.0,FFTT,15,1.0
+647027,misc_0535,楓葉上含有的露水很奇特。不知道產生了何種變化，讓人感覺到絕對不容忽視的氣息。,icon_item_misc_0530,,,,,,,,發光的紅楓葉,5,0.0,0.0,TTTT,15,15.0
+647028,misc_0536,純白的波斯菊常常被作為藥材使用。,icon_item_misc_0531,,,,,,,,純白波斯菊,5,0.0,0.0,TTTT,15,15.0
+647029,misc_0537,將這種藥草作為藥材有問題。,icon_item_misc_0532,,,,,,,,紫色薰衣草,5,0.0,0.0,TTTT,15,15.0
+647030,misc_0538,不同於鬱金香花的朝氣蓬勃，它的莖部是死氣沉沉的。,icon_item_misc_0533,,,,,,,,鮮紅鬱金香,5,0.0,0.0,TTTT,15,15.0
+647031,misc_0539,用圓形金色外框裝飾的圖案。雖然用途和經歷未知，卻帶有豐富的力量。,icon_item_misc_0536,,,,,,,,圓形金色圖案,5,0.0,0.0,TTTT,15,30.0
+647032,misc_0540,用金色外框裝飾的圖案。雖然用途和經歷未知，卻帶有豐富的力量。,icon_item_misc_0534,,,,,,,,完成的金色圖案,5,0.0,0.0,TTTT,15,30.0
+647033,misc_0541,被打破的圖案帶有和原先的圖案不同的力量。說不定那種金色礦物的排列會賦予不同的力量。,icon_item_misc_0535,,,,,,,,破碎的圖案碎片,5,0.0,0.0,TTTT,15,30.0
+647034,misc_0542,紀念[Episode11]改版的紀念鑄幣。活動結束時道具統一刪除。,icon_item_crimson2,,,,,,,,[Episode11] 成長的寶石,5,0.0,0.0,FFFF,15,0.1
+647035,misc_0543,紀念[Episode11]改版的探險的幼苗鑄幣。 活動結束時道具統一刪除。{nl} {nl}可以在探險的幼苗商店內使用。,item_icon_sprout,,,,,,,,[Episode11] 探險的幼苗,5,0.0,0.0,FFFT,15,0.1
 648501,emoticonItem_1,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1071, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,表情符號：凱帕(高興),0,0.0,0.0,FFFF,6,1.0
 648502,emoticonItem_2,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1201, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,表情符號：凱帕(悲傷),0,0.0,0.0,FFFF,6,1.0
 648503,kupole_emotion01,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：奎波爾(賣萌),0,0.0,0.0,FFFT,6,1.0
@@ -1768,7 +1791,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649011,misc_ore12,此礦石的特徵是會發出淡淡的金色光芒，可以從怪物身上取得，被當作道具的材料使用。,20_item_ore_tachyum,,,,,,"[10096, 11085, 12087, 12088, 13088, 13089, 14090, 15085, 16090, 17070, 18060, 19021, 19022, 20009, 20010, 20011, 21006, 21007, 31057, 32014, 32016, 33066, 34059, 34060, 37010, 37011, 40035]",,帕勒礦石,2,0.0,0.0,TTTT,15,1.0
 649012,misc_ore13,發出紅光的結晶。,icon_item_crystal_red,,[642928],,,,"[30547, 30549]",,朱紅結晶,2,0.0,0.0,TTTT,15,1.0
 649013,misc_ore14,發出黃光的結晶。,icon_item_crystal_yellow,,[642928],,,,"[30548, 30550]",,金黃結晶,2,0.0,0.0,TTTT,15,1.0
-649014,misc_ore15,發出紫色光芒的結晶。,icon_item_crystal_high,,"[642926, 642927, 642931, 642929, 642934]",,,,"[10096, 10097, 10098, 11085, 11086, 11087, 12088, 12089, 12090, 13089, 13090, 13091, 14090, 14091, 14092, 15085, 15086, 15087, 16090, 16091, 16092, 17070, 17071, 17072, 18060, 18061, 18062, 19022, 19023, 19024, 20011, 20012, 20013, 21007, 21008, 21009, 31057, 31058, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 32014, 32015, 32016, 32017, 37011, 37012, 37013, 40019, 40020, 40021, 40022, 40023, 40024, 40025, 40026, 40027, 40028, 40029, 40030, 40031, 40032, 40033, 40035, 40036, 40038, 40040, 40052, 40053, 40054, 40055, 40056, 40057, 40058, 40059, 40060, 40061, 40062, 40063, 40064, 40065, 40066, 40067, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,艷紫結晶,2,0.0,0.0,TTTT,15,1.0
+649014,misc_ore15,發出紫色光芒的結晶。,icon_item_crystal_high,,"[642927, 642931, 642929, 642934]",,,,"[10096, 10097, 10098, 11085, 11086, 11087, 12088, 12089, 12090, 13089, 13090, 13091, 14090, 14091, 14092, 15085, 15086, 15087, 16090, 16091, 16092, 17070, 17071, 17072, 18060, 18061, 18062, 19022, 19023, 19024, 20011, 20012, 20013, 21007, 21008, 21009, 31057, 31058, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 32014, 32015, 32016, 32017, 37011, 37012, 37013, 40019, 40020, 40021, 40022, 40023, 40024, 40025, 40026, 40027, 40028, 40029, 40030, 40031, 40032, 40033, 40035, 40036, 40038, 40040, 40052, 40053, 40054, 40055, 40056, 40057, 40058, 40059, 40060, 40061, 40062, 40063, 40064, 40065, 40066, 40067, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,艷紫結晶,2,0.0,0.0,TTTT,15,1.0
 649015,misc_ore16,紫色魔方形狀的結晶。,18_item_plantite,,"[642924, 642923, 642925]",,,,"[10097, 11086, 12089, 13090, 14091, 15086, 16091, 17071, 18061, 19023, 20012, 21008, 31058, 32015, 37012, 40001, 40002, 40003, 40004, 40005, 40006, 40007, 40008, 40009, 40010, 40011, 40012, 40013, 40014, 40017, 40036, 40037, 400000, 400001, 400002, 400003, 400004, 400005, 400006, 400007, 400008, 400009, 400010, 400011, 400012, 400013, 400014, 400015, 400016, 400017, 400018, 400019, 400020, 400021, 400022, 400023, 400024, 400025, 400026, 400027, 400028, 400029, 400030, 400031]",,紫色魔方結晶,2,0.0,0.0,TTTT,15,1.0
 649016,misc_ore17,一開始很多人誤認為這是如鐵一樣型態的礦物，後來發現這個礦石具有不同的性質，被用在特殊的地方。,8_item_ore_platinum,,,,,,[3030],,亞西圖姆礦石,2,0.0,0.0,FFFF,15,0.0
 649017,misc_ore18,不祥的氣息盤旋的靈魂破片。據說有種裝備是以這種破片當作材料。,icon_item_misc_dust,,,,,,"[33072, 33073, 33074, 33075, 34065, 34066, 34067, 34068]",,不祥的靈魂破片,2,0.0,0.0,TTTT,15,0.0
@@ -1776,10 +1799,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649019,misc_ore20,不祥的氣息盤旋的靈魂結晶。據說有種裝備是以這種結晶當作材料。,icon_item_misc_bosspiece,,,,,,"[33076, 33077, 33078, 33079, 40034]",,不祥的靈魂結晶,2,0.0,0.0,TTTT,15,0.0
 649020,misc_ore21,不祥的氣息盤旋的靈魂水晶。據說有種裝備是以這種水晶當作材料。,icon_item_misc_bosscrystal,,,,,,"[33076, 33077, 33078, 33079, 34069, 34070, 34071, 34072]",[40034],不祥的靈魂水晶,2,0.0,0.0,TTTT,15,0.0
 649025,misc_ore22,此不明的結晶核可對動植物甚至是無生物發揮作用，進而使其突變，提煉後已可對裝備使用。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_1,,,,,,"[9024, 10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19024, 20013, 21009, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 32017, 34075, 34076, 34077, 34078, 37013, 40040]",,核粉末,0,0.0,0.0,TTTT,15,1.0
-649026,misc_ore23,植物爆走後便出現於世界各地，可在自然中吸收能量。為了利用其吸收的能量，已將之提煉成粉末。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_2,,"[642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642926, 642927, 642927, 642927, 642927, 642927, 642927]",,,,"[9024, 10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19024, 20013, 21009, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 32017, 34073, 34074, 37013, 40040, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,希埃拉粉末,0,0.0,0.0,TTTT,15,1.0
+649026,misc_ore23,植物爆走後便出現於世界各地，可在自然中吸收能量。為了利用其吸收的能量，已將之提煉成粉末。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_2,,"[642927, 642927, 642927, 642927, 642927, 642927]",,,,"[9024, 10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19024, 20013, 21009, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 32017, 34073, 34074, 37013, 40040, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,希埃拉粉末,0,0.0,0.0,TTTT,15,1.0
 649027,misc_ore24,混合一定比例的鈹德礦石和祕銀礦石所製造出來的彈性高的礦物，被當作道具的材料使用。,item_icon_pideingot,,[642928],,,,"[34075, 34076, 34077, 34078, 34079, 34080, 34081]",[9027],貝特雷敏礦石,0,0.0,0.0,TTTT,15,1.0
 649028,misc_ore25,混合一定比例的紅色泰拉金屬和祕銀礦石所製造出來的具有強大火屬性氣息的金屬，被當作道具的材料使用。,item_icon_teraingot,,[642928],,,,"[34073, 34074]",[9028],烏斯托馬伊特金屬,0,0.0,0.0,TTTT,15,1.0
-649029,misc_ore26,消滅貝爾庫波後可以獲得靈魂碎片，上面含有未知的氣息，如果使用在裝備材料上，可以發揮優秀的功能。,icon_item_velcoffer_misc01,,"[642916, 642916]",,,,,,貝爾庫波靈魂碎片,0,0.0,0.0,FFFF,15,1.0
+649029,misc_ore26,消滅貝爾庫波後可以獲得靈魂碎片，上面含有未知的氣息，如果使用在裝備材料上，可以發揮優秀的功能。,icon_item_velcoffer_misc01,,"[642916, 642916]",,,,,,貝爾庫波靈魂碎片,0,0.0,0.0,FFFT,15,1.0
 649200,misc_jore01,樹液經過長時間放置凝固成寶石。,22_item_ore_amber,[642061],,,,,,,琥珀,6,0.0,0.0,TTTT,15,1.0
 649201,misc_jore02,琥珀裡有一隻蜥蜴標本，是非常珍貴的寶石。,23_item_ore_amber_lizard,[642030],,,,,[19007],,蜥蜴琥珀,1000,0.0,0.0,TTTT,15,1.0
 649202,misc_jore03,黃色的寶石，傳說它具有驅逐惡魔的力量。,24_item_ore_topaz,,,,,,[15023],,黃玉,1914,0.0,0.0,TTTT,15,1.0
@@ -2783,6 +2806,18 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 662201,HT_KLAFEDA_NPC_05_ITEM1,柯拉佩達少女給的馬鈴薯麵包。雖然說是用馬鈴薯製成，但口感實在太硬看起來就不是很想吃，也許是某人的回意吧..,icon_item_focaccia,,,,,,,,馬鈴薯麵包,0,0.0,0.0,FFFF,20,0.0
 662202,HT3_SIAULIAI_50_1_SQ_MAN01_ITEM1,路易茲拿出的種子袋,icon_item_small_bag,,,,,,,,路易茲的作物種子,0,0.0,0.0,FFFF,20,0.0
 662203,HTA_REMAINS_40_WATERPOT_ITEM1,棄置的農家那裡發現的破舊湯碗，裡面裝的水很髒，這東西要用在哪呢？,icon_item_farm49_2_mq06_item2,,,,,,,,破舊湯碗,0,0.0,0.0,FFFF,20,0.0
+662256,F_3CMLAKE_27_1_SQ_2_ITEM,可以裝水的普通瓶子。,icon_item_holywater_empty,,,,,,,,玻璃瓶,0,0.0,0.0,FFFF,20,0.0
+662257,F_3CMLAKE_27_1_SQ_2_ITEM2,裡面裝滿了水。,icon_item_holywater,,,,,,,,裝滿水的玻璃瓶,0,0.0,0.0,FFFF,20,0.0
+662258,F_3CMLAKE_27_1_SQ_3_ITEM,為了辨別我軍而佩戴的信物。,icon_item_bluenecklace,,,,,,,,收復部隊信物,0,0.0,0.0,FFFF,20,0.0
+662259,F_3CMLAKE_27_1_SQ_4_ITEM,感應重量而爆炸。,icon_item_bomb,,,,,,,,衝擊炸彈,0,0.0,0.0,FFFF,20,0.0
+662260,F_3CMLAKE_27_2_SQ_1_ITEM,豎立柵欄需要的工具。,icon_item_quest_00017,,,,,,,,柵欄工具,0,0.0,0.0,FFFF,20,0.0
+662261,F_3CMLAKE_27_2_SQ_2_ITEM,可以輕易捕獲的魚網。,icon_item_3cm_landing_net,,,,,,,,捕魚網,0,0.0,0.0,FFFF,20,0.0
+662262,F_3CMLAKE_27_2_SQ_2_ITEM2,居住在湖中的大魚,icon_item_sardine,,,,,,,,湖水魚,0,0.0,0.0,FFFF,20,0.0
+662264,F_3CMLAKE_27_3_SQ_2_ITEM,神樹之日過後變得巨大的水草。,icon_item_grassbladeg,,,,,,,,水草,0,0.0,0.0,FFFF,20,0.0
+662265,F_3CMLAKE_27_3_SQ_2_ITEM2,為了方便提起而將水草綁成的草堆。不過吸收了很多水分，所以很重。,icon_item_fur_02green,,,,,,,,水草堆,0,0.0,0.0,FFFF,20,1000.0
+662266,F_3CMLAKE_27_3_SQ_3_ITEM,為了使用水盤裝置所需的蘊含魔力的石頭。,icon_item_gem_elemental2,,,,,,,,水盤設施魔力源,0,0.0,0.0,FFFF,20,0.0
+662267,F_3CMLAKE_27_3_SQ_5_ITEM,蘊含對怪物有害的湖泊氣息的草。,icon_item_bamboo_leaf,,,,,,,,蘊含湖泊氣息的草,0,0.0,0.0,FFFF,20,0.0
+662268,F_3CMLAKE_27_3_SQ_8_ITEM,製作防身用品時的核心材料。,icon_item_bezoari,,,,,,,,麻痺袋子,0,0.0,0.0,FFFF,20,0.0
 663000,CHATHEDRAL56_SQ03_BOOK_ITEM,祭司收集的材料,icon_item_collection_04black,,,,,,,,祭司的材料,0,0.0,0.0,FFFF,20,0.0
 663001,DUMARO_MEAT,杜瑪洛部位中肉最多的部份,icon_item_meat_01,,,,,,,,杜瑪洛的後腿肉,0,0.0,0.0,FFFF,20,0.0
 663002,SOLDIRE_SQ31_RELIC,守護礦山村莊一直到最後一刻的士兵們的遺物。,icon_item_small_bag,,,,,,,,士兵的遺物,0,0.0,0.0,FFFF,20,0.0
@@ -3330,6 +3365,18 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 664143,DCAPITAL107_SQ_9_ITEM,克利西亞委託轉交給佛拉德的物品,icon_item_kupole_porket,,,,,,,,克利西亞的一切,0,0.0,0.0,FFFF,20,0.0
 664144,PAYAUTA_EP11_2_ITEM,受帕亞烏塔所託，在巴林威爾87水域的怪物身上收集而來的物品。,icon_item_toolbox,,,,,,,,失竊的修理用品,0,0.0,0.0,FFFF,20,0.0
 664145,PAYAUTA_EP11_7_ITEM,帕亞烏塔拜託你在外城壁第9區域收集的標記用材料,icon_item_magicpowder,,,,,,,,帶有磁性的土,0,0.0,0.0,FFFF,20,0.0
+664146,CASTLE96_MQ_2_ITEM,在外城壁第14區域發現。像是累積在怪物體內的城牆殘骸。,icon_item_topaz_piece,,,,,,,,怪物吞食的黃色碎片,0,0.0,0.0,FFFF,20,0.0
+664147,CASTLE96_MQ_5_ITEM,在外城壁第14區域發現。無法得知其用途。,icon_item_blokenmirror,,,,,,,,刺眼的玻璃碎片,0,0.0,0.0,FFFF,20,0.0
+664148,CASTLE96_MQ_7_ITEM,在外城壁第14區域發現。必須深深扎進土裡的基石碎片。,icon_item_gem_elemental11,,,,,,,,基石碎片,0,0.0,0.0,FFFF,20,0.0
+664149,CASTLE96_MQ_10_ITEM,在外城壁第14區域發現。在穿破城牆生長的枯木上找到的。,icon_item_gem_elemental12,,,,,,,,古木精髓,0,0.0,0.0,FFFF,20,15.0
+664150,CASTLE98_MQ_CORE_ITEM,從外城壁第15區域的伊奈塔那邊拿來的工具。使用時，可以捕捉事物蘊含的時間殘影，獲得有用的情報。,icon_item_bluenecklace,,,,,,,,時間殘影測量器,0,1.0,0.0,FFFF,20,0.0
+664151,CASTLE98_MQ_2_ITEM,在外城壁第15區域發現。看起來像是很久以前被破壞的某種武器的碎片。,icon_item_tableland28_2_sq04_item,,,,,,,,把手碎片,0,0.0,0.0,FFFF,20,0.0
+664152,CASTLE98_MQ_3_ITEM,在外城壁第15區域發現。看起來像是很久以前被破壞的女神像碎片。,icon_item_farm47_low,,,,,,,,女神像碎片,0,0.0,0.0,FFFF,20,0.0
+664153,CASTLE98_MQ_4_ITEM,在外城壁第15區域發現。看起來像是很久以前被破壞的馬車輪子。,icon_item_wheel,,,,,,,,破裂的輪子碎片,0,0.0,0.0,FFFF,20,0.0
+664154,CASTLE98_MQ_5_ITEM,在外城壁第15區域發現。有著被某種東西燻黑痕跡的箭矢。,item_icon_arrow_barbedhead,,,,,,,,燻黑的箭矢,0,0.0,0.0,FFFF,20,0.0
+664155,CASTLE98_MQ_6_ITEM,在外城壁第15區域發現。看起來比較乾淨，沒有使用過的樣子。,icon_item_arrow,,,,,,,,破碎箭矢,0,0.0,0.0,FFFF,20,0.0
+664156,CASTLE98_MQ_7_ITEM,在外城壁第15區域發現。有使用過的痕跡。,kq_recipe_hethran_material_3_7,,,,,,,,被遺棄的墜飾,0,0.0,0.0,FFFF,20,0.0
+664157,CASTLE98_MQ_END_ITEM,從外城壁第15區域的凱都拉商團團員伊內塔那邊拿來的。墜飾的背面寫著'「給親愛的帕亞烏塔」'這麼幾個字。,kq_recipe_hethran_material_3_7,,,,,,,,帕亞烏塔的墜飾,0,0.0,0.0,FFFF,20,0.0
 664800,RVR_BK_KEYITEM_URVAS_1,以奧斯特雅之名監視龍王普魯達的奎波爾烏勒巴斯所隨身攜帶的信物。{nl}進入龍王普魯達領域時的必要道具。{nl}進入時會破壞信物。,icon_item_borutakey,,,,,,,,烏勒巴斯信物,0,0.0,0.0,TFFT,15,0.0
 664801,RVR_BK_KEYITEM_EVENT_OPEN,以奧斯特雅之名監視龍王普魯達的奎波爾烏勒巴斯所隨身攜帶的信物。{nl}進入龍王普魯達領域時的必要道具。{nl}進入時會破壞信物。{nl}活動結束時道具統一刪除。,icon_item_borutakey,,,,,,,,[活動] 烏勒巴斯信物,0,0.0,0.0,FFFT,15,0.0
 664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,從王國補給將校手中得到的徽章，證明再打倒普魯達上有做出了充分的貢獻。{nl}可透過公會基地的 '王國補給將校萬普雷達斯'交換道具。,icon_item_boruta_coin,,,,,,,,榮譽徽章 : 普魯達,0,0.0,0.0,FFFT,15,0.0
@@ -3570,6 +3617,19 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 666240,E_Balloon_12,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon02,,,,,,,,氣球 : 生,0,0.0,0.0,FFFF,20,0.0
 666241,E_Balloon_13,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon03,,,,,,,,氣球 : Game,0,0.0,0.0,FFFF,20,0.0
 666242,E_Balloon_14,使用時可以和慶典用氣球同在。{nl}活動結束時道具統一刪除。,icon_item_3yearballon04,,,,,,,,氣球 : 愛心,0,0.0,0.0,FFFF,20,0.0
+666243,CASTLE93_MAIN03_ITEM,聚集在外城壁第11區域的魔族們攜帶的指令書。如同在其他地方看過的指令書，使用難懂的魔族文字書寫而無法解讀。,icon_item_ring_120010,,,,,,,,魔族的指令書,0,0.0,0.0,FFFF,20,0.0
+666244,CASTLE93_MAIN04_ITEM,德魯伊大師給的變身試劑瓶。據說使用這個就可以變身成周遭看過的魔族一段時間。,icon_item_misc04_60,,,,,,,,變身試劑瓶,0,60.0,0.0,FFFF,20,0.0
+666245,CASTLE94_MAIN03_ITEM,道士大師給的淨化符。表面上看起來就像普通的黃紙，貼在蘊含邪惡氣息的地方就會顯現效力。,icon_item_guehwangji,,,,,,,,淨化符,0,0.0,0.0,FFFF,20,0.0
+666246,CASTLE94_MAIN04_ITEM,驅魔師大師給的淨化的聖水。灑在虛弱的魔族身上可以引發靈魂淨化。,icon_item_holywater,,,,,,,,淨化的聖水,0,10.0,0.0,FFFF,20,0.0
+666247,CASTLE94_MAIN07_ITEM,驅魔師大師給的淨化的女神像。隨身攜帶這尊女神像，據說可以將邪惡的氣息聚集並淨化，使女神像發揮更大的力量。,icon_item_farm47_broken_zemina,,,,,,,,淨化的女神像,0,0.0,0.0,FFFF,20,0.0
+666248,CASTLE95_MAIN03_ITEM01,炸藥裝填於其中的炸彈。好像要丟了才能知道它的威力。,icon_item_bullet_poison,,,,,,,,投擲用炸彈,0,0.0,0.0,FFFF,20,0.0
+666249,CASTLE95_MAIN03_ITEM02,滿出火藥庫的火藥箱。因為火藥的量很多、太重了，一次只拿得動一個。若一不小心點燃，可能一下就會回歸女神的懷抱了。,icon_item_stuff_box_c,,,,,,,,火藥箱,0,0.0,0.0,FFFF,20,0.0
+666250,CASTLE95_MAIN05_ITEM01,在訓練場方尖塔周圍的魔族身上找到的碎片。可能是破壞訓練場方尖塔的線索也不一定。,icon_item_gem_stone_str,,,,,,,,紅水晶碎片,0,0.0,0.0,FFFF,20,0.0
+666251,CASTLE95_MAIN05_ITEM02,在訓練場方尖塔周圍的魔族身上找到的碎片。可能是破壞訓練場方尖塔的線索也不一定。,icon_item_gem_stone_int,,,,,,,,藍水晶碎片,0,0.0,0.0,FFFF,20,0.0
+666252,CASTLE95_MAIN05_ITEM03,在訓練場方尖塔周圍的魔族身上找到的碎片。可能是破壞訓練場方尖塔的線索也不一定。,icon_item_gem_stone_con,,,,,,,,黃水晶碎片,0,0.0,0.0,FFFF,20,0.0
+666254,CASTLE95_MAIN05_ITEM04,在訓練場方尖塔周圍的魔族身上找到的碎片。可能是破壞訓練場方尖塔的線索也不一定。,icon_item_gem_stone_agi,,,,,,,,綠水晶碎片,0,0.0,0.0,FFFF,20,0.0
+666255,CASTLE95_MAIN07_ITEM,安塔妮娜所給的物品。安塔妮娜要你將它設置在外城壁第13區域輸送魔族的傳點周圍，用來抑制和移除傳點。,icon_item_wooden_romuva_blue,,,,,,,,傳點生成抑制器,0,0.0,0.0,FFFF,20,0.0
+666256,CASTLE95_MAIN02_BOOK,抵抗軍副官安塔妮娜所寫的筆記。上面記錄著在外城壁第13區域要做的事情。點擊滑鼠右鍵可以閱讀內容。,icon_item_sheepskin,,,,,,,,安塔妮娜的筆記,0,0.0,0.0,FFFF,20,0.0
 667000,CATACOMB_33_1_SQ_04_FIRE,從希奇斯那裡獲得的火柴，使用於讓亡者火葬。,icon_item_rod,,,,,,,,守墓人的火柴,0,5.0,0.0,FFFF,20,0.0
 667001,CATACOMB_33_1_SQ_05_DOLL,帶有守護人咒術的人偶。,icon_item_strawdoll1,,,,,,,,守墓人的咒術人偶,0,5.0,0.0,FFFF,20,0.0
 667002,CATACOMB_33_2_SQ_02_ORB,從復活過來的亡者身上吸收生存信念的靈石。,icon_item_spirit_green,,,,,,,,邪念石,0,20.0,0.0,FFFF,20,0.0
@@ -3725,6 +3785,26 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 667226,CHAR312_MSTEP3_ITEM,獲得聖水祭司大師祝福的精神疾病治療劑，發出淡淡的氣息。,icon_item_blue_glass_bottle,,,,,,,,受祝福的精神疾病治療劑,0,0.0,0.0,FFFF,20,0.0
 667227,JOB_PIED_PIPER_Q1_ITEM,吹笛手大師所給的用於吹笛訓練的笛子。{nl}到祭壇路的布朗金堤丘陵使用笛子看看。{nl}冷卻時間3秒,icon_item_flute,,,,,,,,舊笛子,0,3.0,0.0,FFFF,20,0.0
 667228,JOB_ASSASSIN_Q1_ITEM,暗殺者大師所交付的藥水。{nl}在拉姆斯堤斯峽谷的帕沙卡懸崖下使用看看吧。{nl}冷卻時間3秒,icon_item_quest_00020,,,,,,,,用連魂草製作的藥水,0,3.0,0.0,FFFF,20,0.0
+667230,F_MAPLE_243_MQ_02_ITEM_01,黃色的花。,icon_item_geranium_farm_yellow,,,,,,,,黃花,0,0.0,0.0,FFFF,20,0.0
+667231,F_MAPLE_243_MQ_02_ITEM_02,紅色的花。,icon_item_geranium_farm,,,,,,,,紅花,0,0.0,0.0,FFFF,20,0.0
+667232,F_MAPLE_243_MQ_02_ITEM_03,白色的花。,icon_item_geranium_farm_white,,,,,,,,白花,0,0.0,0.0,FFFF,20,0.0
+667233,F_MAPLE_243_MQ_03_ITEM_01,蝴蝶形狀的黃色樹葉。{nl}看起來就像蝴蝶飛來飛去。,icon_item_butterfly_maple_leaf_yellow,,,,,,,,蝴蝶形狀的黃色樹葉,0,0.0,0.0,FFFF,20,0.0
+667234,F_MAPLE_243_MQ_03_ITEM_02,蝴蝶形狀的紅色樹葉。{nl}看起來就像蝴蝶飛來飛去。,icon_item_butterfly_maple_leaf_red,,,,,,,,蝴蝶形狀的紅色樹葉,0,0.0,0.0,FFFF,20,0.0
+667235,F_MAPLE_243_MQ_03_ITEM_03,蝴蝶形狀的白色樹葉。{nl}看起來就像蝴蝶飛來飛去。,icon_item_butterfly_maple_leaf_white,,,,,,,,蝴蝶形狀的白色樹葉,0,0.0,0.0,FFFF,20,0.0
+667236,F_MAPLE_243_MQ_05_ITEM,來歷不明的透明結晶。{nl}不過結晶上瀰漫著神聖的氣息。,icon_item_whiteorb,,,,,,,,透明的結晶,0,0.0,0.0,FFFF,20,0.0
+667237,F_MAPLE_243_MQ_07_ITEM_01,可以將魔力封印的卷軸。,golemmagicitem2,,,,,,,,魔力封印卷軸,0,3.0,0.0,FFFF,20,0.0
+667238,F_MAPLE_243_MQ_07_ITEM_02,可以將某人束縛的卷軸。,icon_item_grimoire_green,,,,,,,,束縛卷軸,0,3.0,0.0,FFFF,20,0.0
+667239,F_MAPLE_243_MQ_09_ITEM,來路不明的美麗種子。{nl}種子上瀰漫的氣息似乎不尋常。,icon_item_seed_of_divine_tree,,,,,,,,來路不明的種子,0,0.0,0.0,FFFF,20,0.0
+667240,F_MAPLE_241_MQ_01_ITEM,可以將魔力封印的卷軸。,golemmagicitem2,,,,,,,,魔力封印卷軸,0,3.0,0.0,FFFF,20,0.0
+667241,F_MAPLE_241_MQ_03_ITEM_01,梅德依那交付的唯一神樹種子。{nl}據說有著言語無法表達的驚人效果。,icon_item_seed_of_divine_tree,,,,,,,,神樹的種子,0,0.0,0.0,FFFF,20,0.0
+667242,F_MAPLE_241_MQ_03_ITEM_02,環繞著生氣，生機盎然的草。{nl}看不出剛才還是枯萎的樣子。,icon_item_raudonelis,,,,,,,,環繞生氣的草,0,0.0,0.0,FFFF,20,0.0
+667243,F_MAPLE_241_MQ_04_1_ITEM,環繞神聖氣息，感覺很神聖的樹枝。,icon_item_branch_06divine,,,,,,,,環繞神聖氣息的樹枝,0,0.0,0.0,FFFF,20,0.0
+667244,F_MAPLE_242_MQ_02_ITEM,赤紅斑特勒持有的束縛結界解除卷軸。,icon_item_scroll,,,,,,,,束縛結界解除卷軸,0,0.0,0.0,FFFF,20,0.0
+667245,F_MAPLE_242_MQ_03_ITEM,奎波爾伊羅娜從梅德伊那女神那邊拿到的寶珠{nl}奎波爾伊羅娜說用這顆寶珠應該能找到梅德依那女神的蹤跡。,icon_item_orb3,,,,,,,,裝有自然精氣的寶珠,0,3.0,0.0,FFFF,20,0.0
+667246,F_MAPLE_242_MQ_06_ITEM,在赤紅斑特勒死亡的地方產生的精髓。{nl}可以感覺得到邪惡的氣息。,icon_item_core_01orange,,,,,,,,赤紅斑特勒的精髓,0,0.0,0.0,FFFF,20,0.0
+667247,F_MAPLE_242_MQ_08_ITEM,可以將魔力封印的卷軸。,golemmagicitem2,,,,,,,,魔力封印卷軸,0,3.0,0.0,FFFF,20,0.0
+667248,F_MAPLE_242_MQ_10_ITEM,梅德依那交付的唯一神樹種子。{nl}透過梅德依那事先安排的祭壇氣息，除了梅德伊那的治療外，大部分的效果都被封印了。,icon_item_seed_of_divine_tree,,,,,,,,被封印的神樹種子,0,0.0,0.0,FFFF,20,0.0
+667249,F_MAPLE_242_MQ_04_2_ITEM,梅德依那交付的唯一神樹種子。{nl}透過梅德依那事先安排的祭壇氣息，除了梅德伊那的治療外，大部分的效果都被封印了。,icon_item_seed_of_divine_tree,,,,,,,,被封印的神樹種子,0,0.0,0.0,FFFF,20,0.0
 668001,F_3CMLAKE_83_MQ_ITEM1,在漂浮聖地上所發現的圓盤。聽說偶而會浮現紅光。,icon_item_3cmdisk,,,,,,,,老舊的圓盤,0,5.0,0.0,FFFF,20,0.0
 668002,F_3CMLAKE_83_MQ_ITEM2,來歷不明的碎片，散發引人注目的不祥紅光。,icon_item_gem_stone_str,,,,,,,,紅色碎片,0,0.0,0.0,FFFF,20,0.0
 668003,F_3CMLAKE_83_SQ_ITEM1,薩斯納斯要奉獻給女神，所請求的貢品。可以貢獻這樣的東西嗎？ ,icon_item_meat_01,,,,,,,,拉札泰特波的肉,0,0.0,0.0,FFFF,20,0.0
@@ -3882,7 +3962,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 670011,All_Color_Card_Book,某人收集的卡片冊。建議你在安靜閒寂的地方翻閱。{nl}100等以上可使用{nl}使用時將召喚 330LV的BOSS怪。召喚的怪物會在10分鐘後消失。{nl}只能在野外使用。,icon_item_4color_cardbook,,,,,,,,怪物卡片冊：All Color,0,60.0,0.0,FFFT,6,10.0
 670012,Premium_Black_Card_Book,可以感受到不祥氣息的卡片集，建議你找一個安靜閒寂的地方再翻閱。{nl}300級以上可使用{nl}使用時可以召喚330LV的卡片BOSS怪物或是野外BOSS怪物當中的1種。(召喚高階野外BOSS時，可以獲得該BOSS的魔方。){nl}召喚的BOSS會在10分鐘後消失，但是高階野外BOSS會在120分鐘後消失。{nl}只能在野外使用。,icon_item_curse_cardbook,,,,,,,,發光的怪物卡片集：黑色,0,60.0,0.0,TTFT,6,10.0
 670013,Ominous_Card_Book_Team,可以感受到不祥氣息的卡片集，建議你找一個安靜閒寂的地方再翻閱。{nl}300級以上可使用{nl}使用時可以召喚330LV的卡片BOSS怪物或是野外BOSS怪物當中的1種。(召喚高階野外BOSS時，可以獲得該BOSS的魔方。){nl}召喚的BOSS會在10分鐘後消失，但是高階野外BOSS會在120分鐘後消失。{nl}只能在野外使用。,icon_item_curse_cardbook,,,,,,,,怪物卡片冊：黑色,0,60.0,0.0,FFFT,6,10.0
-680000,Dungeon_Key01,進入獨特遠征隊時所需的道具。,icon_item_dungeon_portalstone,,"[642916, 642916]",,,,,[9024],遠征隊傳送石,10,0.0,0.0,TTTT,15,1.0
+680000,Dungeon_Key01,進入獨特遠征隊時所需的道具。,icon_item_dungeon_portalstone,,"[642916, 642916]",,,,[9031],[9024],遠征隊傳送石,10,0.0,0.0,TTTT,15,1.0
 680001,BlueOrb_Onion,召喚怪物。召喚出來的怪物會和我軍一起戰鬥。維持180秒。點擊滑鼠右鍵使用。,icon_item_dreamshade,,,,,,,,藍色寶珠：凱帕,10,180.0,0.0,TTTT,6,1.0
 680002,BlueOrb_Leaf_diving,召喚怪物。召喚出來的怪物會和我軍一起戰鬥。維持180秒。點擊滑鼠右鍵使用。,icon_item_dreamshade,,,,,,,,藍色寶珠：竹葉蟲,10,180.0,0.0,TTTT,6,1.0
 680003,BlueOrb_Hanaming,召喚怪物。召喚出來的怪物會和我軍一起戰鬥。維持180秒。點擊滑鼠右鍵使用。,icon_item_dreamshade,,,,,,,,藍色寶珠：粉紅小花怪,10,180.0,0.0,TTTT,6,1.0
@@ -5143,6 +5223,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 687002,UNDER302_STAFF_MID,看起來像是破碎的權杖中間的碎片。,icon_item_staff_mid,,,,,,[2011],,權杖中間部份碎片,0,0.0,0.0,FFFF,20,0.0
 687003,UNDER302_STAFF_BOT,看起來像是破碎的權杖下端的碎片。,icon_item_staff_bot,,,,,,[2011],,權杖下端碎片,0,0.0,0.0,FFFF,20,0.0
 687004,UNDER302_STAFF,破碎權杖的復原品。,icon_item_staff_red,,,,,,,[2011],老舊權杖,0,0.0,0.0,FFFF,20,0.0
+689001,Dungeon_Key02,進入傳說遠征隊所需的物品。,icon_item_dungeon_raidportalstone,,,,,,,[9031],傳說遠征隊傳送石,10,0.0,0.0,TTTT,15,1.0
 699001,Weapon_icor,不確定是否真的從神之血中所產生的，但可以確定這是由武器內的氣息所凝結而成的。,item_icon_weapon_linksoul1,,,,,,,,阿斯特里血晶,10,0.0,0.0,TFTT,13,1.0
 699002,Armor_icor,不確定是否真的從神之血中所產生的，但可以確定這是由防具內的氣息所凝結而成的。,item_icon_weapon_linksoul2,,,,,,,,斯蒂弗魯斯血晶,10,0.0,0.0,TFTT,13,1.0
 699003,Legend_ExpPotion,蒐集戰鬥中所產生的氣息，可以將其儲存起來的試劑瓶，戰鬥開始前需要先激活。,icon_item_empty_partis,,,,,,,,帕勒堤斯試劑瓶,10,0.0,0.0,TFFT,9,1.0
@@ -5153,6 +5234,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699008,Event_Unique_Enchant_Jewel,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[活動] 獨特附魔珠寶,10,0.0,0.0,FFFT,6,1.0
 699009,Event_Legend_Enchant_Jewel,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[活動] 傳說附魔珠寶,10,0.0,0.0,FFFT,6,1.0
 699010,Unique_Enchant_Jewel_Team,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,獨特附魔珠寶,10,0.0,0.0,FFFT,6,1.0
+699011,Legend_ExpPotion_2,蒐集戰鬥中所產生的氣息，可以將其儲存起來的試劑瓶，戰鬥開始前需要先激活。,icon_item_empty_partis,,,,,,,,帕莫卡試劑瓶,10,0.0,0.0,TFFT,9,50.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,15,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,15,1.0
 700002,KQ_token_hethran_3,費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv3,2000,0.0,0.0,TTTT,15,1.0
@@ -5316,7 +5398,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900200,Event_160913_1,破壞樹根水晶時，以一定機率獲得。{nl}收集5個以上，到活動佈告欄參加活動吧！,icon_item_orb_1,,,,,,,,根之水晶,1,0.0,0.0,FFTF,15,0.0
 900201,Artefact_900201,發生值得恭喜的事情或是值得祝福的事所使用的鞭炮。點擊滑鼠右鍵可以進行使用。,icon_item_firework,,,,,,,,爆竹,0,3.0,0.0,FFFT,6,1.0
 900202,161215Event_NexonCash_1,恭禧你抽中Nexon5萬現金！{nl}活動結束時活動道具統一刪除。{nl}點擊滑鼠右鍵即可確認。,icon_item_event_50000cash,,,,,,,,Nexon5萬現金抽獎劵,1,0.0,0.0,FFFF,8,0.0
-900203,161215Event_NexonCash_2,已參加Nexon現金抽獎。{nl}活動結束時活動道具統一刪除。,icon_item_event_luckychance,,,,,,,,Nexon現金抽獎劵,1,0.0,0.0,FFFF,8,0.0
+900203,161215Event_NexonCash_2,您參加了Nexon cash抽獎。{nl}活動結束時道具統一刪除。,icon_item_event_luckychance,,,,,,,,Nexon現金抽獎劵,1,0.0,0.0,FFFF,8,0.0
 900204,misc_paperBox_party_30d,需要關心的時候，請使用。,icon_item_paperbox,,,,,,,,紙箱 (30天),20,1.0,2592000.0,FFTF,6,1.0
 900205,Event_160908_6_14d,放入豐富材料製作的大王松糕，散發香甜味道看起來非常好吃。{nl}30分內給予組隊全體隊員移動速度 +4、廣域攻擊比率 +1、經驗值增加 25%的效果。,icon_item_large_songpyeon,,,,,,,,[活動]大王松糕(限時),0,1800.0,1209600.0,FFFF,6,1.0
 900206,Event_Ability_Coupon_1,特性券,,,,,,,,,特性折扣券 1(預計可變更名稱及設定),1,0.0,0.0,FFFF,8,0.0
@@ -5466,37 +5548,37 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900388,Event_Steam_Master_Cube,完成萊塔斯小溪邊任務時獲得的獎勵。{nl}(和大師同在活動),icon_item_eventcube3,,,,,,,,大師的魔方,0,0.0,0.0,FFFF,8,0.0
 900389,Event_Steam_Master_Item,完成萊塔斯小溪邊任務時獲得的獎勵。{nl}(和大師同在活動),item_icon_medal,,,,,,,,大師的信物,0,0.0,0.0,FFFT,8,0.0
 900390,Event_G9_BOX,救援者為了地球的幸福而努力，箱中充滿對救援者的感謝心意。,icon_item_giftbox_4,,,,,,,,地球的幸福箱,0,0.0,0.0,FFFT,8,0.0
-900391,EVENT_1710_NEWCHARACTER_BOX_1,點擊滑鼠右鍵即可使用，15級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (15級),0,0.0,0.0,FFFF,8,1.0
-900392,EVENT_1710_NEWCHARACTER_BOX_2,點擊滑鼠右鍵即可使用，40級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (40級),0,0.0,0.0,FFFF,8,1.0
-900393,EVENT_1710_NEWCHARACTER_BOX_3,點擊滑鼠右鍵即可使用，50級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (50級),0,0.0,0.0,FFFF,8,1.0
-900394,EVENT_1710_NEWCHARACTER_BOX_4,點擊滑鼠右鍵即可使用，75級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (75級),0,0.0,0.0,FFFF,8,1.0
-900395,EVENT_1710_NEWCHARACTER_BOX_5,點擊滑鼠右鍵即可使用，85級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (85級),0,0.0,0.0,FFFF,8,1.0
-900396,EVENT_1710_NEWCHARACTER_BOX_6,點擊滑鼠右鍵即可使用，100級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (100級),0,0.0,0.0,FFFF,8,1.0
-900397,EVENT_1710_NEWCHARACTER_BOX_7,點擊滑鼠右鍵即可使用，120級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (120級),0,0.0,0.0,FFFF,8,1.0
-900398,EVENT_1710_NEWCHARACTER_BOX_8,點擊滑鼠右鍵即可使用，140級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (140級),0,0.0,0.0,FFFF,8,1.0
-900399,EVENT_1710_NEWCHARACTER_BOX_9,點擊滑鼠右鍵即可使用，170級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (170級),0,0.0,0.0,FFFF,8,1.0
-900400,EVENT_1710_NEWCHARACTER_BOX_10,點擊滑鼠右鍵即可使用，180級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (180級),0,0.0,0.0,FFFF,8,1.0
-900401,EVENT_1710_NEWCHARACTER_BOX_11,點擊滑鼠右鍵即可使用，200級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (200級),0,0.0,0.0,FFFF,8,1.0
-900402,EVENT_1710_NEWCHARACTER_BOX_12,點擊滑鼠右鍵即可使用，220級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (220級),0,0.0,0.0,FFFF,8,1.0
-900403,EVENT_1710_NEWCHARACTER_BOX_13,點擊滑鼠右鍵即可使用，230級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (230級),0,0.0,0.0,FFFF,8,1.0
-900404,EVENT_1710_NEWCHARACTER_BOX_14,點擊滑鼠右鍵即可使用，270級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (270級),0,0.0,0.0,FFFF,8,1.0
-900405,EVENT_1710_NEWCHARACTER_BOX_15,點擊滑鼠右鍵即可使用，300級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (300級),0,0.0,0.0,FFFF,8,1.0
-900406,EVENT_1710_NEWCHARACTER_BOX_16,點擊滑鼠右鍵即可使用，330級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (330級),0,0.0,0.0,FFFF,8,1.0
+900391,EVENT_1710_NEWCHARACTER_BOX_1,點擊滑鼠右鍵即可使用，15級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (15級),0,0.0,0.0,FFFF,8,1.0
+900392,EVENT_1710_NEWCHARACTER_BOX_2,點擊滑鼠右鍵即可使用，40級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (40級),0,0.0,0.0,FFFF,8,1.0
+900393,EVENT_1710_NEWCHARACTER_BOX_3,點擊滑鼠右鍵即可使用，50級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (50級),0,0.0,0.0,FFFF,8,1.0
+900394,EVENT_1710_NEWCHARACTER_BOX_4,點擊滑鼠右鍵即可使用，75級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (75級),0,0.0,0.0,FFFF,8,1.0
+900395,EVENT_1710_NEWCHARACTER_BOX_5,點擊滑鼠右鍵即可使用，85級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (85級),0,0.0,0.0,FFFF,8,1.0
+900396,EVENT_1710_NEWCHARACTER_BOX_6,點擊滑鼠右鍵即可使用，100級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (100級),0,0.0,0.0,FFFF,8,1.0
+900397,EVENT_1710_NEWCHARACTER_BOX_7,點擊滑鼠右鍵即可使用，120級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (120級),0,0.0,0.0,FFFF,8,1.0
+900398,EVENT_1710_NEWCHARACTER_BOX_8,點擊滑鼠右鍵即可使用，140級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (140級),0,0.0,0.0,FFFF,8,1.0
+900399,EVENT_1710_NEWCHARACTER_BOX_9,點擊滑鼠右鍵即可使用，170級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (170級),0,0.0,0.0,FFFF,8,1.0
+900400,EVENT_1710_NEWCHARACTER_BOX_10,點擊滑鼠右鍵即可使用，180級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (180級),0,0.0,0.0,FFFF,8,1.0
+900401,EVENT_1710_NEWCHARACTER_BOX_11,點擊滑鼠右鍵即可使用，200級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (200級),0,0.0,0.0,FFFF,8,1.0
+900402,EVENT_1710_NEWCHARACTER_BOX_12,點擊滑鼠右鍵即可使用，220級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (220級),0,0.0,0.0,FFFF,8,1.0
+900403,EVENT_1710_NEWCHARACTER_BOX_13,點擊滑鼠右鍵即可使用，230級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (230級),0,0.0,0.0,FFFF,8,1.0
+900404,EVENT_1710_NEWCHARACTER_BOX_14,點擊滑鼠右鍵即可使用，270級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (270級),0,0.0,0.0,FFFF,8,1.0
+900405,EVENT_1710_NEWCHARACTER_BOX_15,點擊滑鼠右鍵即可使用，315級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (315級),0,0.0,0.0,FFFF,8,1.0
+900406,EVENT_1710_NEWCHARACTER_BOX_16,點擊滑鼠右鍵即可使用，330級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (330級),0,0.0,0.0,FFFF,8,1.0
 900407,EVENT_1710_NEWCHARACTER_TPBOX,可點擊滑鼠右鍵使用。首次獲得時可於7日後使用。{nl}活動結束後統一刪除。,icon_item_eventbox_tp,,,,,,,,7日TP箱,0,0.0,0.0,FFFF,8,1.0
 900408,Moru_Gold_EVENT_1710_NEWCHARACTER,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。右擊滑鼠使用。{nl}活動結束時道具統一刪除。,icon_item_anvil_gold,,,,,,,,[Re:Build] 發光的黃金鐵砧,0,0.0,0.0,FFFF,15,1.0
 900409,161215Event_Seed_EVENT_1710_NEWCHARACTER,使用時受女神祝福的嫩芽會悄悄開花。{nl}活動結束時道具統一刪除。,icon_item_event161215_01,,,,,,,,[Re:Build] 充滿祝福的嫩芽,0,5.0,0.0,FFFF,6,0.0
-900410,EVENT_1710_NEWCHARACTER_BOX_17,點擊滑鼠右鍵即可使用，350級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (350級),0,0.0,0.0,FFFF,8,1.0
+900410,EVENT_1710_NEWCHARACTER_BOX_17,點擊滑鼠右鍵即可使用，350級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (350級),0,0.0,0.0,FFFF,8,1.0
 900411,Drug_Event_Looting_Potion_14d,30分內令Rooting機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間30分。{nl} - Rooting機會藥水無法疊加使用。,icon_item_looting_potion_01,,,,,,,,Rooting機會增加藥水(14天),25,1800.0,1209600.0,FFFF,6,5.0
 900412,EVENT_1803_NEWCHARACTER_JUMPING,獲得跳躍角色禮包所出現的信物。{nl}活動結束時道具統一刪除。,icon_item_event_luckychance,,,,,,,,跳躍角色禮包交換卷,1,0.0,0.0,FFFF,8,1.0
 900413,EVENT_1803_NEWCHARACTER_JUMPING_BOX,點擊滑鼠右鍵使用，15級以下才可使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_4,,,,,,,,[團結] 跳躍禮包箱子,0,0.0,0.0,FFFT,8,1.0
 900414,Event_expCard_300Lv,可提升300級角色的經驗值。50級以下才可使用。,icon_item_expcard,,,,,,,,經驗值卡片 (300級),0,0.0,0.0,FFFF,8,0.0
 900415,Event_Ability_Point_Stone_1000,活動所發送的道具。{nl}使用時特性點數增加1000，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint,,,,,,,,特性點數 1000,0,0.0,0.0,FFFF,8,1.0
-900416,EVENT_1803_NEWCHARACTER_ABILITY_BOX,點擊滑鼠右鍵使用，到活動結束為止，每日可獲得特性點數500。{nl}活動結束時道具統一刪除。,icon_item_giftbox_1,,,,,,,,[Re:Build] 每日特性點數箱子,0,0.0,0.0,FFFF,8,1.0
+900416,EVENT_1803_NEWCHARACTER_ABILITY_BOX,點擊滑鼠右鍵即可使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_1,,,,,,,,[Episode11] 每日特性點數箱子,0,0.0,0.0,FFFF,8,1.0
 900417,EVENT_1803_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動送的稱號箱，活動結束時統一刪除。,icon_item_holyark,,,,,,,,[Re:Build] 稱號-終極的救援者,0,0.0,0.0,FFFT,6,0.0
 900418,EVENT_1805_NEWCHARACTER_WEAPON,可以跟烏斯卡領取350級稀有11強5超越的武器。{nl}活動結束時統一刪除。,icon_item_event_luckychance,,,,,,,,[團結] 11強5超越交換劵,1,0.0,0.0,FFFF,8,1.0
 900419,EVENT_1805_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動送的稱號箱，活動結束時統一刪除。,icon_item_holyark,,,,,,,,[Re:Build] 稱號 - 啟示獲得者,0,0.0,0.0,FFFT,6,0.0
-900420,EVENT_1710_NEWCHARACTER_BOX_18,點擊滑鼠右鍵即可使用，380級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Re:Build] 衝等寶箱 (380級),0,0.0,0.0,FFFF,8,1.0
-900421,EVENT_1803_NEWCHARACTER_Ability_Point_Stone_1000,活動發送的道具。{nl}使用時特性點數增加1000，點擊滑鼠右鍵即可使用。{nl活動結束時道具統一刪除。,icon_item_abilitypoint,,,,,,,,"[Re:Build] 特性點數 1,000",0,0.0,0.0,FFFT,8,1.0
+900420,EVENT_1710_NEWCHARACTER_BOX_18,點擊滑鼠右鍵即可使用，380級以上才可以使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (380級),0,0.0,0.0,FFFF,8,1.0
+900421,EVENT_1803_NEWCHARACTER_Ability_Point_Stone_1000,配合活動發放的道具。{nl}使用時增加特性點數1000點。點擊滑鼠右鍵使用。{nl}活動結束時道具統一刪除。,icon_item_abilitypoint,,,,,,,,"[Episode11]  特性點數 1,000",0,0.0,0.0,FFFT,8,1.0
 900422,Event_Ability_Point_Stone_10000_14d,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,,,"特性點數10,000(14天)",0,0.0,1209600.0,FFFF,8,1.0
 900423,EVENT_1811_NEWCHARACTER_BARRACK_SLOT,活動發送的道具。{nl}會增加角色欄位，點擊滑鼠右鍵使用。,icon_item_barrack_slot1,,,,,,,,角色欄位增加使用劵,0,0.0,0.0,FFFF,8,1.0
 900424,EVENT_1811_NEWCHARACTER_REINFORCE11,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+11強化。{nl}活動結束時統一刪除。,icon_item_reinforce11,,,,,,,,[Re:Build] 摩西尼奧斯武器+11強化劵,0,0.0,0.0,FFFF,15,1.0
@@ -5677,8 +5759,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904135,EVENT_190110_RankReset_Point_Lv1,"職業變更點數增加100。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_3,,,,,,,,職業變更劵 Lv.1 (14天),0,0.0,1209600.0,FFFT,8,0.0
 904136,EVENT_LAB_1901_ACHIEVE_BOX,賦予TOS第4期研究員的稱號。,icon_item_holyark,,,,,,,,稱號 - TOS第4期研究員,0,0.0,0.0,FFFT,6,1.0
 904137,EVENT_190124_RankReset_Point_Lv2,"職業變更點數增加５00。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_2,,,,,,,,[活動] 職業變更劵 Lv.2(14日),0,0.0,1209600.0,FFFT,8,0.0
-904140,Class_Solution_Select_Box_Event,隱藏職業解除券選擇箱{nl} 可選擇目錄 {nl} - 忍者解除券 {nl} - 巫女解除券 {nl} - 符文師解除券 {nl} - 鑑定師解除券 {nl} - 泰拳解除券,icon_item_classsolution_box,,,,,,,,[活動] 解除券選擇箱,0,0.0,0.0,FFFT,8,0.0
+904140,Class_Solution_Select_Box_Event,隱藏職業解除券選擇箱{nl} 可選擇目錄 {nl} - 忍者解除券 {nl} - 巫女解除券 {nl} - 符文師解除券 {nl} - 鑑定師解除券 {nl} - 泰拳解除券{nl}(活動結束時道具統一刪除。),icon_item_classsolution_box,,,,,,,,[活動] 解除券選擇箱,0,0.0,0.0,FFFT,8,0.0
 904141,EVENT_1902_FISHBOX,點擊滑鼠右鍵即可使用。使用時可獲得寶箱內道具中的一種。{nl} - 特性點數 100(14天) x2{nl} - 魔法賦予卷軸(14天) x1{nl} - 強化用卡片：500(14天) x1{nl} - 5星寶石研磨劑(14天){nl} - 覺醒石(14天) x1{nl} - 執事與女僕套裝寶箱(黑色) x1{nl}活動時道具統一刪除。,icon_item_happybox_red,,,,,,,,[活動]藏在池塘內的寶箱,0,0.0,0.0,FFFT,8,1.0
+904146,EVENT_1903_TERIAVELIS_STONE,佩迪米安的鐵匠戴利亞貝利斯要求的製作特別裝備所需的材料。{nl}通關貝爾庫波的巢穴、獨特遠征隊、挑戰5階段、修女院任務、等級副本可以取得。{nl}活動結束時道具統一刪除。,icon_item_orb3,,,,,,,,[活動]閃亮星之碎片,0,0.0,0.0,FFFT,15,0.1
+904148,EVENT_1811_NEWCHARACTER_BARRACK_SLOT2,配合活動發放的道具。{nl}增加角色欄位。點擊滑鼠右鍵即可使用。活動結束時道具統一刪除,icon_item_barrack_slot1,,,,,,,,[活動]角色欄位增加使用劵,0,0.0,0.0,FFFF,8,1.0
+904149,Event_Reinforce_100000coupon_Event,強化銀幣優惠券 {nl} {nl} - 活動結束時道具統一刪除,icon_item_reinforce_100000coupon,,,,,,,,[活動]強化銀幣優惠券 : 10萬銀幣,1,0.0,0.0,FFFT,8,0.0
+904150,EVENT_NEW_FACE_ACHIEVE_BOX,新生幼苗稱號寶箱。{nl}活動結束時道具統一刪除。,icon_item_holyark,,,,,,,,稱號 - 新生幼苗,0,0.0,0.0,FFFT,6,1.0
+904151,EVENT_1710_NEWCHARACTER_BOX_19,點擊滑鼠右鍵使用。400級以上才能使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_2,,,,,,,,[Episode11] 衝等寶箱 (400級),0,0.0,0.0,FFFF,8,1.0
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,15,1.0
