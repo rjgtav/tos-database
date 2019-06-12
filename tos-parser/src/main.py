@@ -1,3 +1,4 @@
+import csv
 import json
 import logging
 import os
@@ -22,6 +23,9 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S',
     level=logging.DEBUG
 )
+
+# Configure csv to support large files
+csv.field_size_limit(999999999)
 
 # Patch the game with the latest version
 version_old, version_new = patcher.patch()
