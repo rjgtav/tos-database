@@ -26,6 +26,7 @@ lua = LuaRuntime(attribute_handlers=(attr_getter, attr_setter), unpack_returned_
 
 LUA_OVERRIDE = [
     'function GET_ITEM_LEVEL(item) return 0 end',  # We cant emulate this function as geItemTable is undefined
+    'function IsBuffApplied(pc, buff) return "NO" end',
     'function IsServerSection(pc) return 0 end',
     'function GetExProp(entity, name) return 0 end',
     'function GetIESID(item) end',
