@@ -1468,6 +1468,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156164,npc_Tantaliser,,,속박된 탄타이저,2
 156165,maple_24_tree_young,,,어린 단풍나무,2
 156166,HiddenWall_Vivid,,,,2
+156167,pvp_battle_shop,,minimap_erosion,장비 렌탈 상점,2
 157000,3cmlake_ruins,,,호수의 잔해,2
 157001,coral_tent_01,,,크란토 텐트,2
 157002,PCStatue,,,,2

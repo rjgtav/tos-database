@@ -16,7 +16,6 @@ $ID,$ID_NAME,Bonus2,Bonus3,Bonus4,Bonus5,Bonus6,Bonus7,Link_Items,Name
 16,set_016,어둠 속성 저항력 {img green_up_arrow 16 16}10 증가,정신 {img green_up_arrow 16 16}6 증가,악마형 대상에게 피격 시 1% 확률로 5초동안 SP 200회복,,,,"[502157, 512157, 522157, 532157]",르귄가문의 천 방어구 세트
 17,set_017,어둠 속성 저항력 {img green_up_arrow 16 16}10 증가,정신 {img green_up_arrow 16 16}6 증가,악마형 대상에게 피격 시 1% 확률로 5초동안 SP 200회복,,,,"[502158, 512158, 522158, 532158]",르귄가문의 가죽 방어구 세트
 18,set_018,어둠 속성 저항력 {img green_up_arrow 16 16}10 증가,정신 {img green_up_arrow 16 16}6 증가,악마형 대상에게 피격 시 1% 확률로 5초동안 SP 200회복,,,,"[502159, 512159, 522159, 532159]",르귄가문의 판금 방어구 세트
-19,set_019,적 뒤에서 백스텝 사용 시{nl}{img green_up_arrow 16 16}150% 공격력 추가{nl}회피 {img red_down_arrow 16 16}188 감소,,,,,,"[183108, 113002]",카라챠 세트
 20,set_020,민첩 {img green_up_arrow 16 16}6 증가,,,,,,"[522187, 532187]",벨니아몽키 세트
 21,set_021,마법 방어력 {img green_up_arrow 16 16}5 증가,마법 방어력 {img green_up_arrow 16 16}10 증가,지능 {img green_up_arrow 16 16}15 증가,,,,"[502188, 512188, 522188, 532188]",엘고스 세트
 22,set_022,물리 방어력 {img green_up_arrow 16 16}5 증가,물리 방어력 {img green_up_arrow 16 16}10 증가,회피 {img green_up_arrow 16 16}15 증가,,,,"[502189, 512189, 522189, 532189]",이브레 세트
