@@ -787,6 +787,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151176,npc_kupole_6_event,,minimap_event_1,Event Kupole 6,2
 151177,npc_giltine_weapon_event,,minimap_event_1,Event Armed Giltine,2
 151178,npc_goldpig,,minimap_event_1,Golden Pig,2
+151180,gacha_cube1_event,,minimap_event_1,Leticia's Secret Cube,2
 152000,npc_husband_1,,,Ordinary Husband,2
 152001,npc_wife_1,,,Ordinary Wife,2
 152002,npc_oldman_1,,,Old Man,2
