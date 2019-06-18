@@ -2362,6 +2362,8 @@ $ID,$ID_NAME,AnvilATK,AnvilDEF,AnvilPrice,Bonus,Description,Durability,Grade,Ico
 494095,1905_romance_selectbox01,,,,,開啟時可以選擇內容物中的一種。{nl} - 聖潔的貴族宴會服(男) 1個{nl} - 聖潔的貴族宴會服(女) 1個,,,icon_item_romance_selectbox01,,,,,,,,,,,聖潔的貴族宴會服選擇箱,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 494096,1905_romance_selectbox02,,,,,開啟時可以選擇內容物中的一種。{nl} - 紅玫瑰騎士套裝(男) 1個{nl} - 紅玫瑰騎士套裝(女) 1個,,,icon_item_romance_selectbox02,,,,,,,,,,,紅玫瑰騎士選擇箱,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 494097,1905_romance_selectbox03,,,,,開啟時可以選擇內容物中的一種。{nl} - 白玫瑰騎士套裝(男) 1個{nl} - 白玫瑰騎士套裝(女) 1個,,,icon_item_romance_selectbox03,,,,,,,,,,,白玫瑰騎士選擇箱,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
+494098,Challenge_Reset_Big_Box,,,,,點擊滑鼠右鍵開始即可獲得內容物。{nl} - 挑戰模式1次入場劵 100個{nl} - 挑戰傳點生成卷軸 100個,,,icon_item_challenge_box_s,,,,,,,,,,,挑戰重置超豪華箱,,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
+494099,Special_Gift_Box_Leticia_1905,,,,,雷堤夏將所有貴重物品裝在一起的箱子，可以獲得以下內容物。{nl} - VIP 3個{nl} - 發光的黃金鑲嵌槽寶箱{nl} - 女神祝福石 100個{nl} - 發光的8星寶石研磨劑 3個,,,icon_item_god_box,,,,,,,,,,,2019 雷堤夏寶箱(S6),,0,,,,,,,,,,,0.0,0.0,FFFT,,19,,,,,1.0
 494102,Steam_Attribute_Package,,,,,"點擊滑鼠右鍵開啟時可獲得以下內容物。{nl} - 特性重置藥水{nl} - 職業變更劵 Lv.2{nl} - 特性點數10,000{nl} - 補給用濃縮SP藥水LV15 15個",,,icon_item_giftbox_5,,,,,,,,,,,覺醒：特性禮包,,0,,,,,,,,,,,0.0,0.0,FFFF,,19,,,,,0.0
 494103,Steam_Start_Package,,,,,點擊滑鼠右鍵開啟時可獲得以下內容物。{nl} - 魔法賦予卷軸 3個{nl} - x8經驗之書{nl} - 隊伍倉庫擴張劵 +1{nl} - 咕咕小雞{nl} - 角色欄位增加使用劵{nl} - [Freebie]企鵝選擇箱,,,icon_item_giftbox_4,,,,,,,,,,,覺醒：初心者禮包,,0,,,,,,,,,,,0.0,0.0,FFFF,,19,,,,,0.0
 494104,Steam_Attribute_All_Package,,,,,點擊滑鼠右鍵開啟時可獲得以下內容物。{nl} - 覺醒：特性禮包{nl} - 覺醒：初心者禮包{nl} - 特性重置藥水,,,icon_item_giftbox_3,,,,,,,,,,,覺醒：ALL-IN-ONE 終極禮包,,0,,,,,,,,,,,0.0,0.0,FFFF,,19,,,,,0.0
