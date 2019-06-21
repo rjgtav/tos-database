@@ -627,6 +627,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150202,castle94_gate_opened,,,캐슬 정문(열림),2
 150203,Shadowmancer_seal_cage,,,그림자 감옥,2
 150204,HiddenWall_500_300_300,,,,2
+150205,npc_stockades_uphill,,,방책,2
 151000,closing_device,,,폐쇄장치,2
 151001,spell_crystal_red,,,마력이 맺힌 결정,2
 151002,spell_crystal_gem_red,,,홍염의 보석,2
