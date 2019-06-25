@@ -398,7 +398,7 @@ def lua_function_source_to_javascript(function_source):
         line = line.replace('local ', 'var ')
         line = line.replace('math.', 'Math.')
         line = line.replace(':', '.')
-        line = re.sub(r'\s+--(.+)', '', line)
+        line = re.sub(r'--(.+)', '', line)
         line = re.sub(r'\band\b', ' && ', line)
         line = re.sub(r'\bor\b', ' || ', line)
         line = re.sub(r'\bend\b', '}', line)
