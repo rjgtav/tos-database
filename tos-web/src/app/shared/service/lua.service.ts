@@ -18,6 +18,8 @@ export class LUAService {
     'var GetClassList = (a) => null;',
     'var GetClassByNameFromList = (a) => null;',
     'var GetExProp = (a, b) => null;',
+    'var GetJobHistoryString = (a) => null;',
+    'var GetMyJobHistoryString = (a) => null;',
     'var GetSumOfEquipItem = (a, b) => 0;',
     'var GetZoneName = (a) => null;',
     'var TryGetProp = (a, b) => a && a[b];',
@@ -25,6 +27,7 @@ export class LUAService {
     'var IsPVPField = (a) => 0;',
     'var IsPVPServer = (a) => 0;',
     'var IsServerSection = (a) => 0;',
+    'var IsServerObj = (a) => 0;',
     'var i = 0;',
     'var owner = pc;',
     'var session = { party: {' +
