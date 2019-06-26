@@ -604,6 +604,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150047,uniqraid_startower_InvisbleWall_0_0_0_0,,,,2
 150048,uniqraid_startower_InvisbleWall_150_120_500_0,,,,2
 150049,uniqraid_startower_InvisbleWall_10_160_500_1,,,,2
+150051,fishingbox3,,,クリール3段階,2
 150171,stones_startower,,,隠された魔力源,2
 150172,magicsquare_1_mini_fantasylib,,,魔法陣,2
 150173,supplemants_fantasylib,,,アンプル,2
@@ -615,6 +616,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150181,star_stone_01_small_startower_sp,,,魔力残留物 (特殊),2
 150182,npc_schaffenstar_ignas,,,シャッフェンスター団長イグナス,2
 150183,npc_sage_female_1,,,セージ　女1,2
+150200,npc_ghost_soldier_castle,,,幽霊兵士,2
+150201,castle94_gate,,,キャッスル正門,2
+150202,castle94_gate_opened,,,キャッスル正門(開く),2
 151000,closing_device,,,閉鎖装置,2
 151001,spell_crystal_red,,,魔力が宿った結晶,2
 151002,spell_crystal_gem_red,,,紅炎の宝石,2
@@ -862,6 +866,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 152076,HiddenWall_10_200_200,,,,2
 152077,npc_zachariel_cube_0,,,王陵キューブ_0,2
 152078,velniasprison_warp_mini,,minimap_portal,空間移動の魔法陣(ミニ),2
+152079,npc_3cmlake_27_riddle_device,,,水盤施設,2
+152080,npc_3cmlake_27_bracken_leaves,,,水草,2
 153000,npc_matron_aquamarine,,,中年の婦人(アクアマリン),2
 153001,npc_matron_blue,,,中年の婦人(ブルー),2
 153002,npc_matron_darkbrown,,,中年の婦人(ダークブラウン),2
@@ -1185,7 +1191,11 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154117,HiddenWall_40_40_500,,,,2
 154118,HiddenWall_25_25_500,,,,2
 154119,Event_FishingBox,,minimap_event_1,ゴールデンウィークは釣り三昧！,2
-154120,npc_pajauta_1,,minimap_event_1,パヤウタ,2
+154120,npc_pajauta_1,,,パヤウタ,2
+154121,npc_MasterSheriff,,minimap_man_scout,シェリフマスター,2
+154122,npc_MasterMatross,,minimap_man_archer,マトロスマスター,2
+154123,npc_MasterArditi,,minimap_man_scout,アルディーティマスター,2
+154124,npc_MasterTigerHunter,,minimap_man_archer,タイガーハンターマスター,2
 155000,npc_crystal_machine,,,水晶加工マシン,2
 155001,farm49_sapling,,,神秘の苗木,2
 155002,dirt_ground,,,土壌の標本,2
@@ -1443,6 +1453,12 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156157,npc_OLW_female_master,,minimap_man_scout,アウトローマスター女,2
 156158,npc_goddess_medeina,,,女神メデイナ,2
 156159,npc_kartas_alone,,,カルタス(犬無しバージョン),2
+156160,maple_24_tree,,,紅葉の木,2
+156161,gacha_cube1_red,,,シークレットキューブレッド,2
+156162,gacha_cube1_gold,,,シークレットキューブゴールド,2
+156163,gacha_cube1_blue,,,シークレットキューブブルー,2
+156164,npc_Tantaliser,,,拘束されたタンタイザー,2
+156165,maple_24_tree_young,,,紅葉の幼木,2
 157000,3cmlake_ruins,,,湖の残骸,2
 157001,coral_tent_01,,,クラントテント,2
 157002,PCStatue,,,,2
