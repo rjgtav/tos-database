@@ -150,8 +150,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20185,HiddenWall_Thanksgiving2,,,,2
 20186,HiddenWall_Thanksgiving3,,,,2
 20187,musicbox_popolion,,,포포리온 워터볼 오르골,2
-20188,npc_sailor_f,,,장난감 상인,2
-20189,npc_sailor_m,,,먹거리 상인,2
+20188,npc_sailor_f,,minimap_event_1,장난감 상인,2
+20189,npc_sailor_m,,minimap_event_1,먹거리 상인,2
 40000,Obstacle_box,,,상자,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,책상,2
@@ -627,6 +627,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150202,castle94_gate_opened,,,캐슬 정문(열림),2
 150203,Shadowmancer_seal_cage,,,그림자 감옥,2
 150204,HiddenWall_500_300_300,,,,2
+150205,npc_stockades_uphill,,,방책,2
 151000,closing_device,,,폐쇄장치,2
 151001,spell_crystal_red,,,마력이 맺힌 결정,2
 151002,spell_crystal_gem_red,,,홍염의 보석,2
