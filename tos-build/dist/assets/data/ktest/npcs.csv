@@ -150,8 +150,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20185,HiddenWall_Thanksgiving2,,,,2
 20186,HiddenWall_Thanksgiving3,,,,2
 20187,musicbox_popolion,,,포포리온 워터볼 오르골,2
-20188,npc_sailor_f,,,장난감 상인,2
-20189,npc_sailor_m,,,먹거리 상인,2
+20188,npc_sailor_f,,minimap_event_1,장난감 상인,2
+20189,npc_sailor_m,,minimap_event_1,먹거리 상인,2
 40000,Obstacle_box,,,상자,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,책상,2

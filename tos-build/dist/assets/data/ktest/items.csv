@@ -65,7 +65,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 490313,Ability_Point_Stone_100000,"사용시 특성 포인트가 100,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint6,,,,,,,,"특성 포인트 100,000",0,0.0,0.0,FFFT,8,1.0
 490324,Ability_Point_Scroll_1000,"사용시 특성 포인트가 1,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_ability_point_scroll_1000,,,,,,,,특성 포인트 스크롤,0,0.0,0.0,FFFT,8,1.0
 490354,indunReset_1add_14d_NoStack_Team,사용 시 인스턴스 던전과 의뢰소 미션에 1회 더 입장 가능합니다.,icon_item_indunonemoreenter,,,,,,,,인스턴스 던전 1회 입장권 (14일),0,0.0,1209600.0,FFFT,6,0.0
+490390,Premium_Mystic_Glass_Event,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 즉시 적용되며 이전으로 돌아갈 수 없습니다. ",icon_item_magnifier_blue,,,,,,,,[이벤트]신비한 돋보기,0,0.0,0.0,FFFT,8,0.0
+490391,Premium_Master_Glass_Event,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.",icon_item_magnifier_red,,,,,,,,[이벤트]장인의 돋보기,0,0.0,0.0,FFFT,8,0.0
 494079,Event_Ability_Point_Stone_10000_team,"사용시 특성 포인트가 10,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint4,,,,,,,,"특성 포인트 10,000 (14일)",0,0.0,1209600.0,FFFT,8,1.0
+494132,Premium_Mystic_Glass_Event_14d,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 즉시 적용되며 이전으로 돌아갈 수 없습니다. ",icon_item_magnifier_blue,,,,,,,,[이벤트]신비한 돋보기(14일),0,0.0,1209600.0,FFFT,8,0.0
+494133,Premium_Master_Glass_Event_14d,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.",icon_item_magnifier_red,,,,,,,,[이벤트]장인의 돋보기(14일),0,0.0,1209600.0,FFFT,8,0.0
 495001,160714Event_box1,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,,,강자의 길 1일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
 495002,160714Event_box2,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,,,강자의 길 2일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
 495003,160714Event_box3,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.,icon_item_giftbox_1,,,,,,,,강자의 길 3일차 상자 (7일),0,0.0,604800.0,FFFF,8,0.0
@@ -137,9 +141,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 495084,Premium_indunPack,마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.{nl} - 인스턴스 던전 소탕권(1성) 3개{nl} - 인스턴스 입장 횟수 초기화권 1개{nl} - 경험의 서 3개,icon_item_pumpkin_box04,,,,,,,,프리미엄 인던 패키지,0,0.0,0.0,FFFT,8,0.0
 495085,Kupole_TestServer_Pack,마우스 우클릭 시 사용되며 구성물을 획득할 수 있습니다.,icon_item_premiumpackage_1,,,,,,,,큐폴 서버 구원자 패키지,0,0.0,0.0,FFFF,8,0.0
 495121,Premium_Enchantchip14_Team,헤어 코스튬에 사용 시 랜덤한 옵션이 추가됩니다. 옵션은 최대 3개까지 생성될 수 있습니다. 착용하고 있는 장비에는 사용할 수 없습니다. 마우스 우클릭으로 사용합니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_enchantscroll,,,,,,,,마법 부여 스크롤(14일),0,0.0,1209600.0,FFFT,8,0.0
-495123,Premium_awakeningStone14_Team,장비의 포텐셜을 감소시키지 않고 아이템 각성을 할 수 있게 도와줍니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_awakeningstone,,,,,,,,프리미엄 각성석(14일),0,0.0,1209600.0,FFFT,8,0.0
+495123,Premium_awakeningStone14_Team,장비의 포텐셜을 감소시키지 않고 아이템 각성을 할 수 있게 도와줍니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_awakeningstone,,,,,,,,프리미엄 각성석(14일),0,0.0,1209600.0,FFFT,15,0.0
 495125,Ability_Point_Stone_5_Team,사용시 특성 포인트가 5 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_abilitypoint7,,,,,,,,특성 포인트 5(14일),0,0.0,1209600.0,FFFT,8,1.0
 495130,Ability_Point_Stone_5_Team_Event,사용시 특성 포인트가 5 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_abilitypoint7,,,,,,,,특성 포인트 5,0,0.0,0.0,FFFT,8,1.0
+495132,Beauty_HairCoupon_90_14d,뷰티샵: 바버샵에서 헤어를 구매할 때 90% 할인을 받을 수 있는 쿠폰입니다.{nl}다른 헤어 할인 쿠폰과 중복으로 사용할 수 없습니다.,icon_item_haircoupon_90,,,,,,,,[이벤트]헤어 1회 90% 할인권(14일),0,0.0,1209600.0,FFFT,8,1.0
+495133,Beauty_DyeCoupon_90_14d,뷰티샵: 바버샵에서 '헤어 스타일 변경'을 클릭하여 헤어 선택 후 염색을 시도할 때 염색 값의 90%를 할인 받을 수 있는 쿠폰입니다.{nl}다른 염색 할인 쿠폰과 중복으로 사용할 수 없습니다. 또한 가발 염색약에는 사용되지 않습니다.,icon_item_dyecoupon_90,,,,,,,,[이벤트]염색 1회 90% 할인권(14일),0,0.0,1209600.0,FFFT,8,1.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,,,스태미나 +5 증가 물약,200,0.0,0.0,FFFF,6,1.0
 640002,Drug_HP1,HP를 273 즉시 회복시키고 2초 간격으로 15초 동안 HP를 273 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다.,item_hp_oil_1,,,,,,,,작은 HP포션,16,25.0,0.0,FFTF,6,7.0
 640003,Drug_HP2,HP를 462 즉시 회복시키고 2초 간격으로 15초 동안 HP를 462 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다.,item_hp_oil_2,,,,,,"[3001, 3003, 3004, 3006, 3007, 3009, 3010, 3012, 3013, 3015, 3016, 3018, 3019, 3021, 3022]",,HP포션,32,25.0,0.0,FFTF,6,7.0
@@ -512,6 +518,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640447,Event_Drug_RedApple20,HP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 HP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.,icon_item_hpelixir_small,,,,,,,,[이벤트] HP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,6,30.0
 640448,Event_Drug_BlueApple20,SP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 SP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.,icon_item_spelixir_small,,,,,,,,[이벤트] SP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,6,30.0
 640449,Uphille_Power_Potion1,"업힐 디펜스 미션에서만 사용 가능한 포션입니다. 대미지 5% 증가, 받는 피해 5%감소합니다. 최대 10회 중첩됩니다. 아이템 우클릭으로 사용합니다.",icon_item_battle_potion_2,,,,,,,,전투 포션: 업힐 미션,0,1.0,0.0,FFFT,6,10.0
+640452,KUPOLE_SEBI_WEAPON_SELECT,사용 시 리스트 중 원하시는 장비가 지급됩니다.,icon_item_event_weaponbox1,,,,,,,,[큐폴전용] 세비노스 무기 선택 상자,0,0.0,0.0,FFFF,8,1.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,,,LV1 공격 부스터,1,8.0,0.0,TTTT,6,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,,,공격 부스터 +15,1,8.0,0.0,TTTT,6,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,공격 부스터 +20,2,8.0,0.0,TTTT,6,1.0
@@ -746,7 +753,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641952,Event_1710_NexonCashBox,"15레벨 이상 사용 가능{nl}넥슨 캐시를 얻을 수 있는 상자입니다.{nl}11월 30일 점검 시, 일괄 삭제됩니다.",icon_item_event_nexoncash01,,,,,,,,골든위크 행운상자 (1시간),0,5.0,3600.0,FFFF,6,0.0
 641953,ChallengeModeReset,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,,,챌린지 모드 1회 입장권,0,5.0,0.0,FFFF,6,1.0
 641954,ChallengeModeReset_1d,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,,,챌린지 모드 1회 입장권 (1일),0,5.0,86400.0,FFFF,6,1.0
-641955,ChallengeModeReset_14d,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,,,챌린지 모드 1회 입장권 (14일),0,5.0,1209600.0,FFFF,6,1.0
+641955,ChallengeModeReset_14d,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,,,챌린지 모드 1회 입장권 (14일),0,5.0,1209600.0,FFFF,8,1.0
 641956,Reward_Error_compensation_1d,"마우스 우클릭으로 사용할 수 있습니다. 사용시 상자의 내용물을 획득할 수 있습니다.{nl} - 컴패니언 교환권 12장{nl} - x4 경험의 서 3개 {nl} - 특성 포인트 1,000(모험일지 보상) 2개 {nl} - 인스턴스 던전 배수 토큰 3개 {nl} - 실버 500,000 ",icon_item_giftbox_4,,,,,,,,오류 보상용 모험일지 랭킹 보상 상자 (1일),0,0.0,86400.0,FFFF,6,0.0
 641962,Event_drug_steam_team,"30분 동안 이동속도 +2, 물리 공격력 +50, 마법 공격력 +50 증가합니다. 마우스 오른쪽 클릭으로 사용합니다. 2월 8일 점검 시, 일괄 삭제됩니다.",item_speed_requid_3,,,,,,,,정착 지원 포션,0,30.0,0.0,FFFT,6,0.0
 641963,Premium_ChallengeModeReset,챌린지 모드 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,,,챌린지 모드 1회 입장권,0,5.0,0.0,TTFT,6,1.0
@@ -787,9 +794,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643020,Extract_kit,아이커 추출에 사용되는 도구입니다. 일반 도구로 테리아베리스에게서 구매할 수 있습니다.,icon_item_extractkit,,,,,,,,아이커 추출 키트,600,0.0,0.0,FFTF,15,4.0
 643021,Extract_kit_Sliver,아이커 추출에 사용되는 도구입니다. 소모하는 재화가 필요 없습니다.,icon_item_extractkit_sliver,,,,,,,,은빛 아이커 추출 키트,0,0.0,0.0,FFTF,15,4.0
 643022,Extract_kit_Gold,"아이커 추출에 사용되는 도구입니다. 장비 포텐셜 0일 경우 사용 가능하며, 아이템 파괴를 방지합니다.",icon_item_extractkit_gold,,,,,,,,빛나는 황금 아이커 추출 키트,0,0.0,0.0,TTFT,15,4.0
-643025,Moru_Gold_14d_Team,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil_gold,,,,,,,,황금 모루(14일),0,0.0,1209600.0,FFFT,15,1.0
+643023,Transcend_Scroll_Event_90d,장비의 초월 수치를 5단계로 만들어줍니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_transcendence_coupon,,,,,,,,[이벤트] 5초월 스크롤 (90일),0,0.0,7776000.0,FFFT,8,1.0
+643025,Moru_Gold_14d_Team,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil_gold,,,,,,,,황금 모루(14일),0,0.0,1209600.0,FFFT,6,1.0
 643026,Extract_kit_Gold_NotFail,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다. {nl} - 1월 17일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100% 아이커 추출 키트,0,0.0,0.0,FFTF,15,4.0
-643027,Transcend_Scroll_5_Event,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,6,1.0
+643027,Transcend_Scroll_5_Event,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,8,1.0
 643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다.{nl}랜덤 옵션 장비에만 사용할 수 있습니다. {nl} - 1월 31일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100% 아이커 추출 키트: 랜덤 옵션,0,0.0,0.0,FFTF,15,4.0
 643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 패치 케어 기간 동안 사용 가능한 아이커 추출권입니다.{nl}제작 유니크 장비에만 사용할 수 있습니다. {nl} - 1월 31일 일괄 삭제됩니다.,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100% 아이커 추출 키트: 제작,0,0.0,0.0,FFTF,15,4.0
 643035,Moru_Stone_TN,모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 장비 강화 비용이 50% 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_anvil,,,,,,,,강철 모루,45,0.0,0.0,FFTF,15,1.0
@@ -800,10 +808,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643041,Moru_Silver_Team_Able,모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 실버 소비 없이 장비를 강화할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_anvil_silver,,,,,,,,은빛 모루(14일),0,0.0,1209600.0,FFFT,15,1.0
 643042,Transcend_Scroll_3_Event_1905,"장비의 초월 수치를 3단계로 만들어줍니다.{nl}0~2단계 초월 아이템만 사용할 수 있으며, 3초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 3초월 상태로 변경됩니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 3초월 스크롤,0,0.0,0.0,FFFT,6,1.0
 643043,Transcend_Scroll_5_Event_1905,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,6,1.0
-643044,Transcend_Scroll_8_Event_1905,"장비의 초월 수치를 8단계로 만들어줍니다.{nl}0~7단계 초월 아이템만 사용할 수 있으며, 8초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 8초월 상태로 변경됩니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 8초월 스크롤,0,0.0,0.0,FFFT,6,1.0
+643044,Transcend_Scroll_8_Event_1905,"장비의 초월 수치를 8단계로 만들어줍니다.{nl}0~7단계 초월 아이템만 사용할 수 있으며, 8초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 8초월 상태로 변경됩니다.{nl}7월 11일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 8초월 스크롤,0,0.0,0.0,FFFT,6,1.0
 643045,Transcend_Scroll_10_PC,"장비의 초월 수치를 10단계로 만들어줍니다.{nl}0~9단계 초월 아이템만 사용할 수 있으며, 10초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 10초월 상태로 변경됩니다. {nl}Lv 400이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,[PC방] Lv.400 10초월 스크롤,0,0.0,0.0,TFFT,6,1.0
-643046,Extract_kit_Gold_Team,"아이커 추출에 사용되는 도구입니다. 장비 포텐셜 0일 경우 사용 가능하며, 아이템 파괴를 방지합니다.",icon_item_extractkit_gold,,,,,,,,[이벤트] 황금 아이커 추출 키트,0,0.0,0.0,FFFT,15,4.0
-643047,Transcend_Scroll_9_PC,"장비의 초월 수치를 9단계로 만들어줍니다.{nl}0~8단계 초월 아이템만 사용할 수 있으며, 9초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 9초월 상태로 변경됩니다. {nl}Lv 400이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,[Lv.400] 9초월 스크롤,0,0.0,0.0,TFFT,6,1.0
+643046,Extract_kit_Gold_Team,"아이커 추출에 사용되는 도구입니다. 장비 포텐셜 0일 경우 사용 가능하며, 아이템 파괴를 방지합니다.",icon_item_extractkit_gold,,,,,,,,[이벤트] 황금 아이커 추출 키트,0,0.0,0.0,FFFT,8,4.0
+643047,Transcend_Scroll_9_PC,"장비의 초월 수치를 9단계로 만들어줍니다.{nl}0~8단계 초월 아이템만 사용할 수 있으며, 9초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 9초월 상태로 변경됩니다. {nl}Lv 400이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,[Lv.400] 9초월 스크롤,0,0.0,0.0,FFFT,6,1.0
 645002,D_Bube_Mane,수정에 오래 노출된 부베들에게서만 얻을 수 있는 어두운 마석,icon_item_evilenergy_piece,,,,,,,,부베 마석,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,달콤한 향이 나는 꽃잎입니다. 하나밍에게서 획득합니다.,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,하나밍 꽃잎,1,0.0,0.0,TTTT,15,1.0
 645025,TreasureboxKey2,보물 상자 LV 2을 여는데 사용되는 열쇠,icon_item_key1,,,,,,,,LV2 보물상자 열쇠,0,0.0,0.0,FFTF,15,1.0
@@ -2605,7 +2613,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 661217,E_Balloon_8,"사용 시 축제용 풍선이 함께 합니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_balloon_o,,,,,,,,풍선 : O,0,0.0,0.0,FFFF,20,0.0
 661218,E_Balloon_9,"사용 시 축제용 풍선이 함께 합니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_balloon_s,,,,,,,,풍선 : S,0,0.0,0.0,FFFF,20,0.0
 661219,E_Balloon_10,"사용 시 축제용 풍선이 함께 합니다.{nl}1월 10일 점검 시, 일괄 삭제됩니다.",icon_item_balloon_star,,,,,,,,풍선 : ★,0,0.0,0.0,FFFF,20,0.0
-661220,E_Balloon_beach,"사용 시 TOS 비치볼이 함께 합니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_beach_ball,,,,,,,,TOS 비치 볼,0,0.0,0.0,FFFT,20,0.0
+661220,E_Balloon_beach,"사용 시 TOS 비치볼이 함께 합니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_beach_ball,,,,,,,,TOS 비치 볼,0,0.0,0.0,FFFT,8,0.0
 662000,FORMINE_ARMOR_BAG01,포마인 아머의 재료. 가슴 앞쪽을 방어하는 부분이다.,icon_item_formine_armor_bag01,,,,,,[30258],,가죽 앞판,0,0.0,0.0,FFFF,20,0.0
 662001,FORMINE_ARMOR_SCAPULAR,포마인 아머의 재료. 어깨쪽을 보호해 줍니다.,icon_item_formine_armor_scapular,,,,,,[30258],,잎줄기 견갑,0,0.0,0.0,FFFF,20,0.0
 662002,FORMINE_ARMOR_BAG02,포마인 아머의 재료. 등쪽에 덧대는 부분입니다.,icon_item_formine_armor_bag02,,,,,,[30258],,가죽 뒷판,0,0.0,0.0,FFFF,20,0.0
@@ -5206,9 +5214,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699004,Rare_Enchant_Jewel,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,,,레어 인챈트 쥬얼,10,0.0,0.0,TFTT,6,1.0
 699005,Unique_Enchant_Jewel,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,유니크 인챈트 쥬얼,10,0.0,0.0,TFTT,6,1.0
 699006,Legend_Enchant_Jewel,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,레전드 인챈트 쥬얼,10,0.0,0.0,TFTT,6,1.0
-699007,Event_Rare_Enchant_Jewel,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,,,[이벤트] 레어 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
-699008,Event_Unique_Enchant_Jewel,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,[이벤트] 유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
-699009,Event_Legend_Enchant_Jewel,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[이벤트] 레전드 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
+699007,Event_Rare_Enchant_Jewel,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,,,[이벤트] 레어 인챈트 쥬얼,10,0.0,0.0,FFFT,8,1.0
+699008,Event_Unique_Enchant_Jewel,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,[이벤트] 유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,8,1.0
+699009,Event_Legend_Enchant_Jewel,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[이벤트] 레전드 인챈트 쥬얼,10,0.0,0.0,FFFT,8,1.0
 699010,Unique_Enchant_Jewel_Team,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
 699011,Legend_ExpPotion_2,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 전투 시작전 활성화가 필요합니다.,icon_item_empty_partis,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,5.0
 699012,Legend_ExpPotion_2_complete,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 전투 시작전 활성화가 필요합니다.,icon_item_full_partis2,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,10.0
@@ -5506,7 +5514,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900413,EVENT_1803_NEWCHARACTER_JUMPING_BOX,"마우스 오른쪽 버튼 클릭으로 사용합니다.15레벨 이하에서 사용 가능합니다.{nl}4월 19일 점검 시, 일괄 삭제됩니다.",icon_item_giftbox_4,,,,,,,,[결속] 점핑 패키지 상자,0,0.0,0.0,FFFT,8,1.0
 900414,Event_expCard_300Lv,캐릭터 300레벨의 경험치를 상승시켜 줍니다. 50 레벨 이하에서만 사용할 수 있습니다.,icon_item_expcard,,,,,,,,경험치 카드 (300레벨),0,0.0,0.0,FFFF,8,0.0
 900415,Event_Ability_Point_Stone_1000,이벤트로 지급되는 아이템입니다.{nl}사용시 특성 포인트가 1000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_abilitypoint,,,,,,,,특성 포인트 1000,0,0.0,0.0,FFFF,8,1.0
-900416,EVENT_1803_NEWCHARACTER_ABILITY_BOX,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}7월 11일 점검 시, 일괄 삭제됩니다.{nl}매일 특성 포인트를 500씩 획득하실 수 있습니다.",icon_item_giftbox_1,,,,,,,,[이벤트] 날마다 특성 포인트 상자,0,0.0,0.0,FFFF,8,1.0
+900416,EVENT_1803_NEWCHARACTER_ABILITY_BOX,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.{nl}매일 특성 포인트를 500씩 획득하실 수 있습니다.",icon_item_giftbox_1,,,,,,,,[이벤트] 날마다 특성 포인트 상자,0,0.0,0.0,FFFF,8,1.0
 900417,EVENT_1803_NEWCHARACTER_ACHIEVE_BOX,"우스카 이벤트에서 선물하는 칭호 상자 입니다.1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,[Re:Build] 칭호 - 궁극의 구원자,0,0.0,0.0,FFFT,6,0.0
 900418,EVENT_1805_NEWCHARACTER_WEAPON,"우스카에게서 350레벨 레어 11강 5초월 무기를 지급 받을 수 있습니다.{nl}7월 12일 점검 시, 일괄 삭제됩니다.",icon_item_event_luckychance,,,,,,,,[결속] 11강 5초월 무기 교환권,1,0.0,0.0,FFFF,8,1.0
 900419,EVENT_1805_NEWCHARACTER_ACHIEVE_BOX,"우스카 이벤트에서 선물하는 칭호 상자 입니다.1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,[Re:Build] 칭호 - 계시를 받은자,0,0.0,0.0,FFFT,6,0.0
@@ -5552,6 +5560,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 902130,Event_Steam_Fishing_BOX4,"380레벨 유니크 미감정 장비 아이템을 획득할 수 있습니다.{nl}획득한 장비 아이템은 무제한이며 모든 거래가 가능합니다.{nl}12월 6일 점검 시, 일괄 삭제됩니다.",icon_item_event_armorbox1,,,,,,,,유니크 미감정 하의 선택 상자,0,0.0,0.0,FFFT,8,0.0
 902131,Event_Steam_Fishing_BOX5,"380레벨 유니크 미감정 장비 아이템을 획득할 수 있습니다.{nl}획득한 장비 아이템은 무제한이며 모든 거래가 가능합니다.{nl}12월 6일 점검 시, 일괄 삭제됩니다.",icon_item_event_armorbox1,,,,,,,,유니크 미감정 장갑 선택 상자,0,0.0,0.0,FFFT,8,0.0
 902132,Event_Steam_Fishing_BOX6,"380레벨 유니크 미감정 장비 아이템을 획득할 수 있습니다.{nl}획득한 장비 아이템은 무제한이며 모든 거래가 가능합니다.{nl}12월 6일 점검 시, 일괄 삭제됩니다.",icon_item_event_armorbox1,,,,,,,,유니크 미감정 신발 선택 상자,0,0.0,0.0,FFFT,8,0.0
+902169,Achieve_Event_Twn_3Years_Chupacabra,3주년 이벤트 사막 츄파카브라 성장 시 지급되는 칭호입니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_holyark,,,,,,,,Title - 3주년 내친구 츄파카브라,0,0.0,0.0,FFFT,6,0.0
 904000,EVENT_1802_MASTER_KEY1,"마스터의 훈련에서 필요한 아이템 입니다.{nl}마스터의 시험 이벤트 도우미가 하루에 한번 지급합니다.{nl}4월 5일 점검 시, 일괄 삭제됩니다.",icon_item_mastertraining_1,,,,,,,,마스터의 시험권 초급,0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,"마스터의 훈련 보상으로 받은 아이템 입니다.{nl}5개 이상 모으면 마스터의 시험 이벤트 도우미가 무한한 가능성의 큐브로 교환해줍니다.{nl}4월 5일 점검 시, 일괄 삭제됩니다.",icon_item_gimmick_spcrystal,,,,,,,,작은 가능성의 조각,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,"마스터의 훈련에서 필요한 아이템 입니다.{nl}마스터의 시험 이벤트 도우미가 하루에 한번 지급합니다.{nl}4월 5일 점검 시, 일괄 삭제됩니다.",icon_item_mastertraining_2,,,,,,,,마스터의 시험권 중급,0,0.0,0.0,FFFT,15,1.0
@@ -5592,10 +5601,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904047,EVENT_1806_MASCOT_2_ACHIEVE_BOX,"TOS 축구팀 응원 이벤트에서 선물하는 칭호 상자 입니다.{nl}8월 2일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,칭호 - 오르샤 라이온스의 후원자,0,0.0,0.0,FFFT,6,1.0
 904048,EVENT_1806_STORY_1_TRAINING_FLUTE,"전서응에게 문제가 생겼을 때 사용해 전서응의 위치를 파악할 수 있습니다.{nl}7월 19일 점검 시, 일괄 삭제됩니다.",icon_item_training_flute,,,,,,,,전서응 훈련 피리,0,3.0,0.0,FFFT,6,0.1
 904050,EVENT_1807_STORY_2_COSTUME_BOX,"별의 탑 영웅 코스튬이 들어있는 상자입니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}8월 9일 점검 시, 일괄 삭제됩니다.",icon_item_giftbox_4,,,,,,,,별의 탑 영웅 코스튬 선택상자,0,0.0,0.0,FFFT,8,1.0
-904051,EVENT_1807_POOL_ICE,"[Summer Festa] 이벤트용 아이템 입니다. 8월 8일 점검 시, 일괄 삭제됩니다.",icon_item_1807_pool_ice,,,,,,,,[Summer Festa] 특별한 얼음,0,0.0,0.0,FFFT,15,0.1
-904052,EVENT_1807_POOL_BROCHETTE,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 10초마다 HP+500, SP+500 회복{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_brochette,,,,,,,,[Summer Festa] 맛있는 꼬치,20,1.0,0.0,FFFT,6,1.0
-904053,EVENT_1807_POOL_MOJITO,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 이동속도+2{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_mojito,,,,,,,,[Summer Festa] 짜릿한 레몬아이스티,20,1.0,0.0,FFFT,6,1.0
-904054,EVENT_1807_POOL_COCONUT,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 루팅찬스 +300{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_coconut,,,,,,,,[Summer Festa] 시원한 코코넛쥬스,20,1.0,0.0,FFFT,6,1.0
+904051,EVENT_1807_POOL_ICE,"[Summer Festa] 이벤트용 아이템 입니다. 8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_1807_pool_ice,,,,,,,,[Summer Festa] 특별한 얼음,0,0.0,0.0,FFFT,15,0.1
+904052,EVENT_1807_POOL_BROCHETTE,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 10초마다 HP+500, SP+500 회복{nl}클라페다, 오르샤, 페디미안 지역에서만 사용할 수 있습니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_brochette,,,,,,,,[Summer Festa] 맛있는 꼬치,20,1.0,0.0,FFFT,6,1.0
+904053,EVENT_1807_POOL_MOJITO,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 이동속도+2{nl}클라페다, 오르샤, 페디미안 지역에서만 사용할 수 있습니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_mojito,,,,,,,,[Summer Festa] 짜릿한 레몬아이스티,20,1.0,0.0,FFFT,6,1.0
+904054,EVENT_1807_POOL_COCONUT,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 루팅찬스 +300{nl}클라페다, 오르샤, 페디미안 지역에서만 사용할 수 있습니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_coconut,,,,,,,,[Summer Festa] 시원한 코코넛쥬스,20,1.0,0.0,FFFT,6,1.0
 904055,EVENT_1807_POOL_GRILLEDFISH,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 특성 포인트 +100{nl}8월 23일 점검 시, 일괄 삭제됩니다.",icon_item_food_grilledfish,,,,,,,,[Summer Festa] 생선조림,20,1.0,0.0,FFFT,6,1.0
 904056,EVENT_1807_POOL_PAELLA,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 특성 포인트 +500{nl}8월 23일 점검 시, 일괄 삭제됩니다.",icon_item_food_paella,,,,,,,,[Summer Festa] 새우그라탕,20,1.0,0.0,FFFT,6,1.0
 904058,EVENT_1807_BALL_CRACKER,"30분간 이동속도 +2, 광역 공격 비율 +1 경험치 25% 증가의 효과를 줍니다.{nl}8월 23일 점검 시, 일괄 삭제됩니다.",icon_item_firework,,,,,,,,[Summer Festa] 폭죽,0,10.0,0.0,FFFT,6,1.0
@@ -5649,7 +5658,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904153,EVENT_1905_VIVID_POWDER_1,"무지개를 넘어서 시즌2 이벤트에 참여해 각 도시의 쉬운 코스를 완주하면 기념으로 드리는 아이템입니다.{nl} 이벤트 알림판 NPC를 통해서 추가 보상과 교환 하실 수 있습니다.{nl} 6월 27일 점검 시, 일괄 삭제됩니다.",icon_item_1808_rainbow_powder,,,,,,,,[이벤트]하급 무지갯빛 가루,0,0.0,0.0,FFFT,15,0.1
 904154,EVENT_1905_VIVID_POWDER_2,"무지개를 넘어서 시즌2 이벤트에 참여해 각 도시의 보통 코스를 완주하면 기념으로 드리는 아이템입니다.{nl} 이벤트 알림판 NPC를 통해서 추가 보상과 교환 하실 수 있습니다.{nl} 6월 27일 점검 시, 일괄 삭제됩니다.",icon_item_1905_rainbow_powder_middle,,,,,,,,[이벤트]중급 무지갯빛 가루,0,0.0,0.0,FFFT,15,0.1
 904155,EVENT_1905_VIVID_POWDER_3,"무지개를 넘어서 시즌2 이벤트에 참여해 각 도시의 어려운 코스를 완주하면 기념으로 드리는 아이템입니다.{nl} 이벤트 알림판 NPC를 통해서 추가 보상과 교환 하실 수 있습니다.{nl} 6월 27일 점검 시, 일괄 삭제됩니다.",icon_item_1905_rainbow_powder_higher,,,,,,,,[이벤트]상급 무지갯빛 가루,0,0.0,0.0,FFFT,15,0.1
-904166,EVENT_1906_SUMMER_FESTA_COIN,"2019년 여름 이벤트를 기념하기 위해 제작된 주화입니다. 8월 22일 점검 전까지 획득할 수 있습니다.{nl}9월 5일 점검 시, 일괄 삭제됩니다. 바살로스 주화 상점에서 사용할 수 있습니다.",icon_item_summer_coin,,,,,,,,[이벤트] 바살로스 주화,0,0.0,0.0,FFFT,15,0.1
+904163,EVENT_1906_EQUIPITEM_BOX,"사용 시 원하는 11강 8초월 [이벤트] 세비노스 무기를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[이벤트] 11강 8초월 세비노스 무기 선택상자,0,0.0,0.0,FFFT,8,1.0
+904166,EVENT_1906_SUMMER_FESTA_COIN,2019년 여름 이벤트를 기념하기 위해 제작된 주화입니다. 8월 22일 점검 전까지 획득할 수 있습니다.{nl}8월 22일 점검 시 삭제됩니다.{nl}바살로스 주화 상점에서 사용할 수 있습니다.,icon_item_summer_coin,,,,,,,,[이벤트] 바살로스 주화,0,0.0,0.0,FFFT,15,0.1
 904167,EVENT_1906_GUILD_QUEST_ACHIEVE_BOX,"길드 있어 트오세 있다 이벤트에서 선물하는 칭호 상자 입니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,칭호 - 핵심 맴버,0,0.0,0.0,FFFT,6,1.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,,,새싹,1,0.0,0.0,TTTT,15,1.0
@@ -5669,3 +5679,4 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 910016,Scroll_SkillItem_Pyromancer_EnchantFire,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서 [Lv. 15 인챈트 파이어],5,0.0,0.0,TTTT,6,1.0
 910017,Scroll_SkillItem_Pyromancer_FlameGround,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서 [Lv. 15 플레임 그라운드],5,0.0,0.0,TTTT,6,1.0
 910018,Scroll_SkillItem_Warlock_PoleofAgony,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서 [Lv. 10 폴 오브 아고니],5,0.0,0.0,TTTT,6,1.0
+2000000,Achieve_Event_Steam_PoPo_Vacation,PoPo Vacation 수상자에게 지급되는 칭호입니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_holyark,,,,,,,,Title - PoPo Vacation,0,0.0,0.0,FFFT,6,0.0
