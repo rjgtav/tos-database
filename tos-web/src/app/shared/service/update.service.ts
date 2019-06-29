@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {TOSRegion, TOSRegionService, VERSIONS} from "../domain/tos-region";
 
 const KEY_VERSION = 'version';
-const VERSION_HOTFIX = 4;
+const VERSION_HOTFIX = 5;
 
 @Injectable({
   providedIn: 'root'
