@@ -61,7 +61,7 @@ def parse_translations(language):
             continue
 
         with open(translation_path, 'rb') as translation_file:
-            for row in csv.reader(translation_file, delimiter='\t', quotechar='"'):
+            for row in csv.reader(translation_file, delimiter='\t', quoting=csv.QUOTE_NONE):
                 if len(row) > 1:
                     result[row[0]] = unicode(row[1], 'utf-8')
 
