@@ -5672,6 +5672,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 902151,Steam_SP_Potion_1Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion3,,,,,,,[400066],SP藥水(1天),0,20.0,86400.0,FFFT,6,3.0
 902152,Steam_SP_Potion_7Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion3,,,,,,,[400067],SP樂水(7天),0,20.0,604800.0,FFFT,6,3.0
 902153,Steam_Event_Carnival_Fire,收集慶典爆竹可以跟活動佈告欄交換各種道具。{nl}(使用時，10分內移動速度+2、物理攻擊力+50、魔法攻擊力+50。),icon_item_firework,,,,,,,,慶典爆竹,0,30.0,0.0,FFFT,6,0.0
+902168,Event_TWN_3YEARS_PET_FOOD,讓卓柏卡布拉長大時所需要的飼料。{nl}到烈焰法師大師的研究室，找卓柏卡布拉領養NPC可以獲得使卓柏卡布拉長大的飼料。{nl}(活動結束時統一刪除。),icon_item_pork,,,,,,,,[活動] 卓柏卡布拉飼料,0,0.0,0.0,FFFT,8,0.0
+902169,Achieve_Event_Twn_3Years_Chupacabra,3週年活動沙漠卓柏卡布拉長大時所提供的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - 3週年好友卓柏卡布拉,0,0.0,0.0,FFFT,6,0.0
 904000,EVENT_1802_MASTER_KEY1,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_1,,,,,,,,大師的考驗卷-初級,0,0.0,0.0,FFFT,15,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,從大師的訓練所得到的獎勵道具。{nl}收集5個以上可以跟大師的考驗活動小幫手交換成無限可能性的魔方。{nl}活動結束時道具統一刪除。,icon_item_gimmick_spcrystal,,,,,,,,微小可能性的碎片,0,0.0,0.0,FFFT,15,1.0
 904003,EVENT_1802_MASTER_KEY2,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_2,,,,,,,,大師的考驗卷-中級,0,0.0,0.0,FFFT,15,1.0
