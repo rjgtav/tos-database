@@ -99,7 +99,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 642722,Gacha_E_022,Allows you to acquire a random material. {nl}Right-click to use.,icon_item_cube4,,,,,,,,,Earth Tower 30F Cube,0,0.0,0.0,FFFF,5,5.0
 642723,Gacha_E_023,Allows you to acquire a random material. {nl}Right-click to use.,icon_item_cube4,,,,,,,,,Earth Tower 35F Cube,0,0.0,0.0,FFFF,5,5.0
 642724,Gacha_E_024,Allows you to acquire a random material. {nl}Right-click to use.,icon_item_cube4,,,,,,,,,Earth Tower 40F Cube,0,0.0,0.0,FFFF,5,5.0
-642725,Gem_Gacha,,icon_item_cube4,,,,,,,,,Gem Draw,0,0.0,0.0,FFFF,5,5.0
+642725,Gem_Gacha,"Use to obtain one Lv. 1 ~ Lv. 6 Red, Blue, Green, Yellow or Monster Gem. Right-click to use.",icon_item_cube4,,,,,,,,,Gem Draw,0,0.0,0.0,FFFF,5,5.0
 642729,Gacha_M_Zachariel_1,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube4,,,,,,,,,Saalus Cube (Mausoleum),0,0.0,0.0,FFFF,5,5.0
 642730,Gacha_M_Rokas_1,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube4,,,,,,,,,Saalus Cube (Canyon),0,0.0,0.0,FFFF,5,5.0
 642731,Gacha_M_Castle_1,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube4,,,,,,,,,Saalus Cube (Castle),0,0.0,0.0,FFFF,5,5.0

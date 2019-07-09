@@ -1,6 +1,6 @@
 $ID,$ID_NAME,Bonus,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
 642001,COLLECT_101,"[[""STR"", 1], [""INT"", 1]]",An old relic found in a well. {nl}Right-click to use.,icon_item_box,,,"[645461, 645228, 645229, 645151, 645451, 645403]",,,,,,Monster Specimen Set,1,0.0,0.0,FFTF,4,0.0
-642002,COLLECT_102,"[[""STR"", 5]]",A collection ready to be filled with items. Right-click to register.,icon_item_box,,,"[649001, 649002, 649003, 649006, 645268]",,,,,,,1,0.0,0.0,FFTF,4,0.0
+642002,COLLECT_102,"[[""STR"", 5]]",A collection ready to be filled with items. Right-click to register.,icon_item_box,,,"[649001, 649002, 649003, 649006, 645268]",,,,,,Ore Collection,1,0.0,0.0,FFTF,4,0.0
 642003,COLLECT_103,"[[""CON"", 5]]",A collection ready to be filled with items. Right-click to register.,icon_item_box,,,"[645024, 645461, 645379]",,,,,,Flower Collection,1,0.0,0.0,FFTF,4,0.0
 642004,COLLECT_104,"[[""INT"", 5]]",A collection ready to be filled with items. Right-click to register.,icon_item_box,,,"[645267, 645333, 645435, 645364]",,,"[{""Chance"": 0.1, ""Monster"": 57258, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}]",,,Bone Collection,1,0.0,0.0,FFTF,4,0.0
 642005,COLLECT_105,"[[""SPR"", 5]]",A collection ready to be filled with items. Right-click to register.,icon_item_box,,,"[645439, 645292, 645162]",,,,,,Crystal Collection,1,0.0,0.0,FFTF,4,0.0
