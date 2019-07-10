@@ -815,6 +815,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643038,Dirbtumas_kit,イコル錬成に使われる道具です。一般的な道具で、テリアベリスから購入できます。,icon_item_dirbtumas_kit,,,,,,,,イコル錬成キット,0,0.0,0.0,FFTF,15,4.0
 643039,Dirbtumas_kit_Sliver,イコル錬成に使われる道具です。シルバーの消費がなくなります。,icon_item_dirbtumas_kit_silver,,,,,,,,銀のイコル錬成キット,0,0.0,0.0,FFTF,15,4.0
 643041,Moru_Silver_Team_Able,金床の上に装備を乗せて叩くと性能がアップします。シルバーを消費せずに装備を強化できます。右クリックで使用できます。獲得後14日間使用できます。,icon_item_anvil_silver,,,,,,,,銀の金床(14日),0,0.0,1209600.0,FFFT,15,1.0
+643042,Transcend_Scroll_3_Event_1905,装備の超越数値を3段階にします。{nl}0～2段階の超越アイテムに対して使用することができます。3超越スクロールを右クリックした後超越するアイテムを選択すると3超越状態に変更されます。{nl}9月11日メンテナンス時に一括削除されます。,icon_item_transcendence_coupon,,,,,,,,[イベント] 3超越スクロール,0,0.0,0.0,FFFT,6,1.0
+643043,Transcend_Scroll_5_Event_1905,装備の超越数値を5段階にします。{nl}0～4段階の超越アイテムに対して使用することができます。5超越スクロールを右クリックした後超越するアイテムを選択すると5超越状態に変更されます。{nl}9月11日メンテナンス時に一括削除されます。,icon_item_transcendence_coupon,,,,,,,,[イベント]5超越スクロール,0,0.0,0.0,FFFT,6,1.0
+643044,Transcend_Scroll_8_Event_1905,装備の超越数値を8段階にします。{nl}0～7段階の超越アイテムに対して使用することができます。8超越スクロールを右クリックした後超越するアイテムを選択すると8超越状態に変更されます。{nl}9月11日メンテナンス時に一括削除されます。,icon_item_transcendence_coupon,,,,,,,,[イベント] 8超越スクロール,0,0.0,0.0,FFFT,6,1.0
 645002,D_Bube_Mane,水晶に長期間さらされたゴブリンたちからしか手に入らない暗い魔石,icon_item_evilenergy_piece,,,,,,,,ゴブリンの魔石,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,甘い香りのする花びらです。ハナミンから手に入ります。,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,ハナミンの花びら,1,0.0,0.0,TTTT,15,1.0
 645025,TreasureboxKey2,宝箱LV2を開けるのに必要な鍵,icon_item_key1,,,,,,,,LV2宝箱の鍵,0,0.0,0.0,FFTF,15,1.0
@@ -5717,6 +5720,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904149,Event_Reinforce_100000coupon_Event,強化シルバー割引クーポン{nl}8月21日のメンテナンスにて削除されます。,icon_item_reinforce_100000coupon,,,,,,,,[イベント]強化シルバー割引クーポン: 10万シルバー,1,0.0,0.0,FFFT,8,0.0
 904150,EVENT_NEW_FACE_ACHIEVE_BOX,新しい芽称号ボックスです。{nl}8月21日のメンテナンスにて削除されます。,icon_item_holyark,,,,,,,,称号 - 新しい芽,0,0.0,0.0,FFFT,6,1.0
 904151,EVENT_1710_NEWCHARACTER_BOX_19,右クリックで使用できます。400レベル以上で使用可能です。{nl}8月7日のメンテナンスにて削除されます。,icon_item_giftbox_2,,,,,,,,[Episode11]レベルアップボックス(400レベル),0,0.0,0.0,FFFF,8,1.0
+904153,EVENT_1905_VIVID_POWDER_1,虹の彼方へシーズン2イベントに参加して各都市の簡単コースを完走した記念のアイテムです。{nl}イベント掲示板NPCに話しかけると素敵なアイテムと交換することができます。{nl}8月28日メンテナンス時に一括削除されます。,icon_item_1808_rainbow_powder,,,,,,,,[イベント]下級虹色の粉,0,0.0,0.0,FFFT,15,0.1
+904154,EVENT_1905_VIVID_POWDER_2,虹の彼方へシーズン2イベントに参加して各都市の普通コースを完走した記念のアイテムです。{nl}イベント掲示板NPCに話しかけると素敵なアイテムと交換することができます。{nl}8月28日メンテナンス時に一括削除されます。,icon_item_1905_rainbow_powder_middle,,,,,,,,[イベント]中級虹色の粉,0,0.0,0.0,FFFT,15,0.1
+904155,EVENT_1905_VIVID_POWDER_3,虹の彼方へシーズン2イベントに参加して各都市の難しいコースを完走した記念のアイテムです。{nl}イベント掲示板NPCに話しかけると素敵なアイテムと交換することができます。{nl}8月28日メンテナンス時に一括削除されます。,icon_item_1905_rainbow_powder_higher,,,,,,,,[イベント]上級虹色の粉,0,0.0,0.0,FFFT,15,0.1
 910001,Scroll_SkillItem,特定のスキルを保存できるスクロールです。,golemmagicitem1,,,,,,,,スキル呪文書,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,ケッピーから手に入る長い茎です。食べると少し辛いです。,item_icon_sprout,,,,,,,,新芽,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,ケッピーから手に入る長い茎です。食べると少し辛いです。,item_icon_witheredplants,,,,,,,,枯れた植物,1,0.0,0.0,TTTT,15,1.0
