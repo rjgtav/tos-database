@@ -812,6 +812,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643045,Transcend_Scroll_10_PC,"장비의 초월 수치를 10단계로 만들어줍니다.{nl}0~9단계 초월 아이템만 사용할 수 있으며, 10초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 10초월 상태로 변경됩니다. {nl}Lv 400이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,[PC방] Lv.400 10초월 스크롤,0,0.0,0.0,TFFT,6,1.0
 643046,Extract_kit_Gold_Team,"아이커 추출에 사용되는 도구입니다. 장비 포텐셜 0일 경우 사용 가능하며, 아이템 파괴를 방지합니다.",icon_item_extractkit_gold,,,,,,,,[이벤트] 황금 아이커 추출 키트,0,0.0,0.0,FFFT,8,4.0
 643047,Transcend_Scroll_9_PC,"장비의 초월 수치를 9단계로 만들어줍니다.{nl}0~8단계 초월 아이템만 사용할 수 있으며, 9초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 9초월 상태로 변경됩니다. {nl}Lv 400이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,[Lv.400] 9초월 스크롤,0,0.0,0.0,FFFT,6,1.0
+643048,Transcend_Scroll_8_Event_TimeLimit,"장비의 초월 수치를 8단계로 만들어줍니다.{nl}0~7단계 초월 아이템만 사용할 수 있으며, 8초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 8초월 상태로 변경됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 8초월 스크롤 (90일),0,0.0,7776000.0,FFFT,6,1.0
 645002,D_Bube_Mane,수정에 오래 노출된 부베들에게서만 얻을 수 있는 어두운 마석,icon_item_evilenergy_piece,,,,,,,,부베 마석,4,0.0,0.0,TTTT,20,0.0
 645024,leaf_hanaming,달콤한 향이 나는 꽃잎입니다. 하나밍에게서 획득합니다.,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,하나밍 꽃잎,1,0.0,0.0,TTTT,15,1.0
 645025,TreasureboxKey2,보물 상자 LV 2을 여는데 사용되는 열쇠,icon_item_key1,,,,,,,,LV2 보물상자 열쇠,0,0.0,0.0,FFTF,15,1.0
