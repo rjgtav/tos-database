@@ -616,9 +616,17 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150181,star_stone_01_small_startower_sp,,,魔力殘留物(特殊),2
 150182,npc_schaffenstar_ignas,,,夏班史達團長依克拉斯,2
 150183,npc_sage_female_1,,,賢者女1,2
+150184,shadow_raid_device_on,,,電燈裝置 (ON),2
+150185,shadow_raid_device_off,,,電燈裝置 (OFF),2
+150186,shadow_raid_stone_on,,,暗影師大師的封印石 (ON),2
+150187,shadow_raid_stone_off,,,暗影師大師的封印石 (OFF),2
+150188,shadow_raid_orb,,,封印的寶珠,2
+150199,shadow_raid_door,,,封印的門,2
 150200,npc_ghost_soldier_castle,,,幽靈士兵,2
 150201,castle94_gate,,,城堡正門,2
 150202,castle94_gate_opened,,,城堡正門(開啟),2
+150203,Shadowmancer_seal_cage,,,闇影監獄,2
+150204,HiddenWall_500_300_300,,,,2
 151000,closing_device,,,封鎖裝置,2
 151001,spell_crystal_red,,,凝結魔力的結晶,2
 151002,spell_crystal_gem_red,,,紅焰的寶石,2
@@ -1459,6 +1467,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156163,gacha_cube1_blue,,,秘密藍魔方,2
 156164,npc_Tantaliser,,,複束縛的坦達伊秋,2
 156165,maple_24_tree_young,,,小楓樹,2
+156166,HiddenWall_Vivid,,,,2
 157000,3cmlake_ruins,,,湖水的殘物,2
 157001,coral_tent_01,,,克蘭托帳篷,2
 157002,PCStatue,,,,2
