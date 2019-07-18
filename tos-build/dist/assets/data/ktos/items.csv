@@ -66,7 +66,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 490324,Ability_Point_Scroll_1000,"사용시 특성 포인트가 1,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_ability_point_scroll_1000,,,,,,,,특성 포인트 스크롤,0,0.0,0.0,FFFT,8,1.0
 490354,indunReset_1add_14d_NoStack_Team,사용 시 인스턴스 던전과 의뢰소 미션에 1회 더 입장 가능합니다.,icon_item_indunonemoreenter,,,,,,,,인스턴스 던전 1회 입장권 (14일),0,0.0,1209600.0,FFFT,6,0.0
 490390,Premium_Mystic_Glass_Event,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 즉시 적용되며 이전으로 돌아갈 수 없습니다. ",icon_item_magnifier_blue,,,,,,,,[이벤트]신비한 돋보기,0,0.0,0.0,FFFT,8,0.0
-490391,Premium_Master_Glass_Event,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.",icon_item_magnifier_red,,,,,,,,[이벤트]장인의 돋보기,0,0.0,0.0,FFFT,8,0.0
+490391,Premium_Master_Glass_Event,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.8월 8일 점검 후 일괄 삭제됩니다.",icon_item_magnifier_red,,,,,,,,[이벤트]장인의 돋보기,0,0.0,0.0,FFFT,8,0.0
 494079,Event_Ability_Point_Stone_10000_team,"사용시 특성 포인트가 10,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint4,,,,,,,,"특성 포인트 10,000 (14일)",0,0.0,1209600.0,FFFT,8,1.0
 494132,Premium_Mystic_Glass_Event_14d,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 즉시 적용되며 이전으로 돌아갈 수 없습니다. ",icon_item_magnifier_blue,,,,,,,,[이벤트]신비한 돋보기(14일),0,0.0,1209600.0,FFFT,8,0.0
 494133,Premium_Master_Glass_Event_14d,"랜덤 옵션 아이템의 옵션 개수, 옵션 그룹, 옵션, 옵션 수치를 랜덤하게 변경합니다. 옵션은 변경 전 옵션과 변경 후 옵션 중 1개를 선택 할 수 있습니다. 옵션 선택을 하지 않으면 아이템을 사용 할 수 없습니다.",icon_item_magnifier_red,,,,,,,,[이벤트]장인의 돋보기(14일),0,0.0,1209600.0,FFFT,8,0.0
@@ -508,8 +508,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640427,RepairPotion_Colony_Support2_Team_Trade,"사용 시 착용하고 있는 장비의 내구도를 +5 회복시켜 줍니다.{nl}콜로니전 전투 지원으로 지급되는 아이템입니다.{nl}11월 29일 점검 시, 일괄 삭제됩니다.",icon_item_repairkit,,,,,,,,[콜로니전 지원] 긴급 수리 키트,0,0.0,0.0,FFFT,6,0.0
 640428,Drug_Alche_MSPD15_Colony_Support2_Team_Trade,"250초 동안 이동속도를 +3 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 30초.{nl}콜로니전 전투 지원으로 지급되는 아이템입니다.{nl}11월 29일 점검 시, 일괄 삭제됩니다.",item_speed_requid_1,,,,,,,,[콜로니전 지원] 농축 이동속도 증가 포션 LV15,25,30.0,0.0,FFFT,6,5.0
 640430,test_expCard_Max_380,"캐릭터 경험치 2,047,516,611 상승합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_expcard,,,,,,,,[큐폴전용] 경험치 부스터 카드,0,0.0,0.0,FFFT,6,0.0
-640435,Boruta_Drug_RedApple20,"HP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 HP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.{nl}19년 3월 28일 점검 시, 일괄 삭제됩니다.",icon_item_hpelixir_small,,,,,,,,[이벤트] HP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,6,30.0
-640436,Boruta_Drug_BlueApple20,"SP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 SP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.{nl}19년 3월 28일 점검 시, 일괄 삭제됩니다.",icon_item_spelixir_small,,,,,,,,[이벤트] SP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,6,30.0
+640435,Boruta_Drug_RedApple20,"HP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 HP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.{nl}{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_hpelixir_small,,,,,,,,[이벤트] HP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,6,30.0
+640436,Boruta_Drug_BlueApple20,"SP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 SP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.{nl}{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_spelixir_small,,,,,,,,[이벤트] SP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,6,30.0
 640437,Boruta_Drug_Alche_STA15,"스태미나를 78 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다.{nl}19년 3월 28일 점검 시, 일괄 삭제됩니다.",item_sta_pill_3,,,,,,,,[이벤트] 농축 스태미나 알약 LV15,0,15.0,0.0,FFFT,6,7.0
 640438,Boruta_repairPotion_event,"사용 시 착용하고 있는 장비의 내구도를 +5 회복시켜 줍니다.{nl}19년 3월 28일 점검 시, 일괄 삭제됩니다.",icon_item_repairkit,,,,,,,,[이벤트] 긴급 수리 키트,0,0.0,0.0,FFFT,6,0.0
 640439,Boruta_Warp_table_10_1,"이벤트용 워프 주문서입니다.{nl}사용 시 베다 고원의 큐폴 카제에게 이동합니다.{nl}19년 3월 28일 점검 시, 일괄 삭제됩니다.",icon_item_scroll,,,,,,,,[이벤트] 워프 주문서-큐폴 카제,0,10.0,0.0,FFFT,6,1.0
@@ -524,9 +524,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,공격 부스터 +20,2,8.0,0.0,TTTT,6,1.0
 641101,Jungtan_Def_1,,icon_item_booster_2,,,,,,,,방어 부스터 +4,1,8.0,0.0,TTTT,6,1.0
 641102,Jungtan_Def_2,,icon_item_booster_2,,,,,,,,방어 부스터 +8,1,8.0,0.0,TTTT,6,1.0
-641151,Dispeller_1,디스펠러를 활성화시켜 자신이 받는 해로운 효과를 무효화시킵니다. 효과를 무효화 시킬 때마다 디스펠러가 1장씩 소비됩니다. 마우스 오른쪽 클릭으로 활성화시킵니다.,icon_item_grimoire_blue,,,,,,,,디스펠러,1,8.0,0.0,TTTT,6,1.0
+641151,Dispeller_1,디스펠러를 활성화시켜 자신이 받는 일반 해제 가능한 모든 디버프를 무효화시킵니다. 효과를 무효화 시킬 때마다 디스펠러가 1장씩 소비됩니다. 마우스 오른쪽 클릭으로 활성화시킵니다.,icon_item_grimoire_blue,,,,,,,,디스펠러,1,8.0,0.0,TTTT,6,1.0
 641152,Antimagic_1,마법 공격을 무효화시킵니다.,icon_item_grimoire_yellow,,,,,,,,안티매직,1,8.0,0.0,TTTT,6,1.0
-641153,Bujeok_1,오마모리를 활성화시켜 자신이 받는 상급 해로운 효과를 무효화시킵니다. 효과를 무효화 시킬 때마다 오마모리가 1장씩 소비됩니다. 마우스 오른쪽 클릭으로 활성화시킵니다.,icon_item_omarmori,,,,,,,,오마모리,1,8.0,0.0,TTTT,6,1.0
+641153,Bujeok_1,오마모리를 활성화시켜 자신이 받는 고급 해제 가능한 모든 디버프를 무효화시킵니다. 효과를 무효화 시킬 때마다 오마모리가 1장씩 소비됩니다.(리쿠마의 가호 효과보다 우선 적용됩니다.) 마우스 오른쪽 클릭으로 활성화시킵니다.,icon_item_omarmori,,,,,,,,오마모리,1,60.0,0.0,TTTT,6,1.0
 641154,EnchantBomb_Fire_1,불 인챈트탄을 활성화하여 공격 시 치명타 발생 확률을 증가시킵니다. 효과가 발동할 때마다 불 인챈트탄이 1개씩 소비됩니다. 마우스 오른쪽 클릭으로 활성화시킵니다.,icon_item_panto_core_fire,,,,,,,,불 인챈트탄,1,0.0,0.0,TTTT,6,1.0
 641155,EnchantBomb_Ice_1,얼음 인챈트탄을 활성화하여 자신이 받는 대미지를 감소시킵니다. 효과가 발동할 때마다 얼음 인챈트탄이 1개씩 소비됩니다. 마우스 오른쪽 클릭으로 활성화시킵니다.,icon_item_panto_core_ice,,,,,,,,얼음 인챈트탄,1,0.0,0.0,TTTT,6,1.0
 641201,Drug_Alche_HP,HP를 1152 즉시 회복시키고 2초 간격으로 15초 동안 HP를 1152 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_hp_alche,,,,,,,,농축 HP포션 LV1,32,15.0,0.0,TTTT,6,10.0
@@ -763,6 +763,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641971,Event_Drug_Alche_HP15_Premium,HP를 5614 즉시 회복시키고 2초 간격으로 15초 동안 HP를 5614회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 45초.,item_hp_oil_3,,,,,,,,보급용 농축 HP포션 LV15,0,45.0,0.0,FFFT,6,1.0
 641972,Event_Drug_Alche_SP15_Premium,SP를 1288 즉시 회복시키고 2초 간격으로 15초 동안 SP를 1288 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 45초.,item_sp_requid_3,,,,,,,,보급용 농축 SP포션 LV15,0,45.0,0.0,FFFT,6,1.0
 641973,Event_drug_steam_1h_Premium,"1시간 동안 이동속도 +2, 물리 공격력 +50, 마법 공격력 +50 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",item_speed_requid_3,,,,,,,,정착 지원 포션 Lv2,0,30.0,0.0,FFFT,6,0.0
+641974,Event1907_Drug_Alche_HP15,"HP를 5614 즉시 회복시키고 2초 간격으로 15초 동안 HP를 5614회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 45초.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",item_hp_oil_3,,,,,,,,[Summer Festa] 보급용 농축 HP포션 LV15,0,45.0,0.0,FFFT,6,1.0
+641975,Event1907_Drug_Alche_SP15,"SP를 1288 즉시 회복시키고 2초 간격으로 15초 동안 SP를 1288 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 45초.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",item_sp_requid_3,,,,,,,,[Summer Festa] 보급용 농축 SP포션 LV15,0,45.0,0.0,FFFT,6,1.0
+641976,Event1907_guild_exp_up_lv1,"길드 경험치를 +100 상승시킬 수 있는 아이템입니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_guild_exp_up1,,,,,,,,[이벤트] 길드 퀘스트 보상 주화 : 동,0,0.0,0.0,FFFT,15,1.0
+641977,Event1907_guild_exp_up_lv2,"길드 경험치를 +200 상승시킬 수 있는 아이템입니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_guild_exp_up2,,,,,,,,[이벤트] 길드 퀘스트 보상 주화 : 은,0,0.0,0.0,FFFT,15,1.0
+641978,Event1907_guild_exp_up_lv3,"길드 경험치를 +400 상승시킬 수 있는 아이템입니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_guild_exp_up3,,,,,,,,[이벤트] 길드 퀘스트 보상 주화 : 금,0,0.0,0.0,FFFT,15,1.0
 642502,Gacha_EXP_001,사용 시 LV2 ~ 10 경험치 카드 중에 무작위로 3장을 획득할 수 있습니다.,icon_item_quest_00017,,,,,,,,경험치 카드 상자,0,0.0,0.0,FFFF,6,0.0
 642503,Gacha_Recipe_Wep,사용 시 LV220 무기 레시피 중에 무작위로 1장을 획득할 수 있습니다.,icon_item_luckybox_red,,,,,,,,Lv220 제작서 상자 - 무기,0,0.0,0.0,FFFF,6,0.0
 642504,Gacha_Recipe_Arm,사용 시 방어구 레시피(LV120 ~ 220)를 획득할 수 있습니다.,icon_item_cube2,,,,,,,,제작서 상자 - 방어구,0,0.0,0.0,FFFF,6,0.0
@@ -806,8 +811,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643038,Dirbtumas_kit,아이커 연성에 사용되는 도구입니다. 일반 도구로 테리아베리스에게서 구매할 수 있습니다.,icon_item_dirbtumas_kit,,,,,,,,아이커 연성 키트,0,0.0,0.0,FFTF,15,4.0
 643039,Dirbtumas_kit_Sliver,아이커 연성에 사용되는 도구입니다. 소모하는 재화가 필요 없습니다.,icon_item_dirbtumas_kit_silver,,,,,,,,은빛 아이커 연성 키트,0,0.0,0.0,FFTF,15,4.0
 643041,Moru_Silver_Team_Able,모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 실버 소비 없이 장비를 강화할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_anvil_silver,,,,,,,,은빛 모루(14일),0,0.0,1209600.0,FFFT,15,1.0
-643042,Transcend_Scroll_3_Event_1905,"장비의 초월 수치를 3단계로 만들어줍니다.{nl}0~2단계 초월 아이템만 사용할 수 있으며, 3초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 3초월 상태로 변경됩니다.{nl}7월 11일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 3초월 스크롤,0,0.0,0.0,FFFT,6,1.0
-643043,Transcend_Scroll_5_Event_1905,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.{nl}7월 11일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,6,1.0
+643042,Transcend_Scroll_3_Event_1905,"장비의 초월 수치를 3단계로 만들어줍니다.{nl}0~2단계 초월 아이템만 사용할 수 있으며, 3초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 3초월 상태로 변경됩니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 3초월 스크롤,0,0.0,0.0,FFFT,6,5.0
+643043,Transcend_Scroll_5_Event_1905,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 5초월 스크롤,0,0.0,0.0,FFFT,6,5.0
 643044,Transcend_Scroll_8_Event_1905,"장비의 초월 수치를 8단계로 만들어줍니다.{nl}0~7단계 초월 아이템만 사용할 수 있으며, 8초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 8초월 상태로 변경됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트] 8초월 스크롤,0,0.0,0.0,FFFT,6,1.0
 643045,Transcend_Scroll_10_PC,"장비의 초월 수치를 10단계로 만들어줍니다.{nl}0~9단계 초월 아이템만 사용할 수 있으며, 10초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 10초월 상태로 변경됩니다. {nl}Lv 400이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,[PC방] Lv.400 10초월 스크롤,0,0.0,0.0,TFFT,6,1.0
 643046,Extract_kit_Gold_Team,"아이커 추출에 사용되는 도구입니다. 장비 포텐셜 0일 경우 사용 가능하며, 아이템 파괴를 방지합니다.",icon_item_extractkit_gold,,,,,,,,[이벤트] 황금 아이커 추출 키트,0,0.0,0.0,FFFT,8,4.0
@@ -2385,7 +2390,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 651008,GuildColony_Item_mysticCristal_Colony_Support2,"전투 불능 시 신비한 크리스탈을 사용하여 제자리에서 부활할 수 있습니다.{nl}스팟 지역에서만 사용할 수 있습니다.{nl}콜로니전 전투 지원으로 지급되는 아이템입니다.{nl}11월 29일 점검 시, 일괄 삭제됩니다.",icon_item_soulcrystal_colony,,,,,,,,[콜로니전 지원] 신비한 크리스탈,0,300.0,0.0,FFFT,6,0.0
 651009,GuildColony_Item_Scroll_Warp_Colony_Support2,"사용 시 스팟 지역으로 이동할 수 있습니다.{nl}스팟 지역에 신성한 깃발이 설치된 위치로 이동합니다.{nl}스팟 지역에서는 사용할 수 없습니다.{nl}콜로니전 전투 지원으로 지급되는 아이템입니다.{nl}해당 아이템은 비점령 길드 인원만 사용할 수 있습니다.{nl}11월 29일 점검 시, 일괄 삭제됩니다.",icon_item_warp_scroll_colony,,,,,,,,[콜로니전 지원] 워프 주문서-콜로니전,0,300.0,0.0,FFFT,6,1.0
 651010,GuildColony_Item_Observation_Scroll,사용 시 스팟 지역에 있는 점령 길드 인원들의 위치를 5초간 확인할 수 있습니다.{nl}스팟 지역에 있는 비점령 길드 인원만 사용할 수 있습니다.,icon_item_observation_scroll,,,,,,,,[콜로니전] 정찰용 지도,100,180.0,0.0,FFTT,6,1.0
-651011,GuildColony_Item_Resistance_status_Drug,"사용 시 현재 걸려있는 모든 3레벨 이하 디버프를 제거하고, 다음의 효과가 적용됩니다.{nl}    - 5초간 넉백, 넉다운 면역 상태{nl}    - 5초간 3레벨 이하 디버프 면역 상태{nl}    - 5초간 이동속도가 크게 증가하고 점차 감소{nl}스팟 지역에서만 사용할 수 있습니다.",icon_item_drug_resistance_statu,,,,,,,,[콜로니전] 상태 이상 저항 포션,100,300.0,0.0,FFTT,6,1.0
+651011,GuildColony_Item_Resistance_status_Drug,"사용 시 현재 걸려있는 일반 해제 가능한 모든 디버프를 제거하고, 다음의 효과가 적용됩니다.{nl}    - 5초간 넉백, 넉다운 면역 상태{nl}    - 5초간 해제 가능한 모든 디버프 면역 상태{nl}    - 5초간 이동속도가 크게 증가하고 점차 감소{nl}스팟 지역에서만 사용할 수 있습니다.",icon_item_drug_resistance_statu,,,,,,,,[콜로니전] 상태 이상 저항 포션,100,300.0,0.0,FFTT,6,1.0
 653041,stonetablet05,마법사의 탑에서 발견된 다섯 번째 계시. 읽어볼 수 있습니다.,icon_item_stonetablet,[642017],,,,,,,마법사의 탑의 계시,0,0.0,0.0,FFFF,20,0.0
 660000,CHATHEDRAL54_SQ01_PART1_ITEM,저주와 관련된 마군주에 대한 문헌. 나크티스 관련 내용을 심도있게 다루고 있습니다.,icon_item_magicpaper,,,,,,,,저주의 마군주 나크티스,0,0.0,0.0,FFFF,20,0.0
 660001,PILGRIMROAD55_SQ09_ITEM,순례자 달러스의 시신.,icon_item_small_bag,,,,,,,,순례자 달러스의 시신,0,0.0,0.0,FFFF,20,0.0
@@ -5221,8 +5226,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699008,Event_Unique_Enchant_Jewel,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,[이벤트] 유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,8,1.0
 699009,Event_Legend_Enchant_Jewel,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[이벤트] 레전드 인챈트 쥬얼,10,0.0,0.0,FFFT,8,1.0
 699010,Unique_Enchant_Jewel_Team,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
-699011,Legend_ExpPotion_2,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 전투 시작전 활성화가 필요합니다.,icon_item_empty_partis,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,5.0
-699012,Legend_ExpPotion_2_complete,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 전투 시작전 활성화가 필요합니다.,icon_item_full_partis2,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,10.0
+699011,Legend_ExpPotion_2,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 활성화 되어 있으면 적 몬스터를 처치 할 때 마다 경험치를 얻습니다.,icon_item_empty_partis,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,5.0
+699012,Legend_ExpPotion_2_complete,충전이 완료된 시약병입니다. 레전드 아이템 세트옵션 부여에 사용됩니다.,icon_item_full_partis2,,,,,,,,파모카 시약병,10,0.0,0.0,TFFT,9,10.0
 699013,PC_Rare_Enchant_Jewel,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,,,[PC방] 레어 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
 699014,PC_Unique_Enchant_Jewel,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,[PC방] 유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
 699015,PC_Legend_Enchant_Jewel,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[PC방] 레전드 인챈트 쥬얼,10,0.0,0.0,FFFT,6,1.0
@@ -5604,7 +5609,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904047,EVENT_1806_MASCOT_2_ACHIEVE_BOX,"TOS 축구팀 응원 이벤트에서 선물하는 칭호 상자 입니다.{nl}8월 2일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,칭호 - 오르샤 라이온스의 후원자,0,0.0,0.0,FFFT,6,1.0
 904048,EVENT_1806_STORY_1_TRAINING_FLUTE,"전서응에게 문제가 생겼을 때 사용해 전서응의 위치를 파악할 수 있습니다.{nl}7월 19일 점검 시, 일괄 삭제됩니다.",icon_item_training_flute,,,,,,,,전서응 훈련 피리,0,3.0,0.0,FFFT,6,0.1
 904050,EVENT_1807_STORY_2_COSTUME_BOX,"별의 탑 영웅 코스튬이 들어있는 상자입니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}8월 9일 점검 시, 일괄 삭제됩니다.",icon_item_giftbox_4,,,,,,,,별의 탑 영웅 코스튬 선택상자,0,0.0,0.0,FFFT,8,1.0
-904051,EVENT_1807_POOL_ICE,"[Summer Festa] 이벤트용 아이템 입니다. 8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_1807_pool_ice,,,,,,,,[Summer Festa] 특별한 얼음,0,0.0,0.0,FFFT,15,0.1
+904051,EVENT_1807_POOL_ICE,"[Summer Festa] 이벤트용 아이템 입니다. 8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_1807_pool_ice,,,,,,,,[SummerFesta]특별한 얼음,0,0.0,0.0,FFFT,15,0.1
 904052,EVENT_1807_POOL_BROCHETTE,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 10초마다 HP+500, SP+500 회복{nl}클라페다, 오르샤, 페디미안 지역에서만 사용할 수 있습니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_brochette,,,,,,,,[Summer Festa] 맛있는 꼬치,20,1.0,0.0,FFFT,6,1.0
 904053,EVENT_1807_POOL_MOJITO,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 이동속도+2{nl}클라페다, 오르샤, 페디미안 지역에서만 사용할 수 있습니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_mojito,,,,,,,,[Summer Festa] 짜릿한 레몬아이스티,20,1.0,0.0,FFFT,6,1.0
 904054,EVENT_1807_POOL_COCONUT,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 30분간 루팅찬스 +300{nl}클라페다, 오르샤, 페디미안 지역에서만 사용할 수 있습니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_food_coconut,,,,,,,,[Summer Festa] 시원한 코코넛쥬스,20,1.0,0.0,FFFT,6,1.0
@@ -5665,6 +5670,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904166,EVENT_1906_SUMMER_FESTA_COIN,2019년 여름 이벤트를 기념하기 위해 제작된 주화입니다. 8월 22일 점검 전까지 획득할 수 있습니다.{nl}8월 22일 점검 시 삭제됩니다.{nl}바살로스 주화 상점에서 사용할 수 있습니다.,icon_item_summer_coin,,,,,,,,[이벤트] 바살로스 주화,0,0.0,0.0,FFFT,15,0.1
 904167,EVENT_1906_GUILD_QUEST_ACHIEVE_BOX,"길드 있어 트오세 있다 이벤트에서 선물하는 칭호 상자 입니다.{nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,칭호 - 핵심 맴버,0,0.0,0.0,FFFT,6,1.0
 904168,EVENT_1906_EQUIPITEM_BOX_ARMOR,"사용 시 원하는 11강 [이벤트] 세비노스 방어구를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[이벤트] 11강 세비노스 방어구 선택상자,0,0.0,0.0,FFFT,8,1.0
+904170,Event1907_SUMMER_FESTA_GACHA_1,"상자 우클릭 시, 아래 아이템 중 각기 다른 확률로 한 개의 아이템을 획득할 수 있습니다.{nl}- [이벤트] 3초월 스크롤 x1{nl}- [이벤트] 길드 퀘스트 보상 주화 : 동 x1{nl}- [Summer Festa] 보급용 농축 HP포션 LV15 x1{nl}- [Summer Festa] 보급용 농축 SP포션 LV15 x1{nl}- [이벤트] 바살로스 주화 x(1~2){nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_happybox_red,,,,,,,,[Summer Festa] 붉은색 교환상자,0,0.0,0.0,FFFT,8,1.0
+904171,Event1907_SUMMER_FESTA_GACHA_2,"상자 우클릭 시, 아래 아이템 중 각기 다른 확률로 한 개의 아이템을 획득할 수 있습니다.{nl}- [이벤트] 5초월 스크롤 x1{nl}- [이벤트] 길드 퀘스트 보상 주화 : 은 x1{nl}- [Summer Festa] 보급용 농축 HP포션 LV15 x2{nl}- [Summer Festa] 보급용 농축 SP포션 LV15 x2{nl}- [이벤트] 바살로스 주화 x(5~10){nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_happybox_blue,,,,,,,,[Summer Festa] 파란색 교환상자,0,0.0,0.0,FFFT,8,1.0
+904172,Event1907_SUMMER_FESTA_GACHA_3,"상자 우클릭 시, 아래 아이템 중 각기 다른 확률로 한 개의 아이템을 획득할 수 있습니다.{nl}- 버틀러와 메이드 코스튬 상자(블랙) x1{nl}- [이벤트] 길드 퀘스트 보상 주화 : 금 x1{nl}- [이벤트] HP 회복 소형 엘릭서 x2{nl}- [이벤트] SP 회복 소형 엘릭서 x2{nl}- [Summer Festa] 보급용 농축 HP포션 LV15 x5{nl}- [Summer Festa] 보급용 농축 SP포션 LV15 x5{nl}- [이벤트] 바살로스 주화 x(10~20){nl}8월 22일 점검 시, 일괄 삭제됩니다.",icon_item_happybox_black,,,,,,,,[Summer Festa] 검은색 교환상자,0,0.0,0.0,FFFT,8,1.0
+904173,CARE_RankReset_Point_Lv1,"클래스 변경 포인트가 100 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_1,,,,,,,,[보상용] 클래스 변경권 Lv.1,0,0.0,0.0,FFFF,8,0.0
+904174,CARE_RankReset_Point_Lv2,"클래스 변경 포인트가 500 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_2,,,,,,,,[보상용] 클래스 변경권 Lv.2,0,0.0,0.0,FFFF,8,0.0
+904175,CARE_RankReset_Point_Lv3,"클래스 변경 포인트가 1000 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_3,,,,,,,,[보상용] 클래스 변경권 Lv.3,0,0.0,0.0,FFFF,8,0.0
+904176,CARE_RankReset_Point_Lv4,"클래스 변경 포인트가 3000 증가합니다.{nl}클래스 변경 포인트는 3,000까지 누적되고 초과하는 포인트는 사라집니다.",icon_item_rankreset_paper_4,,,,,,,,[보상용] 클래스 변경권 Lv.4,0,0.0,0.0,FFFF,8,0.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,,,새싹,1,0.0,0.0,TTTT,15,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,,,시든 식물,1,0.0,0.0,TTTT,15,1.0
