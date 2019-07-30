@@ -5695,13 +5695,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 902120,Event_Steam_Store_Call_14d,"Opens a shop where you can purchase potions, skill consumables and other useful items.",icon_item_portrait_paper,,,,,,,,Combat Support Shop Voucher (14 Days),0,0.0,1209600.0,FFFF,8,0.0
 902121,Event_Steam_Store_Call,"Opens a shop where you can purchase potions, skill consumables and other useful items.",icon_item_portrait_paper,,,,,,,,Combat Support Shop Voucher,0,3.0,0.0,FFFF,8,0.0
 902125,Achieve_Event_Horror_Night,A title given to winners of the 2018 Halloween fan art contest. Right-click to use.,icon_item_holyark,,,,,,,,Title - Horror Night,0,0.0,0.0,FFFT,6,0.0
-902126,Event_Steam_Fishing_Talt,Can be exchanged for an equipment item at the Talt Processing Device.,31_item_ore_mega_talt,,,,,,,,Unique Talt,0,0.0,0.0,FFFT,8,0.0
-902127,Event_Steam_Fishing_BOX1,Select and obtain one Lv. 380 unidentified equipment item.{nl}The item will not be timed or include any trading restrictions.,icon_item_event_weaponbox1,,,,,,,,Unique Unidentified Two-handed Weapon Box,0,0.0,0.0,FFFT,8,0.0
-902128,Event_Steam_Fishing_BOX2,Select and obtain one Lv. 380 unidentified equipment item.{nl}The item will not be timed or include any trading restrictions.,icon_item_event_weaponbox1,,,,,,,,Unique Unidentified One-handed Weapon Box,0,0.0,0.0,FFFT,8,0.0
-902129,Event_Steam_Fishing_BOX3,Select and obtain one Lv. 380 unidentified equipment item.{nl}The item will not be timed or include any trading restrictions.,icon_item_event_armorbox1,,,,,,,,Unique Unidentified Top Armor Box,0,0.0,0.0,FFFT,8,0.0
-902130,Event_Steam_Fishing_BOX4,Select and obtain one Lv. 380 unidentified equipment item.{nl}The item will not be timed or include any trading restrictions.,icon_item_event_armorbox1,,,,,,,,Unique Unidentified Bottom Armor Box,0,0.0,0.0,FFFT,8,0.0
-902131,Event_Steam_Fishing_BOX5,Select and obtain one Lv. 380 unidentified equipment item.{nl}The item will not be timed or include any trading restrictions.,icon_item_event_armorbox1,,,,,,,,Unique Unidentified Gloves Box,0,0.0,0.0,FFFT,8,0.0
-902132,Event_Steam_Fishing_BOX6,Select and obtain one Lv. 380 unidentified equipment item.{nl}The item will not be timed or include any trading restrictions.,icon_item_event_armorbox1,,,,,,,,Unique Unidentified Boots Box,0,0.0,0.0,FFFT,8,0.0
+902126,Event_Steam_Fishing_Talt,Can be traded for equipment Can be exchanged for an equipment item at a talt-processing facility.{nl}Will be removed at the end of the event period.,31_item_ore_mega_talt,,,,,,,,Unique Talt,0,0.0,0.0,FFFT,8,0.0
+902127,Event_Steam_Fishing_BOX1,ITEM_20190727_022730,icon_item_event_weaponbox1,,,,,,,,Unique Unidentified Two-handed Weapon Box,0,0.0,0.0,FFFT,8,0.0
+902128,Event_Steam_Fishing_BOX2,ITEM_20190727_022730,icon_item_event_weaponbox1,,,,,,,,Unique Unidentified One-handed Weapon Box,0,0.0,0.0,FFFT,8,0.0
+902129,Event_Steam_Fishing_BOX3,ITEM_20190727_022730,icon_item_event_armorbox1,,,,,,,,Unique Unidentified Top Armor Box,0,0.0,0.0,FFFT,8,0.0
+902130,Event_Steam_Fishing_BOX4,ITEM_20190727_022730,icon_item_event_armorbox1,,,,,,,,Unique Unidentified Bottom Armor Box,0,0.0,0.0,FFFT,8,0.0
+902131,Event_Steam_Fishing_BOX5,ITEM_20190727_022730,icon_item_event_armorbox1,,,,,,,,Unique Unidentified Gloves Box,0,0.0,0.0,FFFT,8,0.0
+902132,Event_Steam_Fishing_BOX6,ITEM_20190727_022730,icon_item_event_armorbox1,,,,,,,,Unique Unidentified Boots Box,0,0.0,0.0,FFFT,8,0.0
 902134,Achieve_Event_Weapon_Designer,A title given to winners of the TOS weapon design event. Right-click to use.,icon_item_holyark,,,,,,,,Title - TOS Weapon Designer,0,0.0,0.0,FFFT,6,0.0
 902141,Achieve_Event_2019_New_Year_Artist,Title given to winners of the New Year's fan art event. Right-click to use.,icon_item_holyark,,,,,,,,Title - New Year Artist,0,0.0,0.0,FFFT,6,0.0
 902146,Event_Steam_PoPo_Point_100,Use to obtain 100 Popo Points.{nl} - Used only during Popo Point Shop event periods.,icon_item_tospoint100,,,,,,,,PP Shop 100 Points Voucher,0,0.0,0.0,FFFT,6,0.0
@@ -5839,3 +5839,4 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 910017,Scroll_SkillItem_Pyromancer_FlameGround,A scroll used to record a particular skill.,golemmagicitem1,,,,,,,,Skill Scroll [Lv 15 Flame Ground],5,0.0,0.0,TTTT,6,1.0
 910018,Scroll_SkillItem_Warlock_PoleofAgony,A scroll used to record a particular skill.,golemmagicitem1,,,,,,,,Skill Scroll [Lv 10 Pole of Agony],5,0.0,0.0,TTTT,6,1.0
 2000000,Achieve_Event_Steam_PoPo_Vacation,A title given to winners of the Popo Vacation event. Right-click to use.,icon_item_holyark,,,,,,,,Title - PoPo Vacation,0,0.0,0.0,FFFT,6,0.0
+2500013,GLOBAL_STEAM_Transcend_Scroll_8_PC,ETC_20190727_042189,icon_item_transcendence_coupon,,,,,,,,ETC_20190727_042188,0,0.0,0.0,FFFT,6,1.0
