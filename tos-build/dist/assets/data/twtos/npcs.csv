@@ -795,6 +795,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151176,npc_kupole_6_event,,minimap_event_1,活動奎波爾6,2
 151177,npc_giltine_weapon_event,,minimap_event_1,活動 拿著武器的吉特涅,2
 151178,npc_goldpig,,minimap_event_1,黃金豬,2
+151180,gacha_cube1_event,,minimap_event_1,雷堤夏秘密魔方,2
 152000,npc_husband_1,,,平凡的男子,2
 152001,npc_wife_1,,,平凡的妻子,2
 152002,npc_oldman_1,,,平凡的老人,2
