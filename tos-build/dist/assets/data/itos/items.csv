@@ -1444,9 +1444,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645771,misc_earthTower30_boss,Obtainable from the Earth Tower Solmiki Area,33_item_ore_lapis_lazuli,,,,,,,,Organ Essence,0,0.0,0.0,FFTT,15,0.0
 645772,misc_earthTower35_boss,Obtainable from the Earth Tower Solmiki Area,33_item_ore_lapis_lazuli,,,,,,,,Plokste Essence,0,0.0,0.0,FFTT,15,0.0
 645773,misc_earthTower40_boss,Obtainable from the Earth Tower Solmiki Area,33_item_ore_lapis_lazuli,,,,,,,,Grim Reaper Essence,0,0.0,0.0,FFTT,15,0.0
-645774,misc_earthTower5_toll,You can start the Earth Tower Challenge from the 6th floor of the Lolopanther Area if you give it to Kupole Lhuta.,icon_item_earthtower5_toll,,,,,,,,Symbol of Pyroego,0,0.0,0.0,FFFF,15,0.0
-645775,misc_earthTower10_toll,You can start the Earth Tower Challenge from the 11th floor of the Lolopanther Area if you give it to Kupole Lhuta.,icon_item_earthtower10_toll,,,,,,,,Symbol of Gosarius,0,0.0,0.0,FFFF,15,0.0
-645776,misc_earthTower15_toll,You can start the Earth Tower Challenge from the 16th floor of the Lolopanther Area if you give it to Kupole Lhuta.,icon_item_earthtower15_toll,,,,,,,,Symbol of Turtai,0,0.0,0.0,FFFF,15,0.0
+645774,misc_earthTower5_toll,You can start the Earth Tower Challenge from the 6th floor of the Lolopanther Area if you give it to Kupole Ruta.,icon_item_earthtower5_toll,,,,,,,,Symbol of Pyroego,0,0.0,0.0,FFFF,15,0.0
+645775,misc_earthTower10_toll,You can start the Earth Tower Challenge from the 11th floor of the Lolopanther Area if you give it to Kupole Ruta.,icon_item_earthtower10_toll,,,,,,,,Symbol of Gosarius,0,0.0,0.0,FFFF,15,0.0
+645776,misc_earthTower15_toll,You can start the Earth Tower Challenge from the 16th floor of the Lolopanther Area if you give it to Kupole Ruta.,icon_item_earthtower15_toll,,,,,,,,Symbol of Turtai,0,0.0,0.0,FFFF,15,0.0
 645777,misc_earthTower20_toll,You can start the Earth Tower Challenge from the 1st floor of the Solmiki Area if you carry this symbol with you.,icon_item_earthtower20_toll,,,,,,,,Symbol of G'bb,0,0.0,0.0,FFFF,15,0.0
 645778,Premium_itemUpgradeStone_Weapon,A gem with the blessing of the goddesses.{nl}Can be used to enhance a weapon.,icon_item_transcendence_red,,,,,,,[9010],Goddesses' Blessed Gem: Weapon,0,0.0,0.0,TTTT,15,0.0
 645779,Premium_itemUpgradeStone_Armor,A gem with the blessing of the goddesses.{nl}Can be used to enhance a piece of armor.,icon_item_transcendence,,,,,,,[9011],Goddesses' Blessed Gem: Armor,0,0.0,0.0,TTTT,15,0.0
