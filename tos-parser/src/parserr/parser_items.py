@@ -28,16 +28,17 @@ class TOSItemGroup(TOSEnum):
     ICOR = 13
     MAGICAMULET = 14
     MATERIAL = 15
-    PASTEBAIT = 16
-    PETARMOR = 17
-    PETWEAPON = 18
-    PREMIUM = 19
-    QUEST = 20
-    RECIPE = 21
-    SEAL = 22
-    SUBWEAPON = 23
-    UNUSED = 24
-    WEAPON = 25
+    MISC = 16
+    PASTEBAIT = 17
+    PETARMOR = 18
+    PETWEAPON = 19
+    PREMIUM = 20
+    QUEST = 21
+    RECIPE = 22
+    SEAL = 23
+    SUBWEAPON = 24
+    UNUSED = 25
+    WEAPON = 26
 
     @staticmethod
     def value_of(string):
@@ -58,6 +59,7 @@ class TOSItemGroup(TOSEnum):
             'ICOR': TOSItemGroup.ICOR,
             'MAGICAMULET': TOSItemGroup.MAGICAMULET,
             'MATERIAL': TOSItemGroup.MATERIAL,
+            'MISC': TOSItemGroup.MISC,
             'PASTEBAIT': TOSItemGroup.PASTEBAIT,
             'PETARMOR': TOSItemGroup.PETARMOR,
             'PETWEAPON': TOSItemGroup.PETWEAPON,

@@ -343,6 +343,7 @@ export enum TOSItemType {
   ICOR = 'Icor',
   MAGICAMULET = 'Magic Amulet',
   MATERIAL = 'Material',
+  MISC = 'Miscellaneous',
   PASTEBAIT = 'Paste Bait',
   PETARMOR = 'Companion Armor',
   PETWEAPON = 'Companion Weapon',
