@@ -491,7 +491,8 @@ export const TOSMonsterTypeService = EnumServiceFactory(TOSMonsterType);
 export enum TOSSkillRequiredStanceCompanion {
   BOTH = 'Yes',
   NO = 'No',
-  YES = 'Exclusive'
+  SELF = 'Self',
+  YES = 'Exclusive',
 }
 export const TOSSkillRequiredStanceCompanionService = EnumServiceFactory(TOSSkillRequiredStanceCompanion);
 

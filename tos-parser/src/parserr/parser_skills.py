@@ -21,13 +21,15 @@ EFFECT_DEPRECATE = {
 class TOSRequiredStanceCompanion(TOSEnum):
     BOTH = 0
     NO = 1
-    YES = 2
+    SELF = 2
+    YES = 3
 
     @staticmethod
     def value_of(string):
         return {
             'BOTH': TOSRequiredStanceCompanion.BOTH,
             '': TOSRequiredStanceCompanion.NO,
+            'SELF': TOSRequiredStanceCompanion.SELF,
             'YES': TOSRequiredStanceCompanion.YES,
         }[string.upper()]
 
