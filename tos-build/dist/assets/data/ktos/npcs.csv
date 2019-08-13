@@ -877,6 +877,10 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 152078,velniasprison_warp_mini,,minimap_portal,공간이동 마법진(미니),2
 152079,npc_3cmlake_27_riddle_device,,,수반 시설,2
 152080,npc_3cmlake_27_bracken_leaves,,,수초,2
+152081,npc_Underaqueduct_Gimmick,,,머즈루스 마력 덩어리,2
+152082,npc_Underaqueduct_Pc_Life_1,,,PC 카운트1,2
+152083,npc_Underaqueduct_Pc_Life_2,,,PC 카운트2,2
+152084,npc_Underaqueduct_Skill_Gimmick,,,머즈루스 마력 수정,2
 153000,npc_matron_aquamarine,,,중년부인(아쿠아마린),2
 153001,npc_matron_blue,,,중년부인(블루),2
 153002,npc_matron_darkbrown,,,중년부인(다크브라운),2
@@ -1530,6 +1534,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157057,npc_junk_shop_3,,,[케도라 상단원]{nl}게랄다손,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,팀 배틀리그,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,수도사2 대장장이,2
+160000,h_GuildHousing_farmer_girl,,,농장 관리인,2
+160001,h_GuildHousing_farmer_boy,,,농장 관리인,2
+160002,h_GuildHousing_manager,,,길드 아지트 관리인(남),2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
 161002,npc_Teliavelis,,minimap_man_smith,대장장이 테리아베리스,2
