@@ -340,6 +340,7 @@ export enum TOSItemType {
   FISHINGROD = 'Fishing Rod',
   GEM = 'Gem',
   HELMET = 'Helmet',
+  HIDDENABILITY = 'Hidden Ability',
   ICOR = 'Icor',
   MAGICAMULET = 'Magic Amulet',
   MATERIAL = 'Material',
@@ -361,8 +362,10 @@ export const
     {
       options: [
         TOSItemType.DRUG,
+        TOSItemType.HIDDENABILITY,
         TOSItemType.EVENT,
         TOSItemType.MATERIAL,
+        TOSItemType.MISC,
         TOSItemType.PREMIUM,
         TOSItemType.QUEST,
       ]

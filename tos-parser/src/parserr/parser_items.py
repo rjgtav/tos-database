@@ -25,20 +25,21 @@ class TOSItemGroup(TOSEnum):
     FISHINGROD = 10
     GEM = 11
     HELMET = 12
-    ICOR = 13
-    MAGICAMULET = 14
-    MATERIAL = 15
-    MISC = 16
-    PASTEBAIT = 17
-    PETARMOR = 18
-    PETWEAPON = 19
-    PREMIUM = 20
-    QUEST = 21
-    RECIPE = 22
-    SEAL = 23
-    SUBWEAPON = 24
-    UNUSED = 25
-    WEAPON = 26
+    HIDDENABILITY = 13
+    ICOR = 14
+    MAGICAMULET = 15
+    MATERIAL = 16
+    MISC = 17
+    PASTEBAIT = 18
+    PETARMOR = 19
+    PETWEAPON = 20
+    PREMIUM = 21
+    QUEST = 22
+    RECIPE = 23
+    SEAL = 24
+    SUBWEAPON = 25
+    UNUSED = 26
+    WEAPON = 27
 
     @staticmethod
     def value_of(string):
@@ -56,6 +57,7 @@ class TOSItemGroup(TOSEnum):
             'FISHINGROD': TOSItemGroup.FISHINGROD,
             'GEM': TOSItemGroup.GEM,
             'HELMET': TOSItemGroup.HELMET,
+            'HIDDENABILITY': TOSItemGroup.HIDDENABILITY,
             'ICOR': TOSItemGroup.ICOR,
             'MAGICAMULET': TOSItemGroup.MAGICAMULET,
             'MATERIAL': TOSItemGroup.MATERIAL,
@@ -78,8 +80,10 @@ ITEM_GROUP_ITEM_WHITELIST = [
     TOSItemGroup.EVENT,
     TOSItemGroup.EXPORB,
     TOSItemGroup.FISHINGROD,
+    TOSItemGroup.HIDDENABILITY,
     TOSItemGroup.ICOR,
     TOSItemGroup.MATERIAL,
+    TOSItemGroup.MISC,
     TOSItemGroup.PASTEBAIT,
     TOSItemGroup.PREMIUM,
     TOSItemGroup.QUEST
