@@ -5261,10 +5261,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 721001,Domecover,美味しい料理が隠れていそうなフードカバーです。,icon_item_artefact_dome_cover,,,,,,,,フードカバー,20,1.0,0.0,FFFT,6,1.0
 721002,TOS_Ticket,ツリーオブセイヴァーの世界へ来たことを歓迎するプラカードです。,icon_item_artefact_ticket_tos,,,,,,,,TOSプラカード,20,1.0,0.0,FFFT,6,1.0
 721003,Decorative_knife,攻撃のための武器というよりも儀式用に作られたナイフです。,icon_item_artefact_decorative_knife,,,,,,,,儀式用ナイフ,20,1.0,0.0,TTTT,6,1.0
-721004,surffing_board,このボードを持っているだけでサーファーのような気分になれます。,icon_item_artefact_surfingboard,,,,,,,,サーフボード,20,1.0,0.0,TTFT,6,1.0
-721005,Juice_board,爽やかなブルーレモネードセットです。,icon_item_bunny_juice,,,,,,,,ブルーレモネードのおもちゃ,20,1.0,0.0,TTFT,6,1.0
-721006,Parfait,甘～いパフェセットです。,icon_item_bunny_parfait,,,,,,,,スイートなパフェのおもちゃ,20,1.0,0.0,TTFT,6,1.0
-721007,squirt,少しだけチクッとします。,icon_item_nurse_squirt,,,,,,,,チックン注射のおもちゃ,20,1.0,0.0,TTFT,6,1.0
+721004,surffing_board,このボードを持っているだけでサーファーのような気分になれます。{nl}リサイクルショップでメダルと交換できます。,icon_item_artefact_surfingboard,,,,,,,,サーフボード,20,1.0,0.0,TTFT,6,1.0
+721005,Juice_board,爽やかなブルーレモネードセットです。{nl}リサイクルショップでメダルと交換できます。,icon_item_bunny_juice,,,,,,,,ブルーレモネードのおもちゃ,20,1.0,0.0,TTFT,6,1.0
+721006,Parfait,甘～いパフェセットです。{nl}リサイクルショップでメダルと交換できます。,icon_item_bunny_parfait,,,,,,,,スイートなパフェのおもちゃ,20,1.0,0.0,TTFT,6,1.0
+721007,squirt,少しだけチクッとします。{nl}リサイクルショップでメダルと交換できます。,icon_item_nurse_squirt,,,,,,,,チックン注射のおもちゃ,20,1.0,0.0,TTFT,6,1.0
 721008,bloodpack,病院ごっこ用のおもちゃです。,icon_item_nurse_linger,,,,,,,,HP点滴のおもちゃ,20,1.0,0.0,TTFT,6,1.0
 721009,bamboo,細長い竹で作られた竹槍です。,icon_item_artefact_jukchang,,,,,,,,バンブージャベリン,20,1.0,0.0,TTFT,6,1.0
 721010,pumkin_lamp,大きなかぼちゃをくり抜いて作られているランタン。人気のない路地裏でゆらゆらと光っているものには近付かない方が身のためです。,icon_item_artefact_pumkin_lamp,,,,,,,,ジャックランタン,20,1.0,0.0,TTFT,6,1.0
