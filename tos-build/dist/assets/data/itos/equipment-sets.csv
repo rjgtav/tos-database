@@ -16,7 +16,6 @@ $ID,$ID_NAME,Bonus2,Bonus3,Bonus4,Bonus5,Bonus6,Bonus7,Link_Items,Name
 16,set_016,Dark Property Resistance {img green_up_arrow 16 16} 10,SPR {img green_up_arrow 16 16} 6,1% chance of recovering 200 SP for 5 seconds when attacked by a Devil-type enemy,,,,"[502157, 512157, 522157, 532157]",Legwyn Family's Cloth Armor Set
 17,set_017,Dark Property Resistance {img green_up_arrow 16 16} 10,SPR {img green_up_arrow 16 16} 6,1% chance of recovering 200 SP for 5 seconds when attacked by a Devil-type enemy,,,,"[502158, 512158, 522158, 532158]",Legwyn Family's Leather Armor Set
 18,set_018,Dark Property Resistance {img green_up_arrow 16 16} 10,SPR {img green_up_arrow 16 16} 6,1% chance of recovering 200 SP for 5 seconds when attacked by a Devil-type enemy,,,,"[502159, 512159, 522159, 532159]",Legwyn Family's Plate Armor Set
-19,set_019,Attack increases by {img green_up_arrow 16 16} 150% and evasion reduces by {img red_down_arrow 16 16} 188 when you attack an enemy from behind with Backstab,,,,,,"[183108, 113002]",Karacha Set
 20,set_020,DEX {img green_up_arrow 16 16} 6,,,,,,"[522187, 532187]",Velnia Monkey Set
 21,set_021,Magic Defense {img green_up_arrow 16 16} 5,Magic Defense {img green_up_arrow 16 16} 10,INT {img green_up_arrow 16 16} 15,,,,"[502188, 512188, 522188, 532188]",Elgos Set
 22,set_022,Physical Defense {img green_up_arrow 16 16} 5,Physical Defense {img green_up_arrow 16 16} 10,Evasion {img green_up_arrow 16 16} 15,,,,"[502189, 512189, 522189, 532189]",Ibre Set
@@ -60,3 +59,6 @@ $ID,$ID_NAME,Bonus2,Bonus3,Bonus4,Bonus5,Bonus6,Bonus7,Link_Items,Name
 63,set_063,,5% chance to activate Berserk on attack.{nl} {nl}Berserk{nl}Increases Critical Rate by 10% for 5 seconds (maximum increase of 200).,,,,,"[584118, 604118, 604118]",Abyss Irredian Set
 64,set_064,,3% chance to activate Cevisa - Protection when hit.{nl} {nl}Cevisa - Protection{nl}Damage received {img green_down_arrow 16 16}10%{nl}Movement Speed {img green_up_arrow 16 16}5{nl}(10-second duration),,,,,"[584119, 604119, 604119]",Cevisa Irredian Set
 67,set_067,'Tomb of the White Crow' provides a damage reduction of 10%,,,,,,"[10017, 633216]",Velcoffer Costume Set
+68,set_068,,"Enhancement: Magic Critical Attack +45 for every ENH (max. 2,100){nl} {nl}Transcendence: Magic Critical Attack +30 per stage of TRA",,,,,"[585005, 605005, 605005]",Carnas Magija Set
+69,set_069,,Enhancement: Healing +8 for every ENH (max. 400){nl} {nl}Transcendence: Healing +16 per stage of TRA,,,,,"[585006, 605006, 605006]",Carnas Zeisty Set
+70,set_070,,"Enhancement: Physical Critical Attack +45 for every ENH (max. 2,100){nl} {nl}Transcendence: Physical Critical Attack +30 per stage of TRA",,,,,"[585007, 605007, 605007]",Carnas Pyginis Set

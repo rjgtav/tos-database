@@ -150,8 +150,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20185,HiddenWall_Thanksgiving2,,,,2
 20186,HiddenWall_Thanksgiving3,,,,2
 20187,musicbox_popolion,,,Popolion Waterball Orgel,2
-20188,npc_sailor_f,,,Party Planner,2
-20189,npc_sailor_m,,,Bartender,2
+20188,npc_sailor_f,,minimap_event_1,Party Planner,2
+20189,npc_sailor_m,,minimap_event_1,Bartender,2
 40000,Obstacle_box,,,Box,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,Desk,2
@@ -627,6 +627,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150202,castle94_gate_opened,,,Castle Main Gate (open),2
 150203,Shadowmancer_seal_cage,,,Shadow Prison,2
 150204,HiddenWall_500_300_300,,,,2
+150205,npc_stockades_uphill,,,Stake Stockades,2
 151000,closing_device,,,Closing Device,2
 151001,spell_crystal_red,,,Crystal with magic,2
 151002,spell_crystal_gem_red,,,Jewel of Prominence,2
@@ -1469,6 +1470,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156164,npc_Tantaliser,,,Bound Tantalizer,2
 156165,maple_24_tree_young,,,Young Maple Leaf,2
 156166,HiddenWall_Vivid,,,,2
+156167,pvp_battle_shop,,minimap_erosion,Equipment Rental Shop,2
 157000,3cmlake_ruins,,,Lake Ruin,2
 157001,coral_tent_01,,,Cranto Tent,2
 157002,PCStatue,,,,2
