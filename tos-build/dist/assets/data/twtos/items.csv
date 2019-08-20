@@ -840,6 +840,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643042,Transcend_Scroll_3_Event_1905,提升裝備的超越數值至3階段。{nl}只有0~2階段超越道具可以使用，當點按3超越卷軸右鍵選擇要超越的道具時，會變更為3超越狀態。{nl}活動結束時統一刪除。 ,icon_item_transcendence_coupon,,,,,,,,[活動] 3超越卷軸,0,0.0,0.0,FFFT,6,1.0
 643043,Transcend_Scroll_5_Event_1905,提升裝備的超越數值至5階段。{nl}只有0~4階段超越道具可以使用，當點按5超越卷軸右鍵選擇要超越的道具時，會變更為5超越的狀態。{nl}活動結束時統一刪除。 ,icon_item_transcendence_coupon,,,,,,,,[活動] 5超越卷軸,0,0.0,0.0,FFFT,6,1.0
 643044,Transcend_Scroll_8_Event_1905,提升裝備的超越數值至8階段。{nl}只有0~7階段超越道具可以使用，當點按8超越卷軸右鍵選擇要超越的道具時，會變更為8超越的狀態。{nl}活動結束時統一刪除。 ,icon_item_transcendence_coupon,,,,,,,,[活動] 8超越卷軸,0,0.0,0.0,FFFT,6,1.0
+643045,Transcend_Scroll_10_PC,讓裝備的超越數值提升至10階。{nl}只有0~9階超越道具可以使用，右點擊10超越卷軸後，選擇要超越的道具，就可以變更成10超越的狀態。{nl}只能使用在Lv 400以下裝備的超越卷軸。,item_icon_transcend_scroll_10,,,,,,,,[POPOshop] Lv.400 10超越卷軸,0,0.0,0.0,TFFT,6,1.0
+643047,Transcend_Scroll_9_PC,讓裝備的超越數值提升至9階。{nl}只有0~8階超越道具可以使用，右點擊9超越卷軸後，選擇要超越的道具，就可以變更成9超越的狀態。{nl}只能使用在Lv 400以下裝備的超越卷軸。,item_icon_transcend_scroll_10,,,,,,,,[Lv.400] 9超越卷軸,0,0.0,0.0,FFFT,6,1.0
 645002,D_Bube_Mane,可以從長時間暴露於水晶的布貝身上獲得的黑暗魔石。,icon_item_evilenergy_piece,,,,,,,,布貝魔石,4,0.0,0.0,TTTT,22,0.0
 645024,leaf_hanaming,散發出甜蜜香味的花瓣，可以從粉紅小花怪身上獲得。,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,粉紅小花怪花瓣,1,0.0,0.0,TTTT,16,1.0
 645025,TreasureboxKey2,開啟寶箱 LV 2所使用的鑰匙,icon_item_key1,,,,,,,,LV2 寶箱鑰匙,0,0.0,0.0,FFTF,16,1.0
@@ -5241,6 +5243,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699010,Unique_Enchant_Jewel_Team,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,獨特附魔珠寶,10,0.0,0.0,FFFT,6,1.0
 699011,Legend_ExpPotion_2,蒐集戰鬥中所產生的氣息，可以將其儲存起來的試劑瓶，戰鬥開始前需要先激活。,icon_item_empty_partis,,,,,,,,帕莫卡試劑瓶,10,0.0,0.0,TFFT,9,5.0
 699012,Legend_ExpPotion_2_complete,蒐集戰鬥中所產生的氣息，可以將其儲存起來的試劑瓶，戰鬥開始前需要先激活。,icon_item_full_partis2,,,,,,,,帕莫卡試劑瓶,10,0.0,0.0,TFFT,9,10.0
+699013,PC_Rare_Enchant_Jewel,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,[POPOshop] 稀有附魔珠寶,10,0.0,0.0,FFFT,6,1.0
+699014,PC_Unique_Enchant_Jewel,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[POPOshop] 獨特附魔珠寶,10,0.0,0.0,FFFT,6,1.0
+699015,PC_Legend_Enchant_Jewel,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[POPOshop] 傳說附魔珠寶,10,0.0,0.0,FFFT,6,1.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,16,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,16,1.0
 700002,KQ_token_hethran_3,費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv3,2000,0.0,0.0,TTTT,16,1.0
@@ -5678,8 +5683,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 902151,Steam_SP_Potion_1Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion3,,,,,,,[400066],SP藥水(1天),0,20.0,86400.0,FFFT,6,3.0
 902152,Steam_SP_Potion_7Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion3,,,,,,,[400067],SP樂水(7天),0,20.0,604800.0,FFFT,6,3.0
 902153,Steam_Event_Carnival_Fire,收集慶典爆竹可以跟活動佈告欄交換各種道具。{nl}(使用時，10分內移動速度+2、物理攻擊力+50、魔法攻擊力+50。),icon_item_firework,,,,,,,,慶典爆竹,0,30.0,0.0,FFFT,6,0.0
+902161,Event_Steam_Tulip,將鬱金香送給NPC可以兌換獎勵。{nl}(使用鬱金香贈送名單可以查看NPC位置。),icon_item_misc_0533,,,,,,,,鬱金香,0,0.0,0.0,FFFT,8,0.0
+902162,Event_Steam_Tulip_List,使用時可以查看目前要贈送鬱金香的NPC位置。,icon_item_paper,,,,,,,,鬱金香贈送名單,0,0.0,0.0,FFFF,8,0.0
 902168,Event_TWN_3YEARS_PET_FOOD,讓卓柏卡布拉長大時所需要的飼料。{nl}到烈焰法師大師的研究室，找卓柏卡布拉領養NPC可以獲得使卓柏卡布拉長大的飼料。{nl}(活動結束時統一刪除。),icon_item_pork,,,,,,,,[活動] 卓柏卡布拉飼料,0,0.0,0.0,FFFT,8,0.0
 902169,Achieve_Event_Twn_3Years_Chupacabra,3週年活動沙漠卓柏卡布拉長大時所提供的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - 3週年好友卓柏卡布拉,0,0.0,0.0,FFFT,6,0.0
+902174,GLOBAL_EVENT_MISSION_TRY_PIECE,收集碎片後，可以選擇獲得活動：勝利 - 魔方內容物中的時裝或裝備道具。{nl} - 地點：佩迪米安建築物內部{nl} - NPC：勝利魔方碎片兌換小幫手{nl}(活動結束時統一刪除。),icon_item_1807_rank_star,,,,,,,,活動：勝利 - 魔方碎片,0,0.0,0.0,FFFT,8,0.0
+902175,GLOBAL_EVENT_MISSION_TRY_INFO,記載著活動：勝利副本使用資料的日誌。{nl} - 使用時，可以查看自己的活動：勝利副本資料。,icon_item_diary,,,,,,,,活動：勝利 - 記錄日誌,0,0.0,0.0,FFFF,8,0.0
+902178,GLOBAL_EVENT_MISSION_TRY_WARP_SCROLL,使用後，可以立即前往佩迪米安 - 建築物內部。,siaul_act3_confirmation,,,,,,,,活動：勝利 - 傳送卷軸,0,0.0,0.0,FFFF,8,0.0
 904000,EVENT_1802_MASTER_KEY1,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_1,,,,,,,,大師的考驗卷-初級,0,0.0,0.0,FFFT,16,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,從大師的訓練所得到的獎勵道具。{nl}收集5個以上可以跟大師的考驗活動小幫手交換成無限可能性的魔方。{nl}活動結束時道具統一刪除。,icon_item_gimmick_spcrystal,,,,,,,,微小可能性的碎片,0,0.0,0.0,FFFT,16,1.0
 904003,EVENT_1802_MASTER_KEY2,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_2,,,,,,,,大師的考驗卷-中級,0,0.0,0.0,FFFT,16,1.0
