@@ -150,8 +150,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20185,HiddenWall_Thanksgiving2,,,,2
 20186,HiddenWall_Thanksgiving3,,,,2
 20187,musicbox_popolion,,,ポポリオンウォーターボールオルゴール,2
-20188,npc_sailor_f,,,イベント受付,2
-20189,npc_sailor_m,,,飲食受付,2
+20188,npc_sailor_f,,minimap_event_1,イベント受付,2
+20189,npc_sailor_m,,minimap_event_1,飲食受付,2
 40000,Obstacle_box,,,箱,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,机,2
@@ -616,9 +616,18 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150181,star_stone_01_small_startower_sp,,,魔力残留物 (特殊),2
 150182,npc_schaffenstar_ignas,,,シャッフェンスター団長イグナス,2
 150183,npc_sage_female_1,,,セージ　女1,2
+150184,shadow_raid_device_on,,,電灯装置(ON),2
+150185,shadow_raid_device_off,,,電灯装置(OFF),2
+150186,shadow_raid_stone_on,,,シャドウマンサーマスターの封印石(ON),2
+150187,shadow_raid_stone_off,,,シャドウマンサーマスターの封印石(OFF),2
+150188,shadow_raid_orb,,,封印のオーブ,2
+150199,shadow_raid_door,,,封印の門,2
 150200,npc_ghost_soldier_castle,,,幽霊兵士,2
 150201,castle94_gate,,,キャッスル正門,2
 150202,castle94_gate_opened,,,キャッスル正門(開く),2
+150203,Shadowmancer_seal_cage,,,影監獄,2
+150204,HiddenWall_500_300_300,,,,2
+150205,npc_stockades_uphill,,,ステイクスタッケイド,2
 151000,closing_device,,,閉鎖装置,2
 151001,spell_crystal_red,,,魔力が宿った結晶,2
 151002,spell_crystal_gem_red,,,紅炎の宝石,2
@@ -1460,6 +1469,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156164,npc_Tantaliser,,,拘束されたタンタイザー,2
 156165,maple_24_tree_young,,,紅葉の幼木,2
 156166,HiddenWall_Vivid,,,,2
+156167,pvp_battle_shop,,minimap_erosion,装備レンタル商店,2
 157000,3cmlake_ruins,,,湖の残骸,2
 157001,coral_tent_01,,,クラントテント,2
 157002,PCStatue,,,,2

@@ -133,6 +133,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644147,card_FrosterLord,[スロット装着効果]攻撃時、[★/2]%の確率で相手を4秒間凍傷状態{nl}(ボスには適用されません。),icon_item_card_atk,149_boss_frosterlord,,,,,800076,,,,0,1,フロスターロッドカード,500,,,,0.0,0.0,TTTT,3,0,1.0
 644148,card_varleking,[スロット装着効果]治癒力+[★*5],icon_item_card_def,144_boss_varleking,,"[642928, 642944]",,,57866,,,,2,0,バロルキングカード,500,,,,0.0,0.0,TTTT,3,1,1.0
 644149,card_payawoota,[スロット装着効果] 全ステータス+[★* 0.4],icon_item_card_stat,001_npc_payawoota,,,,,,,,,,,パヤウタカード,500,,,,0.0,0.0,TTTT,3,4,1.0
+644150,card_skiaclips,[スロット装着効果]知能、体力+ [★],icon_item_card_stat,156_boss_skiaclipse,,[642948],,,57866,,,,2,0,スキアクリプスカード,500,,,,0.0,0.0,TTTT,3,4,1.0
 644900,Legend_card_Marnoks,[スロット装着効果] 最小クリティカル率{nl}[★*2]%アップ,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔将マルノックスカード,0,,,,0.0,0.0,TTTT,3,2,1.0
 644901,Legend_card_Blud,[スロット装着効果] PVP時に受けるダメージ{nl}[★*3]%ダウン,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔将ブルッドカード,0,,,,0.0,0.0,TTTT,3,2,1.0
 644902,Legend_card_Zawra,[スロット装着効果] 物理防御力[★*10]%アップ,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔将ジャウラカード,0,,,,0.0,0.0,TTTT,3,2,1.0
@@ -156,6 +157,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644920,Legend_card_Lecifer_JP,[スロット装着効果] 移動速度[★]アップ,icon_item_card_legend,030_boss_lecifer,,,,,800043,,,,0,1,魔将レキシファーカード,0,,,,0.0,0.0,FFFT,3,2,1.0
 644921,Legend_card_Mirtis_JP,[スロット装着効果]攻撃時、属性の相性によるペナルティ[★ * 10]%ダウン ,icon_item_card_legend,007_boss_mirtis,,,,,800048,,,,0,1,魔将ミルティスカード,0,,,,0.0,0.0,FFFT,3,2,1.0
 644922,Legend_card_FrosterLord_JP,[スロット装着効果] 召喚獣の最小攻撃力と最大攻撃力の差が[★ * 10]%ダウン{nl}(10LVを達成すると召喚獣の最小攻撃力が最大攻撃力と同じ数値に変更されます。),icon_item_card_legend,149_boss_frosterlord,,,,,800076,,,,0,1,魔将フロスターロッドカード,0,,,,0.0,0.0,FFFT,3,2,1.0
+644923,Legendcard_skiaclips,[スロット装着効果]昆虫型対象攻撃力750 * [★],icon_item_card_legend,156_boss_skiaclipse,,[642949],,,57866,,,,2,0,解放されたスキアクリプスカード,0,,,,0.0,0.0,TTTT,3,2,1.0
 650001,legend_reinforce_card_lv1,レジェンドカード強化に使用できる強化用カードです。LV4まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,,,破れたレジェンド強化用カード,0,,,,0.0,0.0,TTTT,3,3,1.0
 650002,legend_reinforce_card_lv2,レジェンドカード強化に使用できる強化用カードです。LV6まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,古びたレジェンド強化用カード,0,,,,0.0,0.0,TTTT,3,3,1.0
 650003,legend_reinforce_card_lv3,レジェンドカード強化に使用できる強化用カードです。LV8まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,,,レジェンド強化用カード,0,,,,0.0,0.0,TTTT,3,3,1.0
