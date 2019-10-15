@@ -1,8 +1,8 @@
 $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Materials,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Link_Target,Name,Price,Tradability,Type
-1001,R_timber_01,icon_item_recipe_misc1,,,,,"[{""Item"": 645238, ""Quantity"": 3}]",,,,645242,Recipe - Oak Lumber,10,TTTT,23
-1002,R_timber_02,icon_item_recipe_misc1,,,,,"[{""Item"": 645239, ""Quantity"": 3}]",,,,645243,Recipe - Ash Lumber,10,TTTT,23
-1003,R_timber_03,icon_item_recipe_misc1,,,,,"[{""Item"": 645240, ""Quantity"": 3}]",,,,645244,Recipe - Pine Lumber,10,TTTT,23
-1004,R_timber_04,icon_item_recipe_misc1,,,,,"[{""Item"": 645241, ""Quantity"": 3}]",,,,645245,Recipe - Cedar Lumber,10,TTTT,23
+1001,R_timber_01,icon_item_recipe_misc1,,,,,"[{""Item"": 1001, ""Quantity"": 1}, {""Item"": 645238, ""Quantity"": 3}]",,[1001],,645242,Recipe - Oak Lumber,10,TTTT,23
+1002,R_timber_02,icon_item_recipe_misc1,,,,,"[{""Item"": 1002, ""Quantity"": 1}, {""Item"": 645239, ""Quantity"": 3}]",,[1002],,645243,Recipe - Ash Lumber,10,TTTT,23
+1003,R_timber_03,icon_item_recipe_misc1,,,,,"[{""Item"": 1003, ""Quantity"": 1}, {""Item"": 645240, ""Quantity"": 3}]",,[1003],,645244,Recipe - Pine Lumber,10,TTTT,23
+1004,R_timber_04,icon_item_recipe_misc1,,,,,"[{""Item"": 1004, ""Quantity"": 1}, {""Item"": 645241, ""Quantity"": 3}]",,[1004],,645245,Recipe - Cedar Lumber,10,TTTT,23
 1010,R_drakeResc,icon_item_recipe_misc1,,,,,"[{""Item"": 1010, ""Quantity"": 1}, {""Item"": 645216, ""Quantity"": 300}]",,[1010],,645305,Recipe - Drake Epaulet,10,FFFF,23
 2001,R_rsc_2_1,icon_item_recipe_misc1,,,,,"[{""Item"": 2001, ""Quantity"": 1}, {""Item"": 645024, ""Quantity"": 5}, {""Item"": 645352, ""Quantity"": 2}]",,[2001],,645495,Recipe - White Mucus,10,TTTT,23
 2002,R_rsc_2_2,icon_item_recipe_misc1,,,,,"[{""Item"": 2002, ""Quantity"": 1}, {""Item"": 645131, ""Quantity"": 4}]",,[2002],,645496,Recipe - Florr,10,TTTT,23
@@ -931,7 +931,7 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Li
 35092,R_Hat_628104,icon_item_helm_misc1,,,,,"[{""Item"": 35092, ""Quantity"": 1}, {""Item"": 645392, ""Quantity"": 117}]",,[35092],,628104,Recipe - Winter Hat,0,TTTT,23
 35095,R_Hat_628107,icon_item_helm_misc1,,,,,"[{""Item"": 35095, ""Quantity"": 1}, {""Item"": 645118, ""Quantity"": 124}]",,[35095],,628107,Recipe - Boater,0,TTTT,23
 35097,R_Hat_628109,icon_item_helm_misc1,,,,,"[{""Item"": 35097, ""Quantity"": 1}, {""Item"": 645164, ""Quantity"": 21}, {""Item"": 645269, ""Quantity"": 5}]",,[35097],,628109,Recipe - Noble Hat,0,TTTT,23
-35099,R_Hat_628131,icon_item_helm_misc1,,,,,"[{""Item"": 35099, ""Quantity"": 1}, {""Item"": 645663, ""Quantity"": 25}, {""Item"": 645579, ""Quantity"": 5}, {""Item"": 645650, ""Quantity"": 14}]",,[35099],,628131,Recipe - Ritual Coffin,0,TTTT,23
+35099,R_Hat_628131,icon_item_helm_misc1,,,,,"[{""Item"": 35099, ""Quantity"": 1}, {""Item"": 645579, ""Quantity"": 5}, {""Item"": 645650, ""Quantity"": 14}]",,[35099],,628131,Recipe - Ritual Headdress,0,TTTT,23
 35100,R_Hat_628124,icon_item_helm_misc1,,,,,"[{""Item"": 35100, ""Quantity"": 1}, {""Item"": 645482, ""Quantity"": 11}, {""Item"": 645645, ""Quantity"": 16}, {""Item"": 645648, ""Quantity"": 5}]",,[35100],,628124,Recipe - Canine Head Decoration,0,TTTT,23
 35101,R_Hat_628116,icon_item_helm_misc1,,,,,"[{""Item"": 35101, ""Quantity"": 1}, {""Item"": 645287, ""Quantity"": 2}, {""Item"": 645293, ""Quantity"": 3}]",,[35101],,628116,Recipe - Dignity Miter,0,TTTT,23
 35102,R_Hat_628117,icon_item_helm_misc1,,,,,"[{""Item"": 35102, ""Quantity"": 1}, {""Item"": 645287, ""Quantity"": 2}, {""Item"": 645193, ""Quantity"": 5}]",,[35102],,628117,Recipe - Prestige Miter,0,TTTT,23

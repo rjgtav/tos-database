@@ -67,6 +67,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20084,HiddenObbBox_Photowall_Chess2,,,,2
 20085,HiddenObbBox_Photowall_Chess3,,,,2
 20086,HiddenObbBox_Photowall_Chess4,,,,2
+20087,HiddenObbBox_photowall_chef1,,,,2
+20088,HiddenObbBox_photowall_chef2,,,,2
 20100,npc_combat_transport_section_2_sit,,,Merchant 2 Sit,2
 20101,HiddenTrigger5,,,　,2
 20102,npc_combat_transport_section_1,,,Merchant 1,2
