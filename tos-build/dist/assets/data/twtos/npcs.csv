@@ -150,8 +150,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20185,HiddenWall_Thanksgiving2,,,,2
 20186,HiddenWall_Thanksgiving3,,,,2
 20187,musicbox_popolion,,,波波小獅王水球音樂盒,2
-20188,npc_sailor_f,,,玩具商人,2
-20189,npc_sailor_m,,,小吃商人,2
+20188,npc_sailor_f,,minimap_event_1,玩具商人,2
+20189,npc_sailor_m,,minimap_event_1,小吃商人,2
 40000,Obstacle_box,,,箱子,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,書桌,2
@@ -627,6 +627,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150202,castle94_gate_opened,,,城堡正門(開啟),2
 150203,Shadowmancer_seal_cage,,,闇影監獄,2
 150204,HiddenWall_500_300_300,,,,2
+150205,npc_stockades_uphill,,,柵欄,2
 151000,closing_device,,,封鎖裝置,2
 151001,spell_crystal_red,,,凝結魔力的結晶,2
 151002,spell_crystal_gem_red,,,紅焰的寶石,2
@@ -1469,6 +1470,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156164,npc_Tantaliser,,,複束縛的坦達伊秋,2
 156165,maple_24_tree_young,,,小楓樹,2
 156166,HiddenWall_Vivid,,,,2
+156167,pvp_battle_shop,,minimap_erosion,裝備租賃商店,2
 157000,3cmlake_ruins,,,湖水的殘物,2
 157001,coral_tent_01,,,克蘭托帳篷,2
 157002,PCStatue,,,,2
