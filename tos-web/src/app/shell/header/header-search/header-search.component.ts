@@ -44,7 +44,7 @@ export class HeaderSearchComponent implements OnDestroy, OnInit {
   tooltip: TOSEntity;
 
   input$: Observable<any>;
-  @ViewChild('input') input: ElementRef;
+  @ViewChild('input', {static: true}) input: ElementRef;
 
   subscriptionInput: Subscription;
   subscriptionLoad: Subscription;

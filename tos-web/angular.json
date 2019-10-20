@@ -90,7 +90,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-builders/dev-server:generic",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "web:build",
             "proxyConfig": "proxy.conf.json"

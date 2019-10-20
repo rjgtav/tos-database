@@ -2,10 +2,10 @@
   <input class="form-control" type="number" placeholder="Min"
          [max]="filter?.valueMax" [min]="filter?.valueMin"
          [ngModel]="filter?.get$Min()" (ngModelChange)="set$Min($event)"
-         (mousewheel)="setDelta$Min($event)" />
+         (wheel)="setDelta$Min($event)" />
   <span>&nbsp;-&nbsp;</span>
   <input class="form-control" type="number" placeholder="Max"
          [max]="filter?.valueMax" [min]="filter?.valueMin"
          [ngModel]="filter?.get$Max()" (ngModelChange)="set$Max($event)"
-         (mousewheel)="setDelta$Max($event)" />
+         (wheel)="setDelta$Max($event)" />
 </div>

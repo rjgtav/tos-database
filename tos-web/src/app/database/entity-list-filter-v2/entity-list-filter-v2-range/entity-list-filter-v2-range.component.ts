@@ -21,11 +21,11 @@ export class EntityListFilterV2RangeComponent {
   get filter() { return this.parent.filter }
   get filterEmitter() { return this.parent.filterChange }
 
-  setDelta$Max(event: MouseWheelEvent) { this.set$Max(this.filter.get$Max() + this.setDelta(event)) }
-  setDelta$Min(event: MouseWheelEvent) { this.set$Min(this.filter.get$Min() + this.setDelta(event)) }
-  private setDelta(event: MouseWheelEvent) {
+  setDelta$Max(event: WheelEvent) { this.set$Max(this.filter.get$Max() + this.setDelta(event)) }
+  setDelta$Min(event: WheelEvent) { this.set$Min(this.filter.get$Min() + this.setDelta(event)) }
+  private setDelta(event: WheelEvent) {
     event.preventDefault();
-    return event.wheelDeltaY > 0 ? 1 : -1;
+    return event.deltaY > 0 ? 1 : -1;
   }
 
   set$Max(value: number) {

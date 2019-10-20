@@ -1,3 +1,9 @@
 /dist
 /node_modules
 /www/assets/region/**/ui
+/www/main.*.js
+/www/polyfills.*.js
+/www/polyfills-es5.*.js
+/www/runtime.*.js
+/www/scripts.*.js
+/www/styles.*.css

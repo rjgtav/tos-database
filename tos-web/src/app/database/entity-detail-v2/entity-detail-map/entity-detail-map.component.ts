@@ -33,7 +33,7 @@ export class EntityDetailMapComponent extends EntityDetailComponent implements O
 
   filter: boolean = false;
 
-  @ViewChild('mapElement')    mapElement: ElementRef;
+  @ViewChild('mapElement', {static: false})    mapElement: ElementRef;
                               mapHeight: number = 0;
                               mapWidth: number = 0;
                               mapScale: number = MAP_SCALE_MIN;
@@ -54,7 +54,7 @@ export class EntityDetailMapComponent extends EntityDetailComponent implements O
     this.onMapMouseMove = this.onMapMouseMove.bind(this);
     this.onMapMouseUp = this.onMapMouseUp.bind(this);
   }
-  
+
   get mapStars() {
     let stars = this.map && this.map.Stars || 0;
     let starsList = [];

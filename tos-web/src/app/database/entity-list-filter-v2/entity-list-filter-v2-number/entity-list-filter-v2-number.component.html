@@ -1,4 +1,4 @@
 <input class="form-control" type="number"
        [min]="filter?.valueMin" [max]="filter?.valueMax"
        [ngModel]="filter?.get()" (ngModelChange)="set($event)"
-       (mousewheel)="setDelta($event)" />
+       (wheel)="setDelta($event)" />

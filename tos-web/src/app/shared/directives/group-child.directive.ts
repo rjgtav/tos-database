@@ -1,7 +1,6 @@
-import {Directive, ElementRef, Input, OnDestroy} from '@angular/core';
+import {ElementRef, Input, OnDestroy} from '@angular/core';
 import {ControlValueAccessor} from "@angular/forms";
 
-@Directive()
 export abstract class TOSGroupDirective<C extends TOSGroupChildDirective<C, V>, V> implements ControlValueAccessor {
 
   private _children: Set<C> = new Set<C>();
@@ -41,7 +40,6 @@ export abstract class TOSGroupDirective<C extends TOSGroupChildDirective<C, V>, 
 
 }
 
-@Directive()
 export abstract class TOSGroupChildDirective<C, V> implements OnDestroy {
 
   private _disabled: boolean;

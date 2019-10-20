@@ -76,8 +76,8 @@ import 'zone.js/dist/zone'; // Included with Angular CLI.
 //import 'core-js/es6/array';
 //import 'core-js/es6/object';
 //import 'core-js/es6/promise';
-import 'core-js/es7/array';
-import 'core-js/es7/object';
+//import 'core-js/es7/array';
+//import 'core-js/es7/object';
 
 // https://github.com/angular/angular/issues/23428 -sigh-
 //(window as any)['Zone'] = { current: { get: function() {} } };

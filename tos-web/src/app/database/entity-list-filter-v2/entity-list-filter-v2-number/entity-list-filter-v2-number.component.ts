@@ -25,11 +25,11 @@ export class EntityListFilterV2NumberComponent {
     this.filter && this.filter.set(value);
     this.filterEmitter.emit(this.filter);
   }
-  setDelta(event: MouseWheelEvent) {
+  setDelta(event: WheelEvent) {
     event.preventDefault();
 
     let value = this.filter && this.filter.get() || 0;
-        value += event.wheelDeltaY > 0 ? 1 : -1;
+        value += event.deltaY > 0 ? 1 : -1;
 
     this.set(value);
   }

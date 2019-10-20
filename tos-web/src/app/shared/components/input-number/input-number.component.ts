@@ -27,7 +27,7 @@ export class InputNumberComponent implements OnChanges {
   @Input() label: string;
   @Input() labelMax: number;
 
-  @ViewChild('keyboard')
+  @ViewChild('keyboard', {static: false})
   keyboard: ElementRef;
   keyboardOpen: boolean;
 
