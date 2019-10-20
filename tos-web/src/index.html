@@ -15,14 +15,23 @@
   <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
   <!-- Theme -->
-  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
-
-  <!-- Show the selected Theme right from the start (1/2) -->
+  <link href='assets/themes/light.css' rel='stylesheet' />
+  <link href='assets/themes/dark.css' rel='stylesheet' />
   <script type="application/javascript">
-    let theme = +localStorage.getItem('theme') || 2;
-    let themeFile = theme === 1 ? 'darkly' : 'flatly';
-    let element = document.getElementById('bootstrap-theme');
-        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+      function getTheme() {
+          return localStorage.getItem('theme') || 'light';
+      }
+      function setTheme(theme) {
+          localStorage.setItem('theme', theme);
+          document.head
+              .querySelectorAll('link[rel="stylesheet"]')
+              .forEach(value => {
+                  let disabled = value.getAttribute('href').includes('/themes/') && !value.getAttribute('href').endsWith(theme + '.css');
+                      disabled ? value.setAttribute('disabled', 'true') : value.removeAttribute('disabled');
+              });
+      }
+
+      setTheme(getTheme());
   </script>
 
   <!-- Trigger browser 'Translate' button -->
@@ -35,25 +44,6 @@
     document
       .getElementsByTagName('html')[0]
       .setAttribute('lang', lang);
-  </script>
-
-  <!-- Patreon & Regions -->
-  <script type="application/json" id="tos-patreon">
-    {
-      "100": ["Aaaaaa 11111","Aaaaaa 222222","Aaaaaa 333333","Aaaaaa 444444"],
-      "500": ["Aaaaaa 555555","Aaaaaa 666666","Aaaaaa 777777"],
-      "1000": ["Aaaaaa 888888","Aaaaaa 999999"],
-      "2000": ["Aaaaaa 000000"]
-    }
-  </script>
-  <script type="application/json" id="tos-region">
-    {
-      "iTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
-      "jTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
-      "kTEST": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
-      "kTOS": {"rebuild": true, "version": "patch_XXXXXX_release_YYYYYY"},
-      "twTOS": {"rebuild": false, "version": "patch_XXXXXX_release_YYYYYY"}
-    }
   </script>
 
   <!-- Google Tag Manager -->
@@ -70,12 +60,22 @@
                     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Show the selected Theme right from the start (2/2) -->
+  <!-- Theme (temporary) -->
   <script type="application/javascript">
-    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
-    document.body.style.color = theme === 1 ? '#fff' : '#212529';
-    document.body.style.margin = '0';
-    document.body.onload = () => document.body.setAttribute('style', '');
+      let theme = getTheme();
+      let background = {
+          'dark': '#222',
+          'light': 'white',
+      };
+      let color = {
+          'dark': 'white',
+          'light': '#212529',
+      };
+
+      document.body.style.backgroundColor = background[theme];
+      document.body.style.color = color[theme];
+      document.body.style.margin = '0';
+      document.body.onload = () => document.body.setAttribute('style', '');
   </script>
 
   <app-root>

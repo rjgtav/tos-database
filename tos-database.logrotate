@@ -1,4 +1,4 @@
-/home/ubuntu/tos-database/tos-deploy/logs/deploy.log {
+/home/ubuntu/tos-database/tos-build/logs/deploy.log {
     daily
     missingok
     rotate 7

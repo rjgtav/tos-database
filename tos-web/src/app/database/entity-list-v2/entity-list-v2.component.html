@@ -1,0 +1,48 @@
+<div class="row">
+  <!-- Title -->
+  <div class="col-3 align-items-center">
+    <h2 class="mb-0">Armor</h2>
+  </div>
+
+  <div class="col d-flex align-items-center justify-content-center" *ngIf="list?.filterHeader">
+    <tos-entity-list-filter-v2 [filter]="list.filterHeader" (filterChange)="onFilterChange()"></tos-entity-list-filter-v2>
+  </div>
+
+  <div class="col-3 d-flex align-items-center justify-content-end">
+    <!-- Spinner -->
+    <div class="spinner-border spinner-border-sm text-info"
+         [style.opacity]="isChanging ? 1 : 0">&nbsp;&nbsp;&nbsp;</div>
+
+    <!-- Search -->
+    <div class="flex-grow-1 ml-2 mr-2">
+      <input class="form-control" type="text"
+             [ngModel]="list?.page.search"
+             (ngModelChange)="onSearchChange($event)" />
+    </div>
+
+    <!-- Filter -->
+    <button class="btn" [ngClass]="{ 'btn-danger': isFilter, 'btn-primary': !isFilter }"
+            (click)="toggleFilter()"><fa-icon [icon]="faFilter"></fa-icon></button>
+  </div>
+</div>
+
+<!-- Filter -->
+<div *ngIf="isFilter" class="mt-1 row">
+  <div *ngFor="let filter of list?.filter; trackBy: trackByIndex" class="col-2 d-flex flex-column mb-1">
+    <tos-entity-list-filter-v2 [filter]="filter" (filterChange)="onFilterChange()"></tos-entity-list-filter-v2>
+  </div>
+</div>
+
+<div class="card mt-3 shadow">
+  <div class="card-body">
+    <tos-entity-table-v2  [columns]="list?.columns"
+                          [content]="list?.page.content"
+                          [page]="list?.page.page"
+                          [pageSize]="list?.page.pageSize"
+                          [pageTotal]="list?.page.pageTotal"
+                          (pageChange)="onPageChange($event)"
+                          [sort]="list?.page.sort"
+                          (sortChange)="onSortChange($event)"
+    ></tos-entity-table-v2>
+  </div>
+</div>

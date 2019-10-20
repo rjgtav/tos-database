@@ -1,4 +1,5 @@
-import {EventEmitter, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
+import {ReplaySubject} from "rxjs";
 
 const KEY_THEME = 'theme';
 
@@ -7,36 +8,28 @@ const KEY_THEME = 'theme';
 })
 export class ThemeService {
 
+  private change: ReplaySubject<Theme> = new ReplaySubject(1);
   private style: Element;
-  private theme: Theme;
-  private themeChange: EventEmitter<Theme> = new EventEmitter();
 
   constructor() {
     this.style = document.getElementById('bootstrap-theme');
-    this.set((+localStorage.getItem(KEY_THEME) as Theme) || Theme.LIGHT);
+    this.set(localStorage.getItem(KEY_THEME) as Theme);
   }
 
-  is(theme: Theme) { return this.theme == theme }
-  subscribe(handler: (theme: Theme) => void) { handler(this.theme); return this.themeChange.subscribe(handler); }
-  toggle() { this.set(this.theme == Theme.LIGHT ? Theme.DARK : Theme.LIGHT) }
+  get change$() { return this.change.asObservable() }
 
-  private set(theme: Theme) {
-    let href: string = this.style.getAttribute('href');
+  is(theme: Theme) { return this.get() == theme }
+  toggle() { this.set(this.get() == Theme.LIGHT ? Theme.DARK : Theme.LIGHT) }
 
-    if (theme == Theme.LIGHT) href = 'assets/themes/flatly.min.css';
-    if (theme == Theme.DARK)  href = 'assets/themes/darkly.min.css';
-
-    this.theme = theme;
-    this.themeChange.emit(this.theme);
-    this.style.setAttribute('href', href);
-
-    localStorage.setItem(KEY_THEME, theme + '');
+  private get() { return window['getTheme']() as Theme }
+  private set(theme: Theme ) {
+    window['setTheme'](theme);
+    this.change.next(theme);
   }
 
 }
 
 export enum Theme {
-  UNKNOWN, // Workaround due to 0 being considered false
-  DARK,
-  LIGHT
+  DARK = 'dark',
+  LIGHT = 'light',
 }

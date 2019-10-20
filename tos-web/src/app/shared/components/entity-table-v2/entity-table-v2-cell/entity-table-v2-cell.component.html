@@ -1,0 +1,10 @@
+<div *ngIf="isLoading" class="position-absolute d-flex align-items-center justify-content-center h-100 w-100" style="left: 0; top: 0">
+  <span class="spinner-border spinner-border-sm text-info"></span>
+</div>
+
+<div *ngIf="!isLoading" class="position-relative">
+  <tos-entity-table-v2-cell-icon *ngIf="isCellIcon" [cell]="cell" [content]="content"></tos-entity-table-v2-cell-icon>
+  <tos-entity-table-v2-cell-icon-grade *ngIf="isCellIconGrade" [cell]="cell" [content]="content"></tos-entity-table-v2-cell-icon-grade>
+  <tos-entity-table-v2-cell-text *ngIf="isCellText" [cell]="cell" [content]="content"></tos-entity-table-v2-cell-text>
+  <tos-entity-table-v2-cell-text-date *ngIf="isCellTextDate" [cell]="cell" [content]="content"></tos-entity-table-v2-cell-text-date>
+</div>

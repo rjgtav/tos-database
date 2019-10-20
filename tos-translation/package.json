@@ -1,0 +1,22 @@
+{
+  "name": "tos-translations",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "start": "node dist/tos-translation/src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.11.1",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "console-stamp": "^0.2.9",
+    "fast-glob": "^3.1.0",
+    "xml2js": "^0.4.22"
+  }
+}

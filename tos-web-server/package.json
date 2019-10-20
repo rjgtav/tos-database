@@ -1,0 +1,29 @@
+{
+  "name": "tos-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "main": "tsc && node dist/tos-web-server/src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "csvtojson": "^2.0.8",
+    "express": "^4.16.4",
+    "glob": "^7.1.4",
+    "papaparse": "^4.6.3",
+    "pg": "^7.12.0",
+    "uninstall": "0.0.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.6.8",
+    "@types/pg": "^7.4.14",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}

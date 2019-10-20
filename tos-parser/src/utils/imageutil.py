@@ -1,3 +1,5 @@
+import os
+
 from PIL import Image
 
 
@@ -10,6 +12,14 @@ def optimize(path, mode, rect, size):
     image = image.crop((rect[0], rect[1], rect[0] + rect[2], rect[1] + rect[3])) if (rect[2], rect[3]) != image.size else image
     image = image.resize((size[0], size[1]), Image.ANTIALIAS) if size < image.size else image
     image = image.save(path, format, optimize=True, quality=quality)
+
+
+def png(path):
+    image = Image.open(path)
+    image = image.convert('RGBA') if image.mode != 'RGBA' else image
+    image = image.save(path[:path.rfind('.')] + '.png', 'PNG', optimize=True)
+
+    os.remove(path)
 
 
 # https://stackoverflow.com/a/6483549

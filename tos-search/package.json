@@ -2,18 +2,25 @@
   "name": "tos-search",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
   "scripts": {
-    "main": "node src/index.js",
-    "main-debug": "node %NODE_DEBUG_OPTION% src/index.js"
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "start": "node dist/tos-search/src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "console-stamp": "^0.2.7",
-    "lunr": "^2.3.4",
-    "lunr-languages": "^1.0.0",
-    "open-korean-text-node": "^2.2.0",
-    "papaparse": "^4.6.1"
+    "fast-glob": "^3.0.4",
+    "fast-xml-parser": "^3.12.20",
+    "flexsearch": "github:GriFlo/flexsearch",
+    "pg": "^7.12.0",
+    "xml2js": "^0.4.22"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "rimraf": "^3.0.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
   }
 }

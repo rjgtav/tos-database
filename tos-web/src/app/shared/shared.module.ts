@@ -1,9 +1,8 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {CommonModule, DecimalPipe, PercentPipe} from '@angular/common';
+import {AsyncPipe, CommonModule, DecimalPipe, PercentPipe} from '@angular/common';
 import {SortDirective, SortGroupDirective} from './directives/sort.directive';
 import {FilterDirective, FilterGroupDirective} from "./directives/filter.directive";
 import {TimePipe} from './directives/time.pipe';
-import {TOSItemResolver} from "./domain/tos/item/tos-item.resolver";
 import {TOSEquipmentResolver} from "./domain/tos/item/equipment/tos-equipment.resolver";
 import {TOSBookResolver} from "./domain/tos/item/book/tos-book.resolver";
 import {TOSCollectionResolver} from "./domain/tos/item/collection/tos-collection.resolver";
@@ -52,20 +51,30 @@ import {TableCellLinkPipe} from "./components/entity-table/pipes/table-cell-link
 import {TableCellBadgePipe} from "./components/entity-table/pipes/table-cell-badge.pipe";
 import {TOSDomainRepository} from "./domain/tos/tos-domain.repository";
 import {SEOService} from "./service/seo.service";
-import {SWService} from "./service/sw.service";
+import {InstallService} from "./service/install.service";
 import {AnalyticsService} from "./service/analytics.service";
 import {TOSMapResolver} from "./domain/tos/map/tos-map.resolver";
 import {CssMaxHeightDirective} from './directives/css-max-height.directive';
 import {TOSNPCResolver} from "./domain/tos/monster/tos-npc.resolver";
+import {TOSItemResolverV1} from "./domain/tos/item/tos-item.resolver";
+import {EntityTableV2Component} from './components/entity-table-v2/entity-table-v2.component';
+import {EntityTableV2CellComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell.component';
+import {TOSImageComponent} from './components/tos-image/tos-image.component';
+import {EntityTableV2CellTextComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-text/entity-table-v2-cell-text.component';
+import {EntityTableV2CellIconComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-icon/entity-table-v2-cell-icon.component';
+import {EntityTableV2CellIconGradeComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-icon-grade/entity-table-v2-cell-icon-grade.component';
+import {EntityTableV2CellTextDateComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-text-date/entity-table-v2-cell-text-date.component';
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   imports: [
     CommonModule,
     ClickOutsideModule,
     FontAwesomeModule,
-    NgbModule,
     FormsModule,
+    NgbModule,
     RouterModule,
+    TranslateModule,
   ],
   declarations: [
     // Components
@@ -88,8 +97,11 @@ import {TOSNPCResolver} from "./domain/tos/monster/tos-npc.resolver";
     EntityDetailStatsComponent,
     EntityDetailTableComponent,
     EntityTableComponent,
+    EntityTableV2Component,
+    EntityTableV2CellComponent,
     EntityTooltipComponent,
     InputNumberComponent,
+    TOSImageComponent,
 
     // Directives
     CssMaxHeightDirective,
@@ -109,6 +121,10 @@ import {TOSNPCResolver} from "./domain/tos/monster/tos-npc.resolver";
     TableCellTextPipe,
     TimePipe,
     CssMaxHeightDirective,
+    EntityTableV2CellTextComponent,
+    EntityTableV2CellIconComponent,
+    EntityTableV2CellIconGradeComponent,
+    EntityTableV2CellTextDateComponent,
   ],
   exports: [
     // Components
@@ -131,8 +147,11 @@ import {TOSNPCResolver} from "./domain/tos/monster/tos-npc.resolver";
     EntityDetailStatsComponent,
     EntityDetailTableComponent,
     EntityTableComponent,
+    EntityTableV2Component,
+    EntityTableV2CellComponent,
     EntityTooltipComponent,
     InputNumberComponent,
+    TOSImageComponent,
 
     // Directives
     CssMaxHeightDirective,
@@ -166,6 +185,7 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [
+        AsyncPipe,
         DecimalPipe,
         PercentPipe,
         TimePipe,
@@ -182,7 +202,7 @@ export class SharedModule {
         TOSEquipmentResolver,
         TOSEquipmentSetResolver,
         TOSGemResolver,
-        TOSItemResolver,
+        TOSItemResolverV1,
         TOSJobResolver,
         TOSMapResolver,
         TOSMonsterResolver,
@@ -197,6 +217,6 @@ export class SharedModule {
   constructor(
     private analytics: AnalyticsService,
     private seo: SEOService,
-    private sw: SWService,
+    private sw: InstallService,
   ) {}
 }

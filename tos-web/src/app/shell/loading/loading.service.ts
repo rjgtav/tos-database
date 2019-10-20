@@ -1,41 +1,75 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, ReplaySubject} from "rxjs";
-import {UpdateService} from "../../shared/service/update.service";
-import {TOSDataSet, TOSDataSetService} from "../../shared/domain/tos/tos-domain";
-import {take} from "rxjs/operators";
-import {TOSRegionService} from "../../shared/domain/tos-region";
-import {TOSDomainService} from "../../shared/domain/tos/tos-domain.service";
-import {SWService} from "../../shared/service/sw.service";
+import {InstallService} from "../../shared/service/install.service";
+import {ReplaySubject} from "rxjs";
+import {filter, take} from "rxjs/operators";
+import {SearchService} from "../../shared/service/search.service";
+import {TOSRegion} from "../../shared/domain/tos-region";
+import {LUAService} from "../../shared/service/lua.service";
+import {TranslateService} from "../../shared/service/translate.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoadingService {
 
-  private installComplete: ReplaySubject<boolean> = new ReplaySubject(1);
-  private updateComplete: ReplaySubject<boolean> = new ReplaySubject(1);
-  private updateProgress: BehaviorSubject<number> = new BehaviorSubject(-1);
+  private installComplete: boolean;
+  private luaComplete: boolean;
+  private searchComplete: boolean;
+  private translateComplete: boolean;
+
+  private loading$complete: ReplaySubject<boolean> = new ReplaySubject(1);
+  private loading$message: ReplaySubject<string> = new ReplaySubject(1);
+  private loading$progress: ReplaySubject<number> = new ReplaySubject(1);
+  private loading$total: ReplaySubject<number> = new ReplaySubject(1);
 
   constructor(
-    private domain: TOSDomainService,
-    private http: HttpClient,
-    private sw: SWService,
-    private update: UpdateService,
+    private install: InstallService,
+    private lua: LUAService,
+    private search: SearchService,
+    private translate: TranslateService,
   ) {
-    this.sw.enabled
-      ? this.installCheck()
-      : this.onInstallComplete();
+    this.install.complete$.subscribe(value => this.onInstallComplete(value));
+    this.install.progress$.subscribe(value => this.loading$progress.next(value));
+    this.install.total$.subscribe(value => this.loading$total.next(value));
+
+    this.lua.complete$.subscribe(value => this.onLuaComplete(value));
+    this.lua.progress$.subscribe(value => this.loading$progress.next(value));
+    this.lua.total$.subscribe(value => this.loading$total.next(value));
+
+    this.search.complete$.subscribe(value => this.onSearchComplete(value));
+    this.search.progress$.subscribe(value => this.loading$progress.next(value));
+    this.search.total$.subscribe(value => this.loading$total.next(value));
+
+    this.translate.complete$.subscribe(value => this.onTranslateComplete(value));
+    this.translate.progress$.subscribe(value => this.loading$progress.next(value));
+    this.translate.total$.subscribe(value => this.loading$total.next(value));
+
+    this.onComplete();
   }
 
-  get installComplete$() { return this.installComplete.pipe(take(1)) }
-  get installSupported() { return !!navigator.serviceWorker && !!window.indexedDB }
+  get complete$() { return this.loading$complete.pipe(filter(value => !!value), take(1)) }
+  get message$() { return this.loading$message.asObservable() }
+  get progress$() { return this.loading$progress.asObservable() }
+  get total$() { return this.loading$total.asObservable() }
 
-  get updateComplete$() { return this.updateComplete.pipe(take(1)) }
-  get updateProgress$() { return this.updateProgress.asObservable() }
-  get updateTotal() { return Object.values(TOSDataSet).length }
+  get supported() { return navigator.serviceWorker != null && window.indexedDB != null && window.caches != null }
 
-  async clear() {
+  private onComplete() {
+    let message = 'Loading tos.guru...';
+        message = this.installComplete ? 'Loading LUA runtime...' : message;
+        message = this.luaComplete ? 'Loading search index...' : message;
+        message = this.searchComplete ? 'Loading translation...' : message;
+
+
+    this.loading$complete.next(this.installComplete && this.luaComplete && this.searchComplete && this.translateComplete);
+    this.loading$message.next(message);
+  }
+  private onInstallComplete(value: boolean) { this.installComplete = value; this.onComplete() }
+  private onLuaComplete(value: boolean) { this.luaComplete = value; this.onComplete() }
+  private onSearchComplete(value: boolean) { this.searchComplete = value; this.onComplete() }
+  private onTranslateComplete(value: boolean) { this.translateComplete = value; this.onComplete() }
+
+  async reset() {
     let confirm = `
       =====================================
        Please close all other tos.guru tabs before proceeding
@@ -46,71 +80,37 @@ export class LoadingService {
     `;
 
     if (window.confirm(confirm)) {
-      if (window.caches) {
-        // Clear cache
-        console.log('Clearing cache...');
-        await Promise
-          .all((await window.caches.keys())
-            .map(value => window.caches.delete(value)));
-      }
-
-      // Clear IndexedDB for the current region
-      console.log('Clearing IndexedDB...');
-      await Promise
-        .all(Object.values(TOSDataSet)
-          .map(value => new Promise((resolve) => {
-            let request = window.indexedDB.deleteDatabase(TOSRegionService.getUrl() + '/' + TOSDataSetService.toUrl(value));
-            request.onsuccess = () => resolve();
-          })));
-
-      // Clear version
-      console.log('Clearing version...');
-      this.update.updateVersion(true);
-
       // Unregister service worker
       console.log('Unregistering service worker...');
       await Promise.all((await navigator.serviceWorker.getRegistrations()).map(value => value.unregister()));
 
+      // Clear local storage
+      console.log('Clearing local storage...');
+      window.localStorage && window.localStorage.clear();
+
+      // Clear cache
+      console.log('Clearing cache...');
+      window.caches && await Promise
+        .all((await window.caches.keys())
+          .map(value => window.caches.delete(value)));
+
+      // Clear IndexedDB
+      console.log('Clearing IndexedDB...');
+      if (window.indexedDB) {
+        let databases = [].concat.apply([], ['attributes', 'books', 'cards', 'collections', 'cubes', 'equipment', 'equipment-sets', 'gems', 'items', 'jobs', 'maps', 'monsters', 'npcs', 'recipes', 'skills']
+          .map(dataset => Object.values(TOSRegion)
+            .map(region => `${ region }/${ dataset }`.toLowerCase())));
+
+        await Promise.all(databases
+          .concat('__dbnames')
+          .map(database => new Promise((resolve, reject) => {
+            let request = window.indexedDB.deleteDatabase(database);
+                request.onsuccess = () => resolve();
+          })));
+      }
+
       location.reload(true);
     }
-  }
-
-  private installCheck() {
-    this.sw.installComplete()
-      ? this.onInstallComplete()
-      : setTimeout(() => this.installCheck(), 250);
-  }
-
-  private async updateCheck() {
-    let region = TOSRegionService.get();
-    //console.log('updateCheck', region);
-
-    if (!this.update.updateAvailable())
-      return this.onUpdateComplete();
-
-    this.updateProgress.next(0);
-
-    // Load one at a time, for reliability
-    for (let dataset of Object.values(TOSDataSet)) {
-      await this.domain.load(dataset, region).toPromise();
-
-      //console.log('updateProgress', this.updateProgress.getValue() + 1);
-      this.updateProgress.next(this.updateProgress.getValue() + 1);
-      this.updateProgress.getValue() == this.updateTotal && this.onUpdateComplete();
-    }
-
-    this.update.updateVersion();
-  }
-
-  private onInstallComplete() {
-    //console.log('onInstallComplete');
-    this.installComplete.next(this.installSupported);
-    this.updateCheck();
-  }
-
-  private onUpdateComplete() {
-    //console.log('onUpdateComplete');
-    this.updateComplete.next(true);
   }
 
 }

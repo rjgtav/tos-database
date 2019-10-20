@@ -1,0 +1,26 @@
+<!-- Radio Interface -->
+<div class="btn-group d-none d-md-block" *ngIf="isRadio()">
+  <button *ngFor="let option of filter.options" class="btn btn-info" type="button"
+          [ngClass]="{ 'active': filter?.is(option) }"
+          (click)="select(option)">
+    {{ option.translation }}
+  </button>
+</div>
+
+<!-- Dropdown Interface -->
+<div class="dropdown" [ngClass]="{ 'd-block d-md-none': isRadio() }"
+     [attachOutsideOnClick]="true" (clickOutside)="show = false">
+
+  <!-- Selected -->
+  <button class="btn btn-primary dropdown-toggle w-100"
+          (click)="show = !show">{{ selected() || '&nbsp;' }}</button>
+
+  <!-- Popup -->
+  <div class="dropdown-menu" [ngClass]="{ 'show': show  }">
+    <button *ngIf="!isRadio()" class="dropdown-item" type="button"
+            (click)="select(null)">&nbsp;</button>
+    <button *ngFor="let option of filter.options" class="dropdown-item" type="button"
+            [ngClass]="{ 'active': filter?.is(option) }"
+            (click)="select(option)">{{ option.translation }}</button>
+  </div>
+</div>

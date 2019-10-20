@@ -1,5 +1,9 @@
 export abstract class ArrayUtils {
 
+  public static flatten<T>(array: T[][]): T[] {
+    return  [].concat.apply([], array);
+  }
+
   public static get sort() {
     return (a, b) => a < b ? -1 : a > b ? 1 : 0;
   }

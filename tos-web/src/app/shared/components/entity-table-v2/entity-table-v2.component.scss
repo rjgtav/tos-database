@@ -1,0 +1,5 @@
+thead th { border: 0; cursor: pointer }
+thead th.position-sticky { top: 0; z-index: 2 }
+
+tfoot td { border: 0 }
+tfoot td.position-sticky { bottom: 0; z-index: 1 }

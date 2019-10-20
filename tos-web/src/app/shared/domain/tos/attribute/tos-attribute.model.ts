@@ -1,9 +1,9 @@
 import {TOSEntity} from "../tos-entity.model";
 import {ITOSAttribute, ITOSAttributeUnlockArg, ITOSBuild, ITOSJob, ITOSSkill, TOSDataSet} from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
-import {LUAService} from "../../../service/lua.service";
 import {Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal-compatibility";
+import {OldLUAService} from "../../../service/old-lua.service";
 
 export class TOSAttribute extends TOSEntity implements ITOSAttribute {
 
@@ -39,7 +39,7 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
           'limitRank': unlockArg.UnlockArgNum,
         };
 
-        let unlock = (await LUAService.eval(build, source, context).toPromise());
+        let unlock = (await OldLUAService.eval(build, source, context).toPromise());
         if (unlock === 'UNLOCK')
           return true;
       }

@@ -12,10 +12,10 @@ import {
   TOSSkillRequiredStanceCompanion,
 } from "../tos-domain";
 import {TOSDomainService} from "../tos-domain.service";
-import {LUAService} from "../../../service/lua.service";
 import {Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal-compatibility";
 import {map} from "rxjs/operators";
+import {OldLUAService} from "../../../service/old-lua.service";
 
 export class TOSSkill extends TOSEntity implements ITOSSkill {
 
@@ -178,7 +178,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       if (source == null)
         return null;
 
-      let result = await LUAService.parse(build, source, context).toPromise();
+      let result = await OldLUAService.parse(build, source, context).toPromise();
       let value = eval(result.func.join('\n')) as number;
           value = parseFloat(value.toFixed(2)); // Remove trailing 0s
 
@@ -191,7 +191,7 @@ export class TOSSkill extends TOSEntity implements ITOSSkill {
       let context = await this.effectContext(prop, build, true).toPromise();
 
       return source != null
-        ? await LUAService.human(build, source, context).toPromise()
+        ? await OldLUAService.human(build, source, context).toPromise()
         : '';
     })())
   }

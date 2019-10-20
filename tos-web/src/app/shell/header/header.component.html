@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark" style="background: #002A3A;">
+<nav class="navbar navbar-dark bg-primary">
   <a class="navbar-brand mr-4 p-0 order-0" [routerLink]="routerLink('')">
     <img src="assets/images/logo_tos.png" height="47" style="transform: scale(1.25)" />
   </a>
@@ -13,30 +13,47 @@
         <a class="dropdown-item" style="color: grey" routerLink="game/world">World Map</a>
       -->
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle tos-link" href="javascript:void(0);" routerLinkActive="active">
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle" href="javascript:void(0);" routerLinkActive="active">
           Database <span class="badge badge-danger">New</span>
           <div class="dropdown-menu">
-            <div *ngFor="let group of TOSDataSetService.VALUES; index as i">
-              <div class="dropdown-header">{{ group.label }}</div>
-              <a *ngFor="let option of group.options" class="dropdown-item" routerLinkActive="active"
-                 [routerLink]="routerLink('database/' + TOSDataSetService.toUrl(option))">
-                {{ TOSDataSetService.toLabel(option) }}&nbsp;
-                <span class="badge badge-danger" *ngIf="option == TOSDataSet.MAPS">New</span>
-              </a>
-              <div class="dropdown-divider" *ngIf="i < TOSDataSetService.VALUES.length - 1"></div>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/achievements')">Achievements</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/attributes')">Attributes</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/classes')">Classes</a>
+            <div class="dropdown-item dropdown-toggle-sub">
+              <a href="javascript:void(0);" style="color: inherit">Items</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/weapons')">Weapons</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/armor')">Armor</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/consumables')">Consumables</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/accessories')">Accessories</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/accessories-hair')">Hair Accessories</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/recipes')">Recipes</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/cards')">Cards</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/materials')">Materials</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/materials-gear')">Special Gear Materials</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/gems')">Gems</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/appearance')">Appearance</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/appearance-equipment')">Appearance Equipment</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/premium')">Premium</a>
+              </div>
             </div>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/maps')">Maps</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/npcs')">NPCs</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/quests')">Quests</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/skills')">Skills</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/effects')">Status Effects</a>
           </div>
         </a>
 
       </li>
 
       <li class="nav-item">
-        <a class="nav-link tos-link" [routerLink]="routerLink('simulator')" routerLinkActive="active">Skill Simulator</a>
+        <a class="nav-link" [routerLink]="routerLink('simulator')" routerLinkActive="active">Skill Simulator</a>
       </li>
 
       <li class="nav-item d-lg-none">
-        <a class="nav-link tos-link" (click)="isOpenSearch = !isOpenSearch">
+        <a class="nav-link" (click)="isOpenSearch = !isOpenSearch">
           &nbsp;<fa-icon [icon]="faSearch"></fa-icon>&nbsp;
         </a>
       </li>
@@ -54,28 +71,52 @@
 
   <div class="navbar-expand order-1 order-md-3">
     <ul class="navbar-nav align-items-center">
-      <!-- Region selector -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle tos-link" href="javascript:void(0);" style="text-transform: initial;">
-          {{ TOSRegionService.get() }}
+      <!-- Language selector -->
+      <li class="nav-item" *ngIf="LANGUAGES[regionSelected].length > 1">
+        <a class="nav-link dropdown-toggle" href="javascript:void(0);" style="line-height: 15px; text-transform: initial;">
+          <ng-template [ngTemplateOutlet]="templateFlag"
+                       [ngTemplateOutletContext]="{ flag: TOSLanguageService.toFlag(languageSelected), label: TOSLanguageService.toHuman(languageSelected) }">
+          </ng-template>
           <div class="dropdown-menu dropdown-menu-right">
-            <a *ngFor="let region of REGION" class="dropdown-item" style="text-transform: initial;"
-               [href]="'#' + region"
-               [ngClass]="{ 'active': TOSRegionService.get() == region }"
-               (click)="regionSelect(region)">
-              {{ region }}&nbsp;
-              <span class="badge badge-success" *ngIf="TOSRegionService.isRebuild(region)">Re:Build</span>
+            <a *ngFor="let language of LANGUAGES[regionSelected]" class="dropdown-item"
+               [href]="'#' + language"
+               [ngClass]="{ 'active': language == languageSelected }"
+               (click)="languageSelect(language)">
+              <ng-template [ngTemplateOutlet]="templateFlag"
+                           [ngTemplateOutletContext]="{ flag: TOSLanguageService.toFlag(language), label: TOSLanguageService.toHuman(language) }">
+              </ng-template>
             </a>
           </div>
         </a>
       </li>
+
+      <!-- Region selector -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="javascript:void(0);" style="line-height: 15px; text-transform: initial;">
+          <ng-template [ngTemplateOutlet]="templateFlag"
+                       [ngTemplateOutletContext]="{ flag: TOSRegionService.toFlag(regionSelected), label: TOSRegionService.toHuman(regionSelected) }">
+          </ng-template>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a *ngFor="let region of REGIONS" class="dropdown-item"
+               [href]="'#' + region"
+               [ngClass]="{ 'active': region == regionSelected }"
+               (click)="regionSelect(region)">
+              <ng-template [ngTemplateOutlet]="templateFlag"
+                           [ngTemplateOutletContext]="{ flag: TOSRegionService.toFlag(region), label: TOSRegionService.toHuman(region) }">
+              </ng-template>
+            </a>
+          </div>
+        </a>
+      </li>
+
       <!-- Check for updates (manually) -->
-      <a class="nav-item nav-link ml-1 mr-1" (click)="updateCheck(true)" ngbTooltip="Check for updates" placement="bottom">
-        <fa-icon [icon]="faSync"></fa-icon>
+      <a class="nav-item" (click)="updateCheck(true)" ngbTooltip="Check for updates" placement="bottom">
+        <fa-icon class="nav-link" [icon]="faSync"></fa-icon>
       </a>
+
       <!-- Theme selector -->
-      <a class="nav-item nav-link ml-1 mr-1" (click)="theme.toggle()" [ngbTooltip]="(theme.is(Theme.LIGHT) ? 'Dark' : 'Light') + ' Theme'" placement="bottom">
-        <fa-icon [icon]="theme.is(Theme.LIGHT) ? faMoon : faSun"></fa-icon>
+      <a class="nav-item" (click)="theme.toggle()" [ngbTooltip]="(theme.is(Theme.LIGHT) ? 'Dark' : 'Light') + ' Theme'" placement="bottom">
+        <fa-icon class="nav-link" [icon]="theme.is(Theme.LIGHT) ? faMoon : faSun"></fa-icon>
       </a>
     </ul>
   </div>
@@ -107,3 +148,9 @@
   A new update is available. Click to install
 </a>
 
+<ng-template #templateFlag let-flag="flag" let-label="label">
+  <span class="d-inline-flex align-items-center justify-content-center">
+    <span class="flag" [ngClass]="flag"></span>&nbsp;
+    <span>{{ label }}</span>
+  </span>
+</ng-template>

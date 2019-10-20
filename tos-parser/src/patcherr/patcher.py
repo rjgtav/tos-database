@@ -1,12 +1,15 @@
 import logging
 import os
+import shutil
 import struct
+import time
 import urllib2
+from datetime import datetime
 
 import constants
 from libs import blowfish
-from patcherr import patcher_ipf, patcher_pak
-from patcherr.patcher_ipf import IPF_BLACKLIST
+from patcherr import patcher_ipf
+from utils import fileutil
 
 CHUNK_SIZE = 128 * 1024 * 1024  # 128MB of Chunk Size
 
@@ -14,87 +17,89 @@ CHUNK_SIZE = 128 * 1024 * 1024  # 128MB of Chunk Size
 def patch():
     logging.debug('Patching...')
 
-    # Full patch
-    patch_full(
-        constants.PATH_INPUT_DATA, constants.PATH_INPUT_DATA_PATCH, constants.PATH_INPUT_DATA_PATCH_URL_FULL, '.ipf', patcher_ipf.unpack,
-        constants.PATH_INPUT_DATA_REVISION_URL_FULL
+    # Patch the full data
+    patch_revision(
+        constants.PATH_INPUT_PATCH_DATA_FULL,
+        constants.PATH_INPUT_PATCH_DATA_FULL_URL,
+        constants.PATH_INPUT_PATCH_DATA_FULL_URL_REVISION,
+        patcher_ipf.IPF_BLACKLIST,
+        lambda revision: revision + '.ipf',
     )
 
-    # Partial patches
-    version_data, version_data_new = patch_partial(
-        constants.PATH_INPUT_DATA_PATCH, constants.PATH_INPUT_DATA_PATCH_URL, '.ipf', patcher_ipf.unpack,
-        constants.PATH_INPUT_DATA_REVISION, constants.PATH_INPUT_DATA_REVISION_URL,
+    # Patch the partial data updates
+    patch_revision(
+        constants.PATH_INPUT_PATCH_DATA_PARTIAL,
+        constants.PATH_INPUT_PATCH_DATA_PARTIAL_URL,
+        constants.PATH_INPUT_PATCH_DATA_PARTIAL_URL_REVISION,
+        ['147674_001001.ipf'],
+        lambda revision: revision.split(' ')[0] + '_001001.ipf',
     )
-    version_release, version_release_new = patch_partial(
-        constants.PATH_INPUT_RELEASE_PATCH, constants.PATH_INPUT_RELEASE_PATCH_URL, '.pak', patcher_pak.unpack,
-        constants.PATH_INPUT_RELEASE_REVISION, constants.PATH_INPUT_RELEASE_REVISION_URL,
+
+    # Patch the partial release updates
+    patch_revision(
+        constants.PATH_INPUT_PATCH_RELEASE,
+        constants.PATH_INPUT_PATCH_RELEASE_URL,
+        constants.PATH_INPUT_PATCH_RELEASE_URL_REVISION,
+        [],
+        lambda revision: revision.split(' ')[0] + '_001001.pak',
     )
 
-    version_new = 'patch_' + str(version_data_new) + '_release_' + str(version_release_new)
-    version_old = 'patch_' + str(version_data) + '_release_' + str(version_release)
-
-    return version_old, version_new
+    return patch_version(constants.PATH_INPUT_PATCH_DATA_PARTIAL), patch_version(constants.PATH_INPUT_PATCH_RELEASE)
 
 
-def patch_full(patch_destination, patch_path, patch_url, patch_ext, patch_unpack, revision_url):
-    logging.debug('Patching %s...', revision_url)
-    revision_list = urllib2.urlopen(revision_url).read()
-    revision_list = revision_decrypt(revision_list)
+def patch_download(patch_file, patch_file_tmp, patch_url, progress, progress_total):
+    # Skip missing files
+    if os.path.basename(patch_file) in ['147674_001001.pak']:
+        return False
 
-    for revision in revision_list:
-        # Download patch
-        patch_name = revision + patch_ext
-        patch_file = os.path.join(patch_path, patch_name)
+    # Skip already downloaded files
+    if os.path.exists(patch_file):
+        return False
 
-        if not os.path.exists(os.path.join(patch_destination, patch_name)) and patch_name not in IPF_BLACKLIST:
-            logging.debug('Downloading %s...', patch_url + patch_name)
-            patch_process(patch_file, patch_name, patch_unpack, patch_url)
+    # Clear temporary folder
+    fileutil.clear(os.path.dirname(patch_file_tmp))
 
-
-def patch_partial(patch_path, patch_url, patch_ext, patch_unpack, revision_path, revision_url):
-    logging.debug('Patching %s...', revision_url)
-    revision_list = urllib2.urlopen(revision_url).read()
-    revision_list = revision_decrypt(revision_list)
-    revision_old = revision_txt_read(revision_path)
-    revision_new = revision_old
-
-    for revision in revision_list:
-        revision = revision.split(' ')[0]
-
-        if int(revision) > int(revision_old) and revision not in ['147674']:
-            # Process patch
-            patch_name = revision + '_001001' + patch_ext
-            patch_file = os.path.join(patch_path, patch_name)
-            patch_process(patch_file, patch_name, patch_unpack, patch_url)
-
-            # Update revision
-            revision_txt_write(revision_path, revision)
-            revision_new = revision
-
-    return revision_old, revision_new
-
-
-def patch_process(patch_file, patch_name, patch_unpack, patch_url):
-    # Ensure patch_file destination exists
-    if not os.path.exists(os.path.dirname(patch_file)):
-        os.makedirs(os.path.dirname(patch_file))
+    logging.debug('Downloading (%d/%d) %s...', progress, progress_total, patch_url)
 
     # Download patch
-    logging.debug('Downloading %s...', patch_url + patch_name)
-    patch_response = urllib2.urlopen(patch_url + patch_name)
+    patch_response = urllib2.urlopen(patch_url)
 
-    with open(patch_file, 'wb') as file:
+    with open(patch_file_tmp, 'wb') as file:
         for chunk in iter(lambda: patch_response.read(CHUNK_SIZE), ''):
             file.write(chunk)
 
-    # Extract patch
-    patch_unpack(patch_name)
+    # Keep original modified datetime
+    # https://docs.python.org/2/library/time.html#time.strftime
+    modified = datetime.strptime(patch_response.headers.dict['last-modified'], "%a, %d %b %Y %H:%M:%S %Z")
+    modified = time.mktime(modified.timetuple())
+    os.utime(patch_file_tmp, (modified, modified))
 
-    # Delete patch
-    os.remove(patch_file)
+    return True
 
 
-def revision_decrypt(revision):
+def patch_revision(download_path, download_url, revision_url, revision_blacklist, revision_name):
+    logging.debug('Patching %s...', revision_url)
+    revision_list = urllib2.urlopen(revision_url).read()
+    revision_list = patch_revision_decrypt(revision_list)
+
+    revision_list = [revision_name(revision) for revision in revision_list]
+    revision_list = [revision for revision in revision_list if revision not in revision_blacklist]
+    revision_list_len = len(revision_list)
+
+    for i in range(revision_list_len):
+        download_name = revision_list[i]
+        download_file = os.path.join(download_path, download_name)
+        download_file_tmp = os.path.join(constants.PATH_INPUT_PATCH_TEMPORARY, download_name)
+
+        if patch_download(download_file, download_file_tmp, download_url + download_name, i, revision_list_len - 1):
+            # Decrypt
+            patcher_ipf.decrypt(download_file_tmp)
+
+            # Move to final destination
+            shutil.move(download_file_tmp, download_file)
+
+
+def patch_revision_decrypt(revision):
     # Thanks to https://github.com/celophi/Arboretum/blob/master/Arboretum.Lib/Decryptor.cs
     size_unencrypted = struct.unpack_from('@i', revision, 0)[0]
     size_encrypted = struct.unpack_from('@i', revision, 4)[0]
@@ -112,14 +117,5 @@ def revision_decrypt(revision):
     return revision[:-1]
 
 
-def revision_txt_read(revision_txt):
-    if os.path.isfile(revision_txt):
-        with open(revision_txt, 'r') as file:
-            return file.readline()
-    else:
-        return 0
-
-
-def revision_txt_write(revision_txt, revision):
-    with open(revision_txt, 'w') as file:
-        file.write(revision)
+def patch_version(path):
+    return os.listdir(path)[-1].split('_')[0]

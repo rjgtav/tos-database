@@ -1,8 +1,5 @@
 import {ApplicationRef, Injectable} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
-import {TOSDataSet, TOSDataSetService} from "../domain/tos/tos-domain";
-import {TOSDomainService} from "../domain/tos/tos-domain.service";
-import {TOSEntity} from "../domain/tos/tos-entity.model";
 import {Meta, Title} from "@angular/platform-browser";
 
 @Injectable({
@@ -25,6 +22,8 @@ export class SEOService {
           urlTitle = 'Skill Simulator - Tree of Savior';
           urlDescription = `Plan your builds and share with other players.`;
         }
+        /*
+        TODO: fix
         if (url.indexOf('/database') > 0) {
           let parts = url.slice(url.indexOf('/database')).split('/').slice(2);
           let dataset = Object.values(TOSDataSet).find(value => TOSDataSetService.toUrl(value) == parts[0]);
@@ -41,7 +40,7 @@ export class SEOService {
           }
 
         }
-
+         */
         this.meta.updateTag({ name: 'description', content: urlDescription });
         this.title.setTitle(urlTitle);
       }

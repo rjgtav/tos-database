@@ -1,11 +1,12 @@
 import {Injectable} from "@angular/core";
 import {TOSItem} from "./tos-item.model";
 import {CRUDResolver} from "../../../service/CRUD.resolver";
-import {TOSDataSet} from "../tos-domain";
+
+//import {TOSDataSet} from "../tos-domain";
 
 @Injectable()
-export class TOSItemResolver extends CRUDResolver<TOSItem> {
+export class TOSItemResolverV1 extends CRUDResolver<TOSItem> {
 
-  constructor() { super(TOSDataSet.ITEMS); }
+  constructor() { super(undefined /*TOSDataSet.ITEMS */); }
 
 }

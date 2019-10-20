@@ -8,12 +8,12 @@ import {
   ViewChild
 } from '@angular/core';
 import {faSearch, faTimes} from "@fortawesome/free-solid-svg-icons";
-import {TOSSearchResult, TOSSearchService} from "../../../shared/service/tos-search.service";
 import {TOSEntity} from "../../../shared/domain/tos/tos-entity.model";
 import {Router} from "@angular/router";
-import {TOSDataSet, TOSDataSetService} from "../../../shared/domain/tos/tos-domain";
 import {fromEvent, Observable, Subscription} from "rxjs";
 import {debounceTime} from "rxjs/operators";
+import {TOSDataSet, TOSDataSetService} from "../../../shared/domain/tos/tos-domain";
+import {OldTosSearchService, TOSSearchResult} from "../../../shared/service/old-tos-search.service";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -52,7 +52,7 @@ export class HeaderSearchComponent implements OnDestroy, OnInit {
   constructor(
     private changeDetector: ChangeDetectorRef,
     private router: Router,
-    private search: TOSSearchService
+    private search: OldTosSearchService
   ) {
     this.subscriptionLoad = search.isLoaded$.subscribe(value => this.onLoad(value));
   }

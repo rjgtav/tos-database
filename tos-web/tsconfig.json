@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "esModuleInterop": true,
     "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

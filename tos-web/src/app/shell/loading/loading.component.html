@@ -1,27 +1,26 @@
-<div class="d-flex align-items-center justify-content-center h-100 w-100" style="background: #002A3A;"
-     [ngClass]="{ 'show': updateAvailable && !updateComplete }"
-     [style.pointerEvents]="updateAvailable && !updateComplete ? 'initial' : 'none'"
+<div class="d-flex align-items-center justify-content-center h-100 w-100" style="background: #002A3A; transition-duration: 1s"
+     [ngClass]="{ 'show': show }"
+     [style.pointerEvents]="show ? 'initial' : 'none'"
      [style.transitionDuration]="updateAvailable ? '0.25s' : '1s'">
   <div class="position-relative text-center text-white">
-    <div *ngIf="installSupported">
+    <!-- Install Progress -->
+    <div *ngIf="loadingSupported">
       <img class="mb-4 mb-sm-5" src="assets/images/logo_tos.png" />
-
-      <div *ngIf="!installComplete">
-        <div class="progress"><div class="progress-bar progress-bar-animated progress-bar-striped w-100"></div></div>
-        <div class="mt-2">Loading tos.guru...</div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-animated progress-bar-striped"
+             [style.width]="(loadingProgress * 100 / loadingTotal) + '%'"></div>
       </div>
-      <div *ngIf="installComplete">
-        <div class="progress">
-          <div class="progress-bar progress-bar-animated progress-bar-striped"
-               [style.width]="(updateProgress * 100 / updateTotal) + '%'"></div>
-        </div>
-        <div class="mt-2">
-          Updating to the latest patch... <span *ngIf="updateProgress">{{ updateProgress }}/{{ updateTotal }}</span><br/>
-          <span class="font-italic text-muted">{{ updateVersion }}</span>
-        </div>
+      <div class="mt-2">
+        {{ loadingMessage }}
+        <span *ngIf="loadingTotal == 100">{{ loadingProgress }}%</span>
+        <span *ngIf="loadingTotal < 100">{{ loadingProgress }}/{{ loadingTotal }}</span>
+        <br/>
+        <span class="font-italic text-muted">{{ updateVersion }}</span>
       </div>
     </div>
-    <div *ngIf="!installSupported">
+
+    <!-- Unsupported Browser -->
+    <div *ngIf="!loadingSupported">
       <img class="mb-4 mb-sm-5" src="assets/images/emoticons/emoticon_0003.png" />
       <div>It seems your browser doesn't support tos.guru</div>
       <hr class="border-white mt-4 mt-sm-5" />
@@ -58,6 +57,7 @@
       <hr class="border-white" />
     </div>
 
+    <!-- Links -->
     <div class="d-flex justify-content-around font-weight-bold text-center text-white mt-4 mt-sm-5">
       <a href="https://discord.gg/8g76NAA" target="_blank" class="d-flex flex-column">
         <img class="align-self-center" src="assets/images/logo_discord.png" />
@@ -77,9 +77,10 @@
       </a>
     </div>
 
+    <!-- Reset -->
     <div class="position-absolute mt-4 mt-sm-5 text-center w-100" *ngIf="isClearCacheAvailable">
       <div>Installation stuck?</div>
-      <button type="button" class="btn btn-danger mt-2" (click)="onClearCacheClick()">Clear cache</button>
+      <button type="button" class="btn btn-danger mt-2" (click)="onResetClick()">Reset</button>
     </div>
   </div>
 </div>

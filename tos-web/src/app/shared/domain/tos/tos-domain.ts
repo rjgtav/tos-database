@@ -3,6 +3,49 @@ import {TOSUrlService} from "../../service/tos-url.service";
 import {TOSRegion} from "../tos-region";
 import {CRUDPage, CRUDPageResult} from "../../service/CRUD.resolver";
 
+// TODO: remove this
+export enum TOSDataSet {
+  ATTRIBUTES = 'attributes',
+  BOOKS = 'books',
+  CARDS = 'cards',
+  COLLECTIONS = 'collections',
+  CUBES = 'cubes',
+  EQUIPMENT = 'equipment',
+  EQUIPMENT_SETS = 'equipment-sets',
+  GEMS = 'gems',
+  ITEMS = 'items',
+  JOBS = 'jobs',
+  MAPS = 'maps',
+  MONSTERS = 'monsters',
+  NPCS = 'npcs',
+  RECIPES = 'recipes',
+  SKILLS = 'skills'
+}
+export namespace TOSDataSetService {
+  export const VALUES: TOSDataSet[] = Object.values(TOSDataSet);
+
+  export function toLabel(value: TOSDataSet): string {
+    if (value == null || (value + '') == '') return null;
+
+    return (value || '').toString() // Convert to Human Form
+      .split('-')
+      .map(value => value[0].toUpperCase() + value.slice(1))
+      .join(' ');
+  }
+
+  export function toProperty(value: TOSDataSet): string {
+    return (value || '').toString() // Convert to camelCase
+      .split('-')
+      .map((value, index) => index > 0 ? value[0].toUpperCase() + value.slice(1) : value)
+      .join('');
+  }
+
+  export function toUrl(value: TOSDataSet) {
+    return value.toString();
+  }
+}
+
+
 /*====================================================================================================================+
  | Enums
  *====================================================================================================================*/
@@ -50,77 +93,6 @@ export enum TOSClassTree {
   SCOUT = 'Scout',
   SWORDSMAN = 'Swordsman',
   WIZARD = 'Wizard',
-}
-
-export enum TOSDataSet {
-  ATTRIBUTES = 'attributes',
-  BOOKS = 'books',
-  CARDS = 'cards',
-  COLLECTIONS = 'collections',
-  CUBES = 'cubes',
-  EQUIPMENT = 'equipment',
-  EQUIPMENT_SETS = 'equipment-sets',
-  GEMS = 'gems',
-  ITEMS = 'items',
-  JOBS = 'jobs',
-  MAPS = 'maps',
-  MONSTERS = 'monsters',
-  NPCS = 'npcs',
-  RECIPES = 'recipes',
-  SKILLS = 'skills',
-}
-export namespace TOSDataSetService {
-  export const VALUES: { label: string, options: TOSDataSet[] }[] = [
-    {
-      label: 'Character',
-      options: [
-        TOSDataSet.ATTRIBUTES,
-        TOSDataSet.JOBS,
-        TOSDataSet.SKILLS,
-      ],
-    },
-    {
-      label: 'Items',
-      options: [
-        TOSDataSet.BOOKS,
-        TOSDataSet.CARDS,
-        TOSDataSet.COLLECTIONS,
-        TOSDataSet.CUBES,
-        TOSDataSet.EQUIPMENT,
-        TOSDataSet.EQUIPMENT_SETS,
-        TOSDataSet.GEMS,
-        TOSDataSet.ITEMS,
-        TOSDataSet.RECIPES,
-      ],
-    },
-    {
-      label: 'World',
-      options: [
-        TOSDataSet.MAPS,
-        TOSDataSet.MONSTERS,
-      ],
-    }
-  ];
-
-  export function toLabel(value: TOSDataSet): string {
-    if (value == TOSDataSet.JOBS) return 'Classes';
-    if (value == null || (value + '') == '') return null;
-
-    return (value || '').toString() // Convert to Human Form
-      .split('-')
-      .map(value => value[0].toUpperCase() + value.slice(1))
-      .join(' ');
-  }
-  export function toProperty(value: TOSDataSet): string {
-    return (value || '').toString() // Convert to camelCase
-      .split('-')
-      .map((value, index) => index > 0 ? value[0].toUpperCase() + value.slice(1) : value)
-      .join('');
-  }
-  export function toUrl(value: TOSDataSet) {
-    if (value == TOSDataSet.JOBS) return 'classes';
-    return value.toString();
-  }
 }
 
 export enum TOSElement {
@@ -627,6 +599,28 @@ export interface ITOSBuildStats {
   INT: number,
   SPR: number,
   STR: number,
+}
+
+export interface ITOSEntityV2 {
+  ClassID: number;
+  ClassName: string;
+
+  Name: string;
+
+  __Entry_Created: Date;
+  __Entry_Updated: Date;
+}
+
+export interface ITOSItemV2 extends ITOSEntityV2 {
+  Icon: string;
+}
+
+export interface ITOSItemEquipmentV2 extends ITOSItemV2 {
+  ItemGrade: number;
+  ItemGrade$Image: Observable<string>;
+  Material: string;
+  Material$Label: string;
+  UseLv: number;
 }
 
 export interface ITOSEntity {

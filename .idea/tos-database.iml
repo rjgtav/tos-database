@@ -3,19 +3,25 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/tos-parser/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/web/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-search/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-sitemap/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-html/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/tos-deploy/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/tos-ngsw/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-build/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/tos-web-rest/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-sw/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-patreon/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tos-web/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-lua/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-web-server/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-translations/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tos-translation/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/IPFParser/output" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-lua/dist" />
       <excludeFolder url="file://$MODULE_DIR$/tos-parser/input" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-search/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-sw/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-translation/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-translations/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-web/dist" />
       <excludeFolder url="file://$MODULE_DIR$/web/dist/web" />
     </content>
     <orderEntry type="jdk" jdkName="2.7 @ WSLDistribution{myDescriptor=WslDistributionDescriptor{id='UBUNTU', msId='Ubuntu'}}" jdkType="Python SDK" />

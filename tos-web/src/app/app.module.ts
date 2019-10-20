@@ -9,6 +9,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from './shared/shared.module';
 import {ShellModule} from './shell/shell.module';
 import {LoadingComponent} from "./shell/loading/loading.component";
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -17,13 +18,13 @@ import {LoadingComponent} from "./shell/loading/loading.component";
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-
     FontAwesomeModule,
+    HttpClientModule,
     NgbModule,
+    TranslateModule.forRoot(),
 
-    SharedModule.forRoot(),
     AppRoutingModule,
+    SharedModule.forRoot(),
     ShellModule,
   ],
   providers: [],

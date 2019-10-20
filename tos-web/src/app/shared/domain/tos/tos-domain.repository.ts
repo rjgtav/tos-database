@@ -1,7 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Observable, Subject} from "rxjs";
 import {ITOSDomainRepository, TOSDataSet} from "./tos-domain";
-import {TOSUrlService} from "../../service/tos-url.service";
 import {TOSRegion, TOSRegionService} from "../tos-region";
 import {CRUDPage, CRUDPageResult} from "../../service/CRUD.resolver";
 import {map} from "rxjs/operators";
@@ -151,7 +150,7 @@ export class TOSDomainRepository implements ITOSDomainRepository {
     let message: WorkerDexieMessage = { cmd, nonce, payload };
 
     let subject = this.workerDexieHandler[nonce] = new Subject();
-    let worker = this.workerDexie = this.workerDexie || new Worker(TOSUrlService.WORKER_DEXIE());
+    let worker = this.workerDexie = this.workerDexie || new Worker('TOSUrlService.WORKER_DEXIE()');
         worker.onmessage = this.onDexieMessage;
         worker.postMessage(message);
 
@@ -162,7 +161,7 @@ export class TOSDomainRepository implements ITOSDomainRepository {
     let message: WorkerPapaparseMessage = { cmd, dataset, nonce, payload };
 
     let subject = this.workerPapaparseHandler[nonce] = new Subject();
-    let worker = this.workerPapaparse = this.workerPapaparse || new Worker(TOSUrlService.WORKER_PAPAPARSE());
+    let worker = this.workerPapaparse = this.workerPapaparse || new Worker('TOSUrlService.WORKER_PAPAPARSE()');
         worker.onmessage = this.onPapaparseMessage;
         worker.postMessage(message);
 

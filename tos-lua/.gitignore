@@ -1,0 +1,10 @@
+/dist
+
+# dependencies
+/node_modules
+
+# lua output
+lua/src/lua
+lua/src/luac
+lua/src/*.a
+lua/src/*.o

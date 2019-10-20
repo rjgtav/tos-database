@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
-import {UpdateService} from "../../shared/service/update.service";
+import {VersionService} from "../../shared/service/version.service";
 import {LoadingService} from "./loading.service";
 
 @Component({
@@ -13,34 +13,42 @@ export class LoadingComponent implements OnInit, OnDestroy {
   isClearCacheAvailable: boolean;
   isClearCacheAvailableTimeout: number;
 
-  installComplete: boolean;
-  installSupported: boolean;
+  loadingSupported: boolean;
+  loadingComplete: boolean;
+  loadingMessage: string;
+  loadingProgress: number;
+  loadingTotal: number;
 
   updateAvailable: boolean;
-  updateComplete: boolean;
-  updateProgress: number = 0;
-  updateTotal: number = 0;
+  updateInstalled: boolean;
   updateVersion: string;
 
   constructor(
     private changeDetector: ChangeDetectorRef,
     private loading: LoadingService,
-    private update: UpdateService,
+    private version: VersionService,
     private zone: NgZone,
   ) {
-    this.loading.updateProgress$.subscribe(value => this.onUpdateProgress(value));
-    this.loading.updateComplete$.subscribe(value => this.onUpdateComplete());
-    this.loading.installComplete$.subscribe(value => this.onInstallComplete());
+    this.loadingSupported = this.loading.supported;
+    this.loading.complete$.subscribe(value => this.onLoadingComplete(value));
+    this.loading.progress$.subscribe(value => this.onLoadingProgress(value));
+    this.loading.message$.subscribe(value => this.onLoadingMessage(value));
+    this.loading.total$.subscribe(value => this.onLoadingTotal(value));
 
-    this.installSupported = this.loading.installSupported;
-    this.onUpdateAvailable();
+    this.version.versionHuman$.subscribe(value => this.onVersionHuman(value));
+    this.version.versionUpdateAvailable$.subscribe(value => this.onVersionUpdateAvailable(value));
+    this.version.versionUpdateInstalled$.subscribe(value => this.onVersionUpdateInstalled(value));
+  }
+
+  get show() {
+    return !this.updateInstalled || this.updateAvailable && !this.loadingComplete
   }
 
   ngOnInit(): void {
     this.zone.runOutsideAngular(() => this.isClearCacheAvailableTimeout = setTimeout(() => {
         this.isClearCacheAvailable = true;
         this.changeDetector.detectChanges();
-      }, 5 * 1000
+      }, 3 * 1000
     ));
   }
 
@@ -48,29 +56,37 @@ export class LoadingComponent implements OnInit, OnDestroy {
     clearTimeout(this.isClearCacheAvailableTimeout);
   }
 
-  onClearCacheClick() {
-    this.loading.clear();
+  onLoadingComplete(value: boolean) {
+    this.loadingComplete = value;
+    this.changeDetector.detectChanges();
+  }
+  onLoadingMessage(value: string) {
+    this.loadingMessage = value;
+    this.loadingProgress ? this.changeDetector.detectChanges() : this.changeDetector.markForCheck();
+  }
+  onLoadingProgress(value: number) {
+    this.loadingProgress = value;
+    this.changeDetector.detectChanges();
+  }
+  onLoadingTotal(value: number) {
+    this.loadingTotal = value;
+    this.changeDetector.detectChanges();
   }
 
-  onInstallComplete() {
-    this.installComplete = true;
-    this.changeDetector.markForCheck();
+  onResetClick() {
+    this.loading.reset();
   }
 
-  onUpdateAvailable() {
-    this.updateAvailable = this.update.updateAvailable();
-    this.updateAvailable && this.changeDetector.markForCheck();
-    this.updateVersion = this.update.versionHuman;
+  onVersionHuman(value: string) {
+    this.updateVersion = value;
+    this.changeDetector.detectChanges();
   }
-  onUpdateComplete() {
-    this.updateComplete = true;
-    this.changeDetector.markForCheck();
+  onVersionUpdateAvailable(value: boolean) {
+    this.updateAvailable = value;
+    this.changeDetector.detectChanges();
   }
-  onUpdateProgress(value: number) {
-    if (!this.updateAvailable) return;
-
-    this.updateProgress = Math.max(value, 0);
-    this.updateTotal = this.loading.updateTotal;
+  onVersionUpdateInstalled(value: boolean) {
+    this.updateInstalled = value;
     this.changeDetector.markForCheck();
   }
 

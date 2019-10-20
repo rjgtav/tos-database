@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "emscripten.h": "c",
+        "main.h": "c",
+        "lua.h": "c",
+        "lua-runtime-overrides.h": "c"
+    }
+}

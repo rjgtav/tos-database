@@ -44,17 +44,30 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "styles": [
-              "src/styles.scss"
-            ],
             "scripts": [
-              "node_modules_patched/html2canvas/dist/html2canvas.min.js"
+              "node_modules/flexsearch/dist/flexsearch.min.js"
+            ],
+            "styles": [
+              "src/styles.scss",
+              {
+                "input": "src/assets/themes/theme-dark.scss",
+                "bundleName": "assets/themes/dark",
+                "lazy": true
+              },
+              {
+                "input": "src/assets/themes/theme-light.scss",
+                "bundleName": "assets/themes/light",
+                "lazy": true
+              }
             ]
           },
           "configurations": {
+            "dev": {
+              "extractCss": true
+            },
             "production": {
               "assets": [
-                { "glob": "**/*", "input": "src/assets/", "ignore": ["js/*"], "output": "/assets/" },
+                { "glob": "**/*", "input": "src/assets/", "ignore": ["themes/*", "worker/*"], "output": "/assets/" },
                 { "glob": "favicon.ico", "input": "src/", "output": "/" },
                 { "glob": "manifest.json", "input": "src/", "output": "/" }
               ],

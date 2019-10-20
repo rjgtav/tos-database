@@ -16,7 +16,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         // Get members per tier
         console.log('Get members tier');
         let campaigns = await patreonCampaigns(token);
-        let members = await patreonCampaignMembers(campaigns[0], token)
+        let members = await patreonCampaignMembers(campaigns[0], token);
         let membersPerTier = members.reduce((accumulator, member) => {
             let tier = accumulator[member.tier] = accumulator[member.tier] || [];
                 tier.push("'" + member.name + "'");
@@ -26,7 +26,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
 
         // Update patreon.json
         console.log('Update patreon.json');
-        fs.writeFileSync(path.join('..', 'tos-build', 'dist', 'patreon.json'), JSON.stringify(membersPerTier));
+        fs.writeFileSync(path.join('..', 'tos-web-server', 'www', 'patreon.json.js'), JSON.stringify(membersPerTier));
 
     } catch (e) {
         console.error(e);

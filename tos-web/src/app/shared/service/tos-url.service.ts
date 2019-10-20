@@ -2,20 +2,28 @@ import {TOSRegionService} from "../domain/tos-region";
 
 export abstract class TOSUrlService {
 
-  static readonly WORKER_DEXIE = () => TOSUrlService.Asset('assets/js/dexie.worker.js');
-  static readonly WORKER_LUNR = () => TOSUrlService.Asset('assets/js/lunr.worker.js');
-  static readonly WORKER_PAPAPARSE = () => TOSUrlService.Asset('assets/js/papaparse.worker.js');
-  static readonly WORKER_SW = () => TOSUrlService.Asset('tos-sw.worker.js');
+  static Url(url: string): string {
+    return this.join(this.origin, url.toLowerCase());
+  }
 
-  static Asset(url: string): string {
-    if (url.indexOf('data/') > -1)
-      url = url.replace('data/', 'data/' + TOSRegionService.getUrl() + '/');
+  static Api(url: string): string {
+    return this.Url(`api/${ url }`);
+  }
 
-    return this.join(this.origin, url);
+  public static Asset(url: string, region: boolean = false): string {
+    return region
+      ? this.Url(`assets/region/${ TOSRegionService.toUrl() }/${ url }`)
+      : this.Url(`assets/${ url }`);
+  }
+  public static AssetRegion(url: string): string {
+    return TOSUrlService.Asset(url, true);
+  }
+  public static AssetWorker(url: string): string {
+    return TOSUrlService.Asset(`worker/${ url }`, false);
   }
 
   static Route(url: string): string {
-    return this.join('', this.join(TOSRegionService.getUrl(), url));
+    return this.join('', this.join(TOSRegionService.toUrl(), url));
   }
 
   private static join(url1: string, url2: string) {

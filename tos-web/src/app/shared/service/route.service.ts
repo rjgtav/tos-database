@@ -11,7 +11,6 @@ import {
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {TOSRegionService} from "../domain/tos-region";
-import {switchMap} from "rxjs/operators";
 import {TOSDomainService} from "../domain/tos/tos-domain.service";
 import {LoadingService} from "../../shell/loading/loading.service";
 
@@ -38,11 +37,11 @@ export class RouteService implements CanActivate, CanDeactivate<any> {
 
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    return this.loading.installComplete$.pipe(switchMap(() => this.loading.updateComplete$));
+    return this.loading.complete$;
   }
 
   canDeactivate(component: any, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    return this.loading.updateComplete$;
+    return this.loading.complete$;
   }
 
 }

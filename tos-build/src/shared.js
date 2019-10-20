@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const request = require('sync-request');
-const sharedVariables = require("../../variables");
+const sharedVariables = JSON.parse(fs.readFileSync(path.join('..', 'environment.json'), 'utf-8'));
 
 exports.IS_FORCE_DEPLOY = process.argv.length > 2 && !!process.argv.find(value => value === 'deploy');
 exports.IS_PROD = process.argv.length > 2 && !!process.argv.find(value => value === 'prod');
@@ -54,7 +54,7 @@ exports.singletonUnlock = function() {
 
 exports.log = function(...arguments) {
     if (exports.IS_PROD)
-        request('POST', sharedVariables.SLACK_WEBHOOK, { json: {
+        request('POST', sharedVariables.slack.info, { json: {
                 attachments: [{
                     color: 'good',
                     fallback: arguments.join(' '),
@@ -75,7 +75,7 @@ exports.logError = function(...arguments) {
     };
 
     if (exports.IS_PROD)
-        request('POST', sharedVariables.SLACK_WEBHOOK_ERROR, { json: {
+        request('POST', sharedVariables.slack.error, { json: {
             attachments: [{
                 color: 'danger',
                 fallback: arguments.join(' '),

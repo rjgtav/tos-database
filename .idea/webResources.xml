@@ -5,8 +5,7 @@
       <entry url="file://$PROJECT_DIR$">
         <entryData>
           <resourceRoots>
-            <path value="file://$PROJECT_DIR$/tos-build/dist" />
-            <path value="file://$PROJECT_DIR$/web/dist" />
+            <path value="file://$PROJECT_DIR$/tos-web-server/www" />
           </resourceRoots>
         </entryData>
       </entry>

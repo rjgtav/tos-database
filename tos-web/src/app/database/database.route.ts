@@ -1,44 +1,25 @@
 import {Routes} from '@angular/router';
-import {TOSItemResolver} from "../shared/domain/tos/item/tos-item.resolver";
-import {ItemListConfigurationResolver} from "./resolvers/item-list-configuration.resolver";
-import {EquipmentListConfigurationResolver} from "./resolvers/equipment-list-configuration-resolver.service";
-import {TOSEquipmentResolver} from "../shared/domain/tos/item/equipment/tos-equipment.resolver";
-import {BookListConfigurationResolver} from "./resolvers/book-list-configuration.resolver";
-import {TOSBookResolver} from "../shared/domain/tos/item/book/tos-book.resolver";
-import {CollectionListConfigurationResolver} from "./resolvers/collection-list-configuration.resolver";
-import {TOSCollectionResolver} from "../shared/domain/tos/item/collection/tos-collection.resolver";
-import {MonsterListConfigurationResolver} from "./resolvers/monster-list-configuration.resolver";
-import {TOSMonsterResolver} from "../shared/domain/tos/monster/tos-monster.resolver";
-import {EntityDetailComponent} from "./entity-detail/entity-detail.component";
-import {EntityListComponent} from "./entity-list/entity-list.component";
-import {TOSRecipeResolver} from "../shared/domain/tos/item/recipe/tos-recipe.resolver";
-import {RecipeListConfigurationResolver} from "./resolvers/recipe-list-configuration.resolver";
-import {EquipmentSetListConfigurationResolver} from "./resolvers/equipment-set-list-configuration.resolver";
-import {CubeListConfigurationResolver} from "./resolvers/cube-list-configuration.resolver";
-import {TOSCubeResolver} from "../shared/domain/tos/item/cube/tos-cube.resolver";
-import {TOSEquipmentSetResolver} from "../shared/domain/tos/item/equipment/tos-equipment-set.resolver";
-import {CardListConfigurationResolver} from "./resolvers/card-list-configuration.resolver";
-import {TOSCardResolver} from "../shared/domain/tos/item/card/tos-card.resolver";
-import {GemListConfigurationResolver} from "./resolvers/gem-list-configuration.resolver";
-import {TOSGemResolver} from "../shared/domain/tos/item/gem/tos-gem.resolver";
-import {TOSAttributeResolver} from "../shared/domain/tos/attribute/tos-attribute.resolver";
-import {AttributeListConfigurationResolver} from "./resolvers/attribute-list-configuration.resolver";
-import {SkillListConfigurationResolver} from "./resolvers/skill-list-configuration.resolver";
-import {TOSSkillResolver} from "../shared/domain/tos/skill/tos-skill.resolver";
-import {JobListConfigurationResolver} from "./resolvers/job-list-configuration.resolver";
-import {TOSJobResolver} from "../shared/domain/tos/job/tos-job.resolver";
 import {RouteService} from "../shared/service/route.service";
-import {MapListConfigurationResolver} from "./resolvers/map-list-configuration.resolver";
-import {TOSMapResolver} from "../shared/domain/tos/map/tos-map.resolver";
-import {EntityDetailMapComponent} from "./entity-detail-v2/entity-detail-map/entity-detail-map.component";
-import {TOSNPCResolver} from "../shared/domain/tos/monster/tos-npc.resolver";
+import {EntityListV2Component} from "./entity-list-v2/entity-list-v2.component";
+import {TOSArmorEquipmentListResolver} from "./resolvers/items/tos-armor-equipment-list.resolver";
 
 export const ROUTES_DATABASE: Routes = [
   {
     path: '',
-    redirectTo: 'items',
+    redirectTo: 'classes',
     pathMatch: 'full'
   },
+  {
+    path: 'items/armor',
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: EntityListV2Component,
+    resolve: {
+      list: TOSArmorEquipmentListResolver,
+    },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  /*
   {
     path: 'attributes',
     canActivate: [RouteService],
@@ -267,7 +248,6 @@ export const ROUTES_DATABASE: Routes = [
     resolve: { response: TOSMonsterResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
-  /*
   {
     path: 'npcs',
     canActivate: [RouteService],
@@ -279,7 +259,6 @@ export const ROUTES_DATABASE: Routes = [
     },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
-  */
   {
     path: 'npcs/:id',
     canActivate: [RouteService],
@@ -326,4 +305,5 @@ export const ROUTES_DATABASE: Routes = [
     resolve: { response: TOSSkillResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
+   */
 ];

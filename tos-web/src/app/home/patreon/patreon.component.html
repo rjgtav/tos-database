@@ -10,35 +10,37 @@
 </div>
 <p class="mb-5">Thanks to all tos.guru patrons for keeping the server up and supporting the development!</p>
 
-<div class="d-flex flex-wrap justify-content-around mb-4" *ngIf="PatreonService.PATRONS_KUPOLE.length">
-  <div class="d-flex col-6 col-md-4 col-xl-3 align-items-center mb-3" *ngFor="let patron of PatreonService.PATRONS_KUPOLE">
-    <img height="64" width="64" class="p-1 rounded-circle" style="background: #F1C40F; box-shadow: 0 0 2rem #F1C40F"
-         [src]="'/assets/images/emoticons/' + emoticon(patron, PatreonService.EMOTICONS_KUPOLE)" />
-    <span class="ml-3">{{ patron }}</span>
+<div *ngIf="patrons">
+  <div class="d-flex flex-wrap justify-content-around mb-4" *ngIf="patrons[PatreonTier.KUPOLE].length">
+    <div class="d-flex col-6 col-md-4 col-xl-3 align-items-center mb-3" *ngFor="let patron of patrons[PatreonTier.KUPOLE]">
+      <img height="64" width="64" class="p-1 rounded-circle" style="background: #F1C40F; box-shadow: 0 0 2rem #F1C40F"
+           [src]="'/assets/images/emoticons/' + emoticon(patron, EMOTICONS_KUPOLE)" />
+      <span class="ml-3">{{ patron }}</span>
+    </div>
   </div>
-</div>
 
-<div class="d-flex flex-wrap justify-content-around mb-4" *ngIf="PatreonService.PATRONS_POPOLION.length">
-  <div class="d-flex col-6 col-md-4 col-xl-3 align-items-center mb-3" *ngFor="let patron of PatreonService.PATRONS_POPOLION">
-    <img height="60" width="60" class="p-1 rounded-circle" style="background: #9B59B6; box-shadow: 0 0 1.5rem #9B59B6"
-         [src]="'/assets/images/emoticons/' + emoticon(patron, PatreonService.EMOTICONS_POPOLION)" />
-    <span class="ml-3">{{ patron }}</span>
+  <div class="d-flex flex-wrap justify-content-around mb-4" *ngIf="patrons[PatreonTier.POPOLION].length">
+    <div class="d-flex col-6 col-md-4 col-xl-3 align-items-center mb-3" *ngFor="let patron of patrons[PatreonTier.POPOLION]">
+      <img height="60" width="60" class="p-1 rounded-circle" style="background: #9B59B6; box-shadow: 0 0 1.5rem #9B59B6"
+           [src]="'/assets/images/emoticons/' + emoticon(patron, EMOTICONS_POPOLION)" />
+      <span class="ml-3">{{ patron }}</span>
+    </div>
   </div>
-</div>
 
-<div class="d-flex flex-wrap justify-content-around mb-4" *ngIf="PatreonService.PATRONS_TINI.length">
-  <div class="d-flex col-6 col-md-4 col-xl-3 align-items-center mb-3" *ngFor="let patron of PatreonService.PATRONS_TINI">
-    <img height="56" width="56" class="p-1 rounded-circle" style="background: #3498DB; box-shadow: 0 0 1rem #3498DB"
-         [src]="'/assets/images/emoticons/' + emoticon(patron, PatreonService.EMOTICONS_TINI)" />
-    <span class="ml-3">{{ patron }}</span>
+  <div class="d-flex flex-wrap justify-content-around mb-4" *ngIf="patrons[PatreonTier.TINI].length">
+    <div class="d-flex col-6 col-md-4 col-xl-3 align-items-center mb-3" *ngFor="let patron of patrons[PatreonTier.TINI]">
+      <img height="56" width="56" class="p-1 rounded-circle" style="background: #3498DB; box-shadow: 0 0 1rem #3498DB"
+           [src]="'/assets/images/emoticons/' + emoticon(patron, EMOTICONS_TINI)" />
+      <span class="ml-3">{{ patron }}</span>
+    </div>
   </div>
-</div>
 
-<div class="d-flex flex-wrap justify-content-around mb-4" *ngIf="PatreonService.PATRONS_KEPA.length">
-  <div class="d-flex col-6 col-md-4 col-xl-3 align-items-center mb-3" *ngFor="let patron of PatreonService.PATRONS_KEPA">
-    <img height="52" width="52" class="bg-primary p-1 rounded-circle"
-         [src]="'/assets/images/emoticons/' + emoticon(patron, PatreonService.EMOTICONS_KEPA)" />
-    <span class="ml-3">{{ patron }}</span>
+  <div class="d-flex flex-wrap justify-content-around mb-4" *ngIf="patrons[PatreonTier.KEPA].length">
+    <div class="d-flex col-6 col-md-4 col-xl-3 align-items-center mb-3" *ngFor="let patron of patrons[PatreonTier.KEPA]">
+      <img height="52" width="52" class="bg-primary p-1 rounded-circle"
+           [src]="'/assets/images/emoticons/' + emoticon(patron, EMOTICONS_KEPA)" />
+      <span class="ml-3">{{ patron }}</span>
+    </div>
   </div>
 </div>
 

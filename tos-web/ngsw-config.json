@@ -6,13 +6,11 @@
       "installMode": "prefetch",
       "resources": {
         "files": [
-          "/index.html",
-          "/*.css",
-          "/*.js",
-          "/assets/js/*.js",
-          "/assets/images/logo_*.png",
-          "/assets/themes/*.css",
-          "/assets/favicon.png"
+          "tos-web/dist/**/*.css",
+          "tos-web/dist/**/*.html",
+          "tos-web/dist/**/*.js",
+          "tos-web-server/www/assets/worker/*.js",
+          "tos-web-server/www/assets/*.json.js"
         ]
       }
     },
@@ -22,7 +20,22 @@
       "updateMode": "lazy",
       "resources": {
         "files": [
-          "/assets/**"
+          "tos-web-server/www/assets/images/**/*.gif",
+          "tos-web-server/www/assets/images/**/*.jpg",
+          "tos-web-server/www/assets/images/**/*.png"
+        ]
+      }
+    },
+    {
+      "name": "assets/region",
+      "installMode": "lazy",
+      "updateMode": "lazy",
+      "resources": {
+        "files": [
+          "tos-web-server/www/assets/region/{region}/**/*.js",
+          "tos-web-server/www/assets/region/{region}/**/*.gif",
+          "tos-web-server/www/assets/region/{region}/**/*.jpg",
+          "tos-web-server/www/assets/region/{region}/**/*.png"
         ]
       }
     }

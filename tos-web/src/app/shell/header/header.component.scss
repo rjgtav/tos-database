@@ -1,45 +1,71 @@
-$color-info: #006bbe;
-
 :host {
   display: block;
   position: relative;
 }
 
-.dropdown:hover .dropdown-menu { display: block; }
-.dropdown-header { text-transform: initial !important; }
-
-.navbar-nav .nav-item {
-  position: relative;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-.nav-link {
+// NavBar
+.nav-item {
   cursor: pointer;
-  transition: none;
-}
-.navbar-nav .nav-link:hover {
-  color: $color-info;
-}
-
-.tos-link {
-  color: white !important;
-  padding: 0 !important;
+  position: relative;
+  margin: 0 0.25rem;
+  padding: 0.5rem;
   text-transform: uppercase;
 }
-.tos-link:before {
+
+.nav-link {
+  position: relative;
+  padding-bottom: 0;
+  padding-left: 0 !important;
+  padding-top: 0;
+  transition: none;
+}
+.nav-link:hover { color: white !important }
+.nav-link:not(.dropdown-toggle) { padding-right: 0 !important }
+
+// NavBar Dropdown
+.dropdown-toggle > .dropdown-menu { margin-top: 0.5rem }
+.dropdown-item { text-transform: initial }
+.nav-item:hover .dropdown-toggle > .dropdown-menu { display: block; }
+
+.dropdown-toggle-sub:hover > .dropdown-menu { display: block; }
+.dropdown-toggle-sub { position: relative; }
+.dropdown-toggle-sub .dropdown-menu {
+  top: -0.5rem;
+  left: 100%;
+  margin-top: -1px;
+}
+
+// NavBar Underline
+.nav-link:before {
   content: "";
   position: absolute;
   left: 0;
   bottom: -6px;
-  background: $color-info;
+  background: var(--info);
   width: 0;
   height: 2.6px;
+  pointer-events: none;
   transition: all .2s ease-in;
 }
-
-.tos-link:hover.tos-link:before,
-.tos-link.active.tos-link:before {
+.nav-item:hover .nav-link:before,
+.nav-link.active.nav-link:before {
   width: 100%;
 }
 
-.bg-info { background-color: $color-info !important; }
+// Flags:
+// https://github.com/SlavkoPekaric/Country-Flags-Responsive-CSS-Sprite
+.flag {
+  display: inline-block;
+  background-size: contain;
+  width: 22px;
+  height: 15px;
+}
+
+.flag-de { background-image: url(/assets/images/flags/de.png) }
+.flag-br { background-image: url(/assets/images/flags/br.png) }
+.flag-jp { background-image: url(/assets/images/flags/jp.png) }
+.flag-kr { background-image: url(/assets/images/flags/kr.png) }
+.flag-tw { background-image: url(/assets/images/flags/tw.png) }
+.flag-us { background-image: url(/assets/images/flags/us.png) }
+.flag-world { height: auto }
+.flag-world:before { content: '🌍' !important }

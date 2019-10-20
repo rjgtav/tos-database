@@ -1,0 +1,6 @@
+<!-- Label -->
+<label class="font-weight-bold mb-1" *ngIf="filter?.label">{{ filter?.label }}</label>
+
+<tos-entity-list-filter-v2-enum *ngIf="filter?.type == TYPE_ENUM" [parent]="anyParent()"></tos-entity-list-filter-v2-enum>
+<tos-entity-list-filter-v2-number *ngIf="filter?.type == TYPE_NUMBER" [parent]="anyParent()"></tos-entity-list-filter-v2-number>
+<tos-entity-list-filter-v2-range *ngIf="filter?.type == TYPE_RANGE" [parent]="anyParent()"></tos-entity-list-filter-v2-range>

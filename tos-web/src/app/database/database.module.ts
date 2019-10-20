@@ -19,6 +19,12 @@ import {RecipeListConfigurationResolver} from "./resolvers/recipe-list-configura
 import {SkillListConfigurationResolver} from "./resolvers/skill-list-configuration.resolver";
 import {MapListConfigurationResolver} from "./resolvers/map-list-configuration.resolver";
 import {EntityDetailMapComponent} from './entity-detail-v2/entity-detail-map/entity-detail-map.component';
+import {EntityListV2Component} from './entity-list-v2/entity-list-v2.component';
+import {EntityListFilterV2Component} from './entity-list-filter-v2/entity-list-filter-v2.component';
+import {EntityListFilterV2EnumComponent} from './entity-list-filter-v2/entity-list-filter-v2-enum/entity-list-filter-v2-enum.component';
+import {EntityListFilterV2NumberComponent} from './entity-list-filter-v2/entity-list-filter-v2-number/entity-list-filter-v2-number.component';
+import {EntityListFilterV2RangeComponent} from './entity-list-filter-v2/entity-list-filter-v2-range/entity-list-filter-v2-range.component';
+import {TOSArmorEquipmentListResolver} from "./resolvers/items/tos-armor-equipment-list.resolver";
 
 @NgModule({
   imports: [
@@ -29,6 +35,11 @@ import {EntityDetailMapComponent} from './entity-detail-v2/entity-detail-map/ent
     EntityListComponent,
     EntityListFilterComponent,
     EntityDetailMapComponent,
+    EntityListV2Component,
+    EntityListFilterV2Component,
+    EntityListFilterV2EnumComponent,
+    EntityListFilterV2NumberComponent,
+    EntityListFilterV2RangeComponent,
   ],
   providers: [
     AttributeListConfigurationResolver,
@@ -45,6 +56,7 @@ import {EntityDetailMapComponent} from './entity-detail-v2/entity-detail-map/ent
     MonsterListConfigurationResolver,
     RecipeListConfigurationResolver,
     SkillListConfigurationResolver,
+    TOSArmorEquipmentListResolver,
   ]
 })
 export class DatabaseModule { }

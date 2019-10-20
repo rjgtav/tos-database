@@ -1,6 +1,6 @@
 import os
 
-from parserr.parser_enums import TOSRegion
+from utils.enumutil import TOSRegion
 
 OUTPUT_ATTRIBUTES = 'attributes'
 OUTPUT_BOOKS = 'books'
@@ -27,29 +27,35 @@ URL_PATCH_twTOS = 'http://tospatch.x2game.com.tw/live/patch/'
 
 PATH_INPUT = None
 PATH_INPUT_DATA = None
-PATH_INPUT_DATA_PATCH = None
-PATH_INPUT_DATA_PATCH_URL = None
-PATH_INPUT_DATA_PATCH_URL_FULL = None
-PATH_INPUT_DATA_REVISION = None
-PATH_INPUT_DATA_REVISION_URL = None
-PATH_INPUT_DATA_REVISION_URL_FULL = None
+PATH_INPUT_PATCH = None
+PATH_INPUT_PATCH_DATA_FULL = None
+PATH_INPUT_PATCH_DATA_FULL_URL = None
+PATH_INPUT_PATCH_DATA_FULL_URL_REVISION = None
+PATH_INPUT_PATCH_DATA_PARTIAL = None
+PATH_INPUT_PATCH_DATA_PARTIAL_URL = None
+PATH_INPUT_PATCH_DATA_PARTIAL_URL_REVISION = None
+PATH_INPUT_PATCH_RELEASE = None
+PATH_INPUT_PATCH_RELEASE_URL = None
+PATH_INPUT_PATCH_RELEASE_URL_REVISION = None
+PATH_INPUT_PATCH_TEMPORARY = None
 PATH_INPUT_RELEASE = None
-PATH_INPUT_RELEASE_PATCH = None
-PATH_INPUT_RELEASE_PATCH_URL = None
-PATH_INPUT_RELEASE_REVISION = None
-PATH_INPUT_RELEASE_REVISION_URL = None
 
 PATH_PARSER = os.path.join('..', 'tos-parser')
 
-PATH_UNPACKER = os.path.join('..', 'IPFUnpacker')
+PATH_UNPACKER = os.path.join('IPFUnpacker')
 PATH_UNPACKER_EXE = os.path.join(PATH_UNPACKER, 'ipf_unpack')
 
-PATH_BUILD = os.path.join('..', 'tos-build', 'dist')
-PATH_BUILD_ASSETS = os.path.join(PATH_BUILD, 'assets')
-PATH_BUILD_ASSETS_DATA = None
-PATH_BUILD_ASSETS_ICONS = os.path.join(PATH_BUILD_ASSETS, 'icons')
-PATH_BUILD_ASSETS_IMAGES = os.path.join(PATH_BUILD_ASSETS, 'images')
-PATH_BUILD_ASSETS_IMAGES_MAPS = os.path.join(PATH_BUILD_ASSETS_IMAGES, 'maps')
+PATH_WEB = os.path.join('..', 'tos-web-server')
+PATH_WEB_DB = os.path.join(PATH_WEB, 'sqlite')
+PATH_WEB_WWW = os.path.join(PATH_WEB, 'www')
+PATH_WEB_WWW_ASSETS = os.path.join(PATH_WEB_WWW, 'assets')
+PATH_WEB_WWW_ASSETS_ICONS = os.path.join(PATH_WEB_WWW_ASSETS, 'icons')
+PATH_WEB_WWW_ASSETS_IMAGES = os.path.join(PATH_WEB_WWW_ASSETS, 'images')
+PATH_WEB_WWW_ASSETS_IMAGES_CLASSES = os.path.join(PATH_WEB_WWW_ASSETS_IMAGES, 'classes')
+PATH_WEB_WWW_ASSETS_IMAGES_MAPS = os.path.join(PATH_WEB_WWW_ASSETS_IMAGES, 'maps')
+PATH_WEB_WWW_ASSETS_REGION = None
+PATH_WEB_WWW_ASSETS_REGION_DATA = None
+PATH_WEB_WWW_ASSETS_REGION_UI = None
 
 
 def region(region):
@@ -57,18 +63,21 @@ def region(region):
         URL_PATCH, \
         PATH_INPUT, \
         PATH_INPUT_DATA, \
-        PATH_INPUT_DATA_PATCH, \
-        PATH_INPUT_DATA_PATCH_URL, \
-        PATH_INPUT_DATA_PATCH_URL_FULL, \
-        PATH_INPUT_DATA_REVISION, \
-        PATH_INPUT_DATA_REVISION_URL, \
-        PATH_INPUT_DATA_REVISION_URL_FULL, \
+        PATH_INPUT_PATCH, \
+        PATH_INPUT_PATCH_DATA_FULL, \
+        PATH_INPUT_PATCH_DATA_FULL_URL, \
+        PATH_INPUT_PATCH_DATA_FULL_URL_REVISION, \
+        PATH_INPUT_PATCH_DATA_PARTIAL, \
+        PATH_INPUT_PATCH_DATA_PARTIAL_URL, \
+        PATH_INPUT_PATCH_DATA_PARTIAL_URL_REVISION, \
+        PATH_INPUT_PATCH_RELEASE, \
+        PATH_INPUT_PATCH_RELEASE_URL, \
+        PATH_INPUT_PATCH_RELEASE_URL_REVISION, \
+        PATH_INPUT_PATCH_TEMPORARY, \
         PATH_INPUT_RELEASE, \
-        PATH_INPUT_RELEASE_PATCH, \
-        PATH_INPUT_RELEASE_PATCH_URL, \
-        PATH_INPUT_RELEASE_REVISION, \
-        PATH_INPUT_RELEASE_REVISION_URL, \
-        PATH_BUILD_ASSETS_DATA
+        PATH_WEB_WWW_ASSETS_REGION, \
+        PATH_WEB_WWW_ASSETS_REGION_DATA, \
+        PATH_WEB_WWW_ASSETS_REGION_UI
 
     region_str = TOSRegion.to_string(region)
 
@@ -80,16 +89,30 @@ def region(region):
 
     PATH_INPUT = os.path.join(PATH_PARSER, 'input', region_str)
     PATH_INPUT_DATA = os.path.join(PATH_INPUT, 'data')
-    PATH_INPUT_DATA_PATCH = os.path.join(PATH_INPUT_DATA, 'patch')
-    PATH_INPUT_DATA_PATCH_URL = URL_PATCH + 'partial/data/'
-    PATH_INPUT_DATA_PATCH_URL_FULL = URL_PATCH + 'full/data/'
-    PATH_INPUT_DATA_REVISION = os.path.join(PATH_INPUT, 'data.revision.txt')
-    PATH_INPUT_DATA_REVISION_URL = URL_PATCH + 'partial/data.revision.txt'
-    PATH_INPUT_DATA_REVISION_URL_FULL = URL_PATCH + 'full/data.file.list.txt'
+    PATH_INPUT_PATCH = os.path.join(PATH_INPUT, 'patch')
+    PATH_INPUT_PATCH_DATA_FULL = os.path.join(PATH_INPUT_PATCH, 'data', 'full')
+    PATH_INPUT_PATCH_DATA_FULL_URL = URL_PATCH + 'full/data/'
+    PATH_INPUT_PATCH_DATA_FULL_URL_REVISION = URL_PATCH + 'full/data.file.list.txt'
+    PATH_INPUT_PATCH_DATA_PARTIAL = os.path.join(PATH_INPUT_PATCH, 'data', 'partial')
+    PATH_INPUT_PATCH_DATA_PARTIAL_URL = URL_PATCH + 'partial/data/'
+    PATH_INPUT_PATCH_DATA_PARTIAL_URL_REVISION = URL_PATCH + 'partial/data.revision.txt'
+    PATH_INPUT_PATCH_RELEASE = os.path.join(PATH_INPUT_PATCH, 'release')
+    PATH_INPUT_PATCH_RELEASE_URL = URL_PATCH + 'partial/release/'
+    PATH_INPUT_PATCH_RELEASE_URL_REVISION = URL_PATCH + 'partial/release.revision.txt'
+    PATH_INPUT_PATCH_TEMPORARY = os.path.join(PATH_INPUT_PATCH, 'tmp')
     PATH_INPUT_RELEASE = os.path.join(PATH_INPUT, 'release')
-    PATH_INPUT_RELEASE_PATCH = os.path.join(PATH_INPUT_RELEASE, 'patch')
-    PATH_INPUT_RELEASE_PATCH_URL = URL_PATCH + 'partial/release/'
-    PATH_INPUT_RELEASE_REVISION = os.path.join(PATH_INPUT, 'release.revision.txt')
-    PATH_INPUT_RELEASE_REVISION_URL = URL_PATCH + 'partial/release.revision.txt'
 
-    PATH_BUILD_ASSETS_DATA = os.path.join(PATH_BUILD_ASSETS, 'data', region_str.lower())
+    if not os.path.exists(PATH_INPUT_DATA):                     os.makedirs(PATH_INPUT_DATA)
+    if not os.path.exists(PATH_INPUT_PATCH_DATA_FULL):          os.makedirs(PATH_INPUT_PATCH_DATA_FULL)
+    if not os.path.exists(PATH_INPUT_PATCH_DATA_PARTIAL):       os.makedirs(PATH_INPUT_PATCH_DATA_PARTIAL)
+    if not os.path.exists(PATH_INPUT_PATCH_RELEASE):            os.makedirs(PATH_INPUT_PATCH_RELEASE)
+    if not os.path.exists(PATH_INPUT_PATCH_TEMPORARY):          os.makedirs(PATH_INPUT_PATCH_TEMPORARY)
+    if not os.path.exists(PATH_INPUT_RELEASE):                  os.makedirs(PATH_INPUT_RELEASE)
+
+    PATH_WEB_WWW_ASSETS_REGION = os.path.join(PATH_WEB_WWW_ASSETS, 'region', region_str.lower())
+    PATH_WEB_WWW_ASSETS_REGION_DATA = os.path.join(PATH_WEB_WWW_ASSETS_REGION, 'data')
+    PATH_WEB_WWW_ASSETS_REGION_UI = os.path.join(PATH_WEB_WWW_ASSETS_REGION, 'ui')
+
+    if not os.path.exists(PATH_WEB_WWW_ASSETS_REGION):          os.makedirs(PATH_WEB_WWW_ASSETS_REGION)
+    if not os.path.exists(PATH_WEB_WWW_ASSETS_REGION_DATA):     os.makedirs(PATH_WEB_WWW_ASSETS_REGION_DATA)
+    if not os.path.exists(PATH_WEB_WWW_ASSETS_REGION_UI):       os.makedirs(PATH_WEB_WWW_ASSETS_REGION_UI)
