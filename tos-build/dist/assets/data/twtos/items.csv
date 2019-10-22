@@ -5822,7 +5822,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904170,Event1907_SUMMER_FESTA_GACHA_1,右鍵點擊開啟箱子，有機率獲得以下道具中的一項。{nl}- [活動]3超越卷軸 x1{nl}- [活動]公會任務獎勵鑄幣：銅 x1{nl}- [Summer Festa]補給用濃縮HP藥水 LV15 x1{nl}- [Summer Festa]補給用濃縮SP藥水 LV15 x1{nl}- [活動]巴賽羅斯鑄幣 x(1~2){nl}活動結束後將統一刪除。,icon_item_happybox_red,,,,,,,,[Summer Festa]紅色兌換箱,0,0.0,0.0,FFFT,8,1.0
 904171,Event1907_SUMMER_FESTA_GACHA_2,右鍵點擊開啟箱子，有機率獲得以下道具中的一項。{nl}- [活動]5超越卷軸 x1{nl}- [活動]公會任務獎勵鑄幣：銀 x1{nl}- [Summer Festa]補給用濃縮HP藥水 LV15 x2{nl}- [Summer Festa]補給用濃縮SP藥水 LV15 x2{nl}- [活動]巴賽羅斯鑄幣 x(5~10){nl}活動結束後將統一刪除。,icon_item_happybox_blue,,,,,,,,[Summer Festa]藍色兌換箱,0,0.0,0.0,FFFT,8,1.0
 904172,Event1907_SUMMER_FESTA_GACHA_3,右鍵點擊開啟箱子，有機率獲得以下道具中的一項。{nl}- 執事女僕套裝箱(黑色) x1{nl}- [活動]公會任務獎勵鑄幣：金 x1{nl}- [活動]HP恢復小型靈藥 x2{nl}- [活動]SP恢復小型靈藥 x2{nl}- [Summer Festa]補給用濃縮HP藥水 LV15 x5{nl}- [Summer Festa]補給用濃縮SP藥水 LV15 x5{nl}- [活動]巴賽羅斯鑄幣 x(10~20){nl}活動結束後將統一刪除。,icon_item_happybox_black,,,,,,,,[Summer Festa]黑色兌換箱,0,0.0,0.0,FFFT,8,1.0
-904199,Event_expCard_400Lv,獲得從1級升至400及所需的經驗值。,icon_item_expcard,,,,,,,,經驗值卡片 (400級),0,0.0,0.0,FFFT,8,0.0
+904199,Event_expCard_400Lv,獲得從1級升至400級所需的經驗值。,icon_item_expcard,,,,,,,,經驗值卡片 (400級),0,0.0,0.0,FFFT,8,0.0
 904200,Event_JobexpCard_BOX,使用後可以獲得以下的道具。{nl} - 職業經驗值卡片 (一){nl} - 職業經驗值卡片 (二){nl} - 職業經驗值卡片 (三){nl} - 職業經驗值卡片 (四),icon_item_quest_00017,,,,,,,,職業經驗值卡片箱,0,0.0,0.0,FFFT,8,0.0
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,16,1.0
