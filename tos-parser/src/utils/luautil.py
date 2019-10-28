@@ -28,7 +28,7 @@ LUA_OVERRIDE = [
     'function GET_ITEM_LEVEL(item) return 0 end',  # We cant emulate this function as geItemTable is undefined
     'function IsBuffApplied(pc, buff) return "NO" end',
     'function IsServerSection(pc) return 0 end',
-    'function GetExProp(entity, name) return 0 end',
+    'function GetExProp(entity, name) return entity[name] end',
     'function GetIESID(item) end',
     'function GetItemOwner(item) return {} end',
     'function GetOwner(monster) end',
@@ -38,6 +38,7 @@ LUA_OVERRIDE = [
     'function IMCRandom(min, max) return 0 end',
     'function ScpArgMsg(a, b, c) return "" end',
     'function SCR_MON_OWNERITEM_ARMOR_CALC(self, defType) return 0 end',
+    'function SetExProp(entity, name, value) entity[name] = value end'
 ]
 
 LUA_RUNTIME = None

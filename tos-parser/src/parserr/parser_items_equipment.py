@@ -240,29 +240,30 @@ class TOSEquipmentType(TOSEnum):
     COSTUME_HELMET = 9
     COSTUME_LENS = 10
     COSTUME_OUTFIT = 11
-    COSTUME_SPECIAL = 12
-    COSTUME_TOY = 13
-    COSTUME_WING = 14
-    DAGGER = 15
-    GLOVES = 16
-    NECKLACE = 17
-    ONE_HANDED_BOW = 18
-    ONE_HANDED_GUN = 19
-    ONE_HANDED_MACE = 20
-    ONE_HANDED_SPEAR = 21
-    ONE_HANDED_STAFF = 22
-    ONE_HANDED_SWORD = 23
-    RAPIER = 24
-    SEAL = 25
-    SHIELD = 26
-    SHOES = 27
-    TOP = 28
-    TWO_HANDED_BOW = 29
-    TWO_HANDED_GUN = 30
-    TWO_HANDED_MACE = 31
-    TWO_HANDED_SPEAR = 32
-    TWO_HANDED_STAFF = 33
-    TWO_HANDED_SWORD = 34
+    COSTUME_SKIN = 12
+    COSTUME_SPECIAL = 13
+    COSTUME_TOY = 14
+    COSTUME_WING = 15
+    DAGGER = 16
+    GLOVES = 17
+    NECKLACE = 18
+    ONE_HANDED_BOW = 19
+    ONE_HANDED_GUN = 20
+    ONE_HANDED_MACE = 21
+    ONE_HANDED_SPEAR = 22
+    ONE_HANDED_STAFF = 23
+    ONE_HANDED_SWORD = 24
+    RAPIER = 25
+    SEAL = 26
+    SHIELD = 27
+    SHOES = 28
+    TOP = 29
+    TWO_HANDED_BOW = 30
+    TWO_HANDED_GUN = 31
+    TWO_HANDED_MACE = 32
+    TWO_HANDED_SPEAR = 33
+    TWO_HANDED_STAFF = 34
+    TWO_HANDED_SWORD = 35
 
     @staticmethod
     def value_of(string):
@@ -292,6 +293,7 @@ class TOSEquipmentType(TOSEnum):
             'SEAL': TOSEquipmentType.SEAL,
             'SHIELD': TOSEquipmentType.SHIELD,
             'SHIRT': TOSEquipmentType.TOP,
+            'SKIN': TOSEquipmentType.COSTUME_SKIN,
             'SPEAR': TOSEquipmentType.ONE_HANDED_SPEAR,
             'SPECIALCOSTUME': TOSEquipmentType.COSTUME_SPECIAL,
             'STAFF': TOSEquipmentType.ONE_HANDED_STAFF,
