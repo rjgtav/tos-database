@@ -67,6 +67,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20084,HiddenObbBox_Photowall_Chess2,,,,2
 20085,HiddenObbBox_Photowall_Chess3,,,,2
 20086,HiddenObbBox_Photowall_Chess4,,,,2
+20087,HiddenObbBox_photowall_chef1,,,,2
+20088,HiddenObbBox_photowall_chef2,,,,2
 20100,npc_combat_transport_section_2_sit,,,상인2 앉기,2
 20101,HiddenTrigger5,,,　,2
 20102,npc_combat_transport_section_1,,,상인1,2
@@ -785,7 +787,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151165,playground_goalpost,,,축구 골대,2
 151166,strongbox_1_event,,minimap_event_3,금고상자,2
 151167,treasure_box5_event,,minimap_event_2,보물상자5,2
-151168,npc_moon,,minimap_event_1,보름달,2
+151168,npc_moon,,,보름달,2
 151169,stone_hill_show_name,,,돌 더미,2
 151170,dirt_heal_2_show_name,,,모래 더미,2
 151171,npc_kupole_1_event,,minimap_event_1,이벤트 큐폴1,2
@@ -1537,6 +1539,12 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160000,h_GuildHousing_farmer_girl,,,농장 관리인,2
 160001,h_GuildHousing_farmer_boy,,,농장 관리인,2
 160002,h_GuildHousing_manager,,,길드 아지트 관리인(남),2
+160003,flower_keep_water_yellow,,,물을 머금은 꽃(노란색),2
+160004,flower_keep_water_red,,,물을 머금은 꽃(빨간색),2
+160005,flower_keep_water_white,,,물을 머금은 꽃(하얀색),2
+160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,정화의 제단,2
+160007,SHADOW_LEGEND_SOLO_CURSE_PURIFICATION,,minimap_portal,정화의 제단,2
+160008,Hiddennpc_Moringponia,,,소환포탈,2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
 161002,npc_Teliavelis,,minimap_man_smith,대장장이 테리아베리스,2
@@ -1561,3 +1569,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 161022,uniq_id_nicopolis_mana_effect_mon,,,,2
 161023,uniq_id_nicopolis_mana_effect_onwer,,,,2
 161024,uniq_id_nicopolis_boss_room_potal,,,,2
+2000127,gimmick_fireball_E1,몬스터,,화끈한 사탕,2
+2000128,farm47_circle_01_E1,몬스터,,마법진,2
+2000129,halloween_scarecrow_E1,몬스터,,할로윈 허수아비,2
+2000130,lockdoor_npc_E1,몬스터,,잠긴 문,2
+2000131,pumpkin_bonus_E1,몬스터,,달콤한 마법진,2
+2000132,middle_boss_board_E1,몬스터,,주민이 남긴 쪽지,2

@@ -1,8 +1,8 @@
 $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Materials,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Link_Target,Name,Price,Tradability,Type
-1001,R_timber_01,icon_item_recipe_misc1,,,,,"[{""Item"": 645238, ""Quantity"": 3}]",,,,645242,Recipe - 떡갈나무 목재,10,TTTT,23
-1002,R_timber_02,icon_item_recipe_misc1,,,,,"[{""Item"": 645239, ""Quantity"": 3}]",,,,645243,Recipe - 물푸레나무 목재,10,TTTT,23
-1003,R_timber_03,icon_item_recipe_misc1,,,,,"[{""Item"": 645240, ""Quantity"": 3}]",,,,645244,Recipe - 소나무 목재,10,TTTT,23
-1004,R_timber_04,icon_item_recipe_misc1,,,,,"[{""Item"": 645241, ""Quantity"": 3}]",,,,645245,Recipe - 삼나무 목재,10,TTTT,23
+1001,R_timber_01,icon_item_recipe_misc1,,,,,"[{""Item"": 1001, ""Quantity"": 1}, {""Item"": 645238, ""Quantity"": 3}]",,[1001],,645242,Recipe - 떡갈나무 목재,10,TTTT,23
+1002,R_timber_02,icon_item_recipe_misc1,,,,,"[{""Item"": 1002, ""Quantity"": 1}, {""Item"": 645239, ""Quantity"": 3}]",,[1002],,645243,Recipe - 물푸레나무 목재,10,TTTT,23
+1003,R_timber_03,icon_item_recipe_misc1,,,,,"[{""Item"": 1003, ""Quantity"": 1}, {""Item"": 645240, ""Quantity"": 3}]",,[1003],,645244,Recipe - 소나무 목재,10,TTTT,23
+1004,R_timber_04,icon_item_recipe_misc1,,,,,"[{""Item"": 1004, ""Quantity"": 1}, {""Item"": 645241, ""Quantity"": 3}]",,[1004],,645245,Recipe - 삼나무 목재,10,TTTT,23
 1010,R_drakeResc,icon_item_recipe_misc1,,,,,"[{""Item"": 1010, ""Quantity"": 1}, {""Item"": 645216, ""Quantity"": 300}]",,[1010],,645305,Recipe - 드레이크 견장,10,FFFF,23
 2001,R_rsc_2_1,icon_item_recipe_misc1,,,,,"[{""Item"": 2001, ""Quantity"": 1}, {""Item"": 645024, ""Quantity"": 5}, {""Item"": 645352, ""Quantity"": 2}]",,[2001],,645495,Recipe - 하얀 점액,10,TTTT,23
 2002,R_rsc_2_2,icon_item_recipe_misc1,,,,,"[{""Item"": 2002, ""Quantity"": 1}, {""Item"": 645131, ""Quantity"": 4}]",,[2002],,645496,Recipe - 플로르,10,TTTT,23
@@ -64,7 +64,7 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Li
 9018,R_BlessedStone_Multi,icon_item_recipe_misc1,,,,,"[{""Item"": 9018, ""Quantity"": 1}, {""Item"": 645783, ""Quantity"": 10}]",,[9018],,646045,Recipe - 여신의 축복석,5000,FFFF,23
 9019,R_3CMLAKE262_SQ04,icon_item_recipe_misc1,,,,,"[{""Item"": 9019, ""Quantity"": 1}, {""Item"": 666180, ""Quantity"": 1}, {""Item"": 666182, ""Quantity"": 16}]",,[9019],,666181,Recipe - 마법 제거 폭탄,0,FFFF,23
 9020,R_3CMLAKE262_SQ10,icon_item_recipe_misc1,,,,,"[{""Item"": 9020, ""Quantity"": 1}, {""Item"": 666179, ""Quantity"": 18}, {""Item"": 666183, ""Quantity"": 12}, {""Item"": 666184, ""Quantity"": 3}]",,[9020],,666185,Recipe - 호수의 정기를 담은 수액,0,FFFF,23
-9024,R_Dungeon_Key01,icon_item_recipe_misc1,,,,,"[{""Item"": 9024, ""Quantity"": 1}, {""Item"": 649026, ""Quantity"": 15}, {""Item"": 649025, ""Quantity"": 30}]",,[9024],,680000,Recipe - 레이드 포탈 스톤,0,TTTT,23
+9024,R_Dungeon_Key01,icon_item_recipe_misc1,,,,,"[{""Item"": 9024, ""Quantity"": 1}, {""Item"": 649026, ""Quantity"": 3}, {""Item"": 649025, ""Quantity"": 300}]",,[9024],,680000,Recipe - 레이드 포탈 스톤,0,TTTT,23
 9025,R_Old_Socket_Gold,icon_item_recipe_misc1,,"[642926, 642931, 642929, 642934, 642948]",,,"[{""Item"": 9025, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 10}]",,[9025],,643018,Recipe - 오래된 황금 소켓,0,FFFF,23
 9027,R_misc_ore24,icon_item_recipe_misc1,,,,,"[{""Item"": 9027, ""Quantity"": 1}, {""Item"": 649009, ""Quantity"": 5}, {""Item"": 649004, ""Quantity"": 50}]",,[9027],,649027,Recipe - 펠트레민,0,FFTF,23
 9028,R_misc_ore25,icon_item_recipe_misc1,,,,,"[{""Item"": 9028, ""Quantity"": 1}, {""Item"": 645694, ""Quantity"": 5}, {""Item"": 649004, ""Quantity"": 50}]",,[9028],,649028,Recipe - 울스터마이트,0,FFTF,23
@@ -1145,6 +1145,12 @@ $ID,$ID_NAME,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Li
 50091,R_HAND04_156,icon_item_gloves_misc5,,,,,"[{""Item"": 50091, ""Quantity"": 1}, {""Item"": 649203, ""Quantity"": 75}, {""Item"": 649202, ""Quantity"": 55}, {""Item"": 649009, ""Quantity"": 47}, {""Item"": 649026, ""Quantity"": 192}]",,[50091],,504156,Recipe - 머즈루스 플레이트 건틀릿,0,TTTT,23
 50092,R_HAND04_157,icon_item_gloves_misc5,,,,,"[{""Item"": 50092, ""Quantity"": 1}, {""Item"": 649203, ""Quantity"": 75}, {""Item"": 649202, ""Quantity"": 55}, {""Item"": 649009, ""Quantity"": 47}, {""Item"": 649026, ""Quantity"": 192}]",,[50092],,504157,Recipe - 머즈루스 글로브,0,TTTT,23
 50093,R_HAND04_158,icon_item_gloves_misc5,,,,,"[{""Item"": 50093, ""Quantity"": 1}, {""Item"": 649203, ""Quantity"": 75}, {""Item"": 649202, ""Quantity"": 55}, {""Item"": 649009, ""Quantity"": 47}, {""Item"": 649026, ""Quantity"": 192}]",,[50093],,504158,Recipe - 머즈루스 레더 글로브,0,TTTT,23
+50094,R_NECK04_120,icon_item_necklace_misc5,,[642957],,,"[{""Item"": 50094, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 20}]",,[50094],,584120,Recipe - 피크티스 네클리스,0,TTTT,23
+50095,R_NECK04_121,icon_item_necklace_misc5,,[642957],,,"[{""Item"": 50095, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 20}]",,[50095],,584121,Recipe - 칸트리베 네클리스,0,TTTT,23
+50096,R_NECK04_122,icon_item_necklace_misc5,,[642957],,,"[{""Item"": 50096, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 20}]",,[50096],,584122,Recipe - 주오다 네클리스,0,TTTT,23
+50097,R_BRC04_120,icon_item_bracelet_misc5,,,,,"[{""Item"": 50097, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 10}]",,[50097],,604120,Recipe - 피크티스 브레이슬릿,0,TTTT,23
+50098,R_BRC04_121,icon_item_bracelet_misc5,,,,,"[{""Item"": 50098, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 10}]",,[50098],,604121,Recipe - 칸트리베 브레이슬릿,0,TTTT,23
+50099,R_BRC04_122,icon_item_bracelet_misc5,,,,,"[{""Item"": 50099, ""Quantity"": 1}, {""Item"": 646045, ""Quantity"": 10}]",,[50099],,604122,Recipe - 주오다 브레이슬릿,0,TTTT,23
 100000,R_HIDDEN_BULLETMARKER_ITEM1,icon_item_recipe_misc1,,,,,"[{""Item"": 100000, ""Quantity"": 1}, {""Item"": 663338, ""Quantity"": 50}, {""Item"": 663342, ""Quantity"": 260}]",,[100000],,663339,Recipe - 냉기 탄,0,FFFF,23
 100001,R_HIDDEN_BULLETMARKER_ITEM2,icon_item_recipe_misc1,,,,,"[{""Item"": 100001, ""Quantity"": 1}, {""Item"": 663338, ""Quantity"": 50}, {""Item"": 649208, ""Quantity"": 200}]",,[100001],,663340,Recipe - 화염 탄,0,FFFF,23
 100002,R_HIDDEN_BULLETMARKER_ITEM3,icon_item_recipe_misc1,,,,,"[{""Item"": 100002, ""Quantity"": 1}, {""Item"": 663338, ""Quantity"": 50}, {""Item"": 663347, ""Quantity"": 2}]",,[100002],,663341,Recipe - 전기 탄,0,FFFF,23

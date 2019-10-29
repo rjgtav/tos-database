@@ -41,7 +41,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644043,card_Strongholder,[슬롯 장착 효과] 스태미너 +[★],icon_item_card_util,082_boss_strongholder,[642011],,,,800005,,,,0,1,사이클롭스 카드,500,251,2,456,0.0,0.0,TTTT,3,5,1.0
 644044,card_Saltistter,[슬롯 장착 효과] 얼음 속성 저항력 +[★*10],icon_item_card_def,085_boss_saltistter,,,,,41207,,,,4,0,살티스터 카드,500,300,2,685,0.0,0.0,TTTT,3,1,1.0
 644045,card_salamander,[슬롯 장착 효과] 불 속성 몬스터 처치 시 [★]% 확률로 SP 5% 회복,icon_item_card_util,054_boss_salamander,[642014],,,,41205,,,,2,0,샐러맨더 카드,500,202,4,524,0.0,0.0,TTTT,3,5,1.0
-644046,card_ShadowGaoler,[슬롯 장착 효과] 침묵 상태 저항 +[★*2]%,icon_item_card_util,093_boss_shadowgaoler,,"[642901, 642918, 642940]",,,800006,,,,0,1,섀도게일러 카드,500,290,1,161,0.0,0.0,TTTT,3,5,1.0
+644046,card_ShadowGaoler,[슬롯 장착 효과] 침묵 상태이상 저항 +[★ * 2],icon_item_card_util,093_boss_shadowgaoler,,"[642901, 642918, 642940]",,,800006,,,,0,1,섀도게일러 카드,500,290,1,161,0.0,0.0,TTTT,3,5,1.0
 644047,card_stone_whale,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 5초간 받는 대미지 10%감소,icon_item_card_util,075_boss_stone_whale,,,,,41209,,,,1,4,석화고래 카드,500,226,1,5288,0.0,0.0,TTTT,3,5,1.0
 644048,card_Shnayim,[슬롯 장착 효과] 전기 속성 저항력 +[★*10],icon_item_card_def,033_boss_shnayim,[642013],,,,41241,,,,5,4,쉬나임 카드,500,270,2,3100,0.0,0.0,TTTT,3,1,1.0
 644049,card_Confinedion,[슬롯 장착 효과] 찌르기류 방어력 +[★*10],icon_item_card_def,096_boss_confinedion,,,,,41379,,,,7,0,스콜피오 카드,500,355,8,644,0.0,0.0,TTTT,3,1,1.0
@@ -82,19 +82,19 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644089,card_sparnas,[슬롯 장착 효과] 미사일류 무기 착용 시 물리 공격력 +[★*7],icon_item_card_atk,006_boss_sparnas,,,,,41224,,,,5,0,스파르나스 카드,500,185,2,206,0.0,0.0,TTTT,3,0,1.0
 644092,card_Sparnanman,[슬롯 장착 효과] 어둠 속성 저항력 +[★*10],icon_item_card_def,035_boss_sparnanman,,,,,800008,,,,0,1,스파나스맨 카드,500,315,2,412,0.0,0.0,TTTT,3,1,1.0
 644093,card_Kerberos,[슬롯 장착 효과] 중형 몬스터에게 피격 시 [★]% 확률로 SP 1% 회복{nl}재사용 대기 시간 5초,icon_item_card_util,094_boss_kerberos,[642013],[642903],,,800028,,,,2,1,켈베로스 카드,500,207,4,460,0.0,0.0,TTTT,3,5,1.0
-644094,card_capria,[슬롯 장착 효과] 수면 상태 저항 +[★ * 2]%,icon_item_card_util,131_boss_capria,,,,,57210,,,,7,0,카프리아 카드,500,214,2,189,0.0,0.0,TTTT,3,5,1.0
+644094,card_capria,[슬롯 장착 효과] 수면 상태이상 저항 +[★ * 2],icon_item_card_util,131_boss_capria,,,,,57210,,,,7,0,카프리아 카드,500,214,2,189,0.0,0.0,TTTT,3,5,1.0
 644095,card_Nepenthes,"[슬롯 장착 효과] 최대 HP +[★ * 90], 최대 SP +[★ * 15]",icon_item_card_util,135_boss_nepenthes,,,,,57015,,,,1,5,네펜더스 카드,500,194,2,174,0.0,0.0,TTTT,3,5,1.0
 644096,card_simorph,"[슬롯 장착 효과] 힘 스탯 +[★/2], 체력 스탯 +[★/2]",icon_item_card_stat,133_boss_simorph,,,,,57151,,,,1,5,시모프 카드,500,141,2,60,0.0,0.0,TTTT,3,4,1.0
 644098,card_Golem_gray,[슬롯 장착 효과] 물리 방어력 +[★*10],icon_item_card_def,134_boss_graygolem,,,,,450222,,,,1,4,회색 골렘 카드,500,213,2,6193,0.0,0.0,TTTT,3,1,1.0
 644099,card_Naktis,[슬롯 장착 효과] 명중 +[★ * 1.5],icon_item_card_util,066_boss_naktis,,,,,800058,,,,0,1,나크티스 카드,500,344,2,128,0.0,0.0,TTTT,3,5,1.0
 644100,card_RingCrawler,[슬롯 장착 효과] 정신 스탯 +[★],icon_item_card_stat,067_boss_ringcrawler,,,,,41232,,,,5,4,링크롤러 카드,500,382,1,372,0.0,0.0,TTTT,3,4,1.0
 644101,card_Durahan,[슬롯 장착 효과] 전투 불능 시 [★]% 확률로 10%의 HP가 회복된 상태로 부활 ,icon_item_card_util,071_durahan,,,,,800014,,,,0,1,듀라한 카드,500,245,6,482,0.0,0.0,TTTT,3,5,1.0
-644102,card_Riteris,[슬롯 장착 효과] 블라인드 상태 저항 +[★ * 2]%,icon_item_card_util,073_riteris,,"[642909, 642915, 642923]",,,800015,,,,0,1,리테리스 카드,500,221,2,308,0.0,0.0,TTTT,3,5,1.0
+644102,card_Riteris,[슬롯 장착 효과] 암흑 상태이상 저항 +[★ * 2],icon_item_card_util,073_riteris,,"[642909, 642915, 642923]",,,800015,,,,0,1,리테리스 카드,500,221,2,308,0.0,0.0,TTTT,3,5,1.0
 644103,card_Nuaele,[슬롯 장착 효과] 마법 방어력 +[★]%,icon_item_card_def,074_nuaele,,,,,800016,,,,0,1,누아엘레 카드,500,186,1,91,0.0,0.0,TTTT,3,1,1.0
 644104,card_Neop,[슬롯 장착 효과] HP 포션 종류 효과 +[★]%,icon_item_card_util,113_neop,,,,,800059,,,,7,2,네옵 카드,500,368,2,912,0.0,0.0,TTTT,3,5,1.0
 644105,card_Blud,[슬롯 장착 효과] 체력 스탯 +[★],icon_item_card_stat,112_blud,,,,,800060,,,,0,1,블룻 카드,500,432,4,1677,0.0,0.0,TTTT,3,4,1.0
 644106,card_Glackuman,[슬롯 장착 효과] 베기류 방어력 +[★*10],icon_item_card_def,116_glackuman,,,,,800022,,,,6,4,글락쿠만 카드,500,382,2,1954,0.0,0.0,TTTT,3,1,1.0
-644108,card_Tetraox,[슬롯 장착 효과] 출혈 상태 저항 +[★ * 2]%,icon_item_card_util,127_tetraox,,,,,57421,,,,1,0,테트라옥스 카드,500,190,4,1260,0.0,0.0,TTTT,3,5,1.0
+644108,card_Tetraox,[슬롯 장착 효과] 출혈 상태이상 저항 +[★ * 2],icon_item_card_util,127_tetraox,,,,,57421,,,,1,0,테트라옥스 카드,500,190,4,1260,0.0,0.0,TTTT,3,5,1.0
 644109,card_basilisk,[슬롯 장착 효과] 치명타 저항 +[★ * 2],icon_item_card_util,122_basilisk,,,,,800061,,,,5,2,바실리스크 카드,500,220,4,784,0.0,0.0,TTTT,3,5,1.0
 644110,card_gremlin,[슬롯 장착 효과] 베기류 무기 착용 시 물리 공격력 +[★*7],icon_item_card_atk,124_gremlin,,,,,58522,,,,5,0,그렘린 카드,500,331,2,610,0.0,0.0,TTTT,3,0,1.0
 644111,card_plokste,[슬롯 장착 효과] 물리 공격력 +[★*5],icon_item_card_atk,120_plokste,,,,,800062,,,,7,2,플록스케 카드,500,224,6,484,0.0,0.0,TTTT,3,0,1.0
@@ -110,7 +110,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644123,card_Frogola,[슬롯 장착 효과] HP 포션 종류 사용 시 10초간 마법 방어력 +[★]%,icon_item_card_def,100_frogola,,,,,800018,,,,4,1,프로골라 카드,500,201,1,164,0.0,0.0,TTTT,3,1,1.0
 644125,card_Marionette,[슬롯 장착 효과] 공격 시 [★/3]% 확률로 상대방에게 3초간 슬로우 상태,icon_item_card_util,105_marionette,,,,,800068,,,,0,1,마리오네트 카드,500,318,2,211,0.0,0.0,TTTT,3,5,1.0
 644126,card_Canceril,[슬롯 장착 효과] 중형 몬스터에게 피격 시 [★]% 확률로 HP 2% 회복{nl}재사용 대기 시간 15초,icon_item_card_util,110_canceril,[642046],,,,800025,,,,4,2,캔서릴 카드,500,212,6,256,0.0,0.0,TTTT,3,5,1.0
-644127,card_Crabil,[슬롯 장착 효과] 스턴 상태 저항 +[★ * 2]%,icon_item_card_util,111_crabil,,,,,47505,,,,1,0,크래빌 카드,500,270,8,400,0.0,0.0,TTTT,3,5,1.0
+644127,card_Crabil,[슬롯 장착 효과] 스턴 상태이상 저항 +[★ * 2],icon_item_card_util,111_crabil,,,,,47505,,,,1,0,크래빌 카드,500,270,8,400,0.0,0.0,TTTT,3,5,1.0
 644128,card_Genmagnus,[슬롯 장착 효과] 보조 물리 공격력 +[★*3],icon_item_card_atk,069_boss_genmagnus,,,,,800069,,,,4,1,마스터 지니 카드,500,380,1,83,0.0,0.0,TTTT,3,0,1.0
 644129,card_merregina,[슬롯 장착 효과] 얼음 속성 추가 대미지 +[★*10],icon_item_card_util,077_merregina,,,,,800070,,,,4,1,머레지나 카드,500,363,1,208,0.0,0.0,TTTT,3,5,1.0
 644130,card_Templeshooter,"[슬롯 장착 효과] 힘 스텟 +[★/2], 정신 스탯 +[★/2] ",icon_item_card_stat,063_boss_templeshooter,[642045],,,,800021,,,,0,1,템플슈터 카드,500,230,2,224,0.0,0.0,TTTT,3,4,1.0
