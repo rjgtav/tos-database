@@ -240,8 +240,8 @@ class TOSEquipmentType(TOSEnum):
     COSTUME_HELMET = 9
     COSTUME_LENS = 10
     COSTUME_OUTFIT = 11
-    COSTUME_SKIN = 12
-    COSTUME_SPECIAL = 13
+    COSTUME_SPECIAL = 12
+    COSTUME_SPECIAL_SKIN = 13
     COSTUME_TOY = 14
     COSTUME_WING = 15
     DAGGER = 16
@@ -293,7 +293,7 @@ class TOSEquipmentType(TOSEnum):
             'SEAL': TOSEquipmentType.SEAL,
             'SHIELD': TOSEquipmentType.SHIELD,
             'SHIRT': TOSEquipmentType.TOP,
-            'SKIN': TOSEquipmentType.COSTUME_SKIN,
+            'SKIN': TOSEquipmentType.COSTUME_SPECIAL_SKIN,
             'SPEAR': TOSEquipmentType.ONE_HANDED_SPEAR,
             'SPECIALCOSTUME': TOSEquipmentType.COSTUME_SPECIAL,
             'STAFF': TOSEquipmentType.ONE_HANDED_STAFF,
