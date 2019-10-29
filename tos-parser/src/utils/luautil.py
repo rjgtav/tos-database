@@ -296,6 +296,15 @@ def init_runtime():
                         continue
 
 
+def destroy():
+    global lua, LUA_OVERRIDE, LUA_RUNTIME, LUA_SOURCE
+
+    lua = None
+    LUA_OVERRIDE = None
+    LUA_RUNTIME = None
+    LUA_SOURCE = None
+
+
 def lua_function_load(function_source):
     if len(function_source) == 0:
         return

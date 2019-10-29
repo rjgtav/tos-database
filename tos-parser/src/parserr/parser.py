@@ -1,3 +1,4 @@
+import gc
 import json
 import logging
 import os
@@ -79,31 +80,46 @@ def parse(region, is_rebuild, is_version_new):
     parser_monsters.parse()
     parser_skills.parse(is_rebuild)
 
-    # Parse links
-    logging.debug('Parsing links...')
+    # Parse links (1/2)
+    logging.debug('Parsing links (1/2)...')
     parser_attributes.parse_links()
+    parser_items_gems.parse_links()
+    parser_jobs.parse_links()
+    parser_skills.parse_links(is_rebuild)
+
+    parser_attributes.parse_clean()
+    parser_skills.parse_clean()
+
+    logging.debug('Writing CSVs (1/2)...')
+    csv_write(globals.attributes.values(), constants.OUTPUT_ATTRIBUTES)
+    csv_write(globals.jobs.values(), constants.OUTPUT_JOBS)
+    csv_write(globals.skills.values(), constants.OUTPUT_SKILLS)
+
+    globals.attributes = None
+    globals.attributes_by_name = None
+    globals.jobs = None
+    globals.jobs_by_name = None
+    globals.skills = None
+    globals.skills_by_name = None
+
+    # Destroy LUA & garbage collect...
+    logging.debug('Garbage collect...')
+    luautil.destroy()
+    gc.collect()
+
+    # Parse links (2/2)
+    logging.debug('Parsing links (2/2)...')
     parser_items.parse_links()
     parser_items_cards.parse_links()
     parser_items_collections.parse_links()
     parser_items_cubes.parse_links()
-    parser_items_gems.parse_links()
     parser_items_equipment.parse_links()
     parser_items_equipment_sets.parse_links()
     parser_items_recipes.parse_links()
-    parser_jobs.parse_links()
     parser_maps.parse_links()
     parser_monsters.parse_links()
-    parser_skills.parse_links(is_rebuild)
 
-    # Clean unused data
-    # parser_assets.parse_clean(version_update) # Note: we can't clean unused icons as they can be used by another region
-    parser_attributes.parse_clean()
-    parser_skills.parse_clean()
-
-    logging.debug('Writing CSVs...')
-
-    # Write parsed data to CSV
-    csv_write(globals.attributes.values(), constants.OUTPUT_ATTRIBUTES)
+    logging.debug('Writing CSVs (2/2)...')
     csv_write(globals.books.values(), constants.OUTPUT_BOOKS)
     csv_write(globals.cards.values(), constants.OUTPUT_CARDS)
     csv_write(globals.collections.values(), constants.OUTPUT_COLLECTIONS)
@@ -112,9 +128,7 @@ def parse(region, is_rebuild, is_version_new):
     csv_write(globals.equipment_sets.values(), constants.OUTPUT_EQUIPMENT_SETS)
     csv_write(globals.gems.values(), constants.OUTPUT_GEMS)
     csv_write(globals.items.values(), constants.OUTPUT_ITEMS)
-    csv_write(globals.jobs.values(), constants.OUTPUT_JOBS)
     csv_write(globals.maps.values(), constants.OUTPUT_MAPS)
     csv_write(globals.monsters.values(), constants.OUTPUT_MONSTERS)
     csv_write(globals.npcs.values(), constants.OUTPUT_NPCS)
     csv_write(globals.recipes.values(), constants.OUTPUT_RECIPES)
-    csv_write(globals.skills.values(), constants.OUTPUT_SKILLS)
