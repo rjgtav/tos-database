@@ -3661,6 +3661,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 666254,CASTLE95_MAIN05_ITEM04,在訓練場方尖塔周圍的魔族身上找到的碎片。可能是破壞訓練場方尖塔的線索也不一定。,icon_item_gem_stone_agi,,,,,,,,綠水晶碎片,0,0.0,0.0,FFFF,22,0.0
 666255,CASTLE95_MAIN07_ITEM,安塔妮娜所給的物品。安塔妮娜要你將它設置在外城壁第13區域輸送魔族的傳點周圍，用來抑制和移除傳點。,icon_item_wooden_romuva_blue,,,,,,,,傳點生成抑制器,0,0.0,0.0,FFFF,22,0.0
 666256,CASTLE95_MAIN02_BOOK,抵抗軍副官安塔妮娜所寫的筆記。上面記錄著在外城壁第13區域要做的事情。點擊滑鼠右鍵可以閱讀內容。,icon_item_sheepskin,,,,,,,,安塔妮娜的筆記,0,0.0,0.0,FFFF,22,0.0
+666257,EVENT_HALLOWEENCANDY_3,對著萬聖節稻草人使用可以削弱萬聖節魔女。{nl}離開副本時消失。,event_whiteday_candy_2,,,,,,,,怪味萬聖節糖果,0,0.0,0.0,FFFF,22,0.0
 667000,CATACOMB_33_1_SQ_04_FIRE,從希奇斯那裡獲得的火柴，使用於讓亡者火葬。,icon_item_rod,,,,,,,,守墓人的火柴,0,5.0,0.0,FFFF,22,0.0
 667001,CATACOMB_33_1_SQ_05_DOLL,帶有守護人咒術的人偶。,icon_item_strawdoll1,,,,,,,,守墓人的咒術人偶,0,5.0,0.0,FFFF,22,0.0
 667002,CATACOMB_33_2_SQ_02_ORB,從復活過來的亡者身上吸收生存信念的靈石。,icon_item_spirit_green,,,,,,,,邪念石,0,20.0,0.0,FFFF,22,0.0
@@ -5824,6 +5825,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904172,Event1907_SUMMER_FESTA_GACHA_3,右鍵點擊開啟箱子，有機率獲得以下道具中的一項。{nl}- 執事女僕套裝箱(黑色) x1{nl}- [活動]公會任務獎勵鑄幣：金 x1{nl}- [活動]HP恢復小型靈藥 x2{nl}- [活動]SP恢復小型靈藥 x2{nl}- [Summer Festa]補給用濃縮HP藥水 LV15 x5{nl}- [Summer Festa]補給用濃縮SP藥水 LV15 x5{nl}- [活動]巴賽羅斯鑄幣 x(10~20){nl}活動結束後將統一刪除。,icon_item_happybox_black,,,,,,,,[Summer Festa]黑色兌換箱,0,0.0,0.0,FFFT,8,1.0
 904199,Event_expCard_400Lv,獲得從1級升至400級所需的經驗值。,icon_item_expcard,,,,,,,,經驗值卡片 (400級),0,0.0,0.0,FFFT,8,0.0
 904200,Event_JobexpCard_BOX,使用後可以獲得以下的道具。{nl} - 職業經驗值卡片 (一){nl} - 職業經驗值卡片 (二){nl} - 職業經驗值卡片 (三){nl} - 職業經驗值卡片 (四),icon_item_quest_00017,,,,,,,,職業經驗值卡片箱,0,0.0,0.0,FFFT,8,0.0
+904221,Event_gemExpStone09_Team_14d,使用於強化寶石時，使寶石的經驗值大幅提升。{nl}活動結束後將統一刪除。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,,,7星寶石研磨劑(14天),0,0.0,1209600.0,FFFT,16,1.0
+904222,Event_indunReset_Team_14d,使用時，副本地下城和委託所任務的入場次數會重置。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_indunfreeenter,,,,,,,,副本進場次數重置卷:14日,0,0.0,1209600.0,FFFT,8,1.0
+904226,EVENT_HALLOWEENCANDY_1,活動道具。{nl}向活動布告欄NPC對話開啟[萬聖節之夜的騷動]活動商店，可以兌換商店內的商品。{nl}活動結束後將統一刪除。,event_whiteday_candy_3,,,,,,,,甜蜜萬聖節糖果,0,0.0,0.0,FFFT,16,0.1
+904227,EVENT_HALLOWEENCANDY_2,活動道具。{nl}使用後，24小時內獲得甜蜜萬聖節糖果的數量增為2倍。不過[萬聖節之夜的騷動]副本和連線獎勵不會套用此效果。{nl}活動結束後將統一刪除。,icon_item_pumpkin,,,,,,,,南瓜萬聖節糖果,0,0.0,0.0,FFFT,6,0.1
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,16,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,16,1.0
