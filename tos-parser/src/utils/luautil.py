@@ -95,6 +95,7 @@ def init_global_data():
         return ies_ADD
     ''')
 
+    ies_ADD('ancient', iesutil.load('ancient_info.ies'))
     ies_ADD('item', iesutil.load('item_equip.ies'))
     ies_ADD('item_grade', iesutil.load('item_grade.ies'))
     ies_ADD('item_growth', iesutil.load('item_growth.ies'))
