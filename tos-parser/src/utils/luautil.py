@@ -416,10 +416,13 @@ def lua_function_source_to_javascript(function_source):
         line = re.sub(r'\belse\b', '} else {', line)
         line = re.sub(r'\belseif\b', '} else if', line)
         line = re.sub(r'\bnil\b', 'null', line)
-        line = re.sub(r'for (.+),(.+)do', r'for (var \1; \2;) {', line)
-        line = re.sub(r'if (.+) then', r'if (\1) {', line)
 
         result.append(line)
+
+    result = '\n'.join(result)
+    result = re.sub(r'for (.+?),(.+?)do', r'for (var \1; \2;) {', result, flags=re.DOTALL)
+    result = re.sub(r'if (.+?) then', r'if (\1) {', result, flags=re.DOTALL)
+    result = result.splitlines()
 
     return result
 

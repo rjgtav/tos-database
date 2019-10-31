@@ -32,11 +32,16 @@ export class TOSAttribute extends TOSEntity implements ITOSAttribute {
         let source = this.Unlock;
         let context = {
           'abilIES': null,
+          'abilName': "'" + unlockArg.UnlockArgStr + "'",
           'jobName': "'" + unlockArg.UnlockArgStr + "'",
+          'jobClassName': "'" + unlockArg.UnlockArgStr + "'",
           'sklName': "'" + unlockArg.UnlockArgStr + "'",
           'levelFix': unlockArg.UnlockArgNum,
           'limitLevel': unlockArg.UnlockArgNum,
           'limitRank': unlockArg.UnlockArgNum,
+          'player': {
+            'JobName': "'" + unlockArg.UnlockArgStr + "'",
+          }
         };
 
         let unlock = (await LUAService.eval(build, source, context).toPromise());

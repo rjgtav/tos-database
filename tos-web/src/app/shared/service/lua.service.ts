@@ -28,6 +28,7 @@ export class LUAService {
     'var IsPVPServer = (a) => 0;',
     'var IsServerSection = (a) => 0;',
     'var IsServerObj = (a) => 0;',
+    'var tonumber = (a) => +a;',
     'var i = 0;',
     'var owner = pc;',
     'var session = { party: {' +
@@ -131,16 +132,27 @@ export class LUAService {
         // Note: we need to reset these on every new line so it doesn't skip matches
         let lineOriginal = line;
         let regexGetJobGrade = /GetJobGradeByName\(pc, (.+)\)/g;
+        let regexGetJobLevelByName = /GetJobLevelByName\(pc, curJobClsName\)/g;
         let regexGetSkill = /GetSkill\(pc, (.+)\)/g;
         let regexPlayer = /(?:pc\.(\w+))+/g;
         let regexSkill = /(?:skill\.(\w+))+/g;
         let match: RegExpExecArray;
+
+        // GetJobLevelByName(pc, curJobClsName);
 
         line = line.replace('GetTotalJobCount(pc)', build.Rank + '');
 
         // GetJobGrade(pc, job) - return the circle of the requested job
         while (match = regexGetJobGrade.exec(lineOriginal)) {
           let jobName = (['"', "'"].indexOf(match[1][0]) > -1 ? match[1] : context[match[1]]).slice(1, -1);
+          let job = await TOSDomainService.jobsByIdName(jobName).toPromise();
+
+          line = line.replace(match[0], build.jobCircle(job) + '');
+        }
+
+        // GetJobGradeByName(pc, curJobClsName) - return the circle for the current job
+        while (match = regexGetJobLevelByName.exec(lineOriginal)) {
+          let jobName = player['JobName'].slice(1, -1);
           let job = await TOSDomainService.jobsByIdName(jobName).toPromise();
 
           line = line.replace(match[0], build.jobCircle(job) + '');
