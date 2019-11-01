@@ -387,9 +387,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640259,GIMMICK_Drug_HPSP4,15초 동안 2초 간격으로 매회 HP와 SP를 831 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 100초.,item_hpsp_potion_3,,,,,,,,케이스타스 회복포션Lv4,0,100.0,0.0,FFFF,6,22.0
 640260,Achieve_CreativeSou,창작의 혼 칭호를 얻을 수 있는 칭호 아이템입니다. 아이템 우클릭으로 사용하여 칭호를 획득할 수 있습니다.,icon_item_holyark,,,,,,,,칭호-창작의 혼,0,0.0,0.0,FFFF,6,0.0
 640263,misc_gemExpStone_randomQuest1_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 300,icon_item_powderp,,,,,,,,빛나는 2성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
-640264,misc_gemExpStone_randomQuest2_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1200,icon_item_powderp,,,,,,,,빛나는 3성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
-640265,misc_gemExpStone_randomQuest3_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3900,icon_item_powderp,,,,,,,,빛나는 4성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
-640266,misc_gemExpStone_randomQuest4_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,빛나는 5성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
+640264,misc_gemExpStone_randomQuest2_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,200",icon_item_powderp,,,,,,,,빛나는 3성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
+640265,misc_gemExpStone_randomQuest3_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3,900",icon_item_powderp,,,,,,,,빛나는 4성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
+640266,misc_gemExpStone_randomQuest4_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,빛나는 5성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
 640268,GIMMICK_Drug_HPSP1_TA,15초 동안 2초 간격으로 매회 HP와 SP를 373 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 100초.,item_hpsp_potion_1,,,,,,,,농축 케이스타스 회복포션Lv1,0,100.0,0.0,TTTT,6,20.0
 640269,GIMMICK_Drug_PMDEF1_TA,3분 동안 물리.마법 방어력을 +100 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 120초.,icon_item_drug_exdef1,,,,,,,,농축 케이스타스 수호의 포션,0,120.0,0.0,TTTT,6,10.0
 640270,GIMMICK_Drug_PMATK1_TA,3분 동안 물리.마법 공격력을 +55 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 120초.,icon_item_drug_exatk1,,,,,,,,농축 케이스타스 용맹의 포션,0,120.0,0.0,TTTT,6,10.0
@@ -397,7 +397,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640272,expCard_C,경험치를 +142150 클래스 경험치를 +109455 상승시켜 줍니다.,icon_item_expcard,,,,,,,,하급 경험치 카드,0,0.0,0.0,TTFT,6,0.0
 640273,expCard_B,경험치를 +237943 클래스 경험치를 +183216 상승시켜 줍니다.,icon_item_expcard,,,,,,,,중급 경험치 카드,0,0.0,0.0,TTFT,6,0.0
 640275,expCard_A,경험치를 +541023 클래스 경험치를 +416587 상승시켜 줍니다.,icon_item_expcard,,,,,,,,고급 경험치 카드,0,0.0,0.0,TTFT,6,0.0
-640276,misc_gemExpStone_5000_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 5000{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_powderp,,,,,,,,젬 연마제: 5000,20,0.0,0.0,TTTT,16,1.0
+640276,misc_gemExpStone_5000_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 5,000{nl} 리사이클샵에서 메달로 교환 가능합니다.",icon_item_powderp,,,,,,,,"젬 연마제: 5,000",20,0.0,0.0,TTTT,16,1.0
 640277,Drug_MSPD2_1h_TA,1시간 동안 이동속도를 +2 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 300초.{nl} 리사이클샵에서 메달로 교환 가능합니다.,item_speed_requid_1,,,,,,,,이동속도 향상의 포션:1시간,25,300.0,0.0,TTTT,6,5.0
 640278,Drug_RedApple100_TA,HP를 50% 즉시 회복시키고 2초 간격으로 11초 동안 HP를 50% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_hpelixir,,,,,,,,HP 회복의 엘릭서,20,20.0,0.0,TTTT,6,30.0
 640279,Drug_BlueApple100_TA,SP를 50% 즉시 회복시키고 2초 간격으로 11초 동안 SP를 50% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_spelixir,,,,,,,,SP 회복의 엘릭서,20,20.0,0.0,TTTT,6,30.0
@@ -1190,7 +1190,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645517,misc_yonazolem_Q1,람스티스 협곡의 요나졸렘에게서 획득할 수 있습니다.,icon_item_misc_00005,,,,,,"[30144, 30145, 30146]",,요나졸렘 파편,2,0.0,0.0,FFTF,16,1.0
 645518,misc_Denoptic,긴다리 계곡의 덴옵틱에게서 획득할 수 있습니다.,icon_item_velorb,,,,,,"[30144, 30145, 30146]",,덴옵틱의 눈,2,0.0,0.0,FFTF,16,1.0
 645519,misc_Confinedion,아크멘스 능선의 스콜피오에게서 획득할 수 있습니다.,icon_item_claw_01,,,,,,"[30144, 30145, 30146]",,스콜피오 갈고리,2,0.0,0.0,FFTF,16,1.0
-645520,misc_gemExpStone01,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3000,icon_item_powderp,,,,,,,,젬 연마제: 3000,20,0.0,0.0,FFTF,16,1.0
+645520,misc_gemExpStone01,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3,000",icon_item_powderp,,,,,,,,"젬 연마제: 3,000",20,0.0,0.0,FFTF,16,1.0
 645521,misc_BRC03_105_1,왕릉 2층의 툼로드에게서 획득할 수 있습니다.,icon_item_chain,,,,,,[34031],,툼로드 체인,2,0.0,0.0,FFTF,16,1.0
 645522,misc_BRC03_105_2,왕릉 4층의 베아카라스에게서 획득할 수 있습니다.,icon_item_statuepiece,,,,,,[34031],,베아카라스 파편,2,0.0,0.0,FFTF,16,1.0
 645523,misc_BRC03_105_3,왕릉 5층의 렉시퍼에게서 획득할 수 있습니다.,icon_item_spirit_brown,,,,,,,,렉시퍼의 사념체,2,0.0,0.0,FFTF,16,1.0
@@ -1273,7 +1273,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645605,misc_wire,매우 얇아서 유심히 보지 않으면 찾을 수 없습니다.,icon_item_wire,,,,,,,,와이어,64,0.0,0.0,FFTF,16,0.2
 645606,misc_spacepiece,시공간이 뒤틀릴 때 발견되는 신비로운 결정입니다.,icon_item_timespace,,,,,,,,시간의 결정,400,0.0,0.0,FFTF,16,0.5
 645607,wood_05,가공된 목재입니다. 아이템을 만드는 재료로 사용됩니다.,icon_item_wood_1,,,,,,,,참나무,4,0.0,0.0,FFTF,16,1.0
-645608,misc_gemExpStone02,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. {nl} - 획득 젬 경험치: 15500,icon_item_powderp,,,,,,,,젬 연마제: 15500,20,0.0,0.0,FFTF,16,1.0
+645608,misc_gemExpStone02,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. {nl} - 획득 젬 경험치: 15,500",icon_item_powderp,,,,,,,,"젬 연마제: 15,500",20,0.0,0.0,FFTF,16,1.0
 645609,misc_Marionette,복잡한 기계에 쓰였을 것같은 톱니바퀴입니다. 록소나 재건단 서관의 마리오네트에게서 획득합니다.,icon_item_gele_gear_01,,,,,,"[30369, 30370, 30373, 30374, 30377, 30378]",,복잡한 톱니바퀴,2000,0.0,0.0,TTTT,16,1.0
 645610,misc_durahan,듀라한의 갑옷 파편입니다. 록소나 재건단 동관의 듀라한에게서 획득합니다.,icon_item_formine_armor_scapular,,,,,,"[30379, 30380]",,듀라한 갑옷 파편,2000,0.0,0.0,TTTT,16,1.0
 645611,misc_anchor,무거운 고철 덩어리입니다. 닻에게서 획득합니다.,icon_item_ironbar03_s,[642107],,,,,"[12084, 14071, 19015, 30377, 30379, 30380]",,닻,2,0.0,0.0,TTTT,16,1.0
@@ -1299,13 +1299,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645631,card_Xpupkit01,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 2000 만큼 상승시킵니다.,monster_card,,,,,,,,강화용 카드 Lv1,2000,0.0,0.0,FFTF,16,1.0
 645632,misc_paperBox_party,관심이 필요할 때 사용하세요.,icon_item_paperbox,,,,,,,,종이상자,20,1.0,0.0,TTTT,6,1.0
 645633,PILGRIM_36_2_SQ_090_ITEM_2,게다스가 열심히 연구 해 둔 연구 자료. 게다스의 퀘스트가 끝난 뒤에는 우클릭으로 소비해 버릴 수 있습니다.,icon_item_paper,,,,,,,,게다스의 연구 자료,1,0.0,0.0,FFFF,22,0.0
-645634,misc_gemExpStone03,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 31000,icon_item_powderp,,"[642909, 642913, 642921, 642922]",,,,,,젬 연마제: 31000,20,0.0,0.0,FFTF,16,1.0
-645635,misc_gemExpStone04,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 62000,icon_item_powderp,,,,,,,,젬 연마제: 62000,20,0.0,0.0,FFTF,16,1.0
-645636,misc_gemExpStone05,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 124000,icon_item_powderp,,,,,,,,젬 연마제: 124000,20,0.0,0.0,FFTF,16,1.0
+645634,misc_gemExpStone03,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 31,000",icon_item_powderp,,"[642909, 642913, 642921, 642922]",,,,,,"젬 연마제: 31,000",20,0.0,0.0,FFTF,16,1.0
+645635,misc_gemExpStone04,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 62,000",icon_item_powderp,,,,,,,,"젬 연마제: 62,000",20,0.0,0.0,FFTF,16,1.0
+645636,misc_gemExpStone05,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 124,000",icon_item_powderp,,,,,,,,"젬 연마제: 124,000",20,0.0,0.0,FFTF,16,1.0
 645637,misc_gemExpStone_randomQuest1,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 300,icon_item_powderp,,,,,,,,2성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
-645638,misc_gemExpStone_randomQuest2,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1200,icon_item_powderp,,,,,,,,3성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
-645639,misc_gemExpStone_randomQuest3,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3900,icon_item_powderp,,,,,,,,4성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
-645640,misc_gemExpStone_randomQuest4,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,5성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
+645638,misc_gemExpStone_randomQuest2,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,200",icon_item_powderp,,,,,,,,3성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
+645639,misc_gemExpStone_randomQuest3,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3,900",icon_item_powderp,,,,,,,,4성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
+645640,misc_gemExpStone_randomQuest4,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,5성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
 645641,misc_Chafperor,체이퍼러에게서 획득합니다.,icon_item_shell_purple,,,,,,"[15084, 16089, 17069, 18025, 18055, 31036, 31056]",,체이퍼러의 껍질,2,0.0,0.0,TTTT,16,1.0
 645642,misc_Socket,머리에 솟아난 뿔입니다. 소켓에게서 획득합니다.,icon_item_pantohorn,"[642162, 642179]",,,,,"[33029, 34026, 38006]",,소켓의 뿔,6,0.0,0.0,TTTT,16,1.0
 645643,misc_ticen_mage,미약하게 마력을 가지고 있는 이끼입니다. 티켄 마법사에게서 획득합니다.,icon_item_grassbladeb,,,,,,[16071],,마법 이끼,1,0.0,0.0,TTTT,16,1.0
@@ -1430,8 +1430,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645762,misc_earthTower10_boss,대지의 탑의 롤로팬서 구간에서 획득 가능합니다.,33_item_ore_lapis_lazuli,,,,,,,,고사리우스의 정수,0,0.0,0.0,FFTT,16,0.0
 645763,misc_earthTower15_boss,대지의 탑의 롤로팬서 구간에서 획득 가능합니다.,33_item_ore_lapis_lazuli,,,,,,,,투르타이의 정수,0,0.0,0.0,FFTT,16,0.0
 645764,misc_earthTower20_boss,대지의 탑의 롤로팬서 구간에서 획득 가능합니다.,33_item_ore_lapis_lazuli,,,,,,,,급의 정수,0,0.0,0.0,FFTT,16,0.0
-645765,misc_gemExpStone09,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230700,icon_item_powderp,,,,,,,,7성 젬 연마제,0,0.0,0.0,FFFF,16,1.0
-645766,misc_gemExpStone10,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1094700,icon_item_powderp,,,,,,,,8성 젬 연마제,0,0.0,0.0,FFFF,16,1.0
+645765,misc_gemExpStone09,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,7성 젬 연마제,0,0.0,0.0,FFFF,16,1.0
+645766,misc_gemExpStone10,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,094,700",icon_item_powderp,,,,,,,,8성 젬 연마제,0,0.0,0.0,FFFF,16,1.0
 645768,misc_awakeningStone1_test,장비의 포텐셜을 감소시키지 않고 아이템 각성을 할 수 있게 도와줍니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_awakeningstone,,,,,,,,각성석:1분,6,0.0,60.0,FFFF,16,1.0
 645769,misc_earthTower_2,대지의 탑의 솔미키 구간에서 획득 가능합니다.,icon_item_gem_stone_int,,,,,,,,LV2 대지의 파편,0,0.0,0.0,FFTT,16,0.0
 645770,misc_earthTower25_boss,대지의 탑의 솔미키 구간에서 획득 가능합니다.,33_item_ore_lapis_lazuli,,,,,,,,네옵의 정수,0,0.0,0.0,FFTT,16,0.0
@@ -1572,9 +1572,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645922,misc_talt_event,몬스터들에게서 발견되는 정체불명의 보석입니다. 신비로운 빛깔로인해 수집가들이 많이 찾고있습니다. 길드를 성장시키는데 이용됩니다.,30_item_ore_talt,,,,,,,,탈트 [증정용],9,0.0,0.0,FFFF,16,10.0
 645923,misc_emptySpellBook,스펠이 전혀 적혀있지 않은 스펠북입니다. 특정한 스킬로 스펠을 적어넣으면 해당 스킬을 사용할 수 있습니다.,icon_item_emptyspellbook,,,,,,,,빈 스펠북,40,0.0,0.0,FFTF,16,1.0
 645924,misc_brokenwheel,"보기보다 무거운 재질로 되어 있으며, 다른 곳에 있는 바퀴를 잠시 불러낼 수 있다고 전해지는 돌입니다.",icon_item_brokenwheel,,,,,,,,심판의 바퀴,40,0.0,0.0,FFTF,16,1.0
-645925,misc_gemExpStone_randomQuest3_14d,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 3900,icon_item_powderp,,,,,,,,4성 젬 연마제:14일,20,0.0,1209600.0,FFFF,16,1.0
-645926,misc_gemExpStone_randomQuest4_14d,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFF,16,1.0
-645927,misc_gemExpStone_randomQuest5,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 57900,icon_item_powderp,,,,,,,,6성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
+645925,misc_gemExpStone_randomQuest3_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 3,900",icon_item_powderp,,,,,,,,4성 젬 연마제:14일,20,0.0,1209600.0,FFFF,16,1.0
+645926,misc_gemExpStone_randomQuest4_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFF,16,1.0
+645927,misc_gemExpStone_randomQuest5,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 57,900",icon_item_powderp,,,,,,,,6성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
 645928,misc_0395,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_20,[642182],,,,,,,로데나콩의 열매,9,0.0,0.0,TTTT,16,1.0
 645929,misc_0396,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_21,[642182],,,,,,,로데내그의 가시줄기,9,0.0,0.0,TTTT,16,1.0
 645930,misc_0397,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_28,[642182],,,,,,,로데타드의 열매,9,0.0,0.0,TTTT,16,1.0
@@ -1688,12 +1688,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 646038,misc_0505,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_73,[642206],,,,,[12089],,모닝버드의 꼬리,9,0.0,0.0,TTTT,16,1.0
 646039,misc_0506,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_74,[642206],,,,,"[14091, 40036]",,모닝버드의 온전한 날개,9,0.0,0.0,TTTT,16,1.0
 646040,misc_scrollskulp,어디에 쓰이는지 정확히 알 수 없는 종이조각입니다. 드문드문 특별한 선이 보입니다.,icon_item_flag_hohen,,,,,,[3031],,찢어진 종이조각,9,0.0,0.0,FFFF,16,1.0
-646041,misc_gemExpStone09_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230700,icon_item_powderp,,,,,,,,빛나는 7성 젬 연마제,0,0.0,0.0,TTTT,16,1.0
-646042,misc_gemExpStone10_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1094700,icon_item_powderp,,,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTTT,16,1.0
+646041,misc_gemExpStone09_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,빛나는 7성 젬 연마제,0,0.0,0.0,TTTT,16,1.0
+646042,misc_gemExpStone10_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,094,700",icon_item_powderp,,,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTTT,16,1.0
 646043,card_Xpupkit01_500,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 500 만큼 상승시킵니다.,monster_card,,,,,,,,강화용 카드 : 500,2000,0.0,0.0,TTTT,16,1.0
 646044,misc_0507,돋보기 제조 기술이 발달하지 못해 내구도가 많이 약합니다. 한 번의 감정에 많은 돋보기가 필요합니다.,icon_item_misc_0507,,,,,,,,감정용 돋보기,25,0.0,0.0,FFTF,16,1.0
 646045,Premium_item_transcendence_Stone,여신의 축복이 담긴 돌입니다. 모든 아이템의 효능을 더 좋게 만드는데 쓰입니다.,icon_item_transcendence_stone,,,,,,"[9025, 50094, 50095, 50096, 50097, 50098, 50099]",[9018],여신의 축복석,0,0.0,0.0,TTTT,16,0.0
-646046,misc_gemExpStone07_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. {nl} - 획득 젬 경험치: 145340,icon_item_powderp,,,,,,,,빛나는 젬 연마제: 145340,0,0.0,0.0,TTTT,16,1.0
+646046,misc_gemExpStone07_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. {nl} - 획득 젬 경험치: 145,340",icon_item_powderp,,,,,,,,"빛나는 젬 연마제: 145,340",0,0.0,0.0,TTTT,16,1.0
 646047,Team_Bat_Card_01,카드 강화에 사용 시 +300의 경험치를 획득할 수 있습니다.,monster_card,,,,,,,,강화용 카드 : 300(팀 배틀 리그 보상),0,0.0,0.0,FFFT,16,1.0
 646048,Exp_Card_300,카드 강화에 사용 시 +300의 경험치를 획득할 수 있습니다.,monster_card,,,,,,,,강화용 카드 : 300,0,0.0,0.0,FFFT,16,1.0
 646049,PVP_Misc_1,콜로니전 승리를 기념하는 주화입니다.,icon_item_coin_colony_01,,,,,,,,콜로니전 기념 주화,100000,0.0,0.0,FFTT,16,1.0
@@ -1742,12 +1742,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647009,misc_0528,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc_0529,,,,,,"[30569, 30571, 30573, 50004, 50018, 50020, 50022, 400037, 400038, 400039, 400040]",,로열 블레이드 파편,25,0.0,0.0,TTTT,16,1.0
 647010,misc_0529,하시사스 포션입니다. 마시면 일시적으로 신체 능력을 향상시켜 줍니다.,icon_item_misc04_112,,,,,,,,하시사스 포션,25,0.0,0.0,FFFF,16,1.0
 647011,misc_0530,고급 장비 제작 및 인장 강화에 사용되는 매우 희귀한 재료입니다.,icon_item_misc_misc_0530,,,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089, 34090, 34091, 34092, 34093]",,마정석,25,0.0,0.0,TTTT,16,1.0
-647012,misc_gemExpStone_randomQuest4_14d_Team,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFT,16,1.0
+647012,misc_gemExpStone_randomQuest4_14d_Team,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFT,16,1.0
 647013,PVP_Misc_1_KOR_Reward,"콜로니전 승리를 기념하는 주화입니다.{nl}콜로니전 마켓 적립금 보상을 대체해 지급되는 아이템입니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_coin_colony_01,,,,,,,,콜로니전 기념 주화 [보상용],100000,0.0,0.0,FFTT,16,1.0
 647014,misc_0531,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_iredian_misc01,,,,,,"[34090, 34091, 34092, 34093]",,이레디안 브로치,0,0.0,0.0,TTTT,16,1.0
 647015,misc_0532,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_iredian_misc02,,,,,,"[34090, 34091, 34092, 34093]",,이레디안 수정 조각,0,0.0,0.0,TTTT,16,1.0
 647016,misc_0533,클라페다 [바이보라 날개] 레나를 찾아가면 유용한 아이템으로 교환 가능합니다.,icon_item_wingcoin,,,,,,,,바이보라의 날개 주화,0,0.0,0.0,FFFT,16,1.0
-647017,misc_gemExpStone10_Premium,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1094700,icon_item_powderp,,,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTFT,16,1.0
+647017,misc_gemExpStone10_Premium,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,094,700",icon_item_powderp,,,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTFT,16,1.0
 647018,widnium_piece_Premium,"최근 머나먼 어딘가에서 케도라 상단을 통해 들어왔다고 전해지는 희귀한 광물입니다.{nl}이 광물은 누군가가 소지하고 있어도 자신이 본래에 있던 곳으로 돌아가려고 한다는 소문이 있습니다.{nl}페디미안의 테리아베리스 또한 소문을 듣고 연구를 위해 이 광석을 애타게 찾고 있다고 합니다.{nl}이 광석을 테리아베리스에게 전해주면 '다이아몬드 모루 (14일)' 1개로 교환해줍니다.{nl}이 아이템은 2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_widnium_piece,,,,,,,,위드니움 조각,0,0.0,0.0,FFFF,16,1.0
 647019,misc_bernice_coin,베르니케 파편 던전보상 아이템입니다. 오라클 마스터를 통해 아이템으로 교환 할 수 있습니다.,icon_item_bernice_coin,,,,,,,,베르니케 파편 주화,1,0.0,0.0,FFFT,16,0.0
 647020,misc_0534,각종 구급 약품이 담겨 있는 상자입니다.,icon_item_first_aid_kit,,,,,,,,구급상자,5,0.0,0.0,FFTF,16,0.1
@@ -5515,7 +5515,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 810000,Companion_Exchange_Ticket,"모험일지 보상으로 얻은 아기돼지 컴패니언 교환권, 바이보라 날개에게서 교환권 20개로 아기돼지 컴패니언을 교환할 수 있습니다. ",icon_item_indulgence,,,,,,,,아기돼지 컴패니언 교환권,0,0.0,0.0,TTFT,16,1.0
 810001,Team_Warehouse_Extend,마우스 오른쪽 클릭으로 사용합니다. 사용시 팀 창고가 2칸 확장됩니다.,icon_item_indulgence,,,,,,,,팀 창고 확장권 +2,0,60.0,0.0,FFFF,6,1.0
 810002,Team_Warehouse_Extend_1add,마우스 오른쪽 클릭으로 사용합니다. 사용시 팀 창고가 1칸 확장됩니다.,icon_item_indulgence,,,,,,,,팀 창고 확장권 +1,0,60.0,0.0,FFFF,6,1.0
-810003,misc_gemExpStone_randomQuest4_Adv,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,5성 젬 연마제,20,0.0,0.0,FFFT,16,1.0
+810003,misc_gemExpStone_randomQuest4_Adv,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,5성 젬 연마제,20,0.0,0.0,FFFT,16,1.0
 810004,Adventure_Reward_Seed,사용 시 여신의 축복이 깃든 새싹이 핍니다.,icon_item_event161215_01,,,,,,,,축복이 깃든 씨앗,0,5.0,0.0,FFFT,6,0.0
 810005,Adventure_Goddess_Statue,5분 동안 여신의 축복을 받을 수 있는 여신의 조각상이 설치됩니다.,icon_item_farm47_broken_zemina,,,,,,,,여신의 조각상,0,0.0,0.0,FFFT,6,0.0
 810006,Companion_Exchange_Ticket2,"모험일지 보상으로 얻은 아르마딜로 컴패니언 교환권, 바이보라 날개에게서 교환권 20개로 아르마딜로 컴패니언을 교환할 수 있습니다. ",icon_item_indulgence,,,,,,,,아르마딜로 컴패니언 교환권,0,0.0,0.0,TTFT,16,1.0
@@ -5651,7 +5651,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900298,Event_1704_LvUp_Old_Lv300,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}9월 14일 점검 시, 일괄 삭제됩니다.",icon_item_eventbox_magic,,,,,,,,명예의 300레벨상자,0,0.0,0.0,FFFF,8,1.0
 900299,Event_1704_Drug_Fortunecookie,"30분간 중첩에 따라 경험치, 이동속도, 최대HP가 증가하며, 최대 5중첩까지 가능합니다.{nl}9월 14일 점검 시, 일괄 삭제됩니다.",icon_item_fortunecookie,,,,,,,,[레벨업 이벤트] 포춘 쿠키,0,10.0,0.0,FFFF,6,0.0
 900300,Event_1704_Goddess_Statue,"5분 동안 여신의 축복을 받을 수 있는 여신의 조각상이 설치됩니다.{nl}1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_farm47_broken_zemina,,,,,,,,[Re:Build] 여신의 조각상,0,0.0,0.0,FFFF,6,0.0
-900301,Event_1704_misc_gemExpStone_randomQuest4,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14700{nl}1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_powderp,,,,,,,,[Re:Build] 5성 젬 연마제,20,0.0,0.0,FFFF,16,1.0
+900301,Event_1704_misc_gemExpStone_randomQuest4,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14,700{nl}1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_powderp,,,,,,,,[Re:Build] 5성 젬 연마제,20,0.0,0.0,FFFF,16,1.0
 900302,Moru_Silver_Event_1704,"모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 실버 소비 없이 장비를 강화할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.{nl}9월 14일 점검 시, 일괄 삭제됩니다.",icon_item_anvil_silver,,,,,,,,[레벨업 이벤트] 은빛 모루,0,0.0,0.0,FFFF,16,1.0
 900310,Event_1705_Corsair_Wood,"해적 단원의 요청으로 만들어진 나무판자{nl}6월 15일 점검 시, 일괄 삭제됩니다.",icon_item_timber_1,,,,,,,,나무 판자,1,0.0,0.0,FFFT,8,1.0
 900311,Event_1705_Corsair_Potion,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}6월 22일 점검 시, 일괄 삭제됩니다.{nl}사용 시 1시간 동안 이동 속도 +5",icon_item_cprsair_potion,,,,,,,,해적단 포션,0,0.0,0.0,FFFT,8,1.0
@@ -5762,7 +5762,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904023,EVENT_1804_TRANSCEND_SHOP_SILVER_BOX_14D,사용시 랜덤 수량의 실버가 획득됩니다.,icon_item_silverbox1,,,,,,,,축복받은 실버 상자 (14일),0,0.0,1209600.0,FFFF,6,1.0
 904024,EVENT_1804_TRANSCEND_SHOP_REINFORCE_BOX_14D,사용 시 보상목록 중 랜덤으로 아이템이 획득됩니다.,icon_item_eventbox_qm,,,,,,,,축복받은 강화 큐브 (14일),0,0.0,1209600.0,FFFF,6,1.0
 904025,EVENT_1804_TRANSCEND_SHOP_COSTUME_BOX_14D,사용 시 보상목록 중 랜덤으로 아이템이 획득됩니다.,icon_item_eventcube3,,,,,,,,인기 이벤트 코스튬 큐브 (14일),0,0.0,1209600.0,FFFF,6,1.0
-904026,misc_gemExpStone09_14d,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230700,icon_item_powderp,,,,,,,,7성 젬 연마제 (14일),0,0.0,1209600.0,FFFF,16,1.0
+904026,misc_gemExpStone09_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,7성 젬 연마제 (14일),0,0.0,1209600.0,FFFF,16,1.0
 904027,MISSION_SURVIVAL_EVENT2_ACHIEVE_BOX,"괴도 트팡 이벤트에서 선물하는 칭호 상자 입니다.{nl}5월 31일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,칭호 - 괴도의 자격,0,0.0,0.0,FFFT,6,0.0
 904029,EVENT_1805_WEDDING1_PIECE,"5월의 신부를 도와줘 이벤트용 아이템 입니다. 5월 17일 점검 시, 일괄 삭제됩니다.",icon_item_event_invitationpiece1,,,,,,,,잃어버린 청첩장 조각,0,0.0,0.0,FFFT,16,0.1
 904030,EVENT_BEAUTY_CHAIR,뷰티샵 구매 이벤트로 지급받은 아이템입니다.{nl}사용 시 바버샵 의자를 소환해 앉을 수 있습니다.,icon_item_event_beauty_chair,,,,,,,,바버샵 의자,0,1.0,0.0,FFFT,6,1.0
@@ -5878,7 +5878,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904218,Event_Drug_Looting_Potion_500_14d,"60분 동안 루팅찬스를 +500 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 60분.{nl} - 루팅 찬스 포션은 중첩해서 사용 할 수 없습니다.{nl}기간 초과 시, 본 아이템이 삭제됩니다.",item_icon_luckypotion_500,,,,,,,,루팅 찬스: 500 (14일),0,3600.0,1209600.0,FFFT,6,1.0
 904219,Event_Sevinose_EquipArmor_Box,"사용 시 원하는 11강 8초월 [이벤트] 세비노스 방어구를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[이벤트] 11강 8초월 세비노스 방어구 선택상자,0,0.0,0.0,FFFT,8,1.0
 904220,Event_card_Xpupkit10_Team_14d,"카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 5400 만큼 상승시킵니다.{nl}기간 초과 시, 본 아이템이 삭제됩니다.",icon_item_reinforce_card_10,,,,,,,,Lv10 강화용 카드 (14일),0,0.0,1209600.0,FFFT,16,1.0
-904221,Event_gemExpStone09_Team_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl}기간 초과 시, 본 아이템이 삭제됩니다.{nl} - 획득 젬 경험치: 230700",icon_item_powderp,,,,,,,,7성 젬 연마제 (14일),0,0.0,1209600.0,FFFT,16,1.0
+904221,Event_gemExpStone09_Team_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl}기간 초과 시, 본 아이템이 삭제됩니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,7성 젬 연마제 (14일),0,0.0,1209600.0,FFFT,16,1.0
 904222,Event_indunReset_Team_14d,사용 시 인스턴스 던전과 의뢰소 미션의 입장 횟수가 초기화됩니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_indunfreeenter,,,,,,,,인스턴스 던전 입장 횟수 초기화권:14일,0,0.0,1209600.0,FFFT,8,1.0
 904223,Event_HiddenAbility_MasterPiece,스킬의 숨겨진 내용이 담겨 있습니다. 계열별 마스터 NPC에게 찾아가면 원하는 내용의 아츠를 얻을 수 있습니다.,icon_item_hiddenability_total,,,,,,,,[이벤트] 미식별 신비한 서,0,0.0,0.0,FFFT,16,0.1
 904225,EVENT_190919_ANCIENT_SCROLL_RESTORE,"사용 시 지정된 몬스터 리스트 중 랜덤한 몬스터 6종이 등장합니다.{nl}몬스터를 선택하여 해당 몬스터가 등록된 그리모어 낱장을 획득할 수 있습니다.{nl}그리모어 낱장 획득 시 [이벤트] 고대 주화가 소모됩니다.{nl} 몬스터의 등급에 따라 소모되는 [이벤트] 고대 주화 개수와 등장 확률이 다릅니다.{nl}다중 선택이 가능합니다. {nl}[이벤트] 고대 주화 소모 개수 및 등장 확률{nl} - 노말 : 1개(70%){nl} - 매직 : 2개(25%){nl} - 유니크 : 3개(4%){nl} - 레전드 : 4개(1%){nl}* 10월 24일 점검 시, 일괄 삭제됩니다.",icon_item_event_190919_ancient_scroll,,,,,,,,[이벤트] 몬스터 선택 스크롤,0,0.0,0.0,FFFF,6,0.0
