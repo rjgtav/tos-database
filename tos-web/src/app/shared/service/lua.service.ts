@@ -24,6 +24,7 @@ export class LUAService {
     'var GetZoneName = (a) => null;',
     'var TryGetProp = (a, b) => a && a[b];',
     'var IsBuffApplied = (a, b) => null;',
+    'var IsRaidField = (a) => 0;',
     'var IsPVPField = (a) => 0;',
     'var IsPVPServer = (a) => 0;',
     'var IsServerSection = (a) => 0;',
