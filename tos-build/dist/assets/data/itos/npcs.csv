@@ -1568,3 +1568,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 161022,uniq_id_nicopolis_mana_effect_mon,,,,2
 161023,uniq_id_nicopolis_mana_effect_onwer,,,,2
 161024,uniq_id_nicopolis_boss_room_potal,,,,2
+2000127,gimmick_fireball_E1,Monster,,Spicy Treat,2
+2000128,farm47_circle_01_E1,Monster,,Magic Circle,2
+2000129,halloween_scarecrow_E1,Monster,,Scaredy Scarecrow,2
+2000130,lockdoor_npc_E1,Monster,,Locked Door,2
+2000131,pumpkin_bonus_E1,Monster,,Sweet Magic Circle,2
+2000132,middle_boss_board_E1,Monster,,Note left by a resident,2

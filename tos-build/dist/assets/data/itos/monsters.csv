@@ -93,7 +93,7 @@ $ID,$ID_NAME,Armor,Description,EXP,EXPClass,Element,Icon,Level,Link_Items,Link_M
 12061,Statue_angel,5,Monster,94,99,6,icon_item_nothing,16,,,Baby Angel Statue,,2,0,64,43,64,43,16,16,0,8,32,16,16,24,24,8,16,424,8,204,8,8,0
 12062,Hall_stone,5,Monster,98,103,6,icon_item_nothing,17,,,Hall Statue,,2,0,66,44,66,44,17,17,0,8,33,17,17,24,24,8,17,445,8,211,8,8,0
 12063,Priest,5,Monster,64,49,6,icon_item_nothing,1,,,Cleric,,2,0,32,21,32,21,1,1,0,2,5,1,1,3,3,2,1,105,2,26,2,2,0
-12082,hidden_monster,5,Monster,0,0,6,icon_item_nothing,1,,"[{""Map"": 1001, ""Population"": 2, ""TimeRespawn"": 60.0}, {""Map"": 528, ""Population"": 2, ""TimeRespawn"": 60.0}, {""Map"": 529, ""Population"": 2, ""TimeRespawn"": 60.0}, {""Map"": 530, ""Population"": 2, ""TimeRespawn"": 60.0}]",Transparent Object,,2,5,32,21,32,21,1,1,0,2,5,1,1,5,5,2,1,131,2,26,2,2,0
+12082,hidden_monster,5,Monster,0,0,6,icon_item_nothing,1,,"[{""Map"": 528, ""Population"": 2, ""TimeRespawn"": 60.0}, {""Map"": 529, ""Population"": 2, ""TimeRespawn"": 60.0}, {""Map"": 530, ""Population"": 2, ""TimeRespawn"": 60.0}]",Transparent Object,,2,5,32,21,32,21,1,1,0,2,5,1,1,5,5,2,1,131,2,26,2,2,0
 12083,hidden_monster2,5,Monster,0,0,2,icon_item_nothing,1,,,Fire Ball,,2,0,32,21,32,21,1,1,0,2,5,1,1,3,3,2,1,105,2,26,2,2,0
 12084,hidden_monster3,5,Monster,0,0,6,icon_item_nothing,1,,,Collar Bomb,,2,0,32,21,32,21,1,1,0,2,5,1,1,3,3,2,1,105,2,26,2,2,0
 12085,hidden_monster4,5,Monster,0,0,6,icon_item_nothing,1,,,Transparent Object,,2,5,32,21,32,21,1,1,0,2,5,1,1,5,5,2,1,131,2,26,2,2,0
@@ -3431,6 +3431,12 @@ $ID,$ID_NAME,Armor,Description,EXP,EXPClass,Element,Icon,Level,Link_Items,Link_M
 2000118,PVP_Mine_Buff_Object_06,1,Monster,0,0,,,1,,,Crystal Protection,,3,1,37,24,37,24,1,1,0,2,5,1,1,91,48,2,1,131,2,26,2,2,0
 2000119,PVP_Mine_Buff_Object_07,1,Monster,0,0,,,1,,,Blessing of the Goddess,,3,1,37,24,37,24,1,1,0,2,5,1,1,91,48,2,1,131,2,26,2,2,0
 2000120,PVP_Mine_Buff_Object_08,1,Monster,0,0,,,1,,,Power of the Goddess,,3,1,37,24,37,24,1,1,0,2,5,1,1,91,48,2,1,131,2,26,2,2,0
+2000121,event_Goblin_Halloween_E1,3,The Halloween Vubbe who stole the Halloween Treats have hidden and locked themselves indoors.,0,0,1,,1,,,Halloween Vubbe,0,2,2,46,25,84,45,1,0,0,2,7,1,0,44,66,3,0,10,1,13,1,3,0
+2000122,pumpkin_dog_E1,1,Amberdogs are running amok in Klaipeda.,0,0,0,,1,,,Amberdog,1,5,1,47,31,29,19,1,0,0,1,3,0,1,98,27,1,0,5,4,39,3,1,0
+2000123,event_Spector_Halloween_E1,2,The culprit behind the Halloween night commotion in Klaipeda. Defeat the Wicked Witch and retrieve the stolen treats.,0,0,0,boss_spector_halloween,1,,,Halloween Witch,1,0,3,62,62,39,39,1,1,0,1,3,1,3,85,46,1,0,800,4,39,3,1,0
+2000124,boss_necrovanter_E1,2,This Necroventer has invaded Klaipeda along with the Wicked Witch. ,0,0,0,boss_necrovanter,1,,,Necroventer,1,0,3,81,44,50,27,1,1,0,1,3,1,3,85,46,1,0,10,4,39,3,1,0
+2000125,boss_Spector_F_E1,2,This Specter of Deceit has invaded Klaipeda along with the Wicked Witch. ,0,0,0,spector_f,1,,,Specter of Deceit,1,0,1,69,46,43,28,1,1,0,1,3,1,2,74,40,1,0,5,4,39,3,1,0
+2000126,boss_Spector_m_E1,2,This Specter Monarch has invaded Klaipeda along with the Wicked Witch. ,0,0,0,boss_spector_m,1,,,Specter Monarch,1,0,3,81,44,50,27,1,1,0,1,3,1,3,85,46,1,0,5,4,39,3,1,0
 2000500,Colony_Siege_Tower,4,Structure,0,0,6,icon_item_siege_tower,1,,,Siege Tower,,3,2,33,33,33,33,1,1,0,2,5,1,1,55,104,2,0,1000,2,26,2,2,0
 2000501,Colony_Ballista,4,Structure,0,0,6,icon_item_large_crossbow,1,,,Varistor,,3,1,31,31,31,31,1,1,0,2,5,1,1,48,91,2,0,400,2,26,2,2,0
 2500001,solo_Onion,1,"This isn't a strong monster, but tears could be dropping from your eyes if you attack it recklessly.",0,0,7,mon_onion,300,,,Dimension Kepa,5,5,0,1887,1258,2103,1402,300,300,0,183,617,600,300,3121,1858,91,0,73782,91,3186,91,152,0
