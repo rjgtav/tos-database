@@ -29,6 +29,7 @@ LUA_OVERRIDE = [
     'function IsBuffApplied(pc, buff) return "NO" end',
     'function IsServerSection(pc) return 0 end',
     'function GetExProp(entity, name) return entity[name] end',
+    'function GetExProp_Str(entity, name) return tostring(entity[name]) end',
     'function GetIESID(item) end',
     'function GetItemOwner(item) return {} end',
     'function GetOwner(monster) end',
