@@ -1211,6 +1211,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154122,npc_MasterMatross,,minimap_man_archer,매트로스 마스터,2
 154123,npc_MasterArditi,,minimap_man_scout,아르디티 마스터,2
 154124,npc_MasterTigerHunter,,minimap_man_archer,산포 마스터,2
+154125,npc_kupole_7,,minimap_personal_house,큐폴7,2
 155000,npc_crystal_machine,,,수정가공기계,2
 155001,farm49_sapling,,,신비한 묘목,2
 155002,dirt_ground,,,토양표본,2
@@ -1545,6 +1546,11 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,정화의 제단,2
 160007,SHADOW_LEGEND_SOLO_CURSE_PURIFICATION,,minimap_portal,정화의 제단,2
 160008,Hiddennpc_Moringponia,,,소환포탈,2
+160009,moringponia_spell_crystal_red,,,정화석,2
+160010,moringponia_star_stone,,,정화석,2
+160011,moringponia_ignore_raise,,minimap_portal,,2
+160012,HiddenWall_600_400_300,,,,2
+160013,HiddenWall_800_400_300,,,,2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
 161002,npc_Teliavelis,,minimap_man_smith,대장장이 테리아베리스,2
