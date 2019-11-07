@@ -387,9 +387,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640259,GIMMICK_Drug_HPSP4,15초 동안 2초 간격으로 매회 HP와 SP를 831 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 100초.,item_hpsp_potion_3,,,,,,,,케이스타스 회복포션Lv4,0,100.0,0.0,FFFF,6,22.0
 640260,Achieve_CreativeSou,창작의 혼 칭호를 얻을 수 있는 칭호 아이템입니다. 아이템 우클릭으로 사용하여 칭호를 획득할 수 있습니다.,icon_item_holyark,,,,,,,,칭호-창작의 혼,0,0.0,0.0,FFFF,6,0.0
 640263,misc_gemExpStone_randomQuest1_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 300,icon_item_powderp,,,,,,,,빛나는 2성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
-640264,misc_gemExpStone_randomQuest2_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1200,icon_item_powderp,,,,,,,,빛나는 3성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
-640265,misc_gemExpStone_randomQuest3_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3900,icon_item_powderp,,,,,,,,빛나는 4성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
-640266,misc_gemExpStone_randomQuest4_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,빛나는 5성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
+640264,misc_gemExpStone_randomQuest2_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,200",icon_item_powderp,,,,,,,,빛나는 3성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
+640265,misc_gemExpStone_randomQuest3_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3,900",icon_item_powderp,,,,,,,,빛나는 4성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
+640266,misc_gemExpStone_randomQuest4_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,빛나는 5성 젬 연마제,20,0.0,0.0,TTTT,16,1.0
 640268,GIMMICK_Drug_HPSP1_TA,15초 동안 2초 간격으로 매회 HP와 SP를 373 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 100초.,item_hpsp_potion_1,,,,,,,,농축 케이스타스 회복포션Lv1,0,100.0,0.0,TTTT,6,20.0
 640269,GIMMICK_Drug_PMDEF1_TA,3분 동안 물리.마법 방어력을 +100 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 120초.,icon_item_drug_exdef1,,,,,,,,농축 케이스타스 수호의 포션,0,120.0,0.0,TTTT,6,10.0
 640270,GIMMICK_Drug_PMATK1_TA,3분 동안 물리.마법 공격력을 +55 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 120초.,icon_item_drug_exatk1,,,,,,,,농축 케이스타스 용맹의 포션,0,120.0,0.0,TTTT,6,10.0
@@ -397,7 +397,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640272,expCard_C,경험치를 +142150 클래스 경험치를 +109455 상승시켜 줍니다.,icon_item_expcard,,,,,,,,하급 경험치 카드,0,0.0,0.0,TTFT,6,0.0
 640273,expCard_B,경험치를 +237943 클래스 경험치를 +183216 상승시켜 줍니다.,icon_item_expcard,,,,,,,,중급 경험치 카드,0,0.0,0.0,TTFT,6,0.0
 640275,expCard_A,경험치를 +541023 클래스 경험치를 +416587 상승시켜 줍니다.,icon_item_expcard,,,,,,,,고급 경험치 카드,0,0.0,0.0,TTFT,6,0.0
-640276,misc_gemExpStone_5000_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 5000{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_powderp,,,,,,,,젬 연마제: 5000,20,0.0,0.0,TTTT,16,1.0
+640276,misc_gemExpStone_5000_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 5,000{nl} 리사이클샵에서 메달로 교환 가능합니다.",icon_item_powderp,,,,,,,,"젬 연마제: 5,000",20,0.0,0.0,TTTT,16,1.0
 640277,Drug_MSPD2_1h_TA,1시간 동안 이동속도를 +2 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 300초.{nl} 리사이클샵에서 메달로 교환 가능합니다.,item_speed_requid_1,,,,,,,,이동속도 향상의 포션:1시간,25,300.0,0.0,TTTT,6,5.0
 640278,Drug_RedApple100_TA,HP를 50% 즉시 회복시키고 2초 간격으로 11초 동안 HP를 50% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_hpelixir,,,,,,,,HP 회복의 엘릭서,20,20.0,0.0,TTTT,6,30.0
 640279,Drug_BlueApple100_TA,SP를 50% 즉시 회복시키고 2초 간격으로 11초 동안 SP를 50% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.{nl} 리사이클샵에서 메달로 교환 가능합니다.,icon_item_spelixir,,,,,,,,SP 회복의 엘릭서,20,20.0,0.0,TTTT,6,30.0
@@ -752,7 +752,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641936,161215Event_OldChar,"라이마의 보물이 들어 있는 상자입니다.{nl}2월 23일 점검 시, 일괄 삭제됩니다.",icon_item_giftbox2,,,,,,,,라이마의 보물 상자,0,0.0,0.0,FFFF,6,0.0
 641937,CS_IndunReset_GTower_1,오늘 입장한 대지의 탑 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,,,오류 보상용 대지의 탑 1회 입장권 (5일),0,0.0,432000.0,FFFF,6,0.0
 641938,CS_IndunReset_Nunnery_1,오늘 입장한 살러스 수녀원 미션 입장 횟수를 1 차감합니다.,icon_item_indunfreeenter,,,,,,,,오류 보상용 살러스 미션 1회 입장권 (5일),0,5.0,432000.0,FFFF,6,0.0
-641939,Event_Goddess_Statue,5분 동안 여신의 축복을 받을 수 있는 여신의 조각상이 설치됩니다.,icon_item_farm47_broken_zemina,,,,,,,,여신의 조각상(14일),0,0.0,1209600.0,FFFF,6,0.0
+641939,Event_Goddess_Statue,5분 동안 여신의 축복을 받을 수 있는 여신의 조각상이 설치됩니다.,icon_item_farm47_broken_zemina,,,,,,,,여신의 조각상(14일),0,0.0,1209600.0,FFFT,6,0.0
 641940,CS_IndunReset_GTower_14d,대지의 탑을 1회 입장 할 수 있습니다.,icon_item_key_earthtower,,,,,,,,대지의 탑 1회 입장권 (14일),0,0.0,1209600.0,FFFF,6,0.0
 641942,Event_1704_SilverBox,사용시 임의의 실버를 획득할 수 있습니다.,icon_item_silverbox1,,,,,,,,대박 실버 상자(14일),0,0.0,1209600.0,FFFF,8,0.0
 641943,Leticia_IndunReset_GTower,대지의 탑을 1회 입장 할 수 있습니다.,icon_item_key_earthtower,,,,,,,,대지의 탑 1회 입장권,0,0.0,0.0,TTTT,6,0.0
@@ -802,7 +802,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643008,Moru_Silver_NoDay,모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 실버 소비 없이 장비를 강화할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_anvil_silver,,,,,,,,은빛 모루,0,0.0,0.0,FFFF,16,1.0
 643009,Moru_Event160929_14d,"강화 단계가 0일때만 사용 가능하며, 강화비용을 소모하지 않습니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil,,,,,,,,가벼운 모루(14일),0,0.0,1209600.0,FFFF,16,1.0
 643010,Moru_Gold_14d,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil_gold,,,,,,,,황금 모루(14일),0,0.0,1209600.0,FFFF,16,1.0
-643014,Moru_Gold_TA_NR,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 강화시 실버가 필요하지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil_gold,,,,,,,,빛나는 황금 모루,0,0.0,0.0,TTTT,16,1.0
+643014,Moru_Gold_TA_NR,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 강화시 실버가 필요하지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.{nl}빛나는 루비 모루의 재료로 사용 할 수 있습니다.",icon_item_anvil_gold,,,,,,[9035],,빛나는 고급 황금 모루,0,0.0,0.0,TTTT,16,1.0
 643015,Moru_Gold_Team_Trade,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil_gold,,,,,,,,황금 모루,0,0.0,0.0,FFFT,16,1.0
 643020,Extract_kit,아이커 추출에 사용되는 도구입니다. 일반 도구로 테리아베리스에게서 구매할 수 있습니다.,icon_item_extractkit,,,,,,,,아이커 추출 키트,600,0.0,0.0,FFTF,16,4.0
 643021,Extract_kit_Sliver,아이커 추출에 사용되는 도구입니다. 소모하는 재화가 필요 없습니다.,icon_item_extractkit_sliver,,,,,,,,은빛 아이커 추출 키트,0,0.0,0.0,FFTF,16,4.0
@@ -831,7 +831,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643052,event1909_Transcend_Scroll_8,"장비의 초월 수치를 8단계로 만들어줍니다.{nl}0~7단계 초월 아이템만 사용할 수 있으며, 8초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 8초월 상태로 변경됩니다.{nl}9월 19일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트]8초월 스크롤,0,0.0,0.0,FFFT,6,1.0
 643053,event1909_Transcend_Scroll_5,"장비의 초월 수치를 5단계로 만들어줍니다.{nl}0~4단계 초월 아이템만 사용할 수 있으며, 5초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 5초월 상태로 변경됩니다.{nl}9월 19일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트]5초월 스크롤,0,0.0,0.0,FFFT,6,5.0
 643054,event1909_Transcend_Scroll_3,"장비의 초월 수치를 3단계로 만들어줍니다.{nl}0~2단계 초월 아이템만 사용할 수 있으며, 3초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 3초월 상태로 변경됩니다.{nl}9월 19일 점검 시, 일괄 삭제됩니다.",icon_item_transcendence_coupon,,,,,,,,[이벤트]3초월 스크롤,0,0.0,0.0,FFFT,6,5.0
-643055,Transcend_Scroll_10,"장비의 초월 수치를 10단계로 만들어줍니다.{nl}0~9단계 초월 아이템만 사용할 수 있으며, 10초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 10초월 상태로 변경됩니다. {nl}Lv 400이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,Lv.400 10초월 스크롤,0,0.0,0.0,TFFT,6,1.0
+643055,Transcend_Scroll_10,"장비의 초월 수치를 10단계로 만들어줍니다.{nl}0~9단계 초월 아이템만 사용할 수 있으며, 10초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 10초월 상태로 변경됩니다. {nl}Lv 400이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,Lv.400 10초월 스크롤,0,0.0,0.0,FFFT,6,1.0
+643056,Moru_Ruby_Charge,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +16 강화 이상에서 실패 시 강화 수치가 +15 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_ruby_moru,,,,,,,[9034],루비 모루,0,0.0,0.0,FFFT,16,1.0
 645002,D_Bube_Mane,수정에 오래 노출된 부베들에게서만 얻을 수 있는 어두운 마석,icon_item_evilenergy_piece,,,,,,,,부베 마석,4,0.0,0.0,TTTT,22,0.0
 645024,leaf_hanaming,달콤한 향이 나는 꽃잎입니다. 하나밍에게서 획득합니다.,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,하나밍 꽃잎,1,0.0,0.0,TTTT,16,1.0
 645025,TreasureboxKey2,보물 상자 LV 2을 여는데 사용되는 열쇠,icon_item_key1,,,,,,,,LV2 보물상자 열쇠,0,0.0,0.0,FFTF,16,1.0
@@ -1190,7 +1191,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645517,misc_yonazolem_Q1,람스티스 협곡의 요나졸렘에게서 획득할 수 있습니다.,icon_item_misc_00005,,,,,,"[30144, 30145, 30146]",,요나졸렘 파편,2,0.0,0.0,FFTF,16,1.0
 645518,misc_Denoptic,긴다리 계곡의 덴옵틱에게서 획득할 수 있습니다.,icon_item_velorb,,,,,,"[30144, 30145, 30146]",,덴옵틱의 눈,2,0.0,0.0,FFTF,16,1.0
 645519,misc_Confinedion,아크멘스 능선의 스콜피오에게서 획득할 수 있습니다.,icon_item_claw_01,,,,,,"[30144, 30145, 30146]",,스콜피오 갈고리,2,0.0,0.0,FFTF,16,1.0
-645520,misc_gemExpStone01,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3000,icon_item_powderp,,,,,,,,젬 연마제: 3000,20,0.0,0.0,FFTF,16,1.0
+645520,misc_gemExpStone01,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3,000",icon_item_powderp,,,,,,,,"젬 연마제: 3,000",20,0.0,0.0,FFTF,16,1.0
 645521,misc_BRC03_105_1,왕릉 2층의 툼로드에게서 획득할 수 있습니다.,icon_item_chain,,,,,,[34031],,툼로드 체인,2,0.0,0.0,FFTF,16,1.0
 645522,misc_BRC03_105_2,왕릉 4층의 베아카라스에게서 획득할 수 있습니다.,icon_item_statuepiece,,,,,,[34031],,베아카라스 파편,2,0.0,0.0,FFTF,16,1.0
 645523,misc_BRC03_105_3,왕릉 5층의 렉시퍼에게서 획득할 수 있습니다.,icon_item_spirit_brown,,,,,,,,렉시퍼의 사념체,2,0.0,0.0,FFTF,16,1.0
@@ -1273,7 +1274,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645605,misc_wire,매우 얇아서 유심히 보지 않으면 찾을 수 없습니다.,icon_item_wire,,,,,,,,와이어,64,0.0,0.0,FFTF,16,0.2
 645606,misc_spacepiece,시공간이 뒤틀릴 때 발견되는 신비로운 결정입니다.,icon_item_timespace,,,,,,,,시간의 결정,400,0.0,0.0,FFTF,16,0.5
 645607,wood_05,가공된 목재입니다. 아이템을 만드는 재료로 사용됩니다.,icon_item_wood_1,,,,,,,,참나무,4,0.0,0.0,FFTF,16,1.0
-645608,misc_gemExpStone02,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. {nl} - 획득 젬 경험치: 15500,icon_item_powderp,,,,,,,,젬 연마제: 15500,20,0.0,0.0,FFTF,16,1.0
+645608,misc_gemExpStone02,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. {nl} - 획득 젬 경험치: 15,500",icon_item_powderp,,,,,,,,"젬 연마제: 15,500",20,0.0,0.0,FFTF,16,1.0
 645609,misc_Marionette,복잡한 기계에 쓰였을 것같은 톱니바퀴입니다. 록소나 재건단 서관의 마리오네트에게서 획득합니다.,icon_item_gele_gear_01,,,,,,"[30369, 30370, 30373, 30374, 30377, 30378]",,복잡한 톱니바퀴,2000,0.0,0.0,TTTT,16,1.0
 645610,misc_durahan,듀라한의 갑옷 파편입니다. 록소나 재건단 동관의 듀라한에게서 획득합니다.,icon_item_formine_armor_scapular,,,,,,"[30379, 30380]",,듀라한 갑옷 파편,2000,0.0,0.0,TTTT,16,1.0
 645611,misc_anchor,무거운 고철 덩어리입니다. 닻에게서 획득합니다.,icon_item_ironbar03_s,[642107],,,,,"[12084, 14071, 19015, 30377, 30379, 30380]",,닻,2,0.0,0.0,TTTT,16,1.0
@@ -1299,13 +1300,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645631,card_Xpupkit01,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 2000 만큼 상승시킵니다.,monster_card,,,,,,,,강화용 카드 Lv1,2000,0.0,0.0,FFTF,16,1.0
 645632,misc_paperBox_party,관심이 필요할 때 사용하세요.,icon_item_paperbox,,,,,,,,종이상자,20,1.0,0.0,TTTT,6,1.0
 645633,PILGRIM_36_2_SQ_090_ITEM_2,게다스가 열심히 연구 해 둔 연구 자료. 게다스의 퀘스트가 끝난 뒤에는 우클릭으로 소비해 버릴 수 있습니다.,icon_item_paper,,,,,,,,게다스의 연구 자료,1,0.0,0.0,FFFF,22,0.0
-645634,misc_gemExpStone03,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 31000,icon_item_powderp,,"[642909, 642913, 642921, 642922]",,,,,,젬 연마제: 31000,20,0.0,0.0,FFTF,16,1.0
-645635,misc_gemExpStone04,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 62000,icon_item_powderp,,,,,,,,젬 연마제: 62000,20,0.0,0.0,FFTF,16,1.0
-645636,misc_gemExpStone05,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 124000,icon_item_powderp,,,,,,,,젬 연마제: 124000,20,0.0,0.0,FFTF,16,1.0
+645634,misc_gemExpStone03,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 31,000",icon_item_powderp,,"[642909, 642913, 642921, 642922]",,,,,,"젬 연마제: 31,000",20,0.0,0.0,FFTF,16,1.0
+645635,misc_gemExpStone04,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 62,000",icon_item_powderp,,,,,,,,"젬 연마제: 62,000",20,0.0,0.0,FFTF,16,1.0
+645636,misc_gemExpStone05,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 124,000",icon_item_powderp,,,,,,,,"젬 연마제: 124,000",20,0.0,0.0,FFTF,16,1.0
 645637,misc_gemExpStone_randomQuest1,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 300,icon_item_powderp,,,,,,,,2성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
-645638,misc_gemExpStone_randomQuest2,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1200,icon_item_powderp,,,,,,,,3성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
-645639,misc_gemExpStone_randomQuest3,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3900,icon_item_powderp,,,,,,,,4성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
-645640,misc_gemExpStone_randomQuest4,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,5성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
+645638,misc_gemExpStone_randomQuest2,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,200",icon_item_powderp,,,,,,,,3성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
+645639,misc_gemExpStone_randomQuest3,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 3,900",icon_item_powderp,,,,,,,,4성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
+645640,misc_gemExpStone_randomQuest4,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,5성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
 645641,misc_Chafperor,체이퍼러에게서 획득합니다.,icon_item_shell_purple,,,,,,"[15084, 16089, 17069, 18025, 18055, 31036, 31056]",,체이퍼러의 껍질,2,0.0,0.0,TTTT,16,1.0
 645642,misc_Socket,머리에 솟아난 뿔입니다. 소켓에게서 획득합니다.,icon_item_pantohorn,"[642162, 642179]",,,,,"[33029, 34026, 38006]",,소켓의 뿔,6,0.0,0.0,TTTT,16,1.0
 645643,misc_ticen_mage,미약하게 마력을 가지고 있는 이끼입니다. 티켄 마법사에게서 획득합니다.,icon_item_grassbladeb,,,,,,[16071],,마법 이끼,1,0.0,0.0,TTTT,16,1.0
@@ -1430,8 +1431,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645762,misc_earthTower10_boss,대지의 탑의 롤로팬서 구간에서 획득 가능합니다.,33_item_ore_lapis_lazuli,,,,,,,,고사리우스의 정수,0,0.0,0.0,FFTT,16,0.0
 645763,misc_earthTower15_boss,대지의 탑의 롤로팬서 구간에서 획득 가능합니다.,33_item_ore_lapis_lazuli,,,,,,,,투르타이의 정수,0,0.0,0.0,FFTT,16,0.0
 645764,misc_earthTower20_boss,대지의 탑의 롤로팬서 구간에서 획득 가능합니다.,33_item_ore_lapis_lazuli,,,,,,,,급의 정수,0,0.0,0.0,FFTT,16,0.0
-645765,misc_gemExpStone09,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230700,icon_item_powderp,,,,,,,,7성 젬 연마제,0,0.0,0.0,FFFF,16,1.0
-645766,misc_gemExpStone10,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1094700,icon_item_powderp,,,,,,,,8성 젬 연마제,0,0.0,0.0,FFFF,16,1.0
+645765,misc_gemExpStone09,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,7성 젬 연마제,0,0.0,0.0,FFFF,16,1.0
+645766,misc_gemExpStone10,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,094,700",icon_item_powderp,,,,,,,,8성 젬 연마제,0,0.0,0.0,FFFF,16,1.0
 645768,misc_awakeningStone1_test,장비의 포텐셜을 감소시키지 않고 아이템 각성을 할 수 있게 도와줍니다. 획득 후부터 1분동안 사용 가능합니다.,icon_item_awakeningstone,,,,,,,,각성석:1분,6,0.0,60.0,FFFF,16,1.0
 645769,misc_earthTower_2,대지의 탑의 솔미키 구간에서 획득 가능합니다.,icon_item_gem_stone_int,,,,,,,,LV2 대지의 파편,0,0.0,0.0,FFTT,16,0.0
 645770,misc_earthTower25_boss,대지의 탑의 솔미키 구간에서 획득 가능합니다.,33_item_ore_lapis_lazuli,,,,,,,,네옵의 정수,0,0.0,0.0,FFTT,16,0.0
@@ -1572,9 +1573,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645922,misc_talt_event,몬스터들에게서 발견되는 정체불명의 보석입니다. 신비로운 빛깔로인해 수집가들이 많이 찾고있습니다. 길드를 성장시키는데 이용됩니다.,30_item_ore_talt,,,,,,,,탈트 [증정용],9,0.0,0.0,FFFF,16,10.0
 645923,misc_emptySpellBook,스펠이 전혀 적혀있지 않은 스펠북입니다. 특정한 스킬로 스펠을 적어넣으면 해당 스킬을 사용할 수 있습니다.,icon_item_emptyspellbook,,,,,,,,빈 스펠북,40,0.0,0.0,FFTF,16,1.0
 645924,misc_brokenwheel,"보기보다 무거운 재질로 되어 있으며, 다른 곳에 있는 바퀴를 잠시 불러낼 수 있다고 전해지는 돌입니다.",icon_item_brokenwheel,,,,,,,,심판의 바퀴,40,0.0,0.0,FFTF,16,1.0
-645925,misc_gemExpStone_randomQuest3_14d,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 3900,icon_item_powderp,,,,,,,,4성 젬 연마제:14일,20,0.0,1209600.0,FFFF,16,1.0
-645926,misc_gemExpStone_randomQuest4_14d,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFF,16,1.0
-645927,misc_gemExpStone_randomQuest5,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 57900,icon_item_powderp,,,,,,,,6성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
+645925,misc_gemExpStone_randomQuest3_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 3,900",icon_item_powderp,,,,,,,,4성 젬 연마제:14일,20,0.0,1209600.0,FFFF,16,1.0
+645926,misc_gemExpStone_randomQuest4_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFF,16,1.0
+645927,misc_gemExpStone_randomQuest5,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 57,900",icon_item_powderp,,,,,,,,6성 젬 연마제,20,0.0,0.0,FFTF,16,1.0
 645928,misc_0395,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_20,[642182],,,,,,,로데나콩의 열매,9,0.0,0.0,TTTT,16,1.0
 645929,misc_0396,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_21,[642182],,,,,,,로데내그의 가시줄기,9,0.0,0.0,TTTT,16,1.0
 645930,misc_0397,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_28,[642182],,,,,,,로데타드의 열매,9,0.0,0.0,TTTT,16,1.0
@@ -1688,12 +1689,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 646038,misc_0505,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_73,[642206],,,,,[12089],,모닝버드의 꼬리,9,0.0,0.0,TTTT,16,1.0
 646039,misc_0506,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc04_74,[642206],,,,,"[14091, 40036]",,모닝버드의 온전한 날개,9,0.0,0.0,TTTT,16,1.0
 646040,misc_scrollskulp,어디에 쓰이는지 정확히 알 수 없는 종이조각입니다. 드문드문 특별한 선이 보입니다.,icon_item_flag_hohen,,,,,,[3031],,찢어진 종이조각,9,0.0,0.0,FFFF,16,1.0
-646041,misc_gemExpStone09_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230700,icon_item_powderp,,,,,,,,빛나는 7성 젬 연마제,0,0.0,0.0,TTTT,16,1.0
-646042,misc_gemExpStone10_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1094700,icon_item_powderp,,,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTTT,16,1.0
+646041,misc_gemExpStone09_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,빛나는 7성 젬 연마제,0,0.0,0.0,TTTT,16,1.0
+646042,misc_gemExpStone10_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,094,700",icon_item_powderp,,,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTTT,16,1.0
 646043,card_Xpupkit01_500,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 500 만큼 상승시킵니다.,monster_card,,,,,,,,강화용 카드 : 500,2000,0.0,0.0,TTTT,16,1.0
 646044,misc_0507,돋보기 제조 기술이 발달하지 못해 내구도가 많이 약합니다. 한 번의 감정에 많은 돋보기가 필요합니다.,icon_item_misc_0507,,,,,,,,감정용 돋보기,25,0.0,0.0,FFTF,16,1.0
-646045,Premium_item_transcendence_Stone,여신의 축복이 담긴 돌입니다. 모든 아이템의 효능을 더 좋게 만드는데 쓰입니다.,icon_item_transcendence_stone,,,,,,"[9025, 50094, 50095, 50096, 50097, 50098, 50099]",[9018],여신의 축복석,0,0.0,0.0,TTTT,16,0.0
-646046,misc_gemExpStone07_TA,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. {nl} - 획득 젬 경험치: 145340,icon_item_powderp,,,,,,,,빛나는 젬 연마제: 145340,0,0.0,0.0,TTTT,16,1.0
+646045,Premium_item_transcendence_Stone,여신의 축복이 담긴 돌입니다. 모든 아이템의 효능을 더 좋게 만드는데 쓰입니다.,icon_item_transcendence_stone,,,,,,"[9025, 9034, 9035, 50094, 50095, 50096, 50097, 50098, 50099]",[9018],여신의 축복석,0,0.0,0.0,TTTT,16,0.0
+646046,misc_gemExpStone07_TA,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. {nl} - 획득 젬 경험치: 145,340",icon_item_powderp,,,,,,,,"빛나는 젬 연마제: 145,340",0,0.0,0.0,TTTT,16,1.0
 646047,Team_Bat_Card_01,카드 강화에 사용 시 +300의 경험치를 획득할 수 있습니다.,monster_card,,,,,,,,강화용 카드 : 300(팀 배틀 리그 보상),0,0.0,0.0,FFFT,16,1.0
 646048,Exp_Card_300,카드 강화에 사용 시 +300의 경험치를 획득할 수 있습니다.,monster_card,,,,,,,,강화용 카드 : 300,0,0.0,0.0,FFFT,16,1.0
 646049,PVP_Misc_1,콜로니전 승리를 기념하는 주화입니다.,icon_item_coin_colony_01,,,,,,,,콜로니전 기념 주화,100000,0.0,0.0,FFTT,16,1.0
@@ -1742,12 +1743,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647009,misc_0528,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_misc_0529,,,,,,"[30569, 30571, 30573, 50004, 50018, 50020, 50022, 400037, 400038, 400039, 400040]",,로열 블레이드 파편,25,0.0,0.0,TTTT,16,1.0
 647010,misc_0529,하시사스 포션입니다. 마시면 일시적으로 신체 능력을 향상시켜 줍니다.,icon_item_misc04_112,,,,,,,,하시사스 포션,25,0.0,0.0,FFFF,16,1.0
 647011,misc_0530,고급 장비 제작 및 인장 강화에 사용되는 매우 희귀한 재료입니다.,icon_item_misc_misc_0530,,,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089, 34090, 34091, 34092, 34093]",,마정석,25,0.0,0.0,TTTT,16,1.0
-647012,misc_gemExpStone_randomQuest4_14d_Team,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFT,16,1.0
+647012,misc_gemExpStone_randomQuest4_14d_Team,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다. 획득 후부터 14일동안 사용 가능합니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,5성 젬 연마제:14일,20,0.0,1209600.0,FFFT,16,1.0
 647013,PVP_Misc_1_KOR_Reward,"콜로니전 승리를 기념하는 주화입니다.{nl}콜로니전 마켓 적립금 보상을 대체해 지급되는 아이템입니다.{nl}2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_coin_colony_01,,,,,,,,콜로니전 기념 주화 [보상용],100000,0.0,0.0,FFTT,16,1.0
 647014,misc_0531,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_iredian_misc01,,,,,,"[34090, 34091, 34092, 34093]",,이레디안 브로치,0,0.0,0.0,TTTT,16,1.0
 647015,misc_0532,몬스터 재료. 아이템을 만드는데 사용됩니다.,icon_item_iredian_misc02,,,,,,"[34090, 34091, 34092, 34093]",,이레디안 수정 조각,0,0.0,0.0,TTTT,16,1.0
 647016,misc_0533,클라페다 [바이보라 날개] 레나를 찾아가면 유용한 아이템으로 교환 가능합니다.,icon_item_wingcoin,,,,,,,,바이보라의 날개 주화,0,0.0,0.0,FFFT,16,1.0
-647017,misc_gemExpStone10_Premium,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1094700,icon_item_powderp,,,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTFT,16,1.0
+647017,misc_gemExpStone10_Premium,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 1,094,700",icon_item_powderp,,,,,,,,빛나는 8성 젬 연마제,0,0.0,0.0,TTFT,16,1.0
 647018,widnium_piece_Premium,"최근 머나먼 어딘가에서 케도라 상단을 통해 들어왔다고 전해지는 희귀한 광물입니다.{nl}이 광물은 누군가가 소지하고 있어도 자신이 본래에 있던 곳으로 돌아가려고 한다는 소문이 있습니다.{nl}페디미안의 테리아베리스 또한 소문을 듣고 연구를 위해 이 광석을 애타게 찾고 있다고 합니다.{nl}이 광석을 테리아베리스에게 전해주면 '다이아몬드 모루 (14일)' 1개로 교환해줍니다.{nl}이 아이템은 2월 21일 점검 시, 일괄 삭제됩니다.",icon_item_widnium_piece,,,,,,,,위드니움 조각,0,0.0,0.0,FFFF,16,1.0
 647019,misc_bernice_coin,베르니케 파편 던전보상 아이템입니다. 오라클 마스터를 통해 아이템으로 교환 할 수 있습니다.,icon_item_bernice_coin,,,,,,,,베르니케 파편 주화,1,0.0,0.0,FFFT,16,0.0
 647020,misc_0534,각종 구급 약품이 담겨 있는 상자입니다.,icon_item_first_aid_kit,,,,,,,,구급상자,5,0.0,0.0,FFTF,16,0.1
@@ -5400,6 +5401,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699017,Legend_Misc_Misrus,"머즈루스의 힘이 남겨져있습니다. {nl} {nl}세비노스 레그바, 스키아클립스 바르나 장비에 세트 옵션 부여 재료로 사용됩니다.",icon_item_misc_misrus,,,,,,,[9033],머즈루스 사슬,10,0.0,0.0,TFFT,17,10.0
 699019,Rare_Enchant_Jewel_Team,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,,,레어 인챈트 쥬얼,10,0.0,0.0,FFFT,8,1.0
 699020,Legend_Enchant_Jewel_Team,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,레전드 인챈트 쥬얼,10,0.0,0.0,FFFT,8,1.0
+699021,Legend_Misc_Mothacc,나비목 접선지 레전드 레이드에서 얻을 수 있습니다.{nl}다음 레전드 장신구를 제작하는데 사용됩니다.{nl} - 모링포니아 피크티스{nl} - 모링포니아 트리우카스{nl} - 모링포니아 이스가리티{nl} - 모링포니아 칸트리베{nl} - 모링포니아 주오다,icon_item_mothpowder,,[642958],,,,,,모스 파우더,10,0.0,0.0,FFFT,17,10.0
 700000,KQ_token_hethran_1,"Lv 260 부터 사용가능{nl}헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_1,,,,,,,,헤스란 증표 Lv1,2000,5.0,0.0,TTTT,16,1.0
 700001,KQ_token_hethran_2,"Lv 300 부터 사용가능{nl}헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_2,,,,,,,,헤스란 증표 Lv2,2000,5.0,0.0,TTTT,16,1.0
 700002,KQ_token_hethran_3,"헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_2,,,,,,,,헤스란 증표 Lv3,2000,0.0,0.0,TTTT,16,1.0
@@ -5515,7 +5517,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 810000,Companion_Exchange_Ticket,"모험일지 보상으로 얻은 아기돼지 컴패니언 교환권, 바이보라 날개에게서 교환권 20개로 아기돼지 컴패니언을 교환할 수 있습니다. ",icon_item_indulgence,,,,,,,,아기돼지 컴패니언 교환권,0,0.0,0.0,TTFT,16,1.0
 810001,Team_Warehouse_Extend,마우스 오른쪽 클릭으로 사용합니다. 사용시 팀 창고가 2칸 확장됩니다.,icon_item_indulgence,,,,,,,,팀 창고 확장권 +2,0,60.0,0.0,FFFF,6,1.0
 810002,Team_Warehouse_Extend_1add,마우스 오른쪽 클릭으로 사용합니다. 사용시 팀 창고가 1칸 확장됩니다.,icon_item_indulgence,,,,,,,,팀 창고 확장권 +1,0,60.0,0.0,FFFF,6,1.0
-810003,misc_gemExpStone_randomQuest4_Adv,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14700,icon_item_powderp,,,,,,,,5성 젬 연마제,20,0.0,0.0,FFFT,16,1.0
+810003,misc_gemExpStone_randomQuest4_Adv,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14,700",icon_item_powderp,,,,,,,,5성 젬 연마제,20,0.0,0.0,FFFT,16,1.0
 810004,Adventure_Reward_Seed,사용 시 여신의 축복이 깃든 새싹이 핍니다.,icon_item_event161215_01,,,,,,,,축복이 깃든 씨앗,0,5.0,0.0,FFFT,6,0.0
 810005,Adventure_Goddess_Statue,5분 동안 여신의 축복을 받을 수 있는 여신의 조각상이 설치됩니다.,icon_item_farm47_broken_zemina,,,,,,,,여신의 조각상,0,0.0,0.0,FFFT,6,0.0
 810006,Companion_Exchange_Ticket2,"모험일지 보상으로 얻은 아르마딜로 컴패니언 교환권, 바이보라 날개에게서 교환권 20개로 아르마딜로 컴패니언을 교환할 수 있습니다. ",icon_item_indulgence,,,,,,,,아르마딜로 컴패니언 교환권,0,0.0,0.0,TTFT,16,1.0
@@ -5557,9 +5559,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900137,Event_161027_2,할로윈 기간에만 볼 수 있는 할로윈 사탕입니다. 사용시 모든 스테이터스를 5 증가시켜줍니다. 마우스 오른쪽 버튼 클릭으로 사용합니다. (11월 22일 일괄 삭제됩니다.),icon_item_pumpkin,,,,,,,,호박사탕,0,1800.0,0.0,FFFT,6,1.0
 900138,Event_161027_1,잭 오 랜턴 모양을 본뜬 할로윈 큐브입니다. 마우스 오른쪽 버튼 클릭으로 사용하여 내용물을 획득할 수 있습니다. (12월 15일 일괄 삭제됩니다.),icon_item_event_halloweencube,,,,,,,,할로윈 큐브,0,2.0,0.0,FFFF,8,0.0
 900139,Event_161025_poporion,포포리온 인형 추첨권입니다. 자세한 사항은 공지사항을 참고하세요.,icon_item_indulgence,,,,,,,,포포리온 인형 추첨권,1,0.0,0.0,FFFF,8,0.0
-900140,Event_161110_1,합격을 기원하는 마음으로 만들어진 합격의 엿입니다. 예로부터 찰싹 붙으라는 뜻이 담겨 있습니다. 30분간 획득하는 경험치가 30% 증가하는 효과가 있습니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.(12월 14일 일괄 삭제됩니다.),icon_item_event_candy,,,,,,,,합격의 엿,0,1800.0,0.0,FFTF,6,1.0
-900141,Event_161110_2,"수능으로 지친 몸과 마음을 달래주는 비타민입니다. 사용 시 30분간 10초마다 HP 600, SP 200 회복의 효과를 얻습니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.(12월 14일 일괄 삭제됩니다.)",icon_item_event_vitamin,,,,,,,,합격의 비타민,0,1800.0,0.0,FFTF,6,1.0
-900142,Event_161110_3,"달달한 맛으로, 뇌의 회전을 도와주는 초콜릿입니다. 사용 시, 30분간 이동속도 +2 의 효과가 있습니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.(12월 14일 일괄 삭제됩니다.)",icon_item_event_choco,,,,,,,,합격의 초콜릿,0,1800.0,0.0,FFTF,6,1.0
+900140,Event_161110_1,합격을 기원하는 마음으로 만들어진 합격의 엿입니다. 예로부터 찰싹 붙으라는 뜻이 담겨 있습니다. 30분간 획득하는 경험치가 30% 증가하는 효과가 있습니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.(12월 19일 일괄 삭제됩니다.),icon_item_event_candy,,,,,,,,합격의 엿,0,1800.0,0.0,FFTT,6,1.0
+900141,Event_161110_2,"수능으로 지친 몸과 마음을 달래주는 비타민입니다. 사용 시 30분간 10초마다 HP 600, SP 200 회복의 효과를 얻습니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.(12월 19일 일괄 삭제됩니다.)",icon_item_event_vitamin,,,,,,,,합격의 비타민,0,1800.0,0.0,FFTT,6,1.0
+900142,Event_161110_3,"달달한 맛으로, 뇌의 회전을 도와주는 초콜릿입니다. 사용 시, 30분간 이동속도 +2 의 효과가 있습니다. 마우스 오른쪽 버튼 클릭으로 사용합니다.(12월 19일 일괄 삭제됩니다.)",icon_item_event_choco,,,,,,,,합격의 초콜릿,0,1800.0,0.0,FFTT,6,1.0
 900143,Event_161109_Cube,케파 군단 이벤트 던전에서 획득할 수 있는 큐브입니다. 마우스 오른쪽 버튼 클릭으로 사용하여 내용물을 획득할 수 있습니다.,icon_item_cube1,,,,,,,,케파 큐브,0,2.0,0.0,FFFF,8,0.0
 900144,card_Xpupkit01_event,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 1000 만큼 상승시킵니다.,monster_card,,,,,,,,오래된 강화용 카드,1000,0.0,0.0,FFFF,16,1.0
 900159,Exp_Card_300_14d,카드 강화에 사용 시 +300의 경험치를 획득할 수 있습니다.,monster_card,,,,,,,,강화용 카드 : 300 (14일),0,0.0,1209600.0,FFFF,16,1.0
@@ -5651,7 +5653,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900298,Event_1704_LvUp_Old_Lv300,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}9월 14일 점검 시, 일괄 삭제됩니다.",icon_item_eventbox_magic,,,,,,,,명예의 300레벨상자,0,0.0,0.0,FFFF,8,1.0
 900299,Event_1704_Drug_Fortunecookie,"30분간 중첩에 따라 경험치, 이동속도, 최대HP가 증가하며, 최대 5중첩까지 가능합니다.{nl}9월 14일 점검 시, 일괄 삭제됩니다.",icon_item_fortunecookie,,,,,,,,[레벨업 이벤트] 포춘 쿠키,0,10.0,0.0,FFFF,6,0.0
 900300,Event_1704_Goddess_Statue,"5분 동안 여신의 축복을 받을 수 있는 여신의 조각상이 설치됩니다.{nl}1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_farm47_broken_zemina,,,,,,,,[Re:Build] 여신의 조각상,0,0.0,0.0,FFFF,6,0.0
-900301,Event_1704_misc_gemExpStone_randomQuest4,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14700{nl}1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_powderp,,,,,,,,[Re:Build] 5성 젬 연마제,20,0.0,0.0,FFFF,16,1.0
+900301,Event_1704_misc_gemExpStone_randomQuest4,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 14,700{nl}1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_powderp,,,,,,,,[Re:Build] 5성 젬 연마제,20,0.0,0.0,FFFF,16,1.0
 900302,Moru_Silver_Event_1704,"모루 위에 장비를 놓고 두드리면 성능이 향상됩니다. 실버 소비 없이 장비를 강화할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.{nl}9월 14일 점검 시, 일괄 삭제됩니다.",icon_item_anvil_silver,,,,,,,,[레벨업 이벤트] 은빛 모루,0,0.0,0.0,FFFF,16,1.0
 900310,Event_1705_Corsair_Wood,"해적 단원의 요청으로 만들어진 나무판자{nl}6월 15일 점검 시, 일괄 삭제됩니다.",icon_item_timber_1,,,,,,,,나무 판자,1,0.0,0.0,FFFT,8,1.0
 900311,Event_1705_Corsair_Potion,"마우스 오른쪽 버튼 클릭으로 사용합니다.{nl}6월 22일 점검 시, 일괄 삭제됩니다.{nl}사용 시 1시간 동안 이동 속도 +5",icon_item_cprsair_potion,,,,,,,,해적단 포션,0,0.0,0.0,FFFT,8,1.0
@@ -5752,7 +5754,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904006,EVENT_KOR_Fortunecookie,"30분간 중첩에 따라 경험치, 이동속도, 최대HP가 증가하며, 최대 5중첩까지 가능합니다. 2월 22일 점검 시, 일괄 삭제됩니다.",icon_item_fortunecookie,,,,,,,,포춘 쿠키,0,10.0,0.0,FFFF,6,0.0
 904008,EVENT_1803_NEWCLASS_BOX_RTA,레티아리이 루디아리우스 코스튬이 들어있는 상자입니다.{nl}레티아리이로 전직해야 사용 가능합니다.{nl}상자에서 획득한 코스튬은 팀창고를 사용할 수 없습니다. ,icon_item_jewelrybox,,,,,,,,레티아리이 루디아리우스 코스튬 상자,0,0.0,0.0,FFFT,6,0.0
 904009,EVENT_1803_NEWCLASS_BOX_OMJ,음양사의 왕실예복 코스튬이 들어있는 상자입니다.{nl}음양사로 전직해야 사용 가능합니다.{nl}상자에서 획득한 코스튬은 팀창고를 사용할 수 없습니다.,icon_item_jewelrybox,,,,,,,,음양사의 왕실예복 코스튬 상자,0,0.0,0.0,FFFT,6,0.0
-904010,161215Event_Seed_1d,사용 시 여신의 축복이 깃든 새싹이 핍니다.,icon_item_event161215_01,,,,,,,,축복이 깃든 씨앗(1일),0,5.0,86400.0,FFFF,6,0.0
+904010,161215Event_Seed_1d,사용 시 여신의 축복이 깃든 새싹이 핍니다.,icon_item_event161215_01,,,,,,,,축복이 깃든 씨앗(1일),0,5.0,86400.0,FFFT,6,0.0
 904011,EVENT_1804_ARBOR_GROW_CRYSTAL_1_2,"자라나라 나무나무 이벤트용 아이템 입니다. 나무의 성장을 촉진 시킵니다. 5월 3일 점검 시, 일괄 삭제됩니다.",icon_item_1804_arbor_1,,,,,,,,묘목 성장의 수정,0,0.0,0.0,FFFT,16,1.0
 904012,EVENT_1804_ARBOR_GROW_CRYSTAL_3_4,"자라나라 나무나무 이벤트용 아이템 입니다. 나무의 성장을 촉진 시킵니다. 5월 3일 점검 시, 일괄 삭제됩니다.",icon_item_1804_arbor_2,,,,,,,,성목 성장의 수정,0,0.0,0.0,FFFT,16,1.0
 904013,EVENT_1804_ARBOR_GROW_CRYSTAL_5_6,"자라나라 나무나무 이벤트용 아이템 입니다. 나무의 성장을 촉진 시킵니다. 5월 3일 점검 시, 일괄 삭제됩니다.",icon_item_1804_arbor_3,,,,,,,,풍성한 성목 성장의 수정,0,0.0,0.0,FFFT,16,1.0
@@ -5762,7 +5764,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904023,EVENT_1804_TRANSCEND_SHOP_SILVER_BOX_14D,사용시 랜덤 수량의 실버가 획득됩니다.,icon_item_silverbox1,,,,,,,,축복받은 실버 상자 (14일),0,0.0,1209600.0,FFFF,6,1.0
 904024,EVENT_1804_TRANSCEND_SHOP_REINFORCE_BOX_14D,사용 시 보상목록 중 랜덤으로 아이템이 획득됩니다.,icon_item_eventbox_qm,,,,,,,,축복받은 강화 큐브 (14일),0,0.0,1209600.0,FFFF,6,1.0
 904025,EVENT_1804_TRANSCEND_SHOP_COSTUME_BOX_14D,사용 시 보상목록 중 랜덤으로 아이템이 획득됩니다.,icon_item_eventcube3,,,,,,,,인기 이벤트 코스튬 큐브 (14일),0,0.0,1209600.0,FFFF,6,1.0
-904026,misc_gemExpStone09_14d,젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230700,icon_item_powderp,,,,,,,,7성 젬 연마제 (14일),0,0.0,1209600.0,FFFF,16,1.0
+904026,misc_gemExpStone09_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,7성 젬 연마제 (14일),0,0.0,1209600.0,FFFF,16,1.0
 904027,MISSION_SURVIVAL_EVENT2_ACHIEVE_BOX,"괴도 트팡 이벤트에서 선물하는 칭호 상자 입니다.{nl}5월 31일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,칭호 - 괴도의 자격,0,0.0,0.0,FFFT,6,0.0
 904029,EVENT_1805_WEDDING1_PIECE,"5월의 신부를 도와줘 이벤트용 아이템 입니다. 5월 17일 점검 시, 일괄 삭제됩니다.",icon_item_event_invitationpiece1,,,,,,,,잃어버린 청첩장 조각,0,0.0,0.0,FFFT,16,0.1
 904030,EVENT_BEAUTY_CHAIR,뷰티샵 구매 이벤트로 지급받은 아이템입니다.{nl}사용 시 바버샵 의자를 소환해 앉을 수 있습니다.,icon_item_event_beauty_chair,,,,,,,,바버샵 의자,0,1.0,0.0,FFFT,6,1.0
@@ -5791,7 +5793,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904055,EVENT_1807_POOL_GRILLEDFISH,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 특성 포인트 +100{nl}8월 23일 점검 시, 일괄 삭제됩니다.",icon_item_food_grilledfish,,,,,,,,[Summer Festa] 생선조림,20,1.0,0.0,FFFT,6,1.0
 904056,EVENT_1807_POOL_PAELLA,"[Summer Festa] 이벤트 기념 아이템 입니다. 사용시 특성 포인트 +500{nl}8월 23일 점검 시, 일괄 삭제됩니다.",icon_item_food_paella,,,,,,,,[Summer Festa] 새우그라탕,20,1.0,0.0,FFFT,6,1.0
 904058,EVENT_1807_BALL_CRACKER,"30분간 이동속도 +2, 광역 공격 비율 +1 경험치 25% 증가의 효과를 줍니다.{nl}8월 23일 점검 시, 일괄 삭제됩니다.",icon_item_firework,,,,,,,,[Summer Festa] 폭죽,0,10.0,0.0,FFFT,6,1.0
-904059,Adventure_Reward_Seed_14d,사용 시 여신의 축복이 깃든 새싹이 핍니다.,icon_item_event161215_01,,,,,,,,축복이 깃든 씨앗(14일),0,5.0,1209600.0,FFFF,6,0.0
+904059,Adventure_Reward_Seed_14d,사용 시 여신의 축복이 깃든 새싹이 핍니다.,icon_item_event161215_01,,,,,,,,축복이 깃든 씨앗(14일),0,5.0,1209600.0,FFFT,6,0.0
 904060,EVENT_PC_ROOM_1_ACHIEVE_BOX,PC방 100시간 접속 보상 칭호 상자,icon_item_holyark,,,,,,,,[PC방] 칭호 - 100시간,0,0.0,0.0,FFFT,6,1.0
 904061,EVENT_PC_ROOM_2_ACHIEVE_BOX,PC방 200시간 접속 보상 칭호 상자,icon_item_holyark,,,,,,,,[PC방] 칭호 - 200시간,0,0.0,0.0,FFFT,6,1.0
 904062,EVENT_PC_ROOM_3_ACHIEVE_BOX,PC방 300시간 접속 보상 칭호 상자,icon_item_holyark,,,,,,,,[PC방] 칭호 - 300시간,0,0.0,0.0,FFFT,6,1.0
@@ -5878,12 +5880,16 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904218,Event_Drug_Looting_Potion_500_14d,"60분 동안 루팅찬스를 +500 상승시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 60분.{nl} - 루팅 찬스 포션은 중첩해서 사용 할 수 없습니다.{nl}기간 초과 시, 본 아이템이 삭제됩니다.",item_icon_luckypotion_500,,,,,,,,루팅 찬스: 500 (14일),0,3600.0,1209600.0,FFFT,6,1.0
 904219,Event_Sevinose_EquipArmor_Box,"사용 시 원하는 11강 8초월 [이벤트] 세비노스 방어구를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[이벤트] 11강 8초월 세비노스 방어구 선택상자,0,0.0,0.0,FFFT,8,1.0
 904220,Event_card_Xpupkit10_Team_14d,"카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 5400 만큼 상승시킵니다.{nl}기간 초과 시, 본 아이템이 삭제됩니다.",icon_item_reinforce_card_10,,,,,,,,Lv10 강화용 카드 (14일),0,0.0,1209600.0,FFFT,16,1.0
-904221,Event_gemExpStone09_Team_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl}기간 초과 시, 본 아이템이 삭제됩니다.{nl} - 획득 젬 경험치: 230700",icon_item_powderp,,,,,,,,7성 젬 연마제 (14일),0,0.0,1209600.0,FFFT,16,1.0
+904221,Event_gemExpStone09_Team_14d,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl}기간 초과 시, 본 아이템이 삭제됩니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,7성 젬 연마제 (14일),0,0.0,1209600.0,FFFT,16,1.0
 904222,Event_indunReset_Team_14d,사용 시 인스턴스 던전과 의뢰소 미션의 입장 횟수가 초기화됩니다. 획득 후부터 14일동안 사용 가능합니다.,icon_item_indunfreeenter,,,,,,,,인스턴스 던전 입장 횟수 초기화권:14일,0,0.0,1209600.0,FFFT,8,1.0
 904223,Event_HiddenAbility_MasterPiece,스킬의 숨겨진 내용이 담겨 있습니다. 계열별 마스터 NPC에게 찾아가면 원하는 내용의 아츠를 얻을 수 있습니다.,icon_item_hiddenability_total,,,,,,,,[이벤트] 미식별 신비한 서,0,0.0,0.0,FFFT,16,0.1
 904225,EVENT_190919_ANCIENT_SCROLL_RESTORE,"사용 시 지정된 몬스터 리스트 중 랜덤한 몬스터 6종이 등장합니다.{nl}몬스터를 선택하여 해당 몬스터가 등록된 그리모어 낱장을 획득할 수 있습니다.{nl}그리모어 낱장 획득 시 [이벤트] 고대 주화가 소모됩니다.{nl} 몬스터의 등급에 따라 소모되는 [이벤트] 고대 주화 개수와 등장 확률이 다릅니다.{nl}다중 선택이 가능합니다. {nl}[이벤트] 고대 주화 소모 개수 및 등장 확률{nl} - 노말 : 1개(70%){nl} - 매직 : 2개(25%){nl} - 유니크 : 3개(4%){nl} - 레전드 : 4개(1%){nl}* 10월 24일 점검 시, 일괄 삭제됩니다.",icon_item_event_190919_ancient_scroll,,,,,,,,[이벤트] 몬스터 선택 스크롤,0,0.0,0.0,FFFF,6,0.0
 904226,EVENT_HALLOWEENCANDY_1,"이벤트 아이템입니다. {nl}[할로윈 밤의 소동] 이벤트 알림판 NPC에게 전달하여 할로윈 상점의 상품 목록과 교환 할 수 있습니다. {nl}11월 28일 점검 시, 삭제됩니다.",event_whiteday_candy_3,,,,,,,,달콤한 할로윈 사탕,0,0.0,0.0,FFFT,16,0.1
 904227,EVENT_HALLOWEENCANDY_2,"이벤트 아이템입니다. {nl}사용하면 24시간 동안 달콤한 할로윈 사탕의 획득량이 2배가 됩니다. 단, [할로윈 밤의 소동] 이벤트 던전과 접속 보상에는 효과가 적용되지 않습니다.{nl}11월 28일 점검 시, 삭제됩니다.",icon_item_pumpkin,,,,,,,,호박맛 할로윈 사탕,0,0.0,0.0,FFFT,6,0.1
+904231,Event_collegetestRiceCake,"사용 시 버프를 얻습니다. 30분간 지속됩니다.{nl}사용 시 마다 버프가 중첩되어 아래의 효과를 얻습니다.{nl} - 경험치 흭득 + (중첩 x 10)%{nl} - 루팅 찬스 + (중첩 x 100){nl} - 최대 체력 + (중첩 x 500){nl} - 10초 마다 HP, SP (중첩 x 100) 회복{nl}(최대 5 중첩){nl} - 12월 19일 점검 시 일괄 삭제됩니다.",icon_item_ricecake,,,,,,,,[이벤트] 가래떡,0,5.0,0.0,FFFT,6,1.0
+904232,PersonalHousing_PointGacha_1,"상자 우클릭 시, 아래 아이템 중 각기 다른 확률로 한 개의 아이템을 획득할 수 있습니다.{nl}딜겔레 x3{nl}뉴클 가루 x10{nl}탈트 x10{nl}[개인 하우징]낚시꾼 카펫 x1{nl}[개인 하우징]낚시꾼 러그 x1{nl}[개인 하우징]달콤 반원 러그 x1",icon_item_happybox_red,,,,,,,,[개인 하우징]1단계 주거 정착 물품,0,0.0,0.0,FFFT,8,0.0
+904233,PersonalHousing_PointGacha_2,"상자 우클릭 시, 아래 아이템 중 각기 다른 확률로 한 개의 아이템을 획득할 수 있습니다.{nl}워시스 x3{nl}시에라 가루 x10{nl}탈트 x20{nl}농축 HP포션 LV15 x5{nl}농축 SP포션 LV15 x5{nl}[개인 하우징]사각 러그 x1{nl}[개인 하우징]가죽 러그 x1{nl}[개인 하우징]바다 분홍 카펫x1",icon_item_happybox_blue,,,,,,,,[개인 하우징]2단계 주거 정착 물품,0,0.0,0.0,FFFT,8,0.0
+904234,PersonalHousing_PointGacha_3,"상자 우클릭 시, 아래 아이템 중 각기 다른 확률로 한 개의 아이템을 획득할 수 있습니다.{nl}농축 HP포션 LV15 x10{nl}농축 SP포션 LV15 x10{nl}탈트 x30{nl}HP 회복 소형 엘릭서 x 5{nl}SP 회복 소형 엘릭서 x 5{nl}[개인 하우징]사냥꾼 호피 러그 x1{nl}[개인 하우징]사냥꾼 백호 러그 x1{nl}[개인 하우징]바다 푸른 카펫x1",icon_item_happybox_black,,,,,,,,[개인 하우징]3단계 주거 정착 물품,0,0.0,0.0,FFFT,8,0.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,6,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,,,새싹,1,0.0,0.0,TTTT,16,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,,,시든 식물,1,0.0,0.0,TTTT,16,1.0
@@ -5902,6 +5908,99 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 910016,Scroll_SkillItem_Pyromancer_EnchantFire,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서 [Lv. 15 인챈트 파이어],5,0.0,0.0,TTTT,6,1.0
 910017,Scroll_SkillItem_Pyromancer_FlameGround,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서 [Lv. 15 플레임 그라운드],5,0.0,0.0,TTTT,6,1.0
 910018,Scroll_SkillItem_Warlock_PoleofAgony,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서 [Lv. 10 폴 오브 아고니],5,0.0,0.0,TTTT,6,1.0
+1210000,PersonalHousing_Item_hp_barrack_06_carpet_1,{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_06_carpet,,,,,,,,[개인 하우징]낚시꾼 카펫,80000,0.0,0.0,FFTT,6,0.0
+1210001,PersonalHousing_Item_hp_barrack_06_chair_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_chair,,,,,,,,[개인 하우징]낚시꾼 의자,60000,0.0,0.0,FFTT,6,0.0
+1210002,PersonalHousing_Item_hp_barrack_06_desk_1,"{#8e0000} 배치 포인트 10 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 책상 위 지구본과 모형배가 움직입니다.)",icon_item_p_h_barrack_06_desk,,,,,,,,[개인 하우징]낚시꾼 책상,120000,0.0,0.0,FFTT,6,0.0
+1210003,PersonalHousing_Item_hp_barrack_06_fishlamp_1,"{#8e0000} 배치 포인트 6 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_06_fishlamp,,,,,,,,[개인 하우징]낚시꾼 물고기 램프,80000,0.0,0.0,FFTT,6,0.0
+1210004,PersonalHousing_Item_hp_barrack_06_fishrod_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_fishrod,,,,,,,,[개인 하우징]낚시꾼 낚싯대,45000,0.0,0.0,FFTT,6,0.0
+1210005,PersonalHousing_Item_hp_barrack_06_fishtank_01_1,"{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 어항 속 물고기가 움직입니다.)",icon_item_p_h_barrack_06_fishtank_01,,,,,,,,[개인 하우징]낚시꾼 네모 수족관,90000,0.0,0.0,FFTT,6,0.0
+1210006,PersonalHousing_Item_hp_barrack_06_fishtank_02_1,"{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 어항 속 물고기가 움직입니다.)",icon_item_p_h_barrack_06_fishtank_02,,,,,,,,[개인 하우징]낚시꾼 원형 수족관,90000,0.0,0.0,FFTT,6,0.0
+1210007,PersonalHousing_Item_hp_barrack_06_frame_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_frame,,,,,,,,[개인 하우징]낚시꾼 청새치 장식,45000,0.0,0.0,FFTT,6,0.0
+1210008,PersonalHousing_Item_hp_barrack_06_lamp_1,"{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_06_lamp,,,,,,,,[개인 하우징]낚시꾼 기름 램프,45000,0.0,0.0,FFTT,6,0.0
+1210009,PersonalHousing_Item_hp_barrack_06_mapboard_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_mapboard,,,,,,,,[개인 하우징]낚시꾼 지도보드,45000,0.0,0.0,FFTT,6,0.0
+1210010,PersonalHousing_Item_hp_barrack_06_partiton_01_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_partiton_01,,,,,,,,[개인 하우징]낚시꾼 난간,60000,0.0,0.0,FFTT,6,0.0
+1210011,PersonalHousing_Item_hp_barrack_06_partiton_02_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_partiton_02,,,,,,,,[개인 하우징]낚시꾼 칸막이,60000,0.0,0.0,FFTT,6,0.0
+1210012,PersonalHousing_Item_hp_barrack_06_partiton_03_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_partiton_03,,,,,,,,[개인 하우징]낚시꾼 가림막,70000,0.0,0.0,FFTT,6,0.0
+1210013,PersonalHousing_Item_hp_barrack_06_rodstand_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_rodstand,,,,,,,,[개인 하우징]낚시꾼 낚싯대 거치대,60000,0.0,0.0,FFTT,6,0.0
+1210014,PersonalHousing_Item_hp_barrack_06_rug_1,{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_06_rug,,,,,,,,[개인 하우징]낚시꾼 러그,80000,0.0,0.0,FFTT,6,0.0
+1210015,PersonalHousing_Item_hp_barrack_06_shelf_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_06_shelf,,,,,,,,[개인 하우징]낚시꾼 선반,70000,0.0,0.0,FFTT,6,0.0
+1210016,PersonalHousing_Item_hp_barrack_04_cupboard_01_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_cupboard_01,,,,,,,,[개인 하우징]달콤 벽장-잼,45000,0.0,0.0,FFTT,6,0.0
+1210017,PersonalHousing_Item_hp_barrack_04_cupboard_02_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_cupboard_02,,,,,,,,[개인 하우징]달콤 벽장-소스,45000,0.0,0.0,FFTT,6,0.0
+1210018,PersonalHousing_Item_hp_barrack_04_candlestick_1,"{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_04_candlestick,,,,,,,,[개인 하우징]달콤 촛대,45000,0.0,0.0,FFTT,6,0.0
+1210019,PersonalHousing_Item_hp_barrack_04_shelf_01_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_shelf_01,,,,,,,,[개인 하우징]달콤 식기장,70000,0.0,0.0,FFTT,6,0.0
+1210020,PersonalHousing_Item_hp_barrack_04_shelf_02_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_shelf_02,,,,,,,,[개인 하우징]달콤 선물함,70000,0.0,0.0,FFTT,6,0.0
+1210021,PersonalHousing_Item_hp_barrack_04_shelf_03_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_shelf_03,,,,,,,,[개인 하우징]달콤 장식장,70000,0.0,0.0,FFTT,6,0.0
+1210022,PersonalHousing_Item_hp_barrack_04_coffemachine_1,"{#8e0000} 배치 포인트 6 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 후 사용 시, 커피 머신을 이용할 수 있습니다.)",icon_item_p_h_barrack_04_coffemachine,,,,,,,,[개인 하우징]달콤 커피 머신,80000,0.0,0.0,FFTT,6,0.0
+1210023,PersonalHousing_Item_hp_barrack_04_storage_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_storage,,,,,,,,[개인 하우징]달콤 쿠키함,60000,0.0,0.0,FFTT,6,0.0
+1210024,PersonalHousing_Item_hp_barrack_04_displayStand_1,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_displaystand,,,,,,,,[개인 하우징]달콤 진열대 대형,130000,0.0,0.0,FFTT,6,0.0
+1210025,PersonalHousing_Item_hp_barrack_04_counter_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_counter,,,,,,,,[개인 하우징]달콤 카운터,60000,0.0,0.0,FFTT,6,0.0
+1210026,PersonalHousing_Item_hp_barrack_04_mat_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_04_mat,,,,,,,,[개인 하우징]달콤 반원 러그,50000,0.0,0.0,FFTT,6,0.0
+1210027,PersonalHousing_Item_hp_barrack_04_chair_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_chair,,,,,,,,[개인 하우징]달콤 의자,60000,0.0,0.0,FFTT,6,0.0
+1210028,PersonalHousing_Item_hp_barrack_04_macaron_1,"{#8e0000} 배치 포인트 6 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 테이블 위 달콤 마카롱이 회전합니다.)",icon_item_p_h_barrack_04_macaron,,,,,,,,[개인 하우징]달콤 마카롱 테이블,80000,0.0,0.0,FFTT,6,0.0
+1210029,PersonalHousing_Item_hp_barrack_04_cakeStall_1,"{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 진열대 안의 케잌이 회전합니다.)",icon_item_p_h_barrack_04_cakestall,,,,,,,,[개인 하우징]달콤 진열대 소형,90000,0.0,0.0,FFTT,6,0.0
+1210030,PersonalHousing_Item_hp_barrack_03_cushion_set_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_cushion_set,,,,,,,,[개인 하우징]소녀 쿠션,70000,0.0,0.0,FFTT,6,0.0
+1210031,PersonalHousing_Item_hp_barrack_03_cabinet_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_cabinet,,,,,,,,[개인 하우징]소녀 캐비넷,60000,0.0,0.0,FFTT,6,0.0
+1210032,PersonalHousing_Item_hp_barrack_03_beartoy_1,"{#8e0000} 배치 포인트 6 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 후 사용 시, 곰인형이 튀어나옵니다.)",icon_item_p_h_barrack_03_beartoy,,,,,,,,[개인 하우징]소녀 선물상자-곰인형,80000,0.0,0.0,FFTT,6,0.0
+1210033,PersonalHousing_Item_hp_barrack_03_mannequin_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_mannequin,,,,,,,,[개인 하우징]소녀 마네킹,60000,0.0,0.0,FFTT,6,0.0
+1210034,PersonalHousing_Item_hp_barrack_03_shoes_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_shoes,,,,,,,,[개인 하우징]소녀 빨간 구두,60000,0.0,0.0,FFTT,6,0.0
+1210035,PersonalHousing_Item_hp_barrack_03_gacha_cabinet_1,"{#8e0000} 배치 포인트 6 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 후 사용 시, 캔디 뽑기를 시도합니다.)",icon_item_p_h_barrack_03_gacha_cabinet,,,,,,,,[개인 하우징]소녀 캔디 머신,80000,0.0,0.0,FFTT,6,0.0
+1210036,PersonalHousing_Item_hp_barrack_03_candle_1,"{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_03_candle,,,,,,,,[개인 하우징]소녀 촛대,45000,0.0,0.0,FFTT,6,0.0
+1210037,PersonalHousing_Item_hp_barrack_03_dressing_desk_1,{#8e0000} 배치 포인트 8 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_dressing_desk,,,,,,,,[개인 하우징]소녀 화장대,100000,0.0,0.0,FFTT,6,0.0
+1210038,PersonalHousing_Item_hp_barrack_03_mirror_01_1,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_mirror_01,,,,,,,,[개인 하우징]소녀 거울-원형,25000,0.0,0.0,FFTT,6,0.0
+1210039,PersonalHousing_Item_hp_barrack_03_mirror_02_1,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_mirror_02,,,,,,,,[개인 하우징]소녀 거울-네모,25000,0.0,0.0,FFTT,6,0.0
+1210040,PersonalHousing_Item_hp_barrack_03_mirror_03_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_mirror_03,,,,,,,,[개인 하우징]소녀 거울-장식,45000,0.0,0.0,FFTT,6,0.0
+1210041,PersonalHousing_Item_hp_barrack_03_mirror_04_1,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_mirror_04,,,,,,,,[개인 하우징]소녀 거울-새,25000,0.0,0.0,FFTT,6,0.0
+1210042,PersonalHousing_Item_hp_barrack_03_mirror_05_1,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_mirror_05,,,,,,,,[개인 하우징]소녀 거울-딸기,25000,0.0,0.0,FFTT,6,0.0
+1210043,PersonalHousing_Item_hp_barrack_03_mirror_06_1,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_mirror_06,,,,,,,,[개인 하우징]소녀 거울-오리,25000,0.0,0.0,FFTT,6,0.0
+1210044,PersonalHousing_Item_hp_barrack_03_mirror_07_1,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_mirror_07,,,,,,,,[개인 하우징]소녀 거울-구름,25000,0.0,0.0,FFTT,6,0.0
+1210045,PersonalHousing_Item_hp_barrack_03_doll_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_03_doll,,,,,,,,[개인 하우징]소녀 봉제 인형,60000,0.0,0.0,FFTT,6,0.0
+1210046,PersonalHousing_Item_hp_barrack_village_alarm_1,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_alarm,,,,,,,,[개인 하우징]철제 풍경,25000,0.0,0.0,FFTT,6,0.0
+1210047,PersonalHousing_Item_hp_barrack_village_bed_01_1,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_bed_01,,,,,,,,[개인 하우징]공주 침대,130000,0.0,0.0,FFTT,6,0.0
+1210048,PersonalHousing_Item_hp_barrack_village_woodbed_1,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_woodbed,,,,,,,,[개인 하우징]나무 침대,130000,0.0,0.0,FFTT,6,0.0
+1210049,PersonalHousing_Item_hp_barrack_village_bread_table_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_bread_table,,,,,,,,[개인 하우징]나무 식탁-빵,70000,0.0,0.0,FFTT,6,0.0
+1210050,PersonalHousing_Item_hp_barrack_village_fruit_table_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_fruit_table,,,,,,,,[개인 하우징]나무 식탁-과일,70000,0.0,0.0,FFTT,6,0.0
+1210051,PersonalHousing_Item_hp_barrack_village_dishp_table_1,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_dish_table,,,,,,,,[개인 하우징]고급 식탁,130000,0.0,0.0,FFTT,6,0.0
+1210052,PersonalHousing_Item_hp_barrack_village_chair_01_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_chair_01,,,,,,,,[개인 하우징]긴 등받이 의자,60000,0.0,0.0,FFTT,6,0.0
+1210053,PersonalHousing_Item_hp_barrack_village_longchair_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_longchair,,,,,,,,[개인 하우징]핑크 스툴 더블,70000,0.0,0.0,FFTT,6,0.0
+1210054,PersonalHousing_Item_hp_barrack_village_sofa_01_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_sofa_01,,,,,,,,[개인 하우징]그린 소파 더블,70000,0.0,0.0,FFTT,6,0.0
+1210055,PersonalHousing_Item_hp_barrack_village_mat_01_1,{#8e0000} 배치 포인트 3 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_village_mat_01,,,,,,,,[개인 하우징]반원 러그,30000,0.0,0.0,FFTT,6,0.0
+1210056,PersonalHousing_Item_hp_barrack_village_mat_02_1,{#8e0000} 배치 포인트 10 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_village_mat_02,,,,,,,,[개인 하우징]사각 러그,110000,0.0,0.0,FFTT,6,0.0
+1210057,PersonalHousing_Item_hp_barrack_village_rug_1,{#8e0000} 배치 포인트 10 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_village_rug,,,,,,,,[개인 하우징]가죽 러그,110000,0.0,0.0,FFTT,6,0.0
+1210058,PersonalHousing_Item_hp_barrack_village_sitting_cushion_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_sitting_cushion,,,,,,,,[개인 하우징]술장식 쿠션,60000,0.0,0.0,FFTT,6,0.0
+1210059,PersonalHousing_Item_hp_barrack_village_side_table_01_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_village_side_table_01,,,,,,,,[개인 하우징]서랍장-뿔피리,60000,0.0,0.0,FFTT,6,0.0
+1210060,PersonalHousing_Item_hp_barrack_village_side_table_012_1,"{#8e0000} 배치 포인트 6 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_village_side_table_012,,,,,,,,[개인 하우징]서랍장-뿔장식,80000,0.0,0.0,FFTT,6,0.0
+1210061,PersonalHousing_Item_hp_barrack_village_stove_01_1,"{#8e0000} 배치 포인트 16 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_village_stove_01,,,,,,,,[개인 하우징]벽난로,180000,0.0,0.0,FFTT,6,0.0
+1210062,PersonalHousing_Item_hp_barrack_village_stove_012_1,"{#8e0000} 배치 포인트 16 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_village_stove_012,,,,,,,,[개인 하우징]벽난로-접시,180000,0.0,0.0,FFTT,6,0.0
+1210063,PersonalHousing_Item_hp_barrack_02_bookshelf_01_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_02_bookshelf_01,,,,,,,,[개인 하우징]점성술 책장 고급형,60000,0.0,0.0,FFTT,6,0.0
+1210064,PersonalHousing_Item_hp_barrack_02_bookshelf_02_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_02_bookshelf_02,,,,,,,,[개인 하우징]대형 책장,60000,0.0,0.0,FFTT,6,0.0
+1210065,PersonalHousing_Item_hp_barrack_02_chair_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_02_chair,,,,,,,,[개인 하우징]점성술 소파 싱글,60000,0.0,0.0,FFTT,6,0.0
+1210066,PersonalHousing_Item_hp_barrack_02_table_1,{#8e0000} 배치 포인트 8 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_02_table,,,,,,,,[개인 하우징]점성술 탁자,100000,0.0,0.0,FFTT,6,0.0
+1210067,PersonalHousing_Item_hp_barrack_07_bear_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_bear,,,,,,,,[개인 하우징]사냥꾼 곰 장식,60000,0.0,0.0,FFTT,6,0.0
+1210068,PersonalHousing_Item_hp_barrack_07_chair_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_chair,,,,,,,,[개인 하우징]사냥꾼 안락의자,70000,0.0,0.0,FFTT,6,0.0
+1210069,PersonalHousing_Item_hp_barrack_07_desk_1,"{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_07_desk,,,,,,,,[개인 하우징]사냥꾼 책상,90000,0.0,0.0,FFTT,6,0.0
+1210070,PersonalHousing_Item_hp_barrack_07_fireplace_1,"{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_07_fireplace,,,,,,,,[개인 하우징]사냥꾼 난로,90000,0.0,0.0,FFTT,6,0.0
+1210071,PersonalHousing_Item_hp_barrack_07_floorDoor_1,{#8e0000} 배치 포인트 8 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_floordoor,,,,,,,,[개인 하우징]사냥꾼 바닥 문,100000,0.0,0.0,FFTT,6,0.0
+1210072,PersonalHousing_Item_hp_barrack_07_table_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_table,,,,,,,,[개인 하우징]사냥꾼 탁자,60000,0.0,0.0,FFTT,6,0.0
+1210073,PersonalHousing_Item_hp_barrack_07_tiger_1,{#8e0000} 배치 포인트 19 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_07_tiger,,,,,,,,[개인 하우징]사냥꾼 호피 러그,200000,0.0,0.0,FFTT,6,0.0
+1210074,PersonalHousing_Item_hp_barrack_07_tiger_white_1,{#8e0000} 배치 포인트 19 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_07_tiger_white,,,,,,,,[개인 하우징]사냥꾼 백호 러그,200000,0.0,0.0,FFTT,6,0.0
+1210075,PersonalHousing_Item_hp_barrack_07_woodholder_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_woodholder,,,,,,,,[개인 하우징]사냥꾼 장작 거치대,60000,0.0,0.0,FFTT,6,0.0
+1210076,PersonalHousing_Item_hp_barrack_08_bed_1,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_bed,,,,,,,,[개인 하우징]바다 침대,130000,0.0,0.0,FFTT,6,0.0
+1210077,PersonalHousing_Item_hp_barrack_08_capet_01_1,{#8e0000} 배치 포인트 10 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_08_capet_01,,,,,,,,[개인 하우징]바다 푸른 카펫,110000,0.0,0.0,FFTT,6,0.0
+1210078,PersonalHousing_Item_hp_barrack_08_capet_02_1,{#8e0000} 배치 포인트 10 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_08_capet_02,,,,,,,,[개인 하우징]바다 분홍 카펫,110000,0.0,0.0,FFTT,6,0.0
+1210079,PersonalHousing_Item_hp_barrack_08_capet_small_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_capet_small,,,,,,,,[개인 하우징]바다 산호색 러그,70000,0.0,0.0,FFTT,6,0.0
+1210080,PersonalHousing_Item_hp_barrack_08_fishbowl_01_1,{#8e0000} 배치 포인트 8 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_fishbowl_01,,,,,,,,[개인 하우징]바다 대형 어항,100000,0.0,0.0,FFTT,6,0.0
+1210081,PersonalHousing_Item_hp_barrack_08_fishbowl_02_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_fishbowl_02,,,,,,,,[개인 하우징]바다 소형 어항,60000,0.0,0.0,FFTT,6,0.0
+1210082,PersonalHousing_Item_hp_barrack_08_jellyfishhganger_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_jellyfishhganger,,,,,,,,[개인 하우징]바다 해파리 옷걸이,60000,0.0,0.0,FFTT,6,0.0
+1210083,PersonalHousing_Item_hp_barrack_08_mirror_1,"{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_08_mirror,,,,,,,,[개인 하우징]바다 세면대,90000,0.0,0.0,FFTT,6,0.0
+1210084,PersonalHousing_Item_hp_barrack_08_partition_01_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_partition_01,,,,,,,,[개인 하우징]바다 가림막,70000,0.0,0.0,FFTT,6,0.0
+1210085,PersonalHousing_Item_hp_barrack_08_pot_1,"{#8e0000} 배치 포인트 6 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}(배치 시, 이펙트가 나옵니다.)",icon_item_p_h_barrack_08_pot,,,,,,,,[개인 하우징]바다 산호초 탁자,80000,0.0,0.0,FFTT,6,0.0
+1210086,PersonalHousing_Item_hp_barrack_08_sofa_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_sofa,,,,,,,,[개인 하우징]바다 산호색 소파,60000,0.0,0.0,FFTT,6,0.0
+1210087,PersonalHousing_Item_hp_barrack_08_stole_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_stole,,,,,,,,[개인 하우징]바다 산호색 스툴,60000,0.0,0.0,FFTT,6,0.0
+1210088,PersonalHousing_Item_hp_barrack_08_tablepot_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_tablepot,,,,,,,,[개인 하우징]바다 산호 탁자,60000,0.0,0.0,FFTT,6,0.0
+1210089,PersonalHousing_Item_hp_barrack_08_treasurebox_1,{#8e0000} 배치 포인트 8 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_treasurebox,,,,,,,,[개인 하우징]바다 보물상자,100000,0.0,0.0,FFTT,6,0.0
+1210090,PersonalHousing_Item_hp_barrack_08_waterbottle_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_waterbottle,,,,,,,,[개인 하우징]바다 물병,60000,0.0,0.0,FFTT,6,0.0
+1250003,motion_medeina_emotion01,움직이는 채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,모션 이모티콘: 메데이나(당황),0,0.0,0.0,FFFT,6,1.0
+1250004,motion_medeina_emotion02,움직이는 채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,모션 이모티콘: 메데이나(기쁨),0,0.0,0.0,FFFT,6,1.0
 2000000,Achieve_Event_Steam_PoPo_Vacation,PoPo Vacation 수상자에게 지급되는 칭호입니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_holyark,,,,,,,,Title - PoPo Vacation,0,0.0,0.0,FFFT,6,0.0
 2000002,Achieve_Steam_PIZZA,피자를 기부한 캐릭터에게 지급되는 칭호입니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_holyark,,,,,,,,칭호 - 피자 배달 서비스,0,0.0,0.0,FFFT,6,0.0
 2010001,HiddenAbility_Piece,"스킬의 숨겨진 내용이 담겨 있지만, 형태를 알아볼 수 없는 낱장입니다. 계열별 마스터 NPC에게 찾아가면 어떤 내용이 담겨 있는지 알 수도 있습니다.",icon_item_hiddenability_piece,,,,,,,,신비한 서 낱장,0,0.0,0.0,TFFT,16,0.1
@@ -5923,7 +6022,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040015,HiddenAbility_Hoplite33,"사용 시 [투창: 어스] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 하플라이트 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* [투창] 스킬의 속성에 [땅] 속성이 추가되고, 투창에 공격당한 적은 3초 동안 [스턴] 상태가 됨{nl}* 투창의 넉다운 효과가 제거됨",icon_item_hiddenability_swordman,,,,,,,,신비한 서 (투창: 어스),0,0.0,0.0,FFFT,13,0.1
 2040016,HiddenAbility_Wizard30,"사용 시 [텔레포테이션: 리턴] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 위저드 클래스 15 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 텔레포테이션 사용 후 2초 이내에 다시 사용하게 되면, 텔레포테이션을 하기 전에 있던 위치로 이동함{nl} * [사이코키노: 텔레포테이션] 특성의 효과는 적용되지 않음",icon_item_hiddenability_wizard,,,,,,,,신비한 서 (텔레포테이션: 리턴),0,0.0,0.0,FFFT,13,0.1
 2040017,HiddenAbility_Necromancer25,"사용 시 [플레시 후프: 죽음의 무도] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 네크로맨서 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 플레시 후프 사용 시, 자신이 현재 보유한 [사체 파편량]에 비례하여 스킬 계수 증가{nl}* 스킬 계수 증가량: ([현재 보유한 사체 파편량] / 2)",icon_item_hiddenability_wizard,,,,,,,,신비한 서 (플레시 후프: 죽음의 무도),0,0.0,0.0,FFFT,13,0.1
-2040018,HiddenAbility_Necromancer26,"사용 시 [해골 마법사 만들기: 서포터] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 네크로맨서 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 해골 마법사가 한마리만 소환되며, 600초간 유지됨{nl}* 해골 마법사가 다음의 효과를 가진 버프를 걸어줌{nl}    - 해골 병사의 물리, 마법 방어력을 100% 증가{nl}    - 해골 궁수가 대기시간 없이 기본 공격을 사용",icon_item_hiddenability_wizard,,,,,,,,신비한 서 (해골 마법사 만들기: 서포터),0,0.0,0.0,FFFT,13,0.1
+2040018,HiddenAbility_Necromancer26,"사용 시 [해골 마법사 만들기: 서포터] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 네크로맨서 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 해골 마법사가 한마리만 소환되며, 30분간 유지됨{nl}* 해골 마법사가 다음의 효과를 가진 버프를 걸어줌{nl}    - 해골 병사의 물리, 마법 방어력을 100% 증가{nl}    - 해골 궁수가 대기시간 없이 기본 공격을 사용",icon_item_hiddenability_wizard,,,,,,,,신비한 서 (해골 마법사 만들기: 서포터),0,0.0,0.0,FFFT,13,0.1
 2040019,HiddenAbility_Daoshi20,"사용 시 [급급여율령: 합!] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 도사 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 부적 스킬 사용 후 부적이 사라질 때, 확률적으로 [급급여율령]이 발동됨",icon_item_hiddenability_wizard,,,,,,,,신비한 서 (급급여율령: 합!),0,0.0,0.0,FFFT,13,0.1
 2040020,HiddenAbility_Daoshi21,"사용 시 [퇴마부: 이전] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 도사 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 퇴마부의 대미지가 20% 감소하지만, 피격된 적에게 [부적] 디버프를 생성{nl}* [부적] 디버프는 주기적으로 자신을 제외한 주변 적에게 전기 대미지를 입힘{nl} - [부적] 디버프 지속시간 : 10초{nl} - 대미지 주기 : 1초{nl} - 대미지 : [퇴마부] 대미지의 2%",icon_item_hiddenability_wizard,,,,,,,,신비한 서 (퇴마부: 이전),0,0.0,0.0,FFFT,13,0.1
 2040021,HiddenAbility_RuneCaster13,"사용 시 [천 마스터리: 인챈트 파괴의 룬] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 룬캐스터 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 천 4세트를 착용 중일 때, [룬 인챈트: 파괴] 버프가 적용됨{nl}* [룬 인챈트: 파괴] 버프가 적용되면 치명타 확률과 물리, 마법 대미지가 증가함 {nl} - 치명타 확률 증가량: 15%{nl} - 대미지 증가: 10%",icon_item_hiddenability_wizard,,,,,,,,신비한 서 (천 마스터리: 인챈트 파괴의 룬),0,0.0,0.0,FFFT,13,0.1
