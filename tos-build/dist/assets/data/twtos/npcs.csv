@@ -67,6 +67,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20084,HiddenObbBox_Photowall_Chess2,,,,2
 20085,HiddenObbBox_Photowall_Chess3,,,,2
 20086,HiddenObbBox_Photowall_Chess4,,,,2
+20087,HiddenObbBox_photowall_chef1,,,,2
+20088,HiddenObbBox_photowall_chef2,,,,2
 20100,npc_combat_transport_section_2_sit,,,商人2 坐下,2
 20101,HiddenTrigger5,,,　,2
 20102,npc_combat_transport_section_1,,,商人1,2
@@ -785,7 +787,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151165,playground_goalpost,,,足球球門柱,2
 151166,strongbox_1_event,,minimap_event_3,金庫,2
 151167,treasure_box5_event,,minimap_event_2,寶箱 5,2
-151168,npc_moon,,minimap_event_1,滿月,2
+151168,npc_moon,,,滿月,2
 151169,stone_hill_show_name,,,石堆,2
 151170,dirt_heal_2_show_name,,,沙堆,2
 151171,npc_kupole_1_event,,minimap_event_1,活動奎波爾1,2
@@ -878,6 +880,10 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 152078,velniasprison_warp_mini,,minimap_portal,空間移動魔法陣(迷你),2
 152079,npc_3cmlake_27_riddle_device,,,水盤設施,2
 152080,npc_3cmlake_27_bracken_leaves,,,水草,2
+152081,npc_Underaqueduct_Gimmick,,,莫茲魯斯魔力團塊,2
+152082,npc_Underaqueduct_Pc_Life_1,,,PC Count1,2
+152083,npc_Underaqueduct_Pc_Life_2,,,PC Count2,2
+152084,npc_Underaqueduct_Skill_Gimmick,,,莫茲魯斯魔力水晶,2
 153000,npc_matron_aquamarine,,,中年婦人(海藍),2
 153001,npc_matron_blue,,,中年婦人(藍),2
 153002,npc_matron_darkbrown,,,中年婦人(暗褐),2
@@ -1531,6 +1537,13 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157057,npc_junk_shop_3,,,[凱都拉商團員]{nl}凱拉爾達遜,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,隊伍戰鬥聯賽,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,修道士2鐵匠,2
+160000,h_GuildHousing_farmer_girl,,,農場管理員,2
+160001,h_GuildHousing_farmer_boy,,,農場管理員,2
+160002,h_GuildHousing_manager,,,公會基地管理人(男),2
+160003,flower_keep_water_yellow,,,噙水之花(黃色),2
+160004,flower_keep_water_red,,,噙水之花(紅色),2
+160005,flower_keep_water_white,,,噙水之花(白色),2
+160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,淨化的祭壇,2
 161000,E_statue_zemina,,minimap_goddess,女神澤米娜之像,2
 161001,npc_kupole_Velcoffer,,,奎波爾西姆那,2
 161002,npc_Teliavelis,,minimap_man_smith,鐵匠戴利亞貝利斯,2
