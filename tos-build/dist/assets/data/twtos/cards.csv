@@ -151,6 +151,14 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644912,Legend_card_Wastrel,[欄位裝備效果] 最大HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,[642931],,,59172,,,,0,4,威伊斯特隆卡片,0,,,,0.0,0.0,TTTT,3,2,1.0
 644913,Legend_card_ignas,[欄位裝備效果] 暴擊攻擊時以[★ * 5]%機率6秒內隱身。,icon_item_card_legend,154_boss_ignas,,[642934],,,800089,,,,0,1,依克那斯卡試,0,,,,0.0,0.0,TTTT,3,2,1.0
 644914,Legend_card_boruta,[欄位裝備效果] 對Boss怪物的傷害增加[★ * 5]%,icon_item_card_legend,155_boss_boruta,,,,,59208,,,,0,0,普魯達卡片,0,,,,0.0,0.0,TTTT,3,2,1.0
+644915,Legend_card_Marnoks_JP,[欄位裝備效果] 最小暴擊機率增加 [★ * 2]%,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔君主馬魯若斯卡片,0,,,,0.0,0.0,FFFT,3,2,1.0
+644916,Legend_card_Blud_JP,[欄位裝備效果] PVP時獲得傷害減少 [★ * 3]%,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔君主布爾魯卡片,0,,,,0.0,0.0,FFFT,3,2,1.0
+644917,Legend_card_Zawra_JP,[欄位裝備效果] 物理防禦力增加 [★ * 10]%,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔君主扎烏拉卡片,0,,,,0.0,0.0,FFFT,3,2,1.0
+644918,Legend_card_Nuaele_JP,[欄位裝備效果] 魔法防禦力增加 [★ * 10]%,icon_item_card_legend,074_nuaele,,,,,800016,,,,0,1,魔君主努亞耶雷卡片,0,,,,0.0,0.0,FFFT,3,2,1.0
+644919,Legend_card_Helgasercle_JP,[欄位裝備效果] 消滅每1怪物時SP恢復 [★ * 20],icon_item_card_legend,053_boss_helgasercle,,,,,800057,,,,0,1,魔君主赫嘉塞露卡片,0,,,,0.0,0.0,FFFT,3,2,1.0
+644920,Legend_card_Lecifer_JP,[欄位裝備效果] 移動速度增加 [★] ,icon_item_card_legend,030_boss_lecifer,,,,,800043,,,,0,1,魔君主雷克西波卡片,0,,,,0.0,0.0,FFFT,3,2,1.0
+644921,Legend_card_Mirtis_JP,[欄位裝備效果] 攻擊時因屬性相生而懲罰減少 [★ * 10]%  ,icon_item_card_legend,007_boss_mirtis,,,,,800048,,,,0,1,魔君主米爾堤斯卡片,0,,,,0.0,0.0,FFFT,3,2,1.0
+644922,Legend_card_FrosterLord_JP,[欄位裝備效果] 召喚獸的最小攻擊力和最大攻擊力差異減少[★ * 10]%{nl}(達成10LV時，召喚獸的最小攻擊力變成和最大攻擊力一樣。),icon_item_card_legend,149_boss_frosterlord,,,,,800076,,,,0,1,魔君主弗羅斯特領主卡片,0,,,,0.0,0.0,FFFT,3,2,1.0
 644923,Legendcard_skiaclips,[欄位裝備效果] 昆蟲型對象攻擊力750 * [★],icon_item_card_legend,156_boss_skiaclipse,,[642949],,,57866,,,,2,0,解放的斯基亞克爾立斯卡片,0,,,,0.0,0.0,TTTT,3,2,1.0
 644924,Legendcard_Moringponia,[欄位裝備效果] 中型對象攻擊力 300 * [★],icon_item_card_legend,157_boss_moringponia,,,,,57866,,,,2,0,魔君主莫靈波尼亞卡片,0,,,,0.0,0.0,TTTT,3,2,1.0
 644925,Legendcard_Misrus,"[欄位裝備效果] 對正使用盾牌的敵人給予 1,000 * [★] 追加傷害",icon_item_card_legend,158_boss_misrus,,,,,57866,,,,2,0,憤怒的莫茲魯斯卡片,0,,,,0.0,0.0,TTTT,3,2,1.0
