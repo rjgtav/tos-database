@@ -870,6 +870,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643052,event1909_Transcend_Scroll_8,提升裝備的超越數值至8階段。{nl}只有0~7階段超越道具可以使用，右點擊8超越卷軸後，選擇要進行超越的道具，該道具會變更成8超越狀態。{nl}活動結束時統一刪除。,icon_item_transcendence_coupon,,,,,,,,[活動]8超越卷軸,0,0.0,0.0,FFFT,6,1.0
 643053,event1909_Transcend_Scroll_5,提升裝備的超越數值至5階段。{nl}只有0~4階段超越道具可以使用，右點擊5超越卷軸後，選擇要進行超越的道具，該道具會變更成5超越狀態。{nl}活動結束時統一刪除。,icon_item_transcendence_coupon,,,,,,,,[活動]5超越卷軸,0,0.0,0.0,FFFT,6,5.0
 643054,event1909_Transcend_Scroll_3,提升裝備的超越數值至3階段。{nl}只有0~2階段超越道具可以使用，右點擊3超越卷軸後，選擇要進行超越的道具，該道具會變更成3超越狀態。{nl}活動結束時統一刪除。,icon_item_transcendence_coupon,,,,,,,,[活動]3超越卷軸,0,0.0,0.0,FFFT,6,5.0
+643055,Transcend_Scroll_10,讓裝備的超越數值提升至10階。{nl}只有0~9階超越道具可以使用，右點擊10超越卷軸後，選擇要超越的道具，就可以變更成10超越的狀態。{nl}只能使用在Lv 400以下裝備的超越卷軸。,item_icon_transcend_scroll_10,,,,,,,,[Lv.400] 10超越卷軸,0,0.0,0.0,FFFT,6,1.0
 645002,D_Bube_Mane,可以從長時間暴露於水晶的布貝身上獲得的黑暗魔石。,icon_item_evilenergy_piece,,,,,,,,布貝魔石,4,0.0,0.0,TTTT,22,0.0
 645024,leaf_hanaming,散發出甜蜜香味的花瓣，可以從粉紅小花怪身上獲得。,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,粉紅小花怪花瓣,1,0.0,0.0,TTTT,16,1.0
 645025,TreasureboxKey2,開啟寶箱 LV 2所使用的鑰匙,icon_item_key1,,,,,,,,LV2 寶箱鑰匙,0,0.0,0.0,FFTF,16,1.0
