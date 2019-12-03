@@ -325,6 +325,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 47264,Hidden_Mon_01,,,Transparent Monster,2
 47265,npc_zachariel_lantern_2,,,Royal Mausoleum Stone Lantern,2
 47266,treasure_box3_2,,,Treasure Box 3,2
+47267,Event_treasure_box3_2,,minimap_event_1,Christmas Royal Chest,2
+47268,Event_treasure_box4,,minimap_event_1,NA,2
 47413,npc_lecifer,Monster,icon_item_nothing,Human Rexipher,2
 48002,f_katyn_owl02,,,Owl Sculpture,2
 48003,f_katyn_owl03,,,Owl Sculpture,2
