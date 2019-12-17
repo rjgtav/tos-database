@@ -301,7 +301,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 904014,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_1_2,栽培樹木活動用的道具。{nl}使用時可以從獎勵目錄上隨機得到一個道具。{nl}活動結束時活動道具統一刪除。,icon_item_eventcube1,,,,,,,,,樹苗魔方,0,0.0,0.0,FFFT,5,0.0
 904015,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_3_4,栽培樹木活動用的道具。{nl}使用時可以從獎勵目錄上隨機得到一個道具。{nl}活動結束時活動道具統一刪除。,icon_item_eventcube2,,,,,,,,,成木魔方,0,0.0,0.0,FFFT,5,0.0
 904016,EVENT_1804_ARBOR_GROW_CRYSTAL_CUBE_5_6,栽培樹木活動用的道具。{nl}使用時可以從獎勵目錄上隨機得到一個道具。{nl}活動結束時活動道具統一刪除。,icon_item_eventcube3,,,,,,,,,茂盛的成木魔方,0,0.0,0.0,FFFT,5,0.0
-904028,MISSION_SURVIVAL_EVENT2_CUBE,怪盜特潘活動所贈送的稱號箱子。{nl}使用時可以從獎勵目錄上隨機得到一個道具。{nl}活動結束時活動道具統一刪除。,icon_item_eventcube2,,,,,,,,,偷來的魔方,0,0.0,0.0,FFFT,5,0.0
+904028,MISSION_SURVIVAL_EVENT2_CUBE,怪盜特龐活動所贈送的稱號箱子。{nl}使用時可以從獎勵目錄上隨機得到一個道具。{nl}活動結束時活動道具統一刪除。,icon_item_eventcube2,,,,,,,,,偷來的魔方,0,0.0,0.0,FFFT,5,0.0
 904041,EVENT_1805_SLATE_CUBE,「石板裡模糊的秘密訊息」活動道具。{nl}使用時隨機獲得獎勵目錄中的道具。{nl}活動結束時統一刪除。,icon_item_eventcube2,,,,,,,,,雷那的感謝魔方,0,0.0,0.0,FFFT,5,0.0
 904049,EVENT_1806_STORY_1_CUBE,前往星之塔的活動道具。{nl}使用時可以隨機獲得獎勵目錄中的道具。{nl}活動結束時統一刪除。,icon_item_eventcube3,,,,,,,,,星之塔英雄魔方,0,0.0,0.0,FFFT,5,0.0
 904057,EVENT_1807_BALL_CUBE,[Summer Festa] 活動道具。{nl}使用時隨機獲得獎勵目錄中的道具。{nl}活動結束時道具統一刪除。,icon_item_summer_box,,,,,,,,,夏夜禮物箱,0,0.0,0.0,FFFT,5,0.0

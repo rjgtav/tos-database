@@ -3004,6 +3004,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 662272,D_UNDERAQUEDUCT_EVETN3_ITEM1,黃色補給品。{nl}在封閉區域Buff的裝置中，對想要的裝置對話，就可以獲得該裝置的Buff效果。獲得Buff之後，補給品就會消失。{nl}脫離外城壁地下水道之後，道具就會消失。{nl}可以丟棄道具。,icon_item_grimoire_dark_yellow,,,,,,,,黃色補給品,0,0.0,0.0,FFFF,22,0.0
 662273,D_UNDERAQUEDUCT_EVETN3_USE_ITEM,為了攻擊出現在外城壁地下水道的膽小鬼查夏，所需要的手鐲。可以感受到神祕的魔力。{nl}可以將手鐲登錄至道具欄位上使用。{nl}在物品欄滑鼠右鍵點擊可以使用。,icon_item_rosario_red,,,,,,,,蘊藏魔力的手鐲,0,0.0,0.0,FFFF,22,0.0
 662274,D_UNDERAQUEDUCT_EVETN4_ITEM1,紅色的補給品。{nl}在封閉區域Buff的裝置中，對想要的裝置對話，就可以獲得該裝置的Buff效果。獲得Buff後，補給品就會消失。{nl}脫離外城壁地下水道之後，道具就會消失。{nl}可以丟棄道具。,icon_item_grimoire_dark_red,,,,,,,,紅色補給品,0,0.0,0.0,FFFF,22,0.0
+662277,event19xmas_RoyalBox_Key_1,用鑰匙開啟位於柯拉佩達的皇家聖誕寶箱可以隨機獲得以下道具中的一個。(獲得高級獎勵的機會比神秘聖誕寶箱高){nl}提尼拿鐵拉花 x1{nl}[活動] 黃金血晶萃取工具 x1{nl}銀色血晶萃取工具(14天) x1{nl}充滿祝福的嫩芽(14天) x1{nl}女神的雕像(14天) x1{nl}[活動]公會任務獎勵鑄幣：銀 x1{nl}遠征隊傳送石 x3{nl}活動結束時將統一刪除。,icon_item_key5,,,,,,,,[活動]皇家聖誕鑰匙,0,0.0,0.0,FFFT,16,0.0
+662278,event19xmas_Box_Key_1,"用鑰匙開啟位於柯拉佩達的神秘聖誕寶箱可以隨機獲得以下道具中的一個。(獲得高級獎勵的機會比皇家聖誕寶箱低){nl}[活動]特性點數 10,000 x1{nl}[活動]特性點數 1,000 x1{nl}[活動]特性點數 500 x1{nl}充滿祝福的嫩芽(14天) x1{nl}女神的雕像(14天) x1{nl}[活動]公會任務獎勵鑄幣：銀 x1{nl}遠征隊傳送石 x3{nl}活動結束時將統一刪除。",cathedral_key_2,,,,,,,,[活動]神秘聖誕鑰匙,0,0.0,0.0,FFFT,16,0.0
 663000,CHATHEDRAL56_SQ03_BOOK_ITEM,祭司收集的材料,icon_item_collection_04black,,,,,,,,祭司的材料,0,0.0,0.0,FFFF,22,0.0
 663001,DUMARO_MEAT,杜瑪洛部位中肉最多的部份,icon_item_meat_01,,,,,,,,杜瑪洛的後腿肉,0,0.0,0.0,FFFF,22,0.0
 663002,SOLDIRE_SQ31_RELIC,守護礦山村莊一直到最後一刻的士兵們的遺物。,icon_item_small_bag,,,,,,,,士兵的遺物,0,0.0,0.0,FFFF,22,0.0
@@ -5902,7 +5904,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904024,EVENT_1804_TRANSCEND_SHOP_REINFORCE_BOX_14D,使用時可以從獎勵目錄上隨機得到一個道具。,icon_item_eventbox_qm,,,,,,,,受祝福的強化魔方(14天),0,0.0,1209600.0,FFFF,6,1.0
 904025,EVENT_1804_TRANSCEND_SHOP_COSTUME_BOX_14D,使用時可以從獎勵目錄上隨機得到一個道具。,icon_item_eventcube3,,,,,,,,人氣活動套裝魔方(14天),0,0.0,1209600.0,FFFF,6,1.0
 904026,misc_gemExpStone09_14d,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,,,7星寶石研磨劑(14天),0,0.0,1209600.0,FFFF,16,1.0
-904027,MISSION_SURVIVAL_EVENT2_ACHIEVE_BOX,怪盜特潘活動所贈送的稱號箱子。{nl}活動結束時活動道具統一刪除。,icon_item_holyark,,,,,,,,稱號 - 怪盜的資格,0,0.0,0.0,FFFT,6,0.0
+904027,MISSION_SURVIVAL_EVENT2_ACHIEVE_BOX,怪盜特龐活動所贈送的稱號箱子。{nl}活動結束時活動道具統一刪除。,icon_item_holyark,,,,,,,,稱號 - 怪盜的資格,0,0.0,0.0,FFFT,6,0.0
 904029,EVENT_1805_WEDDING1_PIECE,請幫助5月的新娘，活動用道具，活動結束時統一刪除。,icon_item_event_invitationpiece1,,,,,,,,遺失的請帖碎片,0,0.0,0.0,FFFT,16,0.1
 904030,EVENT_BEAUTY_CHAIR,美容院購買活動贈送的道具。{nl}使用時可以召喚出美髮椅來坐。,icon_item_event_beauty_chair,,,,,,,,美髮椅,0,1.0,0.0,FFFT,6,1.0
 904031,EVENT_1805_CHILDREN,30分內給予組隊全員移動速度+4、廣域攻擊比率+1、經驗增加25%的效果。,icon_item_firework,,,,,,,,TOS之日爆竹,0,1800.0,0.0,FFFT,6,1.0
