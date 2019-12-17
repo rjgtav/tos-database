@@ -1546,6 +1546,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160004,flower_keep_water_red,,,Dewy Flower (Red),2
 160005,flower_keep_water_white,,,Dewy Flower (White),2
 160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,Altar of Purification,2
+160014,npc_Xmas_Evt_NPC,,minimap_event_1,Christmas NPC,2
 161000,E_statue_zemina,,minimap_goddess,Statue of Goddess Zemyna,2
 161001,npc_kupole_Velcoffer,,,Kupole Simona,2
 161002,npc_Teliavelis,,minimap_man_smith,Blacksmith Teliavelis,2
