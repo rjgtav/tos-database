@@ -325,6 +325,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 47264,Hidden_Mon_01,,,투명 몬스터,2
 47265,npc_zachariel_lantern_2,,,왕릉 석등,2
 47266,treasure_box3_2,,,보물상자3,2
+47267,Event_treasure_box3_2,,minimap_event_1,크리스마스 로열 상자,2
+47268,Event_treasure_box4,,minimap_event_1,신비한 크리스마스 상자,2
 47413,npc_lecifer,몬스터,icon_item_nothing,렉시퍼 인간형,2
 48002,f_katyn_owl02,,,부엉이 조각상,2
 48003,f_katyn_owl03,,,부엉이 조각상,2
@@ -630,6 +632,28 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150203,Shadowmancer_seal_cage,,,그림자 감옥,2
 150204,HiddenWall_500_300_300,,,,2
 150205,npc_stockades_uphill,,,방책,2
+150206,npc_Ragana,,,마신 라가나,2
+150207,npc_holy_romuva,,,신성의 나모트,2
+150208,npc_terramancer_master,,minimap_man_wizard,테라맨서 마스터,2
+150209,npc_MEI_master,,minimap_man_master,매화검수 마스터,2
+150210,npc_baiga,,,바이가,2
+150211,npc_Zofija_Eleonora,,minimap_man_cleric,크루세이더 마스터,2
+150212,npc_rangda_master,,minimap_man_scout,랑다 마스터,2
+150213,npc_Arbalester_master,,minimap_man_archer,아발리스터 마스터,2
+150214,npc_thetree_root,,,신수의 뿌리,2
+150215,npc_raima_wheel,,,라이마의 물레,2
+150216,npc_MasterRangda_Barong,,,미엘라스,2
+150217,npc_Crusader_01,,,크루세이더1,2
+150218,npc_Crusader_02,,,크루세이더2,2
+150219,npc_kingdom_soldier,,,왕국군 병사,2
+150220,npc_kingdom_schaffenmem1,,,저항군 단원1,2
+150221,npc_kingdom_schaffenmem2,,,저항군 단원2,2
+150222,npc_kingdom_schaffenmem3,,,저항군 단원3,2
+150223,npc_kingdom_schaffencap,,,저항군 간부,2
+150224,npc_kingdom_paladin_follower1,,,팔라딘 추종자1,2
+150225,npc_kingdom_paladin_follower2,,,팔라딘 추종자2,2
+150226,npc_kingdom_owl_statue,,,부엉이 조각상,2
+150227,npc_goddess_Laima_ep12,,,갇힌 라이마,2
 151000,closing_device,,,폐쇄장치,2
 151001,spell_crystal_red,,,마력이 맺힌 결정,2
 151002,spell_crystal_gem_red,,,홍염의 보석,2
@@ -1477,6 +1501,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156165,maple_24_tree_young,,,어린 단풍나무,2
 156166,HiddenWall_Vivid,,,,2
 156167,pvp_battle_shop,,minimap_erosion,장비 렌탈 상점,2
+156168,dirt_heal_5,,,흙더미(큰버전),2
+156169,npc_intermediate_officer_men3,,,중급 관리 장교남3,2
 157000,3cmlake_ruins,,,호수의 잔해,2
 157001,coral_tent_01,,,크란토 텐트,2
 157002,PCStatue,,,,2
@@ -1551,6 +1577,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160011,moringponia_ignore_raise,,minimap_portal,,2
 160012,HiddenWall_600_400_300,,,,2
 160013,HiddenWall_800_400_300,,,,2
+160014,npc_Xmas_Evt_NPC,,minimap_event_1,크리스마스 NPC,2
+160015,npc_Xmas_Evt_NPC2,,minimap_event_1,크리스마스 NPC2,2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
 161002,npc_Teliavelis,,minimap_man_smith,대장장이 테리아베리스,2
