@@ -1,8 +1,9 @@
-from multiprocessing import Manager
+#from multiprocessing import Manager
 
 import constants
 
-assets_icons = Manager().dict()
+assets_icons = {}
+#assets_icons = Manager().dict()
 #assets_icons_used = []
 
 attributes = {}

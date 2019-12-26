@@ -1,10 +1,10 @@
 import logging
-import multiprocessing
+#import multiprocessing
 import os
 import shutil
 import xml.etree.ElementTree as ET
-from functools import partial
-from multiprocessing import Pool
+#from functools import partial
+#from multiprocessing import Pool
 
 import constants
 import globals
@@ -83,9 +83,12 @@ def parse_icons(file_name, region, version_update):
     # example: <image name="icon_wizar_energyBolt" file="\icon\skill\wizard\icon_wizar_energyBolt.png" />
     data = [(image, imagelist) for imagelist in data for image in imagelist]
 
-    pool = Pool(processes=multiprocessing.cpu_count())
-    pool.map(partial(parse_icons_step, file_name, region, version_update), data)
-    pool.terminate()
+    for work in data:
+        parse_icons_step(file_name, region, version_update, work)
+
+    #pool = Pool(processes=multiprocessing.cpu_count())
+    #pool.map(partial(parse_icons_step, file_name, region, version_update), data)
+    #pool.terminate()
 
 
 def parse_icons_step(file_name, region, version_update, work):
