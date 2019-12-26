@@ -14,38 +14,41 @@ from utils.tosenum import TOSEnum
 class TOSItemGroup(TOSEnum):
     ARMBAND = 0
     ARMOR = 1
-    BOOK = 2
-    CARD = 3
-    COLLECTION = 4
-    CUBE = 5
-    DRUG = 6
-    EQUIPMENT = 7
-    EVENT = 8
-    EXPORB = 9
-    FISHINGROD = 10
-    GEM = 11
-    HELMET = 12
-    HIDDENABILITY = 13
-    ICOR = 14
-    MAGICAMULET = 15
-    MATERIAL = 16
-    MISC = 17
-    PASTEBAIT = 18
-    PETARMOR = 19
-    PETWEAPON = 20
-    PREMIUM = 21
-    QUEST = 22
-    RECIPE = 23
-    SEAL = 24
-    SUBWEAPON = 25
-    UNUSED = 26
-    WEAPON = 27
+    ARK = 2
+    BOOK = 3
+    CARD = 4
+    COLLECTION = 5
+    CUBE = 6
+    DRUG = 7
+    EQUIPMENT = 8
+    EVENT = 9
+    EXPORB = 10
+    FISHINGROD = 11
+    GEM = 12
+    HELMET = 13
+    HIDDENABILITY = 14
+    ICOR = 15
+    LEGENDMATERIAL = 16
+    MAGICAMULET = 17
+    MATERIAL = 18
+    MISC = 19
+    PASTEBAIT = 20
+    PETARMOR = 21
+    PETWEAPON = 22
+    PREMIUM = 23
+    QUEST = 24
+    RECIPE = 25
+    SEAL = 26
+    SUBWEAPON = 27
+    UNUSED = 28
+    WEAPON = 29
 
     @staticmethod
     def value_of(string):
         return {
             'ARMBAND': TOSItemGroup.ARMBAND,
             'ARMOR': TOSItemGroup.ARMOR,
+            'ARK': TOSItemGroup.ARK,
             'BOOK': TOSItemGroup.BOOK,
             'CARD': TOSItemGroup.CARD,
             'COLLECTION': TOSItemGroup.COLLECTION,
@@ -59,6 +62,7 @@ class TOSItemGroup(TOSEnum):
             'HELMET': TOSItemGroup.HELMET,
             'HIDDENABILITY': TOSItemGroup.HIDDENABILITY,
             'ICOR': TOSItemGroup.ICOR,
+            'LEGENDMATERIAL': TOSItemGroup.LEGENDMATERIAL,
             'MAGICAMULET': TOSItemGroup.MAGICAMULET,
             'MATERIAL': TOSItemGroup.MATERIAL,
             'MISC': TOSItemGroup.MISC,
@@ -76,12 +80,14 @@ class TOSItemGroup(TOSEnum):
 
 
 ITEM_GROUP_ITEM_WHITELIST = [
+    TOSItemGroup.ARK,
     TOSItemGroup.DRUG,
     TOSItemGroup.EVENT,
     TOSItemGroup.EXPORB,
     TOSItemGroup.FISHINGROD,
     TOSItemGroup.HIDDENABILITY,
     TOSItemGroup.ICOR,
+    TOSItemGroup.LEGENDMATERIAL,
     TOSItemGroup.MATERIAL,
     TOSItemGroup.MISC,
     TOSItemGroup.PASTEBAIT,

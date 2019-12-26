@@ -18,7 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tos-parser/input" />
       <excludeFolder url="file://$MODULE_DIR$/web/dist/web" />
     </content>
-    <orderEntry type="jdk" jdkName="2.7 @ WSLDistribution{myDescriptor=WslDistributionDescriptor{id='UBUNTU', msId='Ubuntu'}}" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="2.7 @ Ubuntu 18.04" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

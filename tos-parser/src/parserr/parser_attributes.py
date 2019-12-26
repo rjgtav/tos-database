@@ -66,6 +66,10 @@ def parse_links_jobs():
 
             with open(ies_path, 'rb') as ies_file:
                 for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
+                    if row['ClassName'] not in globals.attributes_by_name:
+                        logging.warn('Missing attribute in ability.ies: %s', row['ClassName'])
+                        continue
+
                     attribute = globals.attributes_by_name[row['ClassName']]
                     attribute['DescriptionRequired'] = attribute['DescriptionRequired'] if attribute['DescriptionRequired'] else ''
                     attribute['DescriptionRequired'] = attribute['DescriptionRequired'] + '{nl}{b}' + parser_translations.translate(row['UnlockDesc']) + '{b}'

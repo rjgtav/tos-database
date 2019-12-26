@@ -228,46 +228,49 @@ class TOSEquipmentStat(TOSEnum):
 
 
 class TOSEquipmentType(TOSEnum):
-    BOTTOM = 0
-    BRACELET = 1
-    CANNON = 2
-    CHARM = 3
-    COSTUME_ARMBAND = 4
-    COSTUME_DOLL = 5
-    COSTUME_EFFECT = 6
-    COSTUME_HAIR = 7
-    COSTUME_HAIR_ACCESSORY = 8
-    COSTUME_HELMET = 9
-    COSTUME_LENS = 10
-    COSTUME_OUTFIT = 11
-    COSTUME_SPECIAL = 12
-    COSTUME_SPECIAL_SKIN = 13
-    COSTUME_TOY = 14
-    COSTUME_WING = 15
-    DAGGER = 16
-    GLOVES = 17
-    NECKLACE = 18
-    ONE_HANDED_BOW = 19
-    ONE_HANDED_GUN = 20
-    ONE_HANDED_MACE = 21
-    ONE_HANDED_SPEAR = 22
-    ONE_HANDED_STAFF = 23
-    ONE_HANDED_SWORD = 24
-    RAPIER = 25
-    SEAL = 26
-    SHIELD = 27
-    SHOES = 28
-    TOP = 29
-    TWO_HANDED_BOW = 30
-    TWO_HANDED_GUN = 31
-    TWO_HANDED_MACE = 32
-    TWO_HANDED_SPEAR = 33
-    TWO_HANDED_STAFF = 34
-    TWO_HANDED_SWORD = 35
+    ARK = 0
+    BOTTOM = 1
+    BRACELET = 2
+    CANNON = 3
+    CHARM = 4
+    COSTUME_ARMBAND = 5
+    COSTUME_DOLL = 6
+    COSTUME_EFFECT = 7
+    COSTUME_HAIR = 8
+    COSTUME_HAIR_ACCESSORY = 9
+    COSTUME_HELMET = 10
+    COSTUME_LENS = 11
+    COSTUME_OUTFIT = 12
+    COSTUME_SPECIAL = 13
+    COSTUME_SPECIAL_SKIN = 14
+    COSTUME_TOY = 15
+    COSTUME_WING = 16
+    DAGGER = 17
+    GLOVES = 18
+    NECKLACE = 19
+    ONE_HANDED_BOW = 20
+    ONE_HANDED_GUN = 21
+    ONE_HANDED_MACE = 22
+    ONE_HANDED_SPEAR = 23
+    ONE_HANDED_STAFF = 24
+    ONE_HANDED_SWORD = 25
+    RAPIER = 26
+    SEAL = 27
+    SHIELD = 28
+    SHOES = 29
+    TOP = 30
+    TRINKET = 31
+    TWO_HANDED_BOW = 32
+    TWO_HANDED_GUN = 33
+    TWO_HANDED_MACE = 34
+    TWO_HANDED_SPEAR = 35
+    TWO_HANDED_STAFF = 36
+    TWO_HANDED_SWORD = 37
 
     @staticmethod
     def value_of(string):
         return {
+            'ARK': TOSEquipmentType.ARK,
             'ARMBAND': TOSEquipmentType.COSTUME_ARMBAND,
             'ARTEFACT': TOSEquipmentType.COSTUME_TOY,
             'BOOTS': TOSEquipmentType.SHOES,
@@ -298,6 +301,7 @@ class TOSEquipmentType(TOSEnum):
             'SPECIALCOSTUME': TOSEquipmentType.COSTUME_SPECIAL,
             'STAFF': TOSEquipmentType.ONE_HANDED_STAFF,
             'SWORD': TOSEquipmentType.ONE_HANDED_SWORD,
+            'TRINKET': TOSEquipmentType.TRINKET,
             'THBOW': TOSEquipmentType.TWO_HANDED_BOW,
             'THMACE': TOSEquipmentType.TWO_HANDED_MACE,
             'THSPEAR': TOSEquipmentType.TWO_HANDED_SPEAR,
