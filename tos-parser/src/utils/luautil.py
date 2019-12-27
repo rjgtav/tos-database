@@ -411,17 +411,22 @@ def lua_function_source_to_javascript(function_source):
         line = line.replace('math.', 'Math.')
         line = line.replace(':', '.')
         line = re.sub(r'--(.+)', '', line)
+        line = re.sub(r'#(\w+)', r'\1.length', line)
         line = re.sub(r'\band\b', ' && ', line)
         line = re.sub(r'\bor\b', ' || ', line)
         line = re.sub(r'\bend\b', '}', line)
         line = re.sub(r'\belse\b', '} else {', line)
         line = re.sub(r'\belseif\b', '} else if', line)
         line = re.sub(r'\bnil\b', 'null', line)
+        line = re.sub(r'{((?:"\w+"[,\s]*)+)}', r'[\1]', line) # arrays
+        line = re.sub(r'^(\s*)([^\s]+?),\s*([^\s]+?)\s*=\s*([^\s]+?),\s*([^\s]+?)$', r'\1\2 = \4; \3 = \5;', line) # multiple variable association
 
         result.append(line)
 
     result = '\n'.join(result)
-    result = re.sub(r'for (.+?),(.+?)do', r'for (var \1; \2;) {', result, flags=re.DOTALL)
+
+    result = re.sub(r'for ([^,]+?)=([^,]+?),([^,]+?),([^,]+?)do', r'for (var \1 = \2; \1 <= \3; \1 += \4) {', result, flags=re.DOTALL)
+    result = re.sub(r'for ([^,]+?)=([^,]+?),([^,]+?)do', r'for (var \1 = \2; \1 <= \3; \1 ++) {', result, flags=re.DOTALL)
     result = re.sub(r'if (.+?) then', r'if (\1) {', result, flags=re.DOTALL)
     result = result.splitlines()
 

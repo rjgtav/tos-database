@@ -186,6 +186,7 @@ export enum TOSEquipmentMaterial {
 export const TOSEquipmentMaterialService = EnumServiceFactory(TOSEquipmentMaterial);
 
 export enum TOSEquipmentType {
+  ARK = 'Ark',
   BOTTOM = 'Pants',
   BRACELET = 'Bracelets',
   CANNON = 'Cannons',
@@ -216,6 +217,7 @@ export enum TOSEquipmentType {
   SHIELD = 'Shields',
   SHOES = 'Shoes',
   TOP = 'Shirts',
+  TRINKET = 'Trinket',
   TWO_HANDED_BOW = 'Bows',
   TWO_HANDED_GUN = 'Muskets',
   TWO_HANDED_MACE = '2H Maces',
@@ -288,9 +290,11 @@ export const
       ]
     },
     {
-      header: 'Seals',
+      header: 'Others',
       options: [
+        TOSEquipmentType.ARK,
         TOSEquipmentType.SEAL,
+        TOSEquipmentType.TRINKET,
       ]
     },
   ];
@@ -331,6 +335,7 @@ export const TOSItemTradabilityService = EnumServiceFactory(TOSItemTradability);
 export enum TOSItemType {
   ARMBAND = 'Arm Band',
   ARMOR = 'Armor',
+  ARK = 'Ark',
   BOOK = 'Books',
   CARD = 'Card',
   COLLECTION = 'Collection',
@@ -344,6 +349,7 @@ export enum TOSItemType {
   HELMET = 'Helmet',
   HIDDENABILITY = 'Hidden Ability',
   ICOR = 'Icor',
+  LEGENDMATERIAL = 'Legendary Material',
   MAGICAMULET = 'Magic Amulet',
   MATERIAL = 'Material',
   MISC = 'Miscellaneous',
@@ -363,9 +369,11 @@ export const
   TOSItemTypeService.groupBy = () => [
     {
       options: [
+        TOSItemType.ARK,
         TOSItemType.DRUG,
         TOSItemType.HIDDENABILITY,
         TOSItemType.EVENT,
+        TOSItemType.LEGENDMATERIAL,
         TOSItemType.MATERIAL,
         TOSItemType.MISC,
         TOSItemType.PREMIUM,
