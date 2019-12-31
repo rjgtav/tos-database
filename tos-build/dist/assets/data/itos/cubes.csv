@@ -15,6 +15,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 640450,Gacha_PC_Event_Costume01,Right-click to obtain the following items.{nl} - Martian Ambition Selection Box x1{nl} - Martian Ambition Helmet x1,icon_item_gacha_pc_event_costume01,,,,,,,,,[PP] Martian Ambition Package,0,0.0,0.0,FFFF,6,5.0
 640451,Select_costume_ep11,Right-click to use. Contains the class costume for the following classes.{nl}Class list{nl}- Tiger Hunter{nl}- Matross{nl}- Ardito{nl}- Sheriff{nl} {nl}- Will be automatically deleted at the end of the event period.,icon_item_giftbox_4,,,,,,,,,[Event] New Class Premium Costume Selection Box,0,0.0,0.0,FFFT,6,5.0
 640453,Ghaca_Guild_Contribution_Shop_MISC,Right-click to use and obtain a random item.,icon_item_farm47_sack_01,,,,,,,,,Ore Sack,0,0.0,0.0,FFFT,6,1.0
+640462,box_gabia_set,NA,icon_item_gabia_set,,,,,,,,,NA,0,0.0,0.0,FFFF,6,5.0
 642601,Gacha_F_001,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,,,"[{""Chance"": 10.0, ""Monster"": 57500, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}]",,,Abomination Cube,0,0.0,0.0,FFFF,6,5.0
 642602,Gacha_F_002,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,,,,,,(Old) Obscene Deathweaver Cube,0,0.0,0.0,FFFF,6,5.0
 642603,Gacha_F_003,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,,,,,,(Old) Bleak Chapparition Cube,0,0.0,0.0,FFFF,6,5.0
