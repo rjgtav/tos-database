@@ -154,6 +154,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20187,musicbox_popolion,,,포포리온 워터볼 오르골,2
 20188,npc_sailor_f,,minimap_event_1,장난감 상인,2
 20189,npc_sailor_m,,minimap_event_1,먹거리 상인,2
+20190,npc_city_alchemist,,minimap_man_wizard,전문 알케미스트,2
 40000,Obstacle_box,,,상자,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,책상,2
@@ -1579,6 +1580,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160013,HiddenWall_800_400_300,,,,2
 160014,npc_Xmas_Evt_NPC,,minimap_event_1,크리스마스 NPC,2
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,크리스마스 NPC2,2
+160016,rokas_pot3_small_E1,,,새해 복항아리,2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
 161002,npc_Teliavelis,,minimap_man_smith,대장장이 테리아베리스,2
@@ -1609,3 +1611,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 2000130,lockdoor_npc_E1,몬스터,,잠긴 문,2
 2000131,pumpkin_bonus_E1,몬스터,,달콤한 마법진,2
 2000132,middle_boss_board_E1,몬스터,,주민이 남긴 쪽지,2
+2000201,creto_E1,마을 주민들이 몬스터로 분장해 방해합니다.,mon_creto,변장한 마을 주민,2
+2000202,cretobiang_E1,열정적인 마을 주민이 몬스터로 분장해 방해합니다.,mon_cretobiang,열정적인 마을 주민,2
+2000203,boss_summon_spiderweb_E1,마을 사람들이 설치해 놓은 함정입니다. 잠시 이동을 방해합니다.,,,2
+2000204,velniasprison_warp_mini_E1,발판을 밟으면 최고 속도로 달릴 수 있습니다.,,,2
+2000206,hidden_monster_E1,출발지점 투명 오브젝트,,,2
