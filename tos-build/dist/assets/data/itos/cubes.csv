@@ -16,6 +16,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 640451,Select_costume_ep11,Right-click to use. Contains the class costume for the following classes.{nl}Class list{nl}- Tiger Hunter{nl}- Matross{nl}- Ardito{nl}- Sheriff{nl} {nl}- Will be automatically deleted at the end of the event period.,icon_item_giftbox_4,,,,,,,,,[Event] New Class Premium Costume Selection Box,0,0.0,0.0,FFFT,6,5.0
 640453,Ghaca_Guild_Contribution_Shop_MISC,Right-click to use and obtain a random item.,icon_item_farm47_sack_01,,,,,,,,,Ore Sack,0,0.0,0.0,FFFT,6,1.0
 640462,box_gabia_set,NA,icon_item_gabia_set,,,,,,,,,NA,0,0.0,0.0,FFFF,6,5.0
+640463,rubymoru_recipe_box,Right-click to obtain the following items.{nl} - Shining Ruby Anvil Recipe x10,icon_item_ruby_recipebox,,,,,,,,,Shining Ruby Anvil Recipe Bundle (x10),0,0.0,0.0,FFFF,6,5.0
 642601,Gacha_F_001,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,,,"[{""Chance"": 10.0, ""Monster"": 57500, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}]",,,Abomination Cube,0,0.0,0.0,FFFF,6,5.0
 642602,Gacha_F_002,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,,,,,,(Old) Obscene Deathweaver Cube,0,0.0,0.0,FFFF,6,5.0
 642603,Gacha_F_003,It seems to contain something unknown. {nl}Right-click to use.,icon_item_cube3,,,,,,,,,(Old) Bleak Chapparition Cube,0,0.0,0.0,FFFF,6,5.0
@@ -299,7 +300,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 902138,EVENT_1812_ORB_WEAPONBOX,Use to receive one random Lv 380 Primus weapon/subweapon item.,icon_item_event_weaponbox1,,,,,,,,,Weapon Cube,0,0.0,0.0,FFFT,6,0.0
 902139,Event_BlueCube_Lv6_1812,Use to obtain a random reward item.{nl}Will be deleted after the event period.,icon_item_eventbox_blue,,,,,,,,,Blue Cube,0,0.0,0.0,FFFT,6,0.0
 902154,Steam_Event_Carnival_Box,Contains a Festival Costume of your choice (Male/Female).,icon_item_giftbox_4,,,,,,,,,Festival Costume Selection Box,0,0.0,0.0,FFFT,6,0.0
-902158,Event_JP_FLOWER_CUBE,It seems to contain something unknown. {nl}Right-click to use.,icon_item_sakuracube,,,,,,,,,Flower Road Cube,0,0.0,0.0,FFFT,6,0.0
+902158,Event_JP_FLOWER_CUBE,It seems to contain something unknown. {nl}Right-click to use.,item_icon_luckybox_c,,,,,,,,,Spring Cube,0,0.0,0.0,FFFT,6,0.0
 902163,Steam_Event_Popo_Weapon_3d_Box,A box containing Popo Shop weapons that grow along with the player. Right-click to use.,icon_item_solmiki_box,,,,,,,,,Popo Shop Weapon Selection Box (3 Days),0,0.0,259200.0,FFFF,6,0.0
 902164,Steam_Event_Popo_Weapon_7d_Box,A box containing Popo Shop weapons that grow along with the player. Right-click to use.,icon_item_solmiki_box,,,,,,,,,Popo Shop Weapon Selection Box (7 Days),0,0.0,604800.0,FFFF,6,0.0
 904002,EVENT_1802_MASTER_REWARD_CUBE,A reward obtained from training with the master.{nl}Use to receive a random item from the reward's list.{nl}Will be deleted when the event period ends.,icon_item_eventcube1,,,,,,,,,Infinite Potential Cube,0,0.0,0.0,FFFT,6,0.0
