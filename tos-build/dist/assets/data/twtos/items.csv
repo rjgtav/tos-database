@@ -814,6 +814,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641976,Event1907_guild_exp_up_lv1,令公會經驗值+100的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up1,,,,,,,,[活動]公會任務獎勵鑄幣：銅,0,0.0,0.0,FFFT,18,1.0
 641977,Event1907_guild_exp_up_lv2,令公會經驗值+200的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up2,,,,,,,,[活動]公會任務獎勵鑄幣：銀,0,0.0,0.0,FFFT,18,1.0
 641978,Event1907_guild_exp_up_lv3,令公會經驗值+400的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up3,,,,,,,,[活動]公會任務獎勵鑄幣：金,0,0.0,0.0,FFFT,18,1.0
+641983,Coupon_Reagent_Bottle_Expup_100,使用時，4小時內試劑瓶獲得的經驗值增為2倍。{nl}與相同效果的Buff不會重疊。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值累積量2倍券,0,0.0,0.0,FFFT,7,0.0
 641985,Coupon_Reagent_Bottle_Expup_100_Daily,使用時，4小時內試劑瓶獲得的經驗值增為2倍。{nl}與相同效果的Buff不會重疊。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值2倍券(14天),0,3.0,1209600.0,FFFT,7,0.0
 641986,PREMIUM_CHALLENG_PORTAL_Daily,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,1209600.0,FFFF,9,1.0
 642502,Gacha_EXP_001,使用時 LV2 ~ 10 經驗值卡片中可隨機獲得3張。,icon_item_quest_00017,,,,,,,,經驗值卡片箱子,0,0.0,0.0,FFFF,7,0.0
@@ -870,8 +871,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643050,Moru_Gold_14d_Team_event1909,只有潛力為 0的裝備可以使用，就算失敗裝備也不會被破壞。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少為+10強化。點擊滑鼠右鍵即可使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_anvil_gold,,,,,,,,[活動]黃金鐵砧(14天),0,0.0,1209600.0,FFFT,7,1.0
 643051,Moru_Silver_Team_event1909,將裝備放置到鐵砧上，輕敲後可以提升裝備性能。不需花費銀幣就可以強化裝備。點擊滑鼠右鍵可以直接使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_anvil_silver,,,,,,,,[活動]銀光鐵砧(14天),0,0.0,1209600.0,FFFT,7,1.0
 643052,event1909_Transcend_Scroll_8,提升裝備的超越數值至8階段。{nl}只有0~7階段超越道具可以使用，右點擊8超越卷軸後，選擇要進行超越的道具，該道具會變更成8超越狀態。{nl}活動結束時統一刪除。,icon_item_transcendence_coupon,,,,,,,,[活動]8超越卷軸,0,0.0,0.0,FFFT,7,1.0
-643053,event1909_Transcend_Scroll_5,提升裝備的超越數值至5階段。{nl}只有0~4階段超越道具可以使用，右點擊5超越卷軸後，選擇要進行超越的道具，該道具會變更成5超越狀態。{nl}活動結束時統一刪除。,icon_item_transcendence_coupon,,,,,,,,[活動]5超越卷軸,0,0.0,0.0,FFFT,7,5.0
-643054,event1909_Transcend_Scroll_3,提升裝備的超越數值至3階段。{nl}只有0~2階段超越道具可以使用，右點擊3超越卷軸後，選擇要進行超越的道具，該道具會變更成3超越狀態。{nl}活動結束時統一刪除。,icon_item_transcendence_coupon,,,,,,,,[活動]3超越卷軸,0,0.0,0.0,FFFT,7,5.0
+643053,event1909_Transcend_Scroll_5,讓裝備的超越數值提升至5階。{nl}只有0~4階超越道具可以使用，右點擊5超越卷軸後，選擇要超越的道具，就可以變更成5超越的狀態。,icon_item_transcendence_coupon,,,,,,,,[活動]5超越卷軸,0,0.0,0.0,FFFT,7,5.0
+643054,event1909_Transcend_Scroll_3,提升裝備的超越數值至3階段。{nl}只有0~2階段超越道具可以使用，右點擊3超越卷軸後，選擇要進行超越的道具，該道具會變更成3超越狀態。,icon_item_transcendence_coupon,,,,,,,,[活動]3超越卷軸,0,0.0,0.0,FFFT,7,5.0
 643055,Transcend_Scroll_10,讓裝備的超越數值提升至10階。{nl}只有0~9階超越道具可以使用，右點擊10超越卷軸後，選擇要超越的道具，就可以變更成10超越的狀態。{nl}只能使用在Lv 400以下裝備的超越卷軸。,item_icon_transcend_scroll_10,,,,,,,,[Lv.400] 10超越卷軸,0,0.0,0.0,FFFT,7,1.0
 645002,D_Bube_Mane,可以從長時間暴露於水晶的布貝身上獲得的黑暗魔石。,icon_item_evilenergy_piece,,,,,,,,布貝魔石,4,0.0,0.0,TTTT,24,0.0
 645024,leaf_hanaming,散發出甜蜜香味的花瓣，可以從粉紅小花怪身上獲得。,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,粉紅小花怪花瓣,1,0.0,0.0,TTTT,18,1.0
@@ -3006,6 +3007,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 662272,D_UNDERAQUEDUCT_EVETN3_ITEM1,黃色補給品。{nl}在封閉區域Buff的裝置中，對想要的裝置對話，就可以獲得該裝置的Buff效果。獲得Buff之後，補給品就會消失。{nl}脫離外城壁地下水道之後，道具就會消失。{nl}可以丟棄道具。,icon_item_grimoire_dark_yellow,,,,,,,,黃色補給品,0,0.0,0.0,FFFF,24,0.0
 662273,D_UNDERAQUEDUCT_EVETN3_USE_ITEM,為了攻擊出現在外城壁地下水道的膽小鬼查夏，所需要的手鐲。可以感受到神祕的魔力。{nl}可以將手鐲登錄至道具欄位上使用。{nl}在物品欄滑鼠右鍵點擊可以使用。,icon_item_rosario_red,,,,,,,,蘊藏魔力的手鐲,0,0.0,0.0,FFFF,24,0.0
 662274,D_UNDERAQUEDUCT_EVETN4_ITEM1,紅色的補給品。{nl}在封閉區域Buff的裝置中，對想要的裝置對話，就可以獲得該裝置的Buff效果。獲得Buff後，補給品就會消失。{nl}脫離外城壁地下水道之後，道具就會消失。{nl}可以丟棄道具。,icon_item_grimoire_dark_red,,,,,,,,紅色補給品,0,0.0,0.0,FFFF,24,0.0
+662275,event1912_4thAnniversary_FireCracker_LV2,紀念2020新年而製作的爆竹。{nl}每個隊伍每天可以透過活動公佈欄NPC領取1次，也可以從新年紀念商店中購買。{nl}使用時，使用者將獲得最多持續24小時的[活動]新年x2 Buff效果。套用該效果時[活動]新年紀念鑄幣的獲得數量增為2倍。{nl}活動結束後將統一刪除。{nl} 與[活動]新年x3 Buff重疊時，[活動]新年紀念鑄幣的獲得數量增為5倍。,icon_item_firework,,,,,,,,[活動]新年爆竹,0,60.0,0.0,FFFT,18,0.0
+662276,event1912_4thAnniversary_FireCracker_LV3,紀念2020新年而製作的爆竹。{nl}有一定機率透過狩獵取得。{nl}使用時，使用者的前方將出現持續1分鐘的爆竹效果；並且每10秒賦予一定範圍內的角色[活動]新年x3 Buff，效果最多持續24小時，套用該效果時[活動]新年紀念鑄幣的獲得數量增為3倍。{nl}活動結束後將統一刪除。{nl} 與[活動]新年x2 Buff重疊時，[活動]新年紀念鑄幣的獲得數量增為5倍。,icon_item_firework_secondtime,,,,,,,,[活動]新年同歡爆竹,0,60.0,0.0,FFFT,18,0.0
 662277,event19xmas_RoyalBox_Key_1,用鑰匙開啟位於柯拉佩達的皇家聖誕寶箱可以隨機獲得以下道具中的一個。(獲得高級獎勵的機會比神秘聖誕寶箱高){nl}提尼拿鐵拉花 x1{nl}[活動] 黃金血晶萃取工具 x1{nl}銀色血晶萃取工具(14天) x1{nl}充滿祝福的嫩芽(14天) x1{nl}女神的雕像(14天) x1{nl}[活動]公會任務獎勵鑄幣：銀 x1{nl}遠征隊傳送石 x3{nl}活動結束時將統一刪除。,icon_item_key5,,,,,,,,[活動]皇家聖誕鑰匙,0,0.0,0.0,FFFT,18,0.0
 662278,event19xmas_Box_Key_1,"用鑰匙開啟位於柯拉佩達的神秘聖誕寶箱可以隨機獲得以下道具中的一個。(獲得高級獎勵的機會比皇家聖誕寶箱低){nl}[活動]特性點數 10,000 x1{nl}[活動]特性點數 1,000 x1{nl}[活動]特性點數 500 x1{nl}充滿祝福的嫩芽(14天) x1{nl}女神的雕像(14天) x1{nl}[活動]公會任務獎勵鑄幣：銀 x1{nl}遠征隊傳送石 x3{nl}活動結束時將統一刪除。",cathedral_key_2,,,,,,,,[活動]神秘聖誕鑰匙,0,0.0,0.0,FFFT,18,0.0
 663000,CHATHEDRAL56_SQ03_BOOK_ITEM,祭司收集的材料,icon_item_collection_04black,,,,,,,,祭司的材料,0,0.0,0.0,FFFF,24,0.0
@@ -5443,6 +5446,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699017,Legend_Misc_Misrus,殘留著莫茲魯斯的力量。{nl} {nl}在賽必諾斯雷格巴、斯基亞克爾立斯 · 巴勒那裝備上被當作賦予套裝屬性材料使用。,icon_item_misc_misrus,,,,,,,[9033],莫茲魯斯鎖鏈,10,0.0,0.0,TFFT,19,10.0
 699019,Rare_Enchant_Jewel_Team,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,稀有附魔珠寶,10,0.0,0.0,FFFT,9,1.0
 699020,Legend_Enchant_Jewel_Team,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,傳說附魔珠寶,10,0.0,0.0,FFFT,9,1.0
+699022,Legend_ExpPotion_2_nomarket,可以將戰鬥中所產生的氣息，蒐集並儲存起來的試劑瓶。激活後，消滅怪物時將獲得經驗值。,icon_item_empty_partis,,,,,,,,帕莫卡試劑瓶,10,0.0,0.0,FFFT,10,5.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,18,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,18,1.0
 700002,KQ_token_hethran_3,費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv3,2000,0.0,0.0,TTTT,18,1.0
@@ -6020,7 +6024,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904216,Event_Uphill_Store_Point_1000_14d,使用時可以獲得1000點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。{nl}時間超過時，本道具會被刪除。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：1000(14天),0,0.0,1209600.0,FFFT,7,0.0
 904217,Event_Uphill_Store_Point_3000_14d,使用時可以獲得3000點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。{nl}時間超過時，本道具會被刪除。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：3000(14天),0,0.0,1209600.0,FFFT,7,0.0
 904218,Event_Drug_Looting_Potion_500_14d,60內令Rooting機會提升+500，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - Rooting機會和藥水無法疊加使用。{nl}時間超過時，本道具會被刪除。,item_icon_luckypotion_500,,,,,,,,Rooting機會：500(14天),0,3600.0,1209600.0,FFFT,7,1.0
-904219,Event_Sevinose_EquipArmor_Box,使用時可以獲得想要的11強化8超越[活動]賽必諾斯具1個。{nl} 該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[活動] 11強化8超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
+904219,Event_Sevinose_EquipArmor_Box,使用時可以獲得想要的11強化8超越[活動]賽必諾斯具1個。{nl} 該裝備不能分解、強化、萃取、變更外型。{nl}[活動]賽必諾斯雷格巴盾牌 x1{nl}[活動]賽必諾斯皮克林泰手套 x1{nl}[活動]賽必諾斯皮克林泰靴子 x1{nl}[活動]賽必諾斯皮克林泰短褲 x1{nl}[活動]賽必諾斯皮克林泰布甲 x1{nl}[活動]賽必諾斯彼梅札伊皮革手套 x1{nl}[活動]賽必諾斯彼梅札伊皮革靴子 x1{nl}[活動]賽必諾斯彼梅札伊皮革短褲 x1{nl}[活動]賽必諾斯彼梅札伊皮革盔甲 x1{nl}[活動]賽必諾斯阿克魔護手套 x1{nl}[活動]賽必諾斯阿克魔護脛靴 x1{nl}[活動]賽必諾斯阿克魔鋼鐵短褲 x1{nl}[活動]賽必諾斯阿克魔鋼鐵盔甲 x1,icon_item_jewelrybox_close,,,,,,,,[活動] 11強化8超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
 904220,Event_card_Xpupkit10_Team_14d,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升5400。{nl}時間超過時，本道具會被刪除。,icon_item_reinforce_card_10,,,,,,,,Lv10 強化用卡片(14天),0,0.0,1209600.0,FFFT,18,1.0
 904221,Event_gemExpStone09_Team_14d,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700{nl}時間超過時，本道具會被刪除。,icon_item_powderp,,,,,,,,7星寶石研磨劑(14天),0,0.0,1209600.0,FFFT,18,1.0
 904222,Event_indunReset_Team_14d,使用時，副本地下城和委託所任務的入場次數會重置。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_indunfreeenter,,,,,,,,副本進場次數重置卷:14日,0,0.0,1209600.0,FFFT,9,1.0
@@ -6028,6 +6032,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904225,EVENT_190919_ANCIENT_SCROLL_RESTORE,使用時指定的怪物法單中會隨機登場6種。{nl}選擇怪物就可以獲得登錄該怪物的魔法書散頁。{nl}獲得魔法書散頁時會消耗[活動]古代鑄幣。{nl} 依怪物的階級消耗的[活動]古代鑄幣數量和出現機率也不同。{nl}可複選。{nl}[活動]古代鑄幣消耗數量及登場機率{nl} - 一般 : 1個(70%){nl} - 魔法 : 2個(25%){nl} - 獨特 : 3個(4%){nl} - 傳說 : 4個(1%){nl}* 活動結束後將統一刪除。,icon_item_event_190919_ancient_scroll,,,,,,,,[活動] 怪物選擇卷軸,0,0.0,0.0,FFFF,7,0.0
 904226,EVENT_HALLOWEENCANDY_1,活動道具。{nl}向活動布告欄NPC對話開啟[萬聖節之夜的騷動]活動商店，可以兌換商店內的商品。{nl}活動結束後將統一刪除。,event_whiteday_candy_3,,,,,,,,甜蜜萬聖節糖果,0,0.0,0.0,FFFT,18,0.1
 904227,EVENT_HALLOWEENCANDY_2,活動道具。{nl}使用後，24小時內獲得甜蜜萬聖節糖果的數量增為2倍。不過[萬聖節之夜的騷動]副本和連線獎勵不會套用此效果。{nl}活動結束後將統一刪除。,icon_item_pumpkin,,,,,,,,南瓜萬聖節糖果,0,0.0,0.0,FFFT,7,0.1
+904239,event1912_4thAnniversary_Coin,為了迎接新年而製作的鑄幣。在活動期間內可以透過各種管道取得。{nl}活動結束時統一刪除。{nl}可以在新年紀念商店中使用。,icon_item_annycoin_2,,,,,,,,[活動]新年紀念鑄幣,0,0.0,0.0,FFFT,18,0.1
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,7,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,18,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,18,1.0
