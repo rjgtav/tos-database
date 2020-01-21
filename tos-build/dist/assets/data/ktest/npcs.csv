@@ -1562,6 +1562,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157055,magictrap_core_gimmick2,,,마력 핵,2
 157056,npc_junk_shop_2,,,[케도라 상단원]{nl}게랄다시아,2
 157057,npc_junk_shop_3,,,[케도라 상단원]{nl}게랄다손,2
+157100,npc_sage_female_2,,,세이지 여2,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,팀 배틀리그,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,수도사2 대장장이,2
 160000,h_GuildHousing_farmer_girl,,,농장 관리인,2
@@ -1581,6 +1582,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160014,npc_Xmas_Evt_NPC,,minimap_event_1,크리스마스 NPC,2
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,크리스마스 NPC2,2
 160016,rokas_pot3_small_E1,,,새해 복항아리,2
+160018,Hiddennpc_RiftMode_Start,,,차원 붕괴 지점 입장,2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
 161002,npc_Teliavelis,,minimap_man_smith,대장장이 테리아베리스,2
