@@ -6033,6 +6033,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904226,EVENT_HALLOWEENCANDY_1,活動道具。{nl}向活動布告欄NPC對話開啟[萬聖節之夜的騷動]活動商店，可以兌換商店內的商品。{nl}活動結束後將統一刪除。,event_whiteday_candy_3,,,,,,,,甜蜜萬聖節糖果,0,0.0,0.0,FFFT,18,0.1
 904227,EVENT_HALLOWEENCANDY_2,活動道具。{nl}使用後，24小時內獲得甜蜜萬聖節糖果的數量增為2倍。不過[萬聖節之夜的騷動]副本和連線獎勵不會套用此效果。{nl}活動結束後將統一刪除。,icon_item_pumpkin,,,,,,,,南瓜萬聖節糖果,0,0.0,0.0,FFFT,7,0.1
 904239,event1912_4thAnniversary_Coin,為了迎接新年而製作的鑄幣。在活動期間內可以透過各種管道取得。{nl}活動結束時統一刪除。{nl}可以在新年紀念商店中使用。,icon_item_annycoin_2,,,,,,,,[活動]新年紀念鑄幣,0,0.0,0.0,FFFT,18,0.1
+904240,event1912_TP_feather,充滿加比婭恩寵的羽毛。收集3個可以找NPC加比婭的精靈兌換隨機一個加比婭道具。{nl} {nl}{@st66d}活動結束時將統一變更為特性點數。{/} {nl} {nl}{@st66d_y}{s18}加比婭道具清單{/}{/}{nl}- 加比婭祭司套裝選擇箱 x1{nl}- 加比婭的烈焰 x1{nl}- 加比婭小玩偶 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅髮髮結 x1{nl}- 加比婭羽毛頭飾 x1{nl}- 火精靈鳥x 1{nl}- 充滿加比婭恩寵的翅膀飾品 x2 ~ 50{nl} {nl}{@st66d_y}{s18}* 可以透過官網公告'機率型道具目錄'查看詳細兌換說明。{/}{/},icon_item_feather_pinics,,,,,,,,充滿加比婭恩寵的羽毛,0,0.0,0.0,TTFT,18,0.1
+904241,event1912_TP_wing,充滿加比婭恩寵的翅膀飾品。交給NPC加比婭的精靈可以用指定的數量兌換加比婭道具。{nl} {nl}{@st66d}活動結束時將統一變更為特性點數。{/} {nl} {nl}{@st66d_y}{s18}加比婭道具清單{/}{/}{nl}- 加比婭祭司套裝選擇箱 x1{nl}- 加比婭的烈焰 x1{nl}- 加比婭小玩偶 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅髮髮結 x1{nl}- 加比婭羽毛頭飾 x1,icon_item_wing_pinics,,,,,,,,充滿加比婭恩寵的翅膀飾品,0,0.0,0.0,FFFT,18,0.1
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,7,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,18,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,18,1.0

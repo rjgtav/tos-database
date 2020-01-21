@@ -1547,6 +1547,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160005,flower_keep_water_white,,,噙水之花(白色),2
 160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,淨化的祭壇,2
 160014,npc_Xmas_Evt_NPC,,minimap_event_1,聖誕節NPC,2
+160015,npc_Xmas_Evt_NPC2,,minimap_event_1,聖誕節NPC2,2
 161000,E_statue_zemina,,minimap_goddess,女神澤米娜之像,2
 161001,npc_kupole_Velcoffer,,,奎波爾西姆那,2
 161002,npc_Teliavelis,,minimap_man_smith,鐵匠戴利亞貝利斯,2

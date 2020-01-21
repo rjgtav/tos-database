@@ -15,6 +15,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 640450,Gacha_PC_Event_Costume01,點擊滑鼠右鍵可以使用。使用時可以獲得以下物品。{nl} - 人馬座太空人套裝選擇箱 1個{nl} - 人馬座太空人面罩 1個,icon_item_gacha_pc_event_costume01,,,,,,,,,[POPOshop] 人馬座太空人禮包,0,0.0,0.0,FFFF,6,5.0
 640451,Select_costume_ep11,點擊滑鼠右鍵可使用。可獲得以下的職業套裝。{nl} 職業清單 {nl} - 虎獵師{nl} - 砲衛軍{nl} - 阿迪蒂{nl} - 警長{nl} {nl} - 活動結束時道具統一刪除。,icon_item_giftbox_4,,,,,,,,,[活動] 新職業優惠套裝選擇箱,0,0.0,0.0,FFFT,6,5.0
 640453,Ghaca_Guild_Contribution_Shop_MISC,點擊滑鼠右鍵可以開啟，開啟時可獲得隨機道具。,icon_item_farm47_sack_01,,,,,,,,,礦物袋,0,0.0,0.0,FFFT,6,1.0
+640462,box_gabia_set,點擊右鍵可以使用。使用時可以獲得以下的物品。{nl} - 加比婭守護騎士套裝選擇箱 1個{nl} - 充滿加比婭恩寵的羽毛 x3,icon_item_gabia_set,,,,,,,,,加比婭守護騎士禮包,0,0.0,0.0,FFFF,6,5.0
 642601,Gacha_F_001,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,,,鐵甲殘魔的魔方,0,0.0,0.0,FFFF,6,5.0
 642602,Gacha_F_002,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,,,(舊) 可憎的死亡魔女的魔方,0,0.0,0.0,FFFF,6,5.0
 642603,Gacha_F_003,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,,,(舊) 陰森的死靈查普利的魔方,0,0.0,0.0,FFFF,6,5.0
