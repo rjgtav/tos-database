@@ -546,6 +546,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640476,expCard15_Mine,경험치를 +13189741 클래스 경험치를 +10156100 상승시켜 줍니다. 300 레벨부터 449레벨까지 사용할 수 있습니다.{nl}{#FF0000}* 450 레벨 이상 캐릭터는 사용이 불가능합니다.{/},icon_item_expcard,,,,,,,,[자원 쟁탈전] LV14 경험치 카드,0,0.0,0.0,FFFF,7,0.0
 640477,expCard16_Mine,경험치를 +31212626 클래스 경험치를 +24033722 상승시켜 줍니다. 320 레벨부터 449레벨까지 사용할 수 있습니다.{nl}{#FF0000}* 450 레벨 이상 캐릭터는 사용이 불가능합니다.{/},icon_item_expcard,,,,,,,,[자원 쟁탈전] LV15 경험치 카드,0,0.0,0.0,FFFF,7,0.0
 640478,expCard17_Mine,경험치를 +78031565 클래스 경험치를 +60084305 상승시켜 줍니다. 350 레벨부터 449레벨까지 사용할 수 있습니다.{nl}{#FF0000}* 450 레벨 이상 캐릭터는 사용이 불가능합니다.{/},icon_item_expcard,,,,,,,,[자원 쟁탈전] LV16 경험치 카드,0,0.0,0.0,FFFF,7,0.0
+640479,WeeklyBossDEFpotion,"주간 보스 레이드에서만 사용 가능합니다.{nl}10분간 물리 방어력/마법 방어력이 30,000 으로 상승합니다.{nl}버프는 중복 적용되지 않으며, 기존 물리 방어력/마법 방어력이 30,000 보다 높다면 적용되지 않습니다.",icon_item_weeklybossdefpotion,,,,,,,,[주간 보스 레이드] 케도란 특제 포션,0,60.0,0.0,FFFT,7,5.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,,,LV1 공격 부스터,1,8.0,0.0,TTTT,7,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,,,공격 부스터 +15,1,8.0,0.0,TTTT,7,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,공격 부스터 +20,2,8.0,0.0,TTTT,7,1.0
@@ -828,7 +829,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643014,Moru_Gold_TA_NR,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 강화시 실버가 필요하지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.{nl}빛나는 루비 모루의 재료로 사용 할 수 있습니다.",icon_item_anvil_gold,,,,,,[9035],,빛나는 고급 황금 모루,0,0.0,0.0,TTTT,18,1.0
 643015,Moru_Gold_Team_Trade,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil_gold,,,,,,,,황금 모루,0,0.0,0.0,FFFT,18,1.0
 643020,Extract_kit,아이커 추출에 사용되는 도구입니다. 일반 도구로 테리아베리스에게서 구매할 수 있습니다.,icon_item_extractkit,,,,,,,,아이커 추출 키트,600,0.0,0.0,FFTF,18,4.0
-643021,Extract_kit_Sliver,아이커 추출에 사용되는 도구입니다. 소모하는 재화가 필요 없습니다.,icon_item_extractkit_sliver,,,,,,,,은빛 아이커 추출 키트,0,0.0,0.0,FFTF,18,4.0
+643021,Extract_kit_Sliver,아이커 추출에 사용되는 도구입니다. 소모하는 재화가 필요 없습니다.,icon_item_extractkit_sliver,,,,,,,,은빛 아이커 추출 키트,0,0.0,0.0,FFFT,18,4.0
 643022,Extract_kit_Gold,"아이커 추출에 사용되는 도구입니다. 장비 포텐셜 0일 경우 사용 가능하며, 아이템 파괴를 방지합니다.",icon_item_extractkit_gold,,,,,,,,빛나는 황금 아이커 추출 키트,0,0.0,0.0,TTFT,18,4.0
 643023,Transcend_Scroll_Event_90d,장비의 초월 수치를 5단계로 만들어줍니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_transcendence_coupon,,,,,,,,[이벤트] 5초월 스크롤 (90일),0,0.0,7776000.0,FFFT,9,1.0
 643025,Moru_Gold_14d_Team,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +12 강화 이상에서 실패 시 강화 수치가 +10 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_anvil_gold,,,,,,,,황금 모루(14일),0,0.0,1209600.0,FFFT,7,1.0
@@ -858,6 +859,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643056,Moru_Ruby_Charge,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +16 강화 이상에서 실패 시 강화 수치가 +15 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_ruby_moru,,,,,,,[9034],루비 모루,0,0.0,0.0,FFFT,18,1.0
 643057,Moru_Ruby_14d_event,"포텐셜이 0인 장비에만 사용가능 하며, 실패해도 장비가 파괴되지 않습니다. 실패시 강화수치가 1 감소하며, +16 강화 이상에서 실패 시 강화 수치가 +15 강화로 감소합니다. 마우스 오른쪽 클릭으로 사용합니다.{nl}획득 후부터 14일동안 사용 가능합니다.",icon_item_ruby_moru,,,,,,,,[이벤트]루비 모루(14일),0,0.0,1209600.0,FFFT,18,1.0
 643058,Transcend_Scroll_10_PC_430,"장비의 초월 수치를 10단계로 만들어줍니다.{nl}0~9단계 초월 아이템만 사용할 수 있으며, 10초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 10초월 상태로 변경됩니다. {nl}Lv 430이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,[PC방] Lv.430 10초월 스크롤,0,0.0,0.0,TFFT,7,1.0
+643059,Transcend_Scroll_10_430,"장비의 초월 수치를 10단계로 만들어줍니다.{nl}0~9단계 초월 아이템만 사용할 수 있으며, 10초월 스크롤을 우클릭한 후 초월할 아이템을 선택하면 10초월 상태로 변경됩니다. {nl}Lv 430이하 장비에만 사용 가능한 초월 스크롤입니다.",item_icon_transcend_scroll_10,,,,,,,,[Lv.430] 10초월 스크롤,0,0.0,0.0,FFFT,7,1.0
+643060,Extract_kit_Gold_Team_nonEvent,"아이커 추출에 사용되는 도구입니다. 장비 포텐셜 0일 경우 사용 가능하며, 아이템 파괴를 방지합니다.",icon_item_extractkit_gold,,,,,,,,황금 아이커 추출 키트,0,0.0,0.0,FFFT,9,4.0
 645002,D_Bube_Mane,수정에 오래 노출된 부베들에게서만 얻을 수 있는 어두운 마석,icon_item_evilenergy_piece,,,,,,,,부베 마석,4,0.0,0.0,TTTT,24,0.0
 645024,leaf_hanaming,달콤한 향이 나는 꽃잎입니다. 하나밍에게서 획득합니다.,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,하나밍 꽃잎,1,0.0,0.0,TTTT,18,1.0
 645025,TreasureboxKey2,보물 상자 LV 2을 여는데 사용되는 열쇠,icon_item_key1,,,,,,,,LV2 보물상자 열쇠,0,0.0,0.0,FFTF,18,1.0
@@ -1748,7 +1751,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 646072,Retiarii_Net,레티아리이가 사용하는 투망입니다.,icon_item_retiarii_net,,,,,,,,투망,0,0.0,0.0,FFTF,18,0.1
 646073,Onmyoji_paper,레티아리이 어망,,,,,,,,,음양사 종이인형,0,0.0,0.0,FFFF,18,10.0
 646074,misc_paperdoll,음양사가 식신령을 부릴때 사용하는 인형입니다.,icon_item_paperdoll,,,,,,,,종이 인형,0,0.0,0.0,FFTF,18,0.1
-646076,misc_pvp_mine2,수정 원석을 가져다가 준 대가로 받는 증표입니다.,icon_item_pvpmine_2,,,,,,,,용병단 증표,1,0.0,0.0,FFFT,18,0.0
+646076,misc_pvp_mine2,용병단 사이에서 실력의 증거로 여겨지고 있는 증표입니다. 용병단에 도움이 되는 일을 하면 획득 할 수 있습니다.{nl}용병단 증표 상점에서 케도라 상단이 지원하는 보급품으로 교환 할 수 있습니다.,icon_item_pvpmine_2,,,,,,,,용병단 증표,1,0.0,0.0,FFFT,18,0.0
 646077,misc_pvp_mine1,교환원에게 가져가 포인트로 교환할 수 있습니다.,icon_item_pvpmine_1,,,,,,,,수정 원석,0,0.0,0.0,FFFF,18,0.0
 646078,misc_torturetools,각종 고문용 도구가 담겨있는 상자입니다.,icon_item_torturing_tool,,,,,,,,고문도구,30,0.0,0.0,FFTF,18,0.1
 646079,misc_trapkit,함정을 설치할 때 사용되는 각종 트랩 재료들이 담긴 키트입니다.,icon_item_trap_kit,,,,,,,,트랩 키트,3,0.0,0.0,FFTF,18,0.1
@@ -1831,7 +1834,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649028,misc_ore25,붉은 기운을 띈 테라늄과 미스릴을 일정 비율로 섞어 제작된 강렬한 불의 기운을 머금은 금속입니다. 아이템의 재료로 사용됩니다.,item_icon_teraingot,,[642928],,,,"[34073, 34074]",[9028],울스터마이트,0,0.0,0.0,TTTT,18,1.0
 649029,misc_ore26,벨코퍼를 처치 후 획득 할 수 있습니다. 알 수 없는 기운을 머금고있어 장비 재료로 사용시 훌륭한 성능을 발휘합니다.,icon_item_velcoffer_misc01,,"[642916, 642916]",,,,,,벨코퍼 영혼 조각,0,0.0,0.0,FFFT,18,1.0
 649030,misc_ore27,스키아클립스를 처치 후 획득 할 수 있습니다. 알 수 없는 기운을 머금고있어 장비 재료로 사용시 훌륭한 성능을 발휘합니다.,icon_item_misc_skiaclipse,,[642949],,,,,,스키아클립스 깃털,0,0.0,0.0,FFFT,18,1.0
-649031,misc_ore23_stone,시에라 가루를 응축해서 만든 결정석입니다.{nl} {nl}사용처: 아크 합성,icon_item_breakpowder_2_stone,,,,,,,[50100],시에라 스톤,0,0.0,0.0,TTTT,18,1.0
+649031,misc_ore23_stone,시에라 가루를 응축해서 만든 결정석입니다.{nl} {nl}사용처: 아크 합성,icon_item_breakpowder_2_stone,,,,,,"[50105, 50106]",[50100],시에라 스톤,0,0.0,0.0,TTTT,18,1.0
 649200,misc_jore01,나무의 수액이 오랜 시간 굳어져 만들어진 보석입니다.,22_item_ore_amber,[642061],,,,,,,호박,6,0.0,0.0,TTTT,18,1.0
 649201,misc_jore02,호박 안에 도마뱀이 갇혀있는 희귀한 보석입니다.,23_item_ore_amber_lizard,[642030],,,,,[19007],,도마뱀 호박,1000,0.0,0.0,TTTT,18,1.0
 649202,misc_jore03,노란 빛의 보석입니다. 악마를 퇴치하는 힘이 있다고 전해집니다.,24_item_ore_topaz,,,,,,"[15023, 50082, 50083, 50084, 50085, 50086, 50087, 50088, 50089, 50090, 50091, 50092, 50093]",,토파즈,1914,0.0,0.0,TTTT,18,1.0
@@ -3608,7 +3611,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 664157,CASTLE98_MQ_END_ITEM,외성벽 제 15구역에서 케도라 상단원 이네타에게 전달 받았습니다. 팬던트의 뒷면에 '사랑하는 파야우타에게'라고 적혀있습니다.,kq_recipe_hethran_material_3_7,,,,,,,,파야우타의 팬던트,0,0.0,0.0,FFFF,24,0.0
 664800,RVR_BK_KEYITEM_URVAS_1,여신 아우스테야의 명으로 드래곤 보루타를 감시하던 큐폴 우르바스가 지니고 다니던 증표입니다.{nl}슬리비나스 레어에 있는 아우스테야 여신에게 건네주면 절규 효과를 감소시키는 데 도움을 받을 수 있습니다.,icon_item_borutakey,,,,,,,,우르바스 증표,0,0.0,0.0,TFFT,18,0.0
 664801,RVR_BK_KEYITEM_EVENT_OPEN,"여신 아우스테야의 명으로 드래곤 보루타를 감시하던 큐폴 우르바스가 지니고 다니던 증표입니다.{nl}슬리비나스 레어에 있는 아우스테야 여신에게 건네주면 절규 효과를 감소시키는 데 도움을 받을 수 있습니다.{nl}19년 3월 28일 점검 시, 일괄 삭제됩니다.",icon_item_borutakey,,,,,,,,[이벤트] 우르바스 증표,0,0.0,0.0,FFFT,18,0.0
-664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,왕국 보급 장교로부터 드래곤 보루타를 저지하는 데 충분히 기여했음을 증명할 수 있는 훈장입니다.{nl}길드 아지트의 '왕국 보급 장교 만프래다스'에게  아이템으로 교환할 수 있습니다.,icon_item_boruta_coin,,,,,,,,영예의 훈장 : 보루타,0,0.0,0.0,FFFT,18,0.0
+664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,왕국 보급 장교로부터 드래곤 보루타를 저지하는 데 충분히 기여했음을 증명할 수 있는 훈장입니다. 최근에는 더 많은 공헌자에게 감사를 표하기 위해 훈장의 지급처를 확대하고 있습니다.{nl} {nl}다음 NPC에게서 아이템으로 교환할 수 있습니다.{nl} - 길드 아지트의 '왕국 보급 장교 만프래다스'{nl} - 클라페다의 템플러 마스터 '기사단당 우스카',icon_item_boruta_coin,,,,,,,,영예의 훈장 : 보루타,0,0.0,0.0,FFFT,18,0.0
 666000,FARM49_1_MQ01_ITEM,주황 리자드맨의 가죽. 이것으로 신비한 묘목의 반응을 보겠다고 합니다.,icon_item_misc_00011,,,,,,,,리자드맨의 가죽,0,0.0,0.0,FFFF,24,0.0
 666001,FARM49_1_MQ02_ITEM1,농장지기의 오두막 근처에서 채취한 토양 표본. 굉장히 오염되어 있습니다.,icon_item_powderb,,,,,,,,두 번째 오염된 토양 표본,0,0.0,0.0,FFFF,24,0.0
 666002,FARM49_1_MQ02_ITEM2,인적 없는 작업장 근처에서 채취한 토양 표본. 굉장히 오염되어 있습니다.,icon_item_powderb,,,,,,,,첫 번째 오염된 토양 표본,0,0.0,0.0,FFFF,24,0.0
@@ -5493,6 +5496,15 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699021,Legend_Misc_Mothacc,나비목 접선지 레전드 레이드에서 얻을 수 있습니다.{nl}다음 레전드 장신구를 제작하는데 사용됩니다.{nl} - 모링포니아 피크티스{nl} - 모링포니아 트리우카스{nl} - 모링포니아 이스가리티{nl} - 모링포니아 칸트리베{nl} - 모링포니아 주오다,icon_item_mothpowder,,[642958],,,,,,모스 파우더,10,0.0,0.0,FFFT,19,10.0
 699022,Legend_ExpPotion_2_nomarket,전투 중 발생하는 기운을 모아 저장 할 수 있는 시약병입니다. 활성화 되어 있으면 적 몬스터를 처치 할 때 마다 경험치를 얻습니다.,icon_item_empty_partis,,,,,,,,파모카 시약병,10,0.0,0.0,FFFT,10,5.0
 699023,Legend_Misc_Mothacc_easy,5개를 모아서 사용하면 '모스 파우더' 1개를 얻습니다.,icon_item_misc_tantaliser_easy,,,,,,,,모스 더스트,0,0.0,0.0,FFFT,7,1.0
+699024,Rare_Enchant_Jewel_440,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,,,[LV. 440] 레어 인챈트 쥬얼,10,0.0,0.0,TFTT,7,1.0
+699025,Unique_Enchant_Jewel_440,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,[LV. 440] 유니크 인챈트 쥬얼,10,0.0,0.0,TFTT,7,1.0
+699026,Legend_Enchant_Jewel_490,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[LV. 490] 레전드 인챈트 쥬얼,10,0.0,0.0,TFTT,7,1.0
+699027,event_Unique_Enchant_Jewel_430,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,[이벤트][LV. 430] 유니크 인챈트 쥬얼,10,0.0,0.0,FFFT,7,1.0
+699028,event_Legend_Enchant_Jewel_430,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[이벤트][LV. 430] 레전드 인챈트 쥬얼,10,0.0,0.0,FFFT,7,1.0
+699029,Rare_Enchant_Jewel_410,레어 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul2,,,,,,,,[LV. 410] 레어 인챈트 쥬얼,10,0.0,0.0,TFTT,7,1.0
+699030,Unique_Enchant_Jewel_410,유니크 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul1,,,,,,,,[LV. 410] 유니크 인챈트 쥬얼,10,0.0,0.0,TFTT,7,1.0
+699031,Legend_Enchant_Jewel_460,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[LV. 460] 레전드 인챈트 쥬얼,10,0.0,0.0,TFTT,7,1.0
+699032,Team_Legend_Enchant_Jewel_460,레전드 등급 인챈트 쥬얼입니다. 무기 / 방어구에 [인챈트 옵션]을 부여 할 수 있습니다.,item_icon_armor_linksoul_3,,,,,,,,[LV. 460] 레전드 인챈트 쥬얼,10,0.0,0.0,FFFT,7,1.0
 700000,KQ_token_hethran_1,"Lv 260 부터 사용가능{nl}헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_1,,,,,,,,헤스란 증표 Lv1,2000,5.0,0.0,TTTT,18,1.0
 700001,KQ_token_hethran_2,"Lv 300 부터 사용가능{nl}헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_2,,,,,,,,헤스란 증표 Lv2,2000,5.0,0.0,TTTT,18,1.0
 700002,KQ_token_hethran_3,"헤스란 증표는 케도라 상단의 옛 단장의 이름을 딴 신용증표입니다. 4백 년이 흐른 지금은 케도라 상단에서도 사용되지 않지만, 희귀성과 안정성을 고려하여 이를 증표로 사용하는 곳이 아직 있습니다. ",icon_kq_token_hethran_2,,,,,,,,헤스란 증표 Lv3,2000,0.0,0.0,TTTT,18,1.0
@@ -5796,7 +5808,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900419,EVENT_1805_NEWCHARACTER_ACHIEVE_BOX,"우스카 이벤트에서 선물하는 칭호 상자 입니다.1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_holyark,,,,,,,,[Re:Build] 칭호 - 계시를 받은자,0,0.0,0.0,FFFT,7,0.0
 900420,EVENT_1710_NEWCHARACTER_BOX_18,"마우스 오른쪽 버튼 클릭으로 사용합니다.380레벨 이상에서 사용 가능합니다.{nl}1월 23일 점검 시, 일괄 삭제됩니다.",icon_item_giftbox_2,,,,,,,,[이벤트] 레벨업 상자 (380레벨),0,0.0,0.0,FFFF,9,1.0
 900421,EVENT_1803_NEWCHARACTER_Ability_Point_Stone_1000,"이벤트로 지급되는 아이템입니다.{nl}사용시 특성 포인트가 1000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.{nl}1월 30일 점검 시, 일괄 삭제됩니다.",icon_item_abilitypoint,,,,,,,,"[이벤트] 특성 포인트 1,000",0,0.0,0.0,FFFT,9,1.0
-900422,Event_Ability_Point_Stone_10000_14d,"이벤트로 지급되는 아이템입니다.{nl}사용시 특성 포인트가 10,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint4,,,,,,,,"특성 포인트 10,000 (14일)",0,0.0,1209600.0,FFFF,9,1.0
+900422,Event_Ability_Point_Stone_10000_14d,"이벤트로 지급되는 아이템입니다.{nl}사용시 특성 포인트가 10,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint4,,,,,,,,"특성 포인트 10,000 (14일)",0,0.0,1209600.0,FFFT,9,1.0
 900423,EVENT_1811_NEWCHARACTER_BARRACK_SLOT,캐릭터 슬롯이 추가됩니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_barrack_slot1,,,,,,,,캐릭터 슬롯 추가 이용권,0,0.0,0.0,FFFF,9,1.0
 900424,EVENT_1811_NEWCHARACTER_REINFORCE11,"이벤트로 지급되는 아이템입니다.{nl}클라페다 우스카를 찾아가면 [Re:Build] 마시니오스 무기를 11강화할 수 있습니다.{nl}1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_reinforce11,,,,,,,,[Re:Build] 마시니오스 무기 +11 강화권,0,0.0,0.0,FFFF,18,1.0
 900425,EVENT_1811_NEWCHARACTER_TRANSCEND5,"이벤트로 지급되는 아이템입니다.{nl}클라페다 우스카를 찾아가면 [Re:Build] 마시니오스 무기를 5초월할 수 있습니다.{nl}1월 31일 점검 시, 일괄 삭제됩니다.",icon_item_transcend5,,,,,,,,[Re:Build] 마시니오스 무기 +5 초월권,0,0.0,0.0,FFFF,18,1.0
@@ -5996,12 +6008,28 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904247,TP_1912_EQUIPITEM_BOX_ARMOR,"사용 시 원하는  11강 10초월 [4ever] 세비노스 방어구를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[4ever] 11강 10초월 세비노스 방어구 선택상자,0,0.0,0.0,FFFT,9,1.0
 904248,TP_1912_EQUIPITEM_BOX,"사용 시 원하는 11강 10초월 [4ever] 세비노스 무기를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[4ever] 11강 10초월 세비노스 무기 선택상자,0,0.0,0.0,FFFT,9,1.0
 904249,EVENT_1710_NEWCHARACTER_BOX_20,"마우스 오른쪽 버튼 클릭으로 사용합니다.420레벨 이상에서 사용 가능합니다.{nl}1월 23일 점검 시, 일괄 삭제됩니다.",icon_item_giftbox_2,,,,,,,,[이벤트] 레벨업 상자 (420레벨),0,0.0,0.0,FFFF,9,1.0
-904250,EVENT_EP12NEWCLASS_COSBOX,마우스 오른쪽 버튼 클릭으로 사용합니다. 다음 클래스 코스튬 중 하나를 선택하여 획득할 수 있습니다.{nl} - 매화 검수{nl} - 아발리스터{nl} - 테라맨서{nl} - 크루세이더{nl} - 랑다,icon_item_giftbox_4,,,,,,,,[이벤트] 신규 클래스 프리미엄 코스튬 선택 상자,0,0.0,0.0,FFFT,9,1.0
+904250,EVENT_EP12NEWCLASS_COSBOX,"마우스 오른쪽 버튼 클릭으로 사용합니다. 다음 클래스 코스튬 중 하나를 선택하여 획득할 수 있습니다.{nl} - 매화 검수{nl} - 아발리스터{nl} - 테라맨서{nl} - 크루세이더{nl} - 랑다{nl} {nl}2월 6일 점검 시, 일괄 삭제됩니다.",icon_item_giftbox_4,,,,,,,,[이벤트] 신규 클래스 프리미엄 코스튬 선택 상자,0,0.0,0.0,FFFT,9,1.0
 904251,Event_expCard_400Lv_NO420,"1레벨에서 400레벨 도달까지 필요한 만큼의 경험치를 얻습니다. {nl}단, {#ff0000}200레벨 미만 일 때만 사용 가능합니다.",icon_item_expcard,,,,,,,,[이벤트] 경험치 카드 (400레벨),0,0.0,0.0,FFFT,9,0.0
 904252,Drug_Fortunecookie_2020,"30분간 중첩에 따라 경험치, 이동속도, 최대HP가 증가하며, 최대 5중첩까지 가능합니다. 2월 20일 점검 시, 일괄 삭제됩니다.",icon_item_fortunecookie,,,,,,,,[이벤트]포춘 쿠키,0,10.0,0.0,FFFT,7,0.0
 904253,4YEARS_EVENT_JUMPING,사용시 아래 구성물을 모두 획득할 수 있습니다.{nl} - [이벤트] 경험치 카드 (400레벨) x1{nl} - 클래스 경험치 카드 상자 x1,icon_item_giftbox_4,,,,,,,,[이벤트] Lv.400 점핑 상자,0,0.0,0.0,FFFF,7,0.0
+904254,2020_AbillityArts_Box_1_d7,"사용시, 원하는 계열의 아츠 초기화 포션 선택상자를 획득하실 수 있습니다.",icon_item_happybox_red,,,,,,,,[이벤트]아츠 초기화 포션 계열 선택 상자(7일),0,0.0,604800.0,FFFT,9,1.0
+904255,2020_AbillityArts_Box_2_d7,"사용시, 원하는 소드맨 계열의 아츠 초기화 포션(1일)을 획득하실 수 있습니다.",icon_item_eventbox_potion,,,,,,,,[이벤트]소드맨 계열 아츠 초기화 포션 선택 상자(7일),0,0.0,604800.0,FFFT,9,1.0
+904256,2020_AbillityArts_Box_3_d7,"사용시, 원하는 스카우트 계열의 아츠 초기화 포션(1일)을 획득하실 수 있습니다.",icon_item_eventbox_potion,,,,,,,,[이벤트]스카우트 계열 아츠 초기화 포션 선택 상자(7일),0,0.0,604800.0,FFFT,9,1.0
+904257,2020_AbillityArts_Box_4_d7,"사용시, 원하는 클레릭 계열의 아츠 초기화 포션(1일)을 획득하실 수 있습니다.",icon_item_eventbox_potion,,,,,,,,[이벤트]클레릭 계열 아츠 초기화 포션 선택 상자(7일),0,0.0,604800.0,FFFT,9,1.0
+904258,2020_AbillityArts_Box_5_d7,"사용시, 원하는 아처 계열의 아츠 초기화 포션(1일)을 획득하실 수 있습니다.",icon_item_eventbox_potion,,,,,,,,[이벤트]아처 계열 아츠 초기화 포션 선택 상자(7일),0,0.0,604800.0,FFFT,9,1.0
+904259,2020_AbillityArts_Box_6_d7,"사용시, 원하는 위저드 계열의 아츠 초기화 포션(1일)을 획득하실 수 있습니다.",icon_item_eventbox_potion,,,,,,,,[이벤트]위저드 계열 아츠 초기화 포션 선택 상자(7일),0,0.0,604800.0,FFFT,9,1.0
 904260,Achieve_LV400_MISSION_ACHIEVE01,불굴의 투지 보유자 (Lv.400 던전) 칭호를 얻을 수 있는 칭호 아이템입니다. 아이템 우클릭으로 사용하여 칭호를 획득할 수 있습니다.,icon_item_holyark,,,,,,,,칭호-불굴의 투지 보유자 (Lv.400 던전),0,0.0,0.0,FFFT,9,0.0
 904261,Achieve_LV400_MISSION_ACHIEVE02,칭호-용기있는 자 (Lv.400 던전) 칭호를 얻을 수 있는 칭호 아이템입니다. 아이템 우클릭으로 사용하여 칭호를 획득할 수 있습니다.,icon_item_holyark,,,,,,,,칭호-용기있는 자 (Lv.400 던전),0,0.0,0.0,FFFT,9,0.0
+904262,Event_Ability_Point_Stone_10000_14d_2,"이벤트로 지급되는 아이템입니다.{nl}사용시 특성 포인트가 10,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint4,,,,,,,,"[이벤트]특성 포인트 10,000 (14일)",0,0.0,1209600.0,FFFT,9,1.0
+904263,Weekly boss raid_Event_01,칭호-주간 보스 레이드 토벌대 칭호를 획득할 수 있는 아이템 입니다. 우클릭으로 사용하실 수 있습니다.{nl}440.LV 이상만 사용 가능합니다.,icon_item_holyark,,,,,,,,주간 보스 레이드 토벌대,0,0.0,0.0,FFFT,7,1.0
+904265,event1909_Ability_Point_Stone_1000_Team_14d,이벤트로 지급되는 아이템입니다.{nl}사용시 특성 포인트가 1000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_abilitypoint,,,,,,,,"[이벤트]특성 포인트 1,000(14일)",0,0.0,1209600.0,FFFT,9,1.0
+904266,artifact_Royal_chair,뷰티샵 구매 이벤트로 지급받은 아이템입니다.{nl}사용 시 바버샵 의자를 소환해 앉을 수 있습니다.,item_icon_royal_chair,,,,,,,,헬가세르클 의자,0,1.0,0.0,TTTT,7,1.0
+904267,Achieve_WeeklyRank_1,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Iron Lord,0,0.0,0.0,FFFF,7,1.0
+904268,Achieve_WeeklyRank_2,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Demon Rose,0,0.0,0.0,FFFF,7,1.0
+904269,Achieve_WeeklyRank_3,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Mist Bringer,0,0.0,0.0,FFFF,7,1.0
+904270,RiftModePortalScroll,사용 시 차원 붕괴 지점에 입장할 수 있는 포탈이 생성됩니다.{nl} - 421레벨 지역부터 사용 가능합니다.,icon_item_riftmode_scroll,,,,,,,,차원 붕괴 지점 포탈 스크롤,0,5.0,0.0,FFFF,7,1.0
+904272,2020NewYear_EQUIPITEM_BOX_ARMOR,"사용 시 원하는  11강 10초월 [2020 새해] 세비노스 방어구를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[2020 새해] 11강 10초월 세비노스 방어구 선택상자,0,0.0,0.0,FFFT,9,1.0
+904273,2020NewYear_EQUIPITEM_BOX,"사용 시 원하는 11강 10초월 [2020 새해] 세비노스 무기를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[2020 새해] 11강 10초월 세비노스 무기 선택상자,0,0.0,0.0,FFFT,9,1.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,7,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,,,새싹,1,0.0,0.0,TTTT,18,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,,,시든 식물,1,0.0,0.0,TTTT,18,1.0
@@ -6111,6 +6139,42 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 1210088,PersonalHousing_Item_hp_barrack_08_tablepot_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_tablepot,,,,,,,,[개인 하우징]바다 산호 탁자,60000,0.0,0.0,FFTT,7,0.0
 1210089,PersonalHousing_Item_hp_barrack_08_treasurebox_1,{#8e0000} 배치 포인트 8 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_treasurebox,,,,,,,,[개인 하우징]바다 보물상자,100000,0.0,0.0,FFTT,7,0.0
 1210090,PersonalHousing_Item_hp_barrack_08_waterbottle_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_08_waterbottle,,,,,,,,[개인 하우징]바다 물병,60000,0.0,0.0,FFTT,7,0.0
+1210091,PersonalHousing_Item_hp_barrack_07_alligator,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_alligator,,,,,,,,[개인 하우징]사냥꾼 악어 쇼파,130000,0.0,0.0,FFTT,7,0.0
+1210092,PersonalHousing_Item_hp_barrack_07_bearcarpet,{#8e0000} 배치 포인트 19 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_07_bearcarpet,,,,,,,,[개인 하우징]사냥꾼 흑곰 러그,200000,0.0,0.0,FFTT,7,0.0
+1210093,PersonalHousing_Item_hp_barrack_07_medal,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_medal,,,,,,,,[개인 하우징]사냥꾼 메달 컬렉션,25000,0.0,0.0,FFTT,7,0.0
+1210094,PersonalHousing_Item_hp_barrack_07_boar,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_boar,,,,,,,,[개인 하우징]사냥꾼 멧돼지 장식,25000,0.0,0.0,FFTT,7,0.0
+1210095,PersonalHousing_Item_hp_barrack_07_fox,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_fox,,,,,,,,[개인 하우징]사냥꾼 여우 장식,25000,0.0,0.0,FFTT,7,0.0
+1210096,PersonalHousing_Item_hp_barrack_07_rabbit,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_rabbit,,,,,,,,[개인 하우징]사냥꾼 토끼 장식,25000,0.0,0.0,FFTT,7,0.0
+1210097,PersonalHousing_Item_hp_barrack_07_gunholder,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_gunholder,,,,,,,,[개인 하우징]사냥꾼 머스킷 장식,25000,0.0,0.0,FFTT,7,0.0
+1210098,PersonalHousing_Item_hp_barrack_07_shelf,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_shelf,,,,,,,,[개인 하우징]사냥꾼 꿩 선반,70000,0.0,0.0,FFTT,7,0.0
+1210099,PersonalHousing_Item_hp_barrack_07_partition,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_partition,,,,,,,,[개인 하우징]사냥꾼 문양 칸막이,70000,0.0,0.0,FFTT,7,0.0
+1210100,PersonalHousing_Item_hp_barrack_07_window,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_window,,,,,,,,[개인 하우징]사냥꾼 세로 창문,25000,0.0,0.0,FFTT,7,0.0
+1210101,PersonalHousing_Item_hp_barrack_09_candleStand,{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_candlestand,,,,,,,,[개인 하우징]연회장 촛대,80000,0.0,0.0,FFTT,7,0.0
+1210102,PersonalHousing_Item_hp_barrack_09_carpet_L_1,{#8e0000} 배치 포인트 39 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_09_carpet_l,,,,,,,,[개인 하우징]연회장 로열 카펫,400000,0.0,0.0,FFTT,7,0.0
+1210103,PersonalHousing_Item_hp_barrack_09_carpet_M_1,{#8e0000} 배치 포인트 13 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_09_carpet_m,,,,,,,,[개인 하우징]연회장 플라워 카펫,140000,0.0,0.0,FFTT,7,0.0
+1210104,PersonalHousing_Item_hp_barrack_09_cart_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_cart,,,,,,,,[개인 하우징]연회장 서빙 카트,60000,0.0,0.0,FFTT,7,0.0
+1210105,PersonalHousing_Item_hp_barrack_09_chair_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_chair,,,,,,,,[개인 하우징]연회장 고급 의자,60000,0.0,0.0,FFTT,7,0.0
+1210106,PersonalHousing_Item_hp_barrack_09_champagne_1,{#8e0000} 배치 포인트 8 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_champagne,,,,,,,,[개인 하우징]연회장 샴페인 테이블,100000,0.0,0.0,FFTT,7,0.0
+1210107,PersonalHousing_Item_hp_barrack_09_dessertTable_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_desserttable,,,,,,,,[개인 하우징]연회장 디저트 테이블,60000,0.0,0.0,FFTT,7,0.0
+1210108,PersonalHousing_Item_hp_barrack_09_diningTable_1,{#8e0000} 배치 포인트 13 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_diningtable,,,,,,,,[개인 하우징]연회장 다이닝 테이블,80000,0.0,0.0,FFTT,7,0.0
+1210109,PersonalHousing_Item_hp_barrack_09_door_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_door,,,,,,,,[개인 하우징]연회장 대형 문,45000,0.0,0.0,FFTT,7,0.0
+1210110,PersonalHousing_Item_hp_barrack_09_frame_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_frame,,,,,,,,[개인 하우징]연회장 금테 액자,45000,0.0,0.0,FFTT,7,0.0
+1210111,PersonalHousing_Item_hp_barrack_09_frameSet_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_frameset,,,,,,,,[개인 하우징]연회장 명화 액자,45000,0.0,0.0,FFTT,7,0.0
+1210112,PersonalHousing_Item_hp_barrack_09_lamp_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_lamp,,,,,,,,[개인 하우징]연회장 가스등,65000,0.0,0.0,FFTT,7,0.0
+1210113,PersonalHousing_Item_hp_barrack_09_partition_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_partition,,,,,,,,[개인 하우징]연회장 고급 칸막이,70000,0.0,0.0,FFTT,7,0.0
+1210114,PersonalHousing_Item_hp_barrack_09_shelf_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_shelf,,,,,,,,[개인 하우징]연회장 고급 선반,45000,0.0,0.0,FFTT,7,0.0
+1210115,PersonalHousing_Item_hp_barrack_09_statue_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_statue,,,,,,,,[개인 하우징]연회장 큐폴 조각상,60000,0.0,0.0,FFTT,7,0.0
+1210116,PersonalHousing_Item_hp_barrack_09_swan_1,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_swan,,,,,,,,[개인 하우징]연회장 백조 장식,130000,0.0,0.0,FFTT,7,0.0
+1210117,PersonalHousing_Item_hp_barrack_09_window_1,{#8e0000} 배치 포인트 2 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_09_window,,,,,,,,[개인 하우징]연회장 고급 창문,25000,0.0,0.0,FFTT,7,0.0
+1210118,PersonalHousing_Item_hp_barrack_04_sign,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_04_sign,,,,,,,,[개인 하우징]달콤 간판 중형,45000,0.0,0.0,FFTT,7,0.0
+1210119,PersonalHousing_Item_hp_figure_Zawra,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}주간 보스 레이드 콘텐츠의 랭킹 보상입니다.,icon_item_housing_monster_figure,,,,,,,,마군주 자우라 피규어,1,0.0,0.0,FFFT,7,0.0
+1210120,PersonalHousing_Item_hp_figure_helgasercle,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}주간 보스 레이드 콘텐츠의 랭킹 보상입니다.,icon_item_housing_monster_figure,,,,,,,,마군주 헬가 세르클 피규어,1,0.0,0.0,FFFT,7,0.0
+1210121,PersonalHousing_Item_hp_figure_Nuaelle,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}주간 보스 레이드 콘텐츠의 랭킹 보상입니다.,icon_item_housing_monster_figure,,,,,,,,마군주 누아엘레 피규어,1,0.0,0.0,FFFT,7,0.0
+1210122,PersonalHousing_Item_hp_figure_mirtis,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}주간 보스 레이드 콘텐츠의 랭킹 보상입니다.,icon_item_housing_monster_figure,,,,,,,,마군주 미르티스 피규어,1,0.0,0.0,FFFT,7,0.0
+1210123,PersonalHousing_Item_hp_figure_Blud,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}주간 보스 레이드 콘텐츠의 랭킹 보상입니다.,icon_item_housing_monster_figure,,,,,,,,마군주 블룻 피규어,1,0.0,0.0,FFFT,7,0.0
+1210124,PersonalHousing_Item_hp_figure_Marnoks,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}주간 보스 레이드 콘텐츠의 랭킹 보상입니다.,icon_item_housing_monster_figure,,,,,,,,마군주 마르녹스 피규어,1,0.0,0.0,FFFT,7,0.0
+1210125,PersonalHousing_Item_hp_figure_Lecifer,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}주간 보스 레이드 콘텐츠의 랭킹 보상입니다.,icon_item_housing_monster_figure,,,,,,,,마군주 렉시퍼 피규어,1,0.0,0.0,FFFT,7,0.0
+1210126,PersonalHousing_Item_hp_figure_hauberk,{#8e0000} 배치 포인트 11 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}주간 보스 레이드 콘텐츠의 랭킹 보상입니다.,icon_item_housing_monster_figure,,,,,,,,마군주 하우벅 피규어,1,0.0,0.0,FFFT,7,0.0
 1250003,motion_medeina_emotion01,움직이는 채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,모션 이모티콘: 메데이나(당황),0,0.0,0.0,FFFT,7,1.0
 1250004,motion_medeina_emotion02,움직이는 채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,모션 이모티콘: 메데이나(기쁨),0,0.0,0.0,FFFT,7,1.0
 2000000,Achieve_Event_Steam_PoPo_Vacation,PoPo Vacation 수상자에게 지급되는 칭호입니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_holyark,,,,,,,,Title - PoPo Vacation,0,0.0,0.0,FFFT,7,0.0
@@ -6193,7 +6257,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040071,HiddenAbility_Squire14,"사용 시 [천 마스터리: 재봉 장인] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 스콰이어 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* [천] 계열 방어구 4개 착용 시, 자신의 상점을 이용한 캐릭터에게 [천 마스터리: 마법] 효과를 30분간 부여합니다.",icon_item_hiddenability_scout,,,,,,,,신비한 서 (천 마스터리: 재봉 장인),0,0.0,0.0,FFFT,14,0.1
 2040072,HiddenAbility_Squire15,"사용 시 [가죽 마스터리: 세공 장인] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 스콰이어 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* [가죽] 계열 방어구 4개 착용 시, 자신의 상점을 이용한 캐릭터에게 [가죽 마스터리: 기민함] 효과를 30분간 부여합니다.",icon_item_hiddenability_scout,,,,,,,,신비한 서 (가죽 마스터리: 세공 장인),0,0.0,0.0,FFFT,14,0.1
 2040073,HiddenAbility_Squire16,"사용 시 [판금 마스터리: 제련 장인] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 스콰이어 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* [판금] 계열 방어구 4개 착용 시, 자신의 상점을 이용한 캐릭터에게 [판금 마스터리: 방어] 효과를 30분간 부여합니다.",icon_item_hiddenability_scout,,,,,,,,신비한 서 (판금 마스터리: 제련 장인),0,0.0,0.0,FFFT,14,0.1
-2040074,HiddenAbility_Shinobi11,"사용 시 [인법 분신술: 미진술] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 시노비 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 분신이 사라질 때 [인법 미진술]을 사용합니다. 대미지는 본체의 스킬 계수에 비례하고, 분신이 미진술을 사용 시 본체의 SP가 소모됩니다.",icon_item_hiddenability_scout,,,,,,,,신비한 서 (인법 분신술: 미진술),0,0.0,0.0,FFFT,14,0.1
+2040074,HiddenAbility_Shinobi11,"사용 시 [인법 분신술: 미진술] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 시노비 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 분신이 사라질 때 [인법 미진술]을 사용. 대미지는 본체의 스킬 계수에 비례하고, 분신이 미진술을 사용 시 본체의 SP가 소모됨{nl}* 분신이 [인법 미진술]을 사용해서 사라질 때는 효과가 적용되지 않음",icon_item_hiddenability_scout,,,,,,,,신비한 서 (인법 분신술: 미진술),0,0.0,0.0,FFFT,14,0.1
 2040075,HiddenAbility_Thaumaturge20,"사용 시 [스웰 브레인: 물리] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 쏘마터지 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 7200 포인트{nl} - 아츠 설명{nl}* [스웰 브레인]의 루팅찬스 증가 효과가 사라지고, 자신과 파티원들의 힘과 민첩이 특성 레벨당 10만큼 증가합니다.",icon_item_hiddenability_scout,,,,,,,,신비한 서 (스웰 브레인: 물리),0,0.0,0.0,FFFT,14,0.1
 2040076,HiddenAbility_Thaumaturge21,"사용 시 [스웰 브레인: 마법] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 쏘마터지 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 7200 포인트{nl} - 아츠 설명{nl}* [스웰 브레인]의 루팅찬스 증가 효과가 사라지고, 자신과 파티원들의 지능과 정신이 특성 레벨당 10만큼 증가합니다.",icon_item_hiddenability_scout,,,,,,,,신비한 서 (스웰 브레인: 마법),0,0.0,0.0,FFFT,14,0.1
 2040077,HiddenAbility_Murmillo21,"사용 시 [어인 투구: 투사] 아츠를 획득할 수 있습니다.{nl} - 습득 조건 : 무르밀로 클래스 45 레벨 달성{nl} - 습득 또는 레벨업 특성 비용 : 36000 포인트{nl} - 아츠 설명{nl}* 상태 이상에 대한 저항력이 절반으로 줄어드는 대신, [총] 공격에 대한 피해에 블록이 100% 증가되어 적용됩니다.",icon_item_hiddenability_swordman,,,,,,,,신비한 서 (어인 투구: 투사),0,0.0,0.0,FFFT,14,0.1
