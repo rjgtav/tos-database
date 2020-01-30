@@ -524,10 +524,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640448,Event_Drug_BlueApple20,SP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 SP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.,icon_item_spelixir_small,,,,,,,,[이벤트] SP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,7,30.0
 640449,Uphille_Power_Potion1,"업힐 디펜스 미션에서만 사용 가능한 포션입니다. 대미지 5% 증가, 받는 피해 5%감소합니다. 최대 10회 중첩됩니다. 아이템 우클릭으로 사용합니다.",icon_item_battle_potion_2,,,,,,,,전투 포션: 업힐 미션,0,1.0,0.0,FFFT,7,10.0
 640452,KUPOLE_SEBI_WEAPON_SELECT,사용 시 리스트 중 원하시는 장비가 지급됩니다.,icon_item_event_weaponbox1,,,,,,,,[큐폴전용] 세비노스 무기 선택 상자,0,0.0,0.0,FFFF,9,1.0
-640454,God_Potion_ATK,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_god_adivse_atk,,,,,,,[50103],여신의 지원 상자: 징벌,0,0.0,0.0,FFFF,9,1.0
-640455,God_Potion_DEF,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_god_adivse_def,,,,,,,[50104],여신의 지원 상자: 가호,0,0.0,0.0,FFFF,9,1.0
-640456,Hero_Potion_ATK,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_hero_adivse_atk,,,,,,,,영웅의 지원 상자: 징벌,0,0.0,0.0,FFFF,9,1.0
-640457,Hero_Potion_DEF,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_hero_adivse_def,,,,,,,,영웅의 지원 상자: 가호,0,0.0,0.0,FFFF,9,1.0
+640454,God_Potion_ATK,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_god_adivse_atk,,,,,,,[50103],여신의 지원 상자: 징벌,0,0.0,0.0,FFFT,9,1.0
+640455,God_Potion_DEF,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_god_adivse_def,,,,,,,[50104],여신의 지원 상자: 가호,0,0.0,0.0,FFFT,9,1.0
+640456,Hero_Potion_ATK,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_hero_adivse_atk,,,,,,,,영웅의 지원 상자: 징벌,0,0.0,0.0,FFFT,9,1.0
+640457,Hero_Potion_DEF,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_hero_adivse_def,,,,,,,,영웅의 지원 상자: 가호,0,0.0,0.0,FFFT,9,1.0
 640458,TP_jexpCard_UpRank2,캐릭터의 클래스 레벨을 15로 올려줍니다.  마우스 오른쪽 클릭으로 사용합니다.,icon_item_classexp_rollback,,,,,,,,클래스 경험치 카드 (1st),0,0.0,0.0,FFFF,7,0.0
 640459,TP_jexpCard_UpRank3,캐릭터의 클래스 레벨을 45로 올려줍니다.  마우스 오른쪽 클릭으로 사용합니다.,icon_item_classexp_rollback,,,,,,,,클래스 경험치 카드 (2nd),0,0.0,0.0,FFFF,7,0.0
 640460,TP_jexpCard_UpRank4,캐릭터의 클래스 레벨을 45로 올려줍니다.  마우스 오른쪽 클릭으로 사용합니다.,icon_item_classexp_rollback,,,,,,,,클래스 경험치 카드 (3rd),0,0.0,0.0,FFFF,7,0.0
