@@ -296,6 +296,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 902061,EVENT_1801_ORB_ARMORBOX,開啟時可隨機獲得350級普利摩斯防具道具中的1種。{nl}活動結束時道具統一刪除。,icon_item_event_armorbox1,,,,,,,,,寶貝的防具魔方,0,0.0,0.0,FFFT,6,0.0
 902062,EVENT_1801_ORB_WEAPONBOX,開啟時可隨機獲得350級普利摩斯武器/輔助武器道具中的1種。{nl}活動結束時道具統一刪除。,icon_item_event_weaponbox1,,,,,,,,,寶貝的武器魔方,0,0.0,0.0,FFFT,6,0.0
 902154,Steam_Event_Carnival_Box,箱子裡裝有可以參加煙火節活動的慶典服裝。,icon_item_giftbox_4,,,,,,,,,慶典服裝選擇箱,0,0.0,0.0,FFFT,6,0.0
+902158,Event_JP_FLOWER_CUBE,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_sakuracube,,,,,,,,,花路魔方,0,0.0,0.0,FFFT,6,0.0
 902163,Steam_Event_Popo_Weapon_3d_Box,箱子裡面裝著依主人等級獲得最大可以成長至400級的Popo Shop武器，點擊滑鼠右鍵即可使用。,icon_item_solmiki_box,,,,,,,,,Popo Shop 武器選擇箱 (3天),0,0.0,259200.0,FFFF,6,0.0
 902164,Steam_Event_Popo_Weapon_7d_Box,箱子裡面裝著依主人等級獲得最大可以成長至400級的Popo Shop武器，點擊滑鼠右鍵即可使用。,icon_item_solmiki_box,,,,,,,,,Popo Shop 武器選擇箱 (7天),0,0.0,604800.0,FFFF,6,0.0
 904002,EVENT_1802_MASTER_REWARD_CUBE,從大師的訓練所得到的獎勵道具。{nl}使用時可以從獎勵目錄上隨機得到一個道具。{nl}活動結束時道具統一刪除。,icon_item_eventcube1,,,,,,,,,無限可能性的魔方,0,0.0,0.0,FFFT,6,0.0

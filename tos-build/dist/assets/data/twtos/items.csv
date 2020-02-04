@@ -5868,6 +5868,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 902094,Event_Nru2_Box_7_re,引導員魔方。{nl}使用時可以獲得道具。{nl}(隊伍等級3以上材可以使用。),icon_item_giftbox1,,,,,,,,Team Lv3  引導員箱子(14天),0,0.0,1209600.0,FFFF,9,0.0
 902096,Event_Steam_Last_Winter_Key,可以在冬季企鵝活動中使用的鑰匙。{nl}(活動結束時統一刪除。),cathedral_key_2,,,,,,,,冬季鑰匙,0,0.0,0.0,FFFT,9,0.0
 902097,Event_Steam_Last_Winter_Icicle,冰錐的冰融化之後，裡面會有什麼呢?{nl}(冰錐只能在木柴周圍使用。),icon_item_gimmick_spcrystal,,,,,,,,冰錐(14天),0,3.0,1209600.0,FFFF,9,0.0
+902101,Event_Flower_item_1,收集花葉好像會發生好事喔。,icon_item_firentflower,,,,,,,,花葉,0,0.0,0.0,FFFT,9,0.0
 902102,Event_Steam_2Years_Master_List,記錄著持有邀請函的大師名單。{nl}(使時可以確認活動進行狀況。),icon_item_diary,,,,,,,,大師名冊,0,0.0,0.0,FFFT,9,0.0
 902103,Event_Steam_2Years_Master_DLC,活動用傳送卷軸。{nl}使用後會移動到2週年活動小幫手npc旁邊。,siaul_act3_confirmation,,,,,,,,活動傳送卷軸 - 2週年活動開始,0,0.0,0.0,FFFT,9,0.0
 902106,Event_Steam_Magazine_Num1,啟示活動道具。{nl}可以在活動佈告欄用活動道具交換稱號。,icon_item_stonetablet,,,,,,,,[活動]第一個啟示,0,0.0,0.0,FFFT,9,0.0
@@ -5890,6 +5891,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 902151,Steam_SP_Potion_1Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_low_ability_up_potion3,,,,,,,[400066],SP藥水(1天),0,20.0,86400.0,FFFT,7,3.0
 902152,Steam_SP_Potion_7Day,SP立刻恢復40%，11秒內每隔2秒SP恢復40%，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_ability_up_potion3,,,,,,,[400067],SP樂水(7天),0,20.0,604800.0,FFFT,7,3.0
 902153,Steam_Event_Carnival_Fire,收集慶典爆竹可以跟活動佈告欄交換各種道具。{nl}(使用時，10分內移動速度+2、物理攻擊力+50、魔法攻擊力+50。),icon_item_firework,,,,,,,,慶典爆竹,0,30.0,0.0,FFFT,7,0.0
+902159,Event_JP_FLOWER_SELECT_BOX,裝有荷葉邊裝飾妖精套裝的箱子，點擊滑鼠右鍵即可使用。,icon_item_giftbox_4,,,,,,,,荷葉邊裝飾妖精套裝選擇箱,0,0.0,0.0,FFFT,9,0.0
 902169,Achieve_Event_Twn_3Years_Chupacabra,3週年活動沙漠卓柏卡布拉長大時所提供的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - 3週年好友卓柏卡布拉,0,0.0,0.0,FFFT,7,0.0
 904000,EVENT_1802_MASTER_KEY1,大師的訓練中所需要的道具。{nl}大師的考驗活動小幫手1天會發放1次。{nl}活動結束時道具統一刪除。,icon_item_mastertraining_1,,,,,,,,大師的考驗卷-初級,0,0.0,0.0,FFFT,18,1.0
 904001,EVENT_1802_MASTER_REWARD_PIECE,從大師的訓練所得到的獎勵道具。{nl}收集5個以上可以跟大師的考驗活動小幫手交換成無限可能性的魔方。{nl}活動結束時道具統一刪除。,icon_item_gimmick_spcrystal,,,,,,,,微小可能性的碎片,0,0.0,0.0,FFFT,18,1.0
