@@ -524,10 +524,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640448,Event_Drug_BlueApple20,SP를 20% 즉시 회복시키고 2초 간격으로 11초 동안 SP를 20% 회복 시켜줍니다. 마우스 오른쪽 클릭으로 사용합니다. 재사용 대기시간 20초.,icon_item_spelixir_small,,,,,,,,[이벤트] SP 회복 소형 엘릭서 ,0,20.0,0.0,FFFT,7,30.0
 640449,Uphille_Power_Potion1,"업힐 디펜스 미션에서만 사용 가능한 포션입니다. 대미지 5% 증가, 받는 피해 5%감소합니다. 최대 10회 중첩됩니다. 아이템 우클릭으로 사용합니다.",icon_item_battle_potion_2,,,,,,,,전투 포션: 업힐 미션,0,1.0,0.0,FFFT,7,10.0
 640452,KUPOLE_SEBI_WEAPON_SELECT,사용 시 리스트 중 원하시는 장비가 지급됩니다.,icon_item_event_weaponbox1,,,,,,,,[큐폴전용] 세비노스 무기 선택 상자,0,0.0,0.0,FFFF,9,1.0
-640454,God_Potion_ATK,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_god_adivse_atk,,,,,,,[50103],여신의 지원 상자: 징벌,0,0.0,0.0,FFFF,9,1.0
-640455,God_Potion_DEF,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_god_adivse_def,,,,,,,[50104],여신의 지원 상자: 가호,0,0.0,0.0,FFFF,9,1.0
-640456,Hero_Potion_ATK,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_hero_adivse_atk,,,,,,,,영웅의 지원 상자: 징벌,0,0.0,0.0,FFFF,9,1.0
-640457,Hero_Potion_DEF,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_hero_adivse_def,,,,,,,,영웅의 지원 상자: 가호,0,0.0,0.0,FFFF,9,1.0
+640454,God_Potion_ATK,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_god_adivse_atk,,,,,,,[50103],여신의 지원 상자: 징벌,0,0.0,0.0,FFFT,9,1.0
+640455,God_Potion_DEF,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_god_adivse_def,,,,,,,[50104],여신의 지원 상자: 가호,0,0.0,0.0,FFFT,9,1.0
+640456,Hero_Potion_ATK,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_hero_adivse_atk,,,,,,,,영웅의 지원 상자: 징벌,0,0.0,0.0,FFFT,9,1.0
+640457,Hero_Potion_DEF,사용 시 리스트 중 원하는 아이템이 지급됩니다.,icon_item_hero_adivse_def,,,,,,,,영웅의 지원 상자: 가호,0,0.0,0.0,FFFT,9,1.0
 640458,TP_jexpCard_UpRank2,캐릭터의 클래스 레벨을 15로 올려줍니다.  마우스 오른쪽 클릭으로 사용합니다.,icon_item_classexp_rollback,,,,,,,,클래스 경험치 카드 (1st),0,0.0,0.0,FFFF,7,0.0
 640459,TP_jexpCard_UpRank3,캐릭터의 클래스 레벨을 45로 올려줍니다.  마우스 오른쪽 클릭으로 사용합니다.,icon_item_classexp_rollback,,,,,,,,클래스 경험치 카드 (2nd),0,0.0,0.0,FFFF,7,0.0
 640460,TP_jexpCard_UpRank4,캐릭터의 클래스 레벨을 45로 올려줍니다.  마우스 오른쪽 클릭으로 사용합니다.,icon_item_classexp_rollback,,,,,,,,클래스 경험치 카드 (3rd),0,0.0,0.0,FFFF,7,0.0
@@ -1797,6 +1797,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647037,EQUIP_RENTAL_POINT,PVP전용 기간제 장비 아이템을 구매하기 위한 주화입니다. 렌탈 상점에서 사용 가능합니다.{nl}맵 이탈 시 삭제됩니다.,icon_item_pvpmine_2,,,,,,,,배틀 포인트 주화,0,0.0,0.0,FFFT,18,0.0
 647039,card_Xpupkit01_500_Notrade,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 500 만큼 상승시킵니다.,monster_card,,,,,,,,강화용 카드 : 500,2000,0.0,0.0,FFFF,18,1.0
 647040,Abrasive_430,각성 연마재를 사용하여 각성을 할 경우 더 높은 옵션을 얻을 수 있습니다.,icon_item_awakemisc01,,,,,,,,Lv.430 각성 연마재,5,0.0,0.0,FFFT,18,1.0
+647042,misc_gemExpStone09_Team,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,7성 젬 연마제,0,0.0,0.0,FFFT,18,1.0
 648501,emoticonItem_1,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1071, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,이모티콘: 케파(기쁨),0,0.0,0.0,FFFF,7,1.0
 648502,emoticonItem_2,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1201, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,이모티콘: 케파(슬픔),0,0.0,0.0,FFFF,7,1.0
 648503,kupole_emotion01,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 큐폴(데헷),0,0.0,0.0,FFFT,7,1.0
@@ -1807,6 +1808,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 648508,kupole_emotion06,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 큐폴(더블피스),0,0.0,0.0,FFFF,7,1.0
 648509,medeina_emotion01,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 메데이나(당황),0,0.0,0.0,FFFT,7,1.0
 648510,medeina_emotion02,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 메데이나(기쁨),0,0.0,0.0,FFFT,7,1.0
+648511,medeina_emotion03,아래와 같은 채팅 이모티콘을 등록할 수 있습니다.  마우스 오른쪽 클릭으로 사용합니다.{nl}{img medeina_emotion03 50 50},icon_item_misc_00021,,,,,,,,이모티콘: 메데이나(청결),0,0.0,0.0,FFFF,7,1.0
 649000,misc_ore01,광석,1_item_ore_copper,,,,,,,,구리 광석,10,0.0,0.0,TTTT,18,1.0
 649001,misc_ore02,쉽게 볼 수 있는 흔한 광석입니다.,2_item_ore_iron,[642002],,,,,"[9003, 11036, 11037, 12024, 12036, 12037, 13038, 13039, 14026, 14032, 14039, 14040, 15035, 15036, 16025, 16038, 16039, 34007]",,철 광석,10,0.0,0.0,TTTT,18,1.0
 649002,misc_ore03,철 보다도 더 단단한 광석입니다.,3_item_ore_steel,[642002],,,,,"[31013, 35035]",,강철 광석,10,0.0,0.0,TTTT,18,1.0
@@ -6023,11 +6025,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904262,Event_Ability_Point_Stone_10000_14d_2,"이벤트로 지급되는 아이템입니다.{nl}사용시 특성 포인트가 10,000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.",icon_item_abilitypoint4,,,,,,,,"[이벤트]특성 포인트 10,000 (14일)",0,0.0,1209600.0,FFFT,9,1.0
 904263,Weekly boss raid_Event_01,칭호-주간 보스 레이드 토벌대 칭호를 획득할 수 있는 아이템 입니다. 우클릭으로 사용하실 수 있습니다.{nl}440.LV 이상만 사용 가능합니다.,icon_item_holyark,,,,,,,,주간 보스 레이드 토벌대,0,0.0,0.0,FFFT,7,1.0
 904265,event1909_Ability_Point_Stone_1000_Team_14d,이벤트로 지급되는 아이템입니다.{nl}사용시 특성 포인트가 1000 증가합니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_abilitypoint,,,,,,,,"[이벤트]특성 포인트 1,000(14일)",0,0.0,1209600.0,FFFT,9,1.0
-904266,artifact_Royal_chair,뷰티샵 구매 이벤트로 지급받은 아이템입니다.{nl}사용 시 바버샵 의자를 소환해 앉을 수 있습니다.,item_icon_royal_chair,,,,,,,,헬가세르클 의자,0,1.0,0.0,TTTT,7,1.0
+904266,artifact_Royal_chair,주간 보스 계열 별 랭킹 보상으로 획득한 아이템입니다.{nl}사용 시 헬가세르클 의자를 소환해 앉을 수 있습니다.,item_icon_royal_chair,,,,,,,,헬가세르클 의자,0,1.0,0.0,TTTT,7,1.0
 904267,Achieve_WeeklyRank_1,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Iron Lord,0,0.0,0.0,FFFF,7,1.0
 904268,Achieve_WeeklyRank_2,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Demon Rose,0,0.0,0.0,FFFF,7,1.0
 904269,Achieve_WeeklyRank_3,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Mist Bringer,0,0.0,0.0,FFFF,7,1.0
-904270,RiftModePortalScroll,사용 시 차원 붕괴 지점에 입장할 수 있는 포탈이 생성됩니다.{nl} - 421레벨 지역부터 사용 가능합니다.,icon_item_riftmode_scroll,,,,,,,,차원 붕괴 지점 포탈 스크롤,0,5.0,0.0,FFFF,7,1.0
+904270,RiftModePortalScroll,사용 시 차원 붕괴 지점에 입장할 수 있는 포탈이 생성됩니다.{nl} - 421레벨 지역부터 사용 가능합니다.,icon_item_riftmode_scroll,,,,,,,,차원 붕괴 지점 포탈 스크롤,0,300.0,0.0,FFFF,7,1.0
+904271,EVENT_2002_CHOCO,"30분간 1중첩 마다 경험치 획득량 10% 증가, 최대 체력 1000 증가, 10초마다 HP 200/ SP 100씩 회복 합니다. 최대 5중첩까지 가능합니다. 3월 05일 점검 시, 일괄 삭제됩니다.",icon_item_chocolatebox,,,,,,,,더 달콤한 발렌타인 초콜릿,0,10.0,0.0,FFFT,7,0.0
 904272,2020NewYear_EQUIPITEM_BOX_ARMOR,"사용 시 원하는  11강 10초월 [2020 새해] 세비노스 방어구를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[2020 새해] 11강 10초월 세비노스 방어구 선택상자,0,0.0,0.0,FFFT,9,1.0
 904273,2020NewYear_EQUIPITEM_BOX,"사용 시 원하는 11강 10초월 [2020 새해] 세비노스 무기를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[2020 새해] 11강 10초월 세비노스 무기 선택상자,0,0.0,0.0,FFFT,9,1.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,7,0.0
@@ -6118,7 +6121,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 1210067,PersonalHousing_Item_hp_barrack_07_bear_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_bear,,,,,,,,[개인 하우징]사냥꾼 곰 장식,60000,0.0,0.0,FFTT,7,0.0
 1210068,PersonalHousing_Item_hp_barrack_07_chair_1,{#8e0000} 배치 포인트 5 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_chair,,,,,,,,[개인 하우징]사냥꾼 안락의자,70000,0.0,0.0,FFTT,7,0.0
 1210069,PersonalHousing_Item_hp_barrack_07_desk_1,{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_desk,,,,,,,,[개인 하우징]사냥꾼 책상,90000,0.0,0.0,FFTT,7,0.0
-1210070,PersonalHousing_Item_hp_barrack_07_fireplace_1,{#8e0000} 배치 포인트 7 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_fireplace,,,,,,,,[개인 하우징]사냥꾼 난로,90000,0.0,0.0,FFTT,7,0.0
+1210070,PersonalHousing_Item_hp_barrack_07_fireplace_1,{#8e0000} 배치 포인트 6 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}벽면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_fireplace,,,,,,,,[개인 하우징]사냥꾼 난로,90000,0.0,0.0,FFTT,7,0.0
 1210071,PersonalHousing_Item_hp_barrack_07_floorDoor_1,{#8e0000} 배치 포인트 8 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_floordoor,,,,,,,,[개인 하우징]사냥꾼 바닥 문,100000,0.0,0.0,FFTT,7,0.0
 1210072,PersonalHousing_Item_hp_barrack_07_table_1,{#8e0000} 배치 포인트 4 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl},icon_item_p_h_barrack_07_table,,,,,,,,[개인 하우징]사냥꾼 탁자,60000,0.0,0.0,FFTT,7,0.0
 1210073,PersonalHousing_Item_hp_barrack_07_tiger_1,{#8e0000} 배치 포인트 19 점{/}{nl}개인 하우징 내에 배치할 수 있는 물품 입니다.{nl}지면 위치에 배치할 수 있습니다.{nl}카펫 타입의 위에 지면 타입의 물품을 설치할 수 있습니다.{nl},icon_item_p_h_barrack_07_tiger,,,,,,,,[개인 하우징]사냥꾼 호피 러그,200000,0.0,0.0,FFTT,7,0.0

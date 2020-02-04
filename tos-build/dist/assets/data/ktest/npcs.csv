@@ -1237,6 +1237,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154123,npc_MasterArditi,,minimap_man_scout,아르디티 마스터,2
 154124,npc_MasterTigerHunter,,minimap_man_archer,산포 마스터,2
 154125,npc_kupole_7,,minimap_personal_house,큐폴7,2
+154129,npc_washstand_1,,minimap_event_1,분수대,2
 155000,npc_crystal_machine,,,수정가공기계,2
 155001,farm49_sapling,,,신비한 묘목,2
 155002,dirt_ground,,,토양표본,2
@@ -1616,5 +1617,5 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 2000201,creto_E1,마을 주민들이 몬스터로 분장해 방해합니다.,mon_creto,변장한 마을 주민,2
 2000202,cretobiang_E1,열정적인 마을 주민이 몬스터로 분장해 방해합니다.,mon_cretobiang,열정적인 마을 주민,2
 2000203,boss_summon_spiderweb_E1,마을 사람들이 설치해 놓은 함정입니다. 잠시 이동을 방해합니다.,,,2
-2000204,velniasprison_warp_mini_E1,발판을 밟으면 최고 속도로 달릴 수 있습니다.,,,2
+2000204,velniasprison_warp_mini_E1,발판을 밟으면 최고 속도로 달릴 수 있습니다.,,가속 발판,2
 2000206,hidden_monster_E1,출발지점 투명 오브젝트,,,2
