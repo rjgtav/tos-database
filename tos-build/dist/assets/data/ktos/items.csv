@@ -1797,6 +1797,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647037,EQUIP_RENTAL_POINT,PVP전용 기간제 장비 아이템을 구매하기 위한 주화입니다. 렌탈 상점에서 사용 가능합니다.{nl}맵 이탈 시 삭제됩니다.,icon_item_pvpmine_2,,,,,,,,배틀 포인트 주화,0,0.0,0.0,FFFT,18,0.0
 647039,card_Xpupkit01_500_Notrade,카드를 강화할 때 사용하는 강화용 카드입니다. 카드의 경험치를 500 만큼 상승시킵니다.,monster_card,,,,,,,,강화용 카드 : 500,2000,0.0,0.0,FFFF,18,1.0
 647040,Abrasive_430,각성 연마재를 사용하여 각성을 할 경우 더 높은 옵션을 얻을 수 있습니다.,icon_item_awakemisc01,,,,,,,,Lv.430 각성 연마재,5,0.0,0.0,FFFT,18,1.0
+647042,misc_gemExpStone09_Team,"젬을 강화시킬 때 사용합니다. 젬의 경험치를 대폭 올려줍니다.{nl} - 획득 젬 경험치: 230,700",icon_item_powderp,,,,,,,,7성 젬 연마제,0,0.0,0.0,FFFT,18,1.0
 648501,emoticonItem_1,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1071, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,이모티콘: 케파(기쁨),0,0.0,0.0,FFFF,7,1.0
 648502,emoticonItem_2,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1201, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,이모티콘: 케파(슬픔),0,0.0,0.0,FFFF,7,1.0
 648503,kupole_emotion01,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 큐폴(데헷),0,0.0,0.0,FFFT,7,1.0
@@ -1807,6 +1808,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 648508,kupole_emotion06,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 큐폴(더블피스),0,0.0,0.0,FFFF,7,1.0
 648509,medeina_emotion01,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 메데이나(당황),0,0.0,0.0,FFFT,7,1.0
 648510,medeina_emotion02,채팅 이모티콘을 등록할 수 있습니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_misc_00021,,,,,,,,이모티콘: 메데이나(기쁨),0,0.0,0.0,FFFT,7,1.0
+648511,medeina_emotion03,아래와 같은 채팅 이모티콘을 등록할 수 있습니다.  마우스 오른쪽 클릭으로 사용합니다.{nl}{img medeina_emotion03 50 50},icon_item_misc_00021,,,,,,,,이모티콘: 메데이나(청결),0,0.0,0.0,FFFF,7,1.0
 649000,misc_ore01,광석,1_item_ore_copper,,,,,,,,구리 광석,10,0.0,0.0,TTTT,18,1.0
 649001,misc_ore02,쉽게 볼 수 있는 흔한 광석입니다.,2_item_ore_iron,[642002],,,,,"[9003, 11036, 11037, 12024, 12036, 12037, 13038, 13039, 14026, 14032, 14039, 14040, 15035, 15036, 16025, 16038, 16039, 34007]",,철 광석,10,0.0,0.0,TTTT,18,1.0
 649002,misc_ore03,철 보다도 더 단단한 광석입니다.,3_item_ore_steel,[642002],,,,,"[31013, 35035]",,강철 광석,10,0.0,0.0,TTTT,18,1.0
@@ -6028,6 +6030,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904268,Achieve_WeeklyRank_2,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Demon Rose,0,0.0,0.0,FFFF,7,1.0
 904269,Achieve_WeeklyRank_3,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Mist Bringer,0,0.0,0.0,FFFF,7,1.0
 904270,RiftModePortalScroll,사용 시 차원 붕괴 지점에 입장할 수 있는 포탈이 생성됩니다.{nl} - 421레벨 지역부터 사용 가능합니다.,icon_item_riftmode_scroll,,,,,,,,차원 붕괴 지점 포탈 스크롤,0,300.0,0.0,FFFF,7,1.0
+904271,EVENT_2002_CHOCO,"30분간 1중첩 마다 경험치 획득량 10% 증가, 최대 체력 1000 증가, 10초마다 HP 200/ SP 100씩 회복 합니다. 최대 5중첩까지 가능합니다. 3월 05일 점검 시, 일괄 삭제됩니다.",icon_item_chocolatebox,,,,,,,,더 달콤한 발렌타인 초콜릿,0,10.0,0.0,FFFT,7,0.0
 904272,2020NewYear_EQUIPITEM_BOX_ARMOR,"사용 시 원하는  11강 10초월 [2020 새해] 세비노스 방어구를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[2020 새해] 11강 10초월 세비노스 방어구 선택상자,0,0.0,0.0,FFFT,9,1.0
 904273,2020NewYear_EQUIPITEM_BOX,"사용 시 원하는 11강 10초월 [2020 새해] 세비노스 무기를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[2020 새해] 11강 10초월 세비노스 무기 선택상자,0,0.0,0.0,FFFT,9,1.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,7,0.0

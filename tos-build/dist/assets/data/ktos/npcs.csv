@@ -1237,6 +1237,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154123,npc_MasterArditi,,minimap_man_scout,아르디티 마스터,2
 154124,npc_MasterTigerHunter,,minimap_man_archer,산포 마스터,2
 154125,npc_kupole_7,,minimap_personal_house,큐폴7,2
+154129,npc_washstand_1,,minimap_event_1,분수대,2
 155000,npc_crystal_machine,,,수정가공기계,2
 155001,farm49_sapling,,,신비한 묘목,2
 155002,dirt_ground,,,토양표본,2
