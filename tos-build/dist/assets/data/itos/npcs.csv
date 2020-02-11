@@ -154,6 +154,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20187,musicbox_popolion,,,Popolion Waterball Orgel,2
 20188,npc_sailor_f,,minimap_event_1,Party Planner,2
 20189,npc_sailor_m,,minimap_event_1,Bartender,2
+20190,npc_city_alchemist,,minimap_man_wizard,Professional Alchemist,2
 40000,Obstacle_box,,,Box,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,Desk,2
@@ -426,7 +427,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 147370,magicsquare_3_thornmain_mini,,,,2
 147371,npc_gesti,,,Gesti,2
 147372,blank_npc,,,Empty NPC,2
-147373,holly_oliphant_1,,,Divine Sphere,2
+147373,holly_oliphant_1,,,Divine Utensil,2
 147374,HiddenWall_10_500_500,,,,2
 147375,siau_tent_01,,,Siauliai Tent,2
 147376,siau_fence_01,,,Siauliai Fence,2
@@ -632,6 +633,28 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150203,Shadowmancer_seal_cage,,,Shadow Prison,2
 150204,HiddenWall_500_300_300,,,,2
 150205,npc_stockades_uphill,,,Stake Stockades,2
+150206,npc_Ragana,,,Demon Goddess Ragana,2
+150207,npc_holy_romuva,,,Sacred Namott,2
+150208,npc_terramancer_master,,minimap_man_wizard,Terramancer Master,2
+150209,npc_MEI_master,,minimap_man_master,Blossom Blader Master,2
+150210,npc_baiga,,,Baiga,2
+150211,npc_Zofija_Eleonora,,minimap_man_cleric,Crusader Master,2
+150212,npc_rangda_master,,minimap_man_scout,Rangda Master,2
+150213,npc_Arbalester_master,,minimap_man_archer,Arbalester Master,2
+150214,npc_thetree_root,,,Root of the Divine Tree,2
+150215,npc_raima_wheel,,,Laima's Wheel,2
+150216,npc_MasterRangda_Barong,,,Mielas,2
+150217,npc_Crusader_01,,,Crusader 1,2
+150218,npc_Crusader_02,,,Crusader 2,2
+150219,npc_kingdom_soldier,,,Royal Army Guard,2
+150220,npc_kingdom_schaffenmem1,,,Resistance Soldier 1,2
+150221,npc_kingdom_schaffenmem2,,,Resistance Soldier 2,2
+150222,npc_kingdom_schaffenmem3,,,Resistance Soldier 3,2
+150223,npc_kingdom_schaffencap,,,Resistance Officer,2
+150224,npc_kingdom_paladin_follower1,,,Paladin Follower 1,2
+150225,npc_kingdom_paladin_follower2,,,Paladin Follower 2,2
+150226,npc_kingdom_owl_statue,,,Owl Sculpture,2
+150227,npc_goddess_Laima_ep12,,,Imprisoned Laima,2
 151000,closing_device,,,Closing Device,2
 151001,spell_crystal_red,,,Crystal with magic,2
 151002,spell_crystal_gem_red,,,Jewel of Prominence,2
@@ -1214,6 +1237,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154122,npc_MasterMatross,,minimap_man_archer,Matross Master,2
 154123,npc_MasterArditi,,minimap_man_scout,Ardito Master,2
 154124,npc_MasterTigerHunter,,minimap_man_archer,Tiger Hunter Master,2
+154125,npc_kupole_7,,minimap_personal_house,Kupole 7,2
 155000,npc_crystal_machine,,,Crystal Processing Device,2
 155001,farm49_sapling,,,The Mysterious Tree,2
 155002,dirt_ground,,,Soil Sample,2
@@ -1471,14 +1495,16 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156157,npc_OLW_female_master,,minimap_man_scout,Outlaw Master (Female),2
 156158,npc_goddess_medeina,,,Goddess Medeina,2
 156159,npc_kartas_alone,,,Kartas(without dogs),2
-156160,maple_24_tree,,,Maple Leaf,2
+156160,maple_24_tree,,,Maple,2
 156161,gacha_cube1_red,,,Secret Cube Red,2
 156162,gacha_cube1_gold,,,Secret Cube Gold,2
 156163,gacha_cube1_blue,,,Secret Cube Blue,2
 156164,npc_Tantaliser,,,Bound Tantalizer,2
-156165,maple_24_tree_young,,,Young Maple Leaf,2
+156165,maple_24_tree_young,,,Young Maple,2
 156166,HiddenWall_Vivid,,,,2
 156167,pvp_battle_shop,,minimap_erosion,Equipment Rental Shop,2
+156168,dirt_heal_5,,,Pile of Soil (Large),2
+156169,npc_intermediate_officer_men3,,,Mid Commander (Male 3),2
 157000,3cmlake_ruins,,,Lake Ruin,2
 157001,coral_tent_01,,,Cranto Tent,2
 157002,PCStatue,,,,2
@@ -1546,6 +1572,13 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160004,flower_keep_water_red,,,Dewy Flower (Red),2
 160005,flower_keep_water_white,,,Dewy Flower (White),2
 160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,Altar of Purification,2
+160007,SHADOW_LEGEND_SOLO_CURSE_PURIFICATION,,minimap_portal,Altar of Purification,2
+160008,Hiddennpc_Moringponia,,,Summoning Portal,2
+160009,moringponia_spell_crystal_red,,,Purifying Stone,2
+160010,moringponia_star_stone,,,Purifying Stone,2
+160011,moringponia_ignore_raise,,minimap_portal,,2
+160012,HiddenWall_600_400_300,,,,2
+160013,HiddenWall_800_400_300,,,,2
 160014,npc_Xmas_Evt_NPC,,minimap_event_1,Christmas NPC,2
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,Christmas NPC2,2
 161000,E_statue_zemina,,minimap_goddess,Statue of Goddess Zemyna,2
