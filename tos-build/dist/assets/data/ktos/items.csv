@@ -6030,7 +6030,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904268,Achieve_WeeklyRank_2,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Demon Rose,0,0.0,0.0,FFFF,7,1.0
 904269,Achieve_WeeklyRank_3,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Mist Bringer,0,0.0,0.0,FFFF,7,1.0
 904270,RiftModePortalScroll,사용 시 차원 붕괴 지점에 입장할 수 있는 포탈이 생성됩니다.{nl} - 421레벨 지역부터 사용 가능합니다.,icon_item_riftmode_scroll,,,,,,,,차원 붕괴 지점 포탈 스크롤,0,300.0,0.0,FFFF,7,1.0
-904271,EVENT_2002_CHOCO,"30분간 1중첩 마다 경험치 획득량 10% 증가, 최대 체력 1000 증가, 10초마다 HP 200/ SP 100씩 회복 합니다. 최대 5중첩까지 가능합니다. 3월 05일 점검 시, 일괄 삭제됩니다.",icon_item_chocolatebox,,,,,,,,더 달콤한 발렌타인 초콜릿,0,10.0,0.0,FFFT,7,0.0
+904271,EVENT_2002_CHOCO,"30분간 1중첩 마다 경험치 획득량 10% 증가, 최대 체력 1000 증가, 10초마다 HP 200/ SP 100씩 회복,루팅찬스가 300 증가합니다. 최대 5중첩까지 가능합니다. 3월 05일 점검 시, 일괄 삭제됩니다.",icon_item_chocolatebox,,,,,,,,더 달콤한 발렌타인 초콜릿,0,10.0,0.0,FFFT,7,0.0
 904272,2020NewYear_EQUIPITEM_BOX_ARMOR,"사용 시 원하는  11강 10초월 [2020 새해] 세비노스 방어구를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[2020 새해] 11강 10초월 세비노스 방어구 선택상자,0,0.0,0.0,FFFT,9,1.0
 904273,2020NewYear_EQUIPITEM_BOX,"사용 시 원하는 11강 10초월 [2020 새해] 세비노스 무기를 1개 받을 수 있습니다.{nl} 해당 장비는 분해, 강화가 불가능합니다.",icon_item_jewelrybox_close,,,,,,,,[2020 새해] 11강 10초월 세비노스 무기 선택상자,0,0.0,0.0,FFFT,9,1.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,7,0.0
