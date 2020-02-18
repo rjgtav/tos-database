@@ -142,6 +142,8 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644156,card_uska,[슬롯 장착 효과] 모든 스탯 + [★ * 0.4],icon_item_card_stat,004_npc_uska,,,,,,,,,,,우스카 카드,500,,,,0.0,0.0,FFFT,4,4,1.0
 644157,card_cyrenia,"[슬롯 장착 효과] 스태미너 + [★], 최대 HP + [100 * ★]",icon_item_card_util,006_npc_cyrenia,,,,,,,,,,,시레니아 카드,500,,,,0.0,0.0,FFFT,4,5,1.0
 644158,card_Neringa,[슬롯 장착 효과] 모든 스탯 + [★ * 0.5],icon_item_card_stat,007_npc_neringa,,,,,,,,,,,네링가 카드,500,,,,0.0,0.0,TTTT,4,4,1.0
+644501,Master_card_Boruble,[슬롯 장착 효과] 치유력 +[★ * 30],icon_item_card_def,008_npc_boruble,,,,,,,,,,,보러블 카드,500,,,,0.0,0.0,TTTT,4,1,1.0
+644502,Master_card_MariaLeed,[슬롯 장착 효과] 피격 시 10% 확률로 10초간 최대 HP의 [★ /2]% 실드 생성,icon_item_card_def,009_npc_maria,,,,,,,,,,,마리아 리드 카드,500,,,,0.0,0.0,TTTT,4,1,1.0
 644900,Legend_card_Marnoks,[슬롯 장착 효과] 최소 치명타 확률 [★ * 2]% 증가,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,마군주 마르녹스 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644901,Legend_card_Blud,[슬롯 장착 효과] PVP시 받는 대미지 [★ * 3]% 감소,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,마군주 블룻 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
 644902,Legend_card_Zawra,[슬롯 장착 효과] 물리 방어력 [★ * 10]% 증가,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,마군주 자우라 카드,0,,,,0.0,0.0,TTTT,4,2,1.0
