@@ -38,7 +38,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 350007,misc_collect_qst_008,向在湖水生長的怪物取得的葉子，剛才還有充滿水般濕漉漉的感覺。圖鑑專用道具。,icon_item_leaves_blue,[642212],,,,,,,蘊含湖水氣息的葉子,1,0.0,0.0,FFFT,18,1.0
 350008,misc_collect_qst_009,雖然被砍掉下來了，但是因為吸收了湖水的水份，濕漉漉地散發著神秘的氣息。圖鑑專用道具。,icon_item_varnalesa,[642212],,,,,,,濕潤的根,1,0.0,0.0,FFFT,18,1.0
 350009,misc_collect_qst_010,分給抵抗軍部隊員的補給水桶，因為長時間放在濕氣重的地方，所以有生銹的痕跡，看來應該不是雷歐納勒達斯的物品。圖鑑專用道具。,icon_item_waterbottle,[642212],,,,,,,抵抗軍補給水桶,1,0.0,0.0,FFFT,18,1.0
-490048,Premium_indunReset_14d,使用時，副本地下城和委託所任務的入場次數會重置。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_indunfreeenter,,,,,,,,副本進場次數重置卷:14日,0,0.0,1209600.0,FFFF,9,0.0
+490048,Premium_indunReset_14d,使用時副本進場次數會重置。獲得後14天內可使用。,icon_item_indunfreeenter,,,,,,,,副本進場次數重置卷:14日,0,0.0,1209600.0,FFFF,9,0.0
 490049,Premium_boostToken_14d,點擊右鍵時可以直接使用，可套用角色時間為一小時。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_boostertoken,,,,,,,,[活動]經驗之書(限時),0,0.0,1209600.0,FFFF,9,0.0
 490052,Premium_boostToken_14d_test,點擊右鍵時可以直接使用，可套用角色時間為一小時。道具使用期限為1分鐘，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_boostertoken,,,,,,,,經驗之書(限1分鐘),0,0.0,60.0,FFFF,9,0.0
 490061,Premium_awakeningStone14,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,,,[活動]覺醒石(限時),0,0.0,1209600.0,FFFF,9,0.0
@@ -55,7 +55,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 490084,160609Event_box2,裝有騎士團長烏斯卡手鐲的箱子，點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_eventbox_knight,,,,,,,,騎士團長烏斯卡的箱子,0,0.0,0.0,TTFT,9,0.0
 490112,Premium_boostToken_10m,點擊右鍵時可以直接使用，可套用角色時間為1小時。若10分鐘內沒有用系統回收。,icon_item_boostertoken,,,,,,,,[活動]經驗之書(限10分鐘),0,0.0,600.0,FFFF,9,0.0
 490124,Premium_boostToken_test1min,點擊滑鼠右鍵即可使用，會對角色套裝1分鐘效果。{nl} - 只有在角色連線時會消耗時間。{nl}[經驗之書效果]{nl} - 消滅怪物時獲得經驗值增加+30%{nl}(可和VIP效果疊加){nl}(不能套用經驗值卡片){nl} - 耐力恢復量增加2倍。,icon_item_boostertoken,,,,,,,,經驗之書(效果1分),0,0.0,0.0,FFFF,9,0.0
-490129,Premium_indunReset_1h,使用時，副本地下城和委託所任務的入場次數會重置。獲得後，若1小時內沒有使用系統回收。,icon_item_indunfreeenter,,,,,,,,[活動]副本地下城入場次數重置卷[限時],0,0.0,6000.0,FFFF,9,0.0
+490129,Premium_indunReset_1h,使用時，副本地下城的入場次數會重置。道具使用期限為1小時，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_indunfreeenter,,,,,,,,[活動]副本地下城入場次數重置卷[限時],0,0.0,6000.0,FFFF,9,0.0
 490165,Ability_Point_Stone,"使用時特性點數增加1,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint,,,,,,,,"特性點數 1,000",0,0.0,0.0,FFFT,9,1.0
 490174,Ability_Point_Stone_500,使用時特性點數增加 500，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint2,,,,,,,,特性點數 500,0,0.0,0.0,FFFT,9,1.0
 490251,Point_Stone_100,使用時特性點數增加100，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint3,,,,,,,,特性點數 100,0,0.0,0.0,FFFT,9,1.0
@@ -65,12 +65,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 490312,Ability_Point_Stone_30000,"使用時特性點數增加30,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint5,,,,,,,,"特性點數 30,000",0,0.0,0.0,FFFT,9,1.0
 490313,Ability_Point_Stone_100000,"使用時特性點數增加100,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint6,,,,,,,,"特性點數 100,000",0,0.0,0.0,FFFT,9,1.0
 490324,Ability_Point_Scroll_1000,"使用時特性點數增加1,000，點擊滑鼠右鍵即可使用。",icon_item_ability_point_scroll_1000,,,,,,,,特性點數卷軸,0,0.0,0.0,FFFT,9,1.0
-490354,indunReset_1add_14d_NoStack_Team,使用時即時副本和委託所任務可以追加進場1次。,icon_item_indunonemoreenter,,,,,,,,[活動]副本1次入場卷(限時),0,0.0,1209600.0,FFFT,7,0.0
+490354,indunReset_1add_14d_NoStack_Team,使用時，副本地下城可以追加進場1次。,icon_item_indunonemoreenter,,,,,,,,[活動]副本1次入場卷(限時),0,0.0,1209600.0,FFFT,7,0.0
 490390,Premium_Mystic_Glass_Event,隨機屬性道具的屬性個數、屬性群、屬性數值會隨機變更，屬性會立刻套用而無法恢復到之前的狀態。,icon_item_magnifier_blue,,,,,,,,[活動]神秘放大鏡,0,0.0,0.0,FFFT,9,0.0
 490391,Premium_Master_Glass_Event,隨機變更隨機屬性道具的屬性個數、屬性群、屬性、屬性數值。可在變更前屬性與變更後屬性中選擇1個屬性。若不選擇屬性，將無法使用道具。8月8日維護後統一刪除。,icon_item_magnifier_red,,,,,,,,[活動]匠人放大鏡,0,0.0,0.0,FFFT,9,0.0
 494079,Event_Ability_Point_Stone_10000_team,"使用時特性點數增加10,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint4,,,,,,,,"特性點數10,000(14天)",0,0.0,1209600.0,FFFT,9,1.0
 494132,Premium_Mystic_Glass_Event_14d,隨機屬性道具的屬性個數、屬性群、屬性數值會隨機變更，屬性會立刻套用而無法恢復到之前的狀態。,icon_item_magnifier_blue,,,,,,,,[活動]神秘放大鏡(14天),0,0.0,1209600.0,FFFT,9,0.0
 494133,Premium_Master_Glass_Event_14d,隨機屬性道具的屬性個數、屬性群、屬性數值會隨機變更，屬性可以選擇變更前和變更後中的1個，如果不選擇就不能使用道具。,icon_item_magnifier_red,,,,,,,,[活動]匠人放大鏡(14天),0,0.0,1209600.0,FFFT,9,0.0
+494155,Premium_AddSkillPoint,增加技能點數。{nl}{#FF0000}增加的技能點數在進行技能重置、職業變更時，會以藥水的型態歸還至[市場領取箱]。,icon_item_skillpoint_add,,,,,,,,技能點數藥水,0,0.0,0.0,FFFF,7,0.0
 495001,160714Event_box1,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第1天寶箱 (7天),0,0.0,604800.0,FFFF,9,0.0
 495002,160714Event_box2,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第2天寶箱 (7天),0,0.0,604800.0,FFFF,9,0.0
 495003,160714Event_box3,點擊滑鼠右鍵即可開啟並獲得內容物。,icon_item_giftbox_1,,,,,,,,強者之路第3天寶箱 (7天),0,0.0,604800.0,FFFF,9,0.0
@@ -149,6 +150,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 495130,Ability_Point_Stone_5_Team_Event,使用時特性點數增加5，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint7,,,,,,,,特性點數 5,0,0.0,0.0,FFFT,9,1.0
 495132,Beauty_HairCoupon_90_14d,美容院: 在美髮店購買髮型時，可獲得90%折扣的優惠券。{nl}無法與其他美髮優惠券重複使用。,icon_item_haircoupon_90,,,,,,,,[活動]美髮 1次 90%優惠券(14天),0,0.0,1209600.0,FFFT,9,1.0
 495133,Beauty_DyeCoupon_90_14d,美容院: 在美髮店 '變更髮型'點擊後，選擇髮型要準備染色時，可獲得90%折扣的優惠券。{nl}無法與其他染色優惠券重複使用。且無法使用在假髮染色藥上。,icon_item_dyecoupon_90,,,,,,,,[活動]染色 1次 90%優惠券(14天),0,0.0,1209600.0,FFFT,9,1.0
+620001,Ark_str,以女神之力製作的聖具，此聖匣獲得了加比婭女神的祝福。火之女神加比婭在聖匣賦予了可以正面迎敵的力量。,icon_item_ark_str,,,,,,,,聖匣 - 力量,0,0.0,0.0,FFFT,2,1.0
+620002,Ark_dex,以女神之力製作的聖具，此聖匣獲得了澤米娜女神的祝福。透過大地女神澤米娜的權能賜予祝福在全世界的大地之上發揮此力量。,icon_item_ark_dex,,,,,,,,聖匣 - 敏捷,0,0.0,0.0,FFFT,2,1.0
+620003,Ark_int,以女神之力製作的聖具，此聖匣獲得了拉達女神的祝福。得到眾女神認可的拉達女神希望聖匣有助於正確的選擇。,icon_item_ark_int,,,,,,,,聖匣 - 智力,0,0.0,0.0,FFFT,2,1.0
+620004,Ark_mna,以女神之力製作的聖具，此聖匣獲得了瓦卡麗涅女神的祝福。當中完整地蘊藏著瓦卡麗涅女神希望身心平和的心意。,icon_item_ark_mna,,,,,,,,聖匣 - 精神,0,0.0,0.0,FFFT,2,1.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,,,耐力 +5 增加藥水,200,0.0,0.0,FFFF,7,1.0
 640002,Drug_HP1,HP立刻恢復273，15秒內每隔2秒HP恢復273，點擊滑鼠右鍵使用。,item_hp_oil_1,,,,,,,,HP藥水(小),16,25.0,0.0,FFTF,7,7.0
 640003,Drug_HP2,HP立刻恢復462，15秒內每隔2秒HP恢復462，點擊滑鼠右鍵使用。,item_hp_oil_2,,,,,,"[3001, 3003, 3004, 3006, 3007, 3009, 3010, 3012, 3013, 3015, 3016, 3018, 3019, 3021, 3022]",,HP藥水,32,25.0,0.0,FFTF,7,7.0
@@ -365,7 +370,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640232,GIMMICK_Drug_PMATK1,3分內使物理、魔法攻擊力提升+55，點擊滑鼠右鍵使用，冷卻時間120秒。,icon_item_drug_exatk1,,,,,,,,凱伊托 勇猛藥水,0,120.0,0.0,FFFF,7,10.0
 640233,expCard14,經驗值提升+3630357，職業經驗值提升+2795374。從275級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 100, ""Map"": 1191, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1991, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3070, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3080, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3090, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3270, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3280, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3290, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3560, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3570, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3580, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3590, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3600, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3690, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3700, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4270, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4900, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV13 經驗值卡片,0,0.0,0.0,FFFF,7,0.0
 640234,expCard15,經驗值提升+13189741，職業經驗值提升+10156100。從300級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 100, ""Map"": 1901, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1911, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1921, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1941, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1951, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1961, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1971, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1981, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1982, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1983, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1984, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1985, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1993, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1994, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1995, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2101, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2111, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 2121, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3100, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3110, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3120, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3130, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3140, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3150, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3160, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3170, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3180, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3190, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3200, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3210, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3220, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3221, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3223, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3300, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3530, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3540, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3550, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3660, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3710, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3720, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3770, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3780, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4280, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4350, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4810, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4910, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4931, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4980, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8000, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8010, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 8020, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV14 經驗值卡片,0,0.0,0.0,FFFF,7,0.0
-640235,expCard16,經驗值提升+31212626，職業經驗值提升+24033722。從320級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 100, ""Map"": 3230, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3240, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3250, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV15 經驗值卡片,0,0.0,0.0,FFFF,7,0.0
+640235,expCard16,經驗值提升+31212626，職業經驗值提升+24033722。從320級開始可使用。,icon_item_expcard,,,,"[{""Chance"": 100, ""Map"": 1986, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1987, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1990, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 1992, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3020, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3230, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3240, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 3250, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}, {""Chance"": 100, ""Map"": 4360, ""Quantity_MAX"": 2, ""Quantity_MIN"": 2}]",,,,LV15 經驗值卡片,0,0.0,0.0,FFFF,7,0.0
 640236,food_tomato,紅熊貓和渡渡鳥喜歡的飼料，寵物的HP會全部恢復，耐力會恢復+60。,icon_item_tomato,,,,,,,,番茄,0,10.0,0.0,FFTF,7,1.0
 640237,Drug_PvP_MSPD3,250秒內使移動速度提升+3，點擊滑鼠右鍵使用，冷卻時間300秒。,item_speed_requid_1,,,,,,,,移動速度UP藥水,25,300.0,0.0,FFFF,7,5.0
 640238,GIMMICK_Drug_HPSP2,15秒內可恢復SP與HP各 480。點擊滑鼠右鍵可以直接使用。 重置時間為 100秒。,item_hpsp_potion_2,,,,,,,,凱伊托恢復藥水Lv2,0,100.0,0.0,FFFF,7,20.0
@@ -390,9 +395,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640259,GIMMICK_Drug_HPSP4,15秒內HP及SP每2秒恢復831。點擊滑鼠右鍵即可使用，冷卻時間100秒。,item_hpsp_potion_3,,,,,,,,凱伊托恢復藥水Lv4,0,100.0,0.0,FFFF,7,22.0
 640260,Achieve_CreativeSou,可以獲得創作之魂稱號的道具，右點擊使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-創作之魂,0,0.0,0.0,FFFF,7,0.0
 640263,misc_gemExpStone_randomQuest1_TA,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：300,icon_item_powderp,,,,,,,,發光的2星寶石研磨劑,20,0.0,0.0,TTTT,18,1.0
-640264,misc_gemExpStone_randomQuest2_TA,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1200,icon_item_powderp,,,,,,,,發光的3星寶石研磨劑,20,0.0,0.0,TTTT,18,1.0
-640265,misc_gemExpStone_randomQuest3_TA,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：3900,icon_item_powderp,,,,,,,,發光的4星寶石研磨劑,20,0.0,0.0,TTTT,18,1.0
-640266,misc_gemExpStone_randomQuest4_TA,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,,,發光的5星寶石研磨劑,20,0.0,0.0,TTTT,18,1.0
+640264,misc_gemExpStone_randomQuest2_TA,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1,200",icon_item_powderp,,,,,,,,發光的3星寶石研磨劑,20,0.0,0.0,TTTT,18,1.0
+640265,misc_gemExpStone_randomQuest3_TA,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：3,900",icon_item_powderp,,,,,,,,發光的4星寶石研磨劑,20,0.0,0.0,TTTT,18,1.0
+640266,misc_gemExpStone_randomQuest4_TA,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,發光的5星寶石研磨劑,20,0.0,0.0,TTTT,18,1.0
 640268,GIMMICK_Drug_HPSP1_TA,15秒內可恢復SP與HP各 373。點擊滑鼠右鍵可以直接使用。 重置時間為 100秒。,item_hpsp_potion_1,,,,,,,,濃縮凱伊托恢復藥水Lv1,0,100.0,0.0,TTTT,7,20.0
 640269,GIMMICK_Drug_PMDEF1_TA,3分內使物理、魔法防禦力提升+100，點擊滑鼠右鍵使用，冷卻時間120秒。,icon_item_drug_exdef1,,,,,,,,濃縮凱伊托守護藥水,0,120.0,0.0,TTTT,7,10.0
 640270,GIMMICK_Drug_PMATK1_TA,3分內使物理、魔法攻擊力提升+55，點擊滑鼠右鍵使用，冷卻時間120秒。,icon_item_drug_exatk1,,,,,,,,濃縮凱伊托勇猛藥水,0,120.0,0.0,TTTT,7,10.0
@@ -400,7 +405,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640272,expCard_C,經驗值 +142150， 職業經驗值 +109455。,icon_item_expcard,,,,,,,,下級經驗值卡片,0,0.0,0.0,TTFT,7,0.0
 640273,expCard_B,經驗值 +237943，職業經驗值 +183216。,icon_item_expcard,,,,,,,,中級經驗值卡片,0,0.0,0.0,TTFT,7,0.0
 640275,expCard_A,經驗值 +541023， 職業經驗值 +416587。,icon_item_expcard,,,,,,,,高級經驗值卡片,0,0.0,0.0,TTFT,7,0.0
-640276,misc_gemExpStone_5000_TA,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：5000{nl} 可以到回收商店用代幣交換。,icon_item_powderp,,,,,,,,寶石研磨劑：5000,20,0.0,0.0,TTTT,18,1.0
+640276,misc_gemExpStone_5000_TA,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：5,000{nl} 可以到回收商店用代幣交換。",icon_item_powderp,,,,,,,,"寶石研磨劑：5,000",20,0.0,0.0,TTTT,18,1.0
 640277,Drug_MSPD2_1h_TA,1小時內使移動速度提升+2，點擊滑鼠右鍵使用，冷卻時間300秒。{nl}可以到回收商店用代幣交換。,item_speed_requid_1,,,,,,,,移動速度UP藥水：1小時,25,300.0,0.0,TTTT,7,5.0
 640278,Drug_RedApple100_TA,令HP立即恢復50%，11秒內每隔2秒使恢復50%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}可以到回收商店用代幣交換。,icon_item_hpelixir,,,,,,,,HP恢復的靈藥,20,20.0,0.0,TTTT,7,30.0
 640279,Drug_BlueApple100_TA,令SP立即恢復50%，11秒內每隔2秒使恢復50%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。{nl}可以到回收商店用代幣交換。,icon_item_spelixir,,,,,,,,SP恢復的靈藥,20,20.0,0.0,TTTT,7,30.0
@@ -473,11 +478,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640360,test_expCard_Max,"角色經驗值上升974,470,022。右擊滑鼠使用。",icon_item_expcard,,,,,,,,[奎波爾專用] 經驗值加速器,0,0.0,0.0,FFFT,7,0.0
 640361,test_jexpCard_UpRank8,將角色7階的職業等級提升至15，只有7階時可使用，點擊滑鼠右鍵使用。,icon_item_expcard8,,,,,,,,[奎波爾專用] 8階卡片,0,0.0,0.0,FFFT,7,0.0
 640362,jexpCard_UpRank10,,,,,,,,,,無功能,0,0.0,0.0,FFFF,7,0.0
-640363,Drug_Event_Looting_Potion,30分內令Rooting機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間30分。{nl} - Rooting機會藥水無法疊加使用。,icon_item_looting_potion_01,,,,,,,,Rooting機會增加藥水,25,1800.0,0.0,FFFT,7,5.0
+640363,Drug_Event_Looting_Potion,30分內令道具掉落機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間30分。{nl} - 道具掉落機會藥水無法疊加使用。,icon_item_looting_potion_01,,,,,,,,道具掉落機會增加藥水,25,1800.0,0.0,FFFT,7,5.0
 640364,Drug_Fortunecookie_14d,30分鐘內根據疊加經驗值、移動速度、最大HP會增加，最多可以疊加至5為止。,icon_item_fortunecookie,,,,,,,,幸運餅乾(14天),0,10.0,0.0,FFFF,7,0.0
-640365,Drug_Looting_Potion_100,60內令Rooting機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - Rooting機會藥水無法疊加使用。,item_icon_luckypotion_100,,,,,,,,Rooting機會：100,25,3600.0,0.0,TTFT,7,1.0
-640366,Drug_Looting_Potion_300,60內令Rooting機會提升+300，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - Rooting機會藥水無法疊加使用。,item_icon_luckypotion_300,,,,,,,,Rooting機會：300,25,3600.0,0.0,TTFT,7,1.0
-640367,Drug_Looting_Potion_500,60內令Rooting機會提升+500，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - Rooting機會藥水無法疊加使用。,item_icon_luckypotion_500,,,,,,,,Rooting機會：500,25,3600.0,0.0,TTFT,7,1.0
+640365,Drug_Looting_Potion_100,60內令道具掉落機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - 道具掉落機會藥水無法疊加使用。,item_icon_luckypotion_100,,,,,,,,道具掉落機會：100,25,3600.0,0.0,TTFT,7,1.0
+640366,Drug_Looting_Potion_300,60內令道具掉落機會提升+300，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - 道具掉落機會藥水無法疊加使用。,item_icon_luckypotion_300,,,,,,,,道具掉落機會：300,25,3600.0,0.0,TTFT,7,1.0
+640367,Drug_Looting_Potion_500,60內令道具掉落機會提升+500，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - 道具掉落機會藥水無法疊加使用。,item_icon_luckypotion_500,,,,,,,,道具掉落機會：500,25,3600.0,0.0,TTFT,7,1.0
 640368,Potion_Demon_DMG_UP,10秒內給惡魔型BOSS怪物的傷害增加100%。{nl}冷卻時間30秒。{nl}不可與其它懲罰藥水重複使用。,icon_item_ability_down_potion5,,,,,,,[40042],女神的懲罰藥水：惡魔,0,30.0,0.0,TTTT,7,10.0
 640369,Potion_MIX_DMG_UP,10秒內給變異型BOSS怪物的傷害增加100%。{nl}冷卻時間30秒。{nl}不可與其它懲罰藥水重複使用。,icon_item_ability_down_potion3,,,,,,,[40043],女神的懲罰藥水：變異,0,30.0,0.0,TTTT,7,10.0
 640370,Potion_Bug_DMG_UP,10秒內給昆蟲型BOSS怪物的傷害增加100%。{nl}冷卻時間30秒。{nl}不可與其它懲罰藥水重複使用。,icon_item_ability_down_potion4,,,,,,,[40044],女神的懲罰藥水：昆蟲,0,30.0,0.0,TTTT,7,10.0
@@ -512,7 +517,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640402,Vernike_Drug_HPSP,"2秒間隔15秒內恢復 HP 1234, SP 617。點擊滑鼠即可使用，冷卻時間100秒。",icon_item_vernike_potion,,,,,,,,次元藥水,0,100.0,0.0,FFFT,7,30.0
 640405,Drug_RedApple20_PC,令HP立即恢復20%，11秒內每隔2秒使恢復20%的HP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_random_hpellixerbox_pp,,,,,,,,[Popo Shop] HP 恢復小型靈藥,20,20.0,0.0,FFFT,7,3.0
 640406,Drug_BlueApple_PC,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_random_spellixerbox_pp,,,,,,,,[Popo Shop] SP 恢復小型靈藥,20,20.0,0.0,FFFT,7,3.0
-640410,Drug_Looting_Potion_100_pc,60內令Rooting機會提升+300，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - Rooting機會藥水無法疊加使用。,icon_item_pp_looting300,,,,,,,,[Popo Shop] Rooting機會：300,25,3600.0,0.0,FFFT,7,1.0
+640410,Drug_Looting_Potion_100_pc,60內令道具掉落機會提升+300，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - 道具掉落機會藥水無法疊加使用。,icon_item_pp_looting300,,,,,,,,[Popo Shop] 道具掉落機會：300,25,3600.0,0.0,FFFT,7,1.0
 640411,jexpCard_UpRank11,,,,,,,,,,無功能,0,0.0,0.0,FFFF,7,0.0
 640412,Drug_RedApple100_TA_Event_Team_Trade,令HP立即恢復50%，11秒內每隔2秒令HP恢復50%，點擊滑鼠右鍵即可使用，冷時間20秒。,icon_item_hpelixir,,,,,,,,[活動]HP恢復的靈藥,20,20.0,0.0,FFFT,7,30.0
 640413,Drug_BlueApple100_TA_Event_Team_Trade,令SP立即恢復50%，11秒內每隔2秒令SP恢復50%，點擊滑鼠右鍵即可使用，冷時間20秒。,icon_item_spelixir,,,,,,,,[活動]SP恢復的靈藥,20,20.0,0.0,FFFT,7,30.0
@@ -540,14 +545,28 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640448,Event_Drug_BlueApple20,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_spelixir_small,,,,,,,,[活動] SP恢復小型靈藥,0,20.0,0.0,FFFT,7,30.0
 640449,Uphille_Power_Potion1,只能在高地防守任務中使用的藥水。增加傷害5%、減少承受的傷害5%。最多可以疊加10次。點擊滑鼠右鍵使用。,icon_item_battle_potion_2,,,,,,,,戰鬥藥水: 高地任務,0,1.0,0.0,FFFT,7,10.0
 640452,KUPOLE_SEBI_WEAPON_SELECT,使用時會發送清單中想要的裝備。,icon_item_event_weaponbox1,,,,,,,,[奎波爾專用] 賽必諾斯武器選擇箱,0,0.0,0.0,FFFF,9,1.0
-640454,God_Potion_ATK,使用時贈送清單中想要的道具。,icon_item_god_adivse_atk,,,,,,,,女神支援箱：懲罰,0,0.0,0.0,FFFF,9,1.0
-640455,God_Potion_DEF,使用時贈送清單中想要的道具。,icon_item_god_adivse_def,,,,,,,,女神支援箱：加護,0,0.0,0.0,FFFF,9,1.0
+640454,God_Potion_ATK,使用時贈送清單中想要的道具。,icon_item_god_adivse_atk,,,,,,,[50103],女神支援箱：懲罰,0,0.0,0.0,FFFF,9,1.0
+640455,God_Potion_DEF,使用時贈送清單中想要的道具。,icon_item_god_adivse_def,,,,,,,[50104],女神支援箱：加護,0,0.0,0.0,FFFF,9,1.0
 640456,Hero_Potion_ATK,使用時贈送清單中想要的道具。,icon_item_hero_adivse_atk,,,,,,,,英雄支援箱：懲罰,0,0.0,0.0,FFFF,9,1.0
 640457,Hero_Potion_DEF,使用時贈送清單中想要的道具。,icon_item_hero_adivse_def,,,,,,,,英雄支援箱：加護,0,0.0,0.0,FFFF,9,1.0
 640458,TP_jexpCard_UpRank2,將角色的職業等級提升至15，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值卡片 (一),0,0.0,0.0,FFFF,7,0.0
 640459,TP_jexpCard_UpRank3,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值卡片 (二),0,0.0,0.0,FFFF,7,0.0
 640460,TP_jexpCard_UpRank4,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值卡片 (三),0,0.0,0.0,FFFF,7,0.0
 640461,TP_jexpCard_UpRank5,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值卡片 (四),0,0.0,0.0,FFFF,7,0.0
+640464,expCard2_x5,經驗值提升+13430，職業經驗值提升+10341。從5級開始可使用。,icon_item_expcard,,,,,,,,LV2 經驗值卡片(x5),0,0.0,0.0,FFFF,7,0.0
+640465,expCard3_x5,經驗值提升+42210，職業經驗值提升+32501。從20級開始可使用。,icon_item_expcard,,,,,,,,LV3 經驗值卡片(x5),0,0.0,0.0,FFFF,7,0.0
+640466,expCard6_x5,經驗值提升+122855，職業經驗值提升+94598。從60級開始可使用。,icon_item_expcard,,,,,,,,LV5 經驗值卡片(x5),0,0.0,0.0,FFFF,7,0.0
+640467,expCard7_x5,經驗值提升+301560，職業經驗值提升+232201。從70級開始可使用。,icon_item_expcard,,,,,,,,LV6 經驗值卡片(x5),0,0.0,0.0,FFFF,7,0.0
+640468,expCard8_x5,經驗值提升+710750，職業經驗值提升+547277。從100級開始可使用。,icon_item_expcard,,,,,,,,LV7 經驗值卡片(x5),0,0.0,0.0,FFFF,7,0.0
+640469,expCard11_x10,經驗值提升+5410230，職業經驗值提升+4165877。從180級開始可使用。,icon_item_expcard,,,,,,,,LV10 經驗值卡片(x10),0,0.0,0.0,FFFF,7,0.0
+640470,expCard12_x10,經驗值提升+9850610，職業經驗值提升+7584969。從210級開始可使用。,icon_item_expcard,,,,,,,,LV11 經驗值卡片(x10),0,0.0,0.0,FFFF,7,0.0
+640471,expCard15_x5,經驗值提升+65948705，職業經驗值提升+50780502。從300級開始可使用。,icon_item_expcard,,,,,,,,LV14 經驗值卡片(x5),0,0.0,0.0,FFFF,7,0.0
+640472,expCard16_x3,經驗值提升+93637878，職業經驗值提升+72101166。從320級開始可使用。,icon_item_expcard,,,,,,,,LV15 經驗值卡片(x3),0,0.0,0.0,FFFF,7,0.0
+640473,expCard17,經驗值提升+78031565，職業經驗值提升+60084305。從320級開始可使用。,icon_item_expcard,,,,,,,,LV16 經驗值卡片,0,0.0,0.0,FFFF,7,0.0
+640475,Potion_hero_selectbox,使用時可選擇清單中想要的道具。{nl} - 英雄支援箱：懲罰{nl} - 英雄支援箱：加護,icon_item_hero_adivse_select,,,,,,"[50103, 50104]",,英雄藥水選擇箱,0,0.0,0.0,FFFT,7,2.0
+640476,expCard15_Mine,提升經驗值13189741、職業經驗值10156100。300級至449級的角色可以使用。{nl}{#FF0000}* 450級以上角色無法使用。{/},icon_item_expcard,,,,,,,,[資源爭奪戰]LV14經驗值卡片,0,0.0,0.0,FFFF,7,0.0
+640477,expCard16_Mine,提升經驗值31212626、職業經驗值24033722。320級至449級的角色可以使用。{nl}{#FF0000}* 450級以上角色無法使用。{/},icon_item_expcard,,,,,,,,[資源爭奪戰]LV15經驗值卡片,0,0.0,0.0,FFFF,7,0.0
+640478,expCard17_Mine,提升經驗值78031565、職業經驗值60084305。350級至449級可以使用。{nl}{#FF0000}* 450級以上角色無法使用。{/},icon_item_expcard,,,,,,,,[資源爭奪戰]LV16經驗值卡片,0,0.0,0.0,FFFF,7,0.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,,,LV1 攻擊推進器,1,8.0,0.0,TTTT,7,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,,,攻擊推進器 +15,1,8.0,0.0,TTTT,7,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,攻擊推進器 +20,2,8.0,0.0,TTTT,7,1.0
@@ -788,7 +807,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641936,161215Event_OldChar,裝有拉伊瑪寶物的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_giftbox2,,,,,,,,拉伊瑪的寶箱,0,0.0,0.0,FFFF,7,0.0
 641937,CS_IndunReset_GTower_1,今天進入的大地之塔進場次數增加1次。,icon_item_indunfreeenter,,,,,,,,大地之塔入場劵(5天),0,0.0,432000.0,FFFF,7,0.0
 641938,CS_IndunReset_Nunnery_1,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,,,莎勒斯修女院入場劵(5天),0,5.0,432000.0,FFFF,7,0.0
-641939,Event_Goddess_Statue,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,,,女神的雕像(14天),0,0.0,1209600.0,FFFF,7,0.0
+641939,Event_Goddess_Statue,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,,,女神的雕像(14天),0,0.0,1209600.0,FFFT,7,0.0
 641940,CS_IndunReset_GTower_14d,可以進入大地之塔1次。,icon_item_key_earthtower,,,,,,,,大地之塔入場劵(14天),0,0.0,1209600.0,FFFF,7,0.0
 641941,CS_IndunReset_Nunnery_14d,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,,,莎勒斯修女院入場劵(14天),0,5.0,1209600.0,FFFF,7,0.0
 641942,Event_1704_SilverBox,使用時可以獲得任意的銀幣。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_silverbox1,,,,,,,,[活動]大發銀幣箱(限時),0,0.0,1209600.0,FFFF,9,0.0
@@ -814,8 +833,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641976,Event1907_guild_exp_up_lv1,令公會經驗值+100的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up1,,,,,,,,[活動]公會任務獎勵鑄幣：銅,0,0.0,0.0,FFFT,18,1.0
 641977,Event1907_guild_exp_up_lv2,令公會經驗值+200的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up2,,,,,,,,[活動]公會任務獎勵鑄幣：銀,0,0.0,0.0,FFFT,18,1.0
 641978,Event1907_guild_exp_up_lv3,令公會經驗值+400的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up3,,,,,,,,[活動]公會任務獎勵鑄幣：金,0,0.0,0.0,FFFT,18,1.0
-641983,Coupon_Reagent_Bottle_Expup_100,使用時，4小時內試劑瓶獲得的經驗值增為2倍。{nl}與相同效果的Buff不會重疊。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值累積量2倍券,0,0.0,0.0,FFFT,7,0.0
-641985,Coupon_Reagent_Bottle_Expup_100_Daily,使用時，4小時內試劑瓶獲得的經驗值增為2倍。{nl}與相同效果的Buff不會重疊。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值2倍券(14天),0,3.0,1209600.0,FFFT,7,0.0
+641983,Coupon_Reagent_Bottle_Expup_100,使用時4小時內進入試劑瓶的經驗值增加2倍。{nl}不會和有相同效果的Buff重覆套用。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值增加量2倍折扣劵,0,0.0,0.0,FFFT,7,0.0
+641984,abilitypoint_piece_1000,"收集100個後使用可獲得特性點數1,000。",icon_item_abilitypoint_piece,,,,,,,,"撕破的特性點數交換劵 1,000",0,0.0,0.0,FFFT,7,0.0
+641985,Coupon_Reagent_Bottle_Expup_100_Daily,使用時4小時內進入試劑瓶的經驗值增加2倍。{nl}不會和有相同效果的Buff重覆套用。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值增加量2倍折扣劵(14天),0,3.0,1209600.0,FFFT,7,0.0
 641986,PREMIUM_CHALLENG_PORTAL_Daily,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,1209600.0,FFFF,9,1.0
 642502,Gacha_EXP_001,使用時 LV2 ~ 10 經驗值卡片中可隨機獲得3張。,icon_item_quest_00017,,,,,,,,經驗值卡片箱子,0,0.0,0.0,FFFF,7,0.0
 642503,Gacha_Recipe_Wep,使用時可以在LV220武器製作圖中隨獲獲得1張。,icon_item_luckybox_red,,,,,,,,Lv220 製作書箱子 - 武器,0,0.0,0.0,FFFF,7,0.0
@@ -843,7 +863,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643008,Moru_Silver_NoDay,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,,,銀光鐵砧,0,0.0,0.0,FFFF,18,1.0
 643009,Moru_Event160929_14d,只有強化階段為0時可以使用，不會消耗強化費用，點擊滑鼠右鍵即可使用。,icon_item_anvil,,,,,,,,輕便鐵砧(14天),0,0.0,1209600.0,FFFF,18,1.0
 643010,Moru_Gold_14d,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,,,黃金鐵砧(14天),0,0.0,1209600.0,FFFF,18,1.0
-643014,Moru_Gold_TA_NR,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。強化時不需要銀幣。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。右擊滑鼠使用。,icon_item_anvil_gold,,,,,,,,發光的黃金鐵砧,0,0.0,0.0,TTTT,18,1.0
+643014,Moru_Gold_TA_NR,"""只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。強化時不需要銀幣。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。點擊滑鼠右鍵即可使用。{nl}可以透過發光的紅寶石鐵砧的材料使用。",icon_item_anvil_gold,,,,,,[9035],,發光的高級黃金鐵砧,0,0.0,0.0,TTTT,18,1.0
 643015,Moru_Gold_Team_Trade,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,,,黃金鐵砧,0,0.0,0.0,FFFT,18,1.0
 643017,Moru_Silver_DLC,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,,,銀光鐵砧,0,0.0,0.0,FFFT,18,1.0
 643020,Extract_kit,血晶萃取時使用的工具，可以跟戴利亞貝利斯購買。,icon_item_extractkit,,,,,,,,血晶萃取工具,600,0.0,0.0,FFTF,18,4.0
@@ -874,6 +894,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643053,event1909_Transcend_Scroll_5,讓裝備的超越數值提升至5階。{nl}只有0~4階超越道具可以使用，右點擊5超越卷軸後，選擇要超越的道具，就可以變更成5超越的狀態。,icon_item_transcendence_coupon,,,,,,,,[活動]5超越卷軸,0,0.0,0.0,FFFT,7,5.0
 643054,event1909_Transcend_Scroll_3,提升裝備的超越數值至3階段。{nl}只有0~2階段超越道具可以使用，右點擊3超越卷軸後，選擇要進行超越的道具，該道具會變更成3超越狀態。,icon_item_transcendence_coupon,,,,,,,,[活動]3超越卷軸,0,0.0,0.0,FFFT,7,5.0
 643055,Transcend_Scroll_10,讓裝備的超越數值提升至10階。{nl}只有0~9階超越道具可以使用，右點擊10超越卷軸後，選擇要超越的道具，就可以變更成10超越的狀態。{nl}只能使用在Lv 400以下裝備的超越卷軸。,item_icon_transcend_scroll_10,,,,,,,,[Lv.400] 10超越卷軸,0,0.0,0.0,FFFT,7,1.0
+643056,Moru_Ruby_Charge,只有潛力為0的裝備可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+16強化以上失敗時，強化數值會減少為+15。點擊滑鼠右鍵使用。,icon_item_ruby_moru,,,,,,,[9034],紅寶石鐵砧,0,0.0,0.0,FFFT,18,1.0
+643057,Moru_Ruby_14d_event,只有潛力為0的裝備可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+16強化以上失敗時，強化數值會減少為+15。點擊滑鼠右鍵使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_ruby_moru,,,,,,,,[活動]紅寶石鐵砧(14天),0,0.0,1209600.0,FFFT,18,1.0
+643058,Transcend_Scroll_10_PC_430,讓裝備的超越數值提升至10階。{nl}只有0~9階超越道具可以使用，右點擊10超越卷軸後，選擇要超越的道具，就可以變更成10超越狀態。{nl}只有Lv 430以下道具可使用超越卷軸。,item_icon_transcend_scroll_10,,,,,,,,[網咖] Lv.430 10超越卷軸,0,0.0,0.0,TFFT,7,1.0
 645002,D_Bube_Mane,可以從長時間暴露於水晶的布貝身上獲得的黑暗魔石。,icon_item_evilenergy_piece,,,,,,,,布貝魔石,4,0.0,0.0,TTTT,24,0.0
 645024,leaf_hanaming,散發出甜蜜香味的花瓣，可以從粉紅小花怪身上獲得。,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,粉紅小花怪花瓣,1,0.0,0.0,TTTT,18,1.0
 645025,TreasureboxKey2,開啟寶箱 LV 2所使用的鑰匙,icon_item_key1,,,,,,,,LV2 寶箱鑰匙,0,0.0,0.0,FFTF,18,1.0
@@ -1232,7 +1255,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645517,misc_yonazolem_Q1,可以從拉姆斯堤斯峽谷的約納喬雷身上獲得。,icon_item_misc_00005,,,,,,"[30144, 30145, 30146]",,約納喬雷破片,2,0.0,0.0,FFTF,18,1.0
 645518,misc_Denoptic,可以從長橋溪谷的巨眼丹提身上獲得。,icon_item_velorb,,,,,,"[30144, 30145, 30146]",,巨眼丹提的眼睛,2,0.0,0.0,FFTF,18,1.0
 645519,misc_Confinedion,可以從阿克梅斯山脊的巨魔蠍身上獲得。,icon_item_claw_01,,,,,,"[30144, 30145, 30146]",,巨魔蠍鉤子,2,0.0,0.0,FFTF,18,1.0
-645520,misc_gemExpStone01,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：3000,icon_item_powderp,,,,,,,,寶石研磨劑：3000,20,0.0,0.0,FFTF,18,1.0
+645520,misc_gemExpStone01,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：3,000",icon_item_powderp,,,,,,,,"寶石研磨劑：3,000",20,0.0,0.0,FFTF,18,1.0
 645521,misc_BRC03_105_1,可以從王陵2層的墓主洛德身上獲得。,icon_item_chain,,,,,,[34031],,墓主洛德鎖鏈,2,0.0,0.0,FFTF,18,1.0
 645522,misc_BRC03_105_2,可以從王陵4層的貝亞卡拉斯身上獲得。,icon_item_statuepiece,,,,,,[34031],,貝亞卡拉斯破片,2,0.0,0.0,FFTF,18,1.0
 645523,misc_BRC03_105_3,可以從王陵5層的雷克西波身上獲得。,icon_item_spirit_brown,,,,,,,,雷克西波的邪念體,2,0.0,0.0,FFTF,18,1.0
@@ -1315,7 +1338,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645605,misc_wire,非常細，如果不仔細看會找不到。,icon_item_wire,,,,,,,,鋼絲,64,0.0,0.0,FFTF,18,0.2
 645606,misc_spacepiece,時空間扭曲時發現的神秘結晶。,icon_item_timespace,,,,,,,,時間的結晶,400,0.0,0.0,FFTF,18,0.5
 645607,wood_05,加工過的木材。被用來做製作道具的材料。,icon_item_wood_1,,,,,,,,橡木,4,0.0,0.0,FFTF,18,1.0
-645608,misc_gemExpStone02,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：15500,icon_item_powderp,,,,,,,,寶石研磨劑：15500,20,0.0,0.0,FFTF,18,1.0
+645608,misc_gemExpStone02,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：15,500",icon_item_powderp,,,,,,,,"寶石研磨劑：15,500",20,0.0,0.0,FFTF,18,1.0
 645609,misc_Marionette,好像是用在複雜的機械上的齒輪，可以從路克索那重建團西館的提線木偶身上獲得。,icon_item_gele_gear_01,,,,,,"[30369, 30370, 30373, 30374, 30377, 30378]",,複雜的齒輪,2000,0.0,0.0,TTTT,18,1.0
 645610,misc_durahan,圖拉漢盔甲破片，可以從路克索那重建團東館的圖拉漢身上獲得。,icon_item_formine_armor_scapular,,,,,,"[30379, 30380]",,圖拉漢盔甲破片,2000,0.0,0.0,TTTT,18,1.0
 645611,misc_anchor,沉重的廢鐵塊，可以從鐵錨中獲得。,icon_item_ironbar03_s,[642107],,,,,"[12084, 14071, 19015, 30377, 30379, 30380]",,錨,2,0.0,0.0,TTTT,18,1.0
@@ -1341,13 +1364,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645631,card_Xpupkit01,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升2000。,monster_card,,,,,,,,強化用卡片 Lv1,2000,0.0,0.0,FFTF,18,1.0
 645632,misc_paperBox_party,需要關心的時候，請使用。,icon_item_paperbox,,,,,,,,紙箱,20,1.0,0.0,TTTT,7,1.0
 645633,PILGRIM_36_2_SQ_090_ITEM_2,凱泰斯認真研究所留下的研究資料，凱泰斯的任務結束之後，點擊右鍵可以消耗掉。,icon_item_paper,,,,,,,,凱泰斯的研究資料,1,0.0,0.0,FFFF,24,0.0
-645634,misc_gemExpStone03,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：31000,icon_item_powderp,,"[642909, 642913, 642921, 642922]",,,,,,寶石研磨劑：31000,20,0.0,0.0,FFTF,18,1.0
-645635,misc_gemExpStone04,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：62000,icon_item_powderp,,,,,,,,寶石研磨劑：62000,20,0.0,0.0,FFTF,18,1.0
-645636,misc_gemExpStone05,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：124000,icon_item_powderp,,,,,,,,寶石研磨劑：124000,20,0.0,0.0,FFTF,18,1.0
+645634,misc_gemExpStone03,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：31,000",icon_item_powderp,,"[642909, 642913, 642921, 642922]",,,,,,"寶石研磨劑：31,000",20,0.0,0.0,FFTF,18,1.0
+645635,misc_gemExpStone04,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：62,000",icon_item_powderp,,,,,,,,"寶石研磨劑：62,000",20,0.0,0.0,FFTF,18,1.0
+645636,misc_gemExpStone05,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：124,000",icon_item_powderp,,,,,,,,"寶石研磨劑：124,000",20,0.0,0.0,FFTF,18,1.0
 645637,misc_gemExpStone_randomQuest1,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：300,icon_item_powderp,,,,,,,,2星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
-645638,misc_gemExpStone_randomQuest2,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1200,icon_item_powderp,,,,,,,,3星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
-645639,misc_gemExpStone_randomQuest3,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：3900,icon_item_powderp,,,,,,,,4星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
-645640,misc_gemExpStone_randomQuest4,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,,,5星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
+645638,misc_gemExpStone_randomQuest2,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1,200",icon_item_powderp,,,,,,,,3星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
+645639,misc_gemExpStone_randomQuest3,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：3,900",icon_item_powderp,,,,,,,,4星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
+645640,misc_gemExpStone_randomQuest4,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,5星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
 645641,misc_Chafperor,可以從切波勒身上獲得。,icon_item_shell_purple,,,,,,"[15084, 16089, 17069, 18025, 18055, 31036, 31056]",,切波勒的外殼,2,0.0,0.0,TTTT,18,1.0
 645642,misc_Socket,頭上冒出的角，可以從蘇凱身上獲得。,icon_item_pantohorn,"[642162, 642179]",,,,,"[33029, 34026, 38006]",,蘇凱的角,6,0.0,0.0,TTTT,18,1.0
 645643,misc_ticen_mage,具有微弱魔力的青苔，可以從堤肯魔法師身上獲得。,icon_item_grassbladeb,,,,,,[16071],,魔法青苔,1,0.0,0.0,TTTT,18,1.0
@@ -1472,8 +1495,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645762,misc_earthTower10_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,高薩利烏斯的精髓,0,0.0,0.0,FFTT,18,0.0
 645763,misc_earthTower15_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,吐勒塔伊的精髓,0,0.0,0.0,FFTT,18,0.0
 645764,misc_earthTower20_boss,在大地之塔的羅洛班索區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,級別的精髓,0,0.0,0.0,FFTT,18,0.0
-645765,misc_gemExpStone09,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,,,7星寶石研磨劑,0,0.0,0.0,FFFF,18,1.0
-645766,misc_gemExpStone10,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,,,8星寶石研磨劑,0,0.0,0.0,FFFF,18,1.0
+645765,misc_gemExpStone09,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230,700",icon_item_powderp,,,,,,,,7星寶石研磨劑,0,0.0,0.0,FFFF,18,1.0
+645766,misc_gemExpStone10,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1,094,700",icon_item_powderp,,,,,,,,8星寶石研磨劑,0,0.0,0.0,FFFF,18,1.0
 645768,misc_awakeningStone1_test,可以讓道具覺醒，不會減少裝備的潛能。道具使用期限為1分鐘，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_awakeningstone,,,,,,,,[活動]覺醒石(限1分鐘),6,0.0,60.0,FFFF,18,1.0
 645769,misc_earthTower_2,在大地之塔的索爾米奇區間可以獲得。,icon_item_gem_stone_int,,,,,,,,LV2 大地的碎片,0,0.0,0.0,FFTT,18,0.0
 645770,misc_earthTower25_boss,在大地之塔的索爾米奇區間可以獲得。,33_item_ore_lapis_lazuli,,,,,,,,諾溫的精髓,0,0.0,0.0,FFTT,18,0.0
@@ -1489,7 +1512,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645780,Premium_itemUpgradeStone_Acc,蘊藏女神祝福的石頭，使用時會讓飾品的效能更好。,icon_item_transcendence_blue,,,,,,,,女神祝福石：飾品,0,0.0,0.0,TTTT,18,0.0
 645781,Premium_itemDissassembleStone,據說具有觸碰就分解物品力量的神秘槌子，不知道神秘力量是否已耗盡，無法運作。,icon_item_farm47_wood_hammer,,,,,,,,分解之槌,0,0.0,0.0,TTTT,18,0.0
 645782,Premium_deleteTranscendStone,據說到處冒出的針吸收了周圍的魔力，現在對魔力沒有反應。,icon_item_spellneedle,,,,,,,,魔力吸收針,0,0.0,0.0,TTTT,18,0.0
-645783,misc_BlessedStone,可成為特殊道具材料的石頭。,icon_item_gem_elemental1,,,,,,"[9018, 40068, 40069, 40070, 40071, 40072, 40073, 40074, 40075, 40076, 40077]",,受祝福的碎片,0,0.0,0.0,TTTT,18,0.0
+645783,misc_BlessedStone,可成為特殊道具材料的石頭。,icon_item_gem_elemental1,,[642939],,,,"[9018, 40068, 40069, 40070, 40071, 40072, 40073, 40074, 40075, 40076, 40077]",,受祝福的碎片,0,0.0,0.0,TTTT,18,0.0
 645801,misc_0280,發出黑色光芒的塊狀物。無法判斷這東西的是由甚麼組成的。,icon_item_ironbar03_s,,,,,,"[10094, 11083, 16088]",,黑色塊狀物,2,0.0,0.0,TTTT,18,1.0
 645802,misc_0281,發出黃色光芒的塊狀物。乍看之下還以為是金塊。,icon_item_ironbar01_s,,,,,,"[12086, 17068, 18054]",,黃色塊狀物,2,0.0,0.0,TTTT,18,1.0
 645803,misc_0282,不確定是甚麼禽獸的皮革，搞不好根本不是皮革。,icon_item_misc_00007,,,,,,"[13087, 15083, 19020, 21005]",,未知的皮革,2,0.0,0.0,TTTT,18,1.0
@@ -1614,9 +1637,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645922,misc_talt_event,從怪物身上發現的來歷不明寶石，因為神秘色澤，讓收藏者趨之若鶩。使用於讓公會成長。,30_item_ore_talt,,,,,,,,[活動]塔特,9,0.0,0.0,FFFF,18,10.0
 645923,misc_emptySpellBook,空白的魔法書，用特定技能寫上咒文的話，就能使用該技能。,icon_item_emptyspellbook,,,,,,,,空白魔法書,40,0.0,0.0,FFTF,18,1.0
 645924,misc_brokenwheel,材質的重量比想像中重，傳說是能暫時叫來在其他地方的輪的石頭。,icon_item_brokenwheel,,,,,,,,審判之輪,40,0.0,0.0,FFTF,18,1.0
-645925,misc_gemExpStone_randomQuest3_14d,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：3900,icon_item_powderp,,,,,,,,4星寶石研磨劑：14天,20,0.0,1209600.0,FFFF,18,1.0
-645926,misc_gemExpStone_randomQuest4_14d,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFF,18,1.0
-645927,misc_gemExpStone_randomQuest5,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：57900,icon_item_powderp,,,,,,,,6星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
+645925,misc_gemExpStone_randomQuest3_14d,"使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：3,900",icon_item_powderp,,,,,,,,4星寶石研磨劑：14天,20,0.0,1209600.0,FFFF,18,1.0
+645926,misc_gemExpStone_randomQuest4_14d,"使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFF,18,1.0
+645927,misc_gemExpStone_randomQuest5,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：57,900",icon_item_powderp,,,,,,,,6星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
 645928,misc_0395,怪物材料，使用於製作道具。,icon_item_misc04_20,[642182],,,,,,,羅德那康的果實,9,0.0,0.0,TTTT,18,1.0
 645929,misc_0396,怪物材料，使用於製作道具。,icon_item_misc04_21,[642182],,,,,,,羅德內克的刺莖,9,0.0,0.0,TTTT,18,1.0
 645930,misc_0397,怪物材料，使用於製作道具。,icon_item_misc04_28,[642182],,,,,,,羅德塔特的果實,9,0.0,0.0,TTTT,18,1.0
@@ -1730,12 +1753,12 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 646038,misc_0505,怪物材料，使用於製作道具。,icon_item_misc04_73,[642206],,,,,"[12089, 400004, 400020]",,摩寧鳥的尾巴,9,0.0,0.0,TTTT,18,1.0
 646039,misc_0506,怪物材料，使用於製作道具。,icon_item_misc04_74,[642206],,,,,"[14091, 40036, 400005, 400011, 400021, 400027]",,摩寧鳥完整的翅膀,9,0.0,0.0,TTTT,18,1.0
 646040,misc_scrollskulp,無法正確得知用於何處的紙碎片，隱約可看見紙上有特別的線。,icon_item_flag_hohen,,,,,,[3031],,撕碎的紙碎片,9,0.0,0.0,FFFF,18,1.0
-646041,misc_gemExpStone09_TA,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,,,發光的7星寶石研磨劑,0,0.0,0.0,TTTT,18,1.0
-646042,misc_gemExpStone10_TA,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,,,發光的8星寶石研磨劑,0,0.0,0.0,TTTT,18,1.0
+646041,misc_gemExpStone09_TA,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230,700",icon_item_powderp,,,,,,,,發光的7星寶石研磨劑,0,0.0,0.0,TTTT,18,1.0
+646042,misc_gemExpStone10_TA,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1,094,700",icon_item_powderp,,,,,,,,發光的8星寶石研磨劑,0,0.0,0.0,TTTT,18,1.0
 646043,card_Xpupkit01_500,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升500。,monster_card,,,,,,,,強化用卡片 : 500,2000,0.0,0.0,TTTT,18,1.0
 646044,misc_0507,放大鏡的製作技術不夠成熟，導致耐久度低落。進行一次鑑定會需要很多支放大鏡。,icon_item_misc_0507,,,,,,,,鑑定用放大鏡,25,0.0,0.0,FFTF,18,1.0
-646045,Premium_item_transcendence_Stone,含有女神祝福的石頭。可提升所有種類道具的功能。,icon_item_transcendence_stone,,,,,,[9025],[9018],女神的祝福石,0,0.0,0.0,TTTT,18,0.0
-646046,misc_gemExpStone07_TA,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：145340,icon_item_powderp,,,,,,,,發光的寶石研磨劑：145340,0,0.0,0.0,TTTT,18,1.0
+646045,Premium_item_transcendence_Stone,含有女神祝福的石頭。可提升所有種類道具的功能。,icon_item_transcendence_stone,,,,,,"[9025, 9034, 50094, 50095, 50096, 50097, 50098, 50099]",[9018],女神的祝福石,0,0.0,0.0,TTTT,18,0.0
+646046,misc_gemExpStone07_TA,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：145,340",icon_item_powderp,,,,,,,,"發光的寶石研磨劑：145,340",0,0.0,0.0,TTTT,18,1.0
 646047,Team_Bat_Card_01,使用於卡片強化時可獲得 +300的經驗值。,monster_card,,,,,,,,強化用卡片 : 300(隊伍戰鬥聯盟獎勵),0,0.0,0.0,FFFT,18,1.0
 646048,Exp_Card_300,使用於卡片強化時可獲得 +300的經驗值。,monster_card,,,,,,,,強化用卡片 : 300,0,0.0,0.0,FFFT,18,1.0
 646049,PVP_Misc_1,紀念領地戰勝利的鑄幣。,icon_item_coin_colony_01,,,,,,,,領地戰紀念鑄幣,100000,0.0,0.0,FFTT,18,1.0
@@ -1783,31 +1806,33 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647008,misc_0527,怪物材料，使用於製作道具。,icon_item_misc_0527,,,,,,"[50011, 50025, 50027, 50031, 400058, 400060, 400062, 400063]",,尼柯波爾利斯貝拉因,25,0.0,0.0,TTTT,18,1.0
 647009,misc_0528,怪物材料，使用於製作道具。,icon_item_misc_0529,,,,,,"[30569, 30571, 30573, 50004, 50018, 50020, 50022, 400037, 400038, 400039, 400040]",,皇家之劍破片,25,0.0,0.0,TTTT,18,1.0
 647010,misc_0529,哈希什藥水，服用後可以短暫提升身體能力。,icon_item_misc04_112,,,,,,,,哈希什藥水,25,0.0,0.0,FFFF,18,1.0
-647011,misc_0530,使用於高級裝備製作及印章強化上的稀有材料。.,icon_item_misc_misc_0530,,,,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089, 34090, 34091, 34092, 34093]",,魔晶石,25,0.0,0.0,TTTT,18,1.0
-647012,misc_gemExpStone_randomQuest4_14d_Team,使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFT,18,1.0
+647011,misc_0530,使用於高級裝備製作及印章強化上的稀有材料。.,icon_item_misc_misc_0530,,"[642939, 642953]",,,,"[34082, 34083, 34084, 34085, 34086, 34087, 34088, 34089, 34090, 34091, 34092, 34093]",,魔晶石,25,0.0,0.0,TTTT,18,1.0
+647012,misc_gemExpStone_randomQuest4_14d_Team,"使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFT,18,1.0
 647013,PVP_Misc_1_KOR_Reward,紀念領地戰勝利的鑄幣{nl}取代領地戰市場稅金獎勵所發送的道具。{nl}活動結束時統一刪除。,icon_item_coin_colony_01,,,,,,,,領地戰紀念鑄幣[獎勵用],100000,0.0,0.0,FFTT,18,1.0
 647014,misc_0531,怪物材料，使用於製作道具。,icon_item_iredian_misc01,,,,,,"[34090, 34091, 34092, 34093]",,伊雷迪安胸針,0,0.0,0.0,TTTT,18,1.0
 647015,misc_0532,怪物材料，使用於製作道具。,icon_item_iredian_misc02,,,,,,"[34090, 34091, 34092, 34093]",,伊雷迪安水晶碎片,0,0.0,0.0,TTTT,18,1.0
 647016,misc_0533,可以和柯拉佩達[巴伊寶拉之翼]雷那兌換有用的道具。,icon_item_wingcoin,,,,,,,,巴伊寶拉之翼鑄幣,0,0.0,0.0,FFFT,18,1.0
-647017,misc_gemExpStone10_Premium,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1094700,icon_item_powderp,,,,,,,,發光的8星寶石研磨劑,0,0.0,0.0,TTFT,18,1.0
+647017,misc_gemExpStone10_Premium,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1,094,700",icon_item_powderp,,,,,,,,發光的8星寶石研磨劑,0,0.0,0.0,TTFT,18,1.0
 647018,widnium_piece_Premium,聽說這是透過凱都拉商拉從很遠很遠的地方帶進來的珍貴礦物。{nl}傳聞說就算手上持有這個礦物，它也自動回到它原來的地方。{nl}佩迪米安的戴利亞貝利斯聽了傳聞想要研究急著找這個礦石。{nl}如果把這個礦石轉交給戴利亞貝利斯'鑽石鐵砧(14天)'可以交換1個。{nl}此道具活動結束時統一刪除。,icon_item_widnium_piece,,,,,,,,威德礦石碎片,0,0.0,0.0,FFFF,18,1.0
 647019,misc_bernice_coin,貝勒尼凱碎片的副本獎勵道具。可以向神諭師大師兌換道具。,icon_item_bernice_coin,,,,,,,,貝勒尼凱碎片鑄幣,1,0.0,0.0,FFFT,18,0.0
 647020,misc_0534,裝著各種急救藥品的箱子。,icon_item_first_aid_kit,,,,,,,,急救箱,5,0.0,0.0,FFTF,18,0.1
 647023,Abrasive_400,使用覺醒研磨石覺醒後，可以獲得更高的屬性。,icon_item_awakemisc01,,,,,,,,Lv.400 覺醒研磨石,5,0.0,0.0,FFFT,18,1.0
-647024,misc_Planium,可以在低階怪物身上以低機率獲得的材料。佩迪米安的戴利亞貝利斯可以將它們做成裝備。,icon_item_legend_misc01,,,,,,"[9032, 9033]",,弗萊礦石,5,0.0,0.0,TFTT,18,1.0
+647024,misc_Planium,可以在低階怪物身上以低機率獲得的材料。佩迪米安的戴利亞貝利斯可以將它們做成裝備。,icon_item_legend_misc01,,,,,,"[9032, 9033]",,弗萊礦石,5,0.0,0.0,TFTT,16,1.0
 647025,misc_lensterseum,代表著光輝的礦石，沒有人知道它的來歷。只知道它散發出耀眼的光芒並濃縮成一塊。,icon_item_misc_white,,,,,,,,雷恩斯特礦,5,0.0,0.0,FFTT,18,1.0
 647026,misc_riperium,代表著腐敗的礦石，它的來歷在某天的意外被得知。這種礦物從倒塌的地方噴發出來，那股氣流使周圍的所有事物腐敗、老化。,icon_item_misc_black,,,,,,,,利佩里礦,5,0.0,0.0,FFTT,18,1.0
 647027,misc_0535,楓葉上含有的露水很奇特。不知道產生了何種變化，讓人感覺到絕對不容忽視的氣息。,icon_item_misc_0530,,,,,,"[30602, 30703, 30801, 50032, 50040, 50041, 50045, 50052, 50055, 50060, 50062]",,發光的紅楓葉,5,0.0,0.0,TTTT,18,15.0
 647028,misc_0536,純白的波斯菊常常被作為藥材使用。,icon_item_misc_0531,,,,,,"[30601, 30702, 30804, 50033, 50036, 50042, 50047, 50053, 50054, 50059, 50065]",,純白波斯菊,5,0.0,0.0,TTTT,18,15.0
-647029,misc_0537,將這種藥草作為藥材有問題。,icon_item_misc_0532,,,,,,"[30603, 30704, 30802, 50034, 50035, 50037, 50039, 50048, 50050, 50051, 50056, 50061, 50063]",,紫色薰衣草,5,0.0,0.0,TTTT,18,15.0
+647029,misc_0537,將這種藥草作為藥材有問題。,icon_item_misc_0532,,,,,,"[30603, 30704, 30802, 50034, 50035, 50037, 50039, 50048, 50050, 50051, 50056, 50061, 50063, 50102]",,紫色薰衣草,5,0.0,0.0,TTTT,18,15.0
 647030,misc_0538,不同於鬱金香花的朝氣蓬勃，它的莖部是死氣沉沉的。,icon_item_misc_0533,,,,,,"[30604, 30701, 30803, 50038, 50043, 50044, 50046, 50049, 50057, 50058, 50064]",,鮮紅鬱金香,5,0.0,0.0,TTTT,18,15.0
-647031,misc_0539,用圓形金色外框裝飾的圖案。雖然用途和經歷未知，卻帶有豐富的力量。,icon_item_misc_0536,,,,,,"[30601, 30602, 30603, 30604, 50034, 50035, 50037, 50039, 50042, 50044, 50048, 50050, 50051, 50053, 50054, 50055, 50056, 50057]",,圓形金色圖案,5,0.0,0.0,TTTT,18,30.0
+647031,misc_0539,用圓形金色外框裝飾的圖案。雖然用途和經歷未知，卻帶有豐富的力量。,icon_item_misc_0536,,,,,,"[30601, 30602, 30603, 30604, 50034, 50035, 50037, 50039, 50042, 50044, 50048, 50050, 50051, 50053, 50054, 50055, 50056, 50057, 50102]",,圓形金色圖案,5,0.0,0.0,TTTT,18,30.0
 647032,misc_0540,用金色外框裝飾的圖案。雖然用途和經歷未知，卻帶有豐富的力量。,icon_item_misc_0534,,,,,,"[30801, 30802, 30803, 30804, 50033, 50036, 50043, 50045, 50047, 50052, 50062, 50063, 50064, 50065]",,完成的金色圖案,5,0.0,0.0,TTTT,18,30.0
 647033,misc_0541,被打破的圖案帶有和原先的圖案不同的力量。說不定那種金色礦物的排列會賦予不同的力量。,icon_item_misc_0535,,,,,,"[30701, 30702, 30703, 30704, 50032, 50038, 50040, 50041, 50046, 50049, 50058, 50059, 50060, 50061]",,破碎的圖案碎片,5,0.0,0.0,TTTT,18,30.0
-647034,misc_0542,[活動] 成長的寶石，活動結束統一刪除。,icon_item_crimson2,,,,,,,,[活動] 成長的寶石,5,0.0,0.0,FFFF,18,0.1
+647034,misc_0542,[活動] 成長的寶石。活動結束時統一刪除。,icon_item_crimson2,,,,,,,,[活動] 成長的寶石,5,0.0,0.0,FFFF,18,0.1
 647035,misc_0543,紀念[Episode11]改版的探險的幼苗鑄幣。 活動結束時道具統一刪除。{nl} {nl}可以在探險的幼苗商店內使用。,item_icon_sprout,,,,,,,,[Episode11] 探險的幼苗,5,0.0,0.0,FFFT,18,0.1
 647036,misc_0544,為紀念小樹活動，以波波小獅王的模樣為樣本所打造的徽章。{nl}6月27日會刪除。{nl}在小樹活動商店中可使用。,icon_item_1905_popolion_badge,,,,,,,,[活動] 波波小獅王徽章,5,0.0,0.0,FFFT,18,0.1
 647037,EQUIP_RENTAL_POINT,用來購買PVP專用期間制裝備道具的鑄幣，可在租賃商店使用。{nl}該鑄幣在離開地圖時會被刪除。,icon_item_pvpmine_2,,,,,,,,戰鬥點數鑄幣,0,0.0,0.0,FFFT,18,0.0
+647039,card_Xpupkit01_500_Notrade,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升500。,monster_card,,,,,,,,強化用卡片 : 500,2000,0.0,0.0,FFFF,18,1.0
+647040,Abrasive_430,使用覺醒研磨石覺醒後，可以獲得更高的屬性。,icon_item_awakemisc01,,,,,,,,Lv.430 覺醒研磨石,5,0.0,0.0,FFFT,18,1.0
 648501,emoticonItem_1,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1071, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,表情符號：凱帕(高興),0,0.0,0.0,FFFF,7,1.0
 648502,emoticonItem_2,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1201, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,表情符號：凱帕(悲傷),0,0.0,0.0,FFFF,7,1.0
 648503,kupole_emotion01,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：奎波爾(賣萌),0,0.0,0.0,FFFT,7,1.0
@@ -1822,7 +1847,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649001,misc_ore02,常見的礦石。,2_item_ore_iron,[642002],,,,,"[9003, 11036, 11037, 12024, 12036, 12037, 13038, 13039, 14026, 14032, 14039, 14040, 15035, 15036, 16025, 16038, 16039, 34007]",,鐵礦石,10,0.0,0.0,TTTT,18,1.0
 649002,misc_ore03,比鐵更堅硬的礦石。,3_item_ore_steel,[642002],,,,,"[31013, 35035]",,鋼鐵礦石,10,0.0,0.0,TTTT,18,1.0
 649003,misc_ore04,堅硬又輕巧的礦石。,4_item_ore_titanum,[642002],,,,,"[17016, 17021]",,鈦礦石,10,0.0,0.0,TTTT,18,1.0
-649004,misc_ore05,發光的銀色礦物，充滿魔力，被使用於製造強力裝備。,13_item_mythril,,"[642902, 642903, 642911, 642920, 642921, 642922]",,,,"[9027, 9028, 11024, 12069, 14023, 15022, 15062, 15066, 16021, 16071, 17023, 17066, 18034, 19007, 19011, 19018, 31021, 30563, 30566, 30567, 30569, 30571, 30573, 32009, 32010, 33025, 33028, 33063, 33067, 34027, 40034, 50000, 50002, 50004, 50006, 50008, 50010, 50012, 50015, 50016, 50018, 50020, 50022, 50024, 50026, 50028, 50030, 50066, 50067, 50068, 50069, 50070, 50071, 50072, 50073, 50074, 50075, 50076, 50077, 50078, 50079, 50080, 50081, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047]",,祕銀礦石,10,0.0,0.0,TTTT,18,1.0
+649004,misc_ore05,發光的銀色礦物，充滿魔力，被使用於製造強力裝備。,13_item_mythril,,"[642902, 642903, 642911, 642920, 642921, 642922]",,,,"[9027, 9028, 11024, 12069, 14023, 15022, 15062, 15066, 16021, 16071, 17023, 17066, 18034, 19007, 19011, 19018, 31021, 30563, 30566, 30567, 30569, 30571, 30573, 32009, 32010, 33025, 33028, 33063, 33067, 34027, 40034, 50000, 50002, 50004, 50006, 50008, 50010, 50012, 50015, 50016, 50018, 50020, 50022, 50024, 50026, 50028, 50030, 50066, 50067, 50068, 50069, 50070, 50071, 50072, 50073, 50074, 50075, 50076, 50077, 50078, 50079, 50080, 50081, 50101, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047]",,祕銀礦石,10,0.0,0.0,TTTT,18,1.0
 649005,misc_ore06,礦石,9_item_ore_orichalcon,,,,,,,,黃銅礦石,10,0.0,0.0,TTTT,18,1.0
 649006,misc_ore07,建國初期如果沒有獲得女神的恩賜就無法挖到的珍貴寶石，但現在採掘已沒有那麼困難了。,9_item_ore_orichalcon,[642002],,,,,"[14021, 31018, 33076, 33077, 33078, 33079, 34058]",,伊西汀礦石,2000,0.0,0.0,TTTT,18,1.0
 649007,misc_ore08,可以從寇利羅斯身上獲得。,1_item_ore_copper,"[642033, 642127]",,,,,,,柱石,155,0.0,0.0,TTTT,18,1.0
@@ -1832,19 +1857,20 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649011,misc_ore12,此礦石的特徵是會發出淡淡的金色光芒，可以從怪物身上取得，被當作道具的材料使用。,20_item_ore_tachyum,,,,,,"[10096, 11085, 12087, 12088, 13088, 13089, 14090, 15085, 16090, 17070, 18060, 19021, 19022, 20009, 20010, 20011, 21006, 21007, 31057, 32014, 32016, 33066, 34059, 34060, 37010, 37011, 40035]",,帕勒礦石,2,0.0,0.0,TTTT,18,1.0
 649012,misc_ore13,發出紅光的結晶。,icon_item_crystal_red,,[642928],,,,"[30547, 30549]",,朱紅結晶,2,0.0,0.0,TTTT,18,1.0
 649013,misc_ore14,發出黃光的結晶。,icon_item_crystal_yellow,,[642928],,,,"[30548, 30550]",,金黃結晶,2,0.0,0.0,TTTT,18,1.0
-649014,misc_ore15,發出紫色光芒的結晶。,icon_item_crystal_high,,"[642927, 642931, 642929, 642934, 642948]",,,,"[10096, 10097, 10098, 11085, 11086, 11087, 12088, 12089, 12090, 13089, 13090, 13091, 14090, 14091, 14092, 15085, 15086, 15087, 16090, 16091, 16092, 17070, 17071, 17072, 18060, 18061, 18062, 19022, 19023, 19024, 20011, 20012, 20013, 21007, 21008, 21009, 31057, 31058, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 30601, 30602, 30603, 30604, 30701, 30702, 30703, 30704, 30801, 30802, 30803, 30804, 32014, 32015, 32016, 32017, 37011, 37012, 37013, 40019, 40020, 40021, 40022, 40023, 40024, 40025, 40026, 40027, 40028, 40029, 40030, 40031, 40032, 40033, 40035, 40036, 40038, 40040, 40052, 40053, 40054, 40055, 40056, 40057, 40058, 40059, 40060, 40061, 40062, 40063, 40064, 40065, 40066, 40067, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 50032, 50033, 50034, 50035, 50036, 50037, 50038, 50039, 50040, 50041, 50042, 50043, 50044, 50045, 50046, 50047, 50048, 50049, 50050, 50051, 50052, 50053, 50054, 50055, 50056, 50057, 50058, 50059, 50060, 50061, 50062, 50063, 50064, 50065, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,艷紫結晶,2,0.0,0.0,TTTT,18,1.0
+649014,misc_ore15,發出紫色光芒的結晶。,icon_item_crystal_high,,"[642927, 642931, 642929, 642934, 642948]",,,,"[10096, 10097, 10098, 11085, 11086, 11087, 12088, 12089, 12090, 13089, 13090, 13091, 14090, 14091, 14092, 15085, 15086, 15087, 16090, 16091, 16092, 17070, 17071, 17072, 18060, 18061, 18062, 19022, 19023, 19024, 20011, 20012, 20013, 21007, 21008, 21009, 31057, 31058, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 30601, 30602, 30603, 30604, 30701, 30702, 30703, 30704, 30801, 30802, 30803, 30804, 32014, 32015, 32016, 32017, 37011, 37012, 37013, 40019, 40020, 40021, 40022, 40023, 40024, 40025, 40026, 40027, 40028, 40029, 40030, 40031, 40032, 40033, 40035, 40036, 40038, 40040, 40052, 40053, 40054, 40055, 40056, 40057, 40058, 40059, 40060, 40061, 40062, 40063, 40064, 40065, 40066, 40067, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 50032, 50033, 50034, 50035, 50036, 50037, 50038, 50039, 50040, 50041, 50042, 50043, 50044, 50045, 50046, 50047, 50048, 50049, 50050, 50051, 50052, 50053, 50054, 50055, 50056, 50057, 50058, 50059, 50060, 50061, 50062, 50063, 50064, 50065, 50102, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,艷紫結晶,2,0.0,0.0,TTTT,18,1.0
 649015,misc_ore16,紫色魔方形狀的結晶。,18_item_plantite,,"[642924, 642923, 642925]",,,,"[10097, 11086, 12089, 13090, 14091, 15086, 16091, 17071, 18061, 19023, 20012, 21008, 31058, 32015, 37012, 40001, 40002, 40003, 40004, 40005, 40006, 40007, 40008, 40009, 40010, 40011, 40012, 40013, 40014, 40017, 40036, 40037, 400000, 400001, 400002, 400003, 400004, 400005, 400006, 400007, 400008, 400009, 400010, 400011, 400012, 400013, 400014, 400015, 400016, 400017, 400018, 400019, 400020, 400021, 400022, 400023, 400024, 400025, 400026, 400027, 400028, 400029, 400030, 400031]",,紫色魔方結晶,2,0.0,0.0,TTTT,18,1.0
 649016,misc_ore17,一開始很多人誤認為這是如鐵一樣型態的礦物，後來發現這個礦石具有不同的性質，被用在特殊的地方。,8_item_ore_platinum,,,,,,[3030],,亞西圖姆礦石,2,0.0,0.0,FFFF,18,0.0
 649017,misc_ore18,不祥的氣息盤旋的靈魂破片。據說有種裝備是以這種破片當作材料。,icon_item_misc_dust,,,,,,"[33072, 33073, 33074, 33075, 34065, 34066, 34067, 34068]",,不祥的靈魂破片,2,0.0,0.0,TTTT,18,0.0
 649018,misc_ore19,不祥的氣息盤旋的靈魂碎石。據說有種裝備是以這種碎石當作材料。,icon_item_misc_rubble,,,,,,"[33072, 33073, 33074, 33075, 34065, 34066, 34067, 34068]",,不祥的靈魂碎石,2,0.0,0.0,TTTT,18,0.0
 649019,misc_ore20,不祥的氣息盤旋的靈魂結晶。據說有種裝備是以這種結晶當作材料。,icon_item_misc_bosspiece,,,,,,"[33076, 33077, 33078, 33079, 40034]",,不祥的靈魂結晶,2,0.0,0.0,TTTT,18,0.0
 649020,misc_ore21,不祥的氣息盤旋的靈魂水晶。據說有種裝備是以這種水晶當作材料。,icon_item_misc_bosscrystal,,,,,,"[33076, 33077, 33078, 33079, 34069, 34070, 34071, 34072]",[40034],不祥的靈魂水晶,2,0.0,0.0,TTTT,18,0.0
-649025,misc_ore22,此不明的結晶核可對動植物甚至是無生物發揮作用，進而使其突變，提煉後已可對裝備使用。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_1,,,,,,"[9024, 10006, 10012, 10013, 10029, 10098, 11006, 11046, 11087, 12007, 12057, 12090, 13007, 13009, 13091, 14006, 14019, 14054, 14055, 14092, 15008, 15046, 15082, 15087, 16006, 16008, 16052, 16092, 17004, 17006, 17012, 17033, 17039, 17072, 18002, 18008, 18010, 18011, 18062, 19006, 19024, 20013, 21009, 30029, 30030, 30031, 30032, 30033, 30034, 30035, 30036, 30040, 30062, 30063, 30064, 30077, 30078, 30079, 30083, 30084, 30278, 30285, 30336, 30371, 30372, 30375, 30376, 30493, 31006, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 32013, 32017, 34075, 34076, 34077, 34078, 37013, 40040]",,核粉末,0,0.0,0.0,TTTT,18,1.0
-649026,misc_ore23,植物爆走後便出現於世界各地，可在自然中吸收能量。為了利用其吸收的能量，已將之提煉成粉末。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_2,,"[642927, 642927, 642927, 642927, 642927, 642927]",,,,"[9024, 10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19006, 19024, 20013, 21009, 30371, 30372, 30375, 30376, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 30601, 30602, 30603, 30604, 30701, 30702, 30703, 30704, 30801, 30802, 30803, 30804, 32017, 34073, 34074, 37013, 40040, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 50032, 50033, 50034, 50035, 50036, 50037, 50038, 50039, 50040, 50041, 50042, 50043, 50044, 50045, 50046, 50047, 50048, 50049, 50050, 50051, 50052, 50053, 50054, 50055, 50056, 50057, 50058, 50059, 50060, 50061, 50062, 50063, 50064, 50065, 50066, 50067, 50068, 50069, 50070, 50071, 50072, 50073, 50074, 50075, 50076, 50077, 50078, 50079, 50080, 50081, 50082, 50083, 50084, 50085, 50086, 50087, 50088, 50089, 50090, 50091, 50092, 50093, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,希埃拉粉末,0,0.0,0.0,TTTT,18,1.0
+649025,misc_ore22,此不明的結晶核可對動植物甚至是無生物發揮作用，進而使其突變，提煉後已可對裝備使用。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_1,,,,,,"[9024, 10006, 10012, 10013, 10029, 10098, 11006, 11046, 11087, 12007, 12057, 12090, 13007, 13009, 13091, 14006, 14019, 14054, 14055, 14092, 15008, 15046, 15082, 15087, 16006, 16008, 16052, 16092, 17004, 17006, 17012, 17033, 17039, 17072, 18002, 18008, 18010, 18011, 18062, 19006, 19024, 20013, 21009, 30029, 30030, 30031, 30032, 30033, 30034, 30035, 30036, 30040, 30062, 30063, 30064, 30077, 30078, 30079, 30083, 30084, 30278, 30285, 30336, 30371, 30372, 30375, 30376, 30493, 31006, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 32013, 32017, 34075, 34076, 34077, 34078, 37013, 40040]",,核粉末,0,0.0,0.0,TTTT,18,0.1
+649026,misc_ore23,植物爆走後便出現於世界各地，可在自然中吸收能量。為了利用其吸收的能量，已將之提煉成粉末。{nl} {nl}用途：重設屬性、製作道具,icon_item_breakpowder_2,,"[642927, 642927, 642927, 642927, 642927, 642927]",,,,"[9024, 10098, 11087, 12090, 13091, 14092, 15087, 16092, 17072, 18062, 19006, 19024, 20013, 21009, 30371, 30372, 30375, 30376, 31059, 30551, 30552, 30553, 30554, 30555, 30556, 30557, 30558, 30559, 30560, 30561, 30562, 30563, 30564, 30565, 30566, 30567, 30568, 30569, 30570, 30571, 30572, 30573, 30574, 30601, 30602, 30603, 30604, 30701, 30702, 30703, 30704, 30801, 30802, 30803, 30804, 32017, 34073, 34074, 37013, 40040, 50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009, 50010, 50011, 50012, 50013, 50014, 50015, 50016, 50017, 50018, 50019, 50020, 50021, 50022, 50023, 50024, 50025, 50026, 50027, 50028, 50029, 50030, 50031, 50032, 50033, 50034, 50035, 50036, 50037, 50038, 50039, 50040, 50041, 50042, 50043, 50044, 50045, 50046, 50047, 50048, 50049, 50050, 50051, 50052, 50053, 50054, 50055, 50056, 50057, 50058, 50059, 50060, 50061, 50062, 50063, 50064, 50065, 50066, 50067, 50068, 50069, 50070, 50071, 50072, 50073, 50074, 50075, 50076, 50077, 50078, 50079, 50080, 50081, 50082, 50083, 50084, 50085, 50086, 50087, 50088, 50089, 50090, 50091, 50092, 50093, 50100, 50101, 50102, 400032, 400033, 400034, 400035, 400036, 400037, 400038, 400039, 400040, 400041, 400042, 400043, 400044, 400045, 400046, 400047, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,希埃拉粉末,0,0.0,0.0,TTTT,18,0.1
 649027,misc_ore24,混合一定比例的鈹德礦石和祕銀礦石所製造出來的彈性高的礦物，被當作道具的材料使用。,item_icon_pideingot,,[642928],,,,"[34075, 34076, 34077, 34078, 34079, 34080, 34081]",[9027],貝特雷敏礦石,0,0.0,0.0,TTTT,18,1.0
 649028,misc_ore25,混合一定比例的紅色泰拉金屬和祕銀礦石所製造出來的具有強大火屬性氣息的金屬，被當作道具的材料使用。,item_icon_teraingot,,[642928],,,,"[34073, 34074]",[9028],烏斯托馬伊特金屬,0,0.0,0.0,TTTT,18,1.0
 649029,misc_ore26,消滅貝爾庫波後可以獲得靈魂碎片，上面含有未知的氣息，如果使用在裝備材料上，可以發揮優秀的功能。,icon_item_velcoffer_misc01,,"[642916, 642916]",,,,,,貝爾庫波靈魂碎片,0,0.0,0.0,FFFT,18,1.0
 649030,misc_ore27,消滅斯基亞克爾立斯後可獲得，內含未知的氣息，當作裝備材料使用可發揮其優秀性能。,icon_item_misc_skiaclipse,,[642949],,,,,,斯基亞克爾立斯羽毛,0,0.0,0.0,FFFT,18,1.0
+649031,misc_ore23_stone,凝聚希埃拉粉末製作的結晶石。{nl} {nl}使用處：聖匣合成,icon_item_breakpowder_2_stone,,,,,,,[50100],希埃拉石,0,0.0,0.0,TTTT,18,1.0
 649200,misc_jore01,樹液經過長時間放置凝固成寶石。,22_item_ore_amber,[642061],,,,,,,琥珀,6,0.0,0.0,TTTT,18,1.0
 649201,misc_jore02,琥珀裡有一隻蜥蜴標本，是非常珍貴的寶石。,23_item_ore_amber_lizard,[642030],,,,,[19007],,蜥蜴琥珀,1000,0.0,0.0,TTTT,18,1.0
 649202,misc_jore03,黃色的寶石，傳說它具有驅逐惡魔的力量。,24_item_ore_topaz,,,,,,"[15023, 50082, 50083, 50084, 50085, 50086, 50087, 50088, 50089, 50090, 50091, 50092, 50093]",,黃玉,1914,0.0,0.0,TTTT,18,1.0
@@ -1861,8 +1887,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649213,misc_jore14,在派伊羅石上加了金屬性質的礦物。,32_item_ore_pyrite,,,,,,,,派伊拉礦,2,0.0,0.0,TTTT,18,1.0
 649214,misc_jore15,在克里歐石上加了金屬性質的礦物。,39_icon_item_cry8rite,,,,,,,,克里歐礦,2,0.0,0.0,TTTT,18,1.0
 649215,misc_jore16,無色透明的寶石，比金屬還要硬，在寶石中算是稀有珍貴的。,icon_item_dia2,,,,,,[16019],,鑽石,19040,0.0,0.0,TTTT,18,1.0
-649216,misc_jore17,美麗的藍色寶石，色澤愈深價值就愈高。,39_icon_item_cry8rite,[642047],"[642901, 642918]",,,,"[18034, 31020, 30564, 30565, 30568, 30570, 30572, 30574, 32010, 34069, 34070, 34071, 34072, 40069, 40074, 50001, 50003, 50005, 50007, 50009, 50011, 50013, 50014, 50017, 50019, 50021, 50023, 50025, 50027, 50029, 50031, 50066, 50067, 50068, 50069, 50070, 50071, 50072, 50073, 50074, 50075, 50076, 50077, 50078, 50079, 50080, 50081, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,藍寶石,7968,0.0,0.0,TTTT,18,1.0
-649217,misc_jore18,紅色的珍貴寶石。,26_item_ore_garnet,,"[642902, 642903, 642904, 642905, 642921, 642922]",,,,"[13026, 13028, 18034, 33028, 34069, 34070, 34071, 34072, 50066, 50067, 50068, 50069, 50070, 50071, 50072, 50073, 50074, 50075, 50076, 50077, 50078, 50079, 50080, 50081]",,紅寶石,475,0.0,0.0,TTTT,18,1.0
+649216,misc_jore17,美麗的藍色寶石，色澤愈深價值就愈高。,39_icon_item_cry8rite,[642047],"[642901, 642918]",,,,"[18034, 31020, 30564, 30565, 30568, 30570, 30572, 30574, 32010, 34069, 34070, 34071, 34072, 40069, 40074, 50001, 50003, 50005, 50007, 50009, 50011, 50013, 50014, 50017, 50019, 50021, 50023, 50025, 50027, 50029, 50031, 50066, 50067, 50068, 50069, 50070, 50071, 50072, 50073, 50074, 50075, 50076, 50077, 50078, 50079, 50080, 50081, 50101, 400048, 400049, 400050, 400051, 400052, 400053, 400054, 400055, 400056, 400057, 400058, 400059, 400060, 400061, 400062, 400063]",,藍寶石,7968,0.0,0.0,TTTT,18,1.0
+649217,misc_jore18,紅色的珍貴寶石。,26_item_ore_garnet,,"[642902, 642903, 642904, 642905, 642921, 642922]",,,,"[13026, 13028, 18034, 33028, 34069, 34070, 34071, 34072, 50066, 50067, 50068, 50069, 50070, 50071, 50072, 50073, 50074, 50075, 50076, 50077, 50078, 50079, 50080, 50081, 50101]",,紅寶石,475,0.0,0.0,TTTT,18,1.0
 649401,seed_01,可以種植作物的種子，可以在公會基地內使用。,icon_item_seed_green,,,,,,,,迪凱雷草種子,90,3.0,0.0,FFTF,7,10.0
 649402,seed_02,可以種植作物的種子，可以在公會基地內使用。,icon_item_seed_green,,,,,,,,奇斯羅堤斯草種子,16,3.0,0.0,TTTT,7,10.0
 649403,seed_03,可以種植作物的種子，可以在公會基地內使用。,icon_item_seed_green,,,,,,,,拉歐多內莉斯草種子,16,3.0,0.0,TTTT,7,10.0
@@ -2418,7 +2444,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 650836,CHATHEDRAL54_MQ04_PART2_ITEM,梅伊班的第三把鑰匙，據說要收集5把鑰匙才可以接近啟示。,cathedral_key_5,,,,,,,,梅伊班的第三把錀匙,0,1.0,0.0,FFFF,24,0.0
 650837,CHATHEDRAL56_MQ04_PART2_ITEM,梅伊班的第四把鑰匙，據說要收集5把鑰匙才可以接近啟示。,cathedral_key_4,,,,,,,,梅伊班的第四把錀匙,0,1.0,0.0,FFFF,24,0.0
 650838,CHATHEDRAL56_SQ01_ITEM,梅伊班的第五把鑰匙，據說要收集5把鑰匙才可以接近啟示。,cathedral_key_3,,,,,,,,梅伊班的第五把錀匙,0,1.0,0.0,FFFF,24,0.0
-650839,CATHEDRAL54_MQ02_PART2_ITEM,貝伊尼卡祭壇上可以供給魔力的信物，經過長久歲月洗禮，所有魔力被已耗盡放出。,icon_item_gem_stone_int,,,,,,,,靈力的信物,0,60.0,0.0,FFFF,24,0.0
+650839,CATHEDRAL54_MQ02_PART2_ITEM,貝伊尼卡祭壇上可以供給魔力的信物，經過長久歲月洗禮，所有魔力被已耗盡放出。,icon_item_gem_stone_int,,,,,,,,靈力的信物,0,10.0,0.0,FFFF,24,0.0
 650840,CHATHEDRAL54_SQ03_PART1_ITEM,混了什麼在裡面有點混濁的液體，這可以被稱作溶劑嗎？,icon_item_quest_00020,,,,,,,,混濁的溶劑,0,0.0,0.0,FFFF,24,0.0
 650841,CATHEDRAL54_SQ04_PART2_ITEM,聽說吃下這個，可以養成扺抗邪惡氣息的力量…對怪物實驗看看。,icon_item_posion,,,,,,,,達蘭姆開發的新藥,0,3.0,0.0,FFFF,24,0.0
 650842,PILGRIMROAD55_SQ01_ITEM,治療那柯堤斯的詛咒時所需要的藥材。,icon_item_dilgele,,,,,,,,月薊,0,0.0,0.0,FFFF,24,0.0
@@ -2478,7 +2504,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 652027,GuildHousing_Item_h_farm_brownfence_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_brownfence_03,,,,,,,,[公會家園] 農場籬笆_03(褐色),0,0.0,0.0,FFTF,7,0.0
 652028,GuildHousing_Item_h_farm_brownfence_04,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_brownfence_04,,,,,,,,[公會家園] 農場籬笆_04(褐色),0,0.0,0.0,FFTF,7,0.0
 652029,GuildHousing_Item_h_farm_normaltree_01_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_normaltree_01_green,,,,,,,,[公會家園] 造景用樹木(綠色),0,0.0,0.0,FFTF,7,0.0
-652030,GuildHousing_Item_h_farm_plantfence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_plantfence_01,,,,,,,,[公會家園] 木籬笆,0,0.0,0.0,FFTF,7,0.0
+652030,GuildHousing_Item_h_farm_plantfence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_plantfence_01,,,,,,,,[公會家園] 木籬笆_1,0,0.0,0.0,FFTF,7,0.0
 652031,GuildHousing_Item_h_farm_pump_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_pump_01,,,,,,,,[公會家園] 幫浦,0,0.0,0.0,FFTF,7,0.0
 652032,GuildHousing_Item_h_farm_sack_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_sack_01,,,,,,,,[公會家園] 肥料,0,0.0,0.0,FFTF,7,0.0
 652033,GuildHousing_Item_h_farm_whitefence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_whitefence_01,,,,,,,,[公會家園] 農場籬笆_01(白色),0,0.0,0.0,FFTF,7,0.0
@@ -2487,7 +2513,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 652036,GuildHousing_Item_h_farm_whitefence_04,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_whitefence_04,,,,,,,,[公會家園] 農場籬笆_04(白色),0,0.0,0.0,FFTF,7,0.0
 652037,GuildHousing_Item_h_farm_whitefence_05,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_whitefence_05,,,,,,,,[公會家園] 農場籬笆_05(白色),0,0.0,0.0,FFTF,7,0.0
 652038,GuildHousing_Item_h_flowerpot_01_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_01_yellow,,,,,,,,[公會家園] 玫瑰花花盆(黃色),0,0.0,0.0,FFTF,7,0.0
-652039,GuildHousing_Item_h_flowerpot_02_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_green,,,,,,,,[公會家園] 造景用花壇(綠色),0,0.0,0.0,FFTF,7,0.0
+652039,GuildHousing_Item_h_flowerpot_02_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_green,,,,,,,,[公會家園] 造景用花盆(綠色),0,0.0,0.0,FFTF,7,0.0
 652040,GuildHousing_Item_h_gate_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_gate_01,,,,,,,,[公會家園] 庭園拱形,0,0.0,0.0,FFTF,7,0.0
 652041,GuildHousing_Item_h_hydrangea_set_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_hydrangea_set_01_blue,,,,,,,,[公會家園] 綉球花花壇(藍色),0,0.0,0.0,FFTF,7,0.0
 652042,GuildHousing_Item_h_parasol_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_parasol_01_white,,,,,,,,[公會家園] 遮陽傘(白色),0,0.0,0.0,FFTF,7,0.0
@@ -2500,11 +2526,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 652049,GuildHousing_Item_h_topiary_popolion,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_popolion,,,,,,,,[公會家園] 綠雕造型(波波小獅王),0,0.0,0.0,FFTF,7,0.0
 652050,GuildHousing_Item_h_topiary_kepa,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_kepa,,,,,,,,[公會家園] 綠雕造型(凱帕),0,0.0,0.0,FFTF,7,0.0
 652051,GuildHousing_Item_h_topiary_horse,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_horse,,,,,,,,[公會家園] 綠雕造型(馬),0,0.0,0.0,FFTF,7,0.0
-652052,GuildHousing_Item_h_topiary_cube,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_cube,,,,,,,,[公會家園] 綠雕造型(方塊),0,0.0,0.0,FFTF,7,0.0
+652052,GuildHousing_Item_h_topiary_cube,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_topiary_cube,,,,,,,,[公會家園] 方塊草皮,0,0.0,0.0,FFTF,7,0.0
 652053,GuildHousing_Item_h_topiary_05,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_05,,,,,,,,[公會家園] 綠雕造型(正式庭園),0,0.0,0.0,FFTF,7,0.0
 652054,GuildHousing_Item_h_statue_04,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_statue_04,,,,,,,,[公會家園] 騎士雕像,0,0.0,0.0,FFTF,7,0.0
 652055,GuildHousing_Item_h_whitetree_tree,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_whitetree_tree,,,,,,,,[公會家園] 老樹(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652056,GuildHousing_Item_h_tree_basic_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_tree_basic_01,,,,,,,,[公會家園] 裝飾用樹木,0,0.0,0.0,FFTF,7,0.0
+652056,GuildHousing_Item_h_tree_basic_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_tree_basic_01,,,,,,,,[公會家園] 裝飾用樹木_1,0,0.0,0.0,FFTF,7,0.0
 652057,GuildHousing_Item_h_stone_tower_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_stone_tower_02,,,,,,,,[公會家園] 石塔_02,0,0.0,0.0,FFTF,7,0.0
 652058,GuildHousing_Item_h_statue_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_statue_03,,,,,,,,[公會家園] 祈禱中的雕像,0,0.0,0.0,FFTF,7,0.0
 652059,GuildHousing_Item_h_statue_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_statue_02,,,,,,,,[公會家園] 山羊怪雕像,0,0.0,0.0,FFTF,7,0.0
@@ -2576,9 +2602,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 652125,GuildHousing_Item_h_flowerpot_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_01_blue,,,,,,,,[公會家園] 玫瑰花花盆(藍色),0,0.0,0.0,FFTF,7,0.0
 652126,GuildHousing_Item_h_flowerpot_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_01_red,,,,,,,,[公會家園] 玫瑰花花盆(紅色),0,0.0,0.0,FFTF,7,0.0
 652127,GuildHousing_Item_h_flowerpot_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_01_white,,,,,,,,[公會家園] 玫瑰花花盆(白色),0,0.0,0.0,FFTF,7,0.0
-652128,GuildHousing_Item_h_flowerpot_02_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_blue,,,,,,,,[公會家園] 造景用花壇(藍色),0,0.0,0.0,FFTF,7,0.0
-652129,GuildHousing_Item_h_flowerpot_02_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_red,,,,,,,,[公會家園] 造景用花壇(紅色),0,0.0,0.0,FFTF,7,0.0
-652130,GuildHousing_Item_h_flowerpot_02_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_yellow,,,,,,,,[公會家園] 造景用花壇(黃色),0,0.0,0.0,FFTF,7,0.0
+652128,GuildHousing_Item_h_flowerpot_02_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_blue,,,,,,,,[公會家園] 造景用花盆(藍色),0,0.0,0.0,FFTF,7,0.0
+652129,GuildHousing_Item_h_flowerpot_02_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_red,,,,,,,,[公會家園] 造景用花盆(紅色),0,0.0,0.0,FFTF,7,0.0
+652130,GuildHousing_Item_h_flowerpot_02_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_yellow,,,,,,,,[公會家園] 造景用花盆(黃色),0,0.0,0.0,FFTF,7,0.0
 652131,GuildHousing_Item_h_parasol_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_parasol_01_blue,,,,,,,,[公會家園] 遮陽傘(藍色),0,0.0,0.0,FFTF,7,0.0
 652132,GuildHousing_Item_h_parasol_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_parasol_01_red,,,,,,,,[公會家園] 遮陽傘(紅色),0,0.0,0.0,FFTF,7,0.0
 652133,GuildHousing_Item_h_barrack_puddle_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後蓮花池中的魚會動。){/},icon_item_h_barrack_puddle_blue,,,,,,,,[公會家園] 蓮花池(藍色),0,0.0,0.0,FFTF,7,0.0
@@ -2586,6 +2612,55 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 652135,GuildHousing_Item_h_barrack_puddle_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後蓮花池中的魚會動。){/},icon_item_h_barrack_puddle_yellow,,,,,,,,[公會家園] 蓮花池(黃色),0,0.0,0.0,FFTF,7,0.0
 652136,GuildHousing_Item_h_GuildHousing_farmer_boy,可以在公會基地內配置農場管理人(男)的契約書。{nl}只有在所屬公會的基地擴張階級為2階以上時可以配置。{nl}{#8e0000}(配置時，植物收獲量增加0~5%。){/}{nl}{#8e0000}(農場管理人最多可以配置1名。){/},icon_item_guild_housing_contract_farmer_01,,,,,,,,[公會家園] 農場管理人(男)僱用契約書,0,0.0,0.0,FFTF,7,0.0
 652137,GuildHousing_Item_h_GuildHousing_farmer_girl,可以在公會基地內配置農場管理人(女)的契約書。{nl}只有在所屬公會的基地擴張階級為2階以上時可以配置。{nl}{#8e0000}(配置時，植物收獲量增加0~5%。){/}{nl}{#8e0000}(農場管理人最多可以配置1名。){/},icon_item_guild_housing_contract_farmer_01,,,,,,,,[公會家園] 農場管理人(女)僱用契約書,0,0.0,0.0,FFTF,7,0.0
+652138,GuildHousing_Item_h_forest_pond_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後池塘中的鴨子會動，可以坐在椅子上。){/},icon_item_h_forest_pond_01,,,,,,,,[公會家園] 森林生活-鴨子池塘,0,0.0,0.0,FFTF,7,0.0
+652139,GuildHousing_Item_h_forest_pile_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_pile_01,,,,,,,,[公會家園] 森林生活-稻草堆,0,0.0,0.0,FFTF,7,0.0
+652140,GuildHousing_Item_h_forest_rabbit_cage_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後兔子會動。){/},icon_item_h_forest_rabbit_cage_01,,,,,,,,[公會家園] 森林生活-兔籠,0,0.0,0.0,FFTF,7,0.0
+652141,GuildHousing_Item_h_forest_chicken_cage_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後雞和小雞會動。){/},icon_item_h_forest_chicken_cage_01,,,,,,,,[公會家園] 森林生活-雞籠,0,0.0,0.0,FFTF,7,0.0
+652142,GuildHousing_Item_h_forest_pushcart_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後貓會動。){/},icon_item_h_forest_pushcart_01,,,,,,,,[公會家園] 森林生活-菜車,0,0.0,0.0,FFTF,7,0.0
+652143,GuildHousing_Item_h_forest_stump_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後松鼠會動。){/},icon_item_h_forest_stump_01,,,,,,,,[公會家園] 森林生活-樹樁,0,0.0,0.0,FFTF,7,0.0
+652144,GuildHousing_Item_h_forest_pile_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_pile_02,,,,,,,,[公會家園] 森林生活-木柴堆,0,0.0,0.0,FFTF,7,0.0
+652145,GuildHousing_Item_h_forest_stump_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_stump_02,,,,,,,,[公會家園] 森林生活-斧頭和樹樁,0,0.0,0.0,FFTF,7,0.0
+652146,GuildHousing_Item_h_forest_dwarf_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_dwarf_01,,,,,,,,[公會家園] 森林生活-拿著釘耙的小矮人,0,0.0,0.0,FFTF,7,0.0
+652147,GuildHousing_Item_h_forest_dwarf_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_dwarf_02,,,,,,,,[公會家園] 森林生活-拿著鏟子的小矮人,0,0.0,0.0,FFTF,7,0.0
+652148,GuildHousing_Item_h_forest_scarecrow_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後青鳥會動。){/},icon_item_h_forest_scarecrow_01,,,,,,,,[公會家園] 森林生活-稻草人,0,0.0,0.0,FFTF,7,0.0
+652149,GuildHousing_Item_h_forest_bear_shack_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以敲門。){/},icon_item_h_forest_bear_shack_01,,,,,,,,[公會家園] 森林生活-熊之屋,0,0.0,0.0,FFTF,7,0.0
+652150,GuildHousing_Item_h_forest_bench_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在長椅上。){/},icon_item_h_forest_bench_01,,,,,,,,[公會家園] 森林生活-木頭長椅,0,0.0,0.0,FFTF,7,0.0
+652151,GuildHousing_Item_h_forest_arch_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後風車會轉動。){/},icon_item_h_forest_arch_01,,,,,,,,[公會家園] 森林生活-風車入口,0,0.0,0.0,FFTF,7,0.0
+652152,GuildHousing_Item_h_forest_fence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_fence_01,,,,,,,,[公會家園] 森林生活-木籬笆,0,0.0,0.0,FFTF,7,0.0
+652153,GuildHousing_Item_h_forest_arch_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後小鳥會動。){/},icon_item_h_forest_arch_02,,,,,,,,[公會家園] 森林生活-樹樁入口,0,0.0,0.0,FFTF,7,0.0
+652154,GuildHousing_Item_h_forest_windmill_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後風車會轉動。){/},icon_item_h_forest_windmill_01,,,,,,,,[公會家園] 森林生活-風車,0,0.0,0.0,FFTF,7,0.0
+652155,GuildHousing_Item_h_forest_bench_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在鞦韆上。){/},icon_item_h_forest_bench_02,,,,,,,,[公會家園] 森林生活-鞦韆,0,0.0,0.0,FFTF,7,0.0
+652156,GuildHousing_Item_h_forest_stall_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_stall_01,,,,,,,,[公會家園] 森林生活-攤位,0,0.0,0.0,FFTF,7,0.0
+652157,GuildHousing_Item_h_forest_hammock_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在吊床上。){/},icon_item_h_forest_hammock_01,,,,,,,,[公會家園] 森林生活-吊床,0,0.0,0.0,FFTF,7,0.0
+652158,GuildHousing_Item_h_forest_table_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_forest_table_01,,,,,,,,[公會家園] 森林生活-木頭餐桌,0,0.0,0.0,FFTF,7,0.0
+652159,GuildHousing_Item_h_tree_basic_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_tree_basic_02,,,,,,,,[公會家園] 裝飾用樹木_2,0,0.0,0.0,FFTF,7,0.0
+652160,GuildHousing_Item_h_plantfence_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_plantfence_02,,,,,,,,[公會家園] 木籬笆_2,0,0.0,0.0,FFTF,7,0.0
+652161,GuildHousing_Item_h_round_tree_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_round_tree_01,,,,,,,,[公會家園] 圓木,0,0.0,0.0,FFTF,7,0.0
+652162,GuildHousing_Item_h_flower_sunflower_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_sunflower_yellow,,,,,,,,[公會家園] 向日葵(黃色),0,0.0,0.0,FFTF,7,0.0
+652163,GuildHousing_Item_h_flower_poppyflower_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_poppyflower_yellow,,,,,,,,[公會家園] 罌粟(黃色),0,0.0,0.0,FFTF,7,0.0
+652164,GuildHousing_Item_h_flower_cannalily_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_cannalily_red,,,,,,,,[公會家園] 美人蕉(紅色),0,0.0,0.0,FFTF,7,0.0
+652165,GuildHousing_Item_h_topiary_fence,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_fence,,,,,,,,[公會家園] 綠雕造型(籬笆),0,0.0,0.0,FFTF,7,0.0
+652166,GuildHousing_Item_h_topiary_bush,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_bush,,,,,,,,[公會家園] 綠雕造型(草叢),0,0.0,0.0,FFTF,7,0.0
+652167,GuildHousing_Item_h_bush_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_bush_01,,,,,,,,[公會家園] 草叢,0,0.0,0.0,FFTF,7,0.0
+652168,GuildHousing_Item_h_fruity_bush_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_fruity_bush_01,,,,,,,,[公會家園] 結了果實的草叢,0,0.0,0.0,FFTF,7,0.0
+652169,GuildHousing_Item_h_flower_dieffenbachia,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_dieffenbachia,,,,,,,,[公會家園] 花葉萬年青,0,0.0,0.0,FFTF,7,0.0
+652170,GuildHousing_Item_h_flower_valleylily_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_valleylily_white,,,,,,,,[公會家園] 藍鈴花(白色),0,0.0,0.0,FFTF,7,0.0
+652171,GuildHousing_Item_h_flower_tulip_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_tulip_white,,,,,,,,[公會家園] 鬱金香(白色),0,0.0,0.0,FFTF,7,0.0
+652172,GuildHousing_Item_h_small_hydrangea_01_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_small_hydrangea_01_purple,,,,,,,,[公會家園] 小繡球花(紫色),0,0.0,0.0,FFTF,7,0.0
+652173,GuildHousing_Item_h_tree_basic_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_tree_basic_03,,,,,,,,[公會家園] 裝飾用樹木_3,0,0.0,0.0,FFTF,7,0.0
+652174,GuildHousing_Item_h_flower_lotus_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_flower_lotus_blue,,,,,,,,[公會家園] 蓮花(藍色),0,0.0,0.0,FFTF,7,0.0
+652175,GuildHousing_Item_h_flower_allium_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_allium_purple,,,,,,,,[公會家園] 大花蔥(紫色),0,0.0,0.0,FFTF,7,0.0
+652176,GuildHousing_Item_h_wild_grass_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_wild_grass_01,,,,,,,,[公會家園] 野草_1,0,0.0,0.0,FFTF,7,0.0
+652177,GuildHousing_Item_h_flower_lupine_pink,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_lupine_pink,,,,,,,,[公會家園] 魯冰花(粉紅色),0,0.0,0.0,FFTF,7,0.0
+652178,GuildHousing_Item_h_cube_wood_01_beige,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_cube_wood_01_beige,,,,,,,,[公會家園] 木頭魔方(米色),0,0.0,0.0,FFTF,7,0.0
+652179,GuildHousing_Item_h_cube_wood_01_brown,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_cube_wood_01_brown,,,,,,,,[公會家園] 木頭魔方(褐色),0,0.0,0.0,FFTF,7,0.0
+652180,GuildHousing_Item_h_cube_limestone_01_gray,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_cube_limestone_01_gray,,,,,,,,[公會家園] 石灰岩魔方(灰色),0,0.0,0.0,FFTF,7,0.0
+652181,GuildHousing_Item_h_cube_limestone_01_beige,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_cube_limestone_01_beige,,,,,,,,[公會家園] 石灰岩魔方(米色),0,0.0,0.0,FFTF,7,0.0
+652182,GuildHousing_Item_h_topiary_cube_set,使用道具時，可以獲得可以擺設在公會基地的方塊草皮20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_topiary_cube_set,,,,,,,,[公會家園] 方塊草皮 x20 組合,0,0.0,0.0,FFTF,7,0.0
+652183,GuildHousing_Item_h_cube_wood_01_beige_set,使用道具時，可以獲得可以擺設在公會基地的木頭魔方(米色) 20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_cube_wood_01_beige_set,,,,,,,,[公會家園] 木頭魔方(米色) x20 組合,0,0.0,0.0,FFTF,7,0.0
+652184,GuildHousing_Item_h_cube_wood_01_brown_set,使用道具時，可以獲得可以擺設在公會基地的木頭魔方(褐色)20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_cube_wood_01_brown_set,,,,,,,,[公會家園] 木頭魔方(褐色) x20 組合,0,0.0,0.0,FFTF,7,0.0
+652185,GuildHousing_Item_h_cube_limestone_01_gray_set,使用道具時，可以獲得可以擺設在公會基地的石灰岩魔方(灰色)20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_cube_limestone_01_gray_set,,,,,,,,[公會家園] 石灰岩魔方(灰色) x20 組合,0,0.0,0.0,FFTF,7,0.0
+652186,GuildHousing_Item_h_cube_limestone_01_beige_set,使用道具時，可以獲得可以擺設在公會基地的石灰岩魔方(米色)20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_cube_limestone_01_beige_set,,,,,,,,[公會家園] 石灰岩魔方(米色) x20 組合,0,0.0,0.0,FFTF,7,0.0
 653041,stonetablet05,在魔法師之塔發現的第五個啟示，可以閱讀。,icon_item_stonetablet,[642017],,,,,,,魔法師之塔的啟示,0,0.0,0.0,FFFF,24,0.0
 660000,CHATHEDRAL54_SQ01_PART1_ITEM,和詛咒有關的魔君主相關文獻，對那柯堤斯相關內容有相當深入的描寫。,icon_item_magicpaper,,,,,,,,詛咒的魔君主那柯堤斯,0,0.0,0.0,FFFF,24,0.0
 660001,PILGRIMROAD55_SQ09_ITEM,朝聖者達洛斯的屍體。,icon_item_small_bag,,,,,,,,朝聖者達洛斯的屍身,0,0.0,0.0,FFFF,24,0.0
@@ -3007,10 +3082,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 662272,D_UNDERAQUEDUCT_EVETN3_ITEM1,黃色補給品。{nl}在封閉區域Buff的裝置中，對想要的裝置對話，就可以獲得該裝置的Buff效果。獲得Buff之後，補給品就會消失。{nl}脫離外城壁地下水道之後，道具就會消失。{nl}可以丟棄道具。,icon_item_grimoire_dark_yellow,,,,,,,,黃色補給品,0,0.0,0.0,FFFF,24,0.0
 662273,D_UNDERAQUEDUCT_EVETN3_USE_ITEM,為了攻擊出現在外城壁地下水道的膽小鬼查夏，所需要的手鐲。可以感受到神祕的魔力。{nl}可以將手鐲登錄至道具欄位上使用。{nl}在物品欄滑鼠右鍵點擊可以使用。,icon_item_rosario_red,,,,,,,,蘊藏魔力的手鐲,0,0.0,0.0,FFFF,24,0.0
 662274,D_UNDERAQUEDUCT_EVETN4_ITEM1,紅色的補給品。{nl}在封閉區域Buff的裝置中，對想要的裝置對話，就可以獲得該裝置的Buff效果。獲得Buff後，補給品就會消失。{nl}脫離外城壁地下水道之後，道具就會消失。{nl}可以丟棄道具。,icon_item_grimoire_dark_red,,,,,,,,紅色補給品,0,0.0,0.0,FFFF,24,0.0
-662275,event1912_4thAnniversary_FireCracker_LV2,紀念2020新年而製作的爆竹。{nl}每個隊伍每天可以透過活動公佈欄NPC領取1次，也可以從新年紀念商店中購買。{nl}使用時，使用者將獲得最多持續24小時的[活動]新年x2 Buff效果。套用該效果時[活動]新年紀念鑄幣的獲得數量增為2倍。{nl}活動結束後將統一刪除。{nl} 與[活動]新年x3 Buff重疊時，[活動]新年紀念鑄幣的獲得數量增為5倍。,icon_item_firework,,,,,,,,[活動]新年爆竹,0,60.0,0.0,FFFT,18,0.0
-662276,event1912_4thAnniversary_FireCracker_LV3,紀念2020新年而製作的爆竹。{nl}有一定機率透過狩獵取得。{nl}使用時，使用者的前方將出現持續1分鐘的爆竹效果；並且每10秒賦予一定範圍內的角色[活動]新年x3 Buff，效果最多持續24小時，套用該效果時[活動]新年紀念鑄幣的獲得數量增為3倍。{nl}活動結束後將統一刪除。{nl} 與[活動]新年x2 Buff重疊時，[活動]新年紀念鑄幣的獲得數量增為5倍。,icon_item_firework_secondtime,,,,,,,,[活動]新年同歡爆竹,0,60.0,0.0,FFFT,18,0.0
-662277,event19xmas_RoyalBox_Key_1,用鑰匙開啟位於柯拉佩達的皇家聖誕寶箱可以隨機獲得以下道具中的一個。(獲得高級獎勵的機會比神秘聖誕寶箱高){nl}提尼拿鐵拉花 x1{nl}[活動] 黃金血晶萃取工具 x1{nl}銀色血晶萃取工具(14天) x1{nl}充滿祝福的嫩芽(14天) x1{nl}女神的雕像(14天) x1{nl}[活動]公會任務獎勵鑄幣：銀 x1{nl}遠征隊傳送石 x3{nl}活動結束時將統一刪除。,icon_item_key5,,,,,,,,[活動]皇家聖誕鑰匙,0,0.0,0.0,FFFT,18,0.0
-662278,event19xmas_Box_Key_1,"用鑰匙開啟位於柯拉佩達的神秘聖誕寶箱可以隨機獲得以下道具中的一個。(獲得高級獎勵的機會比皇家聖誕寶箱低){nl}[活動]特性點數 10,000 x1{nl}[活動]特性點數 1,000 x1{nl}[活動]特性點數 500 x1{nl}充滿祝福的嫩芽(14天) x1{nl}女神的雕像(14天) x1{nl}[活動]公會任務獎勵鑄幣：銀 x1{nl}遠征隊傳送石 x3{nl}活動結束時將統一刪除。",cathedral_key_2,,,,,,,,[活動]神秘聖誕鑰匙,0,0.0,0.0,FFFT,18,0.0
+662275,event1912_4thAnniversary_FireCracker_LV2,為了紀念救世者之樹4週年製作的爆竹。{nl}每一個隊伍每天可以向活動佈告欄NPC獲得1次及在4週年紀念商店購買。{nl}使用時，使用者可以為使用者帶來最長持續24小時的[活動] 4週年 x2 Buff效果。套用該效果時，[活動] 4週年紀念鑄幣的獲得量會增加2倍。{nl}20年1月 9日維護時會刪除。{nl}和[活動] 4週年 x3 Buff重疊時，[活動] 4週年紀念鑄幣的獲得量增加為5倍。,icon_item_firework,,,,,,,,[活動] 4週年,0,60.0,0.0,FFFT,18,0.0
+662276,event1912_4thAnniversary_FireCracker_LV3,紀念2020新年而製作的爆竹。{nl}每個隊伍每天可以透過活動公佈欄NPC領取1次，也可以從新年紀念商店中購買。{nl}使用時，使用者將獲得最多持續24小時的[活動]新年x2 Buff效果。套用該效果時[活動]新年紀念鑄幣的獲得數量增為2倍。{nl}活動結束後將統一刪除。{nl} 與[活動]新年x3 Buff重疊時，[活動]新年紀念鑄幣的獲得數量增為5倍。,icon_item_firework_secondtime,,,,,,,,[活動] 4週年Together爆竹,0,60.0,0.0,FFFT,18,0.0
+662277,event19xmas_RoyalBox_Key_1,用鑰匙開啟位於柯拉佩達的皇家聖誕寶箱可以隨機獲得以下道具中的一個。(獲得高級獎勵的機會比神秘聖誕寶箱高){nl}提尼拿鐵拉花 x1{nl}[活動] 黃金血晶萃取工具 x1{nl}銀色血晶萃取工具(14天) x1{nl}充滿祝福的嫩芽(14天) x1{nl}女神的雕像(14天) x1{nl}[活動]公會任務獎勵鑄幣：銀 x1{nl}遠征隊傳送石 x3{nl}活動結束時將統一刪除。,icon_item_key5,,,,,,,,[活動] 皇家聖誕鑰匙,0,0.0,0.0,FFFT,18,0.0
+662278,event19xmas_Box_Key_1,"用鑰匙開啟位於柯拉佩達的神秘聖誕寶箱可以隨機獲得以下道具中的一個。(獲得高級獎勵的機會比皇家聖誕寶箱低){nl}[活動]特性點數 10,000 x1{nl}[活動]特性點數 1,000 x1{nl}[活動]特性點數 500 x1{nl}充滿祝福的嫩芽(14天) x1{nl}女神的雕像(14天) x1{nl}[活動]公會任務獎勵鑄幣：銀 x1{nl}遠征隊傳送石 x3{nl}活動結束時將統一刪除。",cathedral_key_2,,,,,,,,[活動] 神秘聖誕鑰匙,0,0.0,0.0,FFFT,18,0.0
 663000,CHATHEDRAL56_SQ03_BOOK_ITEM,祭司收集的材料,icon_item_collection_04black,,,,,,,,祭司的材料,0,0.0,0.0,FFFF,24,0.0
 663001,DUMARO_MEAT,杜瑪洛部位中肉最多的部份,icon_item_meat_01,,,,,,,,杜瑪洛的後腿肉,0,0.0,0.0,FFFF,24,0.0
 663002,SOLDIRE_SQ31_RELIC,守護礦山村莊一直到最後一刻的士兵們的遺物。,icon_item_small_bag,,,,,,,,士兵的遺物,0,0.0,0.0,FFFF,24,0.0
@@ -3437,7 +3512,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 664019,VPRISON512_MQ_05_ITEM,魔君主哈勃克被撕裂靈魂的一部份。,icon_item_velorb,,,,,,,,沉睡的哈勃克的封印碎片,0,0.0,0.0,FFFF,24,0.0
 664020,VPRISON514_MQ_04_ITEM,女神瓦卡麗涅賦予空間權能的水晶，因為吉德羅勒變化成人類可以使用。,icon_item_gem_elemental2,,,,,,,,暮星之鑰,0,60.0,0.0,FFFF,24,0.0
 664021,VPRISON513_MQ_02_ITEM,哈勃克的靈魂為了逃走自我分裂了。,icon_item_siela,,,,,,,,哈勃克的靈魂碎片,0,60.0,0.0,FFFF,24,0.0
-664022,VPRISON513_MQ_03_ITEM,奎波爾達伊帕為了監視魔族而製作的光譜球，使用時可以找到躲藏的哈勃克。,icon_item_dreamshade,,,,,,,,暮星光譜球,0,5.0,0.0,FFFF,24,0.0
+664022,VPRISON513_MQ_03_ITEM,奎波爾達伊帕為了監視魔族而製作的光譜球，使用時可以找到躲藏的哈勃克。,icon_item_dreamshade,,,,,,,,暮星光譜球,0,3.0,0.0,FFFF,24,0.0
 664023,VPRISON515_MQ_RUNE_ITEM,蘊藏女神瓦卡麗涅權能的符文，吸收魔族的靈魂。,icon_item_gem_elemental1,,,,,,,,暮星符文,0,5.0,0.0,FFFF,24,0.0
 664024,VPRISON515_MQ_05_ITEM,奎波爾們賦予給魔族收監所的惡性魔族的封印信物。,cathedral_puzzle_piece,,,,,,,,封印信物,0,60.0,0.0,FFFF,24,0.0
 664025,VPRISON_HAUBERK_SEAL,封印著哈勃克被撕裂的靈魂一部份的碎片。,icon_item_bezoari,,,,,,,,哈勃克封印碎片,0,5.0,0.0,FFFF,24,0.0
@@ -3824,6 +3899,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 666255,CASTLE95_MAIN07_ITEM,安塔妮娜所給的物品。安塔妮娜要你將它設置在外城壁第13區域輸送魔族的傳點周圍，用來抑制和移除傳點。,icon_item_wooden_romuva_blue,,,,,,,,傳點生成抑制器,0,0.0,0.0,FFFF,24,0.0
 666256,CASTLE95_MAIN02_BOOK,抵抗軍副官安塔妮娜所寫的筆記。上面記錄著在外城壁第13區域要做的事情。點擊滑鼠右鍵可以閱讀內容。,icon_item_sheepskin,,,,,,,,安塔妮娜的筆記,0,0.0,0.0,FFFF,24,0.0
 666257,EVENT_HALLOWEENCANDY_3,對著萬聖節稻草人使用可以削弱萬聖節魔女。{nl}離開副本時消失。,event_whiteday_candy_2,,,,,,,,怪味萬聖節糖果,0,0.0,0.0,FFFF,24,0.0
+666258,EP12_PRELUDE_03_ITEM,為了呼喚奈凌卡所說的必須面對的存在，準備的那姆特。,icon_item_wooden_romuva_white,,,,,,,,神聖的那姆特,0,0.0,0.0,FFFF,24,0.0
+666259,EP12_PRELUDE_06_ITEM,這是女神拉伊瑪為奈凌卡準備的寶珠。{nl}奈凌卡說在克利黑爾聖所清洗個這寶珠，越洗神聖的力量會越充沛。,icon_item_orb_1,,,,,,,,透明的寶珠,0,0.0,0.0,FFFF,24,0.0
+666260,EP12_PRELUDE_07_ITEM,神聖的力量馬上就要爆發似的，十分充沛的寶珠。{nl}只要受到一點衝擊，好像馬上就會破裂，所以要小心處理。,icon_item_orb3,,,,,,,,充滿神聖力量的寶珠,0,0.0,0.0,FFFF,24,0.0
+666261,EP12_MAINSTREAM_NERINGA_CANDLE_ITEM,奈凌卡透過奎波爾傳遞的蠟燭。使用後，可以將奈凌卡的幻影呼喚過來。,icon_item_neringa_candle,,,,,,,,奈凌卡的蠟燭,0,10.0,0.0,FFFF,24,0.0
+666262,EP12_MAINSTREAM_RAIMA_WHEEL_ITEM,拉伊瑪女神的聖具。如果隱藏的異空間還開啟的情形，使用這個輪盤就可以前往至異空間。,icon_item_raima_wheel,,,,,,,,拉伊瑪的輪盤,0,1.0,0.0,FFFF,24,0.0
 667000,CATACOMB_33_1_SQ_04_FIRE,從希奇斯那裡獲得的火柴，使用於讓亡者火葬。,icon_item_rod,,,,,,,,守墓人的火柴,0,5.0,0.0,FFFF,24,0.0
 667001,CATACOMB_33_1_SQ_05_DOLL,帶有守護人咒術的人偶。,icon_item_strawdoll1,,,,,,,,守墓人的咒術人偶,0,5.0,0.0,FFFF,24,0.0
 667002,CATACOMB_33_2_SQ_02_ORB,從復活過來的亡者身上吸收生存信念的靈石。,icon_item_spirit_green,,,,,,,,邪念石,0,20.0,0.0,FFFF,24,0.0
@@ -3868,7 +3948,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 667041,SIAULIAI_35_1_SQ_11_TOOTH,地鼠獸的牙齒。比想像的還要堅硬。,icon_item_tooth_white,,,,,,,,地鼠獸的牙齒,0,0.0,0.0,FFFF,24,0.0
 667042,SIAULIAI_35_1_SQ_10_BAISIE,拜杜塔斯所交付的中和劑。據說是成分中有可以中和露西恩所製作的試劑。,icon_item_drug_exdef1,,,,,,,,拜杜塔斯的中和劑,0,0.0,0.0,FFFF,24,0.0
 667043,SIAULIAI_35_1_SQ_12_HERB,露西恩委託種植的藥草種子，好像打算用來當試劑材料。,icon_item_small_bag,,,,,,,,實驗用藥草種子,0,0.0,0.0,FFFF,24,0.0
-667044,ABBEY_35_3_SQ_ORB,村莊居民所給予的靈魂晶球。聽說填滿魔族的靈魂後，就不會再受到攻擊。,icon_item_orb2,,,,,,,,靈魂晶球,0,5.0,0.0,FFFF,24,0.0
+667044,ABBEY_35_3_SQ_ORB,村莊居民所給予的靈魂晶球。聽說填滿魔族的靈魂後，就不會再受到攻擊。,icon_item_orb2,,,,,,,,靈魂晶球,0,3.0,0.0,FFFF,24,0.0
 667045,ABBEY_35_3_EVIL_BLOOD,從魔族身上獲得到的紅血。這要用在什麼地方，完全不得而知。,icon_item_drug_str2,,,,,,,,魔族鮮紅的血,0,0.0,0.0,FFFF,24,0.0
 667046,ABBEY_35_4_SQ_HOLLYORB,修道院長所淨化的靈魂晶球，可以感受到神聖力。,icon_item_orb_1,,,,,,,,淨化的靈魂晶球,0,5.0,0.0,FFFF,24,0.0
 667047,ABBEY_35_3_SQ_11_FAKE_BIBLE,經典裡寫著真理之樹教團的教理。,icon_item_collection_01red,,,,,,,,假經典,0,0.0,0.0,FFFF,24,0.0
@@ -3999,6 +4079,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 667247,F_MAPLE_242_MQ_08_ITEM,可以將魔力封印的卷軸。,golemmagicitem2,,,,,,,,魔力封印卷軸,0,3.0,0.0,FFFF,24,0.0
 667248,F_MAPLE_242_MQ_10_ITEM,梅德依那交付的唯一神樹種子。{nl}透過梅德依那事先安排的祭壇氣息，除了梅德伊那的治療外，大部分的效果都被封印了。,icon_item_seed_of_divine_tree,,,,,,,,被封印的神樹種子,0,0.0,0.0,FFFF,24,0.0
 667249,F_MAPLE_242_MQ_04_2_ITEM,梅德依那交付的唯一神樹種子。{nl}透過梅德依那事先安排的祭壇氣息，除了梅德伊那的治療外，大部分的效果都被封印了。,icon_item_seed_of_divine_tree,,,,,,,,被封印的神樹種子,0,0.0,0.0,FFFF,24,0.0
+667250,PRISON_82_MQ_11_BOOK,這是用生疏的字體寫的書。這看起來像是卡雷伊瑪斯的魔族中某人所寫的書。,icon_item_collection_04black,,,,,,,,不知名的魔族所寫的書,0,0.0,0.0,FFFF,24,0.0
+667251,PRISON_82_MQ_11_NECKLACE,畫有蕨菜花紋的口袋模樣的項鍊。 隱隱透着令人愉快的香味。,item_necklace_14,,,,,,,,蕨菜花紋項鍊,0,0.0,0.0,FFFF,24,0.0
+667252,D_CASTLE_19_1_MQ_05_ITEM,奧斯特雅女神的神聖寶珠。使用寶珠後，對寶珠的神聖力量好像會有反應。,icon_item_core_02yellow,,,,,,,,奧斯特雅女神的寶珠,0,2.0,0.0,FFFF,24,0.0
 668001,F_3CMLAKE_83_MQ_ITEM1,在漂浮聖地上所發現的圓盤。聽說偶而會浮現紅光。,icon_item_3cmdisk,,,,,,,,老舊的圓盤,0,5.0,0.0,FFFF,24,0.0
 668002,F_3CMLAKE_83_MQ_ITEM2,來歷不明的碎片，散發引人注目的不祥紅光。,icon_item_gem_stone_str,,,,,,,,紅色碎片,0,0.0,0.0,FFFF,24,0.0
 668003,F_3CMLAKE_83_SQ_ITEM1,薩斯納斯要奉獻給女神，所請求的貢品。可以貢獻這樣的東西嗎？ ,icon_item_meat_01,,,,,,,,拉札泰特波的肉,0,0.0,0.0,FFFF,24,0.0
@@ -5446,7 +5529,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699017,Legend_Misc_Misrus,殘留著莫茲魯斯的力量。{nl} {nl}在賽必諾斯雷格巴、斯基亞克爾立斯 · 巴勒那裝備上被當作賦予套裝屬性材料使用。,icon_item_misc_misrus,,,,,,,[9033],莫茲魯斯鎖鏈,10,0.0,0.0,TFFT,19,10.0
 699019,Rare_Enchant_Jewel_Team,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,稀有附魔珠寶,10,0.0,0.0,FFFT,9,1.0
 699020,Legend_Enchant_Jewel_Team,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,傳說附魔珠寶,10,0.0,0.0,FFFT,9,1.0
+699021,Legend_Misc_Mothacc,可以在魔蝶交戰地傳說遠征隊獲得。{nl}使用在製作以下的傳說飾品。{nl} - 莫靈波尼亞皮克堤斯{nl} - 莫靈波尼亞特里烏卡斯{nl} - 莫靈波尼亞伊斯卡里堤{nl} - 莫靈波尼亞肯特里貝{nl} - 莫靈波尼亞朱歐達,icon_item_mothpowder,,[642958],,,,,,蝶蛾粉,10,0.0,0.0,FFFT,19,10.0
 699022,Legend_ExpPotion_2_nomarket,可以將戰鬥中所產生的氣息，蒐集並儲存起來的試劑瓶。激活後，消滅怪物時將獲得經驗值。,icon_item_empty_partis,,,,,,,,帕莫卡試劑瓶,10,0.0,0.0,FFFT,10,5.0
+699023,Legend_Misc_Mothacc_easy,收集5個使用'蝶蛾粉' 可獲得1個。,icon_item_misc_tantaliser_easy,,,,,,,,蝶蛾塵,0,0.0,0.0,FFFT,7,1.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,18,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,18,1.0
 700002,KQ_token_hethran_3,費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv3,2000,0.0,0.0,TTTT,18,1.0
@@ -5562,7 +5647,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 810000,Companion_Exchange_Ticket,冒險日誌獎勵中獲得的小豬寵物交換券，可以用20張交換券向巴伊寶拉之翼交換小豬寵物。,icon_item_indulgence,,,,,,,,小豬寵物交換券,0,0.0,0.0,TTFT,18,1.0
 810001,Team_Warehouse_Extend,點擊滑鼠右鍵使用，使用時可擴充隊伍倉庫2格。,icon_item_indulgence,,,,,,,,隊伍倉庫擴張券 +2,0,60.0,0.0,FFFF,7,1.0
 810002,Team_Warehouse_Extend_1add,點擊滑鼠右鍵使用，使用時可擴充隊伍倉庫1格。,icon_item_indulgence,,,,,,,,隊伍倉庫擴張劵 +1,0,60.0,0.0,FFFF,7,1.0
-810003,misc_gemExpStone_randomQuest4_Adv,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14700,icon_item_powderp,,,,,,,,5星寶石研磨劑,20,0.0,0.0,FFFT,18,1.0
+810003,misc_gemExpStone_randomQuest4_Adv,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,5星寶石研磨劑,20,0.0,0.0,FFFT,18,1.0
 810004,Adventure_Reward_Seed,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,,,充滿祝福的嫩芽,0,5.0,0.0,FFFT,7,0.0
 810005,Adventure_Goddess_Statue,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,,,女神的雕像,0,0.0,0.0,FFFT,7,0.0
 810006,Companion_Exchange_Ticket2,冒險日誌獎勵中獲得的犰狳寵物交換券，可以用20張交換券向巴伊寶拉之翼交換犰狳。,icon_item_indulgence,,,,,,,,犰狳寵物交換券,0,0.0,0.0,TTFT,18,1.0
@@ -5604,9 +5689,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900137,Event_161027_2,只有在萬聖節期間會見到的萬聖節糖果，使時所有屬性增加5，點擊滑鼠右鍵即可使。(活動結束時統一刪除。),icon_item_pumpkin,,,,,,,,南瓜糖,0,1800.0,0.0,FFFT,7,1.0
 900138,Event_161027_1,這是模仿傑克南瓜燈外型設計的萬聖節魔方。 請用滑鼠右鍵使用看看並確認裡面的內容物喔！,icon_item_event_halloweencube,,,,,,,,萬聖節魔方,0,2.0,0.0,FFFF,9,0.0
 900139,Event_161025_poporion,波波小獅王玩偶抽獎券，詳細活動內容請參閱公告。,icon_item_indulgence,,,,,,,,波波小獅王玩偶抽獎券,1,0.0,0.0,FFFF,9,0.0
-900140,Event_161110_1,誠心誠意祈禱考試絕對要一百分而製作的合格麥芽糖。從前麥芽糖就有必勝合格的意思，具有30分鐘內讓獲得的經驗值增加30%的效果，透過點按滑鼠右鍵使用。(活動結束後統一刪除。),icon_item_event_candy,,,,,,,,合格的麥牙糖,0,1800.0,0.0,FFTF,7,1.0
-900141,Event_161110_2,安慰那些為了準備大考而身心疲憊的考生維他命。使用時在30分鐘內，每10秒能獲得恢復HP 600、SP 200的效果，透過點按滑鼠右鍵使用。(活動結束後統一刪除。),icon_item_event_vitamin,,,,,,,,合格的維他命,0,1800.0,0.0,FFTF,7,1.0
-900142,Event_161110_3,甜甜的滋味，能幫助活絡腦部的巧克力。 使用時在30分鐘內，能獲得移動速度+2的效果，透過點按滑鼠右鍵使用。(活動結束後統一刪除。),icon_item_event_choco,,,,,,,,合格的巧克力,0,1800.0,0.0,FFTF,7,1.0
+900140,Event_161110_1,誠心誠意祈禱考試絕對要一百分而製作的合格麥芽糖。從前麥芽糖就有必勝合格的意思，具有30分鐘內讓獲得的經驗值增加30%的效果，透過點按滑鼠右鍵使用。(活動結束後統一刪除。),icon_item_event_candy,,,,,,,,合格的麥牙糖,0,1800.0,0.0,FFTT,7,1.0
+900141,Event_161110_2,安慰那些為了準備大考而身心疲憊的考生維他命。使用時在30分鐘內，每10秒能獲得恢復HP 600、SP 200的效果，透過點按滑鼠右鍵使用。(活動結束後統一刪除。),icon_item_event_vitamin,,,,,,,,合格的維他命,0,1800.0,0.0,FFTT,7,1.0
+900142,Event_161110_3,甜甜的滋味，能幫助活絡腦部的巧克力。 使用時在30分鐘內，能獲得移動速度+2的效果，透過點按滑鼠右鍵使用。(活動結束後統一刪除。),icon_item_event_choco,,,,,,,,合格的巧克力,0,1800.0,0.0,FFTT,7,1.0
 900143,Event_161109_Cube,凱帕軍團活動副本內可獲得的魔方。請用滑鼠右鍵確認看看內容物吧！,icon_item_cube1,,,,,,,,凱帕魔方,0,2.0,0.0,FFFF,9,0.0
 900144,card_Xpupkit01_event,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升1000。,monster_card,,,,,,,,老舊的強化用卡片,1000,0.0,0.0,FFFF,18,1.0
 900159,Exp_Card_300_14d,使用於卡片強化時可獲得 +300的經驗值。,monster_card,,,,,,,,強化用卡片：300 (14天),0,0.0,1209600.0,FFFF,18,1.0
@@ -5698,7 +5783,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900298,Event_1704_LvUp_Old_Lv300,點擊滑鼠右鍵可以使用。{nl}活動後統一刪除。,icon_item_eventbox_magic,,,,,,,,300等榮譽衝等寶箱,0,0.0,0.0,FFFF,9,1.0
 900299,Event_1704_Drug_Fortunecookie,使用時30分鐘內經驗值、移動速度、最大HP增加，最多可以疊加5次。活動結束後統一刪除。{nl}活動後統一刪除。,icon_item_fortunecookie,,,,,,,,[衝等活動] 幸運餅乾,0,10.0,0.0,FFFF,7,0.0
 900300,Event_1704_Goddess_Statue,設置女神雕刻像，可在5分鐘內獲得女神祝福。{nl}活動結束時道具統一刪除。,icon_item_farm47_broken_zemina,,,,,,,,[Re:Build] 女神的雕像,0,0.0,0.0,FFFF,7,0.0
-900301,Event_1704_misc_gemExpStone_randomQuest4,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14700{nl}活動結束時道具統一刪除。,icon_item_powderp,,,,,,,,[Re:Build] 5星寶石研磨劑,20,0.0,0.0,FFFF,18,1.0
+900301,Event_1704_misc_gemExpStone_randomQuest4,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14,700{nl}活動結束時道具統一刪除。",icon_item_powderp,,,,,,,,[Re:Build] 5星寶石研磨劑,20,0.0,0.0,FFFF,18,1.0
 900302,Moru_Silver_Event_1704,將裝備放在鐵砧輕敲可以提升裝備效能，無須花費銀幣即可進行強化。點擊滑鼠右鍵可以使用。{nl}活動後統一刪除。,icon_item_anvil_silver,,,,,,,,[衝等活動] 銀光鐵砧,0,0.0,0.0,FFFF,18,1.0
 900310,Event_1705_Corsair_Wood,受到海賊團員的請求而製作的木板。{nl}活動結束後統一刪除。,icon_item_timber_1,,,,,,,,木板,1,0.0,0.0,FFFT,9,1.0
 900311,Event_1705_Corsair_Potion,滑鼠右擊即可使用，使用時1個小時內移動速度+5。{nl}活動結束後統一刪除。,icon_item_cprsair_potion,,,,,,,,海賊團藥水,0,0.0,0.0,FFFT,9,1.0
@@ -5786,7 +5871,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900408,Moru_Gold_EVENT_1710_NEWCHARACTER,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。右擊滑鼠使用。{nl}活動結束時道具統一刪除。,icon_item_anvil_gold,,,,,,,,[Re:Build] 發光的黃金鐵砧,0,0.0,0.0,FFFF,18,1.0
 900409,161215Event_Seed_EVENT_1710_NEWCHARACTER,使用時受女神祝福的嫩芽會悄悄開花。{nl}活動結束時道具統一刪除。,icon_item_event161215_01,,,,,,,,[Re:Build] 充滿祝福的嫩芽,0,5.0,0.0,FFFF,7,0.0
 900410,EVENT_1710_NEWCHARACTER_BOX_17,點擊滑鼠右鍵即可使用，350級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 衝等寶箱 (350級),0,0.0,0.0,FFFF,9,1.0
-900411,Drug_Event_Looting_Potion_14d,30分內令Rooting機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間30分。{nl} - Rooting機會藥水無法疊加使用。,icon_item_looting_potion_01,,,,,,,,Rooting機會增加藥水(14天),25,1800.0,1209600.0,FFFF,7,5.0
+900411,Drug_Event_Looting_Potion_14d,30分內令道具掉落機會提升+100，點擊滑鼠右鍵即可使用，冷卻時間30分。{nl} - 道具掉落機會藥水無法疊加使用。,icon_item_looting_potion_01,,,,,,,,道具掉落機會增加藥水(14天),25,1800.0,1209600.0,FFFF,7,5.0
 900412,EVENT_1803_NEWCHARACTER_JUMPING,獲得跳躍角色禮包所出現的信物。{nl}活動結束時道具統一刪除。,icon_item_event_luckychance,,,,,,,,跳躍角色禮包交換卷,1,0.0,0.0,FFFF,9,1.0
 900413,EVENT_1803_NEWCHARACTER_JUMPING_BOX,點擊滑鼠右鍵使用，15級以下才可使用。{nl}活動結束時道具統一刪除。,icon_item_giftbox_4,,,,,,,,[團結] 跳躍禮包箱子,0,0.0,0.0,FFFT,9,1.0
 900414,Event_expCard_300Lv,可提升300級角色的經驗值。50級以下才可使用。,icon_item_expcard,,,,,,,,經驗值卡片 (300級),0,0.0,0.0,FFFF,9,0.0
@@ -5901,7 +5986,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904006,EVENT_KOR_Fortunecookie,30分內根據疊加，經驗值、移動速度、最大HP會增加，最多可5疊加。活動結束時道具會統一刪除。,icon_item_fortunecookie,,,,,,,,幸運餅乾,0,10.0,0.0,FFFF,7,0.0
 904008,EVENT_1803_NEWCLASS_BOX_RTA,含有網鬥士魯迪阿里烏斯套裝的箱子。{nl}要轉職為網鬥士才可以使用。{nl}從箱子中獲得的套裝不能使用於隊伍倉庫。,icon_item_jewelrybox,,,,,,,,網鬥士魯迪阿里烏斯套裝箱,0,0.0,0.0,FFFT,7,0.0
 904009,EVENT_1803_NEWCLASS_BOX_OMJ,含有陰陽師王室禮服套裝的箱子。{nl}要轉職為陰陽師才可以使用。{nl}從箱子中獲得的套裝不能使用於隊伍倉庫。,icon_item_jewelrybox,,,,,,,,陰陽師王室禮服套裝箱子,0,0.0,0.0,FFFT,7,0.0
-904010,161215Event_Seed_1d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,,,充滿祝福的嫩芽(1天),0,5.0,86400.0,FFFF,7,0.0
+904010,161215Event_Seed_1d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,,,充滿祝福的嫩芽(1天),0,5.0,86400.0,FFFT,7,0.0
 904011,EVENT_1804_ARBOR_GROW_CRYSTAL_1_2,栽培樹木活動用的道具，幫助促進樹木的生長，活動結束時活動道具統一刪除。,icon_item_1804_arbor_1,,,,,,,,樹苗成長水晶,0,0.0,0.0,FFFT,18,1.0
 904012,EVENT_1804_ARBOR_GROW_CRYSTAL_3_4,栽培樹木活動用的道具，幫助促進樹木的生長，活動結束時活動道具統一刪除。,icon_item_1804_arbor_2,,,,,,,,成木成長水晶,0,0.0,0.0,FFFT,18,1.0
 904013,EVENT_1804_ARBOR_GROW_CRYSTAL_5_6,栽培樹木活動用的道具，幫助促進樹木的生長，活動結束時活動道具統一刪除。,icon_item_1804_arbor_3,,,,,,,,茂盛的成木成長水晶,0,0.0,0.0,FFFT,18,1.0
@@ -5911,7 +5996,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904023,EVENT_1804_TRANSCEND_SHOP_SILVER_BOX_14D,使用時可以獲得隨機數量的銀幣。,icon_item_silverbox1,,,,,,,,受祝福的銀幣箱(14天),0,0.0,1209600.0,FFFF,7,1.0
 904024,EVENT_1804_TRANSCEND_SHOP_REINFORCE_BOX_14D,使用時可以從獎勵目錄上隨機得到一個道具。,icon_item_eventbox_qm,,,,,,,,受祝福的強化魔方(14天),0,0.0,1209600.0,FFFF,7,1.0
 904025,EVENT_1804_TRANSCEND_SHOP_COSTUME_BOX_14D,使用時可以從獎勵目錄上隨機得到一個道具。,icon_item_eventcube3,,,,,,,,人氣活動套裝魔方(14天),0,0.0,1209600.0,FFFF,7,1.0
-904026,misc_gemExpStone09_14d,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700,icon_item_powderp,,,,,,,,7星寶石研磨劑(14天),0,0.0,1209600.0,FFFF,18,1.0
+904026,misc_gemExpStone09_14d,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230,700",icon_item_powderp,,,,,,,,7星寶石研磨劑(14天),0,0.0,1209600.0,FFFF,18,1.0
 904027,MISSION_SURVIVAL_EVENT2_ACHIEVE_BOX,怪盜特龐活動所贈送的稱號箱子。{nl}活動結束時活動道具統一刪除。,icon_item_holyark,,,,,,,,稱號 - 怪盜的資格,0,0.0,0.0,FFFT,7,0.0
 904029,EVENT_1805_WEDDING1_PIECE,請幫助5月的新娘，活動用道具，活動結束時統一刪除。,icon_item_event_invitationpiece1,,,,,,,,遺失的請帖碎片,0,0.0,0.0,FFFT,18,0.1
 904030,EVENT_BEAUTY_CHAIR,美容院購買活動贈送的道具。{nl}使用時可以召喚出美髮椅來坐。,icon_item_event_beauty_chair,,,,,,,,美髮椅,0,1.0,0.0,FFFT,7,1.0
@@ -5922,7 +6007,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904035,EVENT_1805_NEWUSER_MEDAL,為組隊狀態時'新朋友' 必須佩戴使用稱號，30分內給予組隊全員移動速度+2、狩獵經驗值增加效果。{nl}活動結束時統一刪除。,icon_item_solidarity_medal,,,,,,,,團結的信物,0,300.0,0.0,FFFT,7,1.0
 904036,EVENT_1805_NEWUSER_ACHIEVE_BOX,「你，來成為我的同伴吧！」活動所贈送的稱號箱子。{nl}活動結束時統一刪除。,icon_item_holyark,,,,,,,,稱號 - 新朋友,0,0.0,0.0,FFFT,7,1.0
 904037,EVENT_1805_GUILD_CARD_LV4,只有公會等級為1時可以使用，使用時公會等級提升至4。,icon_item_guild_lv_up4,,,,,,,,公會Lv4經驗值卡片,0,0.0,0.0,FFFF,7,1.0
-904038,EVENT_1805_GUILD_QUEST_MEDAL,30分內Rooting機會+200{nl}活動結束時統一刪除。,icon_item_token_guild_1,,,,,,,,公會成員的信物,0,300.0,0.0,FFFT,7,1.0
+904038,EVENT_1805_GUILD_QUEST_MEDAL,30分內道具掉落機會+200{nl}活動結束時統一刪除。,icon_item_token_guild_1,,,,,,,,公會成員的信物,0,300.0,0.0,FFFT,7,1.0
 904039,EVENT_1805_GUILD_QUEST_ACHIEVE_BOX,「TOS因公會而存在」活動所贈送的稱號箱子。{nl}活動結束時統一刪除。,icon_item_holyark,,,,,,,,稱號 - 沒公會活不下去,0,0.0,0.0,FFFT,7,1.0
 904040,EVENT_1806_Penalty_Shoot,點球決勝負,icon_item_holyark,,,,,,,,點球決勝負,0,0.0,0.0,FFFT,7,1.0
 904042,EVENT_1805_SLATE_ACHIEVE_BOX,「石板裡模糊的秘密訊息」活動所贈送的稱號箱子。{nl}活動結束時統一刪除。,icon_item_holyark,,,,,,,,石板收藏家的稱號,0,0.0,0.0,FFFT,7,1.0
@@ -5936,11 +6021,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904051,EVENT_1807_POOL_ICE,[Summer Festa] 活動紀念道具，活動結束時道具統一刪除。,icon_item_1807_pool_ice,,,,,,,,[Summer Festa] 特涼冰塊,0,0.0,0.0,FFFT,18,0.1
 904052,EVENT_1807_POOL_BROCHETTE,"[Summer Festa] 活動紀念道具，使用時30分內每10秒恢復HP+500, SP+500。{nl}[可使用地區]柯拉佩達、歐勒夏、佩迪米安、莎勒斯修女院、公會基地、高地戰士大師的道場、邪靈祭司大師之家、烈焰法師大師的研究室{nl}活動結束時統一刪除。",icon_item_food_brochette,,,,,,,,[Summer Festa] 美味烤蝦串,20,1.0,0.0,FFFT,7,1.0
 904053,EVENT_1807_POOL_MOJITO,[Summer Festa] 活動紀念道具，使用時30分內移動速度+2。{nl}[可使用地區]柯拉佩達、歐勒夏、佩迪米安、莎勒斯修女院、公會基地、高地戰士大師的道場、邪靈祭司大師之家、烈焰法師大師的研究室{nl}活動結束時統一刪除。,icon_item_food_mojito,,,,,,,,[Summer Festa] 透心涼凍檸茶,20,1.0,0.0,FFFT,7,1.0
-904054,EVENT_1807_POOL_COCONUT,[Summer Festa] 活動紀念道具，使用時30分內Rooting機會+300。{nl}[可使用地區]柯拉佩達、歐勒夏、佩迪米安、莎勒斯修女院、公會基地、高地戰士大師的道場、邪靈祭司大師之家、烈焰法師大師的研究室{nl}活動結束時統一刪除。,icon_item_food_coconut,,,,,,,,[Summer Festa] 爽口椰子汁,20,1.0,0.0,FFFT,7,1.0
+904054,EVENT_1807_POOL_COCONUT,[Summer Festa] 活動紀念道具，使用時30分內道具掉落機會+300。{nl}[可使用地區]柯拉佩達、歐勒夏、佩迪米安、莎勒斯修女院、公會基地、高地戰士大師的道場、邪靈祭司大師之家、烈焰法師大師的研究室{nl}活動結束時統一刪除。,icon_item_food_coconut,,,,,,,,[Summer Festa] 爽口椰子汁,20,1.0,0.0,FFFT,7,1.0
 904055,EVENT_1807_POOL_GRILLEDFISH,[Summer Festa] 活動紀念道具，使用時特性點數+100。{nl}活動結束時道具統一刪除。,icon_item_food_grilledfish,,,,,,,,[Summer Festa] 炖魚,20,1.0,0.0,FFFT,7,1.0
 904056,EVENT_1807_POOL_PAELLA,[Summer Festa] 活動紀念道具，使用時特性點數+500。{nl}活動結束時道具統一刪除。,icon_item_food_paella,,,,,,,,[Summer Festa] 鮮蝦焗烤,20,1.0,0.0,FFFT,7,1.0
 904058,EVENT_1807_BALL_CRACKER,30分內給予移動速度+2、廣域攻擊比率+1、經驗值增加25%的效果。{nl}活動結束時統一刪除。,icon_item_firework,,,,,,,,[Summer Festa] 爆竹,0,10.0,0.0,FFFT,7,1.0
-904059,Adventure_Reward_Seed_14d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,,,充滿祝福的嫩芽(14天),0,5.0,1209600.0,FFFF,7,0.0
+904059,Adventure_Reward_Seed_14d,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,,,充滿祝福的嫩芽(14天),0,5.0,1209600.0,FFFT,7,0.0
 904060,EVENT_PC_ROOM_1_ACHIEVE_BOX,網咖連線100小時獎勵稱號箱,icon_item_holyark,,,,,,,,[網咖] 稱號 - 100小時,0,0.0,0.0,FFFT,7,1.0
 904061,EVENT_PC_ROOM_2_ACHIEVE_BOX,網咖連線200小時獎勵稱號箱,icon_item_holyark,,,,,,,,[網咖] 稱號 - 200小時,0,0.0,0.0,FFFT,7,1.0
 904062,EVENT_PC_ROOM_3_ACHIEVE_BOX,網咖連線300小時獎勵稱號箱,icon_item_holyark,,,,,,,,[網咖] 稱號 - 300小時,0,0.0,0.0,FFFT,7,1.0
@@ -5980,10 +6065,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904135,EVENT_190110_RankReset_Point_Lv1,"職業變更點數增加100。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_3,,,,,,,,職業變更劵 Lv.1 (14天),0,0.0,1209600.0,FFFT,9,0.0
 904136,EVENT_LAB_1901_ACHIEVE_BOX,賦予TOS第4期研究員的稱號。,icon_item_holyark,,,,,,,,稱號 - TOS第4期研究員,0,0.0,0.0,FFFT,7,1.0
 904137,EVENT_190124_RankReset_Point_Lv2,"職業變更點數增加５00。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_2,,,,,,,,[活動] 職業變更劵 Lv.2(14日),0,0.0,1209600.0,FFFT,9,0.0
-904140,Class_Solution_Select_Box_Event,隱藏職業解除券選擇箱{nl} 可選擇目錄 {nl} - 忍者解除券 {nl} - 巫女解除券 {nl} - 符文師解除券 {nl} - 鑑定師解除券 {nl} - 泰拳解除券,icon_item_classsolution_box,,,,,,,,[活動] 解除券選擇箱,0,0.0,0.0,FFFT,9,0.0
+904140,Class_Solution_Select_Box_Event,隱藏職業解除券選擇箱 {nl} 可選擇目錄 {nl} - 忍者解除劵(斥候) {nl} - 巫女(坎諾席)解除券(牧師) {nl} - 符文師解除券(法師) {nl} - 鑑定師解除券(弓箭手) {nl} - 泰拳解除券(劍士),icon_item_classsolution_box,,,,,,,,[活動] 解除券選擇箱,0,0.0,0.0,FFFT,9,0.0
 904141,EVENT_1902_FISHBOX,點擊滑鼠右鍵即可使用。使用時可獲得寶箱內道具中的一種。{nl} - 特性點數 100(14天) x2{nl} - 魔法賦予卷軸(14天) x1{nl} - 強化用卡片：500(14天) x1{nl} - 5星寶石研磨劑(14天){nl} - 覺醒石(14天) x1{nl} - 執事與女僕套裝寶箱(黑色) x1{nl}活動時道具統一刪除。,icon_item_happybox_red,,,,,,,,[活動]藏在池塘內的寶箱,0,0.0,0.0,FFFT,9,1.0
 904146,EVENT_1903_TERIAVELIS_STONE,佩狄米安的鐵匠戴利亞貝利斯要求的特殊裝備製作材料。{nl}可以通關貝爾庫波的巢穴、白鴉長眠地：傳說、白鴉長眠地：獨特、挑戰5階段、修女院任務、等級副本取得。{nl}活動結束後將統一刪除。,icon_item_orb3,,,,,,,,[活動]閃亮星之碎片,0,0.0,0.0,FFFT,18,0.1
-904148,EVENT_1811_NEWCHARACTER_BARRACK_SLOT2,配合活動發放的道具。{nl}增加角色欄位。點擊滑鼠右鍵即可使用。活動結束時道具統一刪除,icon_item_barrack_slot1,,,,,,,,[活動]角色欄位增加使用劵,0,0.0,0.0,FFFF,9,1.0
+904148,EVENT_1811_NEWCHARACTER_BARRACK_SLOT2,配合活動發放的道具。{nl}增加角色欄位。使用時如果角色欄位已全部擴張，會以贈送33TP取代增加角色欄位。點擊滑鼠右鍵即可使用。,icon_item_barrack_slot1,,,,,,,,[活動]角色欄位增加使用劵,0,0.0,0.0,FFFF,9,1.0
 904149,Event_Reinforce_100000coupon_Event,強化銀幣優惠券,icon_item_reinforce_100000coupon,,,,,,,,[活動]強化銀幣優惠券 : 10萬銀幣,1,0.0,0.0,FFFT,9,0.0
 904150,EVENT_NEW_FACE_ACHIEVE_BOX,新生幼苗稱號寶箱。{nl}活動結束時道具統一刪除。,icon_item_holyark,,,,,,,,稱號 - 新生幼苗,0,0.0,0.0,FFFT,7,1.0
 904151,EVENT_1710_NEWCHARACTER_BOX_19,點擊滑鼠右鍵即可使用，400級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 衝等寶箱 (400級),0,0.0,0.0,FFFF,9,1.0
@@ -6025,19 +6110,35 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904215,Event_Uphill_Store_Point_500_14d,使用時可以獲得500點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。{nl}時間超過時，本道具會被刪除。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：500(14天),0,0.0,1209600.0,FFFT,7,0.0
 904216,Event_Uphill_Store_Point_1000_14d,使用時可以獲得1000點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。{nl}時間超過時，本道具會被刪除。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：1000(14天),0,0.0,1209600.0,FFFT,7,0.0
 904217,Event_Uphill_Store_Point_3000_14d,使用時可以獲得3000點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。{nl}時間超過時，本道具會被刪除。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：3000(14天),0,0.0,1209600.0,FFFT,7,0.0
-904218,Event_Drug_Looting_Potion_500_14d,60內令Rooting機會提升+500，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - Rooting機會和藥水無法疊加使用。{nl}時間超過時，本道具會被刪除。,item_icon_luckypotion_500,,,,,,,,Rooting機會：500(14天),0,3600.0,1209600.0,FFFT,7,1.0
-904219,Event_Sevinose_EquipArmor_Box,使用時可以獲得想要的11強化8超越[活動]賽必諾斯具1個。{nl} 該裝備不能分解、強化、萃取、變更外型。{nl}[活動]賽必諾斯雷格巴盾牌 x1{nl}[活動]賽必諾斯皮克林泰手套 x1{nl}[活動]賽必諾斯皮克林泰靴子 x1{nl}[活動]賽必諾斯皮克林泰短褲 x1{nl}[活動]賽必諾斯皮克林泰布甲 x1{nl}[活動]賽必諾斯彼梅札伊皮革手套 x1{nl}[活動]賽必諾斯彼梅札伊皮革靴子 x1{nl}[活動]賽必諾斯彼梅札伊皮革短褲 x1{nl}[活動]賽必諾斯彼梅札伊皮革盔甲 x1{nl}[活動]賽必諾斯阿克魔護手套 x1{nl}[活動]賽必諾斯阿克魔護脛靴 x1{nl}[活動]賽必諾斯阿克魔鋼鐵短褲 x1{nl}[活動]賽必諾斯阿克魔鋼鐵盔甲 x1,icon_item_jewelrybox_close,,,,,,,,[活動] 11強化8超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
+904218,Event_Drug_Looting_Potion_500_14d,60內令道具掉落機會提升+500，點擊滑鼠右鍵即可使用，冷卻時間60分。{nl} - 道具掉落機會和藥水無法疊加使用。{nl}時間超過時，本道具會被刪除。,item_icon_luckypotion_500,,,,,,,,道具掉落機會：500(14天),0,3600.0,1209600.0,FFFT,7,1.0
+904219,Event_Sevinose_EquipArmor_Box,右點擊時，可以選擇11強化8超越[活動] 賽必諾斯防具。{nl}獲得的防具不能強化、分解、外觀變更萃取。{nl}[活動] 賽必諾斯雷格巴盾牌 x1{nl}[活動] 賽必諾斯皮克林泰手套 x1{nl}[活動] 賽必諾斯皮克林泰靴子 x1{nl}[活動] 賽必諾斯皮克林泰短褲 x1{nl}[活動] 賽必諾斯皮克林泰布甲 x1{nl}[活動] 賽必諾斯比枚札伊皮革手套 x1{nl}[活動] 賽必諾斯比枚札伊皮革靴子 x1{nl}[活動] 賽必諾斯比枚札伊皮革短褲 x1{nl}[活動] 賽必諾斯比枚札伊皮革盔甲 x1{nl}[活動] 賽必諾斯亞克魔護手套  x1{nl}[活動] 賽必諾斯亞克魔護脛靴 x1{nl}[活動] 賽必諾斯亞克魔鋼鐵短褲 x1{nl}[活動] 賽必諾斯亞克魔盔甲 x1,icon_item_jewelrybox_close,,,,,,,,[活動] 11強化8超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
 904220,Event_card_Xpupkit10_Team_14d,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升5400。{nl}時間超過時，本道具會被刪除。,icon_item_reinforce_card_10,,,,,,,,Lv10 強化用卡片(14天),0,0.0,1209600.0,FFFT,18,1.0
-904221,Event_gemExpStone09_Team_14d,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230700{nl}時間超過時，本道具會被刪除。,icon_item_powderp,,,,,,,,7星寶石研磨劑(14天),0,0.0,1209600.0,FFFT,18,1.0
-904222,Event_indunReset_Team_14d,使用時，副本地下城和委託所任務的入場次數會重置。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_indunfreeenter,,,,,,,,副本進場次數重置卷:14日,0,0.0,1209600.0,FFFT,9,1.0
+904221,Event_gemExpStone09_Team_14d,"使用於強化寶石時，使寶石的經驗值大幅提升。nl}時間超過時，本道具會被刪除。{nl} - 獲得寶石經驗值：230,700",icon_item_powderp,,,,,,,,7星寶石研磨劑(14天),0,0.0,1209600.0,FFFT,18,1.0
+904222,Event_indunReset_Team_14d,使用時副本進場次數會重置。獲得後14天內可使用。,icon_item_indunfreeenter,,,,,,,,副本進場次數重置卷:14日,0,0.0,1209600.0,FFFT,9,1.0
 904223,Event_HiddenAbility_MasterPiece,包含技能的隱藏內容，去找各系列大師NPC，就可以獲得想要內容的秘術。,icon_item_hiddenability_total,,,,,,,,[活動] 未識別神秘之書,0,0.0,0.0,FFFT,18,0.1
 904225,EVENT_190919_ANCIENT_SCROLL_RESTORE,使用時指定的怪物法單中會隨機登場6種。{nl}選擇怪物就可以獲得登錄該怪物的魔法書散頁。{nl}獲得魔法書散頁時會消耗[活動]古代鑄幣。{nl} 依怪物的階級消耗的[活動]古代鑄幣數量和出現機率也不同。{nl}可複選。{nl}[活動]古代鑄幣消耗數量及登場機率{nl} - 一般 : 1個(70%){nl} - 魔法 : 2個(25%){nl} - 獨特 : 3個(4%){nl} - 傳說 : 4個(1%){nl}* 活動結束後將統一刪除。,icon_item_event_190919_ancient_scroll,,,,,,,,[活動] 怪物選擇卷軸,0,0.0,0.0,FFFF,7,0.0
 904226,EVENT_HALLOWEENCANDY_1,活動道具。{nl}向活動布告欄NPC對話開啟[萬聖節之夜的騷動]活動商店，可以兌換商店內的商品。{nl}活動結束後將統一刪除。,event_whiteday_candy_3,,,,,,,,甜蜜萬聖節糖果,0,0.0,0.0,FFFT,18,0.1
 904227,EVENT_HALLOWEENCANDY_2,活動道具。{nl}使用後，24小時內獲得甜蜜萬聖節糖果的數量增為2倍。不過[萬聖節之夜的騷動]副本和連線獎勵不會套用此效果。{nl}活動結束後將統一刪除。,icon_item_pumpkin,,,,,,,,南瓜萬聖節糖果,0,0.0,0.0,FFFT,7,0.1
-904239,event1912_4thAnniversary_Coin,為了迎接新年而製作的鑄幣。在活動期間內可以透過各種管道取得。{nl}活動結束時統一刪除。{nl}可以在新年紀念商店中使用。,icon_item_annycoin_2,,,,,,,,[活動]新年紀念鑄幣,0,0.0,0.0,FFFT,18,0.1
-904240,event1912_TP_feather,充滿加比婭恩寵的羽毛。收集3個可以找NPC加比婭的精靈兌換隨機一個加比婭道具。{nl} {nl}{@st66d}活動結束時將統一變更為特性點數。{/} {nl} {nl}{@st66d_y}{s18}加比婭道具清單{/}{/}{nl}- 加比婭祭司套裝選擇箱 x1{nl}- 加比婭的烈焰 x1{nl}- 加比婭小玩偶 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅髮髮結 x1{nl}- 加比婭羽毛頭飾 x1{nl}- 火精靈鳥x 1{nl}- 充滿加比婭恩寵的翅膀飾品 x2 ~ 50{nl} {nl}{@st66d_y}{s18}* 可以透過官網公告'機率型道具目錄'查看詳細兌換說明。{/}{/},icon_item_feather_pinics,,,,,,,,充滿加比婭恩寵的羽毛,0,0.0,0.0,TTFT,18,0.1
-904241,event1912_TP_wing,充滿加比婭恩寵的翅膀飾品。交給NPC加比婭的精靈可以用指定的數量兌換加比婭道具。{nl} {nl}{@st66d}活動結束時將統一變更為特性點數。{/} {nl} {nl}{@st66d_y}{s18}加比婭道具清單{/}{/}{nl}- 加比婭祭司套裝選擇箱 x1{nl}- 加比婭的烈焰 x1{nl}- 加比婭小玩偶 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅髮髮結 x1{nl}- 加比婭羽毛頭飾 x1,icon_item_wing_pinics,,,,,,,,充滿加比婭恩寵的翅膀飾品,0,0.0,0.0,FFFT,18,0.1
-904271,EVENT_2002_CHOCO,30分鐘內，每重疊1層獲得經驗值 +10%、最大HP +1000、每10秒恢復HP 200/SP 100、Rooting機增 +300。最多可以重疊5層。活動結束後將統一刪除。,icon_item_chocolatebox,,,,,,,,加倍甜蜜情人節巧克力,0,10.0,0.0,FFFT,7,0.0
+904229,Arts_Ability_Coupon,若持有此劵，學習秘術時豁免所需的特性點數。{nl}秘術學習後道具會消耗。,icon_item_arts_ability_coupon,,,,,,,,秘術學習特性點數豁免劵,0,0.0,0.0,FFFT,9,0.0
+904230,Ability_Point_Stone_10000_NoTrade,"使用時特性點數增加10,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint4,,,,,,,,"特性點數 10,000",0,0.0,0.0,FFFF,9,1.0
+904231,Event_collegetestRiceCake,"使用時可獲得持續30分鐘的Buff。{nl}每次使用時Buff疊加可獲得以下效果。{nl} - 經驗值獲得 + (疊加 x 10)%{nl} - 道具掉落機會 + (疊加 x 100){nl} - 最大體力 + (疊加 x 500){nl} - 每10秒HP, SP恢復(疊加 x 100){nl}(最多5疊加){nl} - 活動結束時統一刪除。",icon_item_ricecake,,,,,,,,[活動] 長條年糕,0,5.0,0.0,FFFT,7,1.0
+904232,PersonalHousing_PointGacha_1,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl}迪凱雷草 x3{nl}核粉末 x10{nl}塔特 x10{nl}[個人家園]釣客地毯 x1{nl}[個人家園]釣客地氈 x1{nl}[個人家園]甜蜜半圓地氈 x1,icon_item_happybox_red,,,,,,,,[個人家園]第1階段定居物品,0,0.0,0.0,FFFT,9,0.0
+904233,PersonalHousing_PointGacha_2,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl}窩西斯花 x3{nl}希埃拉粉末 x10{nl}塔特 x20{nl}濃縮HP藥水 LV15 x5{nl}濃縮SP藥水 LV15 x5{nl}[個人家園]四角地氈 x1{nl}[個人家園]皮革地氈 x1{nl}[個人家園]大海粉紅地毯 x1,icon_item_happybox_blue,,,,,,,,[個人家園]第2階段定居物品,0,0.0,0.0,FFFT,9,0.0
+904234,PersonalHousing_PointGacha_3,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl}濃縮HP藥水 LV15 x10{nl}濃縮SP藥水 LV15 x10{nl}塔特 x30{nl}HP 恢復小型靈藥 x 5{nl}SP 恢復小型靈藥 x 5{nl}[個人家園]釣客虎皮地氈 x1{nl}[個人家園]獵人白虎地氈 x1{nl}[個人家園]大海綠色地毯 x1,icon_item_happybox_black,,,,,,,,[個人家園]第3階段定居物品,0,0.0,0.0,FFFT,9,0.0
+904235,Ability_Point_Stone_10000_Team_NoDate,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,,,"[活動] 特性點數 10,000",0,0.0,0.0,FFFT,9,1.0
+904238,Achieve_Steam_JP_revelator_item,2019年伺服器移轉玩家的專用稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,稱號-最初的啟示者,0,0.0,0.0,FFFF,7,0.0
+904239,event1912_4thAnniversary_Coin,為了紀念4周年而製作的鑄幣。在活動期間內可以透過各種管道取得。{nl}活動結束時統一刪除。{nl}可以在4周年紀念商店中使用。,icon_item_annycoin_2,,,,,,,,[活動]4周年紀念鑄幣,0,0.0,0.0,FFFT,18,0.1
+904240,event1912_TP_feather,"蘊藏加比婭恩寵的羽毛。收集3個轉交給交換NPC加比婭的傳令，就可以依機率獲得加比婭主題道具中的1種。{nl} {nl}{@st66d}1月 9日維護時特性點數統一變更為 4,000。{/} {nl} {nl}{@st66d_y}{s18}加比婭主題道具清單{/}{/}{nl}- 加比婭的祭司套裝選擇箱 x1{nl}- 加比婭之火 x1{nl}- 小加比婭娃娃 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅色髮結 x1{nl}- 加比婭羽毛髮飾 x1{nl}- 火之傳令鳥x 1{nl}- 充滿加比婭恩寵的翅膀裝飾 x2 ~ 50{nl} {nl}{@st66d_y}{s18}* 透過官網下方 '機率型道具目錄'可以確認內容物和機率。{/}{/}",icon_item_feather_pinics,,,,,,,,充滿加比婭恩寵的羽毛,0,0.0,0.0,TTFT,18,0.1
+904241,event1912_TP_wing,"充滿加比婭恩寵的翅膀裝飾，如果拿去給交換NPC加比婭的傳令和NPC克莉妲的話，可以選擇加比婭主題道具中1個，只要轉交加充滿比婭恩寵翅膀裝飾的需求數量就可以獲得。{nl} {nl}{@st66d}活動期間特性點數統一變成2,000。{/}{nl} {nl}{@st66d_y}{s18}加比婭主題道具清單{/}{/}{nl}- 加比婭祭司套裝選擇箱 x1{nl}- 加比婭之火 x1{nl}- 小加比婭娃娃 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅色髮結 x1{nl}- 加比婭羽毛髮飾 x1",icon_item_wing_pinics,,,,,,,,充滿加比婭恩寵的翅膀裝飾,0,0.0,0.0,FFFT,18,0.1
+904247,TP_1912_EQUIPITEM_BOX_ARMOR,使用時可以獲得想要的11強化10超越[4ever] 賽必諾斯防具1個。{nl}該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[4ever] 11強化10超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
+904248,TP_1912_EQUIPITEM_BOX,使用時可以獲得想要的11強化10超越[4ever] 賽必諾斯武器1個。{nl}該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[4ever] 11強化10超越賽必諾斯武器選擇箱,0,0.0,0.0,FFFT,9,1.0
+904249,EVENT_1710_NEWCHARACTER_BOX_20,點擊滑鼠右鍵即可使用，420級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 升級箱 (420級),0,0.0,0.0,FFFF,9,1.0
+904250,EVENT_EP12NEWCLASS_COSBOX,點擊滑鼠右鍵使用，可以選擇並獲得以下職業套裝中的一件。{nl} - 梅花俠客{nl} - 鋼弩手{nl} - 大地法師{nl} - 東征十字軍{nl} - 冉達,icon_item_giftbox_4,,,,,,,,[活動] 新職業優惠套裝選擇箱,0,0.0,0.0,FFFT,9,1.0
+904251,Event_expCard_400Lv_NO420,可以獲得從1級到400級為止所需要的經驗值。{nl}但是，只有在{#ff0000}200級未滿時可以使用。,icon_item_expcard,,,,,,,,[活動] 經驗值卡片 (400級),0,0.0,0.0,FFFT,9,0.0
+904253,4YEARS_EVENT_JUMPING,使用時可以獲得以下所有內容物。{nl} - [活動] 經驗值卡片 (400級) x1{nl} - 職業經驗值卡片箱 x1,icon_item_giftbox_4,,,,,,,,[活動] Lv.400 飛躍箱,0,0.0,0.0,FFFF,7,0.0
+904260,Achieve_LV400_MISSION_ACHIEVE01,可以獲得稱號-不屈的鬥志持有者 (Lv.400 地下城)的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-不屈的鬥志持有者 (Lv.400 地下城),0,0.0,0.0,FFFT,9,0.0
+904261,Achieve_LV400_MISSION_ACHIEVE02,可以獲得稱號-有勇氣的人 (Lv.400 地下城)的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-有勇氣的人 (Lv.400 地下城),0,0.0,0.0,FFFT,9,0.0
+904271,EVENT_2002_CHOCO,30分鐘內，每重疊1層獲得經驗值 +10%、最大HP +1000{nl}每10秒恢復HP 200/SP 100{nl}未鑑定裝備掉落機增 +300{nl}最多可以重疊5層。活動結束後將統一刪除。,icon_item_chocolatebox,,,,,,,,加倍甜蜜情人節巧克力,0,10.0,0.0,FFFT,7,0.0
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,7,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,18,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,18,1.0
@@ -6056,13 +6157,109 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 910016,Scroll_SkillItem_Pyromancer_EnchantFire,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 15 火焰附魔],5,0.0,0.0,TTTT,7,1.0
 910017,Scroll_SkillItem_Pyromancer_FlameGround,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 15 烈焰大地],5,0.0,0.0,TTTT,7,1.0
 910018,Scroll_SkillItem_Warlock_PoleofAgony,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 10 苦痛之柱],5,0.0,0.0,TTTT,7,1.0
+1210000,PersonalHousing_Item_hp_barrack_06_carpet_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_06_carpet,,,,,,,,[個人家園]釣魚人地毯,80000,0.0,0.0,FFTT,7,0.0
+1210001,PersonalHousing_Item_hp_barrack_06_chair_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_chair,,,,,,,,[個人家園]釣魚人椅子,60000,0.0,0.0,FFTT,7,0.0
+1210002,PersonalHousing_Item_hp_barrack_06_desk_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，桌上的地球儀和模型船會移動。),icon_item_p_h_barrack_06_desk,,,,,,,,[個人家園]釣魚人書桌,120000,0.0,0.0,FFTT,7,0.0
+1210003,PersonalHousing_Item_hp_barrack_06_fishlamp_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_06_fishlamp,,,,,,,,[個人家園]釣魚人魚燈,80000,0.0,0.0,FFTT,7,0.0
+1210004,PersonalHousing_Item_hp_barrack_06_fishrod_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_06_fishrod,,,,,,,,[個人家園]釣魚人釣竿,45000,0.0,0.0,FFTT,7,0.0
+1210005,PersonalHousing_Item_hp_barrack_06_fishtank_01_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，魚缸裡的魚會移動。),icon_item_p_h_barrack_06_fishtank_01,,,,,,,,[個人家園]釣魚人方型水族館,90000,0.0,0.0,FFTT,7,0.0
+1210006,PersonalHousing_Item_hp_barrack_06_fishtank_02_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，魚缸裡的魚會移動。),icon_item_p_h_barrack_06_fishtank_02,,,,,,,,[個人家園]釣魚人方型水族館,90000,0.0,0.0,FFTT,7,0.0
+1210007,PersonalHousing_Item_hp_barrack_06_frame_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_06_frame,,,,,,,,[個人家園]釣魚人四鳍旗鱼裝飾,45000,0.0,0.0,FFTT,7,0.0
+1210008,PersonalHousing_Item_hp_barrack_06_lamp_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_06_lamp,,,,,,,,[個人家園]釣魚人油燈,45000,0.0,0.0,FFTT,7,0.0
+1210009,PersonalHousing_Item_hp_barrack_06_mapboard_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_06_mapboard,,,,,,,,[個人家園]釣魚人地圖板,45000,0.0,0.0,FFTT,7,0.0
+1210010,PersonalHousing_Item_hp_barrack_06_partiton_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_partiton_01,,,,,,,,[個人家園]釣魚人欄杆,60000,0.0,0.0,FFTT,7,0.0
+1210011,PersonalHousing_Item_hp_barrack_06_partiton_02_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_partiton_02,,,,,,,,[個人家園]釣魚人隔板,60000,0.0,0.0,FFTT,7,0.0
+1210012,PersonalHousing_Item_hp_barrack_06_partiton_03_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_partiton_03,,,,,,,,[個人家園]釣魚人擋板,70000,0.0,0.0,FFTT,7,0.0
+1210013,PersonalHousing_Item_hp_barrack_06_rodstand_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_rodstand,,,,,,,,[個人家園]釣魚人釣竿支架,60000,0.0,0.0,FFTT,7,0.0
+1210014,PersonalHousing_Item_hp_barrack_06_rug_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_06_rug,,,,,,,,[個人家園]釣魚人小地毯,80000,0.0,0.0,FFTT,7,0.0
+1210015,PersonalHousing_Item_hp_barrack_06_shelf_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_shelf,,,,,,,,[個人家園]釣魚人架子,70000,0.0,0.0,FFTT,7,0.0
+1210016,PersonalHousing_Item_hp_barrack_04_cupboard_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_04_cupboard_01,,,,,,,,[個人家園]甜蜜壁櫥-果醬,45000,0.0,0.0,FFTT,7,0.0
+1210017,PersonalHousing_Item_hp_barrack_04_cupboard_02_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_04_cupboard_02,,,,,,,,[個人家園]甜蜜壁櫥-調味料,45000,0.0,0.0,FFTT,7,0.0
+1210018,PersonalHousing_Item_hp_barrack_04_candlestick_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_04_candlestick,,,,,,,,[個人家園]甜蜜燭臺,45000,0.0,0.0,FFTT,7,0.0
+1210019,PersonalHousing_Item_hp_barrack_04_shelf_01_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_shelf_01,,,,,,,,[個人家園]甜蜜餐具櫃,70000,0.0,0.0,FFTT,7,0.0
+1210020,PersonalHousing_Item_hp_barrack_04_shelf_02_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_shelf_02,,,,,,,,[個人家園]甜蜜禮物盒,70000,0.0,0.0,FFTT,7,0.0
+1210021,PersonalHousing_Item_hp_barrack_04_shelf_03_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_shelf_03,,,,,,,,[個人家園]甜蜜裝飾櫃,70000,0.0,0.0,FFTT,7,0.0
+1210022,PersonalHousing_Item_hp_barrack_04_coffemachine_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(配置後使用時，就可以利用咖啡機。),icon_item_p_h_barrack_04_coffemachine,,,,,,,,[個人家園]甜蜜咖啡機,80000,0.0,0.0,FFTT,7,0.0
+1210023,PersonalHousing_Item_hp_barrack_04_storage_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_storage,,,,,,,,[個人家園]甜蜜餅乾盒,60000,0.0,0.0,FFTT,7,0.0
+1210024,PersonalHousing_Item_hp_barrack_04_displayStand_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_displaystand,,,,,,,,[個人家園]甜蜜大型展台,130000,0.0,0.0,FFTT,7,0.0
+1210025,PersonalHousing_Item_hp_barrack_04_counter_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_counter,,,,,,,,[個人家園]甜蜜櫃台,60000,0.0,0.0,FFTT,7,0.0
+1210026,PersonalHousing_Item_hp_barrack_04_mat_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_04_mat,,,,,,,,[個人家園]甜蜜半圓地毯,50000,0.0,0.0,FFTT,7,0.0
+1210027,PersonalHousing_Item_hp_barrack_04_chair_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_chair,,,,,,,,[個人家園]甜蜜椅子,60000,0.0,0.0,FFTT,7,0.0
+1210028,PersonalHousing_Item_hp_barrack_04_macaron_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，桌子上的甜蜜馬卡龍會迴轉。),icon_item_p_h_barrack_04_macaron,,,,,,,,[個人家園]蜜馬卡龍桌子,80000,0.0,0.0,FFTT,7,0.0
+1210029,PersonalHousing_Item_hp_barrack_04_cakeStall_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，陳列台裡的蛋糕會迴轉。),icon_item_p_h_barrack_04_cakestall,,,,,,,,[個人家園]甜蜜小型展台,90000,0.0,0.0,FFTT,7,0.0
+1210030,PersonalHousing_Item_hp_barrack_03_cushion_set_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_cushion_set,,,,,,,,[個人家園]少女坐墊,70000,0.0,0.0,FFTT,7,0.0
+1210031,PersonalHousing_Item_hp_barrack_03_cabinet_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_cabinet,,,,,,,,[個人家園]少女櫥櫃,60000,0.0,0.0,FFTT,7,0.0
+1210032,PersonalHousing_Item_hp_barrack_03_beartoy_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，玩具熊會彈跳出來。),icon_item_p_h_barrack_03_beartoy,,,,,,,,[個人家園]少女禮物盒-玩具熊,80000,0.0,0.0,FFTT,7,0.0
+1210033,PersonalHousing_Item_hp_barrack_03_mannequin_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_mannequin,,,,,,,,[個人家園]少女假人,60000,0.0,0.0,FFTT,7,0.0
+1210034,PersonalHousing_Item_hp_barrack_03_shoes_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_shoes,,,,,,,,[個人家園]少女紅皮鞋,60000,0.0,0.0,FFTT,7,0.0
+1210035,PersonalHousing_Item_hp_barrack_03_gacha_cabinet_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(配置後使用時，可以嘗試抽出糖果。),icon_item_p_h_barrack_03_gacha_cabinet,,,,,,,,[個人家園]少女糖果機,80000,0.0,0.0,FFTT,7,0.0
+1210036,PersonalHousing_Item_hp_barrack_03_candle_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_03_candle,,,,,,,,[個人家園]少女燭臺,45000,0.0,0.0,FFTT,7,0.0
+1210037,PersonalHousing_Item_hp_barrack_03_dressing_desk_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_dressing_desk,,,,,,,,[個人家園]少女化妝台,100000,0.0,0.0,FFTT,7,0.0
+1210038,PersonalHousing_Item_hp_barrack_03_mirror_01_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_01,,,,,,,,[個人家園]少女鏡子-圓形,25000,0.0,0.0,FFTT,7,0.0
+1210039,PersonalHousing_Item_hp_barrack_03_mirror_02_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_02,,,,,,,,[個人家園]少女鏡子-方形,25000,0.0,0.0,FFTT,7,0.0
+1210040,PersonalHousing_Item_hp_barrack_03_mirror_03_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_03,,,,,,,,[個人家園]少女鏡子-裝飾,45000,0.0,0.0,FFTT,7,0.0
+1210041,PersonalHousing_Item_hp_barrack_03_mirror_04_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_04,,,,,,,,[個人家園]少女鏡子-小鳥,25000,0.0,0.0,FFTT,7,0.0
+1210042,PersonalHousing_Item_hp_barrack_03_mirror_05_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_05,,,,,,,,[個人家園]少女鏡子-草莓,25000,0.0,0.0,FFTT,7,0.0
+1210043,PersonalHousing_Item_hp_barrack_03_mirror_06_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_06,,,,,,,,[個人家園]少女鏡子-鴨子,25000,0.0,0.0,FFTT,7,0.0
+1210044,PersonalHousing_Item_hp_barrack_03_mirror_07_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_07,,,,,,,,[個人家園]少女鏡子-雲朵,25000,0.0,0.0,FFTT,7,0.0
+1210045,PersonalHousing_Item_hp_barrack_03_doll_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_doll,,,,,,,,[個人家園]少女縫製娃娃,60000,0.0,0.0,FFTT,7,0.0
+1210046,PersonalHousing_Item_hp_barrack_village_alarm_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_village_alarm,,,,,,,,[個人家園]鐵製風景,25000,0.0,0.0,FFTT,7,0.0
+1210047,PersonalHousing_Item_hp_barrack_village_bed_01_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_bed_01,,,,,,,,[個人家園]公主床,130000,0.0,0.0,FFTT,7,0.0
+1210048,PersonalHousing_Item_hp_barrack_village_woodbed_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_woodbed,,,,,,,,[個人家園]木床,130000,0.0,0.0,FFTT,7,0.0
+1210049,PersonalHousing_Item_hp_barrack_village_bread_table_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_bread_table,,,,,,,,[個人家園]木頭餐桌-麵包,70000,0.0,0.0,FFTT,7,0.0
+1210050,PersonalHousing_Item_hp_barrack_village_fruit_table_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_fruit_table,,,,,,,,[個人家園]木頭餐桌-水果,70000,0.0,0.0,FFTT,7,0.0
+1210051,PersonalHousing_Item_hp_barrack_village_dishp_table_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_dish_table,,,,,,,,[個人家園]高級餐桌,130000,0.0,0.0,FFTT,7,0.0
+1210052,PersonalHousing_Item_hp_barrack_village_chair_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_chair_01,,,,,,,,[個人家園]長靠背椅,60000,0.0,0.0,FFTT,7,0.0
+1210053,PersonalHousing_Item_hp_barrack_village_longchair_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_longchair,,,,,,,,[個人家園]粉色雙人小板凳,70000,0.0,0.0,FFTT,7,0.0
+1210054,PersonalHousing_Item_hp_barrack_village_sofa_01_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_sofa_01,,,,,,,,[個人家園]綠色雙人沙發,70000,0.0,0.0,FFTT,7,0.0
+1210055,PersonalHousing_Item_hp_barrack_village_mat_01_1,{#8e0000} 配置點數3點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_village_mat_01,,,,,,,,[個人家園]半圓地毯,30000,0.0,0.0,FFTT,7,0.0
+1210056,PersonalHousing_Item_hp_barrack_village_mat_02_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_village_mat_02,,,,,,,,[個人家園]方形地毯,110000,0.0,0.0,FFTT,7,0.0
+1210057,PersonalHousing_Item_hp_barrack_village_rug_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_village_rug,,,,,,,,[個人家園]皮革地毯,110000,0.0,0.0,FFTT,7,0.0
+1210058,PersonalHousing_Item_hp_barrack_village_sitting_cushion_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_sitting_cushion,,,,,,,,[個人家園]酒裝飾坐墊,60000,0.0,0.0,FFTT,7,0.0
+1210059,PersonalHousing_Item_hp_barrack_village_side_table_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_side_table_01,,,,,,,,[個人家園]抽屜櫃-角笛,60000,0.0,0.0,FFTT,7,0.0
+1210060,PersonalHousing_Item_hp_barrack_village_side_table_012_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_village_side_table_012,,,,,,,,[個人家園]抽屜櫃-角裝飾,80000,0.0,0.0,FFTT,7,0.0
+1210061,PersonalHousing_Item_hp_barrack_village_stove_01_1,{#8e0000} 配置點數16點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_village_stove_01,,,,,,,,[個人家園]壁爐,180000,0.0,0.0,FFTT,7,0.0
+1210062,PersonalHousing_Item_hp_barrack_village_stove_012_1,{#8e0000} 配置點數16點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_village_stove_012,,,,,,,,[個人家園]壁爐-盤子,180000,0.0,0.0,FFTT,7,0.0
+1210063,PersonalHousing_Item_hp_barrack_02_bookshelf_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_02_bookshelf_01,,,,,,,,[個人家園]占星術高級書架,60000,0.0,0.0,FFTT,7,0.0
+1210064,PersonalHousing_Item_hp_barrack_02_bookshelf_02_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_02_bookshelf_02,,,,,,,,[個人家園]大型書架,60000,0.0,0.0,FFTT,7,0.0
+1210065,PersonalHousing_Item_hp_barrack_02_chair_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_02_chair,,,,,,,,[個人家園]占星術單人沙發,60000,0.0,0.0,FFTT,7,0.0
+1210066,PersonalHousing_Item_hp_barrack_02_table_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_02_table,,,,,,,,[個人家園]占星術桌子,100000,0.0,0.0,FFTT,7,0.0
+1210067,PersonalHousing_Item_hp_barrack_07_bear_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_bear,,,,,,,,[個人家園]獵人熊裝飾,60000,0.0,0.0,FFTT,7,0.0
+1210068,PersonalHousing_Item_hp_barrack_07_chair_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_chair,,,,,,,,[個人家園]獵人安樂椅,70000,0.0,0.0,FFTT,7,0.0
+1210069,PersonalHousing_Item_hp_barrack_07_desk_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_07_desk,,,,,,,,[個人家園]獵人書桌,90000,0.0,0.0,FFTT,7,0.0
+1210070,PersonalHousing_Item_hp_barrack_07_fireplace_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_07_fireplace,,,,,,,,[個人家園]獵人暖爐,90000,0.0,0.0,FFTT,7,0.0
+1210071,PersonalHousing_Item_hp_barrack_07_floorDoor_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_floordoor,,,,,,,,[個人家園]獵人地板門,100000,0.0,0.0,FFTT,7,0.0
+1210072,PersonalHousing_Item_hp_barrack_07_table_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_table,,,,,,,,[個人家園]獵人桌子,60000,0.0,0.0,FFTT,7,0.0
+1210073,PersonalHousing_Item_hp_barrack_07_tiger_1,{#8e0000} 配置點數19點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_07_tiger,,,,,,,,[個人家園]獵人虎皮地毯,200000,0.0,0.0,FFTT,7,0.0
+1210074,PersonalHousing_Item_hp_barrack_07_tiger_white_1,{#8e0000} 配置點數19點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_07_tiger_white,,,,,,,,[個人家園]獵人白虎地毯,200000,0.0,0.0,FFTT,7,0.0
+1210075,PersonalHousing_Item_hp_barrack_07_woodholder_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_woodholder,,,,,,,,[個人家園]獵人木材支架,60000,0.0,0.0,FFTT,7,0.0
+1210076,PersonalHousing_Item_hp_barrack_08_bed_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_bed,,,,,,,,[個人家園]海洋床,130000,0.0,0.0,FFTT,7,0.0
+1210077,PersonalHousing_Item_hp_barrack_08_capet_01_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_08_capet_01,,,,,,,,[個人家園]海洋海藍地毯,110000,0.0,0.0,FFTT,7,0.0
+1210078,PersonalHousing_Item_hp_barrack_08_capet_02_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_08_capet_02,,,,,,,,[個人家園]海洋粉紅地毯,110000,0.0,0.0,FFTT,7,0.0
+1210079,PersonalHousing_Item_hp_barrack_08_capet_small_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_capet_small,,,,,,,,[個人家園]海洋珊瑚色小地毯,70000,0.0,0.0,FFTT,7,0.0
+1210080,PersonalHousing_Item_hp_barrack_08_fishbowl_01_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_fishbowl_01,,,,,,,,[個人家園]海洋大型魚缸,100000,0.0,0.0,FFTT,7,0.0
+1210081,PersonalHousing_Item_hp_barrack_08_fishbowl_02_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_fishbowl_02,,,,,,,,[個人家園]海洋小型魚缸,60000,0.0,0.0,FFTT,7,0.0
+1210082,PersonalHousing_Item_hp_barrack_08_jellyfishhganger_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_jellyfishhganger,,,,,,,,[個人家園]海洋水母衣架,60000,0.0,0.0,FFTT,7,0.0
+1210083,PersonalHousing_Item_hp_barrack_08_mirror_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_08_mirror,,,,,,,,[個人家園]海洋洗手台,90000,0.0,0.0,FFTT,7,0.0
+1210084,PersonalHousing_Item_hp_barrack_08_partition_01_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_partition_01,,,,,,,,[個人家園]海洋擋板,70000,0.0,0.0,FFTT,7,0.0
+1210085,PersonalHousing_Item_hp_barrack_08_pot_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_08_pot,,,,,,,,[個人家園]海洋珊瑚礁桌子,80000,0.0,0.0,FFTT,7,0.0
+1210086,PersonalHousing_Item_hp_barrack_08_sofa_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_sofa,,,,,,,,[個人家園]海洋珊瑚色沙發,60000,0.0,0.0,FFTT,7,0.0
+1210087,PersonalHousing_Item_hp_barrack_08_stole_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_stole,,,,,,,,[個人家園]海洋珊瑚色小板凳,60000,0.0,0.0,FFTT,7,0.0
+1210088,PersonalHousing_Item_hp_barrack_08_tablepot_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_tablepot,,,,,,,,[個人家園]海洋珊瑚桌子,60000,0.0,0.0,FFTT,7,0.0
+1210089,PersonalHousing_Item_hp_barrack_08_treasurebox_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_treasurebox,,,,,,,,[個人家園]海洋寶箱,100000,0.0,0.0,FFTT,7,0.0
+1210090,PersonalHousing_Item_hp_barrack_08_waterbottle_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_waterbottle,,,,,,,,[個人家園]海洋水瓶,60000,0.0,0.0,FFTT,7,0.0
+1250003,motion_medeina_emotion01,可以登入會動的聊天表情符號。點擊滑鼠右鍵即可使用。,icon_item_misc_00021,,,,,,,,動作表情符號：梅德依那(慌張),0,0.0,0.0,FFFT,7,1.0
+1250004,motion_medeina_emotion02,可以登入會動的聊天表情符號。點擊滑鼠右鍵即可使用。,icon_item_misc_00021,,,,,,,,動作表情符號：梅德依那(高興),0,0.0,0.0,FFFT,7,1.0
 2000000,Achieve_Event_Steam_PoPo_Vacation,送給PoPo Vacation得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - PoPo Vacation,0,0.0,0.0,FFFT,7,0.0
 2000002,Achieve_Steam_PIZZA,送給捐出披薩的救援者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,稱號 - 披薩外送服務,0,0.0,0.0,FFFT,7,0.0
+2000003,Achieve_Event_Steam_One_of_A_Kind,賜給One of A Kind 得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - One of A Kind,0,0.0,0.0,FFFT,7,0.0
 2010001,HiddenAbility_Piece,內含隱藏技能，但是無法看出什麼的散頁，去找各系列大師NPC，就可以知道隱藏內容。,icon_item_hiddenability_piece,,,,,,,,神秘之書散頁,0,0.0,0.0,TFFT,18,0.1
 2010002,HiddenAbility_MasterPiece,包含技能的隱藏內容，去找各系列大師NPC，就可以獲得想要內容的秘術。,icon_item_hiddenability_total,,,,,,,,[補償用] 未識別神秘之書,0,0.0,0.0,FFFT,18,0.1
-2040001,HiddenAbility_Swordman33,使用時，可以獲得[突刺：突進]秘術。{nl} - 習得條件：劍士職業達到15級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}*  [突刺]的過度打擊變更為2，使用時，朝目前對象敵人突進，給予對象傷害。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (突刺：突進),0,0.0,0.0,FFFT,14,0.1
+2010003,HiddenAbility_MasterPiece_Novice,和各系列的大師NPC見面後，可以獲得能夠學習秘術的神秘之書全集1、2、3卷之一。,icon_item_hiddenability_total,,,,,,,,[Episode] 未識別神秘之書,0,0.0,0.0,FFFT,18,0.1
+2010004,HiddenAbility_MasterPiece_Event,包含技能的隱藏內容，去找各系列大師NPC，就可以獲得想要內容的秘術。,icon_item_hiddenability_total,,,,,,,,[活動] 未識別神秘之書,0,0.0,0.0,FFFF,18,0.1
+2040001,HiddenAbility_Swordman33,使用時，可以獲得[突刺：突進]秘術。{nl} - 習得條件：劍士職業達到15級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}*  [突刺]的過熱次數變更為2，使用時，朝目前對象敵人突進，給予對象傷害。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (突刺：突進),0,0.0,0.0,FFFT,14,0.1
 2040002,HiddenAbility_NakMuay6,使用時，可以獲得[泰拳搏擊：拳擊手]秘術。{nl} - 習得條件：泰拳職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}*  泰拳搏擊姿勢中對普通攻擊有效率地施展踢腿攻擊。此外透過泰拳搏擊基本攻擊及技能發生暴擊時，[古泰拳]技能的冷卻時間減少1秒。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (泰拳搏擊：拳擊手),0,0.0,0.0,FFFT,14,0.1
-2040003,HiddenAbility_Doppelsoeldner27,使用時，可以獲得[會心一擊：發威]秘術。{nl} - 習得條件：雙酬傭兵職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}*  追加[會心一擊]過度打擊2次{nl}* SP消耗增加50%,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (會心一擊：發威),0,0.0,0.0,FFFT,14,0.1
+2040003,HiddenAbility_Doppelsoeldner27,使用時，可以獲得[會心一擊：發威]秘術。{nl} - 習得條件：雙酬傭兵職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}*  追加[會心一擊]過熱次數2次{nl}* SP消耗增加50%,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (會心一擊：發威),0,0.0,0.0,FFFT,14,0.1
 2040004,HiddenAbility_Dragoon21,使用時，可以獲得[龍墜：高空爆]秘術。{nl} - 習得條件：龍騎士職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}*  施展[龍墜]技能時，跳躍後不會移動到指定位置，從空中朝指定位置丟擲槍，給予敵軍傷害後回到原位。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (龍墜：高空爆),0,0.0,0.0,FFFT,14,0.1
 2040005,HiddenAbility_Lancer21,使用時，可以獲得[隆格米安特：決鬥！]秘術。{nl} - 習得條件：槍騎兵職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}*  [隆格米安特]技能命中時，留給對象20秒[決鬥]Debuff。如果被陷入Debuff的對象攻擊，受到50%追加傷害，但是被其他敵人攻擊獲得減少25%的傷害。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (隆格米安特：決鬥！),0,0.0,0.0,FFFT,14,0.1
 2040006,HiddenAbility_Retiarii19,使用時，可以獲得[解除武裝：武器]秘術。{nl} - 習得條件：網鬥士職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}*  [解除武裝]技能可以令敵人解除武器，斥候系列會解除輔助武器。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (解除武裝：武器),0,0.0,0.0,FFFT,14,0.1
@@ -6077,7 +6274,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040015,HiddenAbility_Hoplite33,使用時，可以獲得[長矛投擲：大地]秘術。{nl} - 習得條件：重裝步兵職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [長矛投擲]的技能屬性追加[大地]屬性，被長矛投擲攻擊的敵人，3秒內處於[昏厥]狀態{nl}* 移除長矛的擊倒效果,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (長矛投擲：大地),0,0.0,0.0,FFFT,14,0.1
 2040016,HiddenAbility_Wizard30,使用時，可以獲得[瞬間移動：返回]秘術。{nl} - 習得條件：法師職業達到15級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用瞬間移動後2秒內再次使用時，會移動至使用瞬間移動之前所在的位置。{nl} * 不會明用[念力法師：瞬間移動]特性效果。 ,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (瞬間移動：返回),0,0.0,0.0,FFFT,14,0.1
 2040017,HiddenAbility_Necromancer25,使用時，可以獲得[屍塊護環：死亡之舞]秘術。{nl} - 習得條件：死靈法師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用屍塊護環時，依照自己目前持有的[屍體碎片量]比例，增加技能系數{nl}* 技能係數增加量：([目前持有的屍體碎片量] / 2),icon_item_hiddenability_wizard,,,,,,,,神秘之書 (屍塊護環：死亡之舞),0,0.0,0.0,FFFT,14,0.1
-2040018,HiddenAbility_Necromancer26,使用時，可以獲得[召喚骸骨魔法師：支持者]秘術。{nl} - 習得條件：死靈法師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 只能召喚一隻骸骨魔法師，可維持600秒{nl}* 骸骨魔法師將賦予以下的Buff效果{nl}- 增加骸骨士兵的物理、魔法防禦力100%{nl}- 骸骨弓箭手不需冷卻時間使用基本攻擊,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (召喚骸骨魔法師：支持者),0,0.0,0.0,FFFT,14,0.1
+2040018,HiddenAbility_Necromancer26,使用時，可以獲得[召喚骸骨魔法師：支持者]秘術。{nl} - 習得條件：死靈法師職業等級達成45級{nl} - 習得或升級特性費用 : 36000點{nl} - 秘術說明{nl}* 骸骨魔法師只召喚一隻，維持30分鐘{nl}* 骸骨魔法師被施予具有以下效果的Buff{nl}    - 骸骨士兵的物理、魔法防禦力增加100%{nl}    - 骸骨弓箭手不須待機時間，使用基本攻擊,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (召喚骸骨魔法師：支持者),0,0.0,0.0,FFFT,14,0.1
 2040019,HiddenAbility_Daoshi20,使用時，可以獲得[急急如律令：合!]秘術。{nl} - 習得條件：道士職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用符咒技能後，當符咒消失時，有機率發動[急急如律令],icon_item_hiddenability_wizard,,,,,,,,神秘之書 (急急如律令：合!),0,0.0,0.0,FFFT,14,0.1
 2040020,HiddenAbility_Daoshi21,使用時，可以獲得[退魔符：異電]秘術。{nl} - 習得條件：道士職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 退魔符的傷害減少20%，讓敵人得到[符咒]Debuff狀態{nl}* [符咒]Debuff可以對除了自己以外的敵人持續造成電氣傷害{nl} - [符咒]Debuff持續時間：10秒{nl} - 傷害週期：1秒{nl} - 傷害：[退魔符]傷害的2%,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (退魔符：異電),0,0.0,0.0,FFFT,14,0.1
 2040021,HiddenAbility_RuneCaster13,使用時，可以獲得[掌握布料：破壞符文附魔]秘術。{nl} - 習得條件：符文師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 裝備布料4件組時，套用[破壞符文附魔]Buff{nl}* 套用[破壞符文附魔]Buff後，增加暴擊率和物理、魔法傷害{nl} - 暴擊率增加量：15%{nl} - 增加傷害：10%,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (掌握布料：破壞符文附魔),0,0.0,0.0,FFFT,14,0.1
@@ -6086,7 +6283,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040024,HiddenAbility_Shadowmancer11,使用時，可以獲得[地獄暗影：生機萃取]秘術。{nl} - 習得條件：暗影師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用[地獄暗影]時，將敵人最大HP的50%轉化為自己的護盾，然後萃取影子的HP50%給敵人，護盾可維持10秒{nl} * 護盾的最大值不可超過施展者的最大體力,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (地獄暗影：生機萃取),0,0.0,0.0,FFFT,14,0.1
 2040025,HiddenAbility_Sage21,使用時，可以獲得[空間壓縮：重力球體]秘術。{nl} - 習得條件：賢者職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 向施展者看的方向發射黑色球體{nl}* 球體可以拉住敵人並緩慢移動，時間維持5秒,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (空間壓縮：重力球體),0,0.0,0.0,FFFT,14,0.1
 2040026,HiddenAbility_Sage22,使用時，可以獲得[飛彈洞：異空間的支配者]秘術。{nl} - 習得條件：賢者職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 將飛彈洞擋下的傷害累積下來。{nl}等到Buff結束後，把累積傷害的50%{nl}全部還給周圍的敵人{nl}* 冷卻時間增加45秒,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (飛彈洞：異空間的支配者),0,0.0,0.0,FFFT,14,0.1
-2040027,HiddenAbility_Sorcerer19,使用時，可以獲得[召喚惡魔：自我]秘術。{nl} - 習得條件：巫師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 不能搭乘召喚惡魔所召喚的卡片惡魔，但該惡魔可以自動使用全部的技能{nl}* 召喚惡魔的物理攻擊力和魔法攻擊力，會依照角色的魔法攻擊力130%增加,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (召喚惡魔：自我),0,0.0,0.0,FFFT,14,0.1
+2040027,HiddenAbility_Sorcerer19,使用時，可以獲得[召喚惡魔：自我]秘術。{nl} - 習得條件：巫師職業等級達成45級{nl} - 習得或升級特性費用 : 36000點{nl} - 秘術說明{nl}* 雖然無法騎乘巫師召喚的魔法書，但是魔法書會自動使用所有技能,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (召喚惡魔：自我),0,0.0,0.0,FFFT,14,0.1
 2040028,HiddenAbility_Alchemist13,使用時，可以獲得[製作藥劑：高級秘藥(HP)]秘術。{nl} - 習得條件：鍊金術士職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 獲得可以用[製作藥劑]製作HP恢復小型靈藥的配方,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (製作藥劑：高級秘藥(HP)),0,0.0,0.0,FFFT,14,0.1
 2040029,HiddenAbility_Alchemist14,使用時，可以獲得[製作藥劑：高級秘藥(SP)]秘術。{nl} - 習得條件：鍊金術士職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 獲得可以用[製作藥劑]製作SP恢復小型靈藥的配方,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (製作藥劑：高級秘藥(SP)),0,0.0,0.0,FFFT,14,0.1
 2040030,HiddenAbility_Elementalist33,使用時，可以獲得[隕石：集中]秘術。{nl} - 習得條件：元素使職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用隕石時，自身周圍會產生3顆環繞的火球。{nl}之後每使用1次隕石，就會消耗1顆火球，無需冷卻時間和施展時間，施展出比原本範圍小且傷害低的隕石。{nl}當火球全部使用完，將套用隕石冷卻時間。,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (隕石：集中),0,0.0,0.0,FFFT,14,0.1
@@ -6098,10 +6295,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040036,HiddenAbility_Pyromancer31,使用時，可以獲得[火牆：交叉火焰]秘術。{nl} - 習得條件：烈焰法師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 火牆的打擊次數增為兩倍，使用時顯示為十字形狀,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (火牆：交叉火焰),0,0.0,0.0,FFFT,14,0.1
 2040037,HiddenAbility_Featherfoot23,使用時，可以獲得[反重力：無效化]秘術。{nl} - 習得條件：妖術師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用反重力後，將會立即解除自身可解除的Debuff，4秒內免疫。,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (反重力：無效化),0,0.0,0.0,FFFT,14,0.1
 2040038,HiddenAbility_Archer35,使用時，可以獲得[後方跳躍：機敏]秘術。{nl} - 習得條件：弓箭手職業達到15級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 減少[後方跳躍]技能冷卻時間5秒{nl}* 使用[後方跳躍]技能後，3秒內移動速度增加10~20。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (後方跳躍：機敏),0,0.0,0.0,FFFT,14,0.1
-2040039,HiddenAbility_Appraiser7,使用時，可以獲得[弱點攻擊：集中]秘術。{nl} - 習得條件：鑑定師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [弱點攻擊]的過度打擊變為1，且變為2秒內可進行引導的[火]屬性攻擊技能。{nl}被賦予[曝露弱點]Debuff的敵人，受到暴擊傷害增加30%,icon_item_hiddenability_archer,,,,,,,,神秘之書 (弱點攻擊：集中),0,0.0,0.0,FFFT,14,0.1
+2040039,HiddenAbility_Appraiser7,使用時，可以獲得[弱點攻擊：集中]秘術。{nl} - 習得條件：鑑定師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [弱點攻擊]的過熱次數變為1，且變為2秒內可進行引導的[火]屬性攻擊技能。{nl}被賦予[曝露弱點]Debuff的敵人，受到暴擊傷害增加30%,icon_item_hiddenability_archer,,,,,,,,神秘之書 (弱點攻擊：集中),0,0.0,0.0,FFFT,14,0.1
 2040040,HiddenAbility_Ranger38,使用時，可以獲得[彈跳射擊：急速冷卻箭]秘術。{nl} - 習得條件：遊俠職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 彈跳射擊追加[冰]屬性，讓命中對象陷入2.5秒的[結冰]狀態，被跳彈命中的敵人則陷入[緩速]狀態{nl}* 被弓箭命中的對象數越少則傷害越高{nl}* 傷害：([最大對象數] / [命中對象數]) * 10%,icon_item_hiddenability_archer,,,,,,,,神秘之書 (彈跳射擊：急速冷卻箭),0,0.0,0.0,FFFT,14,0.1
 2040041,HiddenAbility_Ranger39,使用時，可以獲得[扇射：完美角度]秘術。{nl} - 習得條件：遊俠職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 技能的攻擊範圍減少一半，擊中對象數為1人時，其傷害增加{nl}* 攻擊範圍：原本扇形範圍的一半{nl}* 傷害增加：100%,icon_item_hiddenability_archer,,,,,,,,神秘之書 (扇射：完美角度),0,0.0,0.0,FFFT,14,0.1
-2040042,HiddenAbility_Matross14,使用時，可以獲得[震地重擊：電光]秘術。{nl} - 習得條件：砲衛軍職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 震地重擊追加[電氣]屬性{nl}* 使用技能後，賦予自己10秒的[神速]Buff，重砲技能套用為連打攻擊，連打追加1~2次 ,icon_item_hiddenability_archer,,,,,,,,神秘之書 (震地重擊：電光),0,0.0,0.0,FFFT,14,0.1
+2040042,HiddenAbility_Matross14,使用時，可以獲得[震地重擊：電光]秘術。{nl} - 習得條件：砲衛軍職業等級達成45級{nl} - 習得或升級特性費用 : 36000點{nl} - 秘術說明{nl}* 對地重擊追加套用[電氣]屬性{nl}* 而且在使用技能後，對自己賦予10秒[神速]Buff，且砲衛軍技能攻擊會套用連擊。連擊增加1次 ~ 2次,icon_item_hiddenability_archer,,,,,,,,神秘之書 (震地重擊：電光),0,0.0,0.0,FFFT,14,0.1
 2040043,HiddenAbility_Mergen16,使用時，可以獲得[箭雨：彈幕]秘術。{nl} - 習得條件：神射手職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 平均地對箭雨範圍內的敵軍造成傷害{nl}箭雨的打擊次數會變更，每打擊傷害增加30%。{nl}* 不會發動斯基亞克爾立斯弓的[箭雨-廣城化]效果,icon_item_hiddenability_archer,,,,,,,,神秘之書 (箭雨：彈幕),0,0.0,0.0,FFFT,14,0.1
 2040044,HiddenAbility_TigerHunter9,使用時，可以獲得[虎獵師：賞金獵人]秘術。{nl} - 習得條件：虎獵師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 攻擊BOSS怪物時，傷害增加30%,icon_item_hiddenability_archer,,,,,,,,神秘之書 (虎獵師：賞金獵人),0,0.0,0.0,FFFT,14,0.1
 2040045,HiddenAbility_Sapper42,使用時，可以獲得[竹尖釘：即刻設置]秘術。{nl} - 習得條件：工兵職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 變更為立即設置竹尖釘，受到竹尖釘攻擊時，5秒內移動速度固定為10，被施展者攻擊時傷害量增加30%,icon_item_hiddenability_archer,,,,,,,,神秘之書 (竹尖釘：即刻設置),0,0.0,0.0,FFFT,14,0.1
@@ -6111,7 +6308,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040049,HiddenAbility_Druid23,使用時，可以獲得[速成植被：治癒的庭園]秘術。{nl} - 習得條件：德魯伊職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [速成植被]技能的攻擊能力消失，但可以讓技能因子附加治癒系數。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (速成植被：治癒的庭園),0,0.0,0.0,FFFT,14,0.1
 2040050,HiddenAbility_Monk27,使用時，可以獲得[武僧：解放]秘術。{nl} - 習得條件：武僧職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [雙鎖功]攻擊命中對象時，賦予自己[修行]Buff{nl}* [修行]Buff期間，用武僧技能造成暴擊傷害時，可以獲得疊加，達到5疊加時，變更為[解放]Buff{nl}* [解放]Buff期間，氣功波不須冷卻時間和施展時間，氣功波可持續3秒，每秒增加範圍和攻擊力,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (武僧：解放),0,0.0,0.0,FFFT,14,0.1
 2040051,HiddenAbility_Miko9,使用時，可以獲得[祭神杖：悟祭神杖]秘術。{nl} - 習得條件：巫女職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 增加[祭神杖]的SP消耗量100%，並消除周圍100範圍內的敵人Buff。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (祭神杖：悟祭神杖),0,0.0,0.0,FFFT,14,0.1
-2040052,HiddenAbility_Miko10,使用時，可以獲得[神籤：金錢運]秘術。{nl} - 習得條件：巫女職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [神籤]的大吉機率變更為10%，大吉效果套用為以下效果。{nl}* 大吉Buff持續時間：30分鐘{nl}* 大吉：Rooting機會增加500及20%機率賦予可以維持1分鐘穿戴裝備耐久度的Buff,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (神籤：金錢運),0,0.0,0.0,FFFT,14,0.1
+2040052,HiddenAbility_Miko10,使用時，可以獲得[神籤：金錢運]秘術。{nl} - 習得條件：巫女職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [神籤]的大吉機率變更為10%，大吉效果套用為以下效果。{nl}* 大吉Buff持續時間：30分鐘{nl}* 大吉：道具掉落機會增加500及20%機率賦予可以維持1分鐘穿戴裝備耐久度的Buff,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (神籤：金錢運),0,0.0,0.0,FFFT,14,0.1
 2040053,HiddenAbility_Sadhu26,使用時，可以獲得[掌握布料：交感]秘術。{nl} - 習得條件：聖者職業達到45級{nl} - 習得或升級特性費用：7200點{nl} - 秘術說明{nl}* 裝備4個[布]系列防具時，自身的念屬性追加傷害根據魔法攻擊力增加25%， 且有[特性等級] x 2%的機率，免疫一般可以解除的Debuff{nl}* 不會和[秘術] 掌握布料：治癒力重覆活性化,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (掌握布料：交感),0,0.0,0.0,FFFT,14,0.1
 2040054,HiddenAbility_Exorcist20,使用時，可以獲得[驅魔教條：墮落]秘術。{nl} - 習得條件：驅魔師職業達到45級{nl} - 習得或升級特性費用：3600點{nl} - 秘術說明{nl}* [驅魔教條]的屬性變更為[黑暗]屬性，受到驅魔教條攻擊的敵人，將被賦予[攻擊力弱化]Debuff，減少攻擊力。{nl}* 被賦予[攻擊力弱化]的敵人，其傷害依照每[Debuff疊加數]減少5%，最大可疊加數為[特性等級]。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (驅魔教條：墮落),0,0.0,0.0,FFFT,14,0.1
 2040055,HiddenAbility_Exorcist19,使用時，可以獲得[天譴：火焰之槍]秘術。{nl} - 習得條件：驅魔師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [天譴]的屬性變更為[火]屬性，被長槍刺中後，殘餘的火焰會對敵人造成傷害。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (天譴：火焰之槍),0,0.0,0.0,FFFT,14,0.1
@@ -6133,9 +6330,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040071,HiddenAbility_Squire14,使用時，可以獲得[掌握布料：裁縫匠人]秘術。{nl} - 習得條件：侍從職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 裝備4個[布]系列防具時，賦予30分鐘[掌握布料：魔法]效果給來使用自己商店的角色。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (掌握布料：裁縫匠人),0,0.0,0.0,FFFT,14,0.1
 2040072,HiddenAbility_Squire15,使用時，可以獲得[掌握皮革：加工匠人]秘術。{nl} - 習得條件：侍從職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 裝備4個[皮革]系列防具時，賦予30分鐘[掌握皮革：機敏]效果給來使用自己商店的角色。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (掌握皮革：加工匠人),0,0.0,0.0,FFFT,14,0.1
 2040073,HiddenAbility_Squire16,使用時，可以獲得[掌握板金：冶煉匠人]秘術。{nl} - 習得條件：侍從職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 裝備4個[板金]系列防具時，賦予30分鐘[掌握板金：防禦]效果給來使用自己商店的角色。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (掌握板金：冶煉匠人),0,0.0,0.0,FFFT,14,0.1
-2040074,HiddenAbility_Shinobi11,使用時，可以獲得[影分身忍術：微塵術]秘術。{nl} - 習得條件：忍者職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 分身消失時，使用[微塵忍術]，傷害依本體技能係數的比例，分身使用微塵術時，消耗本體的SP。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (影分身忍術：微塵術),0,0.0,0.0,FFFT,14,0.1
-2040075,HiddenAbility_Thaumaturge20,使用時，可以獲得[大腦強化：物理]秘術。{nl} - 習得條件：奇術師職業達到45級{nl} - 習得或升級特性費用：7200點{nl} - 秘術說明{nl}* [大腦強化]的 Rooting機會增加效果消失，令自身和隊員們的力量和敏捷，每特性等級增加10。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (大腦強化：物理),0,0.0,0.0,FFFT,14,0.1
-2040076,HiddenAbility_Thaumaturge21,使用時，可以獲得[大腦強化：魔法]秘術。{nl} - 習得條件：奇術師職業達到45級{nl} - 習得或升級特性費用：7200點{nl} - 秘術說明{nl}* [大腦強化]的Rooting機會增加效果消失，令自身和隊員們的智力和精神，每特性等級增加10。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (大腦強化：魔法),0,0.0,0.0,FFFT,14,0.1
+2040074,HiddenAbility_Shinobi11,使用時，可以獲得[影分身忍術：微塵術]秘術。{nl} - 習得條件：忍者職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 分身消失時使用[微塵忍術]，傷害會以本體的技能係數作為比例，當分身使用微塵術時，會消耗本體的SP。{nl}* 分身使用[微塵忍術]消失時，不會套用效果,icon_item_hiddenability_scout,,,,,,,,神秘之書 (影分身忍術：微塵術),0,0.0,0.0,FFFT,14,0.1
+2040075,HiddenAbility_Thaumaturge20,使用時，可以獲得[大腦強化：物理]秘術。{nl} - 習得條件：奇術師職業達到45級{nl} - 習得或升級特性費用：7200點{nl} - 秘術說明{nl}* [大腦強化]的 道具掉落機會增加效果消失，令自身和隊員們的力量和敏捷，每特性等級增加10。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (大腦強化：物理),0,0.0,0.0,FFFT,14,0.1
+2040076,HiddenAbility_Thaumaturge21,使用時，可以獲得[大腦強化：魔法]秘術。{nl} - 習得條件：奇術師職業達到45級{nl} - 習得或升級特性費用：7200點{nl} - 秘術說明{nl}* [大腦強化]的道具掉落機會增加效果消失，令自身和隊員們的智力和精神，每特性等級增加10。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (大腦強化：魔法),0,0.0,0.0,FFFT,14,0.1
 2040077,HiddenAbility_Murmillo21,使用時，可以獲得[御璽頭具：鬥士]秘術。{nl} - 習得條件：角鬥士大師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 雖然狀態異常的抵抗力減少一半，但套用增加對[槍]攻擊傷害的格擋100%。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (御璽頭具：鬥士),0,0.0,0.0,FFFT,14,0.1
 2040078,HiddenAbility_Fencer13,使用時，可以獲得[重劍防禦：高潔]秘術。{nl} - 習得條件：擊劍手職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [重劍防禦]Buff期間， 用[擊劍手]技能直接從對方正面攻擊時，增加傷害50%，從其餘方向攻擊時，則減少傷害30%。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (重劍防禦：高潔),0,0.0,0.0,FFFT,14,0.1
 2040079,HiddenAbility_Psychokino25,使用時，可以獲得[強力重力：歪曲的重力]秘術。{nl} - 習得條件：念力法師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 強力重力和浮空結合後所產生的魔法陣，會讓我和敵人無法移動，{nl}魔法陣結束後，敵人先往高空移動然後墜落,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (強力重力：歪曲的重力),0,0.0,0.0,FFFT,14,0.1
@@ -6476,6 +6673,36 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040414,HiddenAbility_Daoshi26,使用時，可以獲得 [急急如律令：高級強化] 祕術。{nl} - 學習條件 ：[急急如律令：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [急急如律令]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_wizard,,,,,,,,神祕之書 (急急如律令：高級強化),0,0.0,0.0,FFFT,14,0.1
 2040415,HiddenAbility_Exorcist25,使用時，可以獲得 [驅魔教條：高級強化] 祕術。{nl} - 學習條件 ：[驅魔教條：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [驅魔教條]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_cleric,,,,,,,,神祕之書 (驅魔教條：高級強化),0,0.0,0.0,FFFT,14,0.1
 2040416,HiddenAbility_Exorcist26,使用時，可以獲得 [實體：高級強化] 祕術。{nl} - 學習條件 ：[實體：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [實體]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_cleric,,,,,,,,神祕之書 (實體：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040417,HiddenAbility_Blossomblader12,使用時，可以獲得[落花：高級強化]秘術。{nl} - 習得條件：[落花：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [落花]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (落花：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040418,HiddenAbility_Blossomblader13,使用時，可以獲得[御劍術: 高級強化]秘術。{nl} - 習得條件：[御劍術：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [御劍術]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (御劍術：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040419,HiddenAbility_Blossomblader14,使用時，可以獲得[一閃：高級強化]秘術。{nl} - 習得條件：[一閃：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [一閃]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (一閃：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040420,HiddenAbility_Blossomblader15,使用時，可以獲得[梅花斬擊：高級強化]秘術。{nl} - 習得條件：[梅花斬擊：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [梅花斬擊]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (梅花斬擊：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040421,HiddenAbility_Blossomblader18,使用時，可以獲得[御劍術：飛天御劍]秘術。{nl} - 習得條件：達成梅花俠客職業等級45級{nl} - 習得或升級特性費用 : 36000點{nl} - 秘術說明{nl}* 使用御劍術時，周圍有數個梅花劍快速地的移動，並給予範圍裡的敵人們(最大 [5 + 角色的廣域攻擊比率/2]名)傷害。傷害減少50%,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (御劍術：飛天御劍),0,0.0,0.0,FFFT,14,0.1
+2040422,HiddenAbility_Terramancer10,使用時，可以獲得[砂球術：高級強化]秘術。{nl} - 習得條件：[砂球術：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [砂球術]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (砂球術：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040423,HiddenAbility_Terramancer12,使用時，可以獲得[石瀑術：高級強化]秘術。{nl} - 習得條件：[石瀑術：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [石瀑術]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (石瀑術：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040424,HiddenAbility_Terramancer13,使用時，可以獲得[滾動石球：高級強化]秘術。{nl} - 習得條件：[滾動石球：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [滾動石球]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (滾動石球：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040425,HiddenAbility_Terramancer14,使用時，可以獲得[聚爆：高級強化]秘術。{nl} - 習得條件：[聚爆：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [聚爆]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (聚爆：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040426,HiddenAbility_Terramancer15,使用時，可以獲得[泥獸之角：高級強化]秘術。{nl} - 習得條件：[泥獸之角：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [泥獸之角]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (泥獸之角：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040427,HiddenAbility_Terramancer16,使用時，可以獲得[泥獸之角：圓形打擊]秘術。{nl} - 習得條件：大地法師職業等級達成45級{nl} - 習得或升級特性費用 : 36000點{nl} - 秘術說明{nl}* [泥獸之角]的打擊方式 變更為周圍圓圈範圍，圓型框邊上，砂子暫時噴湧出來。經過這地方的敵人會減少其移動速度,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (泥獸之角：圓形打擊),0,0.0,0.0,FFFT,14,0.1
+2040428,HiddenAbility_Arbalester9,使用時，可以獲得[黑暗審判：高級強化]秘術。{nl} - 習得條件：[黑暗審判：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [黑暗審判]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (黑暗審判：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040429,HiddenAbility_Arbalester10,使用時，可以獲得[黑暗審判：黑幕]秘術。{nl} - 習得條件：鋼弩手職業等級達成45級{nl} - 習得或升級特性費用 : 36000點{nl} - 秘術說明{nl}* 對[黑暗審判]攻擊追加黑暗屬性，被擊中的周圍敵人會留下[標誌] Debuff。傷害減少35% 。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (黑暗審判：黑幕),0,0.0,0.0,FFFT,14,0.1
+2040430,HiddenAbility_Arbalester11,使用時，可以獲得[引導射擊：高級強化]秘術。{nl} - 習得條件：[引導射擊：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [引導射擊]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (引導射擊：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040431,HiddenAbility_Arbalester12,使用時，可以獲得[扇形射擊：高級強化]秘術。{nl} - 習得條件：[扇形射擊：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [扇形射擊]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (扇形射擊：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040432,HiddenAbility_Arbalester13,使用時，可以獲得[脫逃：高級強化]秘術。{nl} - 習得條件：[脫逃：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [脫逃]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (脫逃：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040433,HiddenAbility_Arbalester14,使用時，可以獲得[致命區域：高級強化]秘術。{nl} - 習得條件：[致命區域：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [致命區域]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (致命區域：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040434,HiddenAbility_Arbalester15,使用時，可以獲得[閃靈爆破：高級強化]秘術。{nl} - 習得條件：[閃靈爆破：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [閃靈爆破]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (閃靈爆破：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040435,HiddenAbility_Crusader7,使用時，可以獲得[神聖錘擊：高級強化]秘術。{nl} - 習得條件：[神聖錘擊：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [神聖錘擊]的技能系數和治癒系數每特性等級增加1.25%。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (神聖錘擊：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040436,HiddenAbility_Crusader8,使用時，可以獲得[女神的守護：高級強化]秘術。{nl} - 習得條件：[女神的守護：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [女神的守護]的技能系數和治癒系數每特性等級增加1.25%。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (女神的守護：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040437,HiddenAbility_Crusader9,使用時，可以獲得[神之復仇：高級強化]秘術。{nl} - 習得條件：[神之復仇：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [神之復仇]的技能系數和治癒系數每特性等級增加1.25%。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (神之復仇：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040438,HiddenAbility_Crusader10,使用時，可以獲得[譴責：高級強化]秘術。{nl} - 習得條件：[譴責：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [譴責]的技能系數和治癒系數每特性等級增加1.25%。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (譴責：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040439,HiddenAbility_Crusader13,使用時，可以獲得[光之環：高級強化]秘術。{nl} - 習得條件：[光之環：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [光之環]的技能系數和治癒系數每特性等級增加1.25%。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (光之環：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040440,HiddenAbility_Crusader14,使用時，可以獲得[神祐之光：高級強化]秘術。{nl} - 習得條件：[神祐之光：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [神祐之光]的技能系數和治癒系數每特性等級增加0.5%。,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (神祐之光：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040441,HiddenAbility_Crusader15,使用時，可以獲得[謳歌：女神的祝福]秘術。{nl} - 習得條件：東征十字軍職業等級達成45級{nl} - 習得或升級特性費用 : 36000點{nl} - 秘術說明{nl}* 恢復效果發揮 [30 + 謳歌等級 x 2]% {nl} 魔法傷害增加 [ 謳歌等級 x 2]% {nl} 施展可以同時發揮女神的庇護和女神的懲罰效果的女神祝福Buff,icon_item_hiddenability_cleric,,,,,,,,神秘之書 (謳歌：女神的祝福),0,0.0,0.0,FFFT,14,0.1
+2040442,HiddenAbility_Rangda6,使用時，可以獲得[破傷風：高級強化]秘術。{nl} - 習得條件：[破傷風：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [破傷風]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (破傷風：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040443,HiddenAbility_Rangda7,使用時，可以獲得[詛咒巫術：高級強化]秘術。{nl} - 習得條件：[詛咒巫術：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [詛咒巫術]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (詛咒巫術：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040444,HiddenAbility_Rangda8,使用時，可以獲得[沼澤：高級強化]秘術。{nl} - 習得條件：[沼澤：強化]特性達到65級{nl} - 習得或升級特性費用 : 3057點{nl} - 秘術說明{nl}* [沼澤]的技能系數每特性等級增加 1.25%。,icon_item_hiddenability_scout,,,,,,,,神秘之書 (沼澤：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040445,HiddenAbility_Rangda14,使用時，可以獲得[吸收：吸收精氣]秘術。{nl} - 習得條件：冉達職業等級達成45級{nl} - 習得或升級特性費用 : 36000點{nl} - 秘術說明{nl}* 吸收的周遭敵人之[乏力]、[移動速度減少]DeBuff疊加數增加效果會被刪除，但會以周遭敵人被施展的DeBuff個數為比例，恢復自身的HP。 (至自身的最大HP 50%為止){nl}* 冷卻時間增加30秒,icon_item_hiddenability_scout,,,,,,,,神秘之書 (吸收：吸收精氣),0,0.0,0.0,FFFT,14,0.1
+2040446,HiddenAbility_Hunter20,使用時，可以獲得[衝鋒：猛攻]秘術。{nl} - 習得條件：獵人職業等級達成45級{nl} - 習得或升級特性費用 : 36000 點{nl} - 秘術說明{nl}* 衝鋒的昏厥效果被刪除，技能傷害增加40%。{nl}* 對陷入[出血]的敵人技能傷害增加不是40%，而是80%,icon_item_hiddenability_archer,,,,,,,,神秘之書 (衝鋒：猛攻),0,0.0,0.0,FFFT,14,0.1
 2050001,Market_Weapon_icor_Sword,不確定是否真的從神之血中所產生的，但可以確定這是由武器內的氣息所凝結而成的。,item_icon_weapon_linksoul1,,,,,,,,血晶 - 單手劍,10,0.0,0.0,TFTT,15,1.0
 2050002,Market_Weapon_icor_THSword,不確定是否真的從神之血中所產生的，但可以確定這是由武器內的氣息所凝結而成的。,item_icon_weapon_linksoul1,,,,,,,,血晶 - 雙手劍,10,0.0,0.0,TFTT,15,1.0
 2050003,Market_Weapon_icor_Mace,不確定是否真的從神之血中所產生的，但可以確定這是由武器內的氣息所凝結而成的。,item_icon_weapon_linksoul1,,,,,,,,血晶 - 鈍器,10,0.0,0.0,TFTT,15,1.0
@@ -6496,4 +6723,5 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2050018,Market_Armor_icor_Pants,不確定是否真的從神之血中所產生的，但可以確定這是由防具內的氣息所凝結而成的。,item_icon_weapon_linksoul2,,,,,,,,血晶 - 下衣,10,0.0,0.0,TFTT,15,1.0
 2050019,Market_Armor_icor_Gloves,不確定是否真的從神之血中所產生的，但可以確定這是由防具內的氣息所凝結而成的。,item_icon_weapon_linksoul2,,,,,,,,血晶 - 手套,10,0.0,0.0,TFTT,15,1.0
 2050020,Market_Armor_icor_Boots,不確定是否真的從神之血中所產生的，但可以確定這是由防具內的氣息所凝結而成的。,item_icon_weapon_linksoul2,,,,,,,,血晶 - 鞋子,10,0.0,0.0,TFTT,15,1.0
+2050021,Market_Weapon_icor_Trinket,不確定是否真的從神之血中所產生的，但可以確定這是由武器內的氣息所凝結而成的。,item_icon_weapon_linksoul1,,,,,,,,血晶 - 武器裝飾,10,0.0,0.0,TFTT,15,1.0
 2500013,GLOBAL_STEAM_Transcend_Scroll_8_PC,讓裝備的超越數值提升至8階。{nl}只有0~7階超越道具可以使用，右點擊8超越卷軸後，選擇要超越的道具，就可以變更成8超越的狀態。{nl}只能使用在Lv 400以下裝備的超越卷軸。,icon_item_transcendence_coupon,,,,,,,,[Lv.400] 8超越卷軸,0,0.0,0.0,FFFT,7,1.0

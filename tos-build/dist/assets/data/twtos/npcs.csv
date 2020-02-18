@@ -154,6 +154,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 20187,musicbox_popolion,,,波波小獅王水球音樂盒,2
 20188,npc_sailor_f,,minimap_event_1,玩具商人,2
 20189,npc_sailor_m,,minimap_event_1,小吃商人,2
+20190,npc_city_alchemist,,minimap_man_wizard,專業鍊金術士,2
 40000,Obstacle_box,,,箱子,2
 40001,Warp_arrow,,minimap_portal,WarpSpot,2
 40010,Obstacle_table,,,書桌,2
@@ -632,6 +633,28 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 150203,Shadowmancer_seal_cage,,,闇影監獄,2
 150204,HiddenWall_500_300_300,,,,2
 150205,npc_stockades_uphill,,,柵欄,2
+150206,npc_Ragana,,,魔神羅迦娜,2
+150207,npc_holy_romuva,,,神聖的那姆特,2
+150208,npc_terramancer_master,,minimap_man_wizard,大地法師大師,2
+150209,npc_MEI_master,,minimap_man_master,梅花俠客大師,2
+150210,npc_baiga,,,巴以卡,2
+150211,npc_Zofija_Eleonora,,minimap_man_cleric,東征十字軍大師,2
+150212,npc_rangda_master,,minimap_man_scout,冉達大師,2
+150213,npc_Arbalester_master,,minimap_man_archer,鋼弩手大師,2
+150214,npc_thetree_root,,,神樹的樹根,2
+150215,npc_raima_wheel,,,拉伊瑪的輪盤,2
+150216,npc_MasterRangda_Barong,,,米爾拉斯,2
+150217,npc_Crusader_01,,,東征十字軍1,2
+150218,npc_Crusader_02,,,東征十字軍2,2
+150219,npc_kingdom_soldier,,,王國軍士兵,2
+150220,npc_kingdom_schaffenmem1,,,抵抗軍團員1,2
+150221,npc_kingdom_schaffenmem2,,,抵抗軍團員2,2
+150222,npc_kingdom_schaffenmem3,,,抵抗軍團員3,2
+150223,npc_kingdom_schaffencap,,,抵抗軍幹部,2
+150224,npc_kingdom_paladin_follower1,,,聖殿十字軍追隨者1,2
+150225,npc_kingdom_paladin_follower2,,,聖殿十字軍追隨者2,2
+150226,npc_kingdom_owl_statue,,,貓頭鷹雕像,2
+150227,npc_goddess_Laima_ep12,,,被監禁的拉伊瑪,2
 151000,closing_device,,,封鎖裝置,2
 151001,spell_crystal_red,,,凝結魔力的結晶,2
 151002,spell_crystal_gem_red,,,紅焰的寶石,2
@@ -1214,6 +1237,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154122,npc_MasterMatross,,minimap_man_archer,砲衛軍大師,2
 154123,npc_MasterArditi,,minimap_man_scout,阿迪蒂大師,2
 154124,npc_MasterTigerHunter,,minimap_man_archer,虎獵師大師,2
+154125,npc_kupole_7,,minimap_personal_house,奎波爾7,2
 155000,npc_crystal_machine,,,水晶加工機械,2
 155001,farm49_sapling,,,神祕的樹苗,2
 155002,dirt_ground,,,土壤標本,2
@@ -1479,6 +1503,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 156165,maple_24_tree_young,,,小楓樹,2
 156166,HiddenWall_Vivid,,,,2
 156167,pvp_battle_shop,,minimap_erosion,裝備租賃商店,2
+156168,dirt_heal_5,,,土堆(大),2
+156169,npc_intermediate_officer_men3,,,中階管理將校男3,2
 157000,3cmlake_ruins,,,湖水的殘物,2
 157001,coral_tent_01,,,克蘭托帳篷,2
 157002,PCStatue,,,,2
@@ -1546,8 +1572,15 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160004,flower_keep_water_red,,,噙水之花(紅色),2
 160005,flower_keep_water_white,,,噙水之花(白色),2
 160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,淨化的祭壇,2
-160014,npc_Xmas_Evt_NPC,,minimap_event_1,聖誕節NPC,2
-160015,npc_Xmas_Evt_NPC2,,minimap_event_1,聖誕節NPC2,2
+160007,SHADOW_LEGEND_SOLO_CURSE_PURIFICATION,,minimap_portal,淨化的祭壇,2
+160008,Hiddennpc_Moringponia,,,召喚傳點,2
+160009,moringponia_spell_crystal_red,,,淨化石,2
+160010,moringponia_star_stone,,,淨化石,2
+160011,moringponia_ignore_raise,,minimap_portal,,2
+160012,HiddenWall_600_400_300,,,,2
+160013,HiddenWall_800_400_300,,,,2
+160014,npc_Xmas_Evt_NPC,,minimap_event_1,聖誕節 NPC,2
+160015,npc_Xmas_Evt_NPC2,,minimap_event_1,聖誕節 NPC2,2
 161000,E_statue_zemina,,minimap_goddess,女神澤米娜之像,2
 161001,npc_kupole_Velcoffer,,,奎波爾西姆那,2
 161002,npc_Teliavelis,,minimap_man_smith,鐵匠戴利亞貝利斯,2

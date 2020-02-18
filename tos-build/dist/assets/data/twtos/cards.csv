@@ -15,7 +15,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644015,card_Rajatoad,[欄位裝備效果] 穿戴刺擊類武器時，物理攻擊力 +[★*7]。,icon_item_card_atk,097_boss_rajatoad,[642013],,,,41226,,,,4,0,拉查托特卡片,500,151,4,275,0.0,0.0,TTTT,4,0,1.0
 644016,card_Rocktortuga,[欄位裝備效果] 消滅大地屬性怪時，會以[★]%的機率恢復SP 5%。,icon_item_card_util,046_boss_rocktortuga,,,,,41233,,,,1,4,遠古石龜獸卡片,500,400,2,2472,0.0,0.0,TTTT,4,5,1.0
 644017,card_lecifer,[欄位裝備效果] 魔法暴擊攻擊力 +[★*10],icon_item_card_atk,030_boss_lecifer,,,,,800043,,,,0,1,雷克西波卡片,500,213,2,123,0.0,0.0,TTTT,4,0,1.0
-644018,card_Reaverpede,[欄位裝備效果] 給予中型怪物的傷害增加[★/2]%。,icon_item_card_atk,051_boss_reaverpede,,,,,800044,,,,7,2,地心蟲王卡片,500,276,6,1200,0.0,0.0,TTTT,4,0,1.0
+644018,card_Reaverpede,[欄位裝備效果] 給中型對象的傷害增加[★/2]%,icon_item_card_atk,051_boss_reaverpede,,,,,800044,,,,7,2,地心蟲王卡片,500,276,6,1200,0.0,0.0,TTTT,4,0,1.0
 644019,card_spector_gh,[欄位裝備效果] SP藥水種類效果 +[★]%,icon_item_card_util,010_boss_spector_gh,,,,,800045,,,,0,1,利卡烏斯卡片,500,230,2,76,0.0,0.0,TTTT,4,5,1.0
 644022,card_mineloader,[欄位裝備效果] 攻擊時，會以[★/3]%的機率讓對方在3秒內呈現觸電的狀態。,icon_item_card_util,092_boss_mineloader,[642014],"[642904, 642921]",,,800024,,,,5,4,瑪因洛德卡片,500,345,4,863,0.0,0.0,TTTT,4,5,1.0
 644023,card_Malletwyvern,[欄位裝備效果] 被大型怪物攻擊時，會以[★]%的機率恢復SP 3%。{nl}冷卻時間為5秒。,icon_item_card_util,106_malletwyvern,,,,,47502,,,,4,0,瑪爾雷飛龍卡片,500,222,4,1605,0.0,0.0,TTTT,4,5,1.0
@@ -48,7 +48,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644050,card_Spector_m,[欄位裝備效果] 消滅黑暗屬性怪時，會以[★]%的機率恢復SP 5%。,icon_item_card_util,008_boss_spector_m,,,,,800007,,,,0,1,惡靈君主卡片,500,210,2,45,0.0,0.0,TTTT,4,5,1.0
 644051,card_Throneweaver,[欄位裝備效果] 消滅毒屬性怪時，會以[★]%的機率恢復SP 5%。,icon_item_card_util,041_boss_throneweaver,,,,,800009,,,,7,1,王座大蜘蛛卡片,500,352,6,375,0.0,0.0,TTTT,4,5,1.0
 644052,card_Ironbaum,[欄位裝備效果] 給予睡眠狀態異常的敵人之傷害增加[★]%。,icon_item_card_atk,060_boss_ironbaum,,,,,41354,,,,2,4,生鐵巴溫卡片,500,230,2,2108,0.0,0.0,TTTT,4,0,1.0
-644053,card_archon,[欄位裝備效果] 給予火屬性怪的傷害增加[★]%。,icon_item_card_atk,095_boss_archon,"[642013, 642047]",,,,800027,,,,2,4,亞崑卡片,500,406,2,960,0.0,0.0,TTTT,4,0,1.0
+644053,card_archon,[欄位裝備效果] 給予火屬性怪的傷害增加[★]%。,icon_item_card_atk,095_boss_archon,[642013],,,,800027,,,,2,4,亞崑卡片,500,406,2,960,0.0,0.0,TTTT,4,0,1.0
 644054,card_Abomination,[欄位裝備效果] 敏捷屬性 +[★/2]、體力屬性 +[★/2] ,icon_item_card_stat,038_boss_abomination,,,,,800029,,,,0,1,鐵甲殘魔卡片,500,420,2,1255,0.0,0.0,TTTT,4,4,1.0
 644055,card_Unknocker,[欄位裝備效果] 精神屬性 +[★/2]、體力屬性 +[★/2],icon_item_card_stat,040_boss_unknocker,,,,,800010,,,,0,1,邪惡寶箱怪卡片,500,383,2,782,0.0,0.0,TTTT,4,4,1.0
 644056,card_Achat,[欄位裝備效果] 給予電屬性怪的傷害增加[★]%。,icon_item_card_atk,032_boss_achat,,,,,41240,,,,5,4,艾哈特卡片,500,220,2,2403,0.0,0.0,TTTT,4,0,1.0
@@ -81,7 +81,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644088,card_lepus,[欄位裝備效果] 穿戴單手武器時，攻擊速度+[★]。,icon_item_card_util,084_boss_lepus,,,,,41216,,,,1,0,雷普斯卡片,500,375,2,686,0.0,0.0,TTTT,4,5,1.0
 644089,card_sparnas,[欄位裝備效果] 穿戴飛彈類武器時，物理攻擊力 +[★*7]。,icon_item_card_atk,006_boss_sparnas,,,,,41224,,,,5,0,斯帕勒那絲卡片,500,185,2,206,0.0,0.0,TTTT,4,0,1.0
 644092,card_Sparnanman,[欄位裝備效果] 黑暗屬性抵抗力 +[★*10],icon_item_card_def,035_boss_sparnanman,,,,,800008,,,,0,1,史潘飛行獸人卡片,500,315,2,412,0.0,0.0,TTTT,4,1,1.0
-644093,card_Kerberos,[欄位裝備效果] 被中型怪物攻擊時，會以[★]%的機率恢復SP 1%。{nl}冷卻時間為5秒。,icon_item_card_util,094_boss_kerberos,[642013],[642903],,,800028,,,,2,1,地獄三頭犬卡片,500,207,4,460,0.0,0.0,TTTT,4,5,1.0
+644093,card_Kerberos,[欄位裝備效果] 被中型對象攻擊時以[★]%機率SP恢復1%{nl}冷卻時間5秒,icon_item_card_util,094_boss_kerberos,[642013],[642903],,,800028,,,,2,1,地獄三頭犬卡片,500,207,4,460,0.0,0.0,TTTT,4,5,1.0
 644094,card_capria,[欄位裝備效果] 睡眠狀態異常扺抗 +[★ * 2],icon_item_card_util,131_boss_capria,,,,,57210,,,,7,0,卡普里亞卡片,500,214,2,189,0.0,0.0,TTTT,4,5,1.0
 644095,card_Nepenthes,[欄位裝備效果] 最大HP +[★ * 90]、最大SP +[★ * 15],icon_item_card_util,135_boss_nepenthes,,,,,57015,,,,1,5,豬籠草卡片,500,194,2,174,0.0,0.0,TTTT,4,5,1.0
 644096,card_simorph,"[欄位裝備效果] 力量屬性 +[★/2], 體力屬性 +[★/2]",icon_item_card_stat,133_boss_simorph,,,,,57151,,,,1,5,希默普卡片,500,141,2,60,0.0,0.0,TTTT,4,4,1.0
@@ -109,11 +109,11 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644122,card_Yeti,[欄位裝備效果] 最大 HP +[★ * 180],icon_item_card_util,089_yeti,,,,,57415,,,,4,0,雪人卡片,500,235,2,360,0.0,0.0,TTTT,4,5,1.0
 644123,card_Frogola,[欄位裝備效果] 使用HP藥水種類時，10秒內魔法防禦力+[★]%。,icon_item_card_def,100_frogola,,,,,800018,,,,4,1,普羅高拉卡片,500,201,1,164,0.0,0.0,TTTT,4,1,1.0
 644125,card_Marionette,[欄位裝備效果] 攻擊時會以[★/3]%的機率讓敵人在3秒內呈現緩速狀態。,icon_item_card_util,105_marionette,,,,,800068,,,,0,1,提線木偶卡片,500,318,2,211,0.0,0.0,TTTT,4,5,1.0
-644126,card_Canceril,[欄位裝備效果] 被中型怪物攻擊時，會以[★]%的機率恢復HP 2%。{nl}冷卻時間為15秒。,icon_item_card_util,110_canceril,[642046],,,,800025,,,,4,2,肯瑟琳卡片,500,212,6,256,0.0,0.0,TTTT,4,5,1.0
+644126,card_Canceril,[欄位裝備效果] 被中型對象攻擊時以[★]%機率HP恢復2%{nl}冷卻時間15秒,icon_item_card_util,110_canceril,,,,,800025,,,,4,2,肯瑟琳卡片,500,212,6,256,0.0,0.0,TTTT,4,5,1.0
 644127,card_Crabil,[欄位裝備效果] 昏厥狀態異常扺抗 +[★ * 2],icon_item_card_util,111_crabil,,,,,47505,,,,1,0,克雷比爾卡片,500,270,8,400,0.0,0.0,TTTT,4,5,1.0
 644128,card_Genmagnus,[欄位裝備效果] 輔助物理攻擊力 +[★*3],icon_item_card_atk,069_boss_genmagnus,,,,,800069,,,,4,1,神燈魔神卡片,500,380,1,83,0.0,0.0,TTTT,4,0,1.0
 644129,card_merregina,[欄位裝備效果] 冰屬性追加傷害 +[★*10],icon_item_card_util,077_merregina,,,,,800070,,,,4,1,蒙雷幾那卡片,500,363,1,208,0.0,0.0,TTTT,4,5,1.0
-644130,card_Templeshooter,[欄位裝備效果] 力量屬性 +[★/2]、精神屬性 +[★/2] ,icon_item_card_stat,063_boss_templeshooter,[642045],,,,800021,,,,0,1,神殿射手卡片,500,230,2,224,0.0,0.0,TTTT,4,4,1.0
+644130,card_Templeshooter,[欄位裝備效果] 力量屬性 +[★/2]、精神屬性 +[★/2] ,icon_item_card_stat,063_boss_templeshooter,,,,,800021,,,,0,1,神殿射手卡片,500,230,2,224,0.0,0.0,TTTT,4,4,1.0
 644131,card_Fireload,[欄位裝備效果] 火屬性追加傷害 +[★*10],icon_item_card_util,129_boss_firelord,,[642902],,,800023,,,,2,1,火焰權杖卡片,500,274,2,207,0.0,0.0,TTTT,4,5,1.0
 644132,card_Kubas,[欄位裝備效果] 智力屬性 +[★/2]、精神屬性 +[★/2] ,icon_item_card_stat,130_boss_kubas,,,,,41373,,,,5,4,庫巴斯卡片,500,253,2,1620,0.0,0.0,TTTT,4,4,1.0
 644133,card_Deathweaver,[欄位裝備效果] 被大型怪物攻擊時，會以[★]%的機率恢復HP 3%。{nl}冷卻時間為15秒。,icon_item_card_util,081_boss_deathweaver,,,,,800026,,,,0,1,死亡魔女卡片,500,430,8,364,0.0,0.0,TTTT,4,5,1.0
@@ -129,13 +129,19 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644143,card_Stonefroster,[欄位裝備效果] 使用HP藥水時，10秒內體力+[★ * 1.5]。,icon_item_card_stat,145_boss_stonefroster,,,,,57589,,,,1,4,森林石怪卡,500,,,,0.0,0.0,TTTT,4,4,1.0
 644144,card_Lapene,[欄位裝備效果] 力量、體力、智力、精神、敏捷 + [★/3]。,icon_item_card_stat,146_boss_lapene,,,,,57866,,,,2,0,拉沛內卡,500,,,,0.0,0.0,TTTT,4,4,1.0
 644145,card_Rambandgad,[欄位裝備效果] 使用SP藥水時，10秒內精神+[★ * 1.5]。,icon_item_card_stat,147_boss_rambandgad,,"[642925, 642943]",,,800019,,,,0,1,雷班札特卡,500,,,,0.0,0.0,TTTT,4,4,1.0
-644146,card_SwordBallista,[欄位裝備效果] Rooting機會 +[★ * 5],icon_item_card_stat,148_boss_swordballista,,,,,800081,,,,0,1,庫勒卡斯卡,500,,,,0.0,0.0,TTTT,4,4,1.0
+644146,card_SwordBallista,[欄位裝備效果] 道具掉落機會 +[★ * 5],icon_item_card_stat,148_boss_swordballista,,,,,800081,,,,0,1,庫勒卡斯卡,500,,,,0.0,0.0,TTTT,4,4,1.0
 644147,card_FrosterLord,[欄位裝備效果] 攻擊時有[★/2]%機率令對方4秒內陷入凍傷效果{nl}(不會對boss套用。),icon_item_card_atk,149_boss_frosterlord,,,,,800076,,,,0,1,弗羅斯特領主卡,500,,,,0.0,0.0,TTTT,4,0,1.0
 644148,card_varleking,[欄位裝備效果] 治癒力 +[★ * 5],icon_item_card_def,144_boss_varleking,,"[642928, 642944]",,,57866,,,,2,0,巴勒王卡片,500,,,,0.0,0.0,TTTT,4,1,1.0
 644149,card_payawoota,[欄位裝備效果] 所有屬性  +[★ * 0.4],icon_item_card_stat,001_npc_payawoota,,,,,,,,,,,帕亞烏塔卡片,500,,,,0.0,0.0,TTTT,4,4,1.0
 644150,card_skiaclips,[欄位裝備效果] 智力、體力 + [★],icon_item_card_stat,156_boss_skiaclipse,,[642948],,,57866,,,,2,0,斯基亞克爾立斯卡片,500,,,,0.0,0.0,TTTT,4,4,1.0
-644151,card_Moringponia,[欄位裝備效果] 結冰狀態異常扺抗 +[★]{nl} 最大HP +[100 * ★],icon_item_card_util,157_boss_moringponia,,,,,57866,,,,2,0,莫靈波尼亞卡片,500,,,,0.0,0.0,TTTT,4,5,1.0
-644152,card_Misrus,[欄位裝備效果] 暗黑狀態異常扺抗 +[★]{nl} 最大SP +[60 * ★],icon_item_card_util,158_boss_misrus,,,,,57866,,,,2,0,莫茲魯斯卡片,500,,,,0.0,0.0,TTTT,4,5,1.0
+644151,card_Moringponia,[欄位裝備效果] 結冰狀態異常扺抗 +[★]{nl} 最大HP +[100 * ★],icon_item_card_util,157_boss_moringponia,,,,,800090,,,,6,2,莫靈波尼亞卡片,500,,,,0.0,0.0,TTTT,4,5,1.0
+644152,card_Misrus,[欄位裝備效果] 暗黑狀態異常扺抗 +[★]{nl} 最大SP +[60 * ★],icon_item_card_util,158_boss_misrus,,[642953],,,57866,,,,2,0,莫茲魯斯卡片,500,,,,0.0,0.0,TTTT,4,5,1.0
+644153,card_tantaliser,"[欄位裝備效果] 力量, 體力 + [★]",icon_item_card_stat,159_boss_tantaliser,,,,,800091,,,,6,2,坦達伊秋卡片,500,,,,0.0,0.0,TTTT,4,4,1.0
+644154,card_vaidotas,"[欄位裝備效果] 物理攻擊力, 魔法攻擊力 + [★ * 10]",icon_item_card_atk,002_npc_vaidotas,,,,,,,,,,,拜杜塔斯卡片,500,,,,0.0,0.0,FFFT,4,0,1.0
+644155,card_vlaentinas,"[欄位裝備效果] 物理防禦力, 魔法防禦力 + [★ * 10]",icon_item_card_def,003_npc_vlaentinas,,,,,,,,,,,瓦倫堤那斯卡片,500,,,,0.0,0.0,FFFT,4,1,1.0
+644156,card_uska,[欄位裝備效果] 所有屬性 + [★ * 0.4],icon_item_card_stat,004_npc_uska,,,,,,,,,,,烏斯卡卡片,500,,,,0.0,0.0,FFFT,4,4,1.0
+644157,card_cyrenia,"[欄位裝備效果] 耐力 + [★], 最大HP + [100 * ★]",icon_item_card_util,006_npc_cyrenia,,,,,,,,,,,希來尼亞卡片,500,,,,0.0,0.0,FFFT,4,5,1.0
+644158,card_Neringa,[欄位裝備效果] 所有屬性 + [★ * 0.5],icon_item_card_stat,007_npc_neringa,,,,,,,,,,,奈凌卡卡片,500,,,,0.0,0.0,TTTT,4,4,1.0
 644900,Legend_card_Marnoks,[欄位裝備效果] 最小暴擊機率增加 [★ * 2]%,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔君主馬魯若斯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644901,Legend_card_Blud,[欄位裝備效果] PVP時獲得傷害減少 [★ * 3]%,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔君主布爾魯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644902,Legend_card_Zawra,[欄位裝備效果] 物理防禦力增加 [★ * 10]%,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔君主扎烏拉卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
@@ -149,7 +155,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644910,Legend_card_FrosterLord,[欄位裝備效果] 召喚獸的最小攻擊力和最大攻擊力差異減少[★ * 10]%{nl}(達成10LV時，召喚獸的最小攻擊力變成和最大攻擊力一樣。),icon_item_card_legend,149_boss_frosterlord,,[642927],,,800076,,,,0,1,魔君主弗羅斯特領主卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644911,Legend_card_Acio,[欄位裝備效果] 暴擊發生 +[★ * 15],icon_item_card_legend,152_boss_asio,,[642929],,,59154,,,,5,0,亞西歐梅吉卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644912,Legend_card_Wastrel,[欄位裝備效果] 最大HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,[642931],,,59172,,,,0,4,威伊斯特隆卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
-644913,Legend_card_ignas,[欄位裝備效果] 暴擊攻擊時以[★ * 5]%機率6秒內隱身。,icon_item_card_legend,154_boss_ignas,,[642934],,,800089,,,,0,1,依克那斯卡試,0,,,,0.0,0.0,TTTT,4,2,1.0
+644913,Legend_card_ignas,[欄位裝備效果] 暴擊攻擊時以[★ * 5]%機率6秒內隱身。,icon_item_card_legend,154_boss_ignas,,[642934],,,800089,,,,0,1,依克那斯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644914,Legend_card_boruta,[欄位裝備效果] 對Boss怪物的傷害增加[★ * 5]%,icon_item_card_legend,155_boss_boruta,,,,,59208,,,,0,0,普魯達卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644915,Legend_card_Marnoks_JP,[欄位裝備效果] 最小暴擊機率增加 [★ * 2]%,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔君主馬魯若斯卡片,0,,,,0.0,0.0,FFFT,4,2,1.0
 644916,Legend_card_Blud_JP,[欄位裝備效果] PVP時獲得傷害減少 [★ * 3]%,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔君主布爾魯卡片,0,,,,0.0,0.0,FFFT,4,2,1.0
@@ -160,8 +166,10 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644921,Legend_card_Mirtis_JP,[欄位裝備效果] 攻擊時因屬性相生而懲罰減少 [★ * 10]%  ,icon_item_card_legend,007_boss_mirtis,,,,,800048,,,,0,1,魔君主米爾堤斯卡片,0,,,,0.0,0.0,FFFT,4,2,1.0
 644922,Legend_card_FrosterLord_JP,[欄位裝備效果] 召喚獸的最小攻擊力和最大攻擊力差異減少[★ * 10]%{nl}(達成10LV時，召喚獸的最小攻擊力變成和最大攻擊力一樣。),icon_item_card_legend,149_boss_frosterlord,,,,,800076,,,,0,1,魔君主弗羅斯特領主卡片,0,,,,0.0,0.0,FFFT,4,2,1.0
 644923,Legendcard_skiaclips,[欄位裝備效果] 昆蟲型對象攻擊力750 * [★],icon_item_card_legend,156_boss_skiaclipse,,[642949],,,57866,,,,2,0,解放的斯基亞克爾立斯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
-644924,Legendcard_Moringponia,[欄位裝備效果] 中型對象攻擊力 300 * [★],icon_item_card_legend,157_boss_moringponia,,,,,57866,,,,2,0,魔君主莫靈波尼亞卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
-644925,Legendcard_Misrus,"[欄位裝備效果] 對正使用盾牌的敵人給予 1,000 * [★] 追加傷害",icon_item_card_legend,158_boss_misrus,,,,,57866,,,,2,0,憤怒的莫茲魯斯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
+644924,Legendcard_Moringponia,[欄位裝備效果] 中型對象攻擊力 300 * [★],icon_item_card_legend,157_boss_moringponia,,,,,800090,,,,6,2,魔君主莫靈波尼亞卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
+644925,Legendcard_Misrus,"[欄位裝備效果] 對正使用盾牌的敵人給予 1,000 * [★] 追加傷害",icon_item_card_legend,158_boss_misrus,,[642953],,,57866,,,,2,0,憤怒的莫茲魯斯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
+644926,Legendcard_bayl,[欄位裝備效果] 隊伍等級50以下時，經驗值獲得量增加 [★ * 10]%,icon_item_card_legend,005_npc_bayl,,,,,,,,,,,巴伊爾卡片,0,,,,0.0,0.0,FFFT,4,2,1.0
+644927,Legendcard_tantaliser,[欄位裝備效果] 火、冰、毒、電氣、念、大地、神聖、黑暗 [★ * 50] 追加傷害,icon_item_card_legend,159_boss_tantaliser,,[642958],,,800091,,,,6,2,魔君主坦達伊秋卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 650001,legend_reinforce_card_lv1,可以用在傳說卡片強化的強化卡片，可以成長至LV4為止。{nl}傳說強化用卡片可以裝備也可以當作一般卡片合成材料來使用。,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,,,被撕毀的傳說強化用卡片,0,,,,0.0,0.0,TTTT,4,3,1.0
 650002,legend_reinforce_card_lv2,可以用在傳說卡片強化的強化卡片，可以成長至LV6為止。{nl}傳說強化用卡片可以裝備也可以當作一般卡片合成材料來使用。,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,老舊的傳說強化用卡片,0,,,,0.0,0.0,TTTT,4,3,1.0
 650003,legend_reinforce_card_lv3,可以用在傳說卡片強化的強化卡片，可以成長至LV8為止。{nl}傳說強化用卡片可以裝備也可以當作一般卡片合成材料來使用。,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,,,傳說強化用卡片,0,,,,0.0,0.0,TTTT,4,3,1.0
