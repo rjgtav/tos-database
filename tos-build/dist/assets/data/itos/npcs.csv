@@ -1238,6 +1238,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154123,npc_MasterArditi,,minimap_man_scout,Ardito Master,2
 154124,npc_MasterTigerHunter,,minimap_man_archer,Tiger Hunter Master,2
 154125,npc_kupole_7,,minimap_personal_house,Kupole 7,2
+154129,npc_washstand_1,,minimap_event_1,Fountain,2
 155000,npc_crystal_machine,,,Crystal Processing Device,2
 155001,farm49_sapling,,,The Mysterious Tree,2
 155002,dirt_ground,,,Soil Sample,2

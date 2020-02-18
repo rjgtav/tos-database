@@ -1839,6 +1839,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 648508,kupole_emotion06,You can add chat emoticons to quick slots. {nl}Right-click to use.,icon_item_misc_00021,,,,,,,,Emoticon: Kupole (Peace),0,0.0,0.0,FFFF,7,1.0
 648509,medeina_emotion01,You can add chat emoticons to quick slots. {nl}Right-click to use.,icon_item_misc_00021,,,,,,,,Emoticon: Medeina (Flustered),0,0.0,0.0,FFFT,7,1.0
 648510,medeina_emotion02,You can add chat emoticons to quick slots. {nl}Right-click to use.,icon_item_misc_00021,,,,,,,,Emoticon: Medeina (Joy),0,0.0,0.0,FFFT,7,1.0
+648511,medeina_emotion03,You can add the chat emoticons below to quick slots. Right-click to use.{nl}{img medeina_emotion03 50 50},icon_item_misc_00021,,,,,,,,Emoticon: Medeina (Handwashing),0,0.0,0.0,FFFF,7,1.0
 649000,misc_ore01,Ore,1_item_ore_copper,,,,,,,,Copper Ore,10,0.0,0.0,TTTT,18,1.0
 649001,misc_ore02,A very common ore.,2_item_ore_iron,[642002],,,,"[{""Chance"": 15.0, ""Monster"": 47474, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}, {""Chance"": 25.0, ""Monster"": 47476, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}, {""Chance"": 20.0, ""Monster"": 47492, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}, {""Chance"": 15.0, ""Monster"": 47495, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}]","[9003, 11036, 11037, 12024, 12036, 12037, 13038, 13039, 14026, 14032, 14039, 14040, 15035, 15036, 16025, 16038, 16039, 34007]",,Iron Ore,10,0.0,0.0,TTTT,18,1.0
 649002,misc_ore03,An ore harder than Iron Ore.,3_item_ore_steel,[642002],,,,"[{""Chance"": 25.0, ""Monster"": 401421, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}, {""Chance"": 50.0, ""Monster"": 58674, ""Quantity_MAX"": 0, ""Quantity_MIN"": 0}]","[31013, 35035]",,Steel Ore,10,0.0,0.0,TTTT,18,1.0
@@ -6175,7 +6176,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904260,Achieve_LV400_MISSION_ACHIEVE01,Right-click to obtain the Indomitable Spirit (Lv.400 Dungeon) title.,icon_item_holyark,,,,,,,,Title - Indomitable Spirit (Lv.400 Dungeon),0,0.0,0.0,FFFT,9,0.0
 904261,Achieve_LV400_MISSION_ACHIEVE02,Right-click to obtain the Valiancy (Lv.400 Dungeon) title.,icon_item_holyark,,,,,,,,Title - Valiancy (Lv.400 Dungeon),0,0.0,0.0,FFFT,9,0.0
 904262,Event_Ability_Point_Stone_10000_14d_2,"Event item.{nl}Grants 10,000 Attribute Points. Right-click to use. ",icon_item_abilitypoint4,,,,,,,,"[Event] 10,000 Attribute Points (14 Days)",0,0.0,1209600.0,FFFT,9,1.0
-904271,EVENT_2002_CHOCO,"When used once, increases EXP gains by 10%, max HP 1000, recovers 100 HP/50 SP every 10 seconds for 30 minutes. Up to 5 can be stacked at a time. Item will be deleted upon the announced date.",icon_item_chocolatebox,,,,,,,,Even Sweeter Valentine Chocolate,0,10.0,0.0,FFFT,7,0.0
+904271,EVENT_2002_CHOCO,"30분간 1중첩 마다 경험치 획득량 10% 증가, 최대 체력 1000 증가, 10초마다 HP 200/ SP 100씩 회복,루팅찬스가 300 증가합니다. 최대 5중첩까지 가능합니다. 3월 05일 점검 시, 일괄 삭제됩니다.",icon_item_chocolatebox,,,,,,,,Even Sweeter Valentine Chocolate,0,10.0,0.0,FFFT,7,0.0
 904274,Event_Roulette_Coin,A special coin minted for Goddess’ Roulette.{nl}Item deleted upon the announced date.,icon_item_event_roulette_coin,,,,,,,,[Event] Goddess’ Roulette Coin,0,0.0,0.0,FFFT,18,0.0
 904280,EVENT_SEASON_NewWorld_Rewards_evt1,Use it to obtain the following items.{nl}Megaphone x10{nl}Soul Crystal x5{nl}[Event] Small Elixir of HP Recovery x2{nl}[Event] Small Elixir of SP Recovery x2,icon_item_luckybox_green,,,,,,,,[Event] Growth Support Package,0,0.0,0.0,FFFT,9,0.0
 904281,EVENT_SEASON_NewWorld_Rewards_evt2_1,Use it to obtain the following items.{nl}500 Attribute Points (14 Days) x2{nl}Miracle Seeds (14 Days) x2{nl}Goddess Sculpture (14 Days) x2{nl}Items deleted upon the announced date.,icon_item_luckybox_blue,,,,,,,,[Event] Daily Support Box,0,0.0,0.0,FFFT,9,0.0
@@ -6493,101 +6494,101 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040191,HiddenAbility_Pyromancer34,Learn the art [Fire Pillar: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Fire Pillar: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Fire Pillar] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_wizard,,,,,,,,Mystic Tome (Fire Pillar: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
 2040192,HiddenAbility_Pyromancer35,Learn the art [Hell Breath: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Hell Breath: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Hell Breath] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_wizard,,,,,,,,Mystic Tome (Hell Breath: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
 2040193,HiddenAbility_Pyromancer36,Learn the art [Flame Ground: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Flame Ground: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Flame Ground] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_wizard,,,,,,,,Mystic Tome (Flame Ground: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040194,HiddenAbility_Pyromancer37,ITEM_20191024_024413,icon_item_hiddenability_wizard,,,,,,,,"Mystic Tome (Prominence: E""",0,0.0,0.0,FFFT,14,0.1
-2040195,HiddenAbility_Cryomancer27,ITEM_20191024_024415,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024414,0,0.0,0.0,FFFT,14,0.1
-2040196,HiddenAbility_Cryomancer28,ITEM_20191024_024417,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024416,0,0.0,0.0,FFFT,14,0.1
-2040197,HiddenAbility_Cryomancer29,ITEM_20191024_024419,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024418,0,0.0,0.0,FFFT,14,0.1
-2040198,HiddenAbility_Cryomancer30,ITEM_20191024_024421,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024420,0,0.0,0.0,FFFT,14,0.1
-2040199,HiddenAbility_Cryomancer31,ITEM_20191024_024423,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024422,0,0.0,0.0,FFFT,14,0.1
-2040200,HiddenAbility_Psychokino26,ITEM_20191024_024425,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024424,0,0.0,0.0,FFFT,14,0.1
-2040201,HiddenAbility_Psychokino27,ITEM_20191024_024427,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024426,0,0.0,0.0,FFFT,14,0.1
-2040202,HiddenAbility_Psychokino28,ITEM_20191024_024429,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024428,0,0.0,0.0,FFFT,14,0.1
-2040203,HiddenAbility_Psychokino29,ITEM_20191024_024431,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024430,0,0.0,0.0,FFFT,14,0.1
-2040204,HiddenAbility_Elementalist34,ITEM_20191024_024433,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024432,0,0.0,0.0,FFFT,14,0.1
-2040205,HiddenAbility_Elementalist35,ITEM_20191024_024435,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024434,0,0.0,0.0,FFFT,14,0.1
-2040206,HiddenAbility_Elementalist36,ITEM_20191024_024437,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024436,0,0.0,0.0,FFFT,14,0.1
-2040207,HiddenAbility_Elementalist37,ITEM_20191024_024439,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024438,0,0.0,0.0,FFFT,14,0.1
-2040208,HiddenAbility_Elementalist38,ITEM_20191024_024441,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024440,0,0.0,0.0,FFFT,14,0.1
-2040209,HiddenAbility_Sorcerer20,ITEM_20191024_024443,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024442,0,0.0,0.0,FFFT,14,0.1
-2040210,HiddenAbility_Sorcerer21,ITEM_20191024_024445,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024444,0,0.0,0.0,FFFT,14,0.1
-2040211,HiddenAbility_Sorcerer22,ITEM_20191024_024447,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024446,0,0.0,0.0,FFFT,14,0.1
-2040212,HiddenAbility_Necromancer27,ITEM_20191024_024449,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024448,0,0.0,0.0,FFFT,14,0.1
-2040213,HiddenAbility_Necromancer28,ITEM_20191024_024451,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024450,0,0.0,0.0,FFFT,14,0.1
-2040214,HiddenAbility_Necromancer29,ITEM_20191024_024453,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024452,0,0.0,0.0,FFFT,14,0.1
-2040215,HiddenAbility_Necromancer30,ITEM_20191024_024455,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024454,0,0.0,0.0,FFFT,14,0.1
-2040216,HiddenAbility_Necromancer31,ITEM_20191024_024457,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024456,0,0.0,0.0,FFFT,14,0.1
-2040217,HiddenAbility_Necromancer32,ITEM_20191024_024459,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024458,0,0.0,0.0,FFFT,14,0.1
-2040218,HiddenAbility_Necromancer33,ITEM_20191024_024461,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024460,0,0.0,0.0,FFFT,14,0.1
-2040219,HiddenAbility_Alchemist15,ITEM_20191024_024463,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024462,0,0.0,0.0,FFFT,14,0.1
-2040220,HiddenAbility_Alchemist16,ITEM_20191024_024465,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024464,0,0.0,0.0,FFFT,14,0.1
-2040221,HiddenAbility_Featherfoot24,ITEM_20191024_024467,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024466,0,0.0,0.0,FFFT,14,0.1
-2040222,HiddenAbility_Featherfoot25,ITEM_20191024_024469,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024468,0,0.0,0.0,FFFT,14,0.1
-2040223,HiddenAbility_Featherfoot26,ITEM_20191024_024471,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024470,0,0.0,0.0,FFFT,14,0.1
-2040224,HiddenAbility_Featherfoot27,ITEM_20191024_024473,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024472,0,0.0,0.0,FFFT,14,0.1
-2040225,HiddenAbility_Featherfoot28,ITEM_20191024_024475,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024474,0,0.0,0.0,FFFT,14,0.1
-2040226,HiddenAbility_Featherfoot29,ITEM_20191024_024477,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024476,0,0.0,0.0,FFFT,14,0.1
-2040227,HiddenAbility_Featherfoot30,ITEM_20191024_024479,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024478,0,0.0,0.0,FFFT,14,0.1
-2040228,HiddenAbility_Featherfoot31,ITEM_20191024_024481,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024480,0,0.0,0.0,FFFT,14,0.1
-2040229,HiddenAbility_Warlock21,ITEM_20191024_024483,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024482,0,0.0,0.0,FFFT,14,0.1
-2040230,HiddenAbility_Warlock22,ITEM_20191024_024485,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024484,0,0.0,0.0,FFFT,14,0.1
-2040231,HiddenAbility_Warlock23,ITEM_20191024_024487,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024486,0,0.0,0.0,FFFT,14,0.1
-2040232,HiddenAbility_Warlock24,ITEM_20191024_024489,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024488,0,0.0,0.0,FFFT,14,0.1
-2040233,HiddenAbility_Warlock25,ITEM_20191024_024491,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024490,0,0.0,0.0,FFFT,14,0.1
-2040234,HiddenAbility_RuneCaster14,ITEM_20191024_024493,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024492,0,0.0,0.0,FFFT,14,0.1
-2040235,HiddenAbility_RuneCaster15,ITEM_20191024_024495,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024494,0,0.0,0.0,FFFT,14,0.1
-2040236,HiddenAbility_RuneCaster16,ITEM_20191024_024497,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024496,0,0.0,0.0,FFFT,14,0.1
-2040237,HiddenAbility_RuneCaster17,ITEM_20191024_024499,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024498,0,0.0,0.0,FFFT,14,0.1
-2040238,HiddenAbility_Sage23,ITEM_20191024_024501,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024500,0,0.0,0.0,FFFT,14,0.1
-2040239,HiddenAbility_Sage24,ITEM_20191024_024503,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024502,0,0.0,0.0,FFFT,14,0.1
-2040240,HiddenAbility_Sage25,ITEM_20191024_024505,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024504,0,0.0,0.0,FFFT,14,0.1
-2040241,HiddenAbility_Sage26,ITEM_20191024_024507,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024506,0,0.0,0.0,FFFT,14,0.1
-2040242,HiddenAbility_Shadowmancer12,ITEM_20191024_024509,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024508,0,0.0,0.0,FFFT,14,0.1
-2040243,HiddenAbility_Shadowmancer13,ITEM_20191024_024511,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024510,0,0.0,0.0,FFFT,14,0.1
-2040244,HiddenAbility_Shadowmancer14,ITEM_20191024_024513,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024512,0,0.0,0.0,FFFT,14,0.1
-2040245,HiddenAbility_Onmyoji22,ITEM_20191024_024515,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024514,0,0.0,0.0,FFFT,14,0.1
-2040246,HiddenAbility_Onmyoji23,ITEM_20191024_024517,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024516,0,0.0,0.0,FFFT,14,0.1
-2040247,HiddenAbility_Onmyoji24,ITEM_20191024_024519,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024518,0,0.0,0.0,FFFT,14,0.1
-2040248,HiddenAbility_Onmyoji25,ITEM_20191024_024521,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024520,0,0.0,0.0,FFFT,14,0.1
-2040249,HiddenAbility_Onmyoji26,ITEM_20191024_024523,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024522,0,0.0,0.0,FFFT,14,0.1
-2040250,HiddenAbility_Onmyoji27,ITEM_20191024_024525,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024524,0,0.0,0.0,FFFT,14,0.1
-2040251,HiddenAbility_Bokor27,ITEM_20191024_024527,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024526,0,0.0,0.0,FFFT,14,0.1
-2040252,HiddenAbility_Bokor28,ITEM_20191024_024529,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024528,0,0.0,0.0,FFFT,14,0.1
-2040253,HiddenAbility_Bokor29,ITEM_20191024_024531,icon_item_hiddenability_wizard,,,,,,,,ITEM_20191024_024530,0,0.0,0.0,FFFT,14,0.1
-2040254,HiddenAbility_Daoshi22,Learn the art [Storm Calling: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Storm Calling: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Storm Calling] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_wizard,,,,,,,,Mystic Tome (Storm Calling: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040255,HiddenAbility_Daoshi23,Learn the art [Creeping Death Charm: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Creeping Death Charm: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Creeping Death Charm] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_wizard,,,,,,,,Mystic Tome (Creeping Death Charm: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040256,HiddenAbility_Daoshi24,Learn the art [Divine Punishment: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Divine Punishment: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Divine Punishment] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_wizard,,,,,,,,Mystic Tome (Divine Punishment: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040257,HiddenAbility_Daoshi25,Learn the art [Eradication: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Eradication: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Eradication] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_wizard,,,,,,,,Mystic Tome (Eradication: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040258,HiddenAbility_Archer36,Learn the art [Multi Shot: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Multi Shot: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Multi Shot] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Multi Shot: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040259,HiddenAbility_Archer37,Learn the art [Oblique Shot: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Oblique Shot: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Oblique Shot] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Oblique Shot: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040260,HiddenAbility_Archer38,Learn the art [Twin Arrow: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Twin Arrow: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Twin Arrow] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Twin Arrow: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040261,HiddenAbility_Ranger40,Learn the art [Barrage: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Barrage: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Barrage] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Barrage: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040262,HiddenAbility_Ranger41,Learn the art [High Anchoring: Enhanced Upgrade] upon use.{nl} - Learn Condition: [High Anchoring: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [High Anchoring] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (High Anchoring: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040263,HiddenAbility_Ranger42,Learn the art [Critical Shot: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Critical Shot: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Critical Shot] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Critical Shot: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040264,HiddenAbility_Ranger43,Learn the art [Bounce Shot: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Bounce Shot: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Bounce Shot] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Bounce Shot: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040265,HiddenAbility_Ranger44,Learn the art [Spiral Arrow: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Spiral Arrow: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Spiral Arrow] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Spiral Arrow: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040266,HiddenAbility_QuarrelShooter27,Learn the art [Scatter Caltrops: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Scatter Caltrops: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Scatter Caltrops] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Scatter Caltrops: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040267,HiddenAbility_QuarrelShooter28,Learn the art [Stone Shot: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Stone Shot: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Stone Shot] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Stone Shot: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040268,HiddenAbility_QuarrelShooter29,Learn the art [Rapid Fire: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Rapid Fire: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Rapid Fire] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Rapid Fire: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040269,HiddenAbility_QuarrelShooter30,Learn the art [Tear Down: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Tear Down: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Tear Down] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Tear Down: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040270,HiddenAbility_Sapper43,Learn the art [Stake Stockades: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Stake Stockades: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Stake Stockades] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Stake Stockades: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040271,HiddenAbility_Sapper44,Learn the art [Claymore: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Claymore: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Claymore] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Claymore: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040272,HiddenAbility_Sapper45,Learn the art [Punji Stake: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Punji Stake: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Punji Stake] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Punji Stake: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040273,HiddenAbility_Sapper46,Learn the art [Detonate Trap: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Detonate Trap: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Detonate Trap] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Detonate Trap: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040274,HiddenAbility_Sapper47,Learn the art [Broom Trap: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Broom Trap: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Broom Trap] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Broom Trap: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040275,HiddenAbility_Sapper48,Learn the art [Spike Shooter: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Spike Shooter: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Spike Shooter] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Spike Shooter: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040276,HiddenAbility_Sapper49,Learn the art [Spring Trap: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Spring Trap: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Spring Trap] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Spring Trap: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040277,HiddenAbility_Sapper50,Learn the art [Leghold Trap: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Leghold Trap: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Leghold Trap] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Leghold Trap: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040278,HiddenAbility_Hunter17,Learn the art [Coursing: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Coursing: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Coursing] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Coursing: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040279,HiddenAbility_Hunter18,Learn the art [Rush Dog: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Rush Dog: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Rush Dog] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Rush Dog: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040280,HiddenAbility_Hunter19,Learn the art [Retrieve: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Retrieve: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Retrieve] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Retrieve: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040281,HiddenAbility_Wugushi30,Learn the art [Wugong Gu: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Wugong Gu: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Wugong Gu] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Wugong Gu: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040282,HiddenAbility_Wugushi31,Learn the art [Poison Pot: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Poison Pot: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Poison Pot] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Poison Pot: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040283,HiddenAbility_Wugushi32,Learn the art [Jincan Gu: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Jincan Gu: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Jincan Gu] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Jincan Gu: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040284,HiddenAbility_Wugushi33,Learn the art [Latent Venom: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Latent Venom: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Latent Venom] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Latent Venom: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040285,HiddenAbility_Wugushi34,Learn the art [Wild Miasma: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Wild Miasma: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Wild Miasma] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Wild Miasma: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040286,HiddenAbility_Fletcher28,Learn the art [Broadhead: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Broadhead: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Broadhead] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Broadhead: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040287,HiddenAbility_Fletcher29,Learn the art [Bodkin Point: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Bodkin Point Attribute Points: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Bodkin Point Attribute Points] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Bodkin Point: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
-2040288,HiddenAbility_Fletcher30,Learn the art [Barbed Arrow: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Barbed Arrow: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Barbed Arrow] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Barbed Arrow: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
+2040194,HiddenAbility_Pyromancer37,,icon_item_hiddenability_wizard,,,,,,,,"Mystic Tome (Prominence: E""",0,0.0,0.0,FFFT,14,0.1
+2040195,HiddenAbility_Cryomancer27,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040196,HiddenAbility_Cryomancer28,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040197,HiddenAbility_Cryomancer29,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040198,HiddenAbility_Cryomancer30,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040199,HiddenAbility_Cryomancer31,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040200,HiddenAbility_Psychokino26,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040201,HiddenAbility_Psychokino27,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040202,HiddenAbility_Psychokino28,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040203,HiddenAbility_Psychokino29,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040204,HiddenAbility_Elementalist34,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040205,HiddenAbility_Elementalist35,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040206,HiddenAbility_Elementalist36,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040207,HiddenAbility_Elementalist37,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040208,HiddenAbility_Elementalist38,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040209,HiddenAbility_Sorcerer20,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040210,HiddenAbility_Sorcerer21,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040211,HiddenAbility_Sorcerer22,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040212,HiddenAbility_Necromancer27,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040213,HiddenAbility_Necromancer28,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040214,HiddenAbility_Necromancer29,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040215,HiddenAbility_Necromancer30,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040216,HiddenAbility_Necromancer31,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040217,HiddenAbility_Necromancer32,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040218,HiddenAbility_Necromancer33,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040219,HiddenAbility_Alchemist15,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040220,HiddenAbility_Alchemist16,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040221,HiddenAbility_Featherfoot24,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040222,HiddenAbility_Featherfoot25,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040223,HiddenAbility_Featherfoot26,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040224,HiddenAbility_Featherfoot27,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040225,HiddenAbility_Featherfoot28,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040226,HiddenAbility_Featherfoot29,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040227,HiddenAbility_Featherfoot30,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040228,HiddenAbility_Featherfoot31,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040229,HiddenAbility_Warlock21,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040230,HiddenAbility_Warlock22,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040231,HiddenAbility_Warlock23,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040232,HiddenAbility_Warlock24,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040233,HiddenAbility_Warlock25,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040234,HiddenAbility_RuneCaster14,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040235,HiddenAbility_RuneCaster15,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040236,HiddenAbility_RuneCaster16,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040237,HiddenAbility_RuneCaster17,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040238,HiddenAbility_Sage23,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040239,HiddenAbility_Sage24,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040240,HiddenAbility_Sage25,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040241,HiddenAbility_Sage26,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040242,HiddenAbility_Shadowmancer12,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040243,HiddenAbility_Shadowmancer13,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040244,HiddenAbility_Shadowmancer14,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040245,HiddenAbility_Onmyoji22,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040246,HiddenAbility_Onmyoji23,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040247,HiddenAbility_Onmyoji24,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040248,HiddenAbility_Onmyoji25,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040249,HiddenAbility_Onmyoji26,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040250,HiddenAbility_Onmyoji27,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040251,HiddenAbility_Bokor27,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040252,HiddenAbility_Bokor28,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040253,HiddenAbility_Bokor29,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040254,HiddenAbility_Daoshi22,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040255,HiddenAbility_Daoshi23,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040256,HiddenAbility_Daoshi24,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040257,HiddenAbility_Daoshi25,,icon_item_hiddenability_wizard,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040258,HiddenAbility_Archer36,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040259,HiddenAbility_Archer37,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040260,HiddenAbility_Archer38,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040261,HiddenAbility_Ranger40,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040262,HiddenAbility_Ranger41,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040263,HiddenAbility_Ranger42,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040264,HiddenAbility_Ranger43,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040265,HiddenAbility_Ranger44,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040266,HiddenAbility_QuarrelShooter27,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040267,HiddenAbility_QuarrelShooter28,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040268,HiddenAbility_QuarrelShooter29,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040269,HiddenAbility_QuarrelShooter30,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040270,HiddenAbility_Sapper43,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040271,HiddenAbility_Sapper44,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040272,HiddenAbility_Sapper45,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040273,HiddenAbility_Sapper46,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040274,HiddenAbility_Sapper47,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040275,HiddenAbility_Sapper48,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040276,HiddenAbility_Sapper49,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040277,HiddenAbility_Sapper50,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040278,HiddenAbility_Hunter17,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040279,HiddenAbility_Hunter18,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040280,HiddenAbility_Hunter19,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040281,HiddenAbility_Wugushi30,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040282,HiddenAbility_Wugushi31,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040283,HiddenAbility_Wugushi32,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040284,HiddenAbility_Wugushi33,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040285,HiddenAbility_Wugushi34,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040286,HiddenAbility_Fletcher28,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040287,HiddenAbility_Fletcher29,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
+2040288,HiddenAbility_Fletcher30,,icon_item_hiddenability_archer,,,,,,,,,0,0.0,0.0,FFFT,14,0.1
 2040289,HiddenAbility_Fletcher31,Learn the art [Crossfire: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Crossfire: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Crossfire] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Crossfire: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
 2040290,HiddenAbility_Fletcher32,Learn the art [Magic Arrow: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Magic Arrow: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Magic Arrow] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Magic Arrow: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
 2040291,HiddenAbility_Fletcher33,Learn the art [Divine Machine Arrow: Enhanced Upgrade] upon use.{nl} - Learn Condition: [Divine Machine Arrow: Enhance] Attribute Level 65{nl} - Cost to Learn or Level Up: 3057 Attribute Points{nl} - Art Description{nl}* [Divine Machine Arrow] skill factor is increased by 1.25% per attribute level,icon_item_hiddenability_archer,,,,,,,,Mystic Tome (Divine Machine Arrow: Enhanced Upgrade),0,0.0,0.0,FFFT,14,0.1
