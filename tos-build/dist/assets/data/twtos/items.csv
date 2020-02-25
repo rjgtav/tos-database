@@ -1843,6 +1843,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 648508,kupole_emotion06,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：奎波爾(雙手比V),0,0.0,0.0,FFFF,7,1.0
 648509,medeina_emotion01,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：梅德依那(驚慌),0,0.0,0.0,FFFT,7,1.0
 648510,medeina_emotion02,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：梅德依那(高興),0,0.0,0.0,FFFT,7,1.0
+648511,medeina_emotion03,可以登錄以下的聊天表情符號。點擊滑鼠右鍵使用。{nl}{img medeina_emotion03 50 50},icon_item_misc_00021,,,,,,,,表情符號：梅德依那(清潔),0,0.0,0.0,FFFF,7,1.0
 649000,misc_ore01,礦石,1_item_ore_copper,,,,,,,,銅礦石,10,0.0,0.0,TTTT,18,1.0
 649001,misc_ore02,常見的礦石。,2_item_ore_iron,[642002],,,,,"[9003, 11036, 11037, 12024, 12036, 12037, 13038, 13039, 14026, 14032, 14039, 14040, 15035, 15036, 16025, 16038, 16039, 34007]",,鐵礦石,10,0.0,0.0,TTTT,18,1.0
 649002,misc_ore03,比鐵更堅硬的礦石。,3_item_ore_steel,[642002],,,,,"[31013, 35035]",,鋼鐵礦石,10,0.0,0.0,TTTT,18,1.0
@@ -5532,6 +5533,14 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699021,Legend_Misc_Mothacc,可以在魔蝶交戰地傳說遠征隊獲得。{nl}使用在製作以下的傳說飾品。{nl} - 莫靈波尼亞皮克堤斯{nl} - 莫靈波尼亞特里烏卡斯{nl} - 莫靈波尼亞伊斯卡里堤{nl} - 莫靈波尼亞肯特里貝{nl} - 莫靈波尼亞朱歐達,icon_item_mothpowder,,[642958],,,,,,蝶蛾粉,10,0.0,0.0,FFFT,19,10.0
 699022,Legend_ExpPotion_2_nomarket,可以將戰鬥中所產生的氣息，蒐集並儲存起來的試劑瓶。激活後，消滅怪物時將獲得經驗值。,icon_item_empty_partis,,,,,,,,帕莫卡試劑瓶,10,0.0,0.0,FFFT,10,5.0
 699023,Legend_Misc_Mothacc_easy,收集5個使用'蝶蛾粉' 可獲得1個。,icon_item_misc_tantaliser_easy,,,,,,,,蝶蛾塵,0,0.0,0.0,FFFT,7,1.0
+699024,Rare_Enchant_Jewel_440,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,[LV. 440] 稀有附魔珠寶,10,0.0,0.0,TFTT,7,1.0
+699025,Unique_Enchant_Jewel_440,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[LV. 440] 獨特附魔珠寶,10,0.0,0.0,TFTT,7,1.0
+699026,Legend_Enchant_Jewel_490,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[LV. 490] 傳說附魔珠寶,10,0.0,0.0,TFTT,7,1.0
+699027,event_Unique_Enchant_Jewel_430,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[活動][LV. 430] 獨特附魔珠寶,10,0.0,0.0,FFFT,7,1.0
+699028,event_Legend_Enchant_Jewel_430,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[活動][LV. 430] 傳說附魔珠寶,10,0.0,0.0,FFFT,7,1.0
+699029,Rare_Enchant_Jewel_410,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,[LV. 410] 稀有附魔珠寶,10,0.0,0.0,TFTT,7,1.0
+699030,Unique_Enchant_Jewel_410,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[LV. 410] 獨特附魔珠寶,10,0.0,0.0,TFTT,7,1.0
+699031,Legend_Enchant_Jewel_460,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[LV. 460] 傳說附魔珠寶,10,0.0,0.0,TFTT,7,1.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,18,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,18,1.0
 700002,KQ_token_hethran_3,費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv3,2000,0.0,0.0,TTTT,18,1.0

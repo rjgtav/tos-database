@@ -1238,6 +1238,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 154123,npc_MasterArditi,,minimap_man_scout,阿迪蒂大師,2
 154124,npc_MasterTigerHunter,,minimap_man_archer,虎獵師大師,2
 154125,npc_kupole_7,,minimap_personal_house,奎波爾7,2
+154129,npc_washstand_1,,minimap_event_1,噴水池,2
 155000,npc_crystal_machine,,,水晶加工機械,2
 155001,farm49_sapling,,,神祕的樹苗,2
 155002,dirt_ground,,,土壤標本,2
