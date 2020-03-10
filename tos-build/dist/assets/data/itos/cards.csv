@@ -136,7 +136,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644150,card_skiaclips,"[Card Equip Effect] INT, CON + [{img star_mark 20 20}]",icon_item_card_stat,156_boss_skiaclipse,,[642948],,,57866,,,,2,0,Skiaclipse Card,500,,,,0.0,0.0,TTTT,4,4,1.0
 644151,card_Moringponia,[Card Equip Effect] Resistance against Freeze +[{img star_mark 20 20}]{nl}Max. HP +[100 * {img star_mark 20 20}],icon_item_card_util,157_boss_moringponia,,,,,800090,,,,6,2,Moringponia Card,500,,,,0.0,0.0,TTTT,4,5,1.0
 644152,card_Misrus,[Card Equip Effect] Resistance against Blind +[{img star_mark 20 20}]{nl}Max. SP +[100 * {img star_mark 20 20}],icon_item_card_util,158_boss_misrus,,[642953],,,57866,,,,2,0,Misrus Card,500,,,,0.0,0.0,TTTT,4,5,1.0
-644153,card_tantaliser,"[Card Equip Effect] INT, CON + [{img star_mark 20 20}]",icon_item_card_stat,159_boss_tantaliser,,,,,800091,,,,6,2,Tantalizer Card,500,,,,0.0,0.0,TTTT,4,4,1.0
+644153,card_tantaliser,"[Card Equip Effect] INT, CON + [{img star_mark 20 20}]",icon_item_card_stat,159_boss_tantaliser,,[642957],,,800091,,,,6,2,Tantalizer Card,500,,,,0.0,0.0,TTTT,4,4,1.0
 644154,card_vaidotas,"[Card Equip Effect] Physical Attack, Magic Attack + [{img star_mark 20 20} * 10]",icon_item_card_atk,002_npc_vaidotas,,,,,,,,,,,Vaidotas Card,500,,,,0.0,0.0,FFFT,4,0,1.0
 644155,card_vlaentinas,"[Card Equip Effect] Physical Defense, Magic Defense + [{img star_mark 20 20} * 10]",icon_item_card_def,003_npc_vlaentinas,,,,,,,,,,,Valentinas Card,500,,,,0.0,0.0,FFFT,4,1,1.0
 644156,card_uska,[Card Equip Effect] All stats + [{img star_mark 20 20} * 0.4],icon_item_card_stat,004_npc_uska,,,,,,,,,,,Uska Card,500,,,,0.0,0.0,FFFT,4,4,1.0

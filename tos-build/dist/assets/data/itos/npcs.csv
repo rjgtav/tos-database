@@ -1612,3 +1612,4 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 2000130,lockdoor_npc_E1,Monster,,Locked Door,2
 2000131,pumpkin_bonus_E1,Monster,,Sweet Magic Circle,2
 2000132,middle_boss_board_E1,Monster,,Note left by a resident,2
+2000207,event_npc_village_male_b3,Start Point Invisible Object,minimap_event_1,[Event] Villager B3,2
