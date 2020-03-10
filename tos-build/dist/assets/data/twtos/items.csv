@@ -429,7 +429,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640299,Achieve_EV_Luck2,可獲得中吉稱號的稱號道具。對道具點擊右鍵可立即獲得稱號。,icon_item_holyark,,,,,,,,稱號 - 中吉,0,0.0,0.0,FFFF,7,0.0
 640300,Achieve_EV_Luck3,可獲得吉稱號的稱號道具。對道具點擊右鍵可立即獲得稱號。,icon_item_holyark,,,,,,,,稱號 - 吉,0,0.0,0.0,FFFF,7,0.0
 640301,Achieve_EV_Luck4,可獲得大吉稱號的稱號道具。對道具點擊右鍵可立即獲得稱號。,icon_item_holyark,,,,,,,,稱號 - 大吉,0,0.0,0.0,FFFF,7,0.0
-640302,Drug_Fortunecookie,使用時30分鐘內經驗值增加+30%和移動速度增加，最多可以疊加5次。,icon_item_fortunecookie,,,,,,,,幸運餅乾,0,10.0,0.0,FFFT,7,0.0
+640302,Drug_Fortunecookie,使用時30分鐘內經驗值增加+30%和移動速度增加，最多可以疊加5次。,icon_item_fortunecookie,,,,,,,,幸運餅乾,0,10.0,0.0,FFFF,7,0.0
 640303,Drug_Valentine_Choco,使用時30分鐘內經驗值獲得量、移動速度增加，最多可以疊加5次。,icon_item_chocolatebox,,,,,,,,情人節巧克力,0,10.0,0.0,FFFF,7,0.0
 640304,Achieve_Valentine2017_1,可獲得甘味人生的稱號道具。點擊滑鼠右鍵可獲得稱號。,icon_item_holyark,,,,,,,,稱號 - 甘味人生,0,0.0,0.0,FFFF,7,0.0
 640305,Achieve_Valentine2017_2,可獲得減肥明天再開始的稱號道具。點擊滑鼠右鍵可獲得稱號。,icon_item_holyark,,,,,,,,稱號 - 減肥明天再開始,0,0.0,0.0,FFFF,7,0.0
@@ -5625,7 +5625,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 730203,Paste_Bait_basic_2,釣魚用的下級魚餌。魚兒們很喜歡。,icon_item_paste_bait_basic,,,,,,,,補給用魚餌,10,0.0,0.0,FFFT,20,1.0
 730204,Paste_Bait_basic_pcbang1,釣魚用的高級誘餌，魚咬了會有反應。,icon_item_paste_bait2_pp,,,,,,,,[POPOshop] 華麗的蚯蚓,100,0.0,0.0,FFTT,20,1.0
 730205,Paste_Bait_octopus,釣魚用的高級誘餌，吞了圖鑑材料的魚會有反應。{nl} {nl}圖鑑清單{nl} - 蓮帕拉沙池塘{nl} - 加橋森林{nl} - 帕歐皮斯渡口{nl} - 亞夏克地牢{nl} - 庫魯森林{nl} - 克尼多斯森林{nl} - 達旦森林{nl} - 內貝爾雷礦山{nl} - 諾巴哈地區{nl} - 怪物標本組合{nl} - 夏爾雷依西邊森林{nl} - 夏爾雷依東邊森林{nl} - 夏爾雷依礦山村莊{nl} - 水晶礦山{nl} - 斯拉屋塔斯峽谷{nl} - 凱利高原{nl} - 奈普里塔斯懸崖{nl} - 泰內花園{nl} - 貝雅山谷{nl} - 比爾塔溪谷{nl} - 科博爾特森林{nl} - 賽堤尼山溝{nl} - 泰內聖堂,icon_item_octopus,,,,,,,,章魚,10,0.0,0.0,FFTT,20,1.0
-730299,Event_1902_mudfish,用於釣魚的特殊魚餌。用作魚餌時，可以各自不同的機率獲得[活動]藏在池塘內的寶箱、銀色魚、小銀色魚。{nl}未使用的[活動]悠夏飼養的泥鰍將於活動結束時道具統一刪除。'特性點數5(14天)' 可變更為道具。？？,icon_item_event1902_bait,,,,,,,,[活動]悠夏飼養的泥鰍,10,0.0,0.0,FFFT,20,1.0
+730299,Event_1902_mudfish,用於釣魚的特殊魚餌。用作魚餌時，可以各自不同的機率獲得[活動]藏在池塘內的寶箱、銀色魚、小銀色魚。{nl}未使用的[活動]悠夏飼養的泥鰍將於活動結束時道具統一刪除。,icon_item_event1902_bait,,,,,,,,[活動]悠夏飼養的泥鰍,10,0.0,0.0,FFFT,20,1.0
 730300,Paste_Bait_lure,釣魚用的高級魚餌。會有很棒的獎勵喔。,icon_item_paste_bait_mineral_1,,,,,,,,鱸魚,0,0.0,0.0,FFFT,20,1.0
 730400,Spread_Bait_basic,釣魚機率增加 3.3% {nl}持續時間10分鐘{nl}在釣魚場使用能增加所在釣魚場的釣魚機率。冷卻時間10分鐘。,icon_item_spread_bait_basic,,,,,,,,普通米飯餌,1000,600.0,0.0,FFTT,7,5.0
 730499,Event_1902_Spread_Bait,釣魚機率增加 3.3% {nl}持續時間10分鐘{nl}在釣魚場使用能增加所在釣魚場的釣魚機率。冷卻時間10分鐘。,icon_item_spread_bait_basic,,,,,,,,[活動]普通米飯餌(1天),1000,600.0,86400.0,FFFT,7,5.0
@@ -5727,11 +5727,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900217,Event_Valen_Choco_m_3,白砂糖。{nl}製作愛的巧克力的材料。,icon_item_sugar,,,,,,[40015],,白砂糖,0,0.0,0.0,TTFT,18,0.0
 900218,Event_Valen_Choco_m_4,巧克力模型。{nl}製作愛的巧克力的材料。,icon_item_pilgrim_frame,,,,,,[40015],,巧克力模型,0,0.0,0.0,TTFT,18,0.0
 900230,Event_RandomNumber,使用時會隨機顯示1~10中1個數字，點擊滑鼠右鍵即可使用。,icon_item_stonepaper_01,,,,,,,,隨機數字卷軸,0,5.0,0.0,FFFF,7,1.0
-900231,Event_WhiteDay_Candy_Set,白色情人節活動道具。,event_whiteday_candy_set,,,,,,,[40016],棒棒糖套裝,0,5.0,0.0,FFFF,18,0.0
-900232,Event_WhiteDay_Candy_1,5分鐘內提升物理、魔法攻擊力+100 。{nl}可製作包含蘇打棒棒糖、水果棒棒糖、檸檬棒棒糖的棒棒糖套組。,event_whiteday_candy_1,,,,,,[40016],,草莓棒棒糖,0,300.0,0.0,FFFF,7,1.0
-900233,Event_WhiteDay_Candy_2,5分鐘內提升物理、魔法防禦力+100 。{nl}可製作包含草莓棒棒糖、水果棒棒糖、檸檬棒棒糖的棒棒糖套組。,event_whiteday_candy_2,,,,,,[40016],,蘇打棒棒糖,0,300.0,0.0,FFFF,7,1.0
-900234,Event_WhiteDay_Candy_3,15秒內每間隔2秒可恢復HP、SP 500。{nl}可製作包含草莓棒棒糖、蘇打棒棒糖、檸檬棒棒糖的棒棒糖套組。,event_whiteday_candy_3,,,,,,[40016],,水果棒棒糖,0,30.0,0.0,FFFF,7,1.0
-900235,Event_WhiteDay_Candy_4,5分鐘內提升移動速度+3。{nl}製作包含草莓棒棒糖、蘇打棒棒糖、水果棒棒糖的棒棒糖套組。,event_whiteday_candy_4,,,,,,[40016],,檸檬棒棒糖,0,300.0,0.0,FFFF,7,1.0
+900231,Event_WhiteDay_Candy_Set,白色情人節活動道具。,event_whiteday_candy_set,,,,,,,[40016],糖果組合,0,5.0,0.0,FFFF,18,0.0
+900232,Event_WhiteDay_Candy_1,5分鐘內提升物理、魔法攻擊力+100 。{nl}可製作包含蘇打糖果、果汁糖果、檸檬糖果的糖果組合。,event_whiteday_candy_1,,,,,,[40016],,草莓糖果,0,300.0,0.0,FFFF,7,1.0
+900233,Event_WhiteDay_Candy_2,5分鐘內提升物理、魔法防禦力+100 。{nl}可製作包含草莓糖果、果汁糖果、檸檬糖果的糖果組合。,event_whiteday_candy_2,,,,,,[40016],,蘇打糖果,0,300.0,0.0,FFFF,7,1.0
+900234,Event_WhiteDay_Candy_3,15秒內每間隔2秒可恢復HP、SP 500。{nl}可製作包含草莓糖果、蘇打糖果、檸檬糖果的糖果組合。,event_whiteday_candy_3,,,,,,[40016],,果汁糖果,0,30.0,0.0,FFFF,7,1.0
+900235,Event_WhiteDay_Candy_4,5分鐘內提升移動速度+3。{nl}製作包含草莓糖果、蘇打糖果、果汁糖果的糖果組合。,event_whiteday_candy_4,,,,,,[40016],,檸檬糖果,0,300.0,0.0,FFFF,7,1.0
 900238,Event_ManWoo_1,愚人節活動道具。{nl}使用時能騙倒對方。,icon_item_feather_05purple,,,,,,,,愚人節羽毛,0,10.0,0.0,FFFF,7,1.0
 900240,Event_Fire_Songpyeon,2週年紀念活動道具。{nl}30分內給予組隊全員移動速度+4、廣域攻擊比率+1、經驗值增加25%的效果。,icon_item_firework,,,,,,,,2週年爆竹,0,1800.0,0.0,FFFT,7,1.0
 900241,Event_ArborDay_Costume_Box,箱子裡裝著符合角色的簡潔套裝，點擊滑鼠右鍵即可使用。,icon_item_giftbox_4,,,,,,,,簡潔套裝箱,0,0.0,0.0,FFFT,9,1.0

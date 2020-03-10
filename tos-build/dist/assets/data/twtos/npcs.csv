@@ -1612,3 +1612,4 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 2000130,lockdoor_npc_E1,怪物,,上鎖的門,2
 2000131,pumpkin_bonus_E1,怪物,,甜蜜的魔法陣,2
 2000132,middle_boss_board_E1,怪物,,居民留下的紙條,2
+2000207,event_npc_village_male_b3,出發點透明物件,minimap_event_1,[活動]村莊青年B3,2

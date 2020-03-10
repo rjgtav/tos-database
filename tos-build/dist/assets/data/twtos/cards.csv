@@ -136,7 +136,7 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644150,card_skiaclips,[欄位裝備效果] 智力、體力 + [★],icon_item_card_stat,156_boss_skiaclipse,,[642948],,,57866,,,,2,0,斯基亞克爾立斯卡片,500,,,,0.0,0.0,TTTT,4,4,1.0
 644151,card_Moringponia,[欄位裝備效果] 結冰狀態異常扺抗 +[★]{nl} 最大HP +[100 * ★],icon_item_card_util,157_boss_moringponia,,,,,800090,,,,6,2,莫靈波尼亞卡片,500,,,,0.0,0.0,TTTT,4,5,1.0
 644152,card_Misrus,[欄位裝備效果] 暗黑狀態異常扺抗 +[★]{nl} 最大SP +[60 * ★],icon_item_card_util,158_boss_misrus,,[642953],,,57866,,,,2,0,莫茲魯斯卡片,500,,,,0.0,0.0,TTTT,4,5,1.0
-644153,card_tantaliser,"[欄位裝備效果] 力量, 體力 + [★]",icon_item_card_stat,159_boss_tantaliser,,,,,800091,,,,6,2,坦達伊秋卡片,500,,,,0.0,0.0,TTTT,4,4,1.0
+644153,card_tantaliser,"[欄位裝備效果] 力量, 體力 + [★]",icon_item_card_stat,159_boss_tantaliser,,[642957],,,800091,,,,6,2,坦達伊秋卡片,500,,,,0.0,0.0,TTTT,4,4,1.0
 644154,card_vaidotas,"[欄位裝備效果] 物理攻擊力, 魔法攻擊力 + [★ * 10]",icon_item_card_atk,002_npc_vaidotas,,,,,,,,,,,拜杜塔斯卡片,500,,,,0.0,0.0,FFFT,4,0,1.0
 644155,card_vlaentinas,"[欄位裝備效果] 物理防禦力, 魔法防禦力 + [★ * 10]",icon_item_card_def,003_npc_vlaentinas,,,,,,,,,,,瓦倫堤那斯卡片,500,,,,0.0,0.0,FFFT,4,1,1.0
 644156,card_uska,[欄位裝備效果] 所有屬性 + [★ * 0.4],icon_item_card_stat,004_npc_uska,,,,,,,,,,,烏斯卡卡片,500,,,,0.0,0.0,FFFT,4,4,1.0
