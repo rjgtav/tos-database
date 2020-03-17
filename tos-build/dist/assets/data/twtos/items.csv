@@ -897,6 +897,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643056,Moru_Ruby_Charge,只有潛力為0的裝備可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+16強化以上失敗時，強化數值會減少為+15。點擊滑鼠右鍵使用。,icon_item_ruby_moru,,,,,,,[9034],紅寶石鐵砧,0,0.0,0.0,FFFT,18,1.0
 643057,Moru_Ruby_14d_event,只有潛力為0的裝備可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+16強化以上失敗時，強化數值會減少為+15。點擊滑鼠右鍵使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_ruby_moru,,,,,,,,[活動]紅寶石鐵砧(14天),0,0.0,1209600.0,FFFT,18,1.0
 643058,Transcend_Scroll_10_PC_430,讓裝備的超越數值提升至10階。{nl}只有0~9階超越道具可以使用，右點擊10超越卷軸後，選擇要超越的道具，就可以變更成10超越狀態。{nl}只有Lv 430以下道具可使用超越卷軸。,item_icon_transcend_scroll_10,,,,,,,,[網咖] Lv.430 10超越卷軸,0,0.0,0.0,TFFT,7,1.0
+643059,Transcend_Scroll_10_430,讓裝備的超越數值提升至10階。{nl}只有0~9階超越道具可以使用，右點擊10超越卷軸後，選擇要超越的道具，就可以變更成10超越狀態。{nl}只有Lv 430以下道具可使用超越卷軸。,item_icon_transcend_scroll_10,,,,,,,,[Lv.430] 10超越卷軸,0,0.0,0.0,FFFT,7,1.0
+643060,Extract_kit_Gold_Team_nonEvent,血晶萃取時使用的工具，只有裝備潛力為0時可以使用，防止道具破壞。,icon_item_extractkit_gold,,,,,,,,黃金血晶萃取工具,0,0.0,0.0,FFFT,9,4.0
 645002,D_Bube_Mane,可以從長時間暴露於水晶的布貝身上獲得的黑暗魔石。,icon_item_evilenergy_piece,,,,,,,,布貝魔石,4,0.0,0.0,TTTT,24,0.0
 645024,leaf_hanaming,散發出甜蜜香味的花瓣，可以從粉紅小花怪身上獲得。,icon_item_hanamingpetal,"[642003, 642018, 642120]",,,,,"[2001, 30102]",,粉紅小花怪花瓣,1,0.0,0.0,TTTT,18,1.0
 645025,TreasureboxKey2,開啟寶箱 LV 2所使用的鑰匙,icon_item_key1,,,,,,,,LV2 寶箱鑰匙,0,0.0,0.0,FFTF,18,1.0
@@ -5541,6 +5543,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699029,Rare_Enchant_Jewel_410,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,[LV. 410] 稀有附魔珠寶,10,0.0,0.0,TFTT,7,1.0
 699030,Unique_Enchant_Jewel_410,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[LV. 410] 獨特附魔珠寶,10,0.0,0.0,TFTT,7,1.0
 699031,Legend_Enchant_Jewel_460,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[LV. 460] 傳說附魔珠寶,10,0.0,0.0,TFTT,7,1.0
+699032,Team_Legend_Enchant_Jewel_460,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[LV. 460] 傳說附魔珠寶,10,0.0,0.0,FFFT,7,1.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,18,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,18,1.0
 700002,KQ_token_hethran_3,費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv3,2000,0.0,0.0,TTTT,18,1.0
@@ -6148,6 +6151,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904260,Achieve_LV400_MISSION_ACHIEVE01,可以獲得稱號-不屈的鬥志持有者 (Lv.400 地下城)的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-不屈的鬥志持有者 (Lv.400 地下城),0,0.0,0.0,FFFT,9,0.0
 904261,Achieve_LV400_MISSION_ACHIEVE02,可以獲得稱號-有勇氣的人 (Lv.400 地下城)的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-有勇氣的人 (Lv.400 地下城),0,0.0,0.0,FFFT,9,0.0
 904271,EVENT_2002_CHOCO,30分鐘內，每重疊1層獲得經驗值 +10%、最大HP +1000{nl}每10秒恢復HP 200/SP 100{nl}未鑑定裝備掉落機增 +300{nl}最多可以重疊5層。活動結束後將統一刪除。,icon_item_chocolatebox,,,,,,,,加倍甜蜜情人節巧克力,0,10.0,0.0,FFFT,7,0.0
+904272,2020NewYear_EQUIPITEM_BOX_ARMOR,使用時可以選擇獲得1個11強化、10超越的[2020年春季]賽必諾斯防具。{nl}裝備無法分解、強化。,icon_item_jewelrybox_close,,,,,,,,[2020春季]11強化10超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
+904273,2020NewYear_EQUIPITEM_BOX,使用時可以選擇獲得1個11強化、10超越的[2020年春季]賽必諾斯武器。{nl}裝備無法分解、強化。,icon_item_jewelrybox_close,,,,,,,,[2020春季]11強化10超越賽必諾斯武器選擇箱,0,0.0,0.0,FFFT,9,1.0
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,7,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,18,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,18,1.0
