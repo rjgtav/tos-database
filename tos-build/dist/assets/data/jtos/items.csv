@@ -1,5 +1,5 @@
 $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
--1,Moneybag1,,icon_item_silver,,,,,,,,シルバー,,,,FFFF,28,
+-1,Moneybag1,,icon_item_silver,,,,,,,,シルバー,,,,FFFF,29,
 201001,ColorSpray_1,アイテムを調合して他のアイテム製造,icon_item_small_bag,,,,,,,,スプレー- 黒,11,1.0,0.0,TTTT,7,1.0
 201002,ColorSpray_2,アイテムを調合して他のアイテム製造,icon_item_small_bag,,,,,,,,スプレー- 赤,11,1.0,0.0,TTTT,7,1.0
 201003,ColorSpray_3,アイテムを調合して他のアイテム製造,icon_item_small_bag,,,,,,,,スプレー- 白,11,1.0,0.0,TTTT,7,1.0
