@@ -31,6 +31,7 @@ export enum TOSAttackType {
   MELEE_SLASH = 'Slash',
   MELEE_STRIKE = 'Strike',
   MELEE_THRUST = 'Thrust',
+  TRUE = 'True Damage',
   UNKNOWN = '',
 }
 
