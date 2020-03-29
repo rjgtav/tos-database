@@ -1,5 +1,5 @@
 $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
--1,Moneybag1,,icon_item_silver,,,"{""Chance"": 80.0, ""Map"": 1995, ""Quantity_MAX"": 783, ""Quantity_MIN"": 652}",,"{""Chance"": 80.0, ""Monster"": 57341, ""Quantity_MAX"": 115, ""Quantity_MIN"": 109}",,,Silver,,,,FFFF,28,
+-1,Moneybag1,,icon_item_silver,,,"{""Chance"": 80.0, ""Map"": 1995, ""Quantity_MAX"": 783, ""Quantity_MIN"": 652}",,"{""Chance"": 80.0, ""Monster"": 57341, ""Quantity_MAX"": 115, ""Quantity_MIN"": 109}",,,Silver,,,,FFFF,29,
 201001,ColorSpray_1,Combine items into different ones,icon_item_small_bag,,,,,,,,Spray - Black,11,1.0,0.0,TTTT,7,1.0
 201002,ColorSpray_2,Combine items into different ones,icon_item_small_bag,,,,,,,,Spray - Red,11,1.0,0.0,TTTT,7,1.0
 201003,ColorSpray_3,Combine items into different ones,icon_item_small_bag,,,,,,,,Spray - White,11,1.0,0.0,TTTT,7,1.0
