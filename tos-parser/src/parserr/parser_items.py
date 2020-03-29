@@ -39,9 +39,10 @@ class TOSItemGroup(TOSEnum):
     QUEST = 24
     RECIPE = 25
     SEAL = 26
-    SUBWEAPON = 27
-    UNUSED = 28
-    WEAPON = 29
+    SPECIALMATERIAL = 27
+    SUBWEAPON = 28
+    UNUSED = 29
+    WEAPON = 30
 
     @staticmethod
     def value_of(string):
@@ -73,6 +74,7 @@ class TOSItemGroup(TOSEnum):
             'QUEST': TOSItemGroup.QUEST,
             'RECIPE': TOSItemGroup.RECIPE,
             'SEAL': TOSItemGroup.SEAL,
+            'SPECIALMATERIAL': TOSItemGroup.SPECIALMATERIAL,
             'SUBWEAPON': TOSItemGroup.SUBWEAPON,
             'UNUSED': TOSItemGroup.UNUSED,
             'WEAPON': TOSItemGroup.WEAPON,
@@ -92,7 +94,8 @@ ITEM_GROUP_ITEM_WHITELIST = [
     TOSItemGroup.MISC,
     TOSItemGroup.PASTEBAIT,
     TOSItemGroup.PREMIUM,
-    TOSItemGroup.QUEST
+    TOSItemGroup.QUEST,
+    TOSItemGroup.SPECIALMATERIAL
 ]
 
 ITEM_GROUP_EQUIPMENT_WHITELIST = [

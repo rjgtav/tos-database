@@ -360,6 +360,7 @@ export enum TOSItemType {
   QUEST = 'Quest',
   RECIPE = 'Recipe',
   SEAL = 'Seal',
+  SPECIALMATERIAL = 'Special Material',
   SUBWEAPON = 'Sub Weapon',
   UNUSED = 'Unused',
   WEAPON = 'Weapon',
@@ -378,6 +379,7 @@ export const
         TOSItemType.MISC,
         TOSItemType.PREMIUM,
         TOSItemType.QUEST,
+        TOSItemType.SPECIALMATERIAL,
       ]
     },
   ];
