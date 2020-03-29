@@ -1,5 +1,5 @@
 $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,Name,Price,TimeCoolDown,TimeLifeTime,Tradability,Type,Weight
--1,Moneybag1,,icon_item_silver,,,,,,,,銀幣,,,,FFFF,28,
+-1,Moneybag1,,icon_item_silver,,,,,,,,銀幣,,,,FFFF,29,
 201001,ColorSpray_1,合成道具製作其它道具,icon_item_small_bag,,,,,,,,噴槍 - 黑色,11,1.0,0.0,TTTT,7,1.0
 201002,ColorSpray_2,合成道具製作其它道具,icon_item_small_bag,,,,,,,,噴槍 - 紅色,11,1.0,0.0,TTTT,7,1.0
 201003,ColorSpray_3,合成道具製作其它道具,icon_item_small_bag,,,,,,,,噴槍 - 白色,11,1.0,0.0,TTTT,7,1.0
