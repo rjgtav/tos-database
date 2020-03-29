@@ -63,24 +63,23 @@ def parse(region, is_rebuild, is_version_new):
     parser_maps.parse_maps_images(region, is_version_new)
     parser_translations.parse(region)
 
-    # Parse data
-    logging.debug('Parsing data...')
+    # Garbage collect...
+    logging.debug('Garbage collect...')
+    gc.collect()
+
+    # Parse data (1/2) - attributes + items + items_gems + jobs + skills
+    logging.debug('Parsing data (1/2)...')
     parser_attributes.parse()
     parser_items.parse()
-    parser_items_books.parse()
-    parser_items_cards.parse()
-    parser_items_collections.parse()
-    parser_items_cubes.parse()
     parser_items_gems.parse(is_rebuild)
-    parser_items_equipment.parse()
-    parser_items_equipment_sets.parse()
-    parser_items_recipes.parse()
     parser_jobs.parse(is_rebuild)
-    parser_maps.parse(region, is_version_new)
-    parser_monsters.parse()
     parser_skills.parse(is_rebuild)
 
-    # Parse links (1/2)
+    # Garbage collect...
+    logging.debug('Garbage collect...')
+    gc.collect()
+
+    # Parse links (1/2) - attributes + items + items_gems + jobs + skills
     logging.debug('Parsing links (1/2)...')
     parser_attributes.parse_links()
     parser_items_gems.parse_links()
@@ -90,6 +89,11 @@ def parse(region, is_rebuild, is_version_new):
     parser_attributes.parse_clean()
     parser_skills.parse_clean()
 
+    # Garbage collect...
+    logging.debug('Garbage collect...')
+    gc.collect()
+
+    # Write CSVs (1/2) - attributes + jobs + skills
     logging.debug('Writing CSVs (1/2)...')
     csv_write(globals.attributes.values(), constants.OUTPUT_ATTRIBUTES)
     csv_write(globals.jobs.values(), constants.OUTPUT_JOBS)
@@ -102,7 +106,23 @@ def parse(region, is_rebuild, is_version_new):
     globals.skills = None
     globals.skills_by_name = None
 
-    # Destroy LUA & garbage collect...
+    # Garbage collect...
+    logging.debug('Garbage collect...')
+    gc.collect()
+
+    # Parse data
+    logging.debug('Parsing data (2/2)...')
+    parser_items_books.parse()
+    parser_items_cards.parse()
+    parser_items_collections.parse()
+    parser_items_cubes.parse()
+    parser_items_equipment.parse()
+    parser_items_equipment_sets.parse()
+    parser_items_recipes.parse()
+    parser_maps.parse(region, is_version_new)
+    parser_monsters.parse()
+
+    # Garbage collect & Destroy LUA...
     logging.debug('Garbage collect...')
     luautil.destroy()
     gc.collect()
@@ -119,6 +139,11 @@ def parse(region, is_rebuild, is_version_new):
     parser_maps.parse_links()
     parser_monsters.parse_links()
 
+    # Garbage collect...
+    logging.debug('Garbage collect...')
+    gc.collect()
+
+    # Write CSVs (2/2)
     logging.debug('Writing CSVs (2/2)...')
     csv_write(globals.books.values(), constants.OUTPUT_BOOKS)
     csv_write(globals.cards.values(), constants.OUTPUT_CARDS)
