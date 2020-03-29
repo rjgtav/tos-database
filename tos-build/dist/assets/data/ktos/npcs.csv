@@ -566,7 +566,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 147514,npc_MNK_master_NoRun,,,몽크 마스터(Run 없음),2
 147515,npc_Doppelsoldner_m,,,칼날서약 용병단원 남자,2
 147516,npc_Doppelsoldner_f,,,칼날서약 용병단원 여자,2
-147517,npc_fishing_manager,,minimap_event_1,낚시터 관리인,2
+147517,npc_fishing_manager,,,낚시터 관리인,2
 147518,npc_diana,,,디아나,2
 148001,blank_npc_moon,,,빈 NPC,2
 150000,npc_junk_shop,,,유랑 상인 게랄다스,2
@@ -1584,7 +1584,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,크리스마스 NPC2,2
 160016,rokas_pot3_small_E1,,,새해 복항아리,2
 160018,Hiddennpc_RiftMode_Start,,,차원 붕괴 지점 입장,2
-160019,event_2001_cat,,minimap_event_1,낚시터 고양이,2
+160019,event_2001_cat,,,낚시터 고양이,2
+160020,HiddenWall_moring,,,,2
+160021,MORINGPONIA_HARD_PURIFYING_STONE,,,정화석,2
 160022,WEEKLY_PURIFYING_STONE,,,정화석,2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
@@ -1621,3 +1623,4 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 2000203,boss_summon_spiderweb_E1,마을 사람들이 설치해 놓은 함정입니다. 잠시 이동을 방해합니다.,,,2
 2000204,velniasprison_warp_mini_E1,발판을 밟으면 최고 속도로 달릴 수 있습니다.,,가속 발판,2
 2000206,hidden_monster_E1,출발지점 투명 오브젝트,,,2
+2000207,event_npc_village_male_b3,출발지점 투명 오브젝트,minimap_event_1,[이벤트]마을 청년B3,2
