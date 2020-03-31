@@ -821,7 +821,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151174,npc_kupole_4_event,,minimap_event_1,Event Kupole 4,2
 151175,npc_kupole_5_event,,minimap_event_1,Event Kupole 5,2
 151176,npc_kupole_6_event,,minimap_event_1,Event Kupole 6,2
-151177,npc_giltine_weapon_event,,minimap_event_1,Event Armed Giltine,2
+151177,npc_giltine_weapon_event,,minimap_goddess,Event Armed Giltine,2
 151178,npc_goldpig,,minimap_event_1,Golden Pig,2
 151180,gacha_cube1_event,,minimap_event_1,Leticia's Secret Cube,2
 152000,npc_husband_1,,,Ordinary Husband,2
@@ -1564,6 +1564,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157055,magictrap_core_gimmick2,,,Magic Power Hack,2
 157056,npc_junk_shop_2,,,[Kedora Alliance]{nl}Geraldasia,2
 157057,npc_junk_shop_3,,,[Kedora Alliance]{nl}Geraldason,2
+157100,npc_sage_female_2,,,Sage Female 2,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,Team Battle League,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,Monk2 Blacksmith,2
 160000,h_GuildHousing_farmer_girl,,,Farm Manager,2
@@ -1582,6 +1583,10 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160013,HiddenWall_800_400_300,,,,2
 160014,npc_Xmas_Evt_NPC,,minimap_event_1,Christmas NPC,2
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,Christmas NPC2,2
+160016,rokas_pot3_small_E1,,,Lucky Pot,2
+160018,Hiddennpc_RiftMode_Start,,,Dimensional Collapse Point Entrance,2
+160019,event_2001_cat,,,Cat at the Fishing Spot,2
+160022,WEEKLY_PURIFYING_STONE,,,Purifying Stone,2
 161000,E_statue_zemina,,minimap_goddess,Statue of Goddess Zemyna,2
 161001,npc_kupole_Velcoffer,,,Kupole Simona,2
 161002,npc_Teliavelis,,minimap_man_smith,Blacksmith Teliavelis,2
@@ -1612,4 +1617,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 2000130,lockdoor_npc_E1,Monster,,Locked Door,2
 2000131,pumpkin_bonus_E1,Monster,,Sweet Magic Circle,2
 2000132,middle_boss_board_E1,Monster,,Note left by a resident,2
+2000201,creto_E1,The Villagers are disguised as monsters and disrupts you.,mon_creto,Disguised Villager,2
+2000202,cretobiang_E1,The Passionate Villager disguised themselves as monsters and disrupt you.,mon_cretobiang,Passionate Villager,2
+2000203,boss_summon_spiderweb_E1,A trap set by the villagers. You won't be able to move for a while.,,,2
+2000204,velniasprison_warp_mini_E1,You can run as fast as you can if you step on the tile.,,Acceleration Tile,2
+2000206,hidden_monster_E1,Start Point Invisible Object,,,2
 2000207,event_npc_village_male_b3,Start Point Invisible Object,minimap_event_1,[Event] Villager B3,2
