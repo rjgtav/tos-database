@@ -553,6 +553,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640481,CompanionExpcard400,함께하고 있는 컴패니언의 경험치를 1레벨부터 400레벨까지 필요한 경험치 만큼 상승시켜 줍니다.{nl} {nl}{#ff0000}비행형 컴패니언은 적용받지 않습니다.,icon_item_paperpiece,,,,,,,,컴패니언 경험치 카드 Lv.400,0,0.0,0.0,FFFF,7,0.0
 640482,WeeklyBossReductionPotion,"주간 보스 레이드에서만 사용 가능합니다.{nl}10분간 받는 피해가 30% 감소합니다.{nl}버프는 중복 적용되지 않으며, 받는 피해량이 1,000 이하라면 감소되지 않습니다.{nl} - '[주간 보스 레이드] 케도란 특제 포션'과 중복 불가능",icon_item_defensive_potion,,,,,,,,[주간 보스 레이드] 레티샤 특제 포션,0,60.0,0.0,TTFT,7,5.0
 640483,WeeklyBossReductionPotion_Team,"주간 보스 레이드에서만 사용 가능합니다.{nl}10분간 받는 피해가 30% 감소합니다.{nl}버프는 중복 적용되지 않으며, 받는 피해량이 1,000 이하라면 감소되지 않습니다.{nl} - '[주간 보스 레이드] 케도란 특제 포션'과 중복 불가능",icon_item_defensive_potion,,,,,,,,[주간 보스 레이드] 케도란 특제 포션 II,0,60.0,0.0,FFFT,7,5.0
+640484,Drug_AddMaxWeight3,휴대 가능무게를 영구적으로 +1000 상승시켜 줍니다. 마우스 오른쪽 클릭으로 사용합니다.,icon_item_allplus,,,,,,,,무게 +1000 증가 포션,0,0.0,0.0,FFFT,7,10.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,,,LV1 공격 부스터,1,8.0,0.0,TTTT,7,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,,,공격 부스터 +15,1,8.0,0.0,TTTT,7,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,공격 부스터 +20,2,8.0,0.0,TTTT,7,1.0
@@ -5875,6 +5876,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904283,EVENT_SEASON_NewWorld_Rewards_evt2_3,"사용 시, 다음 아이템을 모두 획득할 수 있습니다.{nl}상자 개봉 시, 길드에 소속되어 있다면 각각의 아이템을 1개 씩 {nl}[이벤트][LV. 430] 유니크 인챈트 쥬얼 x5{nl}[이벤트][LV. 430] 레전드 인챈트 쥬얼 x1{nl}[이벤트] 유니크 무기 선택 상자 (아시오, 웨이스트럴) x1{nl}[이벤트] 이그나스 방어구 선택 상자 x1{nl}[이벤트]황금 모루(14일) x5{nl}[이벤트]루비 모루(14일) x2{nl}[이벤트]특성 포인트 1,000 (14일) x3{nl}[이벤트] 미식별 신비한 서 x1{nl}이벤트 종료 시, 삭제됩니다.
 ",icon_item_luckybox_gold,,,,,,,,[이벤트]월간 지원 상자,0,0.0,0.0,FFFT,9,0.0
 904284,EVENT_SEASON_NewWorld_COIN_1,시즌 서버를 위해 특별 제작된 주화입니다.(사용용도 추가 필요),icon_item_antque_gold_coin,,,,,,,,[이벤트]정착의 주화,0,0.0,0.0,FFFT,18,0.1
+904285,Event_expCard_430Lv,1레벨에서 430레벨 도달까지 필요한 만큼의 경험치를 얻습니다.,icon_item_expcard,,,,,,,,경험치 카드 (430레벨),0,0.0,0.0,FFFT,9,0.0
+904286,Achieve_WeeklyRank_6,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Malicious Delver,0,0.0,0.0,FFFF,7,1.0
+904287,Achieve_WeeklyRank_7,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Brutal Lord,0,0.0,0.0,FFFF,7,1.0
+904288,Achieve_WeeklyRank_8,주간 보스 계열 별 랭킹 보상으로 획득한 칭호입니다.{nl}사용 시 칭호를 획득합니다.{nl}획득한 칭호는 해당 캐릭터만 사용가능합니다.,icon_item_holyark,,,,,,,,칭호 - Implacably Claw,0,0.0,0.0,FFFF,7,1.0
 910001,Scroll_SkillItem,특정 스킬을 저장할 수 있는 주문서입니다.,golemmagicitem1,,,,,,,,스킬 주문서,5,0.0,0.0,FFFF,7,0.0
 910002,Default_Sprout,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_sprout,,,,,,,,새싹,1,0.0,0.0,TTTT,18,1.0
 910003,Default_Deadplants,긴 줄기입니다. 조금 매운 맛이 납니다. 케파에게서 획득합니다.,item_icon_witheredplants,,,,,,,,시든 식물,1,0.0,0.0,TTTT,18,1.0

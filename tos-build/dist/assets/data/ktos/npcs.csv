@@ -1588,6 +1588,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160020,HiddenWall_moring,,,,2
 160021,MORINGPONIA_HARD_PURIFYING_STONE,,,정화석,2
 160022,WEEKLY_PURIFYING_STONE,,,정화석,2
+160023,npc_kupole_3_event_2004,,minimap_event_1,식목일 이벤트 도우미,2
 161000,E_statue_zemina,,minimap_goddess,여신 제미나의 상,2
 161001,npc_kupole_Velcoffer,,,큐폴 시모나,2
 161002,npc_Teliavelis,,minimap_man_smith,대장장이 테리아베리스,2
