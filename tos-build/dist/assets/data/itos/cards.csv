@@ -142,8 +142,8 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644156,card_uska,[Card Equip Effect] All stats + [{img star_mark 20 20} * 0.4],icon_item_card_stat,004_npc_uska,,,,,,,,,,,Uska Card,500,,,,0.0,0.0,FFFT,4,4,1.0
 644157,card_cyrenia,"[Card Equip Effect] Stamina + [{img star_mark 20 20}], Max HP + [100 + {img star_mark 20 20}]",icon_item_card_util,006_npc_cyrenia,,,,,,,,,,,Cyrenia Card,500,,,,0.0,0.0,FFFT,4,5,1.0
 644158,card_Neringa,[Card Equip Effect] All stats + [{img star_mark 20 20} * 0.5],icon_item_card_stat,007_npc_neringa,,,,,,,,,,,Neringa Card,500,,,,0.0,0.0,TTTT,4,4,1.0
-644501,Master_card_Boruble,[Card Equip Effect] Healing +[★ * 30],icon_item_card_def,008_npc_boruble,,,,,,,,,,,Boruble Card,500,,,,0.0,0.0,TTTT,4,1,1.0
-644502,Master_card_MariaLeed,[Card Equip Effect] 10% chance of creating shield equal to [★ /2]% of maximum HP when hit{nl}Cooldown: 30 seconds,icon_item_card_def,009_npc_maria,,,,,,,,,,,Maria Leed Card,500,,,,0.0,0.0,TTTT,4,1,1.0
+644501,Master_card_Boruble,[Card Equip Effect] Healing +[{img star_mark 20 20} * 30],icon_item_card_def,008_npc_boruble,,,,,,,,,,,Boruble Card,500,,,,0.0,0.0,TTTT,4,1,1.0
+644502,Master_card_MariaLeed,[Card Equip Effect] 10% chance of creating shield equal to [{img star_mark 20 20} /2]% of maximum HP when hit{nl}Cooldown: 30 seconds,icon_item_card_def,009_npc_maria,,,,,,,,,,,Maria Leed Card,500,,,,0.0,0.0,TTTT,4,1,1.0
 644900,Legend_card_Marnoks,[Card Equip Effect] Minimum Critical Chance +[{img star_mark 20 20}*2]%,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,Demon Lord Marnox Card,0,,,,0.0,0.0,TTTT,4,2,1.0
 644901,Legend_card_Blud,[Card Equip Effect] [{img star_mark 20 20}*3]% reduced damage taken in PVP,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,Demon Lord Blut Card,0,,,,0.0,0.0,TTTT,4,2,1.0
 644902,Legend_card_Zawra,[Card Equip Effect] Physical Defense +[{img star_mark 20 20}*10]%,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,Demon Lord Zaura Card,0,,,,0.0,0.0,TTTT,4,2,1.0
