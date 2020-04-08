@@ -821,7 +821,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 151174,npc_kupole_4_event,,minimap_event_1,Event Kupole 4,2
 151175,npc_kupole_5_event,,minimap_event_1,Event Kupole 5,2
 151176,npc_kupole_6_event,,minimap_event_1,Event Kupole 6,2
-151177,npc_giltine_weapon_event,,minimap_goddess,Event Armed Giltine,2
+151177,npc_giltine_weapon_event,,minimap_event_1,Event Armed Giltine,2
 151178,npc_goldpig,,minimap_event_1,Golden Pig,2
 151180,gacha_cube1_event,,minimap_event_1,Leticia's Secret Cube,2
 152000,npc_husband_1,,,Ordinary Husband,2
@@ -1587,6 +1587,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160018,Hiddennpc_RiftMode_Start,,,Dimensional Collapse Point Entrance,2
 160019,event_2001_cat,,,Cat at the Fishing Spot,2
 160022,WEEKLY_PURIFYING_STONE,,,Purifying Stone,2
+160023,npc_kupole_3_event_2004,,minimap_event_1,Arbor Day Event Helper,2
 161000,E_statue_zemina,,minimap_goddess,Statue of Goddess Zemyna,2
 161001,npc_kupole_Velcoffer,,,Kupole Simona,2
 161002,npc_Teliavelis,,minimap_man_smith,Blacksmith Teliavelis,2
