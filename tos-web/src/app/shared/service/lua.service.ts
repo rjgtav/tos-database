@@ -19,6 +19,7 @@ export class LUAService {
     'var GetClassByNameFromList = (a) => null;',
     'var GetExProp = (a, b) => null;',
     'var GetJobHistoryString = (a) => null;',
+    'var GetJobHistoryList = (pc) => pc.JobHistoryList;',
     'var GetMyJobHistoryString = (a) => null;',
     'var GetSumOfEquipItem = (a, b) => 0;',
     'var GetZoneName = (a) => null;',
@@ -29,6 +30,7 @@ export class LUAService {
     'var IsPVPServer = (a) => 0;',
     'var IsServerSection = (a) => 0;',
     'var IsServerObj = (a) => 0;',
+    'var SCR_COMMON_COOLDOWN_DECREASE = (pc, basicCooldown) => basicCooldown;',
     'var string = { find: (a, b) => a.indexOf(b) != -1 ? a.indexOf(b) : null };',
     'var StringSplit = (a, b) => a.split(b);',
     'var tonumber = (a) => +a;',
@@ -125,6 +127,7 @@ export class LUAService {
       let skill = context && context['skill'] || {};
       let player = context && context['player'] || {};
           player.ClassName = 'PC';
+          player.JobHistoryList = build.Jobs && build.Jobs.map(value => value.$ID);
           player.Lv = LEVEL_LIMIT; // TODO: get level from build
 
       context && delete context['skill'];
