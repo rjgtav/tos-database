@@ -17,6 +17,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 640453,Ghaca_Guild_Contribution_Shop_MISC,點擊滑鼠右鍵可以開啟，開啟時可獲得隨機道具。,icon_item_farm47_sack_01,,,,,,,,,礦物袋,0,0.0,0.0,FFFT,6,1.0
 640462,box_gabia_set,點擊滑鼠右鍵即可開啟，開啟後可獲得以下內容物。{nl} - 加比婭的守護騎士選擇箱 1個{nl} - 充滿加比婭恩寵的羽毛 x3,icon_item_gabia_set,,,,,,,,,加比婭的守護騎士禮包,0,0.0,0.0,FFFF,6,5.0
 640463,rubymoru_recipe_box,點擊滑鼠右鍵即可使用，使用時可獲得以下內容物。{nl} - 發光的紅寶石鐵砧製作書 x10,icon_item_ruby_recipebox,,,,,,,,,發光的紅寶石鐵砧製作書組合(10張),0,0.0,0.0,FFFF,6,5.0
+640480,ViboraWeaponSelectBox,使用時贈送清單中想要的道具。,icon_item_vibora_weapon_selectbox,,,,,,,,,[奎波爾專用] 巴伊寶拉武器選擇箱,0,0.0,0.0,FFFF,6,5.0
 642601,Gacha_F_001,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,,,鐵甲殘魔的魔方,0,0.0,0.0,FFFF,6,5.0
 642602,Gacha_F_002,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,,,(舊) 可憎的死亡魔女的魔方,0,0.0,0.0,FFFF,6,5.0
 642603,Gacha_F_003,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube3,,,,,,,,,(舊) 陰森的死靈查普利的魔方,0,0.0,0.0,FFFF,6,5.0
@@ -102,6 +103,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 642683,Gacha_F_083,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube_gold_blow,,,,,,,,,魔君主莫靈波尼亞魔方,0,0.0,0.0,FFFF,6,1.0
 642684,Gacha_F_084,使用後可獲得一個未知道具，點擊滑鼠右鍵使用。{nl} - 出現高級道具和傳說卡片的機率比一般魔方還要高。,icon_item_cube_gold_first,,,,,,,,,發光的魔君主莫靈波尼亞魔方,0,0.0,0.0,FFFF,6,1.0
 642685,Gacha_F_085,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube_gold_blow,,,,,,,,,魔君主莫靈波尼亞魔方,0,0.0,0.0,FFFF,6,1.0
+642686,Gacha_SKLGEM,使用時可以獲得隨機技能寶石，點擊滑鼠右鍵使用。,icon_item_cube_sklgem,,,,,,,,,技能寶石魔方,0,0.0,0.0,FFFT,6,0.0
 642701,Gacha_E_001,使用時，可以隨意獲得材料。點擊滑鼠右鍵使用。,icon_item_cube4,,,,,,,,,謎樣魔方,0,0.0,0.0,FFFF,6,5.0
 642702,Gacha_E_002,使用時，可以隨意獲得材料。點擊滑鼠右鍵使用。,icon_item_cube4,,,,,,,,,閃亮魔方,0,0.0,0.0,FFFF,6,5.0
 642703,Gacha_E_003,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube4,,,,,,,,,安慰魔方,0,0.0,0.0,FFFF,6,5.0
@@ -163,6 +165,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 642782,txbox_MoringPonia_set,使用時可獲得以下所有道具。{nl} - 莫靈波尼亞獨特武器選擇箱{nl} - 莫靈波尼亞獨特防具選擇箱{nl}點擊滑鼠右鍵即可使用。,icon_item_moth_armor_selectbox,,,,,,,,,莫靈波尼亞獨特裝備組合箱,0,0.0,0.0,FFFT,6,0.0
 642783,txbox_MoringPonia_set_crown,使用時可獲得以下所有道具。{nl} - 莫靈波尼亞獨特武器選擇箱{nl} - 莫靈波尼亞獨特防具選擇箱{nl} - 莫靈波尼亞王冠 x1{nl}點擊滑鼠右鍵即可使用。,icon_item_moth_setbox,,,,,,,,,莫靈波尼亞獨特特別組合箱,0,0.0,0.0,FFFT,6,0.0
 642784,Legend_HiddenAbility_Piece_Box_set,"使用時可獲得以下所有道具。{nl} - 神秘之書散頁 x10{nl} - 特性點數 10,000 x3{nl}點擊滑鼠右鍵即可使用。",icon_item_paper_ability_setbox,,,,,,,,,神秘之書組合特別箱,0,0.0,0.0,FFFF,6,5.0
+642785,WeeklyBossFBCubeBox,使用時可以選擇並獲得下列道具中的1種。{nl} - 發光的魔君主米爾堤斯魔方{nl} - 發光的魔君主赫嘉塞露魔方{nl} - 發光的魔君主雷克西波魔方{nl} - 發光的魔君主馬魯若斯魔方{nl} - 發光的魔君主努亞耶雷魔方{nl} - 發光的魔君主扎烏拉魔方{nl} - 發光的魔君主布爾魯魔方,icon_item_reset_box,,,,,,,,,發光的魔君主魔方選擇箱,0,0.0,0.0,FFFT,6,0.0
 642801,Gacha_G_001,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,,,卡雷伊瑪斯魔方,0,0.0,0.0,FFFF,6,5.0
 642802,Gacha_G_002,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,,,西卡里歐斯魔方,0,0.0,0.0,FFFF,6,5.0
 642803,Gacha_G_003,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,,,森林的魔方,0,0.0,0.0,FFFF,6,5.0
@@ -227,7 +230,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 642935,Gacha_ID_380_ignas_Piece,收集40個後使用可以選擇依克拉斯裝備製作書。右鍵點擊可以使用。,item_icon_ignas_stone,,"[642934, 642935]",[642935],,,,,,靈魂碎片：依克那斯,0,0.0,0.0,FFFF,6,5.0
 642936,Gacha_G_boruta,公會獎勵，提供給對於打倒普魯達貢獻最多的公會。使用後可獲得一個未知道具，點擊滑鼠右鍵使用。,icon_item_cube_gold_first,,,,,,,,,發光的普魯達魔方,0,0.0,0.0,FFFF,6,5.0
 642937,Gacha_T_boruta,個人獎勵，提供給對於打倒普魯達貢獻最多的人。使用後可獲得一個未知道具，點擊滑鼠右鍵使用。,icon_item_cube_gold_blow,,,,,,,,,普魯達魔方,0,0.0,0.0,FFFF,6,5.0
-642938,Gacha_R_boruta,透過打倒普魯達所得到的榮譽徽章來交換的袋子。使用後可獲得一個未知道具，點擊滑鼠右鍵使用。,gacha_h_010,,,,,,,,,普魯達袋子,0,0.0,0.0,FFFF,6,5.0
+642938,Gacha_R_boruta,用榮譽徽章 : 普魯達交換獲得的袋子。點擊滑鼠右鍵使用。{nl}使用時隨機獲得下列道具中的1種。{nl} {nl} - 女神的祝福石 3個{nl} - 女神的祝福石 5個{nl} - 魔晶石 1個{nl} - 魔晶石 2個{nl} - 製作書- 天龍座帕希烏泰斯項鍊 1個{nl} - 製作書- 天龍座利嫰奇希特項鍊 1個{nl} - 製作書- 天龍座卡伊特姆歐項鍊 1個{nl} - 製作書- 天龍座普利耶努項鍊 1個{nl} - 製作書- 天龍座帕希烏泰斯手鐲 1個{nl} - 製作書- 天龍座利嫰奇希特手鐲 1個{nl} - 製作書- 天龍座卡伊特姆歐手鐲 1個{nl} - 製作書- 天龍座普利耶努手鐲 1個{nl} - 普魯達印章 - 劍士 1個{nl} - 普魯達印章 - 弓箭手 1個{nl} - 普魯達印章 - 魔法師 1個{nl} - 普魯達印章 - 聖職者 1個{nl} - 普魯達印章 - 斥候 1個,gacha_h_010,,,,,,,,,普魯達袋子,0,0.0,0.0,FFFF,6,5.0
 642939,Gacha_iredian_390,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube_gold_blow,,,"[645783, 647011, 34090, 34091, 34092, 34093, 613001, 613002, 613003, 613004, 613005]",,,,,,伊雷迪安魔方,0,0.0,0.0,FFFF,6,5.0
 642940,Gacha_ID_grade1,完成聖堂地下城後獲得的獎勵。,icon_item_cube2,,,"[645268, 644046]",,,,,,聖堂地下城魔方,0,0.0,0.0,FFFF,6,1.0
 642941,Gacha_ID_grade2,完成廢墟遺跡地地下城後獲得的獎勵。,icon_item_cube2,,,"[645268, 644009]",,,,,,廢墟遺跡地魔方,0,0.0,0.0,FFFF,6,1.0
@@ -322,6 +325,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 904129,EVENT_BORUTA_CLEAR_REWARDBOX,為了紀念世界特別的成就女神所賜的特別禮物箱。{nl}紀念初次壓制斯爾利那斯雷歐的龍王普魯達之日。{nl}使用時可獲得道具。,icon_item_cube3_blow,,,,,,,,,女神的禮物箱[普魯達],0,0.0,0.0,FFFT,6,1.0
 904138,EVENT_1902_NEWYEAR_FORTUNEPOUCH,迎接己亥年而發送的豪禮！{nl}請開啟福袋查看禮物。{nl}活動結束時道具統一刪除。,icon_item_fortunepouch,,,,,,,,,[活動]己亥年福袋,0,0.0,0.0,FFFT,6,0.0
 904228,EVENT_QOS_SHIRTS_S1,點擊滑鼠右鍵即可使用，使用時可獲得猜謎王套裝賽季1(女) / 猜謎王套裝賽季(男)中的一種。,icon_item_happybox_black,,,,,,,,,猜謎王套裝賽季1選擇箱,0,0.0,0.0,FFFF,6,5.0
+904245,EVENT_2020_NEWYEAR_FORTUNEPOUCH,庚子年新年福袋。{nl}使用時可依道具別機率獲得活動獎勵。{nl}可獲得道具{nl}-神秘轉蛋(14天){nl}-[活動]老舊的黃金鑲嵌槽{nl}-技能重置藥水(14天){nl}-特性重置藥水(14天){nl}-銀色血晶萃取工具(14天){nl}-7星寶石研磨劑(14天){nl}-覺醒石(14天){nl}-挑戰模式1次入場劵(14天){nl}-特性點數500(14天){nl}-[活動]神秘放大鏡(14天){nl}-[活動]2020大慶典交換券{nl}活動結束時統一刪除。,icon_item_fortunepouch,,,,,,,,,[活動]庚子年新年福袋,0,0.0,0.0,FFFT,6,0.1
+904246,EVENT_2020_GOLDEN_FORTUNEPOUCH,庚子年新年福金福袋。{nl}使用時可依道具別機率獲得活動獎勵。{nl}可獲得道具{nl}-執事女僕套裝箱(黑色){nl}-[活動]黃金血晶萃取工具{nl}-[活動]黃金鐵砧(14天){nl}-[活動]匠人放大鏡(14天){nl}-特性點數1000(14天){nl}活動結束時統一刪除。,icon_item_event_2020_golden_fortunepouch,,,,,,,,,[活動]庚子年新年黃金福袋,0,0.0,0.0,FFFT,6,0.1
 2020001,HiddenAbility_TotalCube,使用時可獲得任意的[神秘之書]。,icon_item_hiddenability_total,,,,,,,,,未識別神秘之書,0,0.0,0.0,FFFT,6,0.1
 2020002,HiddenAbility_SwordmanCube,使用時可獲得劍士系列中任意的[神秘之書]。,icon_item_hiddenability_swordman,,,,,,,,,未識別神秘之書：劍士,0,0.0,0.0,FFFT,6,0.1
 2020003,HiddenAbility_WizardCube,使用時可獲得法師系列中任意的[神秘之書]。,icon_item_hiddenability_wizard,,,,,,,,,未識別神秘之書：法師,0,0.0,0.0,FFFT,6,0.1
@@ -335,7 +340,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 2030005,HiddenAbility_WizardPackage2,使用時可獲得清單中想要的[神秘之書]。{nl} - 神秘之書 (屍塊護環：死亡之舞){nl} - 神秘之書 (退魔符：異電){nl} - 神秘之書 (製造殭屍：定時殭屍){nl} - 神秘之書 (飛彈洞：異空間的支配者){nl} - 神秘之書 (製作藥劑：高級秘藥(SP)){nl} - 神秘之書 (時間倒轉：不可思議){nl} - 神秘之書 (紅焰：寶珠){nl} - 神秘之書 (強力重力：歪曲的重力),icon_item_hiddenability_package,,,,,,,,,神秘之書全集：法師2卷,0,0.0,0.0,FFFT,6,0.1
 2030006,HiddenAbility_WizardPackage3,使用時可獲得清單中想要的[神秘之書]。{nl} - 神秘之書 (召喚骸骨魔法師：支持者){nl} - 神秘之書 (掌握布料：破壞符文附魔){nl} - 神秘之書 (地獄暗影：生機萃取){nl} - 神秘之書 (召喚惡魔：自我){nl} - 神秘之書 (隕石：集中){nl} - 神秘之書 (緩速：吸收時間){nl} - 神秘之書 (火牆：交叉火焰){nl} - 神秘之書 (苦痛之柱：召喚惡靈),icon_item_hiddenability_package,,,,,,,,,神秘之書全集：法師3卷,0,0.0,0.0,FFFT,6,0.1
 2030007,HiddenAbility_ArcherPackage1,使用時可獲得清單中想要的[神秘之書]。{nl} - 神秘之書 (後方跳躍：機敏){nl} - 神秘之書 (扇射：完美角度){nl} - 神秘之書 (虎獵師：賞金獵人){nl} - 神秘之書 (潛毒百歲：虛脫){nl} - 神秘之書 (跪射：構築陣地){nl} - 神秘之書 (即興演奏：世界樹之歌){nl} - 神秘之書 (黑暗審判：黑幕),icon_item_hiddenability_package,,,,,,,,,神秘之書全集：弓箭手1卷,0,0.0,0.0,FFFT,6,0.1
-2030008,HiddenAbility_ArcherPackage2,使用時可獲得清單中想要的[神秘之書]。{nl} - 神秘之書 (弱點攻擊：集中){nl} - 神秘之書 (震地重擊：電光){nl} - 神秘之書 (竹尖釘：即刻設置){nl} - 神秘之書 (狙擊：隱匿){nl} - 神秘之書 (懸吊射擊：瞬間迴避){nl} - 神秘之書 (即興演奏：行軍曲){nl} - 神秘之書 (衝鋒：猛攻),icon_item_hiddenability_package,,,,,,,,,神秘之書全集：弓箭手2卷,0,0.0,0.0,FFFT,6,0.1
+2030008,HiddenAbility_ArcherPackage2,使用時可獲得清單中想要的[神秘之書]。{nl} - 神秘之書 (弱點攻擊：集中){nl} - 神秘之書 (震地重擊：電光){nl} - 神秘之書 (竹尖釘：即刻設置){nl} - 神秘之書 (狙擊：隱蔽){nl} - 神秘之書 (懸吊射擊：瞬間迴避){nl} - 神秘之書 (即興演奏：行軍曲){nl} - 神秘之書 (衝鋒：猛攻),icon_item_hiddenability_package,,,,,,,,,神秘之書全集：弓箭手2卷,0,0.0,0.0,FFFT,6,0.1
 2030009,HiddenAbility_ArcherPackage3,使用時可獲得清單中想要的[神秘之書]。{nl} - 神秘之書 (彈跳射擊：急速冷卻箭){nl} - 神秘之書 (箭雨：彈幕){nl} - 神秘之書 (魔法箭：火種){nl} - 神秘之書 (大砲轟炸：攻城砲){nl} - 神秘之書 (即興演奏：不和諧音){nl} - 神秘之書 (即興演奏：搖籃曲),icon_item_hiddenability_package,,,,,,,,,神秘之書全集：弓箭手3卷,0,0.0,0.0,FFFT,6,0.1
 2030010,HiddenAbility_ClericPackage1,使用時可獲得清單中想要的[神秘之書]。{nl} - 神秘之書 (掌握布料：治癒力){nl} - 神秘之書 (祭神杖：悟祭神杖){nl} - 神秘之書 (天譴：火焰之槍){nl} - 神秘之書 (可見天賦：以女神之名){nl} - 神秘之書 (再生因子：近距離治療){nl} - 神秘之書 (殉教：崇高的犧牲){nl} - 神秘之書 (復活術：促進再生),icon_item_hiddenability_package,,,,,,,,,神秘之書全集：牧師1卷,0,0.0,0.0,FFFT,6,0.1
 2030011,HiddenAbility_ClericPackage2,使用時可獲得清單中想要的[神秘之書]。{nl} - 神秘之書 (速成植被：治癒的庭園){nl} - 神秘之書 (神籤：金錢運){nl} - 神秘之書 (驅魔教條：墮落){nl} - 神秘之書 (聖火：移動型火炬){nl} - 神秘之書 (奧施莉奈女神像：女神的庇護){nl} - 神秘之書 (梅爾卡巴戰輪：安逸){nl} - 神秘之書 (謳歌：女神的祝福),icon_item_hiddenability_package,,,,,,,,,神秘之書全集：牧師2卷,0,0.0,0.0,FFFT,6,0.1

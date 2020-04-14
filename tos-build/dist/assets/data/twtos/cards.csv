@@ -142,6 +142,8 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644156,card_uska,[欄位裝備效果] 所有屬性 + [★ * 0.4],icon_item_card_stat,004_npc_uska,,,,,,,,,,,烏斯卡卡片,500,,,,0.0,0.0,FFFT,4,4,1.0
 644157,card_cyrenia,"[欄位裝備效果] 耐力 + [★], 最大HP + [100 * ★]",icon_item_card_util,006_npc_cyrenia,,,,,,,,,,,希來尼亞卡片,500,,,,0.0,0.0,FFFT,4,5,1.0
 644158,card_Neringa,[欄位裝備效果] 所有屬性 + [★ * 0.5],icon_item_card_stat,007_npc_neringa,,,,,,,,,,,奈凌卡卡片,500,,,,0.0,0.0,TTTT,4,4,1.0
+644501,Master_card_Boruble,[欄位裝備效果] 治癒力 +[★ * 30],icon_item_card_def,008_npc_boruble,,,,,,,,,,,波洛夫卡片,500,,,,0.0,0.0,TTTT,4,1,1.0
+644502,Master_card_MariaLeed,[欄位裝備效果] 被攻擊時以10%機率10秒內最大HP的[★ /2]%盾牌生成{nl}冷卻時間30秒,icon_item_card_def,009_npc_maria,,,,,,,,,,,瑪利亞利德卡片,500,,,,0.0,0.0,TTTT,4,1,1.0
 644900,Legend_card_Marnoks,[欄位裝備效果] 最小暴擊機率增加 [★ * 2]%,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔君主馬魯若斯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644901,Legend_card_Blud,[欄位裝備效果] PVP時獲得傷害減少 [★ * 3]%,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔君主布爾魯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644902,Legend_card_Zawra,[欄位裝備效果] 物理防禦力增加 [★ * 10]%,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔君主扎烏拉卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
@@ -174,3 +176,4 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 650002,legend_reinforce_card_lv2,可以用在傳說卡片強化的強化卡片，可以成長至LV6為止。{nl}傳說強化用卡片可以裝備也可以當作一般卡片合成材料來使用。,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,老舊的傳說強化用卡片,0,,,,0.0,0.0,TTTT,4,3,1.0
 650003,legend_reinforce_card_lv3,可以用在傳說卡片強化的強化卡片，可以成長至LV8為止。{nl}傳說強化用卡片可以裝備也可以當作一般卡片合成材料來使用。,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,,,傳說強化用卡片,0,,,,0.0,0.0,TTTT,4,3,1.0
 650004,legend_reinforce_card_lv4,可以用在傳說卡片強化的強化卡片，可以成長至LV10為止。{nl}傳說強化用卡片可以裝備也可以當作一般卡片合成材料來使用。,icon_item_legend_card_fragment_lv4,legend_card_fragment_lv4,,,,,,,,,,,發光的傳說強化用卡片,0,,,,0.0,0.0,TTTT,4,3,1.0
+650005,legend_reinforce_card_lv2_Team,可以用在傳說卡片強化的強化卡片，可以成長至LV6為止。{nl}傳說強化用卡片可以裝備也可以當作一般卡片合成材料來使用。,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,老舊的傳說強化用卡片,0,,,,0.0,0.0,FFFT,4,3,1.0

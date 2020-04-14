@@ -1564,6 +1564,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157055,magictrap_core_gimmick2,,,魔力核,2
 157056,npc_junk_shop_2,,,[凱都拉商團員]{nl}凱拉爾達西亞,2
 157057,npc_junk_shop_3,,,[凱都拉商團員]{nl}凱拉爾達遜,2
+157100,npc_sage_female_2,,,賢者 女2,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,隊伍戰鬥聯賽,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,修道士2鐵匠,2
 160000,h_GuildHousing_farmer_girl,,,農場管理員,2
@@ -1582,6 +1583,11 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160013,HiddenWall_800_400_300,,,,2
 160014,npc_Xmas_Evt_NPC,,minimap_event_1,聖誕節 NPC,2
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,聖誕節 NPC2,2
+160016,rokas_pot3_small_E1,,,新年福罐,2
+160018,Hiddennpc_RiftMode_Start,,,次元崩壞地點入場,2
+160019,event_2001_cat,,,釣魚場小貓,2
+160022,WEEKLY_PURIFYING_STONE,,,淨化石,2
+160023,npc_kupole_3_event_2004,,minimap_event_1,植樹節活動小幫手,2
 161000,E_statue_zemina,,minimap_goddess,女神澤米娜之像,2
 161001,npc_kupole_Velcoffer,,,奎波爾西姆那,2
 161002,npc_Teliavelis,,minimap_man_smith,鐵匠戴利亞貝利斯,2
@@ -1612,4 +1618,9 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 2000130,lockdoor_npc_E1,怪物,,上鎖的門,2
 2000131,pumpkin_bonus_E1,怪物,,甜蜜的魔法陣,2
 2000132,middle_boss_board_E1,怪物,,居民留下的紙條,2
+2000201,creto_E1,村民們扮成怪物妨礙。,mon_creto,變裝的村民,2
+2000202,cretobiang_E1,熱情的村民扮成怪物防礙。,mon_cretobiang,熱情的村民,2
+2000203,boss_summon_spiderweb_E1,村民們設置的陷阱，防礙暫時的移動。,,,2
+2000204,velniasprison_warp_mini_E1,踩下踏板會以最高速度奔跑。,,加速踏板,2
+2000206,hidden_monster_E1,出發點透明物件,,,2
 2000207,event_npc_village_male_b3,出發點透明物件,minimap_event_1,[活動]村莊青年B3,2

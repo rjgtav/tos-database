@@ -545,10 +545,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640448,Event_Drug_BlueApple20,令SP立即恢復20%，11秒內每隔2秒使恢復20%的SP，點擊滑鼠右鍵使用，冷卻時間20秒。,icon_item_spelixir_small,,,,,,,,[活動] SP恢復小型靈藥,0,20.0,0.0,FFFT,7,30.0
 640449,Uphille_Power_Potion1,只能在高地防守任務中使用的藥水。增加傷害5%、減少承受的傷害5%。最多可以疊加10次。點擊滑鼠右鍵使用。,icon_item_battle_potion_2,,,,,,,,戰鬥藥水: 高地任務,0,1.0,0.0,FFFT,7,10.0
 640452,KUPOLE_SEBI_WEAPON_SELECT,使用時會發送清單中想要的裝備。,icon_item_event_weaponbox1,,,,,,,,[奎波爾專用] 賽必諾斯武器選擇箱,0,0.0,0.0,FFFF,9,1.0
-640454,God_Potion_ATK,使用時贈送清單中想要的道具。,icon_item_god_adivse_atk,,,,,,,[50103],女神支援箱：懲罰,0,0.0,0.0,FFFF,9,1.0
-640455,God_Potion_DEF,使用時贈送清單中想要的道具。,icon_item_god_adivse_def,,,,,,,[50104],女神支援箱：加護,0,0.0,0.0,FFFF,9,1.0
-640456,Hero_Potion_ATK,使用時贈送清單中想要的道具。,icon_item_hero_adivse_atk,,,,,,,,英雄支援箱：懲罰,0,0.0,0.0,FFFF,9,1.0
-640457,Hero_Potion_DEF,使用時贈送清單中想要的道具。,icon_item_hero_adivse_def,,,,,,,,英雄支援箱：加護,0,0.0,0.0,FFFF,9,1.0
+640454,God_Potion_ATK,使用時贈送清單中想要的道具。,icon_item_god_adivse_atk,,,,,,,[50103],女神支援箱：懲罰,0,0.0,0.0,FFFT,9,1.0
+640455,God_Potion_DEF,使用時贈送清單中想要的道具。,icon_item_god_adivse_def,,,,,,,[50104],女神支援箱：加護,0,0.0,0.0,FFFT,9,1.0
+640456,Hero_Potion_ATK,使用時贈送清單中想要的道具。,icon_item_hero_adivse_atk,,,,,,,,英雄支援箱：懲罰,0,0.0,0.0,FFFT,9,1.0
+640457,Hero_Potion_DEF,使用時贈送清單中想要的道具。,icon_item_hero_adivse_def,,,,,,,,英雄支援箱：加護,0,0.0,0.0,FFFT,9,1.0
 640458,TP_jexpCard_UpRank2,將角色的職業等級提升至15，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值卡片 (一),0,0.0,0.0,FFFF,7,0.0
 640459,TP_jexpCard_UpRank3,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值卡片 (二),0,0.0,0.0,FFFF,7,0.0
 640460,TP_jexpCard_UpRank4,將角色的職業等級提升至45，點擊滑鼠右鍵使用。,icon_item_classexp_rollback,,,,,,,,職業經驗值卡片 (三),0,0.0,0.0,FFFF,7,0.0
@@ -567,6 +567,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640476,expCard15_Mine,提升經驗值13189741、職業經驗值10156100。300級至449級的角色可以使用。{nl}{#FF0000}* 450級以上角色無法使用。{/},icon_item_expcard,,,,,,,,[資源爭奪戰]LV14經驗值卡片,0,0.0,0.0,FFFF,7,0.0
 640477,expCard16_Mine,提升經驗值31212626、職業經驗值24033722。320級至449級的角色可以使用。{nl}{#FF0000}* 450級以上角色無法使用。{/},icon_item_expcard,,,,,,,,[資源爭奪戰]LV15經驗值卡片,0,0.0,0.0,FFFF,7,0.0
 640478,expCard17_Mine,提升經驗值78031565、職業經驗值60084305。350級至449級可以使用。{nl}{#FF0000}* 450級以上角色無法使用。{/},icon_item_expcard,,,,,,,,[資源爭奪戰]LV16經驗值卡片,0,0.0,0.0,FFFF,7,0.0
+640479,WeeklyBossDEFpotion,"只能使用在每週BOSS遠征隊。{nl}10分內物理防禦力/魔法防禦力上升至30,000。{nl}BUFF不會重覆套用，當現有物理防禦力/魔法防禦力大於30,000時不會套用效果。",icon_item_weeklybossdefpotion,,,,,,,,[每週BOSS遠征隊] 凱都藍特製藥水,0,60.0,0.0,FFFT,7,5.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,,,LV1 攻擊推進器,1,8.0,0.0,TTTT,7,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,,,攻擊推進器 +15,1,8.0,0.0,TTTT,7,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,攻擊推進器 +20,2,8.0,0.0,TTTT,7,1.0
@@ -867,7 +868,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643015,Moru_Gold_Team_Trade,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,,,黃金鐵砧,0,0.0,0.0,FFFT,18,1.0
 643017,Moru_Silver_DLC,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,,,銀光鐵砧,0,0.0,0.0,FFFT,18,1.0
 643020,Extract_kit,血晶萃取時使用的工具，可以跟戴利亞貝利斯購買。,icon_item_extractkit,,,,,,,,血晶萃取工具,600,0.0,0.0,FFTF,18,4.0
-643021,Extract_kit_Sliver,血晶萃取時使用的工具，不需要消耗財貨。,icon_item_extractkit_sliver,,,,,,,,銀色血晶萃取工具,0,0.0,0.0,FFTF,18,4.0
+643021,Extract_kit_Sliver,血晶萃取時使用的工具，不需要消耗財貨。,icon_item_extractkit_sliver,,,,,,,,銀色血晶萃取工具,0,0.0,0.0,FFFT,18,4.0
 643022,Extract_kit_Gold,血晶萃取時使用的工具，只有裝備潛力為0時可以使用，防止道具破壞。,icon_item_extractkit_gold,,,,,,,,發光的黃金血晶萃取工具,0,0.0,0.0,TTFT,18,4.0
 643023,Transcend_Scroll_Event_90d,提升裝備的超越數值至5階段，點擊右鍵即可使用。,icon_item_transcendence_coupon,,,,,,,,[活動] 5超越卷軸 (90天),0,0.0,7776000.0,FFFT,9,1.0
 643025,Moru_Gold_14d_Team,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,,,黃金鐵砧(14天),0,0.0,1209600.0,FFFT,7,1.0
@@ -1789,7 +1790,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 646072,Retiarii_Net,網鬥士所使用的手拋網。,icon_item_retiarii_net,,,,,,,,手拋網,0,0.0,0.0,FFTF,18,0.1
 646073,Onmyoji_paper,網鬥士漁網,,,,,,,,,陰陽師紙人,0,0.0,0.0,FFFF,18,10.0
 646074,misc_paperdoll,陰陽師召喚式神靈時所使用的紙人。,icon_item_paperdoll,,,,,,,,紙人,0,0.0,0.0,FFTF,18,0.1
-646076,misc_pvp_mine2,交付水晶原石後所獲得的信物。,icon_item_pvpmine_2,,,,,,,,傭兵團信物,1,0.0,0.0,FFFT,18,0.0
+646076,misc_pvp_mine2,此信物在傭兵團之間被認為是實力的證據，如果做了對傭兵團有幫助的事就可以獲得。{nl}在傭兵團信物商店可以交換凱都拉商團支援的補給品。,icon_item_pvpmine_2,,,,,,,,傭兵團信物,1,0.0,0.0,FFFT,18,0.1
 646077,misc_pvp_mine1,可以跟交換員換取點數。,icon_item_pvpmine_1,,,,,,,,水晶原石,0,0.0,0.0,FFFF,18,0.0
 646078,misc_torturetools,裝著各種拷問道具的箱子。,icon_item_torturing_tool,,,,,,,,拷問道具,30,0.0,0.0,FFTF,18,0.1
 646079,misc_trapkit,設置陷阱時使用的各種陷阱材料工具。,icon_item_trap_kit,,,,,,,,陷阱工具,3,0.0,0.0,FFTF,18,0.1
@@ -1835,6 +1836,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 647037,EQUIP_RENTAL_POINT,用來購買PVP專用期間制裝備道具的鑄幣，可在租賃商店使用。{nl}該鑄幣在離開地圖時會被刪除。,icon_item_pvpmine_2,,,,,,,,戰鬥點數鑄幣,0,0.0,0.0,FFFT,18,0.0
 647039,card_Xpupkit01_500_Notrade,強化卡片時所使用的強化用卡片，會令卡片的經驗值提升500。,monster_card,,,,,,,,強化用卡片 : 500,2000,0.0,0.0,FFFF,18,1.0
 647040,Abrasive_430,使用覺醒研磨石覺醒後，可以獲得更高的屬性。,icon_item_awakemisc01,,,,,,,,Lv.430 覺醒研磨石,5,0.0,0.0,FFFT,18,1.0
+647042,misc_gemExpStone09_Team,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：230,700",icon_item_powderp,,,,,,,,7星寶石研磨劑,0,0.0,0.0,FFFT,18,1.0
 648501,emoticonItem_1,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1071, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,表情符號：凱帕(高興),0,0.0,0.0,FFFF,7,1.0
 648502,emoticonItem_2,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,"[{""Chance"": 100, ""Map"": 1201, ""Quantity_MAX"": 1, ""Quantity_MIN"": 1}]",,,,,表情符號：凱帕(悲傷),0,0.0,0.0,FFFF,7,1.0
 648503,kupole_emotion01,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：奎波爾(賣萌),0,0.0,0.0,FFFT,7,1.0
@@ -1846,6 +1848,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 648509,medeina_emotion01,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：梅德依那(驚慌),0,0.0,0.0,FFFT,7,1.0
 648510,medeina_emotion02,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：梅德依那(高興),0,0.0,0.0,FFFT,7,1.0
 648511,medeina_emotion03,可以登錄以下的聊天表情符號。點擊滑鼠右鍵使用。{nl}{img medeina_emotion03 50 50},icon_item_misc_00021,,,,,,,,表情符號：梅德依那(清潔),0,0.0,0.0,FFFF,7,1.0
+648512,marnox_emotion02,可以登錄在聊天表情符號，點擊滑鼠右鍵使用。{nl}{img marnox_emotion02 50 50},icon_item_misc_00021,,,,,,,,表情符號：喵星人(巧克力),0,0.0,0.0,FFFT,7,1.0
 649000,misc_ore01,礦石,1_item_ore_copper,,,,,,,,銅礦石,10,0.0,0.0,TTTT,18,1.0
 649001,misc_ore02,常見的礦石。,2_item_ore_iron,[642002],,,,,"[9003, 11036, 11037, 12024, 12036, 12037, 13038, 13039, 14026, 14032, 14039, 14040, 15035, 15036, 16025, 16038, 16039, 34007]",,鐵礦石,10,0.0,0.0,TTTT,18,1.0
 649002,misc_ore03,比鐵更堅硬的礦石。,3_item_ore_steel,[642002],,,,,"[31013, 35035]",,鋼鐵礦石,10,0.0,0.0,TTTT,18,1.0
@@ -1873,7 +1876,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649028,misc_ore25,混合一定比例的紅色泰拉金屬和祕銀礦石所製造出來的具有強大火屬性氣息的金屬，被當作道具的材料使用。,item_icon_teraingot,,[642928],,,,"[34073, 34074]",[9028],烏斯托馬伊特金屬,0,0.0,0.0,TTTT,18,1.0
 649029,misc_ore26,消滅貝爾庫波後可以獲得靈魂碎片，上面含有未知的氣息，如果使用在裝備材料上，可以發揮優秀的功能。,icon_item_velcoffer_misc01,,"[642916, 642916]",,,,,,貝爾庫波靈魂碎片,0,0.0,0.0,FFFT,18,1.0
 649030,misc_ore27,消滅斯基亞克爾立斯後可獲得，內含未知的氣息，當作裝備材料使用可發揮其優秀性能。,icon_item_misc_skiaclipse,,[642949],,,,,,斯基亞克爾立斯羽毛,0,0.0,0.0,FFFT,18,1.0
-649031,misc_ore23_stone,凝聚希埃拉粉末製作的結晶石。{nl} {nl}使用處：聖匣合成,icon_item_breakpowder_2_stone,,,,,,,[50100],希埃拉石,0,0.0,0.0,TTTT,18,1.0
+649031,misc_ore23_stone,凝聚希埃拉粉末製作的結晶石。{nl} {nl}使用處：聖匣合成,icon_item_breakpowder_2_stone,,,,,,"[50105, 50106]",[50100],希埃拉石,0,0.0,0.0,TTTT,18,1.0
 649200,misc_jore01,樹液經過長時間放置凝固成寶石。,22_item_ore_amber,[642061],,,,,,,琥珀,6,0.0,0.0,TTTT,18,1.0
 649201,misc_jore02,琥珀裡有一隻蜥蜴標本，是非常珍貴的寶石。,23_item_ore_amber_lizard,[642030],,,,,[19007],,蜥蜴琥珀,1000,0.0,0.0,TTTT,18,1.0
 649202,misc_jore03,黃色的寶石，傳說它具有驅逐惡魔的力量。,24_item_ore_topaz,,,,,,"[15023, 50082, 50083, 50084, 50085, 50086, 50087, 50088, 50089, 50090, 50091, 50092, 50093]",,黃玉,1914,0.0,0.0,TTTT,18,1.0
@@ -2478,192 +2481,6 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 651009,GuildColony_Item_Scroll_Warp_Colony_Support2,使用時可以前往據點地區。{nl}將前往據點地區內神聖的旗幟的設置地點。{nl}無法在據點地區內使用。{nl}這是支援領地戰而發放的道具。{nl}此物品只能由非占領公會成員使用。{nl}活動結束後將統一刪除。,icon_item_warp_scroll_colony,,,,,,,,[領地戰支援] 傳送卷軸-領地戰,0,300.0,0.0,FFFT,7,1.0
 651010,GuildColony_Item_Observation_Scroll,使用時5秒內可以確認位在據點地區的佔領公會員的位置。{nl}只有非佔領據點地區的公會員可以使用。,icon_item_observation_scroll,,,,,,,,[領地戰] 偵察用地圖,100,180.0,0.0,FFTT,7,1.0
 651011,GuildColony_Item_Resistance_status_Drug,使用時，移除目前套用中一般可解除所有Debuff，並套用以下效果。{nl}    - 5秒內擊退、擊倒免疫狀態{nl}    - 5秒內可解除所有Debuff免疫狀態{nl}    - 5秒內移動速度大幅增加再逐漸減少{nl}只能在據點地區使用。,icon_item_drug_resistance_statu,,,,,,,,[領地戰] 狀態異常扺抗藥水,100,300.0,0.0,FFTT,7,1.0
-652001,GuildHousing_Item_h_bench_01_brown,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在長椅上。){/},icon_item_h_bench_01_brown,,,,,,,,[公會家園] 長椅(褐色),0,0.0,0.0,FFTF,7,0.0
-652002,GuildHousing_Item_h_street_lamp_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_street_lamp_01,,,,,,,,[公會家園] 柯拉佩達路燈,0,0.0,0.0,FFTF,7,0.0
-652003,GuildHousing_Item_h_hydrangea_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_hydrangea_01_blue,,,,,,,,[公會家園] 綉球花_01(藍色),0,0.0,0.0,FFTF,7,0.0
-652004,GuildHousing_Item_h_hydrangea_02_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_hydrangea_02_blue,,,,,,,,[公會家園] 綉球花_02(藍色),0,0.0,0.0,FFTF,7,0.0
-652005,GuildHousing_Item_h_street_lamp_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_street_lamp_02,,,,,,,,[公會家園] 歐勒夏路燈,0,0.0,0.0,FFTF,7,0.0
-652006,GuildHousing_Item_h_street_lamp_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_street_lamp_03,,,,,,,,[公會家園] 魔法路燈,0,0.0,0.0,FFTF,7,0.0
-652007,GuildHousing_Item_h_street_lamp_04,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_street_lamp_04,,,,,,,,[公會家園] 樹木路燈,0,0.0,0.0,FFTF,7,0.0
-652008,GuildHousing_Item_h_small_fountain_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_small_fountain_01,,,,,,,,[公會家園] 一般噴泉(小型),0,0.0,0.0,FFTF,7,0.0
-652009,GuildHousing_Item_h_statue_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_statue_01,,,,,,,,[公會家園] 演奏中的雕像,0,0.0,0.0,FFTF,7,0.0
-652010,GuildHousing_Item_h_fountain_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_fountain_01,,,,,,,,[公會家園] 庭園噴泉(小型),0,0.0,0.0,FFTF,7,0.0
-652011,GuildHousing_Item_h_fountain_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_fountain_02,,,,,,,,[公會家園] 庭園噴泉(中型),0,0.0,0.0,FFTF,7,0.0
-652012,GuildHousing_Item_h_fountain_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_fountain_03,,,,,,,,[公會家園] 庭園噴泉(大型),0,0.0,0.0,FFTF,7,0.0
-652013,GuildHousing_Item_h_fountain_04,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_fountain_04,,,,,,,,[公會家園] 修道院噴泉,0,0.0,0.0,FFTF,7,0.0
-652014,GuildHousing_Item_h_flowerLight_01_pink,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_flowerlight_01_pink,,,,,,,,[公會家園] 花模樣庭園提燈_左(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652015,GuildHousing_Item_h_flowerLight_02_pink,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_flowerlight_02_pink,,,,,,,,[公會家園] 花模樣庭園提燈_右(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652016,GuildHousing_Item_h_flower_arch_01_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_flower_arch_01_purple,,,,,,,,[公會家園] 花拱形(紫色),0,0.0,0.0,FFTF,7,0.0
-652017,GuildHousing_Item_h_bonfire_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_bonfire_01,,,,,,,,[公會家園] 鐵製提燈,0,0.0,0.0,FFTF,7,0.0
-652018,GuildHousing_Item_h_arch_01_brown,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_arch_01_brown,,,,,,,,[公會家園] 庭園籬笆(褐色),0,0.0,0.0,FFTF,7,0.0
-652019,GuildHousing_Item_h_barrack_05_bigtree,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在鞦韆上。){/},icon_item_h_barrack_05_bigtree,,,,,,,,[公會家園] 大樹和鞦韆,0,0.0,0.0,FFTF,7,0.0
-652020,GuildHousing_Item_h_barrack_gramophone,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以使用留聲機。){/}{nl}{#8e0000}(不會另外有音樂出來。){/},icon_item_h_barrack_gramophone,,,,,,,,[公會家園] 留聲機,0,0.0,0.0,FFTF,7,0.0
-652021,GuildHousing_Item_h_barrack_puddle,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後蓮花池中的魚會動。){/},icon_item_h_barrack_puddle_white,,,,,,,,[公會家園] 蓮花池(白色),0,0.0,0.0,FFTF,7,0.0
-652022,GuildHousing_Item_h_bigplant_set_01_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_bigplant_set_01_green,,,,,,,,[公會家園] 花壇_01(綠色),0,0.0,0.0,FFTF,7,0.0
-652023,GuildHousing_Item_h_bigplant_set_02_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_bigplant_set_02_green,,,,,,,,[公會家園] 花壇_02(綠色),0,0.0,0.0,FFTF,7,0.0
-652024,GuildHousing_Item_h_bigplant_set_03_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_bigplant_set_03_green,,,,,,,,[公會家園] 花壇_03(綠色),0,0.0,0.0,FFTF,7,0.0
-652025,GuildHousing_Item_h_farm_brownfence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_brownfence_01,,,,,,,,[公會家園] 農場籬笆_01(褐色),0,0.0,0.0,FFTF,7,0.0
-652026,GuildHousing_Item_h_farm_brownfence_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_brownfence_02,,,,,,,,[公會家園] 農場籬笆_02(褐色),0,0.0,0.0,FFTF,7,0.0
-652027,GuildHousing_Item_h_farm_brownfence_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_brownfence_03,,,,,,,,[公會家園] 農場籬笆_03(褐色),0,0.0,0.0,FFTF,7,0.0
-652028,GuildHousing_Item_h_farm_brownfence_04,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_brownfence_04,,,,,,,,[公會家園] 農場籬笆_04(褐色),0,0.0,0.0,FFTF,7,0.0
-652029,GuildHousing_Item_h_farm_normaltree_01_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_normaltree_01_green,,,,,,,,[公會家園] 造景用樹木(綠色),0,0.0,0.0,FFTF,7,0.0
-652030,GuildHousing_Item_h_farm_plantfence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_plantfence_01,,,,,,,,[公會家園] 木籬笆_1,0,0.0,0.0,FFTF,7,0.0
-652031,GuildHousing_Item_h_farm_pump_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_pump_01,,,,,,,,[公會家園] 幫浦,0,0.0,0.0,FFTF,7,0.0
-652032,GuildHousing_Item_h_farm_sack_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_sack_01,,,,,,,,[公會家園] 肥料,0,0.0,0.0,FFTF,7,0.0
-652033,GuildHousing_Item_h_farm_whitefence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_whitefence_01,,,,,,,,[公會家園] 農場籬笆_01(白色),0,0.0,0.0,FFTF,7,0.0
-652034,GuildHousing_Item_h_farm_whitefence_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_whitefence_02,,,,,,,,[公會家園] 農場籬笆_02(白色),0,0.0,0.0,FFTF,7,0.0
-652035,GuildHousing_Item_h_farm_whitefence_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_whitefence_03,,,,,,,,[公會家園] 農場籬笆_03(白色),0,0.0,0.0,FFTF,7,0.0
-652036,GuildHousing_Item_h_farm_whitefence_04,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_whitefence_04,,,,,,,,[公會家園] 農場籬笆_04(白色),0,0.0,0.0,FFTF,7,0.0
-652037,GuildHousing_Item_h_farm_whitefence_05,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_whitefence_05,,,,,,,,[公會家園] 農場籬笆_05(白色),0,0.0,0.0,FFTF,7,0.0
-652038,GuildHousing_Item_h_flowerpot_01_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_01_yellow,,,,,,,,[公會家園] 玫瑰花花盆(黃色),0,0.0,0.0,FFTF,7,0.0
-652039,GuildHousing_Item_h_flowerpot_02_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_green,,,,,,,,[公會家園] 造景用花盆(綠色),0,0.0,0.0,FFTF,7,0.0
-652040,GuildHousing_Item_h_gate_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_gate_01,,,,,,,,[公會家園] 庭園拱形,0,0.0,0.0,FFTF,7,0.0
-652041,GuildHousing_Item_h_hydrangea_set_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_hydrangea_set_01_blue,,,,,,,,[公會家園] 綉球花花壇(藍色),0,0.0,0.0,FFTF,7,0.0
-652042,GuildHousing_Item_h_parasol_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_parasol_01_white,,,,,,,,[公會家園] 遮陽傘(白色),0,0.0,0.0,FFTF,7,0.0
-652043,GuildHousing_Item_h_shop_set,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_shop_set,,,,,,,,[公會家園] 商店布景,0,0.0,0.0,FFTF,7,0.0
-652044,GuildHousing_Item_h_smallplant_set_01_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_smallplant_set_01_green,,,,,,,,[公會家園] 花壇_04(綠色),0,0.0,0.0,FFTF,7,0.0
-652045,GuildHousing_Item_h_table_set_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_table_set_01_white,,,,,,,,[公會家園] 花桌子組合(白色),0,0.0,0.0,FFTF,7,0.0
-652046,GuildHousing_Item_h_topiary_swan,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_swan,,,,,,,,[公會家園] 綠雕造型(天鵝),0,0.0,0.0,FFTF,7,0.0
-652047,GuildHousing_Item_h_windmill_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後風車會轉動。){/},icon_item_h_windmill_01,,,,,,,,[公會家園] 農場風車,0,0.0,0.0,FFTF,7,0.0
-652048,GuildHousing_Item_h_topiary_tree,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_tree,,,,,,,,[公會家園] 綠雕造型(樹木),0,0.0,0.0,FFTF,7,0.0
-652049,GuildHousing_Item_h_topiary_popolion,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_popolion,,,,,,,,[公會家園] 綠雕造型(波波小獅王),0,0.0,0.0,FFTF,7,0.0
-652050,GuildHousing_Item_h_topiary_kepa,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_kepa,,,,,,,,[公會家園] 綠雕造型(凱帕),0,0.0,0.0,FFTF,7,0.0
-652051,GuildHousing_Item_h_topiary_horse,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_horse,,,,,,,,[公會家園] 綠雕造型(馬),0,0.0,0.0,FFTF,7,0.0
-652052,GuildHousing_Item_h_topiary_cube,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_topiary_cube,,,,,,,,[公會家園] 方塊草皮,0,0.0,0.0,FFTF,7,0.0
-652053,GuildHousing_Item_h_topiary_05,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_05,,,,,,,,[公會家園] 綠雕造型(正式庭園),0,0.0,0.0,FFTF,7,0.0
-652054,GuildHousing_Item_h_statue_04,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_statue_04,,,,,,,,[公會家園] 騎士雕像,0,0.0,0.0,FFTF,7,0.0
-652055,GuildHousing_Item_h_whitetree_tree,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_whitetree_tree,,,,,,,,[公會家園] 老樹(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652056,GuildHousing_Item_h_tree_basic_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_tree_basic_01,,,,,,,,[公會家園] 裝飾用樹木_1,0,0.0,0.0,FFTF,7,0.0
-652057,GuildHousing_Item_h_stone_tower_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_stone_tower_02,,,,,,,,[公會家園] 石塔_02,0,0.0,0.0,FFTF,7,0.0
-652058,GuildHousing_Item_h_statue_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_statue_03,,,,,,,,[公會家園] 祈禱中的雕像,0,0.0,0.0,FFTF,7,0.0
-652059,GuildHousing_Item_h_statue_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_statue_02,,,,,,,,[公會家園] 山羊怪雕像,0,0.0,0.0,FFTF,7,0.0
-652060,GuildHousing_Item_h_sea_anemone_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_sea_anemone_01_red,,,,,,,,[公會家園] 海葵(紅色),0,0.0,0.0,FFTF,7,0.0
-652061,GuildHousing_Item_h_oak_cask_set_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_oak_cask_set_01,,,,,,,,[公會家園] 橡木桶組合,0,0.0,0.0,FFTF,7,0.0
-652062,GuildHousing_Item_h_fruit_basket_01_basic,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_fruit_basket_01_basic,,,,,,,,[公會家園] 水果籃(褐色),0,0.0,0.0,FFTF,7,0.0
-652063,GuildHousing_Item_h_flower_keep_water_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_keep_water_yellow,,,,,,,,[公會家園] 噙水之花(黃色),0,0.0,0.0,FFTF,7,0.0
-652064,GuildHousing_Item_h_flower_alocasia_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_alocasia_white,,,,,,,,[公會家園] 海芋花(白色),0,0.0,0.0,FFTF,7,0.0
-652065,GuildHousing_Item_h_coral_03_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_coral_03_blue,,,,,,,,[公會家園] 八放珊瑚(藍色),0,0.0,0.0,FFTF,7,0.0
-652066,GuildHousing_Item_h_coral_02_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_coral_02_red,,,,,,,,[公會家園] 八放珊瑚(紅色),0,0.0,0.0,FFTF,7,0.0
-652067,GuildHousing_Item_h_coral_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_coral_01_blue,,,,,,,,[公會家園] 綠珊瑚,0,0.0,0.0,FFTF,7,0.0
-652068,GuildHousing_Item_h_conch_01_basic,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_conch_01_basic,,,,,,,,[公會家園] 螺貝(褐色),0,0.0,0.0,FFTF,7,0.0
-652069,GuildHousing_Item_h_cactus_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_cactus_01,,,,,,,,[公會家園] 仙人掌,0,0.0,0.0,FFTF,7,0.0
-652070,GuildHousing_Item_h_field,可以擺設在公會基地的公會家園設施。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以利用農田。){/}{nl}{#8e0000}(農田最多可以擺設2個。){/},icon_item_h_field,,,,,,,,[公會家園] 農田,0,0.0,0.0,FFTF,7,0.0
-652071,GuildHousing_Item_h_rampartfence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_rampartfence_01,,,,,,,,[公會家園] 城牆籬笆,0,0.0,0.0,FFTF,7,0.0
-652072,GuildHousing_Item_h_armor_laboratory,可以擺設在公會基地的公會家園設施。{nl}只有在所屬公會的基地擴張階級為3階以上時可以擺設。{nl}{#8e0000}(擺設後可以擴建或是利用防具研究所。){/}{nl}{#8e0000}(每擴建等級防具研究最大等級+5。){/}{nl}{#8e0000}(防具研究所最多可以擺設1個。){/},icon_item_guild_housing_contract_lab_armor,,,,,,,,[公會家園] 防具研究所,0,0.0,0.0,FFTF,7,0.0
-652073,GuildHousing_Item_h_attribute_laboratory,可以擺設在公會基地的公會家園設施。{nl}只有在所屬公會的基地擴張階級為3階以上時可以擺設。{nl}{#8e0000}(擺設後可以擴建或是利用屬性研究所。){/}{nl}{#8e0000}(每擴建等級屬性研究最大等級+5。){/}{nl}{#8e0000}(屬性研究所最多可以擺設1個。){/},icon_item_guild_housing_contract_lab_attribute,,,,,,,,[公會家園] 屬性研究所,0,0.0,0.0,FFTF,7,0.0
-652074,GuildHousing_Item_h_weapon_laboratory,可以擺設在公會基地的公會家園設施。{nl}只有在所屬公會的基地擴張階級為3階以上時可以擺設。{nl}{#8e0000}(擺設後可以擴建或是利用武器研究所。){/}{nl}{#8e0000}(每擴建等級武器研究最大等級+5。){/}{nl}{#8e0000}(武器研究所最多可以擺設1個。){/},icon_item_guild_housing_contract_lab_weapon,,,,,,,,[公會家園] 武器研究所,0,0.0,0.0,FFTF,7,0.0
-652075,GuildHousing_Item_h_manufacture_workshop,可以擺設在公會基地的公會家園設施。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以擴建製作工房所。){/}{nl}{#8e0000}(每擴建等級家園點數最大值+100。){/}{nl}{#8e0000}(製作工房所最多可以擺設1個。){/},icon_item_guild_housing_contract_manufacture,,,,,,,,[公會家園] 製作工房所,0,0.0,0.0,FFTF,7,0.0
-652076,GuildHousing_Item_h_scarecrow_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_scarecrow_01,,,,,,,,[公會家園] 稻草人,0,0.0,0.0,FFTF,7,0.0
-652077,GuildHousing_Item_h_stone_tower_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_stone_tower_01,,,,,,,,[公會家園] 石塔_01,0,0.0,0.0,FFTF,7,0.0
-652078,GuildHousing_Item_h_castle_ramp_1,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_castle_ramp_1,,,,,,,,[公會家園] 城堡路燈,0,0.0,0.0,FFTF,7,0.0
-652079,GuildHousing_Item_h_statue_bakarine,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設物品。{nl}{#8e0000}(擺設後膜拜女神像可以傳送至其他地區。){/},icon_item_h_statue_bakarine,,,,,,,,[公會家園] 瓦卡麗涅女神像,0,0.0,0.0,FFTF,7,0.0
-652080,GuildHousing_Item_h_flower_arch_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_flower_arch_01_red,,,,,,,,[公會家園] 花拱形(紅色),0,0.0,0.0,FFTF,7,0.0
-652081,GuildHousing_Item_h_flower_arch_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_flower_arch_01_white,,,,,,,,[公會家園] 花拱形(白色),0,0.0,0.0,FFTF,7,0.0
-652082,GuildHousing_Item_h_flower_arch_01_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_flower_arch_01_yellow,,,,,,,,[公會家園] 花拱形(黃色),0,0.0,0.0,FFTF,7,0.0
-652083,GuildHousing_Item_h_bench_01_green,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在長椅上。){/},icon_item_h_bench_01_green,,,,,,,,[公會家園] 長椅(綠色),0,0.0,0.0,FFTF,7,0.0
-652084,GuildHousing_Item_h_bench_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在長椅上。){/},icon_item_h_bench_01_white,,,,,,,,[公會家園] 長椅(白色),0,0.0,0.0,FFTF,7,0.0
-652085,GuildHousing_Item_h_bench_01_wine,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在長椅上。){/},icon_item_h_bench_01_wine,,,,,,,,[公會家園] 長椅(酒紅色),0,0.0,0.0,FFTF,7,0.0
-652086,GuildHousing_Item_h_flower_alocasia_orange,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_alocasia_orange,,,,,,,,[公會家園] 海芋花(橘色),0,0.0,0.0,FFTF,7,0.0
-652087,GuildHousing_Item_h_flower_alocasia_pink,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_alocasia_pink,,,,,,,,[公會家園] 海芋花(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652088,GuildHousing_Item_h_flower_alocasia_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_alocasia_yellow,,,,,,,,[公會家園] 海芋花(黃色),0,0.0,0.0,FFTF,7,0.0
-652089,GuildHousing_Item_h_flower_keep_water_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_keep_water_purple,,,,,,,,[公會家園] 噙水之花(紫色),0,0.0,0.0,FFTF,7,0.0
-652090,GuildHousing_Item_h_flower_keep_water_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_keep_water_red,,,,,,,,[公會家園] 噙水之花(紅色),0,0.0,0.0,FFTF,7,0.0
-652091,GuildHousing_Item_h_flower_keep_water_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_keep_water_white,,,,,,,,[公會家園] 噙水之花(白色),0,0.0,0.0,FFTF,7,0.0
-652092,GuildHousing_Item_h_conch_01_pink,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_conch_01_pink,,,,,,,,[公會家園] 螺貝(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652093,GuildHousing_Item_h_conch_01_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_conch_01_purple,,,,,,,,[公會家園] 螺貝(紫色),0,0.0,0.0,FFTF,7,0.0
-652094,GuildHousing_Item_h_fruit_basket_01_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_fruit_basket_01_purple,,,,,,,,[公會家園] 水果籃(紫色),0,0.0,0.0,FFTF,7,0.0
-652095,GuildHousing_Item_h_fruit_basket_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_fruit_basket_01_red,,,,,,,,[公會家園] 水果籃(紅色),0,0.0,0.0,FFTF,7,0.0
-652096,GuildHousing_Item_h_sea_anemone_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_sea_anemone_01_blue,,,,,,,,[公會家園] 海葵(藍色),0,0.0,0.0,FFTF,7,0.0
-652097,GuildHousing_Item_h_sea_anemone_01_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_sea_anemone_01_yellow,,,,,,,,[公會家園] 海葵(黃色),0,0.0,0.0,FFTF,7,0.0
-652098,GuildHousing_Item_h_arch_01_black,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_arch_01_black,,,,,,,,[公會家園] 庭園籬笆(黑色),0,0.0,0.0,FFTF,7,0.0
-652099,GuildHousing_Item_h_arch_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_arch_01_white,,,,,,,,[公會家園] 庭園籬笆(白色),0,0.0,0.0,FFTF,7,0.0
-652100,GuildHousing_Item_h_hydrangea_set_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_hydrangea_set_01_red,,,,,,,,[公會家園] 綉球花花壇(紅色),0,0.0,0.0,FFTF,7,0.0
-652101,GuildHousing_Item_h_hydrangea_set_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_hydrangea_set_01_white,,,,,,,,[公會家園] 綉球花花壇(白色),0,0.0,0.0,FFTF,7,0.0
-652102,GuildHousing_Item_h_hydrangea_set_01_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_hydrangea_set_01_yellow,,,,,,,,[公會家園] 綉球花花壇(黃色),0,0.0,0.0,FFTF,7,0.0
-652103,GuildHousing_Item_h_smallplant_set_01_cyan,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_smallplant_set_01_cyan,,,,,,,,[公會家園] 花壇_04(青綠色),0,0.0,0.0,FFTF,7,0.0
-652104,GuildHousing_Item_h_table_set_01_pink,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_table_set_01_pink,,,,,,,,[公會家園] 花桌子組合(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652105,GuildHousing_Item_h_table_set_01_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_table_set_01_yellow,,,,,,,,[公會家園] 花桌子組合(黃色),0,0.0,0.0,FFTF,7,0.0
-652106,GuildHousing_Item_h_whitetree_tree_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_whitetree_tree_purple,,,,,,,,[公會家園] 老樹(紫色),0,0.0,0.0,FFTF,7,0.0
-652107,GuildHousing_Item_h_whitetree_tree_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_whitetree_tree_white,,,,,,,,[公會家園] 老樹(白色),0,0.0,0.0,FFTF,7,0.0
-652108,GuildHousing_Item_h_whitetree_tree_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_whitetree_tree_yellow,,,,,,,,[公會家園] 老樹(黃色),0,0.0,0.0,FFTF,7,0.0
-652109,GuildHousing_Item_h_flowerLight_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_flowerlight_01_red,,,,,,,,[公會家園] 花模樣庭園提燈_左(紅色),0,0.0,0.0,FFTF,7,0.0
-652110,GuildHousing_Item_h_flowerLight_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_flowerlight_01_white,,,,,,,,[公會家園] 花模樣庭園提燈_左(白色),0,0.0,0.0,FFTF,7,0.0
-652111,GuildHousing_Item_h_flowerLight_02_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_flowerlight_02_red,,,,,,,,[公會家園] 花模樣庭園提燈_右(紅色),0,0.0,0.0,FFTF,7,0.0
-652112,GuildHousing_Item_h_flowerLight_02_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(提燈和路燈擺設後可以開關燈。){/},icon_item_h_flowerlight_02_white,,,,,,,,[公會家園] 花模樣庭園提燈_右(白色),0,0.0,0.0,FFTF,7,0.0
-652113,GuildHousing_Item_h_hydrangea_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_hydrangea_01_red,,,,,,,,[公會家園] 綉球花_01(紅色),0,0.0,0.0,FFTF,7,0.0
-652114,GuildHousing_Item_h_hydrangea_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_hydrangea_01_white,,,,,,,,[公會家園] 綉球花_01(白色),0,0.0,0.0,FFTF,7,0.0
-652115,GuildHousing_Item_h_hydrangea_01_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_hydrangea_01_yellow,,,,,,,,[公會家園] 綉球花_01(黃色),0,0.0,0.0,FFTF,7,0.0
-652116,GuildHousing_Item_h_hydrangea_02_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_hydrangea_02_red,,,,,,,,[公會家園] 綉球花_02(紅色),0,0.0,0.0,FFTF,7,0.0
-652117,GuildHousing_Item_h_hydrangea_02_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_hydrangea_02_white,,,,,,,,[公會家園] 綉球花_02(白色),0,0.0,0.0,FFTF,7,0.0
-652118,GuildHousing_Item_h_hydrangea_02_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_hydrangea_02_yellow,,,,,,,,[公會家園] 綉球花_02(黃色),0,0.0,0.0,FFTF,7,0.0
-652119,GuildHousing_Item_h_bigplant_set_01_cyan,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_bigplant_set_01_cyan,,,,,,,,[公會家園] 花壇_01(青綠色),0,0.0,0.0,FFTF,7,0.0
-652120,GuildHousing_Item_h_bigplant_set_02_cyan,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_bigplant_set_02_cyan,,,,,,,,[公會家園] 花壇_02(青綠色),0,0.0,0.0,FFTF,7,0.0
-652121,GuildHousing_Item_h_bigplant_set_03_cyan,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_bigplant_set_03_cyan,,,,,,,,[公會家園] 花壇_03(青綠色),0,0.0,0.0,FFTF,7,0.0
-652122,GuildHousing_Item_h_farm_normaltree_01_pink,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_normaltree_01_pink,,,,,,,,[公會家園] 造景用樹木(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652123,GuildHousing_Item_h_farm_normaltree_01_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_normaltree_01_purple,,,,,,,,[公會家園] 造景用樹木(紫色),0,0.0,0.0,FFTF,7,0.0
-652124,GuildHousing_Item_h_farm_normaltree_01_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_farm_normaltree_01_yellow,,,,,,,,[公會家園] 造景用樹木(黃色),0,0.0,0.0,FFTF,7,0.0
-652125,GuildHousing_Item_h_flowerpot_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_01_blue,,,,,,,,[公會家園] 玫瑰花花盆(藍色),0,0.0,0.0,FFTF,7,0.0
-652126,GuildHousing_Item_h_flowerpot_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_01_red,,,,,,,,[公會家園] 玫瑰花花盆(紅色),0,0.0,0.0,FFTF,7,0.0
-652127,GuildHousing_Item_h_flowerpot_01_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_01_white,,,,,,,,[公會家園] 玫瑰花花盆(白色),0,0.0,0.0,FFTF,7,0.0
-652128,GuildHousing_Item_h_flowerpot_02_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_blue,,,,,,,,[公會家園] 造景用花盆(藍色),0,0.0,0.0,FFTF,7,0.0
-652129,GuildHousing_Item_h_flowerpot_02_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_red,,,,,,,,[公會家園] 造景用花盆(紅色),0,0.0,0.0,FFTF,7,0.0
-652130,GuildHousing_Item_h_flowerpot_02_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flowerpot_02_yellow,,,,,,,,[公會家園] 造景用花盆(黃色),0,0.0,0.0,FFTF,7,0.0
-652131,GuildHousing_Item_h_parasol_01_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_parasol_01_blue,,,,,,,,[公會家園] 遮陽傘(藍色),0,0.0,0.0,FFTF,7,0.0
-652132,GuildHousing_Item_h_parasol_01_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_parasol_01_red,,,,,,,,[公會家園] 遮陽傘(紅色),0,0.0,0.0,FFTF,7,0.0
-652133,GuildHousing_Item_h_barrack_puddle_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後蓮花池中的魚會動。){/},icon_item_h_barrack_puddle_blue,,,,,,,,[公會家園] 蓮花池(藍色),0,0.0,0.0,FFTF,7,0.0
-652134,GuildHousing_Item_h_barrack_puddle_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後蓮花池中的魚會動。){/},icon_item_h_barrack_puddle_red,,,,,,,,[公會家園] 蓮花池(紅色),0,0.0,0.0,FFTF,7,0.0
-652135,GuildHousing_Item_h_barrack_puddle_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後蓮花池中的魚會動。){/},icon_item_h_barrack_puddle_yellow,,,,,,,,[公會家園] 蓮花池(黃色),0,0.0,0.0,FFTF,7,0.0
-652136,GuildHousing_Item_h_GuildHousing_farmer_boy,可以在公會基地內配置農場管理人(男)的契約書。{nl}只有在所屬公會的基地擴張階級為2階以上時可以配置。{nl}{#8e0000}(配置時，植物收獲量增加0~5%。){/}{nl}{#8e0000}(農場管理人最多可以配置1名。){/},icon_item_guild_housing_contract_farmer_01,,,,,,,,[公會家園] 農場管理人(男)僱用契約書,0,0.0,0.0,FFTF,7,0.0
-652137,GuildHousing_Item_h_GuildHousing_farmer_girl,可以在公會基地內配置農場管理人(女)的契約書。{nl}只有在所屬公會的基地擴張階級為2階以上時可以配置。{nl}{#8e0000}(配置時，植物收獲量增加0~5%。){/}{nl}{#8e0000}(農場管理人最多可以配置1名。){/},icon_item_guild_housing_contract_farmer_01,,,,,,,,[公會家園] 農場管理人(女)僱用契約書,0,0.0,0.0,FFTF,7,0.0
-652138,GuildHousing_Item_h_forest_pond_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後池塘中的鴨子會動，可以坐在椅子上。){/},icon_item_h_forest_pond_01,,,,,,,,[公會家園] 森林生活-鴨子池塘,0,0.0,0.0,FFTF,7,0.0
-652139,GuildHousing_Item_h_forest_pile_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_pile_01,,,,,,,,[公會家園] 森林生活-稻草堆,0,0.0,0.0,FFTF,7,0.0
-652140,GuildHousing_Item_h_forest_rabbit_cage_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後兔子會動。){/},icon_item_h_forest_rabbit_cage_01,,,,,,,,[公會家園] 森林生活-兔籠,0,0.0,0.0,FFTF,7,0.0
-652141,GuildHousing_Item_h_forest_chicken_cage_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後雞和小雞會動。){/},icon_item_h_forest_chicken_cage_01,,,,,,,,[公會家園] 森林生活-雞籠,0,0.0,0.0,FFTF,7,0.0
-652142,GuildHousing_Item_h_forest_pushcart_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後貓會動。){/},icon_item_h_forest_pushcart_01,,,,,,,,[公會家園] 森林生活-菜車,0,0.0,0.0,FFTF,7,0.0
-652143,GuildHousing_Item_h_forest_stump_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後松鼠會動。){/},icon_item_h_forest_stump_01,,,,,,,,[公會家園] 森林生活-樹樁,0,0.0,0.0,FFTF,7,0.0
-652144,GuildHousing_Item_h_forest_pile_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_pile_02,,,,,,,,[公會家園] 森林生活-木柴堆,0,0.0,0.0,FFTF,7,0.0
-652145,GuildHousing_Item_h_forest_stump_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_stump_02,,,,,,,,[公會家園] 森林生活-斧頭和樹樁,0,0.0,0.0,FFTF,7,0.0
-652146,GuildHousing_Item_h_forest_dwarf_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_dwarf_01,,,,,,,,[公會家園] 森林生活-拿著釘耙的小矮人,0,0.0,0.0,FFTF,7,0.0
-652147,GuildHousing_Item_h_forest_dwarf_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_dwarf_02,,,,,,,,[公會家園] 森林生活-拿著鏟子的小矮人,0,0.0,0.0,FFTF,7,0.0
-652148,GuildHousing_Item_h_forest_scarecrow_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後青鳥會動。){/},icon_item_h_forest_scarecrow_01,,,,,,,,[公會家園] 森林生活-稻草人,0,0.0,0.0,FFTF,7,0.0
-652149,GuildHousing_Item_h_forest_bear_shack_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以敲門。){/},icon_item_h_forest_bear_shack_01,,,,,,,,[公會家園] 森林生活-熊之屋,0,0.0,0.0,FFTF,7,0.0
-652150,GuildHousing_Item_h_forest_bench_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在長椅上。){/},icon_item_h_forest_bench_01,,,,,,,,[公會家園] 森林生活-木頭長椅,0,0.0,0.0,FFTF,7,0.0
-652151,GuildHousing_Item_h_forest_arch_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後風車會轉動。){/},icon_item_h_forest_arch_01,,,,,,,,[公會家園] 森林生活-風車入口,0,0.0,0.0,FFTF,7,0.0
-652152,GuildHousing_Item_h_forest_fence_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_fence_01,,,,,,,,[公會家園] 森林生活-木籬笆,0,0.0,0.0,FFTF,7,0.0
-652153,GuildHousing_Item_h_forest_arch_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後小鳥會動。){/},icon_item_h_forest_arch_02,,,,,,,,[公會家園] 森林生活-樹樁入口,0,0.0,0.0,FFTF,7,0.0
-652154,GuildHousing_Item_h_forest_windmill_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後風車會轉動。){/},icon_item_h_forest_windmill_01,,,,,,,,[公會家園] 森林生活-風車,0,0.0,0.0,FFTF,7,0.0
-652155,GuildHousing_Item_h_forest_bench_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在鞦韆上。){/},icon_item_h_forest_bench_02,,,,,,,,[公會家園] 森林生活-鞦韆,0,0.0,0.0,FFTF,7,0.0
-652156,GuildHousing_Item_h_forest_stall_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_forest_stall_01,,,,,,,,[公會家園] 森林生活-攤位,0,0.0,0.0,FFTF,7,0.0
-652157,GuildHousing_Item_h_forest_hammock_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在吊床上。){/},icon_item_h_forest_hammock_01,,,,,,,,[公會家園] 森林生活-吊床,0,0.0,0.0,FFTF,7,0.0
-652158,GuildHousing_Item_h_forest_table_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後可以坐在椅子上。){/},icon_item_h_forest_table_01,,,,,,,,[公會家園] 森林生活-木頭餐桌,0,0.0,0.0,FFTF,7,0.0
-652159,GuildHousing_Item_h_tree_basic_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_tree_basic_02,,,,,,,,[公會家園] 裝飾用樹木_2,0,0.0,0.0,FFTF,7,0.0
-652160,GuildHousing_Item_h_plantfence_02,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_plantfence_02,,,,,,,,[公會家園] 木籬笆_2,0,0.0,0.0,FFTF,7,0.0
-652161,GuildHousing_Item_h_round_tree_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_round_tree_01,,,,,,,,[公會家園] 圓木,0,0.0,0.0,FFTF,7,0.0
-652162,GuildHousing_Item_h_flower_sunflower_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_sunflower_yellow,,,,,,,,[公會家園] 向日葵(黃色),0,0.0,0.0,FFTF,7,0.0
-652163,GuildHousing_Item_h_flower_poppyflower_yellow,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_poppyflower_yellow,,,,,,,,[公會家園] 罌粟(黃色),0,0.0,0.0,FFTF,7,0.0
-652164,GuildHousing_Item_h_flower_cannalily_red,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_cannalily_red,,,,,,,,[公會家園] 美人蕉(紅色),0,0.0,0.0,FFTF,7,0.0
-652165,GuildHousing_Item_h_topiary_fence,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_fence,,,,,,,,[公會家園] 綠雕造型(籬笆),0,0.0,0.0,FFTF,7,0.0
-652166,GuildHousing_Item_h_topiary_bush,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_topiary_bush,,,,,,,,[公會家園] 綠雕造型(草叢),0,0.0,0.0,FFTF,7,0.0
-652167,GuildHousing_Item_h_bush_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_bush_01,,,,,,,,[公會家園] 草叢,0,0.0,0.0,FFTF,7,0.0
-652168,GuildHousing_Item_h_fruity_bush_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_fruity_bush_01,,,,,,,,[公會家園] 結了果實的草叢,0,0.0,0.0,FFTF,7,0.0
-652169,GuildHousing_Item_h_flower_dieffenbachia,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_dieffenbachia,,,,,,,,[公會家園] 花葉萬年青,0,0.0,0.0,FFTF,7,0.0
-652170,GuildHousing_Item_h_flower_valleylily_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_valleylily_white,,,,,,,,[公會家園] 藍鈴花(白色),0,0.0,0.0,FFTF,7,0.0
-652171,GuildHousing_Item_h_flower_tulip_white,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_tulip_white,,,,,,,,[公會家園] 鬱金香(白色),0,0.0,0.0,FFTF,7,0.0
-652172,GuildHousing_Item_h_small_hydrangea_01_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_small_hydrangea_01_purple,,,,,,,,[公會家園] 小繡球花(紫色),0,0.0,0.0,FFTF,7,0.0
-652173,GuildHousing_Item_h_tree_basic_03,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_tree_basic_03,,,,,,,,[公會家園] 裝飾用樹木_3,0,0.0,0.0,FFTF,7,0.0
-652174,GuildHousing_Item_h_flower_lotus_blue,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(擺設後會出現特效。){/},icon_item_h_flower_lotus_blue,,,,,,,,[公會家園] 蓮花(藍色),0,0.0,0.0,FFTF,7,0.0
-652175,GuildHousing_Item_h_flower_allium_purple,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_allium_purple,,,,,,,,[公會家園] 大花蔥(紫色),0,0.0,0.0,FFTF,7,0.0
-652176,GuildHousing_Item_h_wild_grass_01,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_wild_grass_01,,,,,,,,[公會家園] 野草_1,0,0.0,0.0,FFTF,7,0.0
-652177,GuildHousing_Item_h_flower_lupine_pink,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}{/},icon_item_h_flower_lupine_pink,,,,,,,,[公會家園] 魯冰花(粉紅色),0,0.0,0.0,FFTF,7,0.0
-652178,GuildHousing_Item_h_cube_wood_01_beige,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_cube_wood_01_beige,,,,,,,,[公會家園] 木頭魔方(米色),0,0.0,0.0,FFTF,7,0.0
-652179,GuildHousing_Item_h_cube_wood_01_brown,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_cube_wood_01_brown,,,,,,,,[公會家園] 木頭魔方(褐色),0,0.0,0.0,FFTF,7,0.0
-652180,GuildHousing_Item_h_cube_limestone_01_gray,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_cube_limestone_01_gray,,,,,,,,[公會家園] 石灰岩魔方(灰色),0,0.0,0.0,FFTF,7,0.0
-652181,GuildHousing_Item_h_cube_limestone_01_beige,可以擺設在公會基地的公會家園物品。{nl}只有在所屬公會的基地擴張階級為2階以上時可以擺設。{nl}{#8e0000}(方塊之間可以堆疊或是可以擺設於空中，方塊上也可以擺設物品。){/},icon_item_h_cube_limestone_01_beige,,,,,,,,[公會家園] 石灰岩魔方(米色),0,0.0,0.0,FFTF,7,0.0
-652182,GuildHousing_Item_h_topiary_cube_set,使用道具時，可以獲得可以擺設在公會基地的方塊草皮20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_topiary_cube_set,,,,,,,,[公會家園] 方塊草皮 x20 組合,0,0.0,0.0,FFTF,7,0.0
-652183,GuildHousing_Item_h_cube_wood_01_beige_set,使用道具時，可以獲得可以擺設在公會基地的木頭魔方(米色) 20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_cube_wood_01_beige_set,,,,,,,,[公會家園] 木頭魔方(米色) x20 組合,0,0.0,0.0,FFTF,7,0.0
-652184,GuildHousing_Item_h_cube_wood_01_brown_set,使用道具時，可以獲得可以擺設在公會基地的木頭魔方(褐色)20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_cube_wood_01_brown_set,,,,,,,,[公會家園] 木頭魔方(褐色) x20 組合,0,0.0,0.0,FFTF,7,0.0
-652185,GuildHousing_Item_h_cube_limestone_01_gray_set,使用道具時，可以獲得可以擺設在公會基地的石灰岩魔方(灰色)20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_cube_limestone_01_gray_set,,,,,,,,[公會家園] 石灰岩魔方(灰色) x20 組合,0,0.0,0.0,FFTF,7,0.0
-652186,GuildHousing_Item_h_cube_limestone_01_beige_set,使用道具時，可以獲得可以擺設在公會基地的石灰岩魔方(米色)20個。{nl}已獲得的公會家園物品，只有在所屬公會的基地擴張階級為2階以上時可以擺設。,icon_item_h_cube_limestone_01_beige_set,,,,,,,,[公會家園] 石灰岩魔方(米色) x20 組合,0,0.0,0.0,FFTF,7,0.0
 653041,stonetablet05,在魔法師之塔發現的第五個啟示，可以閱讀。,icon_item_stonetablet,[642017],,,,,,,魔法師之塔的啟示,0,0.0,0.0,FFFF,24,0.0
 660000,CHATHEDRAL54_SQ01_PART1_ITEM,和詛咒有關的魔君主相關文獻，對那柯堤斯相關內容有相當深入的描寫。,icon_item_magicpaper,,,,,,,,詛咒的魔君主那柯堤斯,0,0.0,0.0,FFFF,24,0.0
 660001,PILGRIMROAD55_SQ09_ITEM,朝聖者達洛斯的屍體。,icon_item_small_bag,,,,,,,,朝聖者達洛斯的屍身,0,0.0,0.0,FFFF,24,0.0
@@ -3650,7 +3467,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 664157,CASTLE98_MQ_END_ITEM,從外城壁第15區域的凱都拉商團團員伊內塔那邊拿來的。墜飾的背面寫著'「給親愛的帕亞烏塔」'這麼幾個字。,kq_recipe_hethran_material_3_7,,,,,,,,帕亞烏塔的墜飾,0,0.0,0.0,FFFF,24,0.0
 664800,RVR_BK_KEYITEM_URVAS_1,奉女神奧斯特雅之命監視龍王普魯達的奎波爾烏勒巴斯所隨身攜帶的信物。{nl}交給斯爾利那斯雷歐內的女神奧斯特雅可以幫助減緩慘叫效果。,icon_item_borutakey,,,,,,,,烏勒巴斯信物,0,0.0,0.0,TFFT,18,0.0
 664801,RVR_BK_KEYITEM_EVENT_OPEN,奉女神奧斯特雅之命監視龍王普魯達的奎波爾烏勒巴斯所隨身攜帶的信物。{nl}交給斯爾利那斯雷歐內的女神奧斯特雅可以幫助減緩慘叫效果。{nl}活動結束後將統一刪除。,icon_item_borutakey,,,,,,,,[活動] 烏勒巴斯信物,0,0.0,0.0,FFFT,18,0.0
-664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,從王國補給將校手中得到的徽章，證明再打倒普魯達上有做出了充分的貢獻。{nl}可透過公會基地的 '王國補給將校萬普雷達斯'交換道具。,icon_item_boruta_coin,,,,,,,,榮譽徽章 : 普魯達,0,0.0,0.0,FFFT,18,0.0
+664802,RVR_BK_MEDAL_BORUTOS_KAPAS_1,從王國補給將校手中得到的徽章，證明再打倒普魯達上有做出了充分的貢獻。最喪為了對更多的功勞者表達謝意，擴大了徽章的發給處。{nl} {nl}可以跟以下NPC交換道具。{nl} - 公會基地的 '王國補給將校萬普雷達斯'{nl} - 柯拉佩達的聖殿騎士大師 '騎士團長烏斯卡',icon_item_boruta_coin,,,,,,,,榮譽徽章 : 普魯達,0,0.0,0.0,FFFT,18,1.0
 666000,FARM49_1_MQ01_ITEM,橘色蜥蜴人的皮革，聽說使用這個可以見識神秘樹苗的反應。,icon_item_misc_00011,,,,,,,,蜥蜴人的皮革,0,0.0,0.0,FFFF,24,0.0
 666001,FARM49_1_MQ02_ITEM1,在農場看守人的小木屋附近採集的土壤標本，受到嚴重的汙染。,icon_item_powderb,,,,,,,,第二個被汙染的土壤標本,0,0.0,0.0,FFFF,24,0.0
 666002,FARM49_1_MQ02_ITEM2,在沒有人跡的作業場附近採集的土壤標本，受到嚴重的汙染。,icon_item_powderb,,,,,,,,第一個被汙染的土壤標本,0,0.0,0.0,FFFF,24,0.0
@@ -5588,6 +5405,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 720016,photowall_camping,使用後會產生立體書，再次使用立體書會消失，產生10分鐘後會自動消失。,icon_item_camping_popupbook,,,,,,,,帳篷營火立體書,2000,30.0,0.0,TTFT,7,10.0
 720017,photowall_chef,使用後會產生立體書，再次使用立體書會消失，產生10分鐘後會自動消失。,icon_item_photowall_chef01_set,,,,,,,,廚房料理桌立體書,2000,30.0,0.0,TTFT,7,10.0
 720018,photowall_squadron,使用後會產生立體書，再次使用立體書會消失，產生10分鐘後會自動消失。,icon_item_photowall_squadron,,,,,,,,TOS特攻隊城市立體書,2000,30.0,0.0,TTFT,7,10.0
+720019,photowall_hiphop,使用後會產生立體書，再次使用立體書會消失，產生10分鐘後會自動消失。,icon_item_photowall_hiphop,,,,,,,,嘻哈拍照牆立體書,2000,30.0,0.0,TTFT,7,10.0
 721000,Tea_Set,味道香濃的茶和點心組合。,icon_item_artefact_tea_set,,,,,,,,茶果組合,20,1.0,0.0,FFFT,7,1.0
 721001,Domecover,罩著美味料理的食物罩。,icon_item_artefact_dome_cover,,,,,,,,食物罩,20,1.0,0.0,FFFT,7,1.0
 721002,TOS_Ticket,歡迎來到TOS的橫幅。,icon_item_artefact_ticket_tos,,,,,,,,TOS 横幅,20,1.0,0.0,FFFT,7,1.0
@@ -5616,6 +5434,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 721025,artefact_Whisker,可以攪拌出蛋白霜的打蛋器玩具。,icon_item_artefact_whisker,,,,,,,,打蛋器玩具,20,1.0,0.0,TTFT,7,1.0
 721026,artefact_salt,可用安全的姿勢撒鹽的鹽罐玩具,icon_item_artefact_salt,,,,,,,,鹽罐玩具,20,1.0,0.0,TTFT,7,1.0
 721027,artefact_fryingpan,有實力的廚師愛用的平底鍋玩具。,icon_item_artefact_fryingpan,,,,,,,,平底鍋玩具,20,1.0,0.0,TTFT,7,1.0
+721028,artefact_camera,可以留下回憶的道具，使用時會演出2種姿勢中的1種。,icon_item_artefact_camera,,,,,,,,嘻哈相機玩具,20,1.0,0.0,TTFT,7,1.0
 730000,Fishing_Rod_1,釣魚機率 7.1% {nl}可釣魚的基本釣魚竿，這魚竿好像不太可靠。,icon_item_fishing_rod_1,,,,,,,,老舊釣竿,5000,0.0,0.0,FFTT,11,10.0
 730001,Fishing_Rod_2,釣魚機率 7.1% {nl}可釣魚的釣魚竿，聽說在柯拉佩達慶典期間可以取得此魚竿。,icon_item_fishing_rod_2,,,,,,,,柯拉佩達釣竿,0,0.0,0.0,FFFT,11,10.0
 730002,Fishing_Rod_3,釣魚機率 7.6% {nl}釣魚用的魚竿。雖然長得非常獨特，但說不定與泳衣很配啊。,icon_item_fishing_rod_4,,,,,,,,紅鶴魚竿,0,0.0,0.0,FFFT,11,10.0
@@ -5894,7 +5713,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900419,EVENT_1805_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動送的稱號箱，活動結束時統一刪除。,icon_item_holyark,,,,,,,,[Re:Build] 稱號 - 啟示獲得者,0,0.0,0.0,FFFT,7,0.0
 900420,EVENT_1710_NEWCHARACTER_BOX_18,點擊滑鼠右鍵即可使用，380級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 衝等寶箱 (380級),0,0.0,0.0,FFFF,9,1.0
 900421,EVENT_1803_NEWCHARACTER_Ability_Point_Stone_1000,活動發送道具。{nl}使用時特性點數增加1000，點擊滑鼠右鍵即可使用。{nl}活動結束時統一刪除。,icon_item_abilitypoint,,,,,,,,"[活動] 特性點數 1,000",0,0.0,0.0,FFFT,9,1.0
-900422,Event_Ability_Point_Stone_10000_14d,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,,,"特性點數10,000(14天)",0,0.0,1209600.0,FFFF,9,1.0
+900422,Event_Ability_Point_Stone_10000_14d,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,,,"特性點數10,000(14天)",0,0.0,1209600.0,FFFT,9,1.0
 900423,EVENT_1811_NEWCHARACTER_BARRACK_SLOT,會增加角色欄位，點擊滑鼠右鍵使用。,icon_item_barrack_slot1,,,,,,,,角色欄位增加使用劵,0,0.0,0.0,FFFF,9,1.0
 900424,EVENT_1811_NEWCHARACTER_REINFORCE11,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+11強化。{nl}活動結束時統一刪除。,icon_item_reinforce11,,,,,,,,[Re:Build] 摩西尼奧斯武器+11強化劵,0,0.0,0.0,FFFF,18,1.0
 900425,EVENT_1811_NEWCHARACTER_TRANSCEND5,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+5超越。{nl}活動結束時統一刪除。,icon_item_transcend5,,,,,,,,[Re:Build] 摩西尼奧斯武器+5超越劵,0,0.0,0.0,FFFF,18,1.0
@@ -6142,17 +5961,47 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904239,event1912_4thAnniversary_Coin,為了紀念4周年而製作的鑄幣。在活動期間內可以透過各種管道取得。{nl}活動結束時統一刪除。{nl}可以在4周年紀念商店中使用。,icon_item_annycoin_2,,,,,,,,[活動]4周年紀念鑄幣,0,0.0,0.0,FFFT,18,0.1
 904240,event1912_TP_feather,"蘊藏加比婭恩寵的羽毛。收集3個轉交給交換NPC加比婭的傳令，就可以依機率獲得加比婭主題道具中的1種。{nl} {nl}{@st66d}1月 9日維護時特性點數統一變更為 4,000。{/} {nl} {nl}{@st66d_y}{s18}加比婭主題道具清單{/}{/}{nl}- 加比婭的祭司套裝選擇箱 x1{nl}- 加比婭之火 x1{nl}- 小加比婭娃娃 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅色髮結 x1{nl}- 加比婭羽毛髮飾 x1{nl}- 火之傳令鳥x 1{nl}- 充滿加比婭恩寵的翅膀裝飾 x2 ~ 50{nl} {nl}{@st66d_y}{s18}* 透過官網下方 '機率型道具目錄'可以確認內容物和機率。{/}{/}",icon_item_feather_pinics,,,,,,,,充滿加比婭恩寵的羽毛,0,0.0,0.0,TTFT,18,0.1
 904241,event1912_TP_wing,"充滿加比婭恩寵的翅膀裝飾，如果拿去給交換NPC加比婭的傳令和NPC克莉妲的話，可以選擇加比婭主題道具中1個，只要轉交加充滿比婭恩寵翅膀裝飾的需求數量就可以獲得。{nl} {nl}{@st66d}活動期間特性點數統一變成2,000。{/}{nl} {nl}{@st66d_y}{s18}加比婭主題道具清單{/}{/}{nl}- 加比婭祭司套裝選擇箱 x1{nl}- 加比婭之火 x1{nl}- 小加比婭娃娃 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅色髮結 x1{nl}- 加比婭羽毛髮飾 x1",icon_item_wing_pinics,,,,,,,,充滿加比婭恩寵的翅膀裝飾,0,0.0,0.0,FFFT,18,0.1
+904242,item_event_2020_luckyticket,為了迎接新年特製的中獎券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_luckyticket,,,,,,,,[活動]新年福袋中獎券,0,0.0,0.0,FFFT,18,0.1
+904243,item_event_2020_goldenticket,為了迎接新年特製的交換券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_goldenticket,,,,,,,,[活動]新年黃金福袋交換券,0,0.0,0.0,FFFT,18,0.1
+904244,item_event_2020_ticket,為了迎接新年特製的交換券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_ticket,,,,,,,,[活動]2020大慶典交換券,0,0.0,0.0,FFFT,18,0.1
 904247,TP_1912_EQUIPITEM_BOX_ARMOR,使用時可以獲得想要的11強化10超越[4ever] 賽必諾斯防具1個。{nl}該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[4ever] 11強化10超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
 904248,TP_1912_EQUIPITEM_BOX,使用時可以獲得想要的11強化10超越[4ever] 賽必諾斯武器1個。{nl}該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[4ever] 11強化10超越賽必諾斯武器選擇箱,0,0.0,0.0,FFFT,9,1.0
 904249,EVENT_1710_NEWCHARACTER_BOX_20,點擊滑鼠右鍵即可使用，420級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 升級箱 (420級),0,0.0,0.0,FFFF,9,1.0
-904250,EVENT_EP12NEWCLASS_COSBOX,點擊滑鼠右鍵使用，可以選擇並獲得以下職業套裝中的一件。{nl} - 梅花俠客{nl} - 鋼弩手{nl} - 大地法師{nl} - 東征十字軍{nl} - 冉達,icon_item_giftbox_4,,,,,,,,[活動] 新職業優惠套裝選擇箱,0,0.0,0.0,FFFT,9,1.0
+904250,EVENT_EP12NEWCLASS_COSBOX,點擊滑鼠右鍵使用，可以選擇並獲得以下職業套裝中的一件。{nl} - 梅花俠客{nl} - 鋼弩手{nl} - 大地法師{nl} - 東征十字軍{nl} - 冉達 {nl}活動結束後統一刪除。,icon_item_giftbox_4,,,,,,,,[活動] 新職業優惠套裝選擇箱,0,0.0,0.0,FFFT,9,1.0
 904251,Event_expCard_400Lv_NO420,可以獲得從1級到400級為止所需要的經驗值。{nl}但是，只有在{#ff0000}200級未滿時可以使用。,icon_item_expcard,,,,,,,,[活動] 經驗值卡片 (400級),0,0.0,0.0,FFFT,9,0.0
+904252,Drug_Fortunecookie_2020,30分鐘內根據疊加經驗值、移動速度、最大HP會增加，最多可以疊加至5為止。活動結束時統一刪除。,icon_item_fortunecookie,,,,,,,,[活動]幸運餅乾,0,10.0,0.0,FFFT,7,0.0
 904253,4YEARS_EVENT_JUMPING,使用時可以獲得以下所有內容物。{nl} - [活動] 經驗值卡片 (400級) x1{nl} - 職業經驗值卡片箱 x1,icon_item_giftbox_4,,,,,,,,[活動] Lv.400 飛躍箱,0,0.0,0.0,FFFF,7,0.0
+904254,2020_AbillityArts_Box_1_d7,使用時可獲得想要的職業系列秘術重置藥水選擇箱。,icon_item_happybox_red,,,,,,,,[活動]秘術重置藥水職業系列選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904255,2020_AbillityArts_Box_2_d7,使用時可獲得想要的劍士系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]劍士系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904256,2020_AbillityArts_Box_3_d7,使用時可獲得想要的斥候系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]斥候系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904257,2020_AbillityArts_Box_4_d7,使用時可獲得想要的牧師系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]牧師系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904258,2020_AbillityArts_Box_5_d7,使用時可獲得想要的弓箭手系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]弓箭手系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904259,2020_AbillityArts_Box_6_d7,使用時可獲得想要的法師系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]法師系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
 904260,Achieve_LV400_MISSION_ACHIEVE01,可以獲得稱號-不屈的鬥志持有者 (Lv.400 地下城)的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-不屈的鬥志持有者 (Lv.400 地下城),0,0.0,0.0,FFFT,9,0.0
 904261,Achieve_LV400_MISSION_ACHIEVE02,可以獲得稱號-有勇氣的人 (Lv.400 地下城)的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-有勇氣的人 (Lv.400 地下城),0,0.0,0.0,FFFT,9,0.0
-904271,EVENT_2002_CHOCO,30分鐘內，每重疊1層獲得經驗值 +10%、最大HP +1000{nl}每10秒恢復HP 200/SP 100{nl}未鑑定裝備掉落機增 +300{nl}最多可以重疊5層。活動結束後將統一刪除。,icon_item_chocolatebox,,,,,,,,加倍甜蜜情人節巧克力,0,10.0,0.0,FFFT,7,0.0
+904262,Event_Ability_Point_Stone_10000_14d_2,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,,,"[活動]特性點數10,000(14天)",0,0.0,1209600.0,FFFT,9,1.0
+904263,Weekly boss raid_Event_01,可獲得稱號-每週BOSS遠征隊討伐隊的道具，點擊右鍵即可使用。{nl}440.LV以上角色才可以使用。,icon_item_holyark,,,,,,,,每週BOSS遠征隊討伐隊,0,0.0,0.0,FFFT,7,1.0
+904265,event1909_Ability_Point_Stone_1000_Team_14d,活動所發送的道具。{nl}使用時特性點數增加1000，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint,,,,,,,,"[活動]特性點數1,000(14天)",0,0.0,1209600.0,FFFT,9,1.0
+904266,artifact_Royal_chair,透過每週BOSS系列別排名獎勵獲得的道具。{nl}使時可以召喚赫嘉塞露女妖椅子出來並坐上去。,item_icon_royal_chair,,,,,,,,赫嘉塞露女妖椅子,0,1.0,0.0,TTTT,7,1.0
+904267,Achieve_WeeklyRank_1,透過每週BOSS系列別排名獎勵獲得的稱號。{nl}使用時獲得稱號。{nl}獲得的稱號只有在該角色上可使用。,icon_item_holyark,,,,,,,,稱號 - Iron Lord,0,0.0,0.0,FFFF,7,1.0
+904268,Achieve_WeeklyRank_2,透過每週BOSS系列別排名獎勵獲得的稱號。{nl}使用時獲得稱號。{nl}獲得的稱號只有在該角色上可使用。,icon_item_holyark,,,,,,,,稱號 - Demon Rose,0,0.0,0.0,FFFF,7,1.0
+904269,Achieve_WeeklyRank_3,透過每週BOSS系列別排名獎勵獲得的稱號。{nl}使用時獲得稱號。{nl}獲得的稱號只有在該角色上可使用。,icon_item_holyark,,,,,,,,稱號 - Mist Bringer,0,0.0,0.0,FFFF,7,1.0
+904270,RiftModePortalScroll,使用時會生成可進入到次元崩壞地點的傳點。{nl} - 可在421級以上地區使用。,icon_item_riftmode_scroll,,,,,,,,次元崩壞地點傳送卷軸,0,300.0,0.0,FFFF,7,1.0
+904271,EVENT_2002_CHOCO,30分鐘內每1疊加經驗值獲得量+10%、最大HP+1000、每10秒HP恢復200/SP恢復100、道具掉落機會+300。最多可以疊加至5，活動結束後將統一刪除。,icon_item_chocolatebox,,,,,,,,加倍甜蜜情人節巧克力,0,10.0,0.0,FFFT,7,0.0
 904272,2020NewYear_EQUIPITEM_BOX_ARMOR,使用時可以選擇獲得1個11強化、10超越的[2020年春季]賽必諾斯防具。{nl}裝備無法分解、強化。,icon_item_jewelrybox_close,,,,,,,,[2020春季]11強化10超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
 904273,2020NewYear_EQUIPITEM_BOX,使用時可以選擇獲得1個11強化、10超越的[2020年春季]賽必諾斯武器。{nl}裝備無法分解、強化。,icon_item_jewelrybox_close,,,,,,,,[2020春季]11強化10超越賽必諾斯武器選擇箱,0,0.0,0.0,FFFT,9,1.0
+904274,Event_Roulette_Coin,在女神輪盤中使用的硬幣。{nl}活動結束時統一刪除。,icon_item_event_roulette_coin,,,,,,,,[活動]女神的輪盤硬幣,0,0.0,0.0,FFFT,18,0.0
+904276,Achieve_WeeklyRank_4,透過每週BOSS系列別排名獎勵獲得的稱號。{nl}使用時獲得稱號。{nl}獲得的稱號只有在該角色上可使用。,icon_item_holyark,,,,,,,,稱號 - Beyond The Death,0,0.0,0.0,FFFF,7,1.0
+904277,Achieve_WeeklyRank_5,透過每週BOSS系列別排名獎勵獲得的稱號。{nl}使用時獲得稱號。{nl}獲得的稱號只有在該角色上可使用。,icon_item_holyark,,,,,,,,稱號 - Cowardly Devil,0,0.0,0.0,FFFF,7,1.0
+904278,artefact_animal_chair,透過每週BOSS系列別排名獎勵獲得的道具。{nl}使時可以召喚布爾魯椅子出來並坐上去。,item_icon_animal_chair,,,,,,,,布爾魯椅子,0,1.0,0.0,TTTT,7,1.0
+904280,EVENT_SEASON_NewWorld_Rewards_evt1,使用時可獲得以下所有道具。{nl}擴音器 x10{nl}靈魂水晶 x5{nl}[活動] HP恢復小型靈藥 x2{nl}[活動] SP恢復小型靈藥 x2,icon_item_luckybox_green,,,,,,,,[活動]賽季伺服器定居支援箱,0,0.0,0.0,FFFT,9,0.0
+904281,EVENT_SEASON_NewWorld_Rewards_evt2_1,"사용 시, 다음 아이템을 모두 획득할 수 있습니다.{nl}상자 개봉 시, 길드에 소속되어 있다면 각각의 아이템을 1개 씩 추가로 획득할 수 있습니다.{nl}특성 포인트 500 (14일) x2{nl}축복이 깃든 씨앗(14일) x2{nl}여신의 조각상(14일) x2{nl}이벤트 종료 시, 삭제됩니다.
+",icon_item_luckybox_blue,,,,,,,,[活動]每日支援箱,0,0.0,0.0,FFFT,9,0.0
+904282,EVENT_SEASON_NewWorld_Rewards_evt2_2,"사용 시, 다음 아이템을 모두 획득할 수 있습니다.{nl}상자 개봉 시, 길드에 소속되어 있다면 각각의 아이템을 1개 씩 {nl}[이벤트]신비한 돋보기(14일) x5{nl}[이벤트]장인의 돋보기(14일) x5{nl}마법 부여 스크롤(14일) x5{nl}[이벤트]은빛 모루(14일) x 5{nl}[이벤트]특성 포인트 1,000 (14일) x1{nl}여신의 축복석 x1{nl}이벤트 종료 시, 삭제됩니다.
+",icon_item_luckybox_orange,,,,,,,,[活動]每週支援箱,0,0.0,0.0,FFFT,9,0.0
+904283,EVENT_SEASON_NewWorld_Rewards_evt2_3,"사용 시, 다음 아이템을 모두 획득할 수 있습니다.{nl}상자 개봉 시, 길드에 소속되어 있다면 각각의 아이템을 1개 씩 {nl}[이벤트][LV. 430] 유니크 인챈트 쥬얼 x5{nl}[이벤트][LV. 430] 레전드 인챈트 쥬얼 x1{nl}[이벤트] 유니크 무기 선택 상자 (아시오, 웨이스트럴) x1{nl}[이벤트] 이그나스 방어구 선택 상자 x1{nl}[이벤트]황금 모루(14일) x5{nl}[이벤트]루비 모루(14일) x2{nl}[이벤트]특성 포인트 1,000 (14일) x3{nl}[이벤트] 미식별 신비한 서 x1{nl}이벤트 종료 시, 삭제됩니다.
+",icon_item_luckybox_gold,,,,,,,,[活動]每月支援箱,0,0.0,0.0,FFFT,9,0.0
+904284,EVENT_SEASON_NewWorld_COIN_1,為了賽季伺服器特別製作的鑄幣。(需追加使用用途),icon_item_antque_gold_coin,,,,,,,,[活動]定居的鑄幣,0,0.0,0.0,FFFT,18,0.1
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,7,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,18,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,18,1.0
@@ -6171,99 +6020,14 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 910016,Scroll_SkillItem_Pyromancer_EnchantFire,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 15 火焰附魔],5,0.0,0.0,TTTT,7,1.0
 910017,Scroll_SkillItem_Pyromancer_FlameGround,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 15 烈焰大地],5,0.0,0.0,TTTT,7,1.0
 910018,Scroll_SkillItem_Warlock_PoleofAgony,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 10 苦痛之柱],5,0.0,0.0,TTTT,7,1.0
-1210000,PersonalHousing_Item_hp_barrack_06_carpet_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_06_carpet,,,,,,,,[個人家園]釣魚人地毯,80000,0.0,0.0,FFTT,7,0.0
-1210001,PersonalHousing_Item_hp_barrack_06_chair_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_chair,,,,,,,,[個人家園]釣魚人椅子,60000,0.0,0.0,FFTT,7,0.0
-1210002,PersonalHousing_Item_hp_barrack_06_desk_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，桌上的地球儀和模型船會移動。),icon_item_p_h_barrack_06_desk,,,,,,,,[個人家園]釣魚人書桌,120000,0.0,0.0,FFTT,7,0.0
-1210003,PersonalHousing_Item_hp_barrack_06_fishlamp_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_06_fishlamp,,,,,,,,[個人家園]釣魚人魚燈,80000,0.0,0.0,FFTT,7,0.0
-1210004,PersonalHousing_Item_hp_barrack_06_fishrod_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_06_fishrod,,,,,,,,[個人家園]釣魚人釣竿,45000,0.0,0.0,FFTT,7,0.0
-1210005,PersonalHousing_Item_hp_barrack_06_fishtank_01_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，魚缸裡的魚會移動。),icon_item_p_h_barrack_06_fishtank_01,,,,,,,,[個人家園]釣魚人方型水族館,90000,0.0,0.0,FFTT,7,0.0
-1210006,PersonalHousing_Item_hp_barrack_06_fishtank_02_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，魚缸裡的魚會移動。),icon_item_p_h_barrack_06_fishtank_02,,,,,,,,[個人家園]釣魚人方型水族館,90000,0.0,0.0,FFTT,7,0.0
-1210007,PersonalHousing_Item_hp_barrack_06_frame_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_06_frame,,,,,,,,[個人家園]釣魚人四鳍旗鱼裝飾,45000,0.0,0.0,FFTT,7,0.0
-1210008,PersonalHousing_Item_hp_barrack_06_lamp_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_06_lamp,,,,,,,,[個人家園]釣魚人油燈,45000,0.0,0.0,FFTT,7,0.0
-1210009,PersonalHousing_Item_hp_barrack_06_mapboard_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_06_mapboard,,,,,,,,[個人家園]釣魚人地圖板,45000,0.0,0.0,FFTT,7,0.0
-1210010,PersonalHousing_Item_hp_barrack_06_partiton_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_partiton_01,,,,,,,,[個人家園]釣魚人欄杆,60000,0.0,0.0,FFTT,7,0.0
-1210011,PersonalHousing_Item_hp_barrack_06_partiton_02_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_partiton_02,,,,,,,,[個人家園]釣魚人隔板,60000,0.0,0.0,FFTT,7,0.0
-1210012,PersonalHousing_Item_hp_barrack_06_partiton_03_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_partiton_03,,,,,,,,[個人家園]釣魚人擋板,70000,0.0,0.0,FFTT,7,0.0
-1210013,PersonalHousing_Item_hp_barrack_06_rodstand_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_rodstand,,,,,,,,[個人家園]釣魚人釣竿支架,60000,0.0,0.0,FFTT,7,0.0
-1210014,PersonalHousing_Item_hp_barrack_06_rug_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_06_rug,,,,,,,,[個人家園]釣魚人小地毯,80000,0.0,0.0,FFTT,7,0.0
-1210015,PersonalHousing_Item_hp_barrack_06_shelf_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_06_shelf,,,,,,,,[個人家園]釣魚人架子,70000,0.0,0.0,FFTT,7,0.0
-1210016,PersonalHousing_Item_hp_barrack_04_cupboard_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_04_cupboard_01,,,,,,,,[個人家園]甜蜜壁櫥-果醬,45000,0.0,0.0,FFTT,7,0.0
-1210017,PersonalHousing_Item_hp_barrack_04_cupboard_02_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_04_cupboard_02,,,,,,,,[個人家園]甜蜜壁櫥-調味料,45000,0.0,0.0,FFTT,7,0.0
-1210018,PersonalHousing_Item_hp_barrack_04_candlestick_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_04_candlestick,,,,,,,,[個人家園]甜蜜燭臺,45000,0.0,0.0,FFTT,7,0.0
-1210019,PersonalHousing_Item_hp_barrack_04_shelf_01_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_shelf_01,,,,,,,,[個人家園]甜蜜餐具櫃,70000,0.0,0.0,FFTT,7,0.0
-1210020,PersonalHousing_Item_hp_barrack_04_shelf_02_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_shelf_02,,,,,,,,[個人家園]甜蜜禮物盒,70000,0.0,0.0,FFTT,7,0.0
-1210021,PersonalHousing_Item_hp_barrack_04_shelf_03_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_shelf_03,,,,,,,,[個人家園]甜蜜裝飾櫃,70000,0.0,0.0,FFTT,7,0.0
-1210022,PersonalHousing_Item_hp_barrack_04_coffemachine_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(配置後使用時，就可以利用咖啡機。),icon_item_p_h_barrack_04_coffemachine,,,,,,,,[個人家園]甜蜜咖啡機,80000,0.0,0.0,FFTT,7,0.0
-1210023,PersonalHousing_Item_hp_barrack_04_storage_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_storage,,,,,,,,[個人家園]甜蜜餅乾盒,60000,0.0,0.0,FFTT,7,0.0
-1210024,PersonalHousing_Item_hp_barrack_04_displayStand_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_displaystand,,,,,,,,[個人家園]甜蜜大型展台,130000,0.0,0.0,FFTT,7,0.0
-1210025,PersonalHousing_Item_hp_barrack_04_counter_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_counter,,,,,,,,[個人家園]甜蜜櫃台,60000,0.0,0.0,FFTT,7,0.0
-1210026,PersonalHousing_Item_hp_barrack_04_mat_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_04_mat,,,,,,,,[個人家園]甜蜜半圓地毯,50000,0.0,0.0,FFTT,7,0.0
-1210027,PersonalHousing_Item_hp_barrack_04_chair_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_04_chair,,,,,,,,[個人家園]甜蜜椅子,60000,0.0,0.0,FFTT,7,0.0
-1210028,PersonalHousing_Item_hp_barrack_04_macaron_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，桌子上的甜蜜馬卡龍會迴轉。),icon_item_p_h_barrack_04_macaron,,,,,,,,[個人家園]蜜馬卡龍桌子,80000,0.0,0.0,FFTT,7,0.0
-1210029,PersonalHousing_Item_hp_barrack_04_cakeStall_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，陳列台裡的蛋糕會迴轉。),icon_item_p_h_barrack_04_cakestall,,,,,,,,[個人家園]甜蜜小型展台,90000,0.0,0.0,FFTT,7,0.0
-1210030,PersonalHousing_Item_hp_barrack_03_cushion_set_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_cushion_set,,,,,,,,[個人家園]少女坐墊,70000,0.0,0.0,FFTT,7,0.0
-1210031,PersonalHousing_Item_hp_barrack_03_cabinet_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_cabinet,,,,,,,,[個人家園]少女櫥櫃,60000,0.0,0.0,FFTT,7,0.0
-1210032,PersonalHousing_Item_hp_barrack_03_beartoy_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，玩具熊會彈跳出來。),icon_item_p_h_barrack_03_beartoy,,,,,,,,[個人家園]少女禮物盒-玩具熊,80000,0.0,0.0,FFTT,7,0.0
-1210033,PersonalHousing_Item_hp_barrack_03_mannequin_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_mannequin,,,,,,,,[個人家園]少女假人,60000,0.0,0.0,FFTT,7,0.0
-1210034,PersonalHousing_Item_hp_barrack_03_shoes_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_shoes,,,,,,,,[個人家園]少女紅皮鞋,60000,0.0,0.0,FFTT,7,0.0
-1210035,PersonalHousing_Item_hp_barrack_03_gacha_cabinet_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(配置後使用時，可以嘗試抽出糖果。),icon_item_p_h_barrack_03_gacha_cabinet,,,,,,,,[個人家園]少女糖果機,80000,0.0,0.0,FFTT,7,0.0
-1210036,PersonalHousing_Item_hp_barrack_03_candle_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_03_candle,,,,,,,,[個人家園]少女燭臺,45000,0.0,0.0,FFTT,7,0.0
-1210037,PersonalHousing_Item_hp_barrack_03_dressing_desk_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_dressing_desk,,,,,,,,[個人家園]少女化妝台,100000,0.0,0.0,FFTT,7,0.0
-1210038,PersonalHousing_Item_hp_barrack_03_mirror_01_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_01,,,,,,,,[個人家園]少女鏡子-圓形,25000,0.0,0.0,FFTT,7,0.0
-1210039,PersonalHousing_Item_hp_barrack_03_mirror_02_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_02,,,,,,,,[個人家園]少女鏡子-方形,25000,0.0,0.0,FFTT,7,0.0
-1210040,PersonalHousing_Item_hp_barrack_03_mirror_03_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_03,,,,,,,,[個人家園]少女鏡子-裝飾,45000,0.0,0.0,FFTT,7,0.0
-1210041,PersonalHousing_Item_hp_barrack_03_mirror_04_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_04,,,,,,,,[個人家園]少女鏡子-小鳥,25000,0.0,0.0,FFTT,7,0.0
-1210042,PersonalHousing_Item_hp_barrack_03_mirror_05_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_05,,,,,,,,[個人家園]少女鏡子-草莓,25000,0.0,0.0,FFTT,7,0.0
-1210043,PersonalHousing_Item_hp_barrack_03_mirror_06_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_06,,,,,,,,[個人家園]少女鏡子-鴨子,25000,0.0,0.0,FFTT,7,0.0
-1210044,PersonalHousing_Item_hp_barrack_03_mirror_07_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_03_mirror_07,,,,,,,,[個人家園]少女鏡子-雲朵,25000,0.0,0.0,FFTT,7,0.0
-1210045,PersonalHousing_Item_hp_barrack_03_doll_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_03_doll,,,,,,,,[個人家園]少女縫製娃娃,60000,0.0,0.0,FFTT,7,0.0
-1210046,PersonalHousing_Item_hp_barrack_village_alarm_1,{#8e0000} 配置點數2點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在牆面位置。{nl},icon_item_p_h_barrack_village_alarm,,,,,,,,[個人家園]鐵製風景,25000,0.0,0.0,FFTT,7,0.0
-1210047,PersonalHousing_Item_hp_barrack_village_bed_01_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_bed_01,,,,,,,,[個人家園]公主床,130000,0.0,0.0,FFTT,7,0.0
-1210048,PersonalHousing_Item_hp_barrack_village_woodbed_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_woodbed,,,,,,,,[個人家園]木床,130000,0.0,0.0,FFTT,7,0.0
-1210049,PersonalHousing_Item_hp_barrack_village_bread_table_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_bread_table,,,,,,,,[個人家園]木頭餐桌-麵包,70000,0.0,0.0,FFTT,7,0.0
-1210050,PersonalHousing_Item_hp_barrack_village_fruit_table_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_fruit_table,,,,,,,,[個人家園]木頭餐桌-水果,70000,0.0,0.0,FFTT,7,0.0
-1210051,PersonalHousing_Item_hp_barrack_village_dishp_table_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_dish_table,,,,,,,,[個人家園]高級餐桌,130000,0.0,0.0,FFTT,7,0.0
-1210052,PersonalHousing_Item_hp_barrack_village_chair_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_chair_01,,,,,,,,[個人家園]長靠背椅,60000,0.0,0.0,FFTT,7,0.0
-1210053,PersonalHousing_Item_hp_barrack_village_longchair_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_longchair,,,,,,,,[個人家園]粉色雙人小板凳,70000,0.0,0.0,FFTT,7,0.0
-1210054,PersonalHousing_Item_hp_barrack_village_sofa_01_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_sofa_01,,,,,,,,[個人家園]綠色雙人沙發,70000,0.0,0.0,FFTT,7,0.0
-1210055,PersonalHousing_Item_hp_barrack_village_mat_01_1,{#8e0000} 配置點數3點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_village_mat_01,,,,,,,,[個人家園]半圓地毯,30000,0.0,0.0,FFTT,7,0.0
-1210056,PersonalHousing_Item_hp_barrack_village_mat_02_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_village_mat_02,,,,,,,,[個人家園]方形地毯,110000,0.0,0.0,FFTT,7,0.0
-1210057,PersonalHousing_Item_hp_barrack_village_rug_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_village_rug,,,,,,,,[個人家園]皮革地毯,110000,0.0,0.0,FFTT,7,0.0
-1210058,PersonalHousing_Item_hp_barrack_village_sitting_cushion_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_sitting_cushion,,,,,,,,[個人家園]酒裝飾坐墊,60000,0.0,0.0,FFTT,7,0.0
-1210059,PersonalHousing_Item_hp_barrack_village_side_table_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_village_side_table_01,,,,,,,,[個人家園]抽屜櫃-角笛,60000,0.0,0.0,FFTT,7,0.0
-1210060,PersonalHousing_Item_hp_barrack_village_side_table_012_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_village_side_table_012,,,,,,,,[個人家園]抽屜櫃-角裝飾,80000,0.0,0.0,FFTT,7,0.0
-1210061,PersonalHousing_Item_hp_barrack_village_stove_01_1,{#8e0000} 配置點數16點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_village_stove_01,,,,,,,,[個人家園]壁爐,180000,0.0,0.0,FFTT,7,0.0
-1210062,PersonalHousing_Item_hp_barrack_village_stove_012_1,{#8e0000} 配置點數16點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_village_stove_012,,,,,,,,[個人家園]壁爐-盤子,180000,0.0,0.0,FFTT,7,0.0
-1210063,PersonalHousing_Item_hp_barrack_02_bookshelf_01_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_02_bookshelf_01,,,,,,,,[個人家園]占星術高級書架,60000,0.0,0.0,FFTT,7,0.0
-1210064,PersonalHousing_Item_hp_barrack_02_bookshelf_02_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_02_bookshelf_02,,,,,,,,[個人家園]大型書架,60000,0.0,0.0,FFTT,7,0.0
-1210065,PersonalHousing_Item_hp_barrack_02_chair_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_02_chair,,,,,,,,[個人家園]占星術單人沙發,60000,0.0,0.0,FFTT,7,0.0
-1210066,PersonalHousing_Item_hp_barrack_02_table_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_02_table,,,,,,,,[個人家園]占星術桌子,100000,0.0,0.0,FFTT,7,0.0
-1210067,PersonalHousing_Item_hp_barrack_07_bear_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_bear,,,,,,,,[個人家園]獵人熊裝飾,60000,0.0,0.0,FFTT,7,0.0
-1210068,PersonalHousing_Item_hp_barrack_07_chair_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_chair,,,,,,,,[個人家園]獵人安樂椅,70000,0.0,0.0,FFTT,7,0.0
-1210069,PersonalHousing_Item_hp_barrack_07_desk_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_07_desk,,,,,,,,[個人家園]獵人書桌,90000,0.0,0.0,FFTT,7,0.0
-1210070,PersonalHousing_Item_hp_barrack_07_fireplace_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_07_fireplace,,,,,,,,[個人家園]獵人暖爐,90000,0.0,0.0,FFTT,7,0.0
-1210071,PersonalHousing_Item_hp_barrack_07_floorDoor_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_floordoor,,,,,,,,[個人家園]獵人地板門,100000,0.0,0.0,FFTT,7,0.0
-1210072,PersonalHousing_Item_hp_barrack_07_table_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_table,,,,,,,,[個人家園]獵人桌子,60000,0.0,0.0,FFTT,7,0.0
-1210073,PersonalHousing_Item_hp_barrack_07_tiger_1,{#8e0000} 配置點數19點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_07_tiger,,,,,,,,[個人家園]獵人虎皮地毯,200000,0.0,0.0,FFTT,7,0.0
-1210074,PersonalHousing_Item_hp_barrack_07_tiger_white_1,{#8e0000} 配置點數19點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_07_tiger_white,,,,,,,,[個人家園]獵人白虎地毯,200000,0.0,0.0,FFTT,7,0.0
-1210075,PersonalHousing_Item_hp_barrack_07_woodholder_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_07_woodholder,,,,,,,,[個人家園]獵人木材支架,60000,0.0,0.0,FFTT,7,0.0
-1210076,PersonalHousing_Item_hp_barrack_08_bed_1,{#8e0000} 配置點數11點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_bed,,,,,,,,[個人家園]海洋床,130000,0.0,0.0,FFTT,7,0.0
-1210077,PersonalHousing_Item_hp_barrack_08_capet_01_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_08_capet_01,,,,,,,,[個人家園]海洋海藍地毯,110000,0.0,0.0,FFTT,7,0.0
-1210078,PersonalHousing_Item_hp_barrack_08_capet_02_1,{#8e0000} 配置點數10點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}在地毯種類的上面，可以設置地面種類的物品。{nl},icon_item_p_h_barrack_08_capet_02,,,,,,,,[個人家園]海洋粉紅地毯,110000,0.0,0.0,FFTT,7,0.0
-1210079,PersonalHousing_Item_hp_barrack_08_capet_small_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_capet_small,,,,,,,,[個人家園]海洋珊瑚色小地毯,70000,0.0,0.0,FFTT,7,0.0
-1210080,PersonalHousing_Item_hp_barrack_08_fishbowl_01_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_fishbowl_01,,,,,,,,[個人家園]海洋大型魚缸,100000,0.0,0.0,FFTT,7,0.0
-1210081,PersonalHousing_Item_hp_barrack_08_fishbowl_02_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_fishbowl_02,,,,,,,,[個人家園]海洋小型魚缸,60000,0.0,0.0,FFTT,7,0.0
-1210082,PersonalHousing_Item_hp_barrack_08_jellyfishhganger_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_jellyfishhganger,,,,,,,,[個人家園]海洋水母衣架,60000,0.0,0.0,FFTT,7,0.0
-1210083,PersonalHousing_Item_hp_barrack_08_mirror_1,{#8e0000} 配置點數7點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_08_mirror,,,,,,,,[個人家園]海洋洗手台,90000,0.0,0.0,FFTT,7,0.0
-1210084,PersonalHousing_Item_hp_barrack_08_partition_01_1,{#8e0000} 配置點數5點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_partition_01,,,,,,,,[個人家園]海洋擋板,70000,0.0,0.0,FFTT,7,0.0
-1210085,PersonalHousing_Item_hp_barrack_08_pot_1,{#8e0000} 配置點數6點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl}(擺設時，特效出現。),icon_item_p_h_barrack_08_pot,,,,,,,,[個人家園]海洋珊瑚礁桌子,80000,0.0,0.0,FFTT,7,0.0
-1210086,PersonalHousing_Item_hp_barrack_08_sofa_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_sofa,,,,,,,,[個人家園]海洋珊瑚色沙發,60000,0.0,0.0,FFTT,7,0.0
-1210087,PersonalHousing_Item_hp_barrack_08_stole_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_stole,,,,,,,,[個人家園]海洋珊瑚色小板凳,60000,0.0,0.0,FFTT,7,0.0
-1210088,PersonalHousing_Item_hp_barrack_08_tablepot_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_tablepot,,,,,,,,[個人家園]海洋珊瑚桌子,60000,0.0,0.0,FFTT,7,0.0
-1210089,PersonalHousing_Item_hp_barrack_08_treasurebox_1,{#8e0000} 配置點數8點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_treasurebox,,,,,,,,[個人家園]海洋寶箱,100000,0.0,0.0,FFTT,7,0.0
-1210090,PersonalHousing_Item_hp_barrack_08_waterbottle_1,{#8e0000} 配置點數4點{/}{nl}可以配置在個人家園裡的物品。{nl}可以配置在地面位置。{nl},icon_item_p_h_barrack_08_waterbottle,,,,,,,,[個人家園]海洋水瓶,60000,0.0,0.0,FFTT,7,0.0
 1250003,motion_medeina_emotion01,可以登入會動的聊天表情符號。點擊滑鼠右鍵即可使用。,icon_item_misc_00021,,,,,,,,動作表情符號：梅德依那(慌張),0,0.0,0.0,FFFT,7,1.0
 1250004,motion_medeina_emotion02,可以登入會動的聊天表情符號。點擊滑鼠右鍵即可使用。,icon_item_misc_00021,,,,,,,,動作表情符號：梅德依那(高興),0,0.0,0.0,FFFT,7,1.0
+1250005,egg_003_ContentsTotalShop,點擊滑鼠右鍵即可使用，使用時立即登錄寵物。{nl}該寵物就算沒有寵物騎乘技能也可騎乘。,icon_item_egg_piggy,,,,,,,,小豬蛋,0,30.0,0.0,FFFT,7,10.0
+1250011,motion_kupole_emotion01,可以登入會動的聊天表情符號。點擊滑鼠右鍵即可使用。,icon_item_misc_00021,,,,,,,,動作表情符號：奎波爾(賣萌),0,0.0,0.0,FFFT,7,1.0
+1250012,motion_kupole_emotion02,可以登入會動的聊天表情符號。點擊滑鼠右鍵即可使用。,icon_item_misc_00021,,,,,,,,動作表情符號：奎波爾(衝擊),0,0.0,0.0,FFFT,7,1.0
+1250013,motion_kupole_emotion03,可以登入會動的聊天表情符號。點擊滑鼠右鍵即可使用。,icon_item_misc_00021,,,,,,,,動作表情符號：奎波爾(嘆氣),0,0.0,0.0,FFFT,7,1.0
+1300001,EPISODE_11_REWARD_WEAPON_BOX,右點擊時可以選擇並獲得11強化10超越[EP11]賽必諾斯雷格巴武器。{nl}ㅤ{nl}{nl}獲得的武器不能進行強化、超越、附魔、覺醒、分解、丟棄、外型變更、萃取。{nl}[可獲得的道具]{nl}[EP11] 賽必諾斯雷格巴十字弓x1{nl}[EP11] 賽必諾斯雷格巴重砲x1{nl}[EP11] 賽必諾斯雷格巴匕首x1{nl}[EP11] 賽必諾斯雷格巴鈍器x1{nl}[EP11] 賽必諾斯雷格巴火槍x1{nl}[EP11] 賽必諾斯雷格巴手槍x1{nl}[EP11] 賽必諾斯雷格巴細劍x1{nl}[EP11] 賽必諾斯雷格巴盾牌x1{nl}[EP11] 賽必諾斯雷格巴矛槍x1{nl}[EP11] 賽必諾斯雷格巴權杖x1{nl}[EP11] 賽必諾斯雷格巴劍x1{nl}[EP11] 賽必諾斯雷格巴短弓x1{nl}[EP11] 賽必諾斯雷格巴雙手鈍器x1{nl}[EP11] 賽必諾斯雷格巴法杖x1{nl}[EP11] 賽必諾斯雷格巴長槍x1{nl}[EP11] 賽必諾斯雷格巴雙手劍x1{nl}[EP11] 賽必諾斯上古飾品 x1,icon_item_jewelrybox_close,,,,,,,,[EP11] 11強10超越賽必諾斯武器選擇箱,0,0.0,0.0,FFFT,9,1.0
+1300002,EPISODE_11_REWARD_EQUIP_BOX,右點擊時可以選擇並獲得11強化10超越[EP11]賽必諾斯防具。{nl}ㅤ{nl}{nl}獲得的防具不能進行強化、超越、附魔、分解、覺醒、丟棄、外型變更、萃取。{nl}[可獲得的道具]{nl}[EP11] 賽必諾斯皮克林泰手套 x1{nl}[EP11] 賽必諾斯皮克林泰靴子 x1{nl}[EP11] 賽必諾斯皮克林泰短褲 x1{nl}[EP11] 賽必諾斯皮克林泰布甲 x1{nl}[EP11] 賽必諾斯彼梅札伊皮革手套 x1{nl}[EP11] 賽必諾斯彼梅札伊皮革靴子 x1{nl}[EP11] 賽必諾斯彼梅札伊皮革短褲 x1{nl}[EP11] 賽必諾斯彼梅札伊皮革盔甲 x1{nl}[EP11] 賽必諾斯阿克魔護手套 x1{nl}[EP11] 賽必諾斯阿克魔護脛靴 x1{nl}[EP11] 賽必諾斯阿克魔鋼鐵短褲 x1{nl}[EP11] 賽必諾斯阿克魔鋼鐵盔甲 x1,icon_item_jewelrybox_close,,,,,,,,[EP11] 11強10超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
 2000000,Achieve_Event_Steam_PoPo_Vacation,送給PoPo Vacation得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - PoPo Vacation,0,0.0,0.0,FFFT,7,0.0
 2000002,Achieve_Steam_PIZZA,送給捐出披薩的救援者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,稱號 - 披薩外送服務,0,0.0,0.0,FFFT,7,0.0
 2000003,Achieve_Event_Steam_One_of_A_Kind,賜給One of A Kind 得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - One of A Kind,0,0.0,0.0,FFFT,7,0.0
@@ -6351,7 +6115,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040078,HiddenAbility_Fencer13,使用時，可以獲得[重劍防禦：高潔]秘術。{nl} - 習得條件：擊劍手職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* [重劍防禦]Buff期間， 用[擊劍手]技能直接從對方正面攻擊時，增加傷害50%，從其餘方向攻擊時，則減少傷害30%。,icon_item_hiddenability_swordman,,,,,,,,神秘之書 (重劍防禦：高潔),0,0.0,0.0,FFFT,14,0.1
 2040079,HiddenAbility_Psychokino25,使用時，可以獲得[強力重力：歪曲的重力]秘術。{nl} - 習得條件：念力法師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 強力重力和浮空結合後所產生的魔法陣，會讓我和敵人無法移動，{nl}魔法陣結束後，敵人先往高空移動然後墜落,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (強力重力：歪曲的重力),0,0.0,0.0,FFFT,14,0.1
 2040080,HiddenAbility_Warlock20,使用時，可以獲得[苦痛之柱：召喚惡靈]秘術。{nl} - 習得條件：咒術師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 在苦痛之柱魔法陣的周圍，每0.5秒產生一隻惡靈{nl}* 也套用[惡靈召喚：邪靈]的效果{nl}* 惡靈技能係數與苦痛之柱相同{nl}* 沒有[苦痛之柱]技能時，不會發動秘術效果,icon_item_hiddenability_wizard,,,,,,,,神秘之書 (苦痛之柱：召喚惡靈),0,0.0,0.0,FFFT,14,0.1
-2040081,HiddenAbility_Musketeer31,使用時，可以獲得[狙擊：隱匿]秘術。{nl} - 習得條件：火槍手職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用[狙擊]技能後，在5秒內為[隱身]狀態，移動速度增加10,icon_item_hiddenability_archer,,,,,,,,神秘之書 (狙擊：隱匿),0,0.0,0.0,FFFT,14,0.1
+2040081,HiddenAbility_Musketeer31,使用時，可以獲得[狙擊：隱蔽]秘術。{nl} - 習得條件：火槍手職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用[狙擊]技能後，在5秒內為[隱身]狀態，移動速度增加10,icon_item_hiddenability_archer,,,,,,,,神秘之書 (狙擊：隱蔽),0,0.0,0.0,FFFT,14,0.1
 2040082,HiddenAbility_Mergen17,使用時，可以獲得[穹頂：鳴箭]秘術。{nl} - 習得條件：神射手職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 被穹頂命中的敵人，被賦予10秒的[恐怖]Debuff{nl}* 全部打擊在單一對象時，傷害增加20%,icon_item_hiddenability_archer,,,,,,,,神秘之書 (穹頂：鳴箭),0,0.0,0.0,FFFT,14,0.1
 2040083,HiddenAbility_Wugushi29,使用時，可以獲得[潛毒百歲：虛脫]秘術。{nl} - 習得條件：巫蠱師職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 陷入潛毒百歲的敵人，每2秒減少3%的力量屬性，施展者的力量屬性則增加5%{nl}* 力量屬性減少及增加量最多套用至50%為，以陷入Buff/Debuff的時間點的力量數值為基準。,icon_item_hiddenability_archer,,,,,,,,神秘之書 (潛毒百歲：虛脫),0,0.0,0.0,FFFT,14,0.1
 2040084,HiddenAbility_Falconer23,使用時，可以獲得[懸吊射擊：瞬間迴避]秘術。{nl} - 習得條件：馴鷹者職業達到45級{nl} - 習得或升級特性費用：36000點{nl} - 秘術說明{nl}* 使用懸吊射擊時，在危機的瞬間被老鷹救出，暫時成為無敵狀態，懸吊射擊Buff結束後，5秒內受到的傷害減少30%{nl}* 懸吊射擊持續時間：3秒,icon_item_hiddenability_archer,,,,,,,,神秘之書 (懸吊射擊：瞬間迴避),0,0.0,0.0,FFFT,14,0.1
