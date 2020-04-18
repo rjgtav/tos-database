@@ -18,20 +18,30 @@
   <link href='assets/themes/light.css' rel='stylesheet' />
   <link href='assets/themes/dark.css' rel='stylesheet' />
   <script type="application/javascript">
-      function getTheme() {
-          return localStorage.getItem('theme') || 'light';
+      const PREFERENCE_THEME = 'preference.theme';
+
+      function getPreference(key, valueDefault) {
+          let value = localStorage.getItem(key);
+
+          if (value == undefined)
+              setPreference(key, valueDefault);
+
+          return value == undefined ? valueDefault : value;
       }
-      function setTheme(theme) {
-          localStorage.setItem('theme', theme);
-          document.head
-              .querySelectorAll('link[rel="stylesheet"]')
-              .forEach(value => {
-                  let disabled = value.getAttribute('href').includes('/themes/') && !value.getAttribute('href').endsWith(theme + '.css');
-                      disabled ? value.setAttribute('disabled', 'true') : value.removeAttribute('disabled');
-              });
+      function setPreference(key, value) {
+          localStorage.setItem(key, value);
+
+          if (key === PREFERENCE_THEME) {
+            document.head
+                .querySelectorAll('link[rel="stylesheet"]')
+                .forEach(node => {
+                    let disabled = node.getAttribute('href').includes('/themes/') && !node.getAttribute('href').endsWith(value.toLowerCase() + '.css');
+                        disabled ? node.setAttribute('disabled', 'true') : node.removeAttribute('disabled');
+                });
+          }
       }
 
-      setTheme(getTheme());
+      setPreference(PREFERENCE_THEME, getPreference(PREFERENCE_THEME, 'Light'));
   </script>
 
   <!-- Trigger browser 'Translate' button -->
@@ -62,7 +72,7 @@
 
   <!-- Theme (temporary) -->
   <script type="application/javascript">
-      let theme = getTheme();
+      let theme = getPreference(PREFERENCE_THEME).toLowerCase();
       let background = {
           'dark': '#222',
           'light': 'white',

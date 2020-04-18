@@ -8,7 +8,14 @@ static const char* LUA_RUNTIME_API = ""
 
     "function LUA_RUNTIME_CALL(function_name, args)\n"
     "   json = require('json_imc')\n"
-    "   return _G[function_name](table.unpack(json.decode(args)))\n"
+    ""
+    "   args = json.decode(args)\n"
+    "   result = { _G[function_name](table.unpack(args)) }\n"
+    ""
+    "   return json.encode({\n"
+    "       args = args,\n"
+    "       result = result,\n"
+    "   })\n"
     "end\n"
 ;
 

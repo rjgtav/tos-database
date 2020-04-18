@@ -1,9 +1,9 @@
 import {HttpClient} from "@angular/common/http";
 import {Observable, ReplaySubject} from "rxjs";
 import {TOSUrlService} from "../../service/tos-url.service";
-import {TOSRegionService} from "../tos-region";
 import {FlexSearchEntry} from "../../../../../../tos-search/src/service/flexsearch.service";
 import {ITOSEntityV2} from "./tos-domain";
+import {switchMap} from "rxjs/operators";
 
 export class V2TOSEntityProxy<ENTITY extends ITOSEntityV2> implements ITOSEntityV2 {
 
@@ -27,11 +27,13 @@ export class V2TOSEntityProxy<ENTITY extends ITOSEntityV2> implements ITOSEntity
       .forEach(key => this[key] = this.$entry[key]);
   }
 
+  get Url() { return this.get().pipe(switchMap(value => value.Url)) }
+
   get(): Observable<ENTITY> {
     if (this.$proxy == null) {
       this.$proxy = new ReplaySubject(1);
       this.$http
-        .get<object>(TOSUrlService.Api(`data/${ TOSRegionService.toUrl() }/${ this.$entry.$table }/${ this.$entry.ClassID }.js`))
+        .get<object>(TOSUrlService.ApiData(this.$entry.ClassID, this.$entry.$table))
         .subscribe(value => this.$proxy.next(this.$factory(value)));
     }
 

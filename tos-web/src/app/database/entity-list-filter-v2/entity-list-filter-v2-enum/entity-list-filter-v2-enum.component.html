@@ -1,14 +1,5 @@
-<!-- Radio Interface -->
-<div class="btn-group d-none d-md-block" *ngIf="isRadio()">
-  <button *ngFor="let option of filter.options" class="btn btn-info" type="button"
-          [ngClass]="{ 'active': filter?.is(option) }"
-          (click)="select(option)">
-    {{ option.translation }}
-  </button>
-</div>
-
 <!-- Dropdown Interface -->
-<div class="dropdown" [ngClass]="{ 'd-block d-md-none': isRadio() }"
+<div class="dropdown" [ngClass]="{ 'd-block d-md-none': !isDropdown() }"
      [attachOutsideOnClick]="true" (clickOutside)="show = false">
 
   <!-- Selected -->
@@ -16,11 +7,20 @@
           (click)="show = !show">{{ selected() || '&nbsp;' }}</button>
 
   <!-- Popup -->
-  <div class="dropdown-menu" [ngClass]="{ 'show': show  }">
+  <div class="dropdown-menu" [ngClass]="{ 'dropdown-menu-center': isRadio(), 'show': show  }">
     <button *ngIf="!isRadio()" class="dropdown-item" type="button"
             (click)="select(null)">&nbsp;</button>
     <button *ngFor="let option of filter.options" class="dropdown-item" type="button"
             [ngClass]="{ 'active': filter?.is(option) }"
             (click)="select(option)">{{ option.translation }}</button>
   </div>
+</div>
+
+<!-- Tabbed Interface -->
+<div class="d-none d-md-flex flex-wrap" *ngIf="!isDropdown()">
+  <button *ngFor="let option of filter.options" class="btn btn-outline-primary m-1 text-nowrap" style="flex: 1 1 auto" type="button"
+          [ngClass]="{ 'active': filter?.is(option) }"
+          (click)="select(option)">
+    {{ option.translation }}
+  </button>
 </div>

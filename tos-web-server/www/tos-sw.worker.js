@@ -6,7 +6,7 @@
     const CACHE_ASSETS_REGION = 'tos-sw:assets/{region}';
     const PARAM_BUST = 'tos-sw-cache-bust';
     const PARAM_HASH = 'tos-sw-hash';
-    const REGEX_DATA_INCLUDE = [new RegExp('^\\/api\\/data\\/([a-z]+)\\/.*\.js$')];
+    const REGEX_API_INCLUDE = [new RegExp('^\\/api\\/([a-z]+)\\/(data|image)\\/.*\.js$')];
     const REGEX_MANIFEST_INCLUDE = [new RegExp('^.*\\/tos-sw\\.manifest\\.js$')];
     const REGEX_REGION_INCLUDE = [new RegExp('^\\/assets\\/region\\/([a-z]+)\\/.*$')];
     const REGEX_NAVIGATION_INCLUDE = [new RegExp('^\\/.*$')];
@@ -92,6 +92,9 @@
         // In case it's a navigation request, redirect it to the index.html
         if (isRequestNavigation(request))
             return await fetchAndCache(new Request((await getManifest()).index), false);
+
+        if (request.url.endsWith('items/weapon/125104'))
+            debugger;
 
         // Otherwise just fetch it normally
         return await fetchAndCache(request, false);
@@ -183,9 +186,9 @@
         if (isRequestManifest(request)) {
             cache = await getCacheApp();
             version = null;
-        } else if (isRequestData(request)) {
+        } else if (isRequestApi(request)) {
             let manifest = await getManifest();
-            let region = REGEX_DATA_INCLUDE[0].exec(url)[1];
+            let region = REGEX_API_INCLUDE[0].exec(url)[1];
 
             cache = await getCacheAssetsRegion(region);
             version = manifest.version;
@@ -217,8 +220,7 @@
      * Use of this source code is governed by an MIT-style license that can be
      * found in the LICENSE file at https://angular.io/license
      */
-    function isRequest(request, accept, navigate, regexExclude, regexInclude) {
-        if (request.mode !== 'navigate' && navigate) return false;
+    function isRequest(request, accept, regexExclude, regexInclude) {
         if (request.headers.get('Accept') && !request.headers.get('Accept').split(',').some(value => value.trim().toLowerCase() === accept) && accept) return false;
 
         let urlPrefix = self.registration.scope.replace(/\/$/, '');
@@ -231,10 +233,10 @@
             (regexInclude == null || regexInclude.some(regex => regex.test(urlWithoutQueryOrHash)) === true)
         );
     }
-    function isRequestData(request) { return isRequest(request, 'application/json', null, null, REGEX_DATA_INCLUDE) }
-    function isRequestManifest(request) { return isRequest(request, 'application/json', null, null, REGEX_MANIFEST_INCLUDE) }
-    function isRequestNavigation(request) { return isRequest(request, 'text/html', true, REGEX_NAVIGATION_EXCLUDE, REGEX_NAVIGATION_INCLUDE) }
-    function isRequestRegion(request) { return isRequest(request, null, null, null, REGEX_REGION_INCLUDE) }
+    function isRequestApi(request) { return isRequest(request, 'application/json', null, REGEX_API_INCLUDE) }
+    function isRequestManifest(request) { return isRequest(request, 'application/json', null, REGEX_MANIFEST_INCLUDE) }
+    function isRequestNavigation(request) { return isRequest(request, 'text/html', REGEX_NAVIGATION_EXCLUDE, REGEX_NAVIGATION_INCLUDE) }
+    function isRequestRegion(request) { return isRequest(request, null, null, REGEX_REGION_INCLUDE) }
 
     function log(level, ...message) {
       let now = new Date();

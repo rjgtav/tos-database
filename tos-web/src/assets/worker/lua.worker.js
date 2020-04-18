@@ -278,10 +278,12 @@ self.onmessage = async function(event) {
 function luaRuntimeCall(functionName, ...functionArgs) {
   let result = LUA.ccall('LUA_RUNTIME_CALL', 'string', ['string', 'string'], [functionName, JSON.stringify(functionArgs)]);
 
+  if (result == null)
+    return result;
   if (result === '$ERROR$')
     throw new Error('An error has occurred during LUA_RUNTIME_CALL. Please check the previous log message for details');
 
-  return result;
+  return JSON.parse(result);
 }
 
 function postResponse(cmd, nonce, payload) {

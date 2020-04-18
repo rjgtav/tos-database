@@ -10,8 +10,8 @@ import {EntityTableV2Cell} from "../entity-table-v2-cell.model";
 })
 export class EntityTableV2CellIconComponent<ENTITY extends ITOSEntityV2> implements OnChanges {
 
-  @Input()    cell: EntityTableV2CellIcon<ENTITY>;
-  @Input()    content: ENTITY;
+  @Input()    config: EntityTableV2CellIcon<ENTITY>;
+  @Input()    entity: ENTITY;
 
   id: string;
   size: number;
@@ -19,10 +19,10 @@ export class EntityTableV2CellIconComponent<ENTITY extends ITOSEntityV2> impleme
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.cell && this.cell)
-      this.size = this.cell.size;
-    if (changes.content && this.content)
-      this.id = this.content[this.cell.key] as any;
+    if (changes.config && this.config)
+      this.size = this.config.size;
+    if (changes.entity && this.entity)
+      this.id = this.entity[this.config.key] as any;
   }
 
 }

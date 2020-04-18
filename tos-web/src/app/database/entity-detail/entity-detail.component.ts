@@ -16,20 +16,20 @@ import {TOSAttribute} from "../../shared/domain/tos/attribute/tos-attribute.mode
 import {TOSSkill} from "../../shared/domain/tos/skill/tos-skill.model";
 import {TOSDatabaseBuild} from "../../shared/domain/tos/tos-build";
 import {TOSJob} from "../../shared/domain/tos/job/tos-job.model";
-import {AttributeListConfigurationResolver} from "../resolvers/attribute-list-configuration.resolver";
-import {CollectionListConfigurationResolver} from "../resolvers/collection-list-configuration.resolver";
-import {GemListConfigurationResolver} from "../resolvers/gem-list-configuration.resolver";
-import {ItemListConfigurationResolver} from "../resolvers/item-list-configuration.resolver";
-import {JobListConfigurationResolver} from "../resolvers/job-list-configuration.resolver";
-import {SkillListConfigurationResolver} from "../resolvers/skill-list-configuration.resolver";
-import {RecipeListConfigurationResolver} from "../resolvers/recipe-list-configuration.resolver";
-import {MonsterListConfigurationResolver} from "../resolvers/monster-list-configuration.resolver";
-import {CubeListConfigurationResolver} from "../resolvers/cube-list-configuration.resolver";
-import {EquipmentSetListConfigurationResolver} from "../resolvers/equipment-set-list-configuration.resolver";
+import {AttributeListConfigurationResolver} from "../resolvers/deprecated/attribute-list-configuration.resolver";
+import {CollectionListConfigurationResolver} from "../resolvers/deprecated/collection-list-configuration.resolver";
+import {GemListConfigurationResolver} from "../resolvers/deprecated/gem-list-configuration.resolver";
+import {ItemListConfigurationResolver} from "../resolvers/deprecated/item-list-configuration.resolver";
+import {JobListConfigurationResolver} from "../resolvers/deprecated/job-list-configuration.resolver";
+import {SkillListConfigurationResolver} from "../resolvers/deprecated/skill-list-configuration.resolver";
+import {RecipeListConfigurationResolver} from "../resolvers/deprecated/recipe-list-configuration.resolver";
+import {MonsterListConfigurationResolver} from "../resolvers/deprecated/monster-list-configuration.resolver";
+import {CubeListConfigurationResolver} from "../resolvers/deprecated/cube-list-configuration.resolver";
+import {EquipmentSetListConfigurationResolver} from "../resolvers/deprecated/equipment-set-list-configuration.resolver";
 import {TOSRegionService} from "../../shared/domain/tos-region";
 import {TOSMap} from "../../shared/domain/tos/map/tos-map.model";
 import {ITOSEntity} from "../../shared/domain/tos/tos-domain";
-import {MapListConfigurationResolver} from "../resolvers/map-list-configuration.resolver";
+import {MapListConfigurationResolver} from "../resolvers/deprecated/map-list-configuration.resolver";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

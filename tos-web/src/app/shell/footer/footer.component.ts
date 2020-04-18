@@ -1,8 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component} from '@angular/core';
-import {Theme, ThemeService} from "../../shared/service/theme.service";
-import {Subscription} from "rxjs";
 import {VersionService} from "../../shared/service/version.service";
 import {LoadingService} from "../loading/loading.service";
+import {PreferenceService, PreferenceTheme} from "../../shared/service/preference.service";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -15,16 +14,14 @@ export class FooterComponent {
   isLightTheme: boolean;
   updateVersion: string;
 
-  subscriptionTheme: Subscription;
-
   constructor(
     private changeDetector: ChangeDetectorRef,
     private loading: LoadingService,
-    private theme: ThemeService,
+    private preferences: PreferenceService,
     private update: VersionService,
   ) {
-    this.update.versionHuman$.subscribe(value => this.onVersionChange(value));
-    this.theme.change$.subscribe(value => this.onThemeChange(value));
+    this.preferences.getTheme$().subscribe(value => this.onChangeTheme(value));
+    this.update.versionHuman$.subscribe(value => this.onChangeVersion(value));
   }
 
   onClearCacheClick(event: MouseEvent) {
@@ -32,12 +29,12 @@ export class FooterComponent {
     this.loading.reset();
   }
 
-  onThemeChange(theme: Theme) {
-    this.isLightTheme = theme == Theme.LIGHT;
+  onChangeTheme(theme: PreferenceTheme) {
+    this.isLightTheme = theme == PreferenceTheme.LIGHT;
     this.changeDetector.markForCheck();
   }
 
-  onVersionChange(value: string) {
+  onChangeVersion(value: string) {
     this.updateVersion = value;
     this.changeDetector.markForCheck();
   }

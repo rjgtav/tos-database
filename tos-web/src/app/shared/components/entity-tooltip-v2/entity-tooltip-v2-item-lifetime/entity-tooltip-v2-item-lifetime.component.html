@@ -1,0 +1,5 @@
+<div *ngIf="entity.LifeTime > 0" class="bg-info mb-3 p-2 progress-bar-animated progress-bar-striped text-center text-white">
+  <fa-icon [icon]="faHourglassStart"></fa-icon>&nbsp;
+  <tos-text [text]="'RemainTime:{Auto_1}' | translate"></tos-text>
+  <tos-text-time [time]="entity.LifeTime"></tos-text-time>
+</div>

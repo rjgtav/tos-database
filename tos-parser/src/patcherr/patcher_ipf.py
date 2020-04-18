@@ -31,9 +31,9 @@ IPF_BLACKLIST = [
 
 
 def unpack(ipf):
-    ipf = str(ipf) + '_001001.ipf' if isinstance(ipf, (int, long)) else ipf
-    ipf = os.path.join(constants.PATH_INPUT_PATCH_DATA_FULL, ipf) if os.path.exists(os.path.join(constants.PATH_INPUT_PATCH_DATA_FULL, ipf)) else ipf
-    ipf = os.path.join(constants.PATH_INPUT_PATCH_DATA_PARTIAL, ipf) if os.path.exists(os.path.join(constants.PATH_INPUT_PATCH_DATA_PARTIAL, ipf)) else ipf
+    #ipf = str(ipf) + '_001001.ipf' if isinstance(ipf, (int, long)) else ipf
+    #ipf = os.path.join(constants.PATH_INPUT_PATCH_DATA_FULL, ipf) if os.path.exists(os.path.join(constants.PATH_INPUT_PATCH_DATA_FULL, ipf)) else ipf
+    #ipf = os.path.join(constants.PATH_INPUT_PATCH_DATA_PARTIAL, ipf) if os.path.exists(os.path.join(constants.PATH_INPUT_PATCH_DATA_PARTIAL, ipf)) else ipf
 
     ipf_destination = constants.PATH_INPUT_DATA
     ipf_origin = os.path.join(os.path.dirname(ipf), 'extract')

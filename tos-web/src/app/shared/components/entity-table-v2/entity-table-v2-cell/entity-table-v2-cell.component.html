@@ -3,8 +3,8 @@
 </div>
 
 <div *ngIf="!isLoading" class="position-relative">
-  <tos-entity-table-v2-cell-icon *ngIf="isCellIcon" [cell]="cell" [content]="content"></tos-entity-table-v2-cell-icon>
-  <tos-entity-table-v2-cell-icon-grade *ngIf="isCellIconGrade" [cell]="cell" [content]="content"></tos-entity-table-v2-cell-icon-grade>
-  <tos-entity-table-v2-cell-text *ngIf="isCellText" [cell]="cell" [content]="content"></tos-entity-table-v2-cell-text>
-  <tos-entity-table-v2-cell-text-date *ngIf="isCellTextDate" [cell]="cell" [content]="content"></tos-entity-table-v2-cell-text-date>
+  <tos-entity-table-v2-cell-icon *ngIf="isCellIcon" [config]="config" [entity]="entity"></tos-entity-table-v2-cell-icon>
+  <tos-entity-table-v2-cell-icon-grade *ngIf="isCellIconGrade" [config]="config" [entity]="entity"></tos-entity-table-v2-cell-icon-grade>
+  <tos-entity-table-v2-cell-text *ngIf="isCellText" [config]="config" [entity]="entity"></tos-entity-table-v2-cell-text>
+  <tos-entity-table-v2-cell-text-date *ngIf="isCellTextDate" [config]="config" [entity]="entity"></tos-entity-table-v2-cell-text-date>
 </div>

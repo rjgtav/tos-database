@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
 import {Params} from "@angular/router";
+import {ITOSEntityV2} from "../../shared/domain/tos/tos-domain";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -7,7 +8,7 @@ import {Params} from "@angular/router";
   templateUrl: './entity-list-filter-v2.component.html',
   styleUrls: ['./entity-list-filter-v2.component.scss']
 })
-export class EntityListFilterV2Component<T extends number | string, FILTER extends EntityListFilterV2<T>> {
+export class EntityListFilterV2Component<ENTITY extends ITOSEntityV2, FILTER extends EntityListFilterV2<ENTITY>> {
 
   readonly TYPE_ENUM = EntityListFilterV2$Type.ENUM;
   readonly TYPE_NUMBER = EntityListFilterV2$Type.NUMBER;
@@ -22,10 +23,10 @@ export class EntityListFilterV2Component<T extends number | string, FILTER exten
 
 }
 
-export abstract class EntityListFilterV2<T extends number | string> {
+export abstract class EntityListFilterV2<ENTITY extends ITOSEntityV2> {
 
   protected constructor(
-    public key: string,
+    public key: keyof ENTITY,
     public label: string,
     public type: EntityListFilterV2$Type,
   ) {}

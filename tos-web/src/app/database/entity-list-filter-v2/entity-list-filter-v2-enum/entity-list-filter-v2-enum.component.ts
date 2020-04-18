@@ -5,6 +5,7 @@ import {
   EntityListFilterV2Component
 } from "../entity-list-filter-v2.component";
 import {Params} from "@angular/router";
+import {ITOSEntityV2} from "../../../shared/domain/tos/tos-domain";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,20 +13,26 @@ import {Params} from "@angular/router";
   templateUrl: './entity-list-filter-v2-enum.component.html',
   styleUrls: ['./entity-list-filter-v2-enum.component.scss']
 })
-export class EntityListFilterV2EnumComponent  {
+export class EntityListFilterV2EnumComponent<ENTITY extends ITOSEntityV2>  {
 
-  @Input()  parent: EntityListFilterV2Component<string, EntityListFilterV2$Enum>;
+  @Input()  parent: EntityListFilterV2Component<ENTITY, EntityListFilterV2$Enum<ENTITY>>;
 
             show: boolean = false;
 
   get filter() { return this.parent.filter }
   get filterEmitter() { return this.parent.filterChange }
 
+  isDropdown() {
+    return this.filter && (this.filter.theme == EntityListFilterV2$Enum$Theme.DROPDOWN || this.filter.options.length > 5)
+  }
   isRadio() {
-    return this.filter && this.filter.theme == EntityListFilterV2$Enum$Theme.RADIO && this.filter.options.length < 8;
+    return this.filter && this.filter.theme == EntityListFilterV2$Enum$Theme.RADIO;
+  }
+  isTabbed() {
+    return this.filter && this.filter.theme == EntityListFilterV2$Enum$Theme.RADIO;
   }
 
-  select(option: EntityLisFilterV2$Enum$Option) {
+  select(option: EntityLisFilterV2$Enum$Option<ENTITY>) {
     this.show = false;
 
     this.filter.set(option);
@@ -48,14 +55,14 @@ export class EntityListFilterV2EnumComponent  {
 
 }
 
-export class EntityListFilterV2$Enum extends EntityListFilterV2<string> {
+export class EntityListFilterV2$Enum<ENTITY extends ITOSEntityV2> extends EntityListFilterV2<ENTITY> {
 
-  private optionsSelection: EntityLisFilterV2$Enum$Option[] = [];
+  private optionsSelection: EntityLisFilterV2$Enum$Option<ENTITY>[] = [];
 
   constructor(
-    public key: string,
+    public key: keyof ENTITY,
     public label: string,
-    public options: EntityLisFilterV2$Enum$Option[],
+    public options: EntityLisFilterV2$Enum$Option<ENTITY>[],
     public selection: EntityListFilterV2$Enum$Selection,
     public theme: EntityListFilterV2$Enum$Theme,
   ) { super(key, label, EntityListFilterV2$Type.ENUM) }
@@ -67,7 +74,7 @@ export class EntityListFilterV2$Enum extends EntityListFilterV2<string> {
     return clone;
   }
 
-  filter(value: object): boolean {
+  filter(value: ENTITY): boolean {
     if (this.optionsSelection == null || this.optionsSelection.length == 0)
       return true;
     if (value[this.key] == null)
@@ -76,14 +83,14 @@ export class EntityListFilterV2$Enum extends EntityListFilterV2<string> {
     // Note: when MULTI selection, we do an AND on all the selected options
     return this.selection == EntityListFilterV2$Enum$Selection.SINGLE
       ? this.optionsSelection[0].value == value[this.key]
-      : this.optionsSelection.find(option => value[this.key].find(v => v == option.value) == null) == null
+      : this.optionsSelection.find(option => ((value[this.key] as unknown) as any[]).find(v => v == option.value) == null) == null
     ;
   }
 
   get() { return this.optionsSelection }
-  is(value: EntityLisFilterV2$Enum$Option) { return this.optionsSelection && !!this.optionsSelection.find(option => option.value == value.value) }
+  is(value: EntityLisFilterV2$Enum$Option<ENTITY>) { return this.optionsSelection && !!this.optionsSelection.find(option => option.value == value.value) }
 
-  set(value: EntityLisFilterV2$Enum$Option) {
+  set(value: EntityLisFilterV2$Enum$Option<ENTITY>) {
     if (value == null) {
       this.optionsSelection = [];
       return;
@@ -113,7 +120,7 @@ export class EntityListFilterV2$Enum extends EntityListFilterV2<string> {
     this.optionsSelection = [];
 
     if (params.hasOwnProperty(this.key)) {
-      let options = params[this.key].split(',').map(value => decodeURIComponent(value));
+      let options = params[this.key + ''].split(',').map(value => decodeURIComponent(value));
           options.forEach(value => this.set(this.options.find(option => option.value == value)));
     } else {
       // If radio, default to the first option
@@ -122,7 +129,7 @@ export class EntityListFilterV2$Enum extends EntityListFilterV2<string> {
     }
   }
   paramsExport(params: Params) {
-    params[this.key] = this.optionsSelection.map(option => encodeURIComponent(option.value + '')).join(',') || undefined;
+    params[this.key + ''] = this.optionsSelection.map(option => encodeURIComponent(option.value + '')).join(',') || undefined;
   }
 
 }
@@ -135,8 +142,8 @@ export enum EntityListFilterV2$Enum$Theme {
   RADIO,
 }
 
-interface EntityLisFilterV2$Enum$Option {
+interface EntityLisFilterV2$Enum$Option<ENTITY extends ITOSEntityV2> {
   translation: string;
-  value: string | number;
+  value: ENTITY[keyof ENTITY];
 }
 

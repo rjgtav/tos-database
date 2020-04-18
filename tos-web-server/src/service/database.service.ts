@@ -14,7 +14,7 @@ const pool = new Pool({
     min: 2
 });
 
-export abstract class TOSDatabaseService {
+export abstract class DatabaseService {
 
     public static async end() {
         return pool.end();
@@ -23,20 +23,26 @@ export abstract class TOSDatabaseService {
     public static async entries(schema: string, table: string): Promise<TOSEntry[]> {
         return this
             .query<TOSEntry>(schema, `SELECT * FROM ${ this.sanitize(table) }`, null)
-            .then(value => value.map(TOSDatabaseService.entryMapper));
+            .then(value => value.map(DatabaseService.entryMapper));
     }
     public static async entryByClassID(schema: string, table: string, ClassID: number): Promise<TOSEntry> {
         return this
             .query<TOSEntry>(schema, `SELECT * FROM ${ this.sanitize(table) } WHERE "ClassID" = $1`, [ClassID])
-            .then(value => value.map(TOSDatabaseService.entryMapper)[0]);
+            .then(value => value.map(DatabaseService.entryMapper)[0]);
     }
     public static async entryByClassName(schema: string, table: string, ClassName: string): Promise<TOSEntry> {
         return this
             .query<TOSEntry>(schema, `SELECT * FROM ${ this.sanitize(table) } WHERE "ClassName" = $1`, [ClassName])
-            .then(value => value.map(TOSDatabaseService.entryMapper)[0]);
+            .then(value => value.map(DatabaseService.entryMapper)[0]);
     }
     private static entryMapper(value: TOSEntry): TOSEntry {
         delete value.__Entry_Hash;
+
+        // Convert all number columns to numbers. For some reason node-postgres doesn't convert NUMERIC columns to number
+        Object
+            .keys(value)
+            .filter(key => !isNaN(value[key]) && value[key] != '')
+            .forEach(key => value[key] = +value[key]);
 
         return value;
     }
@@ -63,7 +69,7 @@ export abstract class TOSDatabaseService {
 
     // Same as tos-parser/src/utils/pgutil.py > sanitize
     public static sanitize(param: string): string {
-        return param.replace(/[^a-zA-Z0-9_]+/g, ''); // Remove suspicious characters to prevent SQL injection
+        return param.replace(/[^a-zA-Z0-9_*]+/g, ''); // Remove suspicious characters to prevent SQL injection
     }
 
     // Same as tos-parser/src/utils/pgutil.py > schema

@@ -1,0 +1,4 @@
+<tos-text *ngIf="d > 0" [text]="('{Day}' | translate) + ' '" [textValues]="{ 'Day': d }"></tos-text>
+<tos-text *ngIf="h > 0" [text]="('{Hour}' | translate) + ' '" [textValues]="{ 'Hour': h }"></tos-text>
+<tos-text *ngIf="m >= 0" [text]="('{Min}' | translate) + ' '" [textValues]="{ 'Min': m }"></tos-text>
+<tos-text [text]="'{Sec}' | translate" [textValues]="{ 'Sec': s }"></tos-text>

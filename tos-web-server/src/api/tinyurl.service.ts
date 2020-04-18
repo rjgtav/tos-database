@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {Express, NextFunction, Request, Response} from "express";
 
-export abstract class TinyUrlService {
+export abstract class ApiTinyUrlService {
 
     public static handler(app: Express, endpoint: string) {
         app.post(`${ endpoint }/create`, (req, res, next) => this.create(req, res, next));

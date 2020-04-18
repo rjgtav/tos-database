@@ -1,8 +1,10 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import path from 'path';
-import {TinyUrlService} from "./api/tinyurl.service";
-import {TOSDataService} from "./api/data/data.service";
+import {ApiDataService} from "./api/data.service";
+import {ApiTinyUrlService} from "./api/tinyurl.service";
+import {TranslateService} from "./service/translate.service";
+import {ApiImageService, ImageService} from "./api/image.service";
 
 // Frontend
 // TODO: remove patreon from index.html and load it lazily
@@ -24,6 +26,10 @@ import {TOSDataService} from "./api/data/data.service";
 // TODO: instead of using the tos-html project, simply generate the templates live
 // TODO: update service worker as we'll now be versioning every item, need to delete the data from the previous patch, etc. what about images?
 
+// Initialize services
+ImageService.loadAll();
+TranslateService.loadAll();
+
 // Initialize server
 const port = 3939;
 const app = express();
@@ -32,8 +38,9 @@ const app = express();
       app.use(express.static('www', { etag: false, lastModified: false }));
 
 // REST API
-TOSDataService.handler(app, '/api/data');
-TinyUrlService.handler(app, '/api/tinyurl');
+ApiDataService.handler(app, '/api/:region/data/:language');
+ApiImageService.handler(app, '/api/:region/image');
+ApiTinyUrlService.handler(app, '/api/tinyurl');
 
 // Redirect all non-file unrecognized routes to index.html, in order to support Angular html5mode routes
 app.get(/^[^.]*$/, (req, res) => res.sendFile(path.resolve('www/index.html')));

@@ -5,6 +5,7 @@ import {
   EntityListFilterV2Component
 } from "../entity-list-filter-v2.component";
 import {Params} from "@angular/router";
+import {ITOSEntityV2} from "../../../shared/domain/tos/tos-domain";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,9 +13,9 @@ import {Params} from "@angular/router";
   templateUrl: './entity-list-filter-v2-number.component.html',
   styleUrls: ['./entity-list-filter-v2-number.component.scss']
 })
-export class EntityListFilterV2NumberComponent {
+export class EntityListFilterV2NumberComponent<ENTITY extends ITOSEntityV2> {
 
-  @Input()  parent: EntityListFilterV2Component<number, EntityListFilterV2$Number>;
+  @Input()  parent: EntityListFilterV2Component<ENTITY, EntityListFilterV2$Number<ENTITY>>;
 
   constructor() { }
 
@@ -36,12 +37,12 @@ export class EntityListFilterV2NumberComponent {
 
 }
 
-export class EntityListFilterV2$Number extends EntityListFilterV2<number> {
+export class EntityListFilterV2$Number<ENTITY extends ITOSEntityV2> extends EntityListFilterV2<ENTITY> {
 
   private value$: number;
 
   constructor(
-    public key: string,
+    public key: keyof ENTITY,
     public label: string,
     public valueMin?: number,
     public valueMax?: number,
@@ -54,7 +55,7 @@ export class EntityListFilterV2$Number extends EntityListFilterV2<number> {
     return clone;
   }
 
-  filter(value: object): boolean {
+  filter(value: ENTITY): boolean {
     if (isNaN(this.value$))
       return true;
 
@@ -76,8 +77,8 @@ export class EntityListFilterV2$Number extends EntityListFilterV2<number> {
     this.value$ = undefined;
 
     if (params.hasOwnProperty(this.key))
-      this.set(+params[this.key]);
+      this.set(+params[this.key + '']);
   }
-  paramsExport(params: Params) { params[this.key] = this.get() }
+  paramsExport(params: Params) { params[this.key + ''] = this.get() }
 
 }

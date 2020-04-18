@@ -14,7 +14,7 @@ import {AsyncPipe} from "@angular/common";
 import {EntityTableV2CellText} from "./entity-table-v2-cell-text/entity-table-v2-cell-text.component";
 import {EntityTableV2CellIcon} from "./entity-table-v2-cell-icon/entity-table-v2-cell-icon.component";
 import {EntityTableV2Cell} from "./entity-table-v2-cell.model";
-import {EntityTableV2CellIconGrade} from "./entity-table-v2-cell-icon-grade/entity-table-v2-cell-icon-grade.component";
+import {EntityTableV2CellIconEquipment} from "./entity-table-v2-cell-icon-equipment/entity-table-v2-cell-icon-equipment.component";
 import {EntityTableV2CellTextDate} from "./entity-table-v2-cell-text-date/entity-table-v2-cell-text-date.component";
 
 @Component({
@@ -25,11 +25,11 @@ import {EntityTableV2CellTextDate} from "./entity-table-v2-cell-text-date/entity
 })
 export class EntityTableV2CellComponent<ENTITY extends ITOSEntityV2> implements OnChanges, OnDestroy {
 
-  @Input()                          cell: EntityTableV2Cell<ENTITY>;
-  @Input()                          content: V2TOSEntityProxy<ENTITY> | ENTITY;
+  @Input()          config: EntityTableV2Cell<ENTITY>;
+  @Input()          entity: V2TOSEntityProxy<ENTITY> | ENTITY;
 
   private async: AsyncPipe;
-  private subscriptionContent: Subscription;
+  private subscriptionEntity: Subscription;
 
   constructor(
     private changeDetector: ChangeDetectorRef,
@@ -37,30 +37,28 @@ export class EntityTableV2CellComponent<ENTITY extends ITOSEntityV2> implements 
     this.async = new AsyncPipe(changeDetector);
   }
 
-  get isLoading() { return this.cell && this.cell.proxy && (this.content == null || this.content instanceof V2TOSEntityProxy); }
+  get isLoading() { return this.config && this.config.proxy && (this.entity == null || this.entity instanceof V2TOSEntityProxy); }
 
-  get isCellIcon() { return this.cell instanceof EntityTableV2CellIcon }
-  get isCellIconGrade() { return this.cell instanceof EntityTableV2CellIconGrade }
-  get isCellText() { return this.cell instanceof EntityTableV2CellText }
-  get isCellTextDate() { return this.cell instanceof EntityTableV2CellTextDate }
+  get isCellIcon() { return this.config instanceof EntityTableV2CellIcon }
+  get isCellIconGrade() { return this.config instanceof EntityTableV2CellIconEquipment }
+  get isCellText() { return this.config instanceof EntityTableV2CellText }
+  get isCellTextDate() { return this.config instanceof EntityTableV2CellTextDate }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.content) {
-      if (this.content instanceof V2TOSEntityProxy) {
-        this.subscriptionContent && this.subscriptionContent.unsubscribe();
-        this.subscriptionContent = this.content.get().subscribe(value => this.onLoad(value));
-
-        this.changeDetector.markForCheck();
+    if (changes.entity) {
+      if (this.entity instanceof V2TOSEntityProxy) {
+        this.subscriptionEntity && this.subscriptionEntity.unsubscribe();
+        this.subscriptionEntity = this.entity.get().subscribe(value => this.onEntityLoad(value));
       }
     }
   }
 
   ngOnDestroy(): void {
-    this.subscriptionContent && this.subscriptionContent.unsubscribe();
+    this.subscriptionEntity && this.subscriptionEntity.unsubscribe();
   }
 
-  onLoad(entity: ENTITY) {
-    this.content = entity;
+  onEntityLoad(entity: ENTITY) {
+    this.entity = entity;
     this.changeDetector.markForCheck();
   }
 

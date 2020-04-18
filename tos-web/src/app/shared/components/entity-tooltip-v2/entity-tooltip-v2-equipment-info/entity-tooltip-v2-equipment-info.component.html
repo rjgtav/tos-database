@@ -1,0 +1,87 @@
+<div class="d-flex flex-wrap">
+  <!-- Background + Icon + Model -->
+  <div class="d-flex align-items-center justify-content-center position-relative"
+       [ngClass]="{
+        'background tooltip-large': size == EntityTooltipV2Size.LARGE,
+        'background tooltip-small': size == EntityTooltipV2Size.SMALL
+       }"
+       [ngStyle]="{ height: height + 'px', width: width + 'px' }">
+    <tos-image [id]="headerBackground | async" class="position-absolute"></tos-image>
+    <tos-image [id]="headerIcon | async" *ngIf="!headerModel"></tos-image>
+    <tos-model [id]="headerModel | async" [height]="height" [width]="width" *ngIf="headerModel" class="position-absolute"></tos-model>
+    <button class="btn btn-primary rounded-circle position-absolute m-2" style="right: 0; top: 0" *ngIf="size == EntityTooltipV2Size.LARGE"
+            [ngbTooltip]="'Switch to ' + (headerModel ? '2D' : '3D')"
+            (click)="onToggle3D(headerModel ? Preference3D.NO : Preference3D.YES)">
+      <fa-icon [icon]="headerModel ? faImage : faCube"></fa-icon>
+    </button>
+  </div>
+
+  <!-- Information -->
+  <div class="d-flex flex-grow-1 information"
+       [ngClass]="{
+        'tooltip-large': size == EntityTooltipV2Size.LARGE,
+        'tooltip-small': size == EntityTooltipV2Size.SMALL
+       }">
+    <div class="d-flex flex-column justify-content-around text-center">
+      <!-- Translations from ui.ipf/uixml/controlset.xml > tooltip_equip_small_img -->
+      <div class="bg-primary rounded text-outline text-white">{{ '종류' | translate }}</div> <!-- UI_20170912_002754 -->
+      <div class="bg-primary rounded text-outline text-white">{{ '직업' | translate }}</div> <!-- UI_20150317_000309 -->
+      <div class="bg-primary rounded text-outline text-white">{{ '레벨' | translate }}</div> <!-- ETC_20150317_001854 -->
+      <div class="bg-primary rounded text-outline text-white">{{ '무게' | translate }}</div> <!-- UI_20150317_000281 -->
+    </div>
+    <div class="d-flex flex-column flex-grow-1 justify-content-around pr-0 text-right">
+      <tos-text [text]="infoType | translate"></tos-text>
+      <div class="d-flex justify-content-end">
+        <!-- Taken from controlset.xml + GET_USEJOB_TOOLTIP_SMALL_IMG -->
+        <tos-image *ngFor="let job of infoJob | async" class="ml-1"
+                   [id]="job.icon"
+                   [ngbTooltip]="job.label | translate"></tos-image><!-- TODO: these translations are not inside the UI stuff -->
+      </div>
+      <div>{{ infoLevel }}</div>
+      <div>{{ infoWeight }}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Basic Properties -->
+<div class="bg-primary rounded text-white mb-3 mt-3 p-2">
+  <!-- ui.ipf/uiscp/equip_tooltip.lua > DRAW_EQUIP_ATK_N_DEF -->
+  <div *ngFor="let prop of propsBasic | async" class="d-flex">
+    <tos-image [id]="prop.icon" [filterInvert]="true"></tos-image>
+    <h5 class="ml-1 mb-0 text-outline">{{ prop.label | translate }}</h5>
+    <h5 class="mb-0 flex-grow-1 text-outline text-right" style="color: #FEE6A9">
+      <span *ngIf="prop.value_min != prop.value_max">{{ prop.value_min }} ~ </span>
+      <span>{{ prop.value_max }}</span>
+    </h5>
+  </div>
+
+  <div *ngIf="entity.Reinforce_2 > 0 || entity.Transcend > 0">
+    <hr class="mt-2 mb-2 border-secondary" />
+
+    <!-- ui.ipf/uiscp/lib_itemtooltip.lua > SET_REINFORCE_TEXT -->
+    <div class="d-flex justify-content-between text-outline">
+      <tos-text [text]="'- ' + ('MoruReinforce' | translate) + ' +' + entity.Reinforce_2"></tos-text>&nbsp;
+      <tos-text [text]="('PropUp' | translate) + (propsBasicReinforced | async)"></tos-text>
+    </div>
+
+    <!-- ui.ipf/uiscp/lib_itemtooltip.lua > SET_TRANSCEND_TEXT -->
+    <div *ngFor="let prop of propsBasicTranscended | async" class="d-flex justify-content-between text-outline">
+      <tos-text [text]="'- ' + (prop.label | translate)" [textValues]="{ 'Count': entity.Transcend }"></tos-text>&nbsp;
+      <tos-text [text]="('PropUp' | translate) + prop.value"></tos-text>
+    </div>
+  </div>
+</div>
+
+<!-- Additional Properties -->
+<div>
+  <div *ngFor="let prop of propsTooltip | async">
+    <tos-text [text]="prop.label | translate"></tos-text>&nbsp;
+    <tos-text [text]="(prop.arrow | translate) + prop.value"></tos-text>
+  </div>
+</div>
+
+<!-- Unidentified Item -->
+<div *ngIf="propsUnidentified" class="bg-info mb-4 p-2 progress-bar-animated progress-bar-striped text-center text-white">
+  <fa-icon [icon]="faSearch"></fa-icon>&nbsp;
+  <span>{{ 'AppraisalItem' | translate }}</span>
+</div>

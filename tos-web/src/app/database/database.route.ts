@@ -1,7 +1,9 @@
 import {Routes} from '@angular/router';
 import {RouteService} from "../shared/service/route.service";
 import {EntityListV2Component} from "./entity-list-v2/entity-list-v2.component";
-import {TOSArmorEquipmentListResolver} from "./resolvers/items/tos-armor-equipment-list.resolver";
+import {TOSItemArmorResolver} from "./resolvers/items/tos-item-armor.resolver";
+import {TOSItemWeaponResolver} from "./resolvers/items/tos-item-weapon.resolver";
+import {EntityDetailV2Component} from "./entity-detail-v2/entity-detail-v2.component";
 
 export const ROUTES_DATABASE: Routes = [
   {
@@ -14,9 +16,23 @@ export const ROUTES_DATABASE: Routes = [
     canActivate: [RouteService],
     canDeactivate: [RouteService],
     component: EntityListV2Component,
-    resolve: {
-      list: TOSArmorEquipmentListResolver,
-    },
+    resolve: { list: TOSItemArmorResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  {
+    path: 'items/weapon',
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: EntityListV2Component,
+    resolve: { list: TOSItemWeaponResolver },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
+  },
+  {
+    path: 'items/weapon/:id',
+    canActivate: [RouteService],
+    canDeactivate: [RouteService],
+    component: EntityDetailV2Component,
+    resolve: { detail: TOSItemWeaponResolver },
     runGuardsAndResolvers: 'paramsOrQueryParamsChange',
   },
   /*

@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable, ReplaySubject, Subject} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {TOSUrlService} from "./tos-url.service";
-import {filter, take} from "rxjs/operators";
+import {filter, map, take} from "rxjs/operators";
 import {TOSLanguageService} from "../domain/tos-language";
 import {TOSRegionService} from "../domain/tos-region";
 import {InstallService} from "./install.service";
@@ -38,8 +38,26 @@ export class LUAService {
   get progress$() { return this.lua$progress.asObservable() }
   get total$() { return this.lua$total.pipe(take(1)) }
 
-  public call(functionName: string, functionArgs: any[]): Observable<any> {
-    return this.postMessage(WorkerCommand.CALL, { functionName, functionArgs });
+  public call(functionName: string, functionArgsOriginal: any[]): Observable<any> {
+    for (let value of functionArgsOriginal)
+      if (value == null)
+        throw new Error('json_imc.encode() doesnt support nulls, therefore we cant send them');
+
+    // Note: if this ever fails saying that it cannot clone an object, make sure that I'm not sending any Observable/Subject
+    let functionArgs = functionArgsOriginal.map(value => value.toJSON ? value.toJSON() : value);
+
+    return this
+      .postMessage(WorkerCommand.CALL, { functionName, functionArgs })
+      .pipe(map((result: { args: any[], result: any[] }) => {
+        // In case LUA updated any of the objects we just sent, apply those changes (as the worker sends a copy and not the actual reference)
+        result.args
+          .filter(value => value.constructor === Object)
+          .forEach((value, i) => Object.assign(functionArgsOriginal[i], value));
+
+        return result.result.length > 1
+          ? result.result
+          : result.result[0];
+      }));
   }
 
   private initialize() {

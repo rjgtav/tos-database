@@ -1,25 +1,26 @@
 <table class="table table-hover mb-0">
-  <thead>
+  <thead class="bg-primary text-nowrap text-white">
     <tr>
-      <th *ngFor="let column of columns; trackBy: trackByIndex" class="bg-primary position-sticky text-nowrap text-white"
-          (click)="onSortClick(column.cell.key)"
+      <th *ngFor="let column of columns; trackBy: trackByIndex" class="position-sticky"
+          (click)="onSortClick(column.config.key)"
           [width]="column.grow ? '' : '1'">
         {{ column.label }}
-        {{ sortIndicator(column.cell.key) }}
+        {{ sortIndicator(column.config.key) }}
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of content; trackBy: trackByClassID">
+    <a *ngFor="let row of content; trackBy: trackByClassID" class="d-table-row"
+       [routerLink]="row.Url | async">
       <td *ngFor="let column of columns; trackBy: trackByIndex" class="align-middle position-relative"
           [ngClass]="{
             'text-nowrap': !column.grow,
-            'p-1': column.cell.image
+            'image p-1': column.config.image
           }">
-        <tos-entity-table-v2-cell [cell]="column.cell"
-                                  [content]="row"></tos-entity-table-v2-cell>
+        <tos-entity-table-v2-cell [config]="column.config"
+                                  [entity]="row"></tos-entity-table-v2-cell>
       </td>
-    </tr>
+    </a>
   </tbody>
   <tfoot>
     <tr>

@@ -4,7 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "main": "tsc && node dist/tos-web-server/src/app.js"
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "start": "node dist/tos-web-server/src/app.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +25,8 @@
     "@types/express": "^4.17.0",
     "@types/node": "^12.6.8",
     "@types/pg": "^7.4.14",
+    "rimraf": "^3.0.0",
     "tslint": "^5.18.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.2"
   }
 }

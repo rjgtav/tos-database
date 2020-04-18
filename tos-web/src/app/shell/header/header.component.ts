@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
-import {Theme, ThemeService} from "../../shared/service/theme.service";
 import {faMoon, faSearch, faSync, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {faSun} from "@fortawesome/free-solid-svg-icons/faSun";
 import {TOSUrlService} from "../../shared/service/tos-url.service";
@@ -7,6 +6,7 @@ import {TOSRegion, TOSRegionService} from "../../shared/domain/tos-region";
 import {PatreonService} from "../../home/patreon/patreon.service";
 import {InstallService} from "../../shared/service/install.service";
 import {TOSLanguage, TOSLanguageService} from "../../shared/domain/tos-language";
+import {PreferenceService, PreferenceTheme} from "../../shared/service/preference.service";
 
 const UPDATE_KEY = 'update';
 const UPDATE_INTERVAL = 60 * 60 * 1000;
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   readonly LANGUAGES = TOSLanguageService.values();
   readonly REGIONS = TOSRegionService.values();
 
-  readonly Theme = Theme;
+  readonly PreferenceTheme = PreferenceTheme;
   readonly TOSLanguageService = TOSLanguageService;
   readonly TOSRegion = TOSRegion;
   readonly TOSRegionService = TOSRegionService;
@@ -34,6 +34,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   languageSelected: TOSLanguage;
   regionSelected: TOSRegion;
+  themeSelected: PreferenceTheme;
 
   patrons: string[];
   patronsCount: number;
@@ -49,7 +50,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private changeDetector: ChangeDetectorRef,
     private install: InstallService,
     private patreon: PatreonService,
-    public theme: ThemeService,
+    private preference: PreferenceService,
     private zone: NgZone,
   ) {
     this.languageSelected = TOSLanguageService.get();
@@ -59,7 +60,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.patrons = value.result;
       this.patronsCount = value.total;
       this.changeDetector.markForCheck();
-    })
+    });
+    this.preference.getTheme$().subscribe(value => {
+      this.themeSelected = value;
+      this.changeDetector.markForCheck();
+    });
   }
 
   ngOnInit(): void {
@@ -70,7 +75,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     clearTimeout(this.isUpdateCheckTimeout);
   }
 
-  languageSelect(language: any) {
+  languageSelect(language: TOSLanguage) {
     TOSLanguageService.set(language);
     return false;
   }
@@ -88,6 +93,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   regionSelect(region: any): boolean {
     TOSRegionService.set(region);
     return false;
+  }
+
+  themeSelect(value: PreferenceTheme) {
+    this.preference.setTheme(value);
   }
 
   updateInstall(event: MouseEvent) {

@@ -1,26 +1,18 @@
 import csv
-import datetime
 import logging
-import multiprocessing
 import os
 import shutil
-import threading
 
 import constants
 from parserr import parser_ies, parser_assets
-from patcherr import patcher_ipf, patcher_pak
-from utils import pgutil, listutil, fileutil, jsonutil
+from patcherr import patcher_ipf, patcher_pak, patcher
+from utils import pgutil, listutil, fileutil, jsonutil, threadingutil
 
 META_TABLE = '__meta__'
 META_KEY_VERSION = 'tos-parser/version'
 
-threads = []
-threads_error = False
-threads_semaphore = threading.Semaphore(multiprocessing.cpu_count() * 2)
-
 
 def parse(region, update):
-    global threads_error, threads, threads_semaphore
 
     # Initialize csv dialects
     csv.register_dialect('ies', delimiter=',', doublequote=False, escapechar=None, lineterminator='\r\n', quotechar='"', quoting=csv.QUOTE_MINIMAL, skipinitialspace=False)
@@ -32,67 +24,40 @@ def parse(region, update):
 
     # Initialize version
     version_data, version_release = version_read(schema)
-    version_data_list = [TOSVersion(file) for file in fileutil.walk(constants.PATH_INPUT_PATCH_DATA_PARTIAL, '*.ipf')]
-    version_release_list = [TOSVersion(file) for file in fileutil.walk(constants.PATH_INPUT_PATCH_RELEASE, '*.pak')]
 
-    # Update data to the latest version, one version at a time
-    for version_data_new in version_data_list:
-        if version_data_new <= version_data:
-            continue
+    # Patch the base game (in case it's the first time we're running)
+    if version_data is None:
+        logging.debug('Patching the base game...')
+        shutil.rmtree(constants.PATH_INPUT_DATA)
 
-        # Patch the full game (in case it's the first time we're running)
-        ies_list = []
+        for version_data in [TOSVersion(file, constants.PATH_INPUT_PATCH_DATA_FULL_URL) for file in fileutil.walk(constants.PATH_INPUT_PATCH_DATA_FULL, '*.ipf')]:
+            for ies in parse_ies_list([ies for ies in patcher_ipf.unpack(version_data.patch) if ies.endswith('.ies')]):
+                threadingutil.start(ParseThread(ies, schema, version_data))
+            threadingutil.join()
 
-        if version_data is None:
-            shutil.rmtree(constants.PATH_INPUT_DATA)
+    # Patch data to the latest version
+    for version_data_new in [TOSVersion(file, constants.PATH_INPUT_PATCH_DATA_PARTIAL_URL) for file in fileutil.walk(constants.PATH_INPUT_PATCH_DATA_PARTIAL, '*.ipf')]:
+        if version_data_new > version_data:
+            #logging.debug('Patching data %s @ %s', version_data_new.version, version_data_new.modified())
+            # Parse data
+            for ies in parse_ies_list([ies for ies in patcher_ipf.unpack(version_data_new.patch) if ies.endswith('.ies')]):
+                threadingutil.start(ParseThread(ies, schema, version_data_new))
+            threadingutil.join()
 
-            for ipf in [file for file in fileutil.walk(constants.PATH_INPUT_PATCH_DATA_FULL, '*.ipf')]:
-                for ies in [ies for ies in patcher_ipf.unpack(ipf) if ies.endswith('.ies')]:
-                    ies_list.append(ies)
+            # Save version
+            version_data = version_data_new
+            version_write(schema, version_data, version_release)
 
-        # Update data
-        version_data = version_data_new
-        version_data_next = version_data_list.index(version_data)
-        version_data_next = version_data_list[version_data_next + 1] if version_data_next + 1 < len(version_data_list) else None
+    # Update release to the latest version
+    for version_release_new in [TOSVersion(file, constants.PATH_INPUT_PATCH_RELEASE_URL) for file in fileutil.walk(constants.PATH_INPUT_PATCH_RELEASE, '*.pak')]:
+        if version_release_new > version_release:
+            #logging.debug('Patching release %s @ %s', version_release_new.version, version_release_new.modified())
+            # Extract release
+            patcher_pak.unpack(version_release_new.patch)
 
-        for ies in [ies for ies in patcher_ipf.unpack(version_data.version) if ies.endswith('.ies')]:
-            ies_list.append(ies)
-
-        # Update release to the corresponding version (i.e. right before the next data version)
-        for version_release_new in version_release_list:
-            if version_release_new <= version_release:
-                continue
-            if version_release_new >= version_data_next:
-                break
-
+            # Save version
             version_release = version_release_new
-
-            patcher_pak.unpack(version_release.version)
-
-        # If nothing changed, continue
-        if ies_list:
-
-            # Parse each extracted ies
-            threads = []
-
-            for ies in parse_ies_list(ies_list):
-                threads_semaphore.acquire()
-                thread = ParseThread(ies, schema, version_data.version, version_data.modified)
-                thread.start()
-                threads.append(thread)
-
-            # Wait for all threads to finish
-            for thread in threads:
-                thread.join()
-
-            if threads_error:
-                break
-
-        # Save new version
-        version_write(schema, version_data, version_release)
-
-    if threads_error:
-        raise Exception
+            version_write(schema, version_data, version_release)
 
     # Parse assets
     parser_assets.parse(region, update)
@@ -111,32 +76,31 @@ def version_read(schema):
     version = pgutil.storage_get(schema, pgutil.STORAGE_KEY_VERSION)
     version = jsonutil.loads(version[0][0]) if version else None
 
-    if version is None:
-        return None, None
+    version_data = int(version['version_data']) if version is not None and 'version_data' in version else None
+    version_release = int(version['version_release']) if version is not None and 'version_release' in version else None
 
-    return version['version_data'], version['version_release']
+    return version_data, version_release
 
 
 def version_write(schema, version_data, version_release):
     version = {
         'version_data': int(str(version_data)),
-        'version_release': int(str(version_release)),
+        'version_release': int(str(version_release)) if version_release is not None else 0,
     }
 
     pgutil.storage_set(schema, pgutil.STORAGE_KEY_VERSION, jsonutil.dumps(version))
 
 
-class ParseThread(threading.Thread):
-    def __init__(self, ies, schema, version, version_modified):
-        threading.Thread.__init__(self)
+class ParseThread(threadingutil.TOSThread):
+
+    def __init__(self, ies, schema, version):
+        threadingutil.TOSThread.__init__(self)
 
         self.ies = ies
         self.schema = schema
-        self.version = version
-        self.version_modified = version_modified
+        self.version_modified = version.modified()
 
-    def run(self):
-        global threads_error, threads_semaphore
+    def run_implementation(self):
         connection = None
         cursor = None
 
@@ -144,32 +108,41 @@ class ParseThread(threading.Thread):
             connection, cursor = pgutil.cursor(self.schema)
             parser_ies.parse(cursor, self.ies, self.schema, self.version_modified)
         except:
-            logging.error('Failed to parse ies: %s, schema: %s, version: %s', self.ies, self.schema, self.version)
-            threads_error = True
+            logging.error('Failed to parse ies: %s, schema: %s, version: %s', self.ies, self.schema, self.version_modified)
             raise
         finally:
             if cursor:      cursor.close()
             if connection:  connection.close()
 
-            threads_semaphore.release()
-
 
 class TOSVersion:
-    def __init__(self, path):
-        self.modified = datetime.datetime.fromtimestamp(os.path.getmtime(path))
-        self.version = int(os.path.basename(path).split('_')[0])
+    def __init__(self, patch, patch_url):
+        self.patch = patch
+        self.patch_url = patch_url
+        self.version = int(os.path.basename(patch).split('_')[0]) if patch is not None and os.path.basename(patch).split('_')[0].isdigit() else 0
+        self._version_modified = None
 
     def __cmp__(self, other):
         if isinstance(other, TOSVersion):
             return cmp(self.version, other.version)
+        if other is None:
+            return cmp(self.version, 0)
 
         return cmp(self.version, other)
 
     def __eq__(self, other):
         if isinstance(other, TOSVersion):
             return self.version == other.version
+        if other is None:
+            return self.version == 0
 
         return self.version == other
 
     def __str__(self):
         return str(self.version)
+
+    def modified(self):
+        if self._version_modified is None:
+            self._version_modified = patcher.patch_modified(self.patch_url + os.path.basename(self.patch))
+
+        return self._version_modified

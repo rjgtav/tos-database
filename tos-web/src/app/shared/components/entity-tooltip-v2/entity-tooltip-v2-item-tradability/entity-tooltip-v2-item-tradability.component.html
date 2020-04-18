@@ -1,0 +1,18 @@
+<table class="table table-bordered table-sm text-center text-white mb-0">
+  <thead>
+    <tr>
+      <th class="border-0 p-0 w-50"></th>
+      <th class="border-0 p-0 w-50"></th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr>
+      <td [ngClass]="isTradable('ShopTrade')" class="border-top-0">{{ '상점' | translate }}</td>
+      <td [ngClass]="isTradable('MarketTrade')" class="border-top-0">{{ '마켓' | translate }}</td>
+    </tr>
+    <tr>
+      <td [ngClass]="isTradable('TeamTrade')">{{ '팀 창고' | translate }}</td>
+      <td [ngClass]="isTradable('UserTrade')">{{ '개인' | translate }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,96 @@
+Endianness: Little-endian
+
+=== Format Specifications ===
+
+char {4}	- Magic Word (XAC )
+byte {4}	- Unknown (01 00 00 01)
+
+// for each chunk
+  uint32 {4}	- Chuck Identifier
+  uint32 {4}	- Chuck Length
+  uint32 {4}	- Chuck Version
+  byte {Length}	- Chunk Data
+// end for
+
+if (Chuck Identifier == 0xD) {
+  uint32 {4}	- Unknown
+  uint32 {4}	- Unknown
+  uint32 {4}	- Object Count // not sure about this
+} else if (Chuck Identifier == 5) {
+  // = Material Chunk (@rjgtav; includes .dds texture reference)
+} else if (Chuck Identifier == 1) {
+  // = Object Chunk
+  uint32 {4}	- Unknown (@rjgtav: always 0)
+  uint32 {4}	- Unknown5 Count (@rjgtav: same value as vertex count...? on c_kla_ground its different)
+  uint32 {4}	- Vertex Count
+  uint32 {4}	- Face Index Count (each Face is defined by three indices)
+  uint32 {4}	- Unknown (@rjgtav: seems like it's the Object Count)
+  uint32 {4}    - Vertex Block Count + 1
+  uint32 {4}    - Unknown
+  uint32 {4}    - Unknown (@rjgtav: always 5)
+  uint32 {4}    - Unknown (@rjgtav: always 4)
+  int16 {2}	    - Unknown
+  int16 {2}	    - Unknown
+
+  byte{4 * Vertex Count} - Unknown (@rjgtav ???)
+
+  // for each Vertex Block
+    uint32 {4}	- Vertex Block Identifier
+    uint32 {4}	- Size of Entry
+    int16 {2}	- Unknown
+    int16 {2}	- Unknown
+    byte{Size of Entry * Vertex Count}	- Vertex Block Data
+    
+    if (Vertex Block Identifier == 5) {
+      // for each Vertex
+        uint32{4}	- Index to Unknown5
+      // end for
+    } else if (Vertex Block Identifier == 0) {
+      // = XYZ Coordinates
+      // for each Vertex
+        float{32}	- X
+        float{32}	- Y
+        float{32}	- Z
+      // end for
+    } else if (Vertex Block Identifier == 1) {
+      // = Normals
+      // for each Vertex
+        float{32}	- X
+        float{32}	- Y
+        float{32}	- Z
+      // end for
+    } else if (Vertex Block Identifier == 3) {
+      // = Texture Coordinates
+      // for each Vertex
+        float{32}	- U
+        float{32}	- V // maybe has to be inverted
+      // end for
+    } else {
+      // unknown block
+    }
+  // end for
+  
+  uint32 {4}	- Face Index Count
+  uint32 {4}	- Vertex Count
+  uint32 {4}	- Unknown
+  uint32 {4}	- Unknown
+  
+  // for each Face Index
+    uint32 {4}	- Vertex Index // one face is defined by three vertex indices
+  // end for
+} else {
+  // Unknown chunk
+}
+
+=== Notes and Comments ===
+
+There can be multiple Material/Object chunks (Object Count = number of Object chunks = number of Material chunks).
+Some objects also have multiple definitions of texture coordinates (the first definition is usually the one for the diffuse map).
+
+=== Links ===
+
+http://forum.xentax.com/viewtopic.php?f=18&t=12512
+
+=== Games ===
+
+Tree of Savior .xac

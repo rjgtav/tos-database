@@ -11,17 +11,17 @@ import {EntityTableV2Cell} from "../entity-table-v2-cell.model";
 })
 export class EntityTableV2CellTextDateComponent<ENTITY extends ITOSEntityV2> implements OnChanges {
 
-  @Input()    cell: EntityTableV2CellTextDate<ENTITY>;
-  @Input()    content: ENTITY;
+  @Input()    config: EntityTableV2CellTextDate<ENTITY>;
+  @Input()    entity: ENTITY;
 
   value: Date;
 
   constructor(private changeDetector: ChangeDetectorRef) { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.content && this.content)
+    if (changes.entity && this.entity)
       ObservableUtils
-        .of(this.content[this.cell.key])
+        .of(this.entity[this.config.key])
         .subscribe(value => {
           this.value = value;
           this.changeDetector.markForCheck();

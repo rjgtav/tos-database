@@ -1,0 +1,45 @@
+<!-- Header -->
+<div class="d-flex mb-3">
+  <div class="flex-grow-1 mr-3">
+    <h2 class="mb-0">{{ detail?.entity.Name }}</h2>
+    <div class="d-flex h5 font-weight-normal mb-0 text-muted">
+      <div>{{ detail?.entity.ClassName }}</div>
+      <div>&nbsp;·&nbsp;</div>
+      <div>{{ detail?.entity.ClassID }}</div>
+    </div>
+  </div>
+  <div class="d-flex align-items-center justify-content-end">
+    <button class="btn btn-primary"
+            ngbTooltip="Link copied!" [autoClose]="true" [triggers]="'manual'" #shareTooltip="ngbTooltip"
+            (click)="onShareClick(shareTooltip)">
+      <fa-icon class="mr-2" [icon]="faLink"></fa-icon>
+      <span>Share</span>
+    </button>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="row">
+  <div *ngIf="isLoading" class="col d-flex align-items-center justify-content-center pb-5 pt-5">
+    <div class="spinner-border spinner-border text-info" [style.opacity]="isLoading ? 1 : 0"></div>
+  </div>
+  <div *ngIf="!isLoading" class="col">
+    <div class="row">
+      <!-- Tooltip -->
+      <div class="col-6">
+        <tos-entity-tooltip-v2 [config]="detail?.tooltip" class="m-auto"
+                               [entity]="detail?.entity"
+                               [mouse]="false"></tos-entity-tooltip-v2>
+      </div>
+
+      <!-- Info & Raw Data -->
+      <div class="col-6">
+        <div *ngFor="let config of detail?.info">
+          <tos-entity-detail-v2-divider *ngIf="isDetailDivider(config)" [config]="config" [entity]="detail?.entity"></tos-entity-detail-v2-divider>
+          <tos-entity-detail-v2-entity-description *ngIf="isDetailEntityDescription(config)" [config]="config" [entity]="detail?.entity"></tos-entity-detail-v2-entity-description>
+          <tos-entity-detail-v2-equipment-enhancement *ngIf="isDetailEquipmentEnhancement(config)" [config]="config" [entity]="detail?.entity"></tos-entity-detail-v2-equipment-enhancement>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

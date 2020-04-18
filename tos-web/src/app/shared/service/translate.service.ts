@@ -32,19 +32,23 @@ export class TranslateService {
     this.translate$progress.next(0);
     this.translate$total.next(100);
 
-    // TODO: update to angular 8?
-    // TODO: update backend to also use the new region only schema
-    // TODO: very high ram usage.. maybe should store this somewhere
+    // TODO: fix search for the remaining languages... (russian, indonesian, korean)
+    // TODO: translate page header
 
     this.http
-      .request(new HttpRequest('GET', TOSUrlService.AssetRegion(`translation/${ TOSLanguageService.toUrl() }.json.js`), { reportProgress: true }))
+      .request(new HttpRequest('GET', TOSUrlService.AssetRegion(`translation/${ TOSLanguageService.toUrl() }-ui.json.js`), { reportProgress: true }))
       .subscribe(event => {
         switch (event.type) {
           case HttpEventType.DownloadProgress:
             this.translate$progress.next(Math.round(100 * event.loaded / event.total));
             break;
           case HttpEventType.Response:
-            this.translate.setTranslation(TOSLanguageService.toUrl(), event.body as object);
+            let language = TOSLanguageService.toUrl();
+
+            this.translate.setTranslation(language, event.body as object);
+            this.translate.setDefaultLang(language);
+            this.translate.use(language);
+
             this.translate$complete.next(true);
             break;
         }

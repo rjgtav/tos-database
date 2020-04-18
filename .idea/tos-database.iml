@@ -21,13 +21,13 @@
       <excludeFolder url="file://$MODULE_DIR$/tos-sw/dist" />
       <excludeFolder url="file://$MODULE_DIR$/tos-translation/dist" />
       <excludeFolder url="file://$MODULE_DIR$/tos-translations/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-web-server/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-web-server/www/assets/region/itos/3d" />
+      <excludeFolder url="file://$MODULE_DIR$/tos-web-server/www/assets/region/itos/ui" />
       <excludeFolder url="file://$MODULE_DIR$/tos-web/dist" />
       <excludeFolder url="file://$MODULE_DIR$/web/dist/web" />
     </content>
-    <orderEntry type="jdk" jdkName="2.7 @ WSLDistribution{myDescriptor=WslDistributionDescriptor{id='UBUNTU', msId='Ubuntu'}}" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="2.7 @ Ubuntu 18.04" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-  <component name="TestRunnerService">
-    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
 </module>

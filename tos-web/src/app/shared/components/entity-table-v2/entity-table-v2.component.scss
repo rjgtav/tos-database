@@ -1,3 +1,6 @@
+tbody a { color: inherit }
+tbody td.image { min-height: 48px; min-width: 48px; }
+
 thead th { border: 0; cursor: pointer }
 thead th.position-sticky { top: 0; z-index: 2 }
 

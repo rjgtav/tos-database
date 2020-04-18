@@ -1,0 +1,16 @@
+<div class="card bg-light">
+  <div class="card-body">
+    <div *ngIf="isLoading" class="d-flex align-items-center justify-content-center">
+      <div class="spinner-border spinner-border text-info" [style.opacity]="isLoading ? 1 : 0"></div>
+    </div>
+    <div *ngIf="!isLoading">
+      <div *ngFor="let config of config">
+        <tos-entity-tooltip-v2-divider *ngIf="isTooltipDivider(config)" [config]="config" [entity]="entity"></tos-entity-tooltip-v2-divider>
+        <tos-entity-tooltip-v2-equipment-info *ngIf="isTooltipEquipmentInfo(config)" [config]="config" [entity]="entity" [size]="size"></tos-entity-tooltip-v2-equipment-info>
+        <tos-entity-tooltip-v2-equipment-upgradability *ngIf="isToolipEquipmentUpgradability(config)" [config]="config" [entity]="entity"></tos-entity-tooltip-v2-equipment-upgradability>
+        <tos-entity-tooltip-v2-item-lifetime *ngIf="isTooltipItemLifeTime(config)" [config]="config" [entity]="entity"></tos-entity-tooltip-v2-item-lifetime>
+        <tos-entity-tooltip-v2-item-tradability *ngIf="isTooltipItemTradability(config)" [config]="config" [entity]="entity"></tos-entity-tooltip-v2-item-tradability>
+      </div>
+    </div>
+  </div>
+</div>

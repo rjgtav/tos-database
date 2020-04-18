@@ -5,6 +5,7 @@ import {
   EntityListFilterV2Component
 } from "../entity-list-filter-v2.component";
 import {Params} from "@angular/router";
+import {ITOSEntityV2} from "../../../shared/domain/tos/tos-domain";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,9 +13,9 @@ import {Params} from "@angular/router";
   templateUrl: './entity-list-filter-v2-range.component.html',
   styleUrls: ['./entity-list-filter-v2-range.component.scss']
 })
-export class EntityListFilterV2RangeComponent {
+export class EntityListFilterV2RangeComponent<ENTITY extends ITOSEntityV2> {
 
-  @Input()  parent: EntityListFilterV2Component<number, EntityListFilterV2$Range>;
+  @Input()  parent: EntityListFilterV2Component<ENTITY, EntityListFilterV2$Range<ENTITY>>;
 
   constructor() { }
 
@@ -40,13 +41,13 @@ export class EntityListFilterV2RangeComponent {
 
 }
 
-export class EntityListFilterV2$Range extends EntityListFilterV2<number> {
+export class EntityListFilterV2$Range<ENTITY extends ITOSEntityV2> extends EntityListFilterV2<ENTITY> {
 
   private value$Max: number;
   private value$Min: number;
 
   constructor(
-    public key: string,
+    public key: keyof ENTITY,
     public label: string,
     public valueMin?: number,
     public valueMax?: number,
@@ -60,7 +61,7 @@ export class EntityListFilterV2$Range extends EntityListFilterV2<number> {
     return clone;
   }
 
-  filter(value: object): boolean {
+  filter(value: ENTITY): boolean {
     if (isNaN(this.value$Max) && isNaN(this.value$Min))
       return true;
 
@@ -93,14 +94,14 @@ export class EntityListFilterV2$Range extends EntityListFilterV2<number> {
     this.value$Min = undefined;
 
     if (params.hasOwnProperty(this.key)) {
-      let value = params[this.key].split(',');
+      let value = params[this.key + ''].split(',');
 
       this.set$Max(+value[1]);
       this.set$Min(+value[0]);
     }
   }
   paramsExport(params: Params) {
-    params[this.key] = this.get$Min() || this.get$Max() ? [this.get$Min(), this.get$Max()].toString() : undefined;
+    params[this.key + ''] = this.get$Min() || this.get$Max() ? [this.get$Min(), this.get$Max()].toString() : undefined;
   }
 
 }

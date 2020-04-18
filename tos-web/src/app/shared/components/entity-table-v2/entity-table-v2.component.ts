@@ -44,17 +44,17 @@ export class EntityTableV2Component<ENTITY extends ITOSEntityV2> {
     }
   }
 
-  trackByIndex(index, item) {
+  trackByIndex(index, row) {
     return index;
   }
-  trackByClassID(index, item: V2TOSEntityProxy<ENTITY>) {
-    return item.ClassID;
+  trackByClassID(index, row: V2TOSEntityProxy<ENTITY>) {
+    return row.ClassID;
   }
 
 }
 
 export interface EntityTableV2Column<ENTITY extends ITOSEntityV2> {
-  cell: EntityTableV2Cell<ENTITY>;
+  config: EntityTableV2Cell<ENTITY>;
   label: string;
   grow?: boolean;
 }

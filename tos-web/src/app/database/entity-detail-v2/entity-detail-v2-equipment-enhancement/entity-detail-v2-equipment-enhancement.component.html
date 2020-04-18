@@ -1,0 +1,121 @@
+<table class="table table-borderless table-sm text-center">
+  <!-- Anvil Enhancement -->
+  <thead class="bg-primary text-white">
+    <tr>
+      <th style="width: 100px">Enhance</th>
+      <th>
+        <span style="color: transparent">▲</span>&nbsp;
+        <span>Bonus</span>
+      </th>
+      <th>
+        <div class="d-flex justify-content-center align-items-center">
+          <span class="icon-placeholder"></span>&nbsp;
+          <span>Cost</span>
+        </div>
+      </th>
+      <th>
+        <div class="d-flex justify-content-center align-items-center">
+          <span class="icon-placeholder"></span>&nbsp;
+          <span>Total</span>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody *ngIf="!enhancementReady">
+    <tr>
+      <td colspan="4">
+        <div class="d-flex justify-content-center p-2">
+          <div class="spinner-border spinner-border spinner-border-sm text-info"></div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="enhancementReady">
+    <tr>
+      <td class="pl-0 pr-0">
+        <input class="form-control text-body text-center" type="number" [max]="MAX_ENHANCEMENT" min="0"
+               [ngModel]="entity.Reinforce_2" (ngModelChange)="entity.$Reinforce_2$Update($event)">
+      </td>
+      <td>
+        <div class="border-0 form-control text-body">
+          <span class="text-success">▲&nbsp;</span>
+          <span>{{ enhancementBonus | number }}</span>
+        </div>
+      </td>
+      <td>
+        <div class="border-0 form-control text-body d-flex justify-content-center">
+          <tos-image [id]="ICON_COST_ENHANCEMENT" [height]="ICON_SIZE" [width]="ICON_SIZE"
+                     [ngbTooltip]="'실버' | translate"></tos-image>&nbsp;
+          <span>{{ enhancementCost | number }}</span>
+        </div>
+      </td>
+      <td>
+        <div class="border-0 form-control text-body d-flex justify-content-center">
+          <tos-image [id]="ICON_COST_ENHANCEMENT" [height]="ICON_SIZE" [width]="ICON_SIZE"
+                     [ngbTooltip]="'실버' | translate"></tos-image>&nbsp;
+          <span>{{ enhancementCostTotal | number }}</span>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+
+  <!-- Transcendence -->
+  <thead class="bg-primary text-white">
+    <tr>
+      <th style="width: 100px">Transcend</th>
+      <th>
+        <span style="color: transparent">▲</span>&nbsp;
+        <span>Bonus</span></th>
+      <th>
+        <div class="d-flex justify-content-center align-items-center">
+          <span class="icon-placeholder"></span>&nbsp;
+          <span>Cost</span>
+        </div>
+      </th>
+      <th>
+        <div class="d-flex justify-content-center align-items-center">
+          <span class="icon-placeholder"></span>&nbsp;
+          <span>Total</span>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody *ngIf="!transcendenceReady">
+    <tr>
+      <td colspan="4">
+        <div class="d-flex justify-content-center p-2">
+          <div class="spinner-border spinner-border spinner-border-sm text-info"></div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="transcendenceReady">
+    <tr>
+      <td class="pl-0 pr-0">
+        <input class="form-control text-body text-center" type="number" [max]="MAX_TRANSCENDENCE" min="0"
+               [ngModel]="entity.Transcend" (ngModelChange)="entity.$Transcend$Update($event)">
+      </td>
+      <td>
+        <div class="border-0 form-control text-body">
+          <span class="text-success">▲&nbsp;</span>
+          <span>{{ transcendenceBonus }}</span>
+        </div>
+      </td>
+      <td>
+        <div class="border-0 form-control text-body d-flex justify-content-center">
+          <tos-image [id]="ICON_COST_TRANSCENDENCE" [height]="ICON_SIZE" [width]="ICON_SIZE"
+                     [ngbTooltip]="'Goddesses\' Blessed Gem' | translate"></tos-image>&nbsp;<!-- TODO: '여신의 축복석' | translate, which doesn't exist in the UI translations -->
+          <span>{{ transcendenceCost | number }}</span>
+        </div>
+      </td>
+      <td>
+        <div class="border-0 form-control text-body d-flex justify-content-center">
+          <tos-image [id]="ICON_COST_TRANSCENDENCE" [height]="ICON_SIZE" [width]="ICON_SIZE"
+                     [ngbTooltip]="'Goddesses\' Blessed Gem' | translate"></tos-image>&nbsp;<!-- TODO: '여신의 축복석' | translate, which doesn't exist in the UI translations -->
+          <span>{{ transcendenceCostTotal | number }}</span>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+
+</table>

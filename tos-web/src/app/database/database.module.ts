@@ -4,27 +4,32 @@ import {SharedModule} from "../shared/shared.module";
 import {EntityListFilterComponent} from './entity-filter/entity-list-filter.component';
 import {EntityDetailComponent} from "./entity-detail/entity-detail.component";
 import {EntityListComponent} from "./entity-list/entity-list.component";
-import {AttributeListConfigurationResolver} from "./resolvers/attribute-list-configuration.resolver";
-import {BookListConfigurationResolver} from "./resolvers/book-list-configuration.resolver";
-import {CardListConfigurationResolver} from "./resolvers/card-list-configuration.resolver";
-import {CollectionListConfigurationResolver} from "./resolvers/collection-list-configuration.resolver";
-import {CubeListConfigurationResolver} from "./resolvers/cube-list-configuration.resolver";
-import {EquipmentListConfigurationResolver} from "./resolvers/equipment-list-configuration-resolver.service";
-import {EquipmentSetListConfigurationResolver} from "./resolvers/equipment-set-list-configuration.resolver";
-import {GemListConfigurationResolver} from "./resolvers/gem-list-configuration.resolver";
-import {ItemListConfigurationResolver} from "./resolvers/item-list-configuration.resolver";
-import {JobListConfigurationResolver} from "./resolvers/job-list-configuration.resolver";
-import {MonsterListConfigurationResolver} from "./resolvers/monster-list-configuration.resolver";
-import {RecipeListConfigurationResolver} from "./resolvers/recipe-list-configuration.resolver";
-import {SkillListConfigurationResolver} from "./resolvers/skill-list-configuration.resolver";
-import {MapListConfigurationResolver} from "./resolvers/map-list-configuration.resolver";
-import {EntityDetailMapComponent} from './entity-detail-v2/entity-detail-map/entity-detail-map.component';
+import {AttributeListConfigurationResolver} from "./resolvers/deprecated/attribute-list-configuration.resolver";
+import {BookListConfigurationResolver} from "./resolvers/deprecated/book-list-configuration.resolver";
+import {CardListConfigurationResolver} from "./resolvers/deprecated/card-list-configuration.resolver";
+import {CollectionListConfigurationResolver} from "./resolvers/deprecated/collection-list-configuration.resolver";
+import {CubeListConfigurationResolver} from "./resolvers/deprecated/cube-list-configuration.resolver";
+import {EquipmentListConfigurationResolver} from "./resolvers/deprecated/equipment-list-configuration-resolver.service";
+import {EquipmentSetListConfigurationResolver} from "./resolvers/deprecated/equipment-set-list-configuration.resolver";
+import {GemListConfigurationResolver} from "./resolvers/deprecated/gem-list-configuration.resolver";
+import {ItemListConfigurationResolver} from "./resolvers/deprecated/item-list-configuration.resolver";
+import {JobListConfigurationResolver} from "./resolvers/deprecated/job-list-configuration.resolver";
+import {MonsterListConfigurationResolver} from "./resolvers/deprecated/monster-list-configuration.resolver";
+import {RecipeListConfigurationResolver} from "./resolvers/deprecated/recipe-list-configuration.resolver";
+import {SkillListConfigurationResolver} from "./resolvers/deprecated/skill-list-configuration.resolver";
+import {MapListConfigurationResolver} from "./resolvers/deprecated/map-list-configuration.resolver";
+import {EntityDetailMapComponent} from './entity-detail-v1/entity-detail-map/entity-detail-map.component';
 import {EntityListV2Component} from './entity-list-v2/entity-list-v2.component';
 import {EntityListFilterV2Component} from './entity-list-filter-v2/entity-list-filter-v2.component';
 import {EntityListFilterV2EnumComponent} from './entity-list-filter-v2/entity-list-filter-v2-enum/entity-list-filter-v2-enum.component';
 import {EntityListFilterV2NumberComponent} from './entity-list-filter-v2/entity-list-filter-v2-number/entity-list-filter-v2-number.component';
 import {EntityListFilterV2RangeComponent} from './entity-list-filter-v2/entity-list-filter-v2-range/entity-list-filter-v2-range.component';
-import {TOSArmorEquipmentListResolver} from "./resolvers/items/tos-armor-equipment-list.resolver";
+import {TOSItemArmorResolver} from "./resolvers/items/tos-item-armor.resolver";
+import {TOSItemWeaponResolver} from "./resolvers/items/tos-item-weapon.resolver";
+import {EntityDetailV2Component} from './entity-detail-v2/entity-detail-v2.component';
+import {EntityDetailV2EntityDescriptionComponent} from './entity-detail-v2/entity-detail-v2-entity-description/entity-detail-v2-entity-description.component';
+import {EntityDetailV2DividerComponent} from './entity-detail-v2/entity-detail-v2-divider/entity-detail-v2-divider.component';
+import {EntityDetailV2EquipmentEnhancementComponent} from './entity-detail-v2/entity-detail-v2-equipment-enhancement/entity-detail-v2-equipment-enhancement.component';
 
 @NgModule({
   imports: [
@@ -40,6 +45,10 @@ import {TOSArmorEquipmentListResolver} from "./resolvers/items/tos-armor-equipme
     EntityListFilterV2EnumComponent,
     EntityListFilterV2NumberComponent,
     EntityListFilterV2RangeComponent,
+    EntityDetailV2Component,
+    EntityDetailV2EntityDescriptionComponent,
+    EntityDetailV2DividerComponent,
+    EntityDetailV2EquipmentEnhancementComponent,
   ],
   providers: [
     AttributeListConfigurationResolver,
@@ -56,7 +65,8 @@ import {TOSArmorEquipmentListResolver} from "./resolvers/items/tos-armor-equipme
     MonsterListConfigurationResolver,
     RecipeListConfigurationResolver,
     SkillListConfigurationResolver,
-    TOSArmorEquipmentListResolver,
+    TOSItemArmorResolver,
+    TOSItemWeaponResolver,
   ]
 })
 export class DatabaseModule { }

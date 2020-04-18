@@ -1,5 +1,6 @@
 import os
 
+from utils import fileutil
 from utils.enumutil import TOSRegion
 
 OUTPUT_ATTRIBUTES = 'attributes'
@@ -54,7 +55,7 @@ PATH_WEB_WWW_ASSETS_IMAGES = os.path.join(PATH_WEB_WWW_ASSETS, 'images')
 PATH_WEB_WWW_ASSETS_IMAGES_CLASSES = os.path.join(PATH_WEB_WWW_ASSETS_IMAGES, 'classes')
 PATH_WEB_WWW_ASSETS_IMAGES_MAPS = os.path.join(PATH_WEB_WWW_ASSETS_IMAGES, 'maps')
 PATH_WEB_WWW_ASSETS_REGION = None
-PATH_WEB_WWW_ASSETS_REGION_DATA = None
+PATH_WEB_WWW_ASSETS_REGION_3D = None
 PATH_WEB_WWW_ASSETS_REGION_UI = None
 
 
@@ -76,7 +77,7 @@ def region(region):
         PATH_INPUT_PATCH_TEMPORARY, \
         PATH_INPUT_RELEASE, \
         PATH_WEB_WWW_ASSETS_REGION, \
-        PATH_WEB_WWW_ASSETS_REGION_DATA, \
+        PATH_WEB_WWW_ASSETS_REGION_3D, \
         PATH_WEB_WWW_ASSETS_REGION_UI
 
     region_str = TOSRegion.to_string(region)
@@ -102,17 +103,17 @@ def region(region):
     PATH_INPUT_PATCH_TEMPORARY = os.path.join(PATH_INPUT_PATCH, 'tmp')
     PATH_INPUT_RELEASE = os.path.join(PATH_INPUT, 'release')
 
-    if not os.path.exists(PATH_INPUT_DATA):                     os.makedirs(PATH_INPUT_DATA)
-    if not os.path.exists(PATH_INPUT_PATCH_DATA_FULL):          os.makedirs(PATH_INPUT_PATCH_DATA_FULL)
-    if not os.path.exists(PATH_INPUT_PATCH_DATA_PARTIAL):       os.makedirs(PATH_INPUT_PATCH_DATA_PARTIAL)
-    if not os.path.exists(PATH_INPUT_PATCH_RELEASE):            os.makedirs(PATH_INPUT_PATCH_RELEASE)
-    if not os.path.exists(PATH_INPUT_PATCH_TEMPORARY):          os.makedirs(PATH_INPUT_PATCH_TEMPORARY)
-    if not os.path.exists(PATH_INPUT_RELEASE):                  os.makedirs(PATH_INPUT_RELEASE)
+    fileutil.makedirs(PATH_INPUT_DATA)
+    fileutil.makedirs(PATH_INPUT_PATCH_DATA_FULL)
+    fileutil.makedirs(PATH_INPUT_PATCH_DATA_PARTIAL)
+    fileutil.makedirs(PATH_INPUT_PATCH_RELEASE)
+    fileutil.makedirs(PATH_INPUT_PATCH_TEMPORARY)
+    fileutil.makedirs(PATH_INPUT_RELEASE)
 
     PATH_WEB_WWW_ASSETS_REGION = os.path.join(PATH_WEB_WWW_ASSETS, 'region', region_str.lower())
-    PATH_WEB_WWW_ASSETS_REGION_DATA = os.path.join(PATH_WEB_WWW_ASSETS_REGION, 'data')
+    PATH_WEB_WWW_ASSETS_REGION_3D = os.path.join(PATH_WEB_WWW_ASSETS_REGION, '3d')
     PATH_WEB_WWW_ASSETS_REGION_UI = os.path.join(PATH_WEB_WWW_ASSETS_REGION, 'ui')
 
-    if not os.path.exists(PATH_WEB_WWW_ASSETS_REGION):          os.makedirs(PATH_WEB_WWW_ASSETS_REGION)
-    if not os.path.exists(PATH_WEB_WWW_ASSETS_REGION_DATA):     os.makedirs(PATH_WEB_WWW_ASSETS_REGION_DATA)
-    if not os.path.exists(PATH_WEB_WWW_ASSETS_REGION_UI):       os.makedirs(PATH_WEB_WWW_ASSETS_REGION_UI)
+    fileutil.makedirs(PATH_WEB_WWW_ASSETS_REGION)
+    fileutil.makedirs(PATH_WEB_WWW_ASSETS_REGION_3D)
+    fileutil.makedirs(PATH_WEB_WWW_ASSETS_REGION_UI)

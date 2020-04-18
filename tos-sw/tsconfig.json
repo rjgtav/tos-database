@@ -7,5 +7,9 @@
     "sourceMap": true,
     "target": "es2015"
   },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
   "lib": ["es2018"]
 }

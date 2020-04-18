@@ -10,3 +10,4 @@ static lua_State* lua;
 
 void LUA_INIT();
 const char* LUA_RUNTIME_CALL(char* function_name, char* args);
+int LUA_TRACEBACK();

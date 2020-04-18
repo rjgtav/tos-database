@@ -1,0 +1,13 @@
+.information.tooltip-small > div:first-child { padding-left: 2px; }
+.information.tooltip-small > div:first-child div { min-width: 100px; }
+.information.tooltip-large > div:first-child div { margin-top: 2px; padding: 2px 0; min-width: 120px; }
+
+
+.position-absolute {
+  top: 0
+}
+
+.row .col-4 > *, .row .col-8 > *, .row .col-2 > * {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}

@@ -2,6 +2,7 @@ import {Observable} from "rxjs";
 import {TOSUrlService} from "../../service/tos-url.service";
 import {TOSRegion} from "../tos-region";
 import {CRUDPage, CRUDPageResult} from "../../service/CRUD.resolver";
+import {HttpClient} from "@angular/common/http";
 
 // TODO: remove this
 export enum TOSDataSet {
@@ -606,22 +607,97 @@ export interface ITOSEntityV2 {
   ClassName: string;
 
   Name: string;
+  Url: Observable<string>;
 
   __Entry_Created: Date;
   __Entry_Updated: Date;
 }
 
 export interface ITOSItemV2 extends ITOSEntityV2 {
+  GroupName: string;
   Icon: string;
+  LifeTime: number;
+  MarketCategory: string;
+  MarketTrade: 'YES' | 'NO';
+  RefreshScp: string;
+  ReqToolTip: string;
+  ShopTrade: 'YES' | 'NO';
+  TeamTrade: 'YES' | 'NO';
+  UserTrade: 'YES' | 'NO';
 }
 
 export interface ITOSItemEquipmentV2 extends ITOSItemV2 {
+  BasicTooltipProp: string;
+  BasicTooltipProp$: string[];
+  BasicTooltipProp$List: Observable<ITOSItemEquipmentV2$BasicTooltipProp[]>;
+  ClassType: string;
+  Desc: string;
+  FileName: string;
+  Icon$Tooltip: Observable<string>;
   ItemGrade: number;
-  ItemGrade$Image: Observable<string>;
+  ItemGrade$Background: Observable<string>;
+  ItemGrade$BackgroundSmall: Observable<string>;
+  ItemGrade$Icon: string;
+  MATK: number;
+  MAXATK: number;
+  MAXATK_AC: number;
+  MaxDur: number;
+  MaxPR: number;
+  MaxSocket_COUNT: number;
+  MINATK: number;
+  MINATK_AC: number;
+  ModelType: string;
+  NeedAppraisal: number;
+  NeedAppraisal$Icon: string;
+  NeedRandomOption: number;
+  Reinforce_2: number;
+  Reinforce_2$: Observable<number>;
+  Transcend: number;
+  Transcend$: Observable<number>;
+  UseJob: string;
+  UseJob$Tooltip: Observable<ITOSItemEquipmentV2$UseJob[]>;
+  UseLv: number;
+  Weight: number;
+
+  $Stats: string[]; // TODO: rename to $Props
+  $Props$Tooltip: Observable<ITOSItemEquipmentV2$Prop$Tooltip[]>;
+
+  $BasicTooltipProp$Reinforced(value?: number): Observable<number>;
+  $BasicTooltipProp$ReinforcedCost(value?: number): Observable<number>;
+  $BasicTooltipProp$Transcended(value?: number): Observable<ITOSItemEquipmentV2$BasicTooltipProp$Transcended[]>;
+  $BasicTooltipProp$TranscendedCost(value?: number): Observable<number>;
+
+  $Model(http: HttpClient): Observable<string>;
+
+  $Reinforce_2$Update(value: number);
+  $Transcend$Update(value: number);
+
+}
+export interface ITOSItemEquipmentV2$BasicTooltipProp {
+  icon: string,
+  label: string,
+  value_max: number,
+  value_min: number,
+}
+export interface ITOSItemEquipmentV2$BasicTooltipProp$Transcended {
+  label: string;
+  value: string;
+}
+export interface ITOSItemEquipmentV2$Prop$Tooltip {
+  arrow: string;
+  label: string;
+  value: number;
+}
+export interface ITOSItemEquipmentV2$UseJob {
+  icon: string;
+  label: string;
+}
+
+export interface ITOSItemEquipmentArmorV2 extends ITOSItemEquipmentV2 {
   Material: string;
   Material$Label: string;
-  UseLv: number;
 }
+export interface ITOSItemEquipmentWeaponV2 extends ITOSItemEquipmentV2 {}
 
 export interface ITOSEntity {
   $ID: number;

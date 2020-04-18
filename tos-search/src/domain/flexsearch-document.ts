@@ -61,4 +61,8 @@ export class FlexSearchDocument {
     private static $idGenerator: number = -1;
     private static $id() { return this.$idGenerator = this.$idGenerator + 1 }
 
+    public static clear() {
+        this.$idGenerator = -1;
+    }
+
 }

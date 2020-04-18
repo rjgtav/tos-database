@@ -1,7 +1,8 @@
-import {ChangeDetectorRef, Component} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component} from '@angular/core';
 import {PatreonService, PatreonTier, PatronsByTier} from "./patreon.service";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'tos-patreon',
   templateUrl: './patreon.component.html',
   styleUrls: ['./patreon.component.scss']

@@ -8,23 +8,20 @@ import urllib
 import xml.etree.ElementTree as ET
 
 from PIL import Image, ImageDraw, ImageColor, ImageFilter
+from wand.image import Image as WandImage
 
 import constants
-from utils import imageutil, tokutil, fileutil, jsonutil
+from utils import imageutil, tokutil, fileutil, jsonutil, xacutil
 from utils.enumutil import TOSRegion
 
 MAPS_SCALE = 0.2
 
-WHITELIST_BASESKINSET = [
-    'bosscard2',
-    'minimap_icons',
-    'sub_card3',
-    'wearing_weapon',
+BLACKLIST_MODELS = [
+    'char_hi.ipf/pc/faces/'
 ]
 
-WHITELIST_RGB = [
-    'bosscard2',
-    'sub_card3',
+BLACKLIST_TEXTURES = [
+    'char_texture.ipf/pc/face/'
 ]
 
 threads = []
@@ -38,16 +35,14 @@ def parse(region, update):
 
     # Parse icons
     parse_icons()
-    #parse_icons('baseskinset.xml', region)
-    #parse_icons('classicon.xml', region)
-    #parse_icons('itemicon.xml', region)
-    #parse_icons('mongem.xml', region)
-    #parse_icons('monillust.xml', region)
-    #parse_icons('skillicon.xml', region)
 
     # Parse images
     parse_images_jobs(region)
-    parse_images_maps(region)
+    #TODO: parse_images_maps(region)
+
+    # Parse models & textures
+    parse_models()
+    #TODO: parse_textures()
 
 
 def parse_icons():
@@ -55,22 +50,42 @@ def parse_icons():
     logging.debug("Parsing icons...")
 
     images = {}
-    images_tga = []
-    path = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf')
+    images_path = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf')
+
+    def texture(path):
+        return path.replace('\\', '/').lower()[1:].replace('.tga', '.png')
 
     # Collect all image IDs and their respective rects
-    for xml in fileutil.walk(os.path.join(path, 'baseskinset'), '*.xml'):
+    for xml in fileutil.walk(os.path.join(images_path, 'baseskinset'), '*.xml'):
         xml_data = ET.parse(xml).getroot()
 
-        for image in [image for imagelist in xml_data if imagelist.tag == 'imagelist' for image in imagelist]:
-            file = image.get('file').replace('\\', '/').lower()[1:]
-            images[image.get('name')] = ';'.join([file.replace('.tga', '.png'), image.get('imgrect')])
+        for element in xml_data:
+            if element.tag in ['effectimagelist', 'fontlist', 'spriteimagelist']:
+                continue
 
-            if image.get('file').endswith('.tga'):
-                images_tga.append(os.path.join(path, file))
+            if element.tag == 'skinlist':
+                skinlist = element
+
+                for skin in skinlist:
+                    for img in skin:
+                        key = '%s/%s' % (skin.get('name'), img.get('name'))
+                        value = '%s;%s' % (texture(skin.get('texture')), img.get('imgrect'))
+
+                        images[key.lower()] = value.lower()
+
+            elif element.tag == 'imagelist':
+                imagelist = element
+
+                for image in imagelist:
+                    key = '%s' % (image.get('name'))
+                    value = '%s;%s' % (texture(image.get('file')), image.get('imgrect'))
+
+                    images[key.lower()] = value.lower()
+            else:
+                raise Exception('Unsupported tag: %s' % element.tag)
 
     # Convert all TGA images to PNG, in parallel
-    for tga in [image for image in set(images_tga) if os.path.exists(image)]:
+    for tga in fileutil.walk(images_path, '*.tga'):
         threads_semaphore.acquire()
         thread = ParseIconsThread(tga)
         thread.start()
@@ -82,17 +97,11 @@ def parse_icons():
     if threads_error:
         raise Exception
 
-    # Update ui.json.js
-    jsonutil.dump(images, os.path.join(constants.PATH_WEB_WWW_ASSETS_REGION_UI, 'ui.json.js'))
+    # Update ui.json
+    jsonutil.dump(images, os.path.join(constants.PATH_WEB_WWW_ASSETS_REGION_UI, 'ui.json'))
 
-    # Create a symlink for all ui.ipf folders
-    for dir in [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]:
-        link = os.path.join(constants.PATH_WEB_WWW_ASSETS_REGION_UI, dir)
-        link_target = os.path.join(path, dir)
-
-        fileutil.symlink(link, link_target)
-        if not os.path.exists(link):
-            os.symlink(os.path.relpath(link_target, constants.PATH_WEB_WWW_ASSETS_REGION), link)
+    # Create symlinks
+    fileutil.symlink_dirs(constants.PATH_WEB_WWW_ASSETS_REGION_UI, images_path)
 
 
 class ParseIconsThread(threading.Thread):
@@ -106,89 +115,13 @@ class ParseIconsThread(threading.Thread):
 
         try:
             imageutil.png(self.image)
+            os.remove(self.image)
         except:
             logging.error('Failed to parse icons. image: %s', self.image)
             threads_error = True
             raise
         finally:
             threads_semaphore.release()
-
-#def parse_icons(file_name, region):
-#    global threads, threads_semaphore
-#    logging.debug('Parsing icons from %s...', file_name)
-#
-#    data_path = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf', 'baseskinset', file_name)
-#    data = ET.parse(data_path).getroot()
-#    threads = []
-#
-#    # example: <imagelist category="Monster_icon_boss_02">
-#    # example: <image name="icon_wizar_energyBolt" file="\icon\skill\wizard\icon_wizar_energyBolt.png" />
-#    for work in [(image, imagelist) for imagelist in data for image in imagelist]:
-#        threads_semaphore.acquire()
-#        thread = ParseIconsThread(region, file_name, work[0], work[1])
-#        thread.start()
-#        threads.append(thread)
-#
-#    for thread in threads:
-#        thread.join()
-#
-#    if threads_error:
-#        raise Exception
-
-#class ParseIconsThread(threading.Thread):
-#    def __init__(self, region, xml_file, xml_image, xml_imagelist):
-#        threading.Thread.__init__(self)
-#
-#        self.region = region
-#        self.xml_file = xml_file
-#        self.xml_image = xml_image
-#        self.xml_image_category = xml_imagelist.get('category')
-#
-#    def run(self):
-#        global threads_error, threads_semaphore
-#
-#        try:
-#            file = self.xml_file
-#            image = self.xml_image
-#            image_category = self.xml_image_category
-#
-#            if image.get('file') is None or image.get('name') is None:
-#                return
-#            if file == 'baseskinset.xml' and image_category not in WHITELIST_BASESKINSET:
-#                return
-#
-#            image_extension = '.jpg' if image_category in WHITELIST_RGB else '.png'
-#            image_file = image.get('file').split('\\')[-1].lower()
-#            image_name = image.get('name').lower()
-#            image_rect = tuple(int(x) for x in image.get('imgrect').split()) if len(image.get('imgrect')) else None  # top, left, width, height
-#
-#            # Copy icon to web assets folder
-#            copy_from = os.path.join(constants.PATH_INPUT_DATA, 'ui.ipf', *image.get('file').lower().split('\\')[:-1])
-#            copy_from = os.path.join(copy_from, image_file)
-#            copy_to = os.path.join(constants.PATH_WEB_WWW_ASSETS_ICONS, image_name + image_extension)
-#
-#            if not os.path.isfile(copy_from):
-#                # Note for future self:
-#                # if you find missing files due to wrong casing, go to the Hotfix at unpacker.py and force lowercase
-#                #logging.warning('Non-existing icon: %s', copy_from)
-#                return
-#
-#            if self.region == TOSRegion.kTEST or not os.path.isfile(copy_to):
-#                shutil.copy(copy_from, copy_to)
-#
-#                # Crop, Resize, Optimize and convert to JPG/PNG
-#                image_mode = 'RGB' if image_extension == '.jpg' else 'RGBA'
-#                image_size = IMAGE_SIZE[image_category] if image_category in IMAGE_SIZE else (image_rect[2], image_rect[3])
-#                image_size = (80, 80) if file == 'classicon.xml' else image_size
-#                image_size = (80, 80) if file == 'skillicon.xml' else image_size
-#
-#                imageutil.optimize(copy_to, image_mode, image_rect, image_size)
-#        except:
-#            logging.error('Failed to parse icons. xml_file: %s, xml_image: %s, xml_image_category: %s', self.xml_file, self.xml_image, self.xml_image_category)
-#            threads_error = True
-#            raise
-#        finally:
-#            threads_semaphore.release()
 
 
 def parse_images_jobs(region):
@@ -366,6 +299,112 @@ class ParseImagesMapsThread(threading.Thread):
             image_shadow.close()
         except:
             logging.error('Failed to parse images maps. row: %s', self.row)
+            threads_error = True
+            raise
+        finally:
+            threads_semaphore.release()
+
+
+def parse_models():
+    global threads, threads_semaphore
+    logging.debug("Parsing models...")
+
+    list_path = [
+        os.path.join(constants.PATH_INPUT_DATA, 'char_hi.ipf'),
+        os.path.join(constants.PATH_INPUT_DATA, 'item_hi.ipf'),
+    ]
+
+    for path in list_path:
+        for xac in fileutil.walk(path, '*.xac'):
+            if any(p in xac.lower() for p in BLACKLIST_MODELS):
+                continue
+
+            threads_semaphore.acquire()
+            thread = ParseModelsThread(xac)
+            thread.start()
+            threads.append(thread)
+
+    for thread in threads:
+        thread.join()
+
+    if threads_error:
+        raise Exception
+
+    # Create symlinks
+    for path in list_path:
+        fileutil.symlink(os.path.join(constants.PATH_WEB_WWW_ASSETS_REGION_3D, os.path.basename(path).replace('.ipf', '')), path)
+
+
+class ParseModelsThread(threading.Thread):
+    def __init__(self, xac):
+        threading.Thread.__init__(self)
+
+        self.xac = xac
+
+    def run(self):
+        global threads_error, threads_semaphore
+
+        try:
+            xacutil.xac2obj(self.xac)
+            #TODO: os.remove(self.xac)
+        except:
+            logging.error('Failed to parse models. xac: %s', self.xac)
+            threads_error = True
+            raise
+        finally:
+            threads_semaphore.release()
+
+
+def parse_textures():
+    global threads, threads_semaphore
+    logging.debug("Parsing textures...")
+
+    list_path = [
+        os.path.join(constants.PATH_INPUT_DATA, 'char_texture.ipf'),
+        os.path.join(constants.PATH_INPUT_DATA, 'item_texture.ipf'),
+    ]
+
+    for path in list_path:
+        for dds in fileutil.walk(path, '*.dds'):
+            if any(p in dds.lower() for p in BLACKLIST_TEXTURES):
+                continue
+
+            threads_semaphore.acquire()
+            thread = ParseTexturesThread(dds)
+            thread.start()
+            threads.append(thread)
+
+    for thread in threads:
+        thread.join()
+
+    if threads_error:
+        raise Exception
+
+    # Create symlinks
+    for path in list_path:
+        fileutil.symlink(os.path.join(constants.PATH_WEB_WWW_ASSETS_REGION_3D, os.path.basename(path).replace('.ipf', '')), path)
+
+
+class ParseTexturesThread(threading.Thread):
+    def __init__(self, dds):
+        threading.Thread.__init__(self)
+
+        self.dds = dds
+
+    def run(self):
+        global threads_error, threads_semaphore
+
+        try:
+            logging.debug('Parsing textures... %s' % self.dds)
+
+            # Note: unfortunately Pillow, despite being faster, doesn't support all variants of the .dds format, so we have to use wand
+            with WandImage(filename=self.dds) as img:
+                img.compression = "no"
+                img.save(filename=self.dds.lower().replace('.dds', '.png'))
+
+            #TODO: os.remove(self.image)
+        except:
+            logging.error('Failed to parse textures. dds: %s', self.dds)
             threads_error = True
             raise
         finally:

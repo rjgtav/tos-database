@@ -62,9 +62,18 @@ import {EntityTableV2CellComponent} from './components/entity-table-v2/entity-ta
 import {TOSImageComponent} from './components/tos-image/tos-image.component';
 import {EntityTableV2CellTextComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-text/entity-table-v2-cell-text.component';
 import {EntityTableV2CellIconComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-icon/entity-table-v2-cell-icon.component';
-import {EntityTableV2CellIconGradeComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-icon-grade/entity-table-v2-cell-icon-grade.component';
+import {EntityTableV2CellIconEquipmentComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-icon-equipment/entity-table-v2-cell-icon-equipment.component';
 import {EntityTableV2CellTextDateComponent} from './components/entity-table-v2/entity-table-v2-cell/entity-table-v2-cell-text-date/entity-table-v2-cell-text-date.component';
-import {TranslateModule} from "@ngx-translate/core";
+import {TranslateModule, TranslatePipe} from "@ngx-translate/core";
+import {EntityTooltipV2Component} from './components/entity-tooltip-v2/entity-tooltip-v2.component';
+import {EntityTooltipV2EquipmentInfoComponent} from './components/entity-tooltip-v2/entity-tooltip-v2-equipment-info/entity-tooltip-v2-equipment-info.component';
+import {TOSModelComponent} from './components/tos-model/tos-model.component';
+import {TOSTextComponent} from './components/tos-text/tos-text.component';
+import {EntityTooltipV2ItemTradabilityComponent} from './components/entity-tooltip-v2/entity-tooltip-v2-item-tradability/entity-tooltip-v2-item-tradability.component';
+import {EntityTooltipV2DividerComponent} from './components/entity-tooltip-v2/entity-tooltip-v2-divider/entity-tooltip-v2-divider.component';
+import {EntityTooltipV2EquipmentUpgradabilityComponent} from './components/entity-tooltip-v2/entity-tooltip-v2-equipment-upgradability/entity-tooltip-v2-equipment-upgradability.component';
+import {TosTextTimeComponent} from './components/tos-text-time/tos-text-time.component';
+import {EntityTooltipV2ItemLifetimeComponent} from './components/entity-tooltip-v2/entity-tooltip-v2-item-lifetime/entity-tooltip-v2-item-lifetime.component';
 
 @NgModule({
   imports: [
@@ -102,6 +111,15 @@ import {TranslateModule} from "@ngx-translate/core";
     EntityTooltipComponent,
     InputNumberComponent,
     TOSImageComponent,
+    TOSModelComponent,
+    TOSTextComponent,
+    EntityTableV2CellTextComponent,
+    EntityTableV2CellIconComponent,
+    EntityTableV2CellIconEquipmentComponent,
+    EntityTableV2CellTextDateComponent,
+    EntityTooltipV2Component,
+    EntityTooltipV2EquipmentInfoComponent,
+    EntityTooltipV2ItemTradabilityComponent,
 
     // Directives
     CssMaxHeightDirective,
@@ -121,10 +139,10 @@ import {TranslateModule} from "@ngx-translate/core";
     TableCellTextPipe,
     TimePipe,
     CssMaxHeightDirective,
-    EntityTableV2CellTextComponent,
-    EntityTableV2CellIconComponent,
-    EntityTableV2CellIconGradeComponent,
-    EntityTableV2CellTextDateComponent,
+    EntityTooltipV2DividerComponent,
+    EntityTooltipV2EquipmentUpgradabilityComponent,
+    TosTextTimeComponent,
+    EntityTooltipV2ItemLifetimeComponent,
   ],
   exports: [
     // Components
@@ -152,6 +170,8 @@ import {TranslateModule} from "@ngx-translate/core";
     EntityTooltipComponent,
     InputNumberComponent,
     TOSImageComponent,
+    TOSModelComponent,
+    TOSTextComponent,
 
     // Directives
     CssMaxHeightDirective,
@@ -177,6 +197,8 @@ import {TranslateModule} from "@ngx-translate/core";
     TableCellNumberPipe,
     TableCellTextPipe,
     TimePipe,
+    TranslatePipe,
+    EntityTooltipV2Component,
   ],
 })
 export class SharedModule {
@@ -185,6 +207,7 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [
+        // Pipes
         AsyncPipe,
         DecimalPipe,
         PercentPipe,
@@ -194,6 +217,9 @@ export class SharedModule {
         TableCellLinkPipe,
         TableCellNumberPipe,
         TableCellTextPipe,
+        TranslatePipe,
+
+        // Resolvers
         TOSAttributeResolver,
         TOSBookResolver,
         TOSCardResolver,

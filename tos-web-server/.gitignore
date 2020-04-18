@@ -1,5 +1,6 @@
 /dist
 /node_modules
+/www/assets/region/**/3d
 /www/assets/region/**/ui
 /www/main.*.js
 /www/polyfills.*.js

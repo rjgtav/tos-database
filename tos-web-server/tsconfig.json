@@ -5,7 +5,12 @@
     "moduleResolution": "node",
     "outDir": "dist",
     "sourceMap": true,
-    "target": "es2015"
+    "target": "es2017"
   },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "www"
+  ],
   "lib": ["es2018"]
 }

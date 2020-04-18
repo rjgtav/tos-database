@@ -91,6 +91,10 @@ export class FlexSearchEnum$Reference {
             : toJSON(this.value);
     }
 
+    public static clear() {
+        this.$reference = {} as any;
+    }
+
     public static indexExport(translations: { [key in FlexSearchEnum$Id]?: ((value) => string) }) {
         ((Object.keys(this.$reference) as unknown[]) as FlexSearchEnum$Id[]).sort()
             .forEach(id => FlexSearchEnum.add(id, Object

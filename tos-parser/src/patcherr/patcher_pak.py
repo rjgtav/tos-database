@@ -25,8 +25,8 @@ OFFSET_FILE_NAME = 4 + OFFSET_SIZE_UNCOMPRESSED
 
 
 def unpack(pak):
-    pak = str(pak) + '_001001.pak' if isinstance(pak, (int, long)) else pak
-    pak = os.path.join(constants.PATH_INPUT_PATCH_RELEASE, pak)
+    #pak = str(pak) + '_001001.pak' if isinstance(pak, (int, long)) else pak
+    #pak = os.path.join(constants.PATH_INPUT_PATCH_RELEASE, pak)
     logging.debug('Unpacking %s...', pak)
 
     pak = open(pak, 'rb').read()

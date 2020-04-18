@@ -1,3 +1,13 @@
+:host {
+  display: block;
+  max-width: 100%;
+  min-width: 25%;
+}
+
+.btn {
+  border: none !important;
+}
+
 .dropdown-item {
   cursor: pointer;
 }
@@ -6,3 +16,4 @@
   max-height: 10*2rem;
   overflow-y: auto;
 }
+

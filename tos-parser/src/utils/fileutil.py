@@ -12,6 +12,12 @@ def clear(path):
     os.makedirs(path)
 
 
+# Ensure the provided path exists
+def makedirs(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+
 # Thanks to https://stackoverflow.com/a/7420617
 def move_tree(source, destination):
     for src_dir, dirs, files in os.walk(source):
@@ -38,6 +44,16 @@ def symlink(link, link_target):
             })
         else:
             os.symlink(link_data, link)
+
+
+# Symlink all directory children of a specific path
+def symlink_dirs(path, path_target):
+    for dir in [d for d in os.listdir(path_target) if os.path.isdir(os.path.join(path_target, d))]:
+        link = os.path.join(path, dir)
+        link_target = os.path.join(path_target, dir)
+
+        symlink(link, link_target)
+
 
 # Converts all children files to lower case
 def to_lower(path):

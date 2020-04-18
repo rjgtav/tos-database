@@ -1,8 +1,6 @@
 import {SearchService} from "../../service/search.service";
 import {HttpClient} from "@angular/common/http";
 import {FlexSearchEntry, FlexSearchPageable,} from "../../../../../../tos-search/src/service/flexsearch.service";
-import {Observable} from "rxjs";
-import {fromPromise} from "rxjs/internal-compatibility";
 import {V2TOSDataSet} from "../tos-dataset";
 import {V2TOSEntityProxy} from "./v2-tos-entity.proxy";
 import {ITOSEntityV2} from "./tos-domain";
@@ -23,21 +21,28 @@ export abstract class V2TOSEntityRepository<ENTITY extends ITOSEntityV2> {
   }
 
   protected abstract $factory(json: object): ENTITY;
+  protected $proxy(entry: FlexSearchEntry): V2TOSEntityProxy<ENTITY> {
+    return new V2TOSEntityProxy(entry, this.$factory, this.http);
+  }
 
   // In the end we can...
   // TODO: kill CRUD.resolver
   // TODO: kill tos-domain.service
   // TODO: replace tos-domain.repository with the new one
 
-  findAll(pageable: FlexSearchPageable<FlexSearchEntry>): Observable<FlexSearchPageable<V2TOSEntityProxy<ENTITY>>> {
-    return fromPromise((async () => {
-      let result: FlexSearchPageable<FlexSearchEntry> = this.search.find(this.dataset, pageable);
-      let result2: FlexSearchPageable<V2TOSEntityProxy<ENTITY>> = Object.assign(result, {
-        content: result.content.map(entry => new V2TOSEntityProxy<ENTITY>(entry, this.$factory, this.http)),
-      });
+  async findAll(pageable: FlexSearchPageable<FlexSearchEntry>): Promise<FlexSearchPageable<V2TOSEntityProxy<ENTITY>>> {
+    let result = this.search.find(this.dataset, pageable);
+        result.content = result.content.map(entry => this.$proxy(entry)) as any;
 
-      return result2;
-    })());
+    return (result as unknown) as FlexSearchPageable<V2TOSEntityProxy<ENTITY>>;
+  }
+
+  async findOne(ClassID: number): Promise<V2TOSEntityProxy<ENTITY>> {
+    let pageable: FlexSearchPageable<FlexSearchEntry> = { filter: value => value.ClassID == ClassID, pageSize: 1 };
+    let result: FlexSearchPageable<FlexSearchEntry> = this.search.find(this.dataset, pageable);
+        result.content = result.content.map(entry => this.$proxy(entry)) as any;
+
+    return (result.content[0] as unknown) as V2TOSEntityProxy<ENTITY>;
   }
 
 }

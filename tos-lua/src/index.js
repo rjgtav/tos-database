@@ -46,7 +46,7 @@ const TOS_WEB_SRC_ASSETS_WORKER = path.join(TOS_WEB_SRC_ASSETS, 'worker');
     let src_wasm_lua_runtime_overrides = path.join(src_wasm, 'lua-runtime-overrides.h');
     let src_wasm_lua_runtime_scripts = path.join(src_wasm, 'lua-runtime-scripts.h');
     let wasm_lua_compiler = path.join('dist', 'lua-compiler.js');
-    let wasm_lua_runtime = path.join('..', 'tos-web-server', 'www', 'assets', 'region', REGION.toLowerCase(), 'data', 'lua.js');
+    let wasm_lua_runtime = path.join('..', 'tos-web-server', 'www', 'assets', 'region', REGION.toLowerCase(), 'lua', 'lua.js');
     let writer;
 
     // 0. Clear emscripten cache

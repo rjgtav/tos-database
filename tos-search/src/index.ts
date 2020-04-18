@@ -2,13 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import * as xml from 'fast-xml-parser';
 import {TOSRegionService} from "../../tos-web/src/app/shared/domain/tos-region";
-import {TOSLanguageService} from "../../tos-web/src/app/shared/domain/tos-language";
-import {TOSDatabaseService, TOSEntry} from "../../tos-web-server/src/service/database.service";
+import {TOSLanguage, TOSLanguageService} from "../../tos-web/src/app/shared/domain/tos-language";
+import {DatabaseService, TOSEntry} from "../../tos-web-server/src/service/database.service";
 import {FlexSearchService} from "./service/flexsearch.service";
 import {V2TOSDataSet} from "../../tos-web/src/app/shared/domain/tos-dataset";
 import {FlexSearchEnum, FlexSearchEnum$Id, FlexSearchEnum$Reference} from './domain/flexsearch-enum';
 import {FlexSearchDocument} from "./domain/flexsearch-document";
-import {TranslationService} from "../../tos-translation/src/service/translation.service";
+import {TranslateService} from "../../tos-web-server/src/service/translate.service";
 
 // Add timestamp to logs
 require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
@@ -70,11 +70,11 @@ const DATABASE_TABLES: { [key in V2TOSDataSet]: string[] } = {
 };
 
 (async function() {
-    for (let language of TOSLanguageService.byRegion(REGION)) {
+    for (let language of TOSLanguageService.values()[REGION]) {
         console.log(`[${ REGION }] Building search index for ${ language }...`);
 
         // Initialize database
-        const DATABASE_SCHEMA = TOSDatabaseService.schema(REGION);
+        const DATABASE_SCHEMA = DatabaseService.schema(REGION);
 
         // Initialize data
         const TOS_COMMON_PROP_LIST = await tosCommonPropertiesList();
@@ -87,18 +87,18 @@ const DATABASE_TABLES: { [key in V2TOSDataSet]: string[] } = {
         const TOS_JOBS_BY_ABILITY = await tosJobsByAbility(DATABASE_SCHEMA, TOS_JOBS);
         const TOS_JOBS_BY_SKILL = await tosJobsBySkill(DATABASE_SCHEMA, TOS_JOBS, TOS_SKILLS);
 
-        // Initialize enums
-        FlexSearchEnum.clear();
-
         // Initialize index
         const INDEX = FlexSearchService.index(language);
+
+        // Initialize translations
+        TranslateService.load(language, REGION);
 
         // Index database
         for (let dataset of Object.keys(DATABASE_TABLES) as V2TOSDataSet[]) {
             for (let table of DATABASE_TABLES[dataset]) {
-                for (let entry of await TOSDatabaseService.entries(DATABASE_SCHEMA, table)) {
+                for (let entry of await DatabaseService.entries(DATABASE_SCHEMA, table)) {
 
-                    let Name = entry['Name'];
+                    let Name = entry['Name'] = TranslateService.translate(language, entry['Name']);
                     if (Name == null || Name.trim().length === 0)
                         continue;
 
@@ -184,15 +184,13 @@ const DATABASE_TABLES: { [key in V2TOSDataSet]: string[] } = {
         }
 
         // Translate enums
-        TranslationService.load(language, REGION);
-
-        const TRANSLATIONS_ITEM_GRADE = await translationsItemGrade(TOS_CONTROL_SET);
+        const TRANSLATIONS_ITEM_GRADE = await translationsItemGrade(TOS_CONTROL_SET, language);
 
         FlexSearchEnum$Reference.indexExport({
-            [FlexSearchEnum$Id.Equipment$Stats]: value => TranslationService.translate(value),
-            [FlexSearchEnum$Id.Equipment$Material]: value => TranslationService.translate(value),
+            [FlexSearchEnum$Id.Equipment$Stats]: value => TranslateService.translate(language, value),
+            [FlexSearchEnum$Id.Equipment$Material]: value => TranslateService.translate(language, value),
             [FlexSearchEnum$Id.Item$Grade]: value => TRANSLATIONS_ITEM_GRADE[value],
-            [FlexSearchEnum$Id.Item$MarketCategory]: value => TranslationService.translate(value.split('_')[1]),
+            [FlexSearchEnum$Id.Item$MarketCategory]: value => TranslateService.translate(language, value.split('_')[1]),
         });
 
         // Save index on disk
@@ -206,13 +204,20 @@ const DATABASE_TABLES: { [key in V2TOSDataSet]: string[] } = {
         FlexSearchService.indexImport(INDEX, exported);
 
         let results;
-            results = FlexSearchService.indexSearch(INDEX, 'onion   '); debugger;
+            results = FlexSearchService.indexSearch(INDEX, 'primus'); debugger;
+            results = FlexSearchService.indexSearch(INDEX, 'onion'); debugger;
             results = FlexSearchService.indexSearch(INDEX, 'kep'); debugger;
          */
+
+        // Clear before the next iteration
+        FlexSearchDocument.clear();
+        FlexSearchEnum.clear();
+        FlexSearchEnum$Reference.clear();
+        TranslateService.clear();
     }
 
     // Close Database
-    await TOSDatabaseService.end();
+    await DatabaseService.end();
 })();
 
 function tosDate(value: Date) {
@@ -238,7 +243,7 @@ async function tosControlSet() {
     return userconfig.reduce((acc, value) => Object.assign(acc, value), {});
 }
 
-async function tosJobs(schema: string) { return TOSDatabaseService.entries(schema, 'job') }
+async function tosJobs(schema: string) { return DatabaseService.entries(schema, 'job') }
 async function tosJobsByAbility(schema: string, jobs: TOSEntry[]) {
     // addon.ipf/skillability/lib_skillability.lua :: SKILLABILITY_GET_ABILITY_NAME_LIST
     let result: { [key: string]: string[] } = {};
@@ -254,7 +259,7 @@ async function tosJobsByAbility(schema: string, jobs: TOSEntry[]) {
             job['DefHaveAbil'].split('#').forEach(ability => resultAdd(ability, job.ClassName));
 
         try {
-            let abilities = await TOSDatabaseService.entries(schema, 'ability_' + job['EngName']);
+            let abilities = await DatabaseService.entries(schema, 'ability_' + job['EngName']);
                 abilities.forEach(ability => resultAdd(ability.ClassName, job.ClassName));
         } catch (e) {}
     }
@@ -278,7 +283,7 @@ async function tosJobsBySkill(schema: string, jobs: TOSEntry[], skills: TOSEntry
         if (job['DefHaveSkill'])
             job['DefHaveSkill'].split('#').forEach(skill => resultAdd(skill, job.ClassName));
 
-        for (let skilltree of await TOSDatabaseService.entries(schema, 'skilltree')) {
+        for (let skilltree of await DatabaseService.entries(schema, 'skilltree')) {
             let job = jobsByClassName[skilltree.ClassName.split('_').slice(0, 2).join('_')];
             let skill = skillsByClassName[skilltree['SkillName']];
 
@@ -298,16 +303,16 @@ async function tosJobsBySkill(schema: string, jobs: TOSEntry[], skills: TOSEntry
 }
 
 async function tosSimony(schema: string): Promise<number[]> {
-    return TOSDatabaseService
+    return DatabaseService
         .entries(schema, 'skill_simony')
         .then(value => value.map(value => value.ClassID));
 }
 
-async function tosSkills(schema: string) { return TOSDatabaseService.entries(schema, 'skill') }
+async function tosSkills(schema: string) { return DatabaseService.entries(schema, 'skill') }
 
-async function translationsItemGrade(controlset: object) {
+async function translationsItemGrade(controlset: object, language: TOSLanguage) {
     return Object
         .keys(controlset)
         .filter(value => value.endsWith('GRADE_TEXT'))
-        .reduce((acc, value, i) => { acc[i + 1] = TranslationService.translate(controlset[value]).replace(/\{.*\}/g, ''); return acc }, {});
+        .reduce((acc, value, i) => { acc[i + 1] = TranslateService.translate(language, controlset[value]).replace(/\{.*\}/g, ''); return acc }, {});
 }

@@ -5,9 +5,11 @@ const KEY_LANGUAGE = 'language';
 export enum TOSLanguage {
   English = 'English',
   German = 'German',
+  Indonesian = 'Indonesian',
   Japanese = 'Japanese',
   Korean = 'Korean',
   Portuguese = 'Portuguese',
+  Russian = 'Russian',
   Taiwanese = 'Taiwanese',
 }
 
@@ -15,23 +17,12 @@ export namespace TOSLanguageService {
 
   let LANGUAGE: TOSLanguage = null;
 
-  export function byRegion(region: TOSRegion): TOSLanguage[] {
-    // TODO: add remaining iTOS languages, add Korean to all regions
-    switch (region) {
-      case TOSRegion.iTOS:  return [TOSLanguage.English, TOSLanguage.Portuguese];
-      case TOSRegion.jTOS:  return [TOSLanguage.Japanese];
-      case TOSRegion.kTEST: return [TOSLanguage.Korean];
-      case TOSRegion.kTOS:  return [TOSLanguage.Korean];
-      case TOSRegion.twTOS: return [TOSLanguage.Taiwanese]
-    }
-  }
-
   export function get() {
     if (LANGUAGE)
       return LANGUAGE;
 
     let region = TOSRegionService.get();
-    let language = localStorage.getItem(KEY_LANGUAGE) as TOSLanguage || TOSLanguageService.byRegion(region)[0];
+    let language = localStorage.getItem(KEY_LANGUAGE) as TOSLanguage || TOSLanguageService.values()[region][0];
 
     return LANGUAGE = language;
   }
@@ -45,17 +36,20 @@ export namespace TOSLanguageService {
     let map: { [key in TOSLanguage]: string } = {
       English: 'flag-us',
       German: 'flag-de',
+      Indonesian: 'flag-id',
       Japanese: 'flag-jp',
       Korean: 'flag-kr',
       Portuguese: 'flag-br',
+      Russian: 'flag-ru',
       Taiwanese: 'flag-tw',
     };
 
+    // Note: flag URLs are defined in the header.component.scss
     return map[value];
   }
 
   export function toHuman(value: TOSLanguage): string {
-    return value;
+    return value == TOSLanguage.Portuguese ? 'Portuguese (Brazil)' : value;
   }
 
   export function toUrl(value?: TOSLanguage): string {
@@ -70,11 +64,11 @@ export namespace TOSLanguageService {
 
   export function values(): { [key in TOSRegion]: TOSLanguage[] } {
     return {
-      iTOS: [TOSLanguage.English, TOSLanguage.German, TOSLanguage.Portuguese],
-      jTOS: [TOSLanguage.Japanese],
+      iTOS: [TOSLanguage.English, TOSLanguage.German, TOSLanguage.Indonesian, TOSLanguage.Korean, TOSLanguage.Portuguese, TOSLanguage.Russian],
+      jTOS: [TOSLanguage.Japanese, TOSLanguage.Korean],
       kTEST: [TOSLanguage.Korean],
       kTOS: [TOSLanguage.Korean],
-      twTOS: [TOSLanguage.Taiwanese],
+      twTOS: [TOSLanguage.Taiwanese, TOSLanguage.Korean],
     };
   }
 

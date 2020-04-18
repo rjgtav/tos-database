@@ -68,6 +68,8 @@ def patch_download(patch_file, patch_file_tmp, patch_url, progress, progress_tot
         for chunk in iter(lambda: patch_response.read(CHUNK_SIZE), ''):
             file.write(chunk)
 
+    # TODO: os patches perderam o modified date.. ha que guardar again. se calhar armazenar num ficheiro a parte...
+
     # Keep original modified datetime
     # https://docs.python.org/2/library/time.html#time.strftime
     modified = datetime.strptime(patch_response.headers.dict['last-modified'], "%a, %d %b %Y %H:%M:%S %Z")
@@ -75,6 +77,17 @@ def patch_download(patch_file, patch_file_tmp, patch_url, progress, progress_tot
     os.utime(patch_file_tmp, (modified, modified))
 
     return True
+
+
+def patch_modified(url):
+    # https://stackoverflow.com/a/4421485
+    request = urllib2.Request(url)
+    request.get_method = lambda : 'HEAD'
+
+    response = urllib2.urlopen(request)
+    response_modified = datetime.strptime(response.headers.dict['last-modified'], "%a, %d %b %Y %H:%M:%S %Z")
+
+    return response_modified
 
 
 def patch_revision(download_path, download_url, revision_url, revision_blacklist, revision_name):

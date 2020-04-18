@@ -1,10 +1,11 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {faFilter, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Subject, Subscription} from "rxjs";
-import {EntityListV2} from "../resolvers/tos-entity-list.resolver";
+import {EntityListV2} from "../resolvers/tos-entity.resolver";
 import {FlexSearchPageable$Sort,} from "../../../../../tos-search/src/service/flexsearch.service";
 import {debounceTime} from "rxjs/operators";
+import {ITOSEntityV2} from "../../shared/domain/tos/tos-domain";
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -12,12 +13,12 @@ import {debounceTime} from "rxjs/operators";
   templateUrl: './entity-list-v2.component.html',
   styleUrls: ['./entity-list-v2.component.scss']
 })
-export class EntityListV2Component implements OnDestroy, OnInit {
+export class EntityListV2Component<ENTITY extends ITOSEntityV2> implements OnDestroy, OnInit {
 
   readonly faSearch = faSearch;
   readonly faFilter = faFilter;
 
-  list: EntityListV2<any>;
+  list: EntityListV2<ENTITY>;
 
   isChanging: boolean;
   isFilter: boolean;
@@ -31,12 +32,13 @@ export class EntityListV2Component implements OnDestroy, OnInit {
   private subscriptionChangePage: Subscription;
   private subscriptionChangeSearch: Subscription;
   private subscriptionChangeSort: Subscription;
-  private subscriptionConfig: Subscription;
+  private subscriptionQuery: Subscription;
 
   constructor(
     private changeDetector: ChangeDetectorRef,
     private route: ActivatedRoute,
     private router: Router,
+    private zone: NgZone,
   ) {}
 
   // XTODO: keep focus on filter when navigating
@@ -61,16 +63,16 @@ export class EntityListV2Component implements OnDestroy, OnInit {
   // XTODO: Enums in the filter dropdown are not sorted after being translated
   // XTODO: Remove prefix from the header, Use the translation for the page title
   // XTODO: implement search by name
-  // TODO: Modularize translations so we can use them anywhere in the website:
-  // TODO:  - tos-parser | Don't store the items translated in the database. Generate an external translation JSON per language
-  // TODO:  - tos-search | Only translate the name, remove translation from the enum
-  // TODO:  - tos-web | Integrate translations with angular's translation service, translate the enums there
+  // XTODO: Modularize translations so we can use them anywhere in the website:
+  // XTODO:  - tos-parser | Don't store the items translated in the database. Generate an external translation JSON per language
+  // XTODO:  - tos-search | Only translate the name, remove translation from the enum
+  // XTODO:  - tos-web | Integrate translations with angular's translation service, translate the enums there
 
   ngOnDestroy(): void {
     this.subscriptionChangeFilter && this.subscriptionChangeFilter.unsubscribe();
     this.subscriptionChangePage && this.subscriptionChangePage.unsubscribe();
     this.subscriptionChangeSearch && this.subscriptionChangeSearch.unsubscribe();
-    this.subscriptionConfig && this.subscriptionConfig.unsubscribe();
+    this.subscriptionQuery && this.subscriptionQuery.unsubscribe();
   }
 
   ngOnInit(): void {
@@ -79,8 +81,8 @@ export class EntityListV2Component implements OnDestroy, OnInit {
     this.subscriptionChangeSearch = this.changeSearch.pipe(debounceTime(200)).subscribe(() => this.onChange());
     this.subscriptionChangeSort = this.changeSort.pipe(debounceTime(0)).subscribe(() => this.onChange());
 
-    this.subscriptionConfig = this.route.queryParams.subscribe(params => {
-      this.list = this.route.snapshot.data.list as EntityListV2<any>;
+    this.subscriptionQuery = this.route.queryParams.subscribe(params => {
+      this.list = this.route.snapshot.data.list as EntityListV2<ENTITY>;
       this.isFilter = this.isFilter || this.list.filter.find(value => params.hasOwnProperty(value.key)) != null;
       this.changeDetector.detectChanges();
     });
@@ -90,10 +92,10 @@ export class EntityListV2Component implements OnDestroy, OnInit {
     this.isChanging = false;
     this.changeDetector.detectChanges();
 
-    this.router.navigate(['.'], {
+    this.zone.run(() => this.router.navigate(['.'], {
       queryParams: this.list.paramsExport(),
       relativeTo: this.route
-    });
+    }));
   }
 
   onFilterChange() {

@@ -17,32 +17,33 @@
         <a class="nav-link dropdown-toggle" href="javascript:void(0);" routerLinkActive="active">
           Database <span class="badge badge-danger">New</span>
           <div class="dropdown-menu">
-            <a class="dropdown-item" [routerLink]="routerLink('/database/achievements')">Achievements</a>
-            <a class="dropdown-item" [routerLink]="routerLink('/database/attributes')">Attributes</a>
-            <a class="dropdown-item" [routerLink]="routerLink('/database/classes')">Classes</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/achievements')"><span class="badge badge-warning">TODO</span>Achievements</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/attributes')"><span class="badge badge-warning">TODO</span>Attributes</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/classes')"><span class="badge badge-warning">TODO</span>Classes</a>
             <div class="dropdown-item dropdown-toggle-sub">
               <a href="javascript:void(0);" style="color: inherit">Items</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/weapons')">Weapons</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/armor')">Armor</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/consumables')">Consumables</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/accessories')">Accessories</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/accessories-hair')">Hair Accessories</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/recipes')">Recipes</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/cards')">Cards</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/materials')">Materials</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/materials-gear')">Special Gear Materials</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/gems')">Gems</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/appearance')">Appearance</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/appearance-equipment')">Appearance Equipment</a>
-                <a class="dropdown-item" [routerLink]="routerLink('/database/items/premium')">Premium</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/weapon')">{{ 'Weapon'| translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/armor')">{{ 'Armor' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/consumables')"><span class="badge badge-warning">TODO</span>{{ 'Consume' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/accessories')"><span class="badge badge-warning">TODO</span>{{ 'Accessory' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/recipes')"><span class="badge badge-warning">TODO</span>{{ 'Recipe' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/cards')"><span class="badge badge-warning">TODO</span>{{ 'Card' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/materials')"><span class="badge badge-warning">TODO</span>{{ 'Misc' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/gems')"><span class="badge badge-warning">TODO</span>{{ 'Gem' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/appearance')"><span class="badge badge-warning">TODO</span>{{ 'Look' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/appearance-equipment')"><span class="badge badge-warning">TODO</span>{{ 'ChangeEquip' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/materials-gear')"><span class="badge badge-warning">TODO</span>{{ 'OPTMisc' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/accessories-hair')"><span class="badge badge-warning">TODO</span>{{ 'HairAcc' | translate }}</a>
+                <a class="dropdown-item" [routerLink]="routerLink('/database/items/premium')"><span class="badge badge-warning">TODO</span>{{ 'Premium' | translate }}</a>
               </div>
             </div>
-            <a class="dropdown-item" [routerLink]="routerLink('/database/maps')">Maps</a>
-            <a class="dropdown-item" [routerLink]="routerLink('/database/npcs')">NPCs</a>
-            <a class="dropdown-item" [routerLink]="routerLink('/database/quests')">Quests</a>
-            <a class="dropdown-item" [routerLink]="routerLink('/database/skills')">Skills</a>
-            <a class="dropdown-item" [routerLink]="routerLink('/database/effects')">Status Effects</a>
+            <a class="dropdown-item" [routerLink]="''"><span class="badge badge-warning">TODO</span>Item Sets?</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/maps')"><span class="badge badge-warning">TODO</span>Maps</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/npcs')"><span class="badge badge-warning">TODO</span>NPCs</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/quests')"><span class="badge badge-warning">TODO</span>Quests</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/skills')"><span class="badge badge-warning">TODO</span>Skills</a>
+            <a class="dropdown-item" [routerLink]="routerLink('/database/effects')"><span class="badge badge-warning">TODO</span>Status Effects</a>
           </div>
         </a>
 
@@ -115,8 +116,10 @@
       </a>
 
       <!-- Theme selector -->
-      <a class="nav-item" (click)="theme.toggle()" [ngbTooltip]="(theme.is(Theme.LIGHT) ? 'Dark' : 'Light') + ' Theme'" placement="bottom">
-        <fa-icon class="nav-link" [icon]="theme.is(Theme.LIGHT) ? faMoon : faSun"></fa-icon>
+      <a class="nav-item"
+         [ngbTooltip]="themeSelected + ' Theme'" placement="bottom"
+         (click)="themeSelect(themeSelected == PreferenceTheme.LIGHT ? PreferenceTheme.DARK : PreferenceTheme.LIGHT)">
+        <fa-icon class="nav-link" [icon]="themeSelected == PreferenceTheme.LIGHT ? faMoon : faSun"></fa-icon>
       </a>
     </ul>
   </div>

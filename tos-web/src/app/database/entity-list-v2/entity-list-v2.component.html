@@ -1,10 +1,10 @@
-<div class="row">
+<div class="row flex-nowrap">
   <!-- Title -->
-  <div class="col-3 align-items-center">
-    <h2 class="mb-0">Armor</h2>
+  <div class="col-3 d-flex align-items-center">
+    <h2 class="mb-0">{{ list?.title | translate }}</h2>
   </div>
 
-  <div class="col d-flex align-items-center justify-content-center" *ngIf="list?.filterHeader">
+  <div class="col-6 d-flex align-items-center justify-content-center" *ngIf="list?.filterHeader">
     <tos-entity-list-filter-v2 [filter]="list.filterHeader" (filterChange)="onFilterChange()"></tos-entity-list-filter-v2>
   </div>
 
@@ -27,7 +27,7 @@
 </div>
 
 <!-- Filter -->
-<div *ngIf="isFilter" class="mt-1 row">
+<div *ngIf="isFilter" class="row align-items-center justify-content-center mt-1">
   <div *ngFor="let filter of list?.filter; trackBy: trackByIndex" class="col-2 d-flex flex-column mb-1">
     <tos-entity-list-filter-v2 [filter]="filter" (filterChange)="onFilterChange()"></tos-entity-list-filter-v2>
   </div>

@@ -1,5 +1,3 @@
-import os
-
 from PIL import Image
 
 
@@ -18,8 +16,6 @@ def png(path):
     image = Image.open(path)
     image = image.convert('RGBA') if image.mode != 'RGBA' else image
     image = image.save(path[:path.rfind('.')] + '.png', 'PNG', optimize=True)
-
-    os.remove(path)
 
 
 # https://stackoverflow.com/a/6483549
