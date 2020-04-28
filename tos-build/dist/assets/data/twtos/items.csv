@@ -568,6 +568,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 640477,expCard16_Mine,提升經驗值31212626、職業經驗值24033722。320級至449級的角色可以使用。{nl}{#FF0000}* 450級以上角色無法使用。{/},icon_item_expcard,,,,,,,,[資源爭奪戰]LV15經驗值卡片,0,0.0,0.0,FFFF,7,0.0
 640478,expCard17_Mine,提升經驗值78031565、職業經驗值60084305。350級至449級可以使用。{nl}{#FF0000}* 450級以上角色無法使用。{/},icon_item_expcard,,,,,,,,[資源爭奪戰]LV16經驗值卡片,0,0.0,0.0,FFFF,7,0.0
 640479,WeeklyBossDEFpotion,"只能使用在每週BOSS遠征隊。{nl}10分內物理防禦力/魔法防禦力上升至30,000。{nl}BUFF不會重覆套用，當現有物理防禦力/魔法防禦力大於30,000時不會套用效果。",icon_item_weeklybossdefpotion,,,,,,,,[每週BOSS遠征隊] 凱都藍特製藥水,0,60.0,0.0,FFFT,7,5.0
+640481,CompanionExpcard400,可以幫助同行寵物的經驗值從1級升至400級的卡片。{nl} {nl}{#ff0000}飛行型寵物不會套用。,icon_item_paperpiece,,,,,,,,寵物經驗值卡片 Lv. 400,0,0.0,0.0,FFFF,7,0.0
+640482,WeeklyBossReductionPotion,"只能在每週BOSS遠征隊使用。{nl}10分內受到的傷害減少30%。{nl}BUFF不會重覆套用，受到的傷害量為1,000時，傷害不會減少。{nl} - 不會和'[每週BOSS遠征隊] 凱都藍特製藥水'重覆套用。",icon_item_defensive_potion,,,,,,,,[每週BOSS遠征隊] 雷堤夏特制藥水,0,60.0,0.0,TTFT,7,5.0
+640483,WeeklyBossReductionPotion_Team,"只能在每週BOSS遠征隊使用。{nl}10分內受到的傷害減少30%。{nl}BUFF不會重覆套用，受到的傷害量為1,000時，傷害不會減少。{nl} - 不會和'[每週BOSS遠征隊] 凱都藍特製藥水'重覆套用。",icon_item_defensive_potion,,,,,,,,[每週BOSS遠征隊] 凱都藍特製藥水 II,0,60.0,0.0,FFFT,7,5.0
 641001,Jungtan_1,,icon_item_booster_1,,,,,,,,LV1 攻擊推進器,1,8.0,0.0,TTTT,7,1.0
 641002,Jungtan_2,,icon_item_booster_1,,,,,,,,攻擊推進器 +15,1,8.0,0.0,TTTT,7,1.0
 641003,Jungtan_3,,icon_item_booster_1,,,,,,,,攻擊推進器 +20,2,8.0,0.0,TTTT,7,1.0
