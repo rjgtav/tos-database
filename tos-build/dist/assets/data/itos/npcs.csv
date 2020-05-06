@@ -1588,6 +1588,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160019,event_2001_cat,,,Cat at the Fishing Spot,2
 160022,WEEKLY_PURIFYING_STONE,,,Purifying Stone,2
 160023,npc_kupole_3_event_2004,,minimap_event_1,Arbor Day Event Helper,2
+160024,NPC_goddess_Roulette,,minimap_event_1,[이벤트] 여신의 룰렛,2
 161000,E_statue_zemina,,minimap_goddess,Statue of Goddess Zemyna,2
 161001,npc_kupole_Velcoffer,,,Kupole Simona,2
 161002,npc_Teliavelis,,minimap_man_smith,Blacksmith Teliavelis,2
