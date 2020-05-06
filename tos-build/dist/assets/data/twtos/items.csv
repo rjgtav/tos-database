@@ -5964,15 +5964,15 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904239,event1912_4thAnniversary_Coin,為了紀念4周年而製作的鑄幣。在活動期間內可以透過各種管道取得。{nl}活動結束時統一刪除。{nl}可以在4周年紀念商店中使用。,icon_item_annycoin_2,,,,,,,,[活動]4周年紀念鑄幣,0,0.0,0.0,FFFT,18,0.1
 904240,event1912_TP_feather,"蘊藏加比婭恩寵的羽毛。收集3個轉交給交換NPC加比婭的傳令，就可以依機率獲得加比婭主題道具中的1種。{nl} {nl}{@st66d}1月 9日維護時特性點數統一變更為 4,000。{/} {nl} {nl}{@st66d_y}{s18}加比婭主題道具清單{/}{/}{nl}- 加比婭的祭司套裝選擇箱 x1{nl}- 加比婭之火 x1{nl}- 小加比婭娃娃 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅色髮結 x1{nl}- 加比婭羽毛髮飾 x1{nl}- 火之傳令鳥x 1{nl}- 充滿加比婭恩寵的翅膀裝飾 x2 ~ 50{nl} {nl}{@st66d_y}{s18}* 透過官網下方 '機率型道具目錄'可以確認內容物和機率。{/}{/}",icon_item_feather_pinics,,,,,,,,充滿加比婭恩寵的羽毛,0,0.0,0.0,TTFT,18,0.1
 904241,event1912_TP_wing,"充滿加比婭恩寵的翅膀裝飾，如果拿去給交換NPC加比婭的傳令和NPC克莉妲的話，可以選擇加比婭主題道具中1個，只要轉交加充滿比婭恩寵翅膀裝飾的需求數量就可以獲得。{nl} {nl}{@st66d}活動期間特性點數統一變成2,000。{/}{nl} {nl}{@st66d_y}{s18}加比婭主題道具清單{/}{/}{nl}- 加比婭祭司套裝選擇箱 x1{nl}- 加比婭之火 x1{nl}- 小加比婭娃娃 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅色髮結 x1{nl}- 加比婭羽毛髮飾 x1",icon_item_wing_pinics,,,,,,,,充滿加比婭恩寵的翅膀裝飾,0,0.0,0.0,FFFT,18,0.1
-904242,item_event_2020_luckyticket,為了迎接新年特製的中獎券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_luckyticket,,,,,,,,[活動]新年福袋中獎券,0,0.0,0.0,FFFT,18,0.1
-904243,item_event_2020_goldenticket,為了迎接新年特製的交換券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_goldenticket,,,,,,,,[活動]新年黃金福袋交換券,0,0.0,0.0,FFFT,18,0.1
+904242,item_event_2020_luckyticket,為了迎接新年特製的中獎券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_luckyticket,,,,,,,,[活動]福袋獎券,0,0.0,0.0,FFFT,18,0.1
+904243,item_event_2020_goldenticket,為了迎接新年特製的交換券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_goldenticket,,,,,,,,[活動]黃金福袋交換券,0,0.0,0.0,FFFT,18,0.1
 904244,item_event_2020_ticket,為了迎接新年特製的交換券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_ticket,,,,,,,,[活動]2020大慶典交換券,0,0.0,0.0,FFFT,18,0.1
 904247,TP_1912_EQUIPITEM_BOX_ARMOR,使用時可以獲得想要的11強化10超越[4ever] 賽必諾斯防具1個。{nl}該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[4ever] 11強化10超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
 904248,TP_1912_EQUIPITEM_BOX,使用時可以獲得想要的11強化10超越[4ever] 賽必諾斯武器1個。{nl}該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[4ever] 11強化10超越賽必諾斯武器選擇箱,0,0.0,0.0,FFFT,9,1.0
 904249,EVENT_1710_NEWCHARACTER_BOX_20,點擊滑鼠右鍵即可使用，420級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 升級箱 (420級),0,0.0,0.0,FFFF,9,1.0
 904250,EVENT_EP12NEWCLASS_COSBOX,點擊滑鼠右鍵使用，可以選擇並獲得以下職業套裝中的一件。{nl} - 梅花俠客{nl} - 鋼弩手{nl} - 大地法師{nl} - 東征十字軍{nl} - 冉達 {nl}活動結束後統一刪除。,icon_item_giftbox_4,,,,,,,,[活動] 新職業優惠套裝選擇箱,0,0.0,0.0,FFFT,9,1.0
 904251,Event_expCard_400Lv_NO420,可以獲得從1級到400級為止所需要的經驗值。{nl}但是，只有在{#ff0000}200級未滿時可以使用。,icon_item_expcard,,,,,,,,[活動] 經驗值卡片 (400級),0,0.0,0.0,FFFT,9,0.0
-904252,Drug_Fortunecookie_2020,30分鐘內根據疊加經驗值、移動速度、最大HP會增加，最多可以疊加至5為止。活動結束時統一刪除。,icon_item_fortunecookie,,,,,,,,[活動]幸運餅乾,0,10.0,0.0,FFFT,7,0.0
+904252,Drug_Fortunecookie_2020,30分鐘內根據疊加經驗值、移動速度、最多可以疊加至5為止。活動結束時統一刪除。,icon_item_fortunecookie,,,,,,,,[活動]幸運餅乾,0,10.0,0.0,FFFT,7,0.0
 904253,4YEARS_EVENT_JUMPING,使用時可以獲得以下所有內容物。{nl} - [活動] 經驗值卡片 (400級) x1{nl} - 職業經驗值卡片箱 x1,icon_item_giftbox_4,,,,,,,,[活動] Lv.400 飛躍箱,0,0.0,0.0,FFFF,7,0.0
 904254,2020_AbillityArts_Box_1_d7,使用時可獲得想要的職業系列秘術重置藥水選擇箱。,icon_item_happybox_red,,,,,,,,[活動]秘術重置藥水職業系列選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
 904255,2020_AbillityArts_Box_2_d7,使用時可獲得想要的劍士系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]劍士系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
@@ -6405,7 +6405,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 2040365,HiddenAbility_Exorcist23,使用時，可以獲得 [團契：高級強化] 祕術。{nl} - 學習條件 ：[團契：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [團契]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_cleric,,,,,,,,神祕之書 (團契：高級強化),0,0.0,0.0,FFFT,14,0.1
 2040366,HiddenAbility_Exorcist24,使用時，可以獲得 [天譴：高級強化] 祕術。{nl} - 學習條件 ：[天譴：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [天譴]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_cleric,,,,,,,,神祕之書 (天譴：高級強化),0,0.0,0.0,FFFT,14,0.1
 2040367,HiddenAbility_Scout24,使用時，可以獲得 [二重斬：高級強化] 祕術。{nl} - 學習條件 ：[二重斬：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [二重斬]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_scout,,,,,,,,神祕之書 (二重斬：高級強化),0,0.0,0.0,FFFT,14,0.1
-2040368,HiddenAbility_Scout25,使用時，可以獲得 [斜射：高級強化] 祕術。{nl} - 學習條件 ：[斜射：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [斜射]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_scout,,,,,,,,神祕之書 (斜射：高級強化),0,0.0,0.0,FFFT,14,0.1
+2040368,HiddenAbility_Scout25,使用時，可以獲得 [傾斜槍火：高級強化] 祕術。{nl}  學習條件 ：[傾斜槍火：強化] 特性 65 等級達成{nl}  學習或是升級特性費用 ：3057 點{nl}  祕術說明{nl}* [傾斜槍火]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_scout,,,,,,,,神祕之書 (傾斜槍火：高級強化),0,0.0,0.0,FFFT,14,0.1
 2040369,HiddenAbility_Assassin19,使用時，可以獲得 [斬首：高級強化] 祕術。{nl} - 學習條件 ：[斬首：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [斬首]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_scout,,,,,,,,神祕之書 (斬首：高級強化),0,0.0,0.0,FFFT,14,0.1
 2040370,HiddenAbility_Assassin20,使用時，可以獲得 [瞬間加速：高級強化] 祕術。{nl} - 學習條件 ：[瞬間加速：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [瞬間加速]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_scout,,,,,,,,神祕之書 (瞬間加速：高級強化),0,0.0,0.0,FFFT,14,0.1
 2040371,HiddenAbility_Assassin21,使用時，可以獲得 [刺穿心臟：高級強化] 祕術。{nl} - 學習條件 ：[刺穿心臟：強化] 特性 65 等級達成{nl} - 學習或是升級特性費用 ：3057 點{nl} - 祕術說明{nl}* [刺穿心臟]的技能係數每特性等級增加 1.25%,icon_item_hiddenability_scout,,,,,,,,神祕之書 (刺穿心臟：高級強化),0,0.0,0.0,FFFT,14,0.1
