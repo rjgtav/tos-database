@@ -328,8 +328,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 904129,EVENT_BORUTA_CLEAR_REWARDBOX,A special gift from the goddess celebrating an important achievement: the first successful hunt on Boruta the dragon in Sulivinas Lair.{nl}Use to obtain the reward.,icon_item_cube3_blow,,,,,,,,,Goddess' Present Chest,0,0.0,0.0,FFFT,6,1.0
 904138,EVENT_1902_NEWYEAR_FORTUNEPOUCH,A special Lunar New Years gift.{nl}Open the bag to find out what's inside.{nl}Will be deleted at the end of the event period.,icon_item_fortunepouch,,,,,,,,,[Event] New Year Lucky Bag,0,0.0,0.0,FFFT,6,0.0
 904228,EVENT_QOS_SHIRTS_S1,NA,icon_item_happybox_black,,,,,,,,,NA,0,0.0,0.0,FFFF,6,5.0
-904245,EVENT_2020_NEWYEAR_FORTUNEPOUCH,"럭키 박스 입니다.{nl}사용 시 각 아이템별 확률에 따라 이벤트 보상을 획득할 수 있습니다.{nl}6월 2일 점검 시, 일괄 삭제됩니다.",icon_item_event_2005_lucky_box,,,,,,,,,[이벤트]럭키 박스,0,0.0,0.0,FFFT,6,0.1
-904246,EVENT_2020_GOLDEN_FORTUNEPOUCH,"골든 럭키 박스 입니다.{nl}사용 시 각 아이템별 확률에 따라 이벤트 보상을 획득할 수 있습니다.{nl}6월 2일 점검 시, 일괄 삭제됩니다",icon_item_event_2005_golden_lucky_box,,,,,,,,,[이벤트]골든 럭키 박스,0,0.0,0.0,FFFT,6,0.1
+904245,EVENT_2020_NEWYEAR_FORTUNEPOUCH,A Lucky Box.{nl}Open it to obtain an event reward.{nl}Will be automatically deleted upon the announced date.,icon_item_event_2005_lucky_box,,,,,,,,,[Event] Lucky Box,0,0.0,0.0,FFFT,6,0.1
+904246,EVENT_2020_GOLDEN_FORTUNEPOUCH,A Golden Lucky Box.{nl}Open it to obtain an event reward.{nl}Will be automatically deleted upon the announced date.,icon_item_event_2005_golden_lucky_box,,,,,,,,,[Event] Golden Lucky Box,0,0.0,0.0,FFFT,6,0.1
 2020001,HiddenAbility_TotalCube,Use to obtain a random [Mystic Tome].,icon_item_hiddenability_total,,,,,,,,,Unidentified Mystic Tome Page,0,0.0,0.0,FFFT,6,0.1
 2020002,HiddenAbility_SwordmanCube,Use to obtain a random Swordsman [Mystic Tome].,icon_item_hiddenability_swordman,,,,,,,,,Unidentified Mystic Tome: Swordsman,0,0.0,0.0,FFFT,6,0.1
 2020003,HiddenAbility_WizardCube,Use to obtain a random Wizard [Mystic Tome].,icon_item_hiddenability_wizard,,,,,,,,,Unidentified Mystic Tome: Wizard,0,0.0,0.0,FFFT,6,0.1
