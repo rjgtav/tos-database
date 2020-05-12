@@ -809,8 +809,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641934,161215Event_ABox_2,裝有受拉伊瑪祝福的防具箱子。{nl}活動結束時活動道具統一刪除。,icon_item_event_armorbox2,,,,,,,,救援者的初級防具箱子,0,0.0,0.0,FFFF,7,0.0
 641935,161215Event_NewChar,裝有拉伊瑪禮物的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_giftbox1,,,,,,,,拉伊瑪的禮物箱子,0,0.0,0.0,FFFF,7,0.0
 641936,161215Event_OldChar,裝有拉伊瑪寶物的箱子。{nl}活動結束時活動道具統一刪除。,icon_item_giftbox2,,,,,,,,拉伊瑪的寶箱,0,0.0,0.0,FFFF,7,0.0
-641937,CS_IndunReset_GTower_1,今天進入的大地之塔進場次數增加1次。,icon_item_indunfreeenter,,,,,,,,大地之塔入場劵(5天),0,0.0,432000.0,FFFF,7,0.0
-641938,CS_IndunReset_Nunnery_1,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,,,莎勒斯修女院入場劵(5天),0,5.0,432000.0,FFFF,7,0.0
+641937,CS_IndunReset_GTower_1,今天進入的大地之塔進場次數增加1次。,icon_item_indunfreeenter,,,,,,,,大地之塔入場券(5天),0,0.0,432000.0,FFFF,7,0.0
+641938,CS_IndunReset_Nunnery_1,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,,,莎勒斯修女院入場券(5天),0,5.0,432000.0,FFFF,7,0.0
 641939,Event_Goddess_Statue,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,,,女神的雕像(14天),0,0.0,1209600.0,FFFT,7,0.0
 641940,CS_IndunReset_GTower_14d,可以進入大地之塔1次。,icon_item_key_earthtower,,,,,,,,大地之塔入場劵(14天),0,0.0,1209600.0,FFFF,7,0.0
 641941,CS_IndunReset_Nunnery_14d,今天進入的莎勒斯修女院的進場次數增加1次。,icon_item_indunfreeenter,,,,,,,,莎勒斯修女院入場劵(14天),0,5.0,1209600.0,FFFF,7,0.0
@@ -823,7 +823,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641953,ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式1次入場券,0,5.0,0.0,FFFF,7,1.0
 641954,ChallengeModeReset_1d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式 1次入場券 (1天),0,5.0,86400.0,FFFF,7,1.0
 641955,ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式 1次入場券 (14天),0,5.0,1209600.0,FFFF,9,1.0
-641956,Reward_Error_compensation_1d,"點擊滑鼠右鍵即可開啟並獲得箱子內容物。{nl} - 寵物交換劵 12張{nl} - x4 經驗之書 3個{nl} - 特性點數1,000(冒險日誌獎勵) 2個 {nl} - 副本倍數VIP3個 {nl} - 銀幣 500,000 ",icon_item_giftbox_4,,,,,,,,補償用冒險日誌排名獎勵箱子(1天),0,0.0,86400.0,FFFF,7,0.0
+641956,Reward_Error_compensation_1d,"點擊滑鼠右鍵即可開啟並獲得箱子內容物。{nl}  寵物交換券 12張{nl}  x4 經驗之書 3個{nl}  特性點數1,000(冒險日誌獎勵) 2個 {nl}  副本倍數VIP3個 {nl}  銀幣 500,000 ",icon_item_giftbox_4,,,,,,,,補償用冒險日誌排名獎勵箱子(1天),0,0.0,86400.0,FFFF,7,0.0
 641962,Event_drug_steam_team,30分鐘內移動速度 +2、物理攻擊力 +50、魔法攻擊力 +50，透過點按滑鼠右鍵使用，活動結束後統一刪除。,item_speed_requid_3,,,,,,,,定居支援藥水,0,30.0,0.0,FFFT,7,0.0
 641963,Premium_ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式1次入場券,0,5.0,0.0,TTFT,7,1.0
 641964,Uphill_Store_Point_10,使用時可以獲得10點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：10,0,0.0,0.0,FFFF,7,0.0
@@ -837,9 +837,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641976,Event1907_guild_exp_up_lv1,令公會經驗值+100的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up1,,,,,,,,[活動]公會任務獎勵鑄幣：銅,0,0.0,0.0,FFFT,18,1.0
 641977,Event1907_guild_exp_up_lv2,令公會經驗值+200的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up2,,,,,,,,[活動]公會任務獎勵鑄幣：銀,0,0.0,0.0,FFFT,18,1.0
 641978,Event1907_guild_exp_up_lv3,令公會經驗值+400的道具。{nl}活動結束時統一刪除。,icon_item_guild_exp_up3,,,,,,,,[活動]公會任務獎勵鑄幣：金,0,0.0,0.0,FFFT,18,1.0
-641983,Coupon_Reagent_Bottle_Expup_100,使用時4小時內進入試劑瓶的經驗值增加2倍。{nl}不會和有相同效果的Buff重覆套用。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值增加量2倍折扣劵,0,0.0,0.0,FFFT,7,0.0
-641984,abilitypoint_piece_1000,"收集100個後使用可獲得特性點數1,000。",icon_item_abilitypoint_piece,,,,,,,,"撕破的特性點數交換劵 1,000",0,0.0,0.0,FFFT,7,0.0
-641985,Coupon_Reagent_Bottle_Expup_100_Daily,使用時4小時內進入試劑瓶的經驗值增加2倍。{nl}不會和有相同效果的Buff重覆套用。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值增加量2倍折扣劵(14天),0,3.0,1209600.0,FFFT,7,0.0
+641983,Coupon_Reagent_Bottle_Expup_100,使用時4小時內進入試劑瓶的經驗值增加2倍。{nl}不會和有相同效果的Buff重覆套用。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值增加量2倍折扣券,0,0.0,0.0,FFFT,7,0.0
+641984,abilitypoint_piece_1000,"收集100個後使用可獲得特性點數1,000。",icon_item_abilitypoint_piece,,,,,,,,"撕破的特性點數交換券 1,000",0,0.0,0.0,FFFT,7,0.0
+641985,Coupon_Reagent_Bottle_Expup_100_Daily,使用時4小時內進入試劑瓶的經驗值增加2倍。{nl}不會和有相同效果的Buff重覆套用。,icon_item_misc_00021,,,,,,,,試劑瓶經驗值增加量2倍折扣券(14天),0,3.0,1209600.0,FFFT,7,0.0
 641986,PREMIUM_CHALLENG_PORTAL_Daily,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,1209600.0,FFFF,9,1.0
 642502,Gacha_EXP_001,使用時 LV2 ~ 10 經驗值卡片中可隨機獲得3張。,icon_item_quest_00017,,,,,,,,經驗值卡片箱子,0,0.0,0.0,FFFF,7,0.0
 642503,Gacha_Recipe_Wep,使用時可以在LV220武器製作圖中隨獲獲得1張。,icon_item_luckybox_red,,,,,,,,Lv220 製作書箱子 - 武器,0,0.0,0.0,FFFF,7,0.0
@@ -875,10 +875,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643022,Extract_kit_Gold,血晶萃取時使用的工具，只有裝備潛力為0時可以使用，防止道具破壞。,icon_item_extractkit_gold,,,,,,,,發光的黃金血晶萃取工具,0,0.0,0.0,TTFT,18,4.0
 643023,Transcend_Scroll_Event_90d,提升裝備的超越數值至5階段，點擊右鍵即可使用。,icon_item_transcendence_coupon,,,,,,,,[活動] 5超越卷軸 (90天),0,0.0,7776000.0,FFFT,9,1.0
 643025,Moru_Gold_14d_Team,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,,,黃金鐵砧(14天),0,0.0,1209600.0,FFFT,7,1.0
-643026,Extract_kit_Gold_NotFail,[Rebuild]改版後支援期間可使用的血晶萃取劵。{nl} - 活動結束時統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具,0,0.0,0.0,FFTF,18,4.0
+643026,Extract_kit_Gold_NotFail,[Rebuild]改版後支援期間可使用的血晶萃取券。{nl}  活動結束時統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具,0,0.0,0.0,FFTF,18,4.0
 643027,Transcend_Scroll_5_Event,讓裝備的超越數值提升至5階。{nl}只有0~4階超越道具可以使用，右點擊5超越卷軸後，選擇要超越的道具，就可以變更成5超越的狀態。,icon_item_transcendence_coupon,,,,,,,,[活動] 5超越卷軸,0,0.0,0.0,FFFT,9,1.0
-643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於隨機屬性裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具：隨機屬性,0,0.0,0.0,FFTF,18,4.0
-643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 改版照顧期間可使用的血晶萃取劵。{nl}只能於製作獨特裝備上使用。{nl} - 活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具：製作,0,0.0,0.0,FFTF,18,4.0
+643028,Extract_kit_Gold_NotFail_Rand,[Rebuild] 改版照顧期間可使用的血晶萃取券。{nl}只能於隨機屬性裝備上使用。{nl}  活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具：隨機屬性,0,0.0,0.0,FFTF,18,4.0
+643029,Extract_kit_Gold_NotFail_Recipe,[Rebuild] 改版照顧期間可使用的血晶萃取券。{nl}只能於製作獨特裝備上使用。{nl}  活動結束時道具統一刪除。,icon_item_extractkit_gold,,,,,,,,[Rebuild] 100%血晶萃取工具：製作,0,0.0,0.0,FFTF,18,4.0
 643035,Moru_Stone_TN,將裝備放到鐵砧上敲敲打打，就可以提升性能。裝備強化費用減少50%。請點擊滑鼠右鍵開始使用。,icon_item_anvil,,,,,,,,鋼鐵鐵砧,45,0.0,0.0,FFTF,18,1.0
 643036,Moru_Silver_Team,將裝備放置到鐵砧上，輕敲後可以提升裝備性能。不需花費銀幣就可以強化裝備。點擊滑鼠右鍵可以直接使用。道具使用期限為14天，獲得後開始計時，若超過使用期限將無法使用道具。,icon_item_anvil_silver,,,,,,,,銀光鐵砧(14天),0,0.0,1209600.0,FFFT,18,1.0
 643037,Moru_Stone_Team,將裝備放到鐵砧上敲敲打打，就可以提升性能。裝備強化費用減少50%。請點擊滑鼠右鍵開始使用。獲得後14日內可以使用。,icon_item_anvil,,,,,,,,鋼鐵鐵砧(14天),45,0.0,1209600.0,FFFT,18,1.0
@@ -1907,16 +1907,16 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649407,seed_07,可以種植作物的種子，可以在公會基地內使用。,icon_item_seed_red,,,,,,,,薰衣草種子,0,3.0,0.0,TTTT,7,10.0
 649601,egg_001,可以養寵物的蛋。 寵物蛋可於公會基地中使用。,icon_item_egg_guineapig,,,,,,,,天竺鼠蛋,2000,30.0,0.0,FFTF,7,10.0
 649602,egg_002,可以養寵物的蛋。 寵物蛋可於公會基地中使用。,icon_item_egg_lesserpanda,,,,,,,,小貓熊蛋 (球型),2000,30.0,0.0,FFTF,7,10.0
-649603,egg_003,使用冒險日誌獎勵寵物交換劵獲得的小豬蛋，點擊滑鼠右鍵即可使用，使用時可立即登錄寵物。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_piggy,,,,,,,,小豬蛋,2000,30.0,0.0,FFTF,7,10.0
+649603,egg_003,使用冒險日誌獎勵寵物交換券獲得的小豬蛋，點擊滑鼠右鍵即可使用，使用時可立即登錄寵物。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_piggy,,,,,,,,小豬蛋,2000,30.0,0.0,FFTF,7,10.0
 649605,egg_005,可以養寵物的蛋。 寵物蛋可於公會基地中使用。,icon_item_egg_barnowl,,,,,,,,貓頭鷹蛋,2000,30.0,0.0,FFTT,7,10.0
 649607,egg_007,點擊右鍵可以直接使用，點擊之後寵物就會自動登錄。 {nl} 寵物就算沒有騎乘功能玩家也可以騎乘寵物。{nl} 玩家與寵物一起行動時，寵物可為玩家帶來暴擊發生率及暴及攻擊力增幅提升。,icon_item_egg_lessrpanda2,,,,,,,,紅熊貓箱子,2000,0.0,0.0,FFFT,7,10.0
 649608,egg_008,能召喚侏儒的賢者之石。點擊滑鼠右鍵即可召喚。,icon_item_philosopher_stone,,,,,,,,賢者之石,0,30.0,0.0,TTTT,7,10.0
 649615,egg_015,點擊右鍵可以直接使用，點擊之後寵物就會自動登錄。 {nl} 寵物就算沒有騎乘功能玩家也可以騎乘寵物。{nl} 玩家與寵物一起行動時，寵物可為玩家帶來暴擊發生率及暴及攻擊力增幅提升。,icon_item_egg_lessrpanda_gray,,,,,,,,救世熊箱,2000,0.0,0.0,TTFT,7,10.0
 649698,egg_098,可以養寵物的蛋。 寵物蛋可於公會基地中使用。,icon_item_egg_guineapig,,,,,,,,天竺鼠蛋(測試用、1分鐘),2000,30.0,0.0,FFTF,7,10.0
 649699,egg_099,過去相伴的寵物的重生蛋。繼承死去寵物的能力值，留下對主人的記憶。,icon_item_egg,,,,,,,,重生蛋,0,30.0,0.0,TTTT,7,10.0
-649700,egg_017,使用冒險日誌獎勵寵物交換劵獲得的犰狳蛋，點擊滑鼠右鍵即可使用，使用時可立即登錄為寵物。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_armadilo,,,,,,,,犰狳蛋,2000,30.0,0.0,FFTF,7,10.0
-649702,egg_022,使用冒險日誌獎勵寵物交換劵獲得的渡渡鳥蛋，點擊滑鼠右鍵即可使用，使用時可立即登錄寵物。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_mrdodo,,,,,,,,渡渡鳥蛋,2000,30.0,0.0,FFTF,7,10.0
-649704,egg_024,利用冒險日誌獎勵寵物交換劵可以獲得的斑點小豬蛋，點擊滑鼠右鍵即可使用，使用時寵物會自動登錄。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_piggy_spotted,,,,,,,,斑點小豬蛋,2000,30.0,0.0,FFTF,7,10.0
+649700,egg_017,使用冒險日誌獎勵寵物交換券獲得的犰狳蛋，點擊滑鼠右鍵即可使用，使用時可立即登錄為寵物。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_armadilo,,,,,,,,犰狳蛋,2000,30.0,0.0,FFTF,7,10.0
+649702,egg_022,使用冒險日誌獎勵寵物交換券獲得的渡渡鳥蛋，點擊滑鼠右鍵即可使用，使用時可立即登錄寵物。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_mrdodo,,,,,,,,渡渡鳥蛋,2000,30.0,0.0,FFTF,7,10.0
+649704,egg_024,利用冒險日誌獎勵寵物交換券可以獲得的斑點小豬蛋，點擊滑鼠右鍵即可使用，使用時寵物會自動登錄。{nl}該寵物就算沒有寵物騎乘技能也可以騎乘。,icon_item_egg_piggy_spotted,,,,,,,,斑點小豬蛋,2000,30.0,0.0,FFTF,7,10.0
 650011,Return_Scroll,如果使用可以瞬間移動到儲存地點的寶珠，每15分可以使用1次。,icon_item_orb_1,,,,,,,,思鄉晶球,0,90.0,0.0,FFFF,24,0.0
 650012,Escape_Orb,可以移動至目前地區內的某個位置上。點擊滑鼠右鍵使用，冷卻時間15分鐘。,mercenarybadge,,,,,,,,歸還石,0,900.0,0.0,FFFF,24,0.0
 650013,Escape_Orb_orsha,可以移動至目前地區內的某個位置上。點擊滑鼠右鍵使用，冷卻時間15分鐘。,mercenarybadge,,,,,,,,歸還石,0,900.0,0.0,FFFF,7,0.0
@@ -2528,8 +2528,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 661030,CATACOMB_38_1_SQ_05_ITEM,因為和魔族之間的契約，而屬於魔族的遺骨，就算死亡也無法獲得自由。,icon_item_bone,,,,,,,,被契約綁著的遺骨,0,0.0,0.0,FFFF,24,0.0
 661031,CATACOMB_02_SQ_03_ITEM,感受到巴利烏斯的魔力。,icon_item_brooch,,,,,,,,充滿巴利烏斯魔力的胸針,0,3.0,0.0,FFFF,24,0.0
 661032,CATACOMB_02_SQ_06_ITEM,具有抑制巴利烏斯生前所創造的魔氣之力量的印章，令魔族的力量弱化。,icon_item_gem_pendent1,,,,,,,,抑制魔氣的印章,0,15.0,0.0,FFFF,24,0.0
-661033,JOB_VELHIDER_COUPON,在寵物商店可以交換貝哈伊勒。,siaul_act3_confirmation,,,,,,,,貝哈伊勒交換劵,0,0.0,0.0,FFFF,24,0.0
-661034,JOB_HAWK_COUPON,在寵物商店可以交換鷹。,siaul_act3_confirmation,,,,,,,,老鷹交換劵,0,0.0,0.0,FFFF,24,0.0
+661033,JOB_VELHIDER_COUPON,在寵物商店可以交換貝哈伊勒。,siaul_act3_confirmation,,,,,,,,貝哈伊勒交換券,0,0.0,0.0,FFFF,24,0.0
+661034,JOB_HAWK_COUPON,在寵物商店可以交換鷹。,siaul_act3_confirmation,,,,,,,,老鷹交換券,0,0.0,0.0,FFFF,24,0.0
 661035,JOB_SQUIRE_6_1_ITEM,勒肯家的印章，很久以前就損壞只剩下一部份。,icon_item_spacepiece,,,,,,,,破產的勒肯家的印章碎片,0,0.0,0.0,FFFF,24,0.0
 661036,JOB_CORSAIR_6_1_ITEM,勒肯家的印章，很久以前就損壞只剩下一部份。,icon_item_neck_100002,,,,,,,,海賊王佛拉迪斯羅帕斯的破碎的項鍊,0,0.0,0.0,FFFF,24,0.0
 661037,JOB_CENTURION_6_1_ITEM,王國軍團遺失的軍團旗，破損很嚴重，無法得知是哪個軍團的旗子。,icon_item_clothpiece_red,,,,,,,,被撕破的王國軍軍團旗,0,0.0,0.0,FFFF,24,0.0
@@ -2629,7 +2629,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 661131,PRISON_82_MQ_10_ITEM,卡杜梅爾王的藍寶石，開啟隱藏啟示的裝置時需要。,icon_item_gem_aquamarine,,,,,,,,王之藍寶石,0,0.0,0.0,FFFF,24,0.0
 661132,stonetablet08,在卡雷伊瑪斯監獄發現的第八個啟示，可以閱讀。,icon_item_stonetablet,,,,,,,,卡雷伊瑪斯監獄的啟示,0,0.0,0.0,FFFF,24,0.0
 661133,PRISON_81_SQ_1_ITEM,被收監在卡雷伊瑪斯監獄的罪犯所留下的信件。,icon_item_paper,,,,,,,,囚犯的信件,0,0.0,0.0,FFFF,24,0.0
-661134,JOB_HOGLAN_COUPON,可以在寵物商店交換霍克鷹。,siaul_act3_confirmation,,,,,,,,霍克鷹交換劵,0,0.0,0.0,FFFF,24,0.0
+661134,JOB_HOGLAN_COUPON,可以在寵物商店交換霍克鷹。,siaul_act3_confirmation,,,,,,,,霍克鷹交換券,0,0.0,0.0,FFFF,24,0.0
 661135,ORCHARD_34_3_SQ_ITEM1,在巴勒哈森林成長的藥草，製作解毒劑的材料。,icon_item_raudonelis,,,,,,,,巴勒哈的藥草,0,0.0,0.0,FFFF,24,0.0
 661136,ORCHARD_34_3_SQ_ITEM2,製作解毒劑所需要的材料，滑溜滑溜的，觸感不是很好。,icon_item_quest_00020,,,,,,,,蘑菇精的滑溜汁液,0,0.0,0.0,FFFF,24,0.0
 661137,ORCHARD_34_3_SQ_ITEM3,用巴勒哈森林的材料所製作的解毒劑，可以治療那些中了莎勒瑪之毒的人。,icon_item_drug_con1,,,,,,,,巴勒哈解毒劑,0,0.0,0.0,FFFF,24,0.0
@@ -2679,7 +2679,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 661181,HIDDEN_MIKO_BEAD_ITEM_12,對神靈石有反應的神靈球，不同的時候有反應的神靈石所搭配的神靈球會不同。,icon_item_whiteorb,,,,,,,,第12個神靈球,0,0.0,0.0,FFFF,24,0.0
 661182,HIDDEN_MIKO_ITEM_2,過去凱都拉商團入手的王國外來的物品，蘊含著神靈。,icon_item_gohei_blue,,,,,,,,蘊含神靈的祭神杖,0,0.0,0.0,FFFF,24,0.0
 661183,JOB_MIKO_6_1_ITEM,管理巫女設下的結界的祭神杖。聽說在結界前搖動祭神杖的話結界會有反應。,icon_item_gohei,,,,,,,,結界的祭神杖,0,3.0,0.0,FFFF,24,0.0
-661184,steam_JOB_HOGLAN_COUPON,可以在寵物商店交換霍克鷹。,siaul_act3_confirmation,,,,,,,,霍克鷹交換劵,0,0.0,0.0,FFFF,24,0.0
+661184,steam_JOB_HOGLAN_COUPON,可以在寵物商店交換霍克鷹。,siaul_act3_confirmation,,,,,,,,霍克鷹交換券,0,0.0,0.0,FFFF,24,0.0
 661185,WTREES_21_2_SQ_1_ITEM,諾貝禮爾傳染病治療劑。還無法達到完整療效。,icon_item_drug_con1,,,,,,,,緊急用諾貝禮爾傳染病治療劑 ,0,5.0,0.0,FFFF,24,0.0
 661186,WTREES_21_2_SQ_2_ITEM,可確認諾貝禮爾傳染病是否有透過空氣傳染的試驗液。,icon_item_quest_00020,,,,,,,,尤克利那斯的試驗液,0,0.0,0.0,FFFF,24,0.0
 661187,WTREES_21_2_SQ_3_ITEM,能感應諾貝禮爾傳染病的氣息的魔法石,14_item_ithildin,,,,,,,,傳染病感應石,0,5.0,0.0,FFFF,24,0.0
@@ -5480,13 +5480,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 800032,Cube_FD_Armor_315_Rare_Piece,獲得8個碎片之後右點擊時，可以獲得相同等級的未鑑定防具魔方(Lv.315)。{nl} - 沒有8個未鑑定魔方時，可用1個核交換。{nl} - 有8個以上的未鑑定魔方時，可變換成武器箱。,icon_item_cube_piece_rare,,,,,,,,未鑑定防具魔方碎片(Lv. 315),0,0.0,0.0,FFFT,7,1.0
 810000,Companion_Exchange_Ticket,冒險日誌獎勵中獲得的小豬寵物交換券，可以用20張交換券向巴伊寶拉之翼交換小豬寵物。,icon_item_indulgence,,,,,,,,小豬寵物交換券,0,0.0,0.0,TTFT,18,1.0
 810001,Team_Warehouse_Extend,點擊滑鼠右鍵使用，使用時可擴充隊伍倉庫2格。,icon_item_indulgence,,,,,,,,隊伍倉庫擴張券 +2,0,60.0,0.0,FFFF,7,1.0
-810002,Team_Warehouse_Extend_1add,點擊滑鼠右鍵使用，使用時可擴充隊伍倉庫1格。,icon_item_indulgence,,,,,,,,隊伍倉庫擴張劵 +1,0,60.0,0.0,FFFF,7,1.0
+810002,Team_Warehouse_Extend_1add,點擊滑鼠右鍵使用，使用時可擴充隊伍倉庫1格。,icon_item_indulgence,,,,,,,,隊伍倉庫擴張券 +1,0,60.0,0.0,FFFF,7,1.0
 810003,misc_gemExpStone_randomQuest4_Adv,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,5星寶石研磨劑,20,0.0,0.0,FFFT,18,1.0
 810004,Adventure_Reward_Seed,使用時受女神祝福的嫩芽會悄悄開花。,icon_item_event161215_01,,,,,,,,充滿祝福的嫩芽,0,5.0,0.0,FFFT,7,0.0
 810005,Adventure_Goddess_Statue,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,,,女神的雕像,0,0.0,0.0,FFFT,7,0.0
 810006,Companion_Exchange_Ticket2,冒險日誌獎勵中獲得的犰狳寵物交換券，可以用20張交換券向巴伊寶拉之翼交換犰狳。,icon_item_indulgence,,,,,,,,犰狳寵物交換券,0,0.0,0.0,TTFT,18,1.0
 810007,Companion_Exchange_Ticket3,冒險日誌獎勵中獲得的渡渡鳥寵物交換券，可以用20張交換券向巴伊寶拉之翼交換渡渡鳥寵物。,icon_item_indulgence,,,,,,,,渡渡鳥寵物交換券,0,0.0,0.0,TTFT,18,1.0
-810008,Companion_Exchange_Ticket4,從冒險日誌獎勵獲得的斑點小豬寵物交換劵，用20張交換劵可以跟巴伊寶拉之翼交換斑點小豬寵物。,icon_item_indulgence,,,,,,,,斑點小豬寵物交換劵,0,0.0,0.0,TTFT,18,1.0
+810008,Companion_Exchange_Ticket4,從冒險日誌獎勵獲得的斑點小豬寵物交換券，用20張交換券可以跟巴伊寶拉之翼交換斑點小豬寵物。,icon_item_indulgence,,,,,,,,斑點小豬寵物交換券,0,0.0,0.0,TTFT,18,1.0
 900101,Event_160421,發行者 ：寫著縮寫 T字母的票券。可用這個票券向村莊內的魔法協會 NPC換取道具。,icon_item_indulgence,,,,,,,,T的票券,1,0.0,0.0,FFFF,9,0.0
 900102,Event_160609,從凱都拉商團取得的黃金錀匙，可以跟村莊內魔法協會NPC交換道具。,icon_item_event_goldenkey,,,,,,,,黃金鑰匙,1,0.0,0.0,FFFF,9,0.0
 900103,Event_160609_1,使用時可以獲得任意的道具。,icon_item_eventbox_magic,,,,,,,,魔術師道具箱,0,2.0,0.0,FFFF,7,0.0
@@ -5534,8 +5534,8 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900162,Gacha_HairAcc_001_event14d_Team,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_hairgacha,,,,,,,,[活動]神秘轉蛋(限時),0,0.0,1209600.0,FFFT,7,0.0
 900200,Event_160913_1,破壞樹根水晶時，以一定機率獲得。{nl}收集5個以上，到活動佈告欄參加活動吧！,icon_item_orb_1,,,,,,,,根之水晶,1,0.0,0.0,FFTF,18,0.0
 900201,Artefact_900201,發生值得恭喜的事情或是值得祝福的事所使用的鞭炮。點擊滑鼠右鍵可以進行使用。,icon_item_firework,,,,,,,,爆竹,0,3.0,0.0,FFFT,7,1.0
-900202,161215Event_NexonCash_1,恭禧你抽中Nexon5萬現金！{nl}活動結束時活動道具統一刪除。{nl}點擊滑鼠右鍵即可確認。,icon_item_event_50000cash,,,,,,,,Nexon5萬現金抽獎劵,1,0.0,0.0,FFFF,9,0.0
-900203,161215Event_NexonCash_2,您參加了Nexon cash抽獎。{nl}活動結束時道具統一刪除。,icon_item_event_luckychance,,,,,,,,Nexon現金抽獎劵,1,0.0,0.0,FFFF,9,0.0
+900202,161215Event_NexonCash_1,恭禧你抽中Nexon5萬現金！{nl}活動結束時活動道具統一刪除。{nl}點擊滑鼠右鍵即可確認。,icon_item_event_50000cash,,,,,,,,Nexon5萬現金抽獎券,1,0.0,0.0,FFFF,9,0.0
+900203,161215Event_NexonCash_2,您參加了Nexon cash抽獎。{nl}活動結束時道具統一刪除。,icon_item_event_luckychance,,,,,,,,Nexon現金抽獎券,1,0.0,0.0,FFFF,9,0.0
 900204,misc_paperBox_party_30d,需要關心的時候，請使用。,icon_item_paperbox,,,,,,,,紙箱 (30天),20,1.0,2592000.0,FFTF,7,1.0
 900205,Event_160908_6_14d,放入豐富材料製作的大王松糕，散發香甜味道看起來非常好吃。{nl}30分內給予組隊全體隊員移動速度 +4、廣域攻擊比率 +1、經驗值增加 25%的效果。,icon_item_large_songpyeon,,,,,,,,[活動]大王松糕(限時),0,1800.0,1209600.0,FFFF,7,1.0
 900206,Event_Ability_Coupon_1,特性券,,,,,,,,,特性折扣券 1(預計可變更名稱及設定),1,0.0,0.0,FFFF,9,0.0
@@ -5712,14 +5712,14 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 900415,Event_Ability_Point_Stone_1000,活動所發送的道具。{nl}使用時特性點數增加1000，點擊滑鼠右鍵即可使用。,icon_item_abilitypoint,,,,,,,,特性點數 1000,0,0.0,0.0,FFFF,9,1.0
 900416,EVENT_1803_NEWCHARACTER_ABILITY_BOX,點擊滑鼠右鍵即可使用，{nl}活動結束時統一刪除。{nl}每日可獲得特性點數500。,icon_item_giftbox_1,,,,,,,,[活動] 每日特性點數箱子,0,0.0,0.0,FFFF,9,1.0
 900417,EVENT_1803_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動送的稱號箱，活動結束時統一刪除。,icon_item_holyark,,,,,,,,[Re:Build] 稱號-終極的救援者,0,0.0,0.0,FFFT,7,0.0
-900418,EVENT_1805_NEWCHARACTER_WEAPON,可以跟烏斯卡領取350級稀有11強5超越的武器。{nl}活動結束時統一刪除。,icon_item_event_luckychance,,,,,,,,[團結] 11強5超越交換劵,1,0.0,0.0,FFFF,9,1.0
+900418,EVENT_1805_NEWCHARACTER_WEAPON,可以跟烏斯卡領取350級稀有11強5超越的武器。{nl}活動結束時統一刪除。,icon_item_event_luckychance,,,,,,,,[團結] 11強5超越交換券,1,0.0,0.0,FFFF,9,1.0
 900419,EVENT_1805_NEWCHARACTER_ACHIEVE_BOX,烏斯卡活動送的稱號箱，活動結束時統一刪除。,icon_item_holyark,,,,,,,,[Re:Build] 稱號 - 啟示獲得者,0,0.0,0.0,FFFT,7,0.0
 900420,EVENT_1710_NEWCHARACTER_BOX_18,點擊滑鼠右鍵即可使用，380級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 衝等寶箱 (380級),0,0.0,0.0,FFFF,9,1.0
 900421,EVENT_1803_NEWCHARACTER_Ability_Point_Stone_1000,活動發送道具。{nl}使用時特性點數增加1000，點擊滑鼠右鍵即可使用。{nl}活動結束時統一刪除。,icon_item_abilitypoint,,,,,,,,"[活動] 特性點數 1,000",0,0.0,0.0,FFFT,9,1.0
 900422,Event_Ability_Point_Stone_10000_14d,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,,,"特性點數10,000(14天)",0,0.0,1209600.0,FFFT,9,1.0
-900423,EVENT_1811_NEWCHARACTER_BARRACK_SLOT,會增加角色欄位，點擊滑鼠右鍵使用。,icon_item_barrack_slot1,,,,,,,,角色欄位增加使用劵,0,0.0,0.0,FFFF,9,1.0
-900424,EVENT_1811_NEWCHARACTER_REINFORCE11,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+11強化。{nl}活動結束時統一刪除。,icon_item_reinforce11,,,,,,,,[Re:Build] 摩西尼奧斯武器+11強化劵,0,0.0,0.0,FFFF,18,1.0
-900425,EVENT_1811_NEWCHARACTER_TRANSCEND5,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+5超越。{nl}活動結束時統一刪除。,icon_item_transcend5,,,,,,,,[Re:Build] 摩西尼奧斯武器+5超越劵,0,0.0,0.0,FFFF,18,1.0
+900423,EVENT_1811_NEWCHARACTER_BARRACK_SLOT,會增加角色欄位，點擊滑鼠右鍵使用。,icon_item_barrack_slot1,,,,,,,,角色欄位增加使用券,0,0.0,0.0,FFFF,9,1.0
+900424,EVENT_1811_NEWCHARACTER_REINFORCE11,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+11強化。{nl}活動結束時統一刪除。,icon_item_reinforce11,,,,,,,,[Re:Build] 摩西尼奧斯武器+11強化券,0,0.0,0.0,FFFF,18,1.0
+900425,EVENT_1811_NEWCHARACTER_TRANSCEND5,活動發送的道具。{nl}到柯拉佩達找鳥斯卡，可以進行[Re:Build] 摩西尼奧斯武器+5超越。{nl}活動結束時統一刪除。,icon_item_transcend5,,,,,,,,[Re:Build] 摩西尼奧斯武器+5超越券,0,0.0,0.0,FFFF,18,1.0
 900426,Event_1704_Cash_500000,"恭禧您中獎獲得Nexon 500,000現金！{nl}活動結束時道具統一刪除。{nl}點擊滑鼠右鍵即可確認圖片。",icon_item_event_500000cash,,,,,,,,"Nexon 500,000現金中獎券",1,0.0,0.0,FFFF,9,0.0
 902000,Event_1710_Thanksgiving_Coin,'硬幣投壺'是可和多人一起使用的道具。{nl}- 使用方法{nl}使用道具時會出現可放入銅錢的 '投壺。'{nl}新增至背包的 '投壺遊戲用銅錢' 使用道具時計量條增加，若使用普通攻擊讓計量條停止增加，將依計量條的量決定投擲銅錢的力道。{nl}把銅錢投入投壺內，即可根據準確度和地下城距離獲得點數。{nl}進行地區移動時，進行中的投壺點數和 '投壺遊戲用的銅錢'將會被刪除。,icon_1710_thanksgiving_target,,,,,,,,硬幣投壺,0,180.0,0.0,TTTT,7,1.0
 902001,Event_1709_NewField_Coupon,10分鐘內移動速度+2、物理攻擊力+50、魔法攻擊力+50。右擊滑鼠使用。{nl}可用邀請魔方向邀請活動小幫手換取。{nl}活動結束後統一刪除。,icon_item_gem_elemental17,,,,,,,,邀請信物,0,30.0,0.0,FFFT,7,0.0
@@ -5890,19 +5890,19 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904107,EVENT_1811_NEWCLASS_BOX_ASS,裝有暗殺者利茲達斯不死鳥套裝的箱子。{nl}必須轉職為暗殺者才能使用。{nl}從箱子中獲得的套裝無法使用隊伍倉庫。,icon_item_jewelrybox,,,,,,,,暗殺者利茲達斯不死鳥套裝箱,0,0.0,0.0,FFFT,7,0.0
 904108,EVENT_1811_NEWCLASS_BOX_OUL,裝有亡命之徒惡棍正裝套裝的箱子。{nl}}必須轉職為亡命之徒才能使用。{nl}從箱子中獲得的套裝無法使用隊伍倉庫。,icon_item_jewelrybox,,,,,,,,亡命之徒惡棍正裝套裝箱,0,0.0,0.0,FFFT,7,0.0
 904109,EVENT_1811_KUPOLE_COIN,[Re:Build] 達伊娜的特別商店活動道具，轉交給NPC就可以參與活動。{nl}活動結束時統一刪除。,icon_item_rebuild_coin,,,,,,,,[Re:Build] 紀念鑄幣,0,0.0,0.0,FFFT,18,0.1
-904110,Costume_Exchange_Coupon,於TP商店裡系列套裝的交換分頁使用，是張可以交換想要套裝的交換券。,icon_item_exchange_costumecoupon,,,,,,,,系列套裝交換劵,0,0.0,0.0,FFFT,18,0.0
+904110,Costume_Exchange_Coupon,於TP商店裡系列套裝的交換分頁使用，是張可以交換想要套裝的交換券。,icon_item_exchange_costumecoupon,,,,,,,,系列套裝交換券,0,0.0,0.0,FFFT,18,0.0
 904114,EVENT_1812_GILTINE_REWARD_BOX,吉特涅女神賜的禮物。{nl} 活動結束時道具統一刪除。,icon_item_event_giltinebox,,,,,,,,吉特涅的禮物箱,0,0.0,0.0,FFFT,9,1.0
 904126,EVENT_1712_SECOND_CHALLENG_14d_Team,使用時會產生挑戰傳送門。,icon_item_challengemode_scroll,,,,,,,,挑戰傳送門生成卷軸(14天),10,3.0,1209600.0,FFFT,9,1.0
 904128,EVENT_1812_DAYCHECK_BALLOONBOX,3周年紀念出席打卡活動用氣球串。{nl}活動結束時道具統一刪除。,icon_item_event_balloonbox,,,,,,,,3周年氣球串,0,0.0,0.0,FFFT,9,1.0
 904133,EVENT_190110_3DAY_BOX,參加三日養成活動獲得的獎勵箱。使用時可獲得道具。{nl}活動結束時道具統一刪除。,icon_item_happybox_blue,,,,,,,,[活動] 三日養成寶箱,0,0.0,0.0,FFFT,9,1.0
 904134,EVENT_190110_GOLDPIG_BOX,參加黃金豬活動獲得的獎勵箱。使用時可獲得道具。{nl}活動結束時道具統一刪除。,icon_item_happybox_red,,,,,,,,[活動]黃金豬寶箱,0,0.0,0.0,FFFT,9,1.0
-904135,EVENT_190110_RankReset_Point_Lv1,"職業變更點數增加100。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_3,,,,,,,,職業變更劵 Lv.1 (14天),0,0.0,1209600.0,FFFT,9,0.0
+904135,EVENT_190110_RankReset_Point_Lv1,"職業變更點數增加100。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_3,,,,,,,,職業變更券 Lv.1 (14天),0,0.0,1209600.0,FFFT,9,0.0
 904136,EVENT_LAB_1901_ACHIEVE_BOX,賦予TOS第4期研究員的稱號。,icon_item_holyark,,,,,,,,稱號 - TOS第4期研究員,0,0.0,0.0,FFFT,7,1.0
-904137,EVENT_190124_RankReset_Point_Lv2,"職業變更點數增加５00。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_2,,,,,,,,[活動] 職業變更劵 Lv.2(14日),0,0.0,1209600.0,FFFT,9,0.0
-904140,Class_Solution_Select_Box_Event,隱藏職業解除券選擇箱 {nl} 可選擇目錄 {nl} - 忍者解除劵(斥候) {nl} - 巫女(坎諾席)解除券(牧師) {nl} - 符文師解除券(法師) {nl} - 鑑定師解除券(弓箭手) {nl} - 泰拳解除券(劍士),icon_item_classsolution_box,,,,,,,,[活動] 解除券選擇箱,0,0.0,0.0,FFFT,9,0.0
+904137,EVENT_190124_RankReset_Point_Lv2,"職業變更點數增加５00。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_2,,,,,,,,[活動] 職業變更券 Lv.2(14日),0,0.0,1209600.0,FFFT,9,0.0
+904140,Class_Solution_Select_Box_Event,隱藏職業解除券選擇箱 {nl} 可選擇目錄 {nl}  忍者解除券(斥候) {nl}  巫女(坎諾席)解除券(牧師) {nl}  符文師解除券(法師) {nl}  鑑定師解除券(弓箭手) {nl}  泰拳解除券(劍士),icon_item_classsolution_box,,,,,,,,[活動] 解除券選擇箱,0,0.0,0.0,FFFT,9,0.0
 904141,EVENT_1902_FISHBOX,點擊滑鼠右鍵即可使用。使用時可獲得寶箱內道具中的一種。{nl} - 特性點數 100(14天) x2{nl} - 魔法賦予卷軸(14天) x1{nl} - 強化用卡片：500(14天) x1{nl} - 5星寶石研磨劑(14天){nl} - 覺醒石(14天) x1{nl} - 執事與女僕套裝寶箱(黑色) x1{nl}活動時道具統一刪除。,icon_item_happybox_red,,,,,,,,[活動]藏在池塘內的寶箱,0,0.0,0.0,FFFT,9,1.0
 904146,EVENT_1903_TERIAVELIS_STONE,佩狄米安的鐵匠戴利亞貝利斯要求的特殊裝備製作材料。{nl}可以通關貝爾庫波的巢穴、白鴉長眠地：傳說、白鴉長眠地：獨特、挑戰5階段、修女院任務、等級副本取得。{nl}活動結束後將統一刪除。,icon_item_orb3,,,,,,,,[活動]閃亮星之碎片,0,0.0,0.0,FFFT,18,0.1
-904148,EVENT_1811_NEWCHARACTER_BARRACK_SLOT2,配合活動發放的道具。{nl}增加角色欄位。使用時如果角色欄位已全部擴張，會以贈送33TP取代增加角色欄位。點擊滑鼠右鍵即可使用。,icon_item_barrack_slot1,,,,,,,,[活動]角色欄位增加使用劵,0,0.0,0.0,FFFF,9,1.0
+904148,EVENT_1811_NEWCHARACTER_BARRACK_SLOT2,配合活動發放的道具。{nl}增加角色欄位。使用時如果角色欄位已全部擴張，會以贈送33TP取代增加角色欄位。點擊滑鼠右鍵即可使用。,icon_item_barrack_slot1,,,,,,,,[活動]角色欄位增加使用券,0,0.0,0.0,FFFF,9,1.0
 904149,Event_Reinforce_100000coupon_Event,強化銀幣優惠券,icon_item_reinforce_100000coupon,,,,,,,,[活動]強化銀幣優惠券 : 10萬銀幣,1,0.0,0.0,FFFT,9,0.0
 904150,EVENT_NEW_FACE_ACHIEVE_BOX,新生幼苗稱號寶箱。{nl}活動結束時道具統一刪除。,icon_item_holyark,,,,,,,,稱號 - 新生幼苗,0,0.0,0.0,FFFT,7,1.0
 904151,EVENT_1710_NEWCHARACTER_BOX_19,點擊滑鼠右鍵即可使用，400級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 衝等寶箱 (400級),0,0.0,0.0,FFFF,9,1.0
@@ -5916,11 +5916,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904170,Event1907_SUMMER_FESTA_GACHA_1,右鍵點擊開啟箱子，有機率獲得以下道具中的一項。{nl}- [活動]3超越卷軸 x1{nl}- [活動]公會任務獎勵鑄幣：銅 x1{nl}- [Summer Festa]補給用濃縮HP藥水 LV15 x1{nl}- [Summer Festa]補給用濃縮SP藥水 LV15 x1{nl}- [活動]巴賽羅斯鑄幣 x(1~2){nl}活動結束後將統一刪除。,icon_item_happybox_red,,,,,,,,[Summer Festa]紅色兌換箱,0,0.0,0.0,FFFT,9,1.0
 904171,Event1907_SUMMER_FESTA_GACHA_2,點擊右鍵開啟箱子時，依不同機率獲得以下道具中的一項。{nl}- [活動]5超越卷軸 x1{nl}- [活動]公會任務獎勵鑄幣：銀 x1{nl}- [Summer Festa]補給用濃縮HP藥水 LV15 x2{nl}- [Summer Festa]補給用濃縮SP藥水 LV15 x2{nl}- [活動]巴賽羅斯鑄幣 x(5~10){nl}活動結束後將統一刪除。,icon_item_happybox_blue,,,,,,,,[Summer Festa]藍色兌換箱,0,0.0,0.0,FFFT,9,1.0
 904172,Event1907_SUMMER_FESTA_GACHA_3,點擊右鍵開啟箱子時，依不同機率獲得以下道具中的一項。{nl}- 執事女僕套裝箱(黑色) x1{nl}- [活動]公會任務獎勵鑄幣：金 x1{nl}- [活動]HP恢復小型靈藥 x2{nl}- [活動]SP恢復小型靈藥 x2{nl}- [Summer Festa]補給用濃縮HP藥水 LV15 x5{nl}- [Summer Festa]補給用濃縮SP藥水 LV15 x5{nl}- [活動]巴賽羅斯鑄幣 x(10~20){nl}活動結束後將統一刪除。,icon_item_happybox_black,,,,,,,,[Summer Festa]黑色兌換箱,0,0.0,0.0,FFFT,9,1.0
-904173,CARE_RankReset_Point_Lv1,"職業變更點數增加100。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_1,,,,,,,,[獎勵用] 職業變更劵 Lv.1,0,0.0,0.0,FFFF,9,0.0
-904174,CARE_RankReset_Point_Lv2,"職業變更點數增加５00。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_2,,,,,,,,[獎勵用] 職業變更劵 Lv.2,0,0.0,0.0,FFFF,9,0.0
-904175,CARE_RankReset_Point_Lv3,"職業變更點數增加1000。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_3,,,,,,,,[獎勵用] 職業變更劵 Lv.3,0,0.0,0.0,FFFF,9,0.0
-904176,CARE_RankReset_Point_Lv4,"職業變更點數增加3000。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_4,,,,,,,,[獎勵用] 職業變更劵 Lv.4,0,0.0,0.0,FFFF,9,0.0
-904177,Event190808_RankReset_Point_Lv3,"為紀念2019年改版The ARTS所發送的活動道具。{nl}職業變更點數增加1000。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。{nl}發送後只維持1天。",icon_item_rankreset_paper_3,,,,,,,,[The ARTS] 職業變更劵 Lv.3 (1天),0,0.0,86400.0,FFFT,9,0.0
+904173,CARE_RankReset_Point_Lv1,"職業變更點數增加100。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_1,,,,,,,,[獎勵用] 職業變更券 Lv.1,0,0.0,0.0,FFFF,9,0.0
+904174,CARE_RankReset_Point_Lv2,"職業變更點數增加５00。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_2,,,,,,,,[獎勵用] 職業變更券 Lv.2,0,0.0,0.0,FFFF,9,0.0
+904175,CARE_RankReset_Point_Lv3,"職業變更點數增加1000。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_3,,,,,,,,[獎勵用] 職業變更券 Lv.3,0,0.0,0.0,FFFF,9,0.0
+904176,CARE_RankReset_Point_Lv4,"職業變更點數增加3000。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。",icon_item_rankreset_paper_4,,,,,,,,[獎勵用] 職業變更券 Lv.4,0,0.0,0.0,FFFF,9,0.0
+904177,Event190808_RankReset_Point_Lv3,"為紀念2019年改版The ARTS所發送的活動道具。{nl}職業變更點數增加1000。{nl}職業變更點數只能累積到3,000為止，超過的點數會消失。{nl}發送後只維持1天。",icon_item_rankreset_paper_3,,,,,,,,[The ARTS] 職業變更券 Lv.3 (1天),0,0.0,86400.0,FFFT,9,0.0
 904178,EVENT_190919_ANCIENT_COIN,交換魔法書散頁或是[活動]怪物選擇卷軸時使用的鑄幣。{nl}* 活動結束後將統一刪除。,icon_item_antque_gold_coin,,,,,,,,[活動] 古代鑄幣,0,0.0,0.0,FFFF,18,0.0
 904179,EVENT_190919_ANCIENT_MONSTER_PIECE,消耗時該魔法書散頁上所登錄的怪物會登錄為自己的怪物。{nl}* 活動結束後將統一刪除。,icon_item_event_190919_ancient_monster_piece,,,,,,,,魔法書散頁,0,0.0,0.0,FFFF,7,0.0
 904180,EVENT_190919_ANCIENT_SCROLL,使用時指定的怪物法單中會隨機登場6種。{nl}選擇怪物就可以獲得登錄該怪物的魔法書散頁。{nl}獲得魔法書散頁時會消耗[活動]古代鑄幣。{nl} 依怪物的階級消耗的[活動]古代鑄幣數量和出現機率也不同。{nl}可複選。{nl}[活動]古代鑄幣消耗數量及登場機率{nl} - 一般 : 1個(70%){nl} - 魔法 : 2個(25%){nl} - 獨特 : 3個(4%){nl} - 傳說 : 4個(1%){nl}* 活動結束後將統一刪除。,icon_item_event_190919_ancient_scroll,,,,,,,,[活動] 怪物選擇卷軸,0,0.0,0.0,FFFF,7,0.0
@@ -5940,7 +5940,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904205,Event_Grimoire_Weapon_Box,右點擊時可以選擇並得下列道具中的1項。{nl} - [活動] 亞西歐獨特武器選擇箱{nl} - [活動] 威伊斯特隆獨特武器選擇箱{nl}獲得的道具不能強化、超越、分解、外型變更。{nl}獲得的道具可進行血晶萃取和軟性。,gacha_h_012,,,,,,,,[活動] 獨特武器選擇箱 (亞西歐、威伊斯特隆),0,0.0,0.0,FFFT,9,1.0
 904206,Event_Grimoire_Weapon_Box_Asio,右點擊時可以選擇並獲得[活動]亞西歐武器。{nl}獲得的道具不能強化、超越、分解、外型變更。{nl}獲得的道具可進行血晶萃取和軟性。,icon_item_eventbox_magic,,,,,,,,[活動] 亞西歐獨特武器選擇箱,0,0.0,0.0,FFFT,9,1.0
 904207,Event_Grimoire_Weapon_Box_Wei,右點擊時可以選擇並獲得[活動]威伊斯特隆武器。{{nl}獲得的道具不能強化、超越、分解、外型變更。{nl}獲得的道具可進行血晶萃取和軟性。,icon_item_eventbox_blue,,,,,,,,[活動] 威伊斯特隆獨特武器選擇箱,0,0.0,0.0,FFFT,9,1.0
-904210,Event_Reinforce_100000coupon_14d,使用本優擊劵進行強化時，強化費用可以獲得10萬銀幣的優惠。{nl}時間超過時，本道具會被刪除。,icon_item_reinforce_100000coupon,,,,,,,,[活動] 強化銀幣優惠券：10萬銀幣 (14天),1,0.0,1209600.0,FFFT,9,1.0
+904210,Event_Reinforce_100000coupon_14d,使用本優擊券進行強化時，強化費用可以獲得10萬銀幣的優惠。{nl}時間超過時，本道具會被刪除。,icon_item_reinforce_100000coupon,,,,,,,,[活動] 強化銀幣優惠券：10萬銀幣 (14天),1,0.0,1209600.0,FFFT,9,1.0
 904215,Event_Uphill_Store_Point_500_14d,使用時可以獲得500點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。{nl}時間超過時，本道具會被刪除。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：500(14天),0,0.0,1209600.0,FFFT,7,0.0
 904216,Event_Uphill_Store_Point_1000_14d,使用時可以獲得1000點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。{nl}時間超過時，本道具會被刪除。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：1000(14天),0,0.0,1209600.0,FFFT,7,0.0
 904217,Event_Uphill_Store_Point_3000_14d,使用時可以獲得3000點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。{nl}時間超過時，本道具會被刪除。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：3000(14天),0,0.0,1209600.0,FFFT,7,0.0
@@ -5953,7 +5953,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904225,EVENT_190919_ANCIENT_SCROLL_RESTORE,使用時指定的怪物法單中會隨機登場6種。{nl}選擇怪物就可以獲得登錄該怪物的魔法書散頁。{nl}獲得魔法書散頁時會消耗[活動]古代鑄幣。{nl} 依怪物的階級消耗的[活動]古代鑄幣數量和出現機率也不同。{nl}可複選。{nl}[活動]古代鑄幣消耗數量及登場機率{nl} - 一般 : 1個(70%){nl} - 魔法 : 2個(25%){nl} - 獨特 : 3個(4%){nl} - 傳說 : 4個(1%){nl}* 活動結束後將統一刪除。,icon_item_event_190919_ancient_scroll,,,,,,,,[活動] 怪物選擇卷軸,0,0.0,0.0,FFFF,7,0.0
 904226,EVENT_HALLOWEENCANDY_1,活動道具。{nl}向活動布告欄NPC對話開啟[萬聖節之夜的騷動]活動商店，可以兌換商店內的商品。{nl}活動結束後將統一刪除。,event_whiteday_candy_3,,,,,,,,甜蜜萬聖節糖果,0,0.0,0.0,FFFT,18,0.1
 904227,EVENT_HALLOWEENCANDY_2,活動道具。{nl}使用後，24小時內獲得甜蜜萬聖節糖果的數量增為2倍。不過[萬聖節之夜的騷動]副本和連線獎勵不會套用此效果。{nl}活動結束後將統一刪除。,icon_item_pumpkin,,,,,,,,南瓜萬聖節糖果,0,0.0,0.0,FFFT,7,0.1
-904229,Arts_Ability_Coupon,若持有此劵，學習秘術時豁免所需的特性點數。{nl}秘術學習後道具會消耗。,icon_item_arts_ability_coupon,,,,,,,,秘術學習特性點數豁免劵,0,0.0,0.0,FFFT,9,0.0
+904229,Arts_Ability_Coupon,若持有此券，學習秘術時豁免所需的特性點數。{nl}秘術學習後道具會消耗。,icon_item_arts_ability_coupon,,,,,,,,秘術學習特性點數豁免券,0,0.0,0.0,FFFT,9,0.0
 904230,Ability_Point_Stone_10000_NoTrade,"使用時特性點數增加10,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint4,,,,,,,,"特性點數 10,000",0,0.0,0.0,FFFF,9,1.0
 904231,Event_collegetestRiceCake,"使用時可獲得持續30分鐘的Buff。{nl}每次使用時Buff疊加可獲得以下效果。{nl} - 經驗值獲得 + (疊加 x 10)%{nl} - 道具掉落機會 + (疊加 x 100){nl} - 最大體力 + (疊加 x 500){nl} - 每10秒HP, SP恢復(疊加 x 100){nl}(最多5疊加){nl} - 活動結束時統一刪除。",icon_item_ricecake,,,,,,,,[活動] 長條年糕,0,5.0,0.0,FFFT,7,1.0
 904232,PersonalHousing_PointGacha_1,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl}迪凱雷草 x3{nl}核粉末 x10{nl}塔特 x10{nl}[個人家園]釣客地毯 x1{nl}[個人家園]釣客地氈 x1{nl}[個人家園]甜蜜半圓地氈 x1,icon_item_happybox_red,,,,,,,,[個人家園]第1階段定居物品,0,0.0,0.0,FFFT,9,0.0
