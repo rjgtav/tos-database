@@ -19,6 +19,7 @@ class TOSMonsterRace(TOSEnum):
     ITEM = 3
     MUTANT = 4
     PLANT = 5
+    VELNAIS = 6
 
     @staticmethod
     def value_of(string):
@@ -29,6 +30,7 @@ class TOSMonsterRace(TOSEnum):
             'ITEM': TOSMonsterRace.ITEM,
             'PARAMUNE': TOSMonsterRace.MUTANT,
             'FORESTER': TOSMonsterRace.PLANT,
+            'VELNAIS': TOSMonsterRace.VELNAIS,
             '': None
         }[string.upper()]
 

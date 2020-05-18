@@ -20,7 +20,7 @@ OUTPUT_SKILLS = 'skills'
 
 URL_PATCH = None
 URL_PATCH_iTOS = 'http://drygkhncipyq8.cloudfront.net/toslive/patch/'
-URL_PATCH_jTOS = 'http://tosdownload.nexon.co.jp/patch/live/'
+URL_PATCH_jTOS = 'http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/'
 URL_PATCH_kTOS = 'http://tosg.dn.nexoncdn.co.kr/patch/live/'
 URL_PATCH_kTEST = 'http://tosg.dn.nexoncdn.co.kr/patch/test/'
 URL_PATCH_twTOS = 'http://tospatch.x2game.com.tw/live/patch/'

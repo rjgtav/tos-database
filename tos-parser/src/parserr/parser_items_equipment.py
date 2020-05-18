@@ -288,6 +288,7 @@ class TOSEquipmentType(TOSEnum):
             'MACE': TOSEquipmentType.ONE_HANDED_MACE,
             'MUSKET': TOSEquipmentType.TWO_HANDED_GUN,
             'NECK': TOSEquipmentType.NECKLACE,
+            'NO': None,
             'OUTER': TOSEquipmentType.COSTUME_OUTFIT,
             'PANTS': TOSEquipmentType.BOTTOM,
             'PISTOL': TOSEquipmentType.ONE_HANDED_GUN,

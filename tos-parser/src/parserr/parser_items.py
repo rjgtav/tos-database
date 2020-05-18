@@ -40,9 +40,10 @@ class TOSItemGroup(TOSEnum):
     RECIPE = 25
     SEAL = 26
     SPECIALMATERIAL = 27
-    SUBWEAPON = 28
-    UNUSED = 29
-    WEAPON = 30
+    SUBEXPORB = 28
+    SUBWEAPON = 29
+    UNUSED = 30
+    WEAPON = 31
 
     @staticmethod
     def value_of(string):
@@ -75,6 +76,7 @@ class TOSItemGroup(TOSEnum):
             'RECIPE': TOSItemGroup.RECIPE,
             'SEAL': TOSItemGroup.SEAL,
             'SPECIALMATERIAL': TOSItemGroup.SPECIALMATERIAL,
+            'SUBEXPORB': TOSItemGroup.SUBEXPORB,
             'SUBWEAPON': TOSItemGroup.SUBWEAPON,
             'UNUSED': TOSItemGroup.UNUSED,
             'WEAPON': TOSItemGroup.WEAPON,
@@ -95,7 +97,8 @@ ITEM_GROUP_ITEM_WHITELIST = [
     TOSItemGroup.PASTEBAIT,
     TOSItemGroup.PREMIUM,
     TOSItemGroup.QUEST,
-    TOSItemGroup.SPECIALMATERIAL
+    TOSItemGroup.SPECIALMATERIAL,
+    TOSItemGroup.SUBEXPORB
 ]
 
 ITEM_GROUP_EQUIPMENT_WHITELIST = [
@@ -118,6 +121,7 @@ def parse():
     parse_items('item_colorspray.ies')
     parse_items('item_gem.ies')
     parse_items('item_equip.ies')
+    parse_items('item_equip_ep12.ies')
     parse_items('item_premium.ies')
     parse_items('item_quest.ies')
     parse_items('recipe.ies')
@@ -149,6 +153,7 @@ def parse_items(file_name):
     for row in ies_reader:
         item_type = TOSItemGroup.RECIPE if file_name == 'recipe.ies' else TOSItemGroup.value_of(row['GroupName'])
         item_type_equipment = TOSEquipmentType.value_of(row['ClassType']) if 'ClassType' in row else None
+        item_type_equipment = TOSEquipmentType.value_of(row['ClassType2']) if 'ClassType' in row and row['ClassType'] == 'NO' and 'ClassType2' in row else item_type_equipment
 
         #logging.debug('Parsing item: %s :: %s', row['ClassID'], row['ClassName'])
 

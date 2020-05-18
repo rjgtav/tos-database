@@ -362,6 +362,7 @@ export enum TOSItemType {
   RECIPE = 'Recipe',
   SEAL = 'Seal',
   SPECIALMATERIAL = 'Special Material',
+  SUBEXPORB = 'Sub Experience Orb',
   SUBWEAPON = 'Sub Weapon',
   UNUSED = 'Unused',
   WEAPON = 'Weapon',
@@ -373,6 +374,7 @@ export const
       options: [
         TOSItemType.ARK,
         TOSItemType.DRUG,
+        TOSItemType.EXPORB,
         TOSItemType.HIDDENABILITY,
         TOSItemType.EVENT,
         TOSItemType.LEGENDMATERIAL,
@@ -381,6 +383,7 @@ export const
         TOSItemType.PREMIUM,
         TOSItemType.QUEST,
         TOSItemType.SPECIALMATERIAL,
+        TOSItemType.SUBEXPORB,
       ]
     },
   ];
@@ -432,6 +435,7 @@ export enum TOSMonsterRace {
   ITEM = 'Item',
   MUTANT = 'Mutant',
   PLANT = 'Plant',
+  VELNAIS = 'Velnais',
 }
 export const
   TOSMonsterRaceService = EnumServiceFactory(TOSMonsterRace) as EnumService<TOSMonsterRace> & {
