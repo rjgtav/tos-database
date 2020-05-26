@@ -566,7 +566,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 147514,npc_MNK_master_NoRun,,,武僧大師(無 Run),2
 147515,npc_Doppelsoldner_m,,,刀刃誓約傭兵男團員,2
 147516,npc_Doppelsoldner_f,,,刀刃誓約傭兵女團員,2
-147517,npc_fishing_manager,,minimap_event_1,釣魚場管理員,2
+147517,npc_fishing_manager,,,釣魚場管理員,2
 147518,npc_diana,,,黛安娜,2
 148001,blank_npc_moon,,,空的 NPC,2
 150000,npc_junk_shop,,,流浪商人 凱拉爾達斯,2
@@ -1585,7 +1585,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160015,npc_Xmas_Evt_NPC2,,minimap_event_1,聖誕節 NPC2,2
 160016,rokas_pot3_small_E1,,,新年福罐,2
 160018,Hiddennpc_RiftMode_Start,,,次元崩壞地點入場,2
-160019,event_2001_cat,,minimap_event_1,釣魚場小貓,2
+160019,event_2001_cat,,,釣魚場小貓,2
 160022,WEEKLY_PURIFYING_STONE,,,淨化石,2
 160023,npc_kupole_3_event_2004,,minimap_event_1,植樹節活動小幫手,2
 161000,E_statue_zemina,,minimap_goddess,女神澤米娜之像,2

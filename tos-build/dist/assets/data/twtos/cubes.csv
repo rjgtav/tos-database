@@ -166,6 +166,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Items,Link_Maps,L
 642783,txbox_MoringPonia_set_crown,使用時可獲得以下所有道具。{nl} - 莫靈波尼亞獨特武器選擇箱{nl} - 莫靈波尼亞獨特防具選擇箱{nl} - 莫靈波尼亞王冠 x1{nl}點擊滑鼠右鍵即可使用。,icon_item_moth_setbox,,,,,,,,,莫靈波尼亞獨特特別組合箱,0,0.0,0.0,FFFT,6,0.0
 642784,Legend_HiddenAbility_Piece_Box_set,"使用時可獲得以下所有道具。{nl} - 神秘之書散頁 x10{nl} - 特性點數 10,000 x3{nl}點擊滑鼠右鍵即可使用。",icon_item_paper_ability_setbox,,,,,,,,,神秘之書組合特別箱,0,0.0,0.0,FFFF,6,5.0
 642785,WeeklyBossFBCubeBox,使用時可以選擇並獲得下列道具中的1種。{nl} - 發光的魔君主米爾堤斯魔方{nl} - 發光的魔君主赫嘉塞露魔方{nl} - 發光的魔君主雷克西波魔方{nl} - 發光的魔君主馬魯若斯魔方{nl} - 發光的魔君主努亞耶雷魔方{nl} - 發光的魔君主扎烏拉魔方{nl} - 發光的魔君主布爾魯魔方,icon_item_reset_box,,,,,,,,,發光的魔君主魔方選擇箱,0,0.0,0.0,FFFT,6,0.0
+642789,Legend_HiddenAbility_Piece_GreatBox,使用時可獲得以下道具。{nl} - 神秘之書散頁 x100,icon_item_paper_box01,,,,,,,,,神秘之書整疊 (x 100),0,0.0,0.0,FFFT,6,0.0
 642801,Gacha_G_001,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,,,卡雷伊瑪斯魔方,0,0.0,0.0,FFFF,6,5.0
 642802,Gacha_G_002,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,,,西卡里歐斯魔方,0,0.0,0.0,FFFF,6,5.0
 642803,Gacha_G_003,使用之後，好像可以獲得無法得知的東西。點擊滑鼠右鍵使用。,icon_item_cube1,,,,,,,,,森林的魔方,0,0.0,0.0,FFFF,6,5.0
