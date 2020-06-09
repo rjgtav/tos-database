@@ -154,6 +154,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 620002,Ark_dex,以女神之力製作的聖具，此聖匣獲得了澤米娜女神的祝福。透過大地女神澤米娜的權能賜予祝福在全世界的大地之上發揮此力量。,icon_item_ark_dex,,,,,,,,聖匣 - 敏捷,0,0.0,0.0,FFFT,2,1.0
 620003,Ark_int,以女神之力製作的聖具，此聖匣獲得了拉達女神的祝福。得到眾女神認可的拉達女神希望聖匣有助於正確的選擇。,icon_item_ark_int,,,,,,,,聖匣 - 智力,0,0.0,0.0,FFFT,2,1.0
 620004,Ark_mna,以女神之力製作的聖具，此聖匣獲得了瓦卡麗涅女神的祝福。當中完整地蘊藏著瓦卡麗涅女神希望身心平和的心意。,icon_item_ark_mna,,,,,,,,聖匣 - 精神,0,0.0,0.0,FFFT,2,1.0
+620005,Ark_wind,,icon_item_ark_blue01,,,,,,,,聖匣 - 疾風,0,0.0,0.0,FFFT,2,1.0
+620006,Ark_thunderbolt,以女神之力製作的聖具，此聖匣獲得了加比婭女神的祝福。火之女神加比婭在聖匣賦予了可以正面迎敵的力量。,icon_item_ark_yellow01,,,,,,,,聖匣 - 雷擊,0,0.0,0.0,FFFT,2,1.0
+620007,Ark_storm,以女神之力製作的聖具，此聖匣獲得了澤米娜女神的祝福。透過大地女神澤米娜的權能賜予祝福在全世界的大地之上發揮此力量。,icon_item_ark_red01,,,,,,,,聖匣 - 暴風,0,0.0,0.0,FFFT,2,1.0
 640001,Drug_MAXSTA1,,icon_item_seed_sta1,,,,,,,,耐力 +5 增加藥水,200,0.0,0.0,FFFF,7,1.0
 640002,Drug_HP1,HP立刻恢復273，15秒內每隔2秒HP恢復273，點擊滑鼠右鍵使用。,item_hp_oil_1,,,,,,,,HP藥水(小),16,25.0,0.0,FFTF,7,7.0
 640003,Drug_HP2,HP立刻恢復462，15秒內每隔2秒HP恢復462，點擊滑鼠右鍵使用。,item_hp_oil_2,,,,,,"[3001, 3003, 3004, 3006, 3007, 3009, 3010, 3012, 3013, 3015, 3016, 3018, 3019, 3021, 3022]",,HP藥水,32,25.0,0.0,FFTF,7,7.0
@@ -821,14 +824,14 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 641945,Event_Goddess_Statue_DLC,可以設置女神的雕像。{nl}只能設置一個女神的雕像。,icon_item_farm47_broken_zemina,,,,,,,,女神的雕像,0,0.0,0.0,FFFT,7,0.0
 641946,Event_drug_steam_1h_DLC,1小時移動速度增加2、物理攻擊力增加50、魔法攻擊力增加50。點擊滑鼠右鍵使用。,item_speed_requid_3,,,,,,,,定居支援藥水 LV2,0,30.0,0.0,FFFT,7,0.0
 641952,Event_1710_NexonCashBox,15級以上可使用{nl}可從箱中獲得Nexon Cash。{nl}活動結束後統一刪除。,icon_item_event_nexoncash01,,,,,,,,黃金週幸運箱 (1小時),0,5.0,3600.0,FFFF,7,0.0
-641953,ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式1次入場券,0,5.0,0.0,FFFF,7,1.0
-641954,ChallengeModeReset_1d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式 1次入場券 (1天),0,5.0,86400.0,FFFF,7,1.0
-641955,ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式 1次入場券 (14天),0,5.0,1209600.0,FFFF,9,1.0
+641953,ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_challengeenter,,,,,,,,挑戰模式1次入場券,0,5.0,0.0,FFFF,7,1.0
+641954,ChallengeModeReset_1d,消耗挑戰模式進場次數1次,icon_item_challengeenter,,,,,,,,挑戰模式 1次入場券 (1天),0,5.0,86400.0,FFFF,7,1.0
+641955,ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_challengeenter,,,,,,,,挑戰模式 1次入場券 (14天),0,5.0,1209600.0,FFFF,9,1.0
 641956,Reward_Error_compensation_1d,"點擊滑鼠右鍵即可開啟並獲得箱子內容物。{nl}  寵物交換券 12張{nl}  x4 經驗之書 3個{nl}  特性點數1,000(冒險日誌獎勵) 2個 {nl}  副本倍數VIP3個 {nl}  銀幣 500,000 ",icon_item_giftbox_4,,,,,,,,補償用冒險日誌排名獎勵箱子(1天),0,0.0,86400.0,FFFF,7,0.0
 641962,Event_drug_steam_team,30分鐘內移動速度 +2、物理攻擊力 +50、魔法攻擊力 +50，透過點按滑鼠右鍵使用，活動結束後統一刪除。,item_speed_requid_3,,,,,,,,定居支援藥水,0,30.0,0.0,FFFT,7,0.0
-641963,Premium_ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式1次入場券,0,5.0,0.0,TTFT,7,1.0
+641963,Premium_ChallengeModeReset,消耗挑戰模式進場次數1次,icon_item_challengeenter,,,,,,,,挑戰模式1次入場券,0,5.0,0.0,TTFT,7,1.0
 641964,Uphill_Store_Point_10,使用時可以獲得10點的高地防守商店點數。{nl}該點數可以在高地防守商店使用。,icon_item_annycoin_2,,,,,,,,高地防守商店點數：10,0,0.0,0.0,FFFF,7,0.0
-641969,Event_190110_ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_indunfreeenter,,,,,,,,挑戰模式 1次入場券 (14天),0,5.0,1209600.0,FFFT,7,1.0
+641969,Event_190110_ChallengeModeReset_14d,消耗挑戰模式進場次數1次,icon_item_challengeenter,,,,,,,,挑戰模式 1次入場券 (14天),0,5.0,1209600.0,FFFT,7,1.0
 641970,Event_190131_SWEET_POTATO_ITEM,這是香甜的烤地瓜。獲得它的話可能會發生令人驚喜的事。{nl}立即恢復HP 2205、SP 735，並於15秒內每2秒恢復HP 2205、SP 735。點擊滑鼠右鍵即可使用。冷卻時間 45秒。{nl}活動結束時道具會統一刪除。,icon_item_sweet_potato,,,,,,,,[活動]香甜烤地瓜,0,45.0,0.0,FFFT,7,1.0
 641971,Event_Drug_Alche_HP15_Premium,HP立刻恢復5614，15秒內每隔2秒HP恢復5614，點擊滑鼠右鍵使用，冷卻時間45秒。,item_hp_oil_3,,,,,,,,補給用濃縮HP藥水LV15,0,45.0,0.0,FFFT,7,1.0
 641972,Event_Drug_Alche_SP15_Premium,SP立刻恢復1288，15秒內每隔2秒SP恢復1288，點擊滑鼠右鍵使用，冷卻時間45秒。,item_sp_requid_3,,,,,,,,補給用濃縮SP藥水LV15,0,45.0,0.0,FFFT,7,1.0
@@ -868,7 +871,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 643008,Moru_Silver_NoDay,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,,,銀光鐵砧,0,0.0,0.0,FFFF,18,1.0
 643009,Moru_Event160929_14d,只有強化階段為0時可以使用，不會消耗強化費用，點擊滑鼠右鍵即可使用。,icon_item_anvil,,,,,,,,輕便鐵砧(14天),0,0.0,1209600.0,FFFF,18,1.0
 643010,Moru_Gold_14d,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,,,黃金鐵砧(14天),0,0.0,1209600.0,FFFF,18,1.0
-643014,Moru_Gold_TA_NR,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。強化時不需要銀幣。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。點擊滑鼠右鍵即可使用。{nl}製作發光的紅寶石鐵砧時可當作材料使用。,icon_item_anvil_gold,,,,,,[9035],,發光的高級黃金鐵砧,0,0.0,0.0,TTTT,18,1.0
+643014,Moru_Gold_TA_NR,"""只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。強化時不需要銀幣。失敗時強化數值減少1，在+12強化以上失敗時，強化數值減少變成+10強化。點擊滑鼠右鍵即可使用。{nl}可以透過發光的紅寶石鐵砧的材料使用。",icon_item_anvil_gold,,,,,,[9035],,發光的高級黃金鐵砧,0,0.0,0.0,TTTT,18,1.0
 643015,Moru_Gold_Team_Trade,只有潛力為0的裝備才可以使用，就算失敗了裝備也不會被破壞。失敗時強化數值減少1，+12強化以上失敗時，強化數值會減少為+10。點擊滑鼠右鍵使用。,icon_item_anvil_gold,,,,,,,,黃金鐵砧,0,0.0,0.0,FFFT,18,1.0
 643017,Moru_Silver_DLC,將裝備放到鐵砧上敲敲打打，就可以提升性能。不用消耗銀幣，就可以強化裝備。點擊滑鼠右鍵使用。,icon_item_anvil_silver,,,,,,,,銀光鐵砧,0,0.0,0.0,FFFT,18,1.0
 643020,Extract_kit,血晶萃取時使用的工具，可以跟戴利亞貝利斯購買。,icon_item_extractkit,,,,,,,,血晶萃取工具,600,0.0,0.0,FFTF,18,4.0
@@ -1377,7 +1380,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645637,misc_gemExpStone_randomQuest1,使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：300,icon_item_powderp,,,,,,,,2星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
 645638,misc_gemExpStone_randomQuest2,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：1,200",icon_item_powderp,,,,,,,,3星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
 645639,misc_gemExpStone_randomQuest3,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：3,900",icon_item_powderp,,,,,,,,4星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
-645640,misc_gemExpStone_randomQuest4,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,5星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
+645640,misc_gemExpStone_randomQuest4,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,5星寶石研磨劑,20,0.0,0.0,FFTT,18,1.0
 645641,misc_Chafperor,可以從切波勒身上獲得。,icon_item_shell_purple,,,,,,"[15084, 16089, 17069, 18025, 18055, 31036, 31056]",,切波勒的外殼,2,0.0,0.0,TTTT,18,1.0
 645642,misc_Socket,頭上冒出的角，可以從蘇凱身上獲得。,icon_item_pantohorn,"[642162, 642179]",,,,,"[33029, 34026, 38006]",,蘇凱的角,6,0.0,0.0,TTTT,18,1.0
 645643,misc_ticen_mage,具有微弱魔力的青苔，可以從堤肯魔法師身上獲得。,icon_item_grassbladeb,,,,,,[16071],,魔法青苔,1,0.0,0.0,TTTT,18,1.0
@@ -1646,7 +1649,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 645924,misc_brokenwheel,材質的重量比想像中重，傳說是能暫時叫來在其他地方的輪的石頭。,icon_item_brokenwheel,,,,,,,,審判之輪,40,0.0,0.0,FFTF,18,1.0
 645925,misc_gemExpStone_randomQuest3_14d,"使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：3,900",icon_item_powderp,,,,,,,,4星寶石研磨劑：14天,20,0.0,1209600.0,FFFF,18,1.0
 645926,misc_gemExpStone_randomQuest4_14d,"使用於強化寶石時，使寶石的經驗值大幅提升，獲得後14天內可使用。{nl} - 獲得寶石經驗值：14,700",icon_item_powderp,,,,,,,,5星寶石研磨劑：14天,20,0.0,1209600.0,FFFF,18,1.0
-645927,misc_gemExpStone_randomQuest5,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：57,900",icon_item_powderp,,,,,,,,6星寶石研磨劑,20,0.0,0.0,FFTF,18,1.0
+645927,misc_gemExpStone_randomQuest5,"使用於強化寶石時，使寶石的經驗值大幅提升。{nl} - 獲得寶石經驗值：57,900",icon_item_powderp,,,,,,,,6星寶石研磨劑,20,0.0,0.0,FFTT,18,1.0
 645928,misc_0395,怪物材料，使用於製作道具。,icon_item_misc04_20,[642182],,,,,,,羅德那康的果實,9,0.0,0.0,TTTT,18,1.0
 645929,misc_0396,怪物材料，使用於製作道具。,icon_item_misc04_21,[642182],,,,,,,羅德內克的刺莖,9,0.0,0.0,TTTT,18,1.0
 645930,misc_0397,怪物材料，使用於製作道具。,icon_item_misc04_28,[642182],,,,,,,羅德塔特的果實,9,0.0,0.0,TTTT,18,1.0
@@ -1853,6 +1856,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 648510,medeina_emotion02,可登錄聊天表情符號，點擊滑鼠右鍵使用。,icon_item_misc_00021,,,,,,,,表情符號：梅德依那(高興),0,0.0,0.0,FFFT,7,1.0
 648511,medeina_emotion03,可以登錄以下的聊天表情符號。點擊滑鼠右鍵使用。{nl}{img medeina_emotion03 50 50},icon_item_misc_00021,,,,,,,,表情符號：梅德依那(清潔),0,0.0,0.0,FFFF,7,1.0
 648512,marnox_emotion02,可以登錄在聊天表情符號，點擊滑鼠右鍵使用。{nl}{img marnox_emotion02 50 50},icon_item_misc_00021,,,,,,,,表情符號：喵星人(巧克力),0,0.0,0.0,FFFT,7,1.0
+648513,malsuns_emotion88,可以登錄以下聊天用表情符號，點擊滑鼠右鍵使用。{nl}{img malsuns_emotion88 50 50},icon_item_misc_00021,,,,,,,,表情符號：哈勃克寶寶(安心),0,0.0,0.0,FFFT,7,1.0
+648514,malsuns_emotion95,可以登錄以下聊天用表情符號，點擊滑鼠右鍵使用。{nl}{img malsuns_emotion95 50 50},icon_item_misc_00021,,,,,,,,表情符號：雷克西波(轉圈圈),0,0.0,0.0,FFFT,7,1.0
+648515,Rozaliia_emotion01,可以登錄以下聊天用表情符號，點擊滑鼠右鍵使用。{nl}{img Rozaliia_emotion01 50 50},icon_item_misc_00021,,,,,,,,表情符號：羅查利亞(喜悅),0,0.0,0.0,FFFT,7,1.0
+648516,Boruble_emotion01,可以登錄以下聊天用表情符號，點擊滑鼠右鍵使用。{nl}{img Boruble_emotion01 50 50},icon_item_misc_00021,,,,,,,,表情符號：波洛夫(害羞),0,0.0,0.0,FFFT,7,1.0
 649000,misc_ore01,礦石,1_item_ore_copper,,,,,,,,銅礦石,10,0.0,0.0,TTTT,18,1.0
 649001,misc_ore02,常見的礦石。,2_item_ore_iron,[642002],,,,,"[9003, 11036, 11037, 12024, 12036, 12037, 13038, 13039, 14026, 14032, 14039, 14040, 15035, 15036, 16025, 16038, 16039, 34007]",,鐵礦石,10,0.0,0.0,TTTT,18,1.0
 649002,misc_ore03,比鐵更堅硬的礦石。,3_item_ore_steel,[642002],,,,,"[31013, 35035]",,鋼鐵礦石,10,0.0,0.0,TTTT,18,1.0
@@ -1879,8 +1886,10 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 649027,misc_ore24,混合一定比例的鈹德礦石和祕銀礦石所製造出來的彈性高的礦物，被當作道具的材料使用。,item_icon_pideingot,,[642928],,,,"[34075, 34076, 34077, 34078, 34079, 34080, 34081]",[9027],貝特雷敏礦石,0,0.0,0.0,TTTT,18,1.0
 649028,misc_ore25,混合一定比例的紅色泰拉金屬和祕銀礦石所製造出來的具有強大火屬性氣息的金屬，被當作道具的材料使用。,item_icon_teraingot,,[642928],,,,"[34073, 34074]",[9028],烏斯托馬伊特金屬,0,0.0,0.0,TTTT,18,1.0
 649029,misc_ore26,消滅貝爾庫波後可以獲得靈魂碎片，上面含有未知的氣息，如果使用在裝備材料上，可以發揮優秀的功能。,icon_item_velcoffer_misc01,,"[642916, 642916]",,,,,,貝爾庫波靈魂碎片,0,0.0,0.0,FFFT,18,1.0
-649030,misc_ore27,消滅斯基亞克爾立斯後可獲得，內含未知的氣息，當作裝備材料使用可發揮其優秀性能。,icon_item_misc_skiaclipse,,[642949],,,,,,斯基亞克爾立斯羽毛,0,0.0,0.0,FFFT,18,1.0
+649030,misc_ore27,消滅斯基亞克爾立斯後可獲得，內含未知的氣息，當作裝備材料使用可發揮其優秀性能。,icon_item_misc_skiaclipse,,[642949],,,,,,斯基亞克爾立斯羽毛,0,0.0,0.0,TFFT,18,1.0
 649031,misc_ore23_stone,凝聚希埃拉粉末製作的結晶石。{nl} {nl}使用處：聖匣合成,icon_item_breakpowder_2_stone,,,,,,"[50105, 50106]",[50100],希埃拉石,0,0.0,0.0,TTTT,18,1.0
+649032,misc_thierrynium,聽說經過複雜的鍊金術工序以低機率製作而成的物質，幾個亞吉斯石才能製作一個，被拿來當作中和劑使用。{nl} {nl}使用處：聖匣製作,icon_item_rune_etc,,,,,,,,堤艾利元素,0,0.0,0.0,TTTT,27,1.0
+649033,misc_mothstone,散發負能量的結晶體，經過解毒過程後，可製作強力裝備。{nl} {nl}使用處：王后飾品製作,icon_item_moth_stone,,[642959],,,,,,巴伊歐雷汀水晶,0,0.0,0.0,TFFT,27,1.0
 649200,misc_jore01,樹液經過長時間放置凝固成寶石。,22_item_ore_amber,[642061],,,,,,,琥珀,6,0.0,0.0,TTTT,18,1.0
 649201,misc_jore02,琥珀裡有一隻蜥蜴標本，是非常珍貴的寶石。,23_item_ore_amber_lizard,[642030],,,,,[19007],,蜥蜴琥珀,1000,0.0,0.0,TTTT,18,1.0
 649202,misc_jore03,黃色的寶石，傳說它具有驅逐惡魔的力量。,24_item_ore_topaz,,,,,,"[15023, 50082, 50083, 50084, 50085, 50086, 50087, 50088, 50089, 50090, 50091, 50092, 50093]",,黃玉,1914,0.0,0.0,TTTT,18,1.0
@@ -3728,6 +3737,22 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 666260,EP12_PRELUDE_07_ITEM,神聖的力量馬上就要爆發似的，十分充沛的寶珠。{nl}只要受到一點衝擊，好像馬上就會破裂，所以要小心處理。,icon_item_orb3,,,,,,,,充滿神聖力量的寶珠,0,0.0,0.0,FFFF,24,0.0
 666261,EP12_MAINSTREAM_NERINGA_CANDLE_ITEM,奈凌卡透過奎波爾傳遞的蠟燭。使用後，可以將奈凌卡的幻影呼喚過來。,icon_item_neringa_candle,,,,,,,,奈凌卡的蠟燭,0,10.0,0.0,FFFF,24,0.0
 666262,EP12_MAINSTREAM_RAIMA_WHEEL_ITEM,拉伊瑪女神的聖具。如果隱藏的異空間還開啟的情形，使用這個輪盤就可以前往至異空間。,icon_item_raima_wheel,,,,,,,,拉伊瑪的輪盤,0,1.0,0.0,FFFF,24,0.0
+666263,Quest_Ancient_Card_Escarot,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[耶斯卡羅特]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666264,Quest_Ancient_Card_Grimreaper,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[格林利波]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666265,Quest_Ancient_Card_Naktis,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[那柯堤斯]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666266,Quest_Ancient_Card_Prisoncutter,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[普利森考特]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666267,Quest_Ancient_Card_Fireload,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[火焰權杖]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666268,Quest_Ancient_Card_Saltistter,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[薩爾提斯托]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666269,Quest_Ancient_Card_Velniamonkey,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[維尼亞猴子]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666270,Quest_Ancient_Card_Canceril,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[肯瑟琳]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666271,Quest_Ancient_Card_FerretMarauder,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[雪貂掠奪者]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666272,Quest_Ancient_Card_Lapene,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[拉沛內]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666273,Quest_Ancient_Card_Mothstem,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[魔斯怪]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666274,Quest_Ancient_Card_Colimencia,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[曼陀花獸]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666275,Quest_Ancient_Card_Orkan,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[奧勒坎]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666276,Quest_Ancient_Card_Sequoia,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[賽夸伊亞]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666277,Quest_Ancient_Card_Mandara,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[曼達拉]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
+666278,Quest_Ancient_Card_Castle_princess,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[城堡公主]召喚獸卡片,0,0.0,0.0,FFFF,24,0.0
 667000,CATACOMB_33_1_SQ_04_FIRE,從希奇斯那裡獲得的火柴，使用於讓亡者火葬。,icon_item_rod,,,,,,,,守墓人的火柴,0,5.0,0.0,FFFF,24,0.0
 667001,CATACOMB_33_1_SQ_05_DOLL,帶有守護人咒術的人偶。,icon_item_strawdoll1,,,,,,,,守墓人的咒術人偶,0,5.0,0.0,FFFF,24,0.0
 667002,CATACOMB_33_2_SQ_02_ORB,從復活過來的亡者身上吸收生存信念的靈石。,icon_item_spirit_green,,,,,,,,邪念石,0,20.0,0.0,FFFF,24,0.0
@@ -5353,9 +5378,9 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699017,Legend_Misc_Misrus,殘留著莫茲魯斯的力量。{nl} {nl}在賽必諾斯雷格巴、斯基亞克爾立斯 · 巴勒那裝備上被當作賦予套裝屬性材料使用。,icon_item_misc_misrus,,,,,,,[9033],莫茲魯斯鎖鏈,10,0.0,0.0,TFFT,19,10.0
 699019,Rare_Enchant_Jewel_Team,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,稀有附魔珠寶,10,0.0,0.0,FFFT,9,1.0
 699020,Legend_Enchant_Jewel_Team,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,傳說附魔珠寶,10,0.0,0.0,FFFT,9,1.0
-699021,Legend_Misc_Mothacc,可以在魔蝶交戰地傳說遠征隊獲得。{nl}使用在製作以下的傳說飾品。{nl} - 莫靈波尼亞皮克堤斯{nl} - 莫靈波尼亞特里烏卡斯{nl} - 莫靈波尼亞伊斯卡里堤{nl} - 莫靈波尼亞肯特里貝{nl} - 莫靈波尼亞朱歐達,icon_item_mothpowder,,[642958],,,,,,蝶蛾粉,10,0.0,0.0,FFFT,19,10.0
+699021,Legend_Misc_Mothacc,可以在魔蝶交戰地傳說遠征隊獲得。{nl}使用在製作以下的傳說飾品。{nl} - 莫靈波尼亞皮克堤斯{nl} - 莫靈波尼亞特里烏卡斯{nl} - 莫靈波尼亞伊斯卡里堤{nl} - 莫靈波尼亞肯特里貝{nl} - 莫靈波尼亞朱歐達,icon_item_mothpowder,,[642958],,,,,,蝶蛾粉,10,0.0,0.0,TFFT,19,10.0
 699022,Legend_ExpPotion_2_nomarket,可以將戰鬥中所產生的氣息，蒐集並儲存起來的試劑瓶。激活後，消滅怪物時將獲得經驗值。,icon_item_empty_partis,,,,,,,,帕莫卡試劑瓶,10,0.0,0.0,FFFT,10,5.0
-699023,Legend_Misc_Mothacc_easy,收集5個使用'蝶蛾粉' 可獲得1個。,icon_item_misc_tantaliser_easy,,,,,,,,蝶蛾塵,0,0.0,0.0,FFFT,7,1.0
+699023,Legend_Misc_Mothacc_easy,收集5個使用'蝶蛾粉' 可獲得1個。,icon_item_misc_tantaliser_easy,,,,,,,,蝶蛾塵,0,0.0,0.0,TFFT,7,1.0
 699024,Rare_Enchant_Jewel_440,稀有等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul2,,,,,,,,[LV. 440] 稀有附魔珠寶,10,0.0,0.0,TFTT,7,1.0
 699025,Unique_Enchant_Jewel_440,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[LV. 440] 獨特附魔珠寶,10,0.0,0.0,TFTT,7,1.0
 699026,Legend_Enchant_Jewel_490,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[LV. 490] 傳說附魔珠寶,10,0.0,0.0,TFTT,7,1.0
@@ -5365,6 +5390,13 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 699030,Unique_Enchant_Jewel_410,獨特等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul1,,,,,,,,[LV. 410] 獨特附魔珠寶,10,0.0,0.0,TFTT,7,1.0
 699031,Legend_Enchant_Jewel_460,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[LV. 460] 傳說附魔珠寶,10,0.0,0.0,TFTT,7,1.0
 699032,Team_Legend_Enchant_Jewel_460,傳說等級附魔珠寶，可以在武器/防具上賦予[附魔屬性]。,item_icon_armor_linksoul_3,,,,,,,,[LV. 460] 傳說附魔珠寶,10,0.0,0.0,FFFT,7,1.0
+699033,Legend_Misc_UpHill01,由異世界物質組成的礦石。{nl} {nl}使用處{nl} - 聖匣製作{nl} - 特殊材料製作,icon_item_legend_misc_uphill,,,,,,,,亞吉斯石 - 熱情,10,0.0,0.0,TFFT,19,1.0
+699034,Legend_Misc_Solo01,由異世界物質組成的礦石。{nl} {nl}使用處{nl} - 聖匣製作{nl} - 特殊材料製作,icon_item_legend_misc_solo,,,,,,,,亞吉斯石 - 循環,10,0.0,0.0,TFFT,19,1.0
+699035,Legend_Misc_Rift01,由異世界物質組成的礦石。{nl} {nl}使用處{nl} - 聖匣製作{nl} - 特殊材料製作,icon_item_legend_misc_raid,,,,,,,,亞吉斯石 - 正義,10,0.0,0.0,TFFT,19,1.0
+699036,Legend_Misc_Week01,由異世界物質組成的礦石。{nl} {nl}使用處{nl} - 聖匣製作{nl} - 特殊材料製作,icon_item_legend_misc_week,,,,,,,,亞吉斯石 - 和諧,10,0.0,0.0,TFFT,19,1.0
+699037,Legend_Misc_Mothacc_hard,可以從魔蝶交戰地傳說遠征隊(困難)獲得。{nl} {nl}可以透過專家鍊金術士阿貝魯的[特殊材料製作]製作巴伊歐雷汀水晶。,icon_item_mothpowder_hard,,[642959],,,,,,莫斯滑石粉,10,0.0,0.0,TFFT,19,10.0
+699038,SubExpOrb,本道具可以收集並儲存戰鬥中產生的氣息。只有達到最高等級的角色可以活化道具，活化後會儲存50%被消滅怪物的經驗值。,icon_item_empty_exp_bottle,,,,,,,,[Lv.450] 經驗精髓,10,0.0,0.0,FFFT,28,5.0
+699039,SubExpOrb_complete,430 ~ 449級角色使用時可獲得經驗值。,icon_item_full_exp_bottle,,,,,,,,[Lv.450] 已充填的經驗精髓,10,5.0,0.0,FFFT,28,10.0
 700000,KQ_token_hethran_1,達成Lv 260後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_1,,,,,,,,費斯蕾信物 Lv1,2000,5.0,0.0,TTTT,18,1.0
 700001,KQ_token_hethran_2,達成Lv 300後可使用{nl}費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv2,2000,5.0,0.0,TTTT,18,1.0
 700002,KQ_token_hethran_3,費斯蕾信物是凱都拉商團前任團長名下的信物。 4百年後的今天，凱都拉商團已經不使用，但是考慮信物的稀有性及祈求安定，還是有些地方會使用這種信物。,icon_kq_token_hethran_2,,,,,,,,費斯蕾信物 Lv3,2000,0.0,0.0,TTTT,18,1.0
@@ -5957,17 +5989,17 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904229,Arts_Ability_Coupon,若持有此券，學習秘術時豁免所需的特性點數。{nl}秘術學習後道具會消耗。,icon_item_arts_ability_coupon,,,,,,,,秘術學習特性點數豁免券,0,0.0,0.0,FFFT,9,0.0
 904230,Ability_Point_Stone_10000_NoTrade,"使用時特性點數增加10,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint4,,,,,,,,"特性點數 10,000",0,0.0,0.0,FFFF,9,1.0
 904231,Event_collegetestRiceCake,"使用時可獲得持續30分鐘的Buff。{nl}每次使用時Buff疊加可獲得以下效果。{nl} - 經驗值獲得 + (疊加 x 10)%{nl} - 道具掉落機會 + (疊加 x 100){nl} - 最大體力 + (疊加 x 500){nl} - 每10秒HP, SP恢復(疊加 x 100){nl}(最多5疊加){nl} - 活動結束時統一刪除。",icon_item_ricecake,,,,,,,,[活動] 長條年糕,0,5.0,0.0,FFFT,7,1.0
-904232,PersonalHousing_PointGacha_1,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl}迪凱雷草 x3{nl}核粉末 x10{nl}塔特 x10{nl}[個人家園]釣客地毯 x1{nl}[個人家園]釣客地氈 x1{nl}[個人家園]甜蜜半圓地氈 x1,icon_item_happybox_red,,,,,,,,[個人家園]第1階段定居物品,0,0.0,0.0,FFFT,9,0.0
-904233,PersonalHousing_PointGacha_2,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl}窩西斯花 x3{nl}希埃拉粉末 x10{nl}塔特 x20{nl}濃縮HP藥水 LV15 x5{nl}濃縮SP藥水 LV15 x5{nl}[個人家園]四角地氈 x1{nl}[個人家園]皮革地氈 x1{nl}[個人家園]大海粉紅地毯 x1,icon_item_happybox_blue,,,,,,,,[個人家園]第2階段定居物品,0,0.0,0.0,FFFT,9,0.0
-904234,PersonalHousing_PointGacha_3,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl}濃縮HP藥水 LV15 x10{nl}濃縮SP藥水 LV15 x10{nl}塔特 x30{nl}HP 恢復小型靈藥 x 5{nl}SP 恢復小型靈藥 x 5{nl}[個人家園]釣客虎皮地氈 x1{nl}[個人家園]獵人白虎地氈 x1{nl}[個人家園]大海綠色地毯 x1,icon_item_happybox_black,,,,,,,,[個人家園]第3階段定居物品,0,0.0,0.0,FFFT,9,0.0
+904232,PersonalHousing_PointGacha_1,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl} 迪凱雷草 x3{nl} 核粉末 x10{nl} 塔特 x10{nl} [個人家園]半圓地毯 x1{nl} [個人家園]方形地毯 x1{nl} [個人家園]皮革地毯 x1{nl} [個人家園]釣魚人地毯 x1{nl} [個人家園]釣魚人小地毯 x1,icon_item_happybox_red,,,,,,,,[個人家園]第1階段定居物品,0,0.0,0.0,FFFT,9,0.0
+904233,PersonalHousing_PointGacha_2,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl} 窩西斯花 x3{nl} 希埃拉粉末 x10{nl} 塔特 x20{nl} 濃縮HP藥水 LV15 x5{nl} 濃縮SP藥水 LV15 x5{nl} [個人家園]獵人黑熊地毯 x1{nl} [個人家園]獵人虎皮地毯 x1{nl} [個人家園]獵人白虎地毯 x1{nl} [個人家園]海洋粉紅地毯 x1,icon_item_happybox_blue,,,,,,,,[個人家園]第2階段定居物品,0,0.0,0.0,FFFT,9,0.0
+904234,PersonalHousing_PointGacha_3,右點擊箱子可以依不同機率獲得以下道具中的1種。{nl} 濃縮HP藥水 LV15 x10{nl} 濃縮SP藥水 LV15 x10{nl} 塔特 x30{nl} HP 恢復小型靈藥 x5{nl} SP 恢復小型靈藥 x5{nl} [個人家園]甜蜜半圓地毯 x1{nl} [個人家園]宴會場皇家地毯 x1{nl} [個人家園]宴會場花漾地毯 x1{nl} [個人家園]海洋海藍地毯 x1,icon_item_happybox_black,,,,,,,,[個人家園]第3階段定居物品,0,0.0,0.0,FFFT,9,0.0
 904235,Ability_Point_Stone_10000_Team_NoDate,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,,,"[活動] 特性點數 10,000",0,0.0,0.0,FFFT,9,1.0
 904238,Achieve_Steam_JP_revelator_item,2019年伺服器移轉玩家的專用稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,稱號-最初的啟示者,0,0.0,0.0,FFFF,7,0.0
 904239,event1912_4thAnniversary_Coin,為了紀念4周年而製作的鑄幣。在活動期間內可以透過各種管道取得。{nl}活動結束時統一刪除。{nl}可以在4周年紀念商店中使用。,icon_item_annycoin_2,,,,,,,,[活動]4周年紀念鑄幣,0,0.0,0.0,FFFT,18,0.1
 904240,event1912_TP_feather,"蘊藏加比婭恩寵的羽毛。收集3個轉交給交換NPC加比婭的傳令，就可以依機率獲得加比婭主題道具中的1種。{nl} {nl}{@st66d}1月 9日維護時特性點數統一變更為 4,000。{/} {nl} {nl}{@st66d_y}{s18}加比婭主題道具清單{/}{/}{nl}- 加比婭的祭司套裝選擇箱 x1{nl}- 加比婭之火 x1{nl}- 小加比婭娃娃 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅色髮結 x1{nl}- 加比婭羽毛髮飾 x1{nl}- 火之傳令鳥x 1{nl}- 充滿加比婭恩寵的翅膀裝飾 x2 ~ 50{nl} {nl}{@st66d_y}{s18}* 透過官網下方 '機率型道具目錄'可以確認內容物和機率。{/}{/}",icon_item_feather_pinics,,,,,,,,充滿加比婭恩寵的羽毛,0,0.0,0.0,TTFT,18,0.1
 904241,event1912_TP_wing,"充滿加比婭恩寵的翅膀裝飾，如果拿去給交換NPC加比婭的傳令和NPC克莉妲的話，可以選擇加比婭主題道具中1個，只要轉交加充滿比婭恩寵翅膀裝飾的需求數量就可以獲得。{nl} {nl}{@st66d}活動期間特性點數統一變成2,000。{/}{nl} {nl}{@st66d_y}{s18}加比婭主題道具清單{/}{/}{nl}- 加比婭祭司套裝選擇箱 x1{nl}- 加比婭之火 x1{nl}- 小加比婭娃娃 x1{nl}- 加比婭翅膀 x1{nl}- 火鳥髮夾x1{nl}- 紅色髮結 x1{nl}- 加比婭羽毛髮飾 x1",icon_item_wing_pinics,,,,,,,,充滿加比婭恩寵的翅膀裝飾,0,0.0,0.0,FFFT,18,0.1
-904242,item_event_2020_luckyticket,為了迎接新年特製的中獎券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_luckyticket,,,,,,,,[活動]福袋獎券,0,0.0,0.0,FFFT,18,0.1
-904243,item_event_2020_goldenticket,為了迎接新年特製的交換券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_goldenticket,,,,,,,,[活動]黃金福袋交換券,0,0.0,0.0,FFFT,18,0.1
-904244,item_event_2020_ticket,為了迎接新年特製的交換券。{nl}活動期間可獲得。{nl}活動結束時統一刪除。{nl}可以跟活動NPC交換福袋。,icon_item_event_2020_ticket,,,,,,,,[活動]2020大慶典交換券,0,0.0,0.0,FFFT,18,0.1
+904242,item_event_2020_luckyticket,透過活動NPC可交換幸運箱。{nl}活動結束時統一刪除。,item_icon_event_2005_luckyticket,,,,,,,,[活動]幸運票券,0,0.0,0.0,FFFT,18,0.1
+904243,item_event_2020_goldenticket,透過活動NPC可交換金色幸運箱。{nl}活動結束時統一刪除。,item_icon_event_2005_goldenticket,,,,,,,,[活動]金色幸運票券,0,0.0,0.0,FFFT,18,0.1
+904244,item_event_2020_ticket,透過活動NPC可交換各種獎勵。{nl}活動結束時統一刪除。,item_icon_event_2005_trade,,,,,,,,[活動]交換券,0,0.0,0.0,FFFT,18,0.1
 904247,TP_1912_EQUIPITEM_BOX_ARMOR,使用時可以獲得想要的11強化10超越[4ever] 賽必諾斯防具1個。{nl}該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[4ever] 11強化10超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
 904248,TP_1912_EQUIPITEM_BOX,使用時可以獲得想要的11強化10超越[4ever] 賽必諾斯武器1個。{nl}該裝備不能分解、強化。,icon_item_jewelrybox_close,,,,,,,,[4ever] 11強化10超越賽必諾斯武器選擇箱,0,0.0,0.0,FFFT,9,1.0
 904249,EVENT_1710_NEWCHARACTER_BOX_20,點擊滑鼠右鍵即可使用，420級以上才能使用。{nl}活動結束時統一刪除。,icon_item_giftbox_2,,,,,,,,[活動] 升級箱 (420級),0,0.0,0.0,FFFF,9,1.0
@@ -5976,11 +6008,11 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904252,Drug_Fortunecookie_2020,30分鐘內根據疊加經驗值、移動速度、最多可以疊加至5為止。活動結束時統一刪除。,icon_item_fortunecookie,,,,,,,,[活動]幸運餅乾,0,10.0,0.0,FFFT,7,0.0
 904253,4YEARS_EVENT_JUMPING,使用時可以獲得以下所有內容物。{nl} - [活動] 經驗值卡片 (400級) x1{nl} - 職業經驗值卡片箱 x1,icon_item_giftbox_4,,,,,,,,[活動] Lv.400 飛躍箱,0,0.0,0.0,FFFF,7,0.0
 904254,2020_AbillityArts_Box_1_d7,使用時可獲得想要的職業系列秘術重置藥水選擇箱。,icon_item_happybox_red,,,,,,,,[活動]秘術重置藥水職業系列選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
-904255,2020_AbillityArts_Box_2_d7,使用時可獲得想要的劍士系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]劍士系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
-904256,2020_AbillityArts_Box_3_d7,使用時可獲得想要的斥候系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]斥候系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
-904257,2020_AbillityArts_Box_4_d7,使用時可獲得想要的牧師系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]牧師系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
-904258,2020_AbillityArts_Box_5_d7,使用時可獲得想要的弓箭手系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]弓箭手系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
-904259,2020_AbillityArts_Box_6_d7,使用時可獲得想要的法師系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,[活動]法師系列秘術藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904255,2020_AbillityArts_Box_2_d7,使用時可獲得想要的劍士系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,劍士系列秘術重置藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904256,2020_AbillityArts_Box_3_d7,使用時可獲得想要的斥候系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,斥候系列秘術重置藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904257,2020_AbillityArts_Box_4_d7,使用時可獲得想要的牧師系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,牧師系列秘術重置藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904258,2020_AbillityArts_Box_5_d7,使用時可獲得想要的弓箭手系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,弓箭手系列秘術重置藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
+904259,2020_AbillityArts_Box_6_d7,使用時可獲得想要的法師系列的秘術重置藥水(1天)。,icon_item_eventbox_potion,,,,,,,,法師系列秘術重置藥水選擇箱(7天),0,0.0,604800.0,FFFT,9,1.0
 904260,Achieve_LV400_MISSION_ACHIEVE01,可以獲得稱號-不屈的鬥志持有者 (Lv.400 地下城)的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-不屈的鬥志持有者 (Lv.400 地下城),0,0.0,0.0,FFFT,9,0.0
 904261,Achieve_LV400_MISSION_ACHIEVE02,可以獲得稱號-有勇氣的人 (Lv.400 地下城)的道具，對道具點擊右鍵使用即可獲得稱號。,icon_item_holyark,,,,,,,,稱號-有勇氣的人 (Lv.400 地下城),0,0.0,0.0,FFFT,9,0.0
 904262,Event_Ability_Point_Stone_10000_14d_2,"活動發送的道具。{nl}使用時特性點數增加10,000，點擊滑鼠右鍵使用。",icon_item_abilitypoint4,,,,,,,,"[活動]特性點數10,000(14天)",0,0.0,1209600.0,FFFT,9,1.0
@@ -6007,13 +6039,18 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 ",icon_item_luckybox_gold,,,,,,,,[活動]每月支援箱,0,0.0,0.0,FFFT,9,0.0
 904284,EVENT_SEASON_NewWorld_COIN_1,為了賽季伺服器特別製作的鑄幣。(需追加使用用途),icon_item_antque_gold_coin,,,,,,,,[活動]定居的鑄幣,0,0.0,0.0,FFFT,18,0.1
 904285,Event_expCard_430Lv,可獲得從1級到430級所需要的所有經驗值。,icon_item_expcard,,,,,,,,經驗值卡片(430級),0,0.0,0.0,FFFT,9,0.0
+904286,Achieve_WeeklyRank_6,透過每週BOSS系列別排名獎勵獲得的稱號。{nl}使用時獲得稱號。{nl}獲得的稱號只有在該角色上可使用。,icon_item_holyark,,,,,,,,稱號 - Malicious Delver,0,0.0,0.0,FFFF,7,1.0
+904287,Achieve_WeeklyRank_7,透過每週BOSS系列別排名獎勵獲得的稱號。{nl}使用時獲得稱號。{nl}獲得的稱號只有在該角色上可使用。,icon_item_holyark,,,,,,,,稱號 - Brutal Lord,0,0.0,0.0,FFFF,7,1.0
+904288,Achieve_WeeklyRank_8,透過每週BOSS系列別排名獎勵獲得的稱號。{nl}使用時獲得稱號。{nl}獲得的稱號只有在該角色上可使用。,icon_item_holyark,,,,,,,,稱號 - Implacably Claw,0,0.0,0.0,FFFF,7,1.0
+904293,EVENT_2005_NEW_WORLD_CHECK_SCROLL,進入公會任務後，可以確認目前有幾明新世界玩家。{nl}可於進入公會任務後使用。{nl}活動結束後統一刪除。,icon_item_new_world_check,,,,,,,,[公會活動] 確認卷軸,0,10.0,0.0,FFFT,7,1.0
+904294,EVENT_2005_NEW_WORLD_CARD,使用時可以透過效果和BUFF證明自己是新世界玩家的道具。{nl}活動結束時統一刪除。,icon_item_new_world_card,,,,,,,,[公會活動] 新世界證書,0,10.0,0.0,FFFT,7,1.0
 910001,Scroll_SkillItem,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸,5,0.0,0.0,FFFF,7,0.0
 910002,Default_Sprout,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_sprout,,,,,,,,幼苗,1,0.0,0.0,TTTT,18,1.0
 910003,Default_Deadplants,長根莖，稍微有辣味，可以從凱帕身上獲得。,item_icon_witheredplants,,,,,,,,枯萎的植物,1,0.0,0.0,TTTT,18,1.0
 910004,Zombie_Capsule,使用邪靈祭師膠囊可以照換殭屍。為了使用膠囊，必須學習 [製造殭屍] 技能，最大殭屍製造數量會依照 [製造殭屍] 限制數量而定。,icon_item_zombiecapsule_01,,,,,,,,殭屍膠囊,5,0.0,0.0,FFTF,7,1.0
 910005,Scroll_SkillItem_Cleric_Cure,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 5 淨化],5,0.0,0.0,TTTT,7,1.0
 910006,Scroll_SkillItem_Kriwi_Aukuras,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 15 聖火],5,0.0,0.0,TTTT,7,1.0
-910007,Scroll_SkillItem_Kriwi_Zalciai,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 15 暴擊魔法陣],5,0.0,0.0,TTTT,7,1.0
+910007,Scroll_SkillItem_Kriwi_Zalciai,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 5 暴擊魔法陣],5,0.0,0.0,TTTT,7,1.0
 910008,Scroll_SkillItem_Kriwi_Daino,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 10 神光],5,0.0,0.0,TTTT,7,1.0
 910009,Scroll_SkillItem_Priest_Monstrance,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 15 聖光體],5,0.0,0.0,TTTT,7,1.0
 910010,Scroll_SkillItem_Paladin_Restoration,可以儲存特定技能的卷軸。,golemmagicitem1,,,,,,,,技能卷軸 [Lv. 15 恢復],5,0.0,0.0,TTTT,7,1.0
@@ -6033,6 +6070,58 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 1250013,motion_kupole_emotion03,可以登入會動的聊天表情符號。點擊滑鼠右鍵即可使用。,icon_item_misc_00021,,,,,,,,動作表情符號：奎波爾(嘆氣),0,0.0,0.0,FFFT,7,1.0
 1300001,EPISODE_11_REWARD_WEAPON_BOX,右點擊時可以選擇並獲得11強化10超越[EP11]賽必諾斯雷格巴武器。{nl}ㅤ{nl}{nl}獲得的武器不能進行強化、超越、附魔、覺醒、分解、丟棄、外型變更、萃取。{nl}[可獲得的道具]{nl}[EP11] 賽必諾斯雷格巴十字弓x1{nl}[EP11] 賽必諾斯雷格巴重砲x1{nl}[EP11] 賽必諾斯雷格巴匕首x1{nl}[EP11] 賽必諾斯雷格巴鈍器x1{nl}[EP11] 賽必諾斯雷格巴火槍x1{nl}[EP11] 賽必諾斯雷格巴手槍x1{nl}[EP11] 賽必諾斯雷格巴細劍x1{nl}[EP11] 賽必諾斯雷格巴盾牌x1{nl}[EP11] 賽必諾斯雷格巴矛槍x1{nl}[EP11] 賽必諾斯雷格巴權杖x1{nl}[EP11] 賽必諾斯雷格巴劍x1{nl}[EP11] 賽必諾斯雷格巴短弓x1{nl}[EP11] 賽必諾斯雷格巴雙手鈍器x1{nl}[EP11] 賽必諾斯雷格巴法杖x1{nl}[EP11] 賽必諾斯雷格巴長槍x1{nl}[EP11] 賽必諾斯雷格巴雙手劍x1{nl}[EP11] 賽必諾斯上古飾品 x1,icon_item_jewelrybox_close,,,,,,,,[EP11] 11強10超越賽必諾斯武器選擇箱,0,0.0,0.0,FFFT,9,1.0
 1300002,EPISODE_11_REWARD_EQUIP_BOX,右點擊時可以選擇並獲得11強化10超越[EP11]賽必諾斯防具。{nl}ㅤ{nl}{nl}獲得的防具不能進行強化、超越、附魔、分解、覺醒、丟棄、外型變更、萃取。{nl}[可獲得的道具]{nl}[EP11] 賽必諾斯皮克林泰手套 x1{nl}[EP11] 賽必諾斯皮克林泰靴子 x1{nl}[EP11] 賽必諾斯皮克林泰短褲 x1{nl}[EP11] 賽必諾斯皮克林泰布甲 x1{nl}[EP11] 賽必諾斯彼梅札伊皮革手套 x1{nl}[EP11] 賽必諾斯彼梅札伊皮革靴子 x1{nl}[EP11] 賽必諾斯彼梅札伊皮革短褲 x1{nl}[EP11] 賽必諾斯彼梅札伊皮革盔甲 x1{nl}[EP11] 賽必諾斯阿克魔護手套 x1{nl}[EP11] 賽必諾斯阿克魔護脛靴 x1{nl}[EP11] 賽必諾斯阿克魔鋼鐵短褲 x1{nl}[EP11] 賽必諾斯阿克魔鋼鐵盔甲 x1,icon_item_jewelrybox_close,,,,,,,,[EP11] 11強10超越賽必諾斯防具選擇箱,0,0.0,0.0,FFFT,9,1.0
+1400001,Scroll_SkillItem_Custom_Moringponia_01,可幫助遠征隊的道具。,icon_item_core_00red,,,,,,,,魔力寶珠：變異解除,0,0.0,0.0,FFFF,7,1.0
+1400002,Scroll_SkillItem_Custom_Moringponia_02,可幫助遠征隊的道具。,icon_item_core_03green,,,,,,,,魔力寶珠：浮空免疫,0,0.0,0.0,FFFF,7,1.0
+1400003,Scroll_SkillItem_Custom_Moringponia_03,可幫助遠征隊的道具。,icon_item_core_04blue,,,,,,,,魔力寶珠：石化解除,0,0.0,0.0,FFFF,7,1.0
+1400004,Scroll_SkillItem_Custom_Moringponia_04,可幫助遠征隊的道具。,icon_item_core_05purple,,,,,,,,魔力寶珠：竊取坦達伊秋Buff,0,0.0,0.0,FFFF,7,1.0
+1400005,Scroll_SkillItem_Custom_Moringponia_05,可幫助遠征隊的道具。,icon_item_core_06black,,,,,,,,魔力寶珠：注視對象,0,0.0,0.0,FFFF,7,1.0
+1410001,Ancient_Card_Escarot,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[耶斯卡羅特]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410002,Ancient_Card_Grimreaper,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[格林利波]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410003,Ancient_Card_Naktis,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[那柯堤斯]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410004,Ancient_Card_Prisoncutter,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[普利森考特]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410005,Ancient_Card_Fireload,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[火焰權杖]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410006,Ancient_Card_Saltistter,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[薩爾提斯托]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410007,Ancient_Card_Velniamonkey,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[維尼亞猴子]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410008,Ancient_Card_Canceril,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[肯瑟琳]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410009,Ancient_Card_FerretMarauder,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[雪貂掠奪者]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410010,Ancient_Card_Lapene,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[拉沛內]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410011,Ancient_Card_Mothstem,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[魔斯怪]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410012,Ancient_Card_Colimencia,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[曼陀花獸]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410013,Ancient_Card_Orkan,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[奧勒坎]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410014,Ancient_Card_Sequoia,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[賽夸伊亞]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410015,Ancient_Card_Mandara,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[曼達拉]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410016,Ancient_Card_Castle_princess,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[城堡公主]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410017,Ancient_Card_Torment,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[暴風]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410018,Ancient_Card_froster_lord,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[弗羅斯特領主]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410019,Ancient_Card_Tantaliser,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[坦達伊秋]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410020,Ancient_Card_Wastrel,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[威伊斯特隆]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410021,Ancient_Card_solcomm,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[蘇科姆]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410022,Ancient_Card_Asiomage,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[亞西歐梅吉]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410023,Ancient_Card_kucarry_balzermancer,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[庫凱利瓦爾澤法師]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410024,Ancient_Card_ProddedHorse,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[普羅迪德浩司]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410025,Ancient_Card_ChiefGuard,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[內比爾拉斯]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410026,Ancient_Card_mirtis,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[米爾堤斯]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410027,Ancient_Card_helgasercle,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[赫嘉塞露女妖]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410028,Ancient_Card_Marnoks,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[馬魯若斯]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410029,Ancient_Card_Lecifer,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[雷克西波]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410030,Ancient_Card_ignas,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[依克拉斯]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410031,Ancient_Card_Zawra,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[扎烏拉]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410032,Ancient_Card_Blud,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[布爾魯]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410033,Ancient_Card_Nuaelle,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[努亞耶雷]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410034,Ancient_Card_succubus,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[夢魔]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410035,Ancient_Card_Porahound,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[波拉哈溫德]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410036,Ancient_Card_Moringponia,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[莫靈波尼亞]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410037,Ancient_Card_Skiaclipse,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[斯基亞克爾立斯]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410038,Ancient_Card_Velcoffer,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[貝爾庫波]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410039,Ancient_Card_Boruta,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[普魯達]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410040,Ancient_Card_Baby_Skiaclipse,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[斯基亞克爾立斯寶寶]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410041,Ancient_Card_Baby_Marnoks,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[馬魯若斯寶寶]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410042,Ancient_Card_Baby_Hauberk,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[哈勃克寶寶]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1410043,Ancient_Card_Misrus,右點擊時獲得該召喚獸。{nl}獲得的召喚獸可在召喚獸保管箱確認。,icon_item_ancient_card,,,,,,,,[莫茲魯斯]召喚獸卡片,0,0.0,0.0,FFFF,7,1.0
+1420041,Ancient_CardBook_Choice,可選擇召喚獸卡片。{nl} {nl}5張召喚獸卡片中只能選擇1張召喚獸卡片。{nl} {nl}※可以透過召喚獸保管箱的召喚獸卡片集按鍵使用。{nl} {nl}※可獲得的召喚獸卡片{nl}[一般等級] - 耶斯卡羅特、格林利波、那柯堤斯、普利森考特、火焰權杖、薩爾提斯托、維尼亞猴子、肯瑟琳、雪貂掠奪者、拉沛內、魔斯怪、曼陀花獸、奧勒坎、賽夸伊亞、曼達拉、城堡公主{nl} {nl}[魔法等級] - 暴風、弗羅斯特領主、坦達伊秋、威伊斯特隆、蘇科姆、亞西歐梅吉、庫凱利瓦爾澤法師、普羅迪德浩司{nl} {nl}[獨特等級] - 內比爾拉斯、米爾堤斯、赫嘉塞露女妖、馬魯若斯、雷克西波、依克拉斯、扎烏拉、布爾魯、努亞耶雷、夢魔{nl} {nl}[傳說等級] - 莫靈波尼亞、斯基亞克爾立斯、貝爾庫波、普魯達、莫茲魯斯,icon_item_ancient_cardbook,,,,,,,,召喚獸卡片集 ：選擇,0,0.0,0.0,FFFF,18,1.0
+1420042,Ancient_CardBook_ALL,可獲得5張召喚獸卡片。{nl} {nl}※可以透過召喚獸保管箱的召喚獸卡片集按鍵使用。{nl} {nl}※可獲得召喚獸卡片{nl}[一般等級] - 耶斯卡羅特、格林利波、那柯堤斯、普利森考特、火焰權杖、薩爾提斯托、維尼亞猴子、肯瑟琳、雪貂掠奪者、拉沛內、魔斯怪、曼陀花獸、奧勒坎、賽夸伊亞、曼達拉、城堡公主{nl} {nl}[魔法等級] - 暴風、弗羅斯特領主、坦達伊秋、威伊斯特隆、蘇科姆、亞西歐梅吉、庫凱利瓦爾澤法師、普羅迪德浩司{nl} {nl}[獨特等級] - 內比爾拉斯、米爾堤斯、赫嘉塞露女妖、馬魯若斯、雷克西波、依克拉斯、扎烏拉、布爾魯、努亞耶雷、夢魔{nl} {nl}[傳說等級] - 莫靈波尼亞、斯基亞克爾立斯、貝爾庫波、普魯達、莫茲魯斯,icon_item_ancient_cardbook,,,,,,,,召喚獸卡片集,0,0.0,0.0,FFFF,18,1.0
+1420043,Ancient_boostToken,點擊滑鼠右鍵即可使用，對角色套用1個小時效果。{nl} - 只有角色連線時會計算時間。{nl} - 消滅怪物時，召喚獸獲得經驗值增加+100%。,icon_item_abilitypoint_ancinet,,,,,,,,召喚獸經驗之書,0,0.0,0.0,FFFT,7,1.0
+1420044,Ability_Point_Stone_1000_Acient,"使用時特性點數增加1,000，點擊滑鼠右鍵即可使用。",icon_item_abilitypoint,,,,,,,,"特性點數 1,000",0,0.0,0.0,FFFT,7,1.0
 2000000,Achieve_Event_Steam_PoPo_Vacation,送給PoPo Vacation得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - PoPo Vacation,0,0.0,0.0,FFFT,7,0.0
 2000002,Achieve_Steam_PIZZA,送給捐出披薩的救援者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,稱號 - 披薩外送服務,0,0.0,0.0,FFFT,7,0.0
 2000003,Achieve_Event_Steam_One_of_A_Kind,賜給One of A Kind 得獎者的稱號，點擊滑鼠右鍵即可使用。,icon_item_holyark,,,,,,,,Title - One of A Kind,0,0.0,0.0,FFFT,7,0.0

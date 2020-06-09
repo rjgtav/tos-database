@@ -146,6 +146,8 @@ $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,
 644502,Master_card_MariaLeed,[欄位裝備效果] 被攻擊時以10%機率10秒內最大HP的[★ /2]%盾牌生成{nl}冷卻時間30秒,icon_item_card_def,009_npc_maria,,,,,,,,,,,瑪利亞利德卡片,500,,,,0.0,0.0,TTTT,4,1,1.0
 644503,Master_card_JuraSwajone,[欄位裝備效果] 迴避 +[★ * 10],icon_item_card_def,010_npc_juraswajone,,,,,,,,,,,尤拉斯瓦約內卡片,500,,,,0.0,0.0,TTTT,4,1,1.0
 644504,Master_card_Kamiya,[欄位裝備效果] 廣域防禦比率 +[★/5],icon_item_card_util,011_npc_kamiya,,,,,,,,,,,卡米亞卡片,500,,,,0.0,0.0,TTTT,4,5,1.0
+644505,Master_card_EckipseUbik,[欄位裝備效果] 給陷入暗黑異常狀態對象的傷害[★]% 增加,icon_item_card_atk,012_npc_eclipseubik,,,,,,,,,,,伊克利斯優比卡片,500,,,,0.0,0.0,TTTT,4,0,1.0
+644506,Master_card_AbrehMelinn,[欄位裝備效果] 給陷入火異常狀態對象的傷害[★]% 增加,icon_item_card_atk,013_npc_abrehmelinn,,,,,,,,,,,阿布雷梅林卡片,500,,,,0.0,0.0,TTTT,4,0,1.0
 644900,Legend_card_Marnoks,[欄位裝備效果] 最小暴擊機率增加 [★ * 2]%,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔君主馬魯若斯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644901,Legend_card_Blud,[欄位裝備效果] PVP時獲得傷害減少 [★ * 3]%,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔君主布爾魯卡片,0,,,,0.0,0.0,TTTT,4,2,1.0
 644902,Legend_card_Zawra,[欄位裝備效果] 物理防禦力增加 [★ * 10]%,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔君主扎烏拉卡片,0,,,,0.0,0.0,TTTT,4,2,1.0

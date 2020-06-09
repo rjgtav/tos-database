@@ -569,7 +569,7 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 147517,npc_fishing_manager,,,釣魚場管理員,2
 147518,npc_diana,,,黛安娜,2
 148001,blank_npc_moon,,,空的 NPC,2
-150000,npc_junk_shop,,,流浪商人 凱拉爾達斯,2
+150000,npc_junk_shop,,minimap_kedora,流浪商人 凱拉爾達斯,2
 150001,npc_skill_misc_shop_2,,,技能材料商人,2
 150002,npc_skill_misc_shop_3,,,技能材料商人,2
 150003,npc_equip_shop_270_315,,,裝備補給兵,2
@@ -1562,8 +1562,8 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 157053,d_fantasylibrary_48_4_elt,,,幻想圖書館移動裝置,2
 157054,halloween_scarecrow,,,萬聖節稻草人,2
 157055,magictrap_core_gimmick2,,,魔力核,2
-157056,npc_junk_shop_2,,,[凱都拉商團員]{nl}凱拉爾達西亞,2
-157057,npc_junk_shop_3,,,[凱都拉商團員]{nl}凱拉爾達遜,2
+157056,npc_junk_shop_2,,minimap_kedora,[凱都拉商團員]{nl}凱拉爾達西亞,2
+157057,npc_junk_shop_3,,minimap_kedora,[凱都拉商團員]{nl}凱拉爾達遜,2
 157100,npc_sage_female_2,,,賢者 女2,2
 158000,npc_paladin_follower1_3_copy,,minimap_team,隊伍戰鬥聯賽,2
 158001,npc_friar_02_blacksmith,,minimap_man_smith,修道士2鐵匠,2
@@ -1586,8 +1586,13 @@ $ID,$ID_NAME,Description,Icon,Name,Type
 160016,rokas_pot3_small_E1,,,新年福罐,2
 160018,Hiddennpc_RiftMode_Start,,,次元崩壞地點入場,2
 160019,event_2001_cat,,,釣魚場小貓,2
+160020,HiddenWall_moring,,,,2
+160021,MORINGPONIA_HARD_PURIFYING_STONE,,,淨化石,2
 160022,WEEKLY_PURIFYING_STONE,,,淨化石,2
 160023,npc_kupole_3_event_2004,,minimap_event_1,植樹節活動小幫手,2
+160024,NPC_goddess_Roulette,,minimap_event_1,[活動] 女神的輪盤,2
+160025,ANCIENT_QUEST_OBJECT,,minimap_portal,淨化的祭壇,2
+160026,ANCIENT_QUEST_OBJECT2,,minimap_portal,淨化的祭壇,2
 161000,E_statue_zemina,,minimap_goddess,女神澤米娜之像,2
 161001,npc_kupole_Velcoffer,,,奎波爾西姆那,2
 161002,npc_Teliavelis,,minimap_man_smith,鐵匠戴利亞貝利斯,2
