@@ -5867,7 +5867,7 @@ $ID,$ID_NAME,Description,Icon,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Ex
 904027,MISSION_SURVIVAL_EVENT2_ACHIEVE_BOX,怪盜特龐活動所贈送的稱號箱子。{nl}活動結束時活動道具統一刪除。,icon_item_holyark,,,,,,,,稱號 - 怪盜的資格,0,0.0,0.0,FFFT,7,0.0
 904029,EVENT_1805_WEDDING1_PIECE,請幫助5月的新娘，活動用道具，活動結束時統一刪除。,icon_item_event_invitationpiece1,,,,,,,,遺失的請帖碎片,0,0.0,0.0,FFFT,18,0.1
 904030,EVENT_BEAUTY_CHAIR,美容院購買活動贈送的道具。{nl}使用時可以召喚出美髮椅來坐。,icon_item_event_beauty_chair,,,,,,,,美髮椅,0,1.0,0.0,FFFT,7,1.0
-904031,EVENT_1805_CHILDREN,30分內給予組隊全員移動速度+4、廣域攻擊比率+1、經驗增加25%的效果。,icon_item_firework,,,,,,,,TOS之日爆竹,0,1800.0,0.0,FFFT,7,1.0
+904031,EVENT_1805_CHILDREN,30分內給予組隊全員移動速度+4、廣域攻擊比率+1、經驗增加25%的效果。,icon_item_firework,,,,,,,,小樹之日爆竹,0,1800.0,0.0,FFFT,7,1.0
 904032,EVENT_1805_NEWCLASS_BOX_PDP,裝有吹笛手的套裝箱。{nl}必須轉職為吹笛手才能使用。{nl}從箱子中獲得的套裝不能隊伍倉庫保管。,icon_item_jewelrybox,,,,,,,,吹笛手的貝勒凱普歐雷德套裝箱,0,0.0,0.0,FFFT,7,0.0
 904033,EVENT_1805_NEWCLASS_BOX_EXO,裝有驅魔師的套裝箱。{nl}必須轉職為驅魔師才能使用。{nl}從箱子中獲得的套裝不能隊伍倉庫保管。,icon_item_jewelrybox,,,,,,,,驅魔師的契約套裝箱,0,0.0,0.0,FFFT,7,0.0
 904034,EVENT_NEARALL_ANIM,右點擊道具，輸入動作名稱，周邊範圍100以的的角色都會做相同動作。{nl}按[F8]可以確認動作名稱。{nl}但是，對沒有使用VIP的角色輸入VIP優惠動作時，不會做該動作。{nl}活動結束時道具統一刪除。,icon_item_magicpaper,,,,,,,,謎樣卷軸,0,10.0,0.0,FFFT,7,0.0
