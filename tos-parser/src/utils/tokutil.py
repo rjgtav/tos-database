@@ -22,10 +22,11 @@ class TokAttrType:
 
 
 def _read_string(buf, pos):
-    l = buf.find('\x00', pos)
+    l = buf.find(b'\x00', pos)
     if l == pos:
         return None
-    return struct.unpack(str(l-pos) + "s", buf[pos:l])[0]
+    print(str(l-pos) + "s")
+
 
 
 def tok2xml(f):
@@ -80,7 +81,7 @@ def tok2xml(f):
         # read attributes
         while True:
             _attr_idx = struct.unpack("b", buf[pos:pos+1])[0] - 1
-            if buf[pos] == '\x00':
+            if buf[pos] == b'\x00':
                 pos += 1
                 break
             pos += 1

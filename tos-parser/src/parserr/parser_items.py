@@ -9,7 +9,7 @@ from parserr import parser_assets
 from parserr import parser_translations
 from parserr.parser_items_equipment import TOSEquipmentType, TYPE_EQUIPMENT_COSTUME_LIST
 from utils.tosenum import TOSEnum
-
+import codecs
 
 class TOSItemGroup(TOSEnum):
     ARMBAND = 0
@@ -44,7 +44,7 @@ class TOSItemGroup(TOSEnum):
     SUBWEAPON = 29
     UNUSED = 30
     WEAPON = 31
-
+    RELIC=32
     @staticmethod
     def value_of(string):
         return {
@@ -80,6 +80,7 @@ class TOSItemGroup(TOSEnum):
             'SUBWEAPON': TOSItemGroup.SUBWEAPON,
             'UNUSED': TOSItemGroup.UNUSED,
             'WEAPON': TOSItemGroup.WEAPON,
+            'RELIC':TOSItemGroup.RELIC,
         }[string.upper()]
 
 
@@ -131,11 +132,11 @@ def parse():
     obj['$ID'] = -1
     obj['$ID_NAME'] = 'Moneybag1'
     obj['Icon'] = parser_assets.parse_entity_icon('icon_item_silver')
-    obj['Name'] = parser_translations.translate(u'실버')
+    obj['Name'] = parser_translations.translate('실버')
     obj['Tradability'] = 'FFFF'
     obj['Type'] = TOSItemGroup.UNUSED
 
-    for key in globals.items.values()[0]:
+    for key in list(globals.items.values())[0]:
         if key not in obj:
             obj[key] = None
 
@@ -147,7 +148,7 @@ def parse_items(file_name):
     logging.debug('Parsing %s...', file_name)
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", file_name)
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path, 'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:

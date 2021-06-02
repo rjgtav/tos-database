@@ -3,7 +3,7 @@ import logging
 import os
 
 import constants
-
+import codecs
 
 def load(ies_name):
     ies_data = []
@@ -13,12 +13,12 @@ def load(ies_name):
         logging.warn('Missing ies file: %s', ies_path)
         return []
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors="replace") as ies_file:
         ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
         for row in ies_reader:
             # auto cast to int/float if possible
-            for key in row.keys():
+            for key in list(row.keys()):
                 try:
                     row[key] = int(row[key])
                 except ValueError:

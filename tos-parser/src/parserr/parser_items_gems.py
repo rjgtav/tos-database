@@ -5,6 +5,7 @@ import xml.etree.ElementTree as ET
 
 import constants
 import globals
+import codecs
 from parserr import parser_translations
 from parserr.parser_items_equipment import TOSEquipmentStat
 from utils.tosenum import TOSEnum
@@ -31,7 +32,7 @@ def parse_gems():
     logging.debug('Parsing gems...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_gem.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path, 'r','utf-8',errors="replace")
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
@@ -104,7 +105,7 @@ def parse_links():
 def parse_links_skills():
     logging.debug('Parsing skills for gems...')
 
-    for gem in globals.gems.values():
+    for gem in list(globals.gems.values()):
         skill = gem['$ID_NAME'][len('Gem_'):]
         skill = globals.get_skill_link(skill)
         gem['Link_Skill'] = skill

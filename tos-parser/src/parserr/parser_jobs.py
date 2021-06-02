@@ -1,12 +1,13 @@
 # coding=utf-8
 import csv
-import httplib
+import http.client
 import logging
 import os
-import urllib
+import urllib.request, urllib.parse, urllib.error
 
 import constants
 import globals
+import codecs
 from parserr import parser_assets
 from parserr import parser_translations
 from parserr.parser_enums import TOSRegion
@@ -88,7 +89,7 @@ def parse_jobs():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             obj = {}
             obj['$ID'] = int(row['ClassID'])
@@ -144,10 +145,10 @@ def parse_jobs_images(region, version_update):
             treeofsavior_path_male = '/Job_sd_m/' + row['ClassID'] + '.gif'
 
             if treeofsavior_domain.startswith('https://'):
-                conn = httplib.HTTPSConnection(treeofsavior_domain.split('://')[1])
+                conn = http.client.HTTPSConnection(treeofsavior_domain.split('://')[1])
                 conn.request('HEAD', treeofsavior_path_female)
             else:
-                conn = httplib.HTTPConnection(treeofsavior_domain.split('://')[1])
+                conn = http.client.HTTPConnection(treeofsavior_domain.split('://')[1])
                 conn.request('HEAD', treeofsavior_path_female)
 
             response = conn.getresponse()
@@ -157,8 +158,8 @@ def parse_jobs_images(region, version_update):
                 logging.warn('Failed to retrieve job image: %s, status %s', treeofsavior_domain + treeofsavior_path_female, response.status)
                 continue
 
-            urllib.urlretrieve(treeofsavior_domain + treeofsavior_path_female, image_path_f)
-            urllib.urlretrieve(treeofsavior_domain + treeofsavior_path_male, image_path_m)
+            urllib.request.urlretrieve(treeofsavior_domain + treeofsavior_path_female, image_path_f)
+            urllib.request.urlretrieve(treeofsavior_domain + treeofsavior_path_male, image_path_m)
 
 
 def parse_jobs_stats():
@@ -166,14 +167,14 @@ def parse_jobs_stats():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'statbase_pc.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             if not len(row['ClassName']):
                 continue
 
             job_tree = TOSJobTree.value_of(row['ClassName'])
 
-            for job in globals.jobs.values():
+            for job in list(globals.jobs.values()):
                 if job['JobTree'] == job_tree:
                     job['StatBase_CON'] = int(row['CON'])
                     job['StatBase_DEX'] = int(row['DEX'])
@@ -191,7 +192,7 @@ def parse_links_skills():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skilltree.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             # Ignore discarded skills (e.g. Bokor's 'Summon: ' skills)
             if row['SkillName'] not in globals.skills_by_name:

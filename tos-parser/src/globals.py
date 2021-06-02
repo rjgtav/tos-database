@@ -129,7 +129,7 @@ def get_skill_link(name):
 
 
 def _get_entity_link(name, collection):
-    if not isinstance(name, (basestring,)):
+    if not isinstance(name, str):
         name = name['$ID_NAME']
     if name not in collection:
         return None
@@ -156,13 +156,13 @@ def _get_entity_link(name, collection):
 
 def link(a, a_key, a_link, b, b_key, b_link):
     if a_key in a and b_link is not None:
-        if isinstance(a[a_key], (list,)):
+        if isinstance(a[a_key], list):
             a[a_key].append(b_link)
         else:
             a[a_key] = b_link
 
     if b_key in b and a_link is not None:
-        if isinstance(b[b_key], (list,)):
+        if isinstance(b[b_key], list):
             b[b_key].append(a_link)
         else:
             b[b_key] = a_link
@@ -197,10 +197,10 @@ class Link:
 
     @staticmethod
     def to_dict(obj, level=2):
-        if isinstance(obj, (list,)) and level > 0:
+        if isinstance(obj, list) and level > 0:
             return Link.to_dict([Link.to_dict(o, level - 1) for o in obj], level - 1)
-        if isinstance(obj, (dict,)) and level > 0:
-            return Link.to_dict({k: Link.to_dict(v, level - 1) for k, v in obj.iteritems()}, level - 1)
-        if isinstance(obj, (Link,)):
+        if isinstance(obj, dict) and level > 0:
+            return Link.to_dict({k: Link.to_dict(v, level - 1) for k, v in obj.items()}, level - 1)
+        if isinstance(obj, Link):
             return obj.dict()
         return obj

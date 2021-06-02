@@ -4,16 +4,14 @@
 
   <div class="col-lg-6">
     <p>
-      This is an open-source database for Tree of Savior, a game being developed by IMC Games.<br/>
+      このサイトは<a href="https://tos.guru/">TosGuru様</a>のサイトをベースとしております。<br/>
+      各種ご質問やお問い合わせは<a href="https://twitter.com/ebisuke">ebisuke</a>までお願いします。<br/>
+      クローンサイトとなりますため、TosGuru様へ直接のご質問はご遠慮ください。<br/>
+      <a href="https://github.com/ebisuke/tos-database">github</a>
     </p>
 
     <p>
-      It is still in active development, taking multiple updates per week, with the latest patches and new features.
-      <span class="badge badge-success">Re:Build</span> patch is already supported<br/>
-    </p>
-
-    <p>
-      Currently, a <a [routerLink]="routerLink('simulator')">Skill Simulator</a> is available, making use of the in-game formulas to calculate skill damage, skill SP costs and attribute unlock logic.<br/>
+       <a [routerLink]="routerLink('simulator')">スキルシミュレータ</a>は現在検証中です。<br/>
     </p>
 
     <p>
@@ -26,285 +24,20 @@
     </ul>
 
     <p>
-      <b>Found an issue?</b><br/>
-      <b>Try clearing the cache, by clicking on the version string at the footer</b><br/>
-      <b>If still present, please report it to @rjgtav on Discord</b>
+
     </p>
   </div>
 
   <div class="col-lg-6">
     <div class="card bg-light">
       <div class="card-header">
-        Changelog
+        更新履歴
       </div>
       <div class="card-body" style="max-height: calc(100vh - 16rem); overflow-y: auto">
+        <li>2021/06/**
+          テストテスト
+        </li>
 
-        <h6>2020-05-18</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Added support to EP 12 equipment</li>
-          <li><span class="badge badge-warning">Fixed</span> Added support to SUBEXPORB item group and VELNAIS monster race</li>
-        </ul>
-
-        <h6>2019-12-27</h6>
-        <ul>
-          <li><span class="badge badge-info">Notice</span> Merry Chritmas 🎅 and a Happy New Year 🎆!</li>
-          <li><span class="badge badge-warning">Fixed</span> Added support to the new 4ever Arks, Classes, Trinkets, ...</li>
-        </ul>
-
-        <h6>2019-10-31</h6>
-        <ul>
-          <li><span class="badge badge-info">Notice</span> Boo!👻</li>
-          <li><span class="badge badge-warning">Fixed</span> Cooldown and SP are being calculated correctly again. Thanks <b>@PetroSpark</b></li>
-        </ul>
-
-        <h6>2019-10-28</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Added support for Special Costume skins (inside the Database &gt; Equipment section)</li>
-          <li><span class="badge badge-warning">Fixed</span> Automatic updates are working again for all regions. Thanks <b>@xZeroGodx</b></li>
-          <li><span class="badge badge-info">Notice</span> Sorry for the lack of updates but I haven't had much free time over the past months. I'm still working on a major rework for the entire website, you can follow the development over at my discord.</li>
-        </ul>
-
-        <h6>2019-06-29</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Translations are no longer missing for the new classes in the twTOS Simulator. Thanks <b>蘋果🍎</b></li>
-        </ul>
-
-        <h6>2019-06-25</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> SkillFactors are being calculated again. Thanks <b>@PetroSpark</b>, <b>@Edoweiss</b>, <b>@Fenatte</b>, <b>@Kashou</b></li>
-          <li><span class="badge badge-warning">Fixed</span> CaptionRatio2 for Heal is being calculated again. Thanks <b>@PetroSpark</b></li>
-          <li><span class="badge badge-info">Notice</span> Sorry for the lack of updates but last month I've been finishing my university. I'm now back to reworking a big part of tos.guru to improve the performance, add more data, etc.</li>
-        </ul>
-
-        <h6>2019-05-17</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Search is now working correctly for twTOS. Thanks <b>@真庭赤狐</b></li>
-          <li><span class="badge badge-success">Improved</span> Improved search for kTOS and kTEST</li>
-        </ul>
-
-        <h6>2019-05-12</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Added the missing drop information for some maps (e.g. Primus drop information in Astral Tower 1F). Thanks <b>@Liel</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Fixed the drop chance for the loot tables (e.g. Ruby's drop chance on Bauba's Cave). Thanks <b>@Liel</b></li>
-        </ul>
-
-        <h6>2019-05-11</h6>
-        <ul>
-          <li><span class="badge badge-success">New</span> Added Maps, which includes an interactive minimap for visualizing the location of NPCs and Monsters spawns</li>
-          <li><span class="badge badge-success">New</span> Added zone-level drop information (e.g. primus equipment and all other unidentified equipment)</li>
-          <li><span class="badge badge-success">New</span> Added map exploration rewards</li>
-          <li><span class="badge badge-success">New</span> Added Collections/Treasures locations</li>
-          <li><span class="badge badge-danger">Bug</span> Loading time has increased, due to the new Map and NPC information</li>
-          <li><span class="badge badge-info">Notice</span> Next I'll be working on significantly reducing the loading time and reduce the amount of bugs due to new game patches. World Map will be coming after.</li>
-        </ul>
-
-        <h6>2019-04-26</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Level cap has been updated to 420 (due to limitations this has been applied to all regions). Thanks <b>@PetroSpark</b></li>
-          <li><span class="badge badge-warning">Fixed</span> kTOS and kTEST Skill cooldown and SP consumption is working again. Thanks <b>@PetroSpark</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Assassin's Hasisas has a working description again. Thanks <b>@Kashou</b></li>
-        </ul>
-
-        <h6>2019-04-19</h6>
-        <ul>
-          <li><span class="badge badge-info">Notice</span> Sorry for taking so long to release a new update, IRL has been extremely busy. Next up it's Maps</li>
-          <li><span class="badge badge-success">Improved</span> Revamped the entire offline mode from scratch. Should no longer fail to install when behind an antivirus or fail to open when the cache becomes corrupted</li>
-          <li><span class="badge badge-success">Improved</span> Simplified the overall deployment process. The server will no longer crash by running out of memory and will update to the new game patches more quickly</li>
-          <li><span class="badge badge-success">Improved</span> Import process now uses the entire LUA code from the client, which should lead to less crashes due to code refactoring</li>
-          <li><span class="badge badge-success">Improved</span> Sharing a build as an URL or opening a linked build is now more reliable as it goes through my own webserver. Thanks <b>@Palemoon</b></li>
-          <li><span class="badge badge-warning">Fixed</span> All images/icons will now always be extracted from kTEST (except for the region specific items)</li>
-          <li><span class="badge badge-warning">Fixed</span> All monsters are now correctly calculating their atk/def values, even when using virtual equipment. Thanks <b>@acc97862</b>, <b>@Crevox</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Added missing monsters (e.g. Velcoffaner). Thanks <b>@Lubu20</b>, <b>@TerminalEssense</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Cooldown is working correctly again for Cleric classes</li>
-        </ul>
-
-        <h6>2019-02-08</h6>
-        <ul>
-          <li><span class="badge badge-success">New</span> Added a 'Thank You' page for all the patrons, for supporting tos.guru!</li>
-          <li><span class="badge badge-success">New</span> Added a message at the top thanking a random selection of patrons. You can dismiss this message for a week</li>
-        </ul>
-
-        <h6>2019-01-30</h6>
-        <ul>
-          <li><span class="badge badge-success">New</span> Added Taiwanese TOS (twTOS) region. Thanks 蘋果🍎</li>
-          <li><span class="badge badge-warning">Fixed</span> Fashion-related filters on the Equipment section are now working again. Thanks <b>@Muniqui</b></li>
-        </ul>
-
-        <h6>2019-01-27</h6>
-        <ul>
-          <li><span class="badge badge-success">New</span> tos.guru will now automatically check for new game patches and update every hour (e.g. 09:15, 10:15, 11:15, ...)</li>
-          <li><span class="badge badge-warning">Fixed</span> Added missing orange background color to Missile Skills (e.g. most Archer's Skills)</li>
-          <li><span class="badge badge-warning">Fixed</span> Skill max levels are now being correctly calculated (e.g. Alchemist's Gem Roasting). Thanks <b>@Crevox </b><b>@Saiko </b><b>@Xvkr</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Some attributes (e.g. Frenzy: Enhance) is now correctly assigned to its skill. Thanks <b>@Skykyrie</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Database pages now show the correct total page number when filtering. Thanks <b>@Lamisedaxeh</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Mortal Slash cooldown is now being correctly calculated. Thanks <b>@Zeucleio</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Mortal Slash is no longer showing as 'Cloneable by Shinobi'. Thanks <b>@Zeucleio</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Updated Pardoner for Re:Build and added Runecaster filter to Skills page</li>
-          <li><span class="badge badge-warning">Fixed</span> Added missing skill icons (again)</li>
-          <li><span class="badge badge-warning">Fixed</span> tos.guru will now wait for at least 30 minutes before checking for updates again</li>
-        </ul>
-
-        <h6>2019-01-25</h6>
-        <ul>
-          <li><span class="badge badge-success">Improved</span> Improved tap registration on the Skill Simulator on mobile</li>
-          <li><span class="badge badge-success">Improved</span> Skill cooldown is now calculated using in-game scripts. Thanks <b>@Hillgarm</b> and <b>@muskekteer</b></li>
-          <li><span class="badge badge-success">Improved</span> Minor design tweaks to the Formulas section of a Skill detail page</li>
-          <li><span class="badge badge-success">Improved</span> Added support to attributes which are shared between multiple skills (e.g. Cannoneer's Detonate). Thanks <b>@Fenatte</b>, <b>@Isthelte</b> and <b>@PetroSpark</b></li>
-          <li><span class="badge badge-success">Improved</span> Skill simulator now always shows the plus/minus buttons on mobile. Thanks <b>@Crevox</b></li>
-          <li><span class="badge badge-success">Improved</span> You can now level a Skill beyond it's maximum level on its Database page. Thanks <b>@Crevox</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Skill factors no longer show as undefined when the translation uses some deprecated methods. (e.g. Snow Rolling) Thanks <b>@Jurcan</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Skill factors no longer fail to calculate when the code updates one of the skill's attributes. (e.g. Throw Sand) Thanks <b>@Xvkr </b><b>@Zeucleio </b><b>@Skykyrie</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Animated GIFs for the new classes (Assassin and Outlaw) are no longer missing</li>
-          <li><span class="badge badge-warning">Fixed</span> Job Type/Role is now showing correctly again. Thanks <b>@Xvkr</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Skill synergy description color is now rendering correctly. Thanks <b>@marq</b> and <b>@Crevox</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Possible fix? for the ERR_FAILED error which plagued some users. Please ping me in case you see it again</li>
-          <li><span class="badge badge-warning">Fixed</span> Possible fix? for header dropdown menus (e.g. Database and Region) which weren't opening at all on iOS Safari</li>
-        </ul>
-
-        <h6>2019-01-21</h6>
-        <ul>
-          <li><span class="badge badge-success">New</span> Added a 'Clear cache' button to the loading screen in case it gets stuck while loading</li>
-          <li><span class="badge badge-success">New</span> Added a 'Clear cache' button to the footer. (click the patch version to trigger)</li>
-          <li><span class="badge">New</span> Added a 'Checking for updates...' notice to the header, to make it clearer when tos.guru is checking for updates</li>
-          <li><span class="badge badge-success">Improved</span> tos.guru now automatically checks for updates every hour and updates to the latest game patches</li>
-          <li><span class="badge badge-success">Improved</span> Cleaned up the design of the header and the footer</li>
-          <li><span class="badge badge-warning">Fixed</span> Fixed installation issues for some users when they were running Kaspersky Antivirus</li>
-          <li><span class="badge badge-warning">Fixed</span> Multiple reliability improvements when installing/updating tos.guru. Should be a bit slower, but will use less RAM and CPU</li>
-        </ul>
-
-        <h6>2019-01-12</h6>
-        <ul>
-          <li><span class="badge badge-secondary">Updated</span> Updated iTOS, jTOS, kTOS and kTEST to the latest versions</li>
-          <li><span class="badge badge-success">Improved</span> tos.guru will now display a message in case your browser isn't supported</li>
-          <li><span class="badge badge-success">Improved</span> Reduced overall download size per region (~10MB -> ~2MB) when updating the database</li>
-          <li><span class="badge badge-success">Improved</span> Improved overall response times when loading assets for the first time, by caching most of the website on CloudFlare</li>
-          <li><span class="badge badge-warning">Fixed</span> Offline mode is now correctly caching all main pages (Database, Home and Simulator) from the start</li>
-        </ul>
-
-        <h6>2019-01-04</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Search is working again. Thanks <b>@Muniqui</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Equipment required classes and item tradability are showing correctly again. Thanks <b>@Hillgarm</b> and <b>@PetroSpark</b></li>
-        </ul>
-
-        <h6>2019-01-03</h6>
-        <ul>
-          <li>[Update] Updated iTOS, jTOS, kTOS and kTEST to the latest versions</li>
-          <li><span class="badge badge-success">Improved</span> Added patch version to the loading screen and to the footer</li>
-        </ul>
-
-        <h6>2019-01-02</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Page no longer shows white when switching regions and using the dark theme. Thanks <b>@Crevox</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Internal database no longer gets into a state with incomplete data</li>
-          <li><span class="badge badge-warning">Fixed</span> Offline mode is now working as intended</li>
-        </ul>
-
-        <h6>2019-01-01</h6>
-        <ul>
-          <li><span class="badge badge-info">Notice</span> Happy New Year! 🐷</li>
-          <li><span class="badge badge-success">New</span> tos.guru is now available offline! Note: in order to save disk, images will be cached on demand</li>
-          <li><span class="badge badge-success">New</span> tos.guru can now be installed on Mobile and on PC (Browser Menu -> Add to Home Screen)</li>
-          <li><span class="badge badge-success">New</span> Added a new fullscreen loading animation when new database updates are available</li>
-          <li><span class="badge badge-success">New</span> Added a new 'Update is Available' indicator to the top menu</li>
-          <li><span class="badge badge-success">New</span> I now have a Patreon! Become a patron and support the development of tos.guru</li>
-          <li><span class="badge badge-success">Improved</span> Significantly reduced the overall RAM usage (by around 50%)</li>
-          <li><span class="badge badge-success">Improved</span> Significantly reduced loading time when no new updates are available</li>
-          <li><span class="badge badge-success">Improved</span> Reduced search loading time by removing the 'Description' field from the index</li>
-          <li><span class="badge badge-success">Improved</span> Updated cache from a time-based to a hash-based implementation, which will reduce the overall network traffic</li>
-          <li><span class="badge badge-warning">Fixed</span> Collections are no longer showing the wrong items in rare situations of duplicate IDs. Thanks <b>@Zeucleio</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Browsers now correctly prompt for translating the page when a foreign region is selected</li>
-          <li><span class="badge badge-warning">Fixed</span> Search no longer crashes when returning Equipment Sets. Thanks <b>@Hillgarm</b> and <b>@Sujiru</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Restored stat attributes for some discontinued items (e.g. CAN05_101). Thanks <b>@Sujiru</b></li>
-          <li><span class="badge badge-danger">Removed</span> Older browsers no longer support tos.guru. For more information, check the browsers in green <a href="https://caniuse.com/serviceworkers">here</a></li>
-        </ul>
-
-        <h6>2018-12-26</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Skills of higher circles are now showing up correctly on the simulator. Thanks <b>@Ramon</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Search accuracy improved quite significantly. Thanks <b>@Crevox</b></li>
-        </ul>
-
-        <h6>2018-12-25</h6>
-        <ul>
-          <li>Ho ho ho 🎅</li>
-          <li><span class="badge badge-warning">Fixed</span> Gems stats are no longer messed up. Thanks <b>@WhiteDwarf</b>, <b>@AmberRei</b> and <b>@Ramon</b></li>
-        </ul>
-
-        <h6>2018-12-24</h6>
-        <ul>
-          <li><span class="badge badge-success">Improved</span> Added attributes to Classes and Skills list pages</li>
-          <li><span class="badge badge-success">Improved</span> Improved tooltip's position so it doesn't cover the important bits as often</li>
-          <li><span class="badge badge-warning">Fixed</span> Removed some more deprecated attributes. Thanks <b>@Ramon</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Fixed some simulator attribute unlock propagation issues. Thanks <b>@Ramon</b></li>
-        </ul>
-
-        <h6>2018-12-23</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> Removed deprecated attributes that were re-introduced with the last update. Thanks <b>@Ramon</b>, <b>@Shinobi</b>, <b>@Umineko</b> and <b>@Zeucleio</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Classes on the Simulator are now ordered by ID instead of by Name. Thanks <b>@Crevox</b></li>
-        </ul>
-
-        <h6>2018-12-22</h6>
-        <ul>
-          <li><span class="badge badge-secondary">Updated</span> Updated iTOS, jTOS, kTOS and kTEST to the latest versions</li>
-          <li><span class="badge badge-success">Improved</span> Initial loading time has been reduced even further, however RAM requirements have increased. This will be addressed on the next update.</li>
-          <li><span class="badge badge-success">Improved</span> Header dropdown menus now open immediately on mouse hover</li>
-          <li><span class="badge badge-success">Improved</span> Improved search performance and reliability</li>
-          <li><span class="badge badge-success">Improved</span> Entity detail pages now have more details for referenced entities (e.g. each collection on Tanu Flower's detail page now shows all the other items which also belong to those collections)</li>
-          <li><span class="badge badge-success">Improved</span> Set the appropriate document language, to trigger the browser's Translate button. Note: this only works when opening the page, not when switching regions. Thanks <b>@Nekorin</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Rank 1 classes no longer show duplicated on the Simulator. Thanks <b>@PetroSpark</b>, <b>@Zeucleio</b>, <b>@Montz</b> and everyone else who reported!</li>
-          <li><span class="badge badge-warning">Fixed</span> Shields/Shirts/Pants are no longer missing their +40 Anvil Enhancement bonus. Thanks <b>@Crevox</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Added missing elements to some skills descriptions (e.g. Monk's Energy Blast on Re:Build). Thanks <b>@4lkruzeth</b></li>
-          <li><span class="badge badge-warning">Fixed</span> As per Re:Build, Cannons are now a 2-Handed Weapon on the Equipment list Type filter. Thanks <b>@Hillgarm</b> and <b>@Laynaria</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Mergen skills no longer show Crossbow as a possible stance. Thanks <b>@TerminalEssence</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Added missing class attributes (e.g. SwordMastery_DEForATK). Thanks <b>@Hillgarm</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Removed extra 0s on some skill description values (e.g. Paladin's Stone Skin on kTEST at level 3)</li>
-          <li><span class="badge badge-danger">Removed</span> Removed Google Adsense test code, as Google continues rejecting serving ads to the website.</li>
-        </ul>
-
-        <h6>2018-12-06</h6>
-        <ul>
-          <li><span class="badge badge-secondary">Updated</span> kTOS is now on Re:Build</li>
-          <li><span class="badge badge-secondary">Updated</span> Updated iTOS, jTOS, kTOS and kTEST to the latest versions</li>
-        </ul>
-
-        <h6>2018-12-01</h6>
-        <ul>
-          <li><span class="badge badge-secondary">Updated</span> Updated iTOS, jTOS, kTOS and kTEST to the latest versions</li>
-          <li><span class="badge badge-success">Improved</span> Improved initial loading time and when changing regions</li>
-          <li><span class="badge badge-warning">Fixed</span> Double Punch is no longer crashing on the detail page</li>
-        </ul>
-
-        <h6>2018-11-24</h6>
-        <ul>
-          <li><span class="badge badge-warning">Fixed</span> kTEST Simulator no longer crashes on certain classes. Thanks <b>@Laynaria</b></li>
-          <li><span class="badge badge-warning">Fixed</span> kTEST Gems (red, green, blue, white) are now showing all stat bonuses. Thanks <b>@KriLanze</b> + <b>@Cotoco</b></li>
-          <li><span class="badge badge-warning">Fixed</span> iTOS, jTOS and kTOS are now able to level their skills again on the Skill detail page. Thanks <b>@TermiNekoEXence</b></li>
-        </ul>
-
-        <h6>2018-11-21</h6>
-        <ul>
-          <li><span class="badge badge-success">New</span> Added SP formulas to Skill detail page</li>
-          <li><span class="badge badge-success">New</span> Added a homepage with a brief introduction and a changelog</li>
-          <li><span class="badge badge-secondary">Updated</span> Updated iTOS, jTOS, kTOS and kTEST to the latest versions</li>
-          <li><span class="badge badge-warning">Fixed</span> Magical Attack no longer appears duplicated on an Equipment stats. Thanks <b>@Crevox</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Skill SP calculation now uses the in-game formulas</li>
-          <li><span class="badge badge-warning">Fixed</span> Search now returns the correct results even on slower machines. Thanks <b>@TermiNekoEXence</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Removed invalid search results from the search index. Thanks <b>@Mia</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Monster detail page is no longer crashing</li>
-        </ul>
-
-        <h6>2018-11-16</h6>
-        <ul>
-          <li><span class="badge badge-success">New</span> Added Stats to Re:Build Simulator</li>
-          <li><span class="badge badge-success">Improved</span> When no more skill points are available, and you left click a skill at level &lt; levelMax, it now goes back to 0. Thanks <b>@PetroSpark</b></li>
-          <li><span class="badge badge-success">Improved</span> Added 'Usable by Scout' icon to equipment tooltip and detail pages</li>
-          <li><span class="badge badge-success">Improved</span> Updated cards' frames to the latest design. Thanks <b>@Crevox</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Chaplain is no longer considered a Secret class. Thanks <b>@Laynaria</b></li>
-          <li><span class="badge badge-warning">Fixed</span> 'Summon'-like skills have been purged from all databases. Thanks <b>@Hillgarm</b></li>
-          <li><span class="badge badge-warning">Fixed</span> Re:Build Simulator builds are again able to be shared around</li>
-        </ul>
       </div>
     </div>
   </div>

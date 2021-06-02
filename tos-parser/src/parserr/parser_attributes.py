@@ -1,7 +1,7 @@
 import csv
 import logging
 import os
-
+import codecs
 import constants
 import globals
 from parserr import parser_assets
@@ -18,7 +18,7 @@ def parse_attributes():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             obj = {}
             obj['$ID'] = int(row['ClassID'])
@@ -55,7 +55,7 @@ def parse_links_jobs():
     # Parse level, unlock and formula
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             job = globals.jobs_by_name[row['ClassName']]
             ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_' + row['EngName'].lower() + '.ies')
@@ -64,7 +64,7 @@ def parse_links_jobs():
             if not os.path.isfile(ies_path):
                 continue
 
-            with open(ies_path, 'rb') as ies_file:
+            with codecs.open(ies_path, 'r','utf-8',errors='replace') as ies_file:
                 for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                     if row['ClassName'] not in globals.attributes_by_name:
                         logging.warn('Missing attribute in ability.ies: %s', row['ClassName'])
@@ -112,9 +112,9 @@ def parse_links_jobs():
 def parse_links_skills():
     logging.debug("Parsing attributes <> skills...")
 
-    for attribute in globals.attributes.values():
+    for attribute in list(globals.attributes.values()):
         for skill in attribute['Link_Skills']:
-            if isinstance(skill, (basestring,)) and skill != 'All' and skill in globals.skills_by_name:
+            if isinstance(skill, str) and skill != 'All' and skill in globals.skills_by_name:
                 skill = globals.skills_by_name[skill]
 
                 globals.link(
@@ -122,14 +122,14 @@ def parse_links_skills():
                     skill, 'Link_Attributes', globals.get_skill_link(skill)
                 )
 
-        attribute['Link_Skills'] = [skill for skill in attribute['Link_Skills'] if not isinstance(skill, (basestring,))]
+        attribute['Link_Skills'] = [skill for skill in attribute['Link_Skills'] if not isinstance(skill, str)]
 
 
 def parse_clean():
     attributes_to_remove = []
 
     # Find which attributes are no longer active
-    for attribute in globals.attributes.values():
+    for attribute in list(globals.attributes.values()):
         if not attribute['Link_Jobs'] and not attribute['Link_Skills']:
             attributes_to_remove.append(attribute)
         elif attribute['LevelMax'] == -1 and attribute['Link_Skills'] is not None:
@@ -142,7 +142,7 @@ def parse_clean():
 
         attribute_id = attribute['$ID']
 
-        for job in globals.jobs.values():
+        for job in list(globals.jobs.values()):
             job['Link_Attributes'] = [link for link in job['Link_Attributes'] if link.entity['$ID'] != attribute_id]
-        for skill in globals.skills.values():
+        for skill in list(globals.skills.values()):
             skill['Link_Attributes'] = [link for link in skill['Link_Attributes'] if link.entity['$ID'] != attribute_id]

@@ -44,6 +44,7 @@ class TOSElement(TOSEnum):
     @staticmethod
     def to_string(value):
         return {
+            None:"None",
             TOSElement.DARK: 'Dark',
             TOSElement.EARTH: 'Earth',
             TOSElement.FIRE: 'Fire',

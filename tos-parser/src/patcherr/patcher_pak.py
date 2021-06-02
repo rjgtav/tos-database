@@ -6,16 +6,16 @@ import zlib
 import constants
 
 PAK_BLACKLIST = [
-    '.aes',
-    '.dll',
-    '.lua',
-    'beforedata/',
-    'bgm/',
-    'BlackCipher/',
-    'loadingimg/',
-    'Client_tos.exe',
-    'hotkey',
-    'xigncode',
+    b'.aes',
+    b'.dll',
+    b'.lua',
+    b'beforedata/',
+    b'bgm/',
+    b'BlackCipher/',
+    b'loadingimg/',
+    b'Client_tos.exe',
+    b'hotkey',
+    b'xigncode',
 ]
 
 OFFSET_FILE_NAME_LEN = 0
@@ -43,15 +43,15 @@ def unpack(pak):
             OFFSET_FILE_NAME + pak_offset:
             OFFSET_FILE_NAME + file_name_len + pak_offset
         ]
-
+        
         if not any(s in file_name for s in PAK_BLACKLIST):
             logging.debug('Unzipping %s...', file_name)
             data = pak[
                 OFFSET_FILE_NAME + file_name_len + pak_offset:
                 OFFSET_FILE_NAME + file_name_len + size_compressed + pak_offset
             ]
-
-            file_path = os.path.join(constants.PATH_INPUT_RELEASE, file_name)
+            file_name=file_name.decode(encoding="utf-8")        
+            file_path = os.path.join(constants.PATH_INPUT_RELEASE, file_name )
 
             # ensure file_path exists
             if not os.path.exists(os.path.dirname(file_path)):

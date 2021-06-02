@@ -13,7 +13,8 @@ from patcherr import patcher
 os.chdir(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
 
 # Configure region
-region = TOSRegion.value_of(sys.argv[1]) if len(sys.argv) > 1 else TOSRegion.iTOS
+#region = TOSRegion.value_of(sys.argv[1]) if len(sys.argv) > 1 else TOSRegion.iTOS
+region = TOSRegion.jTOS
 constants.region(region)
 
 # Configure logging
@@ -34,7 +35,7 @@ is_rebuild = os.path.isfile(os.path.join(constants.PATH_INPUT_DATA, 'ies_ability
 is_patch_new = version_old != version_new
 is_revision_new = sys.argv[2].lower() == 'true' if len(sys.argv) > 2 else False
 
-if is_patch_new or is_revision_new:
+if (is_patch_new or is_revision_new) or True:
     # Parse the game files
     parser.parse(region, is_rebuild, is_patch_new)
 

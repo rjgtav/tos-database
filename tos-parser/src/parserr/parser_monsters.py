@@ -202,7 +202,7 @@ def parse_links():
 def parse_links_items():
     logging.debug('Parsing Monsters <> Items...')
 
-    for monster in globals.monsters.values():
+    for monster in list(globals.monsters.values()):
         ies_file = monster['$ID_NAME'] + '.ies'
         ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_drop.ipf', ies_file.lower())
 

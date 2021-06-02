@@ -1,6 +1,6 @@
 def is_ascii(txt):
     try:
-        txt.decode('ascii')
+        txt.encode('ascii').decode('ascii')
         return True
     except UnicodeDecodeError:
         return False

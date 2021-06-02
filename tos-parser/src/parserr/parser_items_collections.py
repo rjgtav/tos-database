@@ -49,7 +49,7 @@ def parse_links_items():
 
         # Parse bonus
         bonus = row['PropList'].split('/') + row['AccPropList'].split('/')
-        bonus = filter(lambda x: len(x) > 0, bonus)
+        bonus = [x for x in bonus if len(x) > 0]
 
         for i in range(0, len(bonus), 2):
             collection['Bonus'].append([

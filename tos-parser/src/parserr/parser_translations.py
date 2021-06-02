@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 
 import constants
 import globals
+import codecs
 from parserr.parser_enums import TOSRegion
 from utils.stringutil import is_ascii
 
@@ -60,17 +61,17 @@ def parse_translations(language):
         if '.tsv' not in translation:
             continue
 
-        with open(translation_path, 'rb') as translation_file:
+        with codecs.open(translation_path, 'r','utf-8') as translation_file:
             for row in csv.reader(translation_file, delimiter='\t', quoting=csv.QUOTE_NONE):
                 if len(row) > 1:
-                    result[row[0]] = unicode(row[1], 'utf-8')
+                    result[row[0]] = str(row[1])
 
     return result
 
 
 def translate(key):
     try:
-        key = unicode(key.replace('"', ''), 'utf-8')
+        key = str(key.replace('"', ''), 'utf-8')
     except TypeError:
         pass
 

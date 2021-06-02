@@ -3,7 +3,7 @@ import logging
 import math
 import os
 import re
-
+import codecs
 import constants
 import globals
 from parserr import parser_assets
@@ -52,7 +52,7 @@ def parse_skills(is_rebuild):
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skill.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors="replace") as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             # Ignore 'Common_' skills (e.g. Bokor's Summon abilities)
             if row['ClassName'].find('Common_') == 0:
@@ -167,7 +167,7 @@ def parse_skills(is_rebuild):
             globals.skills_by_name[obj['$ID_NAME']] = obj
 
     # HotFix: make sure all skills have the same Effect columns (2/2)
-    for skill in globals.skills.values():
+    for skill in list(globals.skills.values()):
         for effect in EFFECTS:
             if effect not in skill:
                 skill[effect] = None
@@ -238,7 +238,7 @@ def parse_skills_overheats():
     logging.debug('Parsing skills overheats...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'cooldown.ies')
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors="replace") as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             # We're only interested in overheats
             if row['IsOverHeat'] != 'YES':
@@ -246,8 +246,8 @@ def parse_skills_overheats():
 
             skill = None
 
-            for obj in globals.skills.values():
-                if isinstance(obj['OverHeat'], (dict,)) and row['ClassName'] == obj['OverHeat']['Group']:
+            for obj in list(globals.skills.values()):
+                if isinstance(obj['OverHeat'], dict) and row['ClassName'] == obj['OverHeat']['Group']:
                     skill = obj
                     break
 
@@ -258,8 +258,8 @@ def parse_skills_overheats():
             skill['OverHeat'] = int(row['MaxOverTime']) / skill['OverHeat']['Value'] if skill['OverHeat']['Value'] > 0 else 0
 
     # Clear skills with no OverHeat information
-    for skill in globals.skills.values():
-        if isinstance(skill['OverHeat'], (dict,)):
+    for skill in list(globals.skills.values()):
+        if isinstance(skill['OverHeat'], dict):
             skill['OverHeat'] = 0
 
 
@@ -267,7 +267,7 @@ def parse_skills_simony():
     logging.debug('Parsing skills simony...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'skill_simony.ies')
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             if int(row['ClassID']) not in globals.skills:
                 logging.error('Unknown skill: %d', int(row['ClassID']))
@@ -286,13 +286,13 @@ def parse_skills_stances():
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'stance.ies')
 
     # Parse stances
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             stance_list.append(row)
 
     # Add stances to skills
     # from addon.ipf\skilltree\skilltree.lua :: MAKE_STANCE_ICON
-    for skill in globals.skills.values():
+    for skill in list(globals.skills.values()):
         stances_main_weapon = []
         stances_sub_weapon = []
 
@@ -352,7 +352,7 @@ def parse_links_gems():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_gem.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             skill = row['ClassName'][len('Gem_'):]
 
@@ -373,7 +373,7 @@ def parse_links_jobs(is_rebuild):
     tree_runecaster = TOSJobTree.WIZARD
     tree_shinobi = TOSJobTree.SCOUT if is_rebuild else TOSJobTree.WARRIOR
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             # Ignore discarded skills
             if row['SkillName'] not in globals.skills_by_name:
@@ -400,7 +400,7 @@ def parse_clean():
     skills_to_remove = []
 
     # Find which skills are no longer active
-    for skill in globals.skills.values():
+    for skill in list(globals.skills.values()):
         if skill['Link_Job'] is None:
             skills_to_remove.append(skill)
 
@@ -411,7 +411,7 @@ def parse_clean():
 
         skill_id = skill['$ID']
 
-        for attribute in globals.attributes.values():
+        for attribute in list(globals.attributes.values()):
             attribute['Link_Skills'] = [link for link in attribute['Link_Skills'] if link.entity['$ID'] != skill_id]
-        for job in globals.jobs.values():
+        for job in list(globals.jobs.values()):
             job['Link_Skills'] = [link for link in job['Link_Skills'] if link.entity['$ID'] != skill_id]

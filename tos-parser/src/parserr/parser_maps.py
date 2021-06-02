@@ -2,7 +2,7 @@ import csv
 import logging
 import os
 import re
-
+import codecs
 from PIL import Image, ImageDraw, ImageColor, ImageFilter
 
 import constants
@@ -80,7 +80,7 @@ def parse_maps_images(region, version_update):
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'map.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r',"utf-8",errors="replace") as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             image_path = os.path.join(constants.PATH_BUILD_ASSETS_IMAGES_MAPS, row['ClassName'].lower() + '.png')
             tok_path = os.path.join(constants.PATH_INPUT_DATA, 'bg.ipf', row['ClassName'].lower() + '.tok')
@@ -156,7 +156,7 @@ def parse_links():
 def parse_links_items():
     logging.debug('Parsing Maps <> Items...')
 
-    for map in globals.maps.values():
+    for map in list(globals.maps.values()):
         ies_file = 'zonedropitemlist_' + map['$ID_NAME'] + '.ies'
         ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_drop.ipf', 'zonedrop', ies_file.lower())
 
@@ -331,8 +331,8 @@ def parse_links_npcs():
             # Group by Item/NPC and join anchors
             anchors_by_npc = {}
 
-            for anchor in anchors.values():
-                if len(anchor['GenType'].keys()) == 0:
+            for anchor in list(anchors.values()):
+                if len(list(anchor['GenType'].keys())) == 0:
                     continue
 
                 item_name = re.search('\w+:(\w+):\w+', anchor['GenType']['ArgStr2'])
@@ -345,7 +345,7 @@ def parse_links_npcs():
                     anchors_by_npc[npc_name] = anchor
 
             # Link everyone
-            for anchor_name in anchors_by_npc.keys():
+            for anchor_name in list(anchors_by_npc.keys()):
                 anchor = anchors_by_npc[anchor_name]
 
                 if globals.get_item_link(anchor_name):

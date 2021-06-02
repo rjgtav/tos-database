@@ -19,11 +19,11 @@ OUTPUT_RECIPES = 'recipes'
 OUTPUT_SKILLS = 'skills'
 
 URL_PATCH = None
-URL_PATCH_iTOS = 'http://drygkhncipyq8.cloudfront.net/toslive/patch/'
+#URL_PATCH_iTOS = 'http://drygkhncipyq8.cloudfront.net/toslive/patch/'
 URL_PATCH_jTOS = 'http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/'
-URL_PATCH_kTOS = 'http://tosg.dn.nexoncdn.co.kr/patch/live/'
-URL_PATCH_kTEST = 'http://tosg.dn.nexoncdn.co.kr/patch/test/'
-URL_PATCH_twTOS = 'http://tospatch.x2game.com.tw/live/patch/'
+#URL_PATCH_kTOS = 'http://tosg.dn.nexoncdn.co.kr/patch/live/'
+#URL_PATCH_kTEST = 'http://tosg.dn.nexoncdn.co.kr/patch/test/'
+#URL_PATCH_twTOS = 'http://tospatch.x2game.com.tw/live/patch/'
 
 PATH_INPUT = None
 PATH_INPUT_DATA = None
@@ -41,8 +41,8 @@ PATH_INPUT_RELEASE_REVISION_URL = None
 
 PATH_PARSER = os.path.join('..', 'tos-parser')
 
-PATH_UNPACKER = os.path.join('..', 'IPFUnpacker')
-PATH_UNPACKER_EXE = os.path.join(PATH_UNPACKER, 'ipf_unpack')
+PATH_UNPACKER = os.path.join('..', 'ipf_unpacker')
+PATH_UNPACKER_EXE ="ipf_unpack.exe"
 
 PATH_BUILD = os.path.join('..', 'tos-build', 'dist')
 PATH_BUILD_ASSETS = os.path.join(PATH_BUILD, 'assets')
@@ -50,7 +50,6 @@ PATH_BUILD_ASSETS_DATA = None
 PATH_BUILD_ASSETS_ICONS = os.path.join(PATH_BUILD_ASSETS, 'icons')
 PATH_BUILD_ASSETS_IMAGES = os.path.join(PATH_BUILD_ASSETS, 'images')
 PATH_BUILD_ASSETS_IMAGES_MAPS = os.path.join(PATH_BUILD_ASSETS_IMAGES, 'maps')
-
 
 def region(region):
     global\
@@ -72,12 +71,12 @@ def region(region):
 
     region_str = TOSRegion.to_string(region)
 
-    URL_PATCH = URL_PATCH_iTOS if region == TOSRegion.iTOS else URL_PATCH
+    #URL_PATCH = URL_PATCH_iTOS if region == TOSRegion.iTOS else URL_PATCH
     URL_PATCH = URL_PATCH_jTOS if region == TOSRegion.jTOS else URL_PATCH
-    URL_PATCH = URL_PATCH_kTOS if region == TOSRegion.kTOS else URL_PATCH
-    URL_PATCH = URL_PATCH_kTEST if region == TOSRegion.kTEST else URL_PATCH
-    URL_PATCH = URL_PATCH_twTOS if region == TOSRegion.twTOS else URL_PATCH
-
+    #URL_PATCH = URL_PATCH_kTOS if region == TOSRegion.kTOS else URL_PATCH
+    #URL_PATCH = URL_PATCH_kTEST if region == TOSRegion.kTEST else URL_PATCH
+    #URL_PATCH = URL_PATCH_twTOS if region == TOSRegion.twTOS else URL_PATCH    
+   
     PATH_INPUT = os.path.join(PATH_PARSER, 'input', region_str)
     PATH_INPUT_DATA = os.path.join(PATH_INPUT, 'data')
     PATH_INPUT_DATA_PATCH = os.path.join(PATH_INPUT_DATA, 'patch')

@@ -4,7 +4,6 @@ import logging
 import os
 
 import unicodecsv as csv
-
 import constants
 import globals
 from parserr import parser_translations, parser_assets, parser_attributes, parser_items, parser_items_books, \
@@ -20,15 +19,15 @@ def csv_write(data, dataset):
             cell = data[row][col] = globals.Link.to_dict(data[row][col])
 
             # Clean lists and convert to JSON
-            if isinstance(cell, (list,)):
-                cell = filter(lambda x: x is not None, cell)
+            if isinstance(cell, list):
+                cell = [x for x in cell if x is not None]
 
                 # Sort list, in case it's a Link list
                 if len(cell) > 0 and isinstance(cell[0], globals.Link):
                     cell.sort()
 
                 data[row][col] = json.dumps(cell, sort_keys=True) if len(cell) > 0 else None
-            elif isinstance(cell, (dict,)):
+            elif isinstance(cell, dict):
                 data[row][col] = json.dumps(cell, sort_keys=True)
 
     # Ensure destination directory exists
@@ -39,14 +38,16 @@ def csv_write(data, dataset):
     keys = None
 
     for row in data:
-        if keys is None or len(keys) < len(row.keys()):
-            keys = row.keys()
-
+        if keys is None or len(keys) < len(list(row.keys())):
+            keys = list(row.keys())
+    # for k in range(len(data)):
+    #     for kk,vv in data[k].items():
+    #         data[k][kk]=str(vv)
     # Write to CSV
     file = open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'w')
     writer = csv.DictWriter(
         file,
-        delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(keys)
+        delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(list(map(lambda x:x.encode("utf-8"),keys)))
     )
     writer.writeheader()
     writer.writerows(sorted(data, key=lambda k: k['$ID']))
@@ -60,7 +61,7 @@ def parse(region, is_rebuild, is_version_new):
     # Parse assets (Note: we start by processing assets as they use a ton of RAM)
     parser_assets.parse(region, is_version_new)
     parser_jobs.parse_jobs_images(region, is_version_new)
-    parser_maps.parse_maps_images(region, is_version_new)
+    #parser_maps.parse_maps_images(region, is_version_new)
     parser_translations.parse(region)
 
     # Garbage collect...
@@ -95,9 +96,9 @@ def parse(region, is_rebuild, is_version_new):
 
     # Write CSVs (1/2) - attributes + jobs + skills
     logging.debug('Writing CSVs (1/2)...')
-    csv_write(globals.attributes.values(), constants.OUTPUT_ATTRIBUTES)
-    csv_write(globals.jobs.values(), constants.OUTPUT_JOBS)
-    csv_write(globals.skills.values(), constants.OUTPUT_SKILLS)
+    csv_write(list(globals.attributes.values()), constants.OUTPUT_ATTRIBUTES)
+    csv_write(list(globals.jobs.values()), constants.OUTPUT_JOBS)
+    csv_write(list(globals.skills.values()), constants.OUTPUT_SKILLS)
 
     globals.attributes = None
     globals.attributes_by_name = None
@@ -145,15 +146,15 @@ def parse(region, is_rebuild, is_version_new):
 
     # Write CSVs (2/2)
     logging.debug('Writing CSVs (2/2)...')
-    csv_write(globals.books.values(), constants.OUTPUT_BOOKS)
-    csv_write(globals.cards.values(), constants.OUTPUT_CARDS)
-    csv_write(globals.collections.values(), constants.OUTPUT_COLLECTIONS)
-    csv_write(globals.cubes.values(), constants.OUTPUT_CUBES)
-    csv_write(globals.equipment.values(), constants.OUTPUT_EQUIPMENT)
-    csv_write(globals.equipment_sets.values(), constants.OUTPUT_EQUIPMENT_SETS)
-    csv_write(globals.gems.values(), constants.OUTPUT_GEMS)
-    csv_write(globals.items.values(), constants.OUTPUT_ITEMS)
-    csv_write(globals.maps.values(), constants.OUTPUT_MAPS)
-    csv_write(globals.monsters.values(), constants.OUTPUT_MONSTERS)
-    csv_write(globals.npcs.values(), constants.OUTPUT_NPCS)
-    csv_write(globals.recipes.values(), constants.OUTPUT_RECIPES)
+    csv_write(list(globals.books.values()), constants.OUTPUT_BOOKS)
+    csv_write(list(globals.cards.values()), constants.OUTPUT_CARDS)
+    csv_write(list(globals.collections.values()), constants.OUTPUT_COLLECTIONS)
+    csv_write(list(globals.cubes.values()), constants.OUTPUT_CUBES)
+    csv_write(list(globals.equipment.values()), constants.OUTPUT_EQUIPMENT)
+    csv_write(list(globals.equipment_sets.values()), constants.OUTPUT_EQUIPMENT_SETS)
+    csv_write(list(globals.gems.values()), constants.OUTPUT_GEMS)
+    csv_write(list(globals.items.values()), constants.OUTPUT_ITEMS)
+    csv_write(list(globals.maps.values()), constants.OUTPUT_MAPS)
+    csv_write(list(globals.monsters.values()), constants.OUTPUT_MONSTERS)
+    csv_write(list(globals.npcs.values()), constants.OUTPUT_NPCS)
+    csv_write(list(globals.recipes.values()), constants.OUTPUT_RECIPES)

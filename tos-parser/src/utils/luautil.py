@@ -1,9 +1,9 @@
 import csv
 import os
 import re
-
+import codecs
 from lupa import LuaRuntime, LuaError
-
+import logging
 import constants
 from utils import iesutil
 
@@ -27,6 +27,10 @@ lua = LuaRuntime(attribute_handlers=(attr_getter, attr_setter), unpack_returned_
 LUA_OVERRIDE = [
     'function GET_ITEM_LEVEL(item) return 0 end',  # We cant emulate this function as geItemTable is undefined
     'function IsBuffApplied(pc, buff) return "NO" end',
+    'function GetAbilityAddSpendValue(pc,classname,column) return 0 end',
+    'function GetSkillOwner(skill) return {} end',
+    'function GetClassList(name) return {} end',
+    'function GetClassByNameFromList(cls,name) return nil end',
     'function IsServerSection(pc) return 0 end',
     'function GetExProp(entity, name) return entity[name] end',
     'function GetExProp_Str(entity, name) return tostring(entity[name]) end',
@@ -39,7 +43,9 @@ LUA_OVERRIDE = [
     'function IMCRandom(min, max) return 0 end',
     'function ScpArgMsg(a, b, c) return "" end',
     'function SCR_MON_OWNERITEM_ARMOR_CALC(self, defType) return 0 end',
-    'function SetExProp(entity, name, value) entity[name] = value end'
+    'function SetExProp(entity, name, value) entity[name] = value end',
+    'function math.pow(value,power) return value ^ power end'
+
 ]
 
 LUA_RUNTIME = None
@@ -58,7 +64,7 @@ def init_global_constants(ies_file_name):
     execute = ''
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', ies_file_name)
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path, 'r','utf-8',errors="replace") as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             if row['UseInScript'] == 'NO':
                 continue
@@ -265,11 +271,14 @@ def init_runtime():
                 file_path = os.path.join(root, file_name)
                 lua_function = []
 
-                with open(file_path, 'r') as file:
+                with codecs.open(file_path, 'r',"utf-8",errors="ignore") as file:
                     try:
                         # Remove multiline comments https://stackoverflow.com/a/40454391
                         file_content = file.readlines()
+
                         file_content = ''.join(file_content)
+                        # ignore hangul
+                        file_content = file_content.encode("ascii",errors="ignore").decode("ascii")
                         file_content = re.sub(r'--\[(=*)\[(.|\n)*?\]\1\]', '', file_content)
 
                         # Load LUA functions
@@ -294,9 +303,10 @@ def init_runtime():
                         lua_function_load(lua_function)
 
                     except LuaError as error:
-                        # logging.warn('Failed to load %s, error: %s...', file_path, error)
+                        if file_name.upper().endswith("CALC_PROPERTY_SKILL.LUA"):
+                            print("fail")
+                        logging.warn('Failed to load %s, error: %s...', file_path, error)
                         continue
-
 
 def destroy():
     global lua, LUA_OVERRIDE, LUA_RUNTIME, LUA_SOURCE

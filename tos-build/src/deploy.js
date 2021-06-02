@@ -21,7 +21,7 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
         shared.log('Updating node projects...');
         // childProcess.execSync('npm install', { cwd: path.join('..', 'tos-build')}); // We need to run this one before we even start the script
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-html')});
-        childProcess.execSync('npm install', { cwd: path.join('..', 'tos-patreon')});
+        //childProcess.execSync('npm install', { cwd: path.join('..', 'tos-patreon')});
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-search')});
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-sitemap')});
         childProcess.execSync('npm install', { cwd: path.join('..', 'tos-sw')});
@@ -73,14 +73,15 @@ require('console-stamp')(console, 'yyyy-mm-dd HH:MM:ss');
     }
 
     // 5. Patreon
-    shared.log(`5. Patreon`);
-    cwd = path.join('..', 'tos-patreon');
+    // Patreons are NOT ebisuke's.
+    //shared.log(`5. Patreon`);
+    //cwd = path.join('..', 'tos-patreon');
 
-    result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
-    result.status !== 0 && shared.logError('Failed to patreon', result);
+    //result = childProcess.spawnSync(`npm run main`, { cwd, shell: true, stdio: 'inherit' });
+    //result.status !== 0 && shared.logError('Failed to patreon', result);
 
     // 6. Commit changes
-    is_new_patch = commitChanges('Patreon', 6) || is_new_patch;
+    //is_new_patch = commitChanges('Patreon', 6) || is_new_patch;
 
     if (shared.IS_PROD && (is_new_patch || is_new_revision || shared.IS_FORCE_DEPLOY)) {
         // 7. Service Worker

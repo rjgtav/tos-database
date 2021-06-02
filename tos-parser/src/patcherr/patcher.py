@@ -1,7 +1,7 @@
 import logging
 import os
 import struct
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 
 import constants
 from libs import blowfish
@@ -38,7 +38,7 @@ def patch():
 
 def patch_full(patch_destination, patch_path, patch_url, patch_ext, patch_unpack, revision_url):
     logging.debug('Patching %s...', revision_url)
-    revision_list = urllib2.urlopen(revision_url).read()
+    revision_list = urllib.request.urlopen(revision_url).read()
     revision_list = revision_decrypt(revision_list)
 
     for revision in revision_list:
@@ -53,7 +53,7 @@ def patch_full(patch_destination, patch_path, patch_url, patch_ext, patch_unpack
 
 def patch_partial(patch_path, patch_url, patch_ext, patch_unpack, revision_path, revision_url):
     logging.debug('Patching %s...', revision_url)
-    revision_list = urllib2.urlopen(revision_url).read()
+    revision_list = urllib.request.urlopen(revision_url).read()
     revision_list = revision_decrypt(revision_list)
     revision_old = revision_txt_read(revision_path)
     revision_new = revision_old
@@ -78,20 +78,22 @@ def patch_process(patch_file, patch_name, patch_unpack, patch_url):
     # Ensure patch_file destination exists
     if not os.path.exists(os.path.dirname(patch_file)):
         os.makedirs(os.path.dirname(patch_file))
-
+    def request_as_fox(url):
+        headers={"User-Agent":"tos"}
+        return urllib.request.Request(url,None,headers)
     # Download patch
     logging.debug('Downloading %s...', patch_url + patch_name)
-    patch_response = urllib2.urlopen(patch_url + patch_name)
+    patch_response = urllib.request.urlopen(request_as_fox(patch_url + patch_name))
 
     with open(patch_file, 'wb') as file:
-        for chunk in iter(lambda: patch_response.read(CHUNK_SIZE), ''):
-            file.write(chunk)
-
+        file.write(patch_response.read())
+            
+    logging.debug('OK')
     # Extract patch
     patch_unpack(patch_name)
 
     # Delete patch
-    os.remove(patch_file)
+    #os.remove(patch_file)
 
 
 def revision_decrypt(revision):
@@ -99,16 +101,18 @@ def revision_decrypt(revision):
     size_unencrypted = struct.unpack_from('@i', revision, 0)[0]
     size_encrypted = struct.unpack_from('@i', revision, 4)[0]
 
-    revision = [ord(c) for c in revision]               # Convert to binary
+    revision = [ord(chr(c)) for c in revision]               # Convert to binary
     blowfish.Decipher(revision, 8, size_encrypted)      # Decrypt with blowfish
-    revision = [unichr(c) for c in revision]            # Convert back to unicode characters
+    revision = [chr(c) for c in revision]            # Convert back to unicode characters
 
     # Clean and split into a list
+    #revision = ''\
+    #    .join(revision[8:])\
+    #    .encode('ascii', 'ignore')\
+    #    .split('\r\n')
     revision = ''\
         .join(revision[8:])\
-        .encode('ascii', 'ignore')\
         .split('\r\n')
-
     return revision[:-1]
 
 
