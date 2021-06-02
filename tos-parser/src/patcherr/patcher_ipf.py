@@ -36,18 +36,34 @@ def unpack(ipf):
     ipf_extract = os.path.join(os.path.dirname(ipf), 'extract')
     ipf_revision = os.path.basename(ipf)[:-4]
     logging.debug('Unpacking %s...', ipf)
-
+    tmpname="tmp.ipf"
+    extdir=os.path.join(constants.PATH_UNPACKER, 'extract')
+    shutil.copyfile(ipf,os.path.join(constants.PATH_UNPACKER,"tmp.ipf"))
+    prevcurdir=os.getcwd()
+    os.chdir(constants.PATH_UNPACKER)
     # Decrypt and extract ipf file
     if ipf_revision not in ['29_001001']:  # HotFix: these specific patches aren't encrypted for some reason
         subprocess.check_call(
-            [constants.PATH_UNPACKER_EXE, ipf, "decrypt"],
+            ["wine",constants.PATH_UNPACKER_EXE, tmpname, "decrypt"],
             stdin=None, stdout=None, stderr=None, shell=False
         )
-    subprocess.check_call(
-        [constants.PATH_UNPACKER_EXE, ipf, "extract"],
-        stdin=None, stdout=None, stderr=None, shell=False
-    )
-
+    #subprocess.check_call(
+    #    [constants.PATH_UNPACKER_EXE, ipf, "extract"],
+    #    stdin=None, stdout=None, stderr=None, shell=False
+    #)
+    if ipf_revision not in ['29_001001']:  # HotFix: these specific patches aren't encrypted for some reason
+        subprocess.check_call(
+            ["wine",constants.PATH_UNPACKER_EXE,tmpname, "extract"],
+            stdin=None, stdout=None, stderr=None, shell=False
+        )
+    else:
+        subprocess.check_call(
+            ["wine",constants.PATH_UNPACKER_EXE, tmpname, "extract"],
+            stdin=None, stdout=None, stderr=None, shell=False
+        )
+    os.chdir(prevcurdir)
+    fileutil.move_tree(extdir,ipf_extract)
+    shutil.rmtree(extdir)
     if os.path.exists(ipf_extract):
         # Remove blacklisted IPF files from extracted result
         for file_name in os.listdir(ipf_extract):
