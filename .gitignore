@@ -65,3 +65,11 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+#ebi
+**/__pycache__
+**/.DS_Store
+tos-parser/src/venv
+tos-parser/result
+*.bak
+.DS_Store
