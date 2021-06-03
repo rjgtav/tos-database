@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ハイレイバーンに関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>封印されていたハイレイバーンの航海日誌 1章 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690082" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690082" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690082" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690082" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>封印されていたハイレイバーンの航海日誌 1章</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>封印されていたハイレイバーンの航海日誌 1章{np} 大海賊ブラッディスローバス。<br/>彼が一歩前進するたび、その足跡には犠牲になった敵の血があふれると噂され、魔族さえも後退りするほど残忍で邪悪な存在。そんな無慈悲なブラッディスローバスの前に、まだ垢抜けない新兵のようなハイレイバーンが立っていた。<br/>騒ぐ白波、ゆらぐ小舟。頭上を飛びまわるカモメさえもが、息を呑んでその対決を見守っていた。<br/>戦いの報酬など無い。大海賊としての矜持を守るか、それとも奪われるか。それだけだった。<br/> ハイレイバーンはカトラスを抜き、目の前にいるブラッディスローバスへ疾風の如く飛びかかった。{np} 胸元を狙って一度、両脇を狙って二度。<br/>しかし全てはブラッディスローバスの想定内だったのだろう。<br/>ブラッディスローバスはハイレイバーンのカトラスを打ち返し、素早くハイレイバーンの鳩尾を蹴り倒した。<br/>まるで新米の海賊を訓練するかのように……。柄の先が、何度もハイレイバーンに突き下ろされる。{np} かろうじて抜け出し、再び姿勢を正すハイレイバーン。<br/>しかし彼はすでに疲れ果てており、勝利の女神はブラッディスローバスに微笑んでいるかのように思えた。ハイレイバーンは一度深呼吸をし、次の手を検討する。{np} ここで降参すれば、残忍な大海賊ブラッディスローバスは意外にもオレを部下に引き入れるだろう。先ほどの攻防でとどめを刺せたはずなのにそうしなかったことから、ハイレイバーンはそう確信していた。<br/>しかしそんな分析とは裏腹に、彼は心の中で首を横に振っていた。そして、自身でも推し量りきれない海賊としての気概の奥底で、ブラッディスローバスに狡猾な笑みを浮かべる。{np} 直後、彼に飛びかかりしつこく同じ攻撃を繰り返し始めた。彼には通用しないことを知りながら……。<br/>一方でブラッディスローバスは、そろそろハイレイバーンとの遊びに飽きていた。今度は柄ではなく鋭い刃の先で、ハイレイバーンの首筋を貫いてやろう……と。{np} ところが、ハイレイバーンは突然体をひねり、腰から拳銃を出して引き金を引いた。弾丸はブラッディスローバスの眉間に命中し、彼の巨体はゆっくりとハイレイバーンのほうへ倒れ込んだ。<br/>'ざざーっ！' 疲労が激しかったハイレイバーンはその巨体を避けきれず巻き込まれ、バランスを崩した小舟は二人が倒れた衝撃に耐えきれず、ひっくり返ってしまった。{np} 荒波が何度も小舟を襲い、静かに見守っていたカモメたちも声をあげて鳴き始める。<br/>海の上に彼らの姿はない。そうして大海賊の称号は、二人とともに荒波の中へ消えていった。<br/>海が小舟と二人の大海賊を呑み込んだ場所から遠く離れたところに、一隻の巨大な船が現れた。{np} その上には、男ばかりの二つの集団がそれぞれ船の艇首と船尾に分かれて陣取っていた。<br/>このような状況では直感的にお互い睨み合う姿を想像するものだが、実際には彼らはそれぞれ目を背け……正確には、共通するある一点を見つめていた。{np} その視線の先は、彼らのそれぞれのボスが一つの小舟に乗って去って行った海の方であった。<br/>二日間、昼も夜も休まずに戦った末、残ったのはたった一隻の船だけ。その後彼らは戦いを中止し、無言で対峙し続けた。{np} 片方は船の本来の所有者たちで、もう片方は戦闘中に自分たちの船が沈没し、敵船に乗り込んで白兵戦を仕掛けた者たちだった。<br/>停戦時に互いが合意した取り決めさえ守られれば、二つの陣営の男たちは全員、今日からまとめてこの船の船員になる予定だ。{np} しかし誰がこの船の船長になるか、また誰が彼らのボスになるかまでは決まっていない。ブラッディスローバスとハイレイバーンのどちらか……すなわち、決闘ののち生きて帰って来た方がボスになるという取り決めである。ブラッディスローバスに逆らえる海賊は彼の部下には存在しないし、若いハイレイバーンが彼を倒したなら、その座が取って代わられるだけだ。{np} 長い無言の対峙は、船尾に陣取ったブラッディスローバスの部下の一人が口を開くと同時に終わった。彼はブラッディスローバス船団の二等航海士で、シードッグと呼ばれているようだ。<br/>胸に犬のタトゥーを入れた巨体を起こしながら、彼はひとつの提案を持ち出した。{np} [もし次の日が暮れるまで誰も帰って来なかったら、錨を上げてこの海域から出ないか？]<br/>艇首に陣取っていたハイレイバーン陣営の責任者である三等航海士が、半歩前に出て答えた。女性の太ももほどはあろうかという太さの腕を持ち、<br/>その腕に巻きつくようなウミヘビのタトゥーを入れた、オセアニドという体躯に似つかわしくない名を持つ男だ。<br/>[ヴェルニケ島に着くまで戦わないと女神ユラテの名にかけて誓うなら、そうしよう。]{np} シードッグは迷わずその提案を受けた。<br/>[ヴェルニケ島へ着く前にこの船で戦いを起こす者たちは、永遠にキボトスの荷足となり海の底で転がり続けると、女神ユラテの名にかけて誓おう。]<br/>その言葉が終わると、オセアニドも同じ言葉を繰り返した。それと同時に、艇首と船尾の両側にいた全員が同じ言葉を叫んだ。{np} 全員の誓いが終わり、シードッグが空を見上げながら言った。[もしその前に嵐が近づいてきたら、早めに行動に移した方がいいかもしれない。今のところは問題なさそうだが。]オセアニドもまた長年船に乗ってきた男であり、嵐の兆しくらいは同じく読めていたが、あえてシードッグの言葉に同意する表情を見せながら言った。{np} [いずれにしても、残った人数では嵐に耐えながら船を動かすのは不可能だ。もう一度言っておくが、女神ユラテが良い天候を与えてくださってもここにいる全員が協力しない限り、ヴェルニケ島には辿り着けない。だからその時までは、戦いたくても戦えないだろう。]{np} その通りだった。<br/>ブラッディスローバスとハイレイバーンの部下であり、王国の海を駆け巡る百戦錬磨の海賊である彼らは、決して取り決めを反故にすることはないだろう。しかしだからこそ、ボス同士の決闘の結果をただ大人しく待つこともないのである。<br/>一見、彼らの船長たちは「王国の海を支配する大海賊の称号」と「最後に残ったこの船の船長の座」、そして「二つの陣営のボスの座」を巡って決闘をしていたと思われるかもしれない。しかしそれは違う。{np} いずれか一つのことだけに合意していたならば、部下たちは今にも彼らのボスを見捨て、錨を上げて船を動かしその場を去っていただろう。<br/>そしてそれは、通常考えられる海賊としての姿勢と性格を表す行為だ。しかし彼らがそうしない、もとい、できない理由は、この二日間激しい海上戦を繰り広げたことにある。{np} 彼らはもう新しい船長を決めることで争いたくなかった。<br/>いや、本当は決着まで戦いたかった者もいたかもしれないが、それが彼ら全員にとって得にならないと分かっていたのだ。<br/>ブラッディスローバスとハイレイバーンのどちらか一人が帰って来たら、それが誰であれ彼らの船長になる。{np} 帰って来なかった場合は一旦この海域を出るつもりだが、最終的には誰が船長になるのかを巡って再び争いが起こるはずだ。二日間の熾烈な戦いの末に残った人数が半分、またその半分の半分まで減っても船を動かすのに問題がないくらい陸や港の近く……例えば、ヴェルニケ島まで辿り着けば。{np} しかしそこまで人数が減ってしまえば、誰がボスになっても以前ほどの勢力を取り戻すことは難しいだろう。結局他の海賊たちの傘下に入るか、やられるかのどちらかだ。<br/>一隻の船しか残らず、かつこの危険な海域から出るために両陣営が協力せざるを得ないほどの人数になるまで、<br/>この二日間熾烈な戦いを繰り広げてしまったのである。結局この戦いは、それぞれの船長の決闘によって勝敗をつけるという合意に達し、今まさに、両陣営の者たちがその勝者を待っているところなのだ。{np} シードッグとオセアニドに代表される両陣営は、再び沈黙に浸った。<br/>些細な言動によって再び争いが勃発しかねないからだ。{np} そのため自然と、相手ではなくできる限り遠い水平線や船に視線を向け出す。<br/>睨み合えば、' 「その生意気な目はなんだ」' の一言ですべてが台無しになるかもしれない。{np} そう言う意味で、生き残った両陣営の代表者がシードッグとオセアニドという頭の切れる海賊だったことは、不幸中の幸いと言えるだろう。<br/>そしてついに、誰かが船にかけられた縄ばしごを登ってくる音が聞こえてきた。{np} <br/>正常な状況の船なら常に見張りもいただろうが、この状態ではどだい無理な話である。そのため、誰が登ってくるのかを確認するためには体を船べりから突き出して見下ろすしかなかったが、両陣営の誰一人として、そうはしなかった。{np} 船長たちが乗っていた小舟が近づいてくる音もしなかった。今はしごを登ってくる者は、おそらくここまで泳いできたのだろうが、{np} 決闘の場からこの船まではあまりに遠すぎる。とはいえ、あの二人以外に泳いで船に近づこうとする者はいないはずだった。<br/>甲板の両端を陣取る面々が登ってくる者の気配に集中しており、果たしてその者の手が船べりを力強く掴んだ。{np} しかしその手は、両陣営にとって見覚えのないものだった。<br/>血と海水、そして日差しの洗礼を受けながら長い距離を泳いできたことにより、そうなったのかもしれない。<br/>いずれにせよ、その手を助けるために近づく者は誰一人いなかった。{np} 無言の対峙がそれを阻んでいた。もしも自分たちの船長ではなかった場合、突き落とす、または殺すために近づくという誤解を招く恐れがあったからだ。{np} シードッグとオセアニドも、何も言わず静かに船べりを掴んだ手に集中し、それぞれの部下たちが動かないように手で制した。<br/>やがて、その手が力を振り絞るように重い体を引っ張り上げ、手の主の姿を現にする。{np} そしてその場にいた全員が見たものは……部下ですら一見で船長だと判別できないほど、疲労と負傷の苦痛、それ以上の何かが垣間見えるハイレイバーンの顔だった。<br/>いずれの部下であれ、海賊たちは「勝者がいる」という事実に、女神ユラテへの感謝の祈りを捧げた。{np} ハイレイバーンは船の上に両の足を付けると、甲板の海賊を見渡しながら言った。<br/>[よし……お前ら全員の乗船を……許可する。]{np} まるで彼一人しかいなかった船に、他の海賊たちが辛うじてよじ登ってきたかのような口調だった。<br/>まったく逆の状況だったが、船乗りにとって乗船許可は非常に重要な儀式である。<br/>他の礼式や就任式がなくとも、それですべての問題が解決されたということを全員が理解していた。そして異議を申し出る者もいなかった。<br/>それを確認したハイレイバーンが再び口を開いた。<br/>[俺を……船長室へ……。]{np} 言い終わらないうちにハイレイバーンが甲板の床へ倒れ込み、数人の海賊たちが素早く駆け寄って彼の体を支えようとする。<br/>すでに気を失っていた新しい船長は、元の部下と新しい部下によってそのまま船長室に運ばれた。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ハイレイバーンに関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

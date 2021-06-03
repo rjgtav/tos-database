@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ジェロメル1世の時に起きたハマンメデール渡河事件に関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>ハマンメデール川渡河事件 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690094" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690094" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690094" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690094" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>ハマンメデール川渡河事件</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> *ハマンメデールHerrmun_Madale<br/>渡河事件1<br/>{np} ジャカリエル大王が崩御してから51日が過ぎた。<br/>開祖でもあり、先王でもある父親の崩御により、51歳で君主の地位を譲り受けたジェロメル国王は、玉座に座っていた。<br/>以前は王族と貴族が20人以上集まり、国王の悩みの種を共有し苦悩を共にしていたが、今では問題を先に言及する者もなく、静けさを保っていた。<br/>{np} 臣下たちの視線が王の弟である自分に集中していると気づいたリクションが、ついに口を開いた。<br/>[これ以上、様子を伺う必要はありません。まず、国王の勅令で防ぐのです。それでも聞かないようであれば、軍事力で戒めればいいのです。絶対に負けはしません。命ずれば、この私が行きましょう。]<br/>{np} [ですが叔父上、そのようにするとこの40年間続いてきた平和が壊れてしまいます。また、新国王の就任と共に戦争が始まったとの不名誉が歴史に刻まれてしまいます。そしてそれは、王国の現国王が先祖の平和を受け継ぐ能力が無いという点を認めてしまうことになります。]<br/>{np} 次期王位継承者である王子の言葉であった。それに次いで貴族の中の一人が前に出た。<br/>[勅令で二人の領地をお互い離れたところに変更してください。必要であれば、より広い領地にです。そしたら、単純な抗命よりはましな懲戒の名分になるでしょう。]<br/>{np} 他の貴族がその言葉に自身の意見を付け加えた。<br/>[ですが、戦うなという命令も聞かぬ彼らが、領地を変えて慣れない地に移動しろとの命令を果して聞くでしょうか？命令を聞かない可能性が高く、そしたら結果的に王室の軍隊が出動せざるを得ません。<br/>{np} 国王が抗命をそのままにしておくわけにはいかないからです。結局は先代国王が開国戦争を終結した後、一度も起きなかった戦争が起きてしまいます。それも反乱という形で。]<br/>{np} 最初に発言した貴族が言った。<br/>[それは承知の上のこと。どのみち軍事行動を取るのであれば、その名分がよりましだということです。それに、一先ず戦争が始まればその2人の軍事力がどんなに優れていても勝つことはできません。<br/>{np} 兵力はわずかながら私たちの方がより多いですし、何よりもどのウィザードや女神の司祭も彼らを助けることはできません。二人なりに軍事に詳しい者たちなので、むしろ戦いの不利さを知って降伏する可能性もあります。]<br/>この貴族もこうは言っているが、相手が降伏するかもしれないと言ったときは自信が無いように見えた。<br/>{np} 今、朝廷の貴族と王族たちを悩ませている問題は次のことだった。<br/>ハマン家とメデール家は、現在王国の貴族の中で最も強力な貴族である。<br/>あいにく、この貴族たちの領地は隣同士だった。<br/>{np} 隣同士で似たような勢力を持っている2つの巨大貴族の仲が人間の歴史でありきたりのように、平和な共存ではなく反目と葛藤に染まることはほぼ必然的だったが、ジャカリエル大王が生きていた40年の在位期間中は表立った争いは起こさなかった。<br/>{np} だが、王国が2番目の統治者を迎えると、開国の功臣及び多くの貴族が背負っていた重荷も軽くなり、その中でも二つの勢力の貴族がこの機会を逃さまいと、お互いに野心と敵対心を露にしていた。<br/>{np} 王国に反抗するわけではないが、新しい国王が落ち着いてしまう前に事を起こしてしまえば、王室も結果を認めざるを得ないだろうと両家は考えたのだった。<br/>{np} そして、二つの貴族のそれぞれの首長は、自分なりに軍事的才能には自信があったため、まさか自分が負けるとは思っていなかった。<br/>{np} 一方の王室では、即位して早々の問題を結局、軍事力で解決する前例を残してしまうことになり、先王より良い評価は得られなくても低い評価を得るわけにもいかなかった。<br/>そして、王室に逆らってまで彼らの味方をする者はいないはずで、<br/>{np} 司祭とウィザードの支援を全く受けられないので似たような軍事力で兵が少なくても必ず勝てるというのが客観的な評価だったが、二つの勢力の貴族の首長の軍事的才能があるということは自惚れではなく、それは紛れもない事実だった。<br/>{np} 本当に優れた才能を持った2人がぶつかっても結局は勝者と敗者に分かれるだろうが、もしその戦いに王国軍が介入し、2つの勢力が王室の軍隊を先に処理してから戦う、または１つの勢力だけと王室の軍が戦って負けたりでもしたら…。<br/>{np} 王室の権威が地に落ちるのはもちろん、王室の軍隊が弱く王室に忠誠する貴族たちの能力が低いという評価が蔓延するだろう。まあ、それが事実であるかどうかはさておき、王国全体を揺るがす事態になりかねなかった。<br/>{np} 女神の意志は統一された王国の維持であり、司祭たちが女神の意志を受け継いで王室を守っているので、国が滅びることは無いが王室の存在は有名無実になり、各地域の貴族たちは王室の命令には従わなくなって混乱に陥るかもしれなかった。<br/>{np} 歴史から学べる事例はなかったが、ジェロメル国王や周りの王族と貴族皆、王国の土台は建国の王ではなく、守城を任された2代目の王によって変わるという点をよく認識していた。<br/>また沈黙が流れ、この場に集まった貴族の中で最先任者であり年長者でもあるグリーオ公爵が言った。<br/>{np} [現在の王室直轄の兵士は、私の知っている限りでは2万4千人です。また、先王が非常時に備えて、王国全体で動員可能な総兵力を最後に調べた時に推算された兵力は17万人です。全地域に一人も守備兵を置かないのであれば、もっと多くなりますが。<br/>{np} ハマン公爵が領地の兵力を総動員するのであれば、1万2千人程度。メデール公爵は8千人。よって、2万程度。両家が財産を使い果たしてまで傭兵を雇いし、親しい貴族まで動員するのであれば総兵力はその二倍の4万人ぐらいでしょう。]<br/>[なぜ急にそのような計算をなさるのですか？]<br/>{np} [4万人の大軍が対峙しているところに王国軍の2万4千人を送ると軍事的な手段の利用になりますが、4千人ならそうは見えないでしょう。戦争を止めたり、どちらかを懲戒するには足りない兵力です。ですが、派遣された王室代表の護衛兵としては多い兵力ではありますがね。]<br/>{np} グリーオのその言葉に今まで黙っていたジェロメル国王が、初めて口を開いた。<br/>[だが、代表の身分が高ければ十分に可能な兵力になりうる。例えば、国王とかな。]<br/>弟であるリクションがしばらく考え込み、こう言った。<br/>{np} [お言葉ですが兄上、いや、陛下が直接行かれるということはあってはなりません。また、国王の護衛兵でなければ多すぎる兵力です。]<br/>最初に口を開いたグリーオ公爵が続けてこう言った。<br/>{np} [なので、王子が行かれるのです。この程度のことであればそのレベルに合わせて処理するということと、王室の威厳ある者が直接出るという広報効果を同時に得られる手段だと思います。]<br/>リクションはその言葉を聞き、直ぐにこう言った。<br/>{np} [これを機に王子に陛下の名前を付けられたらいかがでしょうか。即ち、次期国王の称号は自動的にジェロメル2世になるのです。<br/>そうすれば国王の名前で事態を処理することになり、<br/>{np} 派遣された王子もやはり、国王の権威とそれに伴った権利で事を処理できるでしょう。<br/>一方で次期後継構図を固められる効果もあります。]<br/>{np} 他の貴族が疑問を口にした。<br/>[王子を派遣して文書だけを渡すより勅令の権威をより重くし、王子の聡明さで現場のいざこざを処理し、この難局を解決するという点では私も反対しません。<br/>{np} ですが、グーリオ公爵がなぜ4千人の兵力を言及したのかが分かりません。力で威圧するわけではないのであれば、それより少ない3千人やより多い5千人はなぜいけないのですか？私の所見としましては、威圧する意図がないように見せようとしても、それを守る範囲内で最大の兵力を陛下と共に派遣するべきだと思います。]<br/>{np} その質問にグーリオ公爵が答えた。<br/>[なぜなら、必要になった場合、武力を使えるようにしなければならないからです。4千人であれば、鎮圧兵力としては足りないですが、鎮圧兵力の本軍や本隊になるには十分な規模なのです。<br/>{np} 私が先ほど推算した兵力は最大4万人程度です。実際はそれより少ないと思います。クレリックとウィザードを活用できない相手の立場を考慮すると、同じ兵力でもその差は2倍と言えるでしょう。]<br/>{np} それならその兵力はどこから集めるのかという疑問が自然と浮かぶだろう。<br/>グリーオ公爵は、その質問が出る前にこう言った。<br/>{np} [王国の貴族たちに召集令を下します。もちろん、私も自分の兵を率いて参加します。召集令にどれくらい応じてくれるかは今のところ分かりませんが、4万人は集められると思います。<br/>{np} 4千なら4万の10分の1なので、召集軍の核となる王子の本隊としては十分な数です。そして、4万人であればすでに申し上げた通り、両方の兵力と同じ数。交互に戦い、各々撃破できる可能性と司祭とウィザードを召集軍だけが利用できる状況であれば、有利な立場に立てるでしょう。<br/>{np} 王子は召集軍が集まる間に両方を説得し、進展がなければ集めた兵力で懲戒を行えばいいのです。そうすれば、これは王室だけの意志ではなく王国貴族全体の意志だと言えるでしょう。王室の兵力を送るより名分をよりはっきりと伝えられると思います。]<br/>{np} ジェロメル国王がまた口を開いた。<br/>[朕は即位してまだ日が浅いのに、そなたは朕をジェロメルからジェロメル1世に称号を変えさせるのか。まあ、よかろう。そなたの意見は筋が通っているから、反対がなければその意見を受け入れるとしよう。<br/>{np} 以降、<br/>計画や作戦については王子に相談し、朕には報告だけでいいぞ。]<br/>誰も反対する者がいなかったので一旦、この事件に関する王室の対応はこの方向で進むこととなった。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ジェロメル1世の時に起きたハマンメデール渡河事件に関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

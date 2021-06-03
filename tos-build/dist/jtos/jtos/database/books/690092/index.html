@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="セージマスターが執筆した現在のマスターたちに関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>現代マスター総覧第3巻 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690092" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690092" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690092" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690092" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>現代マスター総覧第3巻</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*現代マスター総覧第3巻<br/>{np} 今回の人物たちはほとんどが奉職期間が長くて、よく知られている。<br/>従って、前の総覧を参考しなくても比較的簡単に著述できた。<br/>しかし、いつものように当代のマスターたちに関して同じマスターが著述することは誤解と紛乱を招きやすいものだ。<br/>{np} それにもかかわらず、当代の記録を残そうと覚悟を決めたのは今のように神樹の日によって記録されていない事実の消滅の可能性が高い時代が続くと、我々の時代の歴史を後世に伝えることができないかもしれないという焦りからである。<br/>{np} <br/> セージマスター ルパス・ケーヘル<br/>{np}   <br/> 1. ソードマンマスター ラシュア<br/> ラシュアは軍の最も低い階級から始めて将軍にまで上り詰めた平民出身のマスターです。<br/>王室の警備隊長を2回も務め、将軍になってからも新兵を自ら訓練させる真の軍人として有名です。<br/>{np} 公には彼は除隊したことになっていますが、クラペダで新兵募集の命令を受けて臨時復帰し、神樹の日の影響により、特に指示がない限り法律上では現役として活動しているという噂もあります。<br/>実は、ラシュアは警備隊長と訓練所長などの職責から退いた後でも軍から要求があれば再び務めたりしたため、本当のことは本人にしか分かりません。<br/>特に警備隊長の座はハイランダーマスターのダグラス・ブラックに譲り渡しましたが、再び本人が務めた後にラミン将軍を指名したことは有名な事件です。<br/>{np} このように有名になって自然と広まった事件を除いた他のことは軍の機密事項にあたるため、彼が詳細を話すことはないでしょう。<br/>{np}   <br/> 2. マリア・リード ペルタストマスター<br/>マリア・リードはある点では非常に変わった人物です。<br/>彼女は関連分野の他のマスターたちとは違って軍隊との直接な関係がありません。<br/>このような場合はほとんどが傭兵に関わりますが、彼女はそういうこともありません。<br/>{np} その二つでもない場合は単独行動を好むマスターに分類できそうですが、多くの部下と弟子を持つ彼女はこれにも当てはまりません。<br/>彼女と彼女に慕う人たちも傭兵のように雇われたり、報酬をもらって働いたりしますが傭兵のようにそれが主な仕事ではありません。<br/>このように実に変わった彼女の性格と率いる集団の性格によってマリア・リードはハイランダーマスター側の協力要請を断り続けているかもしれません。<br/>{np}   <br/> 3. パイロマンサーマスター アブレ・メリン<br/>アブレ・メリンは両立しにくい二つ、女神に関する信仰と魔法学に関する探究意志を兼ね備えて上昇効果を発揮できた珍しいウィザードです。<br/>{np} 魔法への彼女の高い学問的志に火の女神ガビヤの恵みが与えられ、火炎魔法に関する彼女の成果は歴史上最も高い境地に達したと思われます。<br/>全盛期のアガイラ・フラリーも火炎魔法だけで戦うことになると、アブレ・メリンの炎には負けてしまうという評価は決して大げさではありません。<br/>{np}  <br/>  4. ウィザードマスター ルシア<br/>平民出身で、才能も人並みであったルシアは知られた通りに見習い時代から魔法にはあまり素質がありませんでした。<br/>{np} しかし、彼女は不屈の意志でそれを克服して大魔術師になり、この経験を活かして魔法入門者たちをお手伝いする役割を遂行しています。<br/>ルシアは普段はウィザードたちを励ますことが多いですが、ウィザードの道を軽視したり、修練を怠る者に対しては厳しいです。<br/>{np}   <br/> 5. クレリックマスター ロザリア<br/>ロザリアはクラペダとシャウレイなどで活躍していた治癒師で、治癒と看護、そして聖職に長けて多くの人たちを助けました。そのため、大勢から愛されています。<br/>{np} プレイグドクターマスターは二人の年の差があまりないため、彼が引退してロザリアがその座に就いても長く務められないということを惜しがります。<br/>よって彼女が次の代のプレイグドクターマスターになることはありませんが、プレイグドクターマスターは自分に何があった場合、自分に代わる者としてロザリアを指名しておきました。<br/>万が一のことがあった場合、ロザリアはクレリックマスターとプレイグドクターマスターを兼職しながらどちらかにふさわしい後継者が現れたらその座を譲り渡すことにしたそうです。<br/>{np}   <br/> 6. クリヴィスマスター ヘルクス<br/>全てのクレリックの中でクリヴィスたちは最も伝統的な女神信仰を持っています。<br/>伝統と過去を重んじるため、年寄りのクレリックたちのクラスとして知られています。最も伝統的な女神信仰こそ正統的なものだと思ってこの道に進んだクレリックも少なくありません。<br/>{np} そしてこのような者たちはほとんどがその道から離れることなく、真っ直ぐな信仰の道を歩み続けます。<br/>ヘルクスは厳格さと女神の恵みを人々に分かりやすく伝える調和力を兼ね備えた貫禄のあるクリヴィス司祭です。<br/>{np} 彼はまたパラディンマスターの腹心の友です。<br/>この友情は現在クレリックの古い二つの教団が過去より仲良くしている背景でもあります。<br/>過去に問題があったというより、少し距離を置いた時期がありました。<br/>{np}   <br/> 7. アーチャーマスター アドミュンダス・ティラー<br/>アドミュンダス・ティラーは没落した貴族の末裔ですが、先祖の代で平民になりました。<br/>その後農民として暮らし、入隊した彼はマスターとして成功を収めました。<br/>{np} 過去の自分と同じ境遇の才能ある者と困っている人を助けることに関心があり、星の塔に関することにも興味を持っています。<br/>クラペダのような大都会の住民たちを守るための城壁の修理や物資の蓄積などにも最近力を注いでいます。<br/>{np}   <br/> 8. クォレルシューターマスター リアム・トイラー<br/>神樹の日以前のリアム・トイラーは弩と自分の様々な装備の改良とリディア・シャッフェンの伝承を研究する趣味活動に没頭したそうです。<br/>{np} また少し太っていたそうです。<br/>真面目な努力家だったにもかかわらずこのような見た目だった理由はマスターの仕事と自分の趣味を適切に並行できる心の余裕があったからだそうです。<br/>{np} そのため、<br/>今彼の見た目と日常を目にした人は神樹の日以来クラペダのための彼の頑張りを否定することはできません。<br/>それでも噂好きのある者は彼がハンターマスターのフィオナ・イエヴァの気を引くために体重を減らしたという譫言を言っています。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>セージマスターが執筆した現在のマスターたちに関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

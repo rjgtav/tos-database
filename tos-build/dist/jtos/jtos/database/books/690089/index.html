@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="刃の誓い傭兵団に関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>王国文献ポラニ領地2 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690089" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690089" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690089" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690089" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>王国文献ポラニ領地2</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*王国文献保管所公式記録　第1096－562号文書下編:<br/>ポラニー領地の戦闘に関する件{np} クエラ率いる本隊の追撃が本格的に進行するさなか、ウオシス・クリークは準備していた二次部隊を出動させた。<br/>城砦に残り警備をしていたクエラ側の傭兵たちは、その出陣を見てすぐに塹壕で戦っている味方へその事実を伝えた。{np} だが、クエラに本隊を戻すよう要請はしなかった。直接の視認により、二次攻撃隊の規模がさほど大きくないと判断したためである。{np} この程度の数であれば、城砦を占領している守備側にとってその何倍もの兵力が来ても問題なく、さらに塹壕の方も、フエンク率いる小隊の離脱によって戦況有利となっていたからだ。また、クエラの本隊と残留部隊とでは戦力的にもほぼ半々に分かれている状況だったため、仮に敵部隊が全員そちらへ向かうとしても、数の差で押せると踏んだこともある。{np} ところが、二度目の攻撃に出た黄金の歌傭兵団の目的は、塹壕で悪戦苦闘している残留兵の応援ではなかった。<br/>彼らは城砦に狙いを定め、まっすぐ向かってきた。そして、クロスボウと短銃の射程距離に入るや否や集中砲火を始めた。{np} 刃の誓い傭兵団も、シュヴァルツライターの攻撃力における名声を甘く見ていたわけではないが、これはさすがに畏怖を感じざるを得ない光景であった。ただ、刃の誓い陣営は籠城戦に備え投射武器などを準備していたものの、黄金の歌陣営はどうも城砦への侵入を狙って攻撃しているようには見えなかった。{np} 彼らはコンパニオンに乗ったまま、早い移動とリマソンの回避機動、そしてほかの技を交互に使いながら、とにかく銃弾と矢を浴びせることに集中しているようだった。結局、城砦を守っていた刃の誓い団員は相手を攻撃しようとする考えを止め、城壁の後ろに隠れる戦術を選んだ。{np} 黄金の歌二次部隊は城壁に一定の距離から近づこうとしなかったため、攻撃する必要がなかったのである。また、コンパニオンに乗ったまま休まず動くので、籠城状態で攻撃してもどのみち効率が悪い。{np} もっとも、攻撃の効率が悪いのは黄金の歌陣営も同じだった。刃の誓い陣営の守備兵たちが城砦を盾代わりに身を隠しているので、夏の日に降り注ぐ雹のように、どれだけ銃弾を浴びても指一本怪我をする者はいなかった。それでも、黄金の歌二次部隊は城砦に向かって休まず射撃を続けた。{np} 城砦の守備を受け持ち残っていたクエラ配下の士官の一人は、今の状況は自分たちにとって不利ではないと考えていた。黄金の歌陣営は膨大な物資……つまり弾薬を、無駄な射撃で浪費しているからだ。自分たちは頭を出さず、ただ隠れていればいい。{np} あの程度の兵力なら、もしこのまま全員が隠れ続けて敵の城砦への侵入を許してしまったとしても、むしろ有利な白兵戦での戦闘で十分倒せるだろう……と。<br/>だが、そう思うと急に背筋が凍った。戦場での経験豊富な傭兵団長であるウオシス・クリークが、むやみにこのような損害を招く戦術を取るはずがない……と考えたからだ。{np} そこで、危険を冒してでも頭を上げ状況を確認しようとしたとたん、さらに激しく銃と弓の雨が降ってきた。しかし、目の前が確認できない状況にもかかわらず、いやだからこそ、彼には相手の狙いが分かってきた。<br/>「最初から城砦と城を守る兵力を狙ったわけではない。わざと守備兵の付近を攻撃することで身を隠させ、状況を把握できなくしたのか。だが、なぜ？」{np} その疑問の答えはすぐ分かった。<br/>「我々に気づかれたくなかったのだ。黄金の歌の団員全員が出動する前提で、十分な数が進軍を終えるまでは。 そのためには……クエラ団長の本隊が戻ってくるタイミングを遅らせる必要がある……！」{np} この時点で、塹壕にいた刃の誓い団員もまた、黄金の歌陣営の三次部隊が展開していることに気づいた。だが彼らは、城砦にいる味方のような地理的優位を持っていなかった。{np} そのため、縦に長く蛇のような陣形を組んだ黄金の歌陣営の兵力について、その兵力がどれほどのものであるかを計測することができなかったのである。このような陣形で向かってこられると、同じ高さの地形で対立するかぎり、正面から見える敵の後ろにどの程度の厚みがあるかを判断できない。参考にできるのは、せいぜいコンパニオンの群れが起こす砂ぼこりくらいだ。{np} 結果、ウオシス・クリークの合図により黄金の歌三次部隊が横に長く陣形を広げた時、ようやく全団員による総攻撃であることが分かったが、遅きに失した感はあった。{np} 彼らが城砦に射撃中の二次部隊を襲撃していれば、結果が変わった可能性もなくはない。が、彼らは彼らなりに、塹壕の中の敵を全滅させることを優先していたのだ。{np} さらに、刃の誓い陣営の塹壕戦闘で思ったより時間をかけることになった原因のひとつは、コンパニオンだった。黄金の歌先行部隊は全員がコンパニオンに乗っており、塹壕内ではコンパニオンも戦闘に参加させていた。<br/>個体ごとでは刃の誓い団員一人の力に劣るものの、彼らは自分のコンパニオンへ家族のように接しているという評判がまるで嘘のように、少しのためらいもなくコンパニオンを盾代わりに使ってきたのだ。{np} 時間稼ぎをするための策でしかなかったが、それでもこの時点で黄金の歌先行部隊の大勢が生き残った。もちろん、塹壕内へ導入されたコンパニオンは一体も生き残らなかった。{np} コンパニオン一体をこのレベルまで訓練し育成する費用と労力を考えれば、黄金の歌陣営に多大なる損失が生じたことは明らかだ。そして、この損失が単純な時間稼ぎに過ぎないのであれば、どう考えても戦闘面での損得が合わない。だが、最終的には黄金の歌団員の命という犠牲を払わずに済んだのは事実である。{np} その時、黄金の歌陣営の残りの本隊全員が塹壕に押し寄せてきた。アサルトファイアが援護の口火を切り、そのまま黄金の歌部隊の攻勢が続いた。{np} 開戦前、クエラは狭い塹壕に<br/>支援兵を多く送るのは効率的ではないと考えていたが、それはもともと黄金の歌傭兵団が近接戦より射撃戦が専門の団員を多く抱えており、塹壕戦では基本的に有利という前提に基づいた判断であった。 しかし、円を重ねたような独特の陣形を取った黄金の歌団員たちは、それぞれ自分が担当する円陣から仲間と列を合わせた後、塹壕の中の味方と塹壕を囲んだ前の列の味方を避け、敵に銃弾と矢を放った。{np} 前列と後列の団員それぞれが、コンパニオンの姿勢を低くしたり、体を斜めに傾けて足の力だけでコンパニオンにぶら下がったりと、あらゆる技法と射線を使い、味方を避けつつその付近の刃の誓い団員に休むことなく射撃を浴びせた。{np} この瞬間、ウオシス・クリークは、「少数が大勢の兵力に勝つことは無い。そのような事例があったとしても、実際には戦場の一部地域で、少数が敵の兵力を分散させ、その地域限定で圧倒的な多数の優勢を作ったからこそ可能だったのだ。」というグルカン・ドニヒューの戦争論を思い浮かべていた。{np} 最終的には、黄金の歌陣営の本隊が塹壕戦へ合流したことにより、彼らの集中攻撃を受けた塹壕地域の刃の誓い部隊は、ほどなく全滅した。{np} その後本隊の黄金の歌団員が合流し、連れてきた予備のコンパニオンを、生き残った先行部隊員に渡す。塹壕に残った部隊員のコンパニオンは全て失ったが、投入した人数のわりに死傷者は少なかった。比べると、投入した先行部隊員の二倍ほどになる刃の誓い団員たちを倒したことになる。緒戦の戦果としては十分だった。{np} 三十人ほど少なかった兵力の差も、僅かではあるが、むしろ優勢に変わったほどだ。<br/>これで残る課題は、予定通りにフエンク副団長が脱出できるかどうか……のみである。{np} できるだけ被害を受けず、その過程で敵に痛手を与えられれば御の字だが、主な目的は脱出だった。本隊を誘い出すことには成功したので、脱出さえすれば今日の戦果は十分だろう。{np} 難しく重要な役割であるため、一番信頼している副団長を送り込んだのだが、失敗すれば大損失になる。もし副団長フエンクがクエラの手から逃れられなければ、ウオシスが選ぶべき道は二つしかなかった。{np} このまま進撃し、副団長を助けるついでにクエラの本隊と戦う。もしくは、少し移動したところにある、少数の守備兵だけが残っている城砦を攻撃する作戦だ。{np} 城砦を守っている刃の誓い団員は、塹壕の味方を支援する機会を逸した時点で、ただ見守ることしかできなかった。現時点で彼らにできることは、自分たちの力で城砦を守ることだった。しかし、城砦を攻撃し本隊の合流を隠す任務を受け持っていた黄金の歌二次部隊は、すでに城砦から離れ塹壕の本隊に合流していた。{np} その頃、本隊を率いてフエンクを追撃していたクエラも、ようやく後方で起きた事態に気づいた。戦場における指揮官にもっとも求められる能力は、正しい判断を速やかに下すことだ。そして、二つの重要な事のうち一つを選ばなければならない状況であれば、正確な判断より早い判断のほうが功を奏することは多い。{np} このまま戻り全面対決を行うのであれば、勝負は五分五分だろう。<br/>城砦は少数の人員で守っているが、落ちることはない。{np} 今追っているのは、ほかでもない敵陣営の副団長である。彼が率いる部隊を捕まえるか全滅させることがこの状況での最善な策だと、クエラはすぐに判断した。本隊の兵力を戻さず、また、分けて一部を塹壕や城砦の方向に戻すこともなく、そのまま追撃を続けた。{np} ウオシス・クリークからクエラに渡った判断の主導権は、クエラのこの判断によって、また黄金の歌陣営側、今度はウオシスではなくフエンクに渡った。<br/>本来の作戦であれば、この時点でフエンクと彼の部隊員たちは脱出しなければならなかった。全員が一つの方角に向かって動くのか、いくつかの班に分かれてそれぞれ突破するのか、状況によってフエンクが決めるべきタイミングである。{np} そして次の瞬間、部隊を整理しながら前方の状況を確認していたウオシス・クリークの口から、普段紳士然としている彼にしては相当に珍しい怒号が飛び出た。<br/>すでに起きてしまったことだ。さらに、戦場での突発的な状況変化は、前触れもなく起きるものだ。こんな時は瞬時に判断し、対処するしかない。{np} 幸いにも部下たちは、団長の怒号を聞いた瞬間に事態を直感し、コンパニオンに乗っていた。まだ乗っていない部下たちもいたが、ウオシスは気にせず全員に進撃命令を下した。<br/>ウオシスは鬼のような形相で、こう言った。<br/>[フエンクめ、生きて帰らなかったら許さぬぞ。いや、生きて帰って来てもただでは済まさん！]<br/>クエラも同じく、フエンクがどのような選択をしたのか分かった。<br/>[賭けに出たか、副団長。{np} 単身で領主警備兵をいなし、遠くから領主の足に銃弾を一発でも撃ち込めば、到着初日の一日で勝ったという評判が得られるとでも考えたか？]<br/>フエンクが率いる黄金の歌先行部隊が領地兵と戦っている間に刃の誓い本隊が背後に到着し、その目論見がほぼ確実に阻止されるであろうことは、両陣営の団長や幹部たち皆が想定していた。{np} しかしフエンクは、クエラ率いる本隊までの距離が想定より遠いと見たのだ。部下たちが領地兵相手に時間稼ぎをしてくれれば、自分一人でも領主の執務室まで行くことができる。<br/>そうして、チェスのようにキングを取る。直接確保できずとも、領主の顔に銃口を向ける。それも厳しければ、領主が見えるところまで行き、狙いを定めて足に銃弾を一発撃ち込む。勝てる可能性は十分あると判断したのだ。{np} あらかじめ把握しておいた情報と今回の戦闘で明らかになった兵力から推測するに、クエラが別途兵力を温存しており、領主警備兵と合同での配置をしている……とは考えづらかった。領地民を塹壕工事に動員したが、そこから逆説的に、他の地域へ塹壕や罠を仕掛けた可能性もなさそうである。そのフエンクの分析と判断自体は、間違ってはいなかった。{np} だがクエラも、専門家の傭兵より戦闘力が劣る地方の領地兵たちに対し、何の対策もしていないわけがなかった。<br/>フエンクは領地兵たちを隠しておいて奇襲攻撃をさせたり、正門前に防柵を設置して騎乗しづらくすることで、自分たちの遠距離射撃に備えるだろうと覚悟していた。{np} ところが、現実に起きたことは、その覚悟を大きく上回っていた。包囲しようと寄ってきた領地兵が全員、いきなりスピルアタックを繰り出してきたのだ。<br/>「これはランサーの技じゃないか！ありえない、何かの間違いではないのか？」<br/>と、フエンクは心の中で叫んだ。<br/>フエンクはなんとかかわせたものの、多くの部下たちが次々とコンパニオンから振り落とされていく。{np} 領地兵は専門職のランサーではなく、正式な訓練を受けたわけでもなかったが、数の多さが脅威となった。{np} まるで雨粒を避けるようなものであり、集団で行動するかぎり、一定数の落馬は避けられなかっただろう。<br/>コンパニオンに乗るでもなく、単に走ってフエンク一行に追いつきつつあったクエラが、その様を見て言った。{np} [脱出作戦でもどのみち全滅だったと思うが、欲を出したことで我々の仕事が楽になったよ。]<br/>落馬した部下たちを見て、フエンクはもはや作戦の続行は不可能であることを悟った。周囲に領地兵までいては、無差別射撃はできない。何があっても死亡者を出すわけにはいかない。{np} そして、そのような状況になってまで刃の誓い部隊と戦うことは、ただの犬死である。<br/>フエンクはついに決断を下した。{np} {s18}[何があっても最短距離で、迅速に領地を離脱せよ！]<br/>落馬し領地兵と戦っていた部下たちはその言葉を耳にして、驚くと同時に納得できない態度をあらわにした。<br/>誰かが異議を申し立てる。<br/>[副団長、それでは我々は……。]<br/>フエンクが声を上げ、その言葉を遮った。<br/>[マスタークエラの本隊がすぐに来る。チャンスは今しかない。走れ！]<br/>何人かは運良くコンパニオンに再騎乗し、何人かはそのまま自らの足で走った。領地兵たちも、彼らが逃げる意志を見せたとき、それを妨げることはしなかった。{np} 数の利がありながらすでに押されている状況だったので、敵が逃げてくれるのならむしろ歓迎だったのだろう。<br/>フエンクの部下たちが逃げ始めると、クエラはその意図に気づいた。クエラはニヤリと笑いながら言った。{np} [なるほど、戦線離脱か? まあ、悪くない選択とでも言っておくか。]<br/>クエラは、一部の部下たちだけを追撃させ、残りは戻した。追撃させた部下たちの数とその指揮官の能力であれば、急な状況変化は起きないと思ったからだ。そして、その考えは正しかった。{np} 副団長フエンクとその部下たちは、領地の境界を越えて逃げた。領主たちと傭兵団との協定により、これは戦線離脱となる。よって、フエンクとその部下たちは以降終戦まで、今回の戦闘に関連する領地である三地域には二度と戻ってくることができない。戦力面で言えば、死んだも同然だった。{np} なお、実際にはフエンクとその部下全員の脱出は叶わず、フエンクと共に領地の境界から脱出できた部下はたったの六人だった。{np} 終わってみればこの日の戦果は、死傷者数で比べると黄金の歌傭兵団が優位となったものの、作戦と戦闘の中心戦力である副団長を終戦まで活用できなくなった点では、彼らにとって大きな痛手となった。{np} 追加記録 : 現国王であるタニエル陛下の承認を得て、この文書に下記を付け加える。<br/>最初の戦闘がこのような顛末となった翌日、フエンクの依頼を受けた使いの者から手紙を受け取ったマスターウオシス・クリークは、新しい指令を書いた後、その指令書をフエンクに渡すよう手配していた。{np} 小言もみっしりと書かれていたようだが、趣旨としてはどのみち副団長はこれ以上戦闘には参加できないので、追加兵力の募集に回れ……という内容だ。早い段階で募集することができれば、追加兵力を即時戦闘に投入できるからだ。もっとも、そうでなくとも、戦闘後の兵士補充は必須事項だったと言える。{np} そしてのちに、王国首都闘技場と関連する一連の事件と、フエンクが闘技場の運営者フリアムと接触し、騙されて問題のある契約を結ぶ事件が起きることとなる。この記録の戦闘と直接の関係はないが、どのような経緯で契約に至ったかを説明するうえで、その要因を明らかにするために付け加えた。{np} なお、その後も戦闘は何度か繰り返され、しばしの対立状態を続けた後、ラミン将軍の介入で戦いは幕を閉じた。{np} しかしその介入過程には法的な問題があり、外部へ公開できないため、以降のすべての戦闘とその他事項は機密文書として分類されている。{np} ゆえに、これを閲覧する権限を持った官吏は該当の機密文書に加え、<br/>＜闘技場閉鎖に関する勅令第62条＞<br/>文書とそれに関する捜査記録も閲覧することが望ましい。<br/>王国歴一〇九六年（タニエル国王在位十一年）三月<br/>王国首席記録官エセン・ヨナス</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>刃の誓い傭兵団に関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

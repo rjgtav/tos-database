@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="List of Cards, with advanced filtering and sorting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Cards - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <h1>Cards</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>$ID</th>
+                <th>Name</th>
+                <th>Element</th>
+                <th>Race</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644001"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644001">644001</a></td>
+                <td><a href="/jtos/database/cards/644001">ガイガラスカード</a></td>
+                <td><a href="/jtos/database/cards/644001">Earth</a></td>
+                <td><a href="/jtos/database/cards/644001">Beast</a></td>
+                <td><a href="/jtos/database/cards/644001">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644002"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644002">644002</a></td>
+                <td><a href="/jtos/database/cards/644002">ゲージングゴーレムカード</a></td>
+                <td><a href="/jtos/database/cards/644002">Dark</a></td>
+                <td><a href="/jtos/database/cards/644002">Plant</a></td>
+                <td><a href="/jtos/database/cards/644002">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644003"><img height="40px" width="40px" src="/assets/icons/icon_item_card_def.png" /></a></td>
+                <td><a href="/jtos/database/cards/644003">644003</a></td>
+                <td><a href="/jtos/database/cards/644003">ゴルゴンカード</a></td>
+                <td><a href="/jtos/database/cards/644003">Dark</a></td>
+                <td><a href="/jtos/database/cards/644003">Demon</a></td>
+                <td><a href="/jtos/database/cards/644003">Defense</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644004"><img height="40px" width="40px" src="/assets/icons/icon_item_card_def.png" /></a></td>
+                <td><a href="/jtos/database/cards/644004">644004</a></td>
+                <td><a href="/jtos/database/cards/644004">ゴーレムカード</a></td>
+                <td><a href="/jtos/database/cards/644004">Earth</a></td>
+                <td><a href="/jtos/database/cards/644004">Plant</a></td>
+                <td><a href="/jtos/database/cards/644004">Defense</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644005"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644005">644005</a></td>
+                <td><a href="/jtos/database/cards/644005">グライネンダーカード</a></td>
+                <td><a href="/jtos/database/cards/644005">Fire</a></td>
+                <td><a href="/jtos/database/cards/644005">Plant</a></td>
+                <td><a href="/jtos/database/cards/644005">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644006"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644006">644006</a></td>
+                <td><a href="/jtos/database/cards/644006">グラスモールカード</a></td>
+                <td><a href="/jtos/database/cards/644006">Ice</a></td>
+                <td><a href="/jtos/database/cards/644006">Beast</a></td>
+                <td><a href="/jtos/database/cards/644006">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644007"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644007">644007</a></td>
+                <td><a href="/jtos/database/cards/644007">ギンクラスカード</a></td>
+                <td><a href="/jtos/database/cards/644007">Fire</a></td>
+                <td><a href="/jtos/database/cards/644007">Plant</a></td>
+                <td><a href="/jtos/database/cards/644007">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644008"><img height="40px" width="40px" src="/assets/icons/icon_item_card_stat.png" /></a></td>
+                <td><a href="/jtos/database/cards/644008">644008</a></td>
+                <td><a href="/jtos/database/cards/644008">ネザーボバインカード</a></td>
+                <td><a href="/jtos/database/cards/644008">Dark</a></td>
+                <td><a href="/jtos/database/cards/644008">Demon</a></td>
+                <td><a href="/jtos/database/cards/644008">Stats</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644009"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644009">644009</a></td>
+                <td><a href="/jtos/database/cards/644009">ネクロヴェンターカード</a></td>
+                <td><a href="/jtos/database/cards/644009">Dark</a></td>
+                <td><a href="/jtos/database/cards/644009">Demon</a></td>
+                <td><a href="/jtos/database/cards/644009">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644010"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644010">644010</a></td>
+                <td><a href="/jtos/database/cards/644010">デッドボーンカード</a></td>
+                <td><a href="/jtos/database/cards/644010">Dark</a></td>
+                <td><a href="/jtos/database/cards/644010">Plant</a></td>
+                <td><a href="/jtos/database/cards/644010">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644011"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644011">644011</a></td>
+                <td><a href="/jtos/database/cards/644011">デビルグローブカード</a></td>
+                <td><a href="/jtos/database/cards/644011">Dark</a></td>
+                <td><a href="/jtos/database/cards/644011">Plant</a></td>
+                <td><a href="/jtos/database/cards/644011">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644012"><img height="40px" width="40px" src="/assets/icons/icon_item_card_def.png" /></a></td>
+                <td><a href="/jtos/database/cards/644012">644012</a></td>
+                <td><a href="/jtos/database/cards/644012">デノプティックカード</a></td>
+                <td><a href="/jtos/database/cards/644012">Poison</a></td>
+                <td><a href="/jtos/database/cards/644012">Plant</a></td>
+                <td><a href="/jtos/database/cards/644012">Defense</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644014"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644014">644014</a></td>
+                <td><a href="/jtos/database/cards/644014">ラヴァインピードカード</a></td>
+                <td><a href="/jtos/database/cards/644014">Poison</a></td>
+                <td><a href="/jtos/database/cards/644014">undefined</a></td>
+                <td><a href="/jtos/database/cards/644014">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644015"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644015">644015</a></td>
+                <td><a href="/jtos/database/cards/644015">ラジャトードカード</a></td>
+                <td><a href="/jtos/database/cards/644015">Ice</a></td>
+                <td><a href="/jtos/database/cards/644015">Beast</a></td>
+                <td><a href="/jtos/database/cards/644015">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644016"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644016">644016</a></td>
+                <td><a href="/jtos/database/cards/644016">ロックトルトゥーガカード</a></td>
+                <td><a href="/jtos/database/cards/644016">Earth</a></td>
+                <td><a href="/jtos/database/cards/644016">Plant</a></td>
+                <td><a href="/jtos/database/cards/644016">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644017"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644017">644017</a></td>
+                <td><a href="/jtos/database/cards/644017">レキシファーカード</a></td>
+                <td><a href="/jtos/database/cards/644017">Dark</a></td>
+                <td><a href="/jtos/database/cards/644017">Demon</a></td>
+                <td><a href="/jtos/database/cards/644017">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644018"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644018">644018</a></td>
+                <td><a href="/jtos/database/cards/644018">リーヴァピードカード</a></td>
+                <td><a href="/jtos/database/cards/644018">Poison</a></td>
+                <td><a href="/jtos/database/cards/644018">Insect</a></td>
+                <td><a href="/jtos/database/cards/644018">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644019"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644019">644019</a></td>
+                <td><a href="/jtos/database/cards/644019">リカウスカード</a></td>
+                <td><a href="/jtos/database/cards/644019">Dark</a></td>
+                <td><a href="/jtos/database/cards/644019">Demon</a></td>
+                <td><a href="/jtos/database/cards/644019">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644022"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644022">644022</a></td>
+                <td><a href="/jtos/database/cards/644022">マインローダーカード</a></td>
+                <td><a href="/jtos/database/cards/644022">Lightning</a></td>
+                <td><a href="/jtos/database/cards/644022">Plant</a></td>
+                <td><a href="/jtos/database/cards/644022">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644023"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644023">644023</a></td>
+                <td><a href="/jtos/database/cards/644023">マレットワイバーンカード</a></td>
+                <td><a href="/jtos/database/cards/644023">Ice</a></td>
+                <td><a href="/jtos/database/cards/644023">Beast</a></td>
+                <td><a href="/jtos/database/cards/644023">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644024"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644024">644024</a></td>
+                <td><a href="/jtos/database/cards/644024">マグバークカード</a></td>
+                <td><a href="/jtos/database/cards/644024">Fire</a></td>
+                <td><a href="/jtos/database/cards/644024">Plant</a></td>
+                <td><a href="/jtos/database/cards/644024">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644025"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644025">644025</a></td>
+                <td><a href="/jtos/database/cards/644025">マンティケンカード</a></td>
+                <td><a href="/jtos/database/cards/644025">Poison</a></td>
+                <td><a href="/jtos/database/cards/644025">Insect</a></td>
+                <td><a href="/jtos/database/cards/644025">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644026"><img height="40px" width="40px" src="/assets/icons/icon_item_card_stat.png" /></a></td>
+                <td><a href="/jtos/database/cards/644026">644026</a></td>
+                <td><a href="/jtos/database/cards/644026">マミーガストカード</a></td>
+                <td><a href="/jtos/database/cards/644026">Dark</a></td>
+                <td><a href="/jtos/database/cards/644026">Demon</a></td>
+                <td><a href="/jtos/database/cards/644026">Stats</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644027"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644027">644027</a></td>
+                <td><a href="/jtos/database/cards/644027">マッシュカリアカード</a></td>
+                <td><a href="/jtos/database/cards/644027">Poison</a></td>
+                <td><a href="/jtos/database/cards/644027">undefined</a></td>
+                <td><a href="/jtos/database/cards/644027">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644028"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644028">644028</a></td>
+                <td><a href="/jtos/database/cards/644028">マージカード</a></td>
+                <td><a href="/jtos/database/cards/644028">Ice</a></td>
+                <td><a href="/jtos/database/cards/644028">Insect</a></td>
+                <td><a href="/jtos/database/cards/644028">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644029"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644029">644029</a></td>
+                <td><a href="/jtos/database/cards/644029">モステムカード</a></td>
+                <td><a href="/jtos/database/cards/644029">Lightning</a></td>
+                <td><a href="/jtos/database/cards/644029">Insect</a></td>
+                <td><a href="/jtos/database/cards/644029">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644030"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644030">644030</a></td>
+                <td><a href="/jtos/database/cards/644030">モアカード</a></td>
+                <td><a href="/jtos/database/cards/644030">Dark</a></td>
+                <td><a href="/jtos/database/cards/644030">Beast</a></td>
+                <td><a href="/jtos/database/cards/644030">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644031"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644031">644031</a></td>
+                <td><a href="/jtos/database/cards/644031">モヤブルカカード</a></td>
+                <td><a href="/jtos/database/cards/644031">Earth</a></td>
+                <td><a href="/jtos/database/cards/644031">Beast</a></td>
+                <td><a href="/jtos/database/cards/644031">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644032"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644032">644032</a></td>
+                <td><a href="/jtos/database/cards/644032">モルディホーンカード</a></td>
+                <td><a href="/jtos/database/cards/644032">Poison</a></td>
+                <td><a href="/jtos/database/cards/644032">Beast</a></td>
+                <td><a href="/jtos/database/cards/644032">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644033"><img height="40px" width="40px" src="/assets/icons/icon_item_card_util.png" /></a></td>
+                <td><a href="/jtos/database/cards/644033">644033</a></td>
+                <td><a href="/jtos/database/cards/644033">モリックカード</a></td>
+                <td><a href="/jtos/database/cards/644033">Dark</a></td>
+                <td><a href="/jtos/database/cards/644033">Beast</a></td>
+                <td><a href="/jtos/database/cards/644033">Utility</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644034"><img height="40px" width="40px" src="/assets/icons/icon_item_card_stat.png" /></a></td>
+                <td><a href="/jtos/database/cards/644034">644034</a></td>
+                <td><a href="/jtos/database/cards/644034">ミノタウロスカード</a></td>
+                <td><a href="/jtos/database/cards/644034">Fire</a></td>
+                <td><a href="/jtos/database/cards/644034">Demon</a></td>
+                <td><a href="/jtos/database/cards/644034">Stats</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/cards/644035"><img height="40px" width="40px" src="/assets/icons/icon_item_card_atk.png" /></a></td>
+                <td><a href="/jtos/database/cards/644035">644035</a></td>
+                <td><a href="/jtos/database/cards/644035">ミルティスカード</a></td>
+                <td><a href="/jtos/database/cards/644035">Dark</a></td>
+                <td><a href="/jtos/database/cards/644035">Demon</a></td>
+                <td><a href="/jtos/database/cards/644035">Attack</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/"><img height="40px" width="40px" src="" /></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

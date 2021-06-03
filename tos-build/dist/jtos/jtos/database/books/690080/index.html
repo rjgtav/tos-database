@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ソルコムに関する物語。右クリックで読むことができます。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>ソルコムの星の塔進攻記録6 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690080" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690080" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690080" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690080" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>ソルコムの星の塔進攻記録6</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>「力ずくにするためには塔が完成される前にそうするべきだった」とソルコムは後悔した。 それでもソルコムは結局総攻勢を選ぶしかなかった。人間の傭兵を雇うとしたことが魔界の上級魔族たちの厳しい批判を受けた直後だったため、強硬策を取る必要があったのだ。そして一度だけは試してみる価値のある方法でもあった。{np}そんなはずがないと思いながらも星の塔のシャッフェンスターの警戒心が薄れることを願い、無駄な挑発で部下たちを犠牲にせず、続けて兵力を集めた。また、プベタを酷使し、魔界でも魔族たちを徴兵して数を増やしていった。<br/>プベタはソルコムが魔王たちに批判を受けたという噂が魔界に広がって兵力と資源の調達が大変だとよく不満を口にした。<br/>それでもやるしかなかった。そしてソルコムも今回だけは最後までやってみると覚悟を決めた。{np}そうやって半年にわたって総攻撃を準備した。飛行可能な魔族も船も足りなくて、水上からの攻撃は諦めたため、陸路から接近するしかなかった。{np}この湖の浮遊石は絶妙な高さに浮いていて足首までにしかない水は魔族に十分ダメージを与えながら船での攻撃を遮断した。<br/>リディア・シャッフェンは湖の水の水位が常に足首程度に維持するように魔法浮遊石が浮いている高さを調整した。これによってシャッフェンスター団員たちの靴はいつも濡れていたが、それくらいの不便は我慢できた。{np}戦闘や訓練がない時はシャッフェンスターの見習い団員たちが熊手のような道具でコケや水草などの手入れをした。<br/>彼らは魔法浮遊石の端に行って、刈った草などを湖に捨てた。<br/>そうすると、湖の水生動物たちがその草を食べるために集まった。そうしていつか捨てられる草を食べるため端には常に水生動物が集まるようになった。{np}そのため、シャッフェンスターの新米団員たちは入団する時にどこまでが歩ける魔法浮遊石地域で、どこからが湖の深淵の上なのかを徹底的に教育された。<br/>そして見習い団員の時に行うこの水草の除去作業で集まった草を捨てる過程でその位置をより確実に覚えるようになった。もちろん新米の団員が誤って溺れないように熟練の先輩たちも常に彼らの側で見守っていた。{np}端から水に落ちる事故は非常に危険なものだった。<br/>それは先ほど説明したように、そこで捨てられる水草を食べようと湖の水生動物が集まっていたからだ。<br/>これらは石の上にいる時は大きな脅威とならないが、水に落ちると激しく攻撃してきた。また、この攻撃から生き延びた者もあまりいなかった。<br/>このような攻撃は星の塔を水上から攻撃しにくくする理由でもあった。<br/>このような生物たちのせいで水上攻撃時に船が壊れてしまうと、たとえ魔族ではなくて泳げるとしても上陸する場所がなくなるからだ。<br/>体力もあって、泳ぎも得意だったから運よく端まで来れたとしても、そここそが最も危険な場所だった。{np}そのため、魔法浮遊石がない水域は魔法浮遊石周辺の端より離れた中央の方が安全だった。<br/>体力が持てばの話だが。<br/>シャッフェンスターに守られていた住民たちはこの点でも安全だったが、湖の凶暴な生物たちはシャッフェンスターが捨てる草をエサとして食べていたわけではなかった。<br/>本来彼らは肉食生物だったが、リディア・シャッフェンが綿密に練った長期間の防御戦略によって生存に必要のない水草の毒に侵されたのだ。{np}それによって漁師たちは凶暴な魚類がない中央の水域でたくさんの魚を捕ることができた。<br/>肉食性の水生動物はお腹が空くとそこに行って小さな魚を食べたりしたが、ある程度お腹を満たすと端の方に戻った。<br/>もちろん住民と遭遇する場合もあるが、緊急時は乾燥させた水草の塊を遠くへ投げるとその方向に行ってしまうので住民たちにとってあまり危険ではなかった。{np}ただシャッフェンスター団員たちは水中モンスターが水草欲しさで漁師が狙われないようになるべく使用の自制を呼びかけ、漁師たちもそれに従って緊急時以外は使わなかった。<br/>また、水草は端によく捨てられるため、水中モンスターたちもまたその習性を変えることはできなかった。{np}そのため、人が立てる湖の部分は常にキレイな状態を維持していた。<br/>それを利用してソルコムの部下たちが湖を通って星の塔に進撃しながら石と岩を投げ、それを踏み場にしながら前へ進んだ。{np}凄まじい量の土を運んできて道を作りながら前に進んだ。<br/>攻城戦の基本は城の周囲の溝などを埋めることだが、湖全体が溝である状況ではそれをすべて埋めなければならない。<br/>幸い水位が低かったため、なんとか一歩踏み出すほどのところは作れたが、塔までの距離と幅は気が遠くなるほどのものだった。<br/>多くの兵力が広がって進撃しないと星の塔から発射される投射武器の的になるしかないのだ。{np}勢いよく攻撃命令を出したが、何の戦闘行為も起こらず一日が過ぎた。<br/>これはある意味当然のことで、魔族たちは湖の上に足場を作る工事に夢中で、それはまだ星の塔の投射武器が届かない距離で行われていたからだ。<br/>いくらリディア・シャッフェンでも、星の塔に配置できる遠距離砲弾の数と射程距離には限りがあったからだ。{np}そのため、魔法浮遊石で作られた水域は星の塔から離れていて、遠距離攻撃からは安全だった。<br/>シャッフェンスターとしては塔に監視兵を配置し、工事状況を把握できたため休憩を取っていても特に問題はなかった。それで敵が城外の溝を埋めようとすると城の上から敵を攻撃した伝統的な戦闘様式は見られなかった。{np}進撃を開始した翌日、ついにそのような伝統的な攻撃が始まった。<br/>ソルコムの部下たちの工事が進み、彼らが射程距離内に入ったからだ。<br/>シャッフェンスター団員たちは人間が作ったとは思えないほどの射程距離を持つ砲弾で魔族たちを攻撃した。その攻撃にソルコムの部下たちは反撃すらできないまま倒れていった。{np}屋根の付いた攻城塔などを用意し、その中で作業を進めながら被害を減らそうとしたが、そんな装備も次々と壊れていった。<br/>せめてもの慰めは装備を壊すためにシャッフェンスター団員たちが発射する岩を工事に活用できるということだ。<br/>星の塔は水上に建てられたため、他の攻城戦で使える多くの策は使えなかった。<br/>たとえば、地下に穴を掘るなどもそうだが、水の中で穴を掘れるとしてもここでは使えない策だった。{np}もちろんリディア・シャッフェンが星の塔を建て、攻城戦のような状況に備えていないわけがないとソルコムも思った。<br/>敵が湖なら自分は人海戦術で大勢の魔族とモンスターを動員して勝利を勝ち取らなければならないと考えた。また、魔界の上級魔族たちが彼にそのようなプレッシャーをかけていたのだ。{np}しかし、湖を埋めながら進撃するのは思った以上に時間がかかり、また被害も次第に大きくなった。<br/>被害が大きくても戦いを好む魔族と凶暴なモンスターなら不満を口にしなかったのがこれまでの魔界の性向だった。<br/>しかし、ここの状況は違った。激しい戦いがあったわけでもなく、地味に湖を埋めているだけなのに被害が出るとは。下級魔族たちの口から不満が絶えなかった。<br/>むしろ強い敵と戦って死んでいく状況ならまだマシだったかもしれない。{np}しかし、敵の姿を目にするわけでもなく、敵の投射武器や投石、そして矢しか見えない状況下でソルコムへの下級魔族たちの不満は大きくなっていった。<br/>プベタもまた口にはしなかったが、ソルコムを補佐しながら次第に不満が大きなっている様子だった。{np}そんな中でもついに攻撃隊の先頭が星の塔の入口が見えるところに到達した。<br/>これまでは飛んでくる投石などを空中で迎撃して方向を変えて魔族の被害を減らす任務にあてていた飛行型魔族たちを本格的な戦闘に配置し、<br/>一部は足場を作る作業に残しつつ、大勢の魔族に突進攻撃の命令を出した。総攻撃作戦を開始してから何日も経ってからのことだった。{np}当然星の塔からは敵たちに熱湯、投石、矢、火炎、様々な魔法攻撃を行った。空中で攻撃する魔族たちはシャッフェンスター団員たちの矢によって湖に落ちたり、浮遊石に落ちたが、そこが足場になったところでも湖の水によって命を落とした。<br/>厳しい状況が続いたが、それでもソルコムたちにとってはやっと戦いらしい戦いに臨むことができたのだ。{np}ソルコムはこの攻城戦で勝敗に関係なくすべてを終わらせる思いだった。すでにすべての兵力が湖の水域内に進入した状況だったし、自分も先頭に立って指揮を執った。<br/>攻城戦で難攻不落の城はない。<br/>他の要素がない限り、一般的に城の中にいる者たちは物資が底を尽き、結局は負ける。<br/>城の中にいる者たちの勝利は救援兵が到着するか、外部に味方がいて持続的に敵を攻撃して忍耐の戦いで勝つしかなくて、防御設備はただの時間稼ぎにすぎない。そしてその時間切れを迎え負けるのだ。{np}ソルコムはそう信じ、戦いに臨んだ。<br/>しかし、突然不吉な予感に襲われたソルコムは見上げたその視線の先にいるリディア・シャッフェンと目が合った。彼女は星の塔の望楼で自分に向けて矢の狙いを定めていた。<br/>彼女はソルコムが自分に気づくまで待っていたのだ。{np}ソルコムは彼女が手にしている弓と矢があの魔王ジブリナスを殺したあの武器だと一目で分かった。<br/>たった1本で自分の息の根を止められる矢…。<br/>ソルコムもリディア・シャッフェンに狙撃される恐れがあるため、先頭に立つのは危険だと分かっていた。<br/>しかし、部下や上級魔族たちの不満を取り除く方法はそれしかないと判断して取った行動だった。{np}ジェスティに呼び戻されることは何とか耐えられる。しかし、もしジェスティが自分をカルタスのところに再び戻したら…。カルタスは失敗の責任を押し付けて何をするか分からなかった。<br/>カルタスのおもちゃになって苦しみを受けるようになるならリディア・シャッフェンの矢によって死んだ方がマシだ。{np}ソルコムがリディア・シャッフェンを睨みつけても彼女は矢を放たなかった。むしろ矢をしまってこう言った。[愚か者。お前らが立っているところは魔法によって水に浮いている石材構造物だ。]<br/>遠くに離れているにもかかわらずソルコムのような魔将にははっきりと聞こえた。<br/>しかし、その意味は謎めいていた。だが、次の瞬間、その意味は説明する必要もなく全身で感じることができた。{np}激しい揺れと共に地面全体が沈み始めた。<br/>中には悲鳴を上げる魔族もいた。<br/>四方から水が入ってきて魔族たちを溶かし、燃やした。<br/>水中で燃やされ、死んでいく部下たちを見ているソルコムにできることは何もなかった。<br/>その時になってやっと、敵は自分たちを待ち構えていたと分かった。<br/>攻撃どころか逃げることもできなかった。<br/>飛行や浮遊能力があっても矢の攻撃から逃れられないだろう。{np}命からがら逃げ出した時、魔界から追加で魔族たちを連れてプベタが到着した。<br/>そして気が動転しているソルコムに代って、生存者たちを休ませ、新しく連れてきた魔族たちを落ち着かせた。{np}その後のプベタの調査報告によると、魔法浮遊石を上下に動かしたり、位置を変えたりすることは星の塔にとっても大変なことで頻繁にはできないことだそうだ。<br/>一度使用すると何十年は魔力をチャージしないと使えないのが魔法専門家たちの見解だそうだ。{np}しかし、当時のソルコムやプベタにはそこまで考える余裕はなかった。浮遊石が動いてしまったせいで、これまでの足場工事がすべて無駄になったからだ。<br/>水に流されなかった部分はシャッフェンスター団員たちが塔から出て片付けた。投石として使えそうな物などは塔に持ち帰って、他は湖に投げ捨てた。{np}その作業を妨害するために部下たちを送ったりもしたが、基本的に湖の水に触れながら戦うこと自体大きな負担で、敵の接近を知らせる警報が鳴ると、作業中のシャッフェンスター団員たちは直ちにグループを組織して矢を放ちながら塔に帰った。<br/>ソルコムは悔しかったがこの敗北によって魔族社会での信頼をすべて失った。<br/>下級魔族たちは影でそういうことを話していたが、ソルコムもそれを知っていた。<br/>しかし、信頼を取り戻す方法が浮かばなかった。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ソルコムに関する物語。右クリックで読むことができます。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

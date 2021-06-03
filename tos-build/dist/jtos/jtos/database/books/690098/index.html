@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ジーロットマスターのエリザ・タールに関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>ジーロットマスター物語1巻 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690098" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690098" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690098" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690098" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>ジーロットマスター物語1巻</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*ジーロットマスター物語<br/>{np} 七十人余りの人たちが参列した葬式が終わった後は、そのまま教団の総会が開かれる流れとなった。<br/>本来、他のクレリックや教団と交流がなかった閉鎖的な性格が濃い団体であるため外部の客は殆どおらず、<br/>{np} 故人の親戚の何人かが親戚である義務感で参列し、仲の良かった隣人が何人かが顔を出し、マスターが亡くなったので担当地域の領主が人を送ってその義務を果たした。<br/>{np} 参例者たちは一応誠意を見せたと思うと急いでその場を去った。残った人たちは皆、ジーロット教団に属した内部者だった。<br/>そして、彼らがこの世に存在する全てのジーロットでもあった。<br/>{np} 最後まで残っていた外部の人も一人いたが、その人も交流があったからではなかった。<br/>プレビーという名の中年男性はインクイジターとしてインクイジターマスターのトーマス・イコノスタシスの命令で、教団の長であるジーロットマスターがいなくなった状況で、総会の進行を見守るために残ったのだ。<br/>{np}  ジーロット教団は外部の人はもちろんのこと、他のクレリックたちとも仲がいい方ではなかったので、インクイジターのようにクレリックの社会で公的な役割をする人でないとほとんど会うことはなかった。<br/>{np} もし今日の総会でジーロットマスターが選出されたら、彼がその選出過程が合法的で適切だったことを証明し、インクイジターマスターに報告して王国の関連組織に伝達する任務を託されていた。<br/>{np} ジーロット教団の宗主であるジーロットマスターを選ぶ過程は、代々このように教団内部で選出された人物をインクイジターが異なる女神に仕えている全ての教団を代表し、審査して認めた後に国王に知らせると、朝廷は特別な理由がない限りその事実を認めて任命証を送って終わらせる。<br/>{np} ジーロット教団の次期宗主でもあるマスターは、普通は前代マスターが死亡したり引退する前に予め内部で選定される場合が多いため、外部の人であるインクイジターが実際に新しい首長が選出される過程を目にすることは殆どなかった。<br/>{np} だが、今回の総会は何も決まっていない状態だった。<br/>そのため、派遣されたインクイジターのプレビーを含めてこの場に集まっている全ての人たちは、この総会が今日だけでなく何日も行われたとしても全くおかしくないと覚悟をして参加していたのだ。<br/>{np} そして、史上初の教団総会の議長の役割を外部の人であるインクイジターであるプレビーが務めた総会でもあった。<br/>これはジーロット教団の内部の争いが深刻であることも意味していた。<br/>{np} 少数派であるジーロット教団は二つの派閥に分かれていて、この二つの派閥の生成と対立は教団の歴史そのものだった。<br/>{np} ジーロット教団は消えた女神を探すという教義を掲げており、消えた女神はライマとユラテが代表的であり、先に女神ライマを探そうとする派閥と女神ユラテが先だという派閥で分かれたり。両者はそれぞれ論理と立場が異なったのだ。<br/>{np} それに加え、女神ダリアを優先するごく少数のジーロットが存在していたが、彼らは数が少ないことからあまり発言力がなかった。そのため彼らはこの二つの派閥の板挟みの状態になっていた。{np} このような争いはあってもジーロット教団が分裂することはなかった。<br/>一旦、彼らは他の教団に比べると少数であったため、現状より小規模になるのを恐れたからだ。<br/>そして、どの女神を優先して探すのかに関してもお互い協力することも多々あった。<br/>{np} 教団の最終的な目的は女神を探すことであり、特定の女神を探すことではなかったからだ。<br/>何より、消えていない女神たちとその女神に仕えている教団、そして他のクレリック系統の支援も大きな力になってくれた。<br/>{np} ジーロット教団を嫌う他の女神の教団やクレリックたちも消えた女神を探さなければならないという大義に反対することはできず、ジーロット教団を助けざるを得なかった。<br/>{np} そのため、ジーロット教団も内部の争いが外部に知られ、支援を受けなくなると少数であることから厳しい教団の環境をより悪化させると思って注意せざるを得なかったのだ。<br/>{np} 前々回の総会は女神ライマを優先としている派閥の中心だったデイビット・タールが教団の首長であり、ジーロットマスターとして選出された。<br/>女神ユラテを優先としている派閥にとっては不満もあったが、女神ユラテ派の有力者の娘であるナオミと総会前に結婚したため、争いは一旦収まったのだ。<br/>{np} それからしばらくは両派閥の代表的人物同士の結婚とデイビットの安定的な教団の運営により、数世紀にわたる争いは徐々に収まっていくかのように思われた。<br/>デイビット・タールは教団を安定することでジーロットの力を集める準備を終えると、女神ライマ追跡に拍車をかけた。<br/>{np} それから一つの手がかりを発見し、少数のジーロットを率いてそれを追いかけた。<br/>しかし、この手がかりは不幸にも本物であったため問題になった。<br/>女神ライマの後を追っているまた違う者たちがいて、彼らと遭遇したデイビット・タールは殺されてしまった。<br/>{np} デイビット・タールが死亡すると、ジーロット教団は深い悲しみの中で新しい争いに直面することになった。<br/>紆余曲折を経て、ナオミ・タールが亡くなった夫の代わりにジーロットマスターになったが、デイビット・タールの殺害について消えた女神ライマ派では彼女のせいで、彼女を妻に迎えたせいでデイビットが死んだと主張する人が出てくるほど険悪な雰囲気となった。<br/>{np} このような雰囲気でナオミ・タールは数年間ジーロット教団をうまくまとめていたが、内部の圧力と個人的な希望が合わさり再び女神ライマの追跡と夫を殺害した犯人の追跡を始めた。<br/>この二つの事件は本質的には同じものだったため、別々に行う必要はなかったが、結果的にナオミ・タールも、夫と同じく殺人犯と仲間によって命を落とした。<br/>{np} (後に明らかにされるが、この二人の殺害に関与していた者はエボニフォンだった。<br/>だが、エリザ・タールが親の殺人犯が誰なのか分かったことはそれから長い年月が経った後のことであり、エボニフォンはすでに死んだ後だった。)<br/>{np} そして、その二回目の死の結果が、今回の葬式と今日の総会であった。<br/>そのため、女神ライマ派と女神ユラテ派はお互い不満を持っていた。<br/>{np} お前らが責め続けたせいでナオミ・タールが無理して追撃を始めたと主張する立場と、そもそもデイビットとナオミが結婚する自体間違いだったと主張する立場の両者が声を荒げてお互いを激しく非難した。<br/>{np} もちろん、両方にはそこまで考えていない者たちもいたが、彼らも彼らなりの悲しみと恨みがあったため、今日の総会がどのように進むかは見当もつかなかった。<br/>派遣された進行役のプレビーに一番先に発言を求めたジーロットが口を開いた。<br/>{np} [私は最も長く教団に仕えてきた経験と年輪があるジーロットが次期マスターになるべきだと思います。]<br/>その条件を満たしている人は女神ライマ派にいた。<br/>他のジーロットが発言権を得て違う意見を述べた。<br/>{np} [年輪と経験がある方もいいでしょうが、最も強いジーロットがマスターになるべきだと思います。マスターが実力で他のジーロットに負けるということはあってはならないのです。]<br/>{np} その条件を満たしている者は、女神ユラテ派にいた。二大派閥がそれぞれ自分の派閥の者を候補として挙げると、これ以上発言者や推薦者はいないかと思われたが、その時ある者が発言権を求めた。<br/>{np} [我々ジーロット教団の長い歴史の中で、後任者が決まっていない状態で前任者が死亡したことが立て続けに二回も起きたのです。この前代未聞の事態を迎え、これまでとは違う方式で教団の首長を選出しようと提案します。]<br/>{np} 周りがざわつき始めた。<br/>発言者は落ち着いた様子で話を続けた。<br/>[我々教団は長い間、消えた女神を探してきましたが、見つけることはできませんでした。そして私は考えました。その原因は我々教団が独断的で無駄なプライドを持っているせいではないかと。]<br/>{np} その発言に対して四方八方から罵声が聞こえてきた。<br/>インクイジターのプレビーが場内を静かにさせると、発言者は話を続けた。<br/>{np} [色々な教団の兄弟たちが仰っていることも間違ってはいません。ですが、彼らの助け、それによって彼らの女神の助けを受けられるのであればそれも悪くないと思います。]<br/>そう言って、これから聞こえてくる自分の発言に対する反論を自ら話し始めた。<br/>{np} [正直、他の女神たちは女神ライマの行方に対する質問に答えてくれませんでした。女神たちが人間の質問に答えない理由は色々と事情があると思いますが、その中では我々が知らない事情もあるでしょう。なので、その質問に対する答えを得られなくても、我々が今まで努力してきたこと自体が意味のあることなのです。<br/>{np} 他のクレリックたちが彼らを守ってくれる女神のもとで満足しているとき、女神の不在に誰よりも心を痛め、苦しんでいたのはまさしく我々です。そのため、今回だけはオラクルマスターの神託に頼ってみるのもいいと思います。もしかしたら、女神も危機に陥った我々教団に進むべき道を教えてくれるかもしれません。]<br/>{np} ジーロットの中の誰かが反論した。<br/>[女神が人間にとって何が最善なのかを知っていたとしても、人間の選択に介入したりしません。それなら、女神は国王が崩御するたびに、王族の中で誰が良き王になれるかを教えてくださったでしょう。<br/>{np} いや、わざわざ王族である必要もない。全ての人類の中で最も良き王になれる者を教えてくださればいいこと。いや、それも違う。女神が王になる人材を育て我々に送ってくだされば済む話だろう。それとも女神の一人が王になってくださるのもいいだろう。<br/>{np} そうすれば、次の王を誰にするのか悩む必要もない。君はジーロットであり、神学を勉強した者としてなぜそれが正しくないことだと分からないのだ？]<br/>{np} [仰るとおりです。ですが、それにもかかわらず、約200年前イネル1世は神託によって指名された初めての国王でした。その前の国王だったオルケ国王が初めて女神の介入により退位した後に起こったことです。このように、例外的な状況と必要な場合もあるのです。<br/>{np} 私たちの神学と私たちの信仰の対象である女神たちは人間の意志を重視します。頭が固い方たちでもないので大丈夫ではないでしょうか。なので聞いてみましょう。神託に頼ってみましょう。答えを得られなかったら、再び振り出しに戻るだけでしょう。<br/>{np} 少し時間がかかるだけで、損をすることはありません。もし、女神がしきたりを破って神聖なる介入を行うことになってもジーロット教団の中にそれを反対する者はいないでしょう。]<br/>{np} インクイジター即ち異端審判官を務めているプレビーが場内を見渡した。<br/>誰も反対する者はいなかった。<br/>その時、一人が発言権を求めた。<br/>{np} 正式なジーロットになったばかりの、それも成人して間もない女性が発言権を求めていたのだ。<br/>エリザ・タール。今回亡くなったジーロットマスターを母に、そしてその前に亡くなったマスターを父とする彼女が発言権を得てこう言った。<br/>{np} [神託を受けようとする意見に賛成します。ですが、私は一つ要請したいことがあります。その神託の質問の対象を広範囲である誰かではなく、私エリザ・タールが次のマスターにふさわしいかを聞くのです。<br/>{np} 他の方たちが推薦した経験と年輪、または修練と強さには及ばない若い女の子かもしれませんが、それでも、私の親でもありこの教団のマスターだった両親が夢見た教団の平和という<br/>{np} 内部の目標と消えた女神を探すという教団の真の目的を同時に成し遂げるという私の願いが、果たして実現できるかを聞きたいのです。<br/>{np} もし私がそのような神託を受けるのであれば、二つの異なる考えを持っている方たちの両方の血を受け継いだ私が、公平に前者の目標と後者の目的を達成させると誓います。<br/>{np} 皆さんが神託を受けることに同意し、その質問の内容を私が申し上げた通りにし、女神の祝福が私にあり、その神託が私を名指すのであれば必ず成し遂げてみせます。]<br/>{np} 人々はざわつき始めた。<br/>ざわつきはしばらく場内で続いたが、何人かが順番に壇上へ行き、進行役であるインクイジターのプレビーの耳に何かをささやいた。<br/>そうして、様々な集団を代表する人たちの意見を聞いたインクイジターのプレビーが次のように言った。<br/>{np} [オラクルマスターを通して女神の神託を要請するという意見に皆が同意しました。そして、その内容もエリザ・タールの主張通りに行います。反対するジーロットがいるのであれば、今のうちに申し立ててください。]<br/>少しの時間が経ち、他の意見がなかったので彼は話を続けた。<br/>{np} [いいでしょう。それでは、神託を受けることにします。ですが、エリザ・タールは、もしも神託が拒否されたり神託を受けたとしても、その内容が彼女を認めるものでなければ、候補の権利を独占したことに対する責任を取らなければならないという意見がジーロット教団員から出たこともこの場で伝えます。<br/>{np} これでとりあえず、今回の総会はここまでにし、神託の手順を終えた後に再開することにします。]<br/>それから3日後、教団はもちろん、全てのクレリックと神学界を驚かす神託がオラクルマスターを通して伝えられたのだ。<br/><br/>{np} その結果、エリザ・タールがジーロット教団の首長であり、次期ジーロットマスターに就いた。<br/>たとえ、この若い女性のこれからがマスターの栄光ではなく、過酷な道が待ち受けているとしても。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ジーロットマスターのエリザ・タールに関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

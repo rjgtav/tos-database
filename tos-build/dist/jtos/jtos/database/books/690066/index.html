@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ライマとジェスティに関する物語。右クリックで読むことができます。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>ライマの千年伝第3巻 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690066" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690066" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690066" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690066" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>ライマの千年伝第3巻</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_04black.png" />
+            <h3>Content</h3>
+            <p>　ジェスティはある巨大な墓の入口が見下ろせるところに立っていた。いや、正確には宙に浮いていた。誰かが見上げても彼女の姿は人間には見えない。<br/>この任務を任されてから初めて味わった挫折だった。<br/>予知の権能を持つ女神を捕まえるのは容易いことではないと分かっていた。先を見通す力を持っているライマの先を行くのは無理なので、たとえ未来が分かっていたとしても避けられない行き止まりに追い込むために計画を練った。そしてその計画を秘密裏に進めながらライマの後ろを追いかけていたと思った。{np}　しかし、状況はジェスティの予想とは違う方向に進んだ。<br/>「人間、人間を利用するなんて…あんなくだらない連中を使おうとするなんて！」{np} ジェスティは再び込み上げてくる怒りを抑えながらこれからどう出るべきかを考えた。<br/>まさか自分の力を分けて啓示の形にして残し、それを人間に渡して守らせるとは予想だにしなかった。<br/>女神が人間を頼るとは…。<br/>ジェスティは十分な時間さえあればすべての未来と可能性を把握できるライマが勝利のために、その偉大な権能を捨てて人間ごときに頼った事実を未だに信じられなかったのだ。{np}　ジェスティはライマが勝利のための必須条件に人間が含まれるという核心を予知したことを知らなかったため、彼女としては当然の考えで、また呆れて開いた口が塞がらないほどだった。<br/>実は誰も明確に規定しなかったが、ライマの行動は試合で反則を犯したのと同じ行為だった。<br/>ところが、ジェスティをもっと不愉快にさせるのはそんな行為を反則だと明示した規定がないということだった。{np}　ジェスティの立場からすると、人間の王朝が新しく建つだろうが、その王朝の開国の祖が誰であろうが別にどうでもよかった。その開国の祖というジャカリエルがライマと接触したと知った時も大したことないと思った。<br/>ライマではなくても他の女神も彼女たちを信仰の対象としている人間の聖職者の祈りに応えたり、自ら彼らに現身したりしたのだ。ジェスティはそれをくだらない行為だと思ったが、それ自体は珍しいことではなかったためライマがジャカリエルという人間と会ったことを大して気にしなかったのだ。{np}　自分を避けて逃げていたライマがジャカリエルに会うほど切迫した理由より、普段人間のことをくだらないと思った先入観の方が大きく働いた結果とも言えるだろう。<br/>そのため、ジェスティが気づいた時には、すでにジャカリエルは人間の儚い寿命が尽き、彼が生前作った墓に入った後だった。そしてライマが自分の権能を分けて作った啓示もまたいわゆる王陵というところに埋もれてしまったのだ。<br/>ジェスティがそれを知り王陵に入ろうとした時、彼女はさらに困惑した。王陵はジェスティのような魔王も手に負えないほどの防備システムを備えていたのだ。{np}　ジャカリエルは国王の権力を総動員し、すべての資源を調達して魔法を動員した。また、聖職者たちを動かして女神の神聖な力を利用して王陵を守る設備を建設した。<br/>長い年月が経てば王陵の設備が劣化して弱まるだろうが、今はここを突破できる方法がないということに彼女は苛立ちを覚えた。<br/>不本意ながらジェスティはライマに一本取られたと思った。なにより嫌なのはライマが人間に頼るのを今回限りにしないことだった。<br/>彼女は他の人間を見つけてはまた同じことをするだろう。それを思うとジェスティはこの上なく腹立たしくなった。{np}　ジェスティはライマが多くの人間を利用する方法を見つけてそれを使うようになったら自分一人では追跡するのは難しくなるという現実を認めざるを得なかった。<br/>しかし、そうはいっても今の任務を続けるしかなかった。<br/>ジェスティは手下の魔将たちを呼び寄せた。それに加えてギルティネが許した権限を利用し、カルタスとヴァイガの手下たちも呼び寄せた。{np}　ライマが人間を利用するのであれば彼女は手下たちの魔族を利用すればいいのだ。人間ごときの力が魔族の力には敵わないと見せつけてやるという魂胆もあった。<br/>一番早く現れた魔将はレキシファーだった。<br/>ジェスティは呼び寄せた9人の魔将の中からこの王陵の設備を解体して啓示を手に入れてくれる者としてレキシファーが最も適していると思った。<br/>必要であれば魔将をもっと呼び寄せることもできるが、とりあえずは9人から始めるつもりだった。{np}　ジェスティはレキシファーにジャカリエル王陵から啓示を奪取する任務を命じ、呼び寄せに応じた他の魔将たちを率いて姿を消した。<br/>命じたジェスティとその命令を受けたレキシファーはその時、これによってレキシファーがこの王陵の峡谷に千年もとどまるようになるとは夢にも思わなかった。<br/>ライマだけがその千年の任務の終わりを予知していたのだ。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ライマとジェスティに関する物語。右クリックで読むことができます。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

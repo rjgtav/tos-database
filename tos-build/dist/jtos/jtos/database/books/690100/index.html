@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="バレットマーカーマスターのフリント・ウィンターウッドに関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>冬の火打石 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690100" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690100" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690100" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690100" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>冬の火打石</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*冬の火打石<br/>{np} 古い歴史を誇る邸宅はその年月にふさわしい重い雰囲気を醸し出していた。<br/>ここが常にこうだったわけではない。<br/>ほんの数週間前の大邸宅は威厳はあっても、決して暗い雰囲気ではなかった。<br/>{np} しかし、最近起きたあることは一族のある者にとっては悩みの種となり、一族の会議が開かれる状況になるとある一人の者だけではなく一族全員を悩ませることとなった。<br/>その会議が開かれる場所に向かう二人の男性と一人の女性が廊下を歩いていた。<br/>{np} この三人の中で最も右側を歩いていたバイドータス・ウィンタースプーンが中央を歩いていた男に話しかけた。<br/>[兄上、理由はともあれただ謝ってください。余計なことは話さないでくださいよ。]<br/>{np} そして女性が言った。<br/>[フリント兄上は何も悪いことはしていません。なのにどうして謝らなければならないのです？バイドータス兄上は、本当に頭が固いわ。]<br/>[それはお前もだろう、ルシエン。そうでもしないとフリント兄上は罰を受けることになるんだぞ。]<br/>[フリント兄上は何もしてないのに、どうして…。]<br/>{np} [僕もフリント兄上が悪いとは思わない。だけど、そんな単純なことだったら長老たちが一族を全員集めて会議までは開かないだろう？]<br/>[何でもないことでそこまでするなんて、長老たちも皆頭が固いですわ。フリント兄上が家主になったら我が一族を変えるのですよ。]<br/>{np} [兄上が家主になるためには、今日の会議を無事に終わらせなければならない。]<br/>しかし、フリントは彼らの話を聞いても何も言わなかった。<br/>言いたいことがないわけではなく、彼自身もどうするか考えをまとめられていなかったからだ。<br/>{np} そんなフリントのことを気にせず、ルシエンとバイドータスが話を続けているうちに三人は会議が開かれる部屋の扉の前に着いた。<br/>扉を開く前にバイドータスはもう一度同じことをフリントに強調し、扉を開けた。<br/>{np} 中に入ると数十人の男女が座って彼らを待っていた。<br/>法廷の罪人が座る椅子が用意され、それを囲むように人たちが座っていたのだ。<br/>{np} バイドータスとルシエンもその中で空いている席を探し、座った。<br/>そして二人が連れてきたフリント・ウィンタースプーンが無言で自分の席に座った。<br/>{np} ある意味、今日は彼のために皆集まり、その場が法廷の罪人席のようであっても今日の主人公は彼だった。<br/>しかし、その主人公がヒーローになるか悪人になるかは集まった人たちの決定次第だった。<br/>それもあって、彼は今裁判にかけられた罪人の立場というより、観客の評価を待っている俳優になった気分だった。<br/>{np} あと1席しか空きはなかった。<br/>その席が埋まるとここにはのべ33人がいることになる。<br/>罪人格の彼を除いて、今31人の者が彼を凝視しながら座っていた。<br/>{np} 空いている上座の右に座っている老人が口を開いた。<br/>[これで、現在我がウィンタースプーン家の通過儀礼を完遂した全ての一族が一人を除いてこの場に集まった。ここに参加した全ての一族の最年長者として、家主のいない今、私が代わりに第817回一族会議の開会を宣言する。]<br/>{np} 老人はそれから少し間を置いてから話を続けた。<br/>[コハス・ウィンタースプーンは予め求めた発言権を利用し、発言せよ。]<br/>右に座っていた一人の中年男性が立ち上がり挨拶をした後にこう言った。<br/>{np} [本来この場は、今まで不在だった家主が新しく選出される喜びに満ちる会議になる予定でした。ですが不幸にも、その家主の座に就くはずの一族の一人が、一族と錬金術師全体の掟を破ったという疑いを受け、それを調査するための場を兼ねることになりました。<br/>{np} 長年王国で一番の名家であり、錬金術の宗主として崇められていたウィンタースプーン家の顔に泥を塗ったと言っても過言ではありません。]<br/>{np} コハスはまた間を置いてから話を続けた。<br/>[その一、全てのアルケミストの研究と結果は全ての女神の摂理を逆らってはいけない。<br/>その二、全てのアルケミストの研究と結果は、善と女神にとって脅威となってはいけない。<br/>{np} その三、全てのアルケミストは女神と人間を材料として使ってはいけない。<br/>全てのアルケミストはこれらを守り、他の人たちを守るよう努力する。<br/>一族の者であれば皆が知っている、死ぬまで守らなければならない掟です。<br/>{np} しかし、フリント・ウィンタースプーンはこの掟を破ったのです。彼は錬金術を利用し、強力な武器を作ろうとしています。我が一族が持つ技術と力で武器を作ったらこの世は大変なことになるでしょう。<br/>{np} その武器はこの世に混乱をもたらすことになるでしょう。私は、このような試みと研究は当然中断するべきだと思います。ウィンタースプーン家の歴史で、錬金術を直接的に利用して武器を作った人は一人もいません。<br/>{np} いや、誰一人そんなことをしようとも思いませんでした。ですが、今現に次期家主として言われていた者が、錬金術を利用して武器を作ろうとしています。それは絶対許せません。]<br/>発言が終わると、一人の青年が手を上げ、発言権を求めた。<br/>先ほどの老人が目で合図し、許可すると立ち上がって発言した。<br/>{np} バイドータス・ウィンタースプーンだった。<br/>[先ほどの話は事実と異なります。ケミニスソード、ヴァイン装備、リエナ装備等は全て我が一族が作って、またその技術を提供して作ったものです。この装備で功を奏し、多くの命を助けた人も少なくはありません。<br/>{np} このような事例を考えると、単純に武器を作ることに錬金術が使われて問題だというのは、この世の全ての鍛冶屋と武器の製作者が命の尊さが分からない、破壊狂や殺人魔だと主張をするのと同じです。]<br/>{np} 何人かがバイドータスの話に頷いたが、コハスも引かなかった。<br/>[それを私が知らないとでも？だが、君は物事の断片しか見ていないようだな。火薬が発明されてどれくらいになる？<br/>{np} ソシエル2世時代、我が一族が火薬を発明してから長い年月が経ったが、その威力にもかかわらず火薬兵器は武器の主流ではない。むしろ、王国軍兵士たちのほとんどが未だに槍や刀剣を使用している。この理由は何だと思う？]<br/>{np} バイドータスがすぐさま反論を唱えようとしたが、先に手を挙げた人がいた。<br/>ルシエン・ウィンタースプーンだった。<br/>議長役の老人の無言の許可が下りると、彼女は話し始めた。<br/>{np} [それにもかかわらず、王国軍にはサッパーがおり、キャノニアもあります。王国に火薬兵器が主流になれなかった理由はソシエル2世が残した遺言のせいでもありますが、魔法と魔法兵器及び神聖力が基となったアイテムが火薬兵器に劣らない威力を持っているからです。<br/>{np} しかし、それは火薬兵器が弱いという意味ではありません。火薬兵器やその他の兵器はただの兵器に過ぎません。我が一族が冷兵器に錬金術を使ったのであれば火薬兵器にもそれを使えない理由はありません。<br/>{np} 我が一族が発明した火薬も私たちによって、発展する時が訪れたのです、父上。]<br/>ルシエン・ウィンタースプーンは最終的にはお願いするような口調となった。<br/>{np} しかし、コハスの言葉は依然として厳格だった。<br/>[私の育て方が悪かったようだ。お前が言ったソシエル2世陛下の遺言と数世紀にわたって多くの家主がそのような研究に力を入れなかったのが好奇心や才能がないからと思っているのか？それはそこに潜む危険性に気づいた賢さと慎重さがあった行動だったのだ。]<br/>{np} ルシエンに続いてバイドータス・ウィンタースプーンが再び発言権を求めようとした時に、突然扉が開き一人が入ってきた。<br/>一族の会議が開かれる度、その人のために席を空けていたのだが、実際に参加することはめったになかった。<br/>{np} めったに会えない人にもかからわず、その場にいる全員がその人を知っていた。<br/>数十年も前に会ったのに皆その人だと気づいた。<br/>長い年月が経っても顔がまったく変わらなかったから。<br/>{np} その人が室内に入ると、全員が席から立ち、一族の最年長者であるその人に会釈した。<br/>入ってきた人は美しい女性だったのだが、歩きながらこう言った。<br/>{np} [これまで多くの一族の会議に出ましたが、このように序盤から熱い議論が繰り広げられる会議は久しぶりです。]<br/>会議の議長役だった老人が一族を代表し挨拶した。<br/>[お久しぶりです、大叔母様。]<br/>ルシード・ウィンタースプーンは軽く会釈し、その場から姿を消した。<br/>{np} そして、一瞬で空いていた上座の席に移動した。<br/>[月日が経つにつれ、おばあ様、曽祖母様などと呼ばれたくない呼び名はやめてこれからはずっと大叔母と呼ぶようにとは言ったものの、ケナズのような老人にそう呼ばれると変な気分になりますね。]<br/>{np} ルシード・ウィンタースプーンが着席すると、一族も皆席に着いた。<br/>議長役のケナズ・ウィンタースプーンが何かを言おうとしたが、ルシード・ウィンタースプーンがそれを制した。<br/>[扉からここまで移動する間に、ここであったことについては時間を巻き戻して全て拝見しました。なので、説明はいりません。]<br/>{np} そう言うと、ルシード・ウィンタースプーンはまるで罪人のように席に座っているフリント・ウィンタースプーンを見つめこう言った。<br/>[せっかく熱い議論が繰り広げられているのに、水を差すようなことを言っていいかどうか分かりませんが、<br/>{np} 時にはお互い競い合って違う意見を出し、また時には対立する意見のせいで深い溝ができる前にそれを止めなければなりません。私が思うに今がその時のようです。]<br/>{np} ルシード・ウィンタースプーンはしばらく間を置いてから一族の一人一人を見渡した。数百年前に死んだ兄弟たちの子孫たちを見渡した後、また口を開いた。<br/>{np} [あなたたちがお互いの意見を交換し、皆の知恵を集めて結論を見出すところを見守りたいという気持ちもありますが、不幸にも私たちには時間がありません。また、あなたたちにその理由を話すこともできません。]<br/>{np} 議長役のケナズ・ウィンタースプーンが言った。<br/>[時間の観察者であり一族の最年長者である大叔母様がそのように仰るのであれば我々のことはお気になさらず。大叔母様が我が一族とそれに関することはもちろん、世間のことに関与していないことはよく知っています。<br/>{np} それでも時々介入するときがあってそれにもそれなりの理由があり、その時は明かせなかった理由も後で納得できたのです。我々は大叔母様の助言を聞く準備ができており、我々の全ての能力を集めて出した結論になかった知恵を与えてくれると信じています。<br/>{np} 大叔母様がこの哀れな子孫のために助言をしてくださると言っているのに我々がそれを断る理由はありません。]<br/>[私の助言がそこまでいい知恵だとは思いません。そして、時には結論よりその結論に到達する過程が重要な場合も多いです。<br/>{np} ですが残念ながら時間がありません。なので私がこの会議に介入したことを許してください。]<br/>[どうぞ、仰ってください。]<br/>ケナズが返事をしたが、ルシード・ウィンタースプーンの質問はフリント・ウィンタースプーンに向けられた。<br/>{np} [まだ誰もあなたの意見を聞いていないようですね。一族の他の者たちの意見と彼らの理解も重要ですが、まずはあなたの意見から聞いてみましょう。あなたは何を考えているのです？錬金術を利用し、威力的な銃弾を作って広めようとしていますか？]<br/>{np} フリント・ウィンタースプーンは話でしか聞いたことのなかった一族の伝説的な人物が目の前に現れた衝撃から抜け出せず、その質問に答えられなかった。<br/>しかし、ルシード・ウィンタースプーンが静かに自分の返事を待っていると気づき、口を開いた。<br/>{np} いつかルシード・ウィンタースプーンに会ったら言いたいと思っていた挨拶や質問などが頭の中から全て消えてしまい、辛うじてこう言った。<br/>[そのように簡単にまとめられる内容ではないのですが、確かにその通りです、大叔母様。]<br/>{np} ルシード・ウィンタースプーンは辺りを見渡すと、こう言った。<br/>[何人かを除いてはここに集まった一族のほとんどは、その考えに反対しているようです。私の個人的な意見としては、200年もの間まったく使わなかった錬金術に再び手を出したいと思うほどの発想だったのですが…。]<br/>{np} コハス・ウィンタースプーンは無意識のうちに少し激高した声で言った。<br/>[大叔母様！]<br/>{np} だが、ルシード・ウィンタースプーンがその後に続く言葉を手で制した。<br/>[興奮なさらないでください。今も昔も私は一族のことにとやかく言いたくはありません。それに、興味深いという理由でやってみたいという年頃でもないですしね。]<br/>{np} 引き続きルシード・ウィンタースプーンが話を続けた。<br/>[この場にいるほとんどの一族たちの意見を聞かなくても分かります。もし、他の意見がある人がいれば、言ってください。さて、フリントあなたにお聞きします。あなたが望むことは一族の力が必要なことですか？]<br/>{np} フリント・ウィンタースプーンの表情が変わった。<br/>そのようなことを考えたことがなかったからだ。<br/>一族と共に座っていたルシエンとバイドータスもこの質問に驚いたのか、お互い視線を交わし、それからフリント・ウィンタースプーンの返事を待った。<br/>{np} 他の者たちもフリントの返事を待った。<br/>フリント・ウィンタースプーンは悩んだ。しかし、返事をするまでそう長くはかからなかった。そして答えははっきりしていた。<br/>そして答えた。<br/>{np} [もちろん違います。ウィンタースプーン家が持っている力を私のために集中して使う必要はありません。ですが、私が持っている能力を一族のために使えなくなります。]<br/>{np} [それなら一族を説得する必要はないのでは？あなたが家主の座に興味がなければ独立して、自分のやりたいことをやればいいのです。それにあなたの才能が素晴らしいものだとしても、それがないからといって、我が一族が滅びることはないでしょう。<br/>{np} 長年、一族に貢献していない私を見ればよく分かると思いますが。]<br/>コハス・ウィンタースプーンを含め一族の何人かは反対したかったが、<br/>{np} ルシード・ウィンタースプーンのような錬金術の巨匠がいなくても問題のなかった一族が、フリントがいなくなると問題になるとは主張もできるず、何も言えずにいた。<br/>{np} しかし、フリントは今まで自分自身が一族から独立することを考えたことがなく、少し衝撃を受けたが、最終的にはそれもいい方法だと気づいたようだった。<br/>ルシード・ウィンタースプーンがその変化を見ながら話を続けた。<br/>{np} [フリントが一族から出るのであれば、彼が何をしようと一族は口出ししてはいけません。ですが、あなたがそのような道を選ぶことができるのは結局、我が一族の教えがあってからこそという事実を忘れてはいけません。<br/>{np} そしてこれからあなたはウィンタースプーン家を名乗ってはいけません。ですが、変な名前を使っても困りますし、我が一族と完全に縁を切ることもできないのでこれからはウィンターウッドという名を使ってください。<br/>{np} その名前で一族から学んだことを活かし、あなたがやりたいことを必ず成し遂げてください。]<br/>{np} コハスが言った。<br/>[ですが、錬金術の掟は彼が一族から出たとしても、無視できるものではありません。それは、すでに我が一族の掟だけではなく、王国の全ての錬金術師、いや、この世の全ての錬金術師の鉄則なのです。]<br/>{np} ルシード・ウィンタースプーンが言った。<br/>[何を心配しているのかはよく分かります。ですが、フリント・ウィンターウッドは自分が学んだことをむやみに使用したり、誰にでも教える人ではありません。それぐらいはあなたも分かっているでしょう？それに、このことが我が一族だけでなく、この世においてもいいことになると確信しています。<br/>{np} 私がクロノマンサーということをお忘れですか？それに錬金術師の掟のことですが、それを定めた者の一人がこの私です。そのような脅しは私に通用するとでも？]<br/>{np} 久しぶりに会議に参加したルシード・ウィンタースプーンを一族に留めたかったケナズ・ウィンタースプーンが言った。<br/>[でしたら、次の家主になる者を探してくださいませんか。次期家主とも言われた者が大叔母様の一言で一族から出てしまいました。それぐらいはしていただかないと困ります。]<br/>{np} 次の家主をルシード・ウィンタースプーンが決める人であれば、そして、当分の間ルシード・ウィンタースプーンの助けを得られるのであれば、これからの家門は更に安定するであろうと考えた。<br/>ルシード・ウィンタースプーンの助言を聞くために哀願した歴代の家主たちが少なくなかったと考えると、一族にとっては逃したくない機会だった。<br/>{np} [次の世代から人を選べばいいのです。バイドータスなら十分でしょう。一族の元老たちが若い家主を補佐し、力を合わせるのです。]<br/>コパートがケパーズの目くばせを無視し、今回も反対意見を出した。<br/>ケパーズは余計なことをするなと思ったが何もできなかった。<br/>{np} [バイドータスの錬金術の実力は問題ありませんが、彼はフリントのような強さがありません。要するに、学者に向いているのです。ご存知の通り、家主であれば戦闘にもある程度の実力を持っている必要があります。]<br/>{np} ケパーズはコパートの言葉を聞いてコパートがバイドータスのことを不満に思うのではなく、家主を支える名目としてルシード・ウィンタースプーンを留めさせようとするのだと気づいた。<br/>これに自分も力添えするために発言しようとした瞬間、ルシード・ウィンタースプーンが先に言った。<br/>{np} [まだ若いですし、皆が力と知恵を貸してあげてください。むしろ、その年齢であれほどの錬金術の能力を持っていることを高く評価するべきです。<br/>粗探しは止めて評価すべきところを評価してあげましょう。<br/>{np} それでも不安であれば、訓練させればいいのです。ああ、こうしましょう。最近、ソードマンマスターがその座を降り、クラペダに帰りました。バイドータスをクラペダに行かせ、彼の指導を受けさせましょう。]<br/>ケナズが言った。<br/>{np} [ソードマンの戦闘技術を習うことも悪くはありませんが、この際大叔母様がウィザードの戦闘を教えた方がより効率がいいのではないでしょうか？]<br/>{np} [私がバイドータスに魔法戦闘を指導するとなると、ウィザード社会全体が黙ってはいないでしょう。自分の一族だけひいきすると騒ぎ出すはず。ですが、私が主張したことでもあるので、ある程度の責任は取りましょう。バイドータスを南部に行かせなさい。<br/>{np} 大森林地帯と様々な地域に行って私自ら各地方の風土と特産物の材料について教えます。私が錬金術を直接指導するのは100年も前のこと。私としては十分譲ったと思います。そうなるとクラペダに着くのが少し遅くなりますが、戦闘訓練はそこまで急ぎではないと思うので大丈夫でしょう。]<br/>{np} ここでルシード・ウィンタースプーンは少し目をつぶり、話を止めた。<br/>「いや、むしろ我が一族が世界を救うことに少しでも足を踏み入れるのであれば、熱を入れすぎてもだめでしょうね。タイミングというのもありますし…。<br/>{np} その時に備えて上手く調整しつつ…。まあ、わざわざバイドータスである必要もないですが、彼じゃいけない理由もないですし、女神の摂理に逆らえない範囲であれば大丈夫でしょう…。」<br/>彼女はそんなことを考えたがすぐさまそれを頭の中から消した。<br/>{np} もちろん、それを口にすることはできなかった。<br/>ルシード・ウィンタースプーンはフリントを見つめながらこう言った。<br/>[家主の荷は下りましたが、あなたには成し遂げなければならないことがあるはずです。<br/>{np} 女神があなたを祝福し、あなたを通してその栄光が世の中を照らすことを祈ります。それにふさわしい人生を歩んでください。また、一族の名を一部しか持たなくても、一族の名声を背負った者としてこれからも生きるのです。]<br/>{np} それを聞いたフリントが答えた。<br/>[大叔母様にそう言われるとは…。変な気持ちになります。]<br/>ルシード・ウィンタースプーンがそれを聞いて苦笑いしながら言った。<br/>[確かに。まあ、どうしようもないことです。私もあなたもそういう人なのです。]<br/>{np} その言葉を最後に、ルシード・ウィンタースプーンは特に挨拶もなく、姿を消した。<br/>残った一族にとっては珍しいことでもなかったので、会釈しながら彼女を見送った。<br/>{np} 時間を通して人より未来を見ることができるルシード・ウィンタースプーンほどではなくても、新しい時代が始まるという事実はその場にいた皆が薄々度勘付いていた。<br/>しかし、その時代がどれほど過酷なものかは、その場にいた誰も知る由もなかった。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>バレットマーカーマスターのフリント・ウィンターウッドに関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

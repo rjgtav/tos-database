@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="メルキエル国王時代に書かれたタオカカの冒険の物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>タオカカの冒険 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690095" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690095" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690095" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690095" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>タオカカの冒険</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p> 下記の口承文学は国王メルキエル時期に書かれたものと多くの学者が推測しており、900年にわたり、王国で言い伝えられていた物語である。 <br/>タオカカの素っ頓狂な冒険談に関する物語はいくつかの版本が存在するが、私はこれが最も原作に近い物語だと思う。<br/>{np}  <br/> - [セージマスター] ルパスケーヘル<br/>{np} *タオカカTaokakaの冒険<br/>{np} ある日、人気のない道を歩いていたタオカカは魔族に遭遇しました。<br/>タオカカは、いつどんな時でも親切に挨拶をする愉快な少年だったので、彼に話しかけました。<br/>それは、タオカカの周りには常に魔族や危険があったからです。<br/>{np} [やあ。何をしているの？]<br/>[運命の糸車を回している。]<br/>魔族は適当に答えた。<br/>その魔族前に糸車が置いてあった。<br/>{np} [糸車？何でその糸車を回そうとしているの？]<br/>[この糸車は運命の糸車だ。この糸車を回すと相手のものを持ってきて、相手にないものを渡す。そうやって交換した全てのものはこの糸車についている。そして、糸車がまた回るとき、その中の一つが所有者に与えられる。]<br/>{np} [それはいいことだね。]<br/>[必ずしもそうではない。出会った相手が持っているもの中で最も貴重なものと失われたものの中で最も貴重なものを交換するけど、実際にそれが持ち主に返ってくる時はその中のどれが与えられるかは分からない。<br/>{np} それに、この糸車は一度所有すると必ず7回は回さなければならない掟がある。そして、7回目を回した時に出てきたものは必ず受け取らないといけないんだ。]<br/>[今まで何回回したの？]<br/>[6回。]<br/>{np} [そしたらもう一回回すの？]<br/>[お前がこれを受け取ると言うなら。]<br/>[僕が受け取らないと言うなら？]<br/>[そうするとお前を殺すしかないな。]<br/>[それなら受け取るしかないね。]<br/>{np} [そう。お前に会う前に、他の奴は断ったから殺した。だから、お前も死にたくなければこの魔法の糸車を受け取るしかない。また俺はこの糸車から出てくる何かをもらってここを去る。<br/>{np} 俺は今まで慎重に相手を選んで糸車を回してきたから、この中にはいい物ばかりが入っている。だから、これを回せばお前から貴重なものを一つ持っていき、糸車からは他の人からもらった物の中から二つが出てきて一つはお前が、もう一つは俺が受け取る。だからこれはお前にとっても悪い話ではない。<br/>{np} ちなみに最後の7回目じゃないと糸車から物が二つ出てくることはないぞ。いつも一つを持っていき、一つをくれる。]<br/>[分かった。糸車を回して僕にちょうだい。]<br/>魔族は解放感と共に、長い時間をかけて丹念にやってきたことが実ったやりがいを同時に感じながら、最後の糸車を回しました。<br/>{np} 魔族もタオカカも何かがタオカカから移って、糸車の中に入ったと感づきましたが、それが何かは分かりませんでした。<br/>魔族がそれを見て言いました。<br/>{np} [何か抽象的な概念や気持ちのようなものが移ったようだ。見えなかったからな。知能や勇気みたいなものだったら、お前は急にバカになるか理由もなく恐怖を感じたはずだが、今は分からないな。]<br/>{np} それからまた何かが糸車から出てきて、魔族の中に入っていきました。<br/>それもまた見えませんでしたが、今回はそれが何なのかすぐに分かりました。<br/>魔族の姿が先ほどより恐ろしい姿に変わったからです。<br/>誰が見ても、この魔族が強い力を得たのだと分かりました。<br/>{np} 魔族は満足げに笑いながらこう言いました。<br/>[すさまじい力が俺に入ってきた。この力なら魔界で今すぐにでも魔君主の地位を得られるだろう。だけどもし無限なる生命力が入ってきたら、魔界での戦いと地位を上げるのにもっと役に立ったかもしれないが、これくらいで満足してやろう。<br/>{np} 少年よ、せいぜい頑張るんだな。お前が俺相手に糸車を回す前に俺は行くぜ。ハハハ。]<br/>その言葉と共に、魔族は姿を消した。<br/>{np} タオカカは動揺せず、糸車を持って歩きながらこう言った。<br/>[どうせまた会うことになるだろうけどね…。]<br/>{np} 糸車を持って歩いていたタオカカはどこからか聞こえてくる音楽に導かれ、森の空き地で開かれていた仮面舞踏会場に辿り着きました。<br/>タオカカはそこで糸車を回しました。そうすると音楽が糸車の中に入ってきました。<br/>{np} 音楽がその場にある最もいい物だったからです。<br/>その代わり、糸車はその場になかった真実を与えたため、人々の仮面が全て外され、お互いの本当の姿を見た人々は興ざめし、帰ってしまいました。<br/>{np} タオカカはその場を離れ、また歩き始めました。<br/> するとタオカカは道端に落ちた、おもちゃの剣を見つけました。<br/>見た目は長剣でしたが、大きさは手のひらほどのおもちゃの剣でした。<br/>タオカカは、そのおもちゃの剣の前で糸車を回しました。<br/>すると、おもちゃの剣が持っていた価値の中で最もいいものである面白さが出てきました。<br/>{np} そして、おもちゃにはないもので最も貴重なものは、遊んでくれる持ち主であるため糸車はおもちゃの剣に持ち主を与え、そしておもちゃの剣はタオカカの物になりました。<br/>{np} 糸車とおもちゃの剣をつけたタオカカが道を歩いて出会った人は、道端で退屈そうに土を掘っている人でした。<br/>タオカカは彼に近づき、その前で糸車を回しました。<br/>{np} すると糸車はその労働者におもちゃの剣から出てきた面白さを与え、労働者は退屈だった仕事が急に面白くなりました。<br/>そして、労働者が持っていた最も貴重なものは賃金だったので、一日の賃金が糸車の中に入りました。<br/>{np} 楽しくなった労働者は今日の賃金をもらえないと分かっていましたが、明日も楽しく仕事をして明日の分をもらえばいいと思いました。<br/>{np} そのうえ、この場にはいませんでしたが、彼の賃金を支払わなければならない雇い主も自分がいつどうやって賃金を与えたか覚えていませんでした。しかし、今の状況を少しもおかしいと思いませんでした。<br/>{np} タオカカはその後も色んな場所を歩き回りながら多くの人に出会いましたが、糸車を回したいと思えなくてその場を過ぎました。<br/>すると、捨てられた酒瓶を拾ったタオカカはその前で糸車を回しました。<br/>{np} すると酒瓶が持っている酔いと二日酔いが糸車の中に入ってきました。<br/>そして、酒瓶には音楽が与えられました。<br/>飲むと音楽が流れるが、酔わないお酒を手に入れたタオカカはまた歩き始めました。<br/>{np} 時が経ち、タオカカが足を止めた場所は、とある騎士の死体の前でした。<br/>この人は死ぬ前にかなり抵抗したようです。<br/>その証拠に、周りにはその死体の物と思える戦いの痕跡がありました。<br/>{np} タオカカはその騎士の死体の前で糸車を回しました。<br/>すると死体が持っている最も強力なものである死が糸車の中に入ってきました。<br/>すると糸車が持っていた、そして魔族が消える前に言及していた無限なる生命力がその騎士の死体の中に入りました。<br/>{np} 死体が生命力を得ると、当たり前のごとく彼は復活しました。<br/>復活した騎士はタオカカと話し、彼にお礼を言いました。<br/>タオカカは騎士と話し、騎士を殺した者が自分に糸車を押し付けた魔族だと分かりました。<br/>{np} そしてまたその魔族が各地でいい物を集めながら相手には悪い物が与えられても気にしなかったせいで、色々な人たちが被害に遭ったということも分かりました。<br/>タオカカは騎士がこのような悪事を繰り返す魔族を追いかける途中、その魔族によって命を落としたということも分かりました。<br/>{np} その魔族を再び追いかけようとする騎士にタオカカは自分も参加したいと言いました。<br/>なぜなら、魔族に騙されて糸車が自分から持って行った何かを取り返したかったからです。<br/>{np} タオカカはそれを取り返すために誰かを対象に糸車を回さなければならないならその対象は必ずあの魔族でなければならないと思いました。<br/>なので、タオカカと騎士は共にあの魔族を追いかけることにしました。<br/>7回目は必ずあの魔族を対象に回すために、タオカカは糸車をもう一度回すことにしました。<br/>{np} タオカカは慎重に考え、おもちゃの剣を選択して再度回しました。<br/>すると、糸車はおもちゃの剣に騎士の死体から出た死を与えました。<br/>{np} そして、おもちゃの剣に与えた持ち主が消え、おもちゃの剣はタオカカの物でもなくなり、もう誰の物でもなくなりました。<br/>強いて言うなら、持ち主の資格をおもちゃの剣から持って行った糸車の物になったと言えます。<br/>{np} ですが、糸車が騎士の死体から死を持って行ったものの、それを出す時に騎士の死だけでなく死そのものを宿したため、今回も単純に剣の持ち主ではなく、「持ち主の権利」という抽象的な概念が移った可能性もありました。<br/>{np} とにかくこのおもちゃの剣にはすでに死が宿っているため、誰しもが触れると死ぬしかありません。<br/>そして、持ち主がいないので誰も扱うことができない恐ろしい魔剣になりました。<br/>しかし、生き返った騎士は無限の生命力を得られたため、おもちゃの剣に宿った死は、騎士を殺すことはできませんでした。<br/>{np} そのため、騎士はおもちゃの剣を所有できる能力を持った、唯一の者になりました。<br/>そうやって騎士が死のおもちゃの剣を持ち、二人は魔族を探す旅を続けました。<br/>そして遂に、タオカカに糸車を押し付けた魔族を見つけました。その魔族が言いました。<br/>{np} [こんな偶然が。こうやってまたお前に会うとは。それに、この騎士は確かに俺が殺したはずなのに、どうやって生き返ったんだ？]<br/>タオカカが言いました。<br/>[それはどうでもいい。]<br/>[どうした、人間の少年よ。]<br/>{np} 魔族に聞かれ、タオカカが答えました。<br/>[僕は糸車を利用して僕から奪ったものを返してもらいたい。正確に言うと、切られたものを再び繋げたい。良くも悪くもそれは僕のだから。]<br/>{np} 魔族はその言葉が気になり、質問しました。<br/>[そうか。糸車がお前から持っていったものは何だ？]<br/>[僕もおばあさんに聞いた話だけど、僕は生まれたころに女神から贈り物をもらったんだ。その贈り物は、幸運と繋がっている不運だと言っていた。]<br/>{np} [幸運と繋がっている不運？]<br/>[そうだ。僕は幸運と繋がっている不運を持っているせいで、いつもお前みたいな魔族や、危険に出くわすけど幸運があるからそれに打ち勝てる。だけど今回は、その片方だけ糸車の中に入ってしまったみたいなんだ。]<br/>{np} それを聞いた騎士はこう言いました。<br/>[どうやら、その時糸車に入ったのが幸運のようでな。そして、切り残された不運は誰かにくっついてしまったようだし。]<br/>{np} タオカカも頷きながら言いました。<br/>[そうみたい。だからお前が糸車を持った僕に会ってしまったんだよ。]<br/>その言葉と同時に、タオカカは糸車を回しました。<br/>魔族は慌ててその場から逃げようとしましたが間に合わず、糸車から出てきた何かが彼の中に入っていきました。<br/>{np}  そうして糸車は回されましたが、糸車の性質をよく知っていた魔族は、まだ機会はあると考えました。<br/>それで持っている力を引き出してタオカカと騎士を倒し、糸車を奪い返そうとしました。<br/>糸車が彼に与えた力を奪ったとしても、彼には元々十分な力があるため、それは難しくないと考えました。<br/>{np} 幸いにも、糸車は彼に与えた力を奪いませんでした。<br/>むしろ、タオカカとまた出会わせた不運が抜けていきました。<br/>{np} ここまでは魔族にとってはよかったのですが、糸車は酒瓶から持ってきた強力な酔いと二日酔いを魔族に与えました。<br/>魔族は意識を失いはしませんでしたが、正常に動くことができませんでした。<br/>{np} 結局、話すこともままならずフラフラしながらタオカカが見ている中、地面に倒れてしまいました。<br/>タオカカはもう糸車を回すことはしませんでした。<br/>なぜなら、彼が受けた祝福の幸運が糸車からまた彼に戻ってきて、魔族から出てきた不運も元々の幸運と繋がりタオカカにまた与えられたからです。<br/>{np} ですが、倒れた魔族は自分が回復する方法は糸車しかないとよく分かっていたので、フラフラする体を何とか動かしてタオカカに近づこうとしました。<br/>タオカカは糸車をゆっくり地面に置いて後ろに下がり、魔族は酔っ払い特有の笑みを浮かべながら満足げに糸車を手に取りました。<br/>{np} そして、嬉しそうな顔で糸車を回しました。<br/>すると糸車は魔族から酔いと二日酔いを持っていき、持ち主の資格を与えました。<br/>{np} これによって魔族は糸車の永遠の持ち主になり、もう二度と糸車を他の人に、いや、どの存在にも渡すことができなくなりました。<br/>魔族は酔いがさめたことは分かりましたが、自分に何が与えられたのかはまだ把握できていませんでした。<br/>{np} その時、騎士がまだ状況が飲み込めない魔族におもちゃの剣を魔族の体に触れさせました。<br/>魔族はまだ状況を把握できていない状態であり、何よりそれが手のひらサイズのおもちゃの剣だったためそれを防いだり避けようとは全く思いませんでした。<br/>{np} ですが、それは死の剣、そこに触れた魔族はその場で死んでしまいました。<br/>そして糸車は持ち主の概念を持っていた存在が死んでしまったため、二度と持ち主が現れることのない物になりました。<br/>{np} 騎士やタオカカが試してみましたが、二度と糸車を回すことも、ましてや掴んだり持ち上げたりできないことを確認しました。<br/>{np} 騎士とタオカカはその場を去りました。<br/>彼らが去ってから間もなく、その場に女神ライマが現れました。<br/>女神ライマは、誰も持てなくなった糸車をいとも簡単に持ち上げました。<br/>{np} そうして、自身の運命を再確認できた女神ライマは本来彼女が創り出した運命の糸車を持って姿を消しました。<br/>そして、これが絶対酔わない歌の酒瓶を持ったタオカカと、何でも殺してしまう剣を持った騎士が登場する話の終わりです。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>メルキエル国王時代に書かれたタオカカの冒険の物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

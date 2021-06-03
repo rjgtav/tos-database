@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ソルコムに関する物語。右クリックで読むことができます。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>ソルコムの星の塔進攻記録3 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690077" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690077" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690077" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690077" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>ソルコムの星の塔進攻記録3</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>湖の水を調べてみたが、成果は何も得られなかった。女神たちが神聖な力を与えた単なる聖水なら解決する方法があるかもしれないが、これはそう簡単なものではなかった。魔法と錬金術、そして当時の神学が総動員されていると推測するだけで、解決方法が見つからなかった。時間をかければ方法が見つかるかもしれない。しかし、今はなかった。{np}部下たちを犠牲にして追加探索で得られた成果と言えば、ある種の聖水盤と呼べる物体が存在し、そこから溢れ出る液体が湖の水に混ざって魔族にだけ悪い影響を与えているということだ。<br/>その水盤装置をすべて破壊すればいつかは湖の水も普通の真水になるだろうが、至るところに設置された施設はシャッフェンスター団員の妨害がなくてもなかなか破壊できない。足首くらいまでだが水の中に設置されているためだった。{np} ソルコムには浮遊する、または飛ぶ能力を持っている部下たちがいたが、シャッフェンスター団員の全員が名射手なのだ。圧倒的な数で攻めない限り、一つの水盤装置に近づく前に矢にやられてしまう。<br/>それに偵察のために湖の上空を飛んでいた飛行型魔族たちは星の塔から発射された大型砲弾の攻撃を受けたのだ。{np}それで次に思いついたのが船を利用した水上攻撃だった。この星宿の湖というところは計り知れない深淵が広がる湖に魔法で塔を建て、その塔に歩いて近づける道もまた魔法で作った。この道は非常に広くて、道ではなく広間で呼んでもいいほどだった。<br/> とにかくこれはすべて魔法が宿った石材で作られ、魔法の力によって深淵の湖の上に浮いていた。広い湖の半分がこのような魔法浮遊石で作られた地域、いや水域で他の地域はただの湖だった。従って、魔法浮遊石がない地域、いや水域の上に船を出して塔を攻撃するという計画だった。{np}しかし、船はすぐ作れるものではなかった。<br/>船を用意するのに時間がかかった。プベタが魔界から船を集め、その船を操縦できる魔族がいても数が足りなくて、結局秘密裏にプリミア・エミネントに接触した。彼は人間社会で相当な資金を貯めていたが、その支援を受けて人間たちの船も購入し、星宿の湖に持ってきた。{np}船に乗ると湖の水に部下たちがやられることはなくなった。星の塔に水軍や水上兵力の気配もなかった。<br/>接近してもしばらくは攻撃がなかった。<br/>しかし、星の塔の全体が見える水上のある場所に到達すると星の塔から投射武器が大量に発射された。<br/>武器に命中されなくても跳ね返る水にやられ、船の破損した箇所から水が入ってきた。<br/>体に触れる恐れがあるため、水を汲み上げることもできなかった。{np}しかし、ソルコムが馬鹿で敵がこのような強力な遠距離投射武器を持っているとは思わなかったから攻撃を仕掛けたわけではない。{np}ソルコムの目的は星の塔が投射武器以外にも湖の水面上の敵を攻撃できる手段を持っているのか確かめることだった。<br/>大きな犠牲を払ったが、投射武器にシャッフェンスター団員の矢の攻撃が加わった以外、他の攻撃手段を持っていないことを確認できた。ソルコムはそれを確実に確認し、後退を命じた。{np}一方、飛行型モンスターを総動員して陸上と水上から同時に接近しても星の塔には到達できないということも明らかになった。しかし、誰でも予想がつくことを直接確認するために船を作って、また部下たちを犠牲にしたわけではない。<br/>彼には次の計画があったのだ。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ソルコムに関する物語。右クリックで読むことができます。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

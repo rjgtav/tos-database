@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="闘技場に関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>闘技場の主1 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690086" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690086" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690086" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690086" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>闘技場の主1</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*闘技場の主1{np} ドスン! という荒々しい音と共に、一人の女性がフリアムの部屋に入ってきた。女性の乱暴な態度から、怒っていることはすぐに見て取れる。<br/>闘技場の管理責任者であるフリアムは、ゆっくり椅子から立ち上がって挨拶をした。<br/>[呼んでくだされば私の方から出向きましたのに。こんなところまで来ていただいて光栄です、マスター。]<br/>入ってきた女性、ムルミロマスターのフェリクシアは、そのかえって鼻につく物言いを受け怒り心頭に発し、両手でテーブルを強く叩きつけながら言い放った。<br/>[誰が勝手に対戦表を変えた！]<br/>[私ですが。ご存じのとおり、闘技場の年間、月間、週間のすべての行事と日程をはじめ、財政と人材管理などの行政業務まで行うのは私の責任であり、権限ではありませんか？]<br/>フェリクシアはフリアムの図々しい返事を受けさらに腹を立てたが、頭に血が上りすぎているうえに体裁上はそのとおりなので、返す言葉が見つからなかった。{np} その逡巡を見て、さらにフリアムが話を続ける。<br/>[少し事務的な受け答えになってしまいましたね。申し訳ございません。ですが、マスターが聞くべき質問はこういうことではありませんか?誰が勝手に変えたのかではなくどうして変えたのか。{np} 対戦表を変えて調整する仕事は私の責任と権限ですが、それが合理的にかつ正しく行われたのかは、マスターにも知る権利がありますゆえ。]<br/>[あ……ああ。言いたかったのはそれだ。どうして当日になっていきなり対戦表を変えた？]<br/>[決して私個人の都合や趣味で変えたわけではありません。すべては闘技場に来る観客の興味を高め、それによって闘技場の利益を上げるため。闘技場の運営を任された責任者が悩んだ末に選択した結論です。{np} あなた方はお客様の前で戦うだけでお金が手に入りますが、闘技場の運営はそうもいきません。私が闘技場の運営に就いてから、フェリクシア様への配当金も増えたはずです。違いますか？]{np} [……それはそうだけど……もう! とにかく私が言いたいのは、どうして私の弟子が……。]<br/>[お弟子さんの順番を変えた理由は、先ほど申し上げましたとおり、試合を盛り上げるためです。お言葉ですが、弟子とはいえお歳もあまり変わらない方たちが、マスターを中心にして集まった群れ……ああ失礼、団体と呼びましょう。{np} 今日順番を入れ替えた相手が、たまたまその団体の一員だったというだけのことでは？正直に申し上げますと、国に認可をもらった公的な組織でもありませんし、観客もその人がムルミロマスターの弟子であれ、他のマスターの関係者であれ、まったく興味ないのです。{np} 対戦順を変えることで、魅力的な戦いを見せられればそれでいいのです。勝ち負けに意味はありません。{np} 次の試合で誰と対戦するのか興味を持たれない者が勝っても、面白くないでしょう? ]{np} [それで、戦う相手は？]<br/>[それは言えません。だからこそ盛り上がるのです。七連勝中の期待の新人が、今日抽選によって決まった謎の闘士と対戦する……と、王都中に宣伝しました。{np} その影響で、今日は大勢の観客が集まるでしょう。そうなれば、闘技場の持分を所有するマスターフェリクシアの懐には、また多くの配当金が入ります。受け取った配当金を弟子と呼んでいる者へ配ることについて、私が文句を言ったことがありますか？今回もそうしてください。ですが、この企画と日程には、正直口を挟まないでいただきたいところです。]{np} [持分の話が出たから言うけど、アンタは闘技場の持分の最大所有者かもしれないが、過半数を持っているわけじゃないんだ。あんまり偉そうに言うなよ。]<br/>[偉ぶっているつもりはありませんよ。私は一介の商人に過ぎません。ここはマスターフェリクシアのような強者たちが集まるところです。{np} もし私が不正なんか働いていたら、すぐにばれてデフォエット法務大臣のところまで連行されてしまいます。いや、その前に、闘技場のマスターたちから半殺しにされるでしょうね。私にはそのような度胸も勇気もありません。まあ、お弟子さんに未知の相手と戦う度胸がないと言うなら、今から対戦表を変えてもいいですが……。]{np} [いや、もういい。そもそも剣闘士は、相手が誰であれ戦うのみ。ただし途中で組み合わせを変えるなら、あらかじめ声をかけておくれよ。]<br/>フェリクシアがそう言って部屋から去って行くと、すでに扉の向こうで見えない彼女の背中に向けて、フリアムが答えた。<br/>[承知しました。今度からはそうします、マスター。]{np} ムルミロマスターが去って再び一人になると、フリアムは椅子に腰をかけて事務の仕事に戻った。それからしばらくして、扉が開いた気配はしなかったはずだが、いつの間にかフリアムの目の前に男が立っていた。<br/>[忙しいか？]{np} 声をかけられたフリアムは立ち上がり、目前の人物へ敬意を表した。<br/>[いらっしゃいましたか、マスター。]<br/>呼称はフェリクシアのときと同じくマスターだが、その口調にはフェリクシアに対してとは違う何かが感じられた。{np} それは尊敬というより、本音で接しているかのようだった。二人だけが知っている隠し通路から入ってきた男、モンクマスターオルファス・グリムが言った。<br/>[何かあったか？]{np} [フェリクシアが対戦表変更の件で抗議に来ましたが、黙らせて帰しました。ですから、予定どおりに進めてください。できれば一撃で仕留めてくださいね。七連勝はしたが、本当の実力は大したことなかった……という感じで進めます。]{np} [分かった。ムルミロにかぎらず、闘技場に関わるマスターたちの追従者が増え続けるのは困る。だから、機を見て減らしながら調整していかないとな。それにしても、オレが直接戦わないといけないほどとは、なかなか腕の立つ者のようだが。]{np} [はい。連勝できないよう試合の日程を調節して不利な状況を作ってはいたのですが……。これ以上ムルミロマスターを慕う者が増えるのは好ましくありません。それに此奴が死ねば、フェリクシアが今後遺族たちの面倒を見ることになるでしょう。配当金を受け取ってもすぐ使い果たしてしまうことになります。]{np} [よし。それ以外には？]<br/>[ハイレイバーンが捕虜をかなり集めたので、取引日程と方法を具体的に決めたいと、人を送ってきました。]<br/>[誰が来た？]<br/>[オセアニドとかいう女みたいな名前の男が来ました。腕に蛇のタトゥーを入れていましたが、ご存じですか？]{np} [ああ、あいつか……。ほかは？]<br/>[ニモーケンが来るそうです。マスターは直接会わない方が良さそうですね。彼女は私が相手をします。]<br/>[ああ、頼む。金輪際レンジャーマスターとは会わないつもりだ。ヤツにはこれからも貸しっぱなしにしておくといい。]{np} [そういうことでしたら、じつは……このあとほどなくしてここへ来る予定ですので……。]<br/>[そうか。では、またあとで話そう。]{np} オルファスが隠し通路から闘技場の控え室のほうへ戻っていく姿を見送り、フリアムは再び椅子に腰かけて書類を読み始めた。それからしばらくして、扉を叩く音が聞こえた。<br/>[どうぞ、お入りください。]<br/>フリアムが返事をすると扉が開き、今度はレンジャーマスターのニモーケンが入ってきた。<br/> [これはこれは！こんな遠くまで、どのようなご用でいらっしゃいましたか？]{np} ニモーケンが近づいてきて、フリアムのテーブルにシルバーの入った袋を投げつけながら言った。<br/>[相変わらず大げさな。今日は利子の支払い日でしょ？]<br/>[そんな用件のために、わざわざここまで……。まとめて払ってくださっても構いませんのに。]<br/>[そうは言っても、あんたならあとで絶対文句を言ってくるだろうからね。]{np} [利息は債務関係の規定上、形式的に書いただけです。ですから返済期間中も、四半期に一度減額しているではありませんか。それに、利息のことだけを考えるなら、マスターではなくケドラ商団にでも預けていましたよ。お貸しした金額を商団に預け利息を貯めていれば、ケドラ商団のお得意様リストには、ジーナ・グリーン様の次に私の名前が載っていたでしょう。]{np} [そもそもこんな大金を普通の利息で借りていたら、いかなドルイドマスターでも破産するに決まってる。もちろん私も、借りることすらできなかったろうね……。]<br/>[まあまあ、そうおっしゃらずに……。もっとも、ジーナ・グリーン様は計り知れないほどの財産を持っておられます。もし私が闘技場を十個持っていて、それをすべて売ったとしても……。]{np} [与太話はもういいよ。それで？今日はオルファスに会える？]<br/>[オルファス様には、本日あなた様がお目見えになるとお伝えはしたのですが……。どうやら修練が忙しいようですね。修練を通して心身を鍛えるクレリックですから。]{np} [フッ……そんなクレリック様が、お恵みを与えるでもなく金貸し稼業を営んでいる理由は？]<br/>[簡単なことですよ。財産の運用について詳しくないから、私のような経営に精通した者へ資産管理を任せているだけです。]{np} [今日初めてあんたに会ったならその言葉を信じたかもしれないけど、今日が初めてじゃなくてよかったよ。]<br/>[それは褒め言葉と受け取らせていただきますよ。]<br/>[ふん……皆はパードナーマスターのことを金に目がくらんだクレリックだと言っているけど、その認識は改めないといけないね。彼より重症のクレリックが、この闘技場にいたというわけだ。]{np} ニモーケンがそう言うと、それまでふてぶてしく接していたフリアムの顔色が一瞬変わったが、すぐにまた作り笑いを浮かべ、改まって答える。<br/>[モンクマスター様のことを高利貸し呼ばわりする者たちもいますが、それこそ違います。オルファス様はお金が好きなわけではありません。{np} あの方は高みを目指しておられるのです。そしてその目標は、一般的なクレリックの理想には当てはまりません。凡人には理解できないのでしょうね。]<br/>[じつに忠実な部下ってとこね。そんな部下が、闘技場の利益を横領している……とオルファスに知れたら、どうなると思う？]<br/>フリアムも、今度は作り笑いを崩さない。{np} [公式的な闘技場の主はこの私です。いえ、正確に言えば、持分の最大所有者です。いずれにせよ、私が得た利益の一部をモンクマスターに寄付することは、合法的な行為です。{np} 言い換えれば、これは宗教的な聖なる献金です。自分の配当金を受け取り、その一部を献金として捧げる。横取るつもりなど一切ありません。それに、ここは王国首都の闘技場です。多くの貴族高官はもちろん、ときには国王様もお見えになるこの場所で、そのような不正は働けませんよ。]{np} ニモーケンはフリアムの整然とした論理に反論せず、しばらく沈黙してからこう言った。<br/>[……私が借金を全額返したら、その日のうちに法務大臣を訪ねて自首しなよ。そうでなければ、これから私が自首する。罪状は、立証も正当化もできない個人的な恨みに基づいた殺人……ってところかな。]{np} [ふ……申し訳ありませんが、私に脅しをかける輩は大勢います。その中にはあなた以外のマスターもいますが、どういうわけか私はまだこうして生きています。その事実を分かったうえでお話しいただきたいですね。]{np} フリアムは引き続き作り笑いを浮かべたまま、力強く念を押した。<br/>[それにあなたは、レンジャーの首長としての名誉はもちろんのこと、シャッフェンスターの団員として、リディア・シャッフェンの名にかけて誓ったのではありませんか？ですから、我々の "契約" とその遂行について口外はしないと信じていますよ。少なくとも、借金をすべて返済するまでは……ね。]{np} [そう……じゃ、これからは貴様らと直接会わないようにするよ。借金をかたに、これ以上汚れ仕事を押し付けられたらかなわないからね。利息は人を送ってちゃんと払うから心配しないで。]<br/>そう言い捨て、ニモーケンは返事も聞かずに部屋から出ていった。そんな彼女の背中に向かって、フリアムはフェリクシアのときと同様に挨拶をした。<br/>[クラペダまでの帰路、どうかお気をつけて。]{np} こうして、三人目の訪問者を見送ったフリアムは再び仕事に取りかかろうとテーブルに戻った。<br/>ようやく一息ついたと安堵したフリアムだったが、今日の訪問者はまだ終わりではなかった。次の訪問者は、彼ですら予想だにしなかった意外な者たちだったのだ。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>闘技場に関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

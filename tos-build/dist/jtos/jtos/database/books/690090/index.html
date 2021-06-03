@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ニコポリスの起源に関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>ニコポリスの起源 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690090" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690090" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690090" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690090" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>ニコポリスの起源</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>ニコポリスの起源<br/>- 王国歴1096年、<br/>セージマスター ルパス・ケーヘル<br/>{np} {s14}第14代目の国王ヴァルティネの座位期間15年間は建国初期の活気が消え失せ、政派と党派の争いが頂点に達した時期であった。<br/>正確に記述すると、王国歴348年から363年までである、今から700年も前の時期であった。<br/>ヴァルティネ国王は不安定な内政を治めるために様々な軍制を改革し、王国軍の礎を築いた在位期間として評価される。<br/>ジェロメル国王時代の法典と貴族に関する様々な規律が王国に長年にわたって安定をもたらしたことを考えるとヴァルティネ国王のこのような軍制の整備は問題を違う見方からアプローチして解決する方式だった。<br/>またヴァルティネ国王末期と次に即位した国王ユスエル時代の初期に朝廷であった政治的争いを解決できる礎になったのもこのような軍制改革があったおかげだった。<br/>かくしてユスエル国王時代になって政治的な政派と党派の争いは解決できたが、ヴァルティネ国王時代から続いた朝廷の外での問題は解決する必要があった。<br/>{np} その中でも重要な問題はウィザードたちだった。<br/>この時、一部のウィザードたちが連盟を結成し、他のウィザードたちに加入を強いた。<br/>{np} そして加入した者には厳しい規約に従わせた。その結果、当時のウィザード社会は連盟派と非連盟派が対立する構図となった。<br/>また、その構図では組織力を持つ連盟派が非連盟派より力が強かった。<br/>{np} 女神たちの力を持つクレリックと強力な武士たちが大勢いたのがせめてもの救いだった。そうでなかったら、王国は連盟派のウィザードたちの力によって政権が覆ったかもしれないという噂まで広がった。<br/>ウィザード連盟が単純に力だけを持っていたなら出回るはずのない噂だった。おそらく連盟に所属していたウィザードたちの中にその力を利用して権力を手に入れたものがいたからだろう。<br/>{np} それに比べて非連盟派は独自の行動を取るウィザードたちで、基本的に世捨て人か研究者が多かった。<br/>そのため、連盟派が意図しなくてもウィザード社会の主導権は連盟側が握ることになったのだ。<br/>{np} そしてこれを長年放置すると将来ウィザード社会がどうなるか分からないという懸念の声があがった。<br/>これは王国社会全体の脅威になり得ることだった。<br/>{np} それを解決するためにユスエル国王が行った策が非連盟派のウィザードたちを支援する方法だった。<br/>彼らの研究と生活を政策的に支援した。<br/>そうすると連盟派のウィザードたちはこれに反発し、高値で魔法を売って、傭兵になるなど資金を集めながら力を強めていった。<br/>{np} 非連盟派のウィザードたちは世捨て人や研究者が多かったため結束力がない反面、連盟派は積極的かつ組織的に富裕層と貴族たちに魔法アイテムを売り、魔法が必要な仕事を受注して人脈を広げ、また資金も集めた。<br/>ユスエル国王は王国の住民間の契約と取引を統制できなかったため、それを阻止することはできなかった。<br/>{np} しかし、朝廷が迂回的な規制策を講じ、新しい租税項目を作って連盟の収益から税金を徴収した。また王室に好意的な非連盟派を積極的に動かして安価の魔法アイテムと仕事を市場に提供し、連盟派の力を弱めた。<br/>この過程で当時の王国官僚たちは王国高官たちから圧力を受け、世捨て人や研究者の非連盟派のウィザードたちを頻繁に訪ねてこのような成果を出すことができた。<br/>{np} この事態を受けて、連盟派は王室の措置に対して激しく抗議したが、それ以外に彼らにできることはなかった。<br/>さすがに反逆や内乱を起こすわけにはいかなかったからだ。<br/>{np} 連盟派のウィザードたちの力は強く、非連盟派は世の中のことに興味のない者が多かった。しかし、反逆を起こすと全員ではなくとも一部は王室の味方をするだろうし、女神の力を持つクレリックたちと王国の貴族と将軍及びその兵士たちを相手に戦うことになるのだ。連盟内部でも反逆となると脱退者が出るはずだろう。<br/>{np} それより反逆を起こす大義名分がなかった。<br/>しかし、連盟派は諦めずに他の方法を模索した。<br/>それは連盟派が王国の中で可能な独立した自治領を求めること。<br/>世の中の主導権を握ることができないなら、彼らだけの都市であり、最も輝く都市を作ろうじゃないかという考えだった。<br/>{np} 連盟派のこれまでの行動や動機は不純だったが、ユスエル国王にはそれを阻止する手段がなかった。<br/>実体はどうであれ、法律的には貴族領主が領地を治めるのと同じ形だったからである。<br/>{np} 連盟派はあらゆる手段を活用し、また集めた資金で彼らの領地を購入し、連盟の代表者をそこの統治者として申請した。王室はやむを得ず何かが起きても影響を最低限に抑えることができるだろうということでそれを認めた。<br/>{np} 連盟派はその都市をニコポリスと名づけ、自分たちの勝利を祝った。<br/>それからニコポリスはしばらく繁栄を謳歌した。<br/>彼らが一ヶ所に集まると効率が上がり、それによって彼らが供給していた魔法アイテムと仕事の質と量が向上し、値段は安くなったからだ。<br/>{np} 王室としてもニコポリスが繁栄すると朝廷に納める税金も増えるので決して悪いことばかりではなかった。<br/>そしてこのような変化によってこれ以上非連盟派のウィザードたちを支援する必要もなくなった。<br/>ニコポリスに集まったウィザードたちが外に出て変なことさえ起こさなければみんながハッピーエンドを迎えただろう。<br/>{np} しかし、知っている通りに幸せな結末を迎えることはなかった。<br/>今もその全ては明らかになっていないが、ニコポリスのウィザードたちは不可解な魔法実験を行い、その副作用によって連盟に属したウィザード全員はもちろんニコポリスで暮らしていた一般の住民たち全員が消える大惨事が起きた。<br/>{np} その後の調査では、この実験はウィザードたちの魔力を極大化しようとした実験が失敗した副作用で、ニコポリスの建物などには影響がなかったものの、その魔法実験に参加した連盟所属のウィザードたちと都市の全ての生物だけに解明されていない副作用が出て、全員がどこかに消えたと結論付けられた。<br/>{np} その後、都市はゴーストタウンと化したが、ウィザードたちによって建てられた都市であったため、長い年月が経っても風化作用には驚きの抵抗力を見せた。つい最近まで人が暮らしていたかのように都市は維持されていた。それは今もなお強力な魔法が動いているからであった。<br/>{np} また年月が経ち、ゴーストタウンというイメージが払拭されると王国の色んなところから人々が移住してきた。それから神樹の日までは普通の都市として活用されたのだ。<br/>しかし、後世にニコポリスに定着した住民が都市の修繕と補強工事をしないように手間を減らしてくれた魔法は神樹の日には大きな災難となった。<br/>{np} 都市に潜んでいた魔力によってフェディミアンと他の都市より大きな被害を受けるようになった。これは特に人間に深刻な影響を及ぼし、住民のほとんどが都市を離れた。<br/>しかし、神樹の日によって王国全体が破壊的な被害を受け、ここは魔法によって都市の建物と施設は他の地域によって良好だったため、留まる住民もいたそうだ。<br/>{np} また噂によると、<br/>以降都市の魔力に引きつけられてモンスターが集まって危険な状態になり、王国では都市を再び確保する余裕がなかったため一般住民の出入を禁じた。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ニコポリスの起源に関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

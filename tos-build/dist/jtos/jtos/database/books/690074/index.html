@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ソルコムに関する物語。右クリックで読むことができます。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>ソルコム物語 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690074" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690074" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690074" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690074" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>ソルコム物語</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>召喚された者が前に立った。[お呼びですか？]<br/>魔族の君主ソルコムは魔王ジェスティの前に立った。そしてジェスティの言葉を待ちながら今の状況が非常に複雑だと思っていた。<br/>形式上、彼は魔王カルタスの部下だった。しかし、実際彼が忠誠を誓ったのは魔王ヴァイガ。<br/>ところが、今はジェスティの命令を受けるために彼の前に立っている。彼は3大魔王の指揮を受ける身となったのだ。{np}彼の状況がこうなったのは魔王ヴァイガがカルタスを牽制して監視するためにソルコムを派遣勤務の形としてカルタスに送ったからだ。<br/>彼ら魔王の上官にあたるギルティネもカルタスの狂気と性格をよく分かっていたので、彼の下に合理的で知的な魔将ソルコムを置いておけばカルタスをコントロールできるというヴァイガの助言を受け入れた。{np}それから何世紀が経ったある日、魔王ジェスティにライマを追跡する任務が任され、それを支援するために他の魔王や魔神の部下の中から優秀な者を引き抜いて任務に投入してもいいというギルティネの宣言があった。<br/>ギルティネのこの指示は予想だにしなかった副作用を起こした。魔王カルタスがジェスティを支援したいという名目でソルコムを突き出したからだ。<br/>支援派遣というと聞こえはいいが、実際は一番嫌いな部下を追い出したのだ。<br/>ところが、カルタスの部下の中でソルコムが一番常識者で賢い魔将だったからジェスティの立場からもソルコムじゃなくて他の魔将を派遣してほしいとは言えなかった。{np}ワピュリスのように狂気に満ちた奴が来ても困るだけだからだ。{np}そんな奴はネビュラス一人で十分だった。それでソルコムは2回も所属を変えて現在ジェスティのところにいるわけだ。<br/>こうして数世紀単位で所属と主を変えてきたことはソルコム個人にとっても後に不利に働く可能性が高かった。<br/>どの魔王や魔神も彼の味方をしてくれない恐れがあったからだ。{np}現在の上官であるジェスティもソルコムを個人的に気をかけてあげる義理はなかった。そのジェスティがソルコムに言った。[ライマの啓示の追跡を始めてどれほどの年月が過ぎたと思う？これまで何の成果も得ていないのに、それを上回る悪いことが起きている。]<br/>[それは何ですか？]<br/>[リディア・シャッフェンという名を聞いたことがあるか？]{np}[はい、人間王国の歴史上最も名を馳せている人物ではないでしょうか。師のメイバーンよりも…。]<br/>[お前も人間に余計な興味を持っているようだな。それはどうでもいい。重要なのはその人間の女がライマの啓示を持っているということ。<br/>彼女が持っていると分かっているのにどうして我々は手にすることができない…。これまでの啓示を持っていた者たちは見つからない場所に隠しておくか、守りを固めるか、持っている事実を我々が気づいてなかったかの理由で啓示を保管できたのだ。<br/>大聖堂に引きこもっているリディアの師というメイバーンもそうやって啓示を守っていられるし、テスラが人間の寿命を遥かに超えて長生きできるのも彼が啓示を持っているからかもしれない。<br/>彼が作る女神像はほとんどが女神が降臨した力を発揮する。私の能力では彼を捕まえても取り調べられないからもどかしい。{np}注視者様の予想と分析ではテスラは啓示を持っていないそうだ。とにかくリディア・シャッフェンは他の者たちとは違う。この女は絶対他とは違う。<br/>ソルコムはジェスティの説明が長くなる前に相手が話そうとしたことを先に言った。[はい、違います。リディア・シャッフェンはこの27年間6人の君主級魔族を殺したり追い出しました。今までの歴史に記録されたどの人間も成し遂げることができなかったことです。彼女の矢は魔王の心臓も…あぁ、申し訳ございません。]{np}ソルコムは目の前のジェスティを意識し、途中で言うのを止めたが結局最後まで言った。[貫通できると人間たちは信じているそうです。]<br/>[そう、それにもっと大きな問題はそれが事実ということだ。]{np}ジェスティが人間の力をこんなにも簡単に認める姿を見てソルコムは戸惑いを覚えた。<br/>それでソルコムはもう少し踏み込んでみることにした。[ご存じかもしれませんが、それより大きな問題もあります。リディア・シャッフェンを任された魔将たちが彼女の巧みな策略に飲み込まれたり、罠に引っかかったということです。彼女の恐ろしいところは弓術だけではなく、知能的な策略と徹底する準備にもあります。]<br/>[そのため、お前を呼び寄せたのだ。ギルティネ様にお前なら相手に騙されたりしないと言われたのだ。]{np}[つまり？]<br/>[最近ジブリナス、あの愚か者がリディア・シャッフェンの矢によって命を落とした。リディアはジブリナスの魔力が宿ったエキスまで全部持って逃げたそうだ。<br/>どうせポンデルのような下まで噂が広がるだろうけど、今は魔将たちもまだ知らないことだ。与えられた任務もない奴がなぜ…。]{np}[それは残念です。]<br/>[お前がリディアによって死んでも誰も気にしないだろう。]<br/>[はい？どういう意味ですか？もしかして…。]<br/>[そうだ。今からリディア・シャッフェンが持っているライマの啓示を奪う任務をお前に任す。人間たちが星のなんとか湖と呼ぶところに行け。リディアは最近そこで何かの塔を建てることに夢中になっているそうだ。]<br/>どうせ断れる命令ではなかったため、ソルコムは服従の意を表してその場を去った。そして、以降数世紀にわたって記録される彼の敗北の歴史が動き出した。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ソルコムに関する物語。右クリックで読むことができます。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

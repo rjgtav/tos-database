@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ハイレイバーンに関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>封印されていたハイレイバーンの航海日誌 2章 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690083" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690083" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690083" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690083" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>封印されていたハイレイバーンの航海日誌 2章</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>封印されていたハイレイバーンの航海日誌 2章{np} 船長室の窓から差し込む日差しで、ハイレイバーンは目が覚めた。またいつもの夢を見た。<br/>小舟の上で起きた結末が逆になる、船にかけられたはしごが伸び続けて永遠に上れない上りきった船が幽霊船になっている、疲労困憊の彼に対して反乱を起こした両陣営の部下たちに襲われる……など{np} その内容は様々だったが、どれも場所や状況は似たようなものであった。<br/>身だしなみを整え甲板に出ると、部下たちがすぐさま挨拶を始める。シードッグ一等航海士もその様子から船長が出てきたことに気づいたのか、彼の方へ近づいてきた。ハイレイバーンは手を上げて挨拶を返したが、急にそれを中断し、シードッグをそのまま制した。{np} そして上を見上げ、帆柱の見張りを注視する。<br/>その直後、見張りの大きな声が響いた。<br/>[3時方向に帆柱出現！]<br/>少し報告が遅ければ痛い目に合ったかもしれないが、幸いそれを回避した見張りが再び叫んだ。{np} [船籍不明。商船1隻。]<br/> 直ぐ様新しい報告が聞こえた。<br/>[船籍確認。ケドラ商団の貸船！]<br/>近寄ってきたシードッグが口を開く前にハイレイバーンがうなずき、命令を下していく。{np} 見張りより先に船の気配を感じ取ったハイレイバーンは、用意されたデッキチェアに座り、シードッグの指揮下で戦闘準備に入った部下たちをじっと見守った。見張りでなくとも商船が目視で確認できる距離に到達すると、横にいたシードッグが呟いた。<br/>[あいつらは一体……？]{np} ハイレイバーンも、商船の甲板に並んでいる武装兵を確認する。シードッグの独り言に答えるわけでもないのだろうが、言葉を続けた。<br/>[忌々しいクエラの刃の誓い傭兵団が乗っているようだな。]<br/>一等航海士が控えめに分析する。{np} [商船に貨物を積まず傭兵団を乗せたなら、船もそれほど重くならないからスピードを出せます。私ならそれを利用して逃げますが……。刃の誓い傭兵団の野郎どもは、黄金の歌傭兵団と違って戦闘物資もあまり積まないはずですし。]{np} [メンツが潰れるとこれからの商売に影響が出るから、戦うつもりなんだろう。受けて立ってやろうじゃないか。しかしまさか、クエラ自らが指揮を執るつもりか？]<br/>[そういうつもりではなさそうですぜ。]<br/>シードッグが帆柱の上を見上げ、見張りから追加報告がないことを確認してからそう言った。それを受け、ハイレイバーンがデッキチェアから立ち上がる。<br/>[態勢を整えてからの白兵戦を期待しているようだが、思い通りにはさせんぞ。]{np} [船長、刃の誓い傭兵団は、大きな剣以外に矢も使います。]<br/>シードッグの言葉を、ハイレイバーンは受け流した。<br/>[海賊の戦いは船上で始まり、船上で終わらせなければならない。それにこれは、大海賊の称号を巡ってブラッディスローバスと戦ったときとはわけが違う。]<br/>シードッグは「ハッ！」と力強く返事をし、ハイレイバーンの意中を汲み取って指示を出し始める。{np} それが迅速に実行される様を確認し、ハイレイバーンは再びデッキチェアに腰をかけた。戦闘の序盤は、ハイレイバーン陣営にとって非常に楽な戦いだった。風の方向を正確に読んで海賊船から飛ばされた投射武器は、向かい風で阻まれた相手の武器とは違い、商船の甲板に立っていた傭兵団員の数を確実に減らしてくれた。{np} もちろん、刃の誓い傭兵団も投射武器による戦闘が初めてというわけではなく、盾などを利用して被害を減らそうとした。<br/>しかしここは海……。<br/>陸では、包囲され空中から矢が降ってきても巨大な盾を利用した守備が可能だが、海では通用しない。{np} 海賊船の動きに合わせてそれなりに最善の方向へ舵を取っていた商船は、ハイレイバーンが仕掛けておいた罠に引っかかり、風と海流によって転覆しそうになった。<br/>陸上戦では、滅多なことで地面が突き出たり陥没したりすることはない。しかし海上戦では違う。{np} 船は揺れ続け、訓練を受けた船員でもないかぎり、戦いながらバランスを保つことは至難の業だ。<br/>そうやって敵の数を十分減らしたのち、ついに白兵戦が始まった。<br/>シードッグ一等航海士の荒々しい声が部下たちを急き立てる。<br/>[さっさと鉤をかけろ！]{np} 部下たちは慣れた手つきで商船に鉤をかけ始めた。が、数が減ったとはいえ、戦い慣れている刃の誓い傭兵団が指を咥えて黙って見ているはずがない。<br/>刃の誓い傭兵団を象徴する大型両手剣によって、次々と鉤が切られていく。{np} それを目の当たりにしたハイレイバーンは、デッキチェアから立ち上がった。<br/>[なかなかやるじゃないか。]<br/>そう言い捨てて走り出すやいなや、ハイレイバーンのアイアンフックが商船に投げられた。他の海賊の鉤を斬っていた名もなき傭兵団員の胸の風通しが良くなり、その一人を倒した鉤は勢いを削がれることもなく、商船の船べりに深く突き刺さる。{np} その直後、他の傭兵団員がハイレイバーンの鉤を斬り捨てようと大剣を持って駆けつけてきた。それを見たハイレイバーンは、<br/>[まずは挨拶といこうか！]<br/>と叫び、ピストルショットでその傭兵団員を吹き飛ばす。{np} すると、また他の傭兵団員が駆けつけてきた。ハイレイバーンはさらに拳銃を撃つが、今度の傭兵団員は腕の立つ者なのか、攻撃が通用しない。<br/>ハイレイバーンは面白いといわんばかりの表情で、<br/>[幹部クラスか。じゃ、その鉤ではなくこいつを斬ってみろ。]と独り言ちてから、別の鉤を投げた。{np} 傭兵団員はその鉤を避けられず絡め取られ、ハイレイバーンの方に引き寄せられていく。<br/>必死にもがくも、抜け出せない。それどころか、引き寄せられる度に苦しみが増していく。{np} ハイレイバーンは相手が途中でキールハウリングによって息絶えたことを確認すると、2隻の船の間にその亡骸を投げ捨てた。<br/>いつの間にか、2隻の船の距離は縮まっていた。それを確認したハイレイバーンが旗を取り出し、不敵な笑みを浮かべながらシードッグの方を見て言った。{np} [ブラッディスローバスがこの距離でジョリーロジャーを成功させたこと、あったか？]<br/>ハイレイバーンから号令が下された時、それを横で補佐していたシードッグが首を横に振った。<br/>[この距離で、ですか？　なかったと思いますが……。]{np} まるで分かっていたと言わんがばかりに、言葉尻を待たずしてハイレイバーンが答える。<br/>[ま、無理だろう。俺以外は、な。]<br/>そう言うやいなや、彼の海賊旗は2隻の海賊船の間をすり抜け、目標の商船に突き刺さった。{np} 刹那、ハイレイバーンの声が響き渡る。<br/>[俺の海賊旗に恥をかかせるなよ！一番早くあの旗の横で敵を倒した者は、報酬を2倍にしてやる！]<br/>シードッグがそれを聞き、続けて叫ぶ。<br/>[聞こえたかぁー！　一番遅かった奴は鉤にかけて海にぶち込んでキールハウリングの罰ゲームだ！]{np} それに対し、「船長の提案と異なる」などと無粋な異議を申し立てる者はいなかった。海賊たちは雄叫びを上げながら、次々と商船に乗り込んでいく。<br/>もちろん、ハイレイバーンも真っ先に商船へと飛び移っていた。<br/>すでに追い込まれていた刃の誓い傭兵団は、ハイレイバーンが前線に加わったことで更なる絶望の淵に立たされた。{np} 傭兵団の生き残った班長たちがハイレイバーンのダストデビルによってなぎ倒されると、それを目の当たりにした傭兵団員たちはとうとう武器を捨てて投降し始めた。<br/>投降しない傭兵団員たちは、ハイレイバーンの部下たちによって命を落とした。{np} 戦いが終息し、ハイレイバーン海賊団は船の隅に身を隠していた船員と船長を捕えた。<br/>彼らは戦いに参加せず、この船を刃の誓い傭兵団に貸して身を隠していたため、<br/>危険には晒されなかったのだ。{np} ハイレイバーンは、捕まえた船長と船員に尋ねた。<br/>[思ったより少人数で船を動かしていたようだが？]<br/>すると、まるで予め決まっていたかのように、捕まった船長が流暢に答え始める。<br/>[……クエラ団長とそのように契約を結びました。商団所属の船員の人数を最小限にして、その代わりに傭兵団員たちが船の仕事をするという条件で安く貸したのです。{np} それに、我々商団の貨物もたくさん積ませてもらいました。ただ、そのぶんこの船での権限が弱くなってしまい……。海戦に詳しくないまま無理な判断をしたことが、今回の戦いで命取りになったのでしょう。]{np} [報告によれば、重いだけであまり金にならない貨物だそうだが……なのに安く船を貸した、と。なぜ商団がそんなことを？]<br/>[あなたが現れる前まで、傭兵団は甲板を磨いたり簡単な力仕事をこなしたりしていたので、安くしたこと自体はとくに問題なかったのです。それに、確かにその貨物は今すぐお金にはなりませんが、我々はケドラ商団。どこで何を捌けば利益を得られるか、熟知しています。それで、ですが……。]{np} 船長は話を続けた。<br/>[船と船員、そして貨物を解放してくだされば、証書をお書きいたします。我々が無事に解放されれば、この証書をどの支部のケドラ商団に見せてもお金が受け取れます。それは必ず保証します。{np} この船に積まれた貨物なんかあまり価値もありませんし、商人でないかぎり処分も難しいと思います。ご覧の通り、貸船のため船員も最低限の人数しか乗せていません。ですから、身代金もあまり得られません。我々商団の信用はご存知ですよね？　ぜひ証書を受け取ってください。我々が無事目的地に着いたと確認されれば、ケドラ商団も文句なしにお金を払ってくれるでしょう。]{np} [つまり……船と貨物、少人数の船員では金にならんから、商団所属の船長が保証する証書を受け取った方が得だぞ……ってことか？お前らが目的地に無事着いたということが確認されれば、商団がそれ以上の金を払うと？]<br/>[はい、その通りです。我々ケドラ商団の情報網は広く、かつ迅速です。あなたの賢明な判断は、あっという間にすべての商団支部へ連絡されるはずです。]{np} ハイレイバーンはしばらく考え込んだ。<br/>[……まあ、いいだろう。ケドラ商団は、損をすることには絶対手を出さないと、良く知っている。中には俺たち海賊以上の人でなしもいるしな。ただし！　生き残った傭兵団員と奴らの持ち込みは、すべて俺がもらうぞ。]{np} 最後の一言が提案ではなく命令であること、そしてそれに従うしかないことを、ケドラ商団所属の船長はすぐに悟った。<br/>そしてほどなく、生き残った刃の誓い傭兵団員は一人残らず彼らの所持品ごとハイレイバーンの船に運ばれた。{np} その際、オセアニド二等航海士がハイレイバーンに尋ねた。<br/>[板を準備しましょうか？]<br/>他の海賊団や商船の船員を捕虜にしたときの恒例である「海賊団に入って仲間になるか、船べりにかけた板の上を歩いて海に落ちて死ぬか」を選ぶ儀式を行うか……と聞いてきたのだ。{np} だが、予想に反して、ハイレイバーンは首を横に振った。<br/>[いや、閉じ込めとけ。オルファス・グリムと契約を結んだからな。捕虜をもう少し増やしてから、モンクマスター……オルファスに売る。戦えない程度に、そして売る時文句を言われない程度に飢えさせておけ。]{np} 難しい命令だったが、オセアニドは承諾し、その場から離れた。{np} 誰もいなくなるとハイレイバーンは独り言をつぶやいた。<br/>[クエラがこの件で俺のところへ来たら、ブラッディスローバス以来の派手な戦いを楽しめるかもしれんな。{np} そのときは剣だけで相手してやるか。……ふん、そういえばクリークとかいう奴がクエラのライバルだったか。こいつとの戦いも楽しそうだ。頭にブラッディスローバスのような穴を開けてやろう。俺と同じく、銃を使うらしいからな。]{np} 水平線に消えゆくケドラ商団の船を眺めながら今後の展開を想像し、口元に微かな笑みを浮かべたハイレイバーンは船長室へと足を向けた。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ハイレイバーンに関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

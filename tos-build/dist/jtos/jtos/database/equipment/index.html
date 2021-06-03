@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="List of Equipment, with advanced filtering and sorting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>Equipment - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <h1>Equipment</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>$ID</th>
+                <th>Name</th>
+                <th>Material</th>
+                <th>Grade</th>
+                <th>Level</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/4"><img height="40px" width="40px" src="/assets/icons/icon_item_quest_00017.png" /></a></td>
+                <td><a href="/jtos/database/equipment/4">4</a></td>
+                <td><a href="/jtos/database/equipment/4">なし_Outer</a></td>
+                <td><a href="/jtos/database/equipment/4">undefined</a></td>
+                <td><a href="/jtos/database/equipment/4">Normal</a></td>
+                <td><a href="/jtos/database/equipment/4">1</a></td>
+                <td><a href="/jtos/database/equipment/4">Toys</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/5"><img height="40px" width="40px" src="/assets/icons/icon_item_quest_00017.png" /></a></td>
+                <td><a href="/jtos/database/equipment/5">5</a></td>
+                <td><a href="/jtos/database/equipment/5">なし_Pants</a></td>
+                <td><a href="/jtos/database/equipment/5">undefined</a></td>
+                <td><a href="/jtos/database/equipment/5">Normal</a></td>
+                <td><a href="/jtos/database/equipment/5">1</a></td>
+                <td><a href="/jtos/database/equipment/5">Bracelets</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/6"><img height="40px" width="40px" src="/assets/icons/icon_item_quest_00017.png" /></a></td>
+                <td><a href="/jtos/database/equipment/6">6</a></td>
+                <td><a href="/jtos/database/equipment/6">なし_Gloves</a></td>
+                <td><a href="/jtos/database/equipment/6">undefined</a></td>
+                <td><a href="/jtos/database/equipment/6">Normal</a></td>
+                <td><a href="/jtos/database/equipment/6">1</a></td>
+                <td><a href="/jtos/database/equipment/6">Pistols</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/7"><img height="40px" width="40px" src="/assets/icons/icon_item_quest_00017.png" /></a></td>
+                <td><a href="/jtos/database/equipment/7">7</a></td>
+                <td><a href="/jtos/database/equipment/7">なし_Boots</a></td>
+                <td><a href="/jtos/database/equipment/7">undefined</a></td>
+                <td><a href="/jtos/database/equipment/7">Normal</a></td>
+                <td><a href="/jtos/database/equipment/7">1</a></td>
+                <td><a href="/jtos/database/equipment/7">Muskets</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/8"><img height="40px" width="40px" src="/assets/icons/icon_item_quest_00017.png" /></a></td>
+                <td><a href="/jtos/database/equipment/8">8</a></td>
+                <td><a href="/jtos/database/equipment/8">なし_Shirt</a></td>
+                <td><a href="/jtos/database/equipment/8">undefined</a></td>
+                <td><a href="/jtos/database/equipment/8">Normal</a></td>
+                <td><a href="/jtos/database/equipment/8">1</a></td>
+                <td><a href="/jtos/database/equipment/8">2H Maces</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10000"><img height="40px" width="40px" src="/assets/icons/icon_item_sword_1.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10000">10000</a></td>
+                <td><a href="/jtos/database/equipment/10000"></a></td>
+                <td><a href="/jtos/database/equipment/10000">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10000">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10000">0</a></td>
+                <td><a href="/jtos/database/equipment/10000"></a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10001"><img height="40px" width="40px" src="/assets/icons/icon_item_sword_26.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10001">10001</a></td>
+                <td><a href="/jtos/database/equipment/10001">ムルミロヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10001">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10001">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10001">0</a></td>
+                <td><a href="/jtos/database/equipment/10001">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10002"><img height="40px" width="40px" src="/assets/icons/icon_item_sword_26.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10002">10002</a></td>
+                <td><a href="/jtos/database/equipment/10002">プレイグドクターヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10002">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10002">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10002">0</a></td>
+                <td><a href="/jtos/database/equipment/10002">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10003"><img height="40px" width="40px" src="/assets/icons/icon_item_sword_26.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10003">10003</a></td>
+                <td><a href="/jtos/database/equipment/10003">シャークヘッドヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10003">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10003">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10003">0</a></td>
+                <td><a href="/jtos/database/equipment/10003">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10004"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_ghostcorsair01.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10004">10004</a></td>
+                <td><a href="/jtos/database/equipment/10004">幽霊海賊ヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10004">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10004">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10004">0</a></td>
+                <td><a href="/jtos/database/equipment/10004">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10005"><img height="40px" width="40px" src="/assets/icons/helmet_weddingvail.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10005">10005</a></td>
+                <td><a href="/jtos/database/equipment/10005">どきどきウェディングベールコスチューム</a></td>
+                <td><a href="/jtos/database/equipment/10005">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10005">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10005">0</a></td>
+                <td><a href="/jtos/database/equipment/10005">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10006"><img height="40px" width="40px" src="/assets/icons/icon_item_helmet_fishbowl.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10006">10006</a></td>
+                <td><a href="/jtos/database/equipment/10006">金魚鉢ヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10006">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10006">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10006">0</a></td>
+                <td><a href="/jtos/database/equipment/10006">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10007"><img height="40px" width="40px" src="/assets/icons/icon_item_helmet_diver.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10007">10007</a></td>
+                <td><a href="/jtos/database/equipment/10007">潜水士ヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10007">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10007">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10007">0</a></td>
+                <td><a href="/jtos/database/equipment/10007">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10008"><img height="40px" width="40px" src="/assets/icons/icon_item_sword_26.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10008">10008</a></td>
+                <td><a href="/jtos/database/equipment/10008">ドラグーンヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10008">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10008">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10008">0</a></td>
+                <td><a href="/jtos/database/equipment/10008">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10009"><img height="40px" width="40px" src="/assets/icons/icon_item_pumkin_helmet.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10009">10009</a></td>
+                <td><a href="/jtos/database/equipment/10009">ジャックオーランタンヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10009">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10009">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10009">0</a></td>
+                <td><a href="/jtos/database/equipment/10009">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10010"><img height="40px" width="40px" src="/assets/icons/icon_item_helmet_rudolph.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10010">10010</a></td>
+                <td><a href="/jtos/database/equipment/10010">ルドルフのかぶりもの</a></td>
+                <td><a href="/jtos/database/equipment/10010">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10010">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10010">0</a></td>
+                <td><a href="/jtos/database/equipment/10010">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10011"><img height="40px" width="40px" src="/assets/icons/helmet_weddingvail02.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10011">10011</a></td>
+                <td><a href="/jtos/database/equipment/10011">どきどきウェディングベールブルー</a></td>
+                <td><a href="/jtos/database/equipment/10011">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10011">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10011">0</a></td>
+                <td><a href="/jtos/database/equipment/10011">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10012"><img height="40px" width="40px" src="/assets/icons/icon_item_astronaut_helmet.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10012">10012</a></td>
+                <td><a href="/jtos/database/equipment/10012">ポラリス宇宙飛行士ヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10012">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10012">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10012">0</a></td>
+                <td><a href="/jtos/database/equipment/10012">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10013"><img height="40px" width="40px" src="/assets/icons/icon_item_helmet_astronaut02.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10013">10013</a></td>
+                <td><a href="/jtos/database/equipment/10013">アルファセントーリ宇宙飛行士ヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10013">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10013">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10013">0</a></td>
+                <td><a href="/jtos/database/equipment/10013">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10014"><img height="40px" width="40px" src="/assets/icons/icon_item_helmet_romance01.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10014">10014</a></td>
+                <td><a href="/jtos/database/equipment/10014">お嬢様風のかぶりもの</a></td>
+                <td><a href="/jtos/database/equipment/10014">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10014">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10014">0</a></td>
+                <td><a href="/jtos/database/equipment/10014">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10015"><img height="40px" width="40px" src="/assets/icons/icon_item_helmet_romance02.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10015">10015</a></td>
+                <td><a href="/jtos/database/equipment/10015">ショック顔のかぶりもの</a></td>
+                <td><a href="/jtos/database/equipment/10015">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10015">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10015">0</a></td>
+                <td><a href="/jtos/database/equipment/10015">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10017"><img height="40px" width="40px" src="/assets/icons/icon_item_helmet_baniclips_m.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10017">10017</a></td>
+                <td><a href="/jtos/database/equipment/10017">バナクリプスヘルメットコスチューム</a></td>
+                <td><a href="/jtos/database/equipment/10017">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10017">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10017">0</a></td>
+                <td><a href="/jtos/database/equipment/10017">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10018"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_galaxy01.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10018">10018</a></td>
+                <td><a href="/jtos/database/equipment/10018">星空の騎士ヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10018">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10018">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10018">0</a></td>
+                <td><a href="/jtos/database/equipment/10018">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10019"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_galaxy02.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10019">10019</a></td>
+                <td><a href="/jtos/database/equipment/10019">星空の近衛兵ヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10019">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10019">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10019">0</a></td>
+                <td><a href="/jtos/database/equipment/10019">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10020"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_galaxy03.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10020">10020</a></td>
+                <td><a href="/jtos/database/equipment/10020">星空の使者ヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10020">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10020">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10020">0</a></td>
+                <td><a href="/jtos/database/equipment/10020">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10021"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_blackbear.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10021">10021</a></td>
+                <td><a href="/jtos/database/equipment/10021">ツキノワグマのかぶりもの</a></td>
+                <td><a href="/jtos/database/equipment/10021">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10021">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10021">0</a></td>
+                <td><a href="/jtos/database/equipment/10021">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10022"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_blackbear.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10022">10022</a></td>
+                <td><a href="/jtos/database/equipment/10022">TOSスクワッドレッドヘルメット(男)</a></td>
+                <td><a href="/jtos/database/equipment/10022">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10022">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10022">0</a></td>
+                <td><a href="/jtos/database/equipment/10022">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10023"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_blackbear.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10023">10023</a></td>
+                <td><a href="/jtos/database/equipment/10023">TOSスクワッドレッドヘルメット(女)</a></td>
+                <td><a href="/jtos/database/equipment/10023">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10023">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10023">0</a></td>
+                <td><a href="/jtos/database/equipment/10023">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10024"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_blackbear.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10024">10024</a></td>
+                <td><a href="/jtos/database/equipment/10024">TOSスクワッドピンクヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10024">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10024">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10024">0</a></td>
+                <td><a href="/jtos/database/equipment/10024">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10025"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_blackbear.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10025">10025</a></td>
+                <td><a href="/jtos/database/equipment/10025">TOSスクワッドブルーヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10025">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10025">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10025">0</a></td>
+                <td><a href="/jtos/database/equipment/10025">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10026"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_blackbear.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10026">10026</a></td>
+                <td><a href="/jtos/database/equipment/10026">TOSスクワッドグリーンヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10026">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10026">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10026">0</a></td>
+                <td><a href="/jtos/database/equipment/10026">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/database/equipment/10027"><img height="40px" width="40px" src="/assets/icons/item_icon_helmet_blackbear.png" /></a></td>
+                <td><a href="/jtos/database/equipment/10027">10027</a></td>
+                <td><a href="/jtos/database/equipment/10027">TOSスクワッドイエローヘルメット</a></td>
+                <td><a href="/jtos/database/equipment/10027">undefined</a></td>
+                <td><a href="/jtos/database/equipment/10027">Normal</a></td>
+                <td><a href="/jtos/database/equipment/10027">0</a></td>
+                <td><a href="/jtos/database/equipment/10027">Costume</a></td>
+            </tr><tr class="d-table-row">
+                <td><a href="/jtos/"><img height="40px" width="40px" src="" /></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+                <td><a href="/jtos/"></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

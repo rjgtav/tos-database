@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="シャドウマンサーマスターのエクリップス・ユビックに関する物語。右クリックすると読むことができます。 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>シャドウマンサーマスター実験記1巻 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690099" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690099" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690099" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690099" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>シャドウマンサーマスター実験記1巻</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_00basic.png" />
+            <h3>Content</h3>
+            <p>*シャドウマンサーマスターの実験記1<br/>{np} ユビックは一度深呼吸をし、後ろを振り向いた。<br/>用意された席に並んで座っている魔法マスターたちが見えた。<br/>ぶっきらぼうな人もいれば、期待に満ちた顔をしている人もいた。<br/>だが、誰にも自分が失敗する姿を見せたくはなかった。<br/>{np} 心の準備を終えたユビックは、弟子に合図した。<br/>檻から出てくるまでは何なのか分からない、そして出てきた今もなおあのモンスターが何なのか分からないモンスターが檻から出てきて走り出した。<br/>{np} モンスターの名前は後でゆっくり思い出せばいい。<br/>しかし、示範は時を逃すと恥さらしになる。<br/>ユビックが慎重にそして素早い手つきでキャスティングを終えた。<br/>{np} モンスターの後をつけていた影から、四つのとがった影の矢が放たれた。<br/>その矢たちは矢というより針のようで、後ろに影の蔓のようなものをぶら下げていた。<br/>{np} その四つの影の矢の蔓が、モンスターの四つの足の甲を貫いた。<br/>モンスターは悲鳴を上げたが、四つの足が全て影によって縛られた。<br/>これでひとまず、モンスターの足を封じたので少しの時間稼ぎはできた。<br/>{np} 足の甲を貫いた影の矢の蔓がモンスターの足に巻きついてモンスターの膝を貫通し、枝のように広がりって8本の矢の蔓に変わった。それらは下から上に、他の矢は上から下にそしてまたある矢は横に動き、モンスターの体の8ヶ所を貫通し、計16つの穴を開けた後、モンスターの背中の上を勢いよく襲った。<br/>{np} その8つの影の矢の蔓が一つになり、やがてそれは槍の形になった。<br/>そして、その大きな槍はモンスターの頭を貫き、まだ息を繋いでいて悲鳴を上げていたモンスターの息の根を止めた。<br/>{np} シャドウマンサーマスターユビックは試演を終えると、後ろの壇上に座り鑑賞していたマスターたちの方に目を向けた。<br/>最初に評価を口にした者はソーサラーマスターのデイム・キルケだった。<br/>{np} [そのシャドウソーンはあなたじゃないとできないのでは？あなたの弟子たちや他のシャドウマンサーたちはそのレベルまで達しているとは思えないですが。あなたにしかできない技を見せるためにこんなにも多くのマスターを集めたのですか？]<br/>{np} ユビックは心の中で「身の程を知れ！」と思ったが、ウィカン・セレスティックが続けてこう言った。<br/>{np} [キルケ様の仰るとおりです。非常にレベルが高くて力強い技ですが、他のシャドウマンサーが簡単にまねできない技の応用であれば、魔法学的価値しかないと思われます。<br/>{np} 更に、ソーサラーマスターの魔族の魂の影を反映する技を駆使する能力を考慮すると、ソーサラーマスターが召喚した召喚獣には、発動すらできないでしょう。]<br/>{np} ユビックがあいつはキルケのことになると何でも口を突っ込むと思ったその時、ウィノナ・エンデが反論を唱えた。<br/>[ですが、ユビック様がキルケ様と戦うわけでもないですし、全てのソーサラーがキルケ様のレベルで魔族の魂を操るわけでもありません。全く意味がないとは言えないと思います。]<br/>{np} イリー・テリードが言った。<br/>[皆さんが仰ったことは全て正しいですが、今はとりあえず次の示範を観ましょう。示範を見るたびに議論すると、今日一日では終わりそうにありません。]<br/>その言葉にユビックはまた弟子に合図した。<br/>準備した二番目のモンスターが出てきた。<br/>{np} 今回はユビックが特に何もしていないように見えたが、突然モンスターが地にくっ付いたように動かなかった。<br/>今回はソーマタージュマスターのラリサが口を開いた。<br/>{np} [普通のシャドウパターではないですか？相手の影を地にくっ付けて動けないようにするシャドウマンサーたちの技ですよね？]<br/>ユビックが[その通りです。]と答え、また合図した。<br/>{np} すると弟子たちが四方に配置した魔法火炎を爆発させたり、火を消したりし、しばらくそれを繰り返した。昼間にもかかわらず、強い火炎でモンスターの影がさらに作られた。すると、不思議な事が起きた。<br/>{np} モンスターが新しく作られた影によって引きずられた。<br/>本体が新しく作られた影に引きずられたのだ。<br/>モンスターは自分の影に縛られる状態となり、他のところで作られた影の大きさと方向によって強制的に移動されていた。<br/>{np} 問題はそのように引きずられるたびに地面に叩きつけられる物理的衝撃はそのまま受けてしまうという点だった。<br/>固い地面に何回も叩きつけられ、また宙に飛ばされてから落下することが繰り返されるとモンスターは死んでしまった。<br/>ユビックは後ろを振り向いて他のマスターの評価を待った。<br/>{np} 今回もソーサラーマスターのキルケが真っ先に口を開いた。<br/>[これは戦うたびに光を予め用意しなければならないと思うのですが、それは問題ではないですか？]<br/>{np} リンカーマスターのウィノナ・エンデが次いで発言した。<br/>[リンキングを上手く使い、ファイヤーボールなり何なり、光る物体を四方に魔法で配置すれば、特に問題ないでしょう。<br/>{np} これは最初から他のウィザードと協力し戦闘する合同戦闘のための、技術応用ですね。]<br/>ユビックはウィノナがリンカーマスターらしく、自分が考えた連携攻撃を言及したことが嬉しかった。<br/>しかしその嬉しさは長くは続かなかった。<br/>サイコキノマスターのイリー・テリードがこう言ったからだ。<br/>{np} [ところが、敵にあのような物理衝撃を与えるのであれば、こうすればいいのでは？]<br/>と、言いながらイリー・テリードはテレキネシスで死んだモンスターの死体を掴んで激しく振り回した。<br/>ウィカン・セレスティックがすかさず間に入った。<br/>{np} [もちろん、そうするしかない時にテレキネシスやサイコキノの助けを受けられない場合があるかもしれませんが、それでも効率的とは言えません。]<br/>ソーサラーマスターのデイム・キルケがウィカンに笑顔を見せながら席から立ち、こう言った。<br/>{np} [シャドウマンサーマスターが見せてくださったシャドウマンサー魔法の高いレベルでの応用については理解できました。ですが、それを他のマスターたちが見る必要があったのでしょうか。まあ、これ以上見るつもりもないですが。私は忙しいので今日のところはこれで失礼します。]<br/>{np} デイム・キルケが立ち上がると、ウィカン・セレスティックも挨拶をし、その場を去った。<br/>他の魔法マスターたちの中にはもっと見たいと興味を示す者もいたが、お開きムードを察して迷っているようだった。<br/>{np} その時、静かに見守っていたクロノマンサーマスターのルシード・ウィンタースプーンが立ち上がった。<br/>最も年長者である彼女が立ち上がると、他のマスターたちも席から立ち上がった。<br/>そして、皆ユビックに礼儀正しく挨拶をしてその場を去り始めた。<br/>{np} しかし、ルシード・ウィンタースプーンはユビックに近づきこう言った。<br/>[私が席から立ったせいで、お開きになってしまいましたね。ですが、それは私の狙い通り。]<br/>それを聞いたユビックはルシード・ウィンタースプーンを見つめ、こう言った。<br/>{np} [早く終わらせるためにわざと？]<br/>[はい。その意図もありますが、それが全てではありません。ただ、二人きりで話したいことがあったのです。]<br/>ユビックはこの生きた伝説となった魔法の大家が何を言い出すか、期待と心配が織り混ざった気持ちで彼女の言葉を待った。<br/>{np} ルシード・ウィンタースプーンが言った。<br/>[先ほど見せてくださった魔法のことですが、結果的には影の本体を他のところに送っていましたよね。でしたら、これをもう少し応用すれば瞬間移動として使えるかもしれません。いかがでしょう？]<br/>{np} [お言葉ですが、そうするためには到着時の物理的な衝撃を解決しなければなりません。遠くなるほど衝撃は大きくなります。敵をわざと遠くに送って大きな衝撃を与えるわけでなく自分や自分が望む対象の瞬間移動として使いたければ…。]<br/>{np} ルシード・ウィンタースプーンがその言葉に笑みを浮かべながら言った。<br/>[問題はそれだけではないですが、比較的簡単に解決できそうですね。]<br/>ユビックは少し考えてからこう言った。<br/>{np} [また他の問題は、より遠くに送りたいのであればより強い光を使わなければなりません。そして、遠すぎると行きたいところに光を設置したとしても、本体はそこにはなくて、本体の影を先に送る方法はないので、結果的に本体が直接行かなければならないので…。<br/>{np} 先ほどイリー・テリードも言っていましたが、これについてもテレポーテーションの方がまだ使えるという評価を得られそうですね。]<br/>[必ず自分の影を利用する必要はありません。他の人や物の影に乗るのは？]<br/>{np} [そのような応用は考えたことがなかったので、できるかどうか分かりません。これから時間をかけて研究して可能だという結論が出たとしても同じではないでしょうか？自分の影であれ他の者や物の影であれ遠くに送るためには先ほどと同じ問題に直面しますから。<br/>{np} 先により強い光と影を送る方法もなく、影を送るためには結局本体が先にその場所に存在しなければならないという矛盾です。]<br/>ルシード・ウィンタースプーンが再び笑みを浮かべこう言った。<br/>{np} [その影が月の影だとしたら？]<br/>その言葉にユビックの表情が変わった。<br/>[なるほど！月食や日食の影に乗ることができれば、世界の果てまで一瞬で移動できます！実に素晴らしい！]<br/>{np} ルシード・ウィンタースプーンが言った。<br/>[だとしても、テレポーテーションの非効率的な劣化版という評価を得るかもしれませんが、それでもやってみる価値は十分あると思います。当分の間、この魔法を研究してみるのはいかがでしょうか？私もお手伝いします。]<br/>{np} [はい。今すぐにでも取り掛かりたいと思います。本当にありがとうございます。素晴らしい発想です、ルシード様。]<br/>この出来事からシャドウマンサーマスターユビックはエクリップスと自ら名乗り、エクリップス・ユビックと呼ばれるよううになった。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>シャドウマンサーマスターのエクリップス・ユビックに関する物語。右クリックすると読むことができます。 </p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ミルティスに関する物語。右クリックで読むことができます。">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+  <title>ミルティス物語 - Books - Tree of Savior</title>
+
+  <!-- Additional performance tweaks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Theme -->
+  <link rel="stylesheet" href="assets/themes/flatly.min.css" id="bootstrap-theme">
+
+  <!-- Show the selected Theme right from the start (1/2) -->
+  <script type="application/javascript">
+    let theme = +localStorage.getItem('theme') || 2;
+    let themeFile = theme === 1 ? 'darkly' : 'flatly';
+    let element = document.getElementById('bootstrap-theme');
+        element.setAttribute('href', element.getAttribute('href').replace('flatly', themeFile));
+  </script>
+
+  <!-- Trigger browser 'Translate' button -->
+  <script type="application/javascript">
+    let lang = { 'jtos': 'ja', 'ktos': 'ko', 'ktest': 'ko', 'twtos': 'zh' };
+        lang = Object
+          .keys(lang)
+          .find(value => location.href.indexOf(`/${ value }/`) > 0) || 'en';
+
+    document
+      .getElementsByTagName('html')[0]
+      .setAttribute('lang', lang);
+  </script>
+
+  <!-- Patreon & Regions -->
+  <script type="application/json" id="tos-patreon">{"100":["'Palemoon '","'Phantasos '","'Ersakoz '","'Jedi Aaron'"],"500":["'Tunico Schmidt'","'Kenneth Cheong'","'Chad '","'Daniel Hsiao'"]}</script>
+  <script type="application/json" id="tos-region">{"iTOS": {"rebuild": true, "version": "patch_287215_release_287215"}, "jTOS": {"rebuild": true, "version": "patch_330302_release_330302"}, "kTEST": {"rebuild": true, "version": "patch_283047_release_283047"}, "kTOS": {"rebuild": true, "version": "patch_284153_release_284153"}, "twTOS": {"rebuild": true, "version": "patch_291118_release_291279"}}</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK6GQX3');</script>
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK6GQX3"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Show the selected Theme right from the start (2/2) -->
+  <script type="application/javascript">
+    document.body.style.backgroundColor = theme === 1 ? '#222' : '#fafafa';
+    document.body.style.color = theme === 1 ? '#fff' : '#212529';
+    document.body.style.margin = '0';
+    document.body.onload = () => document.body.setAttribute('style', '');
+  </script>
+
+  <app-root>
+    <!-- Specific CSS for the Server-Side Rendering -->
+    <style>
+      .dropdown:hover .dropdown-menu { display: block; }
+    </style>
+
+    <nav class="navbar navbar-dark mb-5 text-uppercase" style="background: #002A3A">
+      <a class="navbar-brand mr-4 p-0 order-0" href="/itos">
+        <img height="47" src="assets/images/logo_tos.png" style="transform: scale(1.25)">
+      </a>
+      <div class="navbar-expand m-auto m-md-0 order-3 order-md-1 pb-2 pb-md-0 pt-3 pt-md-0">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Database
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">Items</div>
+              <a class="dropdown-item" href="/jtos/database/books" title="Books">Books</a>
+              <a class="dropdown-item" href="/jtos/database/cards" title="Cards">Cards</a>
+              <a class="dropdown-item" href="/jtos/database/collections" title="Collections">Collections</a>
+              <a class="dropdown-item" href="/jtos/database/cubes" title="Cubes">Cubes</a>
+              <a class="dropdown-item" href="/jtos/database/equipment" title="Equipment">Equipment</a>
+              <a class="dropdown-item" href="/jtos/database/equipment-sets" title="Equipment">Equipment Sets</a>
+              <a class="dropdown-item" href="/jtos/database/gems" title="Gems">Gems</a>
+              <a class="dropdown-item" href="/jtos/database/items" title="Items">Items</a>
+              <a class="dropdown-item" href="/jtos/database/recipes" title="Recipes">Recipes</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Player</div>
+              <a class="dropdown-item" href="/jtos/database/attributes" title="Attributes">Attributes</a>
+              <a class="dropdown-item" href="/jtos/database/classes" title="Jobs">Jobs</a>
+              <a class="dropdown-item" href="/jtos/database/skills" title="Skills">Skills</a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">World</div>
+              <a class="dropdown-item" href="/jtos/database/monsters" title="Monsters">Monsters</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jtos/simulator">Skill Simulator</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block flex-grow-1 justify-content-center mt-3 mt-lg-0 order-5 order-lg-3"></div>
+      <div class="order-2 w-100 d-md-none"></div>
+      <div class="order-4 w-100 d-lg-none"></div>
+      <div class="navbar-expand order-1 order-md-3">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+              Region
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/itos/database/books/690071" title="iTOS">iTOS</a>
+              <a class="dropdown-item" href="/jtos/database/books/690071" title="jTOS">jTOS</a>
+              <a class="dropdown-item" href="/ktos/database/books/690071" title="kTOS">kTOS</a>
+              <a class="dropdown-item" href="/ktest/database/books/690071" title="kTEST">kTEST</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100% - 80px)">
+      
+    <div class="row">
+        <h1>ミルティス物語</h1>
+    </div>
+    <div class="row">
+        <div class="col lg-6">
+            <img src="/assets/icons/icon_item_collection_04black.png" />
+            <h3>Content</h3>
+            <p>　ジェスティに命じられ、多くの魔将たちがライマを追跡する任務に就いてから長年が過ぎたが誰一人成功した魔将はいなかった。<br/>一歩先を行く予知の女神を探すことは決して容易いことではなかったため、当然のことかもしれなかったが、最近ライマの追跡に関する進展があったのだ。{np}　エミネントはこれが自分がルクリスを殺したことにライマが衝撃を受けたからだと主張したが、ミルティスからするととんでもないことだった。{np}　それよりはライマが啓示を作ることに疲れてきて、その能力が低下しているのではないかという話の方が有力だった。<br/>とにかく、ミルティスは魔将たちがライマを追撃し始めてから誰よりも、またどんな時よりもライマに近づいたと確信した。<br/>シャウレイ森では姿を目にするほど接近できた時もあったのだ。それからしばらく見かけていないが、またすぐ見つけられる気がした。何よりもミルティスには他の魔将たちにはない偵察手段も持っていた。{np}　案の定、人間が作った監獄にある男と一緒にいたライマを発見したが、ここでも間一髪のところで逃してしまった。<br/>しかし、これまでライマの追跡を始めて以来、ライマを直接見られるほど接近できた魔将はいなかった。<br/>ミルティスはこれを非常に良い進展と考え、今度発見した時は絶対逃すまいと決心した。<br/>ミルティスが目にしたライマはか弱い人間の少女の姿をしていて、かなり弱まっていた。{np}　そしてついに水晶鉱山のある坑道にいるライマを探知した瞬間、ミルティスは念のためライマが逃げられる場所はないか確認した。<br/>その確認には瞬間移動の可能性を排除することも含まれていた。<br/>ライマではない者でもこの鉱山で瞬間移動を試みた瞬間、鉱山は崩れ落ちて移動する前に埋もれてしまうのだ。<br/>ライマが現在いる場所から逃げられないと分かったミルティスは上機嫌になった。{np}　そのせいか、ライマの前に姿を現した時までライマと一緒にいた人間の男のことはまったく気にしていなかった。<br/>ライマの前に立ったミルティスが話し始めた。[これが始まって以来、あなたに直接会った者は私しかいません。すべての魔将たちがあなたの影も見つけられず、追跡を諦めるしかなかった。しかし、長かった追跡もこの私によって幕を閉じることになりました。]<br/>ライマは無言のままだったが、ライマの横にいた人間の男、カニンガムが口を開いた。[我々がわざとお前をここで待っていたとは思わなかったのか？]{np}　ミルティスが言った。[無礼者！そんなこと言っても変わるのは何もないぞ。それに人間の分際で我々のことに首を突っ込むな。]{np}　ミルティスはカニンガムのことは無視し、ライマに再び声をかけた。[ギルティネ様の厳格な命令によってあなたに会ったら我々は一度はあなたを説得することになっています。<br/>ですが、最後まで我々の話を受け入れない場合は手段を選ばずあなたとあなたの啓示を手に入れろとも命じられました。なので我々が礼儀をもって接しているうちに協力した方が身のためです。]{np}　しかし、ライマは無言を貫き、カニンガムは話を続けた。[我々がここでお前を待っていたのはもちろんこれ以上逃げ切れないと思ったからだ。ところが、水晶鉱山は数百年も採掘を続けてきた鉱山。]<br/>[それがどうした？]<br/>ミルティスが聞くと、カニンガムが答えた。[古い鉱山だからもう水晶が採れない鉱区は閉鎖されるという意味だ。よって、たとえここが崩れても誰もこんなところに人がいたとは思わないだろうし、わざわざ掘り起こすこともないということだ。]<br/>[だからそれが何だ？]{np} その質問にカニンガムが答えた。[要は、お前をここに封印してこの鉱区を崩せばお前は封印の魔力によって永遠に閉じ込められる。それにたまたま鉱夫たちがここを掘り起こしてもお前を出してあげたりしないだろう。そしてライマ様も、お前が失敗したらお前の上官という魔王はお前を助けてくれないとおっしゃった。つまり、お前はここで終わりだ。]<br/>そう言って、カニンガムは丸い物体を取り出した。それは糸を紡ぐ糸車の形をし、全体的に輪の形をしていた。{np}　これは後に4大聖器と呼ばれ、神樹の日が王都に起きた時、その災いを縮小して安定させるのに貢献した聖器が初めて世の中で使われた瞬間だった。<br/>初代パラディンマスターリムガウダスが残した他の聖器がミルティスの上官であるジェスティを撃退することもここからあまり離れていないところで起きた事件だが、とにかくミルティスは魔族としては初めて魔王も撃退できるという聖器の攻撃を受けた最初の魔族となった。{np}　ミルティスが何かをしようとした時、彼女はこれ以上自分の周りを流れる時間が普通ではないと気づいた。<br/>それは時間という激流がその勢いを失い、やがて静まり返った湖のような状態になったことを意味した。<br/>時間が流れなくなったら空間を移動すればいいが、先ほどその道を自ら塞いだことに気づき、ミルティスは動けなくなった。{np}　ミルティスはその湖の水が凍り付く前に聖器の影響力から逃げなければと思ったが、すでに体だけではなく精神まで思い通りに動けなくなったのを感じた。ミルティスが完全に凍りついたのを確認するとカニンガムが言った。[この聖器の威力は凄まじいものですね。]<br/>ライマが言った。[それは私がそばにいた影響もあります。人間が一人で使うと、今ほどの威力は発揮できないでしょう。]<br/>カニンガムが言った。[もう大丈夫です。この魔将もしばらくはここにいるしかありませんから。早く逃げてください。後始末は私がします。]{np}　[まさか…おやめください！]<br/>[本当はお分かりなのでしょう？鉱山を崩さないと他の魔族や偶然入ってきた人間が厄介なことを起こすかもしれません。何よりも…。]<br/>カニンガムはしばらく沈黙し、やがて話を続けた。[この聖器は現在の所有者が死ぬと他のところに消えると教えてくださったのはライマ様ではありませんか。未来のためにもこの聖器をここに残すわけにはいきません。ここを崩して私が死ねば解決できます。死んだルクリスも納得してくれるはずです。そうでもしないと、あなたのために命を落としたあいつがあまりにも可哀想じゃありませんか。]{np} ライマはルクリスの名前を聞くと再び悲しみに浸り、結局カニンガムの提案に同意するしかなかった。ライマはカニンガムの犠牲を祝福し、その場を去った。やがて今の記憶を再び封印して過ごさなければならないという事実がこのか弱い女神の心を再び痛めつけた。<br/>幸いにライマはカニンガムが起こした爆発の爆音を聞く前に水晶鉱山から出られた。</p>
+        </div>
+        <div class="col lg-6">
+            <div>
+                <h3>Description</h3>
+                <p>ミルティスに関する物語。右クリックで読むことができます。</p>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <div><span>Cooldown:&nbsp;</span><span></span></div>
+                <div><span>Lifetime:&nbsp;</span><span></span></div>
+                <div><span>Weight:&nbsp;</span><span>1</span></div>
+                <div><span>Silver:&nbsp;</span><span>1</span></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+  </app-root>
+
+  <!-- HotFix: clear app-root for non-crawlers, to not fool the user into thinking this has already loaded -->
+  <script type="text/javascript">
+    document.body.getElementsByTagName('app-root')[0].innerHTML = 'Loading...';
+  </script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>
