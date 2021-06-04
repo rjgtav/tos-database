@@ -1,19 +1,20 @@
 FROM ubuntu:20.04
 LABEL author ebisuke
 
+# ENVs
+ENV LANG=en_EN.UTF-8
+ENV PYTHONIOENCODING=utf-8
+
 # avoid apt-get blocking
 RUN apt-get update && apt-get install -y -q tzdata
 ENV TZ=Asia/Tokyo 
-ENV LANG=en_EN.UTF-8
-ENV PYTHONIOENCODING=utf-8
+
 # add prerequisites
 
-RUN apt-get update && apt-get install -y -q nodejs npm python3 python3-pip unzip nginx bash build-essential curl wget xvfb openjdk-11-jdk
+RUN apt-get update && apt-get install -y -q nodejs npm python3 python3-pip unzip nginx bash build-essential curl wget openjdk-11-jdk
 
 # prepare python environment
-RUN pip3 install pillow lupa unicodecsv pandas
-
-
+RUN pip3 install pillow lupa unicodecsv
 
 # prepare nodejs environment
 RUN npm -g i n yarn && n 16.3.0 && yarn global add @angular/cli

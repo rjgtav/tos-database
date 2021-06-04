@@ -40,16 +40,16 @@ def csv_write(data, dataset):
     for row in data:
         if keys is None or len(keys) < len(list(row.keys())):
             keys = list(row.keys())
-    # for k in range(len(data)):
-    #     for kk,vv in data[k].items():
-    #         data[k][kk]=str(vv)
+    for k in range(len(data)):
+         for kk,vv in data[k].items():
+             data[k][kk]=str(vv)
     # Write to CSV
-    file = codecs.open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'w','utf-8')
+    file = codecs.open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'w','utf-8',errors='replace')
     writer = csv.DictWriter(
         file,
         delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(list(map(lambda x:str(x),keys)))
     )
-    #writer.writeheader()
+    writer.writeheader()
     writer.writerows(sorted(data, key=lambda k: k['$ID']))
     file.close()
 
