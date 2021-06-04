@@ -4,4 +4,8 @@ services:
         build: .
         ports:
             - "8000:8000"
+        volumes:
+            - ./input:/root/tos-parser/input/
+            - ./distbuild:/root/tos-build/dist/
+            - ./distweb:/root/tos-web/dist/
             

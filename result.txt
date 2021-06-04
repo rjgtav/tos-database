@@ -1,139 +1,42 @@
-#1 [internal] load build definition from Dockerfile
-#1 sha256:9d7cad2cbe33557feb33f6c20ef221465f1343853359dc26766aee3a2d37c311
-#1 transferring dockerfile: 975B done
-#1 DONE 0.0s
+Starting tos-database_tos_1 ... 
+Starting tos-database_tos_1 ... done
+Docker Compose is now in the Docker CLI, try `docker compose up`
 
-#2 [internal] load .dockerignore
-#2 sha256:90ee6bceb57eafc9e6ec4513a0219f3d063680234b86b5ac06df23db4163cb32
-#2 transferring context: 2B done
-#2 DONE 0.0s
-
-#3 [internal] load metadata for docker.io/library/ubuntu:20.04
-#3 sha256:cd9ed232facd22264e9246054f9c3d7a9c42bdb414a225d8f8215114646e640c
-#3 DONE 1.1s
-
-#4 [ 1/18] FROM docker.io/library/ubuntu:20.04@sha256:adf73ca014822ad8237623d388cedf4d5346aa72c270c5acc01431cc93e18e2d
-#4 sha256:dd526788d1caf7959fb431f77c0cf7b12ec1e47434ec693200c315c1198183c0
-#4 DONE 0.0s
-
-#5 [ 2/18] RUN apt-get update && apt-get install -y -q tzdata
-#5 sha256:54201ffe5d80797d59cd937b51fc912735e0656b297c9982004a28a95e05d424
-#5 CACHED
-
-#6 [ 3/18] RUN apt-get update && apt-get install -y -q nodejs npm python3 python3-pip unzip wine nginx bash build-essential curl wget
-#6 sha256:4d1145b73e170e3044a9abea046d688c187d31a99c3f957ed7a6654d13d04d6a
-#6 CACHED
-
-#7 [ 4/18] RUN pip3 install pillow lupa unicodecsv pandas
-#7 sha256:f76a7ac90d4766ac51fb0b3c6f2ea3c9b714c32c43ab04b720f6c9a4e75ff718
-#7 CACHED
-
-#8 [ 5/18] RUN npm -g i n yarn && n 16
-#8 sha256:135d798ca502133e686292b263011bd0e30580397837f2420a461a9b6816a81b
-#8 CACHED
-
-#9 [ 6/18] WORKDIR /root
-#9 sha256:d6187cd30b3bf37d9d6b0b0bb403224d217535c6ac8df9350776457519b1311a
-#9 CACHED
-
-#10 [internal] load build context
-#10 sha256:1c4c1a4270b397e7aa131c8fd60e2ce667800b4dc674d31e6eceec76484d285f
-#10 transferring context: 6.65MB 1.9s done
-#10 DONE 2.1s
-
-#11 [ 7/18] COPY ./ipf_unpacker ./ipf_unpacker
-#11 sha256:9f2a03eef625e8af2a34ef7b38c3ff9f9ea9c031e450c5808956e34752479ac8
-#11 DONE 0.1s
-
-#12 [ 8/18] COPY ./tos-build ./tos-build
-#12 sha256:bfa729158669046a86cdbee6b9ab59b967d20a39b45acd5c12b48450b4b2bd21
-#12 DONE 9.3s
-
-#13 [ 9/18] COPY ./tos-html ./tos-html
-#13 sha256:4f309bd82a5f2c2fc851dec530cb797f6af6b0fc1453b680fbfec16734fd9d8d
-#13 DONE 0.0s
-
-#14 [10/18] COPY ./tos-parser ./tos-parser
-#14 sha256:dbeab5ac2c543bf28a0fcb59d14d2ea47af1804416aae5c792327aa792714d6a
-#14 DONE 0.0s
-
-#15 [11/18] COPY ./tos-search ./tos-search
-#15 sha256:e853a516a615c21a70c56c976150f5aa5d59cdfe5924ff998cb6e11b7738b872
-#15 DONE 0.0s
-
-#16 [12/18] COPY ./tos-sitemap ./tos-sitemap
-#16 sha256:2e4d3708d8b0e6a370bc894dea05b2d6b24bfdc347f4da07fca7f3fcdb8133ac
-#16 DONE 0.0s
-
-#17 [13/18] COPY ./tos-sw ./tos-sw
-#17 sha256:21c2dc6a4fa90f6be5485e0cf3a90f183759d82088271eb7013dfafdf8b80fca
-#17 DONE 0.0s
-
-#18 [14/18] COPY ./tos-web ./tos-web
-#18 sha256:7f6bed51025812f898442e995cb0154476d2b1733ac6685852b5ac9069026579
-#18 DONE 0.2s
-
-#19 [15/18] COPY ./tos-web-rest ./tos-web-rest
-#19 sha256:3641246c096f6db14ba4365745bcf6ddca6ed3433448ae0994fcdf829577ccf5
-#19 DONE 0.0s
-
-#20 [16/18] COPY ./build.sh   ./build.sh
-#20 sha256:b613f880837bca849a2cf6632d362b725b60486b989ba369fe318e60e357ca7b
-#20 DONE 0.0s
-
-#21 [17/18] COPY ./httpserver/http.conf /etc/nginx/conf.d/http.conf
-#21 sha256:35123efe3768cacbc2bfe4bde3f9ccf1fff5345829fa22a4183cd2b8dd5f64ea
-#21 DONE 0.0s
-
-#22 [18/18] RUN /bin/bash ./build.sh
-#22 sha256:3b2ffbe33133d472c437070dd9cb4079962e37dc95683844f97e44875bfb9e3a
-#22 0.369 ToS database building start.
-#22 0.500 [2021-06-03 23:49:57] [DEBUG]	[jTOS]	Patching...
-#22 0.500 [2021-06-03 23:49:57] [DEBUG]	[jTOS]	Patching http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/full/data.file.list.txt...
-#22 0.766 [2021-06-03 23:49:57] [DEBUG]	[jTOS]	Downloading http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/full/data/addon.ipf...
-#22 0.766 [2021-06-03 23:49:57] [DEBUG]	[jTOS]	Downloading http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/full/data/addon.ipf...
-#22 1.208 [2021-06-03 23:49:58] [DEBUG]	[jTOS]	OK
-#22 1.208 [2021-06-03 23:49:58] [DEBUG]	[jTOS]	Unpacking ../tos-parser/input/jTOS/data/patch/addon.ipf...
-#22 1.218 it looks like wine32 is missing, you should install it.
-#22 1.233 as root, please execute "apt-get install wine32"
-#22 1.241 wine: created the configuration directory '/root/.wine'
-#22 1.571 0012:err:ole:marshal_object couldn't get IPSFactory buffer for interface {00000131-0000-0000-c000-000000000046}
-#22 1.572 0012:err:ole:marshal_object couldn't get IPSFactory buffer for interface {6d5140c1-7436-11ce-8034-00aa006009fa}
-#22 1.572 0012:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hres=0x80004002
-#22 1.572 0012:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, 80004002
-#22 1.572 0012:err:ole:get_local_server_stream Failed: 80004002
-#22 1.578 0014:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
-#22 1.578 0014:err:winediag:nodrv_CreateWindow Make sure that your X server is running and that $DISPLAY is set correctly.
-#22 1.579 0014:err:ole:apartment_createwindowifneeded CreateWindow failed with error 0
-#22 1.581 0014:err:ole:apartment_createwindowifneeded CreateWindow failed with error 0
-#22 1.583 0014:err:ole:marshal_object couldn't get IPSFactory buffer for interface {00000131-0000-0000-c000-000000000046}
-#22 1.584 0010:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
-#22 1.584 0010:err:winediag:nodrv_CreateWindow Make sure that your X server is running and that $DISPLAY is set correctly.
-#22 1.586 0014:err:ole:apartment_createwindowifneeded CreateWindow failed with error 14007
-#22 1.586 0014:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hres=0x800736b7
-#22 1.586 0014:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, 800736b7
-#22 1.586 0014:err:ole:get_local_server_stream Failed: 800736b7
-#22 1.597 000b:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
-#22 1.597 000b:err:winediag:nodrv_CreateWindow Make sure that your X server is running and that $DISPLAY is set correctly.
-#22 5.941 0023:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
-#22 5.941 0023:err:winediag:nodrv_CreateWindow Make sure that your X server is running and that $DISPLAY is set correctly.
-#22 6.205 wine: configuration in L"/root/.wine" has been updated.
-#22 6.217 0009:err:module:__wine_process_init L"Z:\\root\\ipf_unpacker\\ipf_unpack.exe" not supported on this system
-#22 6.220 Traceback (most recent call last):
-#22 6.220   File "main.py", line 32, in <module>
-#22 6.220     version_old, version_new = patcher.patch()
-#22 6.220   File "/root/tos-parser/src/patcherr/patcher.py", line 18, in patch
-#22 6.220     patch_full(
-#22 6.220   File "/root/tos-parser/src/patcherr/patcher.py", line 51, in patch_full
-#22 6.220     patch_process(patch_file, patch_name, patch_unpack, patch_url)
-#22 6.220   File "/root/tos-parser/src/patcherr/patcher.py", line 93, in patch_process
-#22 6.220     patch_unpack(patch_name)
-#22 6.220   File "/root/tos-parser/src/patcherr/patcher_ipf.py", line 46, in unpack
-#22 6.220     subprocess.check_call(
-#22 6.220   File "/usr/lib/python3.8/subprocess.py", line 364, in check_call
-#22 6.220     raise CalledProcessError(retcode, cmd)
-#22 6.220 subprocess.CalledProcessError: Command '['wine', 'ipf_unpack.exe', 'tmp.ipf', 'decrypt']' returned non-zero exit status 123.
-#22 6.533 yarn install v1.22.10
-#22 6.546 info No lockfile found.
-#22 6.549 warning package-lock.json found. Your project contains lock files generated by tools other than Yarn. It is advised not to mix package managers in order to avoid resolution inconsistencies caused by unsynchronized lock files. To clear this warning, remove package-lock.json.
-#22 6.550 [1/4] Resolving packages...
+Attaching to tos-database_tos_1
+[36mtos_1  |[0m ToS database building start.
+[36mtos_1  |[0m /root/build.sh: line 12: [0: command not found
+[36mtos_1  |[0m [2021-06-04 21:44:38] [DEBUG]	[jTOS]	Patching...
+[36mtos_1  |[0m [2021-06-04 21:44:38] [DEBUG]	[jTOS]	Patching http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/full/data.file.list.txt...
+[36mtos_1  |[0m [2021-06-04 21:44:38] [DEBUG]	[jTOS]	Patching http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/partial/data.revision.txt...
+[36mtos_1  |[0m [2021-06-04 21:44:39] [DEBUG]	[jTOS]	Patching http://d3bbj7hlpo9jjy.cloudfront.net/live/patch/partial/release.revision.txt...
+[36mtos_1  |[0m [2021-06-04 21:44:40] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/accountwarehouse/accountwarehouse.lua, error: [string "<python>"]:1: attempt to index a nil value (global 'account_warehouse')
+[36mtos_1  |[0m stack traceback:
+[36mtos_1  |[0m 	[string "<python>"]:1: in main chunk...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/buffseller_register/buffseller_register.lua, error: error loading code: [string "<python>"]:20: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/changejob/changejob.lua, error: error loading code: [string "<python>"]:2: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/damage_meter/damage_meter.lua, error: error loading code: [string "<python>"]:48: 'end' expected (to close 'if' at line 31) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/event_new_season_server_coin_check/event_new_season_server_coin_check.lua, error: error loading code: [string "<python>"]:2: syntax error near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/exchangeantique/exchangeantique.lua, error: error loading code: [string "<python>"]:19: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/exchangeweapontype/exchangeweapontype.lua, error: error loading code: [string "<python>"]:28: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/goddess_roulette_coin/goddess_roulette_coin.lua, error: error loading code: [string "<python>"]:2: syntax error near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/guildgrowth/guildgrowth.lua, error: error loading code: [string "<python>"]:21: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/guildinfo/guildinfo_agit.lua, error: error loading code: [string "<python>"]:32: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:41] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/guildinfo/guildinfo_info.lua, error: error loading code: [string "<python>"]:6: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:42] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/housing_shop/housing_shop.lua, error: error loading code: [string "<python>"]:11: 'end' expected (to close 'if' at line 9) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:42] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/inventory/inventory.lua, error: error loading code: [string "<python>"]:3: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:42] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/item_equip_helper/item_equip_helper.lua, error: error loading code: [string "<python>"]:8: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:42] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/item_result/item_result.lua, error: error loading code: [string "<python>"]:2: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:42] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/itemcraft/itemcraft.lua, error: error loading code: [string "<python>"]:49: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:42] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/market/market_category.lua, error: error loading code: [string "<python>"]:5: 'end' expected (to close 'function' at line 1) near <eof>...
+[36mtos_1  |[0m [2021-06-04 21:44:43] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/addon.ipf/rareoption/rareoption.lua, error: [string "<python>"]:5: attempt to call a nil value (global 'ClMsg')
+[36mtos_1  |[0m stack traceback:
+[36mtos_1  |[0m 	[string "<python>"]:5: in main chunk...
+[36mtos_1  |[0m [2021-06-04 21:44:44] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/shared.ipf/script/hiddenability_make_shared.lua, error: [string "<python>"]:3: attempt to perform arithmetic on a nil value (local 'cnt')
+[36mtos_1  |[0m stack traceback:
+[36mtos_1  |[0m 	[string "<python>"]:3: in function 'RUN_PARSE_HIDDEN_ABILITY_ITEM'
+[36mtos_1  |[0m 	[string "<python>"]:40: in main chunk...
+[36mtos_1  |[0m [2021-06-04 21:44:44] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/shared.ipf/script/item_legend_shared.lua, error: [string "<python>"]:7: attempt to perform arithmetic on a nil value (local 'xmlCount')
+[36mtos_1  |[0m stack traceback:
+[36mtos_1  |[0m 	[string "<python>"]:7: in function 'make_vibora_list'
+[36mtos_1  |[0m 	[string "<python>"]:24: in main chunk...
+[36mtos_1  |[0m [2021-06-04 21:44:44] [WARNING]	[jTOS]	Failed to load ../tos-parser/input/jTOS/data/shared.ipf/script/personal_housing_shared.lua, error: error loading code: [string "<python>"]:3: 'end' expected (to close 'function' at line 1) near <eof>...

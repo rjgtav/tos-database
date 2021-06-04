@@ -1,0 +1,1627 @@
+$ID,$ID_NAME,Description,Icon,Name,Type
+11282,mon_paladin_follower1_2,Monster,icon_item_nothing,Paladin Follower A2,2
+11283,mon_paladin_follower1_3,Monster,icon_item_nothing,Paladin Follower A3,2
+12080,HiddenTrigge_DMINE8_QUEST04,Monster,icon_item_nothing,Hidden Trigger Monster Type,2
+12081,f_katyn_owl01,Monster,icon_item_nothing,Owl Sculpture,2
+20011,soldier1,,,Supply Soldier,2
+20012,soldier2,,,Eastern Woods Scout,2
+20013,soldier3,,,Supply Officer,2
+20014,soldier4,,,Head of Guard Troop,2
+20015,soldier5,,,View,2
+20016,soldier6,,,Western Woods Scout,2
+20017,matron_f,,,Village Woman,2
+20018,intermediate_officer_f,,,Female Officer,2
+20019,soldier7,,,Western Woods Scout,2
+20020,soldier6_KNOCKDOWN,,,Fallen Soldier,2
+20021,wizardmaster,,minimap_man_wizard,Wizard Master,2
+20022,archermaster,,minimap_man_archer,Archer Master,2
+20023,swordmaster,,minimap_man_master,Swordsman Master,2
+20024,Hiddennpc_move,,,,2
+20025,Hiddennpc,,,,2
+20026,HiddenTrigger6,,,,2
+20027,pyromancer,,minimap_man_wizard,Pyromancer Master,2
+20028,peltasta,,minimap_man_master,Peltasta Master,2
+20029,highlander,,minimap_man_master,Highlander Master,2
+20030,Hiddennpc_Godness,,minimap_goddess,Goddess Statues,2
+20031,Emilia,,,Item Merchant Emilia,2
+20032,SCO_M,,,Crux Knights Officer (Male),2
+20033,SCO_M_Move,,,Crux Knights Officer,2
+20035,HiddenTrigger_AlwaysTitle,,minimap_goddess,,2
+20036,magicsquare_1_mini_AlwaysTitle,,,Magic Circle,2
+20040,HiddenTrigger,,,,2
+20041,HiddenTrigger2,,,,2
+20042,HiddenTrigger3,,,,2
+20043,SCS_M1,,,Security Guard,2
+20044,HiddenWall_100_200_500,,,,2
+20045,HiddenWall_10_100_500,,,,2
+20046,HiddenWall_40_50_100,,,,2
+20047,HiddenWall_30_30_30,,,,2
+20048,HiddenWall_2_20_40,,,,2
+20049,HiddenWall_10_200_500,,,,2
+20050,WarpSpot,,minimap_portal,WarpSpot,2
+20051,HealSpot,,,,2
+20052,WarpSpot_2,,minimap_portal,WarpSpot,2
+20053,HiddenWall_200_200_500,,,,2
+20054,HiddenWall_150_150_150,,,,2
+20055,npc_alf,,minimap_man_shop,Orsha Item Merchant Alf,2
+20056,npc_julla,,minimap_man_armor,Equipment Merchant Jura,2
+20057,npc_yurrs,,minimap_man_ace,Accessory Merchant Jurus,2
+20058,npc_toras,,minimap_man_companion,Companion Trader Toras,2
+20059,orsha_soldier_f,,,Orsha Soldier Female,2
+20060,orsha_soldier_m,,,Orsha Soldier Male,2
+20061,orsha_f_1,,,Orsha Soldier Female1,2
+20062,orsha_f_2,,,Orsha Soldier Female2,2
+20063,orsha_m_1,,,Orsha Soldier Male1,2
+20064,orsha_m_2,,,Orsha Soldier Male2,2
+20065,Inesa_Hamondail,,,Inesa Hamondale,2
+20066,npc_illanai,,minimap_man_smith,Blacksmith Ilanai,2
+20067,npc_aisah,,minimap_werehouse,Storage Keeper Aisa,2
+20068,npc_letizia,,minimap_man_tpshop,TP Trader Leticia,2
+20070,SkillTrigger1,,,,2
+20071,SkillTrigger2,,,,2
+20079,Raima,,,Goddess Laima,2
+20080,HiddenObbBox1,,,,2
+20081,HiddenObbBox_photowall_marine1,,,,2
+20082,HiddenObbBox_photowall_marine2,,,,2
+20083,HiddenObbBox_Photowall_Chess1,,,,2
+20084,HiddenObbBox_Photowall_Chess2,,,,2
+20085,HiddenObbBox_Photowall_Chess3,,,,2
+20086,HiddenObbBox_Photowall_Chess4,,,,2
+20087,HiddenObbBox_photowall_chef1,,,,2
+20088,HiddenObbBox_photowall_chef2,,,,2
+20100,npc_combat_transport_section_2_sit,,,Merchant 2 Sit,2
+20101,HiddenTrigger5,,,　,2
+20102,npc_combat_transport_section_1,,,Merchant 1,2
+20103,npc_combat_transport_section_2,,,Merchant 2,2
+20104,npc_accessary_merchant,,minimap_man_ace,Accessory Merchant,2
+20105,npc_blacksmith,,minimap_man_smith,Blacksmith,2
+20106,npc_intermediate_officer_female,,,Mid Commander (Male),2
+20107,npc_intermediate_officer_men,,,Mid Commander (Female),2
+20108,npc_low_lev_officer_m,,,Minor Commander,2
+20109,npc_miner,,,Veteran Miner,2
+20110,npc_mining_alchemist,,minimap_man_wizard,Miners' Village Alchemist,2
+20111,npc_equipment_dealers,,minimap_man_armor,Equipment Merchant,2
+20112,npc_healer,,minimap_man_cleric,Cleric Master,2
+20113,npc_knight,,,Uska,2
+20114,npc_matron,,,Old Lady,2
+20115,npc_tool_merchants,,minimap_man_shop,Item Merchant ,2
+20116,npc_village_matron,,,Village Old Lady,2
+20117,npc_village_uncle_1,,,Village Gentleman 1,2
+20118,npc_village_uncle_2,,,Village Gentleman 2,2
+20119,npc_liaison_officer_m_1,,,Liaison Offical(data exchange required),2
+20120,npc_chronicler_m_1,,,Recorder(data exchange required),2
+20121,npc_historian_m_1,,,Historian 1(data exchange required),2
+20122,npc_historian_m_2,,,Historian 2(data exchange required),2
+20123,npc_rexither,,,Rexipher human(data exchange required),2
+20124,npc_historian_f_1,,,Female Historian(data exchange required),2
+20125,npc_intermediate_officer_men2,,,Mid Commander (Male 2),2
+20126,DummyPC,,,PC,2
+20127,npc_low_lev_officer2_m,,,Minor Commander 2,2
+20128,npc_low_lev_officer3_m,,,Minor Commander 3,2
+20129,npc_knight2,,,Vacenin,2
+20135,npc_wizdom_owl,,,Foreseeing Owl,2
+20136,npc_bocormaster,,minimap_man_wizard,Bokor Mama,2
+20137,npc_cryomancer,,minimap_man_wizard,Cryomancer Master,2
+20138,npc_village_uncle_3,,,Village Gentleman 3,2
+20139,npc_village_uncle_4,,,Village Gentleman 4,2
+20140,npc_auctioneer,,minimap_man_auction,Auctioneer,2
+20141,npc_low_lev_officer4_m,,,Minor Commander 4,2
+20142,npc_low_lev_officer5_m,,,Minor Commander 5,2
+20143,npc_low_lev_officer6_m,,,Minor Commander 6,2
+20144,npc_low_lev_officer7_m,,,Minor Commander 7,2
+20145,npc_matron2,,,Old Lady 2,2
+20146,npc_matron3,,,Old Lady 3,2
+20147,npc_matron4,,,Old Lady 4,2
+20148,npc_matron5,,,Old Lady 5,2
+20149,npc_matron6,,,Old Lady 6,2
+20150,npc_miner2,,,Veteran Miner 2,2
+20151,npc_village_uncle_5,,,Gentleman 5,2
+20152,npc_village_uncle_6,,,Gentleman 6,2
+20153,npc_village_uncle_7,,,Gentleman 7,2
+20154,npc_village_uncle_8,,,Gentleman 8,2
+20155,npc_village_uncle_9,,,Gentleman 9,2
+20156,npc_village_uncle_10,,,Gentleman 10,2
+20157,npc_village_uncle_11,,,Gentleman 11,2
+20158,npc_village_uncle_12,,,Gentleman 12,2
+20159,npc_auctionHelper,,minimap_man_auction,Auctioneer Helper,2
+20160,soldier6_axe,,,Logging Soldier,2
+20161,npc_c_matron6,,,City Middle-aged Woman,2
+20162,npc_c_blacksmith,,minimap_man_smith,City Blacksmith,2
+20163,npc_c_equipment_dealers,,minimap_man_armor,City Equipment Merchant,2
+20164,npc_c_tool_merchants,,,City Item Merchant,2
+20165,npc_c_sculptor,,,City Middle-aged Man,2
+20166,npc_c_tool_merchants2,,,Item Merchant1,2
+20167,npc_hunter_master,,minimap_man_archer,Hunter Master(data exchange required),2
+20168,npc_cleric_f_1,,,Healer Lady,2
+20169,npc_combat_transport_section_1_market,,minimap_man_market,Market Manager,2
+20170,Skl_ScanTrigger,,,Search Trigger,2
+20171,npc_combat_transport_section_3_market,,minimap_man_market,Market Manager,2
+20172,Gimmick_Dice_1,,,Dice,2
+20173,Gimmick_Dice_2,,,Dice,2
+20174,Gimmick_Dice_3,,,Dice,2
+20175,Gimmick_Dice_4,,,Dice,2
+20176,Gimmick_Dice_5,,,Dice,2
+20177,Gimmick_Dice_6,,,Dice,2
+20178,Gimmick_Dice_S_1,,,Dice,2
+20179,Gimmick_Dice_S_2,,,Dice,2
+20180,Gimmick_Dice_S_3,,,Dice,2
+20181,Gimmick_Dice_S_4,,,Dice,2
+20182,Gimmick_Dice_S_5,,,Dice,2
+20183,Gimmick_Dice_S_6,,,Dice,2
+20184,HiddenWall_Thanksgiving,,,,2
+20185,HiddenWall_Thanksgiving2,,,,2
+20186,HiddenWall_Thanksgiving3,,,,2
+20187,musicbox_popolion,,,Popolion Waterball Orgel,2
+20188,npc_sailor_f,,minimap_event_1,Party Planner,2
+20189,npc_sailor_m,,minimap_event_1,Bartender,2
+20190,npc_city_alchemist,,minimap_man_wizard,Professional Alchemist,2
+40000,Obstacle_box,,,Box,2
+40001,Warp_arrow,,minimap_portal,WarpSpot,2
+40010,Obstacle_table,,,Desk,2
+40020,Obstacle_stone,,,Stone,2
+40021,Break_stone,,,Stone rolling,2
+40030,TreasureBox1,,,Treasure Chest,2
+40031,HideMonBox,,,Hiding Monster Box,2
+40032,Treasure_box_black,,,Treasure Chest,2
+40033,Treasure_box_blue,,,Treasure Chest,2
+40034,Treasure_box_green,,,Treasure Chest,2
+40035,Treasure_box_yellow,,,Treasure Chest,2
+40040,Grating,,,Grating,2
+40041,Grating_abbeyn1,,,Grating,2
+40042,Grating2,,,Grating (prison),2
+40050,Enchant_gateway,,,Enchant Raid Entrance,2
+40051,Enchant_symbol,,,Enchant Symbol,2
+40061,RecoveryPlace,,,Holy Place of Recover,2
+40062,SavePlace2,,,Item Combiner,2
+40064,Grill,,,Grill,2
+40065,Godness,,,Goddess Statues,2
+40066,Guard_fence,,,Guard Fence,2
+40068,Wagon,,,Carriage,2
+40069,block_fence,,,,2
+40071,block_fence_2,,,,2
+40072,block_fence_large,,,,2
+40073,block_fence_sharp,,,,2
+40091,lever,,,Lever 1,2
+40092,lever_1,,,Lever 2,2
+40093,flame_of_goddess,,,Gabija's Torch,2
+40095,HiddenTrigger4,,,,2
+40100,statue_raima,,minimap_goddess,Statue of Goddess Laima,2
+40110,statue_zemina,,minimap_goddess,Statue of Goddess Zemyna,2
+40120,statue_vakarine,,minimap_goddess,Statue of Goddess Vakarine,2
+40130,statue_ausrine,,minimap_goddess,Statue of Goddess Ausrine,2
+40141,cartdummy,,,Kepa Dummy,2
+40143,flame_bgevent,,,Torch,2
+40144,Treasure_bgevent,,,Treasure Chest,2
+40205,MCy_Statue,,,Statue of Goddess Zemyna,2
+41000,D_abbey_statue,,,Statue,2
+41010,D_abbey_trap,,,Puddle Trap,2
+41020,D_castle_handlebar,,,Handle Bar,2
+41030,Trap_Spine,,,Thorn Trap,2
+41040,D_catacomb_stonetrap1,,,Rockfall Trap,2
+41050,D_catacomb_stonetrap2,,,Rockfall Trap,2
+41060,D_catacomb_stonetrap3,,,Rockfall Trap,2
+41070,D_catacomb_stonetrap4,,,Rockfall Trap,2
+41080,D_catacomb_stonetrap5,,,Rockfall Trap,2
+41090,Gold_Candlestick,,,Gold Candle,2
+41091,Silver_Candlestick,,,Silver Candle,2
+41092,mandragora1,,,Mandragora,2
+41093,mandragora2,,,Mandragora,2
+41094,artefact_coin,,,Pitch-pot Coin,2
+41095,artefact_tugeon,,,Pitch-pot,2
+45101,NPC_Cart1,,,Carriage,2
+45102,NPC_Blowfish1,,,Sunfish,2
+45103,SprayDummy,,,Stack of Spray,2
+45104,NPC_Cart2,,,Carriage,2
+45311,Kepacart1,,,Kepa Wagon,2
+45312,Kepacart2,,,Kepa Wagon,2
+45313,Kepacart3,,,Kepa Wagon,2
+45314,Golem_battlestart,,,Start Point of Golem,2
+45315,cart_empty,,,Empty Wagon,2
+45316,cart_spp,,,Supplies Wagon,2
+45320,HolyArk,,,Holy Ark,2
+45321,holyark_black,,,Holy Ark,2
+45322,holyark_green,,,Holy Ark,2
+45323,holyark_white,,,Holy Ark,2
+45324,holyark_yellow,,,Holy Ark,2
+46213,Altar1,,,Altar,2
+46214,Altarcrystal_R1,,,Red Crystal,2
+46215,Altarcrystal_O1,,,Orange Crystal,2
+46216,Altarcrystal_Y1,,,Yellow Crystal,2
+46217,Altarcrystal_G1,,,Green Crystal,2
+46218,Altarcrystal_B1,,,Blue Crystal,2
+46219,Altarcrystal_N1,,,Navy Crystal,2
+46221,Altarcrystal_P1,,,Purple Crystal,2
+46222,Altarcrystal_Silhouette,,,Silhouette Crystal,2
+46301,test_wall1,,,Test Wall 100,2
+46302,test_wall2,,,Test Wall 120,2
+46303,test_wall3,,,Test Wall 140,2
+46304,test_wall4,,,Test Wall 160,2
+47005,accessary_f,,,Accessory Merchant,2
+47006,merchants_f,,,Item Merchant ,2
+47081,thorn_gateway_1,,,Thorn Forest Gate 1,2
+47082,thorn_gateway_2,,,Thorn Forest Gate 2,2
+47083,thorn_gateway_3,,,Thorn Forest Gate 3,2
+47084,thorn_gateway_4,,,Thorn Forest Gate 4,2
+47085,thorn_gateway_5,,,Thorn Forest Gate 5,2
+47086,thorn_gateway_6,,,Thorn Forest Gate 6,2
+47087,thorn_gateway_1_2,,,Thorn Forest Gate 1,2
+47088,thorn_gateway_2_2,,,Thorn Forest Gate 2,2
+47089,thorn_gateway_3_2,,,Thorn Forest Gate 3,2
+47090,thorn_gateway_4_2,,,Thorn Forest Gate 4,2
+47091,thorn_gateway_5_2,,,Thorn Forest Gate 5,2
+47092,thorn_gateway_6_2,,,Thorn Forest Gate 6,2
+47101,npc_rokas_1,,,Royal Mausoleum Entrance,2
+47102,npc_rokas_2,,,Canyon Area Device 1,2
+47103,npc_rokas_3,,,Canyon Area Device 2,2
+47104,npc_rokas_4,,,Canyon Area Device 3,2
+47105,npc_rokas_5,,,Canyon Area Device 4,2
+47106,npc_rokas_6,,,Canyon Area Device 5,2
+47107,npc_rokas_7,,,Canyon Area Device 6,2
+47108,npc_rokas_31,,,Canyon Area Device 1,2
+47109,npc_rokas_cube,,,Canyon Area Device 7,2
+47110,npc_rokas_7_1,,,The size of the device at Canyon Area,2
+47121,magicsquare_1,,,Magic Square of Thorn Forest,2
+47122,magicsquare_2,,,Magic Square of Petrified Town,2
+47123,magicsquare_3,,,Magic Square of Underground Base,2
+47124,magicsquare_1_mini,,,Magic Circle,2
+47130,bokor_statue_1,,,Ruined Statue set by Boroko,2
+47140,book_prop_1,,,Table 1,2
+47150,bube_flag1,,,Vubbe Tribe Flag,2
+47160,pedlar_lose_1,,,Lost Stuff of Vendor 1,2
+47161,pedlar_lose_2,,,Lost Stuff of Vendor 2,2
+47170,soldier_article_1,,,Soldier's Relic,2
+47180,steel_barred_1,,,Steel-barred Window,2
+47181,steel_barred_2,,,Steel-barred Window 1,2
+47190,stone_monument1,,,Literature 1,2
+47191,stone_monument2,,,Literature 2,2
+47192,stone_monument3,,,Literature 3,2
+47200,siauliai_grass_1,,,Discolored Grass of Siauliai,2
+47201,siauliai_grass_2,,,Discolored Grass of Siauliai,2
+47202,siauliai_grass_3,,,Discolored Grass of Siauliai,2
+47203,siauliai_grass_3_large,,,Large Discolored Grass of Siauliai,2
+47204,siauliai_grass_4,,,Siauliai Discolored Grass4,2
+47210,petrifaction_1,,,Petrifaction 1,2
+47211,petrifaction_2,,,Petrifaction 2,2
+47212,petrifaction_3,,,Petrifaction 3,2
+47220,stonepillar_1,,,Stone 1,2
+47221,stonepillar_2,,,Stone 2,2
+47222,stones,,,Pile of Stones,2
+47223,fire_wood,,,Firewood,2
+47224,crystal,,,Crystal,2
+47225,stone_event,,,Background Rock,2
+47226,siauliai_fence,,,Fence,2
+47230,cmine_cartheap,,,Stack of Wagons,2
+47231,brarkaras_stone_basis1,,,Dummy Pillar 1,2
+47232,brarkaras_stone_basis2,,,Dummy Pillar 2,2
+47233,stonetablet_stone,,,Crystal Pillar,2
+47234,stonetablet,,,Revelation Slate,2
+47235,catacomb_skull,,,Stack of Skulls,2
+47236,npc_Laima_little,,,Girl,2
+47237,statue_vakarine_event01,,,Statue of Goddess Vakarine,2
+47238,statue_vakarine_event02,,,Statue of Goddess Vakarine,2
+47239,npc_sculptor,,minimap_man_cleric,Sculptor,2
+47240,Golem_gray_stone,,,Gray Golem Rock,2
+47241,cathedral_furniture,,,Stack of Furniture,2
+47242,cathedral_torch,,,Torch,2
+47243,thorn_raid_npc1,,,Block the Thorn Forest Raid 1 ,2
+47244,thorn_raid_npc2,,,Block the Thorn Forest Raid 2,2
+47245,npc_sout_hunter,,,Hunter,2
+47246,npc_flower1,,,Bouquet 1,2
+47247,npc_flower2,,,Bouquet 2,2
+47248,npc_cat,,,Cat,2
+47250,npc_zachariel_cube,,,Royal Mausoleum Cube,2
+47251,npc_zachariel_head_01,,,Royal Mausoleum Tombstone01,2
+47252,npc_zachariel_head_02,,,Royal Mausoleum Tombstone02,2
+47253,npc_zachariel_lantern,,,Royal Mausoleum Stone Lantern,2
+47254,npc_zacharial_desk,,,Royal Mausoleum Desk,2
+47255,rokas_brickwall,,,Brickwall,2
+47256,rokas_pot1,,,Jar,2
+47257,rokas_pot2,,,Jar,2
+47258,rokas_pot3,,,Jar,2
+47259,Moving_trap_32,,,Broken Moving Trap,2
+47260,zachariel_guardian,,,Royal Mausoleum Guardian,2
+47261,npc_zachariel_cube_05,,,Royal Mausoleum Cube,2
+47262,npc_zachariel_cube_09,,,Royal Mausoleum Cube,2
+47263,Hidden_target,,,Transparency Target,2
+47264,Hidden_Mon_01,,,Transparent Monster,2
+47265,npc_zachariel_lantern_2,,,Royal Mausoleum Stone Lantern,2
+47266,treasure_box3_2,,,Treasure Box 3,2
+47267,Event_treasure_box3_2,,minimap_event_1,Christmas Royal Chest,2
+47268,Event_treasure_box4,,minimap_event_1,NA,2
+47413,npc_lecifer,Monster,icon_item_nothing,Human Rexipher,2
+48002,f_katyn_owl02,,,Owl Sculpture,2
+48003,f_katyn_owl03,,,Owl Sculpture,2
+48004,f_katyn_owl04,,,Owl Sculpture,2
+48005,such_torch,,,Confirm,2
+48006,f_katyn_owl04_big,,,Owl Sculpture,2
+48021,f_katyn_owl01_fall,,,,2
+48022,f_katyn_owl02_fall,,,,2
+48023,f_katyn_owl03_fall,,,,2
+48024,f_katyn_owl04_fall,,,,2
+57264,npc_Alina,Monster,icon_item_nothing,Member Alina,2
+57337,npc_Gragina,Monster,icon_item_nothing,Member Grazina,2
+57578,mon_kupole_1,Monster,icon_item_nothing,Kupole 1,2
+57579,mon_kupole_2,Monster,icon_item_nothing,Kupole 2,2
+57580,mon_kupole_3,Monster,icon_item_nothing,Kupole 3,2
+57581,mon_kupole_4,Monster,icon_item_nothing,Kupole 4,2
+57582,mon_kupole_5,Monster,icon_item_nothing,Kupole 5,2
+57583,mon_kupole_6,Monster,icon_item_nothing,Kupole 6,2
+57585,mon_kupole_5_Event,Monster,minimap_event_1,Kupole 5,2
+57586,mon_kupole_6_Event,Monster,minimap_event_1,Kupole 6,2
+57840,npc_hauberk,"Demon Lord Hauberk signed a secret treaty with Agailla Flurry, who is known as one of the greatest mages in the history, but after that treaty had been discovered by Demon Lord Helgasercle, the body of Hauberk was ripped into pieces and those pieces were sealed away and scattered across the world. Nevertheless, Hauberk still influences his servants and dreams of his resurrection and return.",boss_hauberk,Demon Lord Hauberk,2
+57857,npc_Alina_normal,Monster,icon_item_nothing,Member Alina Track,2
+58049,Shieldcharger,"This isn't a strong monster, but tears could be dropping from your eyes if you attack it recklessly.",icon_item_nothing,Shield Charger,2
+58289,mon_npc_sapper,Monster,icon_item_nothing,Revelator Mihail,2
+58290,mon_npc_tila_monk,Monster,icon_item_nothing,Monk1,2
+58291,mon_paladin_follower2_1,Monster,icon_item_nothing,Paladin Follower B1,2
+58292,mon_paladin_follower2_2,Monster,icon_item_nothing,Paladin Follower B2,2
+58293,mon_paladin_follower2_3,Monster,icon_item_nothing,Paladin Follower B3,2
+58452,pet_egg,"This isn't a strong monster, but tears could be dropping from your eyes if you attack it recklessly.",icon_item_nothing,Companion Egg,2
+58460,alfalfa,"This isn't a strong monster, but tears could be dropping from your eyes if you attack it recklessly.",icon_item_nothing,Alfalfa,2
+58461,tomato,"This isn't a strong monster, but tears could be dropping from your eyes if you attack it recklessly.",icon_item_nothing,Tomato,2
+58530,mon_npc_w_hunter,Monster,icon_item_nothing,White Hunter,2
+58568,pcskill_Enchanter_skill,"This isn't a strong monster, but tears could be dropping from your eyes if you attack it recklessly.",icon_item_nothing,Enchanter Shop,2
+58584,artefact_cereal,Monster,icon_item_nothing,Battlebird Feed,2
+58602,pet_fruits_plate,Monster,icon_item_nothing,Toucan Food,2
+58738,npc_raid_gimmick,Monster,icon_item_nothing,Pillar of Protection,2
+59066,farmer_plant_step_01,Monster,icon_item_nothing,,2
+101001,mon_paladin_follower1_2_hp,Monster,icon_item_nothing,Paladin Follower A2,2
+101002,mon_paladin_follower1_3_hp,Monster,icon_item_nothing,Paladin Follower A3,2
+103015,mon_paladin_follower1_3_Q,Monster,icon_item_nothing,Ruklys Army Member,2
+107003,mon_npc_tila_monk2,Monster,icon_item_nothing,Monk2,2
+147303,npc_zachariel_gate,,,Royal Mausoleum Gate,2
+147304,rokas_trap_dummy,,,Destroyed Moving Trap,2
+147305,Firetower_Defense,,,Mage Tower Defense,2
+147306,Firetower_GateOpen,,,Mage Tower Gate,2
+147307,Firetower_Offense,,,Mage Tower Offense,2
+147308,Cat_Deagil,,,Path,2
+147311,BOOK_01,,,Book,2
+147312,LOST_PAPER,,,Dropped Paper,2
+147313,Hogma_combat_gray,,,Hogma Stone Statue,2
+147315,Warleader_Hogma_gray,,,Hogma Captain Stone Statue,2
+147316,hogma_archer_gray,,,Hogma Stone Statue 2,2
+147317,hogma_sorcerer_gray,,,Hogma Shaman Stone Statue,2
+147318,Hogma_combat_gray_01,,,Hogma Stone Statue01,2
+147319,Treasure_box_3cm,,,Treasure Chest 3cm,2
+147320,Treasure_box_katyn,,,Treasure Chest Kateen,2
+147321,Treasure_box_remain,,,Treasure Chest Area of Ruins,2
+147322,Treasure_box_siaul,,,Treasure Chest Siauliai,2
+147323,Treasure_box_table,,,Treasure Chest Isolation Highland,2
+147325,npc_HOP_master,,minimap_man_master,Hoplite Master,2
+147326,npc_CEN_master,,minimap_man_master,Centurion Master,2
+147327,npc_CAT_master,,minimap_man_master,Cataphract Master,2
+147328,npc_PSY_master,,minimap_man_wizard,Psychokino Master,2
+147329,npc_SOR_master,,minimap_man_wizard,Sorcerer Master,2
+147336,cablecar,,,Broken Equipment,2
+147337,cemetery_irongate,,,Iron Gates,2
+147338,katyn_rock,,,Boulder,2
+147339,thorn_rock,,,Boulder,2
+147340,Treasure_box_rokas,,,Treasure Chest Valley,2
+147341,Treasure_box_flash,,,Treasure Chest Petrification City,2
+147342,Treasure_box_prison,,,Treasure Chest Prison,2
+147343,npc_RAG_master,,minimap_man_archer,Ranger Master,2
+147345,npc_historian_odel_body,,,Cyrenia Odell,2
+147346,npc_ftower_chair,,,Mage Tower Chair,2
+147347,npc_ftower_gear,,,Mage Tower Cogwheel,2
+147348,event_achat,,,Achat Piece,2
+147349,npc_lecife_event,,,Demonic Form Rexipher,2
+147350,mission_chaple_01,,,Cathedral Quest Gate,2
+147351,chaple_chair_01,,,Cathedral Mini Chair,2
+147352,bell_rope_01,,,Belfry Rope,2
+147353,chapel_front_gate,,,Cathedral Gate,2
+147354,gale_bucket_stuff,,,Tools Tub,2
+147355,goat_cable_lever,,,Cable Car Controller,2
+147357,holly_sphere_chapel_01,,,Barrier of Paladin_Temple A,2
+147358,holly_sphere_chapel_02,,,Barrier of Paladin_Temple B,2
+147359,shrine_bot,,,Altar,2
+147360,holly_sphere_gele,,,Barrier of Paladin_Galley Plateau,2
+147361,HiddenTrigger_CantGen50,,,,2
+147362,HiddenTrigger_CantGen100,,,,2
+147363,HiddenTrigger_CantGen150,,,,2
+147364,HiddenTrigger_CantGen200,,,,2
+147365,HiddenTrigger_CantGen250,,,,2
+147366,HiddenTrigger_CantGen300,,,,2
+147367,chaple_chair_02,,,Cathedral Chairs,2
+147368,magicsquare_3_thornmian_big,,,,2
+147369,magicsquare_3_thornmain_mid,,,,2
+147370,magicsquare_3_thornmain_mini,,,,2
+147371,npc_gesti,,,Gesti,2
+147372,blank_npc,,,Empty NPC,2
+147373,holly_oliphant_1,,,Divine Utensil,2
+147374,HiddenWall_10_500_500,,,,2
+147375,siau_tent_01,,,Siauliai Tent,2
+147376,siau_fence_01,,,Siauliai Fence,2
+147377,npc_gele_dummy_01,,,Galley Plateau,2
+147378,npc_gele_dummy_02,,,Galley Plateau,2
+147379,chaple_gate_02,,,Cathedral Gate,2
+147380,blank_npc_2,,,Empty NPC 2 times,2
+147381,chaple_gate_open,,,Cathedral Gate,2
+147382,npc_blackman,,,Beholder,2
+147383,npc_giltine,,,Giltine,2
+147384,npc_hiddennpc02,,,Mission Gate,2
+147385,npc_saule_goddess,,,Goddess Saule,2
+147386,npc_saule_female_1,,,Saule Goddess 2,2
+147387,huevill_merge_gray,,,Seven Valley Stone Statue 1,2
+147388,huevill_mothtem_gray,,,Seven Valley Stone Statue 2,2
+147389,npc_saule_male_1,,,Saule God1,2
+147390,npc_paladin_follower1_1,,,Paladin Follower A1,2
+147391,npc_paladin_follower3_1,,,Paladin Follower C1,2
+147392,treasure_box1,,,Treasure Box 1,2
+147393,treasure_box3,,,Treasure Box 3,2
+147394,treasure_box4,,,Treasure Box 4,2
+147395,treasure_box5,,,Treasure Box 5,2
+147396,huevill_chief,,,Seven Valley Village Chief,2
+147397,npc_saule_female_2,,,Saule Goddess2,2
+147398,npc_saule_male_2,,,Saule God2,2
+147399,npc_paladin_follower1_2,,,Paladin Follower A2,2
+147400,npc_paladin_follower1_3,,,Paladin Follower A3,2
+147401,npc_paladin_follower3_2,,,Paladin Follower C2,2
+147402,npc_paladin_follower3_3,,,Paladin Follower C3,2
+147403,npc_paladin_follower2_1,,,Paladin Follower B1,2
+147404,npc_paladin_follower2_2,,,Paladin Follower B2,2
+147405,npc_paladin_follower2_3,,,Paladin Follower B3,2
+147406,npc_paladin_follower2_4,,,Paladin Follower B4,2
+147407,npc_huevill_male_1,,,Seven Valley Man 1,2
+147408,npc_huevill_male_2,,,Seven Valley Man 2,2
+147409,npc_huevill_male_3,,,Seven Valley Man 3,2
+147410,npc_soldier_female_01,,,Female Guard,2
+147411,npc_thorn_flower,,,Spiny Flower,2
+147412,npc_thorn_bigflower,,,Large Spiny Flower,2
+147413,npc_gele_sanctuary_1,,,Gele Plateau Barrier,2
+147414,npc_Obelisk,,,Obelisk,2
+147415,npc_soldier_female_02,,,Sentinel Woman 2,2
+147416,npc_soldier_female_03,,,Sentinel Woman 3,2
+147417,Huevillage_Altar,,,Altar,2
+147418,npc_huevill_female_1,,,Seven Valley Woman 1,2
+147419,npc_huevill_female_2,,,Seven Valley Woman 2,2
+147420,npc_huevill_female_3,,,Seven Valley Woman 3,2
+147421,npc_paladin_noinst3_1,,,Paladin Follower no instrument c1,2
+147422,npc_paladin_noinst3_2,,,Paladin Follower no instrument c2,2
+147423,npc_paladin_noinst3_3,,,Paladin Follower no instrument c3,2
+147424,npc_gele_firepuppet,,,Summon Magic Dolls,2
+147425,npc_Florijonas,,,Florijonas,2
+147426,npc_paladin_noinst3_2_pet,,,Companion Trader,2
+147428,npc_tableland_guy,,,Southern Elevator,2
+147429,npc_p_villageuncle1,,,Fedimian Male 1,2
+147430,npc_p_villageuncle2,,,Fedimian Male 2,2
+147431,npc_p_villageuncle3,,,Fedimian Male 3,2
+147432,npc_potter,,,Old Potter,2
+147433,npc_p_villageuncle1_cart1,,,Fedimian South Wagon,2
+147434,npc_SAP_master,,minimap_man_archer,Sapper Master,2
+147435,npc_THA_master,,minimap_man_scout,Thaumaturge Master,2
+147436,npc_FLT_master,,minimap_man_archer,Fletcher Master,2
+147437,npc_village_uncle_1_nonwindow,,,Village Gentleman 1,2
+147438,npc_COS_master,,minimap_man_scout,Corsair Master,2
+147439,npc_SQR_master,,minimap_man_scout,Squire Master,2
+147440,npc_village_uncle_8_nowindow,,,Gentleman 8,2
+147441,npc_PDN_master,,minimap_man_cleric,Pardoner Master,2
+147442,npc_WRC_master,,minimap_man_wizard,Elementalist Master,2
+147443,npc_DOP_master,,minimap_man_master,Doppelsoeldner Master,2
+147444,npc_village_uncle_4_nowindow,,,Village Gentleman 4,2
+147445,npc_QRS_master,,minimap_man_archer,Quarrel Shooter Master,2
+147446,npc_NEC_master,,minimap_man_wizard,Necromancer Master,2
+147447,npc_ARC_master,,minimap_man_archer,Archer Master,2
+147448,npc_CHR_master,,minimap_man_wizard,Chronomancer Master,2
+147449,npc_grita,,,Grita,2
+147450,npc_Carnivore,,,Wild Carnivore,2
+147451,npc_Panto,,,Baby Panto,2
+147452,npc_gabia_goddess,,,Goddess Gabija,2
+147453,mine_crystal_red,,,Crystal Basket,2
+147454,npc_Nepenthes,,,Sleeping Nepenthes,2
+147455,HiddenWall_250_250_300,,,,2
+147456,npc_Unknocker,,,Suspicious Treasure Chest,2
+147457,npc_Offset_1,,,Central Pillar,2
+147458,npc_drum_M,,,Drums,2
+147459,npc_drum_S,,,Small Drums,2
+147460,npc_Golemlet,,,Little Golem,2
+147461,npc_mushroom_mini,,,Small Griba,2
+147462,npc_Mushcaria,,,Mushcaria,2
+147463,stontablet_down_1,,,Stone Slabs,2
+147464,stontablet_down_2,,,Stone Slabs,2
+147465,campfire_wood,,,Firewood,2
+147466,pub_book,,,Tavern Book,2
+147467,zachariel_guardian_2,,,Royal Mausoleum Guardian,2
+147468,rokas_beacon,,,Beacon,2
+147469,noshadow_npc,,,No Shadow NPC,2
+147470,Goblin_spear_npc,,,Fallen Vubbe,2
+147471,HiddenWarp,,minimap_portal,　,2
+147472,npc_mineloader,,,Immobile Mineloader,2
+147473,npc_village_female,,,Village Girl,2
+147475,npc_zachariel_cube_mini,,,Tomb Mini Cube,2
+147476,npc_beekeeper1,,,Beekeeper1,2
+147477,npc_beekeeper2,,,Beekeeper2,2
+147478,npc_beekeeper3,,,Beekeeper3,2
+147479,npc_beekeeper4,,,Beekeeper4,2
+147480,npc_beekeeper5,,,Beekeeper5,2
+147481,npc_village_male_a1,,,Youth VillageA1,2
+147482,npc_village_male_a2,,,Youth VillageA2,2
+147483,npc_village_male_a3,,,Youth VillageA3,2
+147484,npc_village_male_b1,,,Youth VillageB1,2
+147485,npc_village_male_b2,,,Youth VillageB2,2
+147486,npc_village_male_b3,,,Youth VillageB3,2
+147488,icewall_flash,,,Ice Pillar,2
+147489,npc_matron_nowindow,,,Old Lady,2
+147491,npc_austeja_female_1,,,Female Follower of Austeja 1,2
+147492,npc_austeja_female_2,,,Female Follower of Austeja 2,2
+147493,npc_cleric_f_2,,,Chemist,2
+147494,pub_waiter,,,Pub Waitress,2
+147495,npc_stonefroster,,,Sleep Stone Master,2
+147496,npc_village_uncle_9_nowindow,,,Gentleman 9,2
+147497,npc_RingCrawler,,,Machinery,2
+147498,npc_f_tower_Ele,,,Antares,2
+147499,npc_investigation01,,,Research Leader,2
+147500,whorfzone,,minimap_portal,Warp Portal,2
+147501,npc_Obelisk_broken,,,Broken Obelisk,2
+147502,firetower_device_01,,,Magic Stabilizing Device ,2
+147503,firetower_gear_01,,,Spell Gear,2
+147504,firetower_valve_01,,,Magic Valve,2
+147505,npc_Gargoyle,,,Gargoyle,2
+147507,blank_npc_warp,,minimap_erosion,NPC Hunting Grounds Entrance,2
+147508,npc_Corsair_m,,,Pirate,2
+147509,npc_Corsair_f,,,Pirate,2
+147510,npc_Schwarzereiter_m,,,Golden Note Mercenary (M),2
+147511,npc_Schwarzereiter_f,,,Golden Note Mercenary (F),2
+147512,npc_Monk_m,,,Monk (M),2
+147513,npc_Monk_f,,,Monk (F),2
+147514,npc_MNK_master_NoRun,,,Monk Master (no Run),2
+147515,npc_Doppelsoldner_m,,,Pledge of the Blade Mercenary (M),2
+147516,npc_Doppelsoldner_f,,,Pledge of the Blade Mercenary (F),2
+147517,npc_fishing_manager,,,Fishing Manager,2
+147518,npc_diana,,,Diana,2
+148001,blank_npc_moon,,,Empty NPC,2
+150000,npc_junk_shop,,,Traveling Merchant Geraldas,2
+150001,npc_skill_misc_shop_2,,,Skill Material Merchant,2
+150002,npc_skill_misc_shop_3,,,Skill Material Merchant,2
+150003,npc_equip_shop_270_315,,,Equipment Supplier,2
+150004,FishingPlace,,,Fishing Spot,2
+150005,FishingFire_1,,,Fishing Bonfire,2
+150006,fishingbox1,,,Tackle Box Stage 1,2
+150007,fishingbox2,,,Tackle Box Stage 2,2
+150009,gacha_cube1,,,Leticia's Secret Cube,2
+150010,Hiddennpc_Challenge_Start,,,Enter the Challenge Mode,2
+150011,Hiddennpc_Challenge_Next,,,Step Up,2
+150012,Hiddennpc_Challenge_Stop,,,Finish the Mode,2
+150013,gacha_cube2,,,Leticia's Christmas Gift,2
+150016,d_raid_spell_crystal_red,,,Terra Essence,2
+150017,d_raid_magicsquare,,,,2
+150018,d_raid_Warp_maig_square,,minimap_portal,,2
+150019,barbershop_curtain,,,Barber Shop Curtain,2
+150020,dressroom_curtain,,,Boutique Curtain,2
+150023,uniqraid_startower_npc_ramunas,,,Ramunas,2
+150024,uniqraid_startower_npc_kron,,,Kron,2
+150025,uniqraid_startower_magiccondense,,,Magic Condenser Device,2
+150031,uniqraid_startower_magiccontrol_black,,,Magic Control Device,2
+150032,uniqraid_startower_power_control,,,Power Control Device,2
+150033,uniqraid_startower_soul_gathering,,,Soul Integrator,2
+150034,uniqraid_startower_Soul_stone,,,Soul Amplifier,2
+150035,uniqraid_startower_magiccontrol_green,,,Magic Control Device,2
+150036,uniqraid_startower_magiccontrol_yellow,,,Magic Control Device,2
+150037,uniqraid_startower_magiccontrol_blue,,,Magic Control Device,2
+150038,uniqraid_startower_magiccontrol_red,,,Magic Control Device,2
+150039,uniqraid_startower_HiddenWall_120_120_500,,,,2
+150040,uniqraid_startower_HiddenTrigger1,,,Western Power Supply,2
+150041,uniqraid_startower_HiddenTrigger2,,,Eastern Power Supply,2
+150042,uniqraid_startower_HiddenWall_120_120_500_0,,,,2
+150043,uniqraid_startower_HiddenWall_120_120_500_45,,,,2
+150044,uniqraid_startower_HiddenWall_120_120_500_90,,,,2
+150045,uniqraid_startower_InvisbleWall_10_160_500_0,,,,2
+150046,uniqraid_startower_InvisbleWall_200_200_500_0,,,,2
+150047,uniqraid_startower_InvisbleWall_0_0_0_0,,,,2
+150048,uniqraid_startower_InvisbleWall_150_120_500_0,,,,2
+150049,uniqraid_startower_InvisbleWall_10_160_500_1,,,,2
+150051,fishingbox3,,,Tackle Box Stage 3,2
+150171,stones_startower,,,Hidden Magic Source,2
+150172,magicsquare_1_mini_fantasylib,,,Magic Circle,2
+150173,supplemants_fantasylib,,,Ampule,2
+150175,fl_crystal_red_deffense,,,Red Boundary Stones,2
+150176,npc_agailla_flurry_deffense,,,Agailla Flurry,2
+150178,npc_schaffenstar_adaux,,,Adaux,2
+150179,npc_schaffenstar_member2_4,,,Schaffenstar F4,2
+150180,npc_schaffenstar_member2_5,,,Schaffenstar F5,2
+150181,star_stone_01_small_startower_sp,,,Magic Residue (Special),2
+150182,npc_schaffenstar_ignas,,,Head of the Schaffenstar Ignas,2
+150183,npc_sage_female_1,,,Sage Female 1,2
+150184,shadow_raid_device_on,,,Lamp (On),2
+150185,shadow_raid_device_off,,,Lamp (Off),2
+150186,shadow_raid_stone_on,,,Shadowmancer Master's Sealing Stone (On),2
+150187,shadow_raid_stone_off,,,Shadowmancer Master's Sealing Stone (Off),2
+150188,shadow_raid_orb,,,Sealing Orb,2
+150199,shadow_raid_door,,,Sealing Gate,2
+150200,npc_ghost_soldier_castle,,,Ghost Soldier,2
+150201,castle94_gate,,,Castle Main Gate,2
+150202,castle94_gate_opened,,,Castle Main Gate (open),2
+150203,Shadowmancer_seal_cage,,,Shadow Prison,2
+150204,HiddenWall_500_300_300,,,,2
+150205,npc_stockades_uphill,,,Stake Stockades,2
+150206,npc_Ragana,,,Demon Goddess Ragana,2
+150207,npc_holy_romuva,,,Sacred Namott,2
+150208,npc_terramancer_master,,minimap_man_wizard,Terramancer Master,2
+150209,npc_MEI_master,,minimap_man_master,Blossom Blader Master,2
+150210,npc_baiga,,,Baiga,2
+150211,npc_Zofija_Eleonora,,minimap_man_cleric,Crusader Master,2
+150212,npc_rangda_master,,minimap_man_scout,Rangda Master,2
+150213,npc_Arbalester_master,,minimap_man_archer,Arbalester Master,2
+150214,npc_thetree_root,,,Root of the Divine Tree,2
+150215,npc_raima_wheel,,,Laima's Wheel,2
+150216,npc_MasterRangda_Barong,,,Mielas,2
+150217,npc_Crusader_01,,,Crusader 1,2
+150218,npc_Crusader_02,,,Crusader 2,2
+150219,npc_kingdom_soldier,,,Royal Army Guard,2
+150220,npc_kingdom_schaffenmem1,,,Resistance Soldier 1,2
+150221,npc_kingdom_schaffenmem2,,,Resistance Soldier 2,2
+150222,npc_kingdom_schaffenmem3,,,Resistance Soldier 3,2
+150223,npc_kingdom_schaffencap,,,Resistance Officer,2
+150224,npc_kingdom_paladin_follower1,,,Paladin Follower 1,2
+150225,npc_kingdom_paladin_follower2,,,Paladin Follower 2,2
+150226,npc_kingdom_owl_statue,,,Owl Sculpture,2
+150227,npc_goddess_Laima_ep12,,,Imprisoned Laima,2
+151000,closing_device,,,Closing Device,2
+151001,spell_crystal_red,,,Crystal with magic,2
+151002,spell_crystal_gem_red,,,Jewel of Prominence,2
+151003,spell_suppressors,,,Magic Suppressor,2
+151004,crystal2,,,EDIT2,2
+151005,npc_antares,,,Antares,2
+151006,mine_purify_01,,,Purifier,2
+151007,stone_ground,,,Stone Production Floor,2
+151008,mine_elevator,,,Mine Lift,2
+151009,mine_miner,,,Miner,2
+151010,mine_matron,,,Miner's Wife,2
+151011,mine_village_female,,,Miner Lady,2
+151012,mine_Laima,,,Miner Girl Laima,2
+151013,mine_crystal_red2,,,Mine Crystal,2
+151014,mine_crystal,,,Modify Wall,2
+151015,mine_purify_01_parts1,,,Purifier Parts 1,2
+151016,mine_purify_01_parts2,,,Purifier Parts 2,2
+151017,mine_purify_01_parts3,,,Purifier Parts 3,2
+151018,noshadow_npc_8,,,No Shadow NPC,2
+151019,noshadow_npc_16,,,No Shadow NPC,2
+151020,noshadow_npc_32,,,No Shadow NPC,2
+151021,noshadow_npc_64,,,No Shadow NPC,2
+151022,npc_orb1,,,Shrine Offering Tools,2
+151023,branch_01,,,Tree Branch,2
+151024,austeja_alter,,,Austeja Altar,2
+151025,beehive_1,,,Bee Hive,2
+151026,beehive_2,,,Broken Honeycomb,2
+151027,beehive_3,,,Honeycomb,2
+151028,gale_bucket_stuff2,,,Bucket,2
+151029,boxes_01,,,Pile of Boxes 01,2
+151030,boxes_02,,,Pile of Boxes 02,2
+151031,wood_piece_01,,,Piece of Wood,2
+151032,scarecrow_01,,,Scarecrow,2
+151033,npc_aurelius,,,Aurelius,2
+151034,npc_fedimian_merchant,,minimap_man_shop,Fedimian Item Merchant,2
+151035,npc_fedimian_merchant_1,,minimap_man_armor,Fedimian Equipment Merchant,2
+151036,npc_fedimian_merchant_4,,minimap_man_smith,Fedimian Blacksmith,2
+151037,npc_fedimian_mercenary_1,,,Fedimian Mercenary Post Manager,2
+151038,npc_fedimian_merchant_3,,minimap_man_ace,Fedimian Accessory Merchant,2
+151039,npc_fedimian_mercenary_2,,,Fedimian Manager,2
+151040,npc_fedimian_f_1,,,Fedimian Village Lady,2
+151041,npc_austeja_goddess,,,Goddess Austeja,2
+151042,NPC_GM,,minimap_event_1,GM,2
+151043,star_sphere_01,,,Astral Tower Celestial Globe,2
+151044,star_hourglass_01,,,Astral Tower Hourglass,2
+151045,star_lantern_01,,,Astral Tower Lantern,2
+151046,star_stone_01,,,Star Stone,2
+151047,candlestick_01,,,Candlestick,2
+151048,star_stone_01_small,,,Star Stone Crystal,2
+151049,npc_FAL_master,,minimap_man_archer,Falconer Master,2
+151050,ftower_sealstorn,,,Sealed Stone,2
+151051,pillarobb_crystal,,,Black Crystal,2
+151052,npc_zacharial_desk2,,,Royal Mausoleum Desk2,2
+151053,npc_grita_phoenix,,,Grita Phoenix,2
+151054,catacomb_wall,,,Catacombs Wall,2
+151055,bones,,,Bone,2
+151056,Link_stone,,,Magic Stone of Mutuality,2
+151057,regenerative_stone,,,Magic Generating Stones,2
+151058,Space_stone,,,Spatial Magic Stone,2
+151059,npc_catacomb_tomb_01,,,Catacombs Grave01,2
+151060,npc_catacomb_tomb_02,,,Catacombs Grave02,2
+151061,npc_hawk,,,Hawk,2
+151062,npc_warehouse_fedimian,,minimap_werehouse,Fedimian Storage Keeper (Temporary),2
+151063,npc_FNC_master,,minimap_man_master,Fencer Master,2
+151064,npc_wooden_romuva_white,,,Namott of Suppression,2
+151065,soul_gathering_mchn_5,,,Soul Starvation,2
+151066,c_orsha_wood,,,Orsha Tree,2
+151067,old_wooden_box_S,,,Small Wooden Chest,2
+151068,npc_DRG_master,,minimap_man_master,Dragoon Master,2
+151069,npc_WAR_master,,minimap_man_wizard,Warlock Master,2
+151070,npc_FTF_master,,minimap_man_wizard,Featherfoot Master,2
+151071,npc_CNN_master,,minimap_man_archer,Cannoneer Master,2
+151072,npc_MSK_master,,minimap_man_archer,Musketeer Master,2
+151073,npc_PGD_master,,minimap_man_cleric,Plague Doctor Master,2
+151074,npc_KBL_master,,minimap_man_cleric,Kabbalist Master,2
+151075,npc_SNB_master,,minimap_man_scout,Shinobi Master,2
+151076,noshadow_npc_128,,,No Shadow NPC,2
+151077,npc_mardas,,,Liaison Officer Mardas,2
+151078,orsha_soldier_f_2,,,Orsha Soldier Female 2,2
+151079,orsha_soldier_f_3,,,Orsha Soldier Female 3,2
+151080,orsha_f_4,,,Orsha Soldier Female 4,2
+151081,orsha_m_5_1,,,Orsha Soldier Male5_1,2
+151082,orsha_m_5_2,,,Orsha Soldier Male5_2,2
+151083,orsha_m_6_1,,,Orsha Soldier Male6_1,2
+151084,orsha_m_6_2,,,Orsha Soldier Male6_2,2
+151085,orsha_m_7_1,,,Orsha Soldier Male7_1,2
+151086,orsha_m_7_2,,,Orsha Soldier Male7_2,2
+151087,orsha_m_8_1,,,Orsha Soldier Male8_1,2
+151088,orsha_m_8_2,,,Orsha Soldier Male8_2,2
+151089,orsha_m_9_1,,,Orsha Soldier Male9_1,2
+151090,orsha_m_9_2,,,Orsha Soldier Male9_2,2
+151091,orsha_m_10_1,,,Orsha Soldier Male10_1,2
+151092,orsha_m_10_2,,,Orsha Soldier Male10_2,2
+151093,orsha_m_11_1,,,Orsha Soldier Male11_1,2
+151094,orsha_m_11_2,,,Orsha Soldier Male11_2,2
+151095,orsha_m_12_1,,,Orsha Soldier Male12_1,2
+151096,orsha_m_12_2,,,Orsha Soldier Male12_2,2
+151097,orsha_m_13_1,,,Orsha Soldier Male13_1,2
+151098,orsha_m_13_2,,,Orsha Soldier Male13_2,2
+151099,prison_bars1,,,Prison Steel-barred Window1,2
+151100,prison_bars2,,,Prison Steel-barred Window2,2
+151101,prison_bars3,,,Prison Steel-barred Window3,2
+151102,noshadow_npc_MANA_WAR,,,Magic Power War Invisible NPC,2
+151103,noshadow_npc_DELIVERY_CHARGES,,,Delivery Recharge Invisible NPC,2
+151105,monument_03_small,,,Small_Area of Ruins_Tombstone03,2
+151106,npc_RUN_master,,minimap_man_wizard,Rune Caster Master,2
+151107,npc_zanas,,,Zanas,2
+151108,prison_device_1,,,Secret Device1,2
+151109,prison_device_2,,,Secret Device2,2
+151110,prison_device_3,,,Secret Device3,2
+151111,pentagonal_prism_1,,,Pentagonal Pillar,2
+151112,npc_Socket_mage_red,,,Red Socket Mage,2
+151113,mine_crystal_red2_small,,,Small Mine Crystal,2
+151114,vine_f_orchard_34_3,,,Barha Forest Vines,2
+151115,HiddenWall_prison_81,,,,2
+151116,bookshelf_1,,,Single Bookshelf,2
+151117,bookshelf_2,,,Double Bookshelf,2
+151118,castle_ramp_1,,,Castle Lamp,2
+151119,castle_ramp_2,,,Castle Magic Lamp,2
+151120,white_paper1,,,White Paper With Writings,2
+151121,white_paper2,,,White Paper,2
+151122,fabric_1,,,Piece of Cloth,2
+151123,strongbox_1,,,Safe,2
+151124,obj_CardBattle_table,,,Wooden Table,2
+151125,cathedral_furniture_big_OBB,,,Pile of Furniture (Big OBB),2
+151126,obj_ExplosionTrap,,,Explosion Trap,2
+151127,pentagonal_prism_1_mon,,,Red Crystal,2
+151128,miko_altar_1,,,Miko Altar,2
+151129,strongbox_1_no_obb,,,Safe(NO OBB),2
+151130,strongbox_ftower_69_2,,,Safe(STEP OBB),2
+151131,d_firetower_book_pile_1,,,Pile of Books 1,2
+151132,d_firetower_book_pile_2,,,Pile of Books 2,2
+151133,d_firetower_book_pile_3,,,Pile of Books 3,2
+151134,npc_vincentass,,,Vincentas,2
+151135,npc_plaguedoctor_m_2,,,Plague Doctor Jugrinas,2
+151136,austeja_alter2,,,Yudejan Altar,2
+151146,npc_poodle_m,,,Poodle Boy,2
+151147,npc_tiecat_f,,,Cat Girl,2
+151148,npc_poporion_f,,,Popolion Girl,2
+151150,klaipeda_vendor,,,Festival Toy Kiosk,2
+151151,klaipeda_balloons,,,Festival Balloon Kiosk,2
+151152,klaipeda_christmas_tree_npc,,,2nd Anniversary Souvenir,2
+151153,NPC_Golddog,,,Golden Pup,2
+151154,treeday_1,,,Sapling,2
+151155,treeday_2,,,Sapling,2
+151156,treeday_3,,,Tree,2
+151157,treeday_4,,,Tree,2
+151158,treeday_5,,,Leafy Tree,2
+151159,treeday_6,,,Leafy Tree,2
+151160,treeday_7,,,Leafy Tree,2
+151161,treeday_square,,,Flowerbed,2
+151162,npc_2017wedding_1_f,,,2017 May Wedding Female NPC,2
+151163,npc_artefact_bouquet01,,,Bridal Bouquet,2
+151164,npc_2018wedding_1_f,,,2018 Golden Fairy Wedding Female NPC,2
+151165,playground_goalpost,,,Goalpost,2
+151166,strongbox_1_event,,minimap_event_3,Safe,2
+151167,treasure_box5_event,,minimap_event_2,Treasure Box 5,2
+151168,npc_moon,,,Full Moon,2
+151169,stone_hill_show_name,,,Rubble,2
+151170,dirt_heal_2_show_name,,,Sand Pile,2
+151171,npc_kupole_1_event,,minimap_event_1,Event Kupole 1,2
+151172,npc_kupole_2_event,,minimap_event_1,Event Kupole 2,2
+151173,npc_kupole_3_event,,minimap_event_1,Event Kupole 3,2
+151174,npc_kupole_4_event,,minimap_event_1,Event Kupole 4,2
+151175,npc_kupole_5_event,,minimap_event_1,Event Kupole 5,2
+151176,npc_kupole_6_event,,minimap_event_1,Event Kupole 6,2
+151177,npc_giltine_weapon_event,,minimap_event_1,Event Armed Giltine,2
+151178,npc_goldpig,,minimap_event_1,Golden Pig,2
+151180,gacha_cube1_event,,minimap_event_1,Leticia's Secret Cube,2
+152000,npc_husband_1,,,Ordinary Husband,2
+152001,npc_wife_1,,,Ordinary Wife,2
+152002,npc_oldman_1,,,Old Man,2
+152003,secret_warp_npc,,,Secret Warp Portal,2
+152004,npc_henrika,,minimap_collection,Henrika,2
+152005,npc_rena,,minimap_journal,Lena,2
+152006,npc_pilgrim_alter_01,,,Half-destroyed Altar,2
+152007,npc_pilgrim_board,,,Bulletin Board,2
+152008,npc_pilgrim_shrine,,,Sanctum Object,2
+152009,npc_pilgrim_tomb,,,Pilgrim NPC Woman's tomb,2
+152010,npc_blackmarket_npc,,,Black Market Exclusive Object ,2
+152011,npc_pilgrim_stump,,,Tree Stump,2
+152012,npc_pilgrim_branch,,,Skinny Tree,2
+152013,npc_pilgrim_tree,,,Holy Tree,2
+152014,catacomb_skull_1,,,Skull Pile_1,2
+152015,catacomb_skull_2,,,Skull Pile_2,2
+152016,catacomb_skull_3,,,Skull Pile_3,2
+152017,npc_flower1_1,,,Big Bouquet1,2
+152018,npc_flower2_1,,,Big Bouquet2,2
+152019,TreasureBox1_1,,,Small Treasure Chest,2
+152020,npc_pilgrim_board_1,,,Large Broken Signboard,2
+152021,farm_47_scorpio,,,Sleeping Scorpio,2
+152022,rokas_pot3_small,,,Small Pot,2
+152023,farm47_statue_zemina_small,,,Small Goddess Statue,2
+152024,npc_rokas_cube2,,,Valley Barrier Chain,2
+152025,npc_rokas_8,,,Valley Device 8,2
+152026,dirt_heal_4,,,Area of Ruins37 Hard pile of soil,2
+152027,stone_monument2_1,,,Area of Ruins Temporal Documents2,2
+152028,remains37_stones,,,Area of Ruins Temporal Pile of stones,2
+152029,thorn_gateway_2_1,,,Area of Ruins Temporal Vine,2
+152030,monument_01,,,Area of Ruins_tombstone01,2
+152031,monument_02,,,Area of Ruins_tombstone02,2
+152032,monument_03,,,Area of Ruins_tombstone03,2
+152033,monument_04,,,Area of Ruins_tombstone04,2
+152034,monument_05,,,Area of Ruins_tombstone05,2
+152035,plate_01,,,Gold Plate01,2
+152036,plate_02,,,Gold Plate02,2
+152037,plate_03,,,Gold Plate03,2
+152038,vine_01,,,Ground Vines,2
+152039,pagoda_01,,,Stone Tower,2
+152040,workdesk_01,,,Worktable,2
+152041,remains_vine_01,,,Vines in Area of Ruins,2
+152042,pagoda_02,,,Stone Tower2,2
+152043,pagoda_03,,,Stone Tower3,2
+152044,rope,,,The rope in Area of Ruin,2
+152045,vine_02,,,Ground Vines2,2
+152046,pagoda_04,,,Stone Tower4,2
+152047,vine_03,,,Ground Vines3,2
+152048,npc_Fireload,,,NPC_Fire Lord,2
+152049,flash_29_blank_npc,,,Empty NPC for Petrified City,2
+152050,Onion_npc,,,NPC_Kepa_Temporal Use,2
+152051,HiddenTrigger6_1,,,Hidden Trigger for Petrifying Frost,2
+152052,poison_crystal_03,,,Changed Tree Root Crystal_Temporal Use,2
+152053,stone_heap01,,,Stone Wall 01,2
+152054,stone_heap02,,,Stone Wall02,2
+152055,soul_gathering_mchn_1,,,Intensive Spirit Device1,2
+152056,soul_gathering_mchn_2,,,Intensive Spirit Device2,2
+152057,noshadow_npc_big,,,No Shadow NPC_Tall,2
+152058,npc_archaeologist_m_01,,,Historian (Male) 01,2
+152059,npc_archaeologist_m_02,,,Historian (Male) 02,2
+152060,npc_archaeologist_m_03,,,Historian (Male) 03,2
+152061,npc_archaeologist_m_04,,,Historian (Male) 04,2
+152062,npc_historian_odel_3,,,Historian (Female) 02,2
+152063,thorn_rock_2,,,Rock_Pilgrim's Way,2
+152064,npc_pilgrim_f_2,,,Pilgrim (Female)_02,2
+152065,npc_pilgrim_f_3,,,Pilgrim (Female)_03,2
+152066,pilgrim_trap_01,,,Monster Trap of Pilgrim's Way,2
+152067,npc_cart2,,,Empty Wagon_Coastal Fortress,2
+152068,Stone01_NoObb,,,The stones with out obb,2
+152069,npc_pilgrim_shrine_NoObb,,,The sanctum object without obb,2
+152070,soul_gathering_mchn_2_1,,,Spirit Condenser2_1,2
+152071,soul_gathering_mchn_2_2,,,Spirit Condenser2_2,2
+152072,soul_gathering_mchn_3,,,Spirit Condenser3,2
+152073,soul_gathering_mchn_4,,,Spirit Condenser4,2
+152074,Infroholder_mage_green_npc,,,NPC_Green Infroholder Sorcerer,2
+152075,npc_goddess_dalia,,,Goddess Dalia,2
+152076,HiddenWall_10_200_200,,,,2
+152077,npc_zachariel_cube_0,,,Mausoleum Cube_0,2
+152078,velniasprison_warp_mini,,minimap_portal,Teleport Magic Circle (Mini),2
+152079,npc_3cmlake_27_riddle_device,,,Water Point,2
+152080,npc_3cmlake_27_bracken_leaves,,,Water Plant,2
+152081,npc_Underaqueduct_Gimmick,,,Misrus Ball of Magic,2
+152082,npc_Underaqueduct_Pc_Life_1,,,PC Count 1,2
+152083,npc_Underaqueduct_Pc_Life_2,,,PC Count 2,2
+152084,npc_Underaqueduct_Skill_Gimmick,,,Misrus Magic Crystal,2
+153000,npc_matron_aquamarine,,,Old Lady (Aquamarine),2
+153001,npc_matron_blue,,,Old Lady (Blue),2
+153002,npc_matron_darkbrown,,,Old Lady (Dark Brown),2
+153003,npc_matron_pink,,,Old Lady (Pink),2
+153004,npc_matron_purple,,,Old Lady (Purple),2
+153005,npc_kristina,,minimap_man_companion,Cristina,2
+153006,npc_gele_57_1_cablecar,,,Cable Car,2
+153007,npc_gele_57_2_cablecar,,,Gele Plateau Cable Car,2
+153008,npc_huevillage58_1_cablecar,,,Program Cable Car,2
+153009,npc_rokas27_cablecar,,,Akmens Ridge Cable Car,2
+153010,npc_mission_gele_01_cablecar,,,Gele Plateau Cable Car,2
+153011,npc_bramble_root,,,Bramble's Root,2
+153012,mission_chaple_02,,,Cathedral Gate,2
+153013,npc_cauldron,,,Alchemy Pot,2
+153014,BOOK_02,,,Book,2
+153015,npc_foot_hold,,,Great Cathedral Footstep,2
+153016,npc_pilgrim_tree_Q,,,Divine Tree(obb version),2
+153017,npc_cathedral_device_01,,,Great Cathedral Device 1,2
+153018,npc_cathedral_device_02,,,Great Cathedral Device 2,2
+153019,npc_pollution_altar,,,Corrupted Altar,2
+153020,pilgrim_statue_01,,,Pilgrim Statue,2
+153021,pilgrim_flower_01,,,Offered flower,2
+153022,Hiddennpc_move02,,,,2
+153023,Hiddennpc_move03,,,,2
+153024,npc_coffin,,,Great King Zachariel's Coffin,2
+153025,npc_plant_repress_L,,,Anti-Monster Proliferation Device,2
+153026,npc_plant_repress_S,,,Anti-Monster Proliferation Device,2
+153027,siau_fence_02,,,Siauliai Fence,2
+153028,HiddenWall_10_170_300,,,,2
+153031,blank_npc_noshadow,,,Empty NPC,2
+153032,npc_zachariel,,,King Zachariel's Spirit,2
+153036,f_katyn_owl02_Q,,,Owl Sculpture,2
+153037,f_katyn_owl03_Q,,,Owl Sculpture,2
+153038,f_katyn_owl04_Q,,,Owl Sculpture,2
+153039,npc_bramble_root_m,,,Bramble's Root,2
+153040,npc_historian_odel_2,,,Historian (F),2
+153041,farm47_sack_01,,,Sack of Crops,2
+153042,farm47_power_01,,,Engine,2
+153043,farm47_warehouse_01,,,Warehouse entrance,2
+153044,farm47_chair_01,,,Wagon Chair,2
+153045,farm47_dryer_01,,,Food Dryer,2
+153046,farm47_dandelion_01,,,Bloomed Dandelion,2
+153048,farm47_circle_02,,,Broken Magic Circle,2
+153049,farm47_wing_01,,,Wing of Goddess Statue,2
+153050,farm47_goddess_head_01,,,Head of Goddess Statue,2
+153051,rokas_Shnayim,,,NPC Shnayim,2
+153053,npc_zachariel_head_03,,,Mausoleum Gravestone03 (Blue),2
+153054,siauliai_grass_1_blue,,,Wide leaf vine_blue,2
+153055,rokas_pots,,,Small Pot,2
+153056,cart_empty_obb,,,Empty Wagon_Collusion Box present,2
+153057,LOST_PAPER_2,,,Fluttering Paper,2
+153058,npc_bramble_root_s,,,Bramble's Root,2
+153059,closing_device_m,,,Closing Device,2
+153060,pillarobb_crystal_Q,,,Black Crystal,2
+153061,npc_rokas_5_HE,,,Canyon Area Device 4,2
+153062,d_under69_obj,,,Fountain,2
+153063,firetower_device_01_Q,,,Magic Stabilizing Device ,2
+153064,Firetower_Offense_Q,,,Evil Energy Purifier,2
+153065,firetower_valve_Q,,,Magic Valve,2
+153067,npc_thorn_flower_yellow,,,Bright Thorny Flower,2
+153068,npc_thorn_bigflower_yellow,,,Big Bright Thorny Flower,2
+153069,Link_stone_small,,,Magic Stone of Mutuality,2
+153070,bube_flag1_Q,,,Vubbe Tribe Flag,2
+153090,house1,,,Home,2
+153091,npc_goddess_Laima_prison,,,Imprisoned Laima,2
+153092,npc_giltine_weapon,,,Armed Giltine,2
+153093,f_3cmlake_bigleaf,,,Lake Leaf,2
+153094,gargoyle_statue,,,Gargoyle,2
+153095,f_bracken_63_3_elt,,,Elevator,2
+153096,GuildHouseObject,,,,2
+153097,d_abbey_64_1_handle,,,Handle,2
+153098,d_abbey_64_1_sack,,,Sack,2
+153099,d_abbey_64_1_wood,,,Wooden Plate,2
+153100,d_abbey_64_1_box,,,Box,2
+153101,Firetower_GateOpen_Q,,,Mage Tower Gate,2
+153102,d_abbey_64_1_elt2,,,Novaha Elevator,2
+153103,PrisonWire,,,Barbed Wire Fence,2
+153104,PrisonWire2,,,Barbed Wire Fence2,2
+153105,npc_orb1_Q,,,Beads,2
+153106,thorn_rock_Q,,,Rock(obstarcle version),2
+153107,f_bracken_63_1_elt,,,Koru Jungle Elevator,2
+153108,npc_f_bracken_63_1_flume,,,Fruit Ship2,2
+153109,orsha_m_3,,,Orsha Citizen3,2
+153110,orsha_m_4,,,Orsha Citizen4,2
+153111,orsha_f_3,,,Orsha City Girl3,2
+153112,f_bracken_63_2_elt,,,Knidos Jungle Cable Car,2
+153113,d_abbey_64_2_elt,,,Novaha Annex Elevator,2
+153114,d_abbey_64_3_elt,,,Novaha Institute Elevator,2
+153115,npc_big_bracken,,,Colossal Bracken,2
+153116,npc_bracken,,,Bracken,2
+153117,npc_gate,,,Warehouse Gate,2
+153118,incomplete_kruvina,,,Incomplete Kruvina,2
+153119,npc_roze,,,Rose,2
+153120,suspicious_wizard,,,Mysterious Wizard,2
+153121,npc_orsha_soldier_bugle_m,,,Orsha Trumpeteer,2
+153122,orsha_wood1,,,Orsha Tree1,2
+153123,orsha_wood2,,,Orsha Tree2,2
+153124,orsha_wood3,,,Orsha Tree3,2
+153125,orsha_wood4,,,Orsha Tree4,2
+153126,orsha_wood5,,,Orsha Tree5,2
+153127,fedimian_bridge,,,Fedimian Bridge,2
+153128,sheepdog_black,,,Laswi,2
+153129,d_castle_67_1_elt,,,Castle Elevator1,2
+153130,d_castle_67_2_elt,,,Castle Elevator2,2
+153131,alchemist_table_1,,,Alchemy Table1,2
+153132,alchemist_table_2,,,Alchemy Table2,2
+153133,workdesk_02,,,Worktable,2
+153134,pilgrim_shrine2,,,Genar Monument,2
+153135,d_underfortress_68_2_elt,,,Sicarius Transport Magic Circle,2
+153136,3cm_bucket_stuff_red,,,Corrupted Urn,2
+153137,firetower_valve_02,,,Protective Layer Device,2
+153138,Firetower_Defense_Q,,,Mage Tower Defense,2
+153139,npc_PremierEminent,,,Premier Eminent,2
+153142,npc_nun_1,,,Sister 1,2
+153143,npc_nun_2,,,Sister 2,2
+153144,npc_kupole_3_3D,,,Kupole3_3D,2
+153145,coral_stuff03,,,Blue Coral,2
+153146,coral_stuff04,,,Coral Wagon,2
+153147,coral_stuff05,,,Red Coral,2
+153148,npc_table_WIZ,,,Wizard Tulis,2
+153149,Stone04,,,Stone,2
+153150,npc_pollution_altar_s,,,Corrupted Altar,2
+153151,npc_stake_stockades,,,Stake Stockades,2
+153155,npc_figurine,,,Cursed Statue,2
+153156,npc_telepty_device,,,Telepathy Device,2
+153157,npc_figurine_device,,,Observation Orb,2
+153158,npc_stake_stockades_01,,,Stake Stockades,2
+153160,Stone04_1,,,Stone,2
+153161,extra_tomb_no_obb,,,Temporary Memorial Monument(NO OBB),2
+153162,monument_03_midle,,,Area of Ruins_Monument03(Medium Size),2
+153163,npc_plaguedoctor_m,,,Plague Doctor Master's Apprentice,2
+153164,npc_rytaswort,,,Strange Flower,2
+153165,npc_dorong,,,Bunkeyto,2
+153167,stonepillar_1_no_obb,,,Stone 1(NO OBB),2
+153168,remains_vine_01_S,,,Area of Ruins Vine(Small Version),2
+153169,npc_INQ_master,,minimap_man_cleric,Inquisitor Master,2
+153170,npc_ENC_master,,minimap_man_scout,Enchanter Master,2
+153171,npc_SAG_master,,minimap_man_wizard,Sage Master,2
+153172,npc_DAO_master,,minimap_man_wizard,Taoist Master,2
+153173,npc_MIKO_master,,minimap_man_cleric,Miko Master,2
+153174,npc_KANU_master,,minimap_man_cleric,Priest,2
+153175,bracken43_4_obj,,,Bracken Object,2
+153176,npc_richboy,,,Small Master,2
+153177,monument_05_small,,,Area of Ruins_tombstone05,2
+153178,candle,,,Scented Candle,2
+153179,f_bracken_43_2_elt,,,Elevator,2
+153180,f_bracken_43_2_elt2,,,Elevator,2
+153181,f_bracken_43_4_elt,,,Elevator,2
+153182,npc_skill_misc_shop,,,Skill Material Merchant,2
+153183,npc_boss_kinghammer,,,King Hammer,2
+153184,npcl_abbey_device,,,Monastery Equipment,2
+153185,npc_whitetree_tree,,,White Tree,2
+153186,npc_abbey_gear,,,Narvas Temple Device,2
+153187,npc_3cmlake_riddle_device,,,Mysterious Device,2
+153188,npc_abbey_secret_warp,,,Narvas Monastery Equipment,2
+153189,npc_whitetrees_22_2_elt,,,White Tree Forest Elevator,2
+153190,npc_whitetrees_22_1_elt,,,White Tree Forest 22_1 Elevator,2
+153191,npc_whitetrees_22_3_elt,,,White Tree Forest 22_3 Elevator,2
+153192,maple_43_tree,,,Fall Woods,2
+153193,npc_BLM_master,,minimap_man_scout,Bullet Marker Master,2
+153194,npc_MTD_master,,minimap_man_master,Matador Master,2
+153195,npc_SHM_master,,minimap_man_wizard,Shadowmancer Master,2
+153196,npc_ZLT_master,,minimap_man_cleric,Zealot Master,2
+153197,Hiddennpc_Q5,,,,2
+153198,npc_circle_trigger_blue,,,Plateau Magic Circle Activation Device,2
+153199,npc_circle_trigger_white,,,Plateau Magic Circle Activation Device,2
+153200,npc_circle_trigger_yellow,,,Plateau Magic Circle Activation Device,2
+153201,npc_RET_master,,minimap_man_master,Retiarius Master,2
+153202,npc_NAK_master,,minimap_man_master,Nak Muay Master,2
+153203,npc_ONM_master,,minimap_man_wizard,Onmyoji Master,2
+153204,f_nicopolis_pendulum,,,UnvisibleName,2
+153207,npc_PID_master,,minimap_man_archer,Pied Piper Master,2
+153208,npc_EXO_master,,minimap_man_cleric,Exorcist Master ,2
+153209,npc_Velwriggler_blue,,,Blue Velwriggler,2
+153210,npc_Spector_gh_red,,,Red Apparition,2
+153211,npc_Sec_Spector_Gh,,,Green Apparition,2
+153212,npc_Hallowventor,,,Hallowventer,2
+153213,WIZ_master_studente1,,,Wizard Nidia,2
+153214,WIZ_master_studente2,,,Wizard Aldoni,2
+153215,WIZ_master_studente3,,,Wizard Ane,2
+153216,npc_nicopolis_female1,,,Nicopolis Resident (F),2
+153217,npc_nicopolis_male1,,,Nicopolis Resident (M),2
+153218,npc_nicopolis_female2,,,Nicopolis Resident 2 (F),2
+153219,npc_nicopolis_male2,,,Nicopolis Resident 2 (M),2
+153220,npc_nicopolis_female3,,,Nicopolis Resident 3 (F),2
+153221,npc_nicopolis_male3,,,Nicopolis Resident 3 (M),2
+153222,npc_EXO_student,,,Exorcist Apprentice,2
+153223,npc_owynia_dilben,,,Owynia Dilben,2
+153224,npc_nicopolis_obj1,,,Nicopolis Sculpture 1,2
+153225,npc_nicopolis_obj2,,,Nicopolis Sculpture 2,2
+153226,npc_auguste_dupin,,,Auguste Dupin,2
+153227,npc_nicopolis_guard_male,,,Nicopolis Male Guard,2
+153228,npc_nicopolis_guard_female,,,Nicopolis Female Guard,2
+153229,katyn_rock_mid,,,Boulder,2
+153230,f_dcapital_106_elt,,,Elevator,2
+153231,f_dcapital_105_elt,,,Elevator,2
+153232,f_nicopolis_81_2_elt,,,Elevator,2
+153233,f_nicopolis_81_3_elt,,,Nicopolis 81_3 Elevator,2
+153234,d_limestonecave_71_1_elt,,,Baubas Cave 71_1 Elevator,2
+153235,npc_Lapflammer_statue,,,Lapflammer Statue,2
+153236,npc_Lapezard_statue,,,Lapezard Statue,2
+153237,npc_Lapemiter_statue,,,Lapemiter Statue,2
+153238,npc_Lapeman_statue,,,Lapeman Statue,2
+154000,velniasprison_warp,,minimap_portal,Teleport Magic Circle,2
+154001,velniasp_block,,,,2
+154002,npc_velniasp_mage,,,Portal Wizard,2
+154003,npc_Blud,,,Demon Lord Blut,2
+154004,Hidden_pillar,,,OBB Pillar,2
+154005,HiddenControl,,,Dungeon Event Manager,2
+154006,fortress_rock,,,Joseph Rock,2
+154007,fd_Firetower_Offense,,,Evil Energy Purifier,2
+154008,npc_valtrus,,,Valtross,2
+154009,crystal_vakarine,,,Vakarine Crystal,2
+154010,npc_vakarine_goddess,,,Goddess Vakarine,2
+154011,npc_kupole_1,,,Kupole 1,2
+154012,npc_kupole_2,,,Kupole 2,2
+154013,npc_kupole_3,,,Kupole 3,2
+154014,npc_kupole_4,,,Kupole 4,2
+154015,npc_kupole_5,,,Kupole 5,2
+154016,npc_kupole_6,,,Kupole 6,2
+154017,npc_ghost_soldier,,,Ghost Soldier,2
+154018,npc_warehouse,,minimap_werehouse,Storage Keeper,2
+154019,npc_bocor_edita,,,Bokor Edita,2
+154020,npc_cryomancer_kostas,,,Cryomancer Kostas,2
+154021,npc_CHR_sabina,,,Chronomancer Sabina,2
+154022,npc_ALC_saliamonas,,,Alchemist Saliamonas,2
+154023,npc_flash_soldier_01,,,Petrified Guard01,2
+154024,npc_flash_male_01,,,Petrified Grave Robber01,2
+154025,flash_detector,,,Petrification Detector,2
+154026,npc_flash_soldier_02,,,Petrified Guard02,2
+154027,npc_flash_soldier_03,,,Petrified Guard03,2
+154028,npc_flash_soldier_04,,,Petrified Guard04,2
+154029,npc_flash_soldier_05,,,Petrified Guard05,2
+154030,npc_flash_male_02,,,Petrified Grave Robber02,2
+154031,npc_flash_male_03,,,Petrified Grave Robber03,2
+154032,npc_kaliss_karriat,,,Wilhelmina Carriot,2
+154033,npc_kaliss_hans,,,Adjutant General Hans,2
+154034,npc_kaliss_soldier,,,Knight of Kaliss Member,2
+154035,npc_flash_box_1,,,Petrified Box,2
+154036,npc_flash_grass_1,,,Petrified Grass,2
+154037,npc_flash_book_1,,,Petrified Books,2
+154038,npc_flash_book_2,,,Petrified Paper,2
+154039,klaipeda_square_statue,,minimap_goddess,Klaipeda Goddess Statue,2
+154040,npc_goddess_Laima,,,Goddess Laima,2
+154041,npc_FD_defence_1,,,Pre Dungeon Defense,2
+154042,candlestick_02,,,Candle02,2
+154043,altar_bottom,,,Ancient Device01,2
+154044,statue_angel,,,Angel Staute01,2
+154045,ground_crack,,,Cracked Land,2
+154046,id_gate_npc,,,InstancedDungeonEntryNPC,2
+154047,CrystalLight,,,Crystal Light,2
+154048,pigrim_fence,,,Pilgrim Fence,2
+154049,npc_Ihrmantas,,,Member Irmantas,2
+154050,npc_Agatas,,,Pilgrim Agatas,2
+154051,npc_williya,,,Squire Williya,2
+154052,npc_Erikais,,,Pardoner Erikas,2
+154053,npc_Galius,,,Gailus Legwyn,2
+154054,npc_Galius_follower_1,,,Legywn family's vassal1,2
+154055,npc_Galius_follower_2,,,Legywn family's vassal2,2
+154056,npc_Galius_follower_3,,,Legywn family's vassal3,2
+154057,npc_Urbonas,,,Urbonas,2
+154058,npc_d_prison_62_elt,,,Elevator01,2
+154059,npc_d_prison_62_1_elt,,,Elevator02,2
+154060,npc_bonfire_Q1,,,BonfireQ1,2
+154061,npc_bonfire_Q2,,,BonfireQ2,2
+154062,npc_bonfire_Q3,,,BonfireQ3,2
+154063,npc_orsha_goddess,,minimap_goddess,Statue of Goddess Ausrine,2
+154064,Hiddennpc_Q1,,,,2
+154065,Hiddennpc_Q2,,,,2
+154066,Hiddennpc_Q3,,,,2
+154067,Hiddennpc_Q4,,,,2
+154068,npc_dog6,,,Jolly,2
+154069,dialog_warp_npc_1,,minimap_portal,Interactive Portal NPC,2
+154070,dialog_warp_npc_2,,minimap_portal,Interactive Portal NPC,2
+154071,gid_star_stone_01,,,Star Stone,2
+154072,npc_goddess_zemina,,,Goddess Zemyna,2
+154073,npc_IronGate,,,Earth Tower Iron Gate,2
+154074,npc_gt_shop,,,Earth Tower Merchant,2
+154075,npc_torchlight,,,Brazier,2
+154076,npc_et_zachariel_cube,,,Royal Mausoleum Cube,2
+154077,npc_et_firepuppet,,,Summon Magic Dolls,2
+154078,npc_et_austeja_alter,,,Earth Altar,2
+154079,flibrary_block,,,,2
+154080,npc_giltine_weapon_flib,,,Armed Giltine Fantasy Library,2
+154081,npc_ftower691_elt,,,Mage Tower Teleportation Device 691,2
+154082,npc_LSCAVE551_CELVERKA_NPC,,,Priest Celvica,2
+154083,npc_ftower691_elt_1,,,Mage Tower Teleportation Device 691_1,2
+154084,npc_fantasylibrary_arch_1,,,Fantasy Library_Event_Arch,2
+154085,npc_fantasylibrary_brickfloor_1,,,Fantasy Library_Event_Stone Floor,2
+154086,npc_vaivora_goddess,,,Goddess Vaivora,2
+154087,npc_agailla_flurry,,,Agailla Flurry,2
+154088,fl_crystal_red,,,Red Boundary Stones,2
+154089,fl_crystal_blue,,,Blue Boundary Stones,2
+154090,fl_Altarcrystal,,,Red Crystal,2
+154091,KQ_poison_crystal_01,,,Tree Root Crystal 1,2
+154092,KQ_poison_crystal_02,,,Tree Root Crystal 2,2
+154093,KQ_npc_firepuppet,,,Shaman Doll,2
+154094,Hiddennpc_KQ1,,,,2
+154095,Hiddennpc_KQ2,,,,2
+154096,Hiddennpc_KQ3,,,,2
+154097,Hiddennpc_KQ4,,,,2
+154098,TreasureBox_KQ1,,,Treasure Chest,2
+154099,d_limestonecave_55_1_elt_1,,,Alembique Transportation Device,2
+154100,rmg_crystal_1,,,Random1,2
+154101,rmg_crystal_2,,,Random2,2
+154102,npc_neringa,,,Neringa,2
+154103,fantasylibrary_bookshelf_1,,,Fantasy Library Bookshelf 1,2
+154104,fantasylibrary_gear_1,,,Fantasy Library Device 1,2
+154105,d_fantasylibrary_runestone_1,,,Fantasy Library Rune Stone 1,2
+154106,d_fantasylibrary_runestone_2,,,Fantasy Library Rune Stone 2,2
+154107,d_fantasylibrary_runestone_3,,,Fantasy Library Rune Stone 3,2
+154108,d_fantasylibrary_book_1,,,Fantasy Library Book 1,2
+154109,d_fantasylibrary_book_2,,,Fantasy Library Book 2,2
+154110,d_fantasylibrary_book_3,,,Fantasy Library Book 3,2
+154111,d_fantasylibrary_desk_1,,,Fantasy Library Table 1,2
+154112,d_fantasylibrary_monument,,,Pillar of Ice,2
+154113,npc_kupole_kaze_1,,,Kupole Kaze,2
+154114,npc_agit_officer_supply_kingdom_1,,,Royal Supply Officer,2
+154115,npc_orb1_Boruta,,,Boruta Roar,2
+154116,HiddenWall_60_60_500,,,,2
+154117,HiddenWall_40_40_500,,,,2
+154118,HiddenWall_25_25_500,,,,2
+154119,Event_FishingBox,,minimap_event_1,Joha's Bucket of Mudfish,2
+154120,npc_pajauta_1,,,Pajauta,2
+154121,npc_MasterSheriff,,minimap_man_scout,Sheriff Master,2
+154122,npc_MasterMatross,,minimap_man_archer,Matross Master,2
+154123,npc_MasterArditi,,minimap_man_scout,Ardito Master,2
+154124,npc_MasterTigerHunter,,minimap_man_archer,Tiger Hunter Master,2
+154125,npc_kupole_7,,minimap_personal_house,Kupole 7,2
+154129,npc_washstand_1,,minimap_event_1,Fountain,2
+155000,npc_crystal_machine,,,Crystal Processing Device,2
+155001,farm49_sapling,,,The Mysterious Tree,2
+155002,dirt_ground,,,Soil Sample,2
+155003,dirt_heal_2,,,Pile of Soil,2
+155004,small_dandelion,,,Young Dandelion,2
+155005,old_sack,,,Old Bag,2
+155006,grape_vine_1,,,Grape Vines,2
+155007,grape_vine_4,,,Grape Vines,2
+155008,old_wooden_box,,,Wooden Chest,2
+155009,old_well,,,Old Well,2
+155010,tunnel_ent_1,,,Underground Tunnel Entrance 1,2
+155011,tunnel_ent_2,,,Underground Tunnel Entrance 2,2
+155012,leather_bag,,,Leather Bag,2
+155013,mine2_crystal_red,,,Red Crystal,2
+155014,mine2_crystal_blue,,,Blue Crystal,2
+155015,mine2_crystal_yellow,,,Yellow Crystal,2
+155016,npc_rich_shaton,,,Gord Shaton,2
+155017,npc_rich_baron,,,Baron Allerno,2
+155018,npc_druid_m,,,Druid Male,2
+155019,npc_druid_f,,,Druid Female,2
+155020,m_crystal,,,Melody Crystal,2
+155021,npc_rich_f,,,Noble Girl,2
+155022,npc_rich_m,,,Noble Man,2
+155023,npc_mushroom,,,Tempas Mushroom,2
+155024,Boss_Kubas_Head,,,Machine of Riddles,2
+155025,Stone_pile,,,Temporal Grave,2
+155026,dirt_heal_3,,,Valley Area Soil,2
+155027,pilgrim_heap_01,,,Pile of Food (Large),2
+155028,pilgrim_heap_02,,,Pile of Food (Medium),2
+155029,pilgrim_heap_03,,,Pile of Food (Small),2
+155030,pilgrim_heap_04,,,Pile of Food (Extra Small),2
+155031,poison_crystal_01,,,Mutated Tree Root Crystal,2
+155032,poison_crystal_02,,,Mutated Tree Root Crystal 2,2
+155033,npc_pilgrim_f_1,,,Pilgrim (F),2
+155034,npc_pilgrim_m_1,,,Pilgrim (M) 1 - New Hair 1,2
+155035,npc_pilgrim_m_2,,,Pilgrim (M) 1 - New Hair 2,2
+155036,npc_pilgrim_m_3,,,Pilgrim (M) 1 - Existing Hair 1,2
+155037,npc_pilgrim_m_4,,,Pilgrim (M) 1 - Existing Hair 2,2
+155038,npc_pilgrim_m_5,,,Pilgrim (M) 1 - Existing Hair 3,2
+155039,npc_pilgrim_m_6,,,Pilgrim (M) 1 - Existing Hair 4,2
+155040,npc_husband_1_down,,,Normal Husband Down,2
+155041,npc_village_male_a1_down,,,Village LadA3 Down,2
+155042,npc_friar_01,,,Monk1,2
+155043,npc_friar_02,,,Monk2,2
+155044,npc_friar_03,,,Monk3,2
+155045,npc_friar_04,,,Monk4,2
+155046,npc_friar_05,,,Monk5,2
+155047,npc_friar_down01,,,Monk3 Down,2
+155048,npc_friar_down02,,,Monk4 Down,2
+155049,npc_abbot,,,Abbot,2
+155050,carpet,,,Carpet,2
+155051,npc_circle_trigger,,,Plateau Magic Circle Activation Device,2
+155052,npc_vine2,,,InstancedDungeonEntryNPC,2
+155053,npc_vine3,,,Production Vine2,2
+155055,tableland_tent,,,Plateau Magic Circle Activation Device,2
+155056,black_stone,,,Black Stone,2
+155057,broken_bar,,,Broken Bar,2
+155058,f_orchard_34_2_slider,,,Waterslide Ship,2
+155059,f_orchard_34_2_elevator,,,Giant Fruit Forest_Elevator,2
+155060,f_orchard_34_2_Flume,,,Fruit Ship,2
+155061,f_orchard_34_2_gate,,,Waterway Gate,2
+155062,npc_SWD_sub_master,,minimap_man_master,Swordsman Submaster,2
+155063,npc_PEL_sub_master,,minimap_man_master,Peltasta Submaster,2
+155064,npc_HLD_sub_master,,minimap_man_master,Highlander Submaster,2
+155065,npc_HOP_sub_master,,minimap_man_master,Hoplite Submaster,2
+155066,npc_BAR_sub_master,,minimap_man_master,Barbarian Submaster,2
+155067,npc_ROD_sub_master,,minimap_man_master,Rodelero Submaster,2
+155068,npc_CAT_sub_master,,minimap_man_master,Cataphract Submaster,2
+155069,npc_WIZ_sub_master,,minimap_man_wizard,Wizard Submaster,2
+155070,npc_PYR_sub_master,,minimap_man_wizard,Pyromancer Submaster,2
+155071,npc_CRY_sub_master,,minimap_man_wizard,Cryomancer Submaster,2
+155072,npc_PSY_sub_master,,minimap_man_wizard,Psychokino Submaster,2
+155073,npc_LIN_sub_master,,minimap_man_scout,Linker Submaster,2
+155074,npc_THA_sub_master,,minimap_man_scout,Thaumaturge Submaster,2
+155075,npc_WRC_sub_master,,minimap_man_wizard,Elementalist Submaster,2
+155076,npc_ARC_sub_master,,minimap_man_archer,Archer Submaster,2
+155077,npc_RAG_sub_master,,minimap_man_archer,Ranger Submaster,2
+155078,npc_QRS_sub_master,,minimap_man_archer,Quarrel Shooter Submaster,2
+155079,npc_SAP_sub_master,,minimap_man_archer,Sapper Submaster,2
+155080,npc_HUT_sub_master,,minimap_man_archer,Hunter Submaster,2
+155081,npc_WUG_sub_master,,minimap_man_archer,Wugushi Submaster,2
+155082,npc_SCT_sub_master,,minimap_man_scout,Scout Submaster,2
+155083,npc_CRL_sub_master,,minimap_man_cleric,Cleric Submaster,2
+155084,npc_KRV_sub_master,,minimap_man_cleric,Krivis Submaster,2
+155085,npc_PRS_sub_master,,minimap_man_cleric,Priest Submaster,2
+155086,npc_BKR_sub_master,,minimap_man_wizard,Bokor Submaster,2
+155087,npc_DIV_sub_master,,minimap_man_cleric,Dievdirbys Submaster,2
+155088,npc_PAL_sub_master,,minimap_man_cleric,Paladin Submaster,2
+155089,cannonball,,,Cannonball,2
+155090,kunai2,,,Kunai,2
+155091,Long_TailedTit,,,Long-tailed Chickadee,2
+155092,Long_TailedTit_red,,,Red Long-tailed Chickadee,2
+155093,flamingo,,,Flamingo,2
+155094,npc_sapper,,,Revelator Mihail,2
+155095,npc_sadhu,,,Revelator Yane,2
+155096,npc_highlander_2,,,Revelator Connor,2
+155099,npc_foot_hold_no,,,Great Cathedral Footstep(Remove the obb),2
+155100,f_bracken_63_1_flume,,,Fruit Ship2(Direction),2
+155101,orsha_castle_lord,,,Lord Delmore,2
+155102,npc_floana,,minimap_collection,Florianna,2
+155103,npc_racia,,minimap_journal,Rosia,2
+155104,kruvina_center,,,Kruvina Central Device,2
+155105,kruvina_pillar,,,Demonic Power Supply Device,2
+155106,alter_sacrifice,,,Life Absorbing Altar ,2
+155107,magical_bomb,,,Magic Power Bead Lump,2
+155108,f_castle_65_2_elt,,,Delmore Manor Lift,2
+155109,f_castle_65_3_elt,,,Delmore Outskirts Lift,2
+155110,d_cmine_66_1_elt,,,Nevellet Quarry 1F Lift,2
+155111,d_cmine_66_1_cart,,,Cart of Nevellet Quarry 1F,2
+155112,f_castle_65_1_elt,,,Delmore Hamlet Cable Car,2
+155113,castle_wizard,,,Mage Melchioras,2
+155114,d_cmine_66_2_cart,,,Cart of Nevellet Quarry 2F(Direction),2
+155115,d_cmine_66_2_cart2,,,Cart of Nevellet Quarry 2F(Direction),2
+155116,kruvina_pillar2,,,Wreckage of the Demonic Power Supply Device,2
+155117,castle_heap,,,Delmore Barrier,2
+155118,orsha_m_14_1,,,Orsha Soldier Male14_1,2
+155119,orsha_m_14_2,,,Orsha Soldier Male14_2,2
+155120,npc_pilgrim_old,,,Old Pilgrim,2
+155121,npc_friar_down03,,,Old Monk,2
+155122,velnias_sword,,,Demon Sword,2
+155123,abbey_gate,,,Monastery Main Gate,2
+155124,abbey_gate_opened,,,Monastery Main Gate (Open),2
+155125,tubers,,,Pile of Plant Roots,2
+155126,npc_frair_f_03,,,Female Monk 3,2
+155127,npc_cauldron_water,,,Water Pot,2
+155128,npc_cauldron_stew,,,Stew Pot,2
+155129,siauliai_grass_small,,,Small Pile of Grass,2
+155130,spell_crystal_red2,,,Enchanted Crystal 2,2
+155131,npc_ghost_soldier2,,,Ghost Soldier2,2
+155132,npc_ghost_soldier3,,,Ghost Soldier3,2
+155133,npc_intermediate_officer_ghost,,,Ghost Officer,2
+155134,npc_intermediate_officer_ghost2,,,Ghost Officer2,2
+155135,npc_alchemist_f2,,,Alchemist Female2,2
+155136,bracken_ruin1,,,Building Rubble1,2
+155137,bracken_ruin2,,,Building Rubble2,2
+155138,stone_hill,,,Stone Supports,2
+155139,extra_tomb,,,Temporary Memorial Monument,2
+155140,bracken_ivy,,,Bracken Vines,2
+155141,bracken_leaves,,,Bracken Leaves,2
+155142,npc_white_hunter,,,White Hunter,2
+155143,npc_young_rich,,,Young Master,2
+155144,npc_teacher,,,Governess,2
+155145,npc_explorer_f,,,Adventurer (Female),2
+155146,npc_thorn_flower_yellow_noOBB,,,Bright Thorn Flower NO OBB,2
+155147,npc_Centaurus,,,Sleeping Centaurus,2
+155148,king_statue,,,King's Statue,2
+155149,whitetrees_gate,,,Small Royal Mausoleum Entrance,2
+155150,woodenwall_trap1,,,Wooden Barricade1,2
+155151,woodenwall_trap2,,,Wooden Barricade2,2
+155152,npc_solcomm,,,Solcomm,2
+155153,f_3cmlake_boxes,,,Box,2
+155154,f_3cmlake_Link_stone,,,The Lake Crystal Stone,2
+155159,job_shadow_firetower_device,,,Shadowmancer's Research Device,2
+155160,f_3cmlake_26_1_elt,,,Lanko 26 Waters Transportation Device,2
+155161,job_shadow_chaser,,,Chaser Cube,2
+155162,thorn_rock_shadow,,,Shadow Rock,2
+155163,npc_schaffenstar_member1_1,,,Schaffenstar M1,2
+155164,npc_schaffenstar_member1_2,,,Schaffenstar M2,2
+155165,npc_schaffenstar_member1_3,,,Schaffenstar M3,2
+155166,npc_schaffenstar_member2_1,,,Schaffenstar F1,2
+155167,cart_spp_3cm,,,Supplies Wagon,2
+155168,npc_anastazija,,,Adventurer Anastazija,2
+155169,d_startower_velnias_stone,,,Demon Device,2
+155170,star_stone_01_small_startower,,,Magic Residue,2
+155171,npc_crystal_machine_event,,minimap_event_1,Event Processing Device,2
+156000,npc_gintas,,,Believer Gintas,2
+156001,npc_margiris,,,Margiris,2
+156002,npc_bocor_juta,,,Bokor Juta,2
+156003,npc_druid_leja,,,Druid Leja,2
+156004,npc_druid_benes,,,Druid Benes,2
+156005,npc_dievdirbys_m,,,Dievdirbys,2
+156006,npc_frair_f_01,,,Female Monk 1,2
+156007,npc_frair_f_02,,,Female Monk 2,2
+156008,orsha_tiliana,,minimap_man_market,Orsha Market Manager,2
+156009,Popolion_Blue_Transfrom,,minimap_man_market,Popolion_Disguise,2
+156010,ferret_folk_Transfrom,,minimap_man_market,Ferret_Disguise,2
+156011,Tiny_Transfrom,,minimap_man_market,Tini_Disguise,2
+156012,Npanto_baby_Transfrom,,minimap_man_market,Panto_Disguise,2
+156013,Honeybean_Transfrom,,minimap_man_market,Honeybean_Disguise,2
+156014,Onion_Transfrom,,minimap_man_market,Kepa_Disguise,2
+156015,Jukopus_Transfrom,,minimap_man_market,Jukopus_Disguise,2
+156016,pilgrim_shrine_parts,,,Broken Tombstone,2
+156017,pilgrim_shrine2_NoObb,,,Recovered Tombstone (no obb),2
+156018,npc_ceslovas,,minimap_man_cleric,Chaplain Master,2
+156019,npc_necromancer_m,,,Male Necromancer,2
+156020,npc_necromancer_f,,,Female Necromancer,2
+156021,npc_cryomancer_f,,,Female Cryomancer,2
+156022,npc_necromancer_m_2,,,Male Necromancer_2,2
+156023,npc_Pinscher,,,Svitrigaila,2
+156024,npc_alchemist_f,,,Female Alchemist,2
+156025,npc_friar_04_2,,,Elgos Monk,2
+156026,npc_Carnivore_down,,,Fallen Carnivore,2
+156027,npc_fedimian_storekeeper,,minimap_werehouse,Fedimian Storage Keeper,2
+156028,vine_4,,,Crumbling Vines,2
+156029,d_abbey_35_4_vine,,,Elgos Monastery Vines,2
+156030,npc_kabbalist_m,,,Male Kabbalist,2
+156031,Stonepiece_1,,,Stone,2
+156032,HiddenWall_120_120_500,,,,2
+156033,Altarcrystal_Silhouette_Noobb,,,Silhouette Crystal (no obb),2
+156034,f_coral_35_2_elt,,,Vera Elevator,2
+156035,cmine_cartheap_Noobb,,,Wagons(NO OBB),2
+156036,orchard34_2_tree,,,Mysterious Tree,2
+156037,f_orchard_32_4_wheel,,,Big Ferris Wheel,2
+156038,f_orchard_32_4_elt,,,Elevator,2
+156039,orchard_drain,,,Vitality Absorption Device,2
+156040,npc_orchard_flower,,,Earth Flower,2
+156041,blank_npc_3,,,Empty NPC 3,2
+156042,binding_Laima,,,Tied Girl Lima,2
+156043,npc_rada_goddess,,,Goddess Lada,2
+156044,gimmick_fireball,,,Gimmick Bead,2
+156045,npc_mine_spot,,,Mining Spot,2
+156100,f_3cmlake_basin,,,Water Glass,2
+156101,npc_bolletta,,,Fletcher Voleta,2
+156102,f_3cmlake_device,,,Water Glass Suppressor,2
+156103,f_3cmlake_monument,,,Monument,2
+156104,f_3cmlake_riddle_device,,,Mysterious Device,2
+156105,f_3cmlake_Consensus_stone,,,Control Magic Stone,2
+156106,woodenwall_trap3,,,Wooden Barricade 3,2
+156107,woodenwall_trap3_destroy,,,Wooden Barricade 3 (Partially Destroyed),2
+156108,riddle_device,,,Mysterious Device (Big Version),2
+156109,npc_gele_sanctuary_1_hit,,,Gele Plateau Barrier (HP UI),2
+156110,npc_Corsair_m2,,,Pirate,2
+156111,Onmyoji_Paper_Doll_white,,,Paper Doll (White),2
+156112,Onmyoji_Paper_Doll_red,,,Paper Doll (Red),2
+156113,Onmyoji_Paper_Doll_black,,,Paper Doll (Black),2
+156114,npc_schaffenstar_executive1_1,,,Schaffenstar Officer M1,2
+156115,npc_schaffenstar_executive1_2,,,Schaffenstar Officer M2,2
+156116,npc_schaffenstar_executive1_3,,,Schaffenstar Officer M3,2
+156117,npc_schaffenstar_executive2_1,,,Schaffenstar Officer F1,2
+156118,npc_schaffenstar_ramunas,,,Ramunas,2
+156119,npc_schaffenstar_kron,,,Kron,2
+156120,npc_schaffenstar_bayl,,,Byle,2
+156121,npc_kartas,,,Kartas,2
+156122,npc_schaffenstar_member1_4,,,Schaffenstar M4,2
+156123,npc_schaffenstar_member1_5,,,Schaffenstar M5,2
+156124,npc_schaffenstar_member1_6,,,Schaffenstar M6,2
+156125,npc_schaffenstar_member1_7,,,Schaffenstar M7,2
+156126,npc_schaffenstar_member1_8,,,Schaffenstar M8,2
+156127,npc_schaffenstar_member1_9,,,Schaffenstar M9,2
+156128,npc_schaffenstar_member1_10,,,Schaffenstar M10,2
+156129,npc_schaffenstar_member2_2,,,Schaffenstar F2,2
+156130,npc_schaffenstar_member2_3,,,Schaffenstar F3,2
+156131,npc_schaffenstar_executive1_4,,,Schaffenstar Officer M4,2
+156132,npc_schaffenstar_executive1_5,,,Schaffenstar Officer M5,2
+156133,npc_schaffenstar_executive1_6,,,Schaffenstar Officer M6,2
+156134,npc_schaffenstar_executive1_7,,,Schaffenstar Officer M7,2
+156135,npc_schaffenstar_henika,,,Henika,2
+156150,Colony_Tower,,,Territory Tower,2
+156151,Colony_Enhancer,,,Territory Amplifier,2
+156152,npc_colony_sutler,,,Expedition Merchant,2
+156153,Colony_Woodenwall_Trap,,icon_item_woodenwall_trap3,Wooden Fence,2
+156154,Colony_Divine_Flag,,icon_item_divine_flag,Divine Flag,2
+156155,npc_ASS_master,,minimap_man_scout,Assassin Master,2
+156156,npc_OLW_male_master,,minimap_man_scout,Outlaw Master (Male),2
+156157,npc_OLW_female_master,,minimap_man_scout,Outlaw Master (Female),2
+156158,npc_goddess_medeina,,,Goddess Medeina,2
+156159,npc_kartas_alone,,,Kartas(without dogs),2
+156160,maple_24_tree,,,Maple,2
+156161,gacha_cube1_red,,,Secret Cube Red,2
+156162,gacha_cube1_gold,,,Secret Cube Gold,2
+156163,gacha_cube1_blue,,,Secret Cube Blue,2
+156164,npc_Tantaliser,,,Bound Tantalizer,2
+156165,maple_24_tree_young,,,Young Maple,2
+156166,HiddenWall_Vivid,,,,2
+156167,pvp_battle_shop,,minimap_erosion,Equipment Rental Shop,2
+156168,dirt_heal_5,,,Pile of Soil (Large),2
+156169,npc_intermediate_officer_men3,,,Mid Commander (Male 3),2
+157000,3cmlake_ruins,,,Lake Ruin,2
+157001,coral_tent_01,,,Cranto Tent,2
+157002,PCStatue,,,,2
+157003,f_coral_32_2_elt,,,Cranto Transport Magic Circle,2
+157004,npc_dievdirbys_m_2,,,Dievdirbys Male2,2
+157005,npc_dievdirbys_m_3,,,Dievdirbys Male3,2
+157006,npc_katyn_safuse,,,Yellow Sapous,2
+157007,npc_ebonypawn,,,Ebonypawn,2
+157008,npc_katyn_sculpture,,,Purifying Sculpture,2
+157009,vine_kink,,,Lump of Vines,2
+157010,npc_maple_stump,,,Tree Stump2,2
+157011,maple_25_tree,,,Fall Woods,2
+157012,maple_25_leaves,,,Fall Grass,2
+157013,maple_25_supplemants,,,Fall Medicine,2
+157014,maple_25_tree_Q1,,,Fall Tree_Q1,2
+157015,maple_25_supplemants_Q1,,,Fall Medicine_Q1,2
+157016,NPC_GM2,,minimap_event_1,GM2,2
+157017,soul_gathering_mchn_6,,,Guardian Orb,2
+157018,soul_gathering_mchn_7,,,Patron Orb,2
+157019,npc_dcapital_20_5_elt,,,Zerromel Movement device,2
+157020,npc_MUR_master,,minimap_man_master,Murmillo Master,2
+157021,npc_LAN_master,,minimap_man_master,Lancer Master,2
+157022,npc_MER_master,,minimap_man_archer,Mergen Master,2
+157023,d_limestonecave_52_1_elt,,,Stalactite Cave Entrance Movement Device,2
+157024,maple_25_tree_Q2,,,Fall Tree_Q2,2
+157025,d_castle_20_4_elt,,,20_4Movement Device,2
+157026,d_firetower_69_2_elt,,,69_2Movement Device,2
+157027,f_castle_20_1_elt,,,20_1Movement Device,2
+157028,f_castle_20_1_elt2,,,20_1Movement Device2,2
+157029,f_castle_20_2_elt,,,20_2Movement Device,2
+157030,f_castle_20_3_elt,,,20_3Movement Device,2
+157031,f_dcapital_20_6_elt,,,20_6Movement Device,2
+157032,f_dcapital_103_elt,,,103Movement Device,2
+157033,f_dcapital_103_elt2,,,103Movement Device2,2
+157034,f_maple_25_1_elt,,,25_1Movement Device,2
+157035,f_maple_25_2_elt,,,25_2Movement Device,2
+157036,f_maple_25_3_elt,,,25_3Movement Device,2
+157037,f_whitetrees_23_3_elt,,,23_3Movement Device,2
+157038,f_whitetrees_56_1_elt,,,56_1Movement Device,2
+157039,npc_Appraiser,,minimap_appraisers,Appraiser,2
+157040,maple_25_leaves_Q1,,,Fall Grass,2
+157041,f_whitetrees_23_1_elt,,,23_1TransportationDevice,2
+157042,f_bracken_42_1_elt,,,42_1TransportationDevice,2
+157043,f_bracken_42_1_elt2,,,42_1TransportationDevice2,2
+157044,complete_kruvina,,,Complete Kruvina,2
+157045,kruvina_center2,,,Massive Kruvina Central Device,2
+157046,id_whitetrees_tree1,,,White Tree,2
+157047,id_whitetrees_tree2,,,White Tree,2
+157048,id_whitetrees_Alter1,,,Altar,2
+157049,id_whitetrees_Altar2,,,Altar,2
+157050,f_coral_44_3_elt,,,Coral Plain Transportation Device,2
+157051,d_fantasylibrary_48_2_elt,,,Fantasy Library Transportation Device,2
+157052,d_fantasylibrary_48_3_elt,,,Fantasy Library Transportation Device,2
+157053,d_fantasylibrary_48_4_elt,,,Fantasy Library Transportation Device,2
+157054,halloween_scarecrow,,,Scaredy Scarecrow,2
+157055,magictrap_core_gimmick2,,,Magic Power Hack,2
+157056,npc_junk_shop_2,,,[Kedora Alliance]{nl}Geraldasia,2
+157057,npc_junk_shop_3,,,[Kedora Alliance]{nl}Geraldason,2
+157100,npc_sage_female_2,,,Sage Female 2,2
+158000,npc_paladin_follower1_3_copy,,minimap_team,Team Battle League,2
+158001,npc_friar_02_blacksmith,,minimap_man_smith,Monk2 Blacksmith,2
+160000,h_GuildHousing_farmer_girl,,,Farm Manager,2
+160001,h_GuildHousing_farmer_boy,,,Farm Manager,2
+160002,h_GuildHousing_manager,,,Guild Hangout Manager (Male),2
+160003,flower_keep_water_yellow,,,Dewy Flower (Yellow),2
+160004,flower_keep_water_red,,,Dewy Flower (Red),2
+160005,flower_keep_water_white,,,Dewy Flower (White),2
+160006,SHADOW_CURSE_PURIFICATION,,minimap_portal,Altar of Purification,2
+160007,SHADOW_LEGEND_SOLO_CURSE_PURIFICATION,,minimap_portal,Altar of Purification,2
+160008,Hiddennpc_Moringponia,,,Summoning Portal,2
+160009,moringponia_spell_crystal_red,,,Purifying Stone,2
+160010,moringponia_star_stone,,,Purifying Stone,2
+160011,moringponia_ignore_raise,,minimap_portal,,2
+160012,HiddenWall_600_400_300,,,,2
+160013,HiddenWall_800_400_300,,,,2
+160014,npc_Xmas_Evt_NPC,,minimap_event_1,Christmas NPC,2
+160015,npc_Xmas_Evt_NPC2,,minimap_event_1,Christmas NPC2,2
+160016,rokas_pot3_small_E1,,,Lucky Pot,2
+160018,Hiddennpc_RiftMode_Start,,,Dimensional Collapse Point Entrance,2
+160019,event_2001_cat,,,Cat at the Fishing Spot,2
+160022,WEEKLY_PURIFYING_STONE,,,Purifying Stone,2
+160023,npc_kupole_3_event_2004,,minimap_event_1,Arbor Day Event Helper,2
+160024,NPC_goddess_Roulette,,minimap_event_1,[Event] Goddess Roulette,2
+161000,E_statue_zemina,,minimap_goddess,Statue of Goddess Zemyna,2
+161001,npc_kupole_Velcoffer,,,Kupole Simona,2
+161002,npc_Teliavelis,,minimap_man_smith,Blacksmith Teliavelis,2
+161003,npc_Kastytis,,,[Fashion Designer]{nl}Kastytis,2
+161004,npc_anabellswyn,,,[Hair Stylist]{nl}Anabell Swyn,2
+161005,npc_henryswyn,,,[Hair Stylist]{nl}Henry Swyn,2
+161006,npc_soccer_goals_event,,,Wall,2
+161007,npc_keeper_event,,,Goalkeeper,2
+161008,npc_small_stone_event,,,Stone,2
+161009,npc_soccer_goals_wall1,,,Wall,2
+161010,npc_soccer_goals_wall2,,,Wall,2
+161011,npc_keeper_event_2,,,Goalkeeper,2
+161012,uniq_id_anergy_stone_gimmick,,,Mana Device,2
+161013,uniq_id_nicopolis_gate,,,,2
+161014,uniq_id_nicopolis_star_stone,,,Mana Crystal,2
+161015,uniq_id_nicopolis_nicopolis_obj1,,,,2
+161016,uniq_id_nicopolis_HiddenWall_120_120_500,,,,2
+161017,uniq_id_nicopolis_HiddenWall_120_350_500,,,,2
+161018,uniq_id_nicopolis_none_monster,,,,2
+161020,uniq_id_nicopolis_effect_dummy,,,,2
+161021,uniq_id_nicopolis_npc_nicopolis_obj2,,,,2
+161022,uniq_id_nicopolis_mana_effect_mon,,,,2
+161023,uniq_id_nicopolis_mana_effect_onwer,,,,2
+161024,uniq_id_nicopolis_boss_room_potal,,,,2
+2000127,gimmick_fireball_E1,Monster,,Spicy Treat,2
+2000128,farm47_circle_01_E1,Monster,,Magic Circle,2
+2000129,halloween_scarecrow_E1,Monster,,Scaredy Scarecrow,2
+2000130,lockdoor_npc_E1,Monster,,Locked Door,2
+2000131,pumpkin_bonus_E1,Monster,,Sweet Magic Circle,2
+2000132,middle_boss_board_E1,Monster,,Note left by a resident,2
+2000201,creto_E1,The Villagers are disguised as monsters and disrupts you.,mon_creto,Disguised Villager,2
+2000202,cretobiang_E1,The Passionate Villager disguised themselves as monsters and disrupt you.,mon_cretobiang,Passionate Villager,2
+2000203,boss_summon_spiderweb_E1,A trap set by the villagers. You won't be able to move for a while.,,,2
+2000204,velniasprison_warp_mini_E1,You can run as fast as you can if you step on the tile.,,Acceleration Tile,2
+2000206,hidden_monster_E1,Start Point Invisible Object,,,2
+2000207,event_npc_village_male_b3,Start Point Invisible Object,minimap_event_1,[Event] Villager B3,2

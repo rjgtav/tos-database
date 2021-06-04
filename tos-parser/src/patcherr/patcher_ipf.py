@@ -44,7 +44,7 @@ def unpack(ipf):
     # Decrypt and extract ipf file
     if ipf_revision not in ['29_001001']:  # HotFix: these specific patches aren't encrypted for some reason
         subprocess.check_call(
-            ["wine",constants.PATH_UNPACKER_EXE, tmpname, "decrypt"],
+            [constants.PATH_UNPACKER_EXE, tmpname, "decrypt"],
             stdin=None, stdout=None, stderr=None, shell=False
         )
     #subprocess.check_call(
@@ -53,12 +53,12 @@ def unpack(ipf):
     #)
     if ipf_revision not in ['29_001001']:  # HotFix: these specific patches aren't encrypted for some reason
         subprocess.check_call(
-            ["wine",constants.PATH_UNPACKER_EXE,tmpname, "extract"],
+            [constants.PATH_UNPACKER_EXE,tmpname, "extract"],
             stdin=None, stdout=None, stderr=None, shell=False
         )
     else:
         subprocess.check_call(
-            ["wine",constants.PATH_UNPACKER_EXE, tmpname, "extract"],
+            [constants.PATH_UNPACKER_EXE, tmpname, "extract"],
             stdin=None, stdout=None, stderr=None, shell=False
         )
     os.chdir(prevcurdir)

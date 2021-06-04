@@ -2,7 +2,7 @@ import gc
 import json
 import logging
 import os
-
+import codecs
 import unicodecsv as csv
 import constants
 import globals
@@ -44,12 +44,12 @@ def csv_write(data, dataset):
     #     for kk,vv in data[k].items():
     #         data[k][kk]=str(vv)
     # Write to CSV
-    file = open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'w')
+    file = codecs.open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'w','utf-8')
     writer = csv.DictWriter(
         file,
-        delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(list(map(lambda x:x.encode("utf-8"),keys)))
+        delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(list(map(lambda x:str(x),keys)))
     )
-    writer.writeheader()
+    #writer.writeheader()
     writer.writerows(sorted(data, key=lambda k: k['$ID']))
     file.close()
 

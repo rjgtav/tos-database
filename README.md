@@ -4,3 +4,11 @@ Includes iTOS, jTOS, kTOS and kTEST regions.
 ※Currently jTOS only
 Converted and modified by ebisuke[https://handtos.mochisuke.jp]
 based on [https://tos.guru](https://tos.guru)
+
+* How to launch 
+```
+sh ./init.sh
+docker-compose build && docker-compose up 
+```
+
+it will expose port 8000 as http.
