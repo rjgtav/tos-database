@@ -78,6 +78,4 @@ input
 distbuild
 distweb
 result.txt
-/dist/*
 */package-lock.json
-result.txt
