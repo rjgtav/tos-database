@@ -11,7 +11,7 @@ REPATCH=1
 if [ $# -ge 1 ];then
     REPATCH=$1
 fi
-mkdir ${BASEDIR}/tos-html/dist | true
+mkdir ${BASEDIR}/tos-web/dist | true
 for region in ${REGIONS[@]}
 do
     echo ${region}
