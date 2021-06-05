@@ -46,6 +46,6 @@ cd ${BASEDIR}/tos-sitemap/
 npm install
 npm run main
 
-
+cd ${BASEDIR}
 
 echo "Done."
