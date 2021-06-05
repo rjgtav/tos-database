@@ -8,7 +8,7 @@ BASEDIR=$(cd $(dirname $0); pwd)
 REGIONS=(jTOS iTOS kTOS kTEST twTOS)
 
 REPATCH=1
-if [$# -ge 1];then
+if [ $# -ge 1 ];then
     REPATCH=$1
 fi
 
@@ -27,7 +27,7 @@ do
     # ->unzip
     cd ${BASEDIR}/tos-build/dist/
     echo ${region,,}.zip
-    if [$(unzip -o ${region,,}.zip) -ge 2]; then
+    if [ $(unzip -o ${region,,}.zip) -ge 2 ]; then
         exit 1
     fi
     echo "complete"
