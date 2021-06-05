@@ -27,7 +27,7 @@ do
     # ->unzip
     cd ${BASEDIR}/tos-build/dist/
     echo ${region,,}.zip
-    if [ $(unzip -o ${region,,}.zip) -ge 2 ]; then
+    if [ $(unzip -o ${region,,}.zip 2> /dev/null) -ge 2 ]; then
         exit 1
     fi
     echo "complete"
