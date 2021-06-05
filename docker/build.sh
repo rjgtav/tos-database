@@ -16,8 +16,8 @@ do
     echo ${region}
 
     # parse
-    cd ${BASEDIR}/tos-parser/
-    python3 src/main.py ${region} true ${REPATCH}
+    cd ${BASEDIR}/tos-parser/src
+    python3 main.py ${region} true ${REPATCH}
 
     # html
     cd ${BASEDIR}/tos-html/
