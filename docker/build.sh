@@ -17,7 +17,7 @@ do
 
     # parse
     cd ${BASEDIR}/tos-parser/
-    python3 src/main.py ${region}
+    python3 src/main.py ${region} true 1
 
     # html
     cd ${BASEDIR}/tos-html/

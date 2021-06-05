@@ -14,6 +14,7 @@ os.chdir(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
 
 # Configure region
 region = TOSRegion.value_of(sys.argv[1]) if len(sys.argv) > 1 else TOSRegion.jTOS
+repatch = int(sys.argv[1]) if len(sys.argv) > 3 else 0
 
 #region = TOSRegion.jTOS
 constants.region(region)
@@ -30,7 +31,7 @@ logging.basicConfig(
 csv.field_size_limit(999999999)
 
 # Patch the game with the latest version
-version_old, version_new = patcher.patch()
+version_old, version_new = patcher.patch(repatch)
 
 is_rebuild = os.path.isfile(os.path.join(constants.PATH_INPUT_DATA, 'ies_ability.ipf', 'ability_assassin.ies'))
 is_patch_new = version_old != version_new

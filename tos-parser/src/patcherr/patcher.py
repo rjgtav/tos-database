@@ -11,7 +11,7 @@ from patcherr.patcher_ipf import IPF_BLACKLIST
 CHUNK_SIZE = 128 * 1024 * 1024  # 128MB of Chunk Size
 
 
-def patch():
+def patch(repatch):
     logging.debug('Patching...')
 
     # Full patch
@@ -36,7 +36,7 @@ def patch():
     return version_old, version_new
 
 
-def patch_full(patch_destination, patch_path, patch_url, patch_ext, patch_unpack, revision_url):
+def patch_full(patch_destination, patch_path, patch_url, patch_ext, patch_unpack, revision_url,repatch):
     logging.debug('Patching %s...', revision_url)
     revision_list = urllib.request.urlopen(revision_url).read()
     revision_list = revision_decrypt(revision_list)
@@ -46,12 +46,12 @@ def patch_full(patch_destination, patch_path, patch_url, patch_ext, patch_unpack
         patch_name = revision + patch_ext
         patch_file = os.path.join(patch_path, patch_name)
 
-        if not os.path.exists(os.path.join(patch_destination, patch_name)) and patch_name not in IPF_BLACKLIST:
+        if (not os.path.exists(os.path.join(patch_destination, patch_name)) or repatch==1 )and patch_name not in IPF_BLACKLIST :
             logging.debug('Downloading %s...', patch_url + patch_name)
             patch_process(patch_file, patch_name, patch_unpack, patch_url)
 
 
-def patch_partial(patch_path, patch_url, patch_ext, patch_unpack, revision_path, revision_url):
+def patch_partial(patch_path, patch_url, patch_ext, patch_unpack, revision_path, revision_url,repatch):
     logging.debug('Patching %s...', revision_url)
     revision_list = urllib.request.urlopen(revision_url).read()
     revision_list = revision_decrypt(revision_list)
@@ -61,7 +61,7 @@ def patch_partial(patch_path, patch_url, patch_ext, patch_unpack, revision_path,
     for revision in revision_list:
         revision = revision.split(' ')[0]
 
-        if int(revision) > int(revision_old) and revision not in ['147674']:
+        if (int(revision) > int(revision_old) or repatch==1) and revision not in ['147674']:
             # Process patch
             patch_name = revision + '_001001' + patch_ext
             patch_file = os.path.join(patch_path, patch_name)
@@ -81,13 +81,15 @@ def patch_process(patch_file, patch_name, patch_unpack, patch_url):
     def request_as_fox(url):
         headers={"User-Agent":"tos"}
         return urllib.request.Request(url,None,headers)
-    # Download patch
-    logging.debug('Downloading %s...', patch_url + patch_name)
-    patch_response = urllib.request.urlopen(request_as_fox(patch_url + patch_name))
+    if not os.path.exists(patch_file):
+        # Download patch
+        logging.debug('Downloading %s...', patch_url + patch_name)
+        patch_response = urllib.request.urlopen(request_as_fox(patch_url + patch_name))
 
-    with open(patch_file, 'wb') as file:
-        file.write(patch_response.read())
-            
+        with open(patch_file, 'wb') as file:
+            file.write(patch_response.read())
+    else:
+        logging.debug("Reusing cache %s...",patch_name)            
     logging.debug('OK')
     # Extract patch
     patch_unpack(patch_name)
