@@ -41,8 +41,7 @@ COPY ./tos-sitemap ./tos-sitemap
 COPY ./tos-sw ./tos-sw
 COPY ./tos-web ./tos-web
 COPY ./tos-web-rest ./tos-web-rest
-COPY ./docker/build.sh   ./build.sh
-COPY ./docker/entrypoint.sh   ./entrypoint.sh
+COPY ./docker/*   ./
 # copy http server conf
 COPY ./httpserver/http.conf /etc/nginx/conf.d/http.conf
 RUN ls
