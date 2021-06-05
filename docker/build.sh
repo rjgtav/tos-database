@@ -11,7 +11,7 @@ REPATCH=1
 if [ $# -ge 1 ];then
     REPATCH=$1
 fi
-
+mkdir ${BASEDIR}/tos-html/dist | true
 for region in ${REGIONS[@]}
 do
     echo ${region}
@@ -22,6 +22,7 @@ do
 
     # html
     cd ${BASEDIR}/tos-html/
+  
     npm install
     npm run main
     # ->unzip

@@ -42,7 +42,6 @@ COPY ./tos-web ./tos-web
 COPY ./tos-web-rest ./tos-web-rest
 COPY ./docker/build.sh   ./build.sh
 COPY ./docker/entrypoint.sh   ./entrypoint.sh
-RUN mkdir ../dist
 # copy http server conf
 COPY ./httpserver/http.conf /etc/nginx/conf.d/http.conf
 RUN ls
