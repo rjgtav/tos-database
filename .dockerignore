@@ -1,9 +1,9 @@
-tos-parser/input
+tos-parser/input/*
 **/venv
-**/dist
-distbuild
-distweb
-skeleton_distbuild
-skeleton_distweb
-**/.git
+**/dist/*
+distbuild/*
+distweb/*
+skeleton_distbuild/*
+skeleton_distweb/*
+**/.git/*
 .idea
