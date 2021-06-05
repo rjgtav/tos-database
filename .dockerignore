@@ -1,6 +1,7 @@
 tos-parser/input/*
 **/venv
 **/dist/*
+input/*
 distbuild/*
 distweb/*
 skeleton_distbuild/*
