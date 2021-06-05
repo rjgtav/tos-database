@@ -7,8 +7,9 @@ echo "ToS database building start."
 BASEDIR=$(cd $(dirname $0); pwd)
 REGIONS=(jTOS iTOS kTOS kTEST twTOS)
 
-if [$# -ne 0]; then
-    REGIONS=($1)
+REPATCH = 1
+if [$# -ge 1];then
+    REPATCH=$1
 fi
 
 for region in ${REGIONS[@]}
@@ -17,7 +18,7 @@ do
 
     # parse
     cd ${BASEDIR}/tos-parser/
-    python3 src/main.py ${region} true 1
+    python3 src/main.py ${region} true ${REPATCH}
 
     # html
     cd ${BASEDIR}/tos-html/

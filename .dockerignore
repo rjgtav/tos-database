@@ -1,2 +1,5 @@
 tos-parser/input
 tos-parser/venv
+tos-parser/dist
+tos-build/dist
+
