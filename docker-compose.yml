@@ -7,5 +7,5 @@ services:
         volumes:
             - ./input:/root/tos-parser/input/
             - ./distbuild:/root/tos-build/dist/
-            - ./distweb:/root/tos-web/dist/
+
             

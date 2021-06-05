@@ -20,10 +20,8 @@ ENV GYP_DEFINES="javalibdir=/usr/lib/jvm/java-1.8.0-openjdk-amd64/lib/server"
 ENV JAVA_HOME ="/usr/lib/jvm/java-1.8.0-openjdk-amd64/"
 ENV PATH $PATH:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin
 
-RUN npm -g i n yarn && n 16 
-RUN yarn global add @angular/cli 
-
-RUN npm install -g --unsafe-perm node-sass --save
+RUN npm -g i n && n 16 
+RUN npm install -g @angular/cli 
 
 # copy databases
 WORKDIR /root
@@ -33,10 +31,10 @@ COPY ./ipf_unpacker ./ipf_unpacker
 WORKDIR /root/ipf_unpacker
 RUN make clean && make release
 WORKDIR /root
-
+COPY ./tos-parser ./tos-parser
 COPY ./tos-build ./tos-build
 COPY ./tos-html ./tos-html
-COPY ./tos-parser ./tos-parser
+
 COPY ./tos-search ./tos-search
 COPY ./tos-sitemap ./tos-sitemap
 COPY ./tos-sw ./tos-sw
@@ -47,7 +45,6 @@ COPY ./docker/entrypoint.sh   ./entrypoint.sh
 # copy http server conf
 COPY ./httpserver/http.conf /etc/nginx/conf.d/http.conf
 RUN ls
-
 
 # expose http server
 EXPOSE 8000
