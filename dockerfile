@@ -39,10 +39,10 @@ COPY ./tos-search ./tos-search
 COPY ./tos-sitemap ./tos-sitemap
 COPY ./tos-sw ./tos-sw
 COPY ./tos-web ./tos-web
-RUN mkdir ./tos-web/dist
 COPY ./tos-web-rest ./tos-web-rest
 COPY ./docker/build.sh   ./build.sh
 COPY ./docker/entrypoint.sh   ./entrypoint.sh
+RUN mkdir ../dist
 # copy http server conf
 COPY ./httpserver/http.conf /etc/nginx/conf.d/http.conf
 RUN ls
