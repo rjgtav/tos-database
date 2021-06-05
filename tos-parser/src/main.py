@@ -14,7 +14,7 @@ os.chdir(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
 
 # Configure region
 region = TOSRegion.value_of(sys.argv[1]) if len(sys.argv) > 1 else TOSRegion.jTOS
-repatch = int(sys.argv[1]) if len(sys.argv) > 3 else 0
+repatch = int(sys.argv[3]) if len(sys.argv) > 3 else 0
 
 #region = TOSRegion.jTOS
 constants.region(region)

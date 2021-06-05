@@ -17,17 +17,17 @@ def patch(repatch):
     # Full patch
     patch_full(
         constants.PATH_INPUT_DATA, constants.PATH_INPUT_DATA_PATCH, constants.PATH_INPUT_DATA_PATCH_URL_FULL, '.ipf', patcher_ipf.unpack,
-        constants.PATH_INPUT_DATA_REVISION_URL_FULL
+        constants.PATH_INPUT_DATA_REVISION_URL_FULL,repatch
     )
 
     # Partial patches
     version_data, version_data_new = patch_partial(
         constants.PATH_INPUT_DATA_PATCH, constants.PATH_INPUT_DATA_PATCH_URL, '.ipf', patcher_ipf.unpack,
-        constants.PATH_INPUT_DATA_REVISION, constants.PATH_INPUT_DATA_REVISION_URL,
+        constants.PATH_INPUT_DATA_REVISION, constants.PATH_INPUT_DATA_REVISION_URL,repatch
     )
     version_release, version_release_new = patch_partial(
         constants.PATH_INPUT_RELEASE_PATCH, constants.PATH_INPUT_RELEASE_PATCH_URL, '.pak', patcher_pak.unpack,
-        constants.PATH_INPUT_RELEASE_REVISION, constants.PATH_INPUT_RELEASE_REVISION_URL,
+        constants.PATH_INPUT_RELEASE_REVISION, constants.PATH_INPUT_RELEASE_REVISION_URL,repatch
     )
 
     version_new = 'patch_' + str(version_data_new) + '_release_' + str(version_release_new)
