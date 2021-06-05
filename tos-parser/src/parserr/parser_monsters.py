@@ -10,7 +10,7 @@ from parserr.parser_enums import TOSElement
 from parserr.parser_items_equipment import TOSEquipmentMaterial
 from utils import luautil
 from utils.tosenum import TOSEnum
-
+import codecs
 
 class TOSMonsterRace(TOSEnum):
     BEAST = 0
@@ -116,7 +116,7 @@ def parse_monsters(file_name):
     LUA_SOURCE = luautil.LUA_SOURCE
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", file_name.lower())
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
@@ -186,7 +186,7 @@ def parse_monsters_statbase(file_name, destination):
     logging.debug('Parsing %s...', file_name)
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, "ies.ipf", file_name)
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
@@ -207,7 +207,7 @@ def parse_links_items():
         ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_drop.ipf', ies_file.lower())
 
         try:
-            with open(ies_path, 'rb') as ies_file:
+            with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
                 for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                     if not row['ItemClassName'] or globals.get_item_link(row['ItemClassName']) is None:
                         continue

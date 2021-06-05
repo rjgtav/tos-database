@@ -15,31 +15,37 @@ fi
 
 for region in ${REGIONS[@]}
 do
+    echo ${region}
+
     # parse
-    cd ${BASEDIR}/tos-parser/
-    python3 src/main.py ${region}
+    #cd ${BASEDIR}/tos-parser/
+    #python3 src/main.py ${region}
 
     # html
-    cd ${BASEDIR}/tos-html/
-    yarn install
-    yarn run build
+    #cd ${BASEDIR}/tos-html/
+    #yarn install
+    #yarn run main
     # ->unzip
-    cd ${BASEDIR}/tos-build/dist/
-    unzip -y ${region,,}.zip
-    # search
-    cd ${BASEDIR}/tos-search/
-    yarn install
-    yarn run build
-
-
-    # sitemap
-    cd ${BASEDIR}/tos-sitemap/
-    yarn install
-    yarn run build
+    #cd ${BASEDIR}/tos-build/dist/
+    #echo ${region,,}.zip
+    #if [$(unzip -o ${region,,}.zip) -ge 2]; then
+    #    exit 1
+    #fi
+    echo "complete"
+    
 
 
 done
+# search
+cd ${BASEDIR}/tos-search/
+yarn install
+yarn run main
 
+
+# sitemap
+cd ${BASEDIR}/tos-sitemap/
+yarn install
+yarn run main
 # build up!
 cd ${BASEDIR}/tos-web/
 yarn install

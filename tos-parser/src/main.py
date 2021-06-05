@@ -13,7 +13,7 @@ from patcherr import patcher
 os.chdir(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
 
 # Configure region
-region = TOSRegion.value_of(sys.argv[1]) if len(sys.argv) > 1 else TOSRegion.iTOS
+region = TOSRegion.value_of(sys.argv[1]) if len(sys.argv) > 1 else TOSRegion.jTOS
 
 #region = TOSRegion.jTOS
 constants.region(region)

@@ -4,25 +4,36 @@ LABEL author ebisuke
 # ENVs
 ENV LANG=en_EN.UTF-8
 ENV PYTHONIOENCODING=utf-8
-
 # avoid apt-get blocking
 RUN apt-get update && apt-get install -y -q tzdata
 ENV TZ=Asia/Tokyo 
 
 # add prerequisites
 
-RUN apt-get update && apt-get install -y -q nodejs npm python3 python3-pip unzip nginx bash build-essential curl wget openjdk-11-jdk
+RUN apt-get update && apt-get install -y -q nodejs npm python3 python3-pip unzip nginx bash build-essential curl wget openjdk-8-jdk p7zip
 
 # prepare python environment
-RUN pip3 install pillow lupa unicodecsv
+RUN pip3 install pillow lupa unicodecsv pydevd-pycharm~=211.7442
 
 # prepare nodejs environment
-RUN npm -g i n yarn && n 16.3.0 && yarn global add @angular/cli
+ENV GYP_DEFINES="javalibdir=/usr/lib/jvm/java-1.8.0-openjdk-amd64/lib/server"
+ENV JAVA_HOME ="/usr/lib/jvm/java-1.8.0-openjdk-amd64/"
+ENV PATH $PATH:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin
+
+RUN npm -g i n yarn && n 16 
+RUN yarn global add @angular/cli 
+
+RUN npm install -g --unsafe-perm node-sass --save
 
 # copy databases
 WORKDIR /root
 
 COPY ./ipf_unpacker ./ipf_unpacker
+# make ipfunpack
+WORKDIR /root/ipf_unpacker
+RUN make clean && make release
+WORKDIR /root
+
 COPY ./tos-build ./tos-build
 COPY ./tos-html ./tos-html
 COPY ./tos-parser ./tos-parser
@@ -36,13 +47,10 @@ COPY ./docker/entrypoint.sh   ./entrypoint.sh
 # copy http server conf
 COPY ./httpserver/http.conf /etc/nginx/conf.d/http.conf
 RUN ls
-# make ipfunpack
-WORKDIR /root/ipf_unpacker
-RUN make clean && make release
-WORKDIR /root
+
 
 # expose http server
 EXPOSE 8000
 
-
-ENTRYPOINT ["/bin/sh","/root/entrypoint.sh"  ]
+# freqently change ENVs
+ENTRYPOINT ["/bin/sh","/root/entrypoint.sh","jTOS"  ]

@@ -4,7 +4,7 @@ import os
 
 import constants
 import globals
-
+import codecs
 
 def parse():
     parse_recipes()
@@ -34,7 +34,7 @@ def parse_links_items():
     logging.debug('Parsing items for recipes...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'recipe.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:

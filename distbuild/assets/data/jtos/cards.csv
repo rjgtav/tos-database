@@ -1,164 +1,213 @@
 $ID,$ID_NAME,Description,Icon,IconTooltip,Link_Collections,Link_Cubes,Link_Maps,Link_Maps_Exploration,Link_Monster,Link_Monsters,Link_RecipeMaterial,Link_RecipeTarget,MonsterElement,MonsterRace,Name,Price,Stat_Height,Stat_Legs,Stat_Weight,TimeCoolDown,TimeLifeTime,Tradability,Type,TypeCard,Weight
-644001,card_Gaigalas,[スロット装着効果] 地属性追加ダメージ+[★*10],icon_item_card_util,027_boss_gaigalas,,,,,41220,,,,1,0,ガイガラスカード,500,205,4,201,0.0,0.0,TTTT,4,5,1.0
-644002,card_GazingGolem,[スロット装着効果] 攻撃を受けたとき[★]%の確率でペインバリア1レベルを使用,icon_item_card_util,108_boss_gazinggolem,,,,,47322,,,,0,4,ゲージングゴーレムカード,500,324,2,4860,0.0,0.0,TTTT,4,5,1.0
-644003,card_Gorgon,[スロット装着効果] 打系防御力+[★*10],icon_item_card_def,064_boss_gorgon,,,,,800042,,,,0,1,ゴルゴンカード,500,190,4,1360,0.0,0.0,TTTT,4,1,1.0
-644004,card_Golem,[スロット装着効果] HPポーション類を使用時、10秒間物理防御力+[★]%,icon_item_card_def,003_boss_golem,,,,,450221,,,,1,4,ゴーレムカード,500,215,2,6192,0.0,0.0,TTTT,4,1,1.0
-644005,card_Grinender,[スロット装着効果] 空中型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,056_boss_grinender,,,,,41374,,,,2,4,グライネンダーカード,500,305,1,214,0.0,0.0,TTTT,4,0,1.0
-644006,card_Glass_mole,[スロット装着効果]SPポーション類を使用時、6秒間物理ダメージ+[★]%,icon_item_card_atk,012_boss_glass_mole,,,,,41367,,,,4,0,グラスモールカード,500,192,4,860,0.0,0.0,TTTT,4,0,1.0
-644007,card_ginklas,[スロット装着効果] プレート系鎧装備の対象に与えるダメージ[★/2]%アップ,icon_item_card_atk,091_boss_ginklas,[642013],,,,41208,,[18018],,2,4,ギンクラスカード,500,320,2,1053,0.0,0.0,TTTT,4,0,1.0
-644008,card_NetherBovine,[スロット装着効果] 力+[★],icon_item_card_stat,026_boss_netherbovine,,,,,800001,,,,0,1,ネザーボバインカード,500,195,4,966,0.0,0.0,TTTT,4,4,1.0
-644009,card_necrovanter,[スロット装着効果] 闇属性追加ダメージ+[★*10],icon_item_card_util,044_boss_necrovanter,[642011],"[642907, 642919, 642941]",,,800002,,,,0,1,ネクロヴェンターカード,500,416,1,144,0.0,0.0,TTTT,4,5,1.0
-644010,card_deadbone,[スロット装着効果]物理クリティカル攻撃力+[★×20],icon_item_card_atk,014_boss_deadbone,,,,,41203,,,,0,4,デッドボーンカード,500,333,2,207,0.0,0.0,TTTT,4,0,1.0
-644011,card_Devilglove,[スロット装着効果] 変異型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,072_boss_devilglove,,,,,41385,,,,0,4,デビルグローブカード,500,127,5,98,0.0,0.0,TTTT,4,0,1.0
-644012,card_Denoptic,[スロット装着効果] 魔法防御力+[★*10],icon_item_card_def,024_boss_denoptic,,,,,41368,,,,7,4,デノプティックカード,500,388,6,205,0.0,0.0,TTTT,4,1,1.0
-644014,card_Ravinepede,[スロット装着効果] STAポーション類効果+[★]%,icon_item_card_util,025_boss_ravinepede,,,,,41236,,,,7,5,ラヴァインピードカード,500,210,1,164,0.0,0.0,TTTT,4,5,1.0
-644015,card_Rajatoad,[スロット装着効果] 突系武器着用時、物理攻撃力+[★*7],icon_item_card_atk,097_boss_rajatoad,[642013],,,,41226,,,,4,0,ラジャトードカード,500,151,4,275,0.0,0.0,TTTT,4,0,1.0
-644016,card_Rocktortuga,[スロット装着効果] 地属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,046_boss_rocktortuga,,,,,41233,,,,1,4,ロックトルトゥーガカード,500,400,2,2472,0.0,0.0,TTTT,4,5,1.0
-644017,card_lecifer,[スロット装着効果]魔法クリティカル攻撃力+[★×10],icon_item_card_atk,030_boss_lecifer,,,,,800043,,,,0,1,レキシファーカード,500,213,2,123,0.0,0.0,TTTT,4,0,1.0
-644018,card_Reaverpede,[スロット装着効果] 中型モンスターに与えるダメージ[★/2]%アップ,icon_item_card_atk,051_boss_reaverpede,,,,,800044,,,,7,2,リーヴァピードカード,500,276,6,1200,0.0,0.0,TTTT,4,0,1.0
-644019,card_spector_gh,[スロット装着効果] SPポーション類効果+[★]%,icon_item_card_util,010_boss_spector_gh,,,,,800045,,,,0,1,リカウスカード,500,230,2,76,0.0,0.0,TTTT,4,5,1.0
-644022,card_mineloader,[スロット装着効果] 攻撃時、[★/3]%の確率で相手を3秒間感電状態,icon_item_card_util,092_boss_mineloader,[642014],"[642904, 642921]",,,800024,,,,5,4,マインローダーカード,500,345,4,863,0.0,0.0,TTTT,4,5,1.0
-644023,card_Malletwyvern,[スロット装着効果] 大型モンスターから攻撃を受けたとき[★]%の確率でSP 3%回復{nl}クールタイム5秒,icon_item_card_util,106_malletwyvern,,,,,47502,,,,4,0,マレットワイバーンカード,500,222,4,1605,0.0,0.0,TTTT,4,5,1.0
-644024,card_MagBurk,[スロット装着効果] 変異型モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,049_boss_magburk,[642014],,,,41350,,,,2,4,マグバークカード,500,197,4,409,0.0,0.0,TTTT,4,5,1.0
-644025,card_Manticen,[スロット装着効果] STAポーション類を使用時、10秒間移動速度+[★/5],icon_item_card_util,114_boss_manticen,,"[642906, 642922]",,,800030,,,,7,2,マンティケンカード,500,255,4,214,0.0,0.0,TTTT,4,5,1.0
-644026,card_Mummyghast,[スロット装着効果] 力+[★/2]、敏捷+[★/2] ,icon_item_card_stat,042_boss_mummyghast,,,,,800003,,,,0,1,マミーガストカード,500,420,2,312,0.0,0.0,TTTT,4,4,1.0
-644027,card_mushcaria,[スロット装着効果] SP回復力+[★ * 6],icon_item_card_util,059_boss_mushcaria,,,,,41217,,,,7,5,マッシュカリアカード,500,263,2,272,0.0,0.0,TTTT,4,5,1.0
-644028,card_Merge,[スロット装着効果] 氷属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,119_merge,,,,,800046,,,,4,2,マージカード,500,321,1,320,0.0,0.0,TTTT,4,0,1.0
-644029,card_Mothstem,[スロット装着効果] 打系武器着用時、魔法攻撃力+[★*7],icon_item_card_atk,103_boss_mothstem,[642012],,,,800047,,,,5,2,モステムカード,500,188,1,136,0.0,0.0,TTTT,4,0,1.0
-644030,card_moa,[スロット装着効果] 悪魔型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,083_boss_moa,,,,,41378,,,,0,0,モアカード,500,340,2,1120,0.0,0.0,TTTT,4,0,1.0
-644031,card_Moyabruka,[スロット装着効果] レザー系鎧装備の対象に与えるダメージ[★/2]%アップ,icon_item_card_atk,115_boss_moyabruka,[642012],,,,47325,,,,1,0,モヤブルカカード,500,200,4,1288,0.0,0.0,TTTT,4,0,1.0
-644032,card_Moldyhorn,[スロット装着効果] 石化状態の対象に与えるダメージ[★]%アップ,icon_item_card_atk,109_boss_moldyhorn,[642012],,,,47323,,,,7,0,モルディホーンカード,500,307,2,421,0.0,0.0,TTTT,4,0,1.0
-644033,card_molich,[スロット装着効果] ブロック+[★ * 2],icon_item_card_util,021_boss_glass_mole,[642012],"[642908, 642915, 642923]",,,400421,,,,0,0,モリックカード,500,540,2,2075,0.0,0.0,TTTT,4,5,1.0
-644034,card_Minotaurs,[スロット装着効果] 敏捷+[★/2]、精神+[★/2] ,icon_item_card_stat,090_boss_minotaurs,,,,,800004,,,,2,1,ミノタウロスカード,500,242,2,560,0.0,0.0,TTTT,4,4,1.0
-644035,card_mirtis,[スロット装着効果] 小型モンスターに与えるダメージ[★/2]%アップ,icon_item_card_atk,007_boss_mirtis,,,,,800048,,,,0,1,ミルティスカード,500,346,2,192,0.0,0.0,TTTT,4,0,1.0
-644036,card_bebraspion,[スロット装着効果] 両手武器着用時、攻撃速度+[★],icon_item_card_util,005_boss_bebraspion,,,,,41222,,,,5,0,ベブラスピオンカード,500,345,2,860,0.0,0.0,TTTT,4,5,1.0
-644037,card_bearkaras,[スロット装着効果] 地属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,031_boss_bearkaras,,,,,401141,,,,1,0,ベアカリスカード,500,359,2,3123,0.0,0.0,TTTT,4,0,1.0
-644038,card_Velorchard,[スロット装着効果] 回避+[★ * 2],icon_item_card_util,126_boss_velorchard,,,,,800049,,,,5,1,ヴェローチャードカード,500,185,3,160,0.0,0.0,TTTT,4,5,1.0
-644039,card_Goblin_Warrior,[スロット装着効果] 野獣型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,004_boss_goblin_warrior,,,,,400201,,,,1,0,ゴブリンファイターカード,500,240,2,356,0.0,0.0,TTTT,4,0,1.0
-644040,card_Goblin_Warrior_red,[スロット装着効果] 打系武器着用時、物理攻撃力+[★*7],icon_item_card_atk,128_boss_goblin_warrior_red,,,,,400203,,,,2,0,レッドゴブリンファイターカード,500,255,2,390,0.0,0.0,TTTT,4,0,1.0
-644041,card_bramble,[スロット装着効果] 地属性抵抗力+[★*10],icon_item_card_def,019_boss_bramble,,,,,400901,,,,0,5,ブランブルカード,500,545,2,1350,0.0,0.0,TTTT,4,1,1.0
-644042,card_BiteRegina,[スロット装着効果] 攻撃時、[★/3]%の確率で相手を6秒間中毒状態,icon_item_card_util,022_boss_biteregina,[642011],,,,800050,,,,7,2,ビテレジーナカード,500,210,6,180,0.0,0.0,TTTT,4,5,1.0
-644043,card_Strongholder,[スロット装着効果] スタミナ+[★],icon_item_card_util,082_boss_strongholder,[642011],,,,800005,,,,0,1,サイクロプスカード,500,251,2,456,0.0,0.0,TTTT,4,5,1.0
-644044,card_Saltistter,[スロット装着効果] 氷属性抵抗力+[★*10],icon_item_card_def,085_boss_saltistter,,,,,41207,,,,4,0,サルティスタカード,500,300,2,685,0.0,0.0,TTTT,4,1,1.0
-644045,card_salamander,[スロット装着効果] 炎属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,054_boss_salamander,[642014],,,,41205,,,,2,0,サラマンダーカード,500,202,4,524,0.0,0.0,TTTT,4,5,1.0
-644046,card_ShadowGaoler,[スロット装着効果] サイレント状態抵抗+[★*2]%,icon_item_card_util,093_boss_shadowgaoler,,"[642901, 642918, 642940]",,,800006,,,,0,1,シャドウジェイラーカード,500,290,1,161,0.0,0.0,TTTT,4,5,1.0
-644047,card_stone_whale,[スロット装着効果] 攻撃時、[★/3]%の確率で5秒間受けるダメージ10%ダウン,icon_item_card_util,075_boss_stone_whale,,,,,41209,,,,1,4,ストーンホエールカード,500,226,1,5288,0.0,0.0,TTTT,4,5,1.0
-644048,card_Shnayim,[スロット装着効果] 雷属性抵抗力+[★*10],icon_item_card_def,033_boss_shnayim,[642013],,,,41241,,,,5,4,シュナイムカード,500,270,2,3100,0.0,0.0,TTTT,4,1,1.0
-644049,card_Confinedion,[スロット装着効果] 突系 防御力+[★*10],icon_item_card_def,096_boss_confinedion,,,,,41379,,,,7,0,デスストーカーカード,500,355,8,644,0.0,0.0,TTTT,4,1,1.0
-644050,card_Spector_m,[スロット装着効果] 闇属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,008_boss_spector_m,,,,,800007,,,,0,1,スペクターマスターカード,500,210,2,45,0.0,0.0,TTTT,4,5,1.0
-644051,card_Throneweaver,[スロット装着効果] 毒属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,041_boss_throneweaver,,,,,800009,,,,7,1,スローンウィーバーカード,500,352,6,375,0.0,0.0,TTTT,4,5,1.0
-644052,card_Ironbaum,[スロット装着効果] スリープ状態の敵に与えるダメージ[★]%アップ,icon_item_card_atk,060_boss_ironbaum,,,,,41354,,,,2,4,アイアンバウムカード,500,230,2,2108,0.0,0.0,TTTT,4,0,1.0
-644053,card_archon,[スロット装着効果] 炎属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,095_boss_archon,"[642013, 642047]",,,,800027,,,,2,4,アコンカード,500,406,2,960,0.0,0.0,TTTT,4,0,1.0
-644054,card_Abomination,[スロット装着効果] 敏捷+[★/2]、体力+[★/2] ,icon_item_card_stat,038_boss_abomination,,,,,800029,,,,0,1,アボミネーションカード,500,420,2,1255,0.0,0.0,TTTT,4,4,1.0
-644055,card_Unknocker,[スロット装着効果] 精神+[★/2]、体力+[★/2],icon_item_card_stat,040_boss_unknocker,,,,,800010,,,,0,1,アンノッカーカード,500,383,2,782,0.0,0.0,TTTT,4,4,1.0
-644056,card_Achat,[スロット装着効果] 雷属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,032_boss_achat,,,,,41240,,,,5,4,エハートカード,500,220,2,2403,0.0,0.0,TTTT,4,0,1.0
-644057,card_ellaganos,[スロット装着効果] 敏捷ステータス+[★],icon_item_card_stat,037_boss_ellaganos,,,,,800013,,,,0,1,エラガノスカード,500,392,6,1060,0.0,0.0,TTTT,4,4,1.0
-644058,card_yekub,[スロット装着効果] 聖属性追加ダメージ+[★*10],icon_item_card_util,011_boss_yekub,,,,,41234,,,,4,0,イェクブカード,500,340,8,316,0.0,0.0,TTTT,4,5,1.0
-644059,card_yonazolem,[スロット装着効果] 聖属性抵抗力+[★*10],icon_item_card_def,055_boss_yonazolem,[642014],,,,41211,,,,1,4,ヒュージゾーレムカード,500,410,2,3170,0.0,0.0,TTTT,4,1,1.0
-644061,card_werewolf,[スロット装着効果] 攻撃時、[★]%の確率で後方攻撃判定,icon_item_card_util,070_boss_werewolf,,,,,41247,,,,0,0,ウェアウルフカード,500,378,2,982,0.0,0.0,TTTT,4,5,1.0
-644062,card_unicorn,[スロット装着効果] 闇属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,050_unicorn,,,,,800051,,,,0,1,ユニコーンカード,500,329,4,460,0.0,0.0,TTTT,4,0,1.0
-644063,card_Iltiswort,[スロット装着効果] 植物型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,017_boss_iltiswort,[642013],,,,41214,,,,7,5,イルティスウォートカード,500,308,1,512,0.0,0.0,TTTT,4,0,1.0
-644064,card_GiantWoodGoblin_red,[スロット装着効果] クロース系鎧着用の対象に与えるダメージ[★/2]%アップ,icon_item_card_atk,062_boss_giantwoodgoblin_red,,,,,41215,,,,2,5,ジャイアントレッドウッドカード,500,551,2,1429,0.0,0.0,TTTT,4,0,1.0
-644065,card_GiantWoodGoblin,[スロット装着効果] スタン状態の敵に与えるダメージ[★]%アップ,icon_item_card_atk,061_boss_giantwoodgoblin,,,,,41386,,,,7,5,ジャイアントウッドゴブリンカード,500,552,2,1428,0.0,0.0,TTTT,4,0,1.0
-644067,card_Chapparition,[スロット装着効果]SPポーション類を使用時、6秒間魔法ダメージ+[★]%,icon_item_card_atk,068_boss_chapparition,[642011],,,,800011,,"[13026, 13028, 30122, 33029]",,0,1,チャッパーリションカード,500,254,1,108,0.0,0.0,TTTT,4,0,1.0
-644068,card_chafer,[スロット装着効果 ]昆虫型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,023_boss_chafer,[642012],,,,800052,,,,7,2,チェイファーカード,500,235,2,217,0.0,0.0,TTTT,4,0,1.0
-644070,card_Carapace,[スロット装着効果] 氷属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,098_boss_carapace,,,,,800053,,,,4,2,キャラパスカード,500,240,6,338,0.0,0.0,TTTT,4,5,1.0
-644072,card_onion_the_great,[スロット装着効果] 大型のモンスターに与えるダメージ[★/2]%アップ,icon_item_card_atk,058_boss_onion_the_great,,,,,41201,,,,0,4,ケッピーチーフテンカード,500,465,2,680,0.0,0.0,TTTT,4,0,1.0
-644073,card_Colimencia,[スロット装着効果] 毒属性抵抗力+[★*10],icon_item_card_def,101_boss_colimencia,,,,,47318,,,,4,5,コリメンシアカード,500,340,6,386,0.0,0.0,TTTT,4,1,1.0
-644074,card_Clymen,[スロット装着効果] 毒属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,117_boss_clymen,,,,,47316,,,,7,5,クライメンカード,500,364,2,314,0.0,0.0,TTTT,4,0,1.0
-644075,card_Kimeleech,[スロット装着効果] ブロック貫通+[★ * 1.5],icon_item_card_util,048_boss_kimeleech,,,,,800054,,,,7,2,キルメリーチカード,500,246,14,780,0.0,0.0,TTTT,4,5,1.0
-644076,card_tutu,[スロット装着効果] 持ち運べる重さ+[★]%,icon_item_card_util,076_boss_tutu,,,,,57161,,,,7,0,トゥトゥカード,500,230,4,1168,0.0,0.0,TTTT,4,5,1.0
-644077,card_TombLord,[スロット装着効果] ボスモンスターに与えるダメージ[★/2]%アップ,icon_item_card_atk,034_boss_tomblord,,,,,800055,,,,0,1,トゥームロードカード,500,201,2,180,0.0,0.0,TTTT,4,0,1.0
-644078,card_poata,[スロット装着効果] HP回復力+[★ * 30],icon_item_card_util,001_boss_poata,,,,,41202,,,,7,0,ポアタカード,500,310,2,427,0.0,0.0,TTTT,4,5,1.0
-644079,card_Sequoia_blue,[スロット装着効果] 物理防御力+[★*5]、魔法防御力+[★*5],icon_item_card_def,015_boss_sequoia,,,,,401661,,,,2,5,セルシシアカード,500,356,2,866,0.0,0.0,TTTT,4,1,1.0
-644080,card_Harpeia,[スロット装着効果] 雷属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,107_boss_harpeia,,"[642905, 642921]",,,800012,,,,5,1,ハーピアカード,500,230,2,197,0.0,0.0,TTTT,4,5,1.0
-644081,card_honeypin,[スロット装着効果] 毒属性追加ダメージ+[★*10],icon_item_card_util,047_boss_honeypin,,,,,800056,,,,7,2,ハニーピンカード,500,218,6,240,0.0,0.0,TTTT,4,5,1.0
-644082,card_helgasercle,[スロット装着効果] 魔法攻撃力+[★*5],icon_item_card_atk,053_boss_helgasercle,,,,,800057,,,,0,1,ヘルガ・セルクルカード,500,298,1,142,0.0,0.0,TTTT,4,0,1.0
-644083,card_Spector_F,[スロット装着効果] 最大SP+[★ * 30],icon_item_card_util,009_boss_spector_f,,,,,800080,,,,0,1,魅惑のスペクターカード,500,162,1,45,0.0,0.0,TTTT,4,5,1.0
-644084,card_hydra,[スロット装着効果] 氷結状態の敵に与えるダメージ[★]%アップ,icon_item_card_atk,099_boss_hydra,,,,,47313,,,,4,4,ヒドラカード,500,353,4,1624,0.0,0.0,TTTT,4,0,1.0
-644085,card_rajapearl,[スロット装着効果] 攻撃時、[★/3]%の確率で相手を6秒間出血状態,icon_item_card_util,078_boss_rajapearl,,,,,41243,,,,4,0,ラジャパールカード,500,160,1,908,0.0,0.0,TTTT,4,5,1.0
-644087,card_fallen_statue,[スロット装着効果] 固定型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,013_boss_fallen_statue,,,,,800071,,,,0,1,コラプテッドカード,500,213,2,240,0.0,0.0,TTTT,4,0,1.0
-644088,card_lepus,[スロット装着効果] 片手武器着用時、攻撃速度+[★],icon_item_card_util,084_boss_lepus,,,,,41216,,,,1,0,レプスカード,500,375,2,686,0.0,0.0,TTTT,4,5,1.0
-644089,card_sparnas,[スロット装着効果] ミサイル系武器着用時、物理攻撃力+[★*7],icon_item_card_atk,006_boss_sparnas,,,,,41224,,,,5,0,スパルナスカード,500,185,2,206,0.0,0.0,TTTT,4,0,1.0
-644092,card_Sparnanman,[スロット装着効果] 闇属性抵抗力+[★*10],icon_item_card_def,035_boss_sparnanman,,,,,800008,,,,0,1,スパルナスマンカード,500,315,2,412,0.0,0.0,TTTT,4,1,1.0
-644093,card_Kerberos,[スロット装着効果] 中型のモンスターから攻撃を受けたとき[★]%の確率でSP 1%回復{nl}クールタイム5秒,icon_item_card_util,094_boss_kerberos,[642013],[642903],,,800028,,,,2,1,ケルベロスカード,500,207,4,460,0.0,0.0,TTTT,4,5,1.0
-644094,card_capria,[スロット装着効果] スリープ抵抗+[★*2]%,icon_item_card_util,131_boss_capria,,,,,57210,,,,7,0,カプリアカード,500,214,2,189,0.0,0.0,TTTT,4,5,1.0
-644095,card_Nepenthes,[スロット装着効果] 最大HP +[★*90]、最大SP +[★*15],icon_item_card_util,135_boss_nepenthes,,,,,57015,,,,1,5,ネペンテスカード,500,194,2,174,0.0,0.0,TTTT,4,5,1.0
-644096,card_simorph,[スロット装着効果] 力+[★/2]、体力+[★/2],icon_item_card_stat,133_boss_simorph,,,,,57151,,,,1,5,シーモフカード,500,141,2,60,0.0,0.0,TTTT,4,4,1.0
-644098,card_Golem_gray,[スロット装着効果] 物理防御力+[★*10],icon_item_card_def,134_boss_graygolem,,,,,450222,,,,1,4,グレーゴーレムカード,500,213,2,6193,0.0,0.0,TTTT,4,1,1.0
-644099,card_Naktis,[スロット装着効果] 命中+[★*1.5],icon_item_card_util,066_boss_naktis,,,,,800058,,,,0,1,ナクティスカード,500,344,2,128,0.0,0.0,TTTT,4,5,1.0
-644100,card_RingCrawler,[スロット装着効果] 精神ステータス+[★],icon_item_card_stat,067_boss_ringcrawler,,,,,41232,,,,5,4,リンクローラーカード,500,382,1,372,0.0,0.0,TTTT,4,4,1.0
-644101,card_Durahan,[スロット装着効果] 戦闘不能時、[★]%の確率で10%のHPが回復した状態で復活 ,icon_item_card_util,071_durahan,,,,,800014,,,,0,1,デュラハンカード,500,245,6,482,0.0,0.0,TTTT,4,5,1.0
-644102,card_Riteris,[スロット装着効果] ブラインド状態抵抗+[★ * 2]%,icon_item_card_util,073_riteris,,"[642909, 642915, 642923]",,,800015,,,,0,1,リテリスカード,500,221,2,308,0.0,0.0,TTTT,4,5,1.0
-644103,card_Nuaele,[スロット装着効果] 魔法防御力+[★]%,icon_item_card_def,074_nuaele,,,,,800016,,,,0,1,ヌアエーレカード,500,186,1,91,0.0,0.0,TTTT,4,1,1.0
-644104,card_Neop,[スロット装着効果] HPポーション類効果+[★]%,icon_item_card_util,113_neop,,,,,800059,,,,7,2,ネオップカード,500,368,2,912,0.0,0.0,TTTT,4,5,1.0
-644105,card_Blud,[スロット装着効果] 体力ステータス+[★],icon_item_card_stat,112_blud,,,,,800060,,,,0,1,ブルッドカード,500,432,4,1677,0.0,0.0,TTTT,4,4,1.0
-644106,card_Glackuman,[スロット装着効果] 斬系防御力+[★*10],icon_item_card_def,116_glackuman,,,,,800022,,,,6,4,グラックマンカード,500,382,2,1954,0.0,0.0,TTTT,4,1,1.0
-644108,card_Tetraox,[スロット装着効果] 出血抵抗+[★*2]%,icon_item_card_util,127_tetraox,,,,,57421,,,,1,0,テトラオックスカード,500,190,4,1260,0.0,0.0,TTTT,4,5,1.0
-644109,card_basilisk,[スロット装着効果] クリティカル抵抗+[★*2],icon_item_card_util,122_basilisk,,,,,800061,,,,5,2,バジリスクカード,500,220,4,784,0.0,0.0,TTTT,4,5,1.0
-644110,card_gremlin,[スロット装着効果] 斬系武器着用時、物理攻撃力+[★*7],icon_item_card_atk,124_gremlin,,,,,58522,,,,5,0,グレムリンカード,500,331,2,610,0.0,0.0,TTTT,4,0,1.0
-644111,card_plokste,[スロット装着効果] 物理攻撃力+[★*5],icon_item_card_atk,120_plokste,,,,,800062,,,,7,2,プロクスケカード,500,224,6,484,0.0,0.0,TTTT,4,0,1.0
-644112,card_Woodhoungan,[スロット装着効果] 知能+[★/2]、体力+[★/2] ,icon_item_card_stat,121_woodhoungan,,,,,47512,,,,7,5,ウッドオウンガンカード,500,326,1,389,0.0,0.0,TTTT,4,4,1.0
-644113,card_velnewt,[スロット装着効果] 小型モンスターから攻撃を受けたとき[★]%の確率でHP 0.5%回復{nl}クールタイム15秒,icon_item_card_util,125_velnewt,,,,,800063,,,,1,2,ヴェルニュートカード,500,222,4,404,0.0,0.0,TTTT,4,5,1.0
-644114,card_Velpede,[スロット装着効果] 攻撃時、[★/3]%の確率で6秒間移動速度+4,icon_item_card_util,123_velpede,,,,,800064,,,,1,2,ヴェルピードカード,500,270,6,504,0.0,0.0,TTTT,4,5,1.0
-644117,card_Pyroego,[スロット装着効果] 知能+[★] ,icon_item_card_stat,057_boss_pyroego,,,,,800065,,,,2,1,パイロエゴカード,500,391,1,100,0.0,0.0,TTTT,4,4,1.0
-644118,card_Mandala,[スロット装着効果] ノックダウン中の敵に与えるダメージ[★]%アップ,icon_item_card_atk,065_mandala,,,,,57707,,,,0,4,マンダラカード,500,229,2,270,0.0,0.0,TTTT,4,0,1.0
-644119,card_LithoRex,[スロット装着効果] 雷属性追加ダメージ+[★*10],icon_item_card_util,079_boss_lithorex,,,,,800017,,,,5,1,リトレックスカード,500,317,2,483,0.0,0.0,TTTT,4,5,1.0
-644120,card_Nuodai,[スロット装着効果] スタン抵抗+[★]、スリープ抵抗+[★] ,icon_item_card_util,086_nuodai,,,,,800066,,,,4,1,ヌオダイカード,500,330,6,480,0.0,0.0,TTTT,4,5,1.0
-644121,card_Centaurus,[スロット装着効果] 広域攻撃比率+[★/5],icon_item_card_atk,088_centaurus,,,,,800067,,,,4,1,ケンタウロスカード,500,230,4,227,0.0,0.0,TTTT,4,0,1.0
-644122,card_Yeti,[スロット装着効果] 最大HP+[★ * 180],icon_item_card_util,089_yeti,,,,,57415,,,,4,0,イエティカード,500,235,2,360,0.0,0.0,TTTT,4,5,1.0
-644123,card_Frogola,[スロット装着効果] HPポーション類を使用時、10秒間魔法防御力+[★]%,icon_item_card_def,100_frogola,,,,,800018,,,,4,1,フロゴーラカード,500,201,1,164,0.0,0.0,TTTT,4,1,1.0
-644125,card_Marionette,[スロット装着効果] 攻撃時、[★/3]%の確率で相手を3秒間スロー状態,icon_item_card_util,105_marionette,,,,,800068,,,,0,1,マリオネットカード,500,318,2,211,0.0,0.0,TTTT,4,5,1.0
-644126,card_Canceril,[スロット装着効果] 中型のモンスターから攻撃を受けたとき[★]%の確率でHP 2%回復{nl}クールタイム15秒,icon_item_card_util,110_canceril,[642046],,,,800025,,,,4,2,キャンスリルカード,500,212,6,256,0.0,0.0,TTTT,4,5,1.0
-644127,card_Crabil,[スロット装着効果] スタン抵抗+[★ * 2]%,icon_item_card_util,111_crabil,,,,,47505,,,,1,0,クラビルカード,500,270,8,400,0.0,0.0,TTTT,4,5,1.0
-644128,card_Genmagnus,[スロット装着効果] 補助物理攻撃力+[★*3],icon_item_card_atk,069_boss_genmagnus,,,,,800069,,,,4,1,マスタージニーカード,500,380,1,83,0.0,0.0,TTTT,4,0,1.0
-644129,card_merregina,[スロット装着効果] 氷属性追加ダメージ+[★*10],icon_item_card_util,077_merregina,,,,,800070,,,,4,1,メレジナカード,500,363,1,208,0.0,0.0,TTTT,4,5,1.0
-644130,card_Templeshooter,[スロット装着効果] 力+[★/2]、精神+[★/2] ,icon_item_card_stat,063_boss_templeshooter,[642045],,,,800021,,,,0,1,テンプルシューターカード,500,230,2,224,0.0,0.0,TTTT,4,4,1.0
-644131,card_Fireload,[スロット装着効果] 炎属性追加ダメージ+[★*10],icon_item_card_util,129_boss_firelord,,[642902],,,800023,,,,2,1,ファイアーロードカード,500,274,2,207,0.0,0.0,TTTT,4,5,1.0
-644132,card_Kubas,[スロット装着効果] 知能+[★/2]、精神+[★/2] ,icon_item_card_stat,130_boss_kubas,,,,,41373,,,,5,4,キュバスカード,500,253,2,1620,0.0,0.0,TTTT,4,4,1.0
-644133,card_Deathweaver,[スロット装着効果] 大型モンスターから攻撃を受けたとき[★]%の確率でHP 3%回復{nl}クールタイム15秒,icon_item_card_util,081_boss_deathweaver,,,,,800026,,,,0,1,デスウィーバーカード,500,430,8,364,0.0,0.0,TTTT,4,5,1.0
-644134,card_Flammidus,[スロット装着効果] 炎属性抵抗力+[★*10],icon_item_card_def,132_boss_flammidus,,"[642910, 642920, 642942]",,,800031,,,,0,1,フラムミドスカード,500,211,2,55,0.0,0.0,TTTT,4,1,1.0
-644135,card_Marnoks,[スロット装着効果] クリティカル発生+[★ * 1.5],icon_item_card_util,139_boss_marnoks,,,,,800078,,,,1,1,マルノックスカード,500,,,,0.0,0.0,TTTT,4,5,1.0
-644136,card_Zawra,[スロット装着効果] 物理防御力+[★]%,icon_item_card_def,140_boss_zawra,,,,,800072,,,,0,1,ジャウラカード,500,,,,0.0,0.0,TTTT,4,1,1.0
-644137,card_Prisoncutter,[スロット装着効果] 出血状態の対象に与えるダメージ[★]%アップ,icon_item_card_atk,143_boss_prisoncutter,,,,,800020,,,,0,1,プリズンカッターカード,500,,,,0.0,0.0,TTTT,4,0,1.0
-644138,card_FerretMarauder,[スロット装着効果] 攻撃時にアップする挑発数値+[★]%,icon_item_card_util,141_boss_ferretmarauder,,,,,57864,,,,1,0,フェレットマローダーカード,500,,,,0.0,0.0,TTTT,4,5,1.0
-644139,card_Velniamonkey,[スロット装着効果] 中毒状態の対象に与えるダメージ[★]%アップ,icon_item_card_atk,142_boss_velniamonkey,,,,,57428,,,,7,5,ベルニアモンキーカード,500,,,,0.0,0.0,TTTT,4,0,1.0
-644140,card_Woodspirit,[スロット装着効果] 攻撃を受けたとき10%の確率でHP[★*70]回復{nl}クールタイム20秒,icon_item_card_def,002_boss_woodspirit,,,,,47355,,,,1,5,ウッドスピリットカード,500,,,,0.0,0.0,TTTT,4,1,1.0
-644141,card_Armaox,[スロット装着効果] 攻撃を受けたとき10%の確率で10秒間シールド[★*100]生成,icon_item_card_def,144_boss_armaox,,"[642925, 642943]",,,57443,,,,7,5,アルマオスカード,500,,,,0.0,0.0,TTTT,4,1,1.0
-644142,card_Succubus,[スロット装着効果] 攻撃時のアップする挑発数値-[★]%,icon_item_card_util,138_boss_succubus,,,,,800079,,,,7,1,サキュバスカード,500,,,,0.0,0.0,TTTT,4,5,1.0
-644143,card_Stonefroster,[スロット装着効果] HPポーション類を使用時、10秒間体力+[★*1.5],icon_item_card_stat,145_boss_stonefroster,,,,,57589,,,,1,4,ギガントゴーレムカード,500,,,,0.0,0.0,TTTT,4,4,1.0
-644144,card_Lapene,[スロット装着効果] 力+[★/3]、体力+[★/3]、知能+[★/3]、精神+[★/3]、敏捷+[★/3],icon_item_card_stat,146_boss_lapene,,,,,57866,,,,2,0,ラペネカード,500,,,,0.0,0.0,TTTT,4,4,1.0
-644145,card_Rambandgad,[スロット装着効果] SPポーション類を使用時、10秒間精神+[★*1.5],icon_item_card_stat,147_boss_rambandgad,,"[642925, 642943]",,,800019,,,,0,1,レベンザードカード,500,,,,0.0,0.0,TTTT,4,4,1.0
-644146,card_SwordBallista,[スロット装着効果] ルーティングチャンス+[★*5],icon_item_card_stat,148_boss_swordballista,,,,,800081,,,,0,1,コルカスカード,500,,,,0.0,0.0,TTTT,4,4,1.0
-644147,card_FrosterLord,[スロット装着効果]攻撃時、[★/2]%の確率で相手を4秒間凍傷状態{nl}(ボスには適用されません。),icon_item_card_atk,149_boss_frosterlord,,,,,800076,,,,0,1,フロスターロッドカード,500,,,,0.0,0.0,TTTT,4,0,1.0
-644148,card_varleking,[スロット装着効果]治癒力+[★*5],icon_item_card_def,144_boss_varleking,,"[642928, 642944]",,,57866,,,,2,0,バロルキングカード,500,,,,0.0,0.0,TTTT,4,1,1.0
-644149,card_payawoota,[スロット装着効果] 全ステータス+[★* 0.4],icon_item_card_stat,001_npc_payawoota,,,,,,,,,,,パヤウタカード,500,,,,0.0,0.0,TTTT,4,4,1.0
-644150,card_skiaclips,[スロット装着効果]知能、体力+ [★],icon_item_card_stat,156_boss_skiaclipse,,[642948],,,57866,,,,2,0,スキアクリプスカード,500,,,,0.0,0.0,TTTT,4,4,1.0
-644900,Legend_card_Marnoks,[スロット装着効果] 最小クリティカル率{nl}[★*2]%アップ,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔将マルノックスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644901,Legend_card_Blud,[スロット装着効果] PVP時に受けるダメージ{nl}[★*3]%ダウン,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔将ブルッドカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644902,Legend_card_Zawra,[スロット装着効果] 物理防御力[★*10]%アップ,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔将ジャウラカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644903,Legend_card_Nuaele,[スロット装着効果] 魔法防御力[★*10]%アップ,icon_item_card_legend,074_nuaele,,,,,800016,,,,0,1,魔将ヌアエーレカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644904,Legend_card_Helgasercle,[スロット装着効果] モンスター討伐時、{nl}1体につきSP [★*20]回復,icon_item_card_legend,053_boss_helgasercle,,,,,800057,,,,0,1,魔将ヘルガ・セルクルカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644905,Legend_card_Lecifer,[スロット装着効果] 移動速度[★]アップ,icon_item_card_legend,030_boss_lecifer,,,,,800043,,,,0,1,魔将レキシファーカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644906,Legend_card_Mirtis,[スロット装着効果]攻撃時、属性の相性によるペナルティ[★ * 10]%ダウン ,icon_item_card_legend,007_boss_mirtis,,,,,800048,,,,0,1,魔将ミルティスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644907,Legend_card_Kucarry_Balzermance,[スロット装着効果] 経験値獲得量[★]%アップ,icon_item_card_legend,151_boss_kucarry_balzermancer,,[642926],,,58818,,,,0,0,霊験あらたかなクゲリバルザマンサーカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644908,Legend_card_PantoRex,[スロット装着効果] 野獣型モンスターに与えるダメージ[★*7]%アップ,icon_item_card_legend,150_boss_pantorex,,,,,,,,,,,異端者のパントレックスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644909,Legend_card_Velcoffer,[スロット装着効果]モンスターから受けるダメージ[★×3]%ダウン,icon_item_card_legend,136_raid_boss_blackgargoyle,,[642916],,,58690,,,,0,0,ベルカッパーカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644910,Legend_card_FrosterLord,[スロット装着効果] 召喚獣の最小攻撃力と最大攻撃力の差が[★ * 10]%ダウン{nl}(10LVを達成すると召喚獣の最小攻撃力が最大攻撃力と同じ数値に変更されます。),icon_item_card_legend,149_boss_frosterlord,,[642927],,,800076,,,,0,1,魔将フロスターロッドカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644911,Legend_card_Acio,[スロット装着効果] クリティカル発生+[★ * 15],icon_item_card_legend,152_boss_asio,,[642929],,,59154,,,,5,0,アシオメイジカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644912,Legend_card_Wastrel,[スロット装着効果] 最大HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,,[642931],,,59172,,,,0,4,ウェイストラルカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644913,Legend_card_ignas,[スロット装着効果]クリティカル攻撃すると[★×5]%の確率で6秒間隠身状態になります。,icon_item_card_legend,154_boss_ignas,,[642934],,,800089,,,,0,1,イグナスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644914,Legend_card_boruta,[スロット装着効果]ボスモンスターにダメージ[★×5]%アップ,icon_item_card_legend,155_boss_boruta,,,,,59208,,,,0,0,ボルタカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-644915,Legend_card_Marnoks_JP,[スロット装着効果] 最小クリティカル率{nl}[★*2]%アップ,icon_item_card_legend,139_boss_marnoks,,,,,800078,,,,1,1,魔将マルノックスカード,0,,,,0.0,0.0,FFFT,4,2,1.0
-644916,Legend_card_Blud_JP,[スロット装着効果] PVP時に受けるダメージ{nl}[★*3]%ダウン,icon_item_card_legend,112_blud,,,,,800060,,,,0,1,魔将ブルッドカード,0,,,,0.0,0.0,FFFT,4,2,1.0
-644917,Legend_card_Zawra_JP,[スロット装着効果] 物理防御力[★*10]%アップ,icon_item_card_legend,140_boss_zawra,,,,,800072,,,,0,1,魔将ジャウラカード,0,,,,0.0,0.0,FFFT,4,2,1.0
-644918,Legend_card_Nuaele_JP,[スロット装着効果] 魔法防御力[★*10]%アップ,icon_item_card_legend,074_nuaele,,,,,800016,,,,0,1,魔将ヌアエーレカード,0,,,,0.0,0.0,FFFT,4,2,1.0
-644919,Legend_card_Helgasercle_JP,[スロット装着効果] モンスター討伐時、{nl}1体につきSP [★*20]回復,icon_item_card_legend,053_boss_helgasercle,,,,,800057,,,,0,1,魔将ヘルガ・セルクルカード,0,,,,0.0,0.0,FFFT,4,2,1.0
-644920,Legend_card_Lecifer_JP,[スロット装着効果] 移動速度[★]アップ,icon_item_card_legend,030_boss_lecifer,,,,,800043,,,,0,1,魔将レキシファーカード,0,,,,0.0,0.0,FFFT,4,2,1.0
-644921,Legend_card_Mirtis_JP,[スロット装着効果]攻撃時、属性の相性によるペナルティ[★ * 10]%ダウン ,icon_item_card_legend,007_boss_mirtis,,,,,800048,,,,0,1,魔将ミルティスカード,0,,,,0.0,0.0,FFFT,4,2,1.0
-644922,Legend_card_FrosterLord_JP,[スロット装着効果] 召喚獣の最小攻撃力と最大攻撃力の差が[★ * 10]%ダウン{nl}(10LVを達成すると召喚獣の最小攻撃力が最大攻撃力と同じ数値に変更されます。),icon_item_card_legend,149_boss_frosterlord,,,,,800076,,,,0,1,魔将フロスターロッドカード,0,,,,0.0,0.0,FFFT,4,2,1.0
-644923,Legendcard_skiaclips,[スロット装着効果]昆虫型対象攻撃力750 * [★],icon_item_card_legend,156_boss_skiaclipse,,[642949],,,57866,,,,2,0,解放されたスキアクリプスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
-650001,legend_reinforce_card_lv1,レジェンドカード強化に使用できる強化用カードです。LV4まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,,,,,,,,,,,破れたレジェンド強化用カード,0,,,,0.0,0.0,TTTT,4,3,1.0
-650002,legend_reinforce_card_lv2,レジェンドカード強化に使用できる強化用カードです。LV6まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,,,,,,,,,,,古びたレジェンド強化用カード,0,,,,0.0,0.0,TTTT,4,3,1.0
-650003,legend_reinforce_card_lv3,レジェンドカード強化に使用できる強化用カードです。LV8まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,,,,,,,,,,,レジェンド強化用カード,0,,,,0.0,0.0,TTTT,4,3,1.0
-650004,legend_reinforce_card_lv4,レジェンドカード強化に使用できる強化用カードです。LV10まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv4,legend_card_fragment_lv4,,,,,,,,,,,輝くレジェンド強化用カード,0,,,,0.0,0.0,TTTT,4,3,1.0
+644001,card_Gaigalas,[スロット装着効果] 地属性追加ダメージ+[★*10],icon_item_card_util,027_boss_gaigalas,None,None,None,None,41220,None,None,None,1,0,ガイガラスカード,500,205,4,201,0.0,0.0,TTTT,4,5,1.0
+644002,card_GazingGolem,[スロット装着効果] 攻撃を受けたとき[★]%の確率でペインバリア1レベルを使用(持続時間15秒),icon_item_card_util,108_boss_gazinggolem,None,None,None,None,47322,None,None,None,0,4,ゲージングゴーレムカード,500,324,2,4860,0.0,0.0,TTTT,4,5,1.0
+644003,card_Gorgon,[スロット装着効果] 打系防御力+[★*10],icon_item_card_def,064_boss_gorgon,None,None,None,None,800042,None,None,None,0,1,ゴルゴンカード,500,190,4,1360,0.0,0.0,TTTT,4,1,1.0
+644004,card_Golem,[スロット装着効果] HPポーション類を使用時、10秒間物理防御力+[★]%,icon_item_card_def,003_boss_golem,None,None,None,None,450221,None,None,None,1,4,ゴーレムカード,500,215,2,6192,0.0,0.0,TTTT,4,1,1.0
+644005,card_Grinender,[スロット装着効果] 空中型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,056_boss_grinender,None,None,None,None,41374,None,None,None,2,4,グライネンダーカード,500,305,1,214,0.0,0.0,TTTT,4,0,1.0
+644006,card_Glass_mole,[スロット装着効果]SPポーション類を使用時、6秒間物理ダメージ+[★]%,icon_item_card_atk,012_boss_glass_mole,None,None,None,None,41367,None,None,None,4,0,グラスモールカード,500,192,4,860,0.0,0.0,TTTT,4,0,1.0
+644007,card_ginklas,[スロット装着効果] プレート系鎧装備の対象に与えるダメージ[★/2]%アップ,icon_item_card_atk,091_boss_ginklas,[642013],None,None,None,41208,None,[18018],None,2,4,ギンクラスカード,500,320,2,1053,0.0,0.0,TTTT,4,0,1.0
+644008,card_NetherBovine,[スロット装着効果] 力+[★],icon_item_card_stat,026_boss_netherbovine,None,None,None,None,800001,None,None,None,0,1,ネザーボバインカード,500,195,4,966,0.0,0.0,TTTT,4,4,1.0
+644009,card_necrovanter,[スロット装着効果] 闇属性追加ダメージ+[★*10],icon_item_card_util,044_boss_necrovanter,[642011],"[642907, 642919, 642941]",None,None,800002,None,None,None,0,1,ネクロヴェンターカード,500,416,1,144,0.0,0.0,TTTT,4,5,1.0
+644010,card_deadbone,[スロット装着効果]物理クリティカル攻撃力+[★×20],icon_item_card_atk,014_boss_deadbone,None,None,None,None,41203,None,None,None,0,4,デッドボーンカード,500,333,2,207,0.0,0.0,TTTT,4,0,1.0
+644011,card_Devilglove,[スロット装着効果] 変異型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,072_boss_devilglove,None,None,None,None,41385,None,None,None,0,4,デビルグローブカード,500,127,5,98,0.0,0.0,TTTT,4,0,1.0
+644012,card_Denoptic,[スロット装着効果] 魔法防御力+[★*10],icon_item_card_def,024_boss_denoptic,None,None,None,None,41368,None,None,None,7,4,デノプティックカード,500,388,6,205,0.0,0.0,TTTT,4,1,1.0
+644014,card_Ravinepede,[スロット装着効果] STAポーション類効果+[★]%,icon_item_card_util,025_boss_ravinepede,None,None,None,None,41236,None,None,None,7,5,ラヴァインピードカード,500,210,1,164,0.0,0.0,TTTT,4,5,1.0
+644015,card_Rajatoad,[スロット装着効果] 突系武器着用時、物理攻撃力+[★*7],icon_item_card_atk,097_boss_rajatoad,[642013],None,None,None,41226,None,None,None,4,0,ラジャトードカード,500,151,4,275,0.0,0.0,TTTT,4,0,1.0
+644016,card_Rocktortuga,[スロット装着効果] 地属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,046_boss_rocktortuga,None,None,None,None,41233,None,None,None,1,4,ロックトルトゥーガカード,500,400,2,2472,0.0,0.0,TTTT,4,5,1.0
+644017,card_lecifer,[スロット装着効果]魔法クリティカル攻撃力+[★×10],icon_item_card_atk,030_boss_lecifer,None,None,None,None,800043,None,None,None,0,1,レキシファーカード,500,213,2,123,0.0,0.0,TTTT,4,0,1.0
+644018,card_Reaverpede,[スロット装着効果] 中型対象に与えるダメージ[★/2]%アップ,icon_item_card_atk,051_boss_reaverpede,None,None,None,None,800044,None,None,None,7,2,リーヴァピードカード,500,276,6,1200,0.0,0.0,TTTT,4,0,1.0
+644019,card_spector_gh,[スロット装着効果] SPポーション類効果+[★]%,icon_item_card_util,010_boss_spector_gh,None,None,None,None,800045,None,None,None,0,1,リカウスカード,500,230,2,76,0.0,0.0,TTTT,4,5,1.0
+644022,card_mineloader,[スロット装着効果] 攻撃時、[★/3]%の確率で相手を3秒間感電状態,icon_item_card_util,092_boss_mineloader,[642014],"[642904, 642921]",None,None,800024,None,None,None,5,4,マインローダーカード,500,345,4,863,0.0,0.0,TTTT,4,5,1.0
+644023,card_Malletwyvern,[スロット装着効果] 大型モンスターから攻撃を受けたとき[★]%の確率でSP 3%回復{nl}クールタイム5秒,icon_item_card_util,106_malletwyvern,None,None,None,None,47502,None,None,None,4,0,マレットワイバーンカード,500,222,4,1605,0.0,0.0,TTTT,4,5,1.0
+644024,card_MagBurk,[スロット装着効果] 変異型モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,049_boss_magburk,[642014],None,None,None,41350,None,None,None,2,4,マグバークカード,500,197,4,409,0.0,0.0,TTTT,4,5,1.0
+644025,card_Manticen,[スロット装着効果] STAポーション類を使用時、10秒間移動速度+[★/5],icon_item_card_util,114_boss_manticen,None,"[642906, 642922]",None,None,800030,None,None,None,7,2,マンティケンカード,500,255,4,214,0.0,0.0,TTTT,4,5,1.0
+644026,card_Mummyghast,[スロット装着効果] 力+[★/2]、敏捷+[★/2] ,icon_item_card_stat,042_boss_mummyghast,None,None,None,None,800003,None,None,None,0,1,マミーガストカード,500,420,2,312,0.0,0.0,TTTT,4,4,1.0
+644027,card_mushcaria,[スロット装着効果] SP回復力+[★ * 6],icon_item_card_util,059_boss_mushcaria,None,None,None,None,41217,None,None,None,7,5,マッシュカリアカード,500,263,2,272,0.0,0.0,TTTT,4,5,1.0
+644028,card_Merge,[スロット装着効果] 氷属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,119_merge,None,None,None,None,800046,None,None,None,4,2,マージカード,500,321,1,320,0.0,0.0,TTTT,4,0,1.0
+644029,card_Mothstem,[スロット装着効果] 打系武器着用時、魔法攻撃力+[★*7],icon_item_card_atk,103_boss_mothstem,[642012],None,None,None,800047,None,None,None,5,2,モステムカード,500,188,1,136,0.0,0.0,TTTT,4,0,1.0
+644030,card_moa,[スロット装着効果] 悪魔型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,083_boss_moa,None,None,None,None,41378,None,None,None,0,0,モアカード,500,340,2,1120,0.0,0.0,TTTT,4,0,1.0
+644031,card_Moyabruka,[スロット装着効果] レザー系鎧装備の対象に与えるダメージ[★/2]%アップ,icon_item_card_atk,115_boss_moyabruka,[642012],None,None,None,47325,None,None,None,1,0,モヤブルカカード,500,200,4,1288,0.0,0.0,TTTT,4,0,1.0
+644032,card_Moldyhorn,[スロット装着効果] 石化状態の対象に与えるダメージ[★]%アップ,icon_item_card_atk,109_boss_moldyhorn,[642012],None,None,None,47323,None,None,None,7,0,モルディホーンカード,500,307,2,421,0.0,0.0,TTTT,4,0,1.0
+644033,card_molich,[スロット装着効果] ブロック+[★ * 2],icon_item_card_util,021_boss_glass_mole,[642012],"[642908, 642915, 642923]",None,None,400421,None,None,None,0,0,モリックカード,500,540,2,2075,0.0,0.0,TTTT,4,5,1.0
+644034,card_Minotaurs,[スロット装着効果] 敏捷+[★/2]、精神+[★/2] ,icon_item_card_stat,090_boss_minotaurs,None,None,None,None,800004,None,None,None,2,1,ミノタウロスカード,500,242,2,560,0.0,0.0,TTTT,4,4,1.0
+644035,card_mirtis,[スロット装着効果] 小型モンスターに与えるダメージ[★/2]%アップ,icon_item_card_atk,007_boss_mirtis,None,None,None,None,800048,None,None,None,0,1,ミルティスカード,500,346,2,192,0.0,0.0,TTTT,4,0,1.0
+644036,card_bebraspion,[スロット装着効果] 両手武器着用時、攻撃速度+[★],icon_item_card_util,005_boss_bebraspion,None,None,None,None,41222,None,None,None,5,0,ベブラスピオンカード,500,345,2,860,0.0,0.0,TTTT,4,5,1.0
+644037,card_bearkaras,[スロット装着効果] 地属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,031_boss_bearkaras,None,None,None,None,401141,None,None,None,1,0,ベアカリスカード,500,359,2,3123,0.0,0.0,TTTT,4,0,1.0
+644038,card_Velorchard,[スロット装着効果] 回避+[★ * 2],icon_item_card_util,126_boss_velorchard,None,None,None,None,800049,None,None,None,5,1,ヴェローチャードカード,500,185,3,160,0.0,0.0,TTTT,4,5,1.0
+644039,card_Goblin_Warrior,[スロット装着効果] 野獣型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,004_boss_goblin_warrior,None,None,None,None,400201,None,None,None,1,0,ゴブリンファイターカード,500,240,2,356,0.0,0.0,TTTT,4,0,1.0
+644040,card_Goblin_Warrior_red,[スロット装着効果] 打系武器着用時、物理攻撃力+[★*7],icon_item_card_atk,128_boss_goblin_warrior_red,None,None,None,None,400203,None,None,None,2,0,レッドゴブリンファイターカード,500,255,2,390,0.0,0.0,TTTT,4,0,1.0
+644041,card_bramble,[スロット装着効果] 地属性抵抗力+[★*10],icon_item_card_def,019_boss_bramble,None,None,None,None,400901,None,None,None,0,5,ブランブルカード,500,545,2,1350,0.0,0.0,TTTT,4,1,1.0
+644042,card_BiteRegina,[スロット装着効果] 攻撃時、[★/3]%の確率で相手を6秒間中毒状態,icon_item_card_util,022_boss_biteregina,[642011],None,None,None,800050,None,None,None,7,2,ビテレジーナカード,500,210,6,180,0.0,0.0,TTTT,4,5,1.0
+644043,card_Strongholder,[スロット装着効果] スタミナ+[★],icon_item_card_util,082_boss_strongholder,[642011],None,None,None,800005,None,None,None,0,1,サイクロプスカード,500,251,2,456,0.0,0.0,TTTT,4,5,1.0
+644044,card_Saltistter,[スロット装着効果] 氷属性抵抗力+[★*10],icon_item_card_def,085_boss_saltistter,None,None,None,None,41207,None,None,None,4,0,サルティスタカード,500,300,2,685,0.0,0.0,TTTT,4,1,1.0
+644045,card_salamander,[スロット装着効果] 炎属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,054_boss_salamander,[642014],None,None,None,41205,None,None,None,2,0,サラマンダーカード,500,202,4,524,0.0,0.0,TTTT,4,5,1.0
+644046,card_ShadowGaoler,[スロット装着効果] 沈黙状態異常抵抗+[★ * 2],icon_item_card_util,093_boss_shadowgaoler,None,"[642901, 642918, 642940]",None,None,800006,None,None,None,0,1,シャドウジェイラーカード,500,290,1,161,0.0,0.0,TTTT,4,5,1.0
+644047,card_stone_whale,[スロット装着効果] 攻撃時、[★/3]%の確率で5秒間受けるダメージ10%ダウン,icon_item_card_util,075_boss_stone_whale,None,None,None,None,41209,None,None,None,1,4,ストーンホエールカード,500,226,1,5288,0.0,0.0,TTTT,4,5,1.0
+644048,card_Shnayim,[スロット装着効果] 雷属性抵抗力+[★*10],icon_item_card_def,033_boss_shnayim,[642013],None,None,None,41241,None,None,None,5,4,シュナイムカード,500,270,2,3100,0.0,0.0,TTTT,4,1,1.0
+644049,card_Confinedion,[スロット装着効果] 突系 防御力+[★*10],icon_item_card_def,096_boss_confinedion,None,None,None,None,41379,None,None,None,7,0,デスストーカーカード,500,355,8,644,0.0,0.0,TTTT,4,1,1.0
+644050,card_Spector_m,[スロット装着効果] 闇属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,008_boss_spector_m,None,None,None,None,800007,None,None,None,0,1,スペクターマスターカード,500,210,2,45,0.0,0.0,TTTT,4,5,1.0
+644051,card_Throneweaver,[スロット装着効果] 毒属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,041_boss_throneweaver,None,None,None,None,800009,None,None,None,7,1,スローンウィーバーカード,500,352,6,375,0.0,0.0,TTTT,4,5,1.0
+644052,card_Ironbaum,[スロット装着効果] スリープ状態の敵に与えるダメージ[★]%アップ,icon_item_card_atk,060_boss_ironbaum,None,None,None,None,41354,None,None,None,2,4,アイアンバウムカード,500,230,2,2108,0.0,0.0,TTTT,4,0,1.0
+644053,card_archon,[スロット装着効果] 炎属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,095_boss_archon,[642013],None,None,None,800027,None,None,None,2,4,アコンカード,500,406,2,960,0.0,0.0,TTTT,4,0,1.0
+644054,card_Abomination,[スロット装着効果] 敏捷+[★/2]、体力+[★/2] ,icon_item_card_stat,038_boss_abomination,None,None,None,None,800029,None,None,None,0,1,アボミネーションカード,500,420,2,1255,0.0,0.0,TTTT,4,4,1.0
+644055,card_Unknocker,[スロット装着効果] 精神+[★/2]、体力+[★/2],icon_item_card_stat,040_boss_unknocker,None,None,None,None,800010,None,None,None,0,1,アンノッカーカード,500,383,2,782,0.0,0.0,TTTT,4,4,1.0
+644056,card_Achat,[スロット装着効果] 雷属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,032_boss_achat,None,None,None,None,41240,None,None,None,5,4,エハートカード,500,220,2,2403,0.0,0.0,TTTT,4,0,1.0
+644057,card_ellaganos,[スロット装着効果] 敏捷ステータス+[★],icon_item_card_stat,037_boss_ellaganos,None,None,None,None,800013,None,None,None,0,1,エラガノスカード,500,392,6,1060,0.0,0.0,TTTT,4,4,1.0
+644058,card_yekub,[スロット装着効果] 聖属性追加ダメージ+[★*10],icon_item_card_util,011_boss_yekub,None,None,None,None,41234,None,None,None,4,0,イェクブカード,500,340,8,316,0.0,0.0,TTTT,4,5,1.0
+644059,card_yonazolem,[スロット装着効果] 聖属性抵抗力+[★*10],icon_item_card_def,055_boss_yonazolem,[642014],None,None,None,41211,None,None,None,1,4,ヒュージゾーレムカード,500,410,2,3170,0.0,0.0,TTTT,4,1,1.0
+644061,card_werewolf,[スロット装着効果] 攻撃時、[★]%の確率で後方攻撃判定,icon_item_card_util,070_boss_werewolf,None,None,None,None,41247,None,None,None,0,0,ウェアウルフカード,500,378,2,982,0.0,0.0,TTTT,4,5,1.0
+644062,card_unicorn,[スロット装着効果] 闇属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,050_unicorn,None,None,None,None,800051,None,None,None,0,1,ユニコーンカード,500,329,4,460,0.0,0.0,TTTT,4,0,1.0
+644063,card_Iltiswort,[スロット装着効果] 植物型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,017_boss_iltiswort,[642013],None,None,None,41214,None,None,None,7,5,イルティスウォートカード,500,308,1,512,0.0,0.0,TTTT,4,0,1.0
+644064,card_GiantWoodGoblin_red,[スロット装着効果] クロース系鎧着用の対象に与えるダメージ[★/2]%アップ,icon_item_card_atk,062_boss_giantwoodgoblin_red,None,None,None,None,41215,None,None,None,2,5,ジャイアントレッドウッドカード,500,551,2,1429,0.0,0.0,TTTT,4,0,1.0
+644065,card_GiantWoodGoblin,[スロット装着効果] スタン状態の敵に与えるダメージ[★]%アップ,icon_item_card_atk,061_boss_giantwoodgoblin,None,None,None,None,41386,None,None,None,7,5,ジャイアントウッドゴブリンカード,500,552,2,1428,0.0,0.0,TTTT,4,0,1.0
+644067,card_Chapparition,[スロット装着効果]SPポーション類を使用時、6秒間魔法ダメージ+[★]%,icon_item_card_atk,068_boss_chapparition,[642011],None,None,None,800011,None,"[13026, 13028, 30122, 33029]",None,0,1,チャッパーリションカード,500,254,1,108,0.0,0.0,TTTT,4,0,1.0
+644068,card_chafer,[スロット装着効果 ]昆虫型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,023_boss_chafer,[642012],None,None,None,800052,None,None,None,7,2,チェイファーカード,500,235,2,217,0.0,0.0,TTTT,4,0,1.0
+644070,card_Carapace,[スロット装着効果] 氷属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,098_boss_carapace,None,None,None,None,800053,None,None,None,4,2,キャラパスカード,500,240,6,338,0.0,0.0,TTTT,4,5,1.0
+644072,card_onion_the_great,[スロット装着効果] 大型のモンスターに与えるダメージ[★/2]%アップ,icon_item_card_atk,058_boss_onion_the_great,None,None,None,None,41201,None,None,None,0,4,ケッピーチーフテンカード,500,465,2,680,0.0,0.0,TTTT,4,0,1.0
+644073,card_Colimencia,[スロット装着効果] 毒属性抵抗力+[★*10],icon_item_card_def,101_boss_colimencia,None,None,None,None,47318,None,None,None,4,5,コリメンシアカード,500,340,6,386,0.0,0.0,TTTT,4,1,1.0
+644074,card_Clymen,[スロット装着効果] 毒属性モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,117_boss_clymen,None,None,None,None,47316,None,None,None,7,5,クライメンカード,500,364,2,314,0.0,0.0,TTTT,4,0,1.0
+644075,card_Kimeleech,[スロット装着効果] ブロック貫通+[★ * 1.5],icon_item_card_util,048_boss_kimeleech,None,None,None,None,800054,None,None,None,7,2,キルメリーチカード,500,246,14,780,0.0,0.0,TTTT,4,5,1.0
+644076,card_tutu,[スロット装着効果] 持ち運べる重さ+[★]%,icon_item_card_util,076_boss_tutu,None,None,None,None,57161,None,None,None,7,0,トゥトゥカード,500,230,4,1168,0.0,0.0,TTTT,4,5,1.0
+644077,card_TombLord,[スロット装着効果] ボスモンスターに与えるダメージ[★/2]%アップ,icon_item_card_atk,034_boss_tomblord,None,None,None,None,800055,None,None,None,0,1,トゥームロードカード,500,201,2,180,0.0,0.0,TTTT,4,0,1.0
+644078,card_poata,[スロット装着効果] HP回復力+[★ * 30],icon_item_card_util,001_boss_poata,None,None,None,None,41202,None,None,None,7,0,ポアタカード,500,310,2,427,0.0,0.0,TTTT,4,5,1.0
+644079,card_Sequoia_blue,[スロット装着効果] 物理防御力+[★*5]、魔法防御力+[★*5],icon_item_card_def,015_boss_sequoia,None,None,None,None,401661,None,None,None,2,5,セルシシアカード,500,356,2,866,0.0,0.0,TTTT,4,1,1.0
+644080,card_Harpeia,[スロット装着効果] 雷属性モンスター討伐時、[★]%の確率でSP 5%回復,icon_item_card_util,107_boss_harpeia,None,"[642905, 642921]",None,None,800012,None,None,None,5,1,ハーピアカード,500,230,2,197,0.0,0.0,TTTT,4,5,1.0
+644081,card_honeypin,[スロット装着効果] 毒属性追加ダメージ+[★*10],icon_item_card_util,047_boss_honeypin,None,None,None,None,800056,None,None,None,7,2,ハニーピンカード,500,218,6,240,0.0,0.0,TTTT,4,5,1.0
+644082,card_helgasercle,[スロット装着効果] 魔法攻撃力+[★*5],icon_item_card_atk,053_boss_helgasercle,None,None,None,None,800057,None,None,None,0,1,ヘルガ・セルクルカード,500,298,1,142,0.0,0.0,TTTT,4,0,1.0
+644083,card_Spector_F,[スロット装着効果] 最大SP+[★ * 30],icon_item_card_util,009_boss_spector_f,None,None,None,None,800080,None,None,None,0,1,魅惑のスペクターカード,500,162,1,45,0.0,0.0,TTTT,4,5,1.0
+644084,card_hydra,[スロット装着効果] 氷結状態の敵に与えるダメージ[★]%アップ,icon_item_card_atk,099_boss_hydra,None,None,None,None,47313,None,None,None,4,4,ヒドラカード,500,353,4,1624,0.0,0.0,TTTT,4,0,1.0
+644085,card_rajapearl,[スロット装着効果] 攻撃時、[★/3]%の確率で相手を6秒間出血状態,icon_item_card_util,078_boss_rajapearl,None,None,None,None,41243,None,None,None,4,0,ラジャパールカード,500,160,1,908,0.0,0.0,TTTT,4,5,1.0
+644087,card_fallen_statue,[スロット装着効果] 固定型モンスターに与えるダメージ[★]%アップ,icon_item_card_atk,013_boss_fallen_statue,None,None,None,None,800071,None,None,None,0,1,コラプテッドカード,500,213,2,240,0.0,0.0,TTTT,4,0,1.0
+644088,card_lepus,[スロット装着効果] 片手武器着用時、攻撃速度+[★],icon_item_card_util,084_boss_lepus,None,None,None,None,41216,None,None,None,1,0,レプスカード,500,375,2,686,0.0,0.0,TTTT,4,5,1.0
+644089,card_sparnas,[スロット装着効果] ミサイル系武器着用時、物理攻撃力+[★*7],icon_item_card_atk,006_boss_sparnas,None,None,None,None,41224,None,None,None,5,0,スパルナスカード,500,185,2,206,0.0,0.0,TTTT,4,0,1.0
+644092,card_Sparnanman,[スロット装着効果] 闇属性抵抗力+[★*10],icon_item_card_def,035_boss_sparnanman,None,None,None,None,800008,None,None,None,0,1,スパルナスマンカード,500,315,2,412,0.0,0.0,TTTT,4,1,1.0
+644093,card_Kerberos,[スロット装着効果] 中型対象から攻撃を受けたとき[★]%の確率でSP 1%回復{nl}クールタイム5秒,icon_item_card_util,094_boss_kerberos,[642013],[642903],None,None,800028,None,None,None,2,1,ケルベロスカード,500,207,4,460,0.0,0.0,TTTT,4,5,1.0
+644094,card_capria,[スロット装着効果] スリープ状態異常抵抗+[★ * 2],icon_item_card_util,131_boss_capria,None,None,None,None,57210,None,None,None,7,0,カプリアカード,500,214,2,189,0.0,0.0,TTTT,4,5,1.0
+644095,card_Nepenthes,[スロット装着効果] 最大HP +[★*90]、最大SP +[★*15],icon_item_card_util,135_boss_nepenthes,None,None,None,None,57015,None,None,None,1,5,ネペンテスカード,500,194,2,174,0.0,0.0,TTTT,4,5,1.0
+644096,card_simorph,[スロット装着効果] 力+[★/2]、体力+[★/2],icon_item_card_stat,133_boss_simorph,None,None,None,None,57151,None,None,None,1,5,シーモフカード,500,141,2,60,0.0,0.0,TTTT,4,4,1.0
+644098,card_Golem_gray,[スロット装着効果] 物理防御力+[★*10],icon_item_card_def,134_boss_graygolem,None,None,None,None,450222,None,None,None,1,4,グレーゴーレムカード,500,213,2,6193,0.0,0.0,TTTT,4,1,1.0
+644099,card_Naktis,[スロット装着効果] 命中+[★*1.5],icon_item_card_util,066_boss_naktis,None,None,None,None,800058,None,None,None,0,1,ナクティスカード,500,344,2,128,0.0,0.0,TTTT,4,5,1.0
+644100,card_RingCrawler,[スロット装着効果] 精神ステータス+[★],icon_item_card_stat,067_boss_ringcrawler,None,None,None,None,41232,None,None,None,5,4,リンクローラーカード,500,382,1,372,0.0,0.0,TTTT,4,4,1.0
+644101,card_Durahan,[スロット装着効果]戦闘不能時に[★]%確率で10%のHPが回復した状態で復活。{nl}(チームバトルリーグトーナメントで戦闘不能状態になった場合、すぐに戦闘不能にならず10秒間維持したあとに戦闘不能になる),icon_item_card_util,071_durahan,None,None,None,None,800014,None,None,None,0,1,デュラハンカード,500,245,6,482,0.0,0.0,TTTT,4,5,1.0
+644102,card_Riteris,[スロット装着効果] 暗黒状態異常抵抗+[★ * 2],icon_item_card_util,073_riteris,None,"[642909, 642915, 642923]",None,None,800015,None,None,None,0,1,リテリスカード,500,221,2,308,0.0,0.0,TTTT,4,5,1.0
+644103,card_Nuaele,[スロット装着効果] 魔法防御力+[★]%,icon_item_card_def,074_nuaele,None,None,None,None,800016,None,None,None,0,1,ヌアエーレカード,500,186,1,91,0.0,0.0,TTTT,4,1,1.0
+644104,card_Neop,[スロット装着効果] HPポーション類効果+[★]%,icon_item_card_util,113_neop,None,None,None,None,800059,None,None,None,7,2,ネオップカード,500,368,2,912,0.0,0.0,TTTT,4,5,1.0
+644105,card_Blud,[スロット装着効果] 体力ステータス+[★],icon_item_card_stat,112_blud,None,None,None,None,800060,None,None,None,0,1,ブルッドカード,500,432,4,1677,0.0,0.0,TTTT,4,4,1.0
+644106,card_Glackuman,[スロット装着効果] 斬系防御力+[★*10],icon_item_card_def,116_glackuman,None,None,None,None,800022,None,None,None,6,4,グラックマンカード,500,382,2,1954,0.0,0.0,TTTT,4,1,1.0
+644108,card_Tetraox,[スロット装着効果] 出血状態異常抵抗+[★ * 2],icon_item_card_util,127_tetraox,None,None,None,None,57421,None,None,None,1,0,テトラオックスカード,500,190,4,1260,0.0,0.0,TTTT,4,5,1.0
+644109,card_basilisk,[スロット装着効果] クリティカル抵抗+[★*2],icon_item_card_util,122_basilisk,None,None,None,None,800061,None,None,None,5,2,バジリスクカード,500,220,4,784,0.0,0.0,TTTT,4,5,1.0
+644110,card_gremlin,[スロット装着効果] 斬系武器着用時、物理攻撃力+[★*7],icon_item_card_atk,124_gremlin,None,None,None,None,58522,None,None,None,5,0,グレムリンカード,500,331,2,610,0.0,0.0,TTTT,4,0,1.0
+644111,card_plokste,[スロット装着効果] 物理攻撃力+[★*5],icon_item_card_atk,120_plokste,None,None,None,None,800062,None,None,None,7,2,プロクスケカード,500,224,6,484,0.0,0.0,TTTT,4,0,1.0
+644112,card_Woodhoungan,[スロット装着効果] 知能+[★/2]、体力+[★/2] ,icon_item_card_stat,121_woodhoungan,None,None,None,None,47512,None,None,None,7,5,ウッドオウンガンカード,500,326,1,389,0.0,0.0,TTTT,4,4,1.0
+644113,card_velnewt,[スロット装着効果] 小型モンスターから攻撃を受けたとき[★]%の確率でHP 0.5%回復{nl}クールタイム15秒,icon_item_card_util,125_velnewt,None,None,None,None,800063,None,None,None,1,2,ヴェルニュートカード,500,222,4,404,0.0,0.0,TTTT,4,5,1.0
+644114,card_Velpede,[スロット装着効果] 攻撃時、[★/3]%の確率で6秒間移動速度+4,icon_item_card_util,123_velpede,None,None,None,None,800064,None,None,None,1,2,ヴェルピードカード,500,270,6,504,0.0,0.0,TTTT,4,5,1.0
+644117,card_Pyroego,[スロット装着効果] 知能+[★] ,icon_item_card_stat,057_boss_pyroego,None,None,None,None,800065,None,None,None,2,1,パイロエゴカード,500,391,1,100,0.0,0.0,TTTT,4,4,1.0
+644118,card_Mandala,[スロット装着効果] ノックダウン中の敵に与えるダメージ[★]%アップ,icon_item_card_atk,065_mandala,None,None,None,None,57707,None,None,None,0,4,マンダラカード,500,229,2,270,0.0,0.0,TTTT,4,0,1.0
+644119,card_LithoRex,[スロット装着効果] 雷属性追加ダメージ+[★*10],icon_item_card_util,079_boss_lithorex,None,None,None,None,800017,None,None,None,5,1,リトレックスカード,500,317,2,483,0.0,0.0,TTTT,4,5,1.0
+644120,card_Nuodai,[スロット装着効果] スタン抵抗+[★]、スリープ抵抗+[★] ,icon_item_card_util,086_nuodai,None,None,None,None,800066,None,None,None,4,1,ヌオダイカード,500,330,6,480,0.0,0.0,TTTT,4,5,1.0
+644121,card_Centaurus,[スロット装着効果] 広域攻撃比率+[★/5],icon_item_card_atk,088_centaurus,None,None,None,None,800067,None,None,None,4,1,ケンタウロスカード,500,230,4,227,0.0,0.0,TTTT,4,0,1.0
+644122,card_Yeti,[スロット装着効果] 最大HP+[★ * 180],icon_item_card_util,089_yeti,None,None,None,None,57415,None,None,None,4,0,イエティカード,500,235,2,360,0.0,0.0,TTTT,4,5,1.0
+644123,card_Frogola,[スロット装着効果] HPポーション類を使用時、10秒間魔法防御力+[★]%,icon_item_card_def,100_frogola,None,None,None,None,800018,None,None,None,4,1,フロゴーラカード,500,201,1,164,0.0,0.0,TTTT,4,1,1.0
+644125,card_Marionette,[スロット装着効果] 攻撃時、[★/3]%の確率で相手を3秒間スロー状態,icon_item_card_util,105_marionette,None,None,None,None,800068,None,None,None,0,1,マリオネットカード,500,318,2,211,0.0,0.0,TTTT,4,5,1.0
+644126,card_Canceril,[スロット装着効果] 中型対象から攻撃を受けたとき[★]%の確率でHP 2%回復{nl}クールタイム15秒,icon_item_card_util,110_canceril,None,None,None,None,800025,None,None,None,4,2,キャンスリルカード,500,212,6,256,0.0,0.0,TTTT,4,5,1.0
+644127,card_Crabil,[スロット装着効果] スタン状態異常抵抗+[★ * 2],icon_item_card_util,111_crabil,None,None,None,None,47505,None,None,None,1,0,クラビルカード,500,270,8,400,0.0,0.0,TTTT,4,5,1.0
+644128,card_Genmagnus,[スロット装着効果] 補助物理攻撃力+[★*3],icon_item_card_atk,069_boss_genmagnus,None,None,None,None,800069,None,None,None,4,1,マスタージニーカード,500,380,1,83,0.0,0.0,TTTT,4,0,1.0
+644129,card_merregina,[スロット装着効果] 氷属性追加ダメージ+[★*10],icon_item_card_util,077_merregina,None,None,None,None,800070,None,None,None,4,1,メレジナカード,500,363,1,208,0.0,0.0,TTTT,4,5,1.0
+644130,card_Templeshooter,[スロット装着効果] 力+[★/2]、精神+[★/2] ,icon_item_card_stat,063_boss_templeshooter,None,None,None,None,800021,None,None,None,0,1,テンプルシューターカード,500,230,2,224,0.0,0.0,TTTT,4,4,1.0
+644131,card_Fireload,[スロット装着効果] 炎属性追加ダメージ+[★*10],icon_item_card_util,129_boss_firelord,None,[642902],None,None,800023,None,None,None,2,1,ファイアーロードカード,500,274,2,207,0.0,0.0,TTTT,4,5,1.0
+644132,card_Kubas,[スロット装着効果] 知能+[★/2]、精神+[★/2] ,icon_item_card_stat,130_boss_kubas,None,None,None,None,41373,None,None,None,5,4,キュバスカード,500,253,2,1620,0.0,0.0,TTTT,4,4,1.0
+644133,card_Deathweaver,[スロット装着効果] 大型モンスターから攻撃を受けたとき[★]%の確率でHP 3%回復{nl}クールタイム15秒,icon_item_card_util,081_boss_deathweaver,None,None,None,None,800026,None,None,None,0,1,デスウィーバーカード,500,430,8,364,0.0,0.0,TTTT,4,5,1.0
+644134,card_Flammidus,[スロット装着効果] 炎属性抵抗力+[★*10],icon_item_card_def,132_boss_flammidus,None,"[642910, 642920, 642942]",None,None,800031,None,None,None,0,1,フラムミドスカード,500,211,2,55,0.0,0.0,TTTT,4,1,1.0
+644135,card_Marnoks,[スロット装着効果] クリティカル発生+[★ * 1.5],icon_item_card_util,139_boss_marnoks,None,None,None,None,800078,None,None,None,1,1,マルノックスカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644136,card_Zawra,[スロット装着効果] 物理防御力+[★]%,icon_item_card_def,140_boss_zawra,None,None,None,None,800072,None,None,None,0,1,ジャウラカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644137,card_Prisoncutter,[スロット装着効果] 出血状態の対象に与えるダメージ[★]%アップ,icon_item_card_atk,143_boss_prisoncutter,None,None,None,None,800020,None,None,None,0,1,プリズンカッターカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644138,card_FerretMarauder,[スロット装着効果] 攻撃時にアップする挑発数値+[★]%,icon_item_card_util,141_boss_ferretmarauder,None,None,None,None,57864,None,None,None,1,0,フェレットマローダーカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644139,card_Velniamonkey,[スロット装着効果] 中毒状態の対象に与えるダメージ[★]%アップ,icon_item_card_atk,142_boss_velniamonkey,None,None,None,None,57428,None,None,None,7,5,ベルニアモンキーカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644140,card_Woodspirit,[スロット装着効果] 攻撃を受けたとき10%の確率でHP[★*70]回復{nl}クールタイム20秒,icon_item_card_def,002_boss_woodspirit,None,None,None,None,47355,None,None,None,1,5,ウッドスピリットカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644141,card_Armaox,[スロット装着効果] 攻撃を受けたとき10%の確率で10秒間シールド[★*100]生成,icon_item_card_def,144_boss_armaox,None,"[642925, 642943]",None,None,57443,None,None,None,7,5,アルマオスカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644142,card_Succubus,[スロット装着効果] 攻撃時のアップする挑発数値-[★]%,icon_item_card_util,138_boss_succubus,None,None,None,None,800079,None,None,None,7,1,サキュバスカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644143,card_Stonefroster,[スロット装着効果] HPポーション類を使用時、10秒間体力+[★*1.5],icon_item_card_stat,145_boss_stonefroster,None,None,None,None,57589,None,None,None,1,4,ギガントゴーレムカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644144,card_Lapene,[スロット装着効果] 力+[★/3]、体力+[★/3]、知能+[★/3]、精神+[★/3]、敏捷+[★/3],icon_item_card_stat,146_boss_lapene,None,None,None,None,57866,None,None,None,2,0,ラペネカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644145,card_Rambandgad,[スロット装着効果] SPポーション類を使用時、10秒間精神+[★*1.5],icon_item_card_stat,147_boss_rambandgad,None,"[642925, 642943]",None,None,800019,None,None,None,0,1,レベンザードカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644146,card_SwordBallista,[スロット装着効果] ルーティングチャンス+[★*5],icon_item_card_stat,148_boss_swordballista,None,None,None,None,800081,None,None,None,0,1,コルカスカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644147,card_FrosterLord,[スロット装着効果]攻撃時、[★/2]%の確率で相手を4秒間凍傷状態{nl}(ボスには適用されません。),icon_item_card_atk,149_boss_frosterlord,None,None,None,None,800076,None,None,None,0,1,フロスターロッドカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644148,card_varleking,[スロット装着効果]治癒力+[★*5],icon_item_card_def,144_boss_varleking,None,"[642928, 642944]",None,None,57866,None,None,None,2,0,バロルキングカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644149,card_payawoota,[スロット装着効果] 全ステータス+[★* 0.4],icon_item_card_stat,001_npc_payawoota,None,None,None,None,,None,None,None,,,パヤウタカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644150,card_skiaclips,[スロット装着効果]知能、体力+ [★],icon_item_card_stat,156_boss_skiaclipse,None,[642948],None,None,57866,None,None,None,2,0,スキアクリプスカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644151,card_Moringponia,[スロット装着効果] 氷結状態異常抵抗+[★]{nl}最大HP +[100 * ★],icon_item_card_util,157_boss_moringponia,None,None,None,None,800090,None,None,None,6,2,モリングフォニアカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644152,card_Misrus,[スロット装着効果] 暗黒状態異常抵抗+[★]{nl}最大SP +[60 * ★],icon_item_card_util,158_boss_misrus,None,[642953],None,None,57866,None,None,None,2,0,マーズルースカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644153,card_tantaliser,[スロット装着効果]力、体力+ [★],icon_item_card_stat,159_boss_tantaliser,None,[642957],None,None,800091,None,None,None,6,2,タンタイザーカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644154,card_vaidotas,[スロット装着効果]物理攻撃力、魔法攻撃力 + [★ * 10],icon_item_card_atk,002_npc_vaidotas,None,None,None,None,,None,None,None,,,バイドータスカード,500,,,,0.0,0.0,FFFT,4,0,1.0
+644155,card_vlaentinas,[スロット装着効果]物理防御力、魔法防御力 + [★ * 10],icon_item_card_def,003_npc_vlaentinas,None,None,None,None,,None,None,None,,,ヴァレンティナスカード,500,,,,0.0,0.0,FFFT,4,1,1.0
+644156,card_uska,[スロット装着効果]すべてのステータス + [★ * 0.4],icon_item_card_stat,004_npc_uska,None,None,None,None,,None,None,None,,,ウスカカード,500,,,,0.0,0.0,FFFT,4,4,1.0
+644157,card_cyrenia,[スロット装着効果]スタミナ + [★]、最大HP + [100 * ★],icon_item_card_util,006_npc_cyrenia,None,None,None,None,,None,None,None,,,シレニアカード,500,,,,0.0,0.0,FFFT,4,5,1.0
+644158,card_Neringa,[スロット装着効果]すべてのステータス + [★ * 0.5],icon_item_card_stat,007_npc_neringa,None,None,None,None,,None,None,None,,,ネリンガカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644159,card_Glacier,[スロット装着効果]精神、体力 + [★],icon_item_card_stat,160_boss_glacier,None,[642960],None,None,59374,None,None,None,4,4,グレイシアカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644501,Master_card_Boruble,[スロット装着効果]治癒力+[★ * 30],icon_item_card_def,008_npc_boruble,None,None,None,None,,None,None,None,,,ボラブルカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644502,Master_card_MariaLeed,[スロット装着効果]攻撃を受けた際10％の確率で10秒間最大HPの[★ /2]%のシールド生成{nl}クールタイム30秒,icon_item_card_def,009_npc_maria,None,None,None,None,,None,None,None,,,マリア・リードカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644503,Master_card_JuraSwajone,[スロット装着効果] 回避 +[★ * 10],icon_item_card_def,010_npc_juraswajone,None,None,None,None,,None,None,None,,,ユラ・スワヨネカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644504,Master_card_Kamiya,[スロット装着効果] 広域防御比率 +[★/5],icon_item_card_util,011_npc_kamiya,None,None,None,None,,None,None,None,,,カミヤカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644505,Master_card_EckipseUbik,[スロット装着効果] 闇属性魔法攻撃時、ダメージ[★]%アップ,icon_item_card_atk,012_npc_eclipseubik,None,None,None,None,,None,None,None,,,エクリップス・ユビックカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644506,Master_card_AbrehMelinn,[スロット装着効果] 炎属性魔法攻撃時、ダメージ[★]%アップ,icon_item_card_atk,013_npc_abrehmelinn,None,None,None,None,,None,None,None,,,アブレ・メリンカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644507,Master_card_Rashn,[スロット装着効果]力 + [★ * 4],icon_item_card_stat,014_npc_rashn,None,None,None,None,,None,None,None,,,ラシュアカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644508,Master_card_Lucia,[スロット装着効果]知能 + [★ * 4],icon_item_card_stat,015_npc_lucia,None,None,None,None,,None,None,None,,,ルチアカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644509,Master_card_EdmundasTiller,[スロット装着効果]敏捷 + [★ * 4],icon_item_card_stat,016_npc_edmundastiller,None,None,None,None,,None,None,None,,,アドミュンダス・ティラーカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644510,Master_card_Rozaliia,[スロット装着効果]精神 + [★ * 4],icon_item_card_stat,017_npc_rozaliia,None,None,None,None,,None,None,None,,,ロザリアカード,500,,,,0.0,0.0,TTTT,4,4,1.0
+644511,Master_card_Vilius,[スロット装着効果]命中+ [★ * 10],icon_item_card_util,018_npc_vilius,None,None,None,None,,None,None,None,,,ヴィリウスカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644512,Master_card_JenaHavindar,[スロット装着効果]追加ダメージ+ [★ * 40],icon_item_card_atk,019_npc_jenahavindar,None,None,None,None,,None,None,None,,,イエナ・ハヴィンダールカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644513,Master_card_ReamToiler,[スロット装着効果] ブロック+[★ * 10],icon_item_card_def,020_npc_reamtoiler,None,None,None,None,,None,None,None,,,リアム・トイラーカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644514,Master_card_NoirParesseus,[スロット装着効果] ブロック貫通+[★ * 10],icon_item_card_util,021_npc_noirparesseus,None,None,None,None,,None,None,None,,,ノア・ペルセウスカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644515,Master_card_Mei,[スロット装着効果]クリティカル発生 +[★ * 10],icon_item_card_util,022_npc_mei,None,None,None,None,,None,None,None,,,メイカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644516,Master_card_ShellyPennington,[スロット装着効果]クリティカル抵抗 +[★ * 10],icon_item_card_util,023_npc_shellypennington,None,None,None,None,,None,None,None,,,シェリー・フェニントンカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644517,Master_card_Winona_Ende,[スロット装着効果]周辺100範囲内に敵が7体以上だった時ダメージアップ +[★ * 1.3]%{nl}(PvP地域では[★ * 0.8]%),icon_item_card_atk,024_npc_winonaende,None,None,None,None,,None,None,None,,,ウィノナ・エンデカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644518,Master_card_Feliksia,[スロット装着効果]ボスから受けるダメージをダウン +[★ * 0.4]%,icon_item_card_def,025_npc_feliksia,None,None,None,None,,None,None,None,,,フェリクシアカード,500,,,,0.0,0.0,TTTT,4,1,1.0
+644519,Master_card_MistesGoldmund,[スロット装着効果] 聖属性魔法攻撃時、ダメージ[★]%アップ,icon_item_card_atk,026_npc_mistesgoldmund,None,None,None,None,,None,None,None,,,マイステス・ゴールドムントカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644520,Master_card_AleisterCrowley,[スロット装着効果] 氷属性魔法攻撃時、ダメージ[★]%アップ,icon_item_card_atk,027_npc_feliksiaaleistercrowley,None,None,None,None,,None,None,None,,,アリスター・クロウリーカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644521,Master_card_Tesla,[スロット装着効果] 最大SP+[★ * 90],icon_item_card_util,028_npc_tesla,None,None,None,None,,None,None,None,,,テスラカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644522,Master_card_KiolRuarawa,[スロット装着効果] HP回復力+[★ * 60],icon_item_card_util,029_npc_kiolruarawa,None,None,None,None,,None,None,None,,,キオール・ルアラワカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644523,Master_card_LucidWinterspoon,[スロット装着効果]キャスティング時間[★ * 0.5]%ダウン,icon_item_card_util,030_lucidwinterspoon,None,None,None,None,,None,None,None,,,ルシード・ウィンタースプーンカード,500,,,,0.0,0.0,TTTT,4,5,1.0
+644524,Master_card_BangomontBorjigin,[スロット装着効果]広域攻撃比率+[★ * 0.3],icon_item_card_atk,031_bangomontborjigin,None,None,None,None,,None,None,None,,,ベンゴモント・ヴォルインカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644525,Master_card_DamirBorkhan,[スロット装着効果] 地属性魔法攻撃時、ダメージ[★]%アップ,icon_item_card_atk,032_damirborkhan,None,None,None,None,,None,None,None,,,ダミール・ボルカンカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644526,Master_card_KhanomCaolaw,[スロット装着効果] 打属性攻撃時、ダメージ[★]%アップ,icon_item_card_atk,033_khanomcaolaw,None,None,None,None,,None,None,None,,,カノム・チャウラウカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644527,Master_card_Rudmila,[スロット装着効果] 銃器属性攻撃時、ダメージ[★]%アップ,icon_item_card_atk,034_rudmila,None,None,None,None,,None,None,None,,,ルドミラカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644528,Master_card_Flintess,[スロット装着効果]斬属性攻撃時、ダメージ[★]%アップ,icon_item_card_atk,035_flintess,None,None,None,None,,None,None,None,,,プリンティスカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644529,Master_card_SorshaHutton,[スロット装着効果]突属性攻撃時、ダメージ[★]%アップ,icon_item_card_atk,036_sorshahutton,None,None,None,None,,None,None,None,,,ソルシャ・ハートンカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644530,Master_card_IliTerid,[スロット装着効果]念属性魔法攻撃時、ダメージ[★]%アップ,icon_item_card_atk,037_iliterid,None,None,None,None,,None,None,None,,,イリー・テリードカード,500,,,,0.0,0.0,TTTT,4,0,1.0
+644900,Legend_card_Marnoks,[スロット装着効果] 最小クリティカル率{nl}[★*2]%アップ,icon_item_card_legend,139_boss_marnoks,None,None,None,None,800078,None,None,None,1,1,魔将マルノックスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644901,Legend_card_Blud,[スロット装着効果] PVP時に受けるダメージ{nl}[★*3]%ダウン,icon_item_card_legend,112_blud,None,None,None,None,800060,None,None,None,0,1,魔将ブルッドカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644902,Legend_card_Zawra,[スロット装着効果] 物理防御力[★*10]%アップ,icon_item_card_legend,140_boss_zawra,None,None,None,None,800072,None,None,None,0,1,魔将ジャウラカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644903,Legend_card_Nuaele,[スロット装着効果] 魔法防御力[★*10]%アップ,icon_item_card_legend,074_nuaele,None,None,None,None,800016,None,None,None,0,1,魔将ヌアエーレカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644904,Legend_card_Helgasercle,[スロット装着効果] モンスター討伐時、{nl}1体につきSP [★*20]回復,icon_item_card_legend,053_boss_helgasercle,None,None,None,None,800057,None,None,None,0,1,魔将ヘルガ・セルクルカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644905,Legend_card_Lecifer,[スロット装着効果] 移動速度[★]アップ,icon_item_card_legend,030_boss_lecifer,None,None,None,None,800043,None,None,None,0,1,魔将レキシファーカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644906,Legend_card_Mirtis,[スロット装着効果] 攻撃時、有利な相性でない場合最終ダメージ[★ * 0.4]%{nl}(PvP地域で効果半減),icon_item_card_legend,007_boss_mirtis,None,None,None,None,800048,None,None,None,0,1,魔将ミルティスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644907,Legend_card_Kucarry_Balzermance,[スロット装着効果] 経験値獲得量[★]%アップ,icon_item_card_legend,151_boss_kucarry_balzermancer,None,[642926],None,None,58818,None,None,None,0,0,霊験あらたかなクゲリバルザマンサーカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644908,Legend_card_PantoRex,[スロット装着効果] 野獣型モンスターに与えるダメージ[★*7]%アップ,icon_item_card_legend,150_boss_pantorex,None,None,None,None,,None,None,None,,,異端者のパントレックスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644909,Legend_card_Velcoffer,[スロット装着効果]モンスターから受けるダメージ[★×3]%ダウン,icon_item_card_legend,136_raid_boss_blackgargoyle,None,[642916],None,None,58690,None,None,None,0,0,ベルカッパーカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644910,Legend_card_FrosterLord,[スロット装着効果] 召喚獣の最小攻撃力と最大攻撃力の差が[★ * 10]%ダウン{nl}(10LVを達成すると召喚獣の最小攻撃力が最大攻撃力と同じ数値に変更されます。),icon_item_card_legend,149_boss_frosterlord,None,[642927],None,None,800076,None,None,None,0,1,魔将フロスターロッドカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644911,Legend_card_Acio,[スロット装着効果] クリティカル発生+[★ * 15],icon_item_card_legend,152_boss_asio,None,[642929],None,None,59154,None,None,None,5,0,アシオメイジカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644912,Legend_card_Wastrel,[スロット装着効果] 最大HP +[★ * 500],icon_item_card_legend,153_boss_wastrel,None,[642931],None,None,59172,None,None,None,0,4,ウェイストラルカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644913,Legend_card_ignas,[スロット装着効果]クリティカル攻撃すると[★×5]%の確率で6秒間隠身状態になります。,icon_item_card_legend,154_boss_ignas,None,[642934],None,None,800089,None,None,None,0,1,イグナスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644914,Legend_card_boruta,[スロット装着効果]ボスモンスターにダメージ[★×5]%アップ,icon_item_card_legend,155_boss_boruta,None,None,None,None,59208,None,None,None,0,0,ボルタカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644915,Legend_card_Marnoks_JP,[スロット装着効果] 最小クリティカル率{nl}[★*2]%アップ,icon_item_card_legend,139_boss_marnoks,None,None,None,None,800078,None,None,None,1,1,魔将マルノックスカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644916,Legend_card_Blud_JP,[スロット装着効果] PVP時に受けるダメージ{nl}[★*3]%ダウン,icon_item_card_legend,112_blud,None,None,None,None,800060,None,None,None,0,1,魔将ブルッドカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644917,Legend_card_Zawra_JP,[スロット装着効果] 物理防御力[★*10]%アップ,icon_item_card_legend,140_boss_zawra,None,None,None,None,800072,None,None,None,0,1,魔将ジャウラカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644918,Legend_card_Nuaele_JP,[スロット装着効果] 魔法防御力[★*10]%アップ,icon_item_card_legend,074_nuaele,None,None,None,None,800016,None,None,None,0,1,魔将ヌアエーレカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644919,Legend_card_Helgasercle_JP,[スロット装着効果] モンスター討伐時、{nl}1体につきSP [★*20]回復,icon_item_card_legend,053_boss_helgasercle,None,None,None,None,800057,None,None,None,0,1,魔将ヘルガ・セルクルカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644920,Legend_card_Lecifer_JP,[スロット装着効果] 移動速度[★]アップ,icon_item_card_legend,030_boss_lecifer,None,None,None,None,800043,None,None,None,0,1,魔将レキシファーカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644921,Legend_card_Mirtis_JP,[スロット装着効果] 攻撃時、有利な相性でない場合最終ダメージ[★ * 0.4]%{nl}(PvP地域で効果半減),icon_item_card_legend,007_boss_mirtis,None,None,None,None,800048,None,None,None,0,1,魔将ミルティスカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644922,Legend_card_FrosterLord_JP,[スロット装着効果] 召喚獣の最小攻撃力と最大攻撃力の差が[★ * 10]%ダウン{nl}(10LVを達成すると召喚獣の最小攻撃力が最大攻撃力と同じ数値に変更されます。),icon_item_card_legend,149_boss_frosterlord,None,None,None,None,800076,None,None,None,0,1,魔将フロスターロッドカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644923,Legendcard_skiaclips,[スロット装着効果]昆虫型対象攻撃力750 * [★],icon_item_card_legend,156_boss_skiaclipse,None,[642949],None,None,57866,None,None,None,2,0,解放されたスキアクリプスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644924,Legendcard_Moringponia,[スロット装着効果] 中型対象攻撃力300 * [★],icon_item_card_legend,157_boss_moringponia,None,None,None,None,800090,None,None,None,6,2,魔将モリングフォニアカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644925,Legendcard_Misrus,"[スロット装着効果] シールド使用中の敵に1,000 * [★]追加ダメージ",icon_item_card_legend,158_boss_misrus,None,[642953],None,None,57866,None,None,None,2,0,憤怒するマーズルースカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644926,Legendcard_bayl,[スロット装着効果]チームレベルが50以下の時、経験値獲得料[★ * 10]%アップ,icon_item_card_legend,005_npc_bayl,None,None,None,None,,None,None,None,,,バイルカード,0,,,,0.0,0.0,FFFT,4,2,1.0
+644927,Legendcard_tantaliser,[スロット装着効果]炎、氷、毒、雷、念、地、神聖、闇[★ * 50]追加ダメージ,icon_item_card_legend,159_boss_tantaliser,None,"[642958, 642965]",None,None,800091,None,None,None,6,2,魔将タンタイザーカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644928,Legendcard_Glacier,[スロット装着効果]変異型対象攻撃力750 * [★],icon_item_card_legend,160_boss_glacier,None,"[642963, 642964]",None,None,59374,None,None,None,4,4,怨恨が込められたグレイシアカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644929,Legendcard_TelHarcha,[スロット装着効果]植物型対象攻撃力 750 * [★],icon_item_card_legend,161_boss_telharsha,None,[642966],None,None,59477,None,None,None,2,4,テルハルシャカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644930,Legendcard_Leticia,[装着不可][強化不可]レジェンドカード強化用に使用されます。,icon_item_card_legend,028_npc_leticia,None,None,None,None,,None,None,None,,,レティーシャカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+644931,Legendcard_Guilty,[スロット装着効果]ボスモンスターにダメージ[★×8]%アップ,icon_item_card_legend,162_boss_guilty,None,None,None,None,,None,None,None,,,ギルティネカード,0,,,,0.0,0.0,TFFT,4,2,1.0
+644932,Legendcard_Avataras,[スロット装着効果]悪魔型対象攻撃力 750 * [★],icon_item_card_legend,163_boss_avataras,None,[642967],None,None,,None,None,None,,,アヴァタラスカード,0,,,,0.0,0.0,TTTT,4,2,1.0
+650001,legend_reinforce_card_lv1,レジェンドカード強化に使用できる強化用カードです。LV4まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv1,legend_card_fragment_lv1,None,None,None,None,,None,None,None,,,破れたレジェンド強化用カード,0,,,,0.0,0.0,TTTT,4,3,1.0
+650002,legend_reinforce_card_lv2,レジェンドカード強化に使用できる強化用カードです。LV6まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,None,None,None,None,,None,None,None,,,古びたレジェンド強化用カード,0,,,,0.0,0.0,TTTT,4,3,1.0
+650003,legend_reinforce_card_lv3,レジェンドカード強化に使用できる強化用カードです。LV8まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv3,legend_card_fragment_lv3,None,None,None,None,,None,None,None,,,レジェンド強化用カード,0,,,,0.0,0.0,TTTT,4,3,1.0
+650004,legend_reinforce_card_lv4,レジェンドカード強化に使用できる強化用カードです。LV10まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv4,legend_card_fragment_lv4,None,None,None,None,,None,None,None,,,輝くレジェンド強化用カード,0,,,,0.0,0.0,TTTT,4,3,1.0
+650005,legend_reinforce_card_lv2_Team,レジェンドカード強化に使用できる強化用カードです。LV6まで成長できます。{nl}レジェンド強化用カードは装着及び一般カード合成材料として使用できません。,icon_item_legend_card_fragment_lv2,legend_card_fragment_lv2,None,None,None,None,,None,None,None,,,古びたレジェンド強化用カード,0,,,,0.0,0.0,FFFT,4,3,1.0

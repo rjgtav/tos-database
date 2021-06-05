@@ -26,6 +26,15 @@ def load(ies_name):
                         row[key] = float(row[key])
                     except ValueError:
                         row[key] = row[key]
+                except TypeError:
+                    r="".join(row[key])
+                    try:
+                        row[key] = int(r)
+                    except ValueError:
+                        try:
+                            row[key] = float(r)
+                        except ValueError:
+                            row[key] = r
 
             ies_data.append(row)
 

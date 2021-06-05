@@ -6,7 +6,7 @@ import constants
 import globals
 from parserr import parser_assets
 from utils.tosenum import TOSEnum
-
+import codecs
 
 class TOSCardType(TOSEnum):
     ATTACK = 0
@@ -15,7 +15,7 @@ class TOSCardType(TOSEnum):
     REINFORCE = 3
     STATS = 4
     UTILITY = 5
-
+    GODDESS = 6
     @staticmethod
     def value_of(string):
         return {
@@ -25,6 +25,7 @@ class TOSCardType(TOSEnum):
             'REINFORCE_CARD': TOSCardType.REINFORCE,
             'STAT': TOSCardType.STATS,
             'UTIL': TOSCardType.UTILITY,
+            'GODDESS': TOSCardType.GODDESS,
             '': None
         }[string.upper()]
 
@@ -38,7 +39,7 @@ def parse_cards():
     logging.debug('Parsing cards...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path, 'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
@@ -56,7 +57,7 @@ def parse_cards_battle():
     logging.debug('Parsing cards battle...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'cardbattle.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path, 'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
@@ -77,7 +78,7 @@ def parse_links_monsters():
     logging.debug('Parsing monsters for cards...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:

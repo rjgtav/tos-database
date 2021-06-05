@@ -11,10 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "console-stamp": "^0.2.7",
-    "lunr": "^2.3.6",
+    "lunr": "^2.3.9",
     "lunr-languages": "^1.1.0",
-    "nodejieba": "^2.3.0",
-    "open-korean-text-node": "^2.2.0",
-    "papaparse": "^4.6.1"
+    "nodejieba": "^2.5.2",
+    "papaparse": "^5.3.1"
+    
   }
 }

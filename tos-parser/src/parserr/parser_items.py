@@ -230,7 +230,7 @@ def parse_links_collections(items_by_name):
     logging.debug('Parsing collections for items...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'collection.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
@@ -253,7 +253,7 @@ def parse_links_cubes(items_by_name):
     logging.debug('Parsing cubes for items...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'reward_indun.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
@@ -273,7 +273,7 @@ def parse_links_recipes(items_by_name):
     logging.debug('Parsing recipes for items...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'recipe.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:

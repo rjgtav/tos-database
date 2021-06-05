@@ -29,8 +29,8 @@ LUA_OVERRIDE = [
     'function IsBuffApplied(pc, buff) return "NO" end',
     'function GetAbilityAddSpendValue(pc,classname,column) return 0 end',
     'function GetSkillOwner(skill) return {} end',
-    'function GetClassList(name) return {} end',
-    'function GetClassByNameFromList(cls,name) return nil end',
+    #'function GetClassList(name) return {} end',
+    #'function GetClassByNameFromList(cls,name) return nil end',
     'function IsServerSection(pc) return 0 end',
     'function GetExProp(entity, name) return entity[name] end',
     'function GetExProp_Str(entity, name) return tostring(entity[name]) end',
@@ -58,7 +58,7 @@ def init():
     init_global_data()
     init_global_functions()
     init_runtime()
-
+    pass
 
 def init_global_constants(ies_file_name):
     execute = ''
@@ -78,25 +78,38 @@ def init_global_data():
     ies_ADD = lua.execute('''
         ies_by_ClassID = {}
         ies_by_ClassName = {}
+        ies_by_ClassIDCount = {}
+        ies_by_ClassNameCount = {}
         
         function ies_ADD(key, data)
             _by_ClassID = {}
             _by_ClassName = {}
-            
+            _by_ClassIDCount=0
+            _by_ClassNameCount=0
+            key=string.lower(key)
             if ies_by_ClassID[key] ~= nil then
                 _by_ClassID = ies_by_ClassID[key]
             end
             if ies_by_ClassName[key] ~= nil then
                 _by_ClassName = ies_by_ClassName[key]
             end
-            
+            if ies_by_ClassID[key] ~= nil then
+                _by_ClassIDCount = ies_by_ClassIDCount[key]
+            end
+            if ies_by_ClassName[key] ~= nil then
+                _by_ClassNameCount = ies_by_ClassNameCount[key]
+            end
             for i, row in python.enumerate(data) do
                 _by_ClassID[math.floor(row["ClassID"])] = row
                 _by_ClassName[row["ClassName"]] = row
+                _by_ClassIDCount=_by_ClassIDCount+1
+                _by_ClassNameCount=_by_ClassNameCount+1
             end
             
             ies_by_ClassID[key] = _by_ClassID
             ies_by_ClassName[key] = _by_ClassName
+            ies_by_ClassIDCount[key] = _by_ClassIDCount
+            ies_by_ClassNameCount[key] = _by_ClassNameCount
         end
         
         return ies_ADD
@@ -105,9 +118,18 @@ def init_global_data():
     ies_ADD('ancient', iesutil.load('ancient_info.ies'))
     ies_ADD('ancient_info', iesutil.load('ancient_info.ies'))
     ies_ADD('item', iesutil.load('item_equip.ies'))
+    ies_ADD('item', iesutil.load('item_equip_ep12.ies'))
+    ies_ADD('item', iesutil.load('item_ep12.ies'))
+    ies_ADD('item', iesutil.load('item_gem.ies'))
+    ies_ADD('item', iesutil.load('item_gem_relic.ies'))
     ies_ADD('item_grade', iesutil.load('item_grade.ies'))
     ies_ADD('item_growth', iesutil.load('item_growth.ies'))
+    ies_ADD('HiddenAbility_Reinforce', iesutil.load('HiddenAbility_Reinforce.ies'))
+
+    ies_ADD('job', iesutil.load('job.ies'))
+    ies_ADD('buff', iesutil.load('buff.ies'))
     ies_ADD('monster', iesutil.load('monster.ies'))
+
     ies_ADD('monster', iesutil.load('monster_event.ies'))
     ies_ADD('monster', iesutil.load('monster_solo_dungeon.ies'))
     ies_ADD('stat_monster', iesutil.load('statbase_monster.ies'))
@@ -116,7 +138,7 @@ def init_global_data():
 
 
 def init_global_functions():
-    lua.execute('''
+    lua.execute("".join((s+"\n" for s in LUA_OVERRIDE))+'\n\n'+'''
         app = {
             IsBarrackMode = function() return false end
         }
@@ -180,7 +202,14 @@ def init_global_functions():
         end
         
         function GetClassList(ies_key)
-            return ies_by_ClassID[string.lower(ies_key)]
+            
+            local value=ies_by_ClassID[string.lower(ies_key)]
+          
+            return value,ies_by_ClassIDCount[string.lower(ies_key)]
+           
+        end
+        function GetClassByIndexFromList(list,idx)
+            return list[idx]
         end
         function GetClassByNameFromList(data, key)
             for id, row in pairs(data) do
@@ -256,7 +285,7 @@ def init_global_functions():
                 return default
             end
         end
-    ''' + '\n'.join(LUA_OVERRIDE))
+    ''' + '\n')
 
 
 def init_runtime():
@@ -266,12 +295,12 @@ def init_runtime():
     LUA_SOURCE = {}
 
     for root, dirs, file_list in os.walk(constants.PATH_INPUT_DATA):
-        for file_name in file_list:
+        for file_name in sorted(file_list):
             if file_name.upper().endswith('.LUA'):
                 file_path = os.path.join(root, file_name)
                 lua_function = []
 
-                with codecs.open(file_path, 'r',"utf-8",errors="ignore") as file:
+                with codecs.open(file_path, 'r',"utf-8",errors="replace") as file:
                     try:
                         # Remove multiline comments https://stackoverflow.com/a/40454391
                         file_content = file.readlines()
@@ -305,7 +334,7 @@ def init_runtime():
                     except LuaError as error:
                         if file_name.upper().endswith("CALC_PROPERTY_SKILL.LUA"):
                             print("fail")
-                        logging.warn('Failed to load %s, error: %s...', file_path, error)
+                        logging.warning('Failed to load %s, error: %s...', file_path, error)
                         continue
 
 def destroy():

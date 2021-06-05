@@ -43,14 +43,17 @@ def csv_write(data, dataset):
     for k in range(len(data)):
          for kk,vv in data[k].items():
              data[k][kk]=str(vv)
+
     # Write to CSV
-    file = codecs.open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'w','utf-8',errors='replace')
-    writer = csv.DictWriter(
-        file,
-        delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(list(map(lambda x:str(x),keys)))
-    )
-    writer.writeheader()
-    writer.writerows(sorted(data, key=lambda k: k['$ID']))
+    file = open(os.path.join(constants.PATH_BUILD_ASSETS_DATA, dataset + '.csv'), 'wb')
+    if keys is not None:
+
+        writer = csv.DictWriter(
+            file,
+            delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL, fieldnames=sorted(list(map(lambda x:x,keys)))
+        )
+        writer.writeheader()
+        writer.writerows(sorted(data, key=lambda k: k['$ID']))
     file.close()
 
 
@@ -120,7 +123,7 @@ def parse(region, is_rebuild, is_version_new):
     parser_items_equipment.parse()
     parser_items_equipment_sets.parse()
     parser_items_recipes.parse()
-    parser_maps.parse(region, is_version_new)
+    #parser_maps.parse(region, is_version_new)
     parser_monsters.parse()
 
     # Garbage collect & Destroy LUA...
@@ -137,7 +140,7 @@ def parse(region, is_rebuild, is_version_new):
     parser_items_equipment.parse_links()
     parser_items_equipment_sets.parse_links()
     parser_items_recipes.parse_links()
-    parser_maps.parse_links()
+    #parser_maps.parse_links()
     parser_monsters.parse_links()
 
     # Garbage collect...

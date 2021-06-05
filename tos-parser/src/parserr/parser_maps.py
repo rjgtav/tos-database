@@ -45,7 +45,7 @@ def parse_maps():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'map.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             obj = {}
             obj['$ID'] = int(row['ClassID'])
@@ -168,7 +168,7 @@ def parse_links_items():
         try:
             drops = []
 
-            with open(ies_path, 'rb') as ies_file:
+            with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
                 for zone_drop in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                     if len(zone_drop['ItemClassName']) > 0:
                         drops.append({
@@ -187,7 +187,7 @@ def parse_links_items():
                         group_drop_ratio = 0
                         group_drops = []
 
-                        with open(ies_path, 'rb') as ies_file:
+                        with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
                             for group_drop in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                                 group_drop_ratio += int(group_drop['DropRatio'])
                                 group_drops.append({
@@ -231,7 +231,7 @@ def parse_links_items_rewards():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'map.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             if int(row['MapRatingRewardCount1']) == 0 or len(row['MapRatingRewardItem1']) == 0:
                 continue
@@ -265,7 +265,7 @@ def parse_links_maps():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'map.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             if len(row['PhysicalLinkZone']) == 0:
                 continue
@@ -286,7 +286,7 @@ def parse_links_npcs():
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'map.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             map = globals.maps_by_name[row['ClassName']]
             map_offset_x = int(round(int(row['Width']) / 2.0))
@@ -299,7 +299,7 @@ def parse_links_npcs():
             ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_mongen.ipf', ies_file.lower())
 
             try:
-                with open(ies_path, 'rb') as ies_file:
+                with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
                     for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                         obj = anchors[row['GenType']] if row['GenType'] in anchors else { 'Anchors': [], 'GenType': {} }
                         obj['Anchors'].append([
@@ -316,7 +316,7 @@ def parse_links_npcs():
             ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies_mongen.ipf', ies_file.lower())
 
             try:
-                with open(ies_path, 'rb') as ies_file:
+                with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
                     for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
                         if globals.get_npc_link(row['ClassType']) is None:
                             continue

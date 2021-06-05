@@ -11,7 +11,7 @@ from parserr import parser_translations
 from parserr.parser_enums import TOSAttackType
 from utils import luautil
 from utils.tosenum import TOSEnum
-
+import codecs
 
 class TOSEquipmentGrade(TOSEnum):
     LEGENDARY = 0
@@ -19,7 +19,7 @@ class TOSEquipmentGrade(TOSEnum):
     NORMAL = 2
     RARE = 3
     UNIQUE = 4
-
+    GODDESS = 5
     @staticmethod
     def value_of(index):
         return [
@@ -29,6 +29,7 @@ class TOSEquipmentGrade(TOSEnum):
             TOSEquipmentGrade.RARE,
             TOSEquipmentGrade.UNIQUE,
             TOSEquipmentGrade.LEGENDARY,
+            TOSEquipmentGrade.GODDESS,
         ][index]
 
 
@@ -38,8 +39,8 @@ class TOSEquipmentMaterial(TOSEnum):
     GHOST = 2
     LEATHER = 3
     PLATE = 4
-    UNKNOWN = 5
-
+    UNKNOWN = 6
+    SHIELD = 5
     @staticmethod
     def value_of(string):
         return {
@@ -48,6 +49,7 @@ class TOSEquipmentMaterial(TOSEnum):
             'GHOST': TOSEquipmentMaterial.GHOST,
             'IRON': TOSEquipmentMaterial.PLATE,
             'LEATHER': TOSEquipmentMaterial.LEATHER,
+            'SHIELD': TOSEquipmentMaterial.SHIELD,
             '': TOSEquipmentMaterial.UNKNOWN,
         }[string.upper()]
 
@@ -439,7 +441,7 @@ def parse_equipment():
     logging.debug('Parsing equipment...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_equip.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     LUA_RUNTIME = luautil.LUA_RUNTIME
@@ -564,7 +566,7 @@ def parse_equipment_grade_ratios():
     logging.debug('Parsing equipment grade...')
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'item_grade.ies')
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path, 'r','utf-8',errors='utf-8')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:
@@ -581,7 +583,7 @@ def parse_links_sets(file_name):
     logging.debug('Parsing sets for equipment: %s...', file_name)
 
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', file_name)
-    ies_file = open(ies_path, 'rb')
+    ies_file = codecs.open(ies_path,'r','utf-8',errors='replace')
     ies_reader = csv.DictReader(ies_file, delimiter=',', quotechar='"')
 
     for row in ies_reader:

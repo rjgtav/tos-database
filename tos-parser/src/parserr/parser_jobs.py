@@ -131,7 +131,7 @@ def parse_jobs_images(region, version_update):
     logging.debug('Parsing Jobs images...')
     ies_path = os.path.join(constants.PATH_INPUT_DATA, 'ies.ipf', 'job.ies')
 
-    with open(ies_path, 'rb') as ies_file:
+    with codecs.open(ies_path,'r','utf-8',errors='replace') as ies_file:
         for row in csv.DictReader(ies_file, delimiter=',', quotechar='"'):
             image_path = os.path.join(constants.PATH_BUILD_ASSETS_IMAGES, 'classes', row['ClassName'])
             image_path_f = image_path + '_f.gif'
