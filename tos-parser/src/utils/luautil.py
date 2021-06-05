@@ -44,8 +44,8 @@ LUA_OVERRIDE = [
     'function ScpArgMsg(a, b, c) return "" end',
     'function SCR_MON_OWNERITEM_ARMOR_CALC(self, defType) return 0 end',
     'function SetExProp(entity, name, value) entity[name] = value end',
-    'function math.pow(value,power) return value ^ power end'
-
+    'function math.pow(value,power) return value ^ power end',
+    'function GetZoneName() return "" end'
 ]
 
 LUA_RUNTIME = None
