@@ -7,7 +7,7 @@ echo "ToS database building start."
 BASEDIR=$(cd $(dirname $0); pwd)
 REGIONS=(jTOS iTOS kTOS kTEST twTOS)
 
-REPATCH = 1
+REPATCH=1
 if [$# -ge 1];then
     REPATCH=$1
 fi

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/bin/bash /root/build.sh jTOS
+/bin/bash /root/build.sh 0
