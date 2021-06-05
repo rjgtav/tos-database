@@ -4,6 +4,7 @@ LABEL author ebisuke
 # ENVs
 ENV LANG=en_EN.UTF-8
 ENV PYTHONIOENCODING=utf-8
+
 # avoid apt-get blocking
 RUN apt-get update && apt-get install -y -q tzdata
 ENV TZ=Asia/Tokyo 
@@ -19,7 +20,7 @@ RUN pip3 install pillow lupa unicodecsv pydevd-pycharm~=211.7442
 ENV GYP_DEFINES="javalibdir=/usr/lib/jvm/java-1.8.0-openjdk-amd64/lib/server"
 ENV JAVA_HOME ="/usr/lib/jvm/java-1.8.0-openjdk-amd64/"
 ENV PATH $PATH:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin
-
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 RUN npm -g i n && n 16 
 RUN npm install -g @angular/cli 
 
