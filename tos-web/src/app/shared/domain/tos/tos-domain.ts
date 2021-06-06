@@ -168,7 +168,7 @@ export const
     if (value == TOSEquipmentGrade.RARE)      return '#CE69EF';
     if (value == TOSEquipmentGrade.UNIQUE)    return '#EF6900';
     if (value == TOSEquipmentGrade.LEGENDARY) return '#F4E409';
-    if (value == TOSEquipmentGrade.GODDESS)   return '#44E488';
+    if (value == TOSEquipmentGrade.GODDESS)   return '#44FF88';
     
   };
   TOSEquipmentGradeService.order = (value: TOSEquipmentGrade) => {

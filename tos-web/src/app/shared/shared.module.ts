@@ -162,7 +162,7 @@ import {TOSNPCResolver} from "./domain/tos/monster/tos-npc.resolver";
 })
 export class SharedModule {
   // Read more: https://medium.com/@chrishouse/when-to-use-angulars-forroot-method-400094a0ebb7
-  static forRoot(): ModuleWithProviders<SharedModule> {
+  static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
       providers: [
