@@ -7,7 +7,7 @@ echo "ToS database building start."
 BASEDIR=$(cd $(dirname $0); pwd)
 #REGIONS=(jTOS iTOS kTOS kTEST twTOS)
 REGIONS=(jTOS)
-REPATCH=1
+REPATCH=0
 if [ $# -ge 1 ];then
     REPATCH=$1
 fi
@@ -23,7 +23,7 @@ do
     cd ${BASEDIR}/tos-html/
   
     npm install
-    npm run main
+    npm run main ${region}
     # ->unzip
     cd ${BASEDIR}/tos-build/dist/
     echo ${region,,}.zip
@@ -32,20 +32,21 @@ do
     fi
     echo "complete"
     
+    # search
+    cd ${BASEDIR}/tos-search/
+    npm install
+    npm run main ${region}
 
+    # sitemap
+    cd ${BASEDIR}/tos-sitemap/
+    npm install
+    npm run main ${region}
 
 done
-# search
-cd ${BASEDIR}/tos-search/
-npm install
-npm run main
-
-
-# sitemap
-cd ${BASEDIR}/tos-sitemap/
-npm install
-npm run main
 
 cd ${BASEDIR}
+
+echo "Launch bootstrap."
+sh bootstrap.sh
 
 echo "Done."
