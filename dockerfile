@@ -32,6 +32,7 @@ COPY ./ipf_unpacker ./ipf_unpacker
 WORKDIR /root/ipf_unpacker
 RUN make clean && make release
 WORKDIR /root
+RUN chown -R www-data:www-data ./
 COPY ./tos-parser ./tos-parser
 COPY ./tos-build ./tos-build
 COPY ./tos-html ./tos-html
@@ -44,8 +45,6 @@ COPY ./tos-web-rest ./tos-web-rest
 COPY ./docker/*   ./
 # copy http server conf
 COPY ./httpserver/http.conf /etc/nginx/conf.d/http.conf
-RUN ls
-
 # expose http server
 EXPOSE 8000
 
