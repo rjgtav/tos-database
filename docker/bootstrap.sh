@@ -7,6 +7,10 @@ BASEDIR=$(cd $(dirname $0); pwd)
 # build up!
 cd ${BASEDIR}/tos-web/
 #npm install -std=c++17 --force
-ng build --prod
+#ng build --prod
+ng build 
+
+# copy dists
+cp -Rn ../tos-build/dist/* ./dist/
 
 echo "Done."

@@ -34,7 +34,7 @@ RUN chmod -R 755 ./
 WORKDIR /var/www/base
 COPY ./tos-web ./tos-web
 WORKDIR /var/www/base/tos-web
-RUN npm install -std=c++17 --force
+RUN npm ci -std=c++17
 WORKDIR /var/www/base
 
 COPY ./ipf_unpacker ./ipf_unpacker
