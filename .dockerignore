@@ -3,7 +3,5 @@ tos-parser/input/*
 input/*
 distbuild/*
 distweb/*
-skeleton_distbuild/*
-skeleton_distweb/*
 **/.git/*
 .idea

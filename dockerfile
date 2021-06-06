@@ -34,7 +34,7 @@ RUN chmod -R 755 ./
 WORKDIR /var/www/base
 COPY ./tos-web ./tos-web
 WORKDIR /var/www/base/tos-web
-RUN npm ci -std=c++17
+RUN npm ci -std=c++17 --force
 WORKDIR /var/www/base
 
 COPY ./ipf_unpacker ./ipf_unpacker
@@ -43,6 +43,7 @@ WORKDIR /var/www/base/ipf_unpacker
 RUN make clean && make release
 WORKDIR /var/www/base
 
+COPY ./skeleton_distweb ./skeleton_distweb
 COPY ./tos-parser ./tos-parser
 COPY ./tos-build ./tos-build
 COPY ./tos-html ./tos-html

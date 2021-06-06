@@ -10,7 +10,9 @@ cd ${BASEDIR}/tos-web/
 #ng build --prod
 ng build 
 
+echo "Copying..."
 # copy dists
+cp -Rn ../skeleton_distweb/* ./dist/
 cp -Rn ../tos-build/dist/* ./dist/
 
 echo "Done."
