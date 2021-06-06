@@ -1,6 +1,6 @@
 import {TOSUrlService} from "../../service/tos-url.service";
 import {ITOSEntity, ITOSEntityLink, TOSDataSet, TOSDataSetService} from "./tos-domain";
-import {forkJoin, isObservable, Observable, ReplaySubject} from "rxjs";
+import {forkJoin, Observable, ReplaySubject} from "rxjs";
 
 const COMPARATOR_ID = (a: number, b: number) => {
   let i = +a;
@@ -17,7 +17,13 @@ export abstract class Comparable {
 
 export abstract class TOSEntity extends Comparable implements ITOSEntity {
 
-  public Selected: boolean;
+  private selected: boolean;
+  public get Selected(){
+    return this.selected;
+  }
+  public set Selected(value){
+    this.selected=value;
+  }
 
   private url: string;
 
@@ -88,7 +94,7 @@ export abstract class TOSEntity extends Comparable implements ITOSEntity {
   }
 
   protected $lazyPropertyLink<T>(prop: string, mapper: (value: any) => Observable<T>): Observable<T> | Observable<T[]> {
-    if (isObservable(this.$json[prop]))
+    if (this.$json[prop] instanceof Observable)
       return this.$json[prop] as Observable<T>;
 
     if (this.$json[prop]) {

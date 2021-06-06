@@ -60,7 +60,7 @@ export class LoadingService {
         .all(Object.values(TOSDataSet)
           .map(value => new Promise((resolve) => {
             let request = window.indexedDB.deleteDatabase(TOSRegionService.getUrl() + '/' + TOSDataSetService.toUrl(value));
-            request.onsuccess = () => resolve();
+            request.onsuccess = () => resolve("ebisuke"); //@TODO
           })));
 
       // Clear version

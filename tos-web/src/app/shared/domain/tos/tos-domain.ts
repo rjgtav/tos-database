@@ -148,6 +148,7 @@ export enum TOSEquipmentGrade {
   NORMAL = 'Normal',
   RARE = 'Rare',
   UNIQUE = 'Unique',
+  GODDESS = 'Goddess',
 }
 export const
   TOSEquipmentGradeService = EnumServiceFactory(TOSEquipmentGrade) as EnumService<TOSEquipmentGrade> & {
@@ -167,6 +168,8 @@ export const
     if (value == TOSEquipmentGrade.RARE)      return '#CE69EF';
     if (value == TOSEquipmentGrade.UNIQUE)    return '#EF6900';
     if (value == TOSEquipmentGrade.LEGENDARY) return '#F4E409';
+    if (value == TOSEquipmentGrade.GODDESS)   return '#44E488';
+    
   };
   TOSEquipmentGradeService.order = (value: TOSEquipmentGrade) => {
     if (value == TOSEquipmentGrade.NORMAL)    return 0;
@@ -174,6 +177,8 @@ export const
     if (value == TOSEquipmentGrade.RARE)      return 2;
     if (value == TOSEquipmentGrade.UNIQUE)    return 3;
     if (value == TOSEquipmentGrade.LEGENDARY) return 4;
+    if (value == TOSEquipmentGrade.GODDESS)   return 5;
+    
   };
 
 export enum TOSEquipmentMaterial {

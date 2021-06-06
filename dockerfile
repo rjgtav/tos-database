@@ -24,15 +24,25 @@ ENV NODE_OPTIONS="--max-old-space-size=2048"
 RUN npm -g i n && n 16 
 RUN npm install -g @angular/cli 
 
+RUN mkdir /var/www/base
+# apply chmod
+WORKDIR /var/www/base
+RUN chown -R www-data:www-data ./
+RUN chmod -R 755 ./
+
 # copy databases
-WORKDIR /root
+WORKDIR /var/www/base
+COPY ./tos-web ./tos-web
+WORKDIR /var/www/base/tos-web
+RUN npm install -std=c++17 --force
+WORKDIR /var/www/base
 
 COPY ./ipf_unpacker ./ipf_unpacker
 # make ipfunpack
-WORKDIR /root/ipf_unpacker
+WORKDIR /var/www/base/ipf_unpacker
 RUN make clean && make release
-WORKDIR /root
-RUN chown -R www-data:www-data ./
+WORKDIR /var/www/base
+
 COPY ./tos-parser ./tos-parser
 COPY ./tos-build ./tos-build
 COPY ./tos-html ./tos-html
@@ -40,7 +50,7 @@ COPY ./tos-html ./tos-html
 COPY ./tos-search ./tos-search
 COPY ./tos-sitemap ./tos-sitemap
 COPY ./tos-sw ./tos-sw
-COPY ./tos-web ./tos-web
+
 COPY ./tos-web-rest ./tos-web-rest
 COPY ./docker/*   ./
 # copy http server conf
@@ -48,5 +58,6 @@ COPY ./httpserver/http.conf /etc/nginx/conf.d/http.conf
 # expose http server
 EXPOSE 8000
 
+
 # freqently change ENVs
-ENTRYPOINT ["/bin/sh","/root/entrypoint.sh","jTOS"  ]
+ENTRYPOINT ["/bin/sh","/var/www/base/entrypoint.sh","jTOS"  ]

@@ -61,7 +61,7 @@ export class SkillBuilderComponent implements OnDestroy, OnInit {
     this.subscriptionSkill = this.build.Skill$.subscribe(value => this.onBuildChange());
     this.subscriptionJob = this.build.Job$.subscribe(value => this.onJobChange(value));
     this.subscriptionStatsPoints = this.build.StatsPoints$.subscribe(value => this.onBuildChange());
-    this.subscriptionTooltip = this.build.Tooltip.subscribe(value => this.tooltip = value);
+    this.subscriptionTooltip = this.build.Tooltip.subscribe(value => this.tooltip = value as TOSEntity); //TODO ebisuke
   }
 
   shareAsImage() {
